@@ -82,7 +82,7 @@ Wednesday was also workshop day and I got a great intro to Remix from [@chanceth
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/chance-strickland.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/chance-strickland.webp" height="120" width="120" />
     <figcaption>
       <h3>Remix Fundamentals</h3>
       <p><strong><a href="https://twitter.com/chancethedev">Chance Strickland</a>, Senior Software Engineer @ Replo</strong></p>
@@ -98,7 +98,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/josh-comeau.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/josh-comeau.webp" height="120" width="120" />
     <figcaption>
       <h3>Building Whimsical Interactions With React</h3>
       <p><strong><a href="https://twitter.com/JoshWComeau">Josh Comeau</a>, Founder @ Josh W. Comeau Courses</strong></p>
@@ -110,7 +110,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/colby-fayock.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/colby-fayock.webp" height="120" width="120" />
     <figcaption>
       <h3>Creating a Whole New World With Generative Ai</h3>
       <p><strong><a href="https://twitter.com/colbyfayock">Colby Fayock</a>, Director of Devx Engineering @ Cloudinary</strong></p>
@@ -122,7 +122,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/adam-rackis.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/adam-rackis.webp" height="120" width="120" />
     <figcaption>
       <h3>The Bleeding "Edge" of Web Development</h3>
       <p><strong><a href="https://twitter.com/AdamRackis">Adam Rackis</a>, Senior Software Engineer @ Spotify</strong></p>
@@ -134,7 +134,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/margarita-caraballo.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/margarita-caraballo.webp" height="120" width="120" />
     <figcaption>
       <h3>Building Together: Technical Product Management in Your Engineering Organization</h3>
       <p><strong><a href="https://www.linkedin.com/in/margarita-c/">Margarita Caraballo</a>, Senior Technical Product Manager @ Mailchimp</strong></p>
@@ -146,7 +146,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/ayo-k-duyile.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/ayo-k-duyile.webp" height="120" width="120" />
     <figcaption>
       <h3>Product Viability to Product Scalability</h3>
       <p><strong><a href="https://twitter.com/AyoKDuyile">Ayo K. Duyile</a>, Senior Technical PM, Software Engineering @ Google</strong></p>
@@ -158,7 +158,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/tom-raviv.jpeg" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/tom-raviv.jpeg" height="120" width="120" />
     <figcaption>
       <h3>Codux Demo</h3>
       <p><strong><a href="https://twitter.com/RavivTom">Tom Raviv</a>, DevRel @ CoduxIDE</strong></p>
@@ -170,7 +170,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/homer-gaines.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/homer-gaines.webp" height="120" width="120" />
     <figcaption>
       <h3>Seeing Eye to Eye</h3>
       <p><strong><a href="https://twitter.com/xirclebox">Homer Gaines</a>, Staff UI Engineer @ Self</strong></p>
@@ -182,7 +182,7 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/chris-coyier.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/chris-coyier.webp" height="120" width="120" />
     <figcaption>
       <h3>Modern CSS in Real Life</h3>
       <p><strong><a href="https://twitter.com/chriscoyier">Chris Coyier</a>, Co-founder @ Codepen</strong></p>
@@ -204,7 +204,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/rizel-scarlet.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/rizel-scarlet.webp" height="120" width="120" />
     <figcaption>
       <h3>Level Up With Copilot</h3>
       <p><strong><a href="https://twitter.com/blackgirlbytes">Rizel Scarlet</a>, Developer Advocate @ Github</strong></p>
@@ -216,7 +216,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/scott-tolinski.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/scott-tolinski.webp" height="120" width="120" />
     <figcaption>
       <h3>Fresh Style: the Next Generation of CSS</h3>
       <p><strong><a href="https://twitter.com/stolinski">Scott Toliniski</a>, Founder @ Level Up Tutorials</strong></p>
@@ -228,7 +228,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/leesa-ward.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/leesa-ward.webp" height="120" width="120" />
     <figcaption>
       <h3>Styling a React App: Let Me Count the Ways</h3>
       <p><strong><a href="https://twitter.com/doubleedesign">Leesa Ward</a>, Front-end Developer @ Various</strong></p>
@@ -240,7 +240,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/shaundai-pearson.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/shaundai-pearson.webp" height="120" width="120" />
     <figcaption>
       <h3>Streaming Server Rendering With Suspense</h3>
       <p><strong><a href="https://twitter.com/shaundai">Shaundai Pearson</a>, Senior Software Engineer, Productivity UI @ Netflix</strong></p>
@@ -252,7 +252,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/evan-you.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/evan-you.webp" height="120" width="120" />
     <figcaption>
       <h3>Thinking Across the Framework Barrier</h3>
       <p><strong><a href="https://twitter.com/youyuxi">Evan You</a>, Author, Vue & Vite @ Vue.js / Vite</strong></p>
@@ -264,7 +264,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/gant-laborde.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/gant-laborde.webp" height="120" width="120" />
     <figcaption>
       <h3>AI in React</h3>
       <p><strong><a href="https://twitter.com/GantLaborde">Gant Laborde</a>, CIO @ Infinite Red</strong></p>
@@ -276,7 +276,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/sarah-drasner.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/sarah-drasner.webp" height="120" width="120" />
     <figcaption>
       <h3>The Wind and the Waves: the Formation of Framework Waves From the Epicenter</h3>
       <p><strong><a href="https://twitter.com/sarah_edo">Sarah Drasner</a>, Director of Engineer, Web, at Google @ Google</strong></p>
@@ -288,7 +288,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/mark-techson.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/mark-techson.webp" height="120" width="120" />
     <figcaption>
       <h3>Rise of the Robots - How to Thrive in the World of AI</h3>
       <p><strong><a href="https://twitter.com/marktechson">Mark Techson</a>, Sr. Developer Relations Engineer @ Google</strong></p>
@@ -300,7 +300,7 @@ In a surprising twist, I made it out of the party early enough to get some sleep
 
 <article class="border-2 border-pink-500 mt-4">
   <figure>
-    <img src="/img/posts/conferences/render-atl-2023/james-quick.webp" height="120" width="120" />
+    <img src="/posts/conferences/render-atl-2023/james-quick.webp" height="120" width="120" />
     <figcaption>
       <h3>How Content Creation Took My Career to the Next Level</h3>
       <p><strong><a href="https://twitter.com/jamesqquick">James Q Quick</a>, Content Creator @ Learn Build Teach LLC</strong></p>

@@ -161,21 +161,21 @@ The following is a timeline of events, with their locations, intending to show h
     </li>
     <li class="step" data-step="2">
       <div class="details">
-        <img alt="Rita Tangredi" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/rita-tangredi.jpg" width="220" />
+        <img alt="Rita Tangredi" src="/posts/true-crime/mapping-the-long-island-murder-victims/rita-tangredi.jpg" width="220" />
         <h3>Rita Tangredi's remains were found in wooded area on November 2, 1993</h3>
         <p>The details are an important part of identifying her killer: she had been beaten, strangled, a specific item of her clothing was missing, and her body was found in a distinct pose, and wood chips were used to cover her.</p>
       </div>
     </li>
     <li class="step" data-step="3">
       <div class="details">
-        <img alt="Sandra Costilla" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/sandra-costilla.jpg" width="220" />
+        <img alt="Sandra Costilla" src="/posts/true-crime/mapping-the-long-island-murder-victims/sandra-costilla.jpg" width="220" />
         <h3>Sandra Costilla's remains were found on November 20, 1993</h3>
         <p>She was found in a wooded area by a group of hunters and she was strangled, but reports don't state that the same level of violence was present as with Rita Tangredi.</p>
       </div>
     </li>
     <li class="step right" data-step="4">
       <div class="details">
-        <img alt="Colleen McNamee" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/colleen-mcnamee.jpg" width="220" />
+        <img alt="Colleen McNamee" src="/posts/true-crime/mapping-the-long-island-murder-victims/colleen-mcnamee.jpg" width="220" />
         <h3>Colleen McNamee was last seen on January 5, 1994</h3>
         <p>She was getting into a small blue car at the Blue Dawn Diner.</p>
       </div>
@@ -188,63 +188,63 @@ The following is a timeline of events, with their locations, intending to show h
     </li>
     <li class="step" data-step="6">
       <div class="details">
-        <img alt="Karen Vergata" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/karen-vergata.jpg" width="220" />
+        <img alt="Karen Vergata" src="/posts/true-crime/mapping-the-long-island-murder-victims/karen-vergata.jpg" width="220" />
         <h3>Partial remains of Karen Vergata are found on April 20, 1996</h3>
         <p>Along Blue Point Beach, people found her legs wrapped in plastic. (Formerly known as Jane Doe No. 7)</p>
       </div>
     </li>
     <li class="step right" data-step="7">
       <div class="details">
-        <img alt="Peaches tattoo" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/jane-doe-no-3.jpg" width="220" />
+        <img alt="Peaches tattoo" src="/posts/true-crime/mapping-the-long-island-murder-victims/jane-doe-no-3.jpg" width="220" />
         <h3>Partial remains of Jane Doe No. 3, aka "Peaches", are found on June 28, 1997</h3>
         <p>Authorities released the information about her tattoo in hopes of identifying her, but there still is not an official match. Her torso was discovered in a green Rubbermaid container.</p>
       </div>
     </li>
     <li class="step" data-step="8">
       <div class="details">
-        <img alt="Valerie Mack sketch" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/valerie-mack.jpg" width="220" />
+        <img alt="Valerie Mack sketch" src="/posts/true-crime/mapping-the-long-island-murder-victims/valerie-mack.jpg" width="220" />
         <h3>Partial remains of Valerie Mack are found on November 19, 2000</h3>
         <p>Her torso was found, wrapped in garbage bags. In addition to her head and hands like the others, her right foot was removed, assumedly to hide a distinguishing mark.</p>
       </div>
     </li>
     <li class="step" data-step="9">
       <div class="details">
-        <img alt="Jessica Taylor" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/jessica-taylor.jpg" width="220" />
+        <img alt="Jessica Taylor" src="/posts/true-crime/mapping-the-long-island-murder-victims/jessica-taylor.jpg" width="220" />
         <h3>Partial remains of Jessica Taylor are found on July 26, 2003</h3>
         <p>She was on a plastic sheet, and the killer had removed her head, hands, and attempted to obscure a tattoo.</p>
       </div>
     </li>
     <li class="step right" data-step="10">
       <div class="details">
-        <img alt="Maureen Brainard-Barnes" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/maureen-brainard-barnes.jpg" width="220" />
+        <img alt="Maureen Brainard-Barnes" src="/posts/true-crime/mapping-the-long-island-murder-victims/maureen-brainard-barnes.jpg" width="220" />
         <h3>Maureen Brainard-Barnes is last seen by a friend on July 9, 2007</h3>
         <p>Her friend, Sara, left her at the Super 8 Midtown. Maureen said that she would stay until that Wednesday, July 11.</p>
       </div>
     </li>
     <li class="step right" data-step="11">
       <div class="details">
-        <img alt="Melissa Barthelemy" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/melissa-barthelemy.jpg" width="220" />
+        <img alt="Melissa Barthelemy" src="/posts/true-crime/mapping-the-long-island-murder-victims/melissa-barthelemy.jpg" width="220" />
         <h3>Melissa Barthelemy is last seen by neighbors on July 10, 2009</h3>
         <p>The last known sighting of Melissa was her on her porch, talking on her phone.</p>
       </div>
     </li>
     <li class="step" data-step="12">
       <div class="details">
-        <img alt="Shannan Gilbert" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/shannan-gilbert.jpg" width="220" />
+        <img alt="Shannan Gilbert" src="/posts/true-crime/mapping-the-long-island-murder-victims/shannan-gilbert.jpg" width="220" />
         <h3>Shannan Gilbert called 911 at 4:51 a.m. on May 1, 2010</h3>
         <p>She ran from a client's house and away from her driver, knocking on doors and calling 911. She went missing and searches for her led to many of the following events.</p>
       </div>
     </li>
     <li class="step" data-step="13">
       <div class="details">
-        <img alt="Megan Waterman" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/megan-waterman.jpg" width="220" />
+        <img alt="Megan Waterman" src="/posts/true-crime/mapping-the-long-island-murder-victims/megan-waterman.jpg" width="220" />
         <h3>Megan Waterman is last seen on hotel camera footage on June 6, 2010</h3>
         <p>She had been staying at a motel, placing ads on Craiglist, and was last seen walking towards a gas station.</p>
       </div>
     </li>
     <li class="step right" data-step="14">
       <div class="details">
-        <img alt="Amber Costello" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/amber-lynn-costello.jpg" width="220" />
+        <img alt="Amber Costello" src="/posts/true-crime/mapping-the-long-island-murder-victims/amber-lynn-costello.jpg" width="220" />
         <h3>Amber Costello was last seen on September 2, 2010</h3>
         <p>A friend, and roommate, walked her towards the car of a client, down the street from their home.</p>
       </div>
@@ -281,7 +281,7 @@ The following is a timeline of events, with their locations, intending to show h
     </li>
     <li class="step right" data-step="20">
       <div class="details">
-        <img alt="John Doe" src="/img/posts/true-crime/mapping-the-long-island-murder-victims/john-doe-asian-male.jpg" width="220" />
+        <img alt="John Doe" src="/posts/true-crime/mapping-the-long-island-murder-victims/john-doe-asian-male.jpg" width="220" />
         <h3>John Doe, aka "Asian Male", is discovered as part of the group on April 4, 2011</h3>
         <p>The only male victim in this group, he died of blunt-force trauma, and was wearing women's clothing.</p>
       </div>

@@ -21,7 +21,7 @@ I have an idea to add some flare to my posts, which will require something a lit
 
 Each item in the collection is going to get a custom "poster." I grabbed this [Miscreated Media](https://creativemarket.com/MockupCloud/4180470-Miscreated-Media-Mockup-Creator) set on Creative Market, and I'm going to piece together bits representing each post. The difference between my goal and what I've normally seen is that it will be a mix of custom markup and an image, where I usually see repeated markup and a custom image, or "thumbnail." To be sure I'm using as much markup as possible, I'll need the ability to customize elements, classes, etc., and not only ship images with text in them.
 
-<img alt="screenshot of posts with custom styles" class="full-to-half-bleed md:my-12" loading="lazy" src="/img/posts/front-end-dev/custom-collection-list-markup-in-eleventy/screenshot-custom.jpg">
+<img alt="screenshot of posts with custom styles" class="full-to-half-bleed md:my-12" loading="lazy" src="/posts/front-end-dev/custom-collection-list-markup-in-eleventy/screenshot-custom.jpg">
 
 ## Can it be done? And how?
 
@@ -68,7 +68,7 @@ tags:
 
 There are some thumb references in there that I will no longer be using as I'm changing up my approach. I'll clean that up as I go with each post, which brings me to an important point. **This will be an incremental update.** I'm building in the wild right now, and I'm not going to wait to do all of my posts before I ship this new feature. So, this is a great default condition. The basic styles that I'm setting come from Tailwind and some custom CSS, which currently look like this:
 
-<img alt="screenshot of posts with base styles" class="full-to-half-bleed md:my-12" loading="lazy" src="/img/posts/front-end-dev/custom-collection-list-markup-in-eleventy/screenshot-posts.png">
+<img alt="screenshot of posts with base styles" class="full-to-half-bleed md:my-12" loading="lazy" src="/posts/front-end-dev/custom-collection-list-markup-in-eleventy/screenshot-posts.png">
 
 ## Conditionally custom
 
@@ -105,7 +105,7 @@ For the loop itself, checking for the existence of the poster and using the safe
 
 Look at this beauty!
 
-<img alt="screenshot of posts with custom styles" class="full-to-half-bleed md:my-12" loading="lazy" src="/img/posts/front-end-dev/custom-collection-list-markup-in-eleventy/screenshot-custom-post.jpg">
+<img alt="screenshot of posts with custom styles" class="full-to-half-bleed md:my-12" loading="lazy" src="/posts/front-end-dev/custom-collection-list-markup-in-eleventy/screenshot-custom-post.jpg">
 
 ## That's a wrap
 

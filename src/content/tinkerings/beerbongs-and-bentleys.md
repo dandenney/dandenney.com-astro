@@ -591,7 +591,7 @@ tags:
   </span>
   <div class="bands">
     <div class="bands-info">
-      <img alt="photo of $1000 in 20s, aka a band" src="/img/tinkerings/beerbongs-and-bentleys/band-bw.png" width="400">
+      <img alt="photo of $1000 in 20s, aka a band" src="/tinkerings/beerbongs-and-bentleys/band-bw.png" width="400">
       <p>At Spotify's current rate, that's around <span class="u-fs-3 u-fw-b">246</span> bands</p>
     </div>
     <blockquote class="u-fw-b">
@@ -603,18 +603,18 @@ tags:
 
 </section>
 
-<img alt="Illustration of barbed wire" class="divider" src="/img/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
+<img alt="Illustration of barbed wire" class="divider" src="/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
 
 <h2 class="streams-title">Compared to surrounding weeks, the total streams of the Spotify Top 20 of the release week was millions higher.</h2>
 
 <section class="u-fx u-jc-c u-p-r">
-  <img alt="photo of Post Malone" class="streams-post" src="/img/tinkerings/beerbongs-and-bentleys/post-face.png" />
+  <img alt="photo of Post Malone" class="streams-post" src="/tinkerings/beerbongs-and-bentleys/post-face.png" />
   <svg class="viz-streams" width="1296" height="500" viewBox="0 0 1296 500"><g style="transform: translate(20px, 0px);"><g><rect x="59.225806451612925" y="63.62624319999999" height="396.3737568" width="353.03225806451616"></rect><rect x="451.48387096774195" y="38.20052520000001" height="421.7994748" width="353.03225806451616"></rect><rect x="843.741935483871" y="151.120028" height="308.879972" width="353.03225806451616"></rect></g><g><text x="235.741935483871" y="143.62624319999998" fill="darkgrey" class="streams-text" style="text-anchor: middle;">86.1M</text><text x="628" y="118.20052520000002" fill="darkgrey" class="streams-text" style="text-anchor: middle;">91.6M</text><text x="1020.258064516129" y="231.120028" fill="darkgrey" class="streams-text" style="text-anchor: middle;">67.1M</text></g><g fill="none" font-size="10" font-family="sans-serif" text-anchor="middle" style="transform: translateY(460px);"><path class="domain" stroke="currentColor" d="M20.5,0.5H1236.5"></path><g class="tick" opacity="1" transform="translate(235.741935483871,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">April 20, 2018</text></g><g class="tick" opacity="1" transform="translate(628,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">April 27, 2018</text></g><g class="tick" opacity="1" transform="translate(1020.258064516129,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">May 4, 2018</text></g></g></g></svg>
 </section>
 
 <blockquote class="u-fw-b blockquote-bougie">"You're bougie, baby, but I love you, baby"</blockquote>
 
-<img alt="Illustration of barbed wire" class="divider" src="/img/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
+<img alt="Illustration of barbed wire" class="divider" src="/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
 
 <h2 class="streams-title">All 18 tracks were in the top 30 songs played globally</h2>
 
@@ -624,7 +624,7 @@ tags:
 
 <blockquote class="u-fw-b u-ta-c">"Got no jumper but I ball a lot"</blockquote>
 
-<img alt="Illustration of barbed wire" class="divider" src="/img/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
+<img alt="Illustration of barbed wire" class="divider" src="/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
 
 <h2 class="counts-title">For 6 days, the tracks were half or more of the Top 20</h2>
 <p class="counts-description">It took <span class="counts-days"><span>54</span> days</span> for it to get back down to 1 track</p>
@@ -726,7 +726,7 @@ tags:
 
 <blockquote class="u-fw-b blockquote-bougie">"I'm here, but don't count on me to stay"</blockquote>
 
-<img alt="Illustration of barbed wire" class="divider" src="/img/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
+<img alt="Illustration of barbed wire" class="divider" src="/tinkerings/beerbongs-and-bentleys/barbed-wire.svg">
 
 <h2 class="streams-title tracks-title">Better Now was the runaway hit</h2>
 <p class="tracks-description">Most tracks had a short run in the top 20 but 3 went for weeks.</p>
