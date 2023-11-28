@@ -1,0 +1,20 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+	const blips = await getCollection('blips');
+	return blips.map((blip) => ({
+		params: { slug: blip.slug },
+		props: blip,
+	}));
+}
+type Props = CollectionEntry<'blips'>;
+
+const blip = Astro.props;
+const { Content } = await blip.render();
+---
+
+<BlogPost {...blip.data}>
+	<Content />
+</BlogPost>
