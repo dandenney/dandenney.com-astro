@@ -10,4 +10,4 @@ I came across this fun idea today, [Kolormark](https://kolormark.com), where the
 
 Of course, I had to have one, so `#b51f24` is now officially "Front-end Conf". [Proof](https://kolormark.com/b51f24)
 
-![Screenshot of the Kolormark certificate](/img/blips/kolormark/kolormark.png)
+![Screenshot of the Kolormark certificate](/blips/kolormark/kolormark.png)

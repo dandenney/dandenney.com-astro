@@ -13,7 +13,7 @@ I based my initial setup on [Notion API with 11ty](https://www.constantvallee.de
 
 However, neither really touched on outputting the data. The API return is verbose. (Fancy word usage to up my Grammarly score). This example is super specific to my needs, but here's an example of trimming the request for attributes from a simple Notion database.
 
-![Screenshot of the a Notion database](/img/blips/outputting-notion-api-data-in-eleventy/screenshot-of-notion-library-database.png)
+![Screenshot of the a Notion database](/blips/outputting-notion-api-data-in-eleventy/screenshot-of-notion-library-database.png)
 
 Your specific data will vary, but I imagine either using something like Postman or outputting the full return in the browser may be more straightforward than console logging like I did.
 

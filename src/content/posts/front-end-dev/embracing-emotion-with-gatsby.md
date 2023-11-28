@@ -26,7 +26,7 @@ While the title is about the CSS-in-JS package named [Emotion](https://emotion.s
 
 I mean free both literally and figuratively. Storing the source code for my site costs zero money, as does hosting it on the [Netlify](https://www.netlify.com) servers that you're reading this from right now. I'd pay for both in an instant, but the free plans cover my needs. More importantly, we get so much work for "free". I've done my fair share of complaining about the complexity of tooling in modern front-end development, but by skimming a few `README` files and typing a few `npm` commands, we get to use the most advanced versions of JavaScript, minification, tree-shaking, image-optimization, lazy-loading, pre-loading of assets, etc. A screenshot is worth a thousand made-up tech words, so we get to run audits for mobile devices with throttled 3g that blow straight 100s, for free. (I skipped the PWA part because I haven't enabled that yet).
 
-![Screenshot of a Lighthouse audit with top scores](/img/posts/front-end-dev/embracing-emotion-with-gatsby/screenshot-lighthouse.png)
+![Screenshot of a Lighthouse audit with top scores](/posts/front-end-dev/embracing-emotion-with-gatsby/screenshot-lighthouse.png)
 
 ## Getting Emotion-al
 
@@ -40,11 +40,11 @@ As one of only a handful of front-end engineers in an engineering team of ~30, I
 
 Once you get past the weirdness of creating elements as "components" that you only write CSS in, things get awkward. I feel like the Ricky Bobby of front-end dev.
 
-![Meme photo of Ricky Bobby with "I have no idea what to do with my CSS selectors"](/img/posts/front-end-dev/embracing-emotion-with-gatsby/no-idea-css.jpg)
+![Meme photo of Ricky Bobby with "I have no idea what to do with my CSS selectors"](/posts/front-end-dev/embracing-emotion-with-gatsby/no-idea-css.jpg)
 
 I'll use a basic card layout as an example to show the organization options, including hovers and media queries. (Yeah, we could do a lot of that with some responsive typography solutions and Grid, but there would still have to be some CSS.)
 
-![Screenshots of a mobile and tablet layout of the songs example](/img/posts/front-end-dev/embracing-emotion-with-gatsby/songs-screenshots.png)
+![Screenshots of a mobile and tablet layout of the songs example](/posts/front-end-dev/embracing-emotion-with-gatsby/songs-screenshots.png)
 
 [All 3 examples are in a Gatsby Starter if you want to play](https://github.com/dandenney/example-gatsby-emotion).
 

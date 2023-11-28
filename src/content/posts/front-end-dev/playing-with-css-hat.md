@@ -19,7 +19,7 @@ A while ago I had this little dream that every day I would code out a psd resour
 
 #### Original Image
 
-![Day 155 nav from 365psd](/img/posts/front-end-dev/playing-with-css-hat/day155.png)
+![Day 155 nav from 365psd](/posts/front-end-dev/playing-with-css-hat/day155.png)
 
 #### Original Conversion
 
@@ -66,7 +66,7 @@ I wanted to try something without blending modes to see how it works out. It get
 
 #### Original Image
 
-![200 Days of Awesomeness #4](/img/posts/front-end-dev/playing-with-css-hat/200days-4.png)
+![200 Days of Awesomeness #4](/posts/front-end-dev/playing-with-css-hat/200days-4.png)
 
 #### CSS Hat Styles
 

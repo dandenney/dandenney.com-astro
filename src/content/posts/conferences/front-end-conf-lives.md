@@ -14,7 +14,7 @@ thumbAlt: "A mesmerizing digital art piece depicting a lush, verdant garden comi
 title: "Front-End Conf Lives!"
 ---
 
-![](/img/posts/conferences/front-end-conf-lives/plan-comes-together.jpg)
+![](/posts/conferences/front-end-conf-lives/plan-comes-together.jpg)
 
 The decision to stop running Front-End Conf was a very tough one and the reaction of the people both in St. Petersburg and Portland made it even more hard. Luckily, I knew it was going to be tough and I decided to call out a few of my friends. The awesome crew from [Unmatched Style](http://unmatchedstyle.com/), who run [ConvergeSE](http://convergese.com/), [ConvergeFL](http://convergefl.com/), [ConvergeRVA](http://convergerva.com/), and the [Breaking Development confs](https://bdconf.com/) (amongst other things) came up on stage to give me a gift. I returned the favor by calling them out on the possibility of running a conf in St. Pete because that's the kind of thing friends can get away with. We've been chatting since and they're officially taking over!
 

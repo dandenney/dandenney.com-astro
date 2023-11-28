@@ -57,7 +57,7 @@ Importing that to Firebase, I get a structure that looks like this. (The recentF
 
 <figure>
 
-![](/img/posts/front-end-dev/experiment-personal-json-api/screenshot-json.png)
+![](/posts/front-end-dev/experiment-personal-json-api/screenshot-json.png)
 
 </figure>
 
@@ -143,7 +143,7 @@ Testing this out with a few entries shows that the data is being saved to my JSO
 
 <figure>
 
-![](/img/posts/front-end-dev/experiment-personal-json-api/screenshot-recentfinds.png)
+![](/posts/front-end-dev/experiment-personal-json-api/screenshot-recentfinds.png)
 
 </figure>
 
@@ -176,7 +176,7 @@ So here's a GIF of it in action. Pardon the fact that it's hideous, this was qui
 
 <figure>
 
-![](/img/posts/front-end-dev/experiment-personal-json-api/by-golly-it-works.gif)
+![](/posts/front-end-dev/experiment-personal-json-api/by-golly-it-works.gif)
 
 </figure>
 

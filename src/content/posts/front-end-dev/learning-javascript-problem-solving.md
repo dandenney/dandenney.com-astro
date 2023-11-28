@@ -15,7 +15,7 @@ tags:
   - front-end-dev
 ---
 
-![](/img/posts/front-end-dev/learning-javascript-problem-solving/crash-js.svg)
+![](/posts/front-end-dev/learning-javascript-problem-solving/crash-js.svg)
 
 <div class="row ov">
 
@@ -33,7 +33,7 @@ In thinking about miles instead, this seemed like the perfect small thing to wor
 
 My thinking was that if I add the 2 speeds together, they are a "cycle". Then it would be a matter of dividing the total number by the number of cycles. To make sure it would work, I created a spreadsheet to test it. (Not while I was in the car)
 
-![](/img/posts/front-end-dev/learning-javascript-problem-solving/spreadsheet.png)
+![](/posts/front-end-dev/learning-javascript-problem-solving/spreadsheet.png)
 
 ## "How do I code this?"
 

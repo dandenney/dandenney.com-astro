@@ -22,7 +22,7 @@ What I've been missing was the right motivation. Of course being better at it wi
 
 Progressive web apps are so hot right now. I was curious, so I dove into some posts and [Jake Archibald's talk](https://www.youtube.com/watch?v=cmGr0RszHc8). I love the ideas behind them and want to take a crack at building one. Somewhere in the mix I ended up on [Udacity's Senior Web Developer Nanodgree](https://www.udacity.com/course/senior-web-developer-nanodegree--nd802#) and something clicked! They packaged up the motivation that I needed: a clear flow of tasks and interesting projects to build using technologies that I want to learn. Not sure if there's much motivation for me behind the actual nanodegree, but it's a perk. The final selling point was that it's a bit pricey and there's a reward for finishing early. Spending the money will be an extra kick in the ass to make progress.
 
-![](/img/posts/front-end-dev/pursuing-a-nanodegree/syllabus.png)
+![](/posts/front-end-dev/pursuing-a-nanodegree/syllabus.png)
 
 ## Ulterior Motive
 
@@ -37,7 +37,7 @@ So, I'll be sharing my experience as I go. This will be a series of posts as I t
 
 The onboarding flow was really well done. The folks at [Focus Lab](http://focuslabllc.com/) recently overhauled Udacity and they did an awesome job. The intro video was very human and there were a series of videos and modals explaining the benefits of the process as well as what you'll be learning.
 
-![](/img/posts/front-end-dev/pursuing-a-nanodegree/video.png)
+![](/posts/front-end-dev/pursuing-a-nanodegree/video.png)
 
 I took some quick notes along the way:
 
@@ -56,11 +56,11 @@ My take at the end of the introductory session: I’m loving this, the videos ar
 
 The goal of this will be to create a small app that allows somoene to create an event, using some cool tech. This was super interesting to me since I do so many events and because I can see how the functionality can be used in many other ways. Since it's form-based, you start off learning about best practices for building forms. Cameron Pittman and Ido Green lead the way, with visits from the guy who literally wrote the [book on forms](http://www.lukew.com/resources/web_form_design.asp), Luke Wroblewski.
 
-![](/img/posts/front-end-dev/pursuing-a-nanodegree/cameron-ido.jpg)
+![](/posts/front-end-dev/pursuing-a-nanodegree/cameron-ido.jpg)
 
 The challenges are integrated well within the video space: you watch a bit, then answer a question or do a little bit of code in that same space. I was pretty used to this and it works well, but they took it to another level. The initial project is doing form validation with `setCustomValidity` and they built a Chrome extension that runs tests on your code. Here's my first run:
 
-![](/img/posts/front-end-dev/pursuing-a-nanodegree/extension.png)
+![](/posts/front-end-dev/pursuing-a-nanodegree/extension.png)
 
 Again, I took some notes along the way:
 
@@ -83,4 +83,4 @@ Again, I took some notes along the way:
 
 That's it for the first section. I'm hooked now and this felt so good:
 
-![](/img/posts/front-end-dev/pursuing-a-nanodegree/success-form.png)
+![](/posts/front-end-dev/pursuing-a-nanodegree/success-form.png)

@@ -28,9 +28,9 @@ Before I share this next bit, I want to be sure to say that as long as we are ru
 
 ## Thank you Github and MailChimp
 
-![Front-End Conftocat](/img/posts/conferences/front-end-conf-13/front-end-conftocat.png)
+![Front-End Conftocat](/posts/conferences/front-end-conf-13/front-end-conftocat.png)
 
-![Freddie](/img/posts/conferences/front-end-conf-13/freddie-wink.png)
+![Freddie](/posts/conferences/front-end-conf-13/freddie-wink.png)
 
 All of the sponsors help make the day rock, but we'd like to give an extra thank you to [Github](http://github.com) and [MailChimp](http://mailchimp.com) for the extra support to make things like the after party and the full bacon bar happen!
 

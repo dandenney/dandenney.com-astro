@@ -11,8 +11,8 @@ My fave data viz group made something rad for reviewing your Spotify history and
 ## Before
 
 **Some of my results**
-![Screenshot of text](/img/blips/how-bad-is-your-spotify/screenshot-01.png)
-![Screenshot of text](/img/blips/how-bad-is-your-spotify/screenshot-02.png)
-![Screenshot of text](/img/blips/how-bad-is-your-spotify/screenshot-03.png)
-![Screenshot of text](/img/blips/how-bad-is-your-spotify/screenshot-04.png)
-![Screenshot of text](/img/blips/how-bad-is-your-spotify/screenshot-05.png)
+![Screenshot of text](/blips/how-bad-is-your-spotify/screenshot-01.png)
+![Screenshot of text](/blips/how-bad-is-your-spotify/screenshot-02.png)
+![Screenshot of text](/blips/how-bad-is-your-spotify/screenshot-03.png)
+![Screenshot of text](/blips/how-bad-is-your-spotify/screenshot-04.png)
+![Screenshot of text](/blips/how-bad-is-your-spotify/screenshot-05.png)

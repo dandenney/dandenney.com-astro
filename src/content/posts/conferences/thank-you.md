@@ -17,9 +17,9 @@ tags:
  .post-header h1 { font-size: clamp(2rem, 2rem + 6vw, 8rem); }
 </style>
 
-![](/img/posts/conferences/thank-you/thank-you.svg)
+![](/posts/conferences/thank-you/thank-you.svg)
 
-![](/img/posts/conferences/thank-you/matt-graham.jpg)
+![](/posts/conferences/thank-you/matt-graham.jpg)
 
 So last Friday on the morning of Front-End Conf Portland, I had run downstairs to get coffee. As I'm known to do, I checked Twitter while waiting my turn and saw this tweet.
 
@@ -41,4 +41,4 @@ Thank you so very, very much to everyone. You made our year! Extra thank yous go
 
 Speaking of the shirt, it feels weird promoting it because we are benefitting from it but they are only available for a limited run. If you want one, there's [6 days left](https://cottonbureau.com/products/to-dan-and-cherrie) to grab it. I can't wait to rock one.
 
-![](/img/posts/conferences/thank-you/give-back-shirt.jpg)
+![](/posts/conferences/thank-you/give-back-shirt.jpg)

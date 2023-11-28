@@ -16,7 +16,7 @@ tags:
 
 Ok, we will sleep. [Carl Smith](http://twitter.com/carlsmith) made it clear how important sleep is during his awesome talk in St. Pete. It's more like "Portland or Bust", but [Nathan Yoder](http://twitter.com/nathanyoder) just claimed that recently as he moved there.
 
-![](/img/posts/conferences/no-sleep-til-portland/portland-or-bust.png)
+![](/posts/conferences/no-sleep-til-portland/portland-or-bust.png)
 
 ## Can we promote a conf in 5 weeks?
 
@@ -32,4 +32,4 @@ I'm usually like Joe Pesci in My Cousin Vinny, trying to do everything I can wit
 
 Of course, I'd like to sweeten the deal a little bit. If you share some reason to attend and use the #frontendconfpdx hashtag, I'll do a random draw to win a gift. (I'll draw this Saturday, July 21) I [backed The Great Discontent](https://www.kickstarter.com/projects/essmaker/the-great-discontent-magazine-issue-1), so I have an unopened set with a magazine, tote bag, and poster. The URL: [frontendconf.com](http://frontendconf.com)
 
-![photo of The Great Discontent package](/img/posts/conferences/no-sleep-til-portland/tgd.jpg)
+![photo of The Great Discontent package](/posts/conferences/no-sleep-til-portland/tgd.jpg)

@@ -3,11 +3,10 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, strapiSeries, thumb, thumbAlt } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,30 +16,56 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<!-- {% if codeHighlighting %}
-				<style>
-					{% include "prism.css" %}
-				</style>
-			{% endif %}
-
-			{% include "header.njk" %} -->
-
 			<article>
-				<header class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0">
+				<header class="longform max-w-2xl mx-auto px-8 lg:px-0">
 					<h1 class="full-to-half-bleed max-w-2xl px-8 py-8 text-4xl font-black tracking-tight text-gray-900 sm:text-6xl lg:px-0 lg:col-span-2 lg:text-8xl xl:col-auto">
 						{title}
 					</h1>
-					<!-- {% if thumb %}
-						<img alt="{{ thumbAlt }}" class="block full-to-half-bleed" height="592" src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/{{ thumb }}" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/{{ thumb }} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/{{ thumb }} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/{{ thumb }} 672w," width="1008">
-					{% endif %} -->
+					{thumb && (
+						<img 
+							alt={thumbAlt} 
+							class="block full-to-half-bleed" 
+							height="592" 
+							src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${thumb}`} srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${thumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${thumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${thumb} 672w,`} 
+							width="1008">
+					)}
 				</header>
 
 				<div class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0">
+					
 					<slot />
 
-					<!-- {% if strapiSeries %}
-						{% include "src/_includes/strapi-series-toc.njk" %}
-					{% endif %} -->
+					{strapiSeries && (
+						<h2>Series Posts</h2>
+
+						<style>
+							.strapi-series-toc {
+								display: flex;
+								flex-direction: column;
+								align-items: flex-start;
+								padding-bottom: 3rem;
+							}
+
+							.strapi-series-toc a {    
+								margin-top: 0.5rem;
+							}
+						</style>
+
+						<nav class="has-links strapi-series-toc">
+							<a href="/posts/front-end-dev/strapi-series-part-1-project-outline">Part 1: Project Outline</a>
+							<a href="/posts/front-end-dev/strapi-series-part-2-architectural-decisions">Part 2: Architectural Decisions</a>
+							<a href="/posts/front-end-dev/strapi-series-part-3-repo-setup">Part 3: Repo Setup</a>
+							<a href="/posts/front-end-dev/strapi-series-part-4-a-fake-company">Part 4: A Fake Company</a>
+							<a href="/posts/front-end-dev/strapi-series-part-5-coming-soon-component">Part 5: A Coming Soon Component</a>
+							<a href="/posts/front-end-dev/strapi-series-part-6-coming-soon-qa">Part 6: Coming Soon QA</a>
+							<a href="/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode">Part 7: Light and Dark Mode</a>
+							<a href="/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors">Part 8: Font Sizes and Colors</a>
+							<a href="/posts/front-end-dev/strapi-series-part-9-thinking-in-data">Part 9: Thinking in Data</a>
+							<a href="/posts/front-end-dev/strapi-series-part-10-links-data-and-requests">Part 10: Links Data and Requests</a>
+							<a href="/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/">Part 11: Header and Footer Links</a>
+						</nav>
+					)}
+
 				</div>
 			</article>
 		</main>

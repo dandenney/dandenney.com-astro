@@ -18,7 +18,7 @@ title: Fun With Responsive Email Banners
 
 We're working on a series of Orientation emails for people who are new to Code School. Since they are all focused on sharing information about features, we want to make them distinctive. [Drew](http://twitter.com/drewbarontini) and [Justin](http://twitter.com/justinmezzell) had a hilarious "over the shoulder via Hipchat" art direction session to come up with this. Needless to say, I love it.
 
-![code school orientation](/img/posts/front-end-dev/fun-with-responsive-email-banners/banner--orientation.png)
+![code school orientation](/posts/front-end-dev/fun-with-responsive-email-banners/banner--orientation.png)
 
 ## Heavy Breathing
 
@@ -32,15 +32,15 @@ A pack of Welch's fruit snacks calmed me down and I dove into solving this.
 
 Most importantly, we don't want a harsh cut off. We want those stripes at the top to run to the edges of the client and to look like it's a layered stack of elements. Scaling is the enemy here, as the height of those will change.
 
-![screenshot of header lines](/img/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--header.png)
+![screenshot of header lines](/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--header.png)
 
 In modern browsers, this is easily achieved with a background image and background-size. You could be extra cool and even do a CSS gradient. Email clients laugh in the face of web standards, though. Background images aren't even fully supported.
 
-![screenshot of background support](/img/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--background-support.png)
+![screenshot of background support](/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--background-support.png)
 
 The next problem is the ribbon overlapping two of the stripes. Negative margins, fixed positions, etc. are like Bigfoot to email client builders. Some people swear they exist and even have footage of them in the wild. Then there are the skeptics.
 
-![screenshot of position support](/img/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--position-support.png)
+![screenshot of position support](/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--position-support.png)
 
 ## CSS like it's '99
 
@@ -54,17 +54,17 @@ The first row is going to be a solid background color. We'll use a media query t
 
 The second row is going to have a solid background color. It will have a nested table for an image with just the top of the ribbon. The nested table will be a max width of 600px. The sliced image top will be as wide as the main image, so that it will scale the same and control the height of the row.
 
-![sliced ribbon top](/img/posts/front-end-dev/fun-with-responsive-email-banners/banner--orientation-top.png)
+![sliced ribbon top](/posts/front-end-dev/fun-with-responsive-email-banners/banner--orientation-top.png)
 
 The third row will have a solid background color. It will have a nested table with the rest of the image. Like the previous one, it will have a max width of 600px and height will be determined by image scaling.
 
-![sliced ribbon and banner](/img/posts/front-end-dev/fun-with-responsive-email-banners/banner--orientation-bottom.png)
+![sliced ribbon and banner](/posts/front-end-dev/fun-with-responsive-email-banners/banner--orientation-bottom.png)
 
 ## Boom
 
 Here's a screenshot of the responsive table version and the original image.
 
-![screenshot of both](/img/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--both.png)
+![screenshot of both](/posts/front-end-dev/fun-with-responsive-email-banners/screenshot--both.png)
 
 ## The Code
 

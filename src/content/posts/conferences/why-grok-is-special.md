@@ -16,7 +16,7 @@ tags:
 
 <figure>
 
-![Grok intro](/img/posts/conferences/why-grok-is-special/grok-01.jpg)
+![Grok intro](/posts/conferences/why-grok-is-special/grok-01.jpg)
 
 <figcaption>Eric, kicking off the first day</figcaption>
 
@@ -34,7 +34,7 @@ First things first, it's the people who made it happen. A collection of hard-wor
 
 <figure>
 
-![Grok intro](/img/posts/conferences/why-grok-is-special/grok-02.jpg)
+![Grok intro](/posts/conferences/why-grok-is-special/grok-02.jpg)
 
 <figcaption>Pour over coffee option</figcaption>
 
@@ -50,7 +50,7 @@ This format made it so that people were introduced to dozens of new people and g
 
 <figure>
 
-![Grok intro](/img/posts/conferences/why-grok-is-special/grok-05.jpg)
+![Grok intro](/posts/conferences/why-grok-is-special/grok-05.jpg)
 
 <figcaption>Creative way to display sponsors</figcaption>
 
@@ -60,7 +60,7 @@ Along with this, all of the standard things were handled very well. The apprecia
 
 <figure>
 
-![Grok intro](/img/posts/conferences/why-grok-is-special/grok-04.jpg)
+![Grok intro](/posts/conferences/why-grok-is-special/grok-04.jpg)
 
 <figcaption>Giovanni finished me off with 2 darts</figcaption>
 
@@ -68,7 +68,7 @@ Along with this, all of the standard things were handled very well. The apprecia
 
 <figure class="mtl">
 
-![Grok intro](/img/posts/conferences/why-grok-is-special/grok-06.jpg)
+![Grok intro](/posts/conferences/why-grok-is-special/grok-06.jpg)
 
 <figcaption>Thank you, Facebook</figcaption>
 

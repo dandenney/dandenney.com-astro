@@ -12,7 +12,9 @@ summary: "Leaving Code School and Pluralsight"
 date: "2017-07-02"
 tags:
   - general
----![](/img/posts/general/turning-the-page/in-memoriam.jpg)
+---
+
+![](/posts/general/turning-the-page/in-memoriam.jpg)
 
 I use a :tombstone: in Slack and say RIP a lot, so this was my going away message :)
 
@@ -22,7 +24,7 @@ Throughout those years, I have learned so much about building the web, growing a
 
 There's no way that I could write this without a specific "Thank You" to [Gregg Pollack](https://twitter.com/greggpollack) for creating things that have had a hugely positive impact on all the people that I've worked with and millions around the world. Gregg is one of the kindest and most generous people that I have ever met, and my whole family has benefitted from the companies that he created.
 
-![](/img/posts/general/turning-the-page/comfort-wants-you-dead.jpg)
+![](/posts/general/turning-the-page/comfort-wants-you-dead.jpg)
 
 ## "Comfort Wants You Dead"
 

@@ -9,6 +9,10 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('posts')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 ).slice(0, 6);
+
+const blips = (await getCollection('blips')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+).slice(0, 5);
 ---
 
 <!doctype html>
@@ -16,11 +20,11 @@ const posts = (await getCollection('posts')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
+	<body class="bg-white dark:bg-slate-900">
+		<main class="bg-white relative shadow  z-10 dark:bg-slate-900 dark:text-slate-200">
 			<section class="dark:bg-slate-900">
 				<div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 dark:from-slate-400/20 ">
+					<Header title={SITE_TITLE} />
 					<div class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96 dark:bg-slate-900 dark:shadow-slate-600/10 dark:ring-slate-800" aria-hidden="true"></div>
 					<div class="mx-auto max-w-7xl px-6 py-8 lg:px-8 lg:py-32">
 						<div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
@@ -42,10 +46,8 @@ const posts = (await getCollection('posts')).sort(
 						<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">Recent Blog Posts</h2>
 						<p class="mt-2 text-lg leading-8 text-gray-600 dark:text-slate-100">They're mostly around front-end dev and web conferences, with some occasional life things sprinkled in.</p>
 					</div>
-					<div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-						
-						{
-							posts.map((post) => (
+					<div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">		
+						{posts.map((post) => (
 							<article class="relative isolate flex flex-col justify-end overflow-hidden rounded bg-gray-900 px-8 pb-8 pt-40 transition-transform sm:pt-24 lg:pt-40 hover:scale-105">
 								<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/${ post.data.thumb}`} alt={post.data.thumbAlt} class="absolute inset-0 -z-10 h-full w-full object-cover">
 								<div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
@@ -58,14 +60,45 @@ const posts = (await getCollection('posts')).sort(
 								</h3>
 							</article>
 							))
-					}
-
+						}
 					</div>
 					<div class="mt-16 flex justify-center">
 						<a href="/posts" class="btn-link">View All Blog Posts</a>
 					</div>
 				</div>
 			</section>
+
+			<section class="py-32">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<div class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
+						<div class="w-full lg:max-w-lg lg:flex-auto">
+							<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">Most Recent Blips</h2>
+							<p class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100">Shorter than a blog post, longer than a tweet. This is where I share quick reactions or stash things I want to remember.</p>
+							<img src="/blip-too.jpg" alt="" class="mt-8 w-full rounded-2xl bg-gray-50 object-cover ">
+						</div>
+						<div class="w-full lg:max-w-xl lg:flex-auto">
+							<h3 class="sr-only">Job openings</h3>
+							<ul class="has-links -my-8 divide-y divide-gray-100 dark:divide-slate-600">
+								{
+									blips.map((blip) => (
+										<li class="py-8">
+											<a class="text-base leading-7" href={`/blips/${blip.slug}/`}>
+												{blip.data.title}
+											</a>
+											<p class="text-sm dark:text-slate-300">{blip.data.summary}</p>
+										</li>
+									))
+								}
+							</ul>
+							<div class="mt-8 flex border-t border-gray-100 pt-8 dark:border-slate-600">
+								<a href="/blips" class="btn-link">View All Blips</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
 		</main>
 		<Footer />
 	</body>

@@ -15,7 +15,7 @@ tags:
   - general
 ---
 
-![](/img/posts/general/give-back/give-back.jpg)  
+![](/posts/general/give-back/give-back.jpg)  
 <small>Two of my favorite people [Carl Smith](https://twitter.com/carlsmith) and [Andi Graham](https://twitter.com/andigrahambsd), who are always giving back to the community.</small>
 
 Some wonderful got together and made us an [awesome site](http://frontendthanks.com) and printed off t-shirts. Thank you again to everyone involved and specifically to [Matt Graham](https://twitter.com/michigangraham) and [Ben Callahan](https://twitter.com/bencallahan) for heading things up. They also donated the proceeds from Cotton Bureau to us. Needless to say, we never planned on pocketing that.

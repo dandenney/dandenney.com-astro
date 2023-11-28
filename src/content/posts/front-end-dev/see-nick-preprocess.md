@@ -15,7 +15,7 @@ tags:
 
 You can save the time of reading this and just [get started learning Sass](http://www.codeschool.com/courses/assembling-sass) from Nick on Code School if you like.
 
-![Nick Walsh](/img/posts/front-end-dev/see-nick-preprocess/nick-walsh.png)
+![Nick Walsh](/posts/front-end-dev/see-nick-preprocess/nick-walsh.png)
 
 ## We launched Assembling Sass today at Code School.
 

@@ -7,7 +7,7 @@ tags:
   - front-end-dev
 ---
 
-![](/img/posts/front-end-dev/going-live-with-number-five/stage.png)
+![](/posts/front-end-dev/going-live-with-number-five/stage.png)
 
 ## A Month (or so) Late
 

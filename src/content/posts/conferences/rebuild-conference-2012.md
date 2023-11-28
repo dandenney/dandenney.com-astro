@@ -13,7 +13,7 @@ I was recently lucky enough to tag along with [Jason VanLue](http://twitter.com/
 
 Prior to heading up, I really didn't know much about Indianapolis or the web community in the area. The city is absolutely charming and the people are warm and friendly. The architecture is gorgeous, there is a bustling downtown and they have a penchant for craft beer (which is near and dear to my heart and belly).
 
-![](/img/posts/conferences/rebuild-conference-2012/slogan.jpg)
+![](/posts/conferences/rebuild-conference-2012/slogan.jpg)
 
 Before leaving, Jason and I roamed around downtown for a bit and I took this pic from a monument. I knew I'd be writing up my thoughts on the conf and that the words etched into stone here seem to be amongst the Indy core values and are definitely a part of re:build.
 
@@ -29,7 +29,7 @@ I attend (and Twitter stalk) many conferences. A popular 'problem' is that peopl
 
 Getting a couple hundred people checked in can be tricky but having registration available at the pre-party helped reduce the crowd in the morning. They also had a big room filled with coffee, snacks and tall tables for people to eat and converse around. Thank you very much to [Harvest](http://getharvest.com) for sponsoring the goodies.
 
-![Harvest Sponsored Area](/img/posts/conferences/rebuild-conference-2012/harvest-room.jpg)
+![Harvest Sponsored Area](/posts/conferences/rebuild-conference-2012/harvest-room.jpg)
 
 ## The Location
 
@@ -49,7 +49,7 @@ The after-party was back at The Speakeasy and started right after the event, whi
 
 Part of The Speakeasy building is a place called Developer Town, which I had to take a pic of for you to believe. It is a big space where developers rent out little sheds inside to work in.
 
-![Developer Town](/img/posts/conferences/rebuild-conference-2012/developer-town.jpg)
+![Developer Town](/posts/conferences/rebuild-conference-2012/developer-town.jpg)
 
 ## The Presentations
 
@@ -61,55 +61,55 @@ You can check out their full bios, plus Twitter and website links on the [re:bui
 
 ### Zach Holman
 
-![Zach Holman at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-zach-holman.jpg)
+![Zach Holman at re:build](/posts/conferences/rebuild-conference-2012/speaker-zach-holman.jpg)
 
 Zach hails from [Github](http://github.com) and he shared many of the things that go into putting together a great team of creatives. He gave examples of how to create a culture that you want and how to deal with the "internet dicks" that spring up as you release things. You can check out the slides and audio already on [Speaker Deck.](https://speakerdeck.com/u/holman/p/the-product-is-the-byproduct) My favorite piece was that you want fixers on your team, so hire those that are "bothered by suck".
 
 ### David Kadavy
 
-![David Kadavy at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-david-kadavy.jpg)
+![David Kadavy at re:build](/posts/conferences/rebuild-conference-2012/speaker-david-kadavy.jpg)
 
 David is the author of <a href="">Design for Developers</a> and his talk focused on an intro to some UX principles, namely use cases and user personas. He used some good examples of the difference in experiences between Craigslist vs. Airbnb, typical weather app experiences vs. the Dark Cloud app and typical online clothiers vs. Gilt. He also gave a quick sample of applying some possible user personas to how the Twitter iPad app was designed. He had a relaxed, conversational style and is quite funny off the stage.
 
 ### Jason VanLue
 
-![Jason VanLue at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-jason-vanlue.jpg)
+![Jason VanLue at re:build](/posts/conferences/rebuild-conference-2012/speaker-jason-vanlue.jpg)
 
 I hadn't heard of this guy before so I was curious what he'd bring to the table. I kid, I kid. I work with Jason at [Envy Labs,](http://envylabs.com) where he is the Hovering Director of Art. Jason is a great speaker and I really enjoy his take on design as a way to solve problems. There are lots of great takeaways throughout his talk, but the main theme is that screens could be as life changing as the automobile was for humankind. We should be focusing on problems that we want to solve for people and on designing for the other side of the screen. The history in his talk is fantastic and it is great to get so much inspiration from people outside of our industry.
 
 ### Willo O'Brien
 
-![Willo O'Brien at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-willo-obrien.jpg)
+![Willo O'Brien at re:build](/posts/conferences/rebuild-conference-2012/speaker-willo-obrien.jpg)
 
 Willo has a great story of how she has gone from creating clothing to co-founding and consulting for startups for creatives. Her presentation was primarily about figuring out "how you work best". She highly recommends making time for serendipity and to manage energy, not time. For her, this has been a matter of taking breaks that she calls art dates and establishing personal relationships with the people that she works with. A few resources that she recommends are: [Book: Strengths Finder,](http://www.amazon.com/StrengthsFinder-2-0-Tom-Rath/dp/159562015X) [Me Values Exercise](https://s3.amazonaws.com/skillshare/assets/hybrid/project-briefs/MEValuesExercise.pdf) and the [Super Better App.](https://www.superbetter.com/)
 
 ### Patrick Filler
 
-![Patrick Filler at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-patrick-filler.jpg)
+![Patrick Filler at re:build](/posts/conferences/rebuild-conference-2012/speaker-patrick-filler.jpg)
 
 Patrick is a front-end dev at [Harvest,](http://www.getharvest.com) where he was part of the development of the [Chosen JavaScript Plugin.](http://harvesthq.github.com/chosen) He shared how they had originally made it for Harvest in order to improve their forms and the decision to open source it. The best part of open sourcing projects is that anyone can do it. There are no connections necessary, it is a meritocracy. Put yourself out there and release some things that you're working on or volunteer your skills to help out projects that you're interested in!
 
 ### David Sleight
 
-![David Sleight at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-david-sleight.jpg)
+![David Sleight at re:build](/posts/conferences/rebuild-conference-2012/speaker-david-sleight.jpg)
 
 David is the product lead at [Readability](http://readability.com) and he shared how publishing has been evolving via technology. Basically, there is a bigger demand for content in the world than in any time in history. The audience is huge, but diffuse. He shared that the keys items that differentiate good resources are APIs, content planning and flexible design. Also, he shared how natural language processing is impacting the future of content. Here are some recommended reads from his presentation: [Orbital Content,](http://www.alistapart.com/articles/orbital-content) [Contents Magazine,](http://contentsmagazine.com) [Quartz,](http://qz.com) [The Evening Edition,](http://evening-edition.com) [The Silent History,](http://www.thesilenthistory.com) and [The Atavist.](https://www.atavist.com/stories)
 
 ### Jenn Lukas
 
-![Jenn Lukas at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-jenn-lukas.jpg)
+![Jenn Lukas at re:build](/posts/conferences/rebuild-conference-2012/speaker-jenn-lukas.jpg)
 
 Jenn is a front-end dev at Happy Cog and I was especially looking forward to seeing her present. (I hope to see her speak at this cool event in Florida sometime.) She shared many ways to surprise and delight your users with hover-based interactions. She shared many great examples of hovers in action and then followed that up with how to use the dev tools to learn how they were achieved. Each example also came with code samples so her slides will be really helpful. One quote that I can't leave out is "Color fade is the smooth jazz of hovers". She shared a cool way of animating height by using max-height: 0 and encouraged everyone to check out [backface-visibility.](http://css-tricks.com/almanac/properties/b/backface-visibility) Her excitement for these things was infectious and there were lots of cats!
 
 ### Mark Otto
 
-![Mark Otto at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-mark-otto.jpg)
+![Mark Otto at re:build](/posts/conferences/rebuild-conference-2012/speaker-mark-otto.jpg)
 
 Mark is one of the creators of [Bootstrap](http://twitter.github.com/bootstrap) and has recently left Twitter and joined Github. He shared how important it is to design how stuff works and the 5 principles behind creating Bootstrap. They were: treat the docs like they're the product, say no all the time, educate by enforcing coding styles, help folks avoid writing JavaScript and reach every person on the planet. Everything is a design system and theirs consisted of base classes, prefix modifiers, formatting, property order and compiling. Going forward, his main goal is to help awesome poeple do awesome stuff.
 
 ### Dave Shea
 
-![Dave Shea at re:build](/img/posts/conferences/rebuild-conference-2012/speaker-dave-shea.jpg)
+![Dave Shea at re:build](/posts/conferences/rebuild-conference-2012/speaker-dave-shea.jpg)
 
 Dave is O.G. when it comes to the design and dev community. He wrapped up the conference with a walk through how we got to where we are today. Part of this is his work with [CSS Zen Garden,](http://www.csszengarden.com) which really helped push CSS layout. One of the more interesting things was about how the original purpose behind the web was to create structure for CERN information. Early users of the web showed pretty quickly that we were more interested in visuals than order. CSS Zen Garden was created to help display what could be done visually with CSS. It had an agenda, a place and a time.
 

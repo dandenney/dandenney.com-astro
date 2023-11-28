@@ -20,7 +20,7 @@ tags:
  h2, h3, h4, h5 { -webkit-text-stroke: 1px #796f63; }
 </style>
 
-![](/img/posts/conferences/front-end-conf-finales/dan-cherrie-stage.svg)
+![](/posts/conferences/front-end-conf-finales/dan-cherrie-stage.svg)
 
 Running the Front-End Design Conference since 2009 has been amazing. We have met so many wonderful people, formed amazing friendships, and had so much fun along the way. As the saying goes, though, "all good things must come to an end". These two events in [St. Pete](http://frontenddesignconference.com/st-pete) and [Portland](http://frontenddesignconference.com/portland) will be the last of our Front-End Design Conferences.
 
@@ -46,4 +46,4 @@ We will still run some events, just with a smaller scale and focus. Working with
 
 In talking about this, the hardest part of the decision is knowing that we won't have this annual couple of days where we get to see so many people that we love. We originally started this out of my love for the community, but it immediately became a family event. My and Cherrie's family run it every year and it has become a part of their lives. Cherrie is especially sad because she has met so many amazing people and the community has embraced her even though she's not "technically" a designer/developer. So, make sure you come out and party with us for these last 2 confs! In fact, we'll start selling tickets to [Portland](http://frontenddesignconference.com/portland) right now, even though all of the details aren't ironed out yet.
 
-![](/img/posts/conferences/front-end-conf-finales/minion-kiss.gif)
+![](/posts/conferences/front-end-conf-finales/minion-kiss.gif)
