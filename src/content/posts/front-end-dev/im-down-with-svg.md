@@ -13,11 +13,11 @@ The crazy cool part about SVG is that you can just save one out from Illustrator
 
 ### Original size from the site
 
-![Gio DiFeterici character as a png](/img/posts/front-end-dev/im-down-with-svg/gio-difeterici.png)
+![Gio DiFeterici character as a png](/posts/front-end-dev/im-down-with-svg/gio-difeterici.png)
 
 <small>Transparent .png, 401px x 466px, 21kb</small>
 
-![Gio DiFeterici character as svg](/img/posts/front-end-dev/im-down-with-svg/gio-difeterici.svg)
+![Gio DiFeterici character as svg](/posts/front-end-dev/im-down-with-svg/gio-difeterici.svg)
 
 <small>SVG, 401px x 466px, 15kb</small>
 
@@ -25,11 +25,11 @@ I'm using a retina MBP, so at regular size I can see the png start to lose detai
 
 ### Resizing with CSS to 50%
 
-![Gio DiFeterici character as a png](/img/posts/front-end-dev/im-down-with-svg/gio-difeterici.png)
+![Gio DiFeterici character as a png](/posts/front-end-dev/im-down-with-svg/gio-difeterici.png)
 
 <small>Transparent .png, 200px x 232px, 21kb</small>
 
-![Gio DiFeterici character as svg](/img/posts/front-end-dev/im-down-with-svg/gio-difeterici.svg)
+![Gio DiFeterici character as svg](/posts/front-end-dev/im-down-with-svg/gio-difeterici.svg)
 
 <small>SVG, 200px x 232px, 15kb</small>
 
@@ -37,11 +37,11 @@ This would represent shrinking an image down for the pixel density. They both lo
 
 ### Flexible width set to fill 100% of the container
 
-![Gio DiFeterici character as a png](/img/posts/front-end-dev/im-down-with-svg/gio-difeterici.png)
+![Gio DiFeterici character as a png](/posts/front-end-dev/im-down-with-svg/gio-difeterici.png)
 
 <small>Transparent .png, Set to 100% width, 21kb</small>
 
-![Gio DiFeterici character as svg](/img/posts/front-end-dev/im-down-with-svg/gio-difeterici.svg)
+![Gio DiFeterici character as svg](/posts/front-end-dev/im-down-with-svg/gio-difeterici.svg)
 
 <small>SVG, Set to 100% width, 15kb</small>
 

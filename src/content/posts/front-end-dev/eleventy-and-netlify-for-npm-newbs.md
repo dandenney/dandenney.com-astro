@@ -58,7 +58,7 @@ What I didn't know before last week is how Netlify knows what to run.
 
 If you use one of the "deploy to Netlify" buttons from their site, they manually set the build command in the UI of your project. In the blog starter, they set it to `DEBUG=* eleventy`, which uses a package that Eleventy [includes and documents](https://www.11ty.dev/docs/debugging/).
 
-![Screenshot of Netlify's dashboard UI](/img/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/screenshot-build-command.png)
+![Screenshot of Netlify's dashboard UI](/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/screenshot-build-command.png)
 
 So if we wanted to use our scripts from above and maintain it from the UI, we'd need to set that to `forNetlify` in the Build Command slot.
 
@@ -114,7 +114,7 @@ My netlify.toml has:
 
 With all of this set up, you are able to pretty closely emulate the Netlify build locally, but there's always a chance of a typo or something going wrong. Luckily, Netlify lets you download a deploy for comparison. This came in very handy as I was learning how the scripts worked together and was testing my deploys with a series of commands.
 
-![Screenshot of Netlify's deploy download](/img/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/screenshot-deploy-download.png)
+![Screenshot of Netlify's deploy download](/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/screenshot-deploy-download.png)
 
 ## The Final Boss: Failed Deploys
 

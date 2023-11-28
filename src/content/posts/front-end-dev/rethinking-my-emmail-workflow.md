@@ -16,7 +16,7 @@ title: Rethinking My eMMail Workflow
 
 In 2015, I was lucky enough to get to share [The Organized Chaos of Email](https://speakerdeck.com/dandenney/the-organized-chaos-of-email-creation) Creation at [The Email Design Conference](https://litmus.com/conference). While I was on stage talking about an offline workflow, people from the Litmus team were in the lobby demoing a game-changer: live client previews built into [Builder](https://litmus.com/email-builder).
 
-![](/img/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-live-previews.png)
+![](/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-live-previews.png)
 
 It instantly became a part of my workflow and since then I don't send an email without it. (Well I have, but it ended up borked in Gmail, sooo.) In my talk, I touted the benefits of building offline in a Middleman app I dubbed [eMMail](https://github.com/dandenney/eMMail). The perks of doing so were reusable variables, partials, and custom reporting. Throughout the year, the Litmus folks have added a couple of those into Builder as well.
 
@@ -26,7 +26,7 @@ I had access to the Partials beta and they're now live for everyone and working 
 
 I doubt they'll tackle the reporting bit anytime soon since that's more related to your ESP, but I hit a wall with mine. I want historical data to show performance of an email over time and that isn't straight-forward when hijacking the frontmatter in Middleman. It's super easy and readable in a Google Docs spreadsheet, though.
 
-![](/img/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-spreadsheet.png)
+![](/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-spreadsheet.png)
 
 ## I'm Out of Excuses
 
@@ -42,7 +42,7 @@ As always, this is a work-in-progress. I'm a couple months in to the tracking po
 
 In studying successful product teams, I've found that most of them document projects (features, campaigns, etc.). I also saw that our teammates at Pluralsight create great kickoff docs for email campaigns. So I kind of made a frankenbaby of them for each of our emails. (I have not gone through and done them for all existing emails yet, but it's a bucket list item.)
 
-![](/img/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-master-doc.png)
+![](/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-master-doc.png)
 
 These docs become increasingly important as we are doing more event-driven transactional emails. It is super easy to lose track of them and for only 1-2 people to know how they work. Writing the docs is mundane but an excellent feature for your team.
 
@@ -56,7 +56,7 @@ Each email starts with my [base snippet](https://litmus.com/community/snippets/8
 
 Another unexpectedly useful feature is the grid view. Enabling it outlines all of your tables and clicking in the preview takes you to that bit of code. It's a popular feature in some editors and I've grown to love it. It's at least 10 times faster than scrolling through code for edits.
 
-![](/img/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-grid-view.png)
+![](/posts/front-end-dev/rethinking-my-emmail-workflow/screenshot-grid-view.png)
 
 ### Present and Iterate in Builder
 

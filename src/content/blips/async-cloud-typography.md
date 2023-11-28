@@ -15,15 +15,15 @@ Luckily, I found [Making Cloud.typography Fast(er)](https://csswizardry.com/2019
 ## Before
 
 **Mobile**
-![Screenshot of Lighthouse performance score of 95](/img/blips/async-cloud-typography/before-mobile.jpg)
+![Screenshot of Lighthouse performance score of 95](/blips/async-cloud-typography/before-mobile.jpg)
 
 **Desktop**
-![Screenshot of Lighthouse performance score of 97](/img/blips/async-cloud-typography/before-desktop.jpg)
+![Screenshot of Lighthouse performance score of 97](/blips/async-cloud-typography/before-desktop.jpg)
 
 ## After
 
 **Mobile**
-![Screenshot of Lighthouse performance score of 100](/img/blips/async-cloud-typography/after-mobile.jpg)
+![Screenshot of Lighthouse performance score of 100](/blips/async-cloud-typography/after-mobile.jpg)
 
 **Desktop**
-![Screenshot of Lighthouse performance score of 99](/img/blips/async-cloud-typography/after-desktop.jpg)
+![Screenshot of Lighthouse performance score of 99](/blips/async-cloud-typography/after-desktop.jpg)

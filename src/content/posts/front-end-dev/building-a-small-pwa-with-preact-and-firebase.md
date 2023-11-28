@@ -56,7 +56,7 @@ I exercise because I greatly enjoy beer and food. I'm not that into it, but sinc
 
 Since this was an app being designed for a demographic of 1 person, research was limited. I knew what was missing for me in other apps, and the style that I wanted. I use [Bear](http://www.bear-writer.com) for project details, and this had requirements, inspiration images, and my best guess at the data structure.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/notes.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/notes.jpg)
 
 To allow for continually working on my version, I’m sharing the steps as I recreate the app in a [repo](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase) specifically for this post.
 
@@ -66,7 +66,7 @@ I was inspired by [Addy Osmani’s talk on Production PWAs with JS frameworks](h
 
 My first step is always creating a repo via GitHub’s UI. It’s a personal preference, but it adds a step when you’re using a generator. That’s still preferable to me vs. initializing from the command line after generating. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/b3692cb0267ed7f1a1075ded896f58a5be39aa1f)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/github-repo.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/github-repo.jpg)
 
 Sass support requires a flag, so after installing the CLI, I ran `preact create app --sass` and then dragged the files out to my main folder. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/ba21e66db288a85e0ad8910f0e312b4347b7b937)
 
@@ -78,17 +78,17 @@ In my first build, the 1.3 version would enable Sass support but still generate 
 
 Running `preact watch` (or the command of your choice) fires up a server on `0.0.0.0:8080` and the starter app is visible.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/preact-cli-home.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/preact-cli-home.jpg)
 
 The out-of-the-box Lighthouse scores are fantastic. ([Lighthouse](https://developers.google.com/web/tools/lighthouse/) is a tool for rating the code for a PWA. The service worker seems only to be enabled in production, so the PWA score is low locally, but 91 once you deploy. The important one to watch locally is Performance. Since Preact is so light, your code is what makes the difference. We’re starting off with 3.7s to a meaningful paint.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/cli-default-perf.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/cli-default-perf.jpg)
 
 ## Adding Firebase
 
 To get rolling with Firebase, I created a project “pwa-preact-firebase” (cause 30 character restriction) and grabbed the config info from “web setup” on the authentication page.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-config.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-config.jpg)
 
 If you haven’t used Firebase, it will seem scary that I posted a screenshot of that information, but it’s available in the UI. Firebase handles security via permissions and many tutorials start by changing them to being wide open to get started. I’m skipping that because I know I want authed users.
 
@@ -119,7 +119,7 @@ export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 I’m only using Google Auth because it doesn’t require an API key and I’m always logged in on my phone. There are other options (Twitter, FB, email/password) as well.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/auth-options.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/auth-options.jpg)
 
 With that configured, the methods in Firebase are available anywhere that you import them. The next part is the first decision as to where that is.
 
@@ -199,7 +199,7 @@ For auth, this is where the magic happens: `onClick={() => auth.signInWithRedire
 
 I’m very visual, so my next step was importing the SignIn component to see it on the page. Because SignIn isn’t directly related to ExercisesList, I made it a sibling component. I don’t see a need to use it any other way yet, but it didn’t feel right nesting it in the folder structure. I am calling it from ExercisesList, though, replacing the placeholder copy. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/3d8b1b394baf61052b9e2ed870601e8df1d3c933)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/sign-in-button.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/sign-in-button.jpg)
 
 ### Mo Versions, Mo Problems
 
@@ -209,7 +209,7 @@ It seems that with the new version, the default URL locally is 0.0.0.0:8080 inst
 
 The default header in the default Preact-CLI template (there are other options) is awesome for getting started, but there won’t be a header in this app until v2, if ever. So, I killed it. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/88a71fbb809d77e3e000eba71c64b3f6c732c49d)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/no-header.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/no-header.jpg)
 
 The alignment and lack of style looked funky, and that was killing me, but I held strong on leaving CSS for later.
 
@@ -241,7 +241,7 @@ export default class  extends Component {
 
 I left the constructor cause I knew I’d need it later and added a placeholder list, simulating the map that I’ll need eventually. Importing that into Exercises made this feel like I was finally getting somewhere. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/7341165085cd6341b890e9cd8b122fe90c7e6f98)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/rendered-data.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/rendered-data.jpg)
 
 ### Time to Use Preact
 
@@ -286,7 +286,7 @@ Another significant difference in Shadow DOM frameworks is lifecycle methods. Th
 
 At this point, clicking the Sign In button changes the state of `currentUser` from `null` to an object that Firebase returns for the current user.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/user-attributes.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/user-attributes.jpg)
 
 #### Render and Re-render
 
@@ -325,7 +325,7 @@ export default class Exercises extends Component {
 
 With a user signed in, the UI is showing the ExerciseList component.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/exercises-only.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/exercises-only.jpg)
 
 While that would eventually be enough to complete the actions that I’ll want, it seemed like adding an avatar and a sign out button was in order. So, I added a CurrentUser component with some placeholders to start. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/67b99cd73b8ebe575bde7e7ac9926665febac5d1)
 
@@ -335,19 +335,19 @@ Since this was an additional component within Exercises, I needed to wrap them i
 
 Since CurrentUser is a child of Exercises, it doesn’t have access to the `currentUser` state. (I know the naming is getting confusing.) Rather than declare and update state within CurrentUser, I passed it in via props as `user`. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/9684a229780fbb424b9dc4d7cbccd471221df579)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/null-user.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/null-user.jpg)
 
 It was at this point that I realized I had messed up again. State had a value for currentUser, but it was passing `null` to props. I can’t explain why, but I put the componentDidMount code in ExercisesList instead of Exercises. Fixing that made it so that the props was getting my user object. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/c5280a88a536f9801c5e4cb370e82eb48103c6d1)
 
 I also had explicitly rebound the `currentUser` constant in Exercises, which was adding a child object. I had done `const currentUser = this.state;` instead of `const { currentUser } = this.state;`. [fixed](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/f6d7c96b7343e1270eceee90a0628584a1a83544)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/current-user.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/current-user.jpg)
 
 #### User Attributes from Google Auth
 
 Now that I had access to the user object via Firebase, I could access the attributes. A `console.log` revealed all of them, so I used the `photoURL` and `displayName` for the alt attribute. This is to give some basic feedback that I’m in the correct account when I auth.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/console-log-user.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/console-log-user.jpg)
 
 Preact passes props to the render functions, so I shortened up the attributes and added them to the image. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/ba9f3e2bee1f716f6ca597c7246049686e184fdd)
 
@@ -448,11 +448,11 @@ The timestamp is unnecessary for the basic functionality, but I knew that I’d 
 
 One of the awesome features about Firebase is that you can create the data in their UI to test it out before needing to hook up a form. (Kinda how you’d mock up with local JSON).
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-db-ui.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-db-ui.jpg)
 
 I added 2 to make sure a loop works.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-objects.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-objects.jpg)
 
 ## Getting State In Order
 
@@ -484,7 +484,7 @@ componentDidMount() {
 
 Boom! Data coming from Firebase was now getting pushed directly into state, which would later determine what and when to render. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/765f2e221400d73ecabbd551d875289cf56c53a6)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/initial-state.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/initial-state.jpg)
 
 #### A Learning Curveball
 
@@ -528,7 +528,7 @@ render() {
 }
 ```
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/render-titles.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/render-titles.jpg)
 
 I knew that I was going to be adding a lot (well some) more functionality, so I wanted to push the HTML for an individual Exercise into its own component. That required passing the user, the key, and all of the attributes of an exercise in via props. This spread operator `{...exercise}` made that easy.
 
@@ -622,11 +622,11 @@ export default class NewExercise extends Component {
 
 I had learned this technique from tutorials. A function is used as a listener (handleChange) for changes to an input. When it’s changed, local state is updated. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/68888063a715ac0d9f55fa4578e43bdfe6977321)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/dynamic-name.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/dynamic-name.jpg)
 
 With that working, I added the rest of the data inputs. This meant adding each as empty to state by default, assign them to a variable from state, and creating an input to listen for events. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/7765fd1ee3ecfeb55d077ad1ba561019266f788d)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/state-attributes.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/state-attributes.jpg)
 
 My favorite little bit (and something I had recently learned) was chaining all of the items into one `const`.
 
@@ -656,7 +656,7 @@ handleSubmit(e) {
 
 After submitting the form, I could see that the core data structure was the same, with the added benefit of unique keys.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/dynamic-ids.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/dynamic-ids.jpg)
 
 ## Adding to Existing Data in Firebase
 
@@ -690,7 +690,7 @@ Since I was looking for that UID too early, I had to move that within Firebase�
 
 With that in place, clicking the Fail button adds data with a unique identifier to the current exercise.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/fail-data.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/fail-data.jpg)
 
 ### Adding Data Conditionally
 
@@ -816,7 +816,7 @@ export default class Exercise extends Component {
 
 To verify it was working without digging through Dev Tools, I rendered a list with the key, knowing that I’d make that more like “eye candy” with CSS.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/render-keys.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/render-keys.jpg)
 
 ## Adding Global Styles
 
@@ -832,7 +832,7 @@ $c-text: #ffffff;
 
 I then added a font from Google Fonts, reset font weights, and added default styles to inputs and buttons. I usually set a variable for spacing and use rems, but I stayed with pixels. Those styles got it headed in the right direction, and I wanted to try component-level styles for the rest. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/2a46dc62d08169bc8ae66ab03fab99df6626c09f)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/base-styles.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/base-styles.jpg)
 
 ## Adding Component-Level Styles
 
@@ -840,13 +840,13 @@ I then added a font from Google Fonts, reset font weights, and added default sty
 
 The individual exercise got the most work, and it felt a little weird to duplicate so many styles. I’m used to modifier classes, but it was also awesome to use basic names and have them get unique names automatically. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/2f19737e4022e7f92732007d4af92b9bbed18ff8)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/individual-exercise.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/individual-exercise.jpg)
 
 ### New Exercise Form
 
 This form will have minimal use going forward, so I’ll likely tuck it away in a future version, but meanwhile, I wanted it to be a little more usable. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/2f19737e4022e7f92732007d4af92b9bbed18ff8)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/new-exercise-form.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/new-exercise-form.jpg)
 
 ### Current User
 
@@ -856,7 +856,7 @@ This part is just for sanity’s sake, so I just gave it a touch of alignment. [
 
 The signed out experience needed some love, and I set a max-width in case I ever bring my laptop to the gym. (JK) [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/a17d2d6ac207f3fa74c361a4aa410c20d9fabda3)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/full-screen.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/full-screen.jpg)
 
 ### Cleaning Up Some SCSS
 
@@ -866,29 +866,29 @@ In my original version, I was designing in the browser, so the CSS was being wri
 
 This web app will be saved on my phone, and there are some settings and icons that can be displayed that make it feel native. I didn’t put much time into it but made the colors match and put an icon of some weights. I have some ideas for v2 that will make this more fun. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/f0b434e760a5d93555236296eebfb867b4b312b5)
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/pixel.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/pixel.jpg)
 
 ## Deploying to Firebase
 
 Firebase is perfect for side projects like this. In addition to all of the other features, hosting via HTTPS is part of the [free plan](https://firebase.google.com/pricing/). Their CLI makes it seamless, as well. Don't be like me and get so excited about it that you forget to build your app with Preact and deploy nothing, which is what I did just now.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-cli.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/firebase-cli.jpg)
 
 ## Ok, Build First, Then Deploy
 
 After running a build with `preact build` I saw that I had done something (probably the combo of Firebase and lodash) that added a lot of weight to my app. That will have to wait for later.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/build-warning.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/build-warning.jpg)
 
 ## Lighthouse Test
 
 The results of this test are why the CLI was valuable. I didn’t have to do any of the service worker and manifest setup, so I have a smooth 100\. If you haven’t done that stuff before, you should try it manually, though.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/pwa-score.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/pwa-score.jpg)
 
 The performance dropped over 10 points from the default, and I’ll have to figure out what is causing that. It won’t matter to me for this app, but I want to learn how to troubleshoot it. My gut says it’s a combo of the font request, the Firebase data request, and lodash.
 
-![](/img/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/perf-score.jpg)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/perf-score.jpg)
 
 ## Make It Better
 

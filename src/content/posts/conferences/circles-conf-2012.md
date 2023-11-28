@@ -27,7 +27,7 @@ The actual theater itself was gorgeous. Registration was set up in a very smart 
 
 I'm going to share the general idea behind the presentation, a few details and my takeaways from them. Of course, everyone gets different things from presentations, so these are just my thoughts.
 
-![Kyle Steed](/img/posts/conferences/circles-conf-2012/kyle_steed.png)
+![Kyle Steed](/posts/conferences/circles-conf-2012/kyle_steed.png)
 
 #### Kyle Steed
 
@@ -35,7 +35,7 @@ Kyle shared the story of his path from leaving a job in order to pursue his pass
 
 My take: Kyle has a very chill delivery style. You feel like you're sitting at the coffee shop chatting, which is pretty cool. For me, it was a good reminder to determine what is important to you and to focus on being present. That is something that I struggle with as I am pretty consistently consuming information from a device whenever I am anywhere. I'm not sure of a fix for that yet though, because learning and information are pretty high on the list of things that are important to me.
 
-![Evie Shaffer](/img/posts/conferences/circles-conf-2012/evie_shaffer.png)
+![Evie Shaffer](/posts/conferences/circles-conf-2012/evie_shaffer.png)
 
 #### Evie Shaffer
 
@@ -47,7 +47,7 @@ Evie shared from a different background, but had a similar theme: Make a careful
 
 My take: Evie also had a very relaxed, conversational style. I especially enjoyed the talk of mindfulness as that is something that I have been studying for the last few months. One interesting thing that left me thinking was that she highly recommended reading over watching TV for learning. Assuming that we're not comparing watching Family Guy to reading about history, this left me really thinking about why. I'd be willing to bet that most people would recommend reading a book on Egyptian history over watching a documentary. Is it primarily a matter of being able to pause and think while consuming information or are there vast cognitive differences between being taught visually vs. reading? This will be important as we are introducing more visual and interactive ways of learning into our schools.
 
-![Joshua Blankenship](/img/posts/conferences/circles-conf-2012/joshua_blankenship.png)
+![Joshua Blankenship](/posts/conferences/circles-conf-2012/joshua_blankenship.png)
 
 #### Joshua Blankenship
 
@@ -55,7 +55,7 @@ Joshua is a wizard and so are you. His talk was a wonderful reminder that what w
 
 My take: Joshua is a storyteller and his delivery was great. I'm guessing that he is a great inspiration to anyone trying to make their way as he is highly talented, but lightly reminds everyone that he comes from a humble town in a state that 'dukes it out with Mississippi for 49th/50th in education'. Specifically, he reminded me to keep working and researching as he shared a quote from Kevin Kelly: 'Out of these inefficient tinkerings will come the future.' On a lighter note, I loved the term 'black market graphics' which are things that are created outside of the design team for a brand.
 
-![Paul Sirmon](/img/posts/conferences/circles-conf-2012/paul_sirmon.png)
+![Paul Sirmon](/posts/conferences/circles-conf-2012/paul_sirmon.png)
 
 #### Paul Sirmon
 
@@ -63,7 +63,7 @@ Paul shared tips and process for working on the branding of non-profits. He walk
 
 My take: Paul had a very conversational style and it was interesting to hear about his process of creating a visual identity. I really resonated with the inverted approach to creating a brand element as I did this with the logo for the Front-End Design Conference. It was entirely based on the appearance of the original site concept and I've been shaking my head at it ever since because of it.
 
-![Noah Stokes](/img/posts/conferences/circles-conf-2012/noah_stokes.png)
+![Noah Stokes](/posts/conferences/circles-conf-2012/noah_stokes.png)
 
 #### Noah Stokes
 
@@ -71,7 +71,7 @@ Noah's talk was all about the pForm, which is the formula for a good pop song. I
 
 My take: Noah is one of those people that you instantly look up to and not just because he's taller than you. He is a great storyteller and just comes off as this genuinely great dude. My favorite quote from his talk and one of the few notes that I took was 'HTML/CSS is the next best thing to designing.' This is exactly how I feel as I love creating beautiful designs but am not very skilled in the graphic design area. So, doing markup for them keeps me satisfied both with the challenge of writing the code and with creating great designs.
 
-![Promise Tangeman](/img/posts/conferences/circles-conf-2012/promise_tangeman.png)
+![Promise Tangeman](/posts/conferences/circles-conf-2012/promise_tangeman.png)
 
 #### Promise Tangeman
 
@@ -79,7 +79,7 @@ Promise kicked things off with something that I hadn't seen before, a highlight 
 
 My take: Promise shared a lot of great quotes and Cherrie and I are big fans of her work. It was cool to hear the story of how she had someone that she felt competitive with but reached out to have coffee with despite the possible uncomfort. It led to a long-running relationship where they now critique each other's work and help each other grow.
 
-![Dan Mall](/img/posts/conferences/circles-conf-2012/dan_mall.png)
+![Dan Mall](/posts/conferences/circles-conf-2012/dan_mall.png)
 
 #### Dan Mall
 
@@ -95,7 +95,7 @@ Day one wrapped up and we had some time to kill before the party, so Chris Walla
 
 ## Day Two Presentations
 
-![Kevin Richardson](/img/posts/conferences/circles-conf-2012/kevin_richardson.png)
+![Kevin Richardson](/posts/conferences/circles-conf-2012/kevin_richardson.png)
 
 #### Kevin Richardson
 
@@ -103,7 +103,7 @@ Kevin started day two off with a bang, with great stories and taking chances and
 
 My take: This was one of the most inspirational talks. Kevin's energy, combined with the fact that he has taken risks despite normally wanting be comfortable was awesome. This one struck me personally because my life greatly changed and I have 'lived' so much more since meeting Cherrie. She has inspired drive in me and led me around the world experiencing wonderful things. It was cool that Kevin's inspiration also came from his love.
 
-![Ismael Burciaga](/img/posts/conferences/circles-conf-2012/ismael_burciaga.png)
+![Ismael Burciaga](/posts/conferences/circles-conf-2012/ismael_burciaga.png)
 
 #### Ismael Burciaga aka Ish
 
@@ -111,7 +111,7 @@ Ish shared how he has 'spilled blood' throughout his career in order to inspire 
 
 My take: I have a big fan of Ish's work for a while and it was so fantastic to see the progression of his work. It reminded me to just keep doing work, reading and getting feedback. It was also awesome that he reminded everyone to seek inspiration from outside of the web and bring good ideas from the world to it.
 
-![Blaine Hogan](/img/posts/conferences/circles-conf-2012/blaine_hogan.png)
+![Blaine Hogan](/posts/conferences/circles-conf-2012/blaine_hogan.png)
 
 #### Blaine Hogan
 
@@ -119,7 +119,7 @@ Blaine wants to be sure you know that you are not a tool. His presentation was a
 
 My take: The most important part for me was the reminder to step back and ask yourself 'what am I really making'? It's a cool thought that will help you from just acting like a tool.
 
-![Jonathan Moore](/img/posts/conferences/circles-conf-2012/jonathan_moore.png)
+![Jonathan Moore](/posts/conferences/circles-conf-2012/jonathan_moore.png)
 
 #### Jonathan Moore
 
@@ -127,7 +127,7 @@ Jonathan's talk was about the internal thoughts of doing creative work. It was f
 
 My take: I had a little nostalgic fanboy moment when he shared that he was part of the 2advanced team at one point. They were such a huge inspiration to me wanting to work on the web. He had another cool little thought about the type of work that we do: "Try something reckless. No one is going to die."
 
-![Phil Coffman](/img/posts/conferences/circles-conf-2012/phil_coffman.png)
+![Phil Coffman](/posts/conferences/circles-conf-2012/phil_coffman.png)
 
 #### Phil Coffman
 
@@ -135,7 +135,7 @@ Phil shared his story, which was very inspirational to anyone getting started in
 
 My take: It was really great to hear his backstory and to see another person that got successful by just cranking through work and doing side projects. It was a great example of how hard work and knocking out things that come your way leads to great things. I'll be sure to point him out to anyone that I meet that is just getting started.
 
-![Cameron Moll](/img/posts/conferences/circles-conf-2012/cameron_moll.png)
+![Cameron Moll](/posts/conferences/circles-conf-2012/cameron_moll.png)
 
 #### Cameron Moll
 

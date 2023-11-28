@@ -18,7 +18,7 @@ tags:
 
 I had been progressing pretty well lately in learning vanilla JS and it felt awesome. Then I hit a wall in doing something that I thought was straight forward. I ended up putting about 5-6 hours into grokking how to get a value out of an event listener, that time being split between attempts, googling, reading Stack Overflows, reading the docs, pairing with a coworker, and _maybe_ an hour sitting like this.
 
-![GIF](/img/posts/front-end-dev/stumbling-through-learning-about-event-listeners/gif-matt-damon-crying.gif)
+![GIF](/posts/front-end-dev/stumbling-through-learning-about-event-listeners/gif-matt-damon-crying.gif)
 
 ## (If this, then that) \* 999
 

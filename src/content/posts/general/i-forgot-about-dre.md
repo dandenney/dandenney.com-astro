@@ -36,33 +36,33 @@ I had seen some internet things confirming that [Beats Music](https://www.beatsm
 
 Hot UX was an understatement. This was the best onboarding experience that I've had on an iPhone app and overall it's instantly a competitor with the other players. I used FB to create my account and here was the initial flow.
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-01.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-01.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-02.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-02.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-03.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-03.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-04.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-04.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-05.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-05.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-06.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-06.jpg)
 
 ## I'm Moody With Music
 
 Music is a huge part of my life you'll find everything from Bach to 2Pac in my collection. What I choose to listen to all depends on my mood and what I'm doing. So this "sentence" mode is something I'll use a lot. Going with hip-hop was kind of a softball for Beats Music so I threw it a curveball with an alt lineup too. Both were spot on.
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-07.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-07.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-08.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-08.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-09.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-09.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-13.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-13.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-14.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-14.jpg)
 
-![Beats Music](/img/posts/general/i-forgot-about-dre/bm-15.jpg)
+![Beats Music](/posts/general/i-forgot-about-dre/bm-15.jpg)
 
 ## The Aftermath
 

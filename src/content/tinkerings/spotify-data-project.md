@@ -54,7 +54,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
+![](/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
 
 #### Dangerous
 
@@ -66,7 +66,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/b225984a1dec4cb4ea43345388ecae4f740cba0b.jpeg)
+![](/tinkerings/spotify-data-project/b225984a1dec4cb4ea43345388ecae4f740cba0b.jpeg)
 
 #### GDFR
 
@@ -78,7 +78,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/f3cf87bfde0748d389702a69e0ba01f6091e2403.jpeg)
+![](/tinkerings/spotify-data-project/f3cf87bfde0748d389702a69e0ba01f6091e2403.jpeg)
 
 #### Cheerleader
 
@@ -90,7 +90,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
+![](/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
 
 #### Firestone
 
@@ -102,7 +102,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/1c64a09fef47c954a6f5e779fbb21bf0245832dc.jpeg)
+![](/tinkerings/spotify-data-project/1c64a09fef47c954a6f5e779fbb21bf0245832dc.jpeg)
 
 #### Love Me Like You Do
 
@@ -114,7 +114,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Outside
 
@@ -126,7 +126,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/956a2c25a6a0cdfcf7e4d61af359b1b3e73575da.jpeg)
+![](/tinkerings/spotify-data-project/956a2c25a6a0cdfcf7e4d61af359b1b3e73575da.jpeg)
 
 #### Sugar
 
@@ -138,7 +138,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
+![](/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
 
 #### Thinking Out Loud
 
@@ -150,7 +150,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
+![](/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
 
 #### Take Me To Church
 
@@ -162,7 +162,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
+![](/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
 
 #### Uptown Funk
 
@@ -210,7 +210,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/1c64a09fef47c954a6f5e779fbb21bf0245832dc.jpeg)
+![](/tinkerings/spotify-data-project/1c64a09fef47c954a6f5e779fbb21bf0245832dc.jpeg)
 
 #### Love Me Like You Do
 
@@ -222,7 +222,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
+![](/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
 
 #### Dangerous
 
@@ -234,7 +234,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/f3cf87bfde0748d389702a69e0ba01f6091e2403.jpeg)
+![](/tinkerings/spotify-data-project/f3cf87bfde0748d389702a69e0ba01f6091e2403.jpeg)
 
 #### Cheerleader
 
@@ -246,7 +246,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/b225984a1dec4cb4ea43345388ecae4f740cba0b.jpeg)
+![](/tinkerings/spotify-data-project/b225984a1dec4cb4ea43345388ecae4f740cba0b.jpeg)
 
 #### GDFR
 
@@ -258,7 +258,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/956a2c25a6a0cdfcf7e4d61af359b1b3e73575da.jpeg)
+![](/tinkerings/spotify-data-project/956a2c25a6a0cdfcf7e4d61af359b1b3e73575da.jpeg)
 
 #### Sugar
 
@@ -270,7 +270,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Outside
 
@@ -282,7 +282,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
+![](/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
 
 #### Firestone
 
@@ -294,7 +294,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
+![](/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
 
 #### Take Me To Church
 
@@ -306,7 +306,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
+![](/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
 
 #### Thinking Out Loud
 
@@ -318,7 +318,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
+![](/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
 
 #### Uptown Funk
 
@@ -366,7 +366,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Blame
 
@@ -378,7 +378,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
+![](/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
 
 #### Dangerous
 
@@ -390,7 +390,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ded7eb8e29384d0d75be7ffc2411bb8008f055b4.jpeg)
+![](/tinkerings/spotify-data-project/ded7eb8e29384d0d75be7ffc2411bb8008f055b4.jpeg)
 
 #### Love Me Harder
 
@@ -402,7 +402,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/b225984a1dec4cb4ea43345388ecae4f740cba0b.jpeg)
+![](/tinkerings/spotify-data-project/b225984a1dec4cb4ea43345388ecae4f740cba0b.jpeg)
 
 #### GDFR
 
@@ -414,7 +414,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/f3cf87bfde0748d389702a69e0ba01f6091e2403.jpeg)
+![](/tinkerings/spotify-data-project/f3cf87bfde0748d389702a69e0ba01f6091e2403.jpeg)
 
 #### Cheerleader
 
@@ -426,7 +426,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
+![](/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
 
 #### Firestone
 
@@ -438,7 +438,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Outside
 
@@ -450,7 +450,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
+![](/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
 
 #### Thinking Out Loud
 
@@ -462,7 +462,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
+![](/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
 
 #### Take Me To Church
 
@@ -474,7 +474,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
+![](/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
 
 #### Uptown Funk
 
@@ -522,7 +522,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/72d5bd1ecd38f261de6b7987283f35cd13d02fbd.jpeg)
+![](/tinkerings/spotify-data-project/72d5bd1ecd38f261de6b7987283f35cd13d02fbd.jpeg)
 
 #### Stay With Me
 
@@ -534,7 +534,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Blame
 
@@ -546,7 +546,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/26b682beeb3bfefdfeed113bdbc0177bfb148b49.jpeg)
+![](/tinkerings/spotify-data-project/26b682beeb3bfefdfeed113bdbc0177bfb148b49.jpeg)
 
 #### Lips Are Movin
 
@@ -558,7 +558,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
+![](/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
 
 #### Dangerous
 
@@ -570,7 +570,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ded7eb8e29384d0d75be7ffc2411bb8008f055b4.jpeg)
+![](/tinkerings/spotify-data-project/ded7eb8e29384d0d75be7ffc2411bb8008f055b4.jpeg)
 
 #### Love Me Harder
 
@@ -582,7 +582,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
+![](/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
 
 #### Firestone
 
@@ -594,7 +594,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Outside
 
@@ -606,7 +606,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
+![](/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
 
 #### Thinking Out Loud
 
@@ -618,7 +618,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
+![](/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
 
 #### Take Me To Church
 
@@ -630,7 +630,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
+![](/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
 
 #### Uptown Funk
 
@@ -678,7 +678,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
+![](/tinkerings/spotify-data-project/c2e52266c4ed1541003babec2964a99ce0350aa3.jpeg)
 
 #### Firestone
 
@@ -690,7 +690,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/d7fe19b11c2814f98aa1449713cdc42668070a49.jpeg)
+![](/tinkerings/spotify-data-project/d7fe19b11c2814f98aa1449713cdc42668070a49.jpeg)
 
 #### All About That Bass
 
@@ -702,7 +702,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ded7eb8e29384d0d75be7ffc2411bb8008f055b4.jpeg)
+![](/tinkerings/spotify-data-project/ded7eb8e29384d0d75be7ffc2411bb8008f055b4.jpeg)
 
 #### Love Me Harder
 
@@ -714,7 +714,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/72d5bd1ecd38f261de6b7987283f35cd13d02fbd.jpeg)
+![](/tinkerings/spotify-data-project/72d5bd1ecd38f261de6b7987283f35cd13d02fbd.jpeg)
 
 #### Stay With Me
 
@@ -726,7 +726,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Blame
 
@@ -738,7 +738,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
+![](/tinkerings/spotify-data-project/ee915e50041ce0dd1dfde71cc6e2c28e078aa8e8.jpeg)
 
 #### Dangerous
 
@@ -750,7 +750,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
+![](/tinkerings/spotify-data-project/0e2747127c12222577e98ccec7ce44773c12c546.jpeg)
 
 #### Outside
 
@@ -762,7 +762,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
+![](/tinkerings/spotify-data-project/646e9619750dfa3d1eadbbea959dc6f528a9109e.jpeg)
 
 #### Thinking Out Loud
 
@@ -774,7 +774,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
+![](/tinkerings/spotify-data-project/0080bec0581fe6edb83293c14d3a0d01942b1798.jpeg)
 
 #### Take Me To Church
 
@@ -786,7 +786,7 @@ tags:
 
 <div class="dib track">
 
-![](/img/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
+![](/tinkerings/spotify-data-project/95f7f3bff78df3fbf5402ee304c9344aaec52890.jpeg)
 
 #### Uptown Funk
 
@@ -859,7 +859,7 @@ Everything will be in the repo:
 
 In playing with the sample data, there are already some decisions to make. While listing the #1 first feels right for the data, my eyes tend to follow the list to the right. If it stays horizontal, I think the #1 should be last.
 
-![screenshot of samples](/img/tinkerings/spotify-data-project/design-decisions.jpg)
+![screenshot of samples](/tinkerings/spotify-data-project/design-decisions.jpg)
 
 - Should dates run vertically or horizontally?
 - What data should be shown in the up state vs. a hover state?
@@ -904,9 +904,9 @@ I've been [stashing](http://www.pinterest.com/dandenney/data-visualization/) a b
 
 Archiving screenshots of things that I'm killing. User tested the layouts and everyone (Cherrie and Jasmine) prefer the grid of album covers. So, I'm rolling with that. Also killing the chartist stuff since I can't use it.
 
-![screenshot of column layout](/img/tinkerings/spotify-data-project/sample-column-view.png)
+![screenshot of column layout](/tinkerings/spotify-data-project/sample-column-view.png)
 
-![screenshot of column layout](/img/tinkerings/spotify-data-project/sample-song-graph.png)
+![screenshot of column layout](/tinkerings/spotify-data-project/sample-song-graph.png)
 
 ## January 22
 
@@ -916,7 +916,7 @@ Drew had exactly what I needed the whole time as I fought to make the classes fr
 
 Negative numbers! It hit me today while driving that negative numbers would help with plotting and showing change from week to week. I still can't use Chartist because of the lack of control over the guides, but making 10 and 1 be -10 and -1 would allow for the graph to work properly.
 
-![screenshot of graph with negative plots](/img/tinkerings/spotify-data-project/sample-graph-negative-plots.png)
+![screenshot of graph with negative plots](/tinkerings/spotify-data-project/sample-graph-negative-plots.png)
 
 Showing the change from week to week would work too: 4 - 2 = 2, but it's really a drop of 2 spots. If -4 and -2 are used, -4 - -2 = -2\. We'll see what I can do with that.
 

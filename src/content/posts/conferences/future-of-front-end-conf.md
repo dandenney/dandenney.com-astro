@@ -7,11 +7,11 @@ tags:
   - conferences
 ---
 
-![](/img/posts/conferences/future-of-front-end-conf/front-end-2009.jpg)
+![](/posts/conferences/future-of-front-end-conf/front-end-2009.jpg)
 
 Before I get to the future, I'll share a tidbit about the past. When I first got Cherrie's approval for doing the 2009 event, I wasn't thinking about 5 years down the road. I wasn't even thinking beyond the day of the first event. Jumping out there and just doing it was one of the best decisions I've made. However, trying to just do something cool without a plan leads to some issues. The result of this has been that every year after the event we talk about how it went and then decide if we can do it again. Going into our fifth year, I don't want to have that conversation afterwards. The last event was by far my favorite. Hanging out with people beforehand, the fantastic presentations of the day, dressing up in goofy stuff for the photo booth, air guitar on a chair during karaoke, the day 2 speakers and the conversations Saturday night absolutely rocked. The awesome sponsors made the amenities great and the whole thing went wonderfully. In our final review, we knew that we want to run this event for as long as people are interested in coming. I love what the conference has become and (in considering future events) my number one goal is not to break it.
 
-![](/img/posts/conferences/future-of-front-end-conf/front-end-conftocat.svg)
+![](/posts/conferences/future-of-front-end-conf/front-end-conftocat.svg)
 
 ### Scaling, Sponsors and Budget
 
@@ -23,7 +23,7 @@ To make sure that we have enough to cover the expenses, we need to raise the pri
 
 ### A less important fix
 
-![](/img/posts/conferences/future-of-front-end-conf/front-end-logo.png)
+![](/posts/conferences/future-of-front-end-conf/front-end-logo.png)
 
 The logo has plagued me since 2009\. As part of not thinking beyond the day of the first event, I made the "logo" to match the site. The original site (which I scared myself by looking at a few weeks ago) was normal on the left and used sketches and sketched type on the right. It was supposed to look unfinished as it technically was. It changed as things changed in the few months while we planned that first event. People have asked me many times about why the sketched part begins at the 't'. I don't have a good answer, it was just closer to being half. Either way, it's going away. [Ricardo Gimenes'](http://ricardogimenes.com) work with the characters is the true branding, so I'm just going to start using a web font to make the Front-End a solid red. Whew.
 

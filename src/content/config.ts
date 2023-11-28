@@ -4,6 +4,7 @@ const posts = defineCollection({
   // Type-check frontmatter using a schema
   schema: z.object({
     date: z.coerce.date(),
+    strapiSeries: z.boolean().optional(),
     summary: z.string(),
     tags: z.array(z.string()),
     thumb: z.string().optional(),

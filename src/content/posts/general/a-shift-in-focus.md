@@ -33,4 +33,4 @@ Every day, I look over the mentions on Twitter and check out what people are lea
 
 We are ready to rock, so there will lots of fun things coming in the next few months. In the meantime, I'll also be catching up on the courses that I've been slacking on since joining the team. I may even wander around the eastern seaboard having some learning get-togethers as well. We'll see...
 
-![Code School brackets](/img/posts/general/a-shift-in-focus/brackets-code-school.png)
+![Code School brackets](/posts/general/a-shift-in-focus/brackets-code-school.png)
