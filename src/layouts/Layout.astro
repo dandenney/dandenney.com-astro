@@ -1,5 +1,12 @@
 ---
 import { SEO } from "astro-seo";
+
+interface Props {
+  description: string;
+  title: string;
+}
+
+const {title, description} = Astro.props;
 ---
 
 <html lang="en">
@@ -8,12 +15,14 @@ import { SEO } from "astro-seo";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<SEO
-      title="The Personal Site of Dan Denney"
-      description="My personal playground for sharing many of the things I enjoy, most of which revolves around web design and development or food."
+    <SEO
+      title={title}
+      description={description}
     />
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main>
+      <slot />
+    </main>
 	</body>
 </html>
