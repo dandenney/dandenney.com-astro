@@ -295,7 +295,7 @@ svg {
 
 <section class="intro">
 
-<img alt="Nic and The Captain from True Crime Garage" src="/img/tinkerings/true-crime-garage-map/true-crime-garage.jpg" />
+<img alt="Nic and The Captain from True Crime Garage" src="/tinkerings/true-crime-garage-map/true-crime-garage.jpg" />
 
 <div>
 

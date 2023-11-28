@@ -278,5 +278,5 @@ The first issue that I've run into is rotating pieces of the SVG is tricky as th
 <p>
 Learned about animatetransform and struggled hacking around to get the right coordinates. Turns out I would have never gotten it right. Ended up recreating the SVG in Illustrator and using the navigator to get the coordinates. Fractions of a pixel, FTW! I tweaked the timing to speed it up and looks like It's still not the exact midpoint.
 </p>
-<img alt="cassette SVG in Illustrator" src="/img/tinkerings/svg-cassette/cassette-screenshot.png" width="344">
+<img alt="cassette SVG in Illustrator" src="/tinkerings/svg-cassette/cassette-screenshot.png" width="344">
 </div>

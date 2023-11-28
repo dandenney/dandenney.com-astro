@@ -13,70 +13,34 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
-
 	<body>
 		<Header />
 		<main>
+			<!-- {% if codeHighlighting %}
+				<style>
+					{% include "prism.css" %}
+				</style>
+			{% endif %}
+
+			{% include "header.njk" %} -->
+
 			<article>
-				<div class="hero-image">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<!-- <FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							} -->
-						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
+				<header class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0">
+					<h1 class="full-to-half-bleed max-w-2xl px-8 py-8 text-4xl font-black tracking-tight text-gray-900 sm:text-6xl lg:px-0 lg:col-span-2 lg:text-8xl xl:col-auto">
+						{title}
+					</h1>
+					<!-- {% if thumb %}
+						<img alt="{{ thumbAlt }}" class="block full-to-half-bleed" height="592" src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/{{ thumb }}" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/{{ thumb }} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/{{ thumb }} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/{{ thumb }} 672w," width="1008">
+					{% endif %} -->
+				</header>
+
+				<div class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0">
 					<slot />
+
+					<!-- {% if strapiSeries %}
+						{% include "src/_includes/strapi-series-toc.njk" %}
+					{% endif %} -->
 				</div>
 			</article>
 		</main>

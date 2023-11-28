@@ -13,7 +13,7 @@ tags:
 </style>
 
 <section class='row'>
-<img class="wheel" width="150" src="/img/tinkerings/roulettingale/roulette-wheel.svg" />
+<img class="wheel" width="150" src="/tinkerings/roulettingale/roulette-wheel.svg" />
 <h1 class='mts tac'>Roulettingale v2</h1>
 <p class='tac'>
 A data project testing the performance of the Martingale betting system in Roulette.

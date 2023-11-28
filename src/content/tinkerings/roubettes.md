@@ -13,7 +13,7 @@ tags:
 <section class='row'>
 <div class='cell well'>
 <h1 class='tac'>Roubettes</h1>
-<img width="100%" src="/img/tinkerings/roulettingale/roubettes-board.svg" />
+<img width="100%" src="/tinkerings/roulettingale/roubettes-board.svg" />
 </div>
 </section>
 <section class='row'>

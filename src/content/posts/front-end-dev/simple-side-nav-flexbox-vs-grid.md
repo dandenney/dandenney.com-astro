@@ -16,7 +16,7 @@ title: "Simple side nav: Flexbox vs. Grid"
 
 I've seen more and more nav "sidebars" recently and wanted to try it on my site. My goal was to shift the layout in the tablet-range of viewport sizes and look something like the image below. This led to a popular question in CSS layout these days.
 
-<img class="full-to-half-bleed" loading="lazy" src="/img/posts/front-end-dev/simple-side-nav-flexbox-vs-grid/sidebar.svg" />
+<img class="full-to-half-bleed" loading="lazy" src="/posts/front-end-dev/simple-side-nav-flexbox-vs-grid/sidebar.svg" />
 
 ## Is this a better job for Flexbox or Grid?
 

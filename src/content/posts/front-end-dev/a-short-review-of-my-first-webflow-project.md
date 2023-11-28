@@ -30,7 +30,7 @@ I was so excited that I could hardly wait to get done with work and back in Webf
 
 The one area that I got stuck on was a section I ended up not using anyways. The problem isn't necessarily anything Webflow-specific. The challenge was that the cards were built to use images with transparency in order to keep them centered in the cards and maintain equal heights. I would've needed to use real photos, and I couldn't figure out how to rework them in the 30ish minutes I was willing to try. I knew I could do it in code easily, so I planned to refactor that part.
 
-<img class="full-to-half-bleed" height="534" src="/img/posts/front-end-dev/a-short-review-of-my-first-webflow-project/screenshot-of-the-builder.webp" alt="Screenshot of Weblow's UI and the Pizza Guy template" width="1008" />
+<img class="full-to-half-bleed" height="534" src="/posts/front-end-dev/a-short-review-of-my-first-webflow-project/screenshot-of-the-builder.webp" alt="Screenshot of Weblow's UI and the Pizza Guy template" width="1008" />
 
 In the end, I skipped it. I felt like I was adding it more to follow the template than to add valuable information to someone reading the page.
 
@@ -38,7 +38,7 @@ In the end, I skipped it. I felt like I was adding it more to follow the templat
 
 I use 11ty often because there's enough abstraction to improve my efficiency, but I'm always very close to having real source code that can be viewed in a browser. Webflow is very similar. The UI and workflow is different, but when you export, you get a folder with all of the pure assets that just works.
 
-<img class="full-to-half-bleed" height="706" src="/img/posts/front-end-dev/a-short-review-of-my-first-webflow-project/screenshot-of-a-local-build.webp" alt="Screenshot of a webflow build and local render" width="1008" />
+<img class="full-to-half-bleed" height="706" src="/posts/front-end-dev/a-short-review-of-my-first-webflow-project/screenshot-of-a-local-build.webp" alt="Screenshot of a webflow build and local render" width="1008" />
 
 Everything is unoptimized, but I think that's a good choice by them. It would be brutal if someone just FTP'd these up to a server, but I wanted to be able to work with the direct files and let 11ty handle the necessary bits for building.
 
