@@ -25,6 +25,7 @@ const tinkerings = defineCollection({
   schema: z.object({
     date: z.coerce.date(),
     summary: z.string().optional(),
+    thumb: z.string().optional(),
     title: z.string(),
   }),
 });

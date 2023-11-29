@@ -4,10 +4,9 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
 
 const tinkerings = (await getCollection('tinkerings')).sort(
-	(a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
@@ -15,95 +14,44 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
 	</head>
-	<body>
+	<body class="bg-white dark:bg-slate-900">
 		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						tinkerings.map((post) => (
-							<li>
-								<a href={`/tinkerings/${post.slug}/`}>
-									<img width={720} height={360} src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.date} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
+		<main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+			<section class="pb-24 pt-16 relative shadow z-10 sm:pb-32">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<div class="mx-auto max-w-2xl lg:max-w-4xl">
+						<p class="text-lg font-semibold leading-8 tracking-tight text-slate-400 dark:text-slate-400">This Used To Be My Playground</p>
+						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-slate-100">Tinkerings</h1>
+						<p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none dark:text-slate-100">
+							The projects are all scratching some itch, either technical or part of my interests. Each has some technical bit that I learned in order to build, but they're focused on things like my love for music and trying to beat number systems.
+						</p>
+						<div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+							{tinkerings.map((tinkering) => (
+								<article class="relative isolate flex flex-col gap-8 lg:flex-row lg:items-center">
+									<div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-48 lg:shrink-0">
+										<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/${tinkering.data.thumb ? tinkering.data.thumb : 'posts/slackin.png'}`} alt="{% if tinkering.data.thumb %}{{ tinkering.data.thumbAlt }}{% else %}slacking on my imagin'{% endif %}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
+										<div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+									</div>
+									<div>
+										<div class="group relative max-w-xl">
+											<h3 class="has-links mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+												<a href={`/tinkerings/${tinkering.slug}/`}>
+													<span class="absolute inset-0"></span>
+													{tinkering.data.title}
+												</a>
+											</h3>
+											<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-slate-300">
+												{tinkering.data.summary}
+											</p>
+										</div>
+									</div>
+								</article>
+								))
+							}
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<Footer />
