@@ -1,7 +1,7 @@
 ---
 path: "/blips/bustle"
 title: Bustle
-date: "2013-08-17"
+pubDate: "2013-08-17"
 tags:
   - blips
 ---

@@ -1,7 +1,7 @@
 ---
 path: "/blips/jared-erondu"
 title: Jared Erondu
-date: "2012-10-02"
+pubDate: "2012-10-02"
 tags:
   - blips
 ---

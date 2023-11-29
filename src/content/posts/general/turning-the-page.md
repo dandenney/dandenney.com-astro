@@ -9,7 +9,7 @@ thumb: "posts/turning-the-page.png"
 thumbAlt: "A photograph of a person turning a page in a book while sitting on a park bench, with a beautiful autumn foliage in the background, during late afternoon with soft, warm lighting and shot with a portrait lens using the Sony FE 85mm f/1.4 GM --v 5 --ar 3:2"
 title: "Turning the Page"
 summary: "Leaving Code School and Pluralsight"
-date: "2017-07-02"
+pubDate: "2017-07-02"
 tags:
   - general
 ---

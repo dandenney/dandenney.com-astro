@@ -1,5 +1,5 @@
 ---
-date: "2020-03-30"
+pubDate: "2020-03-30"
 summary: I missed RSS and grabbed Feedly
 tags:
   - blips

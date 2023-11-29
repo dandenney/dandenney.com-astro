@@ -9,7 +9,7 @@ thumb: posts/map-on-the-web.png
 thumbAlt: "creating a map on the internet --ar 3:2 --v 5"
 title: Mapping On The Web Is Hard, Sorta
 summary: Sharing what I learned trying to build an interactive map
-date: "2020-03-08"
+pubDate: "2020-03-08"
 tags:
   - front-end-dev
 ---

@@ -2,7 +2,7 @@
 path: "/posts/front-end-dev/mondays-rock"
 title: Mondays Rock
 summary: Mondays are so different at Envy
-date: "2012-07-16"
+pubDate: "2012-07-16"
 tags:
   - front-end-dev
 ---

@@ -2,7 +2,7 @@
 path: "/posts/general/growing-with-envy"
 title: "Growing with Envy"
 summary: "Joining Envy Labs and Code School!"
-date: "2012-07-12"
+pubDate: "2012-07-12"
 tags:
   - front-end-dev
 ---

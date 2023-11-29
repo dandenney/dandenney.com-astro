@@ -3,7 +3,7 @@ backgroundPost: "#0e0f14"
 backgroundFooter: "#0d0707"
 colorLink: "#2AB8DE"
 colorText: "#f8f4f2"
-date: "2014-03-03"
+pubDate: "2014-03-03"
 gradientTitle: "linear-gradient(to bottom, #8c0909 0%, #d03d07 20%, #eeb649 40%, #fcfabd 60%, #d03d07 80%, #8c0909 100%)"
 
 path: "/posts/general/a-shift-in-focus"

@@ -2,7 +2,7 @@
 path: "/posts/conferences/rebuild-conference-2012"
 title: "re:build Conference 2012"
 summary: A recap from attending re:build Conf
-date: "2012-09-22"
+pubDate: "2012-09-22"
 tags:
   - conferences
 ---

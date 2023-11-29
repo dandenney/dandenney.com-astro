@@ -1,7 +1,7 @@
 ---
 path: "/blips/cherry-picking-from-frameworks"
 title: Cherry Picking from Frameworks
-date: "2012-11-27"
+pubDate: "2012-11-27"
 tags:
   - blips
 ---

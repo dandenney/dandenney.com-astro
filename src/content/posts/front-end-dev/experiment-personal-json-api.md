@@ -4,7 +4,7 @@ backgroundFooter: "#0d0707"
 codeHighlighting: true
 colorLink: "#7bcccd"
 colorText: "#f8f4f2"
-date: "2014-08-30"
+pubDate: "2014-08-30"
 gradientTitle: "linear-gradient(to left, #d36b89, #8a455c)"
 path: "/posts/front-end-dev/experiment-personal-json-api"
 permalink: posts/front-end-dev/{{ title | slug }}/index.html

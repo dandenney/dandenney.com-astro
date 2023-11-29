@@ -4,7 +4,7 @@ backgroundFooter: "#010a10"
 codeHighlighting: true
 colorLink: "#f8c4a2"
 colorText: "#caeff2"
-date: "2020-12-13"
+pubDate: "2020-12-13"
 gradientTitle: "radial-gradient(#90e3f2, #2b8aa0)"
 path: "/posts/front-end-dev/fighting-tooling-fatigue"
 summary: Failing deploys, build configurations, and plugins oh my

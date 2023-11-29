@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 const posts = defineCollection({
   // Type-check frontmatter using a schema
   schema: z.object({
-    date: z.coerce.date(),
+    pubDate: z.coerce.date(),
     strapiSeries: z.boolean().optional(),
     summary: z.string(),
     tags: z.array(z.string()),
@@ -15,7 +15,7 @@ const posts = defineCollection({
 
 const blips = defineCollection({
   schema: z.object({
-    date: z.coerce.date(),
+    pubDate: z.coerce.date(),
     summary: z.string().optional(),
     title: z.string(),
   }),
@@ -23,7 +23,7 @@ const blips = defineCollection({
 
 const tinkerings = defineCollection({
   schema: z.object({
-    date: z.coerce.date(),
+    pubDate: z.coerce.date(),
     summary: z.string().optional(),
     thumb: z.string().optional(),
     title: z.string(),

@@ -3,7 +3,7 @@ backgroundPost: "#0d0707"
 backgroundFooter: "#0d0707"
 colorLink: "#FE3036"
 colorText: "#f2f2f2"
-date: "2014-10-23"
+pubDate: "2014-10-23"
 gradientTitle: "linear-gradient(to bottom, #efefef, #bbbbbb)"
 path: "/posts/conferences/front-end-conf-lives"
 summary: The conference goes on, thanks to friends

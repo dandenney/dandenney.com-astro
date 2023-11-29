@@ -1,6 +1,6 @@
 ---
 title: Spotify Data Project
-date: 2015-01-27
+pubDate: 2015-01-27
 summary: Learning how to grab data from Spotify and map out track performance
 tags:
   - tinkerings

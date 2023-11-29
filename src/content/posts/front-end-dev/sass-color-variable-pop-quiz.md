@@ -2,7 +2,7 @@
 path: "/posts/front-end-dev/sass-color-variable-pop-quiz"
 title: Sass Color Variable Pop Quiz
 summary: Sharing results from asking when people set variables
-date: "2013-01-21"
+pubDate: "2013-01-21"
 codeHighlighting: true
 tags:
   - front-end-dev

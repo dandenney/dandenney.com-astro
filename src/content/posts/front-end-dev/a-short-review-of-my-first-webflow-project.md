@@ -1,6 +1,6 @@
 ---
 codeHighlighting: true
-date: "2023-07-19"
+pubDate: "2023-07-19"
 socialImageFilename: "og-a-short-review-of-my-first-webflow-project.jpg"
 summary: 'A mix "no code" and "yes code"'
 tags:

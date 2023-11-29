@@ -6,7 +6,7 @@ codeHighlighting: true
 colorInlineCode: "#ffffdf"
 colorLink: "#fa7090"
 colorText: "#ffffdf"
-date: "2023-04-10"
+pubDate: "2023-04-10"
 gradientTitle: "linear-gradient(to bottom, #87d0a5, #51bca2)"
 socialImageFilename: "og-strap-series-part-5-a-coming-soon-component.jpg"
 strapiSeries: true

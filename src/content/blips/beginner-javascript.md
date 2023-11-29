@@ -1,7 +1,7 @@
 ---
 path: "/blips/beginner-javascript"
 title: Beginner JavaScript
-date: "2019-11-29"
+pubDate: "2019-11-29"
 tags:
   - blips
 ---

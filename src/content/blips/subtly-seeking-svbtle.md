@@ -1,7 +1,7 @@
 ---
 path: "/blips/subtly-seeking-svbtle"
 title: Subtly Seeking Svbtle
-date: "2012-11-12"
+pubDate: "2012-11-12"
 tags:
   - blips
 ---

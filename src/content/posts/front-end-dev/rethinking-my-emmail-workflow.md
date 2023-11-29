@@ -3,7 +3,7 @@ backgroundPost: "#e86b31"
 backgroundFooter: "#0d0707"
 colorLink: "#000002"
 colorText: "#ffffff"
-date: "2016-06-30"
+pubDate: "2016-06-30"
 gradientTitle: "linear-gradient(to right, #000002, #000002)"
 path: "/posts/front-end-dev/rethinking-my-emmail-workflow"
 summary: Changing from all local dev to using Builder

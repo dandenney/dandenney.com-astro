@@ -4,7 +4,7 @@ backgroundPost: "#fff"
 canonical: "https://www.dandenney.com/posts/front-end-dev/strapi-series-part-2-architectural-decisions"
 colorLink: "#627884"
 colorText: "#111"
-date: "2023-04-09"
+pubDate: "2023-04-09"
 gradientTitle: "linear-gradient(45deg, #8299a8, #555b53)"
 socialImageFilename: "og-strapi-series-part-2-architectural-decisions.jpg"
 strapiSeries: true

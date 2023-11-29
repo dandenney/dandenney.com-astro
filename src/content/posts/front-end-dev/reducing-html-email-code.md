@@ -9,7 +9,7 @@ thumb: "posts/reducing-email-code.png"
 thumbAlt: "An illustration of a programmer coding a HTML email, with code snippets and email template visible in the background, in the style of a flat design, viewed from a bird's eye perspective --v 5 --ar 3:2"
 title: Reducing HTML Email Code
 summary: Sharing how I took a a crack at refactoring an email
-date: "2016-07-16"
+pubDate: "2016-07-16"
 codeHighlighting: true
 tags:
   - front-end-dev

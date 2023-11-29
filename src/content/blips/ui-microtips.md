@@ -1,7 +1,7 @@
 ---
 path: "/blips/ui-microtips"
 title: "UI Microtips"
-date: "2020-01-18"
+pubDate: "2020-01-18"
 tags:
   - blips
 ---

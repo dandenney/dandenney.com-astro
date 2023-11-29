@@ -1,7 +1,7 @@
 ---
 path: "/blips/smashing-conf-nyc-2019"
 title: Smashing Conf NYC 2019
-date: "2018-10-23T00:00:00.000Z"
+pubDate: "2018-10-23T00:00:00.000Z"
 tags:
   - blips
 ---

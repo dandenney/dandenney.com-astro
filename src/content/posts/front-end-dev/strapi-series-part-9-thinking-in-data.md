@@ -3,7 +3,7 @@ backgroundCode: "#eacba7"
 backgroundPost: "#fcefde"
 codeHighlighting: true
 colorText: "#020e13"
-date: "2023-05-03"
+pubDate: "2023-05-03"
 gradientTitle: "linear-gradient(to bottom, #a95639, #5f2b16)"
 strapiSeries: true
 summary: Learning valuable lessons from initial creation attempts

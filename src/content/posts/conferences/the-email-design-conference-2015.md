@@ -3,7 +3,7 @@ backgroundPost: "#0d0707"
 backgroundFooter: "#0d0707"
 colorLink: "#ea9a83"
 colorText: "#f8f4f2"
-date: "2015-08-29"
+pubDate: "2015-08-29"
 gradientTitle: "linear-gradient(20deg, #6fbbee, #9e9dd1, #ea9a83)"
 path: "/posts/conferences/the-email-design-conference-2015"
 summary: A recap from attending this awesome event

@@ -2,7 +2,7 @@
 backgroundFooter: "#7ed1b3"
 backgroundPost: "#fdf7e3"
 colorText: "#314b55"
-date: "2023-04-04"
+pubDate: "2023-04-04"
 gradientTitle: "linear-gradient(35deg, #f68644, #af5a3d)"
 path: "/posts/front-end-dev/mondays-rock"
 summary: The computers have taken over this website

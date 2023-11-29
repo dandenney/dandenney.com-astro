@@ -5,7 +5,7 @@ backgroundFooter: "#070c14"
 codeHighlighting: true
 colorLink: "#f44a3c"
 colorText: "#e8fbdb"
-date: "2021-08-17"
+pubDate: "2021-08-17"
 gradientTitle: "linear-gradient(to bottom, #aec8c5, #7b9396)"
 path: "/posts/front-end-dev/fixing-x-robots-nofollow-with-vercel"
 summary: Fixing a an issue when proxying to Vercel

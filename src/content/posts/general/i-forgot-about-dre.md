@@ -3,7 +3,7 @@ backgroundPost: "#000000"
 backgroundFooter: "#000000"
 colorLink: "#F91CDB"
 colorText: "#ffffff"
-date: "2014-01-27"
+pubDate: "2014-01-27"
 gradientTitle: "linear-gradient(to bottom, #b9162d, #b9162d)"
 
 path: "/posts/general/i-forgot-about-dre"

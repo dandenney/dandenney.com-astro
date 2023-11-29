@@ -1,5 +1,5 @@
 ---
-date: "2023-05-27"
+pubDate: "2023-05-27"
 summary: Testing ChatGPT's knowledge of my career
 title: What ChatGPT 4 "Thinks" for a Front-end Career
 tags:

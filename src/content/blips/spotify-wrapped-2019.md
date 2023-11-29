@@ -1,7 +1,7 @@
 ---
 path: "/blips/spotify-wrapped-2019"
 title: Spotify Wrapped 2019
-date: "2019-12-05"
+pubDate: "2019-12-05"
 tags:
   - blips
 ---

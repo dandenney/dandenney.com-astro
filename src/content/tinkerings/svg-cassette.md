@@ -1,6 +1,6 @@
 ---
 title: SVG Cassette
-date: 2013-08-13
+pubDate: 2013-08-13
 summary: Learing about SVG animation by spinning cassette reels
 tags:
   - tinkerings

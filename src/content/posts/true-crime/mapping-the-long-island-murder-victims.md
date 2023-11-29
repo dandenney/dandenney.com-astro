@@ -3,7 +3,7 @@ path: "/posts/true-crime/mapping-the-long-island-murder-victims"
 thumb: posts/mapping-long-island-victims.png
 title: "Mapping the Long Island Murder Victims"
 summary: "A map of a series of unsolved murders in Long Island from the 1990s until the 2010s"
-date: "2020-03-07"
+pubDate: "2020-03-07"
 tags:
   - true-crime
 ---

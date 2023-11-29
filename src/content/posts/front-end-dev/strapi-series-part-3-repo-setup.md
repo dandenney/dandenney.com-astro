@@ -4,7 +4,7 @@ backgroundPost: "#010101"
 canonical: "https://www.dandenney.com/posts/front-end-dev/strapi-series-part-3-repo-setup"
 colorLink: "#fdd259"
 colorText: "#fefcea"
-date: "2023-04-09"
+pubDate: "2023-04-09"
 gradientTitle: "linear-gradient(to top, #955235, #ee763b)"
 socialImageFilename: "og-strapi-series-part-3-repo-setup.jpg"
 strapiSeries: true

@@ -1,6 +1,6 @@
 ---
 codeHighlighting: true
-date: "2021-11-02"
+pubDate: "2021-11-02"
 summary: Weird glitch, hoping this helps anyone else
 title: Don't use emojis in Marketo emails
 tags:

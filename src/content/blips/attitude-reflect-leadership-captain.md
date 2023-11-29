@@ -1,7 +1,7 @@
 ---
 path: "/blips/attitude"
 title: Attitude Reflect Leadership, Captain
-date: "2012-09-18"
+pubDate: "2012-09-18"
 tags:
   - blips
 ---

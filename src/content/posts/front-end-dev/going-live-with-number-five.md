@@ -2,7 +2,7 @@
 path: "/posts/front-end-dev/going-live-with-number-five"
 title: Going Live With Number Five
 summary: Launching the site for the 5th Front-End Conf
-date: "2013-03-20"
+pubDate: "2013-03-20"
 tags:
   - front-end-dev
 ---

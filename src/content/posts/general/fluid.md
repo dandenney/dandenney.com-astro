@@ -2,7 +2,7 @@
 path: "/posts/general/fluid"
 title: "Fluid"
 summary: "Waxing poetic on thinking about responsive design by watching nature"
-date: "2012-03-12"
+pubDate: "2012-03-12"
 
 tags:
   - general

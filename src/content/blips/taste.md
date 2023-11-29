@@ -1,7 +1,7 @@
 ---
 path: "/blips/taste"
 title: Taste
-date: "2014-01-29"
+pubDate: "2014-01-29"
 tags:
   - blips
 ---

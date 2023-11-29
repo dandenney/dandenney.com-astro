@@ -4,7 +4,7 @@ backgroundFooter: "#cac09f"
 codeHighlighting: true
 colorLink: "#257f7b"
 colorText: "#453332"
-date: "2020-12-15"
+pubDate: "2020-12-15"
 gradientTitle: "linear-gradient(to bottom, #817f58, #555646)"
 summary: Sharing some basics of configuration that were new to me
 tags:

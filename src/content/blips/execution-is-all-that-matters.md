@@ -1,7 +1,7 @@
 ---
 path: "/blips/execution-is-all-that-matters"
 title: Execution is all that matters
-date: "2012-09-15"
+pubDate: "2012-09-15"
 tags:
   - blips
 ---

@@ -8,7 +8,7 @@ thumb: posts/prop-preferences.png
 title: Prop Data Preferences
 gradientTitle: "linear-gradient(to right, #d9a07f, #f5cdaa)"
 summary: What's the "best practice" for passing down data
-date: "2020-01-18"
+pubDate: "2020-01-18"
 codeHighlighting: true
 tags:
   - front-end-dev

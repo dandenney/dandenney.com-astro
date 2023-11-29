@@ -8,7 +8,7 @@ thumb: "posts/love-css.png"
 title: "You Can't Make Others Love CSS"
 gradientTitle: "radial-gradient(#e74565, #570505)"
 summary: Sharing my take on the utility CSS wars
-date: "2022-09-20"
+pubDate: "2022-09-20"
 codeHighlighting: false
 tags:
   - front-end-dev

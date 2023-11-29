@@ -1,7 +1,7 @@
 ---
 path: "/blips/i-missed-rss"
 title: I Missed RSS
-date: "2013-08-09"
+pubDate: "2013-08-09"
 tags:
   - blips
 ---

@@ -1,7 +1,7 @@
 ---
 path: "/blips/great-week-for-front-end-articles"
 title: Great Week for Front-End Articles
-date: "2013-10-24"
+pubDate: "2013-10-24"
 tags:
   - blips
 ---

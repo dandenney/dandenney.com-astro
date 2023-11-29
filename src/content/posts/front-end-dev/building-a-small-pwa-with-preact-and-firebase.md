@@ -11,7 +11,7 @@ thumb: "posts/preact-pwa.png"
 thumbAlt: "An illustration of a mobile fitness app, displaying a user completing a workout routine, with a gym in the background, in the style of a minimalist design, viewed from a top-down perspective --v 5 --ar 3:2"
 title: Building a Small PWA with Preact and Firebase
 summary: Sharing how I built a little exercise tracker
-date: "2017-07-23"
+pubDate: "2017-07-23"
 codeHighlighting: true
 tags:
   - front-end-dev

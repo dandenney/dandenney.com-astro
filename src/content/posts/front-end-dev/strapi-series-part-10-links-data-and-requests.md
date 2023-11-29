@@ -3,7 +3,7 @@ backgroundPost: "#050100"
 codeHighlighting: true
 colorLink: "#fcdf80"
 colorText: "#fffffc"
-date: "2023-05-11"
+pubDate: "2023-05-11"
 gradientTitle: "linear-gradient(to bottom, #f9bf65, #e99e4f)"
 strapiSeries: true
 summary: The first collection and another single type
