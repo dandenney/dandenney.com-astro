@@ -22,15 +22,19 @@
   </nav>
 </header>
 
-<script>
+<script is:inline>
   const lightModeToggle = document.querySelector('.toggle');
-  lightModeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
+  if (lightModeToggle) {
+    lightModeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
 
-    if (document.documentElement.classList.contains('dark')) {
-      localStorage.theme = 'dark'
-    } else {
-      localStorage.theme = 'light'
-    }
-  });
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  } else {
+    console.error('Toggle button not found.');
+  }
 </script>
