@@ -51,6 +51,7 @@
 .longform h3,
 .longform h4,
 .longform h5 {
+  font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
@@ -65,13 +66,11 @@
 
 .longform h2 {
   font-size: 1.5rem;
-  font-weight: 700;
   line-height: 1.2;
 }
 
 .longform h3 {
   font-size: 1.25rem;
-  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -157,6 +156,13 @@
   max-width: 100rem;
   transform: translateX(-50%);
   width: 100vw;
+}
+
+/* Code */
+
+.astro-code {
+  border-radius: 0.25rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 1000px) {

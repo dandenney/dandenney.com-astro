@@ -25,7 +25,7 @@ So last Friday on the morning of Front-End Conf Portland, I had run downstairs t
 
 I only got a quick peek at it before it was my turn, so I just texted Cherrie: "Did you see what Matt made?" Fast forward 5 minutes and I walked into our hotel room to see Cherrie like this:
 
-![](emobrit.gif)
+![](/posts/conferences/thank-you/emobrit.gif)
 
 ## Oh. My. Goodness.
 
