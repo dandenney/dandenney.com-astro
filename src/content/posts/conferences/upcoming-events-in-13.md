@@ -14,7 +14,7 @@ thumbAlt: "An illustration of a busy calendar with upcoming events marked in bri
 title: "Upcoming Events in '13"
 ---
 
-![](./us-map.svg)
+![](/posts/conferences/upcoming-events-in-13/us-map.svg)
 
 [Cherrie](https://twitter.com/cherriedenney) and I are about to embark on 6 weeks of craziness. We will be hitting up 6 other states, attending 3 weddings, and I will be attending 5 conferences. There are 2 that I am really sad to miss so I'm going to list them first and then share all the ones that I'll be attending. I hope to meet lots of new folks and especially lots of [Code School](http://codeschool.com) customers.
 

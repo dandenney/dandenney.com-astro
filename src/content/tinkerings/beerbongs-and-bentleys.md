@@ -945,7 +945,7 @@ tags:
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
 
-<script>
+<script is:inline>
 const paranoid = {
   title: "Paranoid",
   rankings: [

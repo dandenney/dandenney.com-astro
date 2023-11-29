@@ -54,7 +54,7 @@ Of those 38 best beer spots, I’ve only been to 1, which is shameful. However, 
 
 ### Include the necessary Mapbox files
 
-```markup
+```html
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
 <link
   href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css"
