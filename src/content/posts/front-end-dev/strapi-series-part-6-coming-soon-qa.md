@@ -5,7 +5,7 @@ canonical: "https://www.dandenney.com/posts/front-end-dev/strapi-series-part-6-c
 codeHighlighting: true
 colorLink: "#f8e850"
 colorText: "#f3f5f8"
-date: "2023-04-17"
+pubDate: "2023-04-17"
 gradientTitle: "linear-gradient(45deg, #5adaff, #39b4f0)"
 socialImageFilename: "og-strap-series-part-6-coming-soon-qa.jpg"
 strapiSeries: true

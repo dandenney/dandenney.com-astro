@@ -3,7 +3,7 @@ backgroundPost: "#343132"
 backgroundFooter: "#343132"
 colorLink: "#c5d496"
 colorText: "#f8f4f2"
-date: "2013-04-30"
+pubDate: "2013-04-30"
 gradientTitle: "linear-gradient(120deg, #6d9a81, #c5d496, #406d62)"
 
 path: "/posts/general/the-trouble-with-the-trouble-with-code-school"

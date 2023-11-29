@@ -9,10 +9,12 @@ thumb: "posts/a-new-adventure.png"
 thumbAlt: "a digital artwork that celebrates the adventure and excitement of data science using a graphic tablet and a vibrant, colorful palette that reflects the dynamic and ever-changing nature of the field. Use a composition that incorporates elements of technology and futuristic design, and incorporate references to data visualization and analysis to highlight the importance of data-driven decision making. Use lighting to create a sense of depth and perspective that emphasizes the vast potential of data science --v 5 --ar 3:2"
 title: "A New Adventure"
 summary: "On joining DataCamp to build a front-end team"
-date: "2017-09-10"
+pubDate: "2017-09-10"
 tags:
   - general
----Backstory: After leaving my job at the end of June, I started with a little vacation time, in California and upstate New York for family weddings. Since then, I've had the benefit of working with the awesome folks at [Bridge + Bloom](http://www.bridgeandbloom.com/) on a project. If you're a freelance developer, I can't recommend them enough. They do fantastic design work, they're fun people, and they're highly organized.
+---
+
+Backstory: After leaving my job at the end of June, I started with a little vacation time, in California and upstate New York for family weddings. Since then, I've had the benefit of working with the awesome folks at [Bridge + Bloom](http://www.bridgeandbloom.com/) on a project. If you're a freelance developer, I can't recommend them enough. They do fantastic design work, they're fun people, and they're highly organized.
 
 ## And now...
 

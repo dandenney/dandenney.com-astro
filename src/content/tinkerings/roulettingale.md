@@ -1,6 +1,6 @@
 ---
 title: Roulettingale
-date: 2015-02-05
+pubDate: 2015-02-05
 summary: Applying the Martingale betting system to roulette, to visualize data
 tags:
   - tinkerings

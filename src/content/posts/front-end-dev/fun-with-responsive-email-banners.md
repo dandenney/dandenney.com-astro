@@ -3,7 +3,7 @@ backgroundPost: "#2b354d"
 backgroundFooter: "#1A202F"
 colorLink: "#ffb451"
 colorText: "#ffffff"
-date: "2014-03-27"
+pubDate: "2014-03-27"
 gradientTitle: "linear-gradient(to bottom, #edd4b1, #c5a589)"
 path: "/posts/front-end-dev/fun-with-responsive-email-banners"
 summary: Responsive design and HTML Tables, FTW

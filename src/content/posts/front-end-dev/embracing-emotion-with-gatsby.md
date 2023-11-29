@@ -8,7 +8,7 @@ path: "/posts/front-end-dev/embracing-emotion-with-gatsby"
 thumb: "posts/emotion-gatsby.png"
 title: Embracing Emotion, with Gatsby
 summary: Crushing on Gatsby and trying to organize my Emotions
-date: "2019-04-17"
+pubDate: "2019-04-17"
 codeHighlighting: true
 tags:
   - front-end-dev

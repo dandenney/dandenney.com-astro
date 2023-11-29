@@ -4,7 +4,7 @@ backgroundFooter: "#0d0707"
 codeHighlighting: true
 colorLink: "#c34f0e"
 colorText: "#423231"
-date: "2019-10-20"
+pubDate: "2019-10-20"
 gradientTitle: "linear-gradient(to bottom, #aab670, #485823)"
 path: "/posts/front-end-dev/getting-closer-to-critical-css-by-default"
 summary: How adopting CSS-In-JS tooling is improving performance

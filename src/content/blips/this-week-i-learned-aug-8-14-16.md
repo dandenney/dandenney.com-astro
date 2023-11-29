@@ -1,7 +1,7 @@
 ---
 path: "/blips/this-week-i-learned-aug-8-14-16"
 title: This Week I Learned (Aug 8-14)
-date: 2016-08-14
+pubDate: 2016-08-14
 tags:
   - blips
 ---

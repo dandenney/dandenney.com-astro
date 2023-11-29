@@ -1,7 +1,7 @@
 ---
 path: "/blips/kolormark"
 title: Kolormark
-date: "2020-01-13"
+pubDate: "2020-01-13"
 tags:
   - blips
 ---

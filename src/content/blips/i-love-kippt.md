@@ -1,7 +1,7 @@
 ---
 path: "/blips/i-love-kippt"
 title: I love Kippt
-date: "2012-09-15"
+pubDate: "2012-09-15"
 tags:
   - blips
 ---

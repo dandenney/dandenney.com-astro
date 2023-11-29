@@ -2,10 +2,12 @@
 path: "/posts/general/rebuilding"
 title: "Rebuilding"
 summary: "Why contemplating our mortality can be a powerful catalyst for change"
-date: "2012-06-16"
+pubDate: "2012-06-16"
 tags:
   - general
----I'm in the process of rebuilding my personal site. It kinda sucks that I was more or less forced into it, but I have wanted to do it for a while. I'm taking it as an opportunity to do something very different.
+---
+
+I'm in the process of rebuilding my personal site. It kinda sucks that I was more or less forced into it, but I have wanted to do it for a while. I'm taking it as an opportunity to do something very different.
 
 ## CMS Free
 

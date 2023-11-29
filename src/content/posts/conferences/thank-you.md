@@ -3,7 +3,7 @@ backgroundPost: "#fdf9ed"
 backgroundFooter: "#fdf9ed"
 colorLink: "#b8401d"
 colorText: "#2b190b"
-date: "2014-08-28"
+pubDate: "2014-08-28"
 gradientTitle: "linear-gradient(45deg, #324d5e, #4e7581)"
 path: "/posts/conferences/thank-you"
 summary: People are amazing, thank you so much

@@ -4,7 +4,7 @@ backgroundPost: "#120713"
 codeHighlighting: true
 colorLink: "#26dcc5"
 colorText: "#f4eae2"
-date: "2023-04-20"
+pubDate: "2023-04-20"
 gradientTitle: "linear-gradient(to bottom, #fe9d4c, #f76d4e, #fd5ebf)"
 strapiSeries: true
 summary: Identifying patterns and planning for implementation

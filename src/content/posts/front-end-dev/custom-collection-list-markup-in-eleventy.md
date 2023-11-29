@@ -4,7 +4,7 @@ backgroundFooter: "#12131a"
 codeHighlighting: true
 colorLink: "#1cecef"
 colorText: "#e3dabe"
-date: "2020-12-16"
+pubDate: "2020-12-16"
 gradientTitle: "linear-gradient(to right, #8b471b, #f29f32)"
 path: "/posts/front-end-dev/custom-collection-list-markup-in-eleventy"
 summary: Trying something with using custom markup for each item in a collection list
@@ -59,7 +59,7 @@ thumb: "/img/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/thumb.png"
 thumb2x: "/img/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/thumb@2x.png"
 title: "Eleventy and Netlify for NPM newbs like me"
 summary: Sharing some basics of configuration that were new to me
-date: "2020-12-15"
+pubDate: "2020-12-15"
 codeHighlighting: true
 tags:
 	- front-end-dev
@@ -77,7 +77,7 @@ This current post is the first that will get the custom "poster", so I started w
 ```js
 ---
 codeHighlighting: true
-date: "2020-12-16"
+pubDate: "2020-12-16"
 path: "/posts/front-end-dev/custom-collection-list-markup-in-eleventy"
 poster: 'Custom collection list markup in Eleventy<img alt="Random photo retrieved as a placeholder" src="<https://i.picsum.photos/id/590/200/300.jpg?hmac=rMKCd22eXuQjtVujiifOrJzm-dBuhO8blicB93xN4y4>" />'
 summary: Trying something with using custom markup for each item in a collection list

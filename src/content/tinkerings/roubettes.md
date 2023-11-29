@@ -1,6 +1,6 @@
 ---
 title: Roubettes
-date: 2015-02-21
+pubDate: 2015-02-21
 summary: Outputting the results of specific bets
 tags:
   - tinkerings

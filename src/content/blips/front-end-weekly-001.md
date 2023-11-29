@@ -1,7 +1,7 @@
 ---
 path: "/blips/front-end-weekly-no-1"
 title: Front-End Weekly - No. 1
-date: "2013-11-01"
+pubDate: "2013-11-01"
 tags:
   - blips
 ---

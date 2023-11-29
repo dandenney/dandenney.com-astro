@@ -1,6 +1,6 @@
 ---
 codeHighlighting: true
-date: "2023-05-29"
+pubDate: "2023-05-29"
 title: Filter an Array by Keyboard Rows
 summary: Using ChatGPT for JS problems
 tags:

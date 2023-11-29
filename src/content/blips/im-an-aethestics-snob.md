@@ -1,7 +1,7 @@
 ---
 path: "/blips/im-an-aesthetics-snob"
 title: I'm an Aethestics Snob
-date: "2012-10-04"
+pubDate: "2012-10-04"
 tags:
   - blips
 ---

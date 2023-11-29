@@ -1,5 +1,5 @@
 ---
-date: "2020-04-08"
+pubDate: "2020-04-08"
 summary: Tips to try to speed it up
 tags:
   - blips

@@ -1,7 +1,7 @@
 ---
 path: "/blips/our-people-problem"
 title: Our Industry's Drinking Problem?
-date: "2013-10-24"
+pubDate: "2013-10-24"
 tags:
   - blips
 ---

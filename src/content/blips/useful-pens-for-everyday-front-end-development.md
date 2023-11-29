@@ -1,5 +1,5 @@
 ---
-date: "2020-01-18"
+pubDate: "2020-01-18"
 summary: Another Sarah Drasner joint
 tags:
   - blips

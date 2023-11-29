@@ -3,7 +3,7 @@ backgroundPost: "#20232d"
 backgroundFooter: "#0d0707"
 colorLink: "#fdc861"
 colorText: "#f8f4f2"
-date: "2014-01-08"
+pubDate: "2014-01-08"
 gradientTitle: "linear-gradient(to bottom, #8db2c9, #5981ad)"
 path: "/posts/front-end-dev/photoshops-timeline-rocks"
 summary: Sharing my experience in making a GIF with the timeline

@@ -3,7 +3,7 @@ backgroundPost: "#0d0707"
 backgroundFooter: "#0d0707"
 colorLink: "#EB59A6"
 colorText: "#f8f4f2"
-date: "2014-07-21"
+pubDate: "2014-07-21"
 gradientTitle: "linear-gradient(to bottom, #3eaabe, #102f54)"
 path: "/posts/conferences/no-sleep-til-portland"
 summary: Building up to running our first event in Portland

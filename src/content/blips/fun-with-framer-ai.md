@@ -1,5 +1,5 @@
 ---
-date: "2023-06-13"
+pubDate: "2023-06-13"
 summary: Checking out their new landing page prompt option
 title: Fun With Framer AI
 tags:

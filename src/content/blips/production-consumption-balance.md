@@ -1,7 +1,7 @@
 ---
 path: "/blips/production-consumption-balance"
 title: Production-Consumption Balance
-date: "2012-11-14"
+pubDate: "2012-11-14"
 tags:
   - blips
 ---

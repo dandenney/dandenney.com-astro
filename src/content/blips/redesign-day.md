@@ -1,7 +1,7 @@
 ---
 path: "/blips/redesign-day"
 title: Redesign Day
-date: "2012-10-03"
+pubDate: "2012-10-03"
 tags:
   - blips
 ---

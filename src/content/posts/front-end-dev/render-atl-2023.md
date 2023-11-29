@@ -3,7 +3,7 @@ backgroundFooter: "#7ed1b3"
 backgroundPost: "#000000"
 colorLink: "#ff80e0"
 colorText: "#ffffff"
-date: "2023-06-03"
+pubDate: "2023-06-03"
 socialImageFilename: "og-render-atl-2023.jpg"
 summary: Recap of an awesome experience
 tags:

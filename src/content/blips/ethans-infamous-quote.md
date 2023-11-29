@@ -1,7 +1,7 @@
 ---
 path: "/blips/ethans-infamous-quote"
 title: Ethan's Infamous Quote
-date: "2018-09-05"
+pubDate: "2018-09-05"
 tags:
   - blips
 ---

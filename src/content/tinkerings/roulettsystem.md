@@ -1,6 +1,6 @@
 ---
 title: Roulettystem
-date: 2015-02-22
+pubDate: 2015-02-22
 summary: Can a system win enough times to be profitable?
 tags:
   - tinkerings

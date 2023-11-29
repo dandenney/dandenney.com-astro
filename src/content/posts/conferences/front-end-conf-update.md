@@ -3,7 +3,7 @@ backgroundPost: "#253b67"
 backgroundFooter: "#131e35"
 colorLink: "#ba9e80"
 colorText: "#f8f4f2"
-date: "2014-01-19"
+pubDate: "2014-01-19"
 gradientTitle: "linear-gradient(45deg, #5b9395, #719893, #ffa87a, #fdcda8)"
 path: "/posts/conferences/front-end-conf-update"
 summary: Updates about this and future events

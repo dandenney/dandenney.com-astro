@@ -9,7 +9,7 @@ thumb: "posts/local-ruby.png"
 thumbAlt: "a person holiding a magical ruby, fantasy, cinematic lighting, --s 777 --v 5 --ar 3:2"
 title: TIL Executing Local Ruby
 summary: Sharing how I learned how to use Ruby to solve a problem
-date: "2015-11-20"
+pubDate: "2015-11-20"
 codeHighlighting: true
 tags:
   - front-end-dev

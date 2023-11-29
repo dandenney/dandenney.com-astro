@@ -1,7 +1,7 @@
 ---
 path: "/blips/ideas"
 title: Ideas
-date: "2012-10-01"
+pubDate: "2012-10-01"
 tags:
   - blips
 ---

@@ -5,7 +5,7 @@ canonical: "https://www.dandenney.com/posts/front-end-dev/strapi-series-part-7-l
 codeHighlighting: true
 colorLink: "#f9de88"
 colorText: "#f9fbfa"
-date: "2023-04-19"
+pubDate: "2023-04-19"
 gradientTitle: "radial-gradient(#fef9dc, #eb9256, #ee8146)"
 socialImageFilename: "og-strap-series-part-7-light-and-dark-mode.jpg"
 strapiSeries: true

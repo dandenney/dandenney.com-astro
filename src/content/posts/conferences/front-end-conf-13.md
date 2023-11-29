@@ -1,5 +1,5 @@
 ---
-date: "2013-07-18"
+pubDate: "2013-07-18"
 gradientTitle: "linear-gradient(to bottom, #84151a, #b51f24)"
 path: "/posts/conferences/front-end-conf-13"
 summary: A recap of from running the 2013 event

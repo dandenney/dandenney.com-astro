@@ -3,7 +3,7 @@ backgroundPost: "#000000"
 backgroundFooter: "#000000"
 colorLink: "#f2bd39"
 colorText: "#f6f5ed"
-date: "2014-06-09"
+pubDate: "2014-06-09"
 gradientTitle: "linear-gradient(to right, #111111, #232020)"
 path: "/posts/conferences/front-end-conf-finales"
 summary: Our last two times of running the conf

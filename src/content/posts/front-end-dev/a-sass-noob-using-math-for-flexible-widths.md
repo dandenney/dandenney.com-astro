@@ -2,7 +2,7 @@
 path: "/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths"
 title: A Sass Noob using Math for Flexible Widths
 summary: Sharing as I learn about mixins
-date: "2012-06-18"
+pubDate: "2012-06-18"
 codeHighlighting: true
 tags:
   - front-end-dev

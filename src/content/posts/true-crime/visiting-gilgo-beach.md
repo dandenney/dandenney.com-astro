@@ -3,7 +3,7 @@ path: "/posts/true-crime/visiting-gilgo-beach"
 title: "Visiting Gilgo Beach"
 thumb: "posts/gilgo-beach.png"
 summary: "Watching Ocean Parkway to see where the Gilgo Four were discovered"
-date: "2020-01-15"
+pubDate: "2020-01-15"
 tags:
   - true-crime
 ---

@@ -2,7 +2,7 @@
 path: "/posts/front-end-dev/production-vs-shipping"
 title: Production vs. Shipping
 summary: The differences it makes when you think about shipping
-date: "2012-07-16"
+pubDate: "2012-07-16"
 tags:
   - front-end-dev
 ---

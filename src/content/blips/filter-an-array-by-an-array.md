@@ -1,5 +1,5 @@
 ---
-date: "2019-12-04"
+pubDate: "2019-12-04"
 summary: Stashing this to use again
 title: Filter an array by an array
 tags:

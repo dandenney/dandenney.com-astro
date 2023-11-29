@@ -6,7 +6,7 @@ canonical: "https://www.dandenney.com/posts/front-end-dev/strapi-series-part-4-a
 codeHighlighting: true
 colorLink: "#956552"
 colorText: "#3c3a39"
-date: "2023-04-10"
+pubDate: "2023-04-10"
 gradientTitle: "linear-gradient(to bottom, #919777, #70765a)"
 socialImageFilename: "og-strapi-series-part-4-a-fake-company.jpg"
 strapiSeries: true

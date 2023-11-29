@@ -1,7 +1,7 @@
 ---
 path: "/blips/perf-resources"
 title: "Web Perf Resources"
-date: "2019-11-24"
+pubDate: "2019-11-24"
 tags:
   - blips
 ---

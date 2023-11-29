@@ -2,7 +2,7 @@
 path: "/posts/conferences/circles-conf-2012"
 title: Circles Conf 2012
 summary: A recap from attending Circles Conf
-date: "2012-09-22"
+pubDate: "2012-09-22"
 tags:
   - conferences
 ---

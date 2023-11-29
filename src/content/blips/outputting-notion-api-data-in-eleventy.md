@@ -1,6 +1,6 @@
 ---
 codeHighlighting: true
-date: "2023-05-15"
+pubDate: "2023-05-15"
 summary: Quick notes on the data
 title: Outputting Notion API Data in Eleventy
 tags:

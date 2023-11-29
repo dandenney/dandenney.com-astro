@@ -3,7 +3,7 @@ backgroundPost: "#f091a8"
 backgroundFooter: "#fbadad"
 colorLink: "#ffffff"
 colorText: "#241c47"
-date: "2016-06-26"
+pubDate: "2016-06-26"
 gradientTitle: "linear-gradient(135deg, #612a64, #bf3394)"
 path: "/posts/front-end-dev/pursuing-a-nanodegree"
 summary: Diving into learning JavaScript on Udacity

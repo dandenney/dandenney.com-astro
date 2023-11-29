@@ -3,7 +3,7 @@ backgroundPost: "#ffffff"
 backgroundFooter: "#ffffff"
 colorLink: "#c16e1f"
 colorText: "#071524"
-date: "2014-04-07"
+pubDate: "2014-04-07"
 gradientTitle: "linear-gradient(to right, #386f89, #5998a2)"
 path: "/posts/conferences/why-grok-is-special"
 summary: A review of the awesomeness that is Grok

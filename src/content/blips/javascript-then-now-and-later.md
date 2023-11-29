@@ -1,5 +1,5 @@
 ---
-date: "2022-05-05"
+pubDate: "2022-05-05"
 summary: Awesome takes on the evolving tech
 title: "JavaScript Then, Now, and Later"
 tags:

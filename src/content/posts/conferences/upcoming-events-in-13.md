@@ -3,7 +3,7 @@ backgroundPost: "#2a176b"
 backgroundFooter: "#2a176b"
 colorLink: "#2dccd4"
 colorText: "#f8f4f2"
-date: "2013-08-17"
+pubDate: "2013-08-17"
 gradientTitle: "linear-gradient(25deg, #e6570f, #feae14, #feeda7)"
 path: "/posts/conferences/upcoming-events-in-13"
 summary: A listing of confs to attend in 2013

@@ -1,7 +1,7 @@
 ---
 path: "/blips/tech-conference-diversity"
 title: Tech Conference Diversity
-date: "2013-01-06"
+pubDate: "2013-01-06"
 tags:
   - blips
 ---

@@ -1,6 +1,6 @@
 ---
 codeHighlighting: true
-date: "2022-05-26"
+pubDate: "2022-05-26"
 summary: Another neat thing I learned from Andy
 title: The ex unit is a thing that exists
 tags:

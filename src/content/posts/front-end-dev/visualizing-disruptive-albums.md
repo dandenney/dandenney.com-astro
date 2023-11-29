@@ -4,7 +4,7 @@ backgroundFooter: "#000107"
 codeHighlighting: true
 colorLink: "#e7433c"
 colorText: "#f8f4f2"
-date: "2020-02-17"
+pubDate: "2020-02-17"
 gradientTitle: "radial-gradient(#f1daa4, #e4a051)"
 path: "/posts/front-end-dev/visualizing-disruptive-albums"
 summary: Applying some of what I learned in Fullstack D3 to a passion project

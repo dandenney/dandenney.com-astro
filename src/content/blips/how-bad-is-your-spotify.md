@@ -1,5 +1,5 @@
 ---
-date: "2020-12-25"
+pubDate: "2020-12-25"
 summary: Mine is sooooo good
 title: How Bad Is Your Spotify?
 tags:

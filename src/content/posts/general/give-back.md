@@ -3,7 +3,7 @@ backgroundPost: "#fff"
 backgroundFooter: "#fff"
 colorLink: "#0e687e"
 colorText: "#603e2e"
-date: "2014-10-07"
+pubDate: "2014-10-07"
 gradientTitle: "linear-gradient(to right, #cd5c36, #ef8f69)"
 
 path: "/posts/general/give-back"

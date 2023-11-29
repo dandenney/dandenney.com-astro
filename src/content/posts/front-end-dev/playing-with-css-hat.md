@@ -2,7 +2,7 @@
 path: "/posts/front-end-dev/playing-with-css-hat"
 title: Playing With CSS Hat
 summary: Mondays are so different at Envy
-date: "2012-07-21"
+pubDate: "2012-07-21"
 tags:
   - front-end-dev
 ---

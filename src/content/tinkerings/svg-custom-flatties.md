@@ -1,6 +1,6 @@
 ---
 title: SVG Custom Flatties
-date: 2013-08-18
+pubDate: 2013-08-18
 summary: Playing with icons in SVG instead of icons fonts, for more stylistic control
 tags:
   - tinkerings

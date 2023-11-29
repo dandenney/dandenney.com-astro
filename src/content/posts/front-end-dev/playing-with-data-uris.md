@@ -3,7 +3,7 @@ backgroundPost: "#0d0707"
 backgroundFooter: "#0d0707"
 colorLink: "#c4b377"
 colorText: "#fbe9c4"
-date: "2013-03-21"
+pubDate: "2013-03-21"
 gradientTitle: "linear-gradient(to bottom, #a48364, #7c543a)"
 path: "/posts/front-end-dev/playing-with-data-uris"
 summary: Sharing some benefits of using data URIs for images

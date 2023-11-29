@@ -3,7 +3,7 @@ backgroundPost: "#ffffff"
 codeHighlighting: true
 colorLink: "#4945ff"
 colorText: "#312f2d"
-date: "2023-06-12"
+pubDate: "2023-06-12"
 gradientTitle: "linear-gradient(to bottom, #5a595e, #312f2d)"
 strapiSeries: true
 summary: Refactoring components to use the links data
