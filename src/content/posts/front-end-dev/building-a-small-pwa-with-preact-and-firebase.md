@@ -764,7 +764,7 @@ Similar to `handleFailed`, I then needed to pass a function into Exercise and ca
 
 This part felt magical because it’s so fast. On clicking the “complete” button, it pushes the new setting. Because Preact is always listening for state changes, it grabs that new setting and renders it.
 
-![](setting-update.gif)
+![](/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/setting-update.gif)
 
 The final bit of functionality for this version was outputting an indicator that the data was updated. As a progress tracker, I wanted visual feedback of progress. To do this, I needed to use `filter` to only output completed sets and `map` to loop over the filtered results. [commit](https://github.com/dandenney/building-a-small-pwa-with-preact-and-firebase/commit/31d0d1ecf4f6b648047c36cc0b53cc294865eea4)
 
