@@ -13,6 +13,10 @@ const posts = (await getCollection('posts')).sort(
 const blips = (await getCollection('blips')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 5);
+
+import { getLinks } from '../scripts/notion.js';
+import FormattedDate from '../components/FormattedDate.astro';
+const links = await getLinks();
 ---
 
 <!doctype html>
@@ -98,6 +102,30 @@ const blips = (await getCollection('blips')).sort(
 				</div>
 			</section>
 
+			<section class="pb-32 md:pt-16">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+						<div>
+							<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">Recent finds from around the web</h2>
+							<p class="has-links mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100">
+								I'm starting to stash everything in a <a href="/library">"library"</a> and archive them by month.
+							</p>
+						</div>
+						<ul class="has-links col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+							{links.map((link) => (
+								<li>
+									<a class="text-base leading-7" href={link.url}>
+										{link.title}
+									</a>
+									{link.notes && (
+										<span class="block text-sm dark:text-slate-300">{link.notes}</span>
+									)}
+								</li>
+							))}
+						</ul>
+					</div>
+				</div>
+			</section>
 			
 		</main>
 		<Footer />
