@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1fd45c8e-7b0e-4be4-8e74-2acb0ea96ce9/deploy-status)](https://app.netlify.com/sites/fluffy-mermaid-69e231/deploys)
+
 # Astro Starter Kit: Blog
 
 ```sh
