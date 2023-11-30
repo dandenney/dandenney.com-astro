@@ -1,3 +1,10 @@
+---
+// MainLayout.astro
+//Import the Tracking ID
+const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID!;
+const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
+---
+
 <style>
   footer {
     background: #fff;
@@ -56,3 +63,15 @@
     <p class="max-w-xs	dark:text-slate-100">I'm hoping to run a <a href="https://frontenddesignconference.com">front-end design conference</a> in St. Pete in 2024!</p>
   </div>
 </footer>
+
+<!-- GA Scripts -->
+  <script async src={gaSrc}></script>
+  <script async>
+  const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID;
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", TRACKING_ID);
+</script>
