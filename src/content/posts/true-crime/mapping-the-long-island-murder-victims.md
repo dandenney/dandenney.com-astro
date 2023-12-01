@@ -9,8 +9,14 @@ tags:
 ---
 
 <style>
-  #scrolly {
+  #scrolly {    
+    margin-left: 50%;
+    max-width: 100rem;
+    padding-left: 16px;
+    padding-right: 16px;
     position: relative;
+    transform: translateX(-50%);
+    width: 100vw;
   }
 
   .story {
@@ -64,10 +70,6 @@ tags:
     padding: 1rem;
   }
 
-  .dark .details p {
-    background: rgba(15, 23, 42, 0.9);
-  }
-
   .details h3 {
     background: rgba(181, 31, 36, 0.9);
     box-shadow: 5px 5px 10px rgba(202, 210, 211, 0.5);
@@ -75,6 +77,16 @@ tags:
     margin: -1rem 0 0;
     padding: 1rem;
     font-size: 20px;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .dark .details p,
+  .dark .details h3 {
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  .dark .details h3 {
+    -webkit-text-fill-color: #ffffff;
   }
 
   .details img + h3 {
@@ -110,18 +122,14 @@ tags:
 
   #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
+  header > img {
+    display: none !important;
+  }
+
 
 </style>
 
 <div>
-
-<header class="longform max-w-2xl mx-auto px-8 lg:px-0">
-   <h1 class="full-to-half-bleed max-w-2xl px-8 py-8 text-4xl font-black tracking-tight text-gray-900 sm:text-6xl lg:px-0 lg:col-span-2 lg:text-8xl xl:col-auto">
-      {{ title }}
-    </h1>
-</header>
-
-<div class="longform max-w-2xl mx-auto pb-16 px-8">
 
 <div class="bg-slate-100 mb-4 p-4 dark:bg-slate-700 update">
 
@@ -129,7 +137,7 @@ On July 13, 2023, there was an arrest in relation to the Gilgo Four. [Rex Heuerm
 
 The [bail documentation](https://drive.google.com/file/d/1UAyHSO_aEYDE4aE_ajIoxxxRKccALx-u/view) has extensive information about the evidence against him, including a list of searches and articles that were viewed. In what I can only describe as surreal, this article is in that list.
 
-</div
+</div>
 
 "The Long Island Serial Killer," aka "LISK," is a misnomer. The more that you look at Long Island from the early 90s until the 2010s, the worse it gets. [Joel Rifkin](https://en.wikipedia.org/wiki/Joel_Rifkin) lived in the Hempstead area and killed at least nine, but up to seventeen people from 1989 - 1993. [Robert Shulman](<https://en.wikipedia.org/wiki/Robert_Shulman_(serial_killer)>) killed at least five people from 1991 - 1996 while living in the Hicksville area.
 
@@ -144,8 +152,6 @@ The map below is going to focus on specific details, mostly the location of the 
 The sad truth is that these victims are part of a series of circumstances that are popular in unsolved homicides. These cases include lackluster police work with [criminal behavior](https://www.nytimes.com/2016/11/03/nyregion/james-burke-ex-suffolk-county-police-chief-is-sentenced.html) amongst those involved, a high-risk lifestyle that leads to gaps of time in missing person reports, and the need for public pressure to prioritize the cases.
 
 The following is a timeline of events, with their locations, intending to show how the circumstances may be related.
-
-</div>
 
 <section id="scrolly">
   <figure>
