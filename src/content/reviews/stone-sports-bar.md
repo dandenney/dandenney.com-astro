@@ -9,7 +9,7 @@ heroImage: "stone-sports-bar"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34438-d21404014-Reviews-CMX_Stone_Sports_Bar_Brickell-Miami_Florida.html"
 pubDate: "Nov 5, 2023"
 state: "Florida"
-tags: [American]
+tags: [american]
 title: "Stone Sports Bar"
 ---
 

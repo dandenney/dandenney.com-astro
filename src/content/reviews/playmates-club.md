@@ -11,7 +11,7 @@ heroImageUrl: "https://lh3.ggpht.com/p/AF1QipPQCbMK3_dO_yhZgbxxwH5hIKYh0-TTMx_ZW
 infoUrl: "https://www.google.com/maps/place/Playmates+Club/@25.7331209,-80.2574503,15z/data=!4m17!1m10!3m9!1s0x88d9b7ebcb877677:0xc36e0708f6af841d!2sPlaymates+Club!8m2!3d25.733205!4d-80.2574529!10e5!14m1!1BCgIgAQ!16s%2Fg%2F1tptrd_f!3m5!1s0x88d9b7ebcb877677:0xc36e0708f6af841d!8m2!3d25.733205!4d-80.2574529!16s%2Fg%2F1tptrd_f?entry=ttu"
 pubDate: "Nov 4, 2023"
 state: "Florida"
-tags: ["Strip Club"]
+tags: [strip-club]
 title: "Playmates Club"
 ---
 

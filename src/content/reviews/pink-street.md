@@ -9,7 +9,7 @@ heroImage: "pink-street"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g189158-d19746498-Reviews-The_Pink_Street-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 13, 2023"
 state: ""
-tags: [Bar, Landmark]
+tags: [bar, landmark]
 title: "Pink Street"
 ---
 

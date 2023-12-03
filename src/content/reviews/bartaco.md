@@ -9,7 +9,7 @@ heroImage: "bartaco"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d8635743-Reviews-Bartaco-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Sep 9, 2023"
 state: "Tennessee"
-tags: [Bar, Fusion]
+tags: [bar, fusion]
 title: "bartaco"
 ---
 

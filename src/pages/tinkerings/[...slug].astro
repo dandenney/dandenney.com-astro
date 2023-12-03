@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 		props: tinkering,
 	}));
 }
-type Props = CollectionEntry<'blips'>;
+type Props = CollectionEntry<'tinkerings'>;
 
 const tinkering = Astro.props;
 const { Content } = await tinkering.render();

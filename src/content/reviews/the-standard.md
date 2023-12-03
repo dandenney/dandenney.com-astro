@@ -9,7 +9,7 @@ heroImage: "the-standard"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34230-d8626714-Reviews-The_Standard-Fort_Myers_Florida.html"
 pubDate: "Nov 10, 2023"
 state: "Florida"
-tags: [American, Bar, Contemporary]
+tags: [american, bar, contemporary]
 title: "The Standard"
 ---
 

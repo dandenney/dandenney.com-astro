@@ -9,7 +9,7 @@ heroImage: "tonchin"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g60763-d13206470-Reviews-Tonchin-New_York_City_New_York.html"
 pubDate: "Oct 30, 2023"
 state: "New York"
-tags: [Japanese, Asian, Vegetarian Friendly]
+tags: [japanese, asian, vegetarian-friendly]
 title: "Tonchin"
 ---
 

@@ -9,7 +9,7 @@ heroImage: "chris-delia"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g34230-d2529670-Reviews-Barbara_B_Mann_Performing_Arts_Hall-Fort_Myers_Florida.html"
 pubDate: "Nov 12, 2023"
 state: "Florida"
-tags: [Comedy, Theater]
+tags: [comedy, theater]
 title: "Chris D'Elia"
 ---
 

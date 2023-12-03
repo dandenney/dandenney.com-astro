@@ -9,7 +9,7 @@ heroImage: "berns"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34678-d944244-Reviews-Bern_s_Steak_House-Tampa_Florida.html"
 pubDate: "Nov 7, 2023"
 state: "Florida"
-tags: [French, American, Steakhouse]
+tags: [french, american, steakhouse]
 title: "Bern's Steak House"
 ---
 

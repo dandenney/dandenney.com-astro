@@ -9,7 +9,7 @@ heroImage: "doce-provisions"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34438-d10344780-Reviews-Doce_Provisions-Miami_Florida.html"
 pubDate: "Nov 5, 2023"
 state: "Florida"
-tags: [Caribbean, Latin, Cuban]
+tags: [caribbean, latin, cuban]
 title: "Doce Provisions"
 ---
 

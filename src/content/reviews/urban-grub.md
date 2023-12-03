@@ -9,7 +9,7 @@ heroImage: "urban-grub"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d3152078-Reviews-Urban_Grub-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Oct 21, 2023"
 state: "Tennessee"
-tags: [American, Bar]
+tags: [american, bar]
 title: "Urban Grub"
 ---
 

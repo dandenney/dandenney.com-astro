@@ -11,7 +11,7 @@ heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-w/2a/23/80/03/spagh
 infoUrl: "1300 3rd Ave, N, Nashville, TN 37208"
 pubDate: "Oct 20, 2023"
 state: "Tennessee"
-tags: [Italian]
+tags: [italian]
 title: "Pelato"
 ---
 

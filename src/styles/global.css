@@ -113,7 +113,7 @@
     transparent 90%,
     #b91c1c 0
   ); /* red-700 */
-  background-size: 100% 100%;
+  background-size: 0% 100%;
   transition: background-size 0.4s ease;
 }
 
@@ -125,7 +125,7 @@
     transparent 90%,
     #fca5a5 0
   ); /* red-500 */
-  background-size: 100% 100%;
+  background-size: 0% 100%;
   transition: background-size 0.4s ease;
 }
 
@@ -135,7 +135,7 @@
 .has-links a:focus,
 .longform a:hover,
 .has-links a:hover {
-  background-size: 0% 100%;
+  background-size: 100% 100%;
   cursor: pointer;
 }
 

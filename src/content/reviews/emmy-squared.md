@@ -9,7 +9,7 @@ heroImage: "emmy-squared"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d13856888-Reviews-Emmy_Squared_Pizza_The_Gulch-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Nov 19, 2023"
 state: "Tennessee"
-tags: [Pizza]
+tags: [pizza]
 title: "Emmy Squared"
 ---
 

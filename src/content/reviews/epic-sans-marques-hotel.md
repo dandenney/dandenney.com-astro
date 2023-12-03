@@ -9,7 +9,7 @@ heroImage: "epic-sana-marques-hotel"
 infoUrl: "https://www.tripadvisor.com.br/Hotel_Review-g189158-d320254-Reviews-EPIC_SANA_Marques_Hotel-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 9, 2023"
 state: ""
-tags: [Hotel]
+tags: [hotel]
 title: "Epic Sana Marquês Hotel"
 ---
 

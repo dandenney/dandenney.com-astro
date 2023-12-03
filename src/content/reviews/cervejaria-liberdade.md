@@ -9,7 +9,7 @@ heroImage: "cervejaria-liberdade"
 infoUrl: "https://www.tripadvisor.com.br/Restaurant_Review-g189158-d1500681-Reviews-Cervejaria_Liberdade-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 8, 2023"
 state: ""
-tags: [Portugese]
+tags: [portugese]
 title: "Cervejaria Liberdade"
 ---
 

@@ -9,7 +9,7 @@ heroImage: "bar-continental"
 infoUrl: "https://www.barcontinentalhifi.com"
 pubDate: "Oct 15, 2023"
 state: "Tennessee"
-tags: [American, Music]
+tags: [american, music]
 title: "Bar Continental"
 ---
 
