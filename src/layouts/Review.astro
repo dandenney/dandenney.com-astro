@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import toTitleCase from '../helpers/toTitleCase.js'
 
 const { city, state, tags, heroImage, heroAlt, summary, title } = Astro.props;
@@ -12,12 +13,12 @@ const { city, state, tags, heroImage, heroAlt, summary, title } = Astro.props;
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />
-		<main class="relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
-			<article class="max-w-screen-2xl pt-4 xl:flex xl:gap-12 xl:items-start xl:justify-between xl:px-4">
-				<figure class="bg-white max-w-2xl mx-auto pb-10 pt-4 px-4 shadow-md shadow-slate-10/20 xl:sticky xl:top-4 xl:flex-shrink-0">
+		<main class="bg-slate-50 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+			<article class="max-w-screen-2xl px-4 pt-4 xl:flex xl:gap-12 xl:items-start xl:justify-between">
+				<figure class="bg-white max-w-2xl mx-auto pb-10 pt-4 px-4 shadow-md shadow-slate-10/20 xl:sticky xl:top-4 xl:flex-shrink-0 dark:bg-slate-800">
 					<img class="mx-auto" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroAlt} height="480" width="640" />
 					<ul class="flex font-decorative justify-between  mt-4">
-						<li>{city}{state && `, ${state}` }</li>
+						<li class="text-gray-600 text-gray-600 dark:text-slate-100">{city}{state && `, ${state}` }</li>
 						<li class="has-links text-gray-300 dark:text-slate-100">
 							{tags && tags.map((tag, index) => (
 								<>
@@ -28,15 +29,17 @@ const { city, state, tags, heroImage, heroAlt, summary, title } = Astro.props;
 						</li>
 					</ul>
 				</figure>
-				<div class="max-w-2xl mx-auto">
-					<header class="longform pt-8 px-8 xl:pt-0 xl:px-0">
-						<h1 class="text-4xl font-bold leading-tight tracking-tight mb-4">{title}</h1>
+				<div class="max-w-2xl mx-auto pb-16">
+					<header class="longform pt-8 xl:pt-0">
+						<h1 class="text-4xl font-bold leading-tight tracking-tight mb-4 xl:text-6xl">{title}</h1>
 					</header>
-					<div class="longform pb-16 px-8 xl:px-0">
+					<div class="longform pb-8">
 						<slot />
 					</div>
+					<a href="/no-reserv-ai-tions" class="btn-link ">← Back to No Reserv-AI-tions</a>
 				</div>
 			</article>
 		</main>
+		<Footer />
 	</body>
 </html>

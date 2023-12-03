@@ -16,37 +16,6 @@
   line-height: 1.75;
 }
 
-.longform h1,
-.longform h2,
-.longform h3,
-.longform h4,
-.longform h5 {
-  background: linear-gradient(
-    180deg,
-    #334155,
-    #020617
-  ); /* slate-700 slate-900 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  text-wrap: balance;
-}
-
-.dark .longform h1,
-.dark .longform h2,
-.dark .longform h3,
-.dark .longform h4,
-.dark .longform h5 {
-  background: linear-gradient(
-    180deg,
-    #f1f5f9,
-    #cbd5e1
-  ); /* slate-700 slate-900 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-}
-
 .longform h2,
 .longform h3,
 .longform h4,
