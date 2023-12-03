@@ -9,7 +9,7 @@ heroImage: "tabernia-londrina"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g189158-d23302009-Reviews-Taberna_Londrina_Lisboa_Campo_Grande-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 11, 2023"
 state: ""
-tags: [Portugese, American]
+tags: [portugese, american]
 title: "Tabernia Londrina"
 ---
 

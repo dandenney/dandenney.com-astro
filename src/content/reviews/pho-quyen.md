@@ -9,7 +9,7 @@ heroImage: "pho-quyen"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34561-d1229386-Reviews-Pho_Quyen-Pinellas_Park_Florida.html"
 pubDate: "Nov 6, 2023"
 state: "Florida"
-tags: [Vietnamese, Pho]
+tags: [vietnamese, pho]
 title: "Pho Quyen"
 ---
 

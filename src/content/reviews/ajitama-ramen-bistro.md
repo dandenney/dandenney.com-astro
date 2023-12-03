@@ -9,7 +9,7 @@ heroImage: "ajitama-ramen-bistro"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g189158-d16754142-Reviews-Ajitama_Ramen_Bistro-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 13, 2023"
 state: ""
-tags: [Japanese, Asian]
+tags: [japanese, asian]
 title: "Ajitama Ramen Bistro"
 ---
 

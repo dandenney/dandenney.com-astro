@@ -9,7 +9,7 @@ heroImage: "sud-lisboa"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g189158-d12700473-Reviews-SUD_Lisboa-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 12, 2023"
 state: ""
-tags: [Bar, Mediterranean, Portuguese]
+tags: [bar, mediterranean, portuguese]
 title: "Sud Lisboa"
 ---
 

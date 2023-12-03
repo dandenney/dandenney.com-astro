@@ -9,7 +9,7 @@ heroImage: "forninho-saloio"
 infoUrl: "https://www.tripadvisor.com.br/Restaurant_Review-g189158-d1783724-Reviews-Restaurante_Forninho_Saloio-Lisbon_Lisbon_District_Central_Portugal.html"
 pubDate: "Oct 9, 2023"
 state: ""
-tags: [Mediterranean, Churrasco]
+tags: [mediterranean, churrasco]
 title: "Forninho Saloio"
 ---
 

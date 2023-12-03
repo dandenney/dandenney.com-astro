@@ -67,5 +67,4 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 		const isDark = element.classList.contains("dark");
 		localStorage.setItem("theme", isDark ? "dark" : "light");
 	}
-	document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
 </script>

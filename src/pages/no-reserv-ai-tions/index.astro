@@ -14,9 +14,9 @@ const reviews = (await getCollection('reviews')).sort(
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
 	</head>
-	<body class="bg-slate-100 dark:bg-slate-900">
+	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />
-		<main class="bg-slate-100 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+		<main class="bg-slate-50 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
 			<figure class="overflow-hidden" style="max-height: 70vh;">
         <img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n.webp" />	
       </figure>
@@ -30,7 +30,7 @@ const reviews = (await getCollection('reviews')).sort(
 					<ul class="flex flex-wrap gap-y-8 mt-8">
 						{reviews.map((review) => (
 							<li class="w-1/2">
-								<a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0  hover:bg-red-700" href={`/locations/${review.slug}/`}>
+								<a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0  hover:bg-red-700" href={`/no-reserv-ai-tions/${review.slug}/`}>
 									<div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
 										<figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3" transition:name={`${review.data.title}-img`}>
 											<img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} />

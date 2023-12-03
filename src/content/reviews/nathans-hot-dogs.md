@@ -9,7 +9,7 @@ heroImage: "nathans-hot-dogs"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g60763-d3529407-Reviews-Greeley_Square_Park-New_York_City_New_York.html"
 pubDate: "Oct 30, 2023"
 state: "New York"
-tags: ['American']
+tags: [american]
 title: "Nathan's Hot Dogs"
 ---
 

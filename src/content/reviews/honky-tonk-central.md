@@ -8,8 +8,8 @@ heroAlt: "Photo of Carolina Company Band"
 heroImage: "honky-tonk-central"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g55229-d6485655-Reviews-Honky_Tonk_Central-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Nov 19, 2023"
-state: "Tennessee"
-tags: [Bar]
+state: "tennessee"
+tags: [bar]
 title: "Honky Tonk Central"
 ---
 

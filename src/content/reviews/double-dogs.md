@@ -9,7 +9,7 @@ heroImage: "double-dogs"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d10723418-Reviews-Double_Dogs_Restaurant-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Oct 14, 2023"
 state: "Tennessee"
-tags: [American, Bar, Pub]
+tags: [american, bar, pub]
 title: "Double Dogs"
 ---
 

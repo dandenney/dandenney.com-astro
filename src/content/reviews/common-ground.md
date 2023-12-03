@@ -9,7 +9,7 @@ heroImage: "common-ground"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d25182268-Reviews-Common_Ground-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Sep 10, 2023"
 state: "Tennessee"
-tags: [American]
+tags: [american]
 title: "Common Ground"
 ---
 
