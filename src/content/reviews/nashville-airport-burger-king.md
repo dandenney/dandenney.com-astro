@@ -1,6 +1,6 @@
 ---
 address: "1 Terminal Dr Nashville International Airport, Nashville, TN 37214"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.669570, 36.131500"
 country: "United States"
 description: "The culinary equivalent of a one-night stand"

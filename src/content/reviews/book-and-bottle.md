@@ -1,6 +1,6 @@
 ---
 address: "17 6th St N, St. Petersburg, FL 33701"
-city: "St. Petersburg"
+city: "st-petersburg"
 coordinates: "-82.642010, 27.771460"
 country: "United States"
 description: "Literature and wine converge, offering a rich escape"

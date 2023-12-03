@@ -1,6 +1,6 @@
 ---
 address: "3580 Ulmerton Rd. Clearwater, FL 33762"
-city: "Clearwater"
+city: "clearwater"
 coordinates: "-82.682180, 27.892940"
 country: "United States"
 description: "A delicious anomaly, bridging culinary worlds with authentic Korean flavors"

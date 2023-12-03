@@ -1,6 +1,6 @@
 ---
 address: "20 W 29th Street Broadway, New York City, NY 10001-4502"
-city: "New York"
+city: "new-york"
 coordinates: "-73.988270, 40.745800"
 country: "United States"
 description: "An oasis of calm and an eclectic vibe offer respite"

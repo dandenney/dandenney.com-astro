@@ -1,0 +1,74 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import toTitleCase from '../../../helpers/toTitleCase.js'
+
+export async function getStaticPaths() {
+  const allReviews = await Astro.glob('../../../content/reviews/*.md');
+
+  const uniqueCities = [...new Set(allReviews.map((review) => review.frontmatter.city).flat())];
+
+  return uniqueCities.map((city) => {
+    const filteredReviews = allReviews.filter((review) => 
+      review.frontmatter.city.includes(city)
+    ).map((review) => {
+      // Extract the slug from the file path
+      // This example assumes file names are suitable for use as slugs
+      const slug = review.file.split('/').pop().replace(/\.md$/, '');
+      return { ...review, slug };
+    });
+
+    return {
+      params: { city },
+      props: { reviews: filteredReviews },
+    };
+  });
+}
+
+const { city } = Astro.params;
+const { reviews } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+	</head>
+	<body class="bg-slate-50 dark:bg-slate-900">
+		<Header />
+		<main class="bg-slate-50 dark:bg-slate-900 relative shadow z-10 dark:text-slate-200" style="min-height: 90dvh;">
+			<section class="max-w-screen-2xl mx-auto pb-24 pt-8 px-4">
+				<h2 class="border-b text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:flex-shrink-0">{toTitleCase(city)}</h2>
+				<ul class="md:flex md:flex-wrap gap-y-8 mt-8">
+					{reviews.map((review) => {
+						return(
+						<li class="md:w-1/2">
+							<a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0 hover:bg-red-700 dark:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}`}>
+								<div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
+									<figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3 dark:bg-slate-700" transition:name={`${review.frontmatter.title}-img`}>
+										<img src={`/no-reserv-ai-tions/${review.frontmatter.heroImage}-thumb.webp`} alt={review.frontmatter.heroImageAlt} />
+									</figure>
+									<div>
+										<div class="flex items-center gap-x-4 text-slate-500 text-sm dark:text-slate-100 group-hover:text-white">
+											{toTitleCase(review.frontmatter.city)}, {review.frontmatter.country === 'United States' ? review.frontmatter.state : review.frontmatter.country}
+										</div>
+										<div class="group relative">
+											<h3 class="duration-300 font-bold mt-3 text-4xl text-red-700 transition-color uppercase dark:text-red-300 md:text-5xl group-hover:text-white">
+												<span class="absolute inset-0"></span>
+												{review.frontmatter.title}
+											</h3>
+											<p class="duration-500 mt-2 text-gray-600 text-sm dark:text-slate-100 group-hover:text-white">{review.frontmatter.description}</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+					)})}
+				</ul>
+      </section>
+		</main>
+		<Footer />
+	</body>
+</html>

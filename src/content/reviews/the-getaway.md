@@ -1,6 +1,6 @@
 ---
 address: "13090 Gandy Blvd North, St. Petersburg, FL 33702"
-city: "St. Petersburg"
+city: "st-petersburg"
 coordinates: "-82.628000, 27.866670"
 country: "United States"
 description: "A tiki-style restaurant offers a journey into a Floridian paradise"

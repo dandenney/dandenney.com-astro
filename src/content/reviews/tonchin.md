@@ -1,6 +1,6 @@
 ---
 address: "13 W 36th St, New York City, NY 10018-7914"
-city: "New York"
+city: "new-york"
 coordinates: "-73.984480, 40.750330"
 country: "United States"
 description: "Modern Japanese restaurant offering a symphony of flavors"

@@ -1,6 +1,6 @@
 ---
 address: "4500 W Tropicana Ave The Orleans Hotel & Casino, Las Vegas, NV 89103"
-city: "Las Vegas"
+city: "las-vegas"
 coordinates: "-115.200760, 36.102750"
 country: "United States"
 description: "A flavorful journey that mirrors the deep hues of the desert night sky"

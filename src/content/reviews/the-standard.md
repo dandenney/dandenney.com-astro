@@ -1,6 +1,6 @@
 ---
 address: "1520 Broadway, Fort Myers, FL 33901-3076"
-city: "Fort Myers"
+city: "fort-myers"
 coordinates: "-81.870690, 26.643300"
 country: "United States"
 description: "An unpretentious yet flavorful experience"

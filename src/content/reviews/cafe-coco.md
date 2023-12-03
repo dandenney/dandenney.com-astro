@@ -1,6 +1,6 @@
 ---
 address: "210 Louise Ave, Nashville, TN 37203-1812"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.804890, 36.151910"
 country: "United States"
 description: "Flavorful fusion that embodies the city's diverse musical roots"

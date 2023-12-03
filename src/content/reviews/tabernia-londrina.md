@@ -1,6 +1,6 @@
 ---
 address: "Campo Grande 35-b, Lisbon 1700-087 Portugal"
-city: "Lisbon"
+city: "lisbon"
 coordinates: "-9.150300, 38.750050"
 country: "Lisbon"
 description: "Rich sandwiches and convivial atmosphere, briefly bridging the cities' distinct culinary realms"

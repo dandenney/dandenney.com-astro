@@ -1,6 +1,6 @@
 ---
 address: "2102 Blair Blvd, Nashville, TN 37212-4902"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.802250, 36.130640"
 country: "United States"
 description: "Away from Nashville's glitz, the simple joy of a hearty American meal"

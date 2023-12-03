@@ -1,6 +1,6 @@
 ---
 address: "Avenida Fontes Pereira de Melo 8, Lisboa 1069-310 Portugal"
-city: "Lisbon"
+city: "lisbon"
 coordinates: "-9.148340, 38.727510"
 country: "Portugal"
 description: "Blending luxury, stunning views, and cultural immersion into an unforgettable sensory escape"

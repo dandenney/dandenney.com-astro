@@ -1,6 +1,6 @@
 ---
 address: "322 Fremont St, Las Vegas, NV 89101-5608"
-city: "Las Vegas"
+city: "las-vegas"
 coordinates: "-115.141980, 36.170130"
 country: "United States"
 description: "Imperfect, yet precious late-night salvation"

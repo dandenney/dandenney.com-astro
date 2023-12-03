@@ -1,6 +1,6 @@
 ---
 address: "Avenida Duque de Loule 36, Lisbon 1050-091 Portugal"
-city: "Lisbon"
+city: "lisbon"
 coordinates: "-9.145110, 38.728330"
 country: "Portugal"
 description: "Steaming bowls of layered flavor and communal reverence"

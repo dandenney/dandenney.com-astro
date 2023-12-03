@@ -1,6 +1,6 @@
 ---
 address: "25 1st Ave, New York City, NY 10003-9418"
-city: "New York"
+city: "new-york"
 coordinates: "-73.988450, 40.723840"
 country: "United States"
 description: "A soulful culinary experience with thoughtful dishes"

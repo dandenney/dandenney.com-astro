@@ -1,6 +1,6 @@
 ---
 address: "7430 49th St N, Pinellas Park, FL 33781-3434"
-city: "Pinellas Park"
+city: "pinellas-park"
 coordinates: "-82.701110, 27.841610"
 country: "United States"
 description: "Transport to the streets of Saigon through soulful pho and other classic dishes"

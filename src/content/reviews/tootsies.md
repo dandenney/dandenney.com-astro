@@ -1,6 +1,6 @@
 ---
 address: "1 Terminal Drive, Nashville, TN 37214-4112"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.669570, 36.131500"
 country: "United States"
 description: "A taste of Music City amid the rush of travel"

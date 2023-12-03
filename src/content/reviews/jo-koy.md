@@ -1,6 +1,6 @@
 ---
 address: "401 Channelside Dr, Tampa, FL 33602-5400"
-city: "Tampa"
+city: "tampa"
 coordinates: "-82.453003, 27.943359"
 country: "United States"
 description: "Infectious humor enjoyed with family over beers"

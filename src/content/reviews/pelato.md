@@ -1,6 +1,6 @@
 ---
 address: "1300 3rd Ave, N, Nashville, TN 37208"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.786290, 36.178070"
 country: "United States"
 description: "A portal to Italy through heritage recipes and passionate service"

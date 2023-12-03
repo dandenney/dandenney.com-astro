@@ -1,6 +1,6 @@
 ---
 address: "1356 SW 8th St, Miami, FL 33135"
-city: "Miami"
+city: "miami"
 coordinates: "-80.217720, 25.765551"
 country: "United States"
 description: "A warm embrace of Cuban culture"

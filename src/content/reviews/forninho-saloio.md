@@ -1,6 +1,6 @@
 ---
 address: "Travessa das Parreiras 39, Lisboa 1150-250 Portugal"
-city: "Lisbon"
+city: "lisbon"
 coordinates: "-9.144980, 38.722520"
 country: "Portugal"
 description: "History collides with ingenuity to create an unforgettable cultural immersion"

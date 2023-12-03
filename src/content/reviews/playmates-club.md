@@ -1,6 +1,6 @@
 ---
 address: "3875 Shipping Ave, Miami, FL 33146"
-city: "Miami"
+city: "miami"
 coordinates: "-80.257380, 25.733330"
 country: "United States"
 description: "A night of unforgettable escapades and stories."

@@ -1,6 +1,6 @@
 ---
 address: "Av. da Liberdade 185, 1269-050 Lisboa, Portugal"
-city: "Lisbon"
+city: "lisbon"
 coordinates: "-9.147110, 38.721111"
 country: "Portugal"
 description: "A storied restaurant where ancient flavors mingle with refined ambiance to craft culinary poetry"

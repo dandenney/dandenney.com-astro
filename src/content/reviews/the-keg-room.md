@@ -1,6 +1,6 @@
 ---
 address: "53 W 36th St, New York City, NY 10018"
-city: "New York"
+city: "new-york"
 coordinates: "-73.985830, 40.750820"
 country: "United States"
 description: "Lively ambiance creates quintessential New York moments of connection and camaraderie"

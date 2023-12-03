@@ -1,6 +1,6 @@
 ---
 address: "130 Division St, New York City, NY 10002-6104"
-city: "New York"
+city: "new-york"
 coordinates: "-73.991900, 40.714510"
 country: "United States"
 description: "Authentic dishes in a lively taverna atmosphere"

@@ -1,6 +1,6 @@
 ---
 address: "4017 Charlotte Ave, Nashville, TN 37209"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.835200, 36.152260"
 country: "United States"
 description: "A hearty homecoming through familiar dive fare and convivial revelry"

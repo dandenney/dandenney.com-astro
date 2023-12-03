@@ -1,6 +1,6 @@
 ---
 address: "1000 Broadway Suite 101, Nashville, TN 37203"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.784570, 36.158140"
 country: "United States"
 description: "An imaginative escape where food, music, and drink meld into nostalgic reverie"

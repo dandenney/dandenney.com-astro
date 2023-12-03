@@ -1,6 +1,6 @@
 ---
 address: "4401 Murphy Rd, Nashville, TN 37209-4749"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.839170, 36.140690"
 country: "United States"
 description: "Bringing Spain to Nashville's musical streets"

@@ -1,6 +1,6 @@
 ---
 address: "206 N 3rd St. Downtown Grand Hotel, Las Vegas, NV 89101"
-city: "Las Vegas"
+city: "las-vegas"
 coordinates: "-115.141290, 36.171600"
 country: "United States"
 description: "Mimosas and classic American breakfast at the bar"

@@ -1,6 +1,6 @@
 ---
 address: "4500 W Tropicana Ave, Las Vegas, NV 89103"
-city: "Las Vegas"
+city: "las-vegas"
 coordinates: "-115.200760, 36.102750"
 country: "United States"
 description: "Poker tables filled with camaraderie and good-natured bets"

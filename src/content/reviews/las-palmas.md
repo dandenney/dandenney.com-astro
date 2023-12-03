@@ -1,6 +1,6 @@
 ---
 address: "5821 Charlotte Pike, Nashville, TN 37209-3101"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.863030, 36.148750"
 country: "United States"
 description: "Family-style hospitality and authentic dishes"

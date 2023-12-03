@@ -1,6 +1,6 @@
 ---
 address: "6717 Central Ave N, St. Petersburg, FL 33707"
-city: "St. Petersburg"
+city: "st-petersburg"
 coordinates: "-82.730070, 27.770900"
 country: "United States"
 description: "An unpretentious rite of passage that affirms the joy of camaraderie"

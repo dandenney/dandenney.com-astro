@@ -1,6 +1,6 @@
 ---
 address: "Avenida Brasilia Pavilhão Poente, ao lado do MAAT, Lisbon 1300-598 Portugal"
-city: "Portugal"
+city: "lisbon"
 coordinates: "-9.206250, 38.694670"
 country: "Portugal"
 description: "Riverside revelry, and pioneering entertainment, honoring tradition while embracing the future"
