@@ -1,6 +1,6 @@
 ---
 address: "329 Broadway, Nashville, TN 37201-2005"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.776840, 36.160870"
 country: "United States"
 description: "A whirlwind musical ride soaked in Southern charm"

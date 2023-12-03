@@ -1,6 +1,6 @@
 ---
 address: "301 Fremont St The D Las Vegas, Las Vegas, NV 89101-5600"
-city: "Las Vegas"
+city: "las-vegas"
 coordinates: "-115.142930, 36.169860"
 country: "United States"
 description: "Amidst downtown Vegas's pulsing energy, a sanctuary to carnivores and wine aficionados"

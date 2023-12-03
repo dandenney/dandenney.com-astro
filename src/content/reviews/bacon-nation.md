@@ -1,6 +1,6 @@
 ---
 address: "301 Fremont St inside the D casino, Las Vegas, NV 89101-5600"
-city: "Las Vegas"
+city: "las-vegas"
 coordinates: "-115.142930, 36.169860"
 country: "United States"
 description: "A sinfully indulgent start to the day"

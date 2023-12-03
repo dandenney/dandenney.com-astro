@@ -1,6 +1,6 @@
 ---
 address: "8099 College Pkwy, Fort Myers, FL 33919-5566"
-city: "Fort Myers"
+city: "fort-myers"
 coordinates: "-81.887460, 26.550760"
 country: "United States"
 description: "Unforgettable comedy night woven together by laughter and lasting memories"

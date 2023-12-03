@@ -1,6 +1,6 @@
 ---
 address: "4505 Park Blvd N, Pinellas Park, FL 33781-3528"
-city: "Pinellas Park"
+city: "pinellas-park"
 coordinates: "-82.694920, 27.839870"
 country: "United States"
 description: "Aromatic pho in an atmosphere that tastes like home"

@@ -1,6 +1,6 @@
 ---
 address: "1219 S Fort Harrison Ave, Clearwater, FL 33756-3307"
-city: "Clearwater"
+city: "clearwater"
 coordinates: "-82.799640, 27.952980"
 country: "United States"
 description: "Transports diners to Ireland with dishes, alongside wooden interiors and friendly atmosphere"

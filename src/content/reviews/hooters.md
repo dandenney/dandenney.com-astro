@@ -1,6 +1,6 @@
 ---
 address: "4411 Cleveland Ave, Fort Myers, FL 33901-9011"
-city: "Fort Myers"
+city: "fort-myers"
 coordinates: "-81.869870, 26.598020"
 country: "United States"
 description: "Creating community through shared passions"

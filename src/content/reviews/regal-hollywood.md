@@ -1,6 +1,6 @@
 ---
 address: "719 Thompson Ln, Nashville, TN 37204"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.763680, 36.108669"
 country: "United States"
 description: "Blurring reality and fiction until the drink's distant memory brings you back"

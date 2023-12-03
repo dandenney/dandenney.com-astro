@@ -1,6 +1,6 @@
 ---
 address: "2480 East Bay Drive, Largo, FL 33771"
-city: "Largo"
+city: "largo"
 coordinates: "-82.761060, 27.918100"
 country: "United States"
 description: "A divey wing joint, like an amusement park for the taste buds"

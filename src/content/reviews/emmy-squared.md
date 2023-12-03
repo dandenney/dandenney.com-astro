@@ -1,6 +1,6 @@
 ---
 address: "404 12th Avenue South The Gulch, Nashville, TN 37203"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.784350, 36.152450"
 country: "United States"
 description: "Blending Italian fare with Music City innovation for a refined yet inviting experience"

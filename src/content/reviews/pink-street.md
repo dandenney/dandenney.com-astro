@@ -1,6 +1,6 @@
 ---
 address: "R. Nova do Carvalho, Lisbon 1200-372 Portugal"
-city: "Lisbon"
+city: "lisbon"
 coordinates: "-9.143630, 38.707180"
 country: "Portugal"
 description: "An intoxicating nightlife immersion of heritage haunts to neon-lit clubs"

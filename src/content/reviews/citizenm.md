@@ -1,6 +1,6 @@
 ---
 address: "11 SE 10th Street The Shops at Mary Brickell Village, Miami, FL 33130"
-city: "Miami"
+city: "miami"
 coordinates: "-80.193040, 25.764540"
 country: "United States"
 description: "Outdoor patio captures the essence of Miami's energy, lights, and diverse culture"

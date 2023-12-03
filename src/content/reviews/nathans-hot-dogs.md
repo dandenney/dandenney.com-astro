@@ -1,6 +1,6 @@
 ---
 address: "Broadway Between W 32 St and W 33 St, New York City, NY 10001"
-city: "New York"
+city: "new-york"
 coordinates: "-73.987150, 40.747970"
 country: "United States"
 description: "Nostalgic flavor of the unpretentious Big Apple"

@@ -1,6 +1,6 @@
 ---
 address: "2506 12th Ave S, Nashville, TN 37204-2502"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.789160, 36.124980"
 country: "United States"
 description: "A harmonious blend of heritage and modernity reflected in artful dishes"

@@ -1,6 +1,6 @@
 ---
 address: "541 Southwest 12th Avenue, Miami, FL 33130"
-city: "Miami"
+city: "miami"
 coordinates: "-80.214460, 25.768280"
 country: "United States"
 description: "An intoxicating Cuban experience with the sounds and breeze of the Magic City"

@@ -1,6 +1,6 @@
 ---
 address: "6000 N Terminal Pkwy, Atlanta, GA 30320"
-city: "Atlanta"
+city: "atlanta"
 coordinates: "-84.442978, 33.642262"
 country: "United States"
 description: "Each bite and sip transforms mere waiting into a memorable culinary experience"

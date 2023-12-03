@@ -1,6 +1,6 @@
 ---
 address: "4075 Park Blvd N, Pinellas Park, FL 33781-3634"
-city: "Pinellas Park"
+city: "pinellas-park"
 coordinates: "-82.689340, 27.839760"
 country: "United States"
 description: "A temple of wings, beer, and sports fanaticism"

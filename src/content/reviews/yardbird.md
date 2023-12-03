@@ -1,6 +1,6 @@
 ---
 address: "1600 Lenox Ave, Miami Beach, FL 33139-2422"
-city: "Miami"
+city: "miami"
 coordinates: "-80.140260, 25.789110"
 country: "United States"
 description: "Warm, welcoming Southern joint in Miami Beach"

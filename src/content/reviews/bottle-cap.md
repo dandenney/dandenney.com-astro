@@ -1,6 +1,6 @@
 ---
 address: "2403 12th Street South, Nashville, TN 37204-2415"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.789650, 36.126050"
 country: "United States"
 description: "Americana through straightforward brews, heritage sandwiches, and an infectious sports bar energy"

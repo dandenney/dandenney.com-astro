@@ -1,6 +1,6 @@
 ---
 address: "1208 S Howard Ave, Tampa, FL 33606-3197"
-city: "Tampa"
+city: "tampa"
 coordinates: "-82.482826, 27.931530"
 country: "United States"
 description: "A memorable night amidst elegant allure"

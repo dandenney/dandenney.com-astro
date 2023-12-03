@@ -1,6 +1,6 @@
 ---
 address: "1719 21st Ave S, Nashville, TN 37212-3703"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.801110, 36.136850"
 country: "United States"
 description: "A communal atmosphere that embodies the city's unfiltered character"

@@ -1,6 +1,6 @@
 ---
 address: "701 S Miami Ave Suite 401, Miami, FL 33130"
-city: "Miami"
+city: "miami"
 coordinates: "-80.193100, 25.767080"
 country: "United States"
 description: "An electric game temple with a cinematic screen"

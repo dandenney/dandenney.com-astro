@@ -1,6 +1,6 @@
 ---
 address: "1000 Woodland St, Nashville, TN 37206"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.751090, 36.176610"
 country: "United States"
 description: "Fuses Latin American flavors and Southern charm"

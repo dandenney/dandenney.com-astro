@@ -1,6 +1,6 @@
 ---
 address: "4001 Charlotte Ave, Nashville, TN 37209-3976"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.834130, 36.152140"
 country: "United States"
 description: "An understated yet charming spot with authentic appeal"

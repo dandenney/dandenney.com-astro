@@ -1,6 +1,6 @@
 ---
 address: "661 Central Ave, St. Petersburg, FL 33701-3633"
-city: "St. Petersburg"
+city: "st-petersburg"
 coordinates: "-82.730070, 27.770900"
 country: "United States"
 description: "Eclectic sushi restaurant and bar against the backdrop of the lively downtown area"

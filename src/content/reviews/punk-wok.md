@@ -1,6 +1,6 @@
 ---
 address: "4101 Charlotte Ave, Nashville, TN 37209-3969"
-city: "Nashville"
+city: "nashville"
 coordinates: "-86.835990, 36.151240"
 country: "United States"
 description: "Edgy, unexpected twists to sushi in the heart of Music City"

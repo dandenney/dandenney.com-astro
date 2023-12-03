@@ -1,6 +1,6 @@
 ---
 address: "701 S Miami Ave Brickell City Center 4th Floor, Center Suite 422, Miami, FL 33131"
-city: "Miami"
+city: "miami"
 coordinates: "-80.193100, 25.767080"
 country: "United States"
 description: "Cuban cuisine and tropical cocktails at a Miami hot spot"

@@ -1,6 +1,6 @@
 ---
 address: "1001 Water Street, Tampa, FL 33602"
-city: "Tampa"
+city: "tampa"
 coordinates: "-82.450060, 27.944070"
 country: "United States"
 description: "Blending casual elegance, rustic warmth, and timeless French tradition"
