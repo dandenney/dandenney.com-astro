@@ -15,7 +15,6 @@ const blips = (await getCollection('blips')).sort(
 ).slice(0, 5);
 
 import { getLinks } from '../scripts/notion.js';
-import FormattedDate from '../components/FormattedDate.astro';
 const links = await getLinks();
 ---
 

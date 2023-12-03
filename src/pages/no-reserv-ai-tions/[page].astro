@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// Paginate same list of { astronaut } objects as the previous example
+export async function getStaticPaths({ paginate }) { 
+  const reviews = (await getCollection('reviews')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+	return paginate(reviews, { pageSize: 6 })
+ }
+const { page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+	</head>
+	<body class="bg-slate-50 dark:bg-slate-900">
+		<Header />
+		<main class="bg-slate-50 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
+      <ul class="lg:grid lg:grid-cols-2 lg:gap-8">
+        {page.data.map((review) => 
+          <li>
+            <a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0  hover:bg-red-700" href={`/no-reserv-ai-tions/${review.data.heroImage}`}>
+              <div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
+                <figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3" transition:name={`${review.data.title}-img`}>
+                  <img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} />
+                </figure>
+                <div>
+                  <div class="flex items-center gap-x-4 text-slate-500 text-sm group-hover:text-white">
+                    {review.data.city}, {review.data.country === 'United States' ? review.data.state : review.data.country}
+                  </div>
+                  <div class="group relative">
+                    <h3 class="duration-300 font-bold mt-2 text-4xl  text-red-700 transition-color uppercase md:text-5xl group-hover:text-white">
+                      <span class="absolute inset-0"></span>
+                      {review.data.title}
+                    </h3>
+                    <p class="duration-500 mt-2 text-gray-600 text-sm dark:text-slate-100 group-hover:text-white">{review.data.description}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        )}
+      </ul>
+      <nav class="flex gap-8 justify-center py-8">
+        {page.url.prev ? <a class="btn-link" href={page.url.prev}>Previous</a> : null}
+        {page.url.next ? <a class="btn-link" href={page.url.next}>Next</a> : null}
+      </nav>
+    </main>
+  </body>
+</html>
+
+
