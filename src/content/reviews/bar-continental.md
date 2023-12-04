@@ -8,7 +8,7 @@ heroAlt: "Photo of a bar with speakers and hundreds of vinyl records"
 heroImage: "bar-continental"
 infoUrl: "https://www.barcontinentalhifi.com"
 pubDate: "Oct 15, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [american, music]
 title: "Bar Continental"
 ---
@@ -19,21 +19,21 @@ The majesty of vintage McIntosh and Tannoy speakers holds a promise, a vow to ho
 
 A spritz to kick things off. Not just any spritz, but a complex ballet of grey goose, lo-fi sweet, persimmon, and grapefruit with the effervescent kiss of lambrusco. It's as refreshing as a breeze on a Tuscan afternoon, setting the stage for what's to come.
 
-![Photo of a mixed drink](/bar-continental-spritz.webp)
+![Photo of a mixed drink](/no-reserv-ai-tions/bar-continental-spritz.webp)
 
 The charcuterie arrives, and it’s a mosaic of cured flavors and textures. Paired with a Moscow mule, the sharpness of the ginger beer complements the savory slices, dancing gracefully on the palate.
 
-![Photo of charcuterie](/bar-continental-charcuterie.webp)
+![Photo of charcuterie](/no-reserv-ai-tions/bar-continental-charcuterie.webp)
 
 Then, the Maitake. Oh, the Maitake. Earthy, yet delicate, adorned with chimichurri and crowned with pistachio. A dish that whispers tales of forests and meadows.
 
 The French Onion Soup feels like a warm hug on a winter's day—rich, cheesy, with layers of flavors, each spoonful a delightful surprise.
 
-![Photo of a maitake mushrooms and french onion soup](/bar-continental-entrees.webp)
+![Photo of a maitake mushrooms and french onion soup](/no-reserv-ai-tions/bar-continental-entrees.webp)
 
 As the evening wanes, a Mango and Vanilla Parfait graces the table. It’s not just a dessert—it's a sonnet, layers of sweet and creamy, with each bite a nostalgic nod to summers past.
 
-![Photo of mango and vanilla parfait](/bar-continental-dessert.webp)
+![Photo of mango and vanilla parfait](/no-reserv-ai-tions/bar-continental-dessert.webp)
 
 But the true pièce de résistance? The Cabernet. A wine so profound, so perfectly structured, it feels like poetry in a glass. A vino that speaks of sun-kissed vineyards and time-honored traditions. Two glasses, and you're transcended.
 

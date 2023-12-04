@@ -8,7 +8,7 @@ heroAlt: "Photo of tacos and Birria"
 heroImage: "bartaco"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d8635743-Reviews-Bartaco-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Sep 9, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [bar, fusion]
 title: "bartaco"
 ---

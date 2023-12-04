@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import toTitleCase from '../../helpers/toTitleCase.js';
 
 const reviews = (await getCollection('reviews')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -28,7 +29,7 @@ const reviews = (await getCollection('reviews')).sort(
 				<div class="xl:w-3/5">
 					<div class="pb-4 pt-4 xl:px-4 xl:pt-0">
 						<h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100 md:flex-shrink-0">Latest Reviews</h2>
-						<p class="has-links mt-2">See them all by <a href="/no-reserv-ai-tions/1">newest</a> or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
+						<p class="has-links mt-2">See them all by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
 					</div>
 					<ul class="md:flex md:flex-wrap">
 						{reviews.map((review) => (
@@ -40,7 +41,7 @@ const reviews = (await getCollection('reviews')).sort(
 										</figure>
 										<div>
 											<div class="flex items-center mt-4 gap-x-4 text-slate-500 text-sm dark:text-white group-hover:text-white">
-												{review.data.city}, {review.data.country === 'United States' ? review.data.state : review.data.country}
+												{toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
 											</div>
 											<div class="group relative">
 												<h3 class="duration-300 font-bold text-2xl  text-red-700 transition-color uppercase dark:text-red-300  group-hover:text-white">

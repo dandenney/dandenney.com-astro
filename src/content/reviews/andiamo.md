@@ -8,7 +8,7 @@ heroAlt: "Photo of a steak, whipped potatoes, and wine"
 heroImage: "andiamo"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g45963-d3869216-Reviews-Andiamo_italian_Steakhouse-Las_Vegas_Nevada.html"
 pubDate: "Sep 20, 2023"
-state: "Nevada"
+state: "nevada"
 tags: [italian, american, steakhouse]
 title: "Andiamo"
 ---

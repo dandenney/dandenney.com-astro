@@ -8,7 +8,7 @@ heroAlt: "Photo of french onion soup"
 heroImage: "boulon-brasserie"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34678-d25138929-Reviews-Boulon_Brasserie_and_Bakery-Tampa_Florida.html"
 pubDate: "Nov 25, 2023"
-state: "Florida"
+state: "florida"
 tags: [french]
 title: "Boulon Brasserie"
 ---

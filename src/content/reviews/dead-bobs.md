@@ -10,7 +10,7 @@ heroImageAttribution: "Tripadvisor photo submitted by MGMMUSIC (Mar 2016)"
 heroImageUrl: "https://www.tripadvisor.com/Restaurant_Review-g34607-d7347281-Reviews-Dead_Bob_s-St_Petersburg_Florida.html#photos;aggregationId=101&albumid=101&filter=7&ff=180385317"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34607-d7347281-Reviews-Dead_Bob_s-St_Petersburg_Florida.html"
 pubDate: "September 15, 2023"
-state: "Florida"
+state: "florida"
 tags: [american, bar, pub]
 title: "Dead Bob's Bar"
 ---

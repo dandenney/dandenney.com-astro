@@ -10,7 +10,7 @@ heroImageAttribution: "Traveler photo submitted by Magdalena T (Jul 2023)"
 heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-m/1280/29/aa/c2/f9/caption.jpg"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34438-d20999208-Reviews-Marabu_Restaurant-Miami_Florida.html"
 pubDate: "Nov 4, 2023"
-state: "Florida"
+state: "florida"
 tags: [latin, cuban]
 title: "Marabu"
 ---

@@ -8,7 +8,7 @@ heroAlt: "Photo of a philly steak and fries"
 heroImage: "bottle-cap"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d24991472-Reviews-Bottle_Cap-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Oct 21, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [american]
 title: "Bottle Cap"
 ---

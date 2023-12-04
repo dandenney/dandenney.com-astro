@@ -10,7 +10,7 @@ heroImageAttribution: "Joe Pezzulich"
 heroImageUrl: "https://www.google.com/maps/contrib/101906663790053950545/photos/@27.9413188,-82.4871069,11z/data=!3m1!4b1!4m3!8m2!3m1!1e1?entry=ttu"
 infoUrl: "https://whiskeywings.com/largo/"
 pubDate: "September 16, 2023"
-state: "Florida"
+state: "florida"
 tags: [american, bar]
 title: "Whiskey Wings, Largo"
 ---

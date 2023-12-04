@@ -8,7 +8,7 @@ heroAlt: "Photo of a glorious filet mignon"
 heroImage: "urban-grub"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d3152078-Reviews-Urban_Grub-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Oct 21, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [american, bar]
 title: "Urban Grub"
 ---

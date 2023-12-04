@@ -10,7 +10,7 @@ heroImageAttribution: "Pelato Management"
 heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-w/2a/23/80/03/spaghetti-al-arrabbiata.jpg"
 infoUrl: "1300 3rd Ave, N, Nashville, TN 37208"
 pubDate: "Oct 20, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [italian]
 title: "Pelato"
 ---

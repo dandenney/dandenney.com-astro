@@ -8,7 +8,7 @@ heroAlt: "Photo of the bar area at Ace Hotel"
 heroImage: "ace-hotel-bar"
 infoUrl: "https://www.tripadvisor.com/Hotel_Review-g60763-d1201072-Reviews-Ace_Hotel_New_York-New_York_City_New_York.html"
 pubDate: "Oct 29, 2023"
-state: "New York"
+state: "new-york"
 tags: [bar, hotel]
 title: "Ace Hotel Bar"
 ---

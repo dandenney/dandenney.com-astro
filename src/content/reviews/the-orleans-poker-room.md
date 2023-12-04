@@ -8,7 +8,7 @@ heroAlt: "Photo of tournament chips on a poker table"
 heroImage: "the-orleans-poker-room"
 infoUrl: "https://www.tripadvisor.com/Hotel_Review-g45963-d91907-Reviews-The_Orleans_Hotel_Casino-Las_Vegas_Nevada.html"
 pubDate: "Sep 20, 2023"
-state: "Nevada"
+state: "nevada"
 tags: [poker, casino]
 title: "The Orleans Poker Room"
 ---

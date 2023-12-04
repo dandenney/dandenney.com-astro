@@ -10,7 +10,7 @@ heroImageAttribution: "Tripadvisor traveler photo submitted by TARK2200 (Mar 201
 heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-m/1280/16/e9/ba/fb/photo0jpg.jpg"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34856-d10252887-Reviews-Cat_Cora_s_Kitchen-College_Park_Georgia.html"
 pubDate: "Sep 14 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [american, fast-food]
 title: "Burger King"
 ---

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import toTitleCase from '../../helpers/toTitleCase.js';
 
 // Paginate same list of { astronaut } objects as the previous example
 export async function getStaticPaths({ paginate }) { 
@@ -32,7 +33,7 @@ const { page } = Astro.props;
                 </figure>
                 <div>
                   <div class="flex items-center gap-x-4 text-slate-500 text-sm group-hover:text-white">
-                    {review.data.city}, {review.data.country === 'United States' ? review.data.state : review.data.country}
+                    {toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
                   </div>
                   <div class="group relative">
                     <h3 class="duration-300 font-bold mt-2 text-4xl  text-red-700 transition-color uppercase md:text-5xl group-hover:text-white">

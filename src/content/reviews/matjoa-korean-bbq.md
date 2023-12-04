@@ -8,7 +8,7 @@ heroAlt: "Photo of a combination of yet to be cooked Korean BBQ meats"
 heroImage: "matjoa-korean-bbq"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34379-d20896515-Reviews-Matjoa_Korean_BBQ_Restaurant-Largo_Florida.html"
 pubDate: "Sep 17, 2023"
-state: "Florida"
+state: "florida"
 tags: [barbecue, asian, korean]
 title: "Matjoa Korean BBQ"
 ---

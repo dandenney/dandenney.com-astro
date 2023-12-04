@@ -10,7 +10,7 @@ heroImageAttribution: "olivier DORE"
 heroImageUrl: "https://lh5.googleusercontent.com/p/AF1QipNXl_XG9VL34kBT0jris0XAwuuAhCxoA7q2ie5N=s1031-k-no"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34438-d5503537-Reviews-Party_Cake_Bakery-Miami_Florida.html"
 pubDate: "Nov 4, 2023"
-state: "Florida"
+state: "florida"
 tags: [latin, cafe, spanish]
 title: "Party Cake Bakery"
 ---

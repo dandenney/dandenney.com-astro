@@ -8,7 +8,7 @@ heroAlt: "Photo of a philly steak, fries, and beer"
 heroImage: "hooters"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34230-d401929-Reviews-Hooters-Fort_Myers_Florida.html"
 pubDate: "Nov 11, 2023"
-state: "Florida"
+state: "florida"
 tags: [american, bar]
 title: "Hooters"
 ---

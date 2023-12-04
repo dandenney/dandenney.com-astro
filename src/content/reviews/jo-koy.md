@@ -8,7 +8,7 @@ heroAlt: "Photo of Jo Koy on stage"
 heroImage: "jo-koy"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g34678-d615921-Reviews-Amalie_Arena-Tampa_Florida.html"
 pubDate: "Nov 17, 2023"
-state: "Florida"
+state: "florida"
 tags: [comedy, arena]
 title: "Jo Koy"
 ---

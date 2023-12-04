@@ -8,7 +8,7 @@ heroAlt: "Photo of a bacon and egg breakfast"
 heroImage: "bacon-nation"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g45963-d25169048-Reviews-Bacon_Nation-Las_Vegas_Nevada.html"
 pubDate: "Sep 18, 2023"
-state: "Nevada"
+state: "nevada"
 tags: [american]
 title: "Bacon Nation"
 ---

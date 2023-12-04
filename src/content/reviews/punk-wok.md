@@ -8,7 +8,7 @@ heroAlt: "Photo of 2 sushi rolls"
 heroImage: "punk-wok"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d25304221-Reviews-Punk_Wok-Nashville_Davidson_County_Tennessee.html"
 pubDate: "October 6, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [sushi, asian]
 title: "Punk Wok"
 ---

@@ -52,7 +52,7 @@ const { reviews } = Astro.props;
 									</figure>
 									<div>
 										<div class="flex items-center gap-x-4 text-slate-500 text-sm dark:text-slate-100 group-hover:text-white">
-											{review.frontmatter.city}, {review.frontmatter.country === 'United States' ? review.frontmatter.state : review.frontmatter.country}
+											{toTitleCase(review.frontmatter.city)}, {review.frontmatter.country === 'United States' ? toTitleCase(review.frontmatter.state) : review.frontmatter.country}
 										</div>
 										<div class="group relative">
 											<h3 class="duration-300 font-bold mt-3 text-4xl text-red-700 transition-color uppercase dark:text-red-300 md:text-5xl group-hover:text-white">
