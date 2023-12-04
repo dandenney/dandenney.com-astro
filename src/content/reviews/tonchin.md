@@ -8,7 +8,7 @@ heroAlt: "Photo of a bowl of Ramen and a beer"
 heroImage: "tonchin"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g60763-d13206470-Reviews-Tonchin-New_York_City_New_York.html"
 pubDate: "Oct 30, 2023"
-state: "New York"
+state: "new-york"
 tags: [japanese, asian, vegetarian-friendly]
 title: "Tonchin"
 ---

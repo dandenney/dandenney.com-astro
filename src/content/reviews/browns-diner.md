@@ -8,7 +8,7 @@ heroAlt: "Photo of a musician playing a song"
 heroImage: "browns-diner"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d478224-Reviews-Brown_s_Diner-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Sep 30, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [american, diner]
 title: "Brown's Diner"
 ---

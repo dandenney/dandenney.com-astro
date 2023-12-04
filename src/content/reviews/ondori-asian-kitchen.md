@@ -8,7 +8,7 @@ heroAlt: "Photo of a brisket bowl"
 heroImage: "ondori-asian-kitchen"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g45963-d9867773-Reviews-Ondori_Asian_Kitchen-Las_Vegas_Nevada.html"
 pubDate: "Sep 19, 2023"
-state: "Nevada"
+state: "nevada"
 tags: [chinese, japanese, sushi]
 title: "Ondori Asian Kitchen"
 ---

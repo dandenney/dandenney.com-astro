@@ -10,7 +10,7 @@ heroImageAttribution: "Traveler photo submitted by ElvyBarbar (Nov 2015)"
 heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-o/09/a2/95/6d/kiki-s.jpg"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g60763-d8001308-Reviews-Kiki_s-New_York_City_New_York.html"
 pubDate: "Oct 31, 2023"
-state: "New York"
+state: "new-york"
 tags: [mediterranean, greek, vegetarian-friendly]
 title: "Kiki's"
 ---

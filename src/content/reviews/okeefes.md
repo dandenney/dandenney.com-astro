@@ -8,7 +8,7 @@ heroAlt: "Photo of a bowl of Irish stew"
 heroImage: "okeefes"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34141-d508714-Reviews-O_Keefe_s_Tavern-Clearwater_Florida.html"
 pubDate: "October 28, 2023"
-state: "FL"
+state: "florida"
 tags: [irish, pub]
 title: "O'Keefes"
 ---

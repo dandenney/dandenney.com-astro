@@ -8,7 +8,7 @@ heroImageAlt: "Photo of some potato chips with dip and a beer"
 heroImage: "cat-koras-kitchen-atlanta"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34856-d10252887-Reviews-Cat_Cora_s_Kitchen-College_Park_Georgia.html"
 pubDate: "Sep 15 2023"
-state: "Georgia"
+state: "georgia"
 tags: [american, bar]
 title: "Cat Cora’s Kitchen"
 ---

@@ -8,7 +8,7 @@ heroAlt: "Photo of a glass of Delerium Tremens on a bar"
 heroImage: "the-keg-room"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g60763-d3706457-Reviews-The_Keg_Room-New_York_City_New_York.html"
 pubDate: "Oct 30, 2023"
-state: "New York"
+state: "new-york"
 tags: [american, irish, bar]
 title: "The Keg Room"
 ---

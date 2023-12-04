@@ -8,7 +8,7 @@ heroAlt: "Photo of a beer overlooking downtown Miami"
 heroImage: "citizenm"
 infoUrl: "https://www.tripadvisor.com/Hotel_Review-g34438-d24094386-Reviews-CitizenM_Miami_Brickell_Hotel-Miami_Florida.html"
 pubDate: "Nov 2, 2023"
-state: "Florida"
+state: "florida"
 tags: [hotel]
 title: "CitizenM"
 ---

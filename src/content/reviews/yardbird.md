@@ -10,7 +10,7 @@ heroImageAttribution: "Photo provided by management (Oct 2018)"
 heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/fa/a7/03/chicken-and-waffles.jpg"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34439-d2355097-Reviews-Yardbird_Table_Bar-Miami_Beach_Florida.html"
 pubDate: "Nov 3, 2023"
-state: "Florida"
+state: "florida"
 tags: [american]
 title: "Yardbird"
 ---

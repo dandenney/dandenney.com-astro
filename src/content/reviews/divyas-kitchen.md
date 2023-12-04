@@ -10,7 +10,7 @@ heroImageAttribution: "Management (May 2022)"
 heroImageUrl: "https://media-cdn.tripadvisor.com/media/photo-m/1280/23/a3/5a/73/seasonal-vegetable-bowl.jpg"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g60763-d12715119-Reviews-Divya_s_Kitchen-New_York_City_New_York.html"
 pubDate: "Oct 29, 2023"
-state: "New York"
+state: "new-york"
 tags: [vegetarian friendly, vegan-options]
 title: "Divya's Kitchen"
 ---

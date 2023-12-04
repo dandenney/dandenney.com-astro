@@ -7,11 +7,11 @@ import toTitleCase from '../../../helpers/toTitleCase.js'
 export async function getStaticPaths() {
   const allReviews = await Astro.glob('../../../content/reviews/*.md');
 
-  const uniqueCities = [...new Set(allReviews.map((review) => review.frontmatter.city).flat())];
+  const uniqueStates = [...new Set(allReviews.map((review) => review.frontmatter.state).flat())].filter(state => state !== '');
 
-  return uniqueCities.map((city) => {
+  return uniqueStates.map((state) => {
     const filteredReviews = allReviews.filter((review) => 
-      review.frontmatter.city.includes(city)
+      review.frontmatter.state.includes(state)
     ).map((review) => {
       // Extract the slug from the file path
       // This example assumes file names are suitable for use as slugs
@@ -20,13 +20,13 @@ export async function getStaticPaths() {
     });
 
     return {
-      params: { city },
+      params: { state },
       props: { reviews: filteredReviews },
     };
   });
 }
 
-const { city } = Astro.params;
+const { state } = Astro.params;
 const { reviews } = Astro.props;
 
 ---
@@ -40,7 +40,7 @@ const { reviews } = Astro.props;
 		<Header />
 		<main class="bg-slate-50 dark:bg-slate-900 relative shadow z-10 dark:text-slate-200" style="min-height: 90dvh;">
 			<section class="max-w-screen-2xl mx-auto pb-24 pt-8 px-4">
-				<h2 class="border-b text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:flex-shrink-0">{toTitleCase(city)}</h2>
+				<h2 class="border-b text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:flex-shrink-0">{toTitleCase(state)}</h2>
 				<ul class="md:flex md:flex-wrap gap-y-8 mt-8">
 					{reviews.map((review) => {
 						return(

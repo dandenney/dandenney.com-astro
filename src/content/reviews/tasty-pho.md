@@ -10,7 +10,7 @@ heroImageAttribution: "Tripadvisor photo submitted by Hintz1098 (Sep 2015)"
 heroImageUrl: "https://www.tripadvisor.com/Restaurant_Review-g34561-d4288868-Reviews-Tasty_Pho-Pinellas_Park_Florida.html#photos;aggregationId=101&albumid=101&filter=7&ff=151952815"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g34561-d4288868-Reviews-Tasty_Pho-Pinellas_Park_Florida.html"
 pubDate: "September 16, 2023"
-state: "Florida"
+state: "florida"
 tags: [asian, vietnamese, pho]
 title: "Tasty Pho"
 ---

@@ -8,7 +8,7 @@ heroAlt: "Photo of a pulled pork sandwich"
 heroImage: "tootsies"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d9776083-Reviews-Tootsies_Orchid_Lounge-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Nov 2, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [american]
 title: "Tootsies"
 ---

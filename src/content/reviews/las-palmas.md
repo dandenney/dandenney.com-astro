@@ -8,7 +8,7 @@ heroAlt: "Photo of enchildas supremas"
 heroImage: "las-palmas"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d12636807-Reviews-Las_Palmas_Mexican_Restaurante_Charlotte_Pike-Nashville_Davidson_County_Tennessee.html"
 pubDate: "Nov 26, 2023"
-state: "Tennessee"
+state: "tennessee"
 tags: [mexican]
 title: "Las Palmas"
 ---
