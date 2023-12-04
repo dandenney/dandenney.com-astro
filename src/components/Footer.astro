@@ -1,8 +1,7 @@
 ---
 // MainLayout.astro
 //Import the Tracking ID
-const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID!;
-const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
+const gaSrc = `https://www.googletagmanager.com/gtag/js?id=G-39E050Z1SC`;
 ---
 
 <style>
@@ -67,11 +66,10 @@ const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
 <!-- GA Scripts -->
   <script async src={gaSrc}></script>
   <script async>
-  const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID;
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     window.dataLayer.push(arguments);
   }
   gtag("js", new Date());
-  gtag("config", TRACKING_ID);
+  gtag("config", 'G-39E050Z1SC');
 </script>

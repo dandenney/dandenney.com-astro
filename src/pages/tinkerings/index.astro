@@ -2,7 +2,6 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 
 const tinkerings = (await getCollection('tinkerings')).sort(
@@ -13,7 +12,7 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title="Tinkerings | Dan Denney" description="Projects with some technical bit that I learned in order to create" />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<Header />

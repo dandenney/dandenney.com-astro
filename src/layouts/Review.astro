@@ -1,0 +1,51 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import toTitleCase from '../helpers/toTitleCase.js'
+
+const { city, state, tags, heroAlt, heroImage, heroImageUrl, heroImageAttribution, summary, title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={summary} />
+	</head>
+	<body class="bg-slate-50 dark:bg-slate-900">
+		<Header />
+		<main class="bg-slate-50 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+			<article class="max-w-screen-2xl px-4 pt-4 xl:flex xl:gap-12 xl:items-start xl:justify-between">
+				<figure class="bg-white has-links max-w-2xl mx-auto pb-8 pt-4 px-4 shadow-md shadow-slate-10/20 xl:sticky xl:top-4 xl:flex-shrink-0 dark:bg-slate-800">
+					<img class="mx-auto" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroAlt} height="480" width="640" />
+					{heroImageAttribution && (
+						<small class="mt-8 text-xs text-slate-600">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
+					)}
+					<ul class="flex flex-wrap font-decorative gap-x-4 justify-between">
+						<li class="text-gray-600 mt-4 dark:text-slate-100"><a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></> }</li>
+						<li class="mt-4 text-gray-300 dark:text-slate-100">
+							{tags && tags.map((tag, index) => (
+								<>
+									{index > 0 ? '• ' : ''}
+									<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
+								</>
+							))}
+						</li>
+					</ul>
+				</figure>
+				<div class="max-w-2xl mx-auto pb-16">
+					<header class="longform pt-8 xl:pt-0">
+						<h1 class="text-4xl font-bold leading-tight tracking-tight mb-4 xl:text-6xl">{title}</h1>
+					</header>
+					<div class="longform pb-8">
+						<slot />
+					</div>
+					<nav class="flex flex-wrap gap-x-4">
+						<a href="/no-reserv-ai-tions" class="btn-link ">← Back to No Reserv-AI-tions</a>
+						<p class="has-links mt-2">Or view by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
+					</nav>
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
