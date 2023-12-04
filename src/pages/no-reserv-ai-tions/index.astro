@@ -1,0 +1,64 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import toTitleCase from '../../helpers/toTitleCase.js';
+
+const reviews = (await getCollection('reviews')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 4);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+	</head>
+	<body class="bg-slate-50 dark:bg-slate-900">
+		<Header />
+		<main class="bg-slate-50 relative shadow z-10 xl:flex xl:items-center dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
+			<div class="max-w-screen-2xl px-4 py-4 xl:flex xl:gap-8">
+				<div class="xl:w-2/5">
+					<figure class="overflow-hidden" style="max-height: 70vh;">
+						<img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n.webp" />	
+					</figure>
+					<h2 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100 md:flex-shrink-0 mr-8">No Reserv<span class="uppercase">ai</span>tions</h2>
+					<p class="mt-2 max-w-3xl text-gray-600 dark:text-slate-100"><a href="https://en.wikipedia.org/wiki/Anthony_Bourdain">Anthony Bourdain</a> had a glorious way of describing the human experience, especially when it revolved around food and drink. This project uses AI to write reviews of places, in his general style. No bot can compare to the real person, but <strong class="font-bold">AI</strong>nthony Bourd<strong class="font-bold">AI</strong>n sure can bring life to a description of a place or an experience.</p>
+				</div>
+				<div class="xl:w-3/5">
+					<div class="pb-4 pt-4 xl:px-4 xl:pt-0">
+						<h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100 md:flex-shrink-0">Latest Reviews</h2>
+						<p class="has-links mt-2">See them all by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
+					</div>
+					<ul class="md:flex md:flex-wrap">
+						{reviews.map((review) => (
+							<li class="mt-4 md:w-1/2 md:flex md:mt-0">
+								<a class="block duration-300 group relative isolate p-4 transition-all sm:mt-0  hover:bg-red-700 dark:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}/`}>
+									<div class="max-w-2xl mx-auto sm:gap-8 lg:max-w-screen-2xl">
+										<figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 dark:bg-slate-700 group-hover:-rotate-3" transition:name={`${review.data.title}-img`}>
+											<img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} />
+										</figure>
+										<div>
+											<div class="flex items-center mt-4 gap-x-4 text-slate-500 text-sm dark:text-white group-hover:text-white">
+												{toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
+											</div>
+											<div class="group relative">
+												<h3 class="duration-300 font-bold text-2xl  text-red-700 transition-color uppercase dark:text-red-300  group-hover:text-white">
+													<span class="absolute inset-0"></span>
+													{review.data.title}
+												</h3>
+												<p class="duration-500 text-sm text-slate-500 dark:text-white group-hover:text-white">{review.data.description}</p>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
