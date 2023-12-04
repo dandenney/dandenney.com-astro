@@ -128,16 +128,16 @@ const links = await getLinks();
 			</section>
 
 			<section class="bg-slate-50 dark:bg-slate-900 py-24 sm:py-32">
-				<div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
-					<article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
+				<div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 px-6 lg:gap-y-16 lg:grid-cols-2 lg:px-8">
+					<div class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
 						<img alt="Dan Denney No ReservAItions" class="w-60" src="/no-reserv-ai-tions/no-reserv-ai-tions.svg" />
 						<p class="mt-4 text-lg leading-8 text-gray-600">Cooking and enjoying food and drinks are my hobbies outside of web development. With No ReservAItions, I've found a way to mix the two. I'm using ChatGPT to create reviews for the places that I visit in the spirit of Anthony Bourdain and I'm having so much fun with it!</p>
-					</article>
-					<div class="mx-auto w-full max-w-2xl pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:pt-0">
+					</div>
+					<div class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-none lg:pt-0">
 						<ul>
 							{reviews.map((review) => 
 								<li>
-									<a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0 hover:bg-red-700" href={`/no-reserv-ai-tions/${review.data.heroImage}`}>
+									<a class="block duration-300 group relative isolate mt-4 p-4 transition-all sm:mt-0 hover:bg-red-700" href={`/no-reserv-ai-tions/${review.data.heroImage}`}>
 										<div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
 											<figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3" transition:name={`${review.data.title}-img`}>
 												<img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} />
