@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import toTitleCase from '../helpers/toTitleCase.js'
 
-const { city, state, tags, heroAlt, heroImage, heroImageUrl, heroImageAttribution, summary, title } = Astro.props;
+const { city, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, summary, title } = Astro.props;
 ---
 
 <html lang="en">
@@ -16,7 +16,7 @@ const { city, state, tags, heroAlt, heroImage, heroImageUrl, heroImageAttributio
 		<main class="bg-slate-50 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
 			<article class="max-w-screen-2xl mx-auto px-4 pt-4 xl:flex xl:gap-12 xl:items-start xl:justify-between">
 				<figure class="bg-white has-links max-w-2xl mx-auto pb-8 pt-4 px-4 shadow-md shadow-slate-10/20 xl:sticky xl:top-4 xl:flex-shrink-0 dark:bg-slate-800">
-					<img class="mx-auto" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroAlt} height="480" width="640" />
+					<img class="mx-auto" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroImageAlt} height="480" width="640" />
 					{heroImageAttribution && (
 						<small class="mt-8 text-xs text-slate-600">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
 					)}
