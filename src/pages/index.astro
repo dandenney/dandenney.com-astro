@@ -3,7 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts.js';
-
+import { getLinks } from '../scripts/notion.js';
+import toTitleCase from '../helpers/toTitleCase.js';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('posts')).sort(
@@ -14,7 +15,10 @@ const blips = (await getCollection('blips')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 5);
 
-import { getLinks } from '../scripts/notion.js';
+const reviews = (await getCollection('reviews')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 2);
+
 const links = await getLinks();
 ---
 
@@ -52,14 +56,11 @@ const links = await getLinks();
 					<div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">		
 						{posts.map((post) => (
 							<article class="relative isolate flex flex-col justify-end overflow-hidden rounded bg-gray-900 px-8 pb-8 pt-40 transition-transform sm:pt-24 lg:pt-40 hover:scale-105">
-								<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/${ post.data.thumb}`} alt={post.data.thumbAlt} class="absolute inset-0 -z-10 h-full w-full object-cover">
+								<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/${post.data.thumb}`} alt={post.data.thumbAlt} class="absolute inset-0 -z-10 h-full w-full object-cover">
 								<div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
 								<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
 								<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-									<a href={`/posts/${post.slug}/`}>
-										<span class="absolute inset-0"></span>
-										{post.data.title}
-									</a>
+									<a href={`/posts/${post.slug}/`}><span class="absolute inset-0"></span>{post.data.title}</a>
 								</h3>
 							</article>
 							))
@@ -125,6 +126,46 @@ const links = await getLinks();
 					</div>
 				</div>
 			</section>
+
+			<section class="bg-slate-50 dark:bg-slate-900 py-24 sm:py-32">
+				<div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8">
+					<article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
+						<img alt="Dan Denney No ReservAItions" class="w-60" src="/no-reserv-ai-tions/no-reserv-ai-tions.svg" />
+						<p class="mt-4 text-lg leading-8 text-gray-600">Cooking and enjoying food and drinks are my hobbies outside of web development. With No ReservAItions, I've found a way to mix the two. I'm using ChatGPT to create reviews for the places that I visit in the spirit of Anthony Bourdain and I'm having so much fun with it!</p>
+					</article>
+					<div class="mx-auto w-full max-w-2xl pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:pt-0">
+						<ul>
+							{reviews.map((review) => 
+								<li>
+									<a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0 hover:bg-red-700" href={`/no-reserv-ai-tions/${review.data.heroImage}`}>
+										<div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
+											<figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3" transition:name={`${review.data.title}-img`}>
+												<img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} />
+											</figure>
+											<div>
+												<div class="flex items-center gap-x-4 text-slate-500 text-sm group-hover:text-white">
+													{toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
+												</div>
+												<div class="group relative">
+													<h3 class="duration-300 font-bold mt-2 text-4xl  text-red-700 transition-color uppercase md:text-5xl group-hover:text-white">
+														<span class="absolute inset-0"></span>
+														{review.data.title}
+													</h3>
+													<p class="duration-500 mt-2 text-gray-600 text-sm dark:text-slate-100 group-hover:text-white">{review.data.description}</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							)}
+						</ul>
+						<div class="mt-16 lg:pl-4">
+							<a href="/no-reserv-ai-tions" class="btn-link">View No ReservAItions</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			
 		</main>
 		<Footer />
