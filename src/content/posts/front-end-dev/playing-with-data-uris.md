@@ -9,7 +9,7 @@ path: "/posts/front-end-dev/playing-with-data-uris"
 summary: Sharing some benefits of using data URIs for images
 tags:
   - front-end-dev
-thumb: "posts/data-uris.png"
+cloudinaryThumb: "posts/data-uris.png"
 thumbAlt: "An illustration of a dense forest being condensed into a small glass jar, with miniature trees and wildlife inside, viewed from a side perspective, in the style of a whimsical painting --v 5 --ar 3:2"
 title: Playing With Data URIs
 ---

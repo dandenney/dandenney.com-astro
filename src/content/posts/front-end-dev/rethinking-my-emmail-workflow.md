@@ -9,7 +9,7 @@ path: "/posts/front-end-dev/rethinking-my-emmail-workflow"
 summary: Changing from all local dev to using Builder
 tags:
   - front-end-dev
-thumb: "posts/rethinking.png"
+cloudinaryThumb: "posts/rethinking.png"
 thumbAlt: "An illustration of a person lost in thought, with thought bubbles and symbols representing ideas surrounding them, in the style of Basquiat, viewed from a close-up perspective --v 5 --ar 3:2"
 title: Rethinking My eMMail Workflow
 ---

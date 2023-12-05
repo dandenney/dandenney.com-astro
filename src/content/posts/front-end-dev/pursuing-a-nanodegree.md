@@ -9,7 +9,7 @@ path: "/posts/front-end-dev/pursuing-a-nanodegree"
 summary: Diving into learning JavaScript on Udacity
 tags:
   - front-end-dev
-thumb: "posts/nanodegree.png"
+cloudinaryThumb: "posts/nanodegree.png"
 thumbAlt: "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2"
 title: Pursuing a Nanodegree (1 of ?)
 ---

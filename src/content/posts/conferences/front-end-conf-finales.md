@@ -7,7 +7,7 @@ pubDate: "2014-06-09"
 gradientTitle: "linear-gradient(to right, #111111, #232020)"
 path: "/posts/conferences/front-end-conf-finales"
 summary: Our last two times of running the conf
-thumb: "posts/two-finales.png"
+cloudinaryThumb: "posts/two-finales.png"
 thumbAlt: "
 An illustration of a dramatic stage performance with a curtain closing, with a lone spotlight shining on the performers and a 'The End' sign displayed in the background, in the style of a dark and moody charcoal drawing, viewed from a side perspective --v 5 --ar 3:2"
 title: Front-End Conf Finales

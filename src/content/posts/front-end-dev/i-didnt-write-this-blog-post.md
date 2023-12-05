@@ -8,7 +8,7 @@ path: "/posts/front-end-dev/mondays-rock"
 summary: The computers have taken over this website
 tags:
   - front-end-dev
-thumb: "posts/didnt-write-this-blog-post.png"
+cloudinaryThumb: "posts/didnt-write-this-blog-post.png"
 thumbAlt: "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2"
 title: I Didn't Write This Blog Post
 ---

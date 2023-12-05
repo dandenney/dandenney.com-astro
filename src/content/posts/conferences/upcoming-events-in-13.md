@@ -9,7 +9,7 @@ path: "/posts/conferences/upcoming-events-in-13"
 summary: A listing of confs to attend in 2013
 tags:
   - conferences
-thumb: "posts/upcoming-events.png"
+cloudinaryThumb: "posts/upcoming-events.png"
 thumbAlt: "An illustration of a busy calendar with upcoming events marked in bright colors, surrounded by festive decorations and party favors, in the style of a lively event invitation, viewed from a top-down perspective --v 5 --ar 3:2"
 title: "Upcoming Events in '13"
 ---

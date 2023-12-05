@@ -12,7 +12,7 @@ strapiSeries: true
 summary: Setting up dark mode with a curveball
 tags:
   - front-end-dev
-thumb: "posts/strapi-light-and-dark.png"
+cloudinaryThumb: "posts/strapi-light-and-dark.png"
 thumbAlt: "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2"
 title: "Strapi Series, Part 7: Light and Dark Mode"
 ---

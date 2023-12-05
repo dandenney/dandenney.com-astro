@@ -5,7 +5,7 @@ colorLink: "#ffffff"
 colorText: "#faefe2"
 gradientTitle: "radial-gradient(#f0e1c0, #7c614d)"
 path: "/posts/front-end-dev/embracing-emotion-with-gatsby"
-thumb: "posts/emotion-gatsby.png"
+cloudinaryThumb: "posts/emotion-gatsby.png"
 title: Embracing Emotion, with Gatsby
 summary: Crushing on Gatsby and trying to organize my Emotions
 pubDate: "2019-04-17"

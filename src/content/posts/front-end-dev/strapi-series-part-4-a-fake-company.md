@@ -13,7 +13,7 @@ strapiSeries: true
 summary: Creating some details to make the project fun
 tags:
   - front-end-dev
-thumb: "posts/strapi-series-fake.png"
+cloudinaryThumb: "posts/strapi-series-fake.png"
 thumbAlt: "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2"
 title: "Strapi Series, Part 4: A Fake Company"
 ---

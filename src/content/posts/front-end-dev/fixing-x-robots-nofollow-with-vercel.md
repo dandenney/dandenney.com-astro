@@ -11,7 +11,7 @@ path: "/posts/front-end-dev/fixing-x-robots-nofollow-with-vercel"
 summary: Fixing a an issue when proxying to Vercel
 tags:
   - front-end-dev
-thumb: "posts/x-robots_nofollow.png"
+cloudinaryThumb: "posts/x-robots_nofollow.png"
 title: "Fixing x-robots nofollow with Vercel"
 ---
 

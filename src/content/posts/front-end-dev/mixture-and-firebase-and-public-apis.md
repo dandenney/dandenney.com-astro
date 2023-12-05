@@ -9,7 +9,7 @@ path: "/posts/front-end-dev/mixture-and-firebase-and-public-apis"
 summary: Playing with a cool tool
 tags:
   - front-end-dev
-thumb: "posts/mixture-firebase.png"
+cloudinaryThumb: "posts/mixture-firebase.png"
 thumbAlt: "An illustration of a mad scientist experimenting with a mixture of fire and various chemicals, in the style of a sci-fi movie poster, viewed from a side-facing perspective --v 5 --ar 3:2"
 title: Mixture and Firebase and Public APIs
 ---

@@ -7,7 +7,7 @@ pubDate: "2014-04-07"
 gradientTitle: "linear-gradient(to right, #386f89, #5998a2)"
 path: "/posts/conferences/why-grok-is-special"
 summary: A review of the awesomeness that is Grok
-thumb: "posts/grok.png"
+cloudinaryThumb: "posts/grok.png"
 thumbAlt: "An illustration of a person standing at a whiteboard, drawing a complex algorithm with multiple interconnected parts, with other people looking on in amazement, in the style of a detailed technical diagram, viewed from a bird's-eye perspective --v 5 --ar 3:2"
 title: Why Grok is Special
 tags:

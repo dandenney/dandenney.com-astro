@@ -10,7 +10,8 @@ strapiSeries: true
 summary: Identifying patterns and planning for implementation
 tags:
   - front-end-dev
-thumb: "posts/strapi-colors-shapes.png"
+cloudinaryThumb: "posts/strapi-colors-shapes.png"
+thumb: "posts/front-end-dev/strapi-colors-shapes/strapi-colors-shapes-thumb.webp"
 thumbAlt: "abstract shapes and colors, with letters, postpunk 80s retro --v 5 --ar 3:2"
 title: "Strapi Series, Part 8: Font Sizes and Colors"
 ---

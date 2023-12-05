@@ -10,7 +10,7 @@ path: "/posts/front-end-dev/custom-collection-list-markup-in-eleventy"
 summary: Trying something with using custom markup for each item in a collection list
 tags:
   - front-end-dev
-thumb: "posts/custom-eleventy-collections.png"
+cloudinaryThumb: "posts/custom-eleventy-collections.png"
 thumbAlt: "2d icons, 3d icons, grunge, ui, graphic design, high contrast, artstation --ar 3:2"
 title: "Custom collection list markup in Eleventy"
 ---

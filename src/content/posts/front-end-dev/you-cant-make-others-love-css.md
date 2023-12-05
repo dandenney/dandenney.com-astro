@@ -4,7 +4,7 @@ backgroundPost: "#0e1012"
 colorLink: "#adbd1b"
 colorText: "#a0a9e5"
 path: "/posts/front-end-dev/you-cant-make-other-love-css"
-thumb: "posts/love-css.png"
+cloudinaryThumb: "posts/love-css.png"
 title: "You Can't Make Others Love CSS"
 gradientTitle: "radial-gradient(#e74565, #570505)"
 summary: Sharing my take on the utility CSS wars

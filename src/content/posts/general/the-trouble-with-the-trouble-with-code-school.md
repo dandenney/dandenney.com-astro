@@ -10,7 +10,7 @@ path: "/posts/general/the-trouble-with-the-trouble-with-code-school"
 summary: "A reply to a post about online learning"
 tags:
   - general
-thumb: "posts/trouble-with.png"
+cloudinaryThumb: "posts/trouble-with.png"
 thumbAlt: "An illustration of a group of friends starting trouble by sneaking into an abandoned building, equipped with flashlights and climbing gear, in the style of a suspenseful adventure story, viewed from a low-angle perspective --v 5 --ar 3:2"
 title: 'The Trouble with "The Trouble with Code School"'
 ---

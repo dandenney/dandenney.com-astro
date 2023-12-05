@@ -9,7 +9,8 @@ strapiSeries: true
 summary: The first collection and another single type
 tags:
   - front-end-dev
-thumb: "posts/strapi-page-links-data.png"
+cloudinaryThumb: "posts/strapi-page-links-data.png"
+thumb: "posts/front-end-dev/strapi-page-links-data/strapi-page-links-data-thumb.webp"
 thumbAlt: "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1"
 title: "Strapi Series, Part 10: Links Data and Requests"
 ---

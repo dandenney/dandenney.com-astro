@@ -11,7 +11,7 @@ permalink: posts/front-end-dev/{{ title | slug }}/index.html
 summary: Trying out a way to access a personal bio as an API
 tags:
   - front-end-dev
-thumb: "posts/personal-json-api.png"
+cloudinaryThumb: "posts/personal-json-api.png"
 thumbAlt: "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2"
 title: Experiment - Personal JSON-based API
 ---

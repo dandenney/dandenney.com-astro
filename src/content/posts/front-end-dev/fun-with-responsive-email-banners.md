@@ -9,7 +9,7 @@ path: "/posts/front-end-dev/fun-with-responsive-email-banners"
 summary: Responsive design and HTML Tables, FTW
 tags:
   - front-end-dev
-thumb: "posts/email-banner.png"
+cloudinaryThumb: "posts/email-banner.png"
 thumbAlt: "An illustration of a person riding a rocket with a promotional banner trailing behind, soaring through the clouds and leaving a trail of fire, in the style of a thrilling action movie poster, viewed from a dramatic angle perspective --v 5 --ar 3:2"
 title: Fun With Responsive Email Banners
 ---

@@ -7,7 +7,7 @@ pubDate: "2014-07-21"
 gradientTitle: "linear-gradient(to bottom, #3eaabe, #102f54)"
 path: "/posts/conferences/no-sleep-til-portland"
 summary: Building up to running our first event in Portland
-thumb: "posts/no-sleep.png"
+cloudinaryThumb: "posts/no-sleep.png"
 thumbAlt: "An illustration of a person driving through the night on a deserted highway with Portland in the background, with a graffiti-style font overlay reading 'No Sleep Till Brooklyn', in the style of a digital art, viewed from a front perspective --v 5 --ar 3:2"
 title: No Sleep til Portland
 tags:
