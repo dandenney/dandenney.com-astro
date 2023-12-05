@@ -12,7 +12,7 @@ strapiSeries: true
 summary: Adding TypeScript and Storybook to verify and see data
 tags:
   - front-end-dev
-thumb: "posts/strapi-coming-soon-qa.png"
+cloudinaryThumb: "posts/strapi-coming-soon-qa.png"
 thumbAlt: "An illustration of a mysterious book of spells with a glowing, arcane symbol on the cover, surrounded by flickering candles and an ominous mist, in the style of dark fantasy art, photorealistic, viewed from a top-down perspective --v 5 --ar 3:2"
 title: "Strapi Series, Part 6: Coming Soon QA"
 ---

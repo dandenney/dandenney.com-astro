@@ -7,7 +7,7 @@ pubDate: "2014-01-19"
 gradientTitle: "linear-gradient(45deg, #5b9395, #719893, #ffa87a, #fdcda8)"
 path: "/posts/conferences/front-end-conf-update"
 summary: Updates about this and future events
-thumb: "posts/front-end-update.png"
+cloudinaryThumb: "posts/front-end-update.png"
 thumbAlt: "An illustration of an airplane soaring through the clouds with a beautiful sunset in the background, in the style of a classic airline advertisement, viewed from a top-down perspective --v 5 --ar 3:2"
 title: Front-End Conf Update
 tags:

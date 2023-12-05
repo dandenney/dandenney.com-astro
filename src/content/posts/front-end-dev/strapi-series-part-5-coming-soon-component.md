@@ -13,7 +13,7 @@ strapiSeries: true
 summary: Hooking Strapi up to a component for collecting emails
 tags:
   - front-end-dev
-thumb: "posts/strapi-email-launch.png"
+cloudinaryThumb: "posts/strapi-email-launch.png"
 thumbAlt: "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2"
 title: "Strapi Series, Part 5: A Coming Soon Component"
 ---

@@ -8,7 +8,7 @@ gradientTitle: "linear-gradient(to bottom, #b9162d, #b9162d)"
 
 path: "/posts/general/i-forgot-about-dre"
 summary: "Review of the awesome work behind the Beats app"
-thumb: "posts/forgot-about-dre.jpg"
+cloudinaryThumb: "posts/forgot-about-dre.jpg"
 thumgAlt: "Dre and the Beats logo"
 title: "I Forgot About Dre"
 tags:

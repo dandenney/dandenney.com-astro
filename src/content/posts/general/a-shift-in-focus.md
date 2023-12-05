@@ -10,7 +10,7 @@ path: "/posts/general/a-shift-in-focus"
 summary: "Changing from a split role to a product one"
 tags:
   - general
-thumb: "posts/shift-in-focus.png"
+cloudinaryThumb: "posts/shift-in-focus.png"
 thumbAlt: "A photograph of a steampunk zombie in a post-apocalyptic city, with ruined buildings and smoke in the background, during the night with a mix of blue and orange lighting and shot with a close-up lens using the Nikon AF-S Nikkor 105mm f/2.8G IF-ED VR II --v 5 --ar 3:2"
 title: "A Shift in Focus"
 ---

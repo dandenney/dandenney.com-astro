@@ -5,7 +5,7 @@ colorLink: "#ba9e80"
 colorText: "#ecfdf7"
 gradientTitle: "radial-gradient(circle, rgba(255,167,163,1) 0%, rgba(231,55,81,1) 25%, rgba(152,33,45,1) 75%, rgba(175,29,48,1) 100%)"
 path: "/posts/front-end-dev/til-executing-local-ruby"
-thumb: "posts/local-ruby.png"
+cloudinaryThumb: "posts/local-ruby.png"
 thumbAlt: "a person holiding a magical ruby, fantasy, cinematic lighting, --s 777 --v 5 --ar 3:2"
 title: TIL Executing Local Ruby
 summary: Sharing how I learned how to use Ruby to solve a problem

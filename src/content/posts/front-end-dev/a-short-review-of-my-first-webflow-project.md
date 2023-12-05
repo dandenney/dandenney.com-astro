@@ -5,7 +5,8 @@ socialImageFilename: "og-a-short-review-of-my-first-webflow-project.jpg"
 summary: 'A mix "no code" and "yes code"'
 tags:
   - front-end-dev
-thumb: "posts/a-short-review-webflow-project.png"
+cloudinaryThumb: "posts/a-short-review-webflow-project.png"
+thumb: "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/a-short-review-webflow-project-thumb.webp"
 thumbAlt: "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2"
 title: "A Short Review of My First Webflow Project"
 ---

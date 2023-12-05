@@ -6,7 +6,7 @@ colorText: "#f8f4f2"
 pubDate: "2014-01-23"
 gradientTitle: "linear-gradient(to bottom, #4b89bf, #adabbf)"
 path: "/posts/front-end-dev/an-api-event"
-thumb: "posts/api-event.png"
+cloudinaryThumb: "posts/api-event.png"
 thumbAlt: "An illustration of a person standing in front of a giant API puzzle, with each piece coming to life and fitting together seamlessly, in the style of an action-packed adventure movie poster, viewed from a dynamic perspective --v 5 --ar 3:2"
 title: An API Event?
 summary: Testing the waters for an event I'd like to run

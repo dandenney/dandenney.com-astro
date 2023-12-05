@@ -11,7 +11,7 @@ strapiSeries: true
 summary: Cloning, yarning, and command lining
 tags:
   - front-end-dev
-thumb: "posts/strapi-repo-setup.png"
+cloudinaryThumb: "posts/strapi-repo-setup.png"
 thumbAlt: "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2"
 title: "Strapi Series, Part 3: Repo Setup"
 ---

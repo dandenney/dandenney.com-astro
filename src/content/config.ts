@@ -7,6 +7,7 @@ const posts = defineCollection({
     strapiSeries: z.boolean().optional(),
     summary: z.string(),
     tags: z.array(z.string()),
+    cloudinaryThumb: z.string().optional(),
     thumb: z.string().optional(),
     thumbAlt: z.string().optional(),
     title: z.string(),

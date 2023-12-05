@@ -8,7 +8,7 @@ pubDate: "2020-02-17"
 gradientTitle: "radial-gradient(#f1daa4, #e4a051)"
 path: "/posts/front-end-dev/visualizing-disruptive-albums"
 summary: Applying some of what I learned in Fullstack D3 to a passion project
-thumb: "posts/beerbongs-and-bentleys-album.png"
+cloudinaryThumb: "posts/beerbongs-and-bentleys-album.png"
 thumbAlt: 'A photograph of a vinyl record of "beerbongs and bentleys" being played on a turntable, with a blurred background of an artistic loft, during evening with warm, dim lighting and shot with a macro lens using the Sony FE 90mm f/2.8 Macro G OSS --v 5 --ar 3:2'
 title: "Visualizing a Disruptive Album: beerbongs & bentleys"
 tags:

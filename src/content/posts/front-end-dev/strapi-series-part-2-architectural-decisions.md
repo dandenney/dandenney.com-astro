@@ -11,7 +11,7 @@ strapiSeries: true
 summary: Basic decisions around the tech stack
 tags:
   - front-end-dev
-thumb: "posts/architectural-decisions.png"
+cloudinaryThumb: "posts/architectural-decisions.png"
 thumbAlt: "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2"
 title: "Strapi Series, Part 2: Architectural Decisions"
 ---

@@ -9,7 +9,8 @@ strapiSeries: true
 summary: Refactoring components to use the links data
 tags:
   - front-end-dev
-thumb: "posts/strapi-link-components.png"
+cloudinaryThumb: "posts/strapi-link-components.png"
+thumb: "/posts/front-end-dev/strapi-link-components/strapi-link-components-thumb.webp"
 thumbAlt: "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1"
 title: "Strapi Series, Part 11: Header and Footer Links"
 ---

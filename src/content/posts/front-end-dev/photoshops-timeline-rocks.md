@@ -7,7 +7,7 @@ pubDate: "2014-01-08"
 gradientTitle: "linear-gradient(to bottom, #8db2c9, #5981ad)"
 path: "/posts/front-end-dev/photoshops-timeline-rocks"
 summary: Sharing my experience in making a GIF with the timeline
-thumb: "posts/photoshops-timeline.png"
+cloudinaryThumb: "posts/photoshops-timeline.png"
 thumbAlt: "An illustration of a designer creating an animation with Photoshop's timeline, featuring a cartoon character running and jumping over obstacles, in the style of a playful video game cutscene, viewed from a side-scrolling perspective --v 5 --ar 3:2"
 title: "Photoshop's Timeline Rocks"
 tags:

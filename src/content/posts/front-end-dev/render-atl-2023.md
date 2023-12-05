@@ -8,7 +8,8 @@ socialImageFilename: "og-render-atl-2023.jpg"
 summary: Recap of an awesome experience
 tags:
   - conferences
-thumb: "posts/IMG_7600.heic"
+cloudinaryThumb: "posts/IMG_7600.heic"
+thumb: "/posts/conferences/render-atl-2023/render-atl-2023-thumb.webp"
 thumbAlt: "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2"
 title: Render ATL 2023
 ---

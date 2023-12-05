@@ -10,7 +10,7 @@ path: "/posts/front-end-dev/fighting-tooling-fatigue"
 summary: Failing deploys, build configurations, and plugins oh my
 tags:
   - front-end-dev
-thumb: "posts/tooling-fatigue.png"
+cloudinaryThumb: "posts/tooling-fatigue.png"
 thumbAlt: "A person fatigued while being attacked by code robots in a cinematic style with glorious lighting --ar 3:2 --v 5"
 title: "Fighting Tooling Fatigue"
 ---

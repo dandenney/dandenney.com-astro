@@ -5,7 +5,7 @@ path: "/posts/conferences/front-end-conf-13"
 summary: A recap of from running the 2013 event
 tags:
   - conferences
-thumb: "posts/front-end-13"
+cloudinaryThumb: "posts/front-end-13"
 thumbAlt: "Photo booth shot of people from the conference"
 title: "Front-End Conf 2013"
 ---

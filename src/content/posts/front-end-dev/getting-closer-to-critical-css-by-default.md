@@ -8,7 +8,7 @@ pubDate: "2019-10-20"
 gradientTitle: "linear-gradient(to bottom, #aab670, #485823)"
 path: "/posts/front-end-dev/getting-closer-to-critical-css-by-default"
 summary: How adopting CSS-In-JS tooling is improving performance
-thumb: "posts/critical-css.png"
+cloudinaryThumb: "posts/critical-css.png"
 title: Getting Closer To Critical CSS By Default
 tags:
   - front-end-dev
