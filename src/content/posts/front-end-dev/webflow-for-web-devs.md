@@ -5,7 +5,7 @@ summary: "A meetup talk for Tampa Web Devs"
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/webflow-for-web-devs.png"
-thumb: "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/a-short-review-webflow-project-thumb.webp"
+thumb: "/posts/front-end-dev/webflow-for-web-devs/webflow-for-web-devs-thumb.webp"
 thumbAlt: "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2"
 title: "Webflow for Web Devs"
 ---
