@@ -8,6 +8,7 @@ const posts = defineCollection({
     summary: z.string(),
     tags: z.array(z.string()),
     cloudinaryThumb: z.string().optional(),
+    socialImageFilename: z.string().optional(),
     thumb: z.string().optional(),
     thumbAlt: z.string().optional(),
     title: z.string(),
