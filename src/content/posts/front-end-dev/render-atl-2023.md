@@ -71,6 +71,8 @@ title: Render ATL 2023
   }
 </style>
 
+<div class="longform">
+
 I'm at the Atlanta airport, replaying the last few days of [Render ATL](https://www.renderatl.com) in my head. They say it's "a tech conference where talent feels welcomed." If I had to describe it, I'd say, "[it's a vivrant thing](https://www.youtube.com/watch?v=hYTjBhplTGY&pp=ygUNdml2cmFudCB0aGluZw%3D%3D)." I have been to a lot of conferences, but I have never experienced the energy that the people at Render brought. I'm ready to buy my ticket for [next year](https://twitter.com/ThugDebugger/status/1664770491087765504), and I highly recommend you do, too.
 
 ## Where Tech Meets Culture
@@ -334,3 +336,5 @@ I'll wrap this up with some tweets from other folks sharing how wonderful this e
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">My favorite part of any conference is still the people, look at all those smiley faces 😅❤️ <a href="https://twitter.com/hashtag/RenderATL?src=hash&amp;ref_src=twsrc%5Etfw">#RenderATL</a> <a href="https://t.co/VISKrvRAqF">pic.twitter.com/VISKrvRAqF</a></p>&mdash; Ekene Eze (Kenny) (@kenny_io) <a href="https://twitter.com/kenny_io/status/1664749100951060482?ref_src=twsrc%5Etfw">June 2, 2023</a></blockquote>
 
 I hope to see you at Render ATL 2024 and maybe some other events between now and then!
+
+</div>
