@@ -7056,9 +7056,10 @@ blockquote {
 }
 
 .project-hero-section-text {
-  color: var(--primary);
-  font-size: 14px;
+  color: var(--text-color);
+  font-size: 18px;
   font-weight: 600;
+  text-transform: none;
 }
 
 .instruction-hero-text {

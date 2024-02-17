@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
+import FrontEndConf from '../../components/FrontEndConf.astro';
 
 const tinkerings = (await getCollection('tinkerings')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -10,48 +11,127 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-wf-page="65c96ce4beedf24f0e18a247" data-wf-site="65c96ce3beedf24f0e18a1dd">
 	<head>
 		<BaseHead title="Tinkerings | Dan Denney" description="Projects with some technical bit that I learned in order to create" />
 	</head>
-	<body class="bg-white dark:bg-slate-900">
-		<Header />
-		<main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
-			<section class="pb-24 pt-16 relative shadow z-10 sm:pb-32">
-				<div class="mx-auto max-w-7xl px-6 lg:px-8">
-					<div class="mx-auto max-w-2xl lg:max-w-4xl">
-						<p class="text-lg font-semibold leading-8 tracking-tight text-slate-400 dark:text-slate-400">This Used To Be My Playground</p>
-						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-slate-100">Tinkerings</h1>
-						<p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none dark:text-slate-100">
-							The projects are all scratching some itch, either technical or part of my interests. Each has some technical bit that I learned in order to build, but they're focused on things like my love for music and trying to beat number systems.
-						</p>
-						<div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-							{tinkerings.map((tinkering) => (
-								<article class="relative isolate flex flex-col gap-8 lg:flex-row lg:items-center">
-									<div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-48 lg:shrink-0">
-										<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/${tinkering.data.thumb ? tinkering.data.thumb : 'posts/slackin.png'}`} alt="{% if tinkering.data.thumb %}{{ tinkering.data.thumbAlt }}{% else %}slacking on my imagin'{% endif %}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
-										<div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+	<body>
+		<main>
+			<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="500" data-doc-height="1">
+				<Header />
+			</div>
+			<div class="hero-section-secondary overflow-hidden">
+				<div class="container">
+					<div class="projects-infinit-text-holder">
+						<div class="project-infinit-text-section">
+							<div class="projects-infinit-text-container">
+								<div class="project-infinit-text-wrapper">
+									<div>Projects</div>
+								</div>
+								<div class="project-infinit-text-wrapper">
+									<div>Projects</div>
+								</div>
+								<div class="project-infinit-text-wrapper">
+									<div>Projects</div>
+								</div>
+							</div>
+							<div class="projects-infinit-text-container">
+								<div class="project-infinit-text-wrapper">
+									<div>Projects</div>
+								</div>
+								<div class="project-infinit-text-wrapper">
+									<div>Projects</div>
+								</div>
+								<div class="project-infinit-text-wrapper">
+									<div>Projects</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="projects-images-wrapper">
+						<div class="project-images-holder">
+							<div style="opacity:0;-webkit-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="projects-image-holder _1"><img src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680747164/tinkerings/beerbongs-and-bentleys.png" loading="lazy" sizes="(max-width: 479px) 36vw, (max-width: 767px) 37vw, (max-width: 1279px) 36vw, (max-width: 1439px) 414.5672607421875px, 34vw" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680747164/tinkerings/beerbongs-and-bentleys.png 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680747164/tinkerings/beerbongs-and-bentleys.png 637w" alt="screenshot of a data visualization" class="projects-image _1"></div>
+							<div style="opacity:0;-webkit-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-image-holder _2"><img src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680746810/tinkerings/tcg-map.png" loading="lazy" sizes="(max-width: 479px) 31vw, (max-width: 767px) 32vw, (max-width: 1279px) 31vw, (max-width: 1439px) 354.1953125px, 412.2578125px" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680746810/tinkerings/tcg-map.png 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680746810/tinkerings/tcg-map.png 636w" alt="Screenshot of a map of podcast episodes" class="projects-image _2"></div>
+							<div style="opacity:0;-webkit-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 100px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)" class="projects-image-holder _3"><img src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680747309/tinkerings/roulettingale-v2.png" loading="lazy" sizes="(max-width: 479px) 36vw, (max-width: 767px) 37vw, (max-width: 1279px) 36vw, (max-width: 1439px) 456.01751708984375px, 37vw" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680747309/tinkerings/roulettingale-v2.png 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/v1680747309/tinkerings/roulettingale-v2.png 637w" alt="Screenshot of a data visualization" class="projects-image _3"></div>
+						</div>
+					</div>
+					<div data-w-id="b068480e-3663-4dcf-8999-cabd22940c5a" style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="project-hero-section-text-holder">
+						<p style="opacity:0;-webkit-transform:translate3d(0, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="project-hero-section-text">The projects are all scratching some itch, either technical or part of my interests. Each has some technical bit that I learned in order to build, but they're focused on things like my love for music and trying to beat number systems.</p>
+					</div>
+				</div>
+				<div class="light-section-bg"></div>
+			</div>
+			<div class="section">
+				<div class="work-holder">
+					<div class="container project-details-container">
+						<div class="work-container">
+							<div class="work-wrapper w-dyn-list">
+								<div role="list" class="work-list w-dyn-items">
+									{tinkerings.map((tinkering) => (
+									<div role="listitem" class="work-item w-dyn-item">
+										<a data-w-id="dadb31c9-a00c-3d13-79da-11ea2d1bd84b" href={`/tinkerings/${tinkering.slug}/`} class="work-project-link w-inline-block">
+											<div id="w-node-_9f711ae1-88ca-bc22-8e35-539c4b3c455f-0e18a247" class="work-text-holder">
+												<div class="work-content-holder">
+													<div class="project-title-holder">
+														<div style="color:rgb(183,170,167);-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="work-item-title">{tinkering.data.title}</div>
+													</div>
+													<div class="project-details-holder">
+														<div class="project-details">{tinkering.data.summary}</div>
+													</div>
+												</div>
+											</div>
+											<div class="work-thumbnail-holder">
+												<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/${tinkering.data.thumb ? tinkering.data.thumb : 'posts/slackin.png'}`} alt="{% if tinkering.data.thumb %}{{ tinkering.data.thumbAlt }}{% else %}slacking on my imagin'{% endif %}" class="work-image" />
+											</div>
+										</a>
 									</div>
-									<div>
-										<div class="group relative max-w-xl">
-											<h3 class="has-links mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-												<a href={`/tinkerings/${tinkering.slug}/`}>
-													<span class="absolute inset-0"></span>
-													{tinkering.data.title}
+									))}
+								</div>
+							</div>
+						</div>
+						<div data-w-id="149aac50-94d7-e29a-4622-96b69fc1cc6b" class="project-wrapper hide">
+							<div class="project-holder">
+								<div class="project-container">
+									<div class="project-list-wrapper w-dyn-list">
+										<div role="list" class="project-list w-dyn-items">
+											<div role="listitem" class="project-item w-dyn-item">
+												<a data-w-id="149aac50-94d7-e29a-4622-96b69fc1cc71" href="#" class="project-link w-inline-block">
+													<div class="project-content-holder">
+														<div class="project-title-holder">
+															<div style="color:rgb(183,170,167);-webkit-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="project-title"></div>
+															<div style="opacity:1" class="gradient-overlay"></div>
+														</div>
+														<div class="project-details-holder">
+															<div class="project-details"></div>
+														</div>
+													</div>
 												</a>
-											</h3>
-											<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-slate-300">
-												{tinkering.data.summary}
-											</p>
+											</div>
+										</div>
+										<div class="w-dyn-empty">
+											<div>No items found.</div>
 										</div>
 									</div>
-								</article>
-								))
-							}
+								</div>
+								<div class="project-image-holder w-dyn-list">
+									<div role="list" class="project-image-list w-dyn-items">
+										<div role="listitem" class="project-image-item w-dyn-item">
+											<div class="project-thumbnail-holder"><img alt="" loading="lazy" src="" class="project-image"></div>
+										</div>
+									</div>
+									<div class="w-dyn-empty">
+										<div>No items found.</div>
+									</div>
+								</div>
+								<div class="project-gradient-top"></div>
+								<div class="project-gradient-bot"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+				<div class="projects-section-background"></div>
+				<FrontEndConf />
+			</div>
 		</main>
 		<Footer />
 	</body>
