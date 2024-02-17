@@ -1392,17 +1392,8 @@ sup {
 
 blockquote {
   width: 100%;
-  max-width: 500px;
-  background-image: url("/andora/Lower-Coma.svg"), url("/andora/Upper-Coma.svg");
-  background-position: 100% 100%, 0 0;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
-  border-left: 0 #000;
   margin-top: 2em;
   margin-bottom: 2em;
-  padding: 80px 0 70px;
-  font-size: 18px;
-  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -1431,6 +1422,10 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   padding: 5em 2em;
+}
+
+.blip .container {
+  padding-bottom: 2em;
 }
 
 .container.nav-container {
@@ -4975,6 +4970,12 @@ blockquote {
   display: flex;
 }
 
+.accordion-item:active .accordion-title,
+.accordion-item:focus .accordion-title,
+.accordion-item:hover .accordion-title {
+  color: var(--text-color);
+}
+
 .accordion-item-img {
   flex-shrink: 0;
 }
@@ -4997,13 +4998,14 @@ blockquote {
 }
 
 .accordion-title {
-  color: var(--text-color);
+  color: var(--action-color);
   letter-spacing: 4px;
   text-transform: uppercase;
   font-family: Clashdisplay Variable, sans-serif;
   font-size: 40px;
   font-weight: 700;
   margin: 0;
+  transition: color 0.7s ease;
 }
 
 .accordion-description {
@@ -5833,7 +5835,6 @@ blockquote {
 }
 
 .blog-button-holder {
-  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -6463,11 +6464,6 @@ blockquote {
 .blog-rich-text li {
   letter-spacing: 0.2px;
   margin-bottom: 12px;
-}
-
-.blog-rich-text blockquote {
-  background-image: url("/andora/Light-Lower-Coma.svg"),
-    url("/andora/Upper-Light-Coma.svg");
 }
 
 .read-more-text {
