@@ -1424,8 +1424,13 @@ blockquote {
   padding: 5em 2em;
 }
 
-.blip .container {
+.blip .container,
+.blips-header .container {
   padding-bottom: 2em;
+}
+
+.blips-list .container {
+  padding-top: 0;
 }
 
 .container.nav-container {
@@ -4751,6 +4756,10 @@ blockquote {
   display: flex;
   overflow: hidden;
   transform: rotate(-4deg);
+}
+
+.blips .blog-item-link {
+  align-items: flex-start;
 }
 
 .blog-item-link:hover {
