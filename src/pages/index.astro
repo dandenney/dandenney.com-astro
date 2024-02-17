@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts.js';
 import { getLinks } from '../scripts/notion.js';
 import toTitleCase from '../helpers/toTitleCase.js';
 import { getCollection } from 'astro:content';
+import FrontEndConf from '../components/FrontEndConf.astro';
 
 const posts = (await getCollection('posts')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -27,679 +28,180 @@ const links = await getLinks();
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-white dark:bg-slate-900">
-		<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="500" data-doc-height="1">
-    <div class="container nav-container">
-      <div class="nav-menu-container">
-        <a href="index.html" class="brand-link w-nav-brand"><img src="/andora/Andora.svg" loading="lazy" alt="Portfolio Webflow Template - Andora - Crafted by Wedoflow.com and Azwedo.com" class="brand-logo"></a>
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <div class="nav-link-holder">
-            <a href="home.html" aria-current="page" class="nav-link w-inline-block w--current">
-              <div>Home</div>
-              <div class="link-background"></div>
-            </a>
-          </div>
-          <div class="nav-link-holder">
-            <a href="work.html" class="nav-link w-inline-block">
-              <div>work</div>
-              <div class="link-background"></div>
-            </a>
-          </div>
-          <div class="nav-link-holder">
-            <a href="about.html" class="nav-link w-inline-block">
-              <div>About</div>
-              <div class="link-background"></div>
-            </a>
-          </div>
-          <div class="nav-link-holder">
-            <a href="insights.html" class="nav-link w-inline-block">
-              <div>Blog</div>
-              <div class="link-background"></div>
-            </a>
-          </div>
-          <div class="nav-link-holder">
-            <a href="shop.html" class="nav-link w-inline-block">
-              <div>Shop</div>
-              <div class="link-background"></div>
-            </a>
-          </div>
-          <div class="nav-link-holder">
-            <div data-hover="true" data-delay="300" class="nav-dropdown w-dropdown">
-              <div class="nav-link nav-link-dropdown w-dropdown-toggle">
-                <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-                <div>Pages</div>
-                <div class="link-background"></div>
-                <div class="nav-dropdown-link-arrow-holder">
-                  <div class="nav-dropdown-link-arrow-animated">
-                    <div class="nav-dropdown-link-arrow"></div>
-                  </div>
+	<body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <section data-w-id="775cac5c-1aa2-262a-db52-01cc6bff5d44" class="hero-section overflow-hidden">
+        <div class="container hero-container">
+          <div class="infinite-text-holder">
+            <div class="infinite-text-section">
+              <div class="infinite-text-container">
+                <div class="infinite-text-wrapper">
+                  <div class="text-block">Dan  Denney</div>
+                </div>
+                <div class="infinite-text-wrapper">
+                  <div class="text-block-2">Dan  Denney</div>
+                </div>
+                <div class="infinite-text-wrapper">
+                  <div class="text-block-3">Dan  Denney</div>
                 </div>
               </div>
-              <nav class="nav-dropdown-list w-dropdown-list">
-                <div class="nav-dropdown-list-content">
-                  <div class="w-layout-grid nav-dropdown-grid">
-                    <div class="nav-dropdown-column">
-                      <div class="nav-dropdown-heading">Pages</div>
-                      <ul role="list" class="nav-list">
-                        <li class="nav-dropdown-item">
-                          <a href="index.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Main / Demo</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="home.html" aria-current="page" class="nav-link white-nav-link w-inline-block w--current">
-                            <div>Home</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="work.html" class="nav-link white-nav-link w-inline-block">
-                            <div>work</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="about.html" class="nav-link white-nav-link w-inline-block">
-                            <div>About</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="insights.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Blog</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="shop.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Shop</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="privacy.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Privacy</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="contact.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Contact</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="nav-dropdown-line-abs"></div>
-                    </div>
-                    <div class="nav-dropdown-column">
-                      <div class="nav-dropdown-heading">Other pages</div>
-                      <ul role="list" class="nav-list">
-                        <li class="nav-dropdown-item">
-                          <a href="/projects/city-pulse" class="nav-link white-nav-link w-inline-block">
-                            <div>Project Details</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="/product/how-to-use-webflow-template-tutorial" class="nav-link white-nav-link w-inline-block">
-                            <div>Product Details</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="/post/introducing-andora-a-fresh" class="nav-link white-nav-link w-inline-block">
-                            <div>Post Detail</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="/category/digital-goods" class="nav-link white-nav-link w-inline-block">
-                            <div>Shop Category</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="checkout.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Checkout</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="401.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Password</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="404.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Not found - 404</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="nav-dropdown-line-abs"></div>
-                    </div>
-                    <div class="nav-dropdown-column">
-                      <div class="nav-dropdown-heading">utility</div>
-                      <ul role="list" class="nav-list">
-                        <li class="nav-dropdown-item">
-                          <a href="template/style-guide.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Style Guide</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="template/licensing.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Licensing</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="template/change-log.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Change Log</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="template/instructions.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Instructions</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="blank.html" class="nav-link white-nav-link w-inline-block">
-                            <div>Getting Started</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="nav-dropdown-heading">Premium</div>
-                      <ul role="list" class="nav-list">
-                        <li class="nav-dropdown-item">
-                          <a href="https://webflow.com/templates/designers/azwedo" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Premium Templates</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="mailto:Template Support?subject=hello%40azwedo.com" class="nav-link white-nav-link w-inline-block">
-                            <div>Designer Support</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="nav-dropdown-line-abs"></div>
-                    </div>
-                    <div class="nav-dropdown-column">
-                      <div class="nav-dropdown-heading">Follow us</div>
-                      <ul role="list" class="nav-list">
-                        <li class="nav-dropdown-item">
-                          <a href="https://fb.com/wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Facebook</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://twitter.com/wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Twitter</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://www.linkedin.com/company/wedoflow/" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Linkedin</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://pinterest.com/wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Pinterest</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://landdding.com/u/wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Landdding</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://instagram.com/wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Instagram</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://www.tiktok.com/@wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Tiktok</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://behance.net/wedoflow" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Behance</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                        <li class="nav-dropdown-item">
-                          <a href="https://dribbble.com/azwedo" target="_blank" class="nav-link white-nav-link w-inline-block">
-                            <div>Dribbble</div>
-                            <div class="link-background link-bg-on-dark"></div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="nav-dropdown-footer">
-                    <div class="content">
-                      <div>© - with 🤍 from <a href="https://azwedo.com?ref=template" target="_blank" class="whilte-link">Azwedo</a> &amp; <a href="https://wedoflow.com?ref=template" target="_blank" class="whilte-link">Wedoflow</a>
-                      </div>
-                    </div>
-                    <div class="content">
-                      <div>Free Figma file</div>
-                    </div>
-                  </div>
+              <div class="infinite-text-container">
+                <div class="infinite-text-wrapper">
+                  <div>Dan  Denney</div>
                 </div>
-              </nav>
-            </div>
-          </div>
-        </nav>
-        <div class="nav-menu-overlay-mobile"></div>
-        <div class="nav-cart-holder">
-          <div data-node-type="commerce-cart-wrapper" data-open-product="" data-wf-cart-type="modal" data-wf-cart-query="" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper cart">
-            <a href="#" data-node-type="commerce-cart-open-link" aria-haspopup="dialog" aria-label="Open cart" role="button" data-w-id="280cf9f6-cee2-8e11-32a8-8b06750d0b96" class="w-commerce-commercecartopenlink cart-button w-inline-block"><img src="/andora/shopping-bag-2.svg" loading="lazy" alt="Portfolio Webflow Template - Andora - Crafted by Wedoflow.com and Azwedo.com" class="cart-image">
-              <div class="w-commerce-commercecartopenlinkcount cart-quantity-number">0</div>
-              <div class="cart-bg"></div>
-            </a>
-            <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal cart-wrapper">
-              <div role="dialog" data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
-                <div class="w-commerce-commercecartheader cart-header">
-                  <h4 class="w-commerce-commercecartheading cart-title">Your Cart</h4>
-                  <a href="#" data-node-type="commerce-cart-close-link" role="button" aria-label="Close cart" class="w-commerce-commercecartcloselink cart-close-button w-inline-block"><img src="/andora/Icon.svg" loading="lazy" alt="Portfolio Webflow Template - Andora - Crafted by Wedoflow.com and Azwedo.com" class="x-icon"></a>
+                <div class="infinite-text-wrapper">
+                  <div>Dan  Denney</div>
                 </div>
-                <div class="w-commerce-commercecartformwrapper cart-form-wrapper">
-                  <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform cart-default-state">
-                    <script type="text/x-wf-template" id="wf-template-280cf9f6-cee2-8e11-32a8-8b06750d0ba4"></script>
-                    <div class="w-commerce-commercecartlist cart-list" data-wf-collection="database.commerceOrder.userItems" data-wf-template-id="wf-template-280cf9f6-cee2-8e11-32a8-8b06750d0ba4"></div>
-                    <div class="w-commerce-commercecartfooter cart-footer">
-                      <div aria-atomic="true" aria-live="polite" class="w-commerce-commercecartlineitem">
-                        <div class="cart-subtotal-label">Subtotal</div>
-                        <div class="w-commerce-commercecartordervalue cart-subtotal-price"></div>
-                      </div>
-                      <div>
-                        <div data-node-type="commerce-cart-quick-checkout-actions" class="web-payments">
-                          <a data-node-type="commerce-cart-apple-pay-button" role="button" tabindex="0" aria-label="Apple Pay" aria-haspopup="dialog" style="background-image:-webkit-named-image(apple-pay-logo-white);background-size:100% 50%;background-position:50% 50%;background-repeat:no-repeat" class="w-commerce-commercecartapplepaybutton apple-pay">
-                            <div></div>
-                          </a>
-                          <a data-node-type="commerce-cart-quick-checkout-button" role="button" tabindex="0" aria-haspopup="dialog" style="display:none" class="w-commerce-commercecartquickcheckoutbutton"><svg class="w-commerce-commercequickcheckoutgoogleicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewbox="0 0 16 16">
-                              <defs>
-                                <polygon id="google-mark-a" points="0 .329 3.494 .329 3.494 7.649 0 7.649"></polygon>
-                                <polygon id="google-mark-c" points=".894 0 13.169 0 13.169 6.443 .894 6.443"></polygon>
-                              </defs>
-                              <g fill="none" fill-rule="evenodd">
-                                <path fill="#4285F4" d="M10.5967,12.0469 L10.5967,14.0649 L13.1167,14.0649 C14.6047,12.6759 15.4577,10.6209 15.4577,8.1779 C15.4577,7.6339 15.4137,7.0889 15.3257,6.5559 L7.8887,6.5559 L7.8887,9.6329 L12.1507,9.6329 C11.9767,10.6119 11.4147,11.4899 10.5967,12.0469"></path>
-                                <path fill="#34A853" d="M7.8887,16 C10.0137,16 11.8107,15.289 13.1147,14.067 C13.1147,14.066 13.1157,14.065 13.1167,14.064 L10.5967,12.047 C10.5877,12.053 10.5807,12.061 10.5727,12.067 C9.8607,12.556 8.9507,12.833 7.8887,12.833 C5.8577,12.833 4.1387,11.457 3.4937,9.605 L0.8747,9.605 L0.8747,11.648 C2.2197,14.319 4.9287,16 7.8887,16"></path>
-                                <g transform="translate(0 4)">
-                                  <mask id="google-mark-b" fill="#fff">
-                                    <use xlink:href="#google-mark-a"></use>
-                                  </mask>
-                                  <path fill="#FBBC04" d="M3.4639,5.5337 C3.1369,4.5477 3.1359,3.4727 3.4609,2.4757 L3.4639,2.4777 C3.4679,2.4657 3.4749,2.4547 3.4789,2.4427 L3.4939,0.3287 L0.8939,0.3287 C0.8799,0.3577 0.8599,0.3827 0.8459,0.4117 C-0.2821,2.6667 -0.2821,5.3337 0.8459,7.5887 L0.8459,7.5997 C0.8549,7.6167 0.8659,7.6317 0.8749,7.6487 L3.4939,5.6057 C3.4849,5.5807 3.4729,5.5587 3.4639,5.5337" mask="url(#google-mark-b)"></path>
-                                </g>
-                                <mask id="google-mark-d" fill="#fff">
-                                  <use xlink:href="#google-mark-c"></use>
-                                </mask>
-                                <path fill="#EA4335" d="M0.894,4.3291 L3.478,6.4431 C4.113,4.5611 5.843,3.1671 7.889,3.1671 C9.018,3.1451 10.102,3.5781 10.912,4.3671 L13.169,2.0781 C11.733,0.7231 9.85,-0.0219 7.889,0.0001 C4.941,0.0001 2.245,1.6791 0.894,4.3291" mask="url(#google-mark-d)"></path>
-                              </g>
-                            </svg><svg class="w-commerce-commercequickcheckoutmicrosofticon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16">
-                              <g fill="none" fill-rule="evenodd">
-                                <polygon fill="#F05022" points="7 7 1 7 1 1 7 1"></polygon>
-                                <polygon fill="#7DB902" points="15 7 9 7 9 1 15 1"></polygon>
-                                <polygon fill="#00A4EE" points="7 15 1 15 1 9 7 9"></polygon>
-                                <polygon fill="#FFB700" points="15 15 9 15 9 9 15 9"></polygon>
-                              </g>
-                            </svg>
-                            <div>Pay with browser.</div>
-                          </a>
-                        </div>
-                        <a href="checkout.html" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton button light-button" data-loading-text="Hang Tight...">Continue to Checkout</a>
-                      </div>
-                    </div>
-                  </form>
-                  <div class="w-commerce-commercecartemptystate">
-                    <a href="shop.html" class="button w-button">View ALL</a>
-                  </div>
-                  <div aria-live="assertive" style="display:none" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate error-message">
-                    <div class="w-cart-error-msg" data-w-cart-quantity-error="Product is not available in this quantity." data-w-cart-general-error="Something went wrong when adding this item to the cart." data-w-cart-checkout-error="Checkout is disabled on this site." data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue." data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates.">Product is not available in this quantity.</div>
-                  </div>
+                <div class="infinite-text-wrapper">
+                  <div>Dan  Denney</div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="hero-section-container">
+            <div class="hero-section-wrapper">
+              <div class="hero-section-content-holder">
+                <div style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="overline-text-holder">
+                  <div class="overline-text">Yo, i&#x27;m Dan Denney</div>
+                </div>
+                <div style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="hero-section-text-holder">
+                  <div>I&#x27;m a front-end dev at DataCamp, but they call me a software engineer</div>
+                </div>
+              </div>
+              <div class="content">
+                <div style="height:0px" class="main-home-hero-image">
+                  <div class="hero-section-image-holder"><img src="/andora/dan.svg" loading="lazy" alt="Illustration of Dan by Ricardo Gimenes" class="hero-section-image"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loader-holder">
+            <div class="loader-container">
+              <div class="loader-animation" data-w-id="443569ee-76f6-994a-b497-65d9614f4200" data-animation-type="lottie" data-src="/andora/documents/63c6947b4ef3d83760356e9d_Loader-2.json" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="4.45" data-duration="3.8"></div>
+            </div>
+          </div>
         </div>
-        <div class="nav-link-holder nav-button-holder">
-          <a href="contact.html" class="button nav-button w-inline-block">
-            <div>Contact</div>
-          </a>
+        <div class="section-background"></div>
+      </section>
+      <section class="div-block">
+        <div class="container">
+          <div data-w-id="9234d7a3-2974-0c0a-1150-1fb2fa5e2be2" class="about-me-section-holder">
+            <div data-w-id="9234d7a3-2974-0c0a-1150-1fb2fa5e2be3" class="about-me-section-container">
+              <div class="gradient-overlay-white top"></div>
+              <div class="about-me-section-wrapper">
+                <div class="overline-text">About me</div>
+                <div class="about-me-text">This my personal playground for sharing many of the things I enjoy, most of which revolves around web design and development<br></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="menu-button w-nav-button"><img src="/andora/menu-icon.svg" loading="lazy" alt="Webflow Template - Designed by Azwedo.com and Wedoflow.com" class="menu-icon"></div>
-      </div>
-    </div>
-    <div class="nav-bg"></div>
-  	</div>
-		<div data-w-id="775cac5c-1aa2-262a-db52-01cc6bff5d44" class="hero-section overflow-hidden">
-			<div class="container hero-container">
-				<div class="infinite-text-holder">
-					<div class="infinite-text-section">
-						<div class="infinite-text-container">
-							<div class="infinite-text-wrapper">
-								<div class="text-block">Dan  Denney</div>
-							</div>
-							<div class="infinite-text-wrapper">
-								<div class="text-block-2">Dan  Denney</div>
-							</div>
-							<div class="infinite-text-wrapper">
-								<div class="text-block-3">Dan  Denney</div>
-							</div>
-						</div>
-						<div class="infinite-text-container">
-							<div class="infinite-text-wrapper">
-								<div>Dan  Denney</div>
-							</div>
-							<div class="infinite-text-wrapper">
-								<div>Dan  Denney</div>
-							</div>
-							<div class="infinite-text-wrapper">
-								<div>Dan  Denney</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="hero-section-container">
-					<div class="hero-section-wrapper">
-						<div class="hero-section-content-holder">
-							<div style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="overline-text-holder">
-								<div class="overline-text">Yo, i&#x27;m Dan Denney</div>
-							</div>
-							<div style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="hero-section-text-holder">
-								<div>I&#x27;m a front-end dev at DataCamp, but they call me a software engineer</div>
-							</div>
-						</div>
-						<div class="content">
-							<div style="height:0px" class="main-home-hero-image">
-								<div class="hero-section-image-holder"><img src="/andora/dan.svg" loading="lazy" alt="Illustration of Dan by Ricardo Gimenes" class="hero-section-image"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="loader-holder">
-					<div class="loader-container">
-						<div class="loader-animation" data-w-id="443569ee-76f6-994a-b497-65d9614f4200" data-animation-type="lottie" data-src="/andora/documents/63c6947b4ef3d83760356e9d_Loader-2.json" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="4.45" data-duration="3.8"></div>
-					</div>
-				</div>
-			</div>
-			<div class="section-background"></div>
-		</div>
-		<div class="div-block">
-			<div class="container">
-				<div data-w-id="9234d7a3-2974-0c0a-1150-1fb2fa5e2be2" class="about-me-section-holder">
-					<div data-w-id="9234d7a3-2974-0c0a-1150-1fb2fa5e2be3" class="about-me-section-container">
-						<div class="gradient-overlay-white top"></div>
-						<div class="about-me-section-wrapper">
-							<div class="overline-text">About me</div>
-							<div class="about-me-text">This my personal playground for sharing many of the things I enjoy, most of which revolves around web design and development<br></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section-background"></div>
-		</div>
-		<div class="section">
-			<div class="container">
-				<div class="blog-text-holder">
-					<div class="insights-title">posts</div>
-					<div class="blog-title">Recent <br>Blog Posts</div>
-					<div class="grey-text">They&#x27;re mostly around front-end dev and web conferences, with some occasional life things sprinkled in.</div>
-				</div>
-				<div class="home-blog-wrapper w-dyn-list">
-					<div role="list" class="blog-grid w-dyn-items">
-						{posts.map((post) => (
-							<div role="listitem" class="blog-item w-dyn-item">
-								
-								<a href={`/posts/${post.slug}/`} class="blog-item-link w-inline-block">
-									<div class="blog-item-image-holder"><img src={post.data.thumb} loading="lazy" alt={post.data.thumbAlt} class="blog-item-image"></div>
-									<div class="blog-item-content">
-										<div class="blog-item-category">
-											<div class="blog-item-date"></div>
-										</div>
-										<h2 class="blog-item-title">{post.data.title}</h2>
-										<p class="blog-item-summary">{post.data.summary}</p>
-									</div>
-								</a>
-								
-							</div>
-							))
-						}
-					</div>
-				</div>
-				<div class="blog-button-holder">
-					<a href="/posts" class="button primary-button w-button big-ol-button">View All Blog Posts</a>
-				</div>
-			</div>
-			<div class="section-background"></div>
-		</div>
-		<div class="section">
-			<div class="container">
-				<div class="blog-text-holder">
-					<strong class="insights-title">Most Recent</strong>
-					<h2 class="blog-title">Blips</h2>
-					<p class="grey-text">Shorter than a blog post, longer than a tweet. This is where I share quick reactions or stash things I want to remember.</p>
-				</div>
-				<div class="home-blog-wrapper w-dyn-list">
-					<div role="list" class="blog-grid w-dyn-items">
-						{blips.map((blip) => (
-							<div role="listitem" class="blog-item w-dyn-item">
-								<a href={`/blips/${blip.slug}/`} class="blog-item-link w-inline-block">
-									<img src="/andora/blip.svg" loading="lazy" alt="illustration of a blip" class="blog-item-image blip" />
-									<div class="blog-item-content">
-										<div class="blog-item-category">
-											<div class="blog-item-date"></div>
-										</div>
-										<h2 class="blog-item-title">{blip.data.title}</h2>
-										<p class="blog-item-summary">{blip.data.summary}</p>
-									</div>
-								</a>
-							</div>
-							))
-						}
-					</div>
-				</div>
-				<div class="blog-button-holder">
-					<a href="/blips" class="button primary-button w-button big-ol-button">View All Blips</a>
-				</div>
-			</div>
-			<div class="section-background"></div>
-		</div>
-		<div class="section">
-			<div class="container no-padding-top">
-				<div class="w-layout-grid accordion-parent-grid">
-					<div class="content">
-						<div class="content-sticky">
-							<div class="fade-in-move-on-scroll">
-								<div class="accordion-small-text">Most Recent</div>
-								<h3 class="accordion-big-title">No<br>ReservAItions</h3>
-								<p class="accordion-paragraph">Cooking and enjoying food and drinks are my hobbies outside of web development. With No ReservAItions, I&#x27;ve found a way to mix the two. I&#x27;m using ChatGPT to create reviews for the places that I visit in the spirit of Anthony Bourdain and I&#x27;m having so much fun with it!</p>
-							</div>
-						</div>
-					</div>
-					<div id="w-node-f8fb51ee-9520-c88f-250e-c22b49849f97-0e18a239" class="content">
-						<div data-w-id="f8fb51ee-9520-c88f-250e-c22b49849f98" style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="accordion-list">
-							{reviews.map((review) => 
-								<div data-w-id="6456ca8a-4555-819c-f124-7e27761b415b" class="accordion-item">
-									<figure class="accordion-item-img" transition:name={`${review.data.title}-img`}>
-										<img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} height="144" width="192" />
-									</figure>
-									<div>
-										<strong class="insights-title">
-											{toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
-										</strong>
-										<div class="accordion-item-trigger">
-											<h3 class="accordion-title">{review.data.title}</h3>
-										</div>
-										<p class="accordion-paragraph">{review.data.description}</p>
-									</div>
-								</div>
-							)}
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section-background"></div>
-		</div>
-		<div>
-			<div class="cta">
-				<div class="container">
-					<div class="cta-holder">
-						<div class="cta-title">
-							<div class="cta-title-holder">Check out</div>
-							<div class="cta-title-holder">Front-end conf</div>
-						</div>
-						<div class="cta-text">
-							<div class="cta-text-holder">we&#x27;re bringing the conf back in April 2024!<br></div>
-							<div class="cta-text-holder">10 speakers across two days, with plenty<br></div>
-							<div class="cta-text-holder">of time for conversations<br></div>
-						</div>
-						<div class="start-circle">
-							<a href="https://frontenddesignconference.com" class="start-holder w-inline-block">
-								<div class="start-text">click me!</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="container footer-container">
-				<div class="footer-content">
-					<div id="w-node-_74ab3314-1e2b-a768-0bb3-b25894c1a502-0a144c54" class="content">
-						<div class="fade-in-move-on-scroll">
-							<div class="footer-brand-content">
-								<div class="footer-brand-link-holder">
-									<a href="home.html" aria-current="page" class="footer-brand-link w--current"><img src="/andora/Andora.svg" alt="Portfolio Webflow Template - Andora - Crafted by Wedoflow.com and Azwedo.com" class="footer-image"></a>
-									<a href="home.html" data-w-id="2b4a61b8-c604-6995-6ab4-d201904b30bc" aria-current="page" class="footer-brand-dark-link w--current"><img src="/andora/Dark-Logo.svg" alt="Portfolio Webflow Template - Andora - Crafted by Wedoflow.com and Azwedo.com" class="footer-image"></a>
-								</div>
-								<a href="mailto:hello@wedoflow.com?subject=Andora%20Template" class="footer-email-link">hello@amelagreen.com</a>
-							</div>
-						</div>
-					</div>
-					<div id="w-node-eb050d0c-cd20-6fbc-5d31-0eaf0a144c59-0a144c54" class="footer-grid-content">
-						<div class="fade-in-move-on-scroll">
-							<a href="home.html" aria-current="page" class="footer-link w-inline-block w--current">
-								<div class="link-footer"></div>
-								<div class="footer-text">Home</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="about.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">About</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="work.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">Work</div>
-							</a>
-						</div>
-					</div>
-					<div id="w-node-eb050d0c-cd20-6fbc-5d31-0eaf0a144c66-0a144c54" class="footer-grid-content">
-						<div class="fade-in-move-on-scroll">
-							<a href="insights.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">blog</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="shop.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">Shop</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="contact.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">Contact</div>
-							</a>
-						</div>
-					</div>
-					<div id="w-node-eb050d0c-cd20-6fbc-5d31-0eaf0a144c70-0a144c54" class="footer-grid-content">
-						<div class="fade-in-move-on-scroll">
-							<a href="template/style-guide.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">Style guide</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="template/change-log.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">change log</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="template/licensing.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">licensing</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="template/instructions.html" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">instructions</div>
-							</a>
-						</div>
-					</div>
-					<div id="w-node-_80169c10-fd9c-5981-5169-6288847b863a-0a144c54" class="footer-grid-content">
-						<div class="fade-in-move-on-scroll">
-							<a href="https://www.instagram.com/wedoflow/" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">instagram</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="https://www.pinterest.com/wedoflow/" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">pinterest</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="https://www.linkedin.com/company/wedoflow/" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">linkedin</div>
-							</a>
-						</div>
-						<div class="fade-in-move-on-scroll">
-							<a href="https://www.facebook.com/wedoflow" class="footer-link w-inline-block">
-								<div class="link-footer"></div>
-								<div class="footer-text">facebook</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div data-w-id="eb050d0c-cd20-6fbc-5d31-0eaf0a144c87" class="made-by-section">
-					<div class="copyright-text-holder">
-						<div class="copyright-text">© Crafted with</div><img src="/andora/Vector.svg" loading="lazy" alt="Portfolio Webflow Template - Andora - Crafted by Wedoflow.com and Azwedo.com" class="heart-icon">
-						<div class="copyright-link">by </div>
-						<a href="https://azwedo.com?ref=andora" class="copyright-link">Azwedo</a>
-						<div class="copyright-text">&amp;  </div>
-						<a href="https://wedoflow.com/templates?ref=andora" class="copyright-link">Wedoflow</a>
-					</div>
-					<div class="copyright-text-holder">
-						<div class="copyright-text">Powered By: </div>
-						<a href="https://webflow.com?ref=andora" class="copyright-link">Webflow</a>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bg"></div>
-		</div>
+        <div class="section-background"></div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="blog-text-holder">
+            <div class="insights-title">posts</div>
+            <div class="blog-title">Recent <br>Blog Posts</div>
+            <div class="grey-text">They&#x27;re mostly around front-end dev and web conferences, with some occasional life things sprinkled in.</div>
+          </div>
+          <div class="home-blog-wrapper w-dyn-list">
+            <div role="list" class="blog-grid w-dyn-items">
+              {posts.map((post) => (
+                <div role="listitem" class="blog-item w-dyn-item">
+                  
+                  <a href={`/posts/${post.slug}/`} class="blog-item-link w-inline-block">
+                    <div class="blog-item-image-holder"><img src={post.data.thumb} loading="lazy" alt={post.data.thumbAlt} class="blog-item-image"></div>
+                    <div class="blog-item-content">
+                      <div class="blog-item-category">
+                        <div class="blog-item-date"></div>
+                      </div>
+                      <h2 class="blog-item-title">{post.data.title}</h2>
+                      <p class="blog-item-summary">{post.data.summary}</p>
+                    </div>
+                  </a>
+                  
+                </div>
+                ))
+              }
+            </div>
+          </div>
+          <div class="blog-button-holder">
+            <a href="/posts" class="button primary-button w-button big-ol-button">View All Blog Posts</a>
+          </div>
+        </div>
+        <div class="section-background"></div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="blog-text-holder">
+            <strong class="insights-title">Most Recent</strong>
+            <h2 class="blog-title">Blips</h2>
+            <p class="grey-text">Shorter than a blog post, longer than a tweet. This is where I share quick reactions or stash things I want to remember.</p>
+          </div>
+          <div class="home-blog-wrapper w-dyn-list">
+            <div role="list" class="blog-grid w-dyn-items">
+              {blips.map((blip) => (
+                <div role="listitem" class="blog-item w-dyn-item">
+                  <a href={`/blips/${blip.slug}/`} class="blog-item-link w-inline-block">
+                    <img src="/andora/blip.svg" loading="lazy" alt="illustration of a blip" class="blog-item-image blip" />
+                    <div class="blog-item-content">
+                      <div class="blog-item-category">
+                        <div class="blog-item-date"></div>
+                      </div>
+                      <h2 class="blog-item-title">{blip.data.title}</h2>
+                      <p class="blog-item-summary">{blip.data.summary}</p>
+                    </div>
+                  </a>
+                </div>
+                ))
+              }
+            </div>
+          </div>
+          <div class="blog-button-holder">
+            <a href="/blips" class="button primary-button w-button big-ol-button">View All Blips</a>
+          </div>
+        </div>
+        <div class="section-background"></div>
+      </section>
+      <section class="section">
+        <div class="container no-padding-top">
+          <div class="w-layout-grid accordion-parent-grid">
+            <div class="content">
+              <div class="content-sticky">
+                <div class="fade-in-move-on-scroll">
+                  <div class="accordion-small-text">Most Recent</div>
+                  <h3 class="accordion-big-title">No<br>ReservAItions</h3>
+                  <p class="accordion-paragraph">Cooking and enjoying food and drinks are my hobbies outside of web development. With No ReservAItions, I&#x27;ve found a way to mix the two. I&#x27;m using ChatGPT to create reviews for the places that I visit in the spirit of Anthony Bourdain and I&#x27;m having so much fun with it!</p>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-f8fb51ee-9520-c88f-250e-c22b49849f97-0e18a239" class="content">
+              <div data-w-id="f8fb51ee-9520-c88f-250e-c22b49849f98" style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="accordion-list">
+                {reviews.map((review) => 
+                  <div data-w-id="6456ca8a-4555-819c-f124-7e27761b415b" class="accordion-item">
+                    <figure class="accordion-item-img" transition:name={`${review.data.title}-img`}>
+                      <img src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} alt={review.data.heroImageAlt} height="144" width="192" />
+                    </figure>
+                    <div>
+                      <strong class="insights-title">
+                        {toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
+                      </strong>
+                      <div class="accordion-item-trigger">
+                        <h3 class="accordion-title">{review.data.title}</h3>
+                      </div>
+                      <p class="accordion-paragraph">{review.data.description}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-background"></div>
+      </section>
+      <FrontEndConf />
+    </main>
+		<Footer />
 	</body>
 </html>
