@@ -5654,6 +5654,10 @@ blockquote {
   line-height: 1.05;
 }
 
+.blog-title.posts {
+  margin-bottom: 4rem;
+}
+
 .insights-title {
   color: var(--second-text-color);
   text-transform: uppercase;
@@ -6081,7 +6085,7 @@ blockquote {
 }
 
 .blog-infinit-text-wrapper {
-  color: var(--secondary);
+  color: var(--text-color);
   text-transform: uppercase;
   font-family: Clashdisplay Variable, sans-serif;
   font-size: 300px;
@@ -6194,6 +6198,11 @@ blockquote {
   max-width: 590px;
   position: relative;
   transform: rotate(-4deg);
+}
+
+.main-blog-grid-text-holder-item.posts {
+  padding-right: 4rem;
+  text-transform: none;
 }
 
 .blog-post-summary {
@@ -7168,6 +7177,27 @@ blockquote {
 .paragraph {
   max-width: 600px;
   padding-top: 40vh;
+}
+
+.posts-quote blockquote {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  text-transform: none;
+  text-align: left;
+}
+
+.posts-quote figcaption {
+  display: flex;
+  align-items: center;
+}
+
+.posts-quote figcaption img {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.posts-quote figcaption strong {
+  display: block;
 }
 
 @media screen and (min-width: 1280px) {
