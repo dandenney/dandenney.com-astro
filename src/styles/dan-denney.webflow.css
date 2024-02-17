@@ -15,8 +15,8 @@
   --second-text-color: #a0938a;
   --bg-grey: #d4d4d4;
   --notification-bg: #001b38;
-  --nav-bg-color: #2d2d2d;
-  --footer-text-color: #2d2d2d;
+  --nav-bg-color: #28262c;
+  --footer-text-color: #10040a;
 }
 
 .w-layout-grid {
@@ -1526,7 +1526,6 @@ blockquote {
 .nav-menu {
   z-index: 1;
   flex-direction: row;
-  flex: 1;
   justify-content: center;
   align-items: center;
   padding-left: 1em;
@@ -1630,7 +1629,7 @@ blockquote {
   grid-row-gap: 2em;
   text-align: left;
   grid-template-rows: auto;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
   grid-auto-columns: 1fr;
   justify-content: space-between;
   display: grid;
@@ -1663,7 +1662,7 @@ blockquote {
   z-index: 1;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
-  border-top: 1px solid var(--footer-second-color);
+  border-top: 1px solid rgba(241, 241, 241, 0.4);
   justify-content: space-between;
   margin-top: 2em;
   padding-top: 2em;
@@ -1765,7 +1764,7 @@ blockquote {
   width: 42px;
   height: 42px;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--action-color);
   border-radius: 8px;
   flex-direction: row;
   justify-content: center;
@@ -2430,7 +2429,7 @@ blockquote {
 
 .brand-logo {
   height: 100%;
-  max-height: 30px;
+  max-height: 48px;
   max-width: 150px;
 }
 
@@ -5582,6 +5581,7 @@ blockquote {
   font-family: Work Sans, sans-serif;
   font-size: 24px;
   font-weight: 500;
+  margin-left: 2rem;
 }
 
 .start-holder {
@@ -5610,6 +5610,7 @@ blockquote {
   font-family: Clashdisplay Variable, sans-serif;
   font-size: 56px;
   font-weight: 600;
+  text-align: center;
 }
 
 .start-circle {
@@ -6345,6 +6346,7 @@ blockquote {
   margin-right: auto;
   font-family: Clashdisplay Variable, sans-serif;
   line-height: 1.6;
+  padding-bottom: 4rem;
 }
 
 .blog-rich-text h5 {
@@ -6362,16 +6364,17 @@ blockquote {
 }
 
 .blog-rich-text a {
-  color: #323232;
-  border-bottom: 1px solid #323232;
+  color: var(--action-color);
+  border-bottom: 1px solid var(--action-color);
+  font-weight: 500;
   line-height: 1.6;
   text-decoration: none;
   transition-property: all;
 }
 
 .blog-rich-text a:hover {
-  color: var(--primary);
-  border-bottom-color: rgba(50, 50, 50, 0);
+  color: var(--text-color);
+  border-bottom-color: var(--text-color);
   text-decoration: none;
 }
 
@@ -7322,7 +7325,7 @@ blockquote {
     max-height: 100vh;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    background-color: var(--nav-text-color);
+    background-color: var(--nav-bg-color);
     border-radius: 0;
     flex-direction: row;
     justify-content: center;
@@ -7376,19 +7379,20 @@ blockquote {
   .menu-button {
     z-index: 2;
     height: 38px;
-    background-color: var(--secondary);
+    background-color: var(--action-color);
     border-radius: 10px;
+    color: var(--primary);
     padding-top: 2px;
     transition: background-color 0.35s;
     display: flex;
   }
 
   .menu-button:hover {
-    background-color: var(--secondary);
+    background-color: var(--notification-bg);
   }
 
   .menu-button.w--open {
-    background-color: var(--secondary);
+    background-color: var(--action-color);
     border-radius: 10px;
   }
 
@@ -9944,7 +9948,7 @@ blockquote {
   }
 
   .cta-text-holder {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .about-infinit-left-text-container,
