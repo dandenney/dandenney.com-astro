@@ -23,3 +23,7 @@ This version was recorded at home, but it's super close to the final one that we
 ## More to Come
 
 I'm really enjoying Webflow and there were some fantastic questions during the meetup that I want to explore. I'll share more as I learn.
+
+## Late Addition
+
+I was watching some videos and came across this one, which gives a great breakdown of how to build out a site in a good way. Absolutely worth watching: [Figma to Webflow Website Build 2024](https://www.youtube.com/watch?v=nj-1qB47aKo&t=165s)

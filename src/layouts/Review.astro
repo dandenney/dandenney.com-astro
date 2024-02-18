@@ -12,7 +12,7 @@ const { city, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttri
 	<head>
 		<BaseHead title={`Dan Denney | No ReservAItions - ${title}`} description={summary} />
 	</head>
-	<body class="reviews">
+	<body class="review">
 		<Header title="No ReservAItions" />
 		<main class="page-wrapper">
 			<div data-w-id="25fb3cfa-79fa-201a-bbfe-3eb0a49e8b6d" class="hero-section-secondary">
@@ -53,8 +53,8 @@ const { city, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttri
 					<div class="fade-in-move-on-scroll">
 						<div class="blog-rich-text w-dyn-bind-emptyXXXXX w-richtext">
 							<slot />
-							<nav class="no-res-nav">
-								<p><a href="/no-reserv-ai-tions">← Back to No Reserv-AI-tions</a><span>, or view by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></span></p>
+							<nav>
+								<p class="review-options">See all reviews by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
 							</nav>
 						</div>
 					</div>

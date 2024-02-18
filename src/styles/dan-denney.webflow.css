@@ -5714,7 +5714,8 @@ blockquote {
   line-height: 1.05;
 }
 
-.blog-title.posts {
+.blog-title.posts,
+.blog-title.state {
   margin-bottom: 4rem;
 }
 
@@ -5860,6 +5861,13 @@ blockquote {
   bottom: 0%;
   left: 0%;
   right: 0%;
+}
+
+.list-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 1rem;
+  list-style: none;
 }
 
 .project-details-project-wrapper {
@@ -6141,6 +6149,18 @@ blockquote {
 }
 
 .home-blog-wrapper {
+  margin-top: 4em;
+}
+
+.reviews .home-blog-wrapper {
+  margin-top: 0;
+}
+
+.reviews-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   margin-top: 4em;
 }
 
@@ -6437,8 +6457,18 @@ blockquote {
   font-weight: 700;
 }
 
+.review .main-blog-grid-item ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
 .blog-rich-text a,
-.reviews .main-blog-grid-item ul a,
+.review .main-blog-grid-item ul a,
 .review-options a {
   color: var(--action-color);
   border-bottom: 1px solid var(--action-color);
@@ -6449,7 +6479,7 @@ blockquote {
 }
 
 .blog-rich-text a:hover,
-.reviews .main-blog-grid-item ul a:hover,
+.review .main-blog-grid-item ul a:hover,
 .review-options a:hover {
   color: var(--text-color);
   border-bottom-color: var(--text-color);

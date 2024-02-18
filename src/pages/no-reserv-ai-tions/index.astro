@@ -43,7 +43,7 @@ const reviews = (await getCollection('reviews')).sort(
             <div role="list" class="blog-grid w-dyn-items">
               {reviews.map((review) => (
 								<div role="listitem" class="blog-item w-dyn-item">
-									<a href={`/posts/${review.slug}/`} class="blog-item-link w-inline-block">
+									<a href={`/no-reserv-ai-tions/${review.slug}/`} class="blog-item-link w-inline-block">
 										<div class="blog-item-image-holder">
 											<img class="blog-item-image" loading="lazy" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 										</div>
@@ -62,7 +62,6 @@ const reviews = (await getCollection('reviews')).sort(
             </div>
           </div>
 					<p class="review-options">See them all by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
-
         </div>
         <div class="section-background"></div>
       </section>
