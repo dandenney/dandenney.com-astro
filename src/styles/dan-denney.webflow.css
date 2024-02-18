@@ -2808,6 +2808,10 @@ blockquote {
   min-height: 459px;
 }
 
+.posts .blog-item-image-holder {
+  min-height: 408px;
+}
+
 .blog-item-image {
   width: 100%;
   height: 100%;
