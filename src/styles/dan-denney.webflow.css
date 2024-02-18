@@ -1223,6 +1223,20 @@
   padding: 10px 16px;
 }
 
+.reviews .main-blog-grid-item ul {
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.no-res-nav p {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.125rem !important;
+}
+
 @media screen and (max-width: 767px) {
   .w-commerce-commercelayoutcontainer {
     flex-direction: column;
@@ -1431,6 +1445,22 @@ blockquote {
 
 .blips-list .container {
   padding-top: 0;
+}
+
+.hero-section-secondary .container {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+}
+
+.posts-list .hero-section-secondary .container {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.blip .hero-section-secondary .container,
+.blips .hero-section-secondary .container {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .container.nav-container {
@@ -6223,6 +6253,10 @@ blockquote {
   font-weight: 500;
 }
 
+.blips .blog-post-summary {
+  max-width: 800px;
+}
+
 .projects-rich-text {
   width: 100%;
   max-width: 600px;
@@ -6382,7 +6416,8 @@ blockquote {
   font-weight: 700;
 }
 
-.blog-rich-text a {
+.blog-rich-text a,
+.reviews .main-blog-grid-item ul a {
   color: var(--action-color);
   border-bottom: 1px solid var(--action-color);
   font-weight: 500;
@@ -6391,7 +6426,8 @@ blockquote {
   transition-property: all;
 }
 
-.blog-rich-text a:hover {
+.blog-rich-text a:hover,
+.reviews .main-blog-grid-item ul a:hover {
   color: var(--text-color);
   border-bottom-color: var(--text-color);
   text-decoration: none;
@@ -7298,6 +7334,10 @@ blockquote {
 
   .main-blog-grid-text-holder-item {
     max-width: 750px;
+  }
+
+  .blip .main-blog-grid-text-holder-item {
+    max-width: 100%;
   }
 
   .contact-hero-image-holder {
@@ -8262,6 +8302,11 @@ blockquote {
   .about-infinit-right-text-container {
     grid-column-gap: 60px;
     grid-row-gap: 60px;
+  }
+
+  .hero-section-secondary .container {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
   }
 }
 
