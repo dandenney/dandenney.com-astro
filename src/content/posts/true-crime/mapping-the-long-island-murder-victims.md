@@ -1,6 +1,6 @@
 ---
 path: "/posts/true-crime/mapping-the-long-island-murder-victims"
-thumb: posts/mapping-long-island-victims.png
+cloudinaryThumb: posts/mapping-long-island-victims.png
 title: "Mapping the Long Island Murder Victims"
 summary: "A map of a series of unsolved murders in Long Island from the 1990s until the 2010s"
 pubDate: "2020-03-07"
@@ -45,6 +45,7 @@ tags:
     left: 0;
     width: 100%;
     margin: 0;
+    top: 80px !important;
     transform: translate3d(0, 0, 0);
     z-index: 0;
   }
@@ -59,13 +60,16 @@ tags:
     border: 0.5rem solid rgba(255, 255, 255, 0.9);
     display: block;
     margin: 0 auto;
+    min-width: 1px;
     position: relative;
+    width: 220px !important;
     z-index: 1;
   }
 
   .details p {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 5px 5px 10px rgba(202, 210, 211, 0.5);
+    font-size: 1rem;
     margin: 0 1rem;
     padding: 1rem;
   }
@@ -76,7 +80,7 @@ tags:
     color: #ffffff;
     margin: -1rem 0 0;
     padding: 1rem;
-    font-size: 20px;
+    font-size: 1.125rem;
     -webkit-text-fill-color: #ffffff;
   }
 
