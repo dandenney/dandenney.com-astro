@@ -2,7 +2,8 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import toTitleCase from '../../helpers/toTitleCase.js'
+import toTitleCase from '../../helpers/toTitleCase.js';
+import FrontEndConf from '../../components/FrontEndConf.astro';
 
 export async function getStaticPaths() {
   const allReviews = await Astro.glob('../../content/reviews/*.md');
@@ -32,43 +33,60 @@ const { reviews } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-wf-page="65c96ce4beedf24f0e18a232" data-wf-site="65c96ce3beedf24f0e18a1dd">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
 	</head>
-	<body class="bg-slate-50 dark:bg-slate-900">
+	<body>
 		<Header />
-		<main class="bg-slate-50 dark:bg-slate-900 relative shadow z-10 dark:text-slate-200" style="min-height: 90dvh;">
-			<section class="max-w-screen-2xl mx-auto pb-24 pt-8 px-4">
-				<h2 class="border-b text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:flex-shrink-0">{toTitleCase(tag)}</h2>
-				<ul class="md:flex md:flex-wrap gap-y-8 mt-8">
-					{reviews.map((review) => {
-						return(
-						<li class="md:w-1/2">
-							<a class="block duration-300 group relative isolate mt-16 px-4 transition-all sm:py-4 sm:mt-0 hover:bg-red-700 dark:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}`}>
-								<div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
-									<figure class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3 dark:bg-slate-700" transition:name={`${review.frontmatter.title}-img`}>
-										<img src={`/no-reserv-ai-tions/${review.frontmatter.heroImage}-thumb.webp`} alt={review.frontmatter.heroImageAlt} />
-									</figure>
-									<div>
-										<div class="flex items-center gap-x-4 text-slate-500 text-sm dark:text-slate-100 group-hover:text-white">
-											{toTitleCase(review.frontmatter.city)}, {review.frontmatter.country === 'United States' ? toTitleCase(review.frontmatter.state) : review.frontmatter.country}
+		<main>
+      <div data-w-id="25fb3cfa-79fa-201a-bbfe-3eb0a49e8b6d" class="hero-section-secondary blips-header">
+				<div class="container">
+					<div data-w-id="0ce5212f-91ca-3c96-3011-158f503e0728" class="main-blog-grid">
+						<div class="main-blog-grid-text-holder-item">
+							<h5 style="opacity:0;-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-category"></h5>
+							<h1 style="-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="blog-details-main-title">{tag}</h1>
+							<p style="opacity:0;-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-summary">Reviews of places tagged as {tag} with the help of AI</p>
+						</div>
+						<div class="main-blog-grid-item _1">
+							<div style="opacity:0;-webkit-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="main-blog-image-holder">
+								<img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n.webp" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-background"></div>
+			</div>
+      <section class="section reviews">
+        <div class="container">
+          <div class="home-blog-wrapper w-dyn-list">
+            <div role="list" class="blog-grid w-dyn-items">
+              {reviews.map((review) => (
+								<div role="listitem" class="blog-item w-dyn-item">
+									<a href={`/no-reserv-ai-tions/${review.slug}/`} class="blog-item-link w-inline-block">
+										<div class="blog-item-image-holder">
+											<img class="blog-item-image" loading="lazy" src={`/no-reserv-ai-tions/${review.frontmatter.heroImage}.webp`} alt={review.frontmatter.heroImageAlt} />
 										</div>
-										<div class="group relative">
-											<h3 class="duration-300 font-bold mt-3 text-4xl text-red-700 transition-color uppercase dark:text-red-300 md:text-5xl group-hover:text-white">
-												<span class="absolute inset-0"></span>
-												{review.frontmatter.title}
-											</h3>
-											<p class="duration-500 mt-2 text-gray-600 text-sm dark:text-slate-100 group-hover:text-white">{review.frontmatter.description}</p>
+										<div class="blog-item-content">
+											<div class="blog-item-category">
+												<div class="blog-item-date"></div>
+											</div>
+											<strong class="review-item-location">{toTitleCase(review.frontmatter.city)}, {review.frontmatter.country === 'United States' ? toTitleCase(review.frontmatter.state) : review.frontmatter.country}</strong>
+											<h2 class="blog-item-title">{review.frontmatter.title}</h2>
+											<p class="blog-item-summary">{review.frontmatter.description}</p>
 										</div>
-									</div>
+									</a>
 								</div>
-							</a>
-						</li>
-					)})}
-				</ul>
+								))
+							}
+            </div>
+          </div>
+					<p class="review-options">See them all by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
+        </div>
+        <div class="section-background"></div>
       </section>
-		</main>
-		<Footer />
-	</body>
+			<FrontEndConf />
+    </main>
+    <Footer />
+  </body>
 </html>
