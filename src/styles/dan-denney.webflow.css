@@ -6494,11 +6494,6 @@ blockquote {
   line-height: 1.3;
 }
 
-.blog-rich-text img {
-  width: 100%;
-  min-width: 100%;
-}
-
 .blog-rich-text figcaption {
   color: rgba(50, 50, 50, 0.8);
   letter-spacing: 0.2px;
@@ -6562,6 +6557,11 @@ blockquote {
 .blog-rich-text li {
   letter-spacing: 0.2px;
   margin-bottom: 12px;
+}
+
+.blog-rich-text img {
+  max-width: 100%;
+  height: auto;
 }
 
 .read-more-text {
@@ -10235,4 +10235,59 @@ blockquote {
 iframe {
   aspect-ratio: 16/9; /* Or any other aspect ratio you need */
   width: 100%;
+}
+
+.blog-rich-text > :first-child {
+  margin-top: 0;
+}
+
+/* Bleed Options */
+
+.full-bleed,
+.full-to-half-bleed {
+  margin-left: 50%;
+  overflow: hidden;
+  max-width: 100rem;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+/* Code */
+
+.astro-code {
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .full-to-half-bleed,
+  .normal-to-half-bleed {
+    max-width: 150% !important;
+    width: 150% !important;
+    margin-left: -25%;
+    margin-right: -25%;
+    transform: none;
+  }
+}
+
+/* Generated Images */
+
+@media screen and (min-width: 1000px) {
+  .generated-image {
+    display: grid;
+    grid-template-columns: 1fr 18.75rem;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .generated-image .image {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .generated-image .meta {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+  .generated-image .content {
+    grid-area: 2 / 1 / 3 / 2;
+  }
 }

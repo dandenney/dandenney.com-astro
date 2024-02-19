@@ -49,7 +49,7 @@ title: Render ATL 2023
   }
 
   .longform figure figcaption h3 {
-    margin: 1rem 0 0 0;
+    margin: 0;
   }
 
   .longform figure figcaption h3 + p {
@@ -59,6 +59,19 @@ title: Render ATL 2023
   .longform article p.text-sm + p {
     margin-top: 0;
   }
+
+  .longform figure + p {
+    color: var(--second-text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .longform figure + p + p {
+    margin-top: 0;
+  }
+  
 
   @media screen and (min-width: 480px) {
     figure {
@@ -88,10 +101,10 @@ Wednesday was also workshop day and I got a great intro to Remix from [@chanceth
     <img src="/posts/conferences/render-atl-2023/chance-strickland.webp" height="120" width="120" />
     <figcaption>
       <h3>Remix Fundamentals</h3>
-      <p><strong><a href="https://twitter.com/chancethedev">Chance Strickland</a>, Senior Software Engineer @ Replo</strong></p>
+      <p><a href="https://twitter.com/chancethedev">Chance Strickland</a>, Senior Software Engineer @ Replo</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>It's the remix stir, server-side rendering occurs, <br /> In this framework blur, the future it ensures</p>
 </article>
 
@@ -104,10 +117,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/josh-comeau.webp" height="120" width="120" />
     <figcaption>
       <h3>Building Whimsical Interactions With React</h3>
-      <p><strong><a href="https://twitter.com/JoshWComeau">Josh Comeau</a>, Founder @ Josh W. Comeau Courses</strong></p>
+      <p><a href="https://twitter.com/JoshWComeau">Josh Comeau</a>, Founder @ Josh W. Comeau Courses</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Web animations level up, React makes them disrupt,<br />In this digital habitat, their benefits never corrupt</p>
 </article>
 
@@ -116,10 +129,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/colby-fayock.webp" height="120" width="120" />
     <figcaption>
       <h3>Creating a Whole New World With Generative Ai</h3>
-      <p><strong><a href="https://twitter.com/colbyfayock">Colby Fayock</a>, Director of Devx Engineering @ Cloudinary</strong></p>
+      <p><a href="https://twitter.com/colbyfayock">Colby Fayock</a>, Director of Devx Engineering @ Cloudinary</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>AI's the light, media creation takes flight,<br />Web constructs in sight, future's bright, hold tight</p>
 </article>
 
@@ -128,10 +141,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/adam-rackis.webp" height="120" width="120" />
     <figcaption>
       <h3>The Bleeding "Edge" of Web Development</h3>
-      <p><strong><a href="https://twitter.com/AdamRackis">Adam Rackis</a>, Senior Software Engineer @ Spotify</strong></p>
+      <p><a href="https://twitter.com/AdamRackis">Adam Rackis</a>, Senior Software Engineer @ Spotify</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Keep database queries close, on the edge we propose, <br />Or let Vercel impose, with its tech composure it shows</p>
 </article>
 
@@ -140,10 +153,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/margarita-caraballo.webp" height="120" width="120" />
     <figcaption>
       <h3>Building Together: Technical Product Management in Your Engineering Organization</h3>
-      <p><strong><a href="https://www.linkedin.com/in/margarita-c/">Margarita Caraballo</a>, Senior Technical Product Manager @ Mailchimp</strong></p>
+      <p><a href="https://www.linkedin.com/in/margarita-c/">Margarita Caraballo</a>, Senior Technical Product Manager @ Mailchimp</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Technical PMs, guiding engineers like hymns, <br />In the tech domain, they're the transformative stems</p>
 </article>
 
@@ -152,10 +165,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/ayo-k-duyile.webp" height="120" width="120" />
     <figcaption>
       <h3>Product Viability to Product Scalability</h3>
-      <p><strong><a href="https://twitter.com/AyoKDuyile">Ayo K. Duyile</a>, Senior Technical PM, Software Engineering @ Google</strong></p>
+      <p><a href="https://twitter.com/AyoKDuyile">Ayo K. Duyile</a>, Senior Technical PM, Software Engineering @ Google</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Minimize features early, the path can be swirly, <br /> Talk to customers, grow and learn, the journey's worthy</p>
 </article>
 
@@ -164,10 +177,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/tom-raviv.jpeg" height="120" width="120" />
     <figcaption>
       <h3>Codux Demo</h3>
-      <p><strong><a href="https://twitter.com/RavivTom">Tom Raviv</a>, DevRel @ CoduxIDE</strong></p>
+      <p><a href="https://twitter.com/RavivTom">Tom Raviv</a>, DevRel @ CoduxIDE</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Keep components in sync, visual code's the selector, <br /> In this digital architecture, be the trendsetter</p>
 </article>
 
@@ -176,10 +189,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/homer-gaines.webp" height="120" width="120" />
     <figcaption>
       <h3>Seeing Eye to Eye</h3>
-      <p><strong><a href="https://twitter.com/xirclebox">Homer Gaines</a>, Staff UI Engineer @ Self</strong></p>
+      <p><a href="https://twitter.com/xirclebox">Homer Gaines</a>, Staff UI Engineer @ Self</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Many struggle with vision, it's our mission, <br /> To design with precision, inclusive decision's the ambition</p>
 </article>
 
@@ -188,10 +201,10 @@ Render is a multi-track event with tracks for leadership and entrepreneurship, n
     <img src="/posts/conferences/render-atl-2023/chris-coyier.webp" height="120" width="120" />
     <figcaption>
       <h3>Modern CSS in Real Life</h3>
-      <p><strong><a href="https://twitter.com/chriscoyier">Chris Coyier</a>, Co-founder @ Codepen</strong></p>
+      <p><a href="https://twitter.com/chriscoyier">Chris Coyier</a>, Co-founder @ Codepen</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>CSS on the rise, it's a skill to prize, <br /> Forever in use, in the coder's eyes</p>
 </article>
 
@@ -210,10 +223,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/rizel-scarlet.webp" height="120" width="120" />
     <figcaption>
       <h3>Level Up With Copilot</h3>
-      <p><strong><a href="https://twitter.com/blackgirlbytes">Rizel Scarlet</a>, Developer Advocate @ Github</strong></p>
+      <p><a href="https://twitter.com/blackgirlbytes">Rizel Scarlet</a>, Developer Advocate @ Github</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Copilot on deck, elevating code's quality, <br /> Comments more in check, it's the new tech modality</p>
 </article>
 
@@ -222,10 +235,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/scott-tolinski.webp" height="120" width="120" />
     <figcaption>
       <h3>Fresh Style: the Next Generation of CSS</h3>
-      <p><strong><a href="https://twitter.com/stolinski">Scott Toliniski</a>, Founder @ Level Up Tutorials</strong></p>
+      <p><a href="https://twitter.com/stolinski">Scott Toliniski</a>, Founder @ Level Up Tutorials</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>So much to ship, with PostCSS in your grip, <br /> New CSS trends flip, on this coding trip</p>
 </article>
 
@@ -234,10 +247,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/leesa-ward.webp" height="120" width="120" />
     <figcaption>
       <h3>Styling a React App: Let Me Count the Ways</h3>
-      <p><strong><a href="https://twitter.com/doubleedesign">Leesa Ward</a>, Front-end Developer @ Various</strong></p>
+      <p><a href="https://twitter.com/doubleedesign">Leesa Ward</a>, Front-end Developer @ Various</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Find your CSS groove, make your coding move, <br /> Choose your approach, watch your skills improve</p>
 </article>
 
@@ -246,10 +259,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/shaundai-pearson.webp" height="120" width="120" />
     <figcaption>
       <h3>Streaming Server Rendering With Suspense</h3>
-      <p><strong><a href="https://twitter.com/shaundai">Shaundai Pearson</a>, Senior Software Engineer, Productivity UI @ Netflix</strong></p>
+      <p><a href="https://twitter.com/shaundai">Shaundai Pearson</a>, Senior Software Engineer, Productivity UI @ Netflix</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Stream to intercept, long data requests we respect, <br /> In this tech concept, delays we'll eject</p>
 </article>
 
@@ -258,10 +271,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/evan-you.webp" height="120" width="120" />
     <figcaption>
       <h3>Thinking Across the Framework Barrier</h3>
-      <p><strong><a href="https://twitter.com/youyuxi">Evan You</a>, Author, Vue & Vite @ Vue.js / Vite</strong></p>
+      <p><a href="https://twitter.com/youyuxi">Evan You</a>, Author, Vue & Vite @ Vue.js / Vite</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Learn from others' grind, build tools of a new kind, <br /> For everyone we find, tech progression intertwined</p>
 </article>
 
@@ -270,10 +283,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/gant-laborde.webp" height="120" width="120" />
     <figcaption>
       <h3>AI in React</h3>
-      <p><strong><a href="https://twitter.com/GantLaborde">Gant Laborde</a>, CIO @ Infinite Red</strong></p>
+      <p><a href="https://twitter.com/GantLaborde">Gant Laborde</a>, CIO @ Infinite Red</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>With TensorFlow, create, AI apps that captivate, <br /> Innovate, don't hesitate, it's the future we activate</p>
 </article>
 
@@ -282,10 +295,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/sarah-drasner.webp" height="120" width="120" />
     <figcaption>
       <h3>The Wind and the Waves: the Formation of Framework Waves From the Epicenter</h3>
-      <p><strong><a href="https://twitter.com/sarah_edo">Sarah Drasner</a>, Director of Engineer, Web, at Google @ Google</strong></p>
+      <p><a href="https://twitter.com/sarah_edo">Sarah Drasner</a>, Director of Engineer, Web, at Google @ Google</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Angular's on the climb, learning from others in time, <br /> With each framework's rhyme, it perfects the code line</p>
 </article>
 
@@ -294,10 +307,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/mark-techson.webp" height="120" width="120" />
     <figcaption>
       <h3>Rise of the Robots - How to Thrive in the World of AI</h3>
-      <p><strong><a href="https://twitter.com/marktechson">Mark Techson</a>, Sr. Developer Relations Engineer @ Google</strong></p>
+      <p><a href="https://twitter.com/marktechson">Mark Techson</a>, Sr. Developer Relations Engineer @ Google</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Grasp the AI's mechanics, don't be the one who panics, <br /> Stay ahead in this game, ignite the tech dynamics</p>
 </article>
 
@@ -306,10 +319,10 @@ In a surprising twist, I made it out of the party early enough to get some sleep
     <img src="/posts/conferences/render-atl-2023/james-quick.webp" height="120" width="120" />
     <figcaption>
       <h3>How Content Creation Took My Career to the Next Level</h3>
-      <p><strong><a href="https://twitter.com/jamesqquick">James Q Quick</a>, Content Creator @ Learn Build Teach LLC</strong></p>
+      <p><a href="https://twitter.com/jamesqquick">James Q Quick</a>, Content Creator @ Learn Build Teach LLC</p>
     </figcaption>
   </figure>
-  <p class="text-sm font-semibold leading-8 tracking-tight text-slate-400">My Takeaway</p>
+  <p>My Takeaway</p>
   <p>Be authentic, drop knowledge worldwide, never frantic, <br /> While the paper stacks, it's more than semantic</p>
 </article>
 

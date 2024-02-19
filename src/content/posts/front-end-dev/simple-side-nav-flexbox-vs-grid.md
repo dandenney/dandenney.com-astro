@@ -9,7 +9,7 @@ path: "/posts/front-end-dev/simple-side-nav-flexbox-vs-grid"
 summary: A popular question with a pretty clear answer in this case
 tags:
   - front-end-dev
-thumb: posts/flexbox-vs-grid.png
+cloudinaryThumb: posts/flexbox-vs-grid.png
 thumbAlt: "choosing between two tools that can both do a job, cinematic, photorealistic --ar 3:2 --v 5"
 title: "Simple side nav: Flexbox vs. Grid"
 ---
