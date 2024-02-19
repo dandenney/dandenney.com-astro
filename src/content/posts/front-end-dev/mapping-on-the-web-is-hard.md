@@ -5,7 +5,7 @@ colorLink: "#bec298"
 colorText: "#f8f4f2"
 gradientTitle: "linear-gradient(#e0ca8d, #b39a6e)"
 path: "/posts/front-end-dev/mapping-on-the-web-is-hard-sorta"
-thumb: posts/map-on-the-web.png
+cloudinaryThumb: posts/map-on-the-web.png
 thumbAlt: "creating a map on the internet --ar 3:2 --v 5"
 title: Mapping On The Web Is Hard, Sorta
 summary: Sharing what I learned trying to build an interactive map
