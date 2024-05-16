@@ -1,6 +1,6 @@
 ---
 address: "1 Titans Wy, Nashville, TN 37213"
-city: "st-petersburg"
+city: "nashville"
 coordinates: "-86.770800, 36.166780"
 country: "United States"
 description: "Exhilarating Morgan Wallen outdoor concert at Nissan Stadium"
