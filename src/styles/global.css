@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
-  overflow-x: hidden;
-}
-
 /* Scroll */
 
 @media (prefers-reduced-motion: no-preference) {
