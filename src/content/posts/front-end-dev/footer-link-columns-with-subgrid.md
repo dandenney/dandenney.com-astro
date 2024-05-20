@@ -65,7 +65,7 @@ The value that I was missing was `span`, which, in this case, will set how many 
 The [formal definition on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row#span_integer_custom-ident_) is:
 > Contributes a grid span to the grid item's placement such that the corresponding edge of the grid item's grid area is n lines from the opposite edge.
 
-Here's some code to visualize how it works. The `style` block here is real, so you can edit the code and see how it affects the UI. Or, here's a pen.
+Here's some code to visualize how it works. The `style` block here is real, so you can edit the code and see how it affects the UI. Or, here's a <a href="https://codepen.io/dandenney/pen/LYoNNjV">pen</a>.
 
 <style>
   .example {
