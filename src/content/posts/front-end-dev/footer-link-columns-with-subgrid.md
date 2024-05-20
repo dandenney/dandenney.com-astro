@@ -1,6 +1,6 @@
 ---
 pubDate: "2024-05-15"
-socialImageFilename: "og-webflow-for-web-devs.jpg"
+socialImageFilename: "og-footer-link-columns-with-subgrid.jpg"
 summary: "New tech applied to an old problem"
 tags:
   - front-end-dev
