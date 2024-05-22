@@ -6,7 +6,7 @@ tags:
   - front-end-dev
 cloudinaryThumb: "posts/footer-link-columns-with-subgrid.png"
 thumb: "/posts/front-end-dev/footer-link-columns-with-subgrid/footer-link-columns-with-subgrid-thumb.webp"
-thumbAlt: "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2"
+thumbAlt: "a drafting schematic of a series of columns of different sizes --ar 3:2"
 title: "Footer Link Columns With Subgrid"
 ---
 
