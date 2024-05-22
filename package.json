@@ -14,9 +14,11 @@
     "@astrojs/mdx": "2.0.0",
     "@astrojs/rss": "4.0.0",
     "@astrojs/sitemap": "^3.0.3",
-    "astro": "4.0.2"
+    "astro": "4.0.2",
+    "tinacms": "^1.6.3"
   },
   "devDependencies": {
-    "@notionhq/client": "^2.2.13"
+    "@notionhq/client": "^2.2.13",
+    "@tinacms/cli": "^1.5.45"
   }
 }
