@@ -1,7 +1,7 @@
 ---
 path: "/blips/utility-first-css-ftw"
 title: "Utility-First CSS, FTW"
-pubDate: 2019-01-15T17:59:14.819Z
+pubDate: "2019-01-15"
 tags:
   - blips
 ---
