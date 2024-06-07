@@ -143,6 +143,10 @@ tags:
     margin-bottom: 0;
   }
 
+  .story {
+    z-index: 10;
+  }
+
 </style>
 
 <div>
