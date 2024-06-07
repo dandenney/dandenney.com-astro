@@ -9,6 +9,10 @@ tags:
 ---
 
 <style>
+  html {
+    overflow-x: unset;
+  }
+
   #scrolly {    
     margin-left: 50%;
     max-width: 100rem;
@@ -130,16 +134,26 @@ tags:
     display: none !important;
   }
 
+  .update {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+  }
+
+  .update p:last-of-type {
+    margin-bottom: 0;
+  }
 
 </style>
 
 <div>
 
-<div class="bg-slate-100 mb-4 p-4 dark:bg-slate-700 update">
+<div class="update">
 
 On July 13, 2023, there was an arrest in relation to the Gilgo Four. [Rex Heuermann](https://www.cnn.com/2023/07/14/us/gilgo-beach-murders-suspect-arrest/index.html) was arrested and is currently facing charges for three of the murders, with ongoing work in the Maureen Brainard-Barnes investigation.
 
 The [bail documentation](https://drive.google.com/file/d/1UAyHSO_aEYDE4aE_ajIoxxxRKccALx-u/view) has extensive information about the evidence against him, including a list of searches and articles that were viewed. In what I can only describe as surreal, this article is in that list.
+
+On June 6, 2024, Suffolk County confirmed that Rex Heuermann was charged with two more of the murders: Jessica Taylor and Sandra Costilla.
 
 </div>
 
