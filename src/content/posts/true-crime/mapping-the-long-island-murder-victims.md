@@ -153,7 +153,7 @@ On July 13, 2023, there was an arrest in relation to the Gilgo Four. [Rex Heuerm
 
 The [bail documentation](https://drive.google.com/file/d/1UAyHSO_aEYDE4aE_ajIoxxxRKccALx-u/view) has extensive information about the evidence against him, including a list of searches and articles that were viewed. In what I can only describe as surreal, this article is in that list.
 
-On June 6, 2024, Suffolk County confirmed that Rex Heuermann was charged with two more of the murders: Jessica Taylor and Sandra Costilla.
+On June 6, 2024, Suffolk County confirmed that Rex Heuermann was [charged with two more of the murders](https://www.cnn.com/2024/06/06/us/gilgo-beach-killings-rex-heuermann-indictment/index.html): Jessica Taylor and Sandra Costilla.
 
 </div>
 
