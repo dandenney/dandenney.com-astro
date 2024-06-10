@@ -17,7 +17,7 @@ Lisbon by day is a symphony of trams, Fado, and the faint aroma of grilled sardi
 
 A night on Pink Street is not just a night out—it's a rite of passage. Every bar and club, painted with the emblematic rose hue of the cobbled lane, holds its own unique allure. From intimate gin joints where the bartender knows your name to pulsating clubs where the beat of the music synchronizes with your heart, the evening unravels like a well-mixed cocktail—strong, heady, and utterly intoxicating.
 
-![Photo of a bar in Lisbon offering a special](/pink-street-bar.webp)
+![Photo of a bar in Lisbon offering a special](/no-reserv-ai-tions/pink-street-bar.webp)
 
 Bar-hopping becomes an art form as the night deepens. With each stop, a new drink is savored—a caipirinha here, a vinho verde there, maybe a shot of ginjinha for good measure. Conversations flow, interspersed with laughter, spontaneous dance moves, and the occasional philosophical musing that only seems profound past midnight.
 
