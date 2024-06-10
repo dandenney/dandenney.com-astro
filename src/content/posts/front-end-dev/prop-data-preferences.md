@@ -4,7 +4,7 @@ backgroundPost: "#6d6b6b"
 colorLink: "#7affff"
 colorText: "#fefeeb"
 path: "/posts/front-end-dev/prop-data-preferences"
-thumb: posts/prop-preferences.png
+cloudinaryThumb: posts/prop-preferences.png
 title: Prop Data Preferences
 gradientTitle: "linear-gradient(to right, #d9a07f, #f5cdaa)"
 summary: What's the "best practice" for passing down data
