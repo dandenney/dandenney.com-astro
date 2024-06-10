@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts.js';
 import FrontEndConf from '../components/FrontEndConf.astro';
 
-const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, thumbAlt } = Astro.props;
+const { title, description, socialImageFilename } = Astro.props;
 ---
 
 <html lang="en" data-wf-page="65c96ce4beedf24f0e18a232" data-wf-site="65c96ce3beedf24f0e18a1dd">
@@ -14,7 +14,7 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
-		<main class="page-wrapper">
+		<main class="page-wrapper blip">
 			<div data-w-id="25fb3cfa-79fa-201a-bbfe-3eb0a49e8b6d" class="hero-section-secondary">
 				<div class="container">
 					<div data-w-id="0ce5212f-91ca-3c96-3011-158f503e0728" class="main-blog-grid">
@@ -23,23 +23,20 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 							<h1 style="-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="blog-details-main-title">{title}</h1>
 							<p style="opacity:0;-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-summary"></p>
 						</div>
-						<div class="main-blog-grid-item _1">
-							<div style="opacity:0;-webkit-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="main-blog-image-holder">{cloudinaryThumb && (<img alt={thumbAlt} class="main-blog-image" src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`} srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`}>)}</div>
-						</div>
 					</div>
 				</div>
 				<div class="section-background"></div>
 			</div>
-			<article class="section">
-				<div class="container no-padding-top-and-bottom">
-					<div class="fade-in-move-on-scroll">
-						<div class="blog-rich-text">
-							<slot />
-						</div>
-					</div>
-				</div>
-				<div class="section-background"></div>
-			</article>
+      <article class="section">
+        <div class="container no-padding-top-and-bottom">
+          <div class="fade-in-move-on-scroll">
+            <div class="blog-rich-text w-dyn-bind-emptyXXXXX w-richtext">
+              <slot />
+            </div>
+          </div>
+        </div>
+        <div class="section-background"></div>
+      </article>
 			<FrontEndConf />
 		</main>
 		<Footer />
