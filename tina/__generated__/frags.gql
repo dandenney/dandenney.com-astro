@@ -1,0 +1,39 @@
+fragment BlipParts on Blip {
+  __typename
+  title
+  pubDate
+  tags
+  body
+}
+
+fragment PostParts on Post {
+  __typename
+  title
+  pubDate
+  tags
+  summary
+  socialImageFilename
+  cloudinaryThumb
+  thumb
+  thumbAlt
+  body
+}
+
+fragment ReviewParts on Review {
+  __typename
+  title
+  pubDate
+  tags
+  description
+  address
+  city
+  state
+  country
+  coordinates
+  infoUrl
+  heroImageAlt
+  heroImage
+  heroImageAttribution
+  heroImageUrl
+  body
+}
