@@ -14,6 +14,7 @@ type Props = CollectionEntry<'posts'>;
 const post = Astro.props;
 const { Content } = await post.render();
 ---
+
 <BlogPost {...post.data}>
 	<Content />
 </BlogPost>

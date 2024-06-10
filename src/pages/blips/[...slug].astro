@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import Blip from '../../layouts/Blip.astro';
+import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
 	const blips = await getCollection('blips');
@@ -15,6 +15,6 @@ const blip = Astro.props;
 const { Content } = await blip.render();
 ---
 
-<Blip {...blip.data}>
+<BlogPost {...blip.data}>
 	<Content />
-</Blip>
+</BlogPost>

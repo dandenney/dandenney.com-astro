@@ -2,66 +2,49 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import toTitleCase from '../helpers/toTitleCase.js';
-import FrontEndConf from '../components/FrontEndConf.astro';
+import toTitleCase from '../helpers/toTitleCase.js'
 
 const { city, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, summary, title } = Astro.props;
 ---
 
-<html lang="en" data-wf-page="65c96ce4beedf24f0e18a232" data-wf-site="65c96ce3beedf24f0e18a1dd">
+<html lang="en">
 	<head>
-		<BaseHead title={`Dan Denney | No ReservAItions - ${title}`} description={summary} />
+		<BaseHead title={title} description={summary} />
 	</head>
-	<body class="review">
-		<Header title="No ReservAItions" />
-		<main class="page-wrapper">
-			<div data-w-id="25fb3cfa-79fa-201a-bbfe-3eb0a49e8b6d" class="hero-section-secondary">
-				<div class="container">
-					<div data-w-id="0ce5212f-91ca-3c96-3011-158f503e0728" class="main-blog-grid">
-						<div class="main-blog-grid-text-holder-item">
-							<h5 style="opacity:0;-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-category"></h5>
-							<h1 style="-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="blog-details-main-title">{title}</h1>
-							<p style="opacity:0;-webkit-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-100%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-summary"></p>
-						</div>
-						<div class="main-blog-grid-item _1">
-							<div style="opacity:0;-webkit-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(110%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="main-blog-image-holder">
-								<figure>
-									<img src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroImageAlt} height="480" width="640" />
-									{heroImageAttribution && (
-										<small>Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
-									)}
-									<ul>
-										<li><a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></> }</li>
-										<li>
-											{tags && tags.map((tag, index) => (
-												<>
-													{index > 0 ? '• ' : ''}
-													<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
-												</>
-											))}
-										</li>
-									</ul>
-								</figure>
-							</div>
-						</div>
+	<body class="bg-slate-50 dark:bg-slate-900">
+		<Header />
+		<main class="bg-slate-50 relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+			<article class="max-w-screen-2xl mx-auto px-4 pt-4 xl:flex xl:gap-12 xl:items-start xl:justify-between">
+				<figure class="bg-white has-links max-w-2xl mx-auto pb-8 pt-4 px-4 shadow-md shadow-slate-10/20 xl:sticky xl:top-4 xl:flex-shrink-0 dark:bg-slate-800">
+					<img class="mx-auto" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroImageAlt} height="480" width="640" />
+					{heroImageAttribution && (
+						<small class="mt-8 text-xs text-slate-600">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
+					)}
+					<ul class="flex flex-wrap font-decorative gap-x-4 justify-between">
+						<li class="text-gray-600 mt-4 dark:text-slate-100"><a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></> }</li>
+						<li class="mt-4 text-gray-300 dark:text-slate-100">
+							{tags && tags.map((tag, index) => (
+								<>
+									{index > 0 ? '• ' : ''}
+									<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
+								</>
+							))}
+						</li>
+					</ul>
+				</figure>
+				<div class="max-w-2xl mx-auto pb-16">
+					<header class="longform pt-8 xl:pt-0">
+						<h1 class="text-4xl font-bold leading-tight tracking-tight mb-4 xl:text-6xl">{title}</h1>
+					</header>
+					<div class="longform pb-8">
+						<slot />
 					</div>
+					<nav class="flex flex-wrap gap-x-4">
+						<a href="/no-reserv-ai-tions" class="btn-link ">← Back to No Reserv-AI-tions</a>
+						<p class="has-links mt-2">Or view by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
+					</nav>
 				</div>
-				<div class="section-background"></div>
-			</div>
-			<article class="section">
-				<div class="container no-padding-top-and-bottom">
-					<div class="fade-in-move-on-scroll">
-						<div class="blog-rich-text w-dyn-bind-emptyXXXXX w-richtext">
-							<slot />
-							<nav>
-								<p class="review-options">See all reviews by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
-							</nav>
-						</div>
-					</div>
-				</div>
-				<div class="section-background"></div>
 			</article>
-			<FrontEndConf />
 		</main>
 		<Footer />
 	</body>

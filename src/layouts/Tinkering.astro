@@ -1,12 +1,12 @@
 ---
-import TinkeringHead from '../components/TinkeringHead.astro';
+import BaseHead from '../components/BaseHead.astro';
 
 const { summary, title } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<TinkeringHead title={title} description={summary} />
+		<BaseHead title={title} description={summary} />
 	</head>
 	<body>
 		<main>
