@@ -9,7 +9,7 @@ gradientTitle: "linear-gradient(to bottom, #817f58, #555646)"
 summary: Sharing some basics of configuration that were new to me
 tags:
   - front-end-dev
-thumb: posts/eleventy-netlify-newb.jpg
+cloudinaryThumb: posts/eleventy-netlify-newb.jpg
 title: Eleventy and Netlify for NPM newbs like me
 ---
 

@@ -26,8 +26,6 @@ The Spotify Wrapped release days are my favorite part of the year. I love them s
 ![Screenshot](/blips/spotify-wrapped-2019/16.png)
 ![Screenshot](/blips/spotify-wrapped-2019/17.png)
 
-Here's my 2019 Top Songs and my Best of the Decade playlists:
+Here's my 2019 Top Songs playlist:
 
-<SpotifyEmbed url="https://open.spotify.com/embed/playlist/37i9dQZF1EtqBRoTg6Cwan" />
-
-<SpotifyEmbed url="https://open.spotify.com/embed/playlist/37i9dQZF1DXaMu9xyX1HzK" />
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EtqBRoTg6Cwan?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

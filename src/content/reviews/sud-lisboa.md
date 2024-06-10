@@ -21,11 +21,11 @@ Ample red wine, deep and robust, flows like the lifeblood of the evening, its no
 
 Yet, as the night deepens, Sud Lisboa has another ace up its sleeve. A live dance show where the age-old art form melds with cutting-edge technology. Dancers move with ethereal grace, their bodies responding to the digital world projected around them. It's a metaphor for the modern business world—where tradition and innovation coexist, constantly evolving, ever dynamic.
 
-![Photo of two dancers and a futuristic background](/sud-lisboa-performance.webp)
-![Photo of performers and a glittery background](/sud-lisboa-performance-two.webp)
+![Photo of two dancers and a futuristic background](/no-reserv-ai-tions/sud-lisboa-performance.webp)
+![Photo of performers and a glittery background](/no-reserv-ai-tions/sud-lisboa-performance-two.webp)
 
 The backdrop of Lisbon, with its iconic landmarks bathed in the glow of ambient lights, adds to the spectacle. The views are, in a word, breathtaking—much like the entirety of the evening.
 
-![Photo of performers and a glittery background](/sud-lisboa-view.webp)
+![Photo of performers and a glittery background](/no-reserv-ai-tions/sud-lisboa-view.webp)
 
 To Sud Lisboa, for crafting an evening that's both a nod to the city's illustrious past and a glimpse into its shimmering future. And to nights that remind us that amidst the hustle of corporate life, there's art, beauty, and shared joy. Saúde!
