@@ -357,7 +357,7 @@ The following is a timeline of events, with their locations, intending to show h
   </ol>
 </section>
 
-<div class="longform max-w-2xl mx-auto pb-16 px-8">
+<div class="longform max-w-2xl mx-auto pb-16">
 
 There are many more persons of interest and/or suspects in these cases. John Bittrolff is the only one included because he is the only one with any charges against him. To be clear, the Suffolk County District Attorney has said ["There is no evidentiary or investigative link between this case and Gilgo."](https://pix11.com/2017/09/12/convicted-killer-may-be-tied-to-gilgo-beach-murders-prosecutor)
 
