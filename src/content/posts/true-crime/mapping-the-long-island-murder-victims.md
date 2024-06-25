@@ -14,6 +14,7 @@ tags:
   }
 
   #scrolly {    
+    margin-block-start: 1.5rem;
     margin-left: 50%;
     max-width: 100rem;
     padding-left: 16px;
@@ -21,6 +22,10 @@ tags:
     position: relative;
     transform: translateX(-50%);
     width: 100vw;
+  }
+
+  #scrolly + .longform > p:first-of-type {
+    margin-block-start: 1.5rem !important;
   }
 
   .story {
@@ -116,6 +121,10 @@ tags:
     margin-top: 0 !important;
   }
 
+  .update + p {
+    margin-block-start: 1.5rem !important;
+  }
+
   @media screen and (min-width: 768px) {
     .details h3 {
       font-size: 24px;
@@ -181,164 +190,170 @@ The following is a timeline of events, with their locations, intending to show h
   </figure>
 
 <ol class="relative z-10 story">
-    <li class="step" data-step="1">
+    <li class="step" data-step="1" data-zoom="9">
       <div class="details">
         <h3>This part of the story begins on November 1, 1993</h3>
         <p>On that evening, a woman had been seen hitchhiking in East Patchogue, NY. Her name was Rita Tangredi.</p>
       </div>
     </li>
-    <li class="step" data-step="2">
+    <li class="step" data-step="2" data-zoom="9">
       <div class="details">
         <img alt="Rita Tangredi" src="/posts/true-crime/mapping-the-long-island-murder-victims/rita-tangredi.jpg" width="220" />
         <h3>Rita Tangredi's remains were found in wooded area on November 2, 1993</h3>
         <p>The details are an important part of identifying her killer: she had been beaten, strangled, a specific item of her clothing was missing, and her body was found in a distinct pose, and wood chips were used to cover her.</p>
       </div>
     </li>
-    <li class="step" data-step="3">
+    <li class="step" data-step="3" data-zoom="9">
       <div class="details">
         <img alt="Sandra Costilla" src="/posts/true-crime/mapping-the-long-island-murder-victims/sandra-costilla.jpg" width="220" />
         <h3>Sandra Costilla's remains were found on November 20, 1993</h3>
         <p>She was found in a wooded area by a group of hunters and she was strangled, but reports don't state that the same level of violence was present as with Rita Tangredi.</p>
       </div>
     </li>
-    <li class="step right" data-step="4">
+    <li class="step right" data-step="4" data-zoom="9">
       <div class="details">
         <img alt="Colleen McNamee" src="/posts/true-crime/mapping-the-long-island-murder-victims/colleen-mcnamee.jpg" width="220" />
         <h3>Colleen McNamee was last seen on January 5, 1994</h3>
         <p>She was getting into a small blue car at the Blue Dawn Diner.</p>
       </div>
     </li>
-    <li class="step right" data-step="5">
+    <li class="step right" data-step="5" data-zoom="9">
       <div class="details">
         <h3>Colleen's remains were found on January 30, 1994</h3>
         <p>Similarly to Rita Tangredi, she was found in the woods. She, too, was beaten, strangled, and left in the same pose.</p>
       </div>
     </li>
-    <li class="step" data-step="6">
+    <li class="step" data-step="6" data-zoom="9">
       <div class="details">
         <img alt="Karen Vergata" src="/posts/true-crime/mapping-the-long-island-murder-victims/karen-vergata.jpg" width="220" />
         <h3>Partial remains of Karen Vergata are found on April 20, 1996</h3>
         <p>Along Blue Point Beach, people found her legs wrapped in plastic. (Formerly known as Jane Doe No. 7)</p>
       </div>
     </li>
-    <li class="step right" data-step="7">
+    <li class="step right" data-step="7" data-zoom="9">
       <div class="details">
         <img alt="Peaches tattoo" src="/posts/true-crime/mapping-the-long-island-murder-victims/jane-doe-no-3.jpg" width="220" />
         <h3>Partial remains of Jane Doe No. 3, aka "Peaches", are found on June 28, 1997</h3>
         <p>Authorities released the information about her tattoo in hopes of identifying her, but there still is not an official match. Her torso was discovered in a green Rubbermaid container.</p>
       </div>
     </li>
-    <li class="step" data-step="8">
+    <li class="step" data-step="8" data-zoom="9">
       <div class="details">
         <img alt="Valerie Mack sketch" src="/posts/true-crime/mapping-the-long-island-murder-victims/valerie-mack.jpg" width="220" />
         <h3>Partial remains of Valerie Mack are found on November 19, 2000</h3>
         <p>Her torso was found, wrapped in garbage bags. In addition to her head and hands like the others, her right foot was removed, assumedly to hide a distinguishing mark.</p>
       </div>
     </li>
-    <li class="step" data-step="9">
+    <li class="step" data-step="9" data-zoom="9">
       <div class="details">
         <img alt="Jessica Taylor" src="/posts/true-crime/mapping-the-long-island-murder-victims/jessica-taylor.jpg" width="220" />
         <h3>Partial remains of Jessica Taylor are found on July 26, 2003</h3>
         <p>She was on a plastic sheet, and the killer had removed her head, hands, and attempted to obscure a tattoo.</p>
       </div>
     </li>
-    <li class="step right" data-step="10">
+    <li class="step right" data-step="10" data-zoom="9">
       <div class="details">
         <img alt="Maureen Brainard-Barnes" src="/posts/true-crime/mapping-the-long-island-murder-victims/maureen-brainard-barnes.jpg" width="220" />
         <h3>Maureen Brainard-Barnes is last seen by a friend on July 9, 2007</h3>
         <p>Her friend, Sara, left her at the Super 8 Midtown. Maureen said that she would stay until that Wednesday, July 11.</p>
       </div>
     </li>
-    <li class="step right" data-step="11">
+    <li class="step right" data-step="11" data-zoom="9">
       <div class="details">
         <img alt="Melissa Barthelemy" src="/posts/true-crime/mapping-the-long-island-murder-victims/melissa-barthelemy.jpg" width="220" />
         <h3>Melissa Barthelemy is last seen by neighbors on July 10, 2009</h3>
         <p>The last known sighting of Melissa was her on her porch, talking on her phone.</p>
       </div>
     </li>
-    <li class="step" data-step="12">
+    <li class="step" data-step="12" data-zoom="9">
       <div class="details">
         <img alt="Shannan Gilbert" src="/posts/true-crime/mapping-the-long-island-murder-victims/shannan-gilbert.jpg" width="220" />
         <h3>Shannan Gilbert called 911 at 4:51 a.m. on May 1, 2010</h3>
         <p>She ran from a client's house and away from her driver, knocking on doors and calling 911. She went missing and searches for her led to many of the following events.</p>
       </div>
     </li>
-    <li class="step" data-step="13">
+    <li class="step" data-step="13" data-zoom="9">
       <div class="details">
         <img alt="Megan Waterman" src="/posts/true-crime/mapping-the-long-island-murder-victims/megan-waterman.jpg" width="220" />
         <h3>Megan Waterman is last seen on hotel camera footage on June 6, 2010</h3>
         <p>She had been staying at a motel, placing ads on Craiglist, and was last seen walking towards a gas station.</p>
       </div>
     </li>
-    <li class="step right" data-step="14">
+    <li class="step right" data-step="14" data-zoom="9">
       <div class="details">
         <img alt="Amber Costello" src="/posts/true-crime/mapping-the-long-island-murder-victims/amber-lynn-costello.jpg" width="220" />
         <h3>Amber Costello was last seen on September 2, 2010</h3>
         <p>A friend, and roommate, walked her towards the car of a client, down the street from their home.</p>
       </div>
     </li>
-    <li class="step right" data-step="15">
+    <li class="step right" data-step="15" data-zoom="9">
       <div class="details">
         <h3>Police find the remains of Melissa Barthelemy on December 11, 2010</h3>
         <p>A cadaver dog reacted and an officer found her partially decomposed remains, wrapped in burlap.</p>
       </div>
     </li>
-    <li class="step right" data-step="16">
+    <li class="step right" data-step="16" data-zoom="9">
       <div class="details">
         <h3>Police find three more sets of remains on December 13, 2010</h3>
         <p>They were later identified to be Maureen Brainard-Barnes, Megan Waterman, and Amber Costello. Like Melissa, they were each in a burlap sack and spaced apart pretty evenly. The group became known as The Gilgo Four.</p>
       </div>
     </li>
-    <li class="step" data-step="17">
+    <li class="step" data-step="17" data-zoom="9">
       <div class="details">
         <h3>Police find Jessica Taylor's remains on March 29, 2011</h3>
         <p>Her skull and forearm were matched with her prior remains.</p>
       </div>
     </li>
-    <li class="step" data-step="18">
+    <li class="step" data-step="18" data-zoom="9">
       <div class="details">
         <h3>Police find three more sets of remains on April 4, 2011</h3>
         <p>One set of remains was later matched to Jane Doe No. 6</p>
       </div>
     </li>
-    <li class="step right" data-step="19">
+    <li class="step right" data-step="19" data-zoom="9">
       <div class="details">
         <h3>Baby Doe is discovered as part of the group found on April 4, 2011</h3>
         <p>While she was laid close to one of the other victims, she was later found to be the daughter of Jane Doe No. 3, aka "Peaches". There were no signs of trauma.</p>
       </div>
     </li>
-    <li class="step right" data-step="20">
+    <li class="step right" data-step="20" data-zoom="9">
       <div class="details">
         <img alt="John Doe" src="/posts/true-crime/mapping-the-long-island-murder-victims/john-doe-asian-male.jpg" width="220" />
         <h3>John Doe, aka "Asian Male", is discovered as part of the group on April 4, 2011</h3>
         <p>The only male victim in this group, he died of blunt-force trauma, and was wearing women's clothing.</p>
       </div>
     </li>
-    <li class="step" data-step="21">
+    <li class="step" data-step="21" data-zoom="9">
       <div class="details">
         <h3>Police find two more sets of remains on April 11, 2011</h3>
         <p>These remains were later matched to Karen Vergata and Jane Doe No. 3, aka "Peaches".</p>
       </div>
     </li>
-    <li class="step right" data-step="22">
+    <li class="step right" data-step="22" data-zoom="9">
       <div class="details">
         <h3>Police find the remains of Shannan Gilbert on December 13, 2011</h3>
         <p>She was found in a marsh not far from where she had called 911. The findings of her autopsy have been debated, with the original ruling of "death by misadventure".</p>
       </div>
     </li>
-    <li class="step" data-step="23">
+    <li class="step" data-step="23" data-zoom="9">
       <div class="details">
         <h3>Police arrest John Bittrolff on July 21, 2014, for two of the murders</h3>
         <p>He lived in Manorville and DNA connected him to two of the victims, Rita Tangredi and Colleen McNamee.</p>
       </div>
     </li>
-    <li class="step" data-step="24">
+    <li class="step" data-step="24" data-zoom="9">
       <div class="details">
         <h3>John Bittrolff is convicted of the murders of Rita Tangredi and Colleen McNamee on July 5, 2017</h3>
-        <p>There was physical evidence linking him to the two victims, but he is also a suspect in the murder of Sandra Costilla.</p>
+        <p>There was physical evidence linking him to the two victims.</p>
       </div>
     </li>
-    <li class="step" data-step="25"></li>
+    <li class="step" data-step="25" data-zoom="11">
+      <div class="details">
+        <h3>Rex Heuermann is charged with the murder of six victims as of June 6, 2024</h3>
+        <p>He has been charged with the murder of Sandra Costillo, Jessica Taylor, Amber Costello, Megan Waterman, Melissa Barthelemy, and Maureen Brainard-Barnes.</p>
+      </div>
+    </li>
+    <li class="step" data-step="26" data-zoom="9"></li>
   </ol>
 </section>
 

@@ -219,7 +219,13 @@ function handleStepEnter(response) {
 
     if (response.index == 24) {
       map.setPaintProperty("step24Lines", "line-opacity", 0.35);
+      map.setPaintProperty("step25", "circle-radius", 12);
+      map.setPaintProperty("step25Lines", "line-opacity", 0.8);
     }
+
+    // if (response.index == 25) {
+    //   map.setPaintProperty("step20", "circle-radius", 12);
+    // }
   }
 
   // update graphic based on step
@@ -245,7 +251,7 @@ function init() {
     .setup({
       step: "#scrolly .story .step",
       offset: 0.5,
-      debug: false // turn back on for the line
+      debug: false, // turn back on for the line
     })
     .onStepEnter(handleStepEnter);
 
@@ -658,20 +664,6 @@ map.on("load", function() {
               [-73.1790966, 40.8021165]
             ]
           }
-        },
-        {
-          // Sandra Costilla's line
-          type: "Feature",
-          properties: {
-            color: "#F7455D" // red
-          },
-          geometry: {
-            type: "LineString",
-            coordinates: [
-              [-72.8080842, 40.8413791],
-              [-72.4107357, 40.933967]
-            ]
-          }
         }
       ]
     }
@@ -684,6 +676,110 @@ map.on("load", function() {
     paint: {
       "line-width": 3,
       "line-color": "#000000",
+      "line-opacity": 0
+    }
+  });
+
+  map.addSource("step25Lines", {
+    type: "geojson",
+    data: {
+      type: "FeatureCollection",
+      features: [
+        {
+          // Jessica Taylor's line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-73.359936, 40.629753]
+            ]
+          }
+        },
+        {
+          // Maureen Brainard-Barnes' line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-73.374864, 40.625077]
+            ]
+          }
+        },
+        {
+          // Melissa Barthelemy's line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-73.376259, 40.624613]
+            ]
+          }
+        },
+        {
+          // Megan Watermann's line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-73.373233, 40.62559]
+            ]
+          }
+        },
+        {
+          // Amber Costello's line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-73.377814, 40.624157]
+            ]
+          }
+        },
+        {
+          // Sandra Costilla's line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-72.4107357, 40.933967]
+            ]
+          }
+        }
+      ]
+    }
+  });
+
+  map.addLayer({
+    id: "step25Lines",
+    type: "line",
+    source: "step25Lines",
+    paint: {
+      "line-width": 3,
+      "line-color": "#9333ea",
       "line-opacity": 0
     }
   });
@@ -1440,6 +1536,37 @@ map.on("load", function() {
       "circle-radius": 0,
       "circle-color": "#000000",
       "circle-stroke-color": "#666666",
+      "circle-stroke-width": 2
+    }
+  });
+
+  map.addSource("step25", {
+    type: "geojson",
+    data: {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [-73.447420, 40.684350]
+          },
+          properties: {
+            title: "Rex Heuermann's home"
+          }
+        }
+      ]
+    }
+  });
+
+  map.addLayer({
+    id: "step25",
+    type: "circle",
+    source: "step25",
+    paint: {
+      "circle-radius": 0,
+      "circle-color": "#9333ea",
+      "circle-stroke-color": "#ffffff",
       "circle-stroke-width": 2
     }
   });
