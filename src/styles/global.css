@@ -147,6 +147,14 @@
     margin-right: -25%;
     transform: none;
   }
+
+  .review img {
+    max-width: 125%;
+    width: 125%;
+    margin-left: -12.5%;
+    margin-right: -12.5%;
+    transform: none;
+  }
 }
 
 /* Generated Images */
