@@ -14,44 +14,46 @@ const reviews = (await getCollection('reviews')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
-    <style>
-      .photo-container {
-        aspect-ratio: 6 / 7;
-      }
+    <style>     
+      @media screen and (min-width: 1024px) {  
+        .review-link {
+          box-shadow: 0 0 0 8px #ffffff, 0 0 0 10px #ffffff;
+          transition: box-shadow 0.3s linear;
+        }
 
-      .review-link {
-        box-shadow: 0 0 0 8px #ffffff, 0 0 0 10px #ffffff;
-        transition: box-shadow 0.3s linear;
-      }
+        .review-link:active, 
+        .review-link:focus,
+        .review-link:hover {
+          box-shadow: 0 0 0 8px #ffffff, 0 0 0 10px #b91c1b;
+        }
 
-      .review-link:active, 
-      .review-link:focus,
-      .review-link:hover {
-        box-shadow: 0 0 0 8px #ffffff, 0 0 0 10px #b91c1b;
-      }
+        .dark .review-link {
+          box-shadow: 0 0 0 8px #0f172a, 0 0 0 10px #0f172a;
+          transition: box-shadow 0.3s linear;
+        }
 
-      .dark .review-link {
-        box-shadow: 0 0 0 8px #0f172a, 0 0 0 10px #0f172a;
-        transition: box-shadow 0.3s linear;
-      }
+        .dark .review-link:active, 
+        .dark .review-link:focus,
+        .dark .review-link:hover {
+          box-shadow: 0 0 0 8px #0f172a, 0 0 0 10px #fda5a5;
+        } 
 
-      .dark .review-link:active, 
-      .dark .review-link:focus,
-      .dark .review-link:hover {
-        box-shadow: 0 0 0 8px #0f172a, 0 0 0 10px #fda5a5;
-      } 
-      
-      #descriptions li:not(:first-child) {
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(32px);
+        .photo-container {
+          aspect-ratio: 6 / 7;
+        }
+
+        #descriptions li:not(:first-child) {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(32px);
+        }
       }
     </style>
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<Header />
-		<main class="bg-white relative shadow z-10 xl:flex xl:items-center dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
-			<div class="max-w-screen-xl mx-auto px-4 py-4 xl:grid xl:grid-cols-2 xl:gap-8">
+		<main class="bg-white relative shadow z-10 lg:flex lg:items-center dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
+			<div class="max-w-screen-xl mx-auto px-4 py-4 lg:grid lg:grid-cols-2 lg:gap-8">
 				<div>
           <div class="sticky top-24">
             <h1>
@@ -90,9 +92,9 @@ const reviews = (await getCollection('reviews')).sort(
 
             <h2 class="text-4xl font-bold mt-16 tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100 md:flex-shrink-0">Latest Reviews</h2>
 
-            <ul class="grid grid-cols-1 grid-rows-1 items-start mt-12" id="descriptions">
-              <li class="col-start-1 row-start-1 md:flex">
-                <svg class="animate-bounce ml-24 text-slate-300 w-24 dark:text-slate-700" viewBox="0 0 800 798" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ul class="lg:grid lg:grid-cols-1 lg:grid-rows-1 lg:items-start lg:mt-12" id="descriptions">
+              <li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
+                <svg class="animate-bounce hidden ml-24 text-slate-300 w-24 dark:text-slate-700 lg:block" viewBox="0 0 800 798" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M720.272 40.0708C720.272 62.087 738.12 79.9346 760.136 79.9346C782.152 79.9346 800 62.087 800 40.0708C800 18.0546 782.152 0.206908 760.136 0.206907C738.12 0.206906 720.272 18.0546 720.272 40.0708Z" fill="currentColor"/>
                   <path d="M599.474 158.455C599.474 180.472 617.321 198.319 639.338 198.319C661.354 198.319 679.202 180.472 679.202 158.455C679.202 136.439 661.354 118.592 639.338 118.592C617.321 118.592 599.474 136.439 599.474 158.455Z" fill="currentColor"/>
                   <path d="M720.272 158.455C720.272 180.472 738.12 198.319 760.136 198.319C782.152 198.319 800 180.472 800 158.455C800 136.439 782.152 118.592 760.136 118.592C738.12 118.592 720.272 136.439 720.272 158.455Z" fill="currentColor"/>
@@ -124,16 +126,17 @@ const reviews = (await getCollection('reviews')).sort(
                 </svg>
               </li>
               {reviews.map((review) => (
-                <li class="col-start-1 row-start-1 md:flex">
+                <li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
                   <a class="review-link block duration-300 group relative isolate transition-all sm:mt-0" href={`/no-reserv-ai-tions/${review.slug}/`}>
-                    <div class="max-w-2xl mx-auto sm:gap-8 lg:max-w-screen-2xl">
+                    <div class="max-w-2xl mx-auto sm:gap-8 lg:max-w-screen-2xl sm:flex sm:items-start">
+                      <img class="mb-4 sm:max-w-[240px] sm:h-auto lg:hidden" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
                       <div>
                         <div class="flex items-center gap-x-4 text-sm dark:text-white">
                           {toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
                         </div>
                         <div class="group relative">
                           <h3 class="duration-300 font-bold my-2 text-4xl text-red-700 transition-color uppercase dark:text-red-300">
-                            <span class="absolute inset-0"></span>
+                            <span class="lg:absolute lg:inset-0"></span>
                             {review.data.title}
                           </h3>
                           <p class="duration-500 text-lg dark:text-white">{review.data.description}</p>
@@ -147,7 +150,7 @@ const reviews = (await getCollection('reviews')).sort(
           </div>
 				</div>
 				<div>
-					<ul id="images" class="mb-24">
+					<ul id="images" class="hidden mb-24 lg:block">
             <li class="photo-container overflow-hidden min-h-[70dvh]">
               <img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="h-full w-full object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n-portrait.webp" />	
             </li>
@@ -164,8 +167,9 @@ const reviews = (await getCollection('reviews')).sort(
 			</div>
 		</main>
 		<Footer />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" is:inline></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" is:inline></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" is:inline></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" is:inline></script>
     <script is:inline>
       gsap.registerPlugin(ScrollTrigger);
 
@@ -173,26 +177,30 @@ const reviews = (await getCollection('reviews')).sort(
       const list1Items = document.querySelectorAll("#descriptions li");
       const list2Items = document.querySelectorAll("#images li");
 
-      list2Items.forEach((image, index) => {
-        ScrollTrigger.create({
-            trigger: image,
-            start: "top center",
-            end: "bottom center",
-            onEnter: () => {
-                gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
-            },
-            onLeave: () => {
-                gsap.to(list1Items[index], { opacity: 0, y: -32, pointerEvents: "none", duration: 0.5 });
-            },
-            onEnterBack: () => {
-                gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
-            },
-            onLeaveBack: () => {
-                gsap.to(list1Items[index], { opacity: 0, y: 32, pointerEvents: "none", duration: 0.5 });
-            },
-            markers: true // For debugging, you can remove this in production
+      gsap.matchMedia().add("(min-width: 1000px)", function() {
+
+        list2Items.forEach((image, index) => {
+          ScrollTrigger.create({
+              trigger: image,
+              start: "top center",
+              end: "bottom center",
+              onEnter: () => {
+                  gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
+              },
+              onLeave: () => {
+                  gsap.to(list1Items[index], { opacity: 0, y: -32, pointerEvents: "none", duration: 0.5 });
+              },
+              onEnterBack: () => {
+                  gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
+              },
+              onLeaveBack: () => {
+                  gsap.to(list1Items[index], { opacity: 0, y: 32, pointerEvents: "none", duration: 0.5 });
+              },
+          });
         });
-    });
+      });
     </script>
 	</body>
 </html>
+
+
