@@ -20,7 +20,7 @@ To make it interesting, I didn't want to look at their code. I've played with si
 
 There's nothing too complicated with the HTML/CSS, but there is one thing that I couldn't figure out how to avoid. The images seem to have to be duplicated in the HTML, once for the non-scroll version and once for the scrolling version. For accessibility, I think we'd want to keep the alt text of the non-scroll versions readable and ignore the separate list. 
 
-I also use an unordered list, but you could achive this with just the images. I do it so that there's additional options for controlling the style of the images with a parent element. The Relume team decided it would change to the scrolling view at 768px, so I followed that.
+I also use an unordered list, but you could achieve this with just the images. I do it so that there's additional options for controlling the style of the images with a parent element. The Relume team decided it would change to the scrolling view at 768px, so I followed that.
 
 Once the scrolling version is active, there are a couple of small considerations: you need to apply sticky to the primary content, and you need to handle the spacing between images within the containing `li`. The `sticky` need results in an extra `div`, which is lame, but I couldn't work out a way to avoid it. The space between the images I learned as I went along, adding margin to the `li` itself will result in times when no content is displayed.
 
@@ -158,7 +158,7 @@ It could also be for things that are coded. I've been digging the [gradients on 
 
 </div>
 
-That's a wrap for this post! I'll probably try some more because I really enjoyed the learnings behidn getting the UI to work by default and the intracacies involved with getting it to work with other styles.
+That's a wrap for this post! I'll probably try some more because I really enjoyed the learnings behind getting the UI to work by default and the intracacies involved with getting it to work with other styles.
 
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
