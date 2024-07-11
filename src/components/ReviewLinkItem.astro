@@ -4,9 +4,9 @@ import toTitleCase from '../helpers/toTitleCase.js'
 const { review } = Astro.props;
 ---
 
-<li class="group m-auto max-w-xs mt-8 relative w-full md:max-w-full xl:border-t xl:pb-2 xl:pt-8">
+<li class="group m-auto max-w-xs mt-8 relative w-full md:max-w-full xl:border-t xl:mt-0 xl:pb-8 xl:pt-8">
   <figure class="md:flex md:gap-4 md:items-center lg:gap-8">
-    <img alt={review.frontmatter.heroImageAlt} class="duration-500 mb-2 transition-opacity md:mb-0 md:w-60 xl:absolute xl:right-0 xl:opacity-0 xl:pointer-events-none xl:w-[400px] xl:z-10" src={`/no-reserv-ai-tions/${review.frontmatter.heroImage}-thumb.webp`} />
+    <img alt={review.frontmatter.heroImageAlt} class="duration-500 mb-2 transition-opacity md:mb-0 md:w-60 xl:absolute xl:right-0 xl:opacity-0 xl:pointer-events-none xl:w-[400px] xl:rounded-lg xl:shadow-lg	xl:z-10" src={`/no-reserv-ai-tions/${review.frontmatter.heroImage}-thumb.webp`} />
     <figcaption class="grow">
       <span class="text-slate-500 text-sm dark:text-slate-100 xl:ml-2 xl:text-base">
         {toTitleCase(review.frontmatter.city)}, {review.frontmatter.country === 'United States' ? toTitleCase(review.frontmatter.state) : review.frontmatter.country}

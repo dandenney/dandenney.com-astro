@@ -1,8 +1,7 @@
 ---
 title: Ruby Sunshine
 pubDate: '2024-07-06'
-tags:
-  - 'american, cajun, creole'
+tags: [american, cajun, creole]
 description: 'Southern-inspired dishes and a vibrant, relaxed atmosphere'
 address: '37 Market Square, Knoxville, TN 37902-1405'
 city: knoxville

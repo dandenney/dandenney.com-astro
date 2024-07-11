@@ -15,20 +15,15 @@ const tags = [...new Set(allReviews.map((review) => review.frontmatter.tags).fla
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />
-		<main class="bg-slate-50 relative shadow z-10 xl:flex dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">  
-      <section class="max-w-screen-2xl mx-auto p-4 tags xl:flex xl:gap-8">
-        <figure class="hidden overflow-hidden xl:block xl:flex-shrink-0 xl:w-2/5">
-          <img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n-portrait.webp" />	
-        </figure>
-        <div>
-          <h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 md:flex-shrink-0">No ReservAItions Tags</h2>
-          <p class="mt-2 text-gray-600 dark:text-slate-100">Tagged reviews of food, music, and events with the help of AI</p>
-          <nav class="has-links flex flex-wrap items-start mt-8 gap-x-8 gap-y-4">
-            {tags.map((tag) => (
-              <a class="md:text-2xl" href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
-            ))}
-          </nav>
-        </div>
+		<main class="bg-slate-50 dark:bg-slate-900 relative shadow z-10 dark:text-slate-200" style="min-height: 90dvh;">
+			<section class="max-w-screen-xl mx-auto pb-24 pt-8 px-4">
+				<h2 class="border-b text-center text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:flex-shrink-0 md:text-left xl:border-0 xl:text-6xl">No ReservAItions Tags</h2>
+        <p class="mt-2 text-gray-600 dark:text-slate-100">Tagged reviews of food, music, and events with the help of AI</p>
+        <nav class="has-links flex flex-wrap items-start mt-8 gap-x-8 gap-y-4 xl:gap-x-12 xl:gap-y-8">
+          {tags.map((tag) => (
+            <a class="md:text-2xl xl:text-4xl" href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
+          ))}
+        </nav>
       </section>
     </main>
     <Footer />
