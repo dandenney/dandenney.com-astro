@@ -131,15 +131,20 @@ h1 span {
 }
 
 .fly {
+  align-items: center;
   align-self: flex-end;
-  background-color: #ff5960;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
+  background: linear-gradient(to bottom, #ff5960, #be082c);
+  border: 1px solid #980120;
+  border-radius: 1rem;
   box-shadow: none;
   color: #ffffff;
+  display: flex;
   cursor: pointer;
   font-family: inherit;
   font-size: 1rem;
+  height: 1.75rem;
+  justify-content: center;
+  width: 1.75rem;
   transition: transform 0.3s;
   outline: #443f44;
 }
@@ -148,6 +153,11 @@ h1 span {
 .fly:focus,
 .fly:hover {
   transform: scale(1.05);
+}
+
+.fly svg {
+  height: 1rem;
+  width: 1rem;
 }
 
 .scroll {
@@ -188,8 +198,8 @@ input {
 }
 
 input:checked + label {
-  background-color: #ff5960;
-  border-color: #ffffff;
+  background: linear-gradient(to bottom, #ff5960, #be082c);
+  border: 1px solid #980120;
 }
 
 svg {
@@ -287,6 +297,17 @@ svg {
   .intro img {
     width: 75%;
   }
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
 </style>

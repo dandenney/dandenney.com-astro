@@ -12,6 +12,51 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Princess Doe ////// 594",
+      Release: "07/05/2022",
+      URL: "https://truecrimegarage.com/home/blog/7008233/princess-doe-594",
+      Earliest_Date: "7/15/1982",
+      Earliest_Year: "1982",
+      Notes: "Cedar Ridge Cemetery Blairstown Township, New Jersey",
+    },
+    geometry: {
+      coordinates: [-74.981073, 40.986836],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "America's Highway Serial Killers /// 590 /// 591 /// 592 /// 593 ",
+      Release: "06/22/2022",
+      URL: "https://truecrimegarage.com/home/blog/6999043/america-s-highway-serial-killers-590-591-592-593",
+      Earliest_Date: "6/26/2003",
+      Earliest_Year: "2003",
+      Notes: "Interstate 84 and Hilgard State Park",
+    },
+    geometry: {
+      coordinates: [-118.23651196612965, 45.34289470068838],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Murder in the Neighborhood /// 588 /// 589",
+      Release: "06/14/2022",
+      URL: "https://truecrimegarage.com/home/blog/murder-in-the-neighborhood-588-589",
+      Earliest_Date: "9/6/1949",
+      Earliest_Year: "1949",
+      Notes: "32nd Street and River Road in Camden, New Jersey",
+    },
+    geometry: {
+      coordinates: [-75.086330, 39.960010],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Samuel Little /// The Killer of Women /// 3 Part Series",
       Release: "6/7/2022",
       URL:
@@ -5102,7 +5147,10 @@ function buildLocationList(data) {
       <p>Earliest date: ${prop.Earliest_Date}</p>
       <div class="actions">
         <a href="${prop.URL}">Listen</a>
-        <button class="js-fly fly">Zoom</button>
+        <button class="js-fly fly">
+          <span class="sr-only">Zoom</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><title>crosshair</title><g fill="currentColor" class="nc-icon-wrapper"><path fill="currentColor" d="M24,11h-2.051C21.479,6.283,17.717,2.521,13,2.051V0h-2v2.051C6.283,2.521,2.521,6.283,2.051,11H0v2h2.051 c0.471,4.717,4.232,8.479,8.949,8.949V24h2v-2.051c4.717-0.471,8.479-4.232,8.949-8.949H24V11z M13,19.931V18h-2v1.931 C7.388,19.477,4.523,16.612,4.069,13H6v-2H4.069C4.523,7.388,7.388,4.523,11,4.069V6h2V4.069c3.612,0.453,6.477,3.319,6.931,6.931 H18v2h1.931C19.477,16.612,16.612,19.477,13,19.931z"></path> <circle data-color="color-2" fill="currentColor" cx="12" cy="12" r="2"></circle></g></svg>
+        </button>
       </div>
     `;
 
