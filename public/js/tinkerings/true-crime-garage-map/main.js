@@ -12,6 +12,203 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Garage Refill /// JonBenét Ramsey /// 6 Part Series",
+      Release: "12/26/2022",
+      URL: "https://truecrimegarage.com/home/blog/7128583/garage-refill-jonbenet-ramsey-6-part-series",
+      Earliest_Date: "12/25/1996",
+      Earliest_Year: "1996",
+      Notes: "Home address: 755 15th St. Boulder, Co",
+    },
+    geometry: {
+      coordinates: [-105.273934, 40.001032],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Connecticut River Valley Killer /// 636 /// 637",
+      Release: "12/20/2022",
+      URL: "https://truecrimegarage.com/home/blog/7126079/the-connecticut-river-valley-killer-636-637",
+      Earliest_Date: "10/24/1978",
+      Earliest_Year: "1978",
+      Notes: "Chandler Brook Wetland Preserve in New London, New Hampshire",
+    },
+    geometry: {
+      coordinates: [-71.9487158, 43.4078519],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Leah Hickman ////// 635",
+      Release: "12/13/2022",
+      URL: "https://truecrimegarage.com/home/blog/7122453/leah-hickman-635",
+      Earliest_Date: "12/14/2007",
+      Earliest_Year: "2007",
+      Notes: "403 8th Ave, Huntington, WV 25701",
+    },
+    geometry: {
+      coordinates: [-82.4530335, 38.4133572],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Idaho College Murders ////// 634",
+      Release: "12/06/2022",
+      URL: "https://truecrimegarage.com/home/blog/7119179/idaho-college-murders-634",
+      Earliest_Date: "11/12/2022",
+      Earliest_Year: "2022",
+      Notes: "1122 King Road, Moscow, Idaho",
+    },
+    geometry: {
+      coordinates: [-117.0132753, 46.7218466],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Delphi Murders /// Probable Cause Affidavit Release /// 633",
+      Release: "12/05/2022",
+      URL: "https://truecrimegarage.com/home/blog/7118181/delphi-murders-probable-cause-affidavit-release-633",
+      Earliest_Date: "2/13/2017",
+      Earliest_Year: "2017",
+      Notes:
+        "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Murders_of_Abigail_Williams_and_Liberty_German&params=40_35_20.7_N_86_38_34.2_W_type:landmark",
+    },
+    geometry: {
+      coordinates: [-86.642833, 40.589083],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Garrett Burton ////// 632",
+      Release: "11/29/2022",
+      URL: "https://truecrimegarage.com/home/blog/7113368/garrett-burton-632",
+      Earliest_Date: "9/10/2017",
+      Earliest_Year: "2017",
+      Notes: "1900 block of Dallas Drive in Baton Rouge",
+    },
+    geometry: {
+      coordinates: [-91.1142937, 30.4674628],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Tracy Harkness /// 4 Part Series ",
+      Release: "11/16/2022",
+      URL: "https://truecrimegarage.com/home/blog/7103446/tracy-harkness-4-part-series",
+      Earliest_Date: "11/6/1992",
+      Earliest_Year: "1992",
+      Notes: "3474 Richard Ave, Grove City, OH 43123",
+    },
+    geometry: {
+      coordinates: [-83.0822446, 39.8932237],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kerrie Ann Brown /// 626 /// 627 ",
+      Release: "11/08/2022",
+      URL: "https://truecrimegarage.com/home/blog/7098193/kerrie-ann-brown-626-627",
+      Earliest_Date: "10/16/1986",
+      Earliest_Year: "1986",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-97.8794456, 55.7513887],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Delphi Murders Update ////// 625",
+      Release: "10/31/2022",
+      URL: "https://truecrimegarage.com/home/blog/7092355/delphi-murders-update-625",
+      Earliest_Date: "2/13/2017",
+      Earliest_Year: "2017",
+      Notes:
+        "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Murders_of_Abigail_Williams_and_Liberty_German&params=40_35_20.7_N_86_38_34.2_W_type:landmark",
+    },
+    geometry: {
+      coordinates: [-86.642833, 40.589083],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "American Murderer /// 623 /// 624 ",
+      Release: "10/26/2022",
+      URL: "https://truecrimegarage.com/home/blog/7088919/american-murderer-623-624",
+      Earliest_Date: "11/29/2004",
+      Earliest_Year: "2004",
+      Notes: "50th Street and East Ray Road",
+    },
+    geometry: {
+      coordinates: [-111.9837949, 33.3149648],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Kirtland Cult Killings /// 621 /// 622",
+      Release: "10/18/2022",
+      URL: "https://truecrimegarage.com/home/blog/7084009/the-kirtland-cult-killings-621-622",
+      Earliest_Date: "4/17/1989",
+      Earliest_Year: "1989",
+      Notes: "8671 Euclid-Chardon Road in Kirtland, Ohio",
+    },
+    geometry: {
+      coordinates: [-81.3369846, 41.5824747],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Garage Refill /// Boys On The Tracks /// 4 Part Series ",
+      Release: "10/11/2022",
+      URL: "https://truecrimegarage.com/home/blog/7079196/garage-refill-boys-on-the-tracks-4-part-series",
+      Earliest_Date: "8/23/1987",
+      Earliest_Year: "1987",
+      Notes: "General area of tracks near Bryant, Arkansas",
+    },
+    geometry: {
+      coordinates: [-92.508446, 34.589531],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Amy Baker /// 619 /// 620",
+      Release: "10/04/2022",
+      URL: "https://truecrimegarage.com/home/blog/7074639/amy-baker-619-620",
+      Earliest_Date: "3/29/1989",
+      Earliest_Year: "1989",
+      Notes: "Interstate 95 near Backlick Road in Springfield, Virginia",
+    },
+    geometry: {
+      coordinates: [-77.1865481, 38.7700792],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Nieko Lisi /// 617 /// 618",
       Release: "09/27/2022",
       URL: "https://truecrimegarage.com/home/blog/7069970/nieko-lisi-617-618",
