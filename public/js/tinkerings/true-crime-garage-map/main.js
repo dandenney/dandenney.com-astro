@@ -12,6 +12,187 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Nieko Lisi /// 617 /// 618",
+      Release: "09/27/2022",
+      URL: "https://truecrimegarage.com/home/blog/7069970/nieko-lisi-617-618",
+      Earliest_Date: "9/30/2011",
+      Earliest_Year: "2011",
+      Notes: "Flintlock Drive, Franklin, Tennessee",
+    },
+    geometry: {
+      coordinates: [-86.848603, 35.9300061],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Texas Monster /// 615 /// 616",
+      Release: "09/20/2022",
+      URL: "https://truecrimegarage.com/home/blog/7064778/texas-monster-615-616",
+      Earliest_Date: "8/6/1966",
+      Earliest_Year: "1966",
+      Notes: "2084 Everman Pkwy. Everman, TX 76140",
+    },
+    geometry: {
+      coordinates: [-97.292439, 32.622892],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Nevaeh Buchanan /// 613 /// 614",
+      Release: "09/13/2022",
+      URL: "https://truecrimegarage.com/home/blog/7059694/nevaeh-buchanan-613-614",
+      Earliest_Date: "5/24/2009",
+      Earliest_Year: "2009",
+      Notes: "Charlotte Arms apartment complex, located on North Macomb Street in Monroe, Michigan",
+    },
+    geometry: {
+      coordinates: [-83.3912086, 41.9280929],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Bryce Laspisa /// 611 /// 612",
+      Release: "09/06/2022",
+      URL: "https://truecrimegarage.com/home/blog/7054536/bryce-laspisa-611-612",
+      Earliest_Date: "8/30/2013",
+      Earliest_Year: "2013",
+      Notes: "Main Ramp Road, just a few hundred feet from Lake Hughes Road",
+    },
+    geometry: {
+      coordinates: [-118.596265, 34.516467],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Nancy Eagleson /// 4 Part Series /// 607-610",
+      Release: "08/23/2022",
+      URL: "https://truecrimegarage.com/home/blog/7044373/nancy-eagleson-4-part-series-607-610",
+      Earliest_Date: "11/13/1960",
+      Earliest_Year: "1960",
+      Notes: "Intersection of Flatrock Drive and E. Jackson Street in Paulding, Ohio",
+    },
+    geometry: {
+      coordinates: [-84.573386, 41.138434],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Murder in Moab /// 605 /// 606",
+      Release: "08/17/2022",
+      URL: "https://truecrimegarage.com/home/blog/7040119/murder-in-moab-605-606",
+      Earliest_Date: "8/13/2021",
+      Earliest_Year: "2021",
+      Notes: "Woody's Tavern in Moab",
+    },
+    geometry: {
+      coordinates: [-109.5530298, 38.5707874],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Short Family Murders /// 3 Part Series",
+      Release: "08/11/2022",
+      URL: "https://truecrimegarage.com/home/blog/7035657/the-short-family-murders-3-part-series",
+      Earliest_Date: "8/15/2002",
+      Earliest_Year: "2002",
+      Notes: "10820 Virginia Ave, Oak Level, VA",
+    },
+    geometry: {
+      coordinates: [-79.9395365, 36.8160741],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Hog Trail Murders /// 600 /// 601",
+      Release: "08/02/2022",
+      URL: "https://truecrimegarage.com/home/blog/7029553/the-hog-trail-murders-600-601",
+      Earliest_Date: "2/1/1994",
+      Earliest_Year: "1994",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-82.188960, 27.001270],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Donita Cutts ////// 599",
+      Release: "07/28/2022",
+      URL: "https://truecrimegarage.com/home/blog/7025573/donita-cutts-599",
+      Earliest_Date: "7/29/1978",
+      Earliest_Year: "1978",
+      Notes: "General Downtown of Old Town Alexandria, Virginia",
+    },
+    geometry: {
+      coordinates: [-77.046972, 38.805402],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Emma Compton Layne ////// 598",
+      Release: "07/28/2022",
+      URL: "https://truecrimegarage.com/home/blog/7025571/emma-compton-layne-598",
+      Earliest_Date: "6/17/2017",
+      Earliest_Year: "2017",
+      Notes: "Cody Store, 10051 Stage Coach Rd, Nathalie, VA",
+    },
+    geometry: {
+      coordinates: [-79.0975183, 36.977612],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Madman in the Woods ////// 597",
+      Release: "07/19/2022",
+      URL: "https://truecrimegarage.com/home/blog/7018216/madman-in-the-woods-597",
+      Earliest_Date: "5/25/1978",
+      Earliest_Year: "1978",
+      Notes:
+        "https://geohack.toolforge.org/geohack.php?pagename=University_of_Illinois_at_Chicago&params=41_52_18_N_87_38_57_W_type:landmark_region:US-IL",
+    },
+    geometry: {
+      coordinates: [-87.649167, 41.871667],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Evansdale Murders - Ten Years Later /// 595 /// 596",
+      Release: "07/12/2022",
+      URL: "https://truecrimegarage.com/home/blog/7013322/the-evansdale-murders-ten-years-later-595-596",
+      Earliest_Date: "7/13/2012",
+      Earliest_Year: "2012",
+      Notes: "Brovan Boulevard in Evansdale",
+    },
+    geometry: {
+      coordinates: [-92.293763, 42.475896],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Princess Doe ////// 594",
       Release: "07/05/2022",
       URL: "https://truecrimegarage.com/home/blog/7008233/princess-doe-594",

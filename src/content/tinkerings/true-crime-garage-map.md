@@ -152,7 +152,7 @@ h1 span {
 .fly:active,
 .fly:focus,
 .fly:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .fly svg {
