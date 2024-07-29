@@ -12,6 +12,51 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Stephen Spina ////// 642",
+      Release: "01/17/2023",
+      URL: "https://truecrimegarage.com/home/blog/7139268/stephen-spina-642",
+      Earliest_Date: "9/17/2007",
+      Earliest_Year: "2007",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brown's Chicken Massacre /// 640 /// 641",
+      Release: "01/10/2023",
+      URL: "https://truecrimegarage.com/home/blog/7136205/brown-s-chicken-massacre-640-641",
+      Earliest_Date: "1/8/1993",
+      Earliest_Year: "1993",
+      Notes: "168 West Northwest Highway in Palatine, Illinois",
+    },
+    geometry: {
+      coordinates: [-88.0506901, 42.1227161],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: " Amy Blumberg ////// 639",
+      Release: "01/04/2023",
+      URL: "https://truecrimegarage.com/home/blog/7132592/amy-blumberg-639",
+      Earliest_Date: "12/31/1999",
+      Earliest_Year: "1999",
+      Notes: "138 Eagle Drive, O'Fallon, IL 62269",
+    },
+    geometry: {
+      coordinates: [-89.9389728, 38.5938628],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Garage Refill /// JonBenét Ramsey /// 6 Part Series",
       Release: "12/26/2022",
       URL: "https://truecrimegarage.com/home/blog/7128583/garage-refill-jonbenet-ramsey-6-part-series",
