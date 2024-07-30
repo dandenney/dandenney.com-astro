@@ -12,6 +12,367 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Molly Miller & Colt Haynes /// 681 /// 682",
+      Release: "07/05/2023",
+      URL: "https://truecrimegarage.com/home/blog/7237107/molly-miller-colt-haynes-681-682",
+      Earliest_Date: "7/7/2013",
+      Earliest_Year: "2013",
+      Notes: "Long Hollow Road and Oswalt Road, Love County, Oklahoma",
+    },
+    geometry: {
+      coordinates: [-97.3025563, 34.0275487],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Frauke Liebs /// 679 /// 680",
+      Release: "06/28/2023",
+      URL: "https://truecrimegarage.com/home/blog/7233808/frauke-liebs-679-680",
+      Earliest_Date: "6/20/2006",
+      Earliest_Year: "2006",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [8.7551671, 51.7160175],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "DeOrr Kunz Jr. /// 677 /// 678",
+      Release: "06/20/2023",
+      URL: "https://truecrimegarage.com/home/blog/7229784/deorr-kunz-jr-677-678",
+      Earliest_Date: "7/10/2015",
+      Earliest_Year: "2015",
+      Notes: "Salmon-Challis National Forest near Leadore, Idaho",
+    },
+    geometry: {
+      coordinates: [-113.4096, 44.3961],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Heather Kullorn /// 675 /// 676",
+      Release: "06/14/2023",
+      URL: "https://truecrimegarage.com/home/blog/7226349/heather-kullorn-675-676",
+      Earliest_Date: "7/15/1999",
+      Earliest_Year: "1999",
+      Notes: "1600 block of Yale Avenue, Richmond Heights, Missouri ",
+    },
+    geometry: {
+      coordinates: [-90.3133158, 38.6246714],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Boys on the Road ////// 674",
+      Release: "06/06/2023",
+      URL: "https://truecrimegarage.com/home/blog/7222363/boys-on-the-road-674",
+      Earliest_Date: "8/20/1991",
+      Earliest_Year: "1991",
+      Notes: "County Road 750 S., approximately 1,540 feet from County Road 575 West outside of Laurel, Indiana",
+    },
+    geometry: {
+      coordinates: [-85.5672909, 40.4446679],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Garage Refill /// 500lb. Serial Killer ///",
+      Release: "05/31/2023",
+      URL: "https://truecrimegarage.com/home/blog/7218638/garage-refill-500lb-serial-killer",
+      Earliest_Date: "7/1/1994",
+      Earliest_Year: "1994",
+      Notes:
+        "Date is a range, reports only say July 1994\n\n3200 James St, Baltimore, MD 21230",
+    },
+    geometry: {
+      coordinates: [-76.665709, 39.259364],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Tionda & Diamond Bradley  /// 672 /// 673 ",
+      Release: "05/24/2023",
+      URL: "https://truecrimegarage.com/home/blog/7214889/tionda-diamond-bradley-672-673",
+      Earliest_Date: "7/6/2001",
+      Earliest_Year: "2001",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-87.6108605, 41.8312262],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Lynda Moore /// 670 /// 671",
+      Release: "05/17/2023",
+      URL: "https://truecrimegarage.com/home/blog/7210679/lynda-moore-670-671",
+      Earliest_Date: "4/15/1986",
+      Earliest_Year: "1986",
+      Notes: "Route 121 outside of the Village of Saxtons River",
+    },
+    geometry: {
+      coordinates: [-72.5393476, 43.1345729],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Bible & Freeman Kidnapping and Murders ////// 669",
+      Release: "05/09/2023",
+      URL: "https://truecrimegarage.com/home/blog/7205957/bible-freeman-kidnapping-and-murders-669",
+      Earliest_Date: "12/29/1999",
+      Earliest_Year: "1999",
+      Notes: "7856 S. 4390 Road, Welch, OK",
+    },
+    geometry: {
+      coordinates: [-95.1823182, 36.9020833],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Serial Offender /// 667 /// 668",
+      Release: "05/03/2023",
+      URL: "https://truecrimegarage.com/home/blog/7202073/serial-offender-667-668",
+      Earliest_Date: "7/13/1981",
+      Earliest_Year: "1981",
+      Notes: "Sligo Road North Yarmouth, ME 04097",
+    },
+    geometry: {
+      coordinates: [-70.2189909, 43.8282139],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Rhonda Knutson /// 665 /// 666",
+      Release: "04/26/2023",
+      URL: "https://truecrimegarage.com/home/blog/7197240/rhonda-knutson-665-666",
+      Earliest_Date: "9/7/1992",
+      Earliest_Year: "1992",
+      Notes: "Phillips 66 convenience store, Williamstown, Iowa",
+    },
+    geometry: {
+      coordinates: [-122.8209606, 47.0346554],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Israel's Son  /// 663 /// 664",
+      Release: "04/19/2023",
+      URL: "https://truecrimegarage.com/home/blog/7192898/israel-s-son-663-664",
+      Earliest_Date: "8/11/1995",
+      Earliest_Year: "1995",
+      Notes: "178 East Mox Chehalis Road, Mccleary, WA 98557",
+    },
+    geometry: {
+      coordinates: [-123.2483315, 47.0456424],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Little Rock Slasher /// 661 /// 662",
+      Release: "04/11/2023",
+      URL: "https://truecrimegarage.com/home/blog/7187940/the-little-rock-slasher-661-662",
+      Earliest_Date: "8/24/2020",
+      Earliest_Year: "2020",
+      Notes: "2200 S. Gaines Street in Little Rock, Arkansas",
+    },
+    geometry: {
+      coordinates: [-92.284041, 34.727603],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Cleveland MetroParks Murders ////// 660",
+      Release: "04/06/2023",
+      URL: "https://truecrimegarage.com/home/blog/7185056/cleveland-metroparks-murders-660",
+      Earliest_Date: "6/4/2019",
+      Earliest_Year: "2019",
+      Notes: "Rocky River Reservation in Cleveland MetroParks",
+    },
+    geometry: {
+      coordinates: [-81.883598, 41.408644],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Lemke Murders /// 658 /// 659",
+      Release: "03/28/2023",
+      URL: "https://truecrimegarage.com/home/blog/7180151/the-lemke-murders-658-659",
+      Earliest_Date: "6/16/2020",
+      Earliest_Year: "2020",
+      Notes: "County Highway A, west of Fort Atkinson, Wisconsin",
+    },
+    geometry: {
+      coordinates: [-89.4569266, 42.8962035],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "No One Heard a Thing ////// 657",
+      Release: "03/21/2023",
+      URL: "https://truecrimegarage.com/home/blog/7176108/no-one-heard-a-thing-657-7aafe208-898a-4d5e-a2da-eeb4f1b4db88",
+      Earliest_Date: "1/31/2019",
+      Earliest_Year: "2019",
+      Notes: "Laterra Condominiums World Golf Village in St. Augustine, Florida",
+    },
+    geometry: {
+      coordinates: [-81.514647, 29.965348],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Screams for Help /// 655 /// 656",
+      Release: "03/14/2023",
+      URL: "https://truecrimegarage.com/home/blog/7171587/screams-for-help-655-656",
+      Earliest_Date: "9/2/2010",
+      Earliest_Year: "2010",
+      Notes: "295 Lakeshore Dr Saint Augustine, FL 32095",
+    },
+    geometry: {
+      coordinates: [-81.3684358, 29.99332],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Barbie Doll Killer /// 653 /// 654",
+      Release: "03/08/2023",
+      URL: "https://truecrimegarage.com/home/blog/7167497/the-barbie-doll-killer-653-654",
+      Earliest_Date: "8/13/1995",
+      Earliest_Year: "1995",
+      Notes: "616 W. Snow Queen Place, Salt Lake City, Utah",
+    },
+    geometry: {
+      coordinates: [-111.9383157, 40.7334967],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Denise Pflum /// 651 /// 652",
+      Release: "02/28/2023",
+      URL: "https://truecrimegarage.com/home/blog/7162613/denise-pflum-651-652",
+      Earliest_Date: "3/28/1986",
+      Earliest_Year: "1986",
+      Notes: "W. Fielding Road and North County Road 650 West, in Glenwood, Indiana",
+    },
+    geometry: {
+      coordinates: [-85.2643587, 39.6202504],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Beau Mann ////// 650 ",
+      Release: "02/21/2023",
+      URL: "https://truecrimegarage.com/home/blog/7158204/beau-mann-650-2d9427ba-6c71-47b6-93a0-9233f7afc362",
+      Earliest_Date: "11/30/2021",
+      Earliest_Year: "2021",
+      Notes: "7-Eleven on the 11000 block of Ventura Boulevard in Studio City",
+    },
+    geometry: {
+      coordinates: [-118.3750833, 34.1408926],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Tell-Tale Heart /// The Crimes of Charlie Brandt /// 648 /// 649",
+      Release: "02/14/2023",
+      URL: "https://truecrimegarage.com/home/blog/7153982/the-tell-tale-heart-the-crimes-of-charlie-brandt-648-649",
+      Earliest_Date: "1/3/1971",
+      Earliest_Year: "1971",
+      Notes: "6208 Stony Brook Drive, fort wayne, indiana",
+    },
+    geometry: {
+      coordinates: [-85.0786494, 41.1377776],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Gatha Bowman /// 646 /// 647",
+      Release: "02/07/2023",
+      URL: "https://truecrimegarage.com/home/blog/7150240/gatha-bowman-646-647",
+      Earliest_Date: "2/16/1993",
+      Earliest_Year: "1993",
+      Notes: "Dunham Road, south of State Route 37E.",
+    },
+    geometry: {
+      coordinates: [-83.040823, 40.2647966],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Missing: Marvin Clark ////// 645",
+      Release: "01/31/2023",
+      URL: "https://truecrimegarage.com/home/blog/7146664/missing-marvin-clark-645",
+      Earliest_Date: "10/30/1926",
+      Earliest_Year: "1926",
+      Notes: "bus terminal on Southwest Salmon Street in downtown Portland,1750 SW SALMON ST PORTLAND, OR 97205",
+    },
+    geometry: {
+      coordinates: [-122.6942945, 45.5191852],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Natalie Bollinger /// 643 /// 644",
+      Release: "01/24/2023",
+      URL: "https://truecrimegarage.com/home/blog/7142951/natalie-bollinger-643-644",
+      Earliest_Date: "11/28/2017",
+      Earliest_Year: "2017",
+      Notes: "11600 block of Riverdale Road, Broomfield, Colorado",
+    },
+    geometry: {
+      coordinates: [-104.9134023, 39.9035178],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Stephen Spina ////// 642",
       Release: "01/17/2023",
       URL: "https://truecrimegarage.com/home/blog/7139268/stephen-spina-642",
