@@ -12,6 +12,174 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "The Bedside Murders /// Episodes 773-774",
+      Release: "07/17/2024",
+      URL: "https://truecrimegarage.com/home/blog/7434844/the-bedside-murders-episodes-773-774",
+      Earliest_Date: "10/14/1968",
+      Earliest_Year: "1968",
+      Notes: "US 101 in Ukiah, CA",
+    },
+    geometry: {
+      coordinates: [-123.193988, 39.122992],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Twin Cities Weepy Killer //////",
+      Release: "07/09/2024",
+      URL: "https://truecrimegarage.com/home/blog/7431077/the-twin-cities-weepy-killer",
+      Earliest_Date: "12/31/1980",
+      Earliest_Year: "1980",
+      Notes: "Pierce Butler Road and Syndicate St in St. Paul",
+    },
+    geometry: {
+      coordinates: [-93.1560268, 44.9676614],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brian Shaffer Interview ////// 770",
+      Release: "07/02/2024",
+      URL: "https://truecrimegarage.com/home/blog/7427192/brian-shaffer-interview-770",
+      Earliest_Date: "4/1/2006",
+      Earliest_Year: "2006",
+      Notes:
+        "1546 N High St, Columbus, OH 43201, Ugly Tuna Saloon near Ohio State University",
+    },
+    geometry: {
+      coordinates: [-83.00658, 39.9938],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Robert Pickton /// Episodes: 768-769",
+      Release: "06/25/2024",
+      URL: "https://truecrimegarage.com/home/blog/7423298/robert-pickton-episodes-768-769",
+      Earliest_Date: "8/22/2001",
+      Earliest_Year: "2001",
+      Notes: "953 Dominion Avenue in Port Coquitlam",
+    },
+    geometry: {
+      coordinates: [-122.7461142, 49.2610622],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "A Murder so Cold  //////  767",
+      Release: "06/18/2024",
+      URL: "https://truecrimegarage.com/home/blog/7419622/a-murder-so-cold-767",
+      Earliest_Date: "1/21/1994",
+      Earliest_Year: "1994",
+      Notes: "276 Main St, South Shore, KY 41175",
+    },
+    geometry: {
+      coordinates: [-82.9672985, 38.7194638],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Cabins by the Lake //////",
+      Release: "06/13/2024",
+      URL: "https://truecrimegarage.com/home/blog/7416862/cabins-by-the-lake",
+      Earliest_Date: "6/15/1974",
+      Earliest_Year: "1974",
+      Notes: "Eagle Lake, just outside of Monticello, Minnesota",
+    },
+    geometry: {
+      coordinates: [-93.903965, 45.286159],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Crystal Bradshaw ////// 764",
+      Release: "06/04/2024",
+      URL: "https://truecrimegarage.com/home/blog/7412467/crystal-bradshaw-764",
+      Earliest_Date: "6/3/2007",
+      Earliest_Year: "2007",
+      Notes: "107 Northbrook Street in Boiling Springs, South Carolina",
+    },
+    geometry: {
+      coordinates: [-81.9631109, 35.014366],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "John O'Keefe /// Episodes 762-763",
+      Release: "05/28/2024",
+      URL: "https://truecrimegarage.com/home/blog/7408616/john-o-keefe-episodes-762-763",
+      Earliest_Date: "1/29/2022",
+      Earliest_Year: "2022",
+      Notes: "34 Fairview Road, Canton, MA",
+    },
+    geometry: {
+      coordinates: [-71.1563618, 42.1743046],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Katie Janness /// Episodes: 760-761",
+      Release: "05/22/2024",
+      URL: "https://truecrimegarage.com/home/blog/7405289/katie-janness-episodes-760-761",
+      Earliest_Date: "7/28/2021",
+      Earliest_Year: "2021",
+      Notes: " 10th Street and Charles Allen Drive in Atlanta, Georgia",
+    },
+    geometry: {
+      coordinates: [-84.3753749, 33.781773],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "West Memphis 3 ////// Discussion ",
+      Release: "05/22/2024",
+      URL: "https://truecrimegarage.com/home/blog/7405287/west-memphis-3-discussion",
+      Earliest_Date: "5/5/1993",
+      Earliest_Year: "1993",
+      Notes: "Estimated area based on static maps",
+    },
+    geometry: {
+      coordinates: [-90.171837, 35.161179],
+      type: "Point",
+    },
+    id: "19b09bd6fa5c69cfe61102ceadd4f65a",
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "West Memphis 3 /// A Harvest of Innocence ",
+      Release: "05/07/2024",
+      URL: "https://truecrimegarage.com/home/blog/7396960/west-memphis-3-a-harvest-of-innocence",
+      Earliest_Date: "5/5/1993",
+      Earliest_Year: "1993",
+      Notes: "Estimated area based on static maps",
+    },
+    geometry: {
+      coordinates: [-90.171837, 35.161179],
+      type: "Point",
+    },
+    id: "19b09bd6fa5c69cfe61102ceadd4f65a",
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "The Collector & the Fugitive /// 754 /// 755",
       Release: "04/30/2024",
       URL: "https://truecrimegarage.com/home/blog/7392691/the-collector-the-fugitive-754-755",
