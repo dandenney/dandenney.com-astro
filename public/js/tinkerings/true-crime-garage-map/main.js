@@ -12,6 +12,607 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "The Collector & the Fugitive /// 754 /// 755",
+      Release: "04/30/2024",
+      URL: "https://truecrimegarage.com/home/blog/7392691/the-collector-the-fugitive-754-755",
+      Earliest_Date: "1/1/1983",
+      Earliest_Year: "1983",
+      Notes: "19th St in San Francisco, CA",
+    },
+    geometry: {
+      coordinates: [-122.4193672, 37.7603881],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kyle Byrtus ////// 753 ",
+      Release: "04/23/2024",
+      URL: "https://truecrimegarage.com/home/blog/7388422/kyle-byrtus-753",
+      Earliest_Date: "8/15/2013",
+      Earliest_Year: "2013",
+      Notes: "Leah Court & Meadow Road, Lehigh Acres, Florida",
+    },
+    geometry: {
+      coordinates: [-81.6275309, 26.534875],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Who Killed Jill Dando /// 751 /// 752",
+      Release: "04/16/2024",
+      URL: "https://truecrimegarage.com/home/blog/7384234/who-killed-jill-dando-751-752",
+      Earliest_Date: "4/26/1999",
+      Earliest_Year: "1999",
+      Notes: "29 Gowan Avenue, Fulham, London, England",
+    },
+    geometry: {
+      coordinates: [-0.21374, 51.4766275],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Florida Vampire /// 749 /// 750",
+      Release: "04/10/2024",
+      URL: "https://truecrimegarage.com/home/blog/7380616/florida-vampire-749-750",
+      Earliest_Date: "11/22/1985",
+      Earliest_Year: "1985",
+      Notes: "General Malabar, can't find details",
+    },
+    geometry: {
+      coordinates: [-80.7346719, 27.9906482],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Murder at N.A.S. Norfolk /// Episodes 747-748",
+      Release: "04/03/2024",
+      URL: "https://truecrimegarage.com/home/blog/7376463/murder-at-n-a-s-norfolk-episodes-747-748",
+      Earliest_Date: "2/6/1983",
+      Earliest_Year: "1983",
+      Notes: "N.A.S. Norfolk",
+    },
+    geometry: {
+      coordinates: [-76.289063, 36.931615],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kane Coronado  //////  746",
+      Release: "03/26/2024",
+      URL: "https://truecrimegarage.com/home/blog/7373067/kane-coronado-746",
+      Earliest_Date: "11/1/2022",
+      Earliest_Year: "2022",
+      Notes: "Indian Mounds Drive in Wyoming, Michigan",
+    },
+    geometry: {
+      coordinates: [-85.7450846, 42.9297971],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Sheldon Johnson ////// 745",
+      Release: "03/19/2024",
+      URL: "https://truecrimegarage.com/home/blog/7369293/sheldon-johnson-745",
+      Earliest_Date: "3/5/2024",
+      Earliest_Year: "2024",
+      Notes: "979 Summit Ave",
+    },
+    geometry: {
+      coordinates: [-73.9333028, 40.8325056],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Apex Predator /// 743 /// 744",
+      Release: "03/13/2024",
+      URL: "https://truecrimegarage.com/home/blog/7366408/apex-predator-743-744-3001795e-9b6a-4fd8-a910-72cd2764f319",
+      Earliest_Date: "9/19/1987",
+      Earliest_Year: "1987",
+      Notes: "Ragged Island Wildlife Refuge",
+    },
+    geometry: {
+      coordinates: [-76.527287, 36.9582597],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Rashawn Brazell /// 741 /// 742",
+      Release: "03/06/2024",
+      URL: "https://truecrimegarage.com/home/blog/7362591/rashawn-brazell-741-742",
+      Earliest_Date: "2/14/2005",
+      Earliest_Year: "2005",
+      Notes: "Gates Avenue subway station, 1348 Broadway in the Bedford-Stuyvesant",
+    },
+    geometry: {
+      coordinates: [-73.9277067, 40.6896949],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Sleep in Peace /// 739 /// 740",
+      Release: "02/28/2024",
+      URL: "https://truecrimegarage.com/home/blog/7358782/sleep-in-peace-739-740",
+      Earliest_Date: "6/9/1993",
+      Earliest_Year: "1993",
+      Notes: "East Gordon Street in Allentown",
+    },
+    geometry: {
+      coordinates: [-75.4428179, 40.616078],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Bill Comeans ////// 137",
+      Release: "02/22/2024",
+      URL: "https://truecrimegarage.com/home/blog/7355347/bill-comeans-137-56538277-a795-4971-bb99-6d17ecdb1197",
+      Earliest_Date: "1/7/1980",
+      Earliest_Year: "1980",
+      Notes: "Buena Vista Ave, Columbus, OH 43212",
+    },
+    geometry: {
+      coordinates: [-83.137555, 39.962516],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Starved Rock Murders /// 3 Part Series",
+      Release: "02/14/2024",
+      URL: "https://truecrimegarage.com/home/blog/7351070/the-starved-rock-murders-3-part-series",
+      Earliest_Date: "3/14/1960",
+      Earliest_Year: "1960",
+      Notes: "St. Louis Canyon, near Utica, Illinois",
+    },
+    geometry: {
+      coordinates: [-89.0201028, 41.3205889],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Ashley Ouellette ////// 735",
+      Release: "02/06/2024",
+      URL: "https://truecrimegarage.com/home/blog/7346864/ashley-ouellette-735",
+      Earliest_Date: "2/9/1999",
+      Earliest_Year: "1999",
+      Notes: "57 James St., Saco, Maine",
+    },
+    geometry: {
+      coordinates: [-70.4401505, 43.4980507],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kyla Bobo ////// 734",
+      Release: "01/30/2024",
+      URL: "https://truecrimegarage.com/home/blog/7342795/kyla-bobo-734",
+      Earliest_Date: "1/30/2022",
+      Earliest_Year: "2022",
+      Notes: "Chula Vista area of Pell City, Alabama",
+    },
+    geometry: {
+      coordinates: [-86.3769464, 33.5956581],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brittany Phillips /// 732 /// 733",
+      Release: "01/23/2024",
+      URL: "https://truecrimegarage.com/home/blog/7338796/brittany-phillips-732-733",
+      Earliest_Date: "9/27/2004",
+      Earliest_Year: "2004",
+      Notes: "61st and Mingo, Tulsa, Oklahoma",
+    },
+    geometry: {
+      coordinates: [-95.8711271, 36.075415],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brandy Hall /// 3 Part Series ",
+      Release: "01/17/2024",
+      URL: "https://truecrimegarage.com/home/blog/7335393/brandy-hall-3-part-series",
+      Earliest_Date: "8/17/2006",
+      Earliest_Year: "2006",
+      Notes: "Malabar Volunteer Fire Station",
+    },
+    geometry: {
+      coordinates: [-80.5871677, 27.9994251],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Sharif Rahman ////// 728",
+      Release: "01/09/2024",
+      URL: "https://truecrimegarage.com/home/blog/7331115/sharif-rahman-728",
+      Earliest_Date: "8/17/2023",
+      Earliest_Year: "2023",
+      Notes: "994 2nd Ave E, Owen Sound, ON N4K 2H6, Canada",
+    },
+    geometry: {
+      coordinates: [-80.9478052, 44.5675676],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Delphi Murders /// Leaks & Deception",
+      Release: "01/02/2024",
+      URL: "https://truecrimegarage.com/home/blog/7327150/delphi-murders-leaks-deception",
+      Earliest_Date: "2/13/2017",
+      Earliest_Year: "2017",
+      Notes:
+        "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Murders_of_Abigail_Williams_and_Liberty_German&params=40_35_20.7_N_86_38_34.2_W_type:landmark",
+    },
+    geometry: {
+      coordinates: [-86.642833, 40.589083],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "JonBenet: Poems & Pornography /// 3 Part Series ",
+      Release: "12/19/2023",
+      URL: "https://truecrimegarage.com/home/blog/7321554/jonbenet-poems-pornography-3-part-series",
+      Earliest_Date: "12/25/1996",
+      Earliest_Year: "1996",
+      Notes: "Home address: 755 15th St. Boulder, Co",
+    },
+    geometry: {
+      coordinates: [-105.273934, 40.001032],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Jonbenet: Presumed Guilty ////// 722",
+      Release: "12/13/2023",
+      URL: "https://truecrimegarage.com/home/blog/7318645/jonbenet-presumed-guilty-722",
+      Earliest_Date: "12/25/1996",
+      Earliest_Year: "1996",
+      Notes: "Home address: 755 15th St. Boulder, Co",
+    },
+    geometry: {
+      coordinates: [-105.273934, 40.001032],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "JonBenet: I Killed Her /// 720 /// 721",
+      Release: "12/05/2023",
+      URL: "https://truecrimegarage.com/home/blog/7315047/jonbenet-i-killed-her-720-721",
+      Earliest_Date: "12/25/1996",
+      Earliest_Year: "1996",
+      Notes: "Home address: 755 15th St. Boulder, Co",
+    },
+    geometry: {
+      coordinates: [-105.273934, 40.001032],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "JonBenet: The Master Detective /// 718 /// 719",
+      Release: "11/28/2023",
+      URL: "https://truecrimegarage.com/home/blog/7310649/jonbenet-the-master-detective-718-719",
+      Earliest_Date: "12/25/1996",
+      Earliest_Year: "1996",
+      Notes: "Home address: 755 15th St. Boulder, Co",
+    },
+    geometry: {
+      coordinates: [-105.273934, 40.001032],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Abby & Jamie ////// 717",
+      Release: "11/21/2023",
+      URL: "https://truecrimegarage.com/home/blog/7307403/abby-jamie-717",
+      Earliest_Date: "9/25/1994",
+      Earliest_Year: "1994",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kierra Coles /// 715 /// 716",
+      Release: "11/15/2023",
+      URL: "https://truecrimegarage.com/home/blog/7304131/kierra-coles-715-716",
+      Earliest_Date: "10/2/2018",
+      Earliest_Year: "2018",
+      Notes: "8100 block of South Vernon Avenue, Chicago, Illinois",
+    },
+    geometry: {
+      coordinates: [-87.6165527, 41.7472744],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Simone Ridinger /// 713 /// 714",
+      Release: "11/07/2023",
+      URL: "https://truecrimegarage.com/home/blog/7300370/simone-ridinger-713-714",
+      Earliest_Date: "9/2/1977",
+      Earliest_Year: "1977",
+      Notes: "9 South Main Street, in Natick, Massachusetts",
+    },
+    geometry: {
+      coordinates: [-71.3506395, 42.2827335],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Hendricks Family Murders /// 711 /// 712",
+      Release: "11/01/2023",
+      URL: "https://truecrimegarage.com/home/blog/7297144/the-hendricks-family-murders-711-712",
+      Earliest_Date: "11/7/1983",
+      Earliest_Year: "1983",
+      Notes: "313 Carl Drive, Bloomington, Illinois",
+    },
+    geometry: {
+      coordinates: [-88.9426333, 40.4743775],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Rachel Good ////// 709",
+      Release: "10/24/2023",
+      URL: "https://truecrimegarage.com/home/blog/7292957/rachel-good-709",
+      Earliest_Date: "10/18/2003",
+      Earliest_Year: "2003",
+      Notes: "Elkton Volunteer Fire Department",
+    },
+    geometry: {
+      coordinates: [-78.6265546, 38.4087726],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Longacre Lane /// 4 Part Series",
+      Release: "10/10/2023",
+      URL: "https://truecrimegarage.com/home/blog/7285901/longacre-lane-4-part-series",
+      Earliest_Date: "1/30/2011",
+      Earliest_Year: "2011",
+      Notes: "2161 Longacre Lane in Holland, Ohio",
+    },
+    geometry: {
+      coordinates: [-83.7058407, 41.6012434],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Mystery at Mile Marker 45 /// 704 /// 705",
+      Release: "10/04/2023",
+      URL: "https://truecrimegarage.com/home/blog/7282658/mystery-at-mile-marker-45-704-705",
+      Earliest_Date: "7/12/2015",
+      Earliest_Year: "2015",
+      Notes: "Mile marker 45",
+    },
+    geometry: {
+      coordinates: [-74.600720, 39.493405],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Susan Taraskiewicz /// 702 /// 703",
+      Release: "09/26/2023",
+      URL: "https://truecrimegarage.com/home/blog/7279125/susan-taraskiewicz-702-703",
+      Earliest_Date: "9/13/1992",
+      Earliest_Year: "1992",
+      Notes: "281 Lee Burbank Highway, Revere, MA",
+    },
+    geometry: {
+      coordinates: [-71.0089781, 42.4020245],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Rachel Morin /// 700 /// 701",
+      Release: "09/20/2023",
+      URL: "https://truecrimegarage.com/home/blog/7276005/rachel-morin-700-701",
+      Earliest_Date: "8/5/2023",
+      Earliest_Year: "2023",
+      Notes: "Ma & Pa Trail in Bel Air, Maryland",
+    },
+    geometry: {
+      coordinates: [-76.358388, 39.538901],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Charlotte Fimiano /// 698 /// 699 ",
+      Release: "09/12/2023",
+      URL: "https://truecrimegarage.com/home/blog/7272372/charlotte-fimiano-698-699",
+      Earliest_Date: "9/12/1997",
+      Earliest_Year: "1997",
+      Notes: "2147 Chelsea Ln, Hellertown, PA 18055",
+    },
+    geometry: {
+      coordinates: [-75.3337988, 40.5933405],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Hae Min Lee /// 696 /// 697",
+      Release: "09/06/2023",
+      URL: "https://truecrimegarage.com/home/blog/7269213/hae-min-lee-696-697",
+      Earliest_Date: "1/13/1999",
+      Earliest_Year: "1999",
+      Notes: "Woodlawn High School, Baltimore County, Maryland",
+    },
+    geometry: {
+      coordinates: [-76.7363369, 39.3154495],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Back to School Killer /// 694 /// 695",
+      Release: "08/30/2023",
+      URL: "https://truecrimegarage.com/home/blog/7265951/the-back-to-school-killer",
+      Earliest_Date: "10/17/2009",
+      Earliest_Year: "2009",
+      Notes: "John Paul Jones Arena, Charlottesville, VA",
+    },
+    geometry: {
+      coordinates: [-78.5093332, 38.0459528],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Garage Refill /// Lane Bryant Shooting ",
+      Release: "08/23/2023",
+      URL: "https://truecrimegarage.com/home/blog/7261815/garage-refill-lane-bryant-shooting",
+      Earliest_Date: "2/2/2008",
+      Earliest_Year: "2008",
+      Notes: "7298 W 191st St, Tinley Park, IL 60487",
+    },
+    geometry: {
+      coordinates: [-87.794211, 41.54396],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Boardman Murders Update /// 692 /// 693",
+      Release: "08/16/2023",
+      URL: "https://truecrimegarage.com/home/blog/7257628/the-boardman-murders-update-692-693",
+      Earliest_Date: "3/31/1972",
+      Earliest_Year: "1972",
+      Notes: "61 McClurg RdYoungstown, OH 44512",
+    },
+    geometry: {
+      coordinates: [-80.65752, 40.99491],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Hammer Man /// 690 /// 691",
+      Release: "08/09/2023",
+      URL: "https://truecrimegarage.com/home/blog/7254466/the-hammer-man-690-691",
+      Earliest_Date: "5/1/1973",
+      Earliest_Year: "1973",
+      Notes: "General Seattle, can't find any details",
+    },
+    geometry: {
+      coordinates: [-122.651604, 47.6082925],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Grant Solomon /// 688 /// 689",
+      Release: "08/01/2023",
+      URL: "https://truecrimegarage.com/home/blog/7250695/grant-solomon-688-689",
+      Earliest_Date: "7/20/2020",
+      Earliest_Year: "2020",
+      Notes: "1357 South Water Avenue, Gallatin, Tennessee, 37066",
+    },
+    geometry: {
+      coordinates: [-86.4410122, 36.3555404],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Amber Spradlin ////// 687",
+      Release: "07/25/2023",
+      URL: "https://truecrimegarage.com/home/blog/7247243/amber-spradlin-687",
+      Earliest_Date: "6/18/2023",
+      Earliest_Year: "2023",
+      Notes: "659 Arkansas Creek Rd Martin, KY 41649",
+    },
+    geometry: {
+      coordinates: [-82.7345432, 37.5709488],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Rob Mohney /// 685 /// 686",
+      Release: "07/18/2023",
+      URL: "https://truecrimegarage.com/home/blog/7243911/rob-mohney-685-686",
+      Earliest_Date: "7/18/1996",
+      Earliest_Year: "1996",
+      Notes: "Central College Road in Westerville, Ohio",
+    },
+    geometry: {
+      coordinates: [-82.8287883, 40.0987679],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Molly Miller & Colt Haynes /// 681 /// 682",
       Release: "07/05/2023",
       URL: "https://truecrimegarage.com/home/blog/7237107/molly-miller-colt-haynes-681-682",
