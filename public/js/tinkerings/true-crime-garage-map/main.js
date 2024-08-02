@@ -12,6 +12,36 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Brandon Cartellone ////// 777",
+      Release: "07/30/2024",
+      URL: "https://truecrimegarage.com/home/blog/7442570/brandon-cartellone-777",
+      Earliest_Date: "7/26/2011",
+      Earliest_Year: "2011",
+      Notes: "2173 Professor Avenue, Cleveland, Ohio",
+    },
+    geometry: {
+      coordinates: [-81.6897442, 41.48239],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Phoenix Canal Killer //////",
+      Release: "07/23/2024",
+      URL: "https://truecrimegarage.com/home/blog/7438653/phoenix-canal-killer",
+      Earliest_Date: "11/8/1992",
+      Earliest_Year: "1992",
+      Notes: "Cactus Road and Interstate 17, Phoenix, Arizona",
+    },
+    geometry: {
+      coordinates: [-112.119035, 33.596507],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "The Bedside Murders /// Episodes 773-774",
       Release: "07/17/2024",
       URL: "https://truecrimegarage.com/home/blog/7434844/the-bedside-murders-episodes-773-774",
@@ -6697,7 +6727,7 @@ function buildLocationList(data) {
     link.innerHTML = `
       <h3>${prop.Title}</h3>
       <p>Release date: ${prop.Release}</p>
-      <p>Earliest date: ${prop.Earliest_Date}</p>
+      <p>Earliest event: ${prop.Earliest_Date}</p>
       <div class="actions">
         <a href="${prop.URL}">Listen</a>
         <button class="js-fly fly">
@@ -6744,7 +6774,7 @@ function createPopUp(currentFeature) {
     .setHTML(
       `<h3>${currentFeature.properties.Title}</h3>
       <p>Release date: ${currentFeature.properties.Release}</p>
-      <p>Earliest date: ${currentFeature.properties.Earliest_Date}</p>
+      <p>Earliest event: ${currentFeature.properties.Earliest_Date}</p>
       <a href="${currentFeature.properties.URL}">Listen</a>
     `
     )
