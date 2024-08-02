@@ -12,7 +12,6 @@ export async function getLinks() {
       },
     },
   });
-  console.log(links.results[0].properties.Title.title[0].plain_text);
   const results = links.results.map((link) => {
     return {
       created: new Date(link.created_time),

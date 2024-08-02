@@ -20,6 +20,13 @@ const reviews = (await getCollection('reviews')).sort(
 ).slice(0, 2);
 
 const links = await getLinks();
+
+const getMonthName = () => {
+  const date = new Date();
+  return date.toLocaleString('default', { month: 'long' });
+};
+
+const monthName = getMonthName();
 ---
 
 <!doctype html>
@@ -111,17 +118,22 @@ const links = await getLinks();
 								I'm starting to stash everything in a <a href="/library">"library"</a> and archive them by month.
 							</p>
 						</div>
-						<ul class="has-links col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
-							{links.map((link) => (
-								<li>
-									<a class="text-base leading-7" href={link.url}>
-										{link.title}
-									</a>
-									{link.notes && (
-										<span class="block text-sm dark:text-slate-300">{link.notes}</span>
-									)}
-								</li>
-							))}
+							{links.length > 0 ? (
+                <ul class="has-links col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+                  {links.map((link) => (
+                    <li>
+                      <a class="text-base leading-7" href={link.url}>
+                        {link.title}
+                      </a>
+                      {link.notes && (
+                        <span class="block text-sm dark:text-slate-300">{link.notes}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p class="flex justify-end items-center text-lg font-semibold leading-8 tracking-tight text-slate-400">No links yet in {monthName}</p>
+              )}
 						</ul>
 					</div>
 				</div>
