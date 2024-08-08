@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "The Dartmouth Murders",
+      Release: "08/06/2024",
+      URL: "https://truecrimegarage.com/home/blog/7445549/the-dartmouth-murders",
+      Earliest_Date: "1/27/2001",
+      Earliest_Year: "2001",
+      Notes: "115 Trescott Road, Etna, New Hampshire",
+    },
+    geometry: {
+      coordinates: [-72.2291529, 43.697289],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Brandon Cartellone ////// 777",
       Release: "07/30/2024",
       URL: "https://truecrimegarage.com/home/blog/7442570/brandon-cartellone-777",
