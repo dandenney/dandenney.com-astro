@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Shannon Paulk ////// 780",
+      Release: "08/14/2024",
+      URL: "https://truecrimegarage.com/home/blog/7448852/shannon-paulk-780",
+      Earliest_Date: "8/16/2001",
+      Earliest_Year: "2001",
+      Notes: "Candlestick Park Mobile Home Community in Prattville, Alabama 1691 S Memorial Dr, Prattville, AL 36067",
+    },
+    geometry: {
+      coordinates: [-86.425622, 32.43446],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "The Dartmouth Murders",
       Release: "08/06/2024",
       URL: "https://truecrimegarage.com/home/blog/7445549/the-dartmouth-murders",
