@@ -12,6 +12,51 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "The Cell Phone Murders //////",
+      Release: "09/03/2024",
+      URL: "https://truecrimegarage.com/home/blog/7457370/the-cell-phone-murders",
+      Earliest_Date: "9/25/1996",
+      Earliest_Year: "1996",
+      Notes: "University Drive in Huntsville, Alabama",
+    },
+    geometry: {
+      coordinates: [-86.666558, 34.741421],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kyle Fleischmann /// Missing /// Episodes 782-783",
+      Release: "08/27/2024",
+      URL: "https://truecrimegarage.com/home/blog/7454380/kyle-fleischmann-missing-episodes-782-783",
+      Earliest_Date: "11/9/2007",
+      Earliest_Year: "2007",
+      Notes: "Buckhead Saloon: Located at Fifth and College streets in uptown Charlotte, NC",
+    },
+    geometry: {
+      coordinates: [-80.8431182, 35.2269719],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "After Midnight ////// Katara Johnson",
+      Release: "08/20/2024",
+      URL: "https://truecrimegarage.com/home/blog/7451462/after-midnight-katara-johnson",
+      Earliest_Date: "8/25/2004",
+      Earliest_Year: "2004",
+      Notes: "N. Dolan Street in Taylor, Texas",
+    },
+    geometry: {
+      coordinates: [-97.4018147, 30.5700266],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Shannon Paulk ////// 780",
       Release: "08/14/2024",
       URL: "https://truecrimegarage.com/home/blog/7448852/shannon-paulk-780",
