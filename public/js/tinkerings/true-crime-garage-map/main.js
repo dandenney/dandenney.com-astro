@@ -12,6 +12,36 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Out-R-Inn Murders ////// 787 ",
+      Release: "09/18/2024",
+      URL: "https://truecrimegarage.com/home/blog/7463902/out-r-inn-murders-787",
+      Earliest_Date: "9/25/1994",
+      Earliest_Year: "1994",
+      Notes: "4510 Kenny Rd, Columbus, Ohio",
+    },
+    geometry: {
+      coordinates: [-83.0516682, 40.0508709],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Cassie Compton ////// 786",
+      Release: "09/10/2024",
+      URL: "https://truecrimegarage.com/home/blog/7460523/cassie-compton-786",
+      Earliest_Date: "9/14/2024",
+      Earliest_Year: "2014",
+      Notes: "15th St. in Stuttgart, Arkansas",
+    },
+    geometry: {
+      coordinates: [-91.5587836, 34.4892344],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "The Cell Phone Murders //////",
       Release: "09/03/2024",
       URL: "https://truecrimegarage.com/home/blog/7457370/the-cell-phone-murders",
