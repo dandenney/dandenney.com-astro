@@ -293,7 +293,7 @@ export type Review = Node & Document & {
   description: Scalars['String']['output'];
   address: Scalars['String']['output'];
   city: Scalars['String']['output'];
-  state: Scalars['String']['output'];
+  state?: Maybe<Scalars['String']['output']>;
   country: Scalars['String']['output'];
   coordinates: Scalars['String']['output'];
   infoUrl: Scalars['String']['output'];
@@ -476,7 +476,7 @@ export type BlipPartsFragment = { __typename: 'Blip', title: string, pubDate: st
 
 export type PostPartsFragment = { __typename: 'Post', title: string, pubDate: string, tags?: Array<string | null> | null, summary: string, socialImageFilename: string, cloudinaryThumb: string, thumb: string, thumbAlt: string, body?: any | null };
 
-export type ReviewPartsFragment = { __typename: 'Review', title: string, pubDate: string, tags?: Array<string | null> | null, description: string, address: string, city: string, state: string, country: string, coordinates: string, infoUrl: string, heroImageAlt: string, heroImage: string, heroImageAttribution?: string | null, heroImageUrl?: string | null, body?: any | null };
+export type ReviewPartsFragment = { __typename: 'Review', title: string, pubDate: string, tags?: Array<string | null> | null, description: string, address: string, city: string, state?: string | null, country: string, coordinates: string, infoUrl: string, heroImageAlt: string, heroImage: string, heroImageAttribution?: string | null, heroImageUrl?: string | null, body?: any | null };
 
 export type BlipQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -521,7 +521,7 @@ export type ReviewQueryVariables = Exact<{
 }>;
 
 
-export type ReviewQuery = { __typename?: 'Query', review: { __typename: 'Review', id: string, title: string, pubDate: string, tags?: Array<string | null> | null, description: string, address: string, city: string, state: string, country: string, coordinates: string, infoUrl: string, heroImageAlt: string, heroImage: string, heroImageAttribution?: string | null, heroImageUrl?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type ReviewQuery = { __typename?: 'Query', review: { __typename: 'Review', id: string, title: string, pubDate: string, tags?: Array<string | null> | null, description: string, address: string, city: string, state?: string | null, country: string, coordinates: string, infoUrl: string, heroImageAlt: string, heroImage: string, heroImageAttribution?: string | null, heroImageUrl?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type ReviewConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -533,7 +533,7 @@ export type ReviewConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ReviewConnectionQuery = { __typename?: 'Query', reviewConnection: { __typename?: 'ReviewConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ReviewConnectionEdges', cursor: string, node?: { __typename: 'Review', id: string, title: string, pubDate: string, tags?: Array<string | null> | null, description: string, address: string, city: string, state: string, country: string, coordinates: string, infoUrl: string, heroImageAlt: string, heroImage: string, heroImageAttribution?: string | null, heroImageUrl?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type ReviewConnectionQuery = { __typename?: 'Query', reviewConnection: { __typename?: 'ReviewConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ReviewConnectionEdges', cursor: string, node?: { __typename: 'Review', id: string, title: string, pubDate: string, tags?: Array<string | null> | null, description: string, address: string, city: string, state?: string | null, country: string, coordinates: string, infoUrl: string, heroImageAlt: string, heroImage: string, heroImageAttribution?: string | null, heroImageUrl?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const BlipPartsFragmentDoc = gql`
     fragment BlipParts on Blip {

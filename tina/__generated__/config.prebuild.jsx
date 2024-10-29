@@ -160,7 +160,7 @@ var config_default = defineConfig({
             type: "string",
             name: "state",
             label: "State",
-            required: true
+            required: false
           },
           {
             type: "string",

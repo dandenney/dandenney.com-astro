@@ -178,7 +178,7 @@ type Review implements Node & Document {
   description: String!
   address: String!
   city: String!
-  state: String!
+  state: String
   country: String!
   coordinates: String!
   infoUrl: String!

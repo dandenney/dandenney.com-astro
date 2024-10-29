@@ -1,12 +1,12 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-import { getLinks } from '../scripts/notion.js';
+import { getLinks } from "../scripts/notion.js";
 const links = await getLinks();
 
-import FormattedDate from '../components/FormattedDate.astro';
+import FormattedDate from "../components/FormattedDate.astro";
 ---
 
 <style>
@@ -29,13 +29,13 @@ import FormattedDate from '../components/FormattedDate.astro';
     list-style: none;
     padding: 0 1rem;
   }
-  
+
   .library-links li {
     border-top: 0.125rem solid var(--color-accent);
     margin-top: 1rem;
     padding: 1.5rem;
   }
-  
+
   @media screen and (min-width: 768px) {
     .library-links {
       grid-template-columns: 1fr 1fr;
@@ -45,1485 +45,2738 @@ import FormattedDate from '../components/FormattedDate.astro';
   }
   @media screen and (min-width: 1000px) {
     .library-links {
-      gap:  0 2rem;
+      gap: 0 2rem;
       grid-template-columns: 1fr 1fr 1fr;
     }
-
   }
 </style>
 
-<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title="Library | Dan Denney" description="Links of things I've read and watched" />
-	</head>
-	<body class="bg-white dark:bg-slate-900">
-		<main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+  <head>
+    <BaseHead
+      title="Library | Dan Denney"
+      description="Links of things I've read and watched"
+    />
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <main
+      class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200"
+    >
       <Header />
       <section class="px-6 lg:px-10">
-        <h1 class=" mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">Library</h1>
+        <h1
+          class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+        >
+          Library
+        </h1>
         <p class="mt-2">Links of things I've read and watched.</p>
       </section>
       <ul class="library-links has-links">
-        {links.map((link) => (
-          <li>
-            <a class="link" href={link.url}>
-              {link.title}
-            </a>
-            {link.notes && (
-              <span class="notes">{link.notes}</span>
-            )}
-            <span class="meta">
-              {link.tag}&nbsp;<FormattedDate date={link.created} />
-            </span>
-          </li>
-        ))}
+        {
+          links.map((link) => (
+            <li>
+              <a class="link" href={link.url}>
+                {link.title}
+              </a>
+              {link.notes && <span class="notes">{link.notes}</span>}
+              <span class="meta">
+                {link.tag}&nbsp;
+                <FormattedDate date={link.created} />
+              </span>
+            </li>
+          ))
+        }
       </ul>
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">July 2024</h2>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        September 2024
+      </h2>
       <ul class="library-links has-links">
         <li>
-          <a class="link" href="https://ishadeed.com/article/css-grid-area/">CSS Grid Areas</a>
+          <a
+            class="link"
+            href="https://developer.chrome.com/docs/css-ui/animate-to-height-auto/"
+          >
+            Animate to height: auto; (and other intrinsic sizing keywords) in
+            CSS &nbsp;|&nbsp; CSS and UI &nbsp;|&nbsp; Chrome for Developers
+          </a>
+          <span class="notes">Nice explanation of the latest options</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-09-20T14:07:00.000Z"
+              >Sep 20, 2024</time
+            >
+          </span>
+        </li>
+      </ul>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        July 2024
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a
+            class="link"
+            href="https://frontendmasters.com/blog/split-effects-with-no-content-duplication/?utm_source=CSS-Weekly&utm_medium=newsletter&utm_campaign=issue-595-october-3-2024&_bhlid=d27787fbb6adb27a3d51ba8dc928c06633ebb226"
+          >
+            Split Effects with no Content Duplication – Frontend Masters Boost
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-10-04T23:33:00.000Z"
+              >Oct 4, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://9elements.com/blog/building-the-perfect-logo-strip/?utm_source=CSS-Weekly&utm_medium=newsletter&utm_campaign=issue-595-october-3-2024&_bhlid=aa89e37676d249744ce4fe28b66b1737c827d63d"
+          >
+            Building the Perfect Logo Strip - 9elements
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-10-04T22:19:00.000Z"
+              >Oct 4, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a class="link"
+            >https://youtube.com/watch?v=vWJ95E71cow&si=o6K3cYfElPbAncvn</a
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-10-01T17:29:00.000Z"
+              >Oct 1, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://developer.chrome.com/docs/css-ui/animate-to-height-auto/"
+          >
+            Animate to height: auto; (and other intrinsic sizing keywords) in
+            CSS &nbsp;|&nbsp; CSS and UI &nbsp;|&nbsp; Chrome for Developers
+          </a>
+          <span class="notes">Nice explanation of the latest options</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-09-20T14:07:00.000Z"
+              >Sep 20, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a class="link" href="https://chrisnager.com/blog/design-engineering">
+            Design engineering / Blog / Chris Nager
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-08-19T17:27:00.000Z"
+              >Aug 19, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a class="link" href="https://buttons.ibelick.com/">
+            Tailwind CSS button collection - Click-to-copy integration
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-08-15T19:45:00.000Z"
+              >Aug 15, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://anandchowdhary.github.io/calendar-link/"
+          >
+            📅 Calendar Link | calendar-link
+          </a>
+          <span class="notes">Calendar link generator for popular services</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-08-09T02:42:00.000Z"
+              >Aug 8, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://www.youtube.com/watch?v=DHj7JhH8ins&t=92s"
+          >
+            “Smart” design patterns with container queries
+          </a>
+          <span class="notes">Love the auto grid layouts</span>
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-08-06T17:24:00.000Z"
+              >Aug 6, 2024</time
+            >
+          </span>
+        </li>
+        <li>
+          <a class="link" href="https://web.dev/blog/font-size-adjust">
+            CSS font-size-adjust is now in Baseline &nbsp;|&nbsp; Blog
+            &nbsp;|&nbsp; web.dev
+          </a>
+          <span class="notes">Super handy feature for font fallbacks</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-08-06T00:22:00.000Z"
+              >Aug 5, 2024</time
+            >
+          </span>
+        </li>
+      </ul>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        July 2024
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a class="link" href="https://ishadeed.com/article/css-grid-area/"
+            >CSS Grid Areas</a
+          >
           <span class="notes">Awesome dive, I learned a lot</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-28T16:14:00.000Z">Jul 28, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-28T16:14:00.000Z"
+              >Jul 28, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://github.com/heidkaemper/tailwindcss-intersect">Tailwind CSS with Intersection Observer variants</a>
+          <a
+            class="link"
+            href="https://github.com/heidkaemper/tailwindcss-intersect"
+            >Tailwind CSS with Intersection Observer variants</a
+          >
           <span class="notes">Stashing in case I could use it</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-28T15:41:00.000Z">Jul 28, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-28T15:41:00.000Z"
+              >Jul 28, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://garrettdimon.com/journal/posts/fine-tuning-text-inputs?utm_source=convertkit&amp;utm_medium=email&amp;utm_campaign=How%20would%20you%20rate%20your%20CSS%20skills?%20-%2014553804">Fine-tuning Text Inputs</a>
-          <span class="notes">I haven’t used a few of these and maybe should</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-28T14:17:00.000Z">Jul 28, 2024</time></span>
+          <a
+            class="link"
+            href="https://garrettdimon.com/journal/posts/fine-tuning-text-inputs?utm_source=convertkit&utm_medium=email&utm_campaign=How%20would%20you%20rate%20your%20CSS%20skills?%20-%2014553804"
+            >Fine-tuning Text Inputs</a
+          >
+          <span class="notes"
+            >I haven’t used a few of these and maybe should</span
+          >
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-28T14:17:00.000Z"
+              >Jul 28, 2024</time
+            ></span
+          >
         </li>
         <li>
           <a class="link">My Top 10 Resources for Web Animations</a>
           <span class="notes">I dig this guy’s way of sharing</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-23T23:02:00.000Z">Jul 23, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-23T23:02:00.000Z"
+              >Jul 23, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://web.dev/blog/at-property-baseline">@property: Next-gen CSS variables now with universal browser support&nbsp;|&nbsp;Blog&nbsp;|&nbsp;web.dev</a>
+          <a class="link" href="https://web.dev/blog/at-property-baseline"
+            >@property: Next-gen CSS variables now with universal browser
+            support&nbsp;|&nbsp;Blog&nbsp;|&nbsp;web.dev</a
+          >
           <span class="notes">Types for CSS, ugh</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-20T22:45:00.000Z">Jul 20, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-20T22:45:00.000Z"
+              >Jul 20, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://emilkowal.ski/ui/the-magic-of-clip-path">The Magic of Clip Path</a>
+          <a class="link" href="https://emilkowal.ski/ui/the-magic-of-clip-path"
+            >The Magic of Clip Path</a
+          >
           <span class="notes">Awesome usage and explanation</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-11T15:45:00.000Z">Jul 11, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-11T15:45:00.000Z"
+              >Jul 11, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://css-tip.com/inverted-radius/">Inverted border-radius using CSS mask</a>
+          <a class="link" href="https://css-tip.com/inverted-radius/"
+            >Inverted border-radius using CSS mask</a
+          >
           <span class="notes">Seeing this trend a lot and I dig it</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-11T15:39:00.000Z">Jul 11, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-11T15:39:00.000Z"
+              >Jul 11, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://dev.to/dipakahirav/8-exciting-new-javascript-concepts-you-need-to-know-45hp">8 Exciting New JavaScript Concepts You Need to Know - DEV Community</a>
+          <a
+            class="link"
+            href="https://dev.to/dipakahirav/8-exciting-new-javascript-concepts-you-need-to-know-45hp"
+            >8 Exciting New JavaScript Concepts You Need to Know - DEV Community</a
+          >
           <span class="notes">Well now I partially know them</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-11T15:36:00.000Z">Jul 11, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-11T15:36:00.000Z"
+              >Jul 11, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://blog.greenroots.info/javascript-array-method-with-immutability">Why the with() method of JavaScript Array is a gem?</a>
+          <a
+            class="link"
+            href="https://blog.greenroots.info/javascript-array-method-with-immutability"
+            >Why the with() method of JavaScript Array is a gem?</a
+          >
           <span class="notes">Neat</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-09T23:12:00.000Z">Jul 9, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-09T23:12:00.000Z"
+              >Jul 9, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://www.youtube.com/watch?v=aRJHdLF8hdY">True Crime Explained - YouTube</a>
+          <a class="link" href="https://www.youtube.com/watch?v=aRJHdLF8hdY"
+            >True Crime Explained - YouTube</a
+          >
           <span class="notes">Loved this explanation and visuals</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-09T22:48:00.000Z">Jul 9, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-09T22:48:00.000Z"
+              >Jul 9, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://fluid.tw/">Fluid for Tailwind CSS - Build better responsive designs in less code.</a>
+          <a class="link" href="https://fluid.tw/"
+            >Fluid for Tailwind CSS - Build better responsive designs in less
+            code.</a
+          >
           <span class="notes">Handy items for responsive text</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-04T16:32:00.000Z">Jul 4, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-04T16:32:00.000Z"
+              >Jul 4, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://www.jameskerr.blog/posts/3-types-of-css-utility-classes/?ck_subscriber_id=1665201471">The 3 Types of CSS Utility Classes</a>
+          <a
+            class="link"
+            href="https://www.jameskerr.blog/posts/3-types-of-css-utility-classes/?ck_subscriber_id=1665201471"
+            >The 3 Types of CSS Utility Classes</a
+          >
           <span class="notes">Utilities FTW</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-04T00:26:00.000Z">Jul 3, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-04T00:26:00.000Z"
+              >Jul 3, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link">Add an overlay to a background-image with one line of CSS</a>
+          <a class="link"
+            >Add an overlay to a background-image with one line of CSS</a
+          >
           <span class="notes">Neat trick, but more than one line really</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-03T23:09:00.000Z">Jul 3, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-03T23:09:00.000Z"
+              >Jul 3, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://www.relume.io/whats-new/july-2024-component-day">Component Day | Link Pages, Uncommon Components and React Library Update</a>
+          <a
+            class="link"
+            href="https://www.relume.io/whats-new/july-2024-component-day"
+            >Component Day | Link Pages, Uncommon Components and React Library
+            Update</a
+          >
           <span class="notes">Love these shares</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-02T17:24:00.000Z">Jul 2, 2024</time></span>
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-02T17:24:00.000Z"
+              >Jul 2, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://blog.logrocket.com/product-management/a-guide-to-observability/#enhancedmonitoring">A guide to observability - LogRocket Blog</a>
-          <span class="notes">Learned some definitions around my day-to-day work</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-02T01:51:00.000Z">Jul 1, 2024</time></span>
+          <a
+            class="link"
+            href="https://blog.logrocket.com/product-management/a-guide-to-observability/#enhancedmonitoring"
+            >A guide to observability - LogRocket Blog</a
+          >
+          <span class="notes"
+            >Learned some definitions around my day-to-day work</span
+          >
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-02T01:51:00.000Z"
+              >Jul 1, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://9elements.com/blog/from-hacks-to-elegance-transforming-a-card-component-with-modern-css-wizardry/">From Hacks to Elegance: Transforming a Card Component with Modern CSS Wizardry - 9elements</a>
-          <span class="notes">Excellent walkthrough of modern CSS for an unusual layout</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-02T01:32:00.000Z">Jul 1, 2024</time></span>
+          <a
+            class="link"
+            href="https://9elements.com/blog/from-hacks-to-elegance-transforming-a-card-component-with-modern-css-wizardry/"
+            >From Hacks to Elegance: Transforming a Card Component with Modern
+            CSS Wizardry - 9elements</a
+          >
+          <span class="notes"
+            >Excellent walkthrough of modern CSS for an unusual layout</span
+          >
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-02T01:32:00.000Z"
+              >Jul 1, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://web.dev/articles/adapting-typography-to-user-preferences-with-css">Adapting typography to user preferences with CSS&nbsp;|&nbsp;Articles&nbsp;|&nbsp;web.dev</a>
-          <span class="notes">Love the thought behind using a variable font for improving UX</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-01T17:26:00.000Z">Jul 1, 2024</time></span>
+          <a
+            class="link"
+            href="https://web.dev/articles/adapting-typography-to-user-preferences-with-css"
+            >Adapting typography to user preferences with
+            CSS&nbsp;|&nbsp;Articles&nbsp;|&nbsp;web.dev</a
+          >
+          <span class="notes"
+            >Love the thought behind using a variable font for improving UX</span
+          >
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-01T17:26:00.000Z"
+              >Jul 1, 2024</time
+            ></span
+          >
         </li>
         <li>
-          <a class="link" href="https://frontendmasters.com/blog/popovers-work-pretty-nicely-as-slide-out-drawers/">Popovers Work Pretty Nicely as Slide-Out Drawers – Frontend Masters Boost</a>
-          <span class="notes">Really digging this series on popovers and how easy the API makes things</span>
-          <span class="meta">Read&nbsp;<time datetime="2024-07-01T12:24:00.000Z">Jul 1, 2024</time></span>
+          <a
+            class="link"
+            href="https://frontendmasters.com/blog/popovers-work-pretty-nicely-as-slide-out-drawers/"
+            >Popovers Work Pretty Nicely as Slide-Out Drawers – Frontend Masters
+            Boost</a
+          >
+          <span class="notes"
+            >Really digging this series on popovers and how easy the API makes
+            things</span
+          >
+          <span class="meta"
+            >Read&nbsp;<time datetime="2024-07-01T12:24:00.000Z"
+              >Jul 1, 2024</time
+            ></span
+          >
         </li>
       </ul>
 
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">June 2024</h2>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        June 2024
+      </h2>
       <ul class="library-links has-links">
         <li>
-          <a class="link" href="https://www.figma.com/blog/behind-our-redesign-ui3/"> Inside the Redesigned Figma, Where Your Work Takes Center Stage  | Figma Blog </a> <span class="notes">Awesome work</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-28T21:35:00.000Z"> Jun 28, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://www.figma.com/blog/behind-our-redesign-ui3/"
+          >
+            Inside the Redesigned Figma, Where Your Work Takes Center Stage |
+            Figma Blog
+          </a>
+          <span class="notes">Awesome work</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-28T21:35:00.000Z">
+              Jun 28, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://simpleparallax.com/"> simpleParallax.js - Easy Parallax Effect for React &amp; JavaScript </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-28T17:40:00.000Z"> Jun 28, 2024 </time> </span> </li>
+          <a class="link" href="https://simpleparallax.com/">
+            simpleParallax.js - Easy Parallax Effect for React &amp; JavaScript
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-28T17:40:00.000Z">
+              Jun 28, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://ishadeed.com/article/css-cap-unit/"> CSS Cap Unit </a> <span class="notes">Definitely going to start using this</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-28T15:08:00.000Z"> Jun 28, 2024 </time> </span> </li>
+          <a class="link" href="https://ishadeed.com/article/css-cap-unit/">
+            CSS Cap Unit
+          </a>
+          <span class="notes">Definitely going to start using this</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-28T15:08:00.000Z">
+              Jun 28, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://www.youtube.com/watch?v=su6WA0kUUJE"> Web Design Engineering With the New CSS | Matthias Ott | CSS Day 2024 - YouTube </a> <span class="notes">So good</span> <span class="meta"> Watched&nbsp;<time datetime="2024-06-28T15:04:00.000Z"> Jun 28, 2024 </time> </span> </li>
+          <a class="link" href="https://www.youtube.com/watch?v=su6WA0kUUJE">
+            Web Design Engineering With the New CSS | Matthias Ott | CSS Day
+            2024 - YouTube
+          </a>
+          <span class="notes">So good</span>
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-06-28T15:04:00.000Z">
+              Jun 28, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://vercel.com/blog/introducing-vercel-ai-sdk-3-2"> Introducing Vercel AI SDK 3.2 </a> <span class="notes">Got a great intro to this at Render</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-28T02:24:00.000Z"> Jun 27, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://vercel.com/blog/introducing-vercel-ai-sdk-3-2"
+          >
+            Introducing Vercel AI SDK 3.2
+          </a>
+          <span class="notes">Got a great intro to this at Render</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-28T02:24:00.000Z">
+              Jun 27, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://frontendmasters.com/blog/single-css-keyframe-tricks-are-magic/"> Single CSS Keyframe Tricks are Magic </a> <span class="notes">Neat trick for repeating animations</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-28T02:17:00.000Z"> Jun 27, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://frontendmasters.com/blog/single-css-keyframe-tricks-are-magic/"
+          >
+            Single CSS Keyframe Tricks are Magic
+          </a>
+          <span class="notes">Neat trick for repeating animations</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-28T02:17:00.000Z">
+              Jun 27, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://dev.to/perisicnikola37/new-css-media-queries-syntax-45og"> New CSS media queries syntax </a> <span class="notes">Really interesting, I hadn’t heard of it and it’s succinct</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-28T02:06:00.000Z"> Jun 27, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://dev.to/perisicnikola37/new-css-media-queries-syntax-45og"
+          >
+            New CSS media queries syntax
+          </a>
+          <span class="notes"
+            >Really interesting, I hadn’t heard of it and it’s succinct</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-28T02:06:00.000Z">
+              Jun 27, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://tympanus.net/codrops/2024/06/19/hover-animations-for-terminal-like-typography/"> Hover Animations for Terminal-like Typography | Codrops </a> <span class="notes">Rad effect</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-26T17:03:00.000Z"> Jun 26, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://tympanus.net/codrops/2024/06/19/hover-animations-for-terminal-like-typography/"
+          >
+            Hover Animations for Terminal-like Typography | Codrops
+          </a>
+          <span class="notes">Rad effect</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-26T17:03:00.000Z">
+              Jun 26, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://tympanus.net/codrops/2024/06/26/creating-a-glowing-text-marquee-animation/"> Creating a Glowing Text Marquee Animation | Codrops </a> <span class="notes">Digging this effect</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-26T16:17:00.000Z"> Jun 26, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://tympanus.net/codrops/2024/06/26/creating-a-glowing-text-marquee-animation/"
+          >
+            Creating a Glowing Text Marquee Animation | Codrops
+          </a>
+          <span class="notes">Digging this effect</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-26T16:17:00.000Z">
+              Jun 26, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://www.phpied.com/capturing-web-page-video-with-a-couple-of-bookmarklets/"> Capturing web page video with a couple of bookmarklets </a> <span class="notes">Super helpful bookmarklets</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-26T15:55:00.000Z"> Jun 26, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://www.phpied.com/capturing-web-page-video-with-a-couple-of-bookmarklets/"
+          >
+            Capturing web page video with a couple of bookmarklets
+          </a>
+          <span class="notes">Super helpful bookmarklets</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-26T15:55:00.000Z">
+              Jun 26, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://coryrylan.com/blog/flow-charts-with-css-anchor-positioning"> Flow Charts with CSS Anchor Positioning </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-24T15:01:00.000Z"> Jun 24, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://coryrylan.com/blog/flow-charts-with-css-anchor-positioning"
+          >
+            Flow Charts with CSS Anchor Positioning
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-24T15:01:00.000Z">
+              Jun 24, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://www.viget.com/articles/fluid-breakout-layout-css-grid/?ref=web-design-weekly.com"> Fluid Breakout Layout with CSS Grid | Viget </a> <span class="notes">Love this breakdown and I could add a few on this site</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-24T14:50:00.000Z"> Jun 24, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://www.viget.com/articles/fluid-breakout-layout-css-grid/?ref=web-design-weekly.com"
+          >
+            Fluid Breakout Layout with CSS Grid | Viget
+          </a>
+          <span class="notes"
+            >Love this breakdown and I could add a few on this site</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-24T14:50:00.000Z">
+              Jun 24, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://piccalil.li/blog/lets-make-a-floating-button-sign-up-form-pattern/"> Let’s make a floating button sign up form pattern </a> <span class="notes">Excellent walkthrough </span> <span class="meta"> Read&nbsp;<time datetime="2024-06-24T14:47:00.000Z"> Jun 24, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://piccalil.li/blog/lets-make-a-floating-button-sign-up-form-pattern/"
+          >
+            Let’s make a floating button sign up form pattern
+          </a>
+          <span class="notes">Excellent walkthrough </span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-24T14:47:00.000Z">
+              Jun 24, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://www.nngroup.com/articles/glassmorphism/"> Glassmorphism: Definition and Best Practices </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-24T14:42:00.000Z"> Jun 24, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://www.nngroup.com/articles/glassmorphism/"
+          >
+            Glassmorphism: Definition and Best Practices
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-24T14:42:00.000Z">
+              Jun 24, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://frontendmasters.com/blog/one-of-the-boss-battles-of-css-is-almost-won-transitioning-to-auto/"> One of the Boss Battles of CSS is Almost Won! Transitioning to Auto </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-18T01:46:00.000Z"> Jun 17, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://frontendmasters.com/blog/one-of-the-boss-battles-of-css-is-almost-won-transitioning-to-auto/"
+          >
+            One of the Boss Battles of CSS is Almost Won! Transitioning to Auto
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-18T01:46:00.000Z">
+              Jun 17, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://youtube.com/watch?v=UE01cIWJBko&amp;si=O5sIxy5ejKFPeOlx"> The Next Big Thing in CSS: margin-trim! </a>  <span class="meta"> Watched&nbsp;<time datetime="2024-06-16T21:12:00.000Z"> Jun 16, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://youtube.com/watch?v=UE01cIWJBko&si=O5sIxy5ejKFPeOlx"
+          >
+            The Next Big Thing in CSS: margin-trim!
+          </a>
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-06-16T21:12:00.000Z">
+              Jun 16, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://swizec.com/blog/using-ai-to-spark-connections-at-a-conference/?utm_source=bensbites&amp;utm_medium=newsletter&amp;utm_campaign=daily-digest-turn-dreams-into-videos"> Using AI to spark connections at a conference | Swizec Teller </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-14T00:46:00.000Z"> Jun 13, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://swizec.com/blog/using-ai-to-spark-connections-at-a-conference/?utm_source=bensbites&utm_medium=newsletter&utm_campaign=daily-digest-turn-dreams-into-videos"
+          >
+            Using AI to spark connections at a conference | Swizec Teller
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-14T00:46:00.000Z">
+              Jun 13, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://www.componentdriven.org/"> Component Driven User Interfaces </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-12T22:10:00.000Z"> Jun 12, 2024 </time> </span> </li>
+          <a class="link" href="https://www.componentdriven.org/">
+            Component Driven User Interfaces
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-12T22:10:00.000Z">
+              Jun 12, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://vercel.com/blog/understanding-react-server-components"> Understanding React Server Components – Vercel </a>  <span class="meta"> Read&nbsp;<time datetime="2024-06-12T21:54:00.000Z"> Jun 12, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://vercel.com/blog/understanding-react-server-components"
+          >
+            Understanding React Server Components – Vercel
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-12T21:54:00.000Z">
+              Jun 12, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://bootcamp.uxdesign.cc/how-i-structured-my-design-system-using-figmas-new-variables-7b1be33ce2aa"> How I Structured My Design System Using Figma’s New Variables | by Melissa McArthur | Jul, 2023 | Bootcamp </a> <span class="notes">Love seeing the dragging into other viewport sizes</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-10T17:43:00.000Z"> Jun 10, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://bootcamp.uxdesign.cc/how-i-structured-my-design-system-using-figmas-new-variables-7b1be33ce2aa"
+          >
+            How I Structured My Design System Using Figma’s New Variables | by
+            Melissa McArthur | Jul, 2023 | Bootcamp
+          </a>
+          <span class="notes"
+            >Love seeing the dragging into other viewport sizes</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-10T17:43:00.000Z">
+              Jun 10, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://utilitybend.com/blog/lets-hang-an-intro-to-css-anchor-positioning-with-basic-examples?utm_source=cassidoo&amp;utm_medium=email&amp;utm_campaign=until-youre-ready-to-look-foolish-youll-never"> Let’s hang! An intro to CSS Anchor Positioning with basic examples | utilitybend </a> <span class="notes">First dive into this and it feels like it will be very useful</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-10T17:30:00.000Z"> Jun 10, 2024 </time> </span> </li>
+          <a
+            class="link"
+            href="https://utilitybend.com/blog/lets-hang-an-intro-to-css-anchor-positioning-with-basic-examples?utm_source=cassidoo&utm_medium=email&utm_campaign=until-youre-ready-to-look-foolish-youll-never"
+          >
+            Let’s hang! An intro to CSS Anchor Positioning with basic examples |
+            utilitybend
+          </a>
+          <span class="notes"
+            >First dive into this and it feels like it will be very useful</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-10T17:30:00.000Z">
+              Jun 10, 2024
+            </time>
+          </span>
+        </li>
         <li>
-          <a class="link" href="https://www.bram.us/2024/06/06/css-only-custom-range-slider-with-motion/?ref=sidebar"> CSS-only Custom Range Slider with Motion </a> <span class="notes">Nice little effect</span> <span class="meta"> Read&nbsp;<time datetime="2024-06-09T21:17:00.000Z"> Jun 9, 2024 </time> </span> </li>
-        </ul>
+          <a
+            class="link"
+            href="https://www.bram.us/2024/06/06/css-only-custom-range-slider-with-motion/?ref=sidebar"
+          >
+            CSS-only Custom Range Slider with Motion
+          </a>
+          <span class="notes">Nice little effect</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-06-09T21:17:00.000Z">
+              Jun 9, 2024
+            </time>
+          </span>
+        </li>
+      </ul>
 
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">May 2024</h2>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        May 2024
+      </h2>
       <ul class="library-links has-links">
         <li>
-          <a class="link" href="https://www.youtube.com/watch?v=rTq_8DxZyFY&amp;t=607"> Best Web Design Resources 2024 - YouTube - Jeremy Mura </a>
+          <a
+            class="link"
+            href="https://www.youtube.com/watch?v=rTq_8DxZyFY&t=607"
+          >
+            Best Web Design Resources 2024 - YouTube - Jeremy Mura
+          </a>
           <span class="notes">Awesome collection of resources</span>
-          <span class="meta"> Watched&nbsp; <time datetime="2024-05-21T18:35:00.000Z"> May 21, 2024 </time>
+          <span class="meta">
+            Watched&nbsp; <time datetime="2024-05-21T18:35:00.000Z">
+              May 21, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a class="link" href="https://cassidoo.co/post/blog-website-baby/?utm_source=cassidoo&amp;utm_medium=email&amp;utm_campaign=a-thousand-moments-that-i-had-just-taken-for"> I rewrote my blog! And website! They are one! </a>
+          <a
+            class="link"
+            href="https://cassidoo.co/post/blog-website-baby/?utm_source=cassidoo&utm_medium=email&utm_campaign=a-thousand-moments-that-i-had-just-taken-for"
+          >
+            I rewrote my blog! And website! They are one!
+          </a>
           <span class="notes">Definitely going to check out Tina</span>
-          <span class="meta"> Read&nbsp; <time datetime="2024-05-21T03:38:00.000Z"> May 20, 2024 </time>
+          <span class="meta">
+            Read&nbsp; <time datetime="2024-05-21T03:38:00.000Z">
+              May 20, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a class="link" href="https://rouninmedia.github.io/protecting-your-email-address-via-svg-instead-of-js/?utm_source=tldrnewsletter"> Protecting your email address via SVG instead of JS </a>
-          <span class="notes">Interesting trick, but maybe just until the bots catchup?</span>
-          <span class="meta"> Read&nbsp; <time datetime="2024-05-17T13:37:00.000Z"> May 17, 2024 </time>
+          <a
+            class="link"
+            href="https://rouninmedia.github.io/protecting-your-email-address-via-svg-instead-of-js/?utm_source=tldrnewsletter"
+          >
+            Protecting your email address via SVG instead of JS
+          </a>
+          <span class="notes"
+            >Interesting trick, but maybe just until the bots catchup?</span
+          >
+          <span class="meta">
+            Read&nbsp; <time datetime="2024-05-17T13:37:00.000Z">
+              May 17, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a class="link" href="https://www.alexmurrell.co.uk/articles/the-age-of-average-encore?ref=sidebar"> The age of average (encore) — Alex Murrell </a>
-          <span class="meta"> Read&nbsp; <time datetime="2024-05-11T20:39:00.000Z"> May 11, 2024 </time>
+          <a
+            class="link"
+            href="https://www.alexmurrell.co.uk/articles/the-age-of-average-encore?ref=sidebar"
+          >
+            The age of average (encore) — Alex Murrell
+          </a>
+          <span class="meta">
+            Read&nbsp; <time datetime="2024-05-11T20:39:00.000Z">
+              May 11, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a class="link" href="https://danielnagy.me/posts/Post_tsr8q6sx37pl?ref=dailydev"> Are Inline Styles Faster than CSS? </a>
-          <span class="meta"> Read&nbsp; <time datetime="2024-05-11T17:45:00.000Z"> May 11, 2024 </time>
+          <a
+            class="link"
+            href="https://danielnagy.me/posts/Post_tsr8q6sx37pl?ref=dailydev"
+          >
+            Are Inline Styles Faster than CSS?
+          </a>
+          <span class="meta">
+            Read&nbsp; <time datetime="2024-05-11T17:45:00.000Z">
+              May 11, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a class="link" href="https://react-spectrum.adobe.com/blog/creating-a-pointer-friendly-submenu-experience.html?ck_subscriber_id=1665201471"> Creating a pointer-friendly submenu experience – React Spectrum Blog </a>
-          <span class="meta"> Read&nbsp; <time datetime="2024-05-11T17:41:00.000Z"> May 11, 2024 </time>
+          <a
+            class="link"
+            href="https://react-spectrum.adobe.com/blog/creating-a-pointer-friendly-submenu-experience.html?ck_subscriber_id=1665201471"
+          >
+            Creating a pointer-friendly submenu experience – React Spectrum Blog
+          </a>
+          <span class="meta">
+            Read&nbsp; <time datetime="2024-05-11T17:41:00.000Z">
+              May 11, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a class="link" href="https://danielnagy.me/posts/Post_tsr8q6sx37pl?ref=dailydev"> Are Inline Styles Faster than CSS? </a>
-          <span class="meta"> Read&nbsp; <time datetime="2024-05-11T15:07:00.000Z"> May 11, 2024 </time>
+          <a
+            class="link"
+            href="https://danielnagy.me/posts/Post_tsr8q6sx37pl?ref=dailydev"
+          >
+            Are Inline Styles Faster than CSS?
+          </a>
+          <span class="meta">
+            Read&nbsp; <time datetime="2024-05-11T15:07:00.000Z">
+              May 11, 2024
+            </time>
           </span>
         </li>
       </ul>
 
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">March 2024</h2>
-      <ul class="library-links has-links"> 
-        <li> 
-          <a class="link" href="https://kittygiraudel.com/2024/02/26/css-only-bottom-anchored-scrolling-area/?ref=sidebar"> CSS-only bottom-anchored scrolling area | Kitty Giraudel </a> 
-          <span class="meta"> Read&nbsp;<time datetime="2024-03-02T15:44:00.000Z"> Mar 2, 2024 </time> </span> 
-        </li>
-      </ul>
-
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">February 2024</h2>
-      <ul class="library-links has-links"> 
-        <li> 
-          <a class="link" href="https://youtube.com/watch?v=345V2MU3E_w&amp;si=HnU8LPHOQIR5_Azs"> A better image reset for your CSS </a> 
-          <span class="notes">Clever items that I wouldn’t have thought of</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2024-02-24T18:02:00.000Z"> Feb 24, 2024 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://piccalil.li/blog/event-currenttarget-to-the-rescue/"> Event currentTarget to the rescue - Piccalilli </a> 
-          <span class="notes">Quick and helpful tip</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2024-02-23T15:45:00.000Z"> Feb 23, 2024 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://youtube.com/watch?v=pUnC-ap6ixI&amp;si=UwEtDH1PNey2zJz0"> Webflow’s New Custom CSS Properties 🤯 </a> 
-          <span class="notes">Nice feature for expanding what can be built</span> 
-          <span class="meta"> Watched&nbsp;<time datetime="2024-02-21T00:39:00.000Z"> Feb 20, 2024 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://youtube.com/watch?v=JONzCyVXa60&amp;si=TLdIvcUgqEhBqLW4"> Add Dark Mode to YOUR website with a single line of code </a> 
-          <span class="notes">Super interesting way to handle it</span> 
-          <span class="meta"> Watched&nbsp;<time datetime="2024-02-17T04:49:00.000Z"> Feb 16, 2024 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://youtube.com/watch?v=05tcvQSZtj4&amp;si=cPNHmq2RZ-qGPMtd"> Creating Text Reveal Animation on Scroll with GSAP &amp; SplitType </a> 
-          <span class="notes">Interesting to see Webflow folks use GSAP</span> 
-          <span class="meta"> Watched&nbsp;<time datetime="2024-02-16T00:47:00.000Z"> Feb 15, 2024 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://www.youtube.com/watch?v=Zl2n7qj_TgM"> AI Mixologist vs. Human Bartender | WIRED - YouTube - WIRED </a> 
-          <span class="notes">Fun experiment</span> 
-          <span class="meta"> Watched&nbsp;<time datetime="2024-02-03T14:52:00.000Z"> Feb 3, 2024 </time> </span> 
-        </li>
-      </ul>
-
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">January 2024</h2>
-      <ul class="library-links has-links"> 
-        <li> 
-          <a class="link" href="https://sparkbox.com/foundry/internationalization_css_html"> Accounting for Internationalization with CSS and HTML </a> 
-          <span class="notes">I've been using logical properties but hadn't set the dir yet </span> 
-          <span class="meta"> Read&nbsp;<time datetime="2024-01-15T15:43:00.000Z"> Jan 15, 2024 </time> </span> 
-        </li>
-      </ul>
-
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">December 2023</h2>
-      <ul class="library-links has-links"> 
-        <li> 
-          <a class="link" href="https://www.bekk.christmas/post/2023/12/you-don-t-need-storybook-to-make-a-playground"> You don't need Storybook to make a playground </a> 
-          <span class="notes">Definitely need to try this</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-22T21:48:00.000Z"> Dec 22, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://daniel.do/article/making-noisy-svgs/?ref=web-design-weekly.com"> Making noisy SVGs — Daniel Immke </a> 
-          <span class="notes">Cool technique and gorgeous blog post</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-22T21:45:00.000Z"> Dec 22, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://frontendmasters.com/blog/quantity-queries-are-very-easy-with-css-has/"> Quantity Queries are Very Easy with CSS :has() – Frontend Masters Boost </a> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-20T13:23:00.000Z"> Dec 20, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://lukeplant.me.uk/blog/posts/no-one-actually-wants-simplicity/"> No one actually wants simplicity </a> 
-          <span class="notes">"We think we do, but in fact every web developer will happily sacrifice simplicity to the first shiny thing promising them relief" from the mildest of ailments.</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-15T15:49:00.000Z"> Dec 15, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://astahmer.dev/how-does-xxx-compares-to-panda-css/"> "How does xxx compare to Panda CSS" </a> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-11T18:38:00.000Z"> Dec 11, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://bensbites.beehiiv.com/p/ai-coding-exploding"> AI coding is exploding </a> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-11T14:43:00.000Z"> Dec 11, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://codepen.io/dilums/pen/NWodZMd"> Timed Cards Opening </a> 
-          <span class="notes">I want to use this for no reserv-ai-tions</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-06T15:50:00.000Z"> Dec 6, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://codepen.io/Gogh/pen/GRPoqQW"> Modern Button Styles - 45 CSS Only Buttons </a> 
-          <span class="notes">I want to use a few of these</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-06T15:47:00.000Z"> Dec 6, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://blog.stephaniestimac.com/posts/2023/12/css-media-video-source/"> CSS Media Query Support for Video source Elements - Stephanie Stimac's Blog </a> 
-          <span class="notes">Cool little snippet</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-06T15:39:00.000Z"> Dec 6, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://medium.com/@blakemanzo/teaching-chatgpt-to-prompt-midjourney-3f581cd42a73"> Teaching ChatGPT to prompt Midjourney </a> 
-          <span class="notes">Definitely need to make a thread or GPT of this</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-05T19:22:00.000Z"> Dec 5, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://www.htmhell.dev/adventcalendar/2023/2/?ref=sidebar"> You don't need JavaScript for that - HTMHell </a> 
-          <span class="notes">Nice roundup of UI that can be done natively now </span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-12-04T13:21:00.000Z"> Dec 4, 2023 </time> </span> 
-        </li>
-      </ul>
-
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">November 2023</h2>
-      <ul class="library-links has-links"> 
-        <li> 
-          <a class="link" href="https://css-irl.info/preventing-overscroll-bounce-with-css/"> CSS In Real Life | Preventing Scroll “Bounce” with CSS </a> 
-          <span class="notes">Neat trick that I’ll add to my stuff</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-11-30T16:50:00.000Z"> Nov 30, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://remysharp.com/2023/11/21/scraping-goodreads"> Scraping Goodreads </a> 
-          <span class="notes">Another good way to get your data out of Goodreads</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-11-22T19:56:00.000Z"> Nov 22, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://martinfowler.com/articles/headless-component.html"> Headless Component: a pattern for composing React UIs </a> 
-          <span class="notes">Love this dive into how to think through components</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-11-18T14:43:00.000Z"> Nov 18, 2023 </time> </span> 
-        </li>
-      </ul>
-
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">October 2023</h2>
-
-      <ul class="library-links has-links">
-        <li> 
-          <a class="link" href="https://www.smashingmagazine.com/2023/10/animate-along-path-css/"> How To Animate Along A Path In CSS — Smashing Magazine </a> 
-          <span class="notes">Super slick</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-10-25T13:32:00.000Z"> Oct 25, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://www.smashingmagazine.com/2023/09/smashing-magazine-tinacms-manage-editorial-workflow/"> How Smashing Magazine Uses TinaCMS To Manage An Editorial Workflow </a> 
-          <span class="notes">I’ve been debating using this, I want a git-based CMS for this site</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-10-05T15:20:00.000Z"> Oct 5, 2023 </time> </span> 
-        </li>
-        <li> 
-          <a class="link" href="https://www.amitmerchant.com/textarea-auto-increase-height/?ref=web-design-weekly.com"> Textareas with auto-increasing height using CSS </a> 
-          <span class="notes">Nice feature</span> 
-          <span class="meta"> Read&nbsp;<time datetime="2023-10-04T15:00:00.000Z"> Oct 4, 2023 </time> </span> 
-        </li> 
-      </ul>
-
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">August 2023</h2>
-
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        March 2024
+      </h2>
       <ul class="library-links has-links">
         <li>
-          <a href="https://chriskirknielsen.com/blog/future-themes-with-container-style-queries/?utm_source=CSS-Weekly&amp;utm_campaign=Issue-558&amp;utm_medium=email"> A Future of Themes with CSS Container Style Queries | chriskirknielsen </a>
-          <span class="meta"> Read&nbsp; <time datetime="2023-08-30T17:20:00.000Z"> Aug 30, 2023 </time>
+          <a
+            class="link"
+            href="https://kittygiraudel.com/2024/02/26/css-only-bottom-anchored-scrolling-area/?ref=sidebar"
+          >
+            CSS-only bottom-anchored scrolling area | Kitty Giraudel
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-03-02T15:44:00.000Z">
+              Mar 2, 2024
+            </time>
+          </span>
+        </li>
+      </ul>
+
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        February 2024
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a
+            class="link"
+            href="https://youtube.com/watch?v=345V2MU3E_w&si=HnU8LPHOQIR5_Azs"
+          >
+            A better image reset for your CSS
+          </a>
+          <span class="notes">Clever items that I wouldn’t have thought of</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-02-24T18:02:00.000Z">
+              Feb 24, 2024
+            </time>
           </span>
         </li>
         <li>
-          <a href="https://youtube.com/watch?v=Qm96nr5NoMA&amp;feature=share"> THE BEST SIDE DISH THAT I'VE EVER MADE (SERIOUSLY...) | SAM THE COOKING GUY </a>
+          <a
+            class="link"
+            href="https://piccalil.li/blog/event-currenttarget-to-the-rescue/"
+          >
+            Event currentTarget to the rescue - Piccalilli
+          </a>
+          <span class="notes">Quick and helpful tip</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-02-23T15:45:00.000Z">
+              Feb 23, 2024
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://youtube.com/watch?v=pUnC-ap6ixI&si=UwEtDH1PNey2zJz0"
+          >
+            Webflow’s New Custom CSS Properties 🤯
+          </a>
+          <span class="notes">Nice feature for expanding what can be built</span
+          >
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-02-21T00:39:00.000Z">
+              Feb 20, 2024
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://youtube.com/watch?v=JONzCyVXa60&si=TLdIvcUgqEhBqLW4"
+          >
+            Add Dark Mode to YOUR website with a single line of code
+          </a>
+          <span class="notes">Super interesting way to handle it</span>
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-02-17T04:49:00.000Z">
+              Feb 16, 2024
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://youtube.com/watch?v=05tcvQSZtj4&si=cPNHmq2RZ-qGPMtd"
+          >
+            Creating Text Reveal Animation on Scroll with GSAP &amp; SplitType
+          </a>
+          <span class="notes">Interesting to see Webflow folks use GSAP</span>
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-02-16T00:47:00.000Z">
+              Feb 15, 2024
+            </time>
+          </span>
+        </li>
+        <li>
+          <a class="link" href="https://www.youtube.com/watch?v=Zl2n7qj_TgM">
+            AI Mixologist vs. Human Bartender | WIRED - YouTube - WIRED
+          </a>
+          <span class="notes">Fun experiment</span>
+          <span class="meta">
+            Watched&nbsp;<time datetime="2024-02-03T14:52:00.000Z">
+              Feb 3, 2024
+            </time>
+          </span>
+        </li>
+      </ul>
+
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        January 2024
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a
+            class="link"
+            href="https://sparkbox.com/foundry/internationalization_css_html"
+          >
+            Accounting for Internationalization with CSS and HTML
+          </a>
+          <span class="notes"
+            >I've been using logical properties but hadn't set the dir yet
+          </span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2024-01-15T15:43:00.000Z">
+              Jan 15, 2024
+            </time>
+          </span>
+        </li>
+      </ul>
+
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        December 2023
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a
+            class="link"
+            href="https://www.bekk.christmas/post/2023/12/you-don-t-need-storybook-to-make-a-playground"
+          >
+            You don't need Storybook to make a playground
+          </a>
+          <span class="notes">Definitely need to try this</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-22T21:48:00.000Z">
+              Dec 22, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://daniel.do/article/making-noisy-svgs/?ref=web-design-weekly.com"
+          >
+            Making noisy SVGs — Daniel Immke
+          </a>
+          <span class="notes">Cool technique and gorgeous blog post</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-22T21:45:00.000Z">
+              Dec 22, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://frontendmasters.com/blog/quantity-queries-are-very-easy-with-css-has/"
+          >
+            Quantity Queries are Very Easy with CSS :has() – Frontend Masters
+            Boost
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-20T13:23:00.000Z">
+              Dec 20, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://lukeplant.me.uk/blog/posts/no-one-actually-wants-simplicity/"
+          >
+            No one actually wants simplicity
+          </a>
+          <span class="notes"
+            >"We think we do, but in fact every web developer will happily
+            sacrifice simplicity to the first shiny thing promising them relief"
+            from the mildest of ailments.</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-15T15:49:00.000Z">
+              Dec 15, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://astahmer.dev/how-does-xxx-compares-to-panda-css/"
+          >
+            "How does xxx compare to Panda CSS"
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-11T18:38:00.000Z">
+              Dec 11, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://bensbites.beehiiv.com/p/ai-coding-exploding"
+          >
+            AI coding is exploding
+          </a>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-11T14:43:00.000Z">
+              Dec 11, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a class="link" href="https://codepen.io/dilums/pen/NWodZMd">
+            Timed Cards Opening
+          </a>
+          <span class="notes">I want to use this for no reserv-ai-tions</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-06T15:50:00.000Z">
+              Dec 6, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a class="link" href="https://codepen.io/Gogh/pen/GRPoqQW">
+            Modern Button Styles - 45 CSS Only Buttons
+          </a>
+          <span class="notes">I want to use a few of these</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-06T15:47:00.000Z">
+              Dec 6, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://blog.stephaniestimac.com/posts/2023/12/css-media-video-source/"
+          >
+            CSS Media Query Support for Video source Elements - Stephanie
+            Stimac's Blog
+          </a>
+          <span class="notes">Cool little snippet</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-06T15:39:00.000Z">
+              Dec 6, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://medium.com/@blakemanzo/teaching-chatgpt-to-prompt-midjourney-3f581cd42a73"
+          >
+            Teaching ChatGPT to prompt Midjourney
+          </a>
+          <span class="notes"
+            >Definitely need to make a thread or GPT of this</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-05T19:22:00.000Z">
+              Dec 5, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://www.htmhell.dev/adventcalendar/2023/2/?ref=sidebar"
+          >
+            You don't need JavaScript for that - HTMHell
+          </a>
+          <span class="notes"
+            >Nice roundup of UI that can be done natively now
+          </span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-12-04T13:21:00.000Z">
+              Dec 4, 2023
+            </time>
+          </span>
+        </li>
+      </ul>
+
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        November 2023
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a
+            class="link"
+            href="https://css-irl.info/preventing-overscroll-bounce-with-css/"
+          >
+            CSS In Real Life | Preventing Scroll “Bounce” with CSS
+          </a>
+          <span class="notes">Neat trick that I’ll add to my stuff</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-11-30T16:50:00.000Z">
+              Nov 30, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://remysharp.com/2023/11/21/scraping-goodreads"
+          >
+            Scraping Goodreads
+          </a>
+          <span class="notes"
+            >Another good way to get your data out of Goodreads</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-11-22T19:56:00.000Z">
+              Nov 22, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://martinfowler.com/articles/headless-component.html"
+          >
+            Headless Component: a pattern for composing React UIs
+          </a>
+          <span class="notes"
+            >Love this dive into how to think through components</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-11-18T14:43:00.000Z">
+              Nov 18, 2023
+            </time>
+          </span>
+        </li>
+      </ul>
+
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        October 2023
+      </h2>
+
+      <ul class="library-links has-links">
+        <li>
+          <a
+            class="link"
+            href="https://www.smashingmagazine.com/2023/10/animate-along-path-css/"
+          >
+            How To Animate Along A Path In CSS — Smashing Magazine
+          </a>
+          <span class="notes">Super slick</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-10-25T13:32:00.000Z">
+              Oct 25, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://www.smashingmagazine.com/2023/09/smashing-magazine-tinacms-manage-editorial-workflow/"
+          >
+            How Smashing Magazine Uses TinaCMS To Manage An Editorial Workflow
+          </a>
+          <span class="notes"
+            >I’ve been debating using this, I want a git-based CMS for this site</span
+          >
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-10-05T15:20:00.000Z">
+              Oct 5, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a
+            class="link"
+            href="https://www.amitmerchant.com/textarea-auto-increase-height/?ref=web-design-weekly.com"
+          >
+            Textareas with auto-increasing height using CSS
+          </a>
+          <span class="notes">Nice feature</span>
+          <span class="meta">
+            Read&nbsp;<time datetime="2023-10-04T15:00:00.000Z">
+              Oct 4, 2023
+            </time>
+          </span>
+        </li>
+      </ul>
+
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        August 2023
+      </h2>
+
+      <ul class="library-links has-links">
+        <li>
+          <a
+            href="https://chriskirknielsen.com/blog/future-themes-with-container-style-queries/?utm_source=CSS-Weekly&utm_campaign=Issue-558&utm_medium=email"
+          >
+            A Future of Themes with CSS Container Style Queries |
+            chriskirknielsen
+          </a>
+          <span class="meta">
+            Read&nbsp; <time datetime="2023-08-30T17:20:00.000Z">
+              Aug 30, 2023
+            </time>
+          </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=Qm96nr5NoMA&feature=share">
+            THE BEST SIDE DISH THAT I'VE EVER MADE (SERIOUSLY...) | SAM THE
+            COOKING GUY
+          </a>
           <span class="notes">Fondant potatoes that I have to make</span>
-          <span class="meta"> Watched&nbsp; <time datetime="2023-08-12T21:11:00.000Z"> Aug 12, 2023 </time>
+          <span class="meta">
+            Watched&nbsp; <time datetime="2023-08-12T21:11:00.000Z">
+              Aug 12, 2023
+            </time>
           </span>
         </li>
         <li>
-          <a href="https://blog.bytebytego.com/p/the-foundation-of-rest-api-http?amp%3Butm_medium=email"> The Foundation of REST API: HTTP - ByteByteGo Newsletter </a>
-          <span class="notes">Great explanations, I went too long without knowing any of this </span>
-          <span class="meta"> Read&nbsp; <time datetime="2023-08-12T14:21:00.000Z"> Aug 12, 2023 </time>
+          <a
+            href="https://blog.bytebytego.com/p/the-foundation-of-rest-api-http?amp%3Butm_medium=email"
+          >
+            The Foundation of REST API: HTTP - ByteByteGo Newsletter
+          </a>
+          <span class="notes"
+            >Great explanations, I went too long without knowing any of this
+          </span>
+          <span class="meta">
+            Read&nbsp; <time datetime="2023-08-12T14:21:00.000Z">
+              Aug 12, 2023
+            </time>
           </span>
         </li>
         <li>
-          <a href="https://pimpmytype.com/font-size/"> What’s the right font size in web design? - Pimp my Type </a>
+          <a href="https://pimpmytype.com/font-size/">
+            What’s the right font size in web design? - Pimp my Type
+          </a>
           <span class="notes">I concur</span>
-          <span class="meta"> Read&nbsp; <time datetime="2023-08-11T20:11:00.000Z"> Aug 11, 2023 </time>
+          <span class="meta">
+            Read&nbsp; <time datetime="2023-08-11T20:11:00.000Z">
+              Aug 11, 2023
+            </time>
           </span>
         </li>
         <li>
-          <a href="https://muffinman.io/blog/css-only-floating-input-labels/?utm_source=CSS-Weekly&amp;utm_campaign=Issue-556&amp;utm_medium=email"> CSS only floating labels · Muffin Man </a>
+          <a
+            href="https://muffinman.io/blog/css-only-floating-input-labels/?utm_source=CSS-Weekly&utm_campaign=Issue-556&utm_medium=email"
+          >
+            CSS only floating labels · Muffin Man
+          </a>
           <span class="notes">Nice</span>
-          <span class="meta"> Read&nbsp; <time datetime="2023-08-11T12:35:00.000Z"> Aug 11, 2023 </time>
+          <span class="meta">
+            Read&nbsp; <time datetime="2023-08-11T12:35:00.000Z">
+              Aug 11, 2023
+            </time>
           </span>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=5a8NyGLlorI"> I Gave a Website Logo Superpowers </a>
+          <a href="https://www.youtube.com/watch?v=5a8NyGLlorI">
+            I Gave a Website Logo Superpowers
+          </a>
           <span class="notes">Another fun walkthrough </span>
-          <span class="meta"> Watched&nbsp; <time datetime="2023-08-10T02:19:00.000Z"> Aug 9, 2023 </time>
+          <span class="meta">
+            Watched&nbsp; <time datetime="2023-08-10T02:19:00.000Z">
+              Aug 9, 2023
+            </time>
           </span>
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=BoeZqPaYw9s&amp;t=42s"> Why I STOPPED Using Next.js And Chose Astro Instead </a>
-          <span class="notes">A personal blog is a perfect use case for Astro instead of Next</span>
-          <span class="meta"> Watched&nbsp; <time datetime="2023-08-10T02:18:00.000Z"> Aug 9, 2023 </time>
+          <a href="https://www.youtube.com/watch?v=BoeZqPaYw9s&t=42s">
+            Why I STOPPED Using Next.js And Chose Astro Instead
+          </a>
+          <span class="notes"
+            >A personal blog is a perfect use case for Astro instead of Next</span
+          >
+          <span class="meta">
+            Watched&nbsp; <time datetime="2023-08-10T02:18:00.000Z">
+              Aug 9, 2023
+            </time>
           </span>
         </li>
         <li>
           <a href="https://adactio.com/journal/20386"> Coding prototypes </a>
-          <span class="notes">Write what you need to test a hypothesis. Then throw that code away.</span>
-          <span class="meta"> Read&nbsp; <time datetime="2023-08-09T15:55:00.000Z"> Aug 9, 2023 </time>
+          <span class="notes"
+            >Write what you need to test a hypothesis. Then throw that code
+            away.</span
+          >
+          <span class="meta">
+            Read&nbsp; <time datetime="2023-08-09T15:55:00.000Z">
+              Aug 9, 2023
+            </time>
           </span>
         </li>
         <li>
-            <a href="https://leerob.io/blog/product-engineers">Product and Platform Engineers</a>
-            <span class="notes">Another differentiation, kinda similar to what I do </span>
-            <span class="meta">
-            Read, Aug 07 2023
-            </span>
+          <a href="https://leerob.io/blog/product-engineers"
+            >Product and Platform Engineers</a
+          >
+          <span class="notes"
+            >Another differentiation, kinda similar to what I do
+          </span>
+          <span class="meta"> Read, Aug 07 2023 </span>
         </li>
         <li>
-            <a href="https://glazkov.com/2023/08/03/build-a-thing-to-build-the-thing/?utm_source=tldrnewsletter">Build a thing to build the thing</a>
-            <span class="notes">Valuable approach for building a design system or UI library </span>
-            <span class="meta">
-            Read, Aug 07 2023
-            </span>
+          <a
+            href="https://glazkov.com/2023/08/03/build-a-thing-to-build-the-thing/?utm_source=tldrnewsletter"
+            >Build a thing to build the thing</a
+          >
+          <span class="notes"
+            >Valuable approach for building a design system or UI library
+          </span>
+          <span class="meta"> Read, Aug 07 2023 </span>
         </li>
         <li>
-            <a href="https://www.zeldman.com/2023/08/04/the-next-generation-of-web-layouts/?ref=sidebar">The Next Generation of Web Layouts</a>
-            <span class="notes">Nice, open challenge from The Godfather</span>
-            <span class="meta">
-            Read, Aug 07 2023
-            </span>
+          <a
+            href="https://www.zeldman.com/2023/08/04/the-next-generation-of-web-layouts/?ref=sidebar"
+            >The Next Generation of Web Layouts</a
+          >
+          <span class="notes">Nice, open challenge from The Godfather</span>
+          <span class="meta"> Read, Aug 07 2023 </span>
         </li>
         <li>
-            <a href="https://www.matuzo.at/blog/2023/zero-width-height-skip/">Visually hidden links with 0 dimensions</a>
-            <span class="notes">Weird and helpful find</span>
-            <span class="meta">
-            Read, Aug 07 2023
-            </span>
+          <a href="https://www.matuzo.at/blog/2023/zero-width-height-skip/"
+            >Visually hidden links with 0 dimensions</a
+          >
+          <span class="notes">Weird and helpful find</span>
+          <span class="meta"> Read, Aug 07 2023 </span>
         </li>
         <li>
-            <a href="https://medium.com/@sevensky823/10-art-styles-on-midjourney-v5-prompts-you-must-try-9d4cb1e60c88">10 Art Styles on Midjourney V5 Prompts you must try!</a>
-            <span class="notes">Worth demoing them all</span>
-            <span class="meta">
-            Read, Aug 04 2023
-            </span>
+          <a
+            href="https://medium.com/@sevensky823/10-art-styles-on-midjourney-v5-prompts-you-must-try-9d4cb1e60c88"
+            >10 Art Styles on Midjourney V5 Prompts you must try!</a
+          >
+          <span class="notes">Worth demoing them all</span>
+          <span class="meta"> Read, Aug 04 2023 </span>
         </li>
         <li>
-            <a href="https://heather-buchel.com/blog/2023/07/just-normal-web-things/?ref=sidebar">Just normal web things.</a>
-            <span class="notes">Some good points on how engineers break affordances in the spirit of advancement</span>
-            <span class="meta">
-            Read, Aug 03 2023
-            </span>
+          <a
+            href="https://heather-buchel.com/blog/2023/07/just-normal-web-things/?ref=sidebar"
+            >Just normal web things.</a
+          >
+          <span class="notes"
+            >Some good points on how engineers break affordances in the spirit
+            of advancement</span
+          >
+          <span class="meta"> Read, Aug 03 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=9VXR_qRgROE&amp;list=WL&amp;index=3">Build Custom Interfaces Using CSS Open Props - YouTube - Learn With Jason</a>
-            <span class="notes">Definitely going to try this for some example components that I want to build</span>
-            <span class="meta">
-            Watched, Aug 02 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=9VXR_qRgROE&list=WL&index=3"
+            >Build Custom Interfaces Using CSS Open Props - YouTube - Learn With
+            Jason</a
+          >
+          <span class="notes"
+            >Definitely going to try this for some example components that I
+            want to build</span
+          >
+          <span class="meta"> Watched, Aug 02 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=9mTgKFjJRXg&amp;list=WL&amp;index=18">React Hooks Crash Course (useMemo, useCallback and more). - YouTube - developedbyed</a>
-            <span class="notes">Learned some bits of how things work that Next handles </span>
-            <span class="meta">
-            Watched, Aug 02 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=9mTgKFjJRXg&list=WL&index=18"
+            >React Hooks Crash Course (useMemo, useCallback and more). - YouTube
+            - developedbyed</a
+          >
+          <span class="notes"
+            >Learned some bits of how things work that Next handles
+          </span>
+          <span class="meta"> Watched, Aug 02 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=-YO_z14dUyI&amp;list=WL&amp;index=19">Responding to Reddit on the Next.js App Router - YouTube - Lee Robinson</a>
-            <span class="notes">Love this approach by Lee and I learned some things</span>
-            <span class="meta">
-            Watched, Aug 02 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=-YO_z14dUyI&list=WL&index=19"
+            >Responding to Reddit on the Next.js App Router - YouTube - Lee
+            Robinson</a
+          >
+          <span class="notes"
+            >Love this approach by Lee and I learned some things</span
+          >
+          <span class="meta"> Watched, Aug 02 2023 </span>
         </li>
         <li>
-            <a href="https://ntietz.com/blog/throw-away-your-first-draft/?utm_source=tldrnewsletter">Throw away your first draft of your code | nicole@web</a>
-            <span class="meta">
-            Read, Aug 02 2023
-            </span>
+          <a
+            href="https://ntietz.com/blog/throw-away-your-first-draft/?utm_source=tldrnewsletter"
+            >Throw away your first draft of your code | nicole@web</a
+          >
+          <span class="meta"> Read, Aug 02 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=Rr5AqASIyxw">Stop Conditional Rendering in React Without Knowing This (&amp;&amp; vs Ternary Operator) - YouTube - ByteGrad</a>
-            <span class="notes">I got caught with this in the past</span>
-            <span class="meta">
-            Watched, Aug 01 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=Rr5AqASIyxw"
+            >Stop Conditional Rendering in React Without Knowing This
+            (&amp;&amp; vs Ternary Operator) - YouTube - ByteGrad</a
+          >
+          <span class="notes">I got caught with this in the past</span>
+          <span class="meta"> Watched, Aug 01 2023 </span>
         </li>
         <li>
-            <a href="https://www.amitmerchant.com/run-and-pause-animations-in-css/">Resume and pause animations in CSS</a>
-            <span class="notes">animation-play-state: paused FTW</span>
-            <span class="meta">
-            Read, Aug 01 2023
-            </span>
-        </li>
-      </ul>
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">July 2023</h2>
-      <ul class="library-links has-links">
-        <li>
-            <a href="https://addyosmani.com/blog/patience/">The key to understanding complex systems is patience.</a>
-            <span class="notes">Embracing them and being resilient are the hardest parts for me</span>
-            <span class="meta">
-            Read, Jul 31 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=cEXrxjorI1M">Framer Update: Code Blocks &amp; Inline Code - YouTube - Framer</a>
-            <span class="notes">Nice way to improve usage of Framer for content sites </span>
-            <span class="meta">
-            Watched, Jul 30 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=-pDPASqX97w">How To Create This Unbelievable CSS Scroll Animation - YouTube - Web Dev Simplified</a>
-            <span class="notes">Learned how to think through this animation</span>
-            <span class="meta">
-            Watched, Jul 30 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=RlJYQeKfJDA">Framer Tutorial: Advanced Scroll Zoom Animation - YouTube - Framer University</a>
-            <span class="notes">Awesome walkthrough, learned some Framer techniques</span>
-            <span class="meta">
-            Watched, Jul 30 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=Xc6G3oV24yE">Top 10 CSS One Liners That Will Blow Your Mind - YouTube - developedbyed</a>
-            <span class="notes">He's hilarious and informative, "bitch"</span>
-            <span class="meta">
-            Read, Jul 30 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://daverupert.com/2023/07/why-not-webcomponents/">If Web Components are so great, why am I not using them?</a>
-            <span class="notes">All good points from Uncle Dave</span>
-            <span class="meta">
-            Read, Jul 28 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://utilitybend.com/blog/scroll-driven-animations-in-css-are-a-joy-to-play-around-with?ref=sidebar">Scroll driven animations in CSS are a joy to play around with! | utilitybend</a>
-            <span class="notes">Definitely want a progress meter for blog posts once this is at least in Chrome </span>
-            <span class="meta">
-            Read, Jul 28 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://remotesynthesis.com/blog/goodbye-jamstack/">Remote Synthesis | Is Jamstack Officially Finished?</a>
-            <span class="notes">RIP Jamstack</span>
-            <span class="meta">
-            Read, Jul 27 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=fKSemrudovo">Why Panda: CSS for RSCs is Changing the Game - YouTube - Jack Herrington</a>
-            <span class="notes">I'm super excited for this, I want to see if I could revamp our whole design system with it</span>
-            <span class="meta">
-            Watched, Jul 26 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://vercel.com/blog/introducing-react-tweet">Introducing React Tweet – Vercel</a>
-            <span class="notes">Worth trying when I need one</span>
-            <span class="meta">
-            Read, Jul 26 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=pdJQ8iVTwj8&amp;t=9519">Chris Lattner: Future of Programming and AI | Lex Fridman Podcast #381 - YouTube - Lex Fridman</a>
-            <span class="notes">Fantastic conversation between two humble and insanely smart programmers </span>
-            <span class="meta">
-            Watched, Jul 25 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://youtube.com/watch?v=9dEIg2xOphE&amp;feature=share">CSS-only particle animations</a>
-            <span class="notes">Awesome “pairing” session on animations, lots of great tips</span>
-            <span class="meta">
-            Watched, Jul 25 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=nDyxH5XCbfk">How Long Should Your Midjourney Prompt Be? /Shorten Deep Dive</a>
-            <span class="notes">Nice breakdown of the shorten command and experiments with it</span>
-            <span class="meta">
-            Read, Jul 23 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://bootcamp.uxdesign.cc/how-to-create-brand-consistent-background-images-with-midjourney-283054a86fac">How to Create Brand-Consistent Background Images with Midjourney</a>
-            <span class="notes">Saving to remember to try background images</span>
-            <span class="meta">
-            Read, Jul 21 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://tympanus.net/codrops/2023/07/20/scroll-based-layout-animations/">Scroll-Based Layout Animations | Codrops</a>
-            <span class="notes">An exploration of different scroll based layout switch animations using GSAP's ScrollTrigger and Flip.</span>
-            <span class="meta">
-            Read, Jul 20 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.design-studio.io/blog/the-ultimate-guide-to-ai-web-design/">The Ultimate Guide to AI Web Design 2023 | by Design Studio | Jul, 2023 | UX Planet</a>
-            <span class="notes">Ultimate is strong, but a good collection of what things are being created</span>
-            <span class="meta">
-            Read, Jul 19 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=r-GSGH2RxJs">htmx in 100 seconds</a>
-            <span class="notes">I’m probably missing something, but seems better to use web components</span>
-            <span class="meta">
-            Watched, Jul 19 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.smashingmagazine.com/2023/07/become-better-speaker-conferences/">How To Become A Better Speaker At Conferences — Smashing Magazine</a>
-            <span class="notes">Solid advice </span>
-            <span class="meta">
-            Read, Jul 18 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://ishadeed.com/article/conditional-css-has-nth-last-child/?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=wdrl-313">Conditional CSS with :has and :nth-last-child - Ahmad Shadeed</a>
-            <span class="notes">Excellent examples</span>
-            <span class="meta">
-            Read, Jul 17 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.yieldcode.blog/post/why-engineers-should-write/?utm_source=hackernewsletter&amp;utm_medium=email&amp;utm_term=fav">Why engineers should focus on writing - Dmitry Kudryavtsev</a>
-            <span class="notes">I agree and put it on the internet</span>
-            <span class="meta">
-            Read, Jul 16 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://developer.chrome.com/blog/scroll-animation-performance-case-study/?ck_subscriber_id=1665201471">A case study on scroll-driven animations performance - Chrome Developers</a>
-            <span class="notes">Looking forward to it getting adopted</span>
-            <span class="meta">
-            Read, Jul 16 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://developer.mozilla.org/en-US/blog/scroll-progress-animations-in-css/">Scroll progress animations in CSS | MDN Blog</a>
-            <span class="notes">Love the things that are coming to the platform </span>
-            <span class="meta">
-            Read, Jul 16 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=veEqYQlfNx8">The problems with viewport units - YouTube - Kevin Powell</a>
-            <span class="notes">I recently ran into a few of these, excellent breakdown</span>
-            <span class="meta">
-            Read, Jul 14 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://philna.sh/blog/2023/07/13/easy-and-accessible-pagination-links-for-your-astro-collections/">Easy and accessible pagination links for your Astro collections</a>
-            <span class="notes">Still want to build something sizable with Astro </span>
-            <span class="meta">
-            Read, Jul 13 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.skool.com/chatgpt/promptgenerator?p=1e5ede93">PromptGenerator · ChatGPT Users</a>
-            <span class="notes">Great prompt crafting technique</span>
-            <span class="meta">
-            Read, Jul 13 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://tympanus.net/codrops/2023/07/13/inspiration-for-text-block-transitions/">Inspiration for Text Block Transitions | Codrops</a>
-            <span class="notes">I love the UI for testing as much as I love the effect</span>
-            <span class="meta">
-            Read, Jul 13 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.phpied.com/fixing-inp-with-a-viewport-tag/">Fixing INP with a VIEWPORT tag</a>
-            <span class="notes">Cool trick for static pages with the errors </span>
-            <span class="meta">
-            Read, Jul 13 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.builder.io/blog/tailwind-css-tips-and-tricks">Tailwind CSS Tips and Tricks Worth Knowing</a>
-            <span class="notes">Nice collection of tips, reminded me of group which I needed recently but wrote CSS for </span>
-            <span class="meta">
-            Read, Jul 11 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.cbsnews.com/boston/news/avi-loeb-harvard-professor-alien-technology-fragments/?ref=thefuturist">Harvard professor Avi Loeb believes he's found fragments of alien technology - CBS Boston</a>
-            <span class="notes">Wild discovery, I wonder if they are really crafted bits of tech</span>
-            <span class="meta">
-            Read, Jul 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.kodingkitty.com/blog/how-to-build-a-website/?utm_source=hackernewsletter&amp;utm_medium=email&amp;utm_term=fav">How to build a website without frameworks and tons of libraries | Koding Kitty</a>
-            <span class="notes">Jinja to the rescue! This goes a little further than my taste but I see the value</span>
-            <span class="meta">
-            Read, Jul 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://bootcamp.uxdesign.cc/headless-design-systems-5c20c443e6d1">Headless Design Systems. Revolutionizing Front-end Development | by Matthaios Mantzios | Jun, 2023 | Bootcamp</a>
-            <span class="notes">I love the premise and it solves a problem, but I want to see the dirty work involved</span>
-            <span class="meta">
-            Read, Jul 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://bejamas.io/blog/dodonut-case-study/">Building a Sustainable Website for Dodonut Using Astro JS - Bejamas</a>
-            <span class="notes">Really interesting to consider carbon emissions, beyond the the typical web perf</span>
-            <span class="meta">
-            Read, Jul 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://pudding.cool/2023/05/country-radio/">They Won't Play a Lady-O on Country Radio: Examining Back-to-Back Plays by Gender, Race, &amp; Sexual Orientation</a>
-            <span class="notes">Pudding does it again, with excellent visualizations and backstory behind a problem</span>
-            <span class="meta">
-            Read, Jul 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="http://localroger.com/">localroger's home</a>
-            <span class="notes">Had to read, got it from Lex Fridman chatting with George Hotz</span>
-            <span class="meta">
-            Read, Jul 08 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://muffinman.io/blog/css-only-floating-input-labels/">CSS only floating labels</a>
-            <span class="notes">Nice thing to use </span>
-            <span class="meta">
-            Read, Jul 07 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://youtube.com/watch?v=4DB-w02Er4w&amp;feature=share">Smoked Chicken Bombs Recipe...These Are AMAZING! | Ash Kickin' BBQ</a>
-            <span class="notes">Really want to make these and order those pins</span>
-            <span class="meta">
-            Watched, Jul 06 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://youtube.com/watch?v=XJFXMcpPKA8&amp;feature=share">This Makes State Management so Much Easier</a>
-            <span class="notes">Zustand looks excellent for handling state</span>
-            <span class="meta">
-            Watched, Jul 06 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://kurtextrem.de/posts/svg-in-js">Breaking Up with SVG-in-JS in 2023</a>
-            <span class="notes">Going to try the &lt;use&gt; approach in our next-app</span>
-            <span class="meta">
-            Read, Jul 05 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://github.com/nucliweb/webperf-snippets">nucliweb/webperf-snippets: ⚡️ 💾  Web Performance Snippets</a>
-            <span class="notes">Interesting snippets that I need to try out</span>
-            <span class="meta">
-            Read, Jul 04 2023
-            </span>
+          <a
+            href="https://www.amitmerchant.com/run-and-pause-animations-in-css/"
+            >Resume and pause animations in CSS</a
+          >
+          <span class="notes">animation-play-state: paused FTW</span>
+          <span class="meta"> Read, Aug 01 2023 </span>
         </li>
       </ul>
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">June 2023</h2>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        July 2023
+      </h2>
       <ul class="library-links has-links">
         <li>
-            <a href="https://youtube.com/watch?v=NAwKcF-wQXE&amp;feature=share">Framer Tutorial: Advanced Scroll Animation (ZERO Code)</a>
-            <span class="notes">Really enjoy his style of teaching and video production</span>
-            <span class="meta">
-            Watched, Jun 30 2023
-            </span>
+          <a href="https://addyosmani.com/blog/patience/"
+            >The key to understanding complex systems is patience.</a
+          >
+          <span class="notes"
+            >Embracing them and being resilient are the hardest parts for me</span
+          >
+          <span class="meta"> Read, Jul 31 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=zp14EJrJ0jc">Framer Tutorial: No-Code Animated Curved Carousel for Your Website - YouTube - Framer University</a>
-            <span class="notes">Rad animation made so easily compared to code</span>
-            <span class="meta">
-            Watched, Jun 30 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=cEXrxjorI1M"
+            >Framer Update: Code Blocks &amp; Inline Code - YouTube - Framer</a
+          >
+          <span class="notes"
+            >Nice way to improve usage of Framer for content sites
+          </span>
+          <span class="meta"> Watched, Jul 30 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=gv_5pufAw1w&amp;t=26s">Creating zooming scroll effects like Apple.com in Framer without code - YouTube - Framer</a>
-            <span class="notes">I need to make this </span>
-            <span class="meta">
-            Read, Jun 30 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=-pDPASqX97w"
+            >How To Create This Unbelievable CSS Scroll Animation - YouTube -
+            Web Dev Simplified</a
+          >
+          <span class="notes">Learned how to think through this animation</span>
+          <span class="meta"> Watched, Jul 30 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=6TYkDy54q4E&amp;feature=share">ImNotGoodEnough.js</a>
-            <span class="notes">Love this way of breaking things down by what you know</span>
-            <span class="meta">
-            Watched, Jun 30 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=RlJYQeKfJDA"
+            >Framer Tutorial: Advanced Scroll Zoom Animation - YouTube - Framer
+            University</a
+          >
+          <span class="notes"
+            >Awesome walkthrough, learned some Framer techniques</span
+          >
+          <span class="meta"> Watched, Jul 30 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=3qFmSSuYwaY&amp;feature=share">How we made the </a>
-            <span class="notes">Awesome tutorial and dog-fooding example by Figma</span>
-            <span class="meta">
-            Watched, Jun 30 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=Xc6G3oV24yE"
+            >Top 10 CSS One Liners That Will Blow Your Mind - YouTube -
+            developedbyed</a
+          >
+          <span class="notes">He's hilarious and informative, "bitch"</span>
+          <span class="meta"> Read, Jul 30 2023 </span>
         </li>
         <li>
-            <a href="https://amirardalan.com/blog/use-next-image-with-react-markdown">Use Next/Image with React Markdown – Amir Ardalan</a>
-            <span class="notes">Extend react-markdown with metastrings.</span>
-            <span class="meta">
-            Read, Jun 30 2023
-            </span>
+          <a href="https://daverupert.com/2023/07/why-not-webcomponents/"
+            >If Web Components are so great, why am I not using them?</a
+          >
+          <span class="notes">All good points from Uncle Dave</span>
+          <span class="meta"> Read, Jul 28 2023 </span>
         </li>
         <li>
-            <a href="https://levelup.gitconnected.com/the-best-secret-of-midjourney-v5-2-its-not-zoom-out-but-create-consistent-style-d8ebdb11a0ba">The BEST Secret of MidJourney V5.2&nbsp;: It’s NOT “Zoom Out”… but “Create Consistent Style”!</a>
-            <span class="notes">Excellent walkthrough, need to try this for a series</span>
-            <span class="meta">
-            Read, Jun 30 2023
-            </span>
+          <a
+            href="https://utilitybend.com/blog/scroll-driven-animations-in-css-are-a-joy-to-play-around-with?ref=sidebar"
+            >Scroll driven animations in CSS are a joy to play around with! |
+            utilitybend</a
+          >
+          <span class="notes"
+            >Definitely want a progress meter for blog posts once this is at
+            least in Chrome
+          </span>
+          <span class="meta"> Read, Jul 28 2023 </span>
         </li>
         <li>
-            <a href="https://developer.mozilla.org/en-US/blog/introducing-ai-help/">Introducing AI Help: Your Trusted Companion for Web Development | MDN Blog</a>
-            <span class="notes">Excellent place for AI to help with learning and finding docs</span>
-            <span class="meta">
-            Read, Jun 30 2023
-            </span>
+          <a href="https://remotesynthesis.com/blog/goodbye-jamstack/"
+            >Remote Synthesis | Is Jamstack Officially Finished?</a
+          >
+          <span class="notes">RIP Jamstack</span>
+          <span class="meta"> Read, Jul 27 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=kySGqoU7X-s&amp;feature=share">This Website Feature Demands It Of You</a>
-            <span class="notes">Short and sweet example of how to break down something complicated and recreate it</span>
-            <span class="meta">
-            Watched, Jun 29 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=fKSemrudovo"
+            >Why Panda: CSS for RSCs is Changing the Game - YouTube - Jack
+            Herrington</a
+          >
+          <span class="notes"
+            >I'm super excited for this, I want to see if I could revamp our
+            whole design system with it</span
+          >
+          <span class="meta"> Watched, Jul 26 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=qxCsJeqRoDY&amp;feature=share">Framer Tutorial: CMS Basics</a>
-            <span class="notes">I need to give this a try</span>
-            <span class="meta">
-            Watched, Jun 29 2023
-            </span>
+          <a href="https://vercel.com/blog/introducing-react-tweet"
+            >Introducing React Tweet – Vercel</a
+          >
+          <span class="notes">Worth trying when I need one</span>
+          <span class="meta"> Read, Jul 26 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=gSSsZReIFRk&amp;feature=share">Next.js App Router: Routing, Data Fetching, Caching</a>
-            <span class="notes">Awesome intro by Lee, I want to be able to update to 13</span>
-            <span class="meta">
-            Watched, Jun 29 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=pdJQ8iVTwj8&t=9519"
+            >Chris Lattner: Future of Programming and AI | Lex Fridman Podcast
+            #381 - YouTube - Lex Fridman</a
+          >
+          <span class="notes"
+            >Fantastic conversation between two humble and insanely smart
+            programmers
+          </span>
+          <span class="meta"> Watched, Jul 25 2023 </span>
         </li>
         <li>
-            <a href="https://unicorn-utterances.com/posts/port-nextjs-to-astro">Porting a Next.js Site to Astro Step-by-Step</a>
-            <span class="notes">Nice walkthrough, I'd love to move our marketing site</span>
-            <span class="meta">
-            Read, Jun 29 2023
-            </span>
+          <a href="https://youtube.com/watch?v=9dEIg2xOphE&feature=share"
+            >CSS-only particle animations</a
+          >
+          <span class="notes"
+            >Awesome “pairing” session on animations, lots of great tips</span
+          >
+          <span class="meta"> Watched, Jul 25 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=mPXljWeWu3g&amp;feature=share">Your next component - Dan Mall (Config 2023)</a>
-            <span class="notes">Excellent talk, reminded us that every day is a chance to make things better</span>
-            <span class="meta">
-            Watched, Jun 28 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=nDyxH5XCbfk"
+            >How Long Should Your Midjourney Prompt Be? /Shorten Deep Dive</a
+          >
+          <span class="notes"
+            >Nice breakdown of the shorten command and experiments with it</span
+          >
+          <span class="meta"> Read, Jul 23 2023 </span>
         </li>
         <li>
-            <a href="https://www.framer.com/updates/mobile-navigations">Framer Updates: Mobile Navigations</a>
-            <span class="notes">Need to test making a nav</span>
-            <span class="meta">
-            Read, Jun 28 2023
-            </span>
+          <a
+            href="https://bootcamp.uxdesign.cc/how-to-create-brand-consistent-background-images-with-midjourney-283054a86fac"
+            >How to Create Brand-Consistent Background Images with Midjourney</a
+          >
+          <span class="notes">Saving to remember to try background images</span>
+          <span class="meta"> Read, Jul 21 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=nS_9yAABLwc&amp;feature=share">Master Carousels in Framer (Slideshow, Ticker &amp; Carousel)</a>
-            <span class="notes">Great intro and makes me wonder if you can use CMS items</span>
-            <span class="meta">
-            Watched, Jun 28 2023
-            </span>
+          <a
+            href="https://tympanus.net/codrops/2023/07/20/scroll-based-layout-animations/"
+            >Scroll-Based Layout Animations | Codrops</a
+          >
+          <span class="notes"
+            >An exploration of different scroll based layout switch animations
+            using GSAP's ScrollTrigger and Flip.</span
+          >
+          <span class="meta"> Read, Jul 20 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=71L-BzjSbEc">Framer Update: New Conditionals &amp; Transforms</a>
-            <span class="notes">This tool is a front-end dev and I love it</span>
-            <span class="meta">
-            Watched, Jun 28 2023
-            </span>
+          <a
+            href="https://www.design-studio.io/blog/the-ultimate-guide-to-ai-web-design/"
+            >The Ultimate Guide to AI Web Design 2023 | by Design Studio | Jul,
+            2023 | UX Planet</a
+          >
+          <span class="notes"
+            >Ultimate is strong, but a good collection of what things are being
+            created</span
+          >
+          <span class="meta"> Read, Jul 19 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=tVdGCbpu2cs">Designing the new Dive website in Figma + Framer - YouTube - Ridd</a>
-            <span class="notes">Seriously awesome walkthrough </span>
-            <span class="meta">
-            Watched, Jun 27 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=r-GSGH2RxJs"
+            >htmx in 100 seconds</a
+          >
+          <span class="notes"
+            >I’m probably missing something, but seems better to use web
+            components</span
+          >
+          <span class="meta"> Watched, Jul 19 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=88XxC0_zs74">6 UI Hacks I Wish I Knew As A Beginner - YouTube - Tim Gabe</a>
-            <span class="notes">Standard things, explained very well</span>
-            <span class="meta">
-            Watched, Jun 27 2023
-            </span>
+          <a
+            href="https://www.smashingmagazine.com/2023/07/become-better-speaker-conferences/"
+            >How To Become A Better Speaker At Conferences — Smashing Magazine</a
+          >
+          <span class="notes">Solid advice </span>
+          <span class="meta"> Read, Jul 18 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=IU_qq_c_lKA">Using Images in Next.js (next/image examples) - YouTube - Lee Robinson</a>
-            <span class="notes">Nice dive into the new version of the component</span>
-            <span class="meta">
-            Watched, Jun 27 2023
-            </span>
+          <a
+            href="https://ishadeed.com/article/conditional-css-has-nth-last-child/?utm_source=newsletter&utm_medium=email&utm_campaign=wdrl-313"
+            >Conditional CSS with :has and :nth-last-child - Ahmad Shadeed</a
+          >
+          <span class="notes">Excellent examples</span>
+          <span class="meta"> Read, Jul 17 2023 </span>
         </li>
         <li>
-            <a href="https://nohandoff.org/no-handoff-between-product-and-engineering/">No Handoff: close the gap between product and engineering – No Handoff</a>
-            <span class="notes">The dream</span>
-            <span class="meta">
-            Read, Jun 27 2023
-            </span>
+          <a
+            href="https://www.yieldcode.blog/post/why-engineers-should-write/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav"
+            >Why engineers should focus on writing - Dmitry Kudryavtsev</a
+          >
+          <span class="notes">I agree and put it on the internet</span>
+          <span class="meta"> Read, Jul 16 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=063yVWoQvoY&amp;feature=share">Figma Dev Mode is here!</a>
-            <span class="notes">Intro to the features with a nice warning about the cost</span>
-            <span class="meta">
-            Watched, Jun 27 2023
-            </span>
+          <a
+            href="https://developer.chrome.com/blog/scroll-animation-performance-case-study/?ck_subscriber_id=1665201471"
+            >A case study on scroll-driven animations performance - Chrome
+            Developers</a
+          >
+          <span class="notes">Looking forward to it getting adopted</span>
+          <span class="meta"> Read, Jul 16 2023 </span>
         </li>
         <li>
-            <a href="https://cloudfour.com/thinks/animating-slack-reminders-with-the-view-transitions-api/">Animating Slack reminders with the View Transitions API</a>
-            <span class="notes">Nice intro to the API</span>
-            <span class="meta">
-            Read, Jun 27 2023
-            </span>
+          <a
+            href="https://developer.mozilla.org/en-US/blog/scroll-progress-animations-in-css/"
+            >Scroll progress animations in CSS | MDN Blog</a
+          >
+          <span class="notes"
+            >Love the things that are coming to the platform
+          </span>
+          <span class="meta"> Read, Jul 16 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=UAFBa8VmgJI">4 Ai Personal Assistants (3 Tested)</a>
-            <span class="notes">None seem great, as I’ve experienced as well</span>
-            <span class="meta">
-            Watched, Jun 26 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=veEqYQlfNx8"
+            >The problems with viewport units - YouTube - Kevin Powell</a
+          >
+          <span class="notes"
+            >I recently ran into a few of these, excellent breakdown</span
+          >
+          <span class="meta"> Read, Jul 14 2023 </span>
         </li>
         <li>
-            <a href="https://davidwalsh.name/javascript-reverse-array">JavaScript: Reverse Arrays</a>
-            <span class="notes">use .toReversed() </span>
-            <span class="meta">
-            Read, Jun 26 2023
-            </span>
+          <a
+            href="https://philna.sh/blog/2023/07/13/easy-and-accessible-pagination-links-for-your-astro-collections/"
+            >Easy and accessible pagination links for your Astro collections</a
+          >
+          <span class="notes"
+            >Still want to build something sizable with Astro
+          </span>
+          <span class="meta"> Read, Jul 13 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=uxV2dtLkzt4">NEW Midjourney 5.2 Update: Zooming, Prompt Analyzing, and More! - YouTube - AI Foundations</a>
-            <span class="notes">Good examples for the new features</span>
-            <span class="meta">
-            Read, Jun 24 2023
-            </span>
+          <a href="https://www.skool.com/chatgpt/promptgenerator?p=1e5ede93"
+            >PromptGenerator · ChatGPT Users</a
+          >
+          <span class="notes">Great prompt crafting technique</span>
+          <span class="meta"> Read, Jul 13 2023 </span>
         </li>
         <li>
-            <a href="https://benfrain.com/building-a-line-graph-with-css-clip-mask/">Building a line graph with CSS clip-mask</a>
-            <span class="notes">Clever technique</span>
-            <span class="meta">
-            Read, Jun 23 2023
-            </span>
+          <a
+            href="https://tympanus.net/codrops/2023/07/13/inspiration-for-text-block-transitions/"
+            >Inspiration for Text Block Transitions | Codrops</a
+          >
+          <span class="notes"
+            >I love the UI for testing as much as I love the effect</span
+          >
+          <span class="meta"> Read, Jul 13 2023 </span>
         </li>
         <li>
-            <a href="https://auth0.com/blog/building-beautiful-login-pages-with-auth0/">Building Beautiful Login Pages with Auth0</a>
-            <span class="notes">Focuses on the form, not the page </span>
-            <span class="meta">
-            Read, Jun 16 2023
-            </span>
+          <a href="https://www.phpied.com/fixing-inp-with-a-viewport-tag/"
+            >Fixing INP with a VIEWPORT tag</a
+          >
+          <span class="notes"
+            >Cool trick for static pages with the errors
+          </span>
+          <span class="meta"> Read, Jul 13 2023 </span>
         </li>
         <li>
-            <a href="https://www.bram.us/2023/06/15/scroll-triggered-animations/">Creating Scroll-Triggered Animations by combining Scroll-Driven Animations, Custom Properties, Style Queries, and Transitions</a>
-            <span class="notes">CSS animations are getting so powerful</span>
-            <span class="meta">
-            Read, Jun 16 2023
-            </span>
+          <a href="https://www.builder.io/blog/tailwind-css-tips-and-tricks"
+            >Tailwind CSS Tips and Tricks Worth Knowing</a
+          >
+          <span class="notes"
+            >Nice collection of tips, reminded me of group which I needed
+            recently but wrote CSS for
+          </span>
+          <span class="meta"> Read, Jul 11 2023 </span>
         </li>
         <li>
-            <a href="https://zellwk.com/blog/building-components-in-astro/">When building components in Astro, you might not want to use Astro files | Zell Liew</a>
-            <span class="notes">Use a language you're using, in this case Svelte</span>
-            <span class="meta">
-            Read, Jun 16 2023
-            </span>
+          <a
+            href="https://www.cbsnews.com/boston/news/avi-loeb-harvard-professor-alien-technology-fragments/?ref=thefuturist"
+            >Harvard professor Avi Loeb believes he's found fragments of alien
+            technology - CBS Boston</a
+          >
+          <span class="notes"
+            >Wild discovery, I wonder if they are really crafted bits of tech</span
+          >
+          <span class="meta"> Read, Jul 09 2023 </span>
         </li>
         <li>
-            <a href="https://vadimdemedes.com/posts/generating-income-from-open-source?ref=sidebar">Generating income from open source</a>
-            <span class="notes">Hmm</span>
-            <span class="meta">
-            Read, Jun 16 2023
-            </span>
+          <a
+            href="https://www.kodingkitty.com/blog/how-to-build-a-website/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav"
+            >How to build a website without frameworks and tons of libraries |
+            Koding Kitty</a
+          >
+          <span class="notes"
+            >Jinja to the rescue! This goes a little further than my taste but I
+            see the value</span
+          >
+          <span class="meta"> Read, Jul 09 2023 </span>
         </li>
         <li>
-            <a href="https://evilmartians.com/chronicles/before-your-next-frontend-pull-request-use-this-checklist">Before your next frontend pull&nbsp;request, use this checklist—Martian Chronicles, Evil Martians’ team blog</a>
-            <span class="notes">More related to a general checklist than pull requests</span>
-            <span class="meta">
-            Read, Jun 14 2023
-            </span>
+          <a
+            href="https://bootcamp.uxdesign.cc/headless-design-systems-5c20c443e6d1"
+            >Headless Design Systems. Revolutionizing Front-end Development | by
+            Matthaios Mantzios | Jun, 2023 | Bootcamp</a
+          >
+          <span class="notes"
+            >I love the premise and it solves a problem, but I want to see the
+            dirty work involved</span
+          >
+          <span class="meta"> Read, Jul 09 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=H_szemxPcTI&amp;feature=share">Rick Rubin: Legendary Music Producer | Lex Fridman Podcast #275</a>
-            <span class="notes">I just want to sit and listen to music with Rick Rubin now</span>
-            <span class="meta">
-            Watched, Jun 13 2023
-            </span>
+          <a href="https://bejamas.io/blog/dodonut-case-study/"
+            >Building a Sustainable Website for Dodonut Using Astro JS - Bejamas</a
+          >
+          <span class="notes"
+            >Really interesting to consider carbon emissions, beyond the the
+            typical web perf</span
+          >
+          <span class="meta"> Read, Jul 09 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=U2EVNlDzAJQ&amp;feature=share">I used Framer AI to create a website… in 5 minutes</a>
-            <span class="notes">Shows off all the bits quickly</span>
-            <span class="meta">
-            Watched, Jun 13 2023
-            </span>
+          <a href="https://pudding.cool/2023/05/country-radio/"
+            >They Won't Play a Lady-O on Country Radio: Examining Back-to-Back
+            Plays by Gender, Race, &amp; Sexual Orientation</a
+          >
+          <span class="notes"
+            >Pudding does it again, with excellent visualizations and backstory
+            behind a problem</span
+          >
+          <span class="meta"> Read, Jul 09 2023 </span>
         </li>
         <li>
-            <a href="https://ishadeed.com/article/comment-component/?ref=sidebar">Rebuilding a comment component with modern CSS - Ahmad Shadeed</a>
-            <span class="notes">Fantastic walkthrough </span>
-            <span class="meta">
-            Read, Jun 13 2023
-            </span>
+          <a href="http://localroger.com/">localroger's home</a>
+          <span class="notes"
+            >Had to read, got it from Lex Fridman chatting with George Hotz</span
+          >
+          <span class="meta"> Read, Jul 08 2023 </span>
         </li>
         <li>
-            <a href="https://devblogs.microsoft.com/visualstudio/github-copilot-visual-studio-intellisense/?ck_subscriber_id=1665201471">Visual Studio's IntelliSense list can now steer GitHub Copilot code completions. - Visual Studio Blog</a>
-            <span class="notes">I'm really loving these improvements</span>
-            <span class="meta">
-            Read, Jun 12 2023
-            </span>
+          <a href="https://muffinman.io/blog/css-only-floating-input-labels/"
+            >CSS only floating labels</a
+          >
+          <span class="notes">Nice thing to use </span>
+          <span class="meta"> Read, Jul 07 2023 </span>
         </li>
         <li>
-            <a href="https://www.nngroup.com/articles/skeleton-screens/?ref=uxdesignweekly">Skeleton Screens 101</a>
-            <span class="notes">A definition-type article on them</span>
-            <span class="meta">
-            Read, Jun 12 2023
-            </span>
+          <a href="https://youtube.com/watch?v=4DB-w02Er4w&feature=share"
+            >Smoked Chicken Bombs Recipe...These Are AMAZING! | Ash Kickin' BBQ</a
+          >
+          <span class="notes"
+            >Really want to make these and order those pins</span
+          >
+          <span class="meta"> Watched, Jul 06 2023 </span>
         </li>
         <li>
-            <a href="https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/">Modern CSS For Dynamic Component-Based Architecture | Modern CSS Solutions</a>
-            <span class="notes">Awesome dive into using CSS for a lot of things we see in CSS-In-JS solutions</span>
-            <span class="meta">
-            Read, Jun 12 2023
-            </span>
+          <a href="https://youtube.com/watch?v=XJFXMcpPKA8&feature=share"
+            >This Makes State Management so Much Easier</a
+          >
+          <span class="notes">Zustand looks excellent for handling state</span>
+          <span class="meta"> Watched, Jul 06 2023 </span>
         </li>
         <li>
-            <a href="https://hidde.blog/positioning-anchored-popovers/">Positioning anchored popovers</a>
-            <span class="notes">It'll get better soon-ish</span>
-            <span class="meta">
-            Read, Jun 12 2023
-            </span>
+          <a href="https://kurtextrem.de/posts/svg-in-js"
+            >Breaking Up with SVG-in-JS in 2023</a
+          >
+          <span class="notes"
+            >Going to try the &lt;use&gt; approach in our next-app</span
+          >
+          <span class="meta"> Read, Jul 05 2023 </span>
         </li>
         <li>
-            <a href="https://adamsilver.io/blog/how-to-highlight-required-and-optional-form-fields/">How to highlight required and optional form fields</a>
-            <span class="notes">tl:dr; only highlight optional fields</span>
-            <span class="meta">
-            Read, Jun 12 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://evilmartians.com/chronicles/html-best-practices-for-login-and-signup-forms?utm_source=CSS-Weekly&amp;utm_campaign=Issue-552&amp;utm_medium=email">11 HTML best practices for login &amp; sign-up forms—Martian Chronicles, Evil Martians’ team blog</a>
-            <span class="notes">The kind of article to review when you’re building one</span>
-            <span class="meta">
-            Read, Jun 11 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.nature.com/articles/d41586-023-01883-4">DeepMind AI creates algorithms that sort data faster than those built by people</a>
-            <span class="notes">Computers telling computers what to do better than we do</span>
-            <span class="meta">
-            Read, Jun 11 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://matt-rickard.com/ai-means-more-developers">AI Means More Developers</a>
-            <span class="notes">Developers that can write code but can’t wrangle dependencies or reason about code quality or maintenance will suffer</span>
-            <span class="meta">
-            Read, Jun 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://css-irl.info/reducing-complexity-in-front-end-development/">CSS In Real Life Reducing Complexity in Front End Development</a>
-            <span class="notes">Tips, tricks and tutorials on the web’s most beautiful language.</span>
-            <span class="meta">
-            Read, Jun 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://gomakethings.com/are-javascript-libraries-really-that-bad-for-performance/">Are JavaScript libraries really that bad for performance?</a>
-            <span class="notes">Good explanation of why JS is slower than just the kbs</span>
-            <span class="meta">
-            Read, Jun 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.honeycomb.io/blog/hard-stuff-nobody-talks-about-llm">All the Hard Stuff Nobody Talks About when Building Products with LLMs</a>
-            <span class="notes">Great notes and I had some similar challenges </span>
-            <span class="meta">
-            Read, Jun 09 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://meiert.com/en/blog/48-laws-rules-and-principles/">48 Laws, Rules, and Principles of Web Development · Jens Oliver Meiert</a>
-            <span class="notes">Collection of excellent principles</span>
-            <span class="meta">
-            Read, Jun 08 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://tympanus.net/codrops/2023/06/07/gooey-cursor-effect/">Gooey Cursor Effect | Codrops</a>
-            <span class="notes">Number 8 is so dope</span>
-            <span class="meta">
-            Read, Jun 07 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://zellwk.com/blog/container-queries-best-practice/">Best practices for container queries | Zell Liew</a>
-            <span class="notes">Quick tip on wrapper elements like Flexbox</span>
-            <span class="meta">
-            Read, Jun 07 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://css-irl.info/reducing-complexity-in-front-end-development/">CSS In Real Life | Reducing Complexity in Front End Development</a>
-            <span class="notes">I could get down with committing node_modules</span>
-            <span class="meta">
-            Read, Jun 06 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://youtube.com/watch?v=a00NRSFgHsY&amp;feature=share">5 JavaScript Concepts You HAVE TO KNOW</a>
-            <span class="notes">Checking out James’ videos</span>
-            <span class="meta">
-            Watched, Jun 05 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://youtube.com/watch?v=zbYBgy_ChGY&amp;feature=share">Next.js 13 - Layouts and Pages Explained in 20 mins or so</a>
-            <span class="notes">Funny and informative look at the the pages options</span>
-            <span class="meta">
-            Watched, Jun 05 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=NmA0LhE1AWo">(1) Midjourney Tutorial - Chaos Parameter - Prompts Included - Beginner Friendly - YouTube - A(i)rtifacts</a>
-            <span class="notes">Something to play with </span>
-            <span class="meta">
-            Watched, Jun 04 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=LviRew_Zfcg">(1) Midjourney 5.1 Tutorial: 10 Unique Styles for Stunning AI Art! ✨🎨 - YouTube - AI Wealth</a>
-            <span class="notes">I really enjoy his dives into styles and explanations of them </span>
-            <span class="meta">
-            Watched, Jun 04 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://dev.to/psypher1/lets-learn-11ty-part-7-adding-tailwind-5cdh">Let's Learn 11ty Part 7: Adding Tailwind</a>
-            <span class="notes">Bringing it back to my personal site</span>
-            <span class="meta">
-            Read, Jun 04 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://davidwalsh.name/bluesky-use-domain">How to Use Your Domain on Bluesky</a>
-            <span class="notes">Glad to be in Bluesky and have this hooked up</span>
-            <span class="meta">
-            Read, Jun 04 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://youtube.com/watch?v=7MKEOfSP2s4&amp;feature=share">This React UI Library is GAME CHANGER!</a>
-            <span class="notes">Another good look at shadcn UI</span>
-            <span class="meta">
-            Watched, Jun 04 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://www.geekwire.com/2023/microsoft-vets-lead-secretive-education-startup-using-generative-ai-to-help-students-learn/?utm_source=www.neatprompts.com&amp;utm_medium=newsletter&amp;utm_campaign=how-to-learn-complex-topics-simply-using-ai">Microsoft vets lead secretive education startup using generative AI to help students learn</a>
-            <span class="notes">Education is where I see this being helpful, mainly for the repetitive and "always on" features</span>
-            <span class="meta">
-            Read, Jun 02 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://medium.com/@ApacheDolphinScheduler/train-your-own-private-chatgpt-model-for-the-cost-of-a-starbucks-coffee-25c588f450ee">Train Your Own Private ChatGPT Model for the Cost of a Starbucks Coffee</a>
-            <span class="notes">TIL renting a 3090</span>
-            <span class="meta">
-            Read, Jun 02 2023
-            </span>
-        </li>
-        <li>
-            <a href="https://danmall.com/posts/artificial-intelligence-humanity/?ref=sidebar">“Artificial Intelligence &amp; Humanity,” an article by Dan Mall</a>
-            <span class="notes">Nice breakdown of the pros and cons of AI right now</span>
-            <span class="meta">
-            Read, Jun 02 2023
-            </span>
+          <a href="https://github.com/nucliweb/webperf-snippets"
+            >nucliweb/webperf-snippets: ⚡️ 💾 Web Performance Snippets</a
+          >
+          <span class="notes">Interesting snippets that I need to try out</span>
+          <span class="meta"> Read, Jul 04 2023 </span>
         </li>
       </ul>
-      <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">May 2023</h2>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        June 2023
+      </h2>
       <ul class="library-links has-links">
         <li>
-            <a href="https://keithjgrant.com/posts/2023/05/px-vs-em-in-media-queries/">Re-evaluating px vs em in Media Queries</a>
-            <span class="notes">Seems like there’s movement but still often px</span>
-            <span class="meta">
-            Read, Jun 01 2023
-            </span>
+          <a href="https://youtube.com/watch?v=NAwKcF-wQXE&feature=share"
+            >Framer Tutorial: Advanced Scroll Animation (ZERO Code)</a
+          >
+          <span class="notes"
+            >Really enjoy his style of teaching and video production</span
+          >
+          <span class="meta"> Watched, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://csswizardry.com/2020/05/the-fastest-google-fonts/">The Fastest Google Fonts – CSS Wizardry – Web Performance Optimisation</a>
-            <span class="notes">I need to set this up</span>
-            <span class="meta">
-            Read, May 30 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=zp14EJrJ0jc"
+            >Framer Tutorial: No-Code Animated Curved Carousel for Your Website
+            - YouTube - Framer University</a
+          >
+          <span class="notes"
+            >Rad animation made so easily compared to code</span
+          >
+          <span class="meta"> Watched, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://uxplanet.org/building-a-design-system-without-a-design-system-team-a8586d019733">Building a design system without a design system team | by Andrea Nguyen | UX Planet</a>
-            <span class="notes">We’re approaching this at work on the engineering side</span>
-            <span class="meta">
-            Read, May 29 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=gv_5pufAw1w&t=26s"
+            >Creating zooming scroll effects like Apple.com in Framer without
+            code - YouTube - Framer</a
+          >
+          <span class="notes">I need to make this </span>
+          <span class="meta"> Read, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://fullystacked.net/posts/linear/">Using linear() for better animation</a>
-            <span class="notes">Everything keeps getting better</span>
-            <span class="meta">
-            Read, May 29 2023
-            </span>
+          <a href="https://youtube.com/watch?v=6TYkDy54q4E&feature=share"
+            >ImNotGoodEnough.js</a
+          >
+          <span class="notes"
+            >Love this way of breaking things down by what you know</span
+          >
+          <span class="meta"> Watched, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://performance.shopify.com/blogs/blog/3-ways-to-find-your-worst-javascript-offenders-for-page-load">3 ways to find your worst JavaScript offenders for page load – Performance @ Shopify</a>
-            <span class="notes">Handy tips</span>
-            <span class="meta">
-            Read, May 29 2023
-            </span>
+          <a href="https://youtube.com/watch?v=3qFmSSuYwaY&feature=share"
+            >How we made the
+          </a>
+          <span class="notes"
+            >Awesome tutorial and dog-fooding example by Figma</span
+          >
+          <span class="meta"> Watched, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=PYskozIWh-E&amp;t=1529s">Complete Website in Framer: Beginner Tutorial - YouTube - Tim Gabe</a>
-            <span class="notes">Seriously in awe of how this Framer handles responsive design</span>
-            <span class="meta">
-            Watched, May 27 2023
-            </span>
+          <a
+            href="https://amirardalan.com/blog/use-next-image-with-react-markdown"
+            >Use Next/Image with React Markdown – Amir Ardalan</a
+          >
+          <span class="notes">Extend react-markdown with metastrings.</span>
+          <span class="meta"> Read, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=NT8w5ZS13ao&amp;feature=share">Designers Are Leaving Webflow... Here's Why</a>
-            <span class="notes">Seeing Framer recently has felt like a throwback to 2015, but it’s seriously impressive</span>
-            <span class="meta">
-            Watched, May 27 2023
-            </span>
+          <a
+            href="https://levelup.gitconnected.com/the-best-secret-of-midjourney-v5-2-its-not-zoom-out-but-create-consistent-style-d8ebdb11a0ba"
+            >The BEST Secret of MidJourney V5.2&nbsp;: It’s NOT “Zoom Out”… but
+            “Create Consistent Style”!</a
+          >
+          <span class="notes"
+            >Excellent walkthrough, need to try this for a series</span
+          >
+          <span class="meta"> Read, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=WgXU7XAZYmQ&amp;feature=share">Why is THIS the Perfect Homepage?</a>
-            <span class="notes">I was skeptical but I think he explained his reasoning very well</span>
-            <span class="meta">
-            Watched, May 27 2023
-            </span>
+          <a
+            href="https://developer.mozilla.org/en-US/blog/introducing-ai-help/"
+            >Introducing AI Help: Your Trusted Companion for Web Development |
+            MDN Blog</a
+          >
+          <span class="notes"
+            >Excellent place for AI to help with learning and finding docs</span
+          >
+          <span class="meta"> Read, Jun 30 2023 </span>
         </li>
         <li>
-            <a href="https://www.theguardian.com/technology/2023/may/25/artificial-intelligence-antibiotic-deadly-superbug-hospital?utm_source=www.neatprompts.com&amp;utm_medium=newsletter&amp;utm_campaign=how-to-spot-career-pitfalls-using-ai">Scientists use AI to discover new antibiotic to treat deadly superbug | Artificial intelligence (AI) | The Guardian</a>
-            <span class="notes">Fascinating usage of medical learning at speed</span>
-            <span class="meta">
-            Read, May 27 2023
-            </span>
+          <a href="https://youtube.com/watch?v=kySGqoU7X-s&feature=share"
+            >This Website Feature Demands It Of You</a
+          >
+          <span class="notes"
+            >Short and sweet example of how to break down something complicated
+            and recreate it</span
+          >
+          <span class="meta"> Watched, Jun 29 2023 </span>
         </li>
         <li>
-            <a href="https://blog.logrocket.com/create-loading-component-next-js-13-react-suspense/">Next.js 13 and React Suspense: Create a loading component - LogRocket Blog</a>
-            <span class="notes">Good intro </span>
-            <span class="meta">
-            Read, May 26 2023
-            </span>
+          <a href="https://youtube.com/watch?v=qxCsJeqRoDY&feature=share"
+            >Framer Tutorial: CMS Basics</a
+          >
+          <span class="notes">I need to give this a try</span>
+          <span class="meta"> Watched, Jun 29 2023 </span>
         </li>
         <li>
-            <a href="https://daverupert.com/2023/05/getting-started-view-transitions/?utm_source=CSS-Weekly&amp;utm_campaign=Issue-550&amp;utm_medium=email">Getting started with View Transitions on multi-page apps</a>
-            <span class="notes">Looking forward to adding these, but I don't mess with Canary</span>
-            <span class="meta">
-            Read, May 25 2023
-            </span>
+          <a href="https://youtube.com/watch?v=gSSsZReIFRk&feature=share"
+            >Next.js App Router: Routing, Data Fetching, Caching</a
+          >
+          <span class="notes"
+            >Awesome intro by Lee, I want to be able to update to 13</span
+          >
+          <span class="meta"> Watched, Jun 29 2023 </span>
         </li>
         <li>
-            <a href="https://medium.com/promptjourney/20-art-styles-for-midjourney-with-prompts-and-samples-af9d9abb413f">20 Art Styles for Midjourney With Prompts and Samples.</a>
-            <span class="notes">Interesting to apply it to base images </span>
-            <span class="meta">
-            Read, May 25 2023
-            </span>
+          <a href="https://unicorn-utterances.com/posts/port-nextjs-to-astro"
+            >Porting a Next.js Site to Astro Step-by-Step</a
+          >
+          <span class="notes"
+            >Nice walkthrough, I'd love to move our marketing site</span
+          >
+          <span class="meta"> Read, Jun 29 2023 </span>
         </li>
         <li>
-            <a href="https://strapi.io/blog/introducing-the-new-strapi-starter-with-nextjs13-tailwind-and-typescript?utm_campaign=ProductMarketing-StrapiBlog&amp;utm_source=email&amp;utm_medium=strapiweekly&amp;utm_content=logbook88">New Strapi Starter with Next.js 13, Tailwind, and TypeScript</a>
-            <span class="notes">Worth kicking the tires on, especially for how they handle the API</span>
-            <span class="meta">
-            Read, May 25 2023
-            </span>
+          <a href="https://youtube.com/watch?v=mPXljWeWu3g&feature=share"
+            >Your next component - Dan Mall (Config 2023)</a
+          >
+          <span class="notes"
+            >Excellent talk, reminded us that every day is a chance to make
+            things better</span
+          >
+          <span class="meta"> Watched, Jun 28 2023 </span>
         </li>
         <li>
-            <a href="https://bootcamp.uxdesign.cc/the-midjourney-cheat-sheet-v5-54b5fd92d2da">The Midjourney Cheat Sheet (V5)</a>
-            <span class="notes">From prompts to parameters and weights, all in one place</span>
-            <span class="meta">
-            Read, May 25 2023
-            </span>
+          <a href="https://www.framer.com/updates/mobile-navigations"
+            >Framer Updates: Mobile Navigations</a
+          >
+          <span class="notes">Need to test making a nav</span>
+          <span class="meta"> Read, Jun 28 2023 </span>
         </li>
         <li>
-            <a href="https://daverupert.com/2023/05/markdown-images-anti-pattern/">Markdown images are an anti-pattern</a>
-            <span class="notes">I agree on using an img tag instead</span>
-            <span class="meta">
-            Read, May 25 2023
-            </span>
+          <a href="https://youtube.com/watch?v=nS_9yAABLwc&feature=share"
+            >Master Carousels in Framer (Slideshow, Ticker &amp; Carousel)</a
+          >
+          <span class="notes"
+            >Great intro and makes me wonder if you can use CMS items</span
+          >
+          <span class="meta"> Watched, Jun 28 2023 </span>
         </li>
         <li>
-            <a href="https://18alan.space/posts/how-hard-is-it-to-build-a-frontend-framework.html?utm_source=pocket_saves">Building a Frontend Framework; Reactivity and Composability With Zero
-            Dependencies</a>
-            <span class="notes">Excellent walkthrough </span>
-            <span class="meta">
-            Read, May 19 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=71L-BzjSbEc"
+            >Framer Update: New Conditionals &amp; Transforms</a
+          >
+          <span class="notes">This tool is a front-end dev and I love it</span>
+          <span class="meta"> Watched, Jun 28 2023 </span>
         </li>
         <li>
-            <a href="https://www.raymondcamden.com/2023/05/18/eleventy-by-example-by-bryan-robinson">Eleventy by Example, by Bryan Robinson</a>
-            <span class="notes">A review of "Eleventy by Example", by Bryan Robinson</span>
-            <span class="meta">
-            Read, May 19 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=tVdGCbpu2cs"
+            >Designing the new Dive website in Figma + Framer - YouTube - Ridd</a
+          >
+          <span class="notes">Seriously awesome walkthrough </span>
+          <span class="meta"> Watched, Jun 27 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=p84BpMffZaY">I think I was wrong about Tailwind... - YouTube - James Perkins</a>
-            <span class="notes">Nice breakdown on the copy/pastability</span>
-            <span class="meta">
-            Read, May 19 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=88XxC0_zs74"
+            >6 UI Hacks I Wish I Knew As A Beginner - YouTube - Tim Gabe</a
+          >
+          <span class="notes">Standard things, explained very well</span>
+          <span class="meta"> Watched, Jun 27 2023 </span>
         </li>
         <li>
-            <a href="https://cloudcannon.com/blog/why-the-modern-web-loves-astro-and-eleventy-11ty-and-how-to-choose-which-one-to-use/">Why the modern web loves Astro and Eleventy (11ty) –&nbsp;and how to choose which one to use | CloudCannon</a>
-            <span class="notes">Agree with most of the points</span>
-            <span class="meta">
-            Read, May 18 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=IU_qq_c_lKA"
+            >Using Images in Next.js (next/image examples) - YouTube - Lee
+            Robinson</a
+          >
+          <span class="notes"
+            >Nice dive into the new version of the component</span
+          >
+          <span class="meta"> Watched, Jun 27 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=8qS0pkMJid4">Best Screenflow Audio Filters To Make Your Audio Sound Amazing | Mike Hobbs - YouTube - Mike Hobbs</a>
-            <span class="notes">Struggling with audio lately and this helped a lot</span>
-            <span class="meta">
-            Read, May 18 2023
-            </span>
+          <a
+            href="https://nohandoff.org/no-handoff-between-product-and-engineering/"
+            >No Handoff: close the gap between product and engineering – No
+            Handoff</a
+          >
+          <span class="notes">The dream</span>
+          <span class="meta"> Read, Jun 27 2023 </span>
         </li>
         <li>
-            <a href="https://medium.com/@neonforge/500-high-quality-prompts-for-midjourney-ai-logos-human-emotions-powerpoint-backgrounds-and-more-7edaceb906fc">500 High Quality Prompts for Midjourney AI: Logos, Human Emotions, PowerPoint Backgrounds and more…</a>
-            <span class="notes">Another example of the power of | in prompts</span>
-            <span class="meta">
-            Read, May 18 2023
-            </span>
+          <a href="https://youtube.com/watch?v=063yVWoQvoY&feature=share"
+            >Figma Dev Mode is here!</a
+          >
+          <span class="notes"
+            >Intro to the features with a nice warning about the cost</span
+          >
+          <span class="meta"> Watched, Jun 27 2023 </span>
         </li>
         <li>
-            <a href="https://medium.com/@neonforge/anatomy-of-midjourney-promps-in-depth-study-for-effective-prompting-strategies-v5-1-examples-82a3794d8cde">Anatomy of Midjourney Promps: In-Depth Study for effective Prompting Strategies&hairsp;—&hairsp;V5.1 examples</a>
-            <span class="notes">This is the first I've seen someone use pipes | for separating parts of the prompt</span>
-            <span class="meta">
-            Read, May 18 2023
-            </span>
+          <a
+            href="https://cloudfour.com/thinks/animating-slack-reminders-with-the-view-transitions-api/"
+            >Animating Slack reminders with the View Transitions API</a
+          >
+          <span class="notes">Nice intro to the API</span>
+          <span class="meta"> Read, Jun 27 2023 </span>
         </li>
         <li>
-            <a href="https://blog.bitsrc.io/i-created-a-zero-runtime-css-in-js-library-compatible-with-next-js-app-router-and-rsc-9c016e3c1ce2">I created a Zero-Runtime CSS-in-JS Library Compatible with Next.js App Router and RSC</a>
-            <span class="notes">Excellent description of the issues around CSS-in-JS performance</span>
-            <span class="meta">
-            Read, May 17 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=UAFBa8VmgJI"
+            >4 Ai Personal Assistants (3 Tested)</a
+          >
+          <span class="notes">None seem great, as I’ve experienced as well</span
+          >
+          <span class="meta"> Watched, Jun 26 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=3u80Zuwf2Zo">My AI "Second Brain" To Make Life Easier - YouTube - Matt Wolfe</a>
-            <span class="notes">Fantastic breakdown of useful tools </span>
-            <span class="meta">
-            Read, May 16 2023
-            </span>
+          <a href="https://davidwalsh.name/javascript-reverse-array"
+            >JavaScript: Reverse Arrays</a
+          >
+          <span class="notes">use .toReversed() </span>
+          <span class="meta"> Read, Jun 26 2023 </span>
         </li>
         <li>
-            <a href="https://www.chrbutler.com/designing-for-realistic-attention">Designing for (Realistic) Attention - Christopher Butler</a>
-            <span class="notes">I love this, but I wonder how you balance it with SEO</span>
-            <span class="meta">
-            Read, May 16 2023
-            </span>
+          <a href="https://www.youtube.com/watch?v=uxV2dtLkzt4"
+            >NEW Midjourney 5.2 Update: Zooming, Prompt Analyzing, and More! -
+            YouTube - AI Foundations</a
+          >
+          <span class="notes">Good examples for the new features</span>
+          <span class="meta"> Read, Jun 24 2023 </span>
         </li>
         <li>
-            <a href="https://developer.chrome.com/blog/whats-new-css-ui-2023/">What's new in CSS and UI: I/O 2023 Edition - Chrome Developers</a>
-            <span class="notes">Awesome wrap-up of the latest hotness</span>
-            <span class="meta">
-            Read, May 16 2023
-            </span>
+          <a
+            href="https://benfrain.com/building-a-line-graph-with-css-clip-mask/"
+            >Building a line graph with CSS clip-mask</a
+          >
+          <span class="notes">Clever technique</span>
+          <span class="meta"> Read, Jun 23 2023 </span>
         </li>
         <li>
-            <a href="https://daisyui.com/">daisyUI — Tailwind CSS Components</a>
-            <span class="notes">Nice usage of named styles and utility classes</span>
-            <span class="meta">
-            Read, May 16 2023
-            </span>
+          <a
+            href="https://auth0.com/blog/building-beautiful-login-pages-with-auth0/"
+            >Building Beautiful Login Pages with Auth0</a
+          >
+          <span class="notes">Focuses on the form, not the page </span>
+          <span class="meta"> Read, Jun 16 2023 </span>
         </li>
         <li>
-            <a href="https://github.com/smol-ai/developer">GitHub - smol-ai/developer: with 100k context windows on the way, it's now feasible for every dev to have their own smol developer</a>
-            <span class="notes">Interesting “CLI” for creating any app</span>
-            <span class="meta">
-            Read, May 16 2023
-            </span>
+          <a href="https://www.bram.us/2023/06/15/scroll-triggered-animations/"
+            >Creating Scroll-Triggered Animations by combining Scroll-Driven
+            Animations, Custom Properties, Style Queries, and Transitions</a
+          >
+          <span class="notes">CSS animations are getting so powerful</span>
+          <span class="meta"> Read, Jun 16 2023 </span>
         </li>
         <li>
-            <a href="https://developer.chrome.com/articles/css-nth-child-of-s/">More control over :nth-child() selections with the of S syntax - Chrome Developers</a>
-            <span class="notes">CSS keeps adding things we’ve wanted forever</span>
-            <span class="meta">
-            Read, May 16 2023
-            </span>
+          <a href="https://zellwk.com/blog/building-components-in-astro/"
+            >When building components in Astro, you might not want to use Astro
+            files | Zell Liew</a
+          >
+          <span class="notes"
+            >Use a language you're using, in this case Svelte</span
+          >
+          <span class="meta"> Read, Jun 16 2023 </span>
         </li>
         <li>
-            <a href="https://web.dev/6-css-snippets-every-front-end-developer-should-know-in-2023/">6 CSS snippets every front-end developer should know in 2023</a>
-            <span class="notes">Stuff the cool kids are doing</span>
-            <span class="meta">
-            Read, May 15 2023
-            </span>
+          <a
+            href="https://vadimdemedes.com/posts/generating-income-from-open-source?ref=sidebar"
+            >Generating income from open source</a
+          >
+          <span class="notes">Hmm</span>
+          <span class="meta"> Read, Jun 16 2023 </span>
         </li>
         <li>
-            <a href="https://www.bram.us/2023/05/09/rearrange-animate-css-grid-layouts-with-the-view-transition-api/">Rearrange / Animate CSS Grid Layouts with the View Transition API – Bram.us</a>
-            <span class="notes">My first peek at the View Transition API, which looks rad</span>
-            <span class="meta">
-            Read, May 15 2023
-            </span>
+          <a
+            href="https://evilmartians.com/chronicles/before-your-next-frontend-pull-request-use-this-checklist"
+            >Before your next frontend pull&nbsp;request, use this
+            checklist—Martian Chronicles, Evil Martians’ team blog</a
+          >
+          <span class="notes"
+            >More related to a general checklist than pull requests</span
+          >
+          <span class="meta"> Read, Jun 14 2023 </span>
         </li>
         <li>
-            <a href="https://blog.logrocket.com/create-beautiful-stroked-text-css/">Can you create beautiful stroked text in CSS? - LogRocket Blog</a>
-            <span class="notes">I have to use this somewhere, it’s so fun</span>
-            <span class="meta">
-            Read, May 15 2023
-            </span>
+          <a href="https://youtube.com/watch?v=H_szemxPcTI&feature=share"
+            >Rick Rubin: Legendary Music Producer | Lex Fridman Podcast #275</a
+          >
+          <span class="notes"
+            >I just want to sit and listen to music with Rick Rubin now</span
+          >
+          <span class="meta"> Watched, Jun 13 2023 </span>
         </li>
         <li>
-            <a href="https://www.aleksandrhovhannisyan.com/blog/useful-11ty-filters/#3-date-formatting">A Set of Useful 11ty Filters | Aleksandr Hovhannisyan</a>
-            <span class="notes">Used this for the library date formatting</span>
-            <span class="meta">
-            Read, May 15 2023
-            </span>
+          <a href="https://youtube.com/watch?v=U2EVNlDzAJQ&feature=share"
+            >I used Framer AI to create a website… in 5 minutes</a
+          >
+          <span class="notes">Shows off all the bits quickly</span>
+          <span class="meta"> Watched, Jun 13 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=z9Asx8vdyP8">Top 3 AI Website Builders: How to Create A Website in Minutes (no coding) - YouTube</a>
-            <span class="notes">I’m interested in doing a comparison of some to try to build something I would at work</span>
-            <span class="meta">
-            Watched, May 15 2023
-            </span>
+          <a href="https://ishadeed.com/article/comment-component/?ref=sidebar"
+            >Rebuilding a comment component with modern CSS - Ahmad Shadeed</a
+          >
+          <span class="notes">Fantastic walkthrough </span>
+          <span class="meta"> Read, Jun 13 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=UFH1GQDirtI&amp;t=629">The Photography Prompt that Perfectly Arranges Anything - YouTube</a>
-            <span class="notes">Knolling, with some similar prompts</span>
-            <span class="meta">
-            Watched, May 15 2023
-            </span>
+          <a
+            href="https://devblogs.microsoft.com/visualstudio/github-copilot-visual-studio-intellisense/?ck_subscriber_id=1665201471"
+            >Visual Studio's IntelliSense list can now steer GitHub Copilot code
+            completions. - Visual Studio Blog</a
+          >
+          <span class="notes">I'm really loving these improvements</span>
+          <span class="meta"> Read, Jun 12 2023 </span>
         </li>
         <li>
-            <a href="https://eszter.space/11ty-njk-filters/">Custom filters for Nunjucks templates in Eleventy — Eszter’s (mostly) frontend blog</a>
-            <span class="notes">Trying to track down date format options for the library dates</span>
-            <span class="meta">
-            Read, May 15 2023
-            </span>
+          <a
+            href="https://www.nngroup.com/articles/skeleton-screens/?ref=uxdesignweekly"
+            >Skeleton Screens 101</a
+          >
+          <span class="notes">A definition-type article on them</span>
+          <span class="meta"> Read, Jun 12 2023 </span>
         </li>
         <li>
-            <a href="https://www.constantvallee.dev/posts/notion-api-with-11ty/">Notion API with 11ty - Constant Vallee</a>
-            <span class="notes">Helpful article for getting started, but I ran into trouble getting the data into a template </span>
-            <span class="meta">
-            Read, May 14 2023
-            </span>
+          <a
+            href="https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/"
+            >Modern CSS For Dynamic Component-Based Architecture | Modern CSS
+            Solutions</a
+          >
+          <span class="notes"
+            >Awesome dive into using CSS for a lot of things we see in CSS-In-JS
+            solutions</span
+          >
+          <span class="meta"> Read, Jun 12 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=4YxY4hVxakI">How to Edit Screen Recordings So They're Extremely Easy to Follow - Screenflow 10 Tutorial - YouTube</a>
-            <span class="notes">Excellent tips that have already helped me improving screen recordings</span>
-            <span class="meta">
-            Watched, May 11 2023
-            </span>
+          <a href="https://hidde.blog/positioning-anchored-popovers/"
+            >Positioning anchored popovers</a
+          >
+          <span class="notes">It'll get better soon-ish</span>
+          <span class="meta"> Read, Jun 12 2023 </span>
         </li>
         <li>
-            <a href="https://www.youtube.com/watch?v=ZOTS3lShi-Y&amp;t=296s">ONE ChatGPT Prompt to RULE THEM ALL - MidJourney/Stable Diffusion - YouTube</a>
-            <span class="notes">I didn’t finish the video because someone shared an improved prompt in the comments</span>
-            <span class="meta">
-            Watched, May 11 2023
-            </span>
+          <a
+            href="https://adamsilver.io/blog/how-to-highlight-required-and-optional-form-fields/"
+            >How to highlight required and optional form fields</a
+          >
+          <span class="notes">tl:dr; only highlight optional fields</span>
+          <span class="meta"> Read, Jun 12 2023 </span>
         </li>
         <li>
-            <a href="https://youtube.com/watch?v=wLPIwZdo0gM&amp;feature=share">Dynamic color change while scrolling with CSS</a>
-            <span class="notes">Handy item, similar to an approach that I use for Gmail dark mode </span>
-            <span class="meta">
-            Watched, May 11 2023
-            </span>
+          <a
+            href="https://evilmartians.com/chronicles/html-best-practices-for-login-and-signup-forms?utm_source=CSS-Weekly&utm_campaign=Issue-552&utm_medium=email"
+            >11 HTML best practices for login &amp; sign-up forms—Martian
+            Chronicles, Evil Martians’ team blog</a
+          >
+          <span class="notes"
+            >The kind of article to review when you’re building one</span
+          >
+          <span class="meta"> Read, Jun 11 2023 </span>
         </li>
         <li>
-            <a href="https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/">Tether elements to each other with CSS anchor positioning - Chrome Developers</a>
-            <span class="notes">Interesting to see the platform to continually adapt to UI that is built on top of it</span>
-            <span class="meta">
-            Read, May 11 2023
-            </span>
+          <a href="https://www.nature.com/articles/d41586-023-01883-4"
+            >DeepMind AI creates algorithms that sort data faster than those
+            built by people</a
+          >
+          <span class="notes"
+            >Computers telling computers what to do better than we do</span
+          >
+          <span class="meta"> Read, Jun 11 2023 </span>
+        </li>
+        <li>
+          <a href="https://matt-rickard.com/ai-means-more-developers"
+            >AI Means More Developers</a
+          >
+          <span class="notes"
+            >Developers that can write code but can’t wrangle dependencies or
+            reason about code quality or maintenance will suffer</span
+          >
+          <span class="meta"> Read, Jun 09 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://css-irl.info/reducing-complexity-in-front-end-development/"
+            >CSS In Real Life Reducing Complexity in Front End Development</a
+          >
+          <span class="notes"
+            >Tips, tricks and tutorials on the web’s most beautiful language.</span
+          >
+          <span class="meta"> Read, Jun 09 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://gomakethings.com/are-javascript-libraries-really-that-bad-for-performance/"
+            >Are JavaScript libraries really that bad for performance?</a
+          >
+          <span class="notes"
+            >Good explanation of why JS is slower than just the kbs</span
+          >
+          <span class="meta"> Read, Jun 09 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://www.honeycomb.io/blog/hard-stuff-nobody-talks-about-llm"
+            >All the Hard Stuff Nobody Talks About when Building Products with
+            LLMs</a
+          >
+          <span class="notes"
+            >Great notes and I had some similar challenges
+          </span>
+          <span class="meta"> Read, Jun 09 2023 </span>
+        </li>
+        <li>
+          <a href="https://meiert.com/en/blog/48-laws-rules-and-principles/"
+            >48 Laws, Rules, and Principles of Web Development · Jens Oliver
+            Meiert</a
+          >
+          <span class="notes">Collection of excellent principles</span>
+          <span class="meta"> Read, Jun 08 2023 </span>
+        </li>
+        <li>
+          <a href="https://tympanus.net/codrops/2023/06/07/gooey-cursor-effect/"
+            >Gooey Cursor Effect | Codrops</a
+          >
+          <span class="notes">Number 8 is so dope</span>
+          <span class="meta"> Read, Jun 07 2023 </span>
+        </li>
+        <li>
+          <a href="https://zellwk.com/blog/container-queries-best-practice/"
+            >Best practices for container queries | Zell Liew</a
+          >
+          <span class="notes">Quick tip on wrapper elements like Flexbox</span>
+          <span class="meta"> Read, Jun 07 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://css-irl.info/reducing-complexity-in-front-end-development/"
+            >CSS In Real Life | Reducing Complexity in Front End Development</a
+          >
+          <span class="notes"
+            >I could get down with committing node_modules</span
+          >
+          <span class="meta"> Read, Jun 06 2023 </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=a00NRSFgHsY&feature=share"
+            >5 JavaScript Concepts You HAVE TO KNOW</a
+          >
+          <span class="notes">Checking out James’ videos</span>
+          <span class="meta"> Watched, Jun 05 2023 </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=zbYBgy_ChGY&feature=share"
+            >Next.js 13 - Layouts and Pages Explained in 20 mins or so</a
+          >
+          <span class="notes"
+            >Funny and informative look at the the pages options</span
+          >
+          <span class="meta"> Watched, Jun 05 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=NmA0LhE1AWo"
+            >(1) Midjourney Tutorial - Chaos Parameter - Prompts Included -
+            Beginner Friendly - YouTube - A(i)rtifacts</a
+          >
+          <span class="notes">Something to play with </span>
+          <span class="meta"> Watched, Jun 04 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=LviRew_Zfcg"
+            >(1) Midjourney 5.1 Tutorial: 10 Unique Styles for Stunning AI Art!
+            ✨🎨 - YouTube - AI Wealth</a
+          >
+          <span class="notes"
+            >I really enjoy his dives into styles and explanations of them
+          </span>
+          <span class="meta"> Watched, Jun 04 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://dev.to/psypher1/lets-learn-11ty-part-7-adding-tailwind-5cdh"
+            >Let's Learn 11ty Part 7: Adding Tailwind</a
+          >
+          <span class="notes">Bringing it back to my personal site</span>
+          <span class="meta"> Read, Jun 04 2023 </span>
+        </li>
+        <li>
+          <a href="https://davidwalsh.name/bluesky-use-domain"
+            >How to Use Your Domain on Bluesky</a
+          >
+          <span class="notes"
+            >Glad to be in Bluesky and have this hooked up</span
+          >
+          <span class="meta"> Read, Jun 04 2023 </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=7MKEOfSP2s4&feature=share"
+            >This React UI Library is GAME CHANGER!</a
+          >
+          <span class="notes">Another good look at shadcn UI</span>
+          <span class="meta"> Watched, Jun 04 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://www.geekwire.com/2023/microsoft-vets-lead-secretive-education-startup-using-generative-ai-to-help-students-learn/?utm_source=www.neatprompts.com&utm_medium=newsletter&utm_campaign=how-to-learn-complex-topics-simply-using-ai"
+            >Microsoft vets lead secretive education startup using generative AI
+            to help students learn</a
+          >
+          <span class="notes"
+            >Education is where I see this being helpful, mainly for the
+            repetitive and "always on" features</span
+          >
+          <span class="meta"> Read, Jun 02 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://medium.com/@ApacheDolphinScheduler/train-your-own-private-chatgpt-model-for-the-cost-of-a-starbucks-coffee-25c588f450ee"
+            >Train Your Own Private ChatGPT Model for the Cost of a Starbucks
+            Coffee</a
+          >
+          <span class="notes">TIL renting a 3090</span>
+          <span class="meta"> Read, Jun 02 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://danmall.com/posts/artificial-intelligence-humanity/?ref=sidebar"
+            >“Artificial Intelligence &amp; Humanity,” an article by Dan Mall</a
+          >
+          <span class="notes"
+            >Nice breakdown of the pros and cons of AI right now</span
+          >
+          <span class="meta"> Read, Jun 02 2023 </span>
+        </li>
+      </ul>
+      <h2
+        class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+      >
+        May 2023
+      </h2>
+      <ul class="library-links has-links">
+        <li>
+          <a
+            href="https://keithjgrant.com/posts/2023/05/px-vs-em-in-media-queries/"
+            >Re-evaluating px vs em in Media Queries</a
+          >
+          <span class="notes"
+            >Seems like there’s movement but still often px</span
+          >
+          <span class="meta"> Read, Jun 01 2023 </span>
+        </li>
+        <li>
+          <a href="https://csswizardry.com/2020/05/the-fastest-google-fonts/"
+            >The Fastest Google Fonts – CSS Wizardry – Web Performance
+            Optimisation</a
+          >
+          <span class="notes">I need to set this up</span>
+          <span class="meta"> Read, May 30 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://uxplanet.org/building-a-design-system-without-a-design-system-team-a8586d019733"
+            >Building a design system without a design system team | by Andrea
+            Nguyen | UX Planet</a
+          >
+          <span class="notes"
+            >We’re approaching this at work on the engineering side</span
+          >
+          <span class="meta"> Read, May 29 2023 </span>
+        </li>
+        <li>
+          <a href="https://fullystacked.net/posts/linear/"
+            >Using linear() for better animation</a
+          >
+          <span class="notes">Everything keeps getting better</span>
+          <span class="meta"> Read, May 29 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://performance.shopify.com/blogs/blog/3-ways-to-find-your-worst-javascript-offenders-for-page-load"
+            >3 ways to find your worst JavaScript offenders for page load –
+            Performance @ Shopify</a
+          >
+          <span class="notes">Handy tips</span>
+          <span class="meta"> Read, May 29 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=PYskozIWh-E&t=1529s"
+            >Complete Website in Framer: Beginner Tutorial - YouTube - Tim Gabe</a
+          >
+          <span class="notes"
+            >Seriously in awe of how this Framer handles responsive design</span
+          >
+          <span class="meta"> Watched, May 27 2023 </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=NT8w5ZS13ao&feature=share"
+            >Designers Are Leaving Webflow... Here's Why</a
+          >
+          <span class="notes"
+            >Seeing Framer recently has felt like a throwback to 2015, but it’s
+            seriously impressive</span
+          >
+          <span class="meta"> Watched, May 27 2023 </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=WgXU7XAZYmQ&feature=share"
+            >Why is THIS the Perfect Homepage?</a
+          >
+          <span class="notes"
+            >I was skeptical but I think he explained his reasoning very well</span
+          >
+          <span class="meta"> Watched, May 27 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://www.theguardian.com/technology/2023/may/25/artificial-intelligence-antibiotic-deadly-superbug-hospital?utm_source=www.neatprompts.com&utm_medium=newsletter&utm_campaign=how-to-spot-career-pitfalls-using-ai"
+            >Scientists use AI to discover new antibiotic to treat deadly
+            superbug | Artificial intelligence (AI) | The Guardian</a
+          >
+          <span class="notes"
+            >Fascinating usage of medical learning at speed</span
+          >
+          <span class="meta"> Read, May 27 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://blog.logrocket.com/create-loading-component-next-js-13-react-suspense/"
+            >Next.js 13 and React Suspense: Create a loading component -
+            LogRocket Blog</a
+          >
+          <span class="notes">Good intro </span>
+          <span class="meta"> Read, May 26 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://daverupert.com/2023/05/getting-started-view-transitions/?utm_source=CSS-Weekly&utm_campaign=Issue-550&utm_medium=email"
+            >Getting started with View Transitions on multi-page apps</a
+          >
+          <span class="notes"
+            >Looking forward to adding these, but I don't mess with Canary</span
+          >
+          <span class="meta"> Read, May 25 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://medium.com/promptjourney/20-art-styles-for-midjourney-with-prompts-and-samples-af9d9abb413f"
+            >20 Art Styles for Midjourney With Prompts and Samples.</a
+          >
+          <span class="notes">Interesting to apply it to base images </span>
+          <span class="meta"> Read, May 25 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://strapi.io/blog/introducing-the-new-strapi-starter-with-nextjs13-tailwind-and-typescript?utm_campaign=ProductMarketing-StrapiBlog&utm_source=email&utm_medium=strapiweekly&utm_content=logbook88"
+            >New Strapi Starter with Next.js 13, Tailwind, and TypeScript</a
+          >
+          <span class="notes"
+            >Worth kicking the tires on, especially for how they handle the API</span
+          >
+          <span class="meta"> Read, May 25 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://bootcamp.uxdesign.cc/the-midjourney-cheat-sheet-v5-54b5fd92d2da"
+            >The Midjourney Cheat Sheet (V5)</a
+          >
+          <span class="notes"
+            >From prompts to parameters and weights, all in one place</span
+          >
+          <span class="meta"> Read, May 25 2023 </span>
+        </li>
+        <li>
+          <a href="https://daverupert.com/2023/05/markdown-images-anti-pattern/"
+            >Markdown images are an anti-pattern</a
+          >
+          <span class="notes">I agree on using an img tag instead</span>
+          <span class="meta"> Read, May 25 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://18alan.space/posts/how-hard-is-it-to-build-a-frontend-framework.html?utm_source=pocket_saves"
+            >Building a Frontend Framework; Reactivity and Composability With
+            Zero Dependencies</a
+          >
+          <span class="notes">Excellent walkthrough </span>
+          <span class="meta"> Read, May 19 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://www.raymondcamden.com/2023/05/18/eleventy-by-example-by-bryan-robinson"
+            >Eleventy by Example, by Bryan Robinson</a
+          >
+          <span class="notes"
+            >A review of "Eleventy by Example", by Bryan Robinson</span
+          >
+          <span class="meta"> Read, May 19 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=p84BpMffZaY"
+            >I think I was wrong about Tailwind... - YouTube - James Perkins</a
+          >
+          <span class="notes">Nice breakdown on the copy/pastability</span>
+          <span class="meta"> Read, May 19 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://cloudcannon.com/blog/why-the-modern-web-loves-astro-and-eleventy-11ty-and-how-to-choose-which-one-to-use/"
+            >Why the modern web loves Astro and Eleventy (11ty) –&nbsp;and how
+            to choose which one to use | CloudCannon</a
+          >
+          <span class="notes">Agree with most of the points</span>
+          <span class="meta"> Read, May 18 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=8qS0pkMJid4"
+            >Best Screenflow Audio Filters To Make Your Audio Sound Amazing |
+            Mike Hobbs - YouTube - Mike Hobbs</a
+          >
+          <span class="notes"
+            >Struggling with audio lately and this helped a lot</span
+          >
+          <span class="meta"> Read, May 18 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://medium.com/@neonforge/500-high-quality-prompts-for-midjourney-ai-logos-human-emotions-powerpoint-backgrounds-and-more-7edaceb906fc"
+            >500 High Quality Prompts for Midjourney AI: Logos, Human Emotions,
+            PowerPoint Backgrounds and more…</a
+          >
+          <span class="notes">Another example of the power of | in prompts</span
+          >
+          <span class="meta"> Read, May 18 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://medium.com/@neonforge/anatomy-of-midjourney-promps-in-depth-study-for-effective-prompting-strategies-v5-1-examples-82a3794d8cde"
+            >Anatomy of Midjourney Promps: In-Depth Study for effective
+            Prompting Strategies&hairsp;—&hairsp;V5.1 examples</a
+          >
+          <span class="notes"
+            >This is the first I've seen someone use pipes | for separating
+            parts of the prompt</span
+          >
+          <span class="meta"> Read, May 18 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://blog.bitsrc.io/i-created-a-zero-runtime-css-in-js-library-compatible-with-next-js-app-router-and-rsc-9c016e3c1ce2"
+            >I created a Zero-Runtime CSS-in-JS Library Compatible with Next.js
+            App Router and RSC</a
+          >
+          <span class="notes"
+            >Excellent description of the issues around CSS-in-JS performance</span
+          >
+          <span class="meta"> Read, May 17 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=3u80Zuwf2Zo"
+            >My AI "Second Brain" To Make Life Easier - YouTube - Matt Wolfe</a
+          >
+          <span class="notes">Fantastic breakdown of useful tools </span>
+          <span class="meta"> Read, May 16 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.chrbutler.com/designing-for-realistic-attention"
+            >Designing for (Realistic) Attention - Christopher Butler</a
+          >
+          <span class="notes"
+            >I love this, but I wonder how you balance it with SEO</span
+          >
+          <span class="meta"> Read, May 16 2023 </span>
+        </li>
+        <li>
+          <a href="https://developer.chrome.com/blog/whats-new-css-ui-2023/"
+            >What's new in CSS and UI: I/O 2023 Edition - Chrome Developers</a
+          >
+          <span class="notes">Awesome wrap-up of the latest hotness</span>
+          <span class="meta"> Read, May 16 2023 </span>
+        </li>
+        <li>
+          <a href="https://daisyui.com/">daisyUI — Tailwind CSS Components</a>
+          <span class="notes"
+            >Nice usage of named styles and utility classes</span
+          >
+          <span class="meta"> Read, May 16 2023 </span>
+        </li>
+        <li>
+          <a href="https://github.com/smol-ai/developer"
+            >GitHub - smol-ai/developer: with 100k context windows on the way,
+            it's now feasible for every dev to have their own smol developer</a
+          >
+          <span class="notes">Interesting “CLI” for creating any app</span>
+          <span class="meta"> Read, May 16 2023 </span>
+        </li>
+        <li>
+          <a href="https://developer.chrome.com/articles/css-nth-child-of-s/"
+            >More control over :nth-child() selections with the of S syntax -
+            Chrome Developers</a
+          >
+          <span class="notes">CSS keeps adding things we’ve wanted forever</span
+          >
+          <span class="meta"> Read, May 16 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://web.dev/6-css-snippets-every-front-end-developer-should-know-in-2023/"
+            >6 CSS snippets every front-end developer should know in 2023</a
+          >
+          <span class="notes">Stuff the cool kids are doing</span>
+          <span class="meta"> Read, May 15 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://www.bram.us/2023/05/09/rearrange-animate-css-grid-layouts-with-the-view-transition-api/"
+            >Rearrange / Animate CSS Grid Layouts with the View Transition API –
+            Bram.us</a
+          >
+          <span class="notes"
+            >My first peek at the View Transition API, which looks rad</span
+          >
+          <span class="meta"> Read, May 15 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://blog.logrocket.com/create-beautiful-stroked-text-css/"
+            >Can you create beautiful stroked text in CSS? - LogRocket Blog</a
+          >
+          <span class="notes">I have to use this somewhere, it’s so fun</span>
+          <span class="meta"> Read, May 15 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://www.aleksandrhovhannisyan.com/blog/useful-11ty-filters/#3-date-formatting"
+            >A Set of Useful 11ty Filters | Aleksandr Hovhannisyan</a
+          >
+          <span class="notes">Used this for the library date formatting</span>
+          <span class="meta"> Read, May 15 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=z9Asx8vdyP8"
+            >Top 3 AI Website Builders: How to Create A Website in Minutes (no
+            coding) - YouTube</a
+          >
+          <span class="notes"
+            >I’m interested in doing a comparison of some to try to build
+            something I would at work</span
+          >
+          <span class="meta"> Watched, May 15 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=UFH1GQDirtI&t=629"
+            >The Photography Prompt that Perfectly Arranges Anything - YouTube</a
+          >
+          <span class="notes">Knolling, with some similar prompts</span>
+          <span class="meta"> Watched, May 15 2023 </span>
+        </li>
+        <li>
+          <a href="https://eszter.space/11ty-njk-filters/"
+            >Custom filters for Nunjucks templates in Eleventy — Eszter’s
+            (mostly) frontend blog</a
+          >
+          <span class="notes"
+            >Trying to track down date format options for the library dates</span
+          >
+          <span class="meta"> Read, May 15 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.constantvallee.dev/posts/notion-api-with-11ty/"
+            >Notion API with 11ty - Constant Vallee</a
+          >
+          <span class="notes"
+            >Helpful article for getting started, but I ran into trouble getting
+            the data into a template
+          </span>
+          <span class="meta"> Read, May 14 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=4YxY4hVxakI"
+            >How to Edit Screen Recordings So They're Extremely Easy to Follow -
+            Screenflow 10 Tutorial - YouTube</a
+          >
+          <span class="notes"
+            >Excellent tips that have already helped me improving screen
+            recordings</span
+          >
+          <span class="meta"> Watched, May 11 2023 </span>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=ZOTS3lShi-Y&t=296s"
+            >ONE ChatGPT Prompt to RULE THEM ALL - MidJourney/Stable Diffusion -
+            YouTube</a
+          >
+          <span class="notes"
+            >I didn’t finish the video because someone shared an improved prompt
+            in the comments</span
+          >
+          <span class="meta"> Watched, May 11 2023 </span>
+        </li>
+        <li>
+          <a href="https://youtube.com/watch?v=wLPIwZdo0gM&feature=share"
+            >Dynamic color change while scrolling with CSS</a
+          >
+          <span class="notes"
+            >Handy item, similar to an approach that I use for Gmail dark mode
+          </span>
+          <span class="meta"> Watched, May 11 2023 </span>
+        </li>
+        <li>
+          <a
+            href="https://developer.chrome.com/blog/tether-elements-to-each-other-with-css-anchor-positioning/"
+            >Tether elements to each other with CSS anchor positioning - Chrome
+            Developers</a
+          >
+          <span class="notes"
+            >Interesting to see the platform to continually adapt to UI that is
+            built on top of it</span
+          >
+          <span class="meta"> Read, May 11 2023 </span>
         </li>
       </ul>
     </main>
