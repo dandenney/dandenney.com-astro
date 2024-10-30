@@ -16,6 +16,7 @@ heroImage: viena-capellanes
 heroImageAttribution: Anna_Kudr
 heroImageUrl: >-
   https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/fa/c0/0b/viena-capellanes.jpg?w=1200&h=-1&s=1
+state: ""
 ---
 
 After an overnight flight to Madrid and no hotel in sight yet, there’s no better way to ease into the city than by simply wandering its streets, absorbing its energy and charm.

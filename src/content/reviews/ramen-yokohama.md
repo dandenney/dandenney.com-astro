@@ -13,6 +13,7 @@ infoUrl: >-
   https://www.tripadvisor.com/Restaurant_Review-g187514-d26267365-Reviews-Ramen_Yokohama-Madrid.html
 heroImageAlt: 'Photo of a ramen '
 heroImage: ramen-yokohama
+state: ""
 ---
 
 After a long day of wandering Madrid’s streets, Ramen Yokohama offers a comforting refuge, where the flavors transport you to Japan despite being firmly in the heart of Spain. The Tan Tan Men here is a rich, soul-warming bowl of ramen. The broth is deep, complex, with just the right amount of spice and nuttiness from the sesame. The minced pork adds that satisfying, hearty element, while the noodles are perfectly chewy, soaking up the broth and carrying each bite with flavor. It's a dish that hits all the right notes, warming and filling without overwhelming.

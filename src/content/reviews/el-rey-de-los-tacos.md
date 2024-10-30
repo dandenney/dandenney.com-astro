@@ -12,6 +12,7 @@ infoUrl: >-
   https://www.tripadvisor.com/Restaurant_Review-g187514-d13112972-Reviews-El_Rey_de_Los_Tacos-Madrid.html
 heroImageAlt: Photo of 8 tacos
 heroImage: el-rey-de-los-tacos
+state: ""
 ---
 
 When you're craving authentic Mexican flavors in the heart of Madrid, El Rey de los Tacos delivers in a way that makes you forget you're across the Atlantic. The unassuming spot may be casual, but the food packs a punch.

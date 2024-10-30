@@ -13,6 +13,7 @@ infoUrl: >-
   https://www.tripadvisor.com/Restaurant_Review-g187514-d23651429-Reviews-Ramen_Shifu_Plaza_Espana-Madrid.html
 heroImageAlt: Photo of a bowl of ramen
 heroImage: ramen-shifu
+state: ""
 ---
 
 Walking into Ramen Shifu at Plaza España is like stepping into a vibrant, playful slice of Tokyo. The interior is bold and energetic, with bright red and yellow lanterns casting a warm glow over the space. The walls are adorned with kitschy 80s posters, showcasing classic Japanese movies, manga, and anime characters, giving the place a nostalgic, quirky feel. The cool, urban vibe is rounded off by a modern, eye-catching logo, making it a spot that’s visually as engaging as the food is flavorful.
