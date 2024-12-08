@@ -9,7 +9,7 @@ heroImage: "predators-playoffs"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g55229-d108425-Reviews-Bridgestone_Arena-Nashville_Davidson_County_Tennessee.html"
 pubDate: "April 28, 2024"
 state: "tennessee"
-tags: ['hockey', 'arena']
+tags: ['hockey', 'bridgestone-arena']
 title: "Predators Playoffs"
 ---
 
