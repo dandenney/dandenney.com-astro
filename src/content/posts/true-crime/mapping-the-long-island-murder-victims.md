@@ -168,6 +168,9 @@ The [bail documentation](https://drive.google.com/file/d/1UAyHSO_aEYDE4aE_ajIoxx
 
 On June 6, 2024, Suffolk County confirmed that Rex Heuermann was [charged with two more of the murders](https://www.cnn.com/2024/06/06/us/gilgo-beach-killings-rex-heuermann-indictment/index.html): Jessica Taylor and Sandra Costilla.
 
+On December 17, 2024, it was announced that he is charged with the murder of Valerie Mack. [Gilgo Beach serial killer suspect Rex Heuermann charged in killing of seventh woman
+](https://www.cnn.com/2024/12/17/us/gilgo-beach-killings-rex-heuermann-charges/index.html)
+
 </div>
 
 "The Long Island Serial Killer," aka "LISK," is a misnomer. The more that you look at Long Island from the early 90s until the 2010s, the worse it gets. [Joel Rifkin](https://en.wikipedia.org/wiki/Joel_Rifkin) lived in the Hempstead area and killed at least nine, but up to seventeen people from 1989 - 1993. [Robert Shulman](<https://en.wikipedia.org/wiki/Robert_Shulman_(serial_killer)>) killed at least five people from 1991 - 1996 while living in the Hicksville area.
@@ -349,8 +352,8 @@ The following is a timeline of events, with their locations, intending to show h
     </li>
     <li class="step" data-step="25" data-zoom="11">
       <div class="details">
-        <h3>Rex Heuermann is charged with the murder of six victims as of June 6, 2024</h3>
-        <p>He has been charged with the murder of Sandra Costillo, Jessica Taylor, Amber Costello, Megan Waterman, Melissa Barthelemy, and Maureen Brainard-Barnes.</p>
+        <h3>Rex Heuermann is charged with the murder of seven victims as of December 17, 2024</h3>
+        <p>He has been charged with the murder of Sandra Costillo, Jessica Taylor, Amber Costello, Megan Waterman, Melissa Barthelemy,Maureen Brainard-Barnes, and Valerie Mack.</p>
       </div>
     </li>
     <li class="step" data-step="26" data-zoom="9"></li>

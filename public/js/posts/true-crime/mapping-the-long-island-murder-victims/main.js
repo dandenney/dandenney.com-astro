@@ -700,6 +700,20 @@ map.on("load", function() {
           }
         },
         {
+          // Jessica Taylor's second line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-72.782624, 40.87809]
+            ]
+          }
+        },
+        {
           // Maureen Brainard-Barnes' line
           type: "Feature",
           properties: {
@@ -766,6 +780,20 @@ map.on("load", function() {
             coordinates: [
               [-73.447420, 40.684350],
               [-72.4107357, 40.933967]
+            ]
+          }
+        },
+        {
+          // Valerie Mack's line
+          type: "Feature",
+          properties: {
+            color: "#9333ea" // purple
+          },
+          geometry: {
+            type: "LineString",
+            coordinates: [
+              [-73.447420, 40.684350],
+              [-72.823336, 40.862609]
             ]
           }
         }
@@ -950,7 +978,7 @@ map.on("load", function() {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [-73.6473005, 40.6734285]
+            coordinates: [-73.6473005, 40.6734285] // Valerie Mack's last known
           },
           properties: {
             title: "Jane Doe No 3 Initial"
