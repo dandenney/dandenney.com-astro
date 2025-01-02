@@ -11,7 +11,7 @@ country: Spain
 coordinates: '-3.700610, 40.419370'
 infoUrl: >-
   https://www.tripadvisor.com/Restaurant_Review-g187514-d26267365-Reviews-Ramen_Yokohama-Madrid.html
-heroImageAlt: 'Photo of a ramen '
+heroImageAlt: 'Photo of a ramen bowl'
 heroImage: ramen-yokohama
 state: ""
 ---
