@@ -83,7 +83,7 @@ This is a Lovable project and it’s public, so you’re able to [view the proje
 
 ## Viable vs. Lovable
 
-At this moment, the app is a minimum viable product. We can enter things into each list, archive items, view the archives, and links are populating data that we can then edit. The UI is clean and usable, but not polished. It's already better than some of the various list apps I tried before deciding to build one. I will now work on making it lovable and will go as far as I possibly can without touching any code. I’m greatly enjoying having my robot friend do the work.
+At this moment, the app would maybe be a minimum viable product if I was trying it out from someone else. We can enter things into each list, archive items, view the archives, and links are populating data that we can then edit. The UI is clean and usable, but not polished. It's already better than some of the various list apps I tried before deciding to build one. However, I already love it cause it's mine. I haven't written a line of code, but I feel ownership and I'm popping in commands whenever I get a moment to improve it. I will now work on making it lovable and will go as far as I possibly can without touching any code. I’m greatly enjoying having my robot friend do the work.
 
 Beyond the base functionality, I’m also interested in adding AI functionality to it. I’ve seen how to do that pretty easy with v0, but I’m not sure how that will work in Lovable. I see potential for adding some small niceties like populating the grocery list from a recipe, populating some restaurant data when we save them, etc.
 
