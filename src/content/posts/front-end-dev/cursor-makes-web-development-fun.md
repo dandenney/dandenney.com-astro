@@ -8,7 +8,7 @@ socialImageFilename: og-cursor-makes-web-development-fun.jpg
 cloudinaryThumb: posts/cursor-makes-web-development-fun.webp
 tags:
   - front-end-dev
-thumb: posts/front-end-dev/cursor-makes-web-development-fun/cursor-makes-web-development-fun-thumb.webp
+thumb: /posts/front-end-dev/cursor-makes-web-development-fun/cursor-makes-web-development-fun.webp
 thumbAlt: "an animatronic cursor, smiling and happy, while the background is a dark, dystopian view of wires and computers --ar 3:2"
 ---
 
