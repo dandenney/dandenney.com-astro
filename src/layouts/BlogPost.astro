@@ -16,21 +16,25 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 		<Header />
 		<main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
 			<article>
-				<header class="longform max-w-4xl mx-auto">
-          {cloudinaryThumb && (
-						<img 
-							alt={thumbAlt} 
-							class="block full-to-half-bleed" 
-							height="592" 
-							src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`} srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`} 
-							width="1008">
+				<header class="longform grid aspect-[3/2] bg-slate-900">
+					{cloudinaryThumb && (
+						<>
+							<img 
+								alt={thumbAlt} 
+								class="block col-start-1 row-start-1 max-w-full h-full object-cover animate-image-fade-in" 
+								loading="eager"
+								src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`} 
+								srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`} 
+							/>
+							<div class="col-start-1 row-start-1 bg-black w-full h-full animate-fade-overlay"></div>
+						</>
 					)}
-					<h1 class="full-to-half-bleed bg-white bottom-0 px-8 py-8 sticky text-4xl font-black tracking-tight text-gray-900 sm:text-6xl lg:px-0 lg:col-span-2 lg:text-8xl xl:col-auto dark:bg-slate-900 dark:text-slate-300">
+					<h1 class="col-start-1 row-start-1 self-center px-8 py-8 text-4xl font-black tracking-tight text-white sm:text-6xl lg:px-0 lg:text-8xl animate-fade-text">
 						<span class="block max-w-4xl mx-auto">{title}</span>
 					</h1>
 				</header>
 
-				<div class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0 blogpost">
+				<div class="longform max-w-2xl mx-auto pb-16 pt-8 px-8 lg:px-0 blogpost">
 					
 					<slot />
 
@@ -69,5 +73,53 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 			</article>
 		</main>
 		<Footer />
+
+		<style>
+			@keyframes fade {
+				from {
+					opacity: 0.6;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+
+			@keyframes fadeText {
+				from {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.2;
+				}
+			}
+
+			.animate-fade-overlay {
+				opacity: 0.6;
+				animation: fade linear both;
+				animation-timeline: scroll();
+				animation-range: 0 600px;
+			}
+
+			.animate-fade-text {
+				opacity: 1;
+				animation: fadeText linear both;
+				animation-timeline: scroll();
+				animation-range: 0 600px;
+			}
+
+			@keyframes imageFadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			.animate-image-fade-in {
+				opacity: 0;
+				animation: imageFadeIn 0.5s ease-in forwards;
+			}
+		</style>
 	</body>
 </html>
