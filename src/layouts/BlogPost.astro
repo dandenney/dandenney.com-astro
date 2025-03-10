@@ -107,6 +107,16 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 				animation-range: 0 600px;
 			}
 
+			@media (max-width: 640px) {
+				.animate-fade-overlay {
+					animation-range: 0 100px;
+				}
+				
+				.animate-fade-text {
+					animation-range: 0 100px;
+				}
+			}
+
 			@keyframes imageFadeIn {
 				from {
 					opacity: 0;
