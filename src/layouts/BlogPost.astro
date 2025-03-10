@@ -21,15 +21,15 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 						<>
 							<img 
 								alt={thumbAlt} 
-								class="block col-start-1 row-start-1 w-full h-full object-cover animate-image-fade-in" 
+								class="block col-start-1 row-start-1 w-full h-full object-cover animate-image-fade-in z-0" 
 								loading="eager"
 								src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`} 
 								srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`} 
 							/>
-							<div class="col-start-1 row-start-1 bg-black w-full h-full animate-fade-overlay"></div>
+							<div class="col-start-1 row-start-1 bg-black w-full h-full animate-fade-overlay z-10"></div>
 						</>
 					)}
-					<h1 class="col-start-1 row-start-1 self-center px-8 py-8 text-4xl font-black tracking-tight text-white sm:text-6xl lg:px-0 lg:text-8xl animate-fade-text">
+					<h1 class="col-start-1 row-start-1 self-center px-8 py-8 text-4xl font-black tracking-tight text-white sm:text-6xl lg:px-0 lg:text-8xl animate-fade-text z-20">
 						<span class="block max-w-4xl mx-auto">{title}</span>
 					</h1>
 				</header>
@@ -95,16 +95,26 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 
 			.animate-fade-overlay {
 				opacity: 0.6;
-				animation: fade linear both;
-				animation-timeline: scroll();
-				animation-range: 0 400px;
+			}
+
+			@supports (animation-timeline: scroll()) {
+				.animate-fade-overlay {
+					animation: fade linear both;
+					animation-timeline: scroll();
+					animation-range: 0 400px;
+				}
 			}
 
 			.animate-fade-text {
 				opacity: 1;
-				animation: fadeText linear both;
-				animation-timeline: scroll();
-				animation-range: 0 300px;
+			}
+
+			@supports (animation-timeline: scroll()) {
+				.animate-fade-text {
+					animation: fadeText linear both;
+					animation-timeline: scroll();
+					animation-range: 0 300px;
+				}
 			}
 
 			@keyframes imageFadeIn {
