@@ -5,7 +5,7 @@ summary: "A line of CSS to make images scroll"
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/css-scrolling-images.png"
-thumb: "/posts/front-end-dev/css-scrolling-images/css-srcrolling-images-thumb.webp"
+thumb: "/posts/front-end-dev/css-scrolling-images/css-scrolling-images-thumb.webp"
 thumbAlt: "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2"
 title: "CSS Scrolling Images"
 ---
