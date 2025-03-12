@@ -24,6 +24,29 @@ title: "CSS Scrolling Images"
     margin-block-start: 0;
   }
 
+  .ie {
+    background-color: #ffcc00;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.5rem solid;
+    border-image: repeating-linear-gradient(
+      45deg,
+      black 0,
+      black 5px,
+      transparent 5px,
+      transparent 10px
+    ) 10;
+    font-weight: bold;
+    overflow: clip;
+    transform: rotate(-2deg);
+  }
+
+  @supports (animation-timeline: view()) {
+    .ie {
+      display: none;
+    }
+  }
+
 </style>
 
 <div class="max-w-2xl mx-auto">
@@ -163,6 +186,10 @@ Here comes the magic! It's wild that one line of CSS now enables this effect. Th
     }
   }
 </style>
+
+<p class="ie">
+ Oh no! It looks like you're using IE, or at least the modern-day equivalent. Just imagine joyful things and check this out on a <a href="https://caniuse.com/?search=animation-timeline%3A%20view()">browser that supports animation-timeline: view()</a> when you have time.
+</p>
 
 </div>
 
