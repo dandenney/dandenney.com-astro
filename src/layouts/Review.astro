@@ -66,17 +66,19 @@ const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, h
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" is:inline></script>
 
 				<script is:inline>
-					gsap.registerPlugin(ScrollTrigger);
+					document.addEventListener('astro:page-load', () => {
+						gsap.registerPlugin(ScrollTrigger);
 
-					gsap.to("#photo", {
-						transformOrigin: "100% 0",
-						width: '100%',
-						scrollTrigger: {
-							trigger: "#photo",
-							start: "top center",
-							end: "top top",
-							scrub: true
-						}
+						gsap.to("#photo", {
+							transformOrigin: "100% 0",
+							width: '100%',
+							scrollTrigger: {
+								trigger: "#photo",
+								start: "top center",
+								end: "top top",
+								scrub: true
+							}
+						});
 					});
 				</script>
 

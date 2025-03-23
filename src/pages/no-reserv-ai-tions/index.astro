@@ -173,31 +173,32 @@ const reviews = (await getCollection('reviews')).sort(
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" is:inline></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" is:inline></script>
 		<script is:inline>
-			gsap.registerPlugin(ScrollTrigger);
+			document.addEventListener('astro:page-load', () => {
+				gsap.registerPlugin(ScrollTrigger);
 
-			// Get all <li> elements from both lists
-			const list1Items = document.querySelectorAll("#descriptions li");
-			const list2Items = document.querySelectorAll("#images li");
+				// Get all <li> elements from both lists
+				const list1Items = document.querySelectorAll("#descriptions li");
+				const list2Items = document.querySelectorAll("#images li");
 
-			gsap.matchMedia().add("(min-width: 1000px)", function() {
-
-				list2Items.forEach((image, index) => {
-					ScrollTrigger.create({
+				gsap.matchMedia().add("(min-width: 1024px)", function() {
+					list2Items.forEach((image, index) => {
+						ScrollTrigger.create({
 							trigger: image,
 							start: "top center",
 							end: "bottom center",
 							onEnter: () => {
-									gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
+								gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
 							},
 							onLeave: () => {
-									gsap.to(list1Items[index], { opacity: 0, y: -32, pointerEvents: "none", duration: 0.5 });
+								gsap.to(list1Items[index], { opacity: 0, y: -32, pointerEvents: "none", duration: 0.5 });
 							},
 							onEnterBack: () => {
-									gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
+								gsap.to(list1Items[index], { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.5 });
 							},
 							onLeaveBack: () => {
-									gsap.to(list1Items[index], { opacity: 0, y: 32, pointerEvents: "none", duration: 0.5 });
+								gsap.to(list1Items[index], { opacity: 0, y: 32, pointerEvents: "none", duration: 0.5 });
 							},
+						});
 					});
 				});
 			});
