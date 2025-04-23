@@ -1,0 +1,94 @@
+---
+// src/components/ImageLightbox.astro
+---
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const images = document.querySelectorAll('.longform img:not(.no-lightbox)');
+    const body = document.body;
+    
+    const createLightbox = (img) => {
+      const lightbox = document.createElement('div');
+      lightbox.className = 'lightbox-overlay';
+      
+      const imgClone = document.createElement('img');
+      imgClone.src = img.src;
+      imgClone.alt = img.alt;
+      imgClone.className = 'lightbox-image';
+      
+      lightbox.appendChild(imgClone);
+      
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('show');
+        body.classList.remove('lightbox-open');
+        setTimeout(() => lightbox.remove(), 300);
+      });
+      
+      return lightbox;
+    };
+    
+    images.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      
+      img.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lightbox = createLightbox(img);
+        body.appendChild(lightbox);
+        body.classList.add('lightbox-open');
+        // Small delay to ensure the transition works
+        requestAnimationFrame(() => {
+          lightbox.classList.add('show');
+        });
+      });
+    });
+  });
+</script>
+
+<style is:global>
+  .lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: zoom-out;
+  }
+
+  .lightbox-overlay.show {
+    background: rgba(15, 23, 42, 0.75);
+    opacity: 1;
+  }
+
+  .lightbox-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+
+  .lightbox-overlay.show .lightbox-image {
+    transform: scale(1);
+  }
+
+  body.lightbox-open {
+    overflow: hidden;
+  }
+
+  /* Optional: Add a subtle zoom effect on hover for images that can be lightboxed */
+  .longform img:not(.no-lightbox) {
+    transition: transform 0.2s ease;
+  }
+
+  .longform img:not(.no-lightbox):hover {
+    transform: scale(1.02);
+  }
+</style> 

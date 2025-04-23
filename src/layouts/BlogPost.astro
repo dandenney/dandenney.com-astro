@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ImageLightbox from '../components/ImageLightbox.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, thumbAlt } = Astro.props;
@@ -21,7 +22,7 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 						<>
 							<img 
 								alt={thumbAlt} 
-								class="block col-start-1 row-start-1 w-full h-full object-cover animate-image-fade-in z-0" 
+								class="block col-start-1 row-start-1 w-full h-full object-cover animate-image-fade-in z-0 no-lightbox" 
 								loading="eager"
 								src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`} 
 								srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`} 
@@ -73,6 +74,7 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 			</article>
 		</main>
 		<Footer />
+		<ImageLightbox />
 
 		<style>
 			@keyframes fade {
