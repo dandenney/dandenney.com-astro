@@ -1,0 +1,63 @@
+---
+interface Props {
+  containerName?: string;
+  minWidth?: string;
+  maxWidth?: string;
+}
+
+const { containerName = 'browser-preview', minWidth = '200px', maxWidth = '100%' } = Astro.props;
+---
+
+<div class="browser-preview" style="--container-name: ${containerName}; --min-width: ${minWidth}; --max-width: ${maxWidth};">
+  <slot />
+</div>
+
+<style>
+  .browser-preview {
+    container-type: inline-size;
+    container-name: var(--container-name);
+    overflow: hidden;
+    resize: horizontal;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+  }
+
+  .browser-preview::before {
+    content: '';
+    display: block;
+    height: 32px;
+    background: #f1f1f1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .browser-preview::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  }
+
+  .browser-preview > * {
+    padding: 16px;
+  }
+
+  :global(.dark) .browser-preview {
+    background: #1a1a1a;
+  }
+
+  :global(.dark) .browser-preview::before {
+    background: #2d2d2d;
+    border-bottom-color: #404040;
+  }
+</style> 
