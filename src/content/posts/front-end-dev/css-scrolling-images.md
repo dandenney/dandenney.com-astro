@@ -63,15 +63,21 @@ They used logos as the example and it caught my attention because I have rearran
 
 I'll share the HTML, but there's nothing special there. We'll start with some CSS specifically for ensuring the animation only runs if people don't opt out of animations. A lot of times this gets sprinkled in at the end, but I like to start with it.
 
+<div class="code-ui-wrapper"><div class="code-ui-header">CSS</div>
+
 ```css
 @media (prefers-reduced-motion: no-preference) {
   ...
 }
 ```
 
+</div><!-- Close Code UI -->
+
 Now we'll sprinkle in some HTML and add CSS to handle the basic alignment of them. 
 
 <small>(Disclaimer: if you view source, you'll see some minor code differences but that's to counter my post styles and to add steps to the shares)</small>
+
+<div class="code-ui-wrapper"><div class="code-ui-header">HTML</div>
 
 ```html
 <section class="scroll-wrapper">
@@ -92,6 +98,10 @@ Now we'll sprinkle in some HTML and add CSS to handle the basic alignment of the
 </section>
 ```
 
+</div><!-- Close Code UI -->
+
+<div class="code-ui-wrapper"><div class="code-ui-header">CSS</div>
+
 ```css
 .scroll-container {
   display: grid;
@@ -102,6 +112,9 @@ Now we'll sprinkle in some HTML and add CSS to handle the basic alignment of the
   ...
 }
 ```
+
+</div><!-- Close Code UI -->
+
 <style>
   .scroll-container {
     display: grid;
@@ -134,6 +147,8 @@ With that, you get some basic images aligned in a grid. Nothing special, but it'
 
 Here comes the magic! It's wild that one line of CSS now enables this effect. The rest of the styles are for my personal preferences for the animation and the layout. To be safe, I'm using `@supports` to ensure the various styles only get applied if the browser supports the feature.
 
+<div class="code-ui-wrapper"><div class="code-ui-header">CSS</div>
+
 ```css
 .scroll-container {
   display: grid;
@@ -159,6 +174,8 @@ Here comes the magic! It's wild that one line of CSS now enables this effect. Th
   }
 }
 ```
+
+</div><!-- Close Code UI -->
 
 <style>
   .scroll-wrapper {
