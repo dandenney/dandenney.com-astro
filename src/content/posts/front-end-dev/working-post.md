@@ -31,7 +31,7 @@ The overlay of a smaller image over a larger one is pretty straight forward, exc
 
 Let's get a basic thing working first and then improve upon it. I'm leaning towards CSS Grid here, because I know I can have those two elements overlay each other and and I think we may want more of that behavior as we move up to the desktop version as well.
 
-I don't want to try to create an exact replica of this, so while they did a series of greens, I'll do a series of purple: #773cbd, #bf8fce, #ad6cc0 from [Color Slurp](https://colorslurp.com/blog/purple-color-palette-ideas).
+I don't want to try to create an exact replica of this, so while they did a series of greens, I'll do a series of purple: #161617, #bf8fce, #666248 from [Color Slurp](https://colorslurp.com/blog/purple-color-palette-ideas).
 
 The pen has all the HTML and CSS, but here I'm going to focus on the key parts. First things first, we'll stack two items on top of each other. I always use Sarah Drasner's [CSS Grid Generator](https://cssgrid-generator.netlify.app) for these kinds of things.
 
@@ -56,7 +56,7 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
 
 .media-secondary {
   aspect-ratio: 122 / 119;
-  background-color: #ad6cc0;
+  background-color: #666248;
   border-radius: 12px;
   justify-self: end;
   width: 35%;
@@ -73,7 +73,7 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
   }
 
   .preview-one main {
-    background-color: #773cbd;
+    background-color: #161617;
     padding: 16px;
   }
 
@@ -94,7 +94,7 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
 
   .preview-one .media-secondary {
     aspect-ratio: 122 / 119;
-    background-color: #ad6cc0;
+    background-color: #666248;
     border-radius: 12px;
     justify-self: end;
     width: 35%;
@@ -183,7 +183,7 @@ With that HTML, I can then apply that `clip-path` in the CSS.
   }
 
   .preview-two main {
-    background-color: #773cbd;
+    background-color: #161617;
     padding: 16px;
   }
 
@@ -205,7 +205,7 @@ With that HTML, I can then apply that `clip-path` in the CSS.
 
   .preview-two .media-secondary {
     aspect-ratio: 122 / 119;
-    background-color: #ad6cc0;
+    background-color: #666248;
     border-radius: 12px;
     justify-self: end;
     width: 35%;
@@ -258,7 +258,7 @@ The important additions here are adding an image in the HTML and having it set t
 
 ```html
 <div class="media-primary">
-  <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/people-learning-grid_1.png" />
+  <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
 </div>
 ```
 
@@ -284,7 +284,7 @@ The important additions here are adding an image in the HTML and having it set t
   }
 
   .preview-three main {
-    background-color: #773cbd;
+    background-color: #161617;
     padding: 16px;
   }
 
@@ -312,7 +312,7 @@ The important additions here are adding an image in the HTML and having it set t
 
   .preview-three .media-secondary {
     aspect-ratio: 122 / 119;
-    background-color: #ad6cc0;
+    background-color: #666248;
     border-radius: 12px;
     justify-self: end;
     width: 35%;
@@ -330,7 +330,7 @@ The important additions here are adding an image in the HTML and having it set t
   <main>
     <section>
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/people-learning-grid_1.png" />
+        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -341,6 +341,426 @@ The important additions here are adding an image in the HTML and having it set t
   <svg width="0" height="0">
     <defs>
       <clipPath id="preview-three-clip-path" clipPathUnits="objectBoundingBox">
+        <path d="
+        M0.035,0
+        H0.555
+        A0.035,0.035 0,0,1 0.59,0.04
+        V0.423
+        A0.035,0.035 0,0,0 0.625,0.463
+        H0.965
+        A0.035,0.035 0,0,1 1.000,0.503
+        V0.96
+        A0.035,0.035 0,0,1 0.965,1
+        H0.035
+        A0.035,0.035 0,0,1 0,0.96
+        V0.04
+        A0.035,0.035 0,0,1 0.035,0
+        Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+</div>
+</div>
+
+There's some copy and CTAs in this area that we need to add in. I know that I'm going to end up using them in a Grid layout, so I'm going to wrap some extra `div`s around parts. They're not necessary for the mobile layout, so no new important CSS. I might as well add some classes to select them by as well.
+
+I didn't give the heading all the clip-path love that it deserves to match the original, but honestly I'd prefer it to not be in a blob at all.
+
+<div class="code-ui-wrapper"><div class="code-ui-header">HTML</div>
+
+```html
+<section>
+  <div class="media-primary">
+    <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+  </div>
+  <figure class="media-secondary">
+    <!-- Secondary media will go here -->
+  </figure>
+  <div class="text-content">
+    <h1 class="text-heading">
+      Shared knowledge built from shared work
+    </h1>
+    <div class="text-body">  
+      <p>
+        We're building an example that shares code created while learning from others, showing how collaboration and exploration can lead to enhanced outcomes.
+      </p>
+      <div class="ctas">
+        <a class="cta cta-primary" href="https://mode.com">View the original</a>
+        <a class="cta cta-secondary href="https://codepen.io/collection/KwKNaN">
+          CodePen Collection
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+</div><!-- Close Code UI -->
+
+<style>
+  .preview-four {
+    margin-inline: auto;
+    max-width: 100%;
+    width: 400px;
+  }
+
+  .preview-four main {
+    background-color: #15272a;
+    padding: 16px;
+  }
+
+  .preview-four section {
+    display: grid;
+  }
+
+  .preview-four .media-primary,
+  .preview-four .media-secondary {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .preview-four .media-primary {
+    aspect-ratio: 346 / 300;
+    background-color: #bf8fce;
+    clip-path: url(#preview-four-clip-path);
+    position: relative;
+  }
+
+  .preview-four .media-primary img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .preview-four .media-secondary {
+    aspect-ratio: 122 / 119;
+    background-color: #465e5f;
+    border-radius: 12px;
+    justify-self: end;
+    width: 35%;
+  }
+
+  .preview-four .media-secondary svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .preview-four .text-heading {
+    background-color: #7f999a;
+    border-radius: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-block-start: 1.5rem;
+    max-inline-size: 75%;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .preview-four .text-heading::after {
+    background-color: #7f999a;
+    border-radius: 0 0.75rem 0.75rem 0;
+    content: "";
+    height: 8rem;
+    position: absolute;
+    right: -2rem;
+    width: 2rem;
+    top: 20%;
+  }
+
+  .preview-four .text-body {
+    color: #fff;
+    margin-block-start: 1.5rem;
+  }
+
+  .preview-four .ctas {
+    display: flex;
+    gap: 1rem;
+    margin-block-start: 1.5rem;
+  }
+
+  .preview-four .cta {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .preview-four .cta-primary {
+    background-color: #fff;
+    color: #15272a;
+  }
+
+  .preview-four .cta-secondary {
+    color: #ffffff;
+  }
+
+</style>
+
+<div class="full-bleed">
+<div class="browser-preview preview-four">
+  <main>
+    <section class="content-container">
+      <div class="media-primary">
+        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+      </div>
+      <figure class="media-secondary">
+        <!-- Secondary media will go here -->
+      </figure>
+      <div class="text-content">
+        <h1 class="text-heading">
+          Shared knowledge built from shared work
+        </h1>
+        <div class="text-body">  
+          <p>
+            We're building an example that shares code created while learning from others, showing how collaboration and exploration can lead to enhanced outcomes.
+          </p>
+          <div class="ctas">
+            <a class="cta cta-primary" href="https://mode.com">Mode.com</a>
+            <a class="cta cta-secondary" href="https://codepen.io/collection/KwKNaN">
+              CodePen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <svg width="0" height="0">
+    <defs>
+      <clipPath id="preview-four-clip-path" clipPathUnits="objectBoundingBox">
+        <path d="
+        M0.035,0
+        H0.555
+        A0.035,0.035 0,0,1 0.59,0.04
+        V0.423
+        A0.035,0.035 0,0,0 0.625,0.463
+        H0.965
+        A0.035,0.035 0,0,1 1.000,0.503
+        V0.96
+        A0.035,0.035 0,0,1 0.965,1
+        H0.035
+        A0.035,0.035 0,0,1 0,0.96
+        V0.04
+        A0.035,0.035 0,0,1 0.035,0
+        Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+</div>
+</div>
+
+## Shifting to the full layout
+
+The original version shifts to the full layout at 768px, but I think maybe this part got skipped in later QA. Nothing major, but there’s some content overlaps and wrapping issues that we’ll try to avoid with this version.
+
+First things first, we're going to stack our text content on top of the other grid items. Now that we're doing responsive things, I made the section a container so that we can use container queries. 
+
+<div class="code-ui-wrapper"><div class="code-ui-header">HTML</div>
+
+```html
+<section class="content-container">
+  <div class="media-primary">
+    <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+  </div>
+  <figure class="media-secondary">
+    <!-- Secondary media will go here -->
+  </figure>
+  <div class="text-content">
+    <h1 class="text-heading">
+      Shared knowledge built from shared work
+    </h1>
+    <div class="text-body">  
+      <p>
+        We're building an example that shares code created while learning from others, showing how collaboration and exploration can lead to enhanced outcomes.
+      </p>
+      <div class="ctas">
+        <a class="cta cta-primary" href="https://mode.com">Mode.com</a>
+        <a class="cta cta-secondary" href="https://codepen.io/collection/KwKNaN">
+          CodePen
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+</div><!-- Close Code UI -->
+
+<div class="code-ui-wrapper"><div class="code-ui-header">CSS</div>
+
+```css
+.content-container {
+  container-name: content-container;
+  container-type: inline-size;
+}
+
+@container content-container (min-width: 768px) {
+  .text-content {
+    grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+    z-index: 2;
+  }
+}
+```
+
+</div><!-- Close Code UI -->
+
+<style>
+  .preview-five {
+    margin-inline: auto;
+    max-width: 100%;
+    width: 400px;
+  }
+
+  .preview-five main {
+    background-color: #15272a;
+    padding: 16px;
+  }
+
+  .preview-five section {
+    display: grid;
+  }
+
+  .preview-five .media-primary,
+  .preview-five .media-secondary {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .preview-five .media-primary {
+    aspect-ratio: 346 / 300;
+    background-color: #bf8fce;
+    clip-path: url(#preview-four-clip-path);
+    position: relative;
+  }
+
+  .preview-five .media-primary img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .preview-five .media-secondary {
+    aspect-ratio: 122 / 119;
+    background-color: #465e5f;
+    border-radius: 12px;
+    justify-self: end;
+    width: 35%;
+  }
+
+  .preview-five .media-secondary svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .preview-five .text-heading {
+    background-color: #7f999a;
+    border-radius: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-block-start: 1.5rem;
+    max-inline-size: 75%;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .preview-five .text-heading::after {
+    background-color: #7f999a;
+    border-radius: 0 0.75rem 0.75rem 0;
+    content: "";
+    height: 8rem;
+    position: absolute;
+    right: -2rem;
+    width: 2rem;
+    top: 20%;
+  }
+
+  .preview-five .text-body {
+    color: #fff;
+    margin-block-start: 1.5rem;
+  }
+
+  .preview-five .ctas {
+    display: flex;
+    gap: 1rem;
+    margin-block-start: 1.5rem;
+  }
+
+  .preview-five .cta {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .preview-five .cta-primary {
+    background-color: #fff;
+    color: #15272a;
+  }
+
+  .preview-five .cta-secondary {
+    color: #ffffff;
+  }
+
+  .preview-five .content-container {
+    container-name: content-container;
+    container-type: inline-size;
+  }
+
+  @container content-container (min-width: 768px) {
+    .preview-five .text-content {
+      grid-area: 1 / 1 / 2 / 2;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .browser-preview {
+      width: 810px;
+    }
+  }
+
+</style>
+
+<div class="full-bleed">
+<div class="browser-preview preview-five">
+  <main>
+    <section class="content-container">
+      <div class="media-primary">
+        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+      </div>
+      <figure class="media-secondary">
+        <!-- Secondary media will go here -->
+      </figure>
+      <div class="text-content">
+        <h1 class="text-heading">
+          Shared knowledge built from shared work
+        </h1>
+        <div class="text-body">  
+          <p>
+            We're building an example that shares code created while learning from others, showing how collaboration and exploration can lead to enhanced outcomes.
+          </p>
+          <div class="ctas">
+            <a class="cta cta-primary" href="https://mode.com">Mode.com</a>
+            <a class="cta cta-secondary" href="https://codepen.io/collection/KwKNaN">
+              CodePen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <svg width="0" height="0">
+    <defs>
+      <clipPath id="preview-four-clip-path" clipPathUnits="objectBoundingBox">
         <path d="
         M0.035,0
         H0.555
