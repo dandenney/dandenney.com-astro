@@ -7,7 +7,7 @@ tags:
 cloudinaryThumb: "posts/css-scrolling-images.png"
 thumb: "/posts/front-end-dev/css-scrolling-images/css-scrolling-images-thumb.webp"
 thumbAlt: "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2"
-title: "Working Post"
+title: "Trendy UI With Clip-Path and Grid"
 ---
 
 I have been getting more exposure to custom rounding applied to UI elements,
@@ -722,7 +722,7 @@ First things first, we're going to stack our text content on top of the other gr
   }
 
   @media screen and (min-width: 800px) {
-    .browser-preview {
+    .browser-preview.preview-five {
       width: 810px;
     }
   }
