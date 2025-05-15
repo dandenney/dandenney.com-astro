@@ -1,12 +1,12 @@
 ---
 pubDate: "2025-04-30"
-socialImageFilename: "og-css-scrolling-images.jpg"
+socialImageFilename: "og-trendy-ui-with-clip-path-and-grid.jpg"
 summary: "A line of CSS to make images scroll"
 tags:
   - front-end-dev
-cloudinaryThumb: "posts/css-scrolling-images.png"
-thumb: "/posts/front-end-dev/css-scrolling-images/css-scrolling-images-thumb.webp"
-thumbAlt: "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2"
+cloudinaryThumb: "posts/trendy-ui-with-clip-path-and-grid.png"
+thumb: "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/trendy-ui-with-clip-path-and-grid-thumb.webp"
+thumbAlt: "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2"
 title: "Trendy UI With Clip-Path and Grid"
 ---
 
@@ -21,9 +21,11 @@ So now, I need to know how to do it! It's been a loooooong time since I just gra
 
 In playing around with dev tools and looking at the styles, it wasn't clear to me how they pulled off some of the overlaps. I was expecting some complicated CSS Grid system and clip-path or SVG masks, but it seems like a lot of flexbox and inline-block. 
 
-## But I also wanna improve it a little
+(In hindsight, I completely understand. It's a tremendous amount of work to try to make it responsive and maintain the look. Any letter change would require changing CSS values.)
 
-Overall it looks amazing, but the semantics are a little rough. The h1 is splt into 3 pieces and ends up being 3 h1 elements. So I'd like to see if it's possible to avoid that and learn some new techniques. 
+## But I also wanna modernize it a little
+
+Overall it looks amazing, but the semantics are a little rough. The h1 is splt into 3 pieces and ends up being 3 h1 elements. So I'd like to see if it's possible to avoid that and learn some new techniques. I also want to learn what is and isn't doable with clip-path.
 
 ## Mobile-first, of course
 
@@ -31,7 +33,7 @@ The overlay of a smaller image over a larger one is pretty straight forward, exc
 
 Let's get a basic thing working first and then improve upon it. I'm leaning towards CSS Grid here, because I know I can have those two elements overlay each other and and I think we may want more of that behavior as we move up to the desktop version as well.
 
-I don't want to try to create an exact replica of this, so while they did a series of greens, I'll do a series of purple: #161617, #bf8fce, #666248 from [Color Slurp](https://colorslurp.com/blog/purple-color-palette-ideas).
+I don't want to try to create an exact replica of this, so I generated an image and pulles some colors from it.
 
 The pen has all the HTML and CSS, but here I'm going to focus on the key parts. First things first, we'll stack two items on top of each other. I always use Sarah Drasner's [CSS Grid Generator](https://cssgrid-generator.netlify.app) for these kinds of things.
 
@@ -54,9 +56,15 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
   max-width: 100%;
 }
 
+.media-primary img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .media-secondary {
   aspect-ratio: 122 / 119;
-  background-color: #666248;
+  background-color: #465e5f;
   border-radius: 12px;
   justify-self: end;
   width: 35%;
@@ -65,7 +73,28 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
 
 </div><!-- Close Code UI -->
 
+<div class="code-ui-wrapper"><div class="code-ui-header">HTML</div>
+
+```html
+<main>
+  <section>
+    <div class="media-primary">
+      <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+    </div>
+    <figure class="media-secondary">
+      <!-- Secondary media will go here -->
+    </figure>
+  </section>
+</main>
+```
+
+</div><!-- Close Code UI -->
+
 <style>
+  .full-bleed:last-of-type {
+    margin-block-start: 1.5rem;
+  }
+
   .preview-one {
     margin-inline: auto;
     max-width: 100%;
@@ -88,13 +117,18 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
 
   .preview-one .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     max-width: 100%;
+  }
+
+  .preview-one .media-primary img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .preview-one .media-secondary {
     aspect-ratio: 122 / 119;
-    background-color: #666248;
+    background-color: #465e5f;
     border-radius: 12px;
     justify-self: end;
     width: 35%;
@@ -106,7 +140,7 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
   <main>
     <section>
       <div class="media-primary">
-        <!-- Secondary media will go here -->
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -140,7 +174,7 @@ There's a formula for the conversion, but it's complex. I'd suggest using some t
 <main>
   <section>
     <div class="media-primary">
-      <!-- Secondary media will go here -->
+      <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
     </div>
     <figure class="media-secondary">
       <!-- Secondary media will go here -->
@@ -166,8 +200,7 @@ With that HTML, I can then apply that `clip-path` in the CSS.
 
 ```css
 .media-primary {
-  aspect-ratio: 346 / 300;
-  background-color: #bf8fce;
+  aspect-ratio: 346 / 300
   clip-path: url(#preview-two-clip-path);
   max-width: 100%;
 }
@@ -198,14 +231,19 @@ With that HTML, I can then apply that `clip-path` in the CSS.
 
   .preview-two .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-two-clip-path);
     max-width: 100%;
   }
 
+  .preview-two .media-primary img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
   .preview-two .media-secondary {
     aspect-ratio: 122 / 119;
-    background-color: #666248;
+    background-color: #465e5f;
     border-radius: 12px;
     justify-self: end;
     width: 35%;
@@ -217,7 +255,7 @@ With that HTML, I can then apply that `clip-path` in the CSS.
   <main>
     <section>
       <div class="media-primary">
-        <!-- Secondary media will go here -->
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -250,119 +288,6 @@ With that HTML, I can then apply that `clip-path` in the CSS.
 </div>
 </div>
 
-To get that closer to the original, we'll pop an image into the `media-primary` and free up that shade of purple for our next step with the text.
-
-The important additions here are adding an image in the HTML and having it set to `cover` its parent element.
-
-<div class="code-ui-wrapper"><div class="code-ui-header">HTML</div>
-
-```html
-<div class="media-primary">
-  <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
-</div>
-```
-
-</div><!-- Close Code UI -->
-
-<div class="code-ui-wrapper"><div class="code-ui-header">CSS</div>
-
-```css
-.media-primary img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-```
-
-</div><!-- Close Code UI -->
-
-<style>
-  .preview-three {
-    margin-inline: auto;
-    max-width: 100%;
-    width: 400px;
-  }
-
-  .preview-three main {
-    background-color: #161617;
-    padding: 16px;
-  }
-
-  .preview-three section {
-    display: grid;
-  }
-
-  .preview-three .media-primary,
-  .preview-three .media-secondary {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-  .preview-three .media-primary {
-    aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
-    clip-path: url(#preview-three-clip-path);
-    position: relative;
-  }
-
-  .preview-three .media-primary img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  .preview-three .media-secondary {
-    aspect-ratio: 122 / 119;
-    background-color: #666248;
-    border-radius: 12px;
-    justify-self: end;
-    width: 35%;
-  }
-
-  .preview-three .media-secondary svg {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
-<div class="full-bleed">
-<div class="browser-preview preview-three">
-  <main>
-    <section>
-      <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
-      </div>
-      <figure class="media-secondary">
-        <!-- Secondary media will go here -->
-      </figure>
-    </section>
-  </main>
-
-  <svg width="0" height="0">
-    <defs>
-      <clipPath id="preview-three-clip-path" clipPathUnits="objectBoundingBox">
-        <path d="
-        M0.035,0
-        H0.555
-        A0.035,0.035 0,0,1 0.59,0.04
-        V0.423
-        A0.035,0.035 0,0,0 0.625,0.463
-        H0.965
-        A0.035,0.035 0,0,1 1.000,0.503
-        V0.96
-        A0.035,0.035 0,0,1 0.965,1
-        H0.035
-        A0.035,0.035 0,0,1 0,0.96
-        V0.04
-        A0.035,0.035 0,0,1 0.035,0
-        Z" />
-      </clipPath>
-    </defs>
-  </svg>
-
-</div>
-</div>
-
 There's some copy and CTAs in this area that we need to add in. I know that I'm going to end up using them in a Grid layout, so I'm going to wrap some extra `div`s around parts. They're not necessary for the mobile layout, so no new important CSS. I might as well add some classes to select them by as well.
 
 Back to the generator for another clip-path for the heading. I thought it could be a pseudo element at first glance, but the side thingy is not equidistant from the edge of the rest. 
@@ -372,7 +297,7 @@ Back to the generator for another clip-path for the heading. I thought it could 
 ```html
 <section>
   <div class="media-primary">
-    <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+    <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
   </div>
   <figure class="media-secondary">
     <!-- Secondary media will go here -->
@@ -431,7 +356,6 @@ Back to the generator for another clip-path for the heading. I thought it could 
 
   .preview-four .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-four-clip-path);
     position: relative;
   }
@@ -504,7 +428,7 @@ Back to the generator for another clip-path for the heading. I thought it could 
   <main>
     <section class="content-container">
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -575,7 +499,7 @@ First things first, we're going to stack our text content on top of the other gr
 ```html
 <section class="content-container">
   <div class="media-primary">
-    <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+    <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
   </div>
   <figure class="media-secondary">
     <!-- Secondary media will go here -->
@@ -643,7 +567,6 @@ First things first, we're going to stack our text content on top of the other gr
 
   .preview-five .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-four-clip-path);
     position: relative;
   }
@@ -735,7 +658,7 @@ First things first, we're going to stack our text content on top of the other gr
   <main>
     <section class="content-container">
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -839,7 +762,6 @@ If you pretend real hard, you can see the layout taking shape!
 
   .preview-six .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-four-clip-path);
     position: relative;
   }
@@ -998,7 +920,7 @@ If you pretend real hard, you can see the layout taking shape!
   <main>
     <section class="content-container">
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -1091,7 +1013,6 @@ Reminder: the full code is in the pen, so here I'm just going to show the new SV
 
   .preview-seven .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-four-clip-path);
     position: relative;
   }
@@ -1277,7 +1198,7 @@ Reminder: the full code is in the pen, so here I'm just going to show the new SV
   <main>
     <section class="content-container">
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -1365,7 +1286,6 @@ Reminder: the full code is in the pen, so here I'm just going to show the new SV
 
   .preview-eight .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-four-clip-path);
     position: relative;
   }
@@ -1635,7 +1555,7 @@ Then, here is the new SVG for the full screen `clip-path`.
   <main>
     <section class="content-container">
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <figure class="media-secondary">
         <!-- Secondary media will go here -->
@@ -1880,7 +1800,7 @@ I used a combination of Midjourney and ChatGPT to make some icons and style them
   <main>
     <section class="content-container">
       <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
+        <img alt="Generated image of some people working at a computer and we're hoping they find the typos" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
       </div>
       <div class="media-secondary">
         <figure class="animated-icon">
@@ -1979,7 +1899,6 @@ Back in my day, I'd have made this work on an 800x600 and a 1024x768 monitor and
 
   .preview-nine .media-primary {
     aspect-ratio: 346 / 300;
-    background-color: #bf8fce;
     clip-path: url(#preview-four-clip-path);
     position: relative;
   }
@@ -2225,137 +2144,17 @@ Back in my day, I'd have made this work on an 800x600 and a 1024x768 monitor and
 
 This doesn't get it perfect, but no size that you'd load in has glaring jankiness. If you do front-end or design, the variance in the gaps will drive you nuts, but I'll save those kinf of fixes for when this would be a real thing.
 
-<div class="code-ui-wrapper"><div class="code-ui-header">CSS</div>
+I don't love some of the issues still and I think I could find some creative solutions for it, but the real goal was learning the clip-path part. I've learned a good amount about that and will now know the respnsive challenges for UIs like this. 
 
-```css
-@container content-container (min-width: 820px) {
-    .preview-nine .text-body-container {
-      padding-inline-start: 1.5rem;
-      width: 48%;
-    }
-
-    .preview-nine .media-secondary {
-      aspect-ratio: 260 / 215;
-      width: 22%;
-    }
-  }
-
-  @container content-container (min-width: 1020px) {
-    .preview-nine .text-body-container {
-      padding-inline-start: 1.5rem;
-      width: 45%;
-    }
-
-    .preview-nine .media-primary {
-      aspect-ratio: 320 / 195;
-      width: 54%;
-    }
-
-    .preview-nine .media-secondary {
-      aspect-ratio: 270 / 215;
-      width: 22%;
-    }
-  }
-
-  @container content-container (min-width: 1200px) {
-    .preview-nine .media-primary {
-      clip-path: url(#preview-eight-clip-path-full);
-      width: 45%;
-    }
-
-    .preview-nine .media-primary {
-      aspect-ratio: 320 / 195;
-      width: 53%;
-    }
-
-    .preview-nine .media-secondary {
-      aspect-ratio: 250 / 195;
-      width: 22%;
-    }
-
-    .preview-nine .text-body-container {
-      font-size: 1.125rem;
-      padding-inline-start: 1.5rem;
-      width: 46%;
-    }
-  }
-```
-
-</div>
+If you're interested in fixing it, fork this pen and show me your tricks!
 
 <div class="full-bleed">
-<div class="browser-preview preview-nine has-animation">
-  <main>
-    <section class="content-container">
-      <div class="media-primary">
-        <img alt="Generated image of some people working at a computer" src="https://assets.codepen.io/140/learning-grid-and-clip-path.png" />
-      </div>
-      <div class="media-secondary">
-        <figure class="animated-icon">
-          <img alt="illustration of a laptop" src="https://assets.codepen.io/140/laptop.webp" />
-        </figure>
-        <figure class="animated-icon">
-          <img alt="illustration of a grid" src="https://assets.codepen.io/140/grid.webp" />
-        </figure>
-        <figure class="animated-icon">
-          <img alt="illustration respresenting a clip-path" src="https://assets.codepen.io/140/clip-path.webp" />
-        </figure>
-      </div>
-      <div class="text-content">
-        <div>
-          <h1 class="text-heading">
-            <span class="text-heading-aligned">
-              <span class="span-1" id="first-line">Gaining knowledge</span> 
-              <span class="span-2">by building <svg class="pseudo-corner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" aria-hidden="true" role="presentation"><path fill="currentColor" d="M12 12C12 5.373 6.627 0 0 0h12v12Z"/></svg><svg class="pseudo-corner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" aria-hidden="true" role="presentation"><path fill="currentColor" d="M12 12C12 5.373 6.627 0 0 0h12v12Z"/></svg></span>
-            </span> 
-            <span class="span-3">web things <svg class="pseudo-corner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" aria-hidden="true" role="presentation"><path fill="currentColor" d="M12 12C12 5.373 6.627 0 0 0h12v12Z"/></svg></span>
-          </h1>
-        </div>
-        <div class="text-body">  
-          <div class="text-body-container">
-            <p>
-              We're building an example that shares code created while learning from others, showing how collaboration and exploration can lead to enhanced outcomes.
-            </p>
-            <div class="ctas">
-              <a class="cta cta-primary" href="https://mode.com">Mode.com</a>
-              <a class="cta cta-secondary" href="https://codepen.io/collection/KwKNaN">
-                CodePen
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <svg width="0" height="0">
-    <defs>
-      <clipPath id="preview-four-clip-path" clipPathUnits="objectBoundingBox">
-        <path d="
-        M0.035,0
-        H0.555
-        A0.035,0.035 0,0,1 0.59,0.04
-        V0.423
-        A0.035,0.035 0,0,0 0.625,0.463
-        H0.965
-        A0.035,0.035 0,0,1 1.000,0.503
-        V0.96
-        A0.035,0.035 0,0,1 0.965,1
-        H0.035
-        A0.035,0.035 0,0,1 0,0.96
-        V0.04
-        A0.035,0.035 0,0,1 0.035,0
-        Z" />
-      </clipPath>
-    </defs>
-  </svg>
+<p class="codepen" data-height="700" data-slug-hash="vEEbLJe" data-pen-title="Trendy UI with Clip-Path and Grid" data-user="dandenney" style="height: 700px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 2em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/dandenney/pen/vEEbLJe">
+  Trendy UI with Clip-Path and Grid</a> by Dan Denney (<a href="https://codepen.io/dandenney">@dandenney</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://public.codepenassets.com/embed/index.js"></script>
 
-  <svg width="0" height="0">
-    <defs>
-      <clipPath id="preview-eight-clip-path-full" clipPathUnits="objectBoundingBox">
-        <path d="M0.0188,0 H0.5203 A0.0188,0.0308 0,0,1 0.5391,0.0308 V0.2769 A0.0188,0.0308 0,0,0 0.5578,0.3077 H0.9813 A0.0188,0.0308 0,0,1 1,0.3385 V0.9692 A0.0188,0.0308 0,0,1 0.9813,1 H0.0188 A0.0188,0.0308 0,0,1 0,0.9692 V0.0308 A0.0188,0.0308 0,0,1 0.0188,0 Z" />
-      </clipPath>
-    </defs>
-  </svg>
-</div>
 </div>
