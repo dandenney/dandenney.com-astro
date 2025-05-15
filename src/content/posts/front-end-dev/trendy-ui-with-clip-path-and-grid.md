@@ -7,7 +7,7 @@ tags:
 cloudinaryThumb: "posts/trendy-ui-with-clip-path-and-grid.png"
 thumb: "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/trendy-ui-with-clip-path-and-grid-thumb.webp"
 thumbAlt: "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2"
-title: "Trendy UI With Clip-Path and Grid"
+title: "Trendy UI with Clip-Path and Grid"
 ---
 
 I have been getting more exposure to custom rounding applied to UI elements,
