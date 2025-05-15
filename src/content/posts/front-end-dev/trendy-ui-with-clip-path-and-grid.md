@@ -986,7 +986,7 @@ The original uses widths and duplication to achieve thier effect, which does hav
 
 First things first, we need a new clip path. On mobile, the "top" of the primary media is more thick. My process for that is: draw the shape in Corner Clipper, copy the mask, paste the mask into a ChatGPT thread, where it gives me a SVG equivalent, add that in CSS.
 
-Next up, is the heading and this is a bit of a doozy. The original duplicated the h1 and I really want to avoid that so that a screenreader or a crawler could read the whole thing. I can't avoid peppering it with spans, though, to make it a grid. I'm using the same approach as the original and I want to keep it flexible for the background, so I had to add some SVGs to the h1 as well. The cool thing is that 
+Next up, is the heading and this is a bit of a doozy. The original duplicated the h1 and I really want to avoid that so that a screenreader or a crawler could read the whole thing. I can't avoid peppering it with spans, though, to make it a grid. I'm using the same approach as the original and I want to keep it flexible for the background, so I had to add some SVGs to the h1 as well. The cool thing is that it's a single item that you can highlight the text on.
 
 Reminder: the full code is in the pen, so here I'm just going to show the new SVG, the h1 spanification, and the CSS updates. 
 
