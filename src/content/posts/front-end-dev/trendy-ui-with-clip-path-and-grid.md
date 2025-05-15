@@ -135,6 +135,10 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
   }
 </style>
 
+<p class="mobile-heads-up">
+  The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.
+</p>
+
 <div class="full-bleed">
 <div class="browser-preview preview-one">
   <main>
@@ -653,6 +657,11 @@ First things first, we're going to stack our text content on top of the other gr
 
 </style>
 
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative lg:hidden" role="alert">
+  <strong class="font-bold">Small screen alert!</strong>
+  <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
+</p>
+
 <div class="full-bleed">
 <div class="browser-preview preview-five">
   <main>
@@ -914,6 +923,11 @@ If you pretend real hard, you can see the layout taking shape!
 ```
 
 </div><!-- Close Code UI -->
+
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative lg:hidden" role="alert">
+  <strong class="font-bold">Small screen alert!</strong>
+  <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
+</p>
 
 <div class="full-bleed">
 <div class="browser-preview preview-six">
@@ -1192,6 +1206,11 @@ Reminder: the full code is in the pen, so here I'm just going to show the new SV
   }
 
 </style>
+
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative lg:hidden" role="alert">
+  <strong class="font-bold">Small screen alert!</strong>
+  <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
+</p>
 
 <div class="full-bleed">
 <div class="browser-preview preview-seven">
@@ -1550,6 +1569,11 @@ Then, here is the new SVG for the full screen `clip-path`.
 
 </div>
 
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative xl:hidden" role="alert">
+  <strong class="font-bold">Small screen alert!</strong>
+  <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
+</p>
+
 <div class="full-bleed">
 <div class="browser-preview preview-eight">
   <main>
@@ -1794,6 +1818,11 @@ I used a combination of Midjourney and ChatGPT to make some icons and style them
   }
 }
 </style>
+
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative xl:hidden" role="alert">
+  <strong class="font-bold">Small screen alert!</strong>
+  <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
+</p>
 
 <div class="full-bleed">
 <div class="browser-preview preview-eight has-animation">
@@ -2147,6 +2176,11 @@ This doesn't get it perfect, but no size that you'd load in has glaring jankines
 I don't love some of the issues still and I think I could find some creative solutions for it, but the real goal was learning the clip-path part. I've learned a good amount about that and will now know the respnsive challenges for UIs like this. 
 
 If you're interested in fixing it, fork this pen and show me your tricks!
+
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative xl:hidden" role="alert">
+  <strong class="font-bold">Small screen alert!</strong>
+  <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
+</p>
 
 <div class="full-bleed">
 
