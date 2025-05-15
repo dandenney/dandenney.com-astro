@@ -135,10 +135,6 @@ The pen has all the HTML and CSS, but here I'm going to focus on the key parts. 
   }
 </style>
 
-<p class="mobile-heads-up">
-  The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.
-</p>
-
 <div class="full-bleed">
 <div class="browser-preview preview-one">
   <main>
