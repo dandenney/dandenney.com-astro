@@ -2,6 +2,7 @@
 // MainLayout.astro
 //Import the Tracking ID
 const gaSrc = `https://www.googletagmanager.com/gtag/js?id=G-39E050Z1SC`;
+const isProd = import.meta.env.PROD;
 ---
 
 <style>
@@ -65,12 +66,16 @@ const gaSrc = `https://www.googletagmanager.com/gtag/js?id=G-39E050Z1SC`;
 </footer>
 
 <!-- GA Scripts -->
-  <script async src={gaSrc}></script>
-  <script async>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    window.dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", 'G-39E050Z1SC');
-</script>
+{isProd && (
+  <>
+    <script async src={gaSrc}></script>
+    <script async>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", 'G-39E050Z1SC');
+    </script>
+  </>
+)}
