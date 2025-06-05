@@ -16,7 +16,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.66
     },
     {
@@ -38,8 +39,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.56
     },
     {
@@ -58,7 +60,8 @@
         "front-end-dev"
       ],
       "identifier": "getting-closer-to-critical-css-by-default",
-      "url": "/posts/getting-closer-to-critical-css-by-default/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/getting-closer-to-critical-css-by-default/",
       "similarity": 0.54
     },
     {
@@ -71,7 +74,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.5
     },
     {
@@ -84,7 +88,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.49
     }
   ],
@@ -105,8 +110,9 @@
       "thumbAlt": "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2",
       "title": "Render ATL 2023",
       "identifier": "render-atl-2023",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/render-atl-2023/",
       "path": "../../src/content/posts/front-end-dev/render-atl-2023.md",
-      "url": "/posts/render-atl-2023/",
       "similarity": 0.56
     },
     {
@@ -122,8 +128,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.48
     },
     {
@@ -146,8 +153,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.47
     },
     {
@@ -166,7 +174,8 @@
       "thumbAlt": "An illustration of a mad scientist experimenting with a mixture of fire and various chemicals, in the style of a sci-fi movie poster, viewed from a side-facing perspective --v 5 --ar 3:2",
       "title": "Mixture and Firebase and Public APIs",
       "identifier": "mixture-and-firebase-and-public-apis",
-      "url": "/posts/mixture-and-firebase-and-public-apis/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mixture-and-firebase-and-public-apis/",
       "similarity": 0.47
     },
     {
@@ -187,8 +196,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 3: Repo Setup",
       "identifier": "strapi-series-part-3-repo-setup",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-3-repo-setup/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-3-repo-setup.md",
-      "url": "/posts/strapi-series-part-3-repo-setup/",
       "similarity": 0.46
     }
   ],
@@ -209,8 +219,9 @@
       "thumbAlt": "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2",
       "title": "Render ATL 2023",
       "identifier": "render-atl-2023",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/render-atl-2023/",
       "path": "../../src/content/posts/front-end-dev/render-atl-2023.md",
-      "url": "/posts/render-atl-2023/",
       "similarity": 0.39
     },
     {
@@ -225,8 +236,9 @@
       "thumb": "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp",
       "thumbAlt": "playful illustration of a green sock being illuminated --ar 3:2",
       "identifier": "playing-with-relume-layouts",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-relume-layouts/",
       "path": "../../src/content/posts/front-end-dev/playing-with-relume-layouts.md",
-      "url": "/posts/playing-with-relume-layouts/",
       "similarity": 0.38
     },
     {
@@ -247,7 +259,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.38
     },
     {
@@ -266,7 +279,8 @@
         "front-end-dev"
       ],
       "identifier": "prop-data-preferences",
-      "url": "/posts/prop-data-preferences/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/prop-data-preferences/",
       "similarity": 0.37
     },
     {
@@ -287,8 +301,9 @@
       "thumbAlt": "abstract shapes and colors, with letters, postpunk 80s retro --v 5 --ar 3:2",
       "title": "Strapi Series, Part 8: Font Sizes and Colors",
       "identifier": "strapi-series-part-8-font-sizes-and-colors",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors.md",
-      "url": "/posts/strapi-series-part-8-font-sizes-and-colors/",
       "similarity": 0.34
     }
   ],
@@ -305,8 +320,9 @@
       "thumbAlt": "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2",
       "title": "CSS Scrolling Images",
       "identifier": "css-scrolling-images",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/css-scrolling-images/",
       "path": "../../src/content/posts/front-end-dev/css-scrolling-images.md",
-      "url": "/posts/css-scrolling-images/",
       "similarity": 0.62
     },
     {
@@ -325,7 +341,8 @@
       "thumbAlt": "An illustration of a person riding a rocket with a promotional banner trailing behind, soaring through the clouds and leaving a trail of fire, in the style of a thrilling action movie poster, viewed from a dramatic angle perspective --v 5 --ar 3:2",
       "title": "Fun With Responsive Email Banners",
       "identifier": "fun-with-responsive-email-banners",
-      "url": "/posts/fun-with-responsive-email-banners/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fun-with-responsive-email-banners/",
       "similarity": 0.54
     },
     {
@@ -337,7 +354,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.53
     },
     {
@@ -349,7 +367,8 @@
         "front-end-dev"
       ],
       "identifier": "im-down-with-svg",
-      "url": "/posts/im-down-with-svg/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/im-down-with-svg/",
       "similarity": 0.53
     },
     {
@@ -368,7 +387,8 @@
       "thumbAlt": "choosing between two tools that can both do a job, cinematic, photorealistic --ar 3:2 --v 5",
       "title": "Simple side nav: Flexbox vs. Grid",
       "identifier": "simple-side-nav-flexbox-vs-grid",
-      "url": "/posts/simple-side-nav-flexbox-vs-grid/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/simple-side-nav-flexbox-vs-grid/",
       "similarity": 0.52
     }
   ],
@@ -385,8 +405,9 @@
       "thumb": "/posts/front-end-dev/building-a-lovable-tool-with-ai/building-a-lovable-tool-with-ai.webp",
       "thumbAlt": "A vibrant digital painting of a heart-shaped character chiseling a web app design from a monolithic stone slab, each chisel stroke revealing colorful UI elements like buttons and icons. A backdrop of a digital-meets-ancient workshop merges high-tech holograms with dusty tools. Warm light and stone textures dominate. Created Using: Hyperrealistic textures, layered digital painting techniques, warm color palette, high-energy composition, intricate character details, whimsical fantasy style, bold contrasts, ultra-HD rendering --ar 3:2 --v 6.0",
       "identifier": "building-a-lovable-tool-with-ai",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-lovable-tool-with-ai/",
       "path": "../../src/content/posts/front-end-dev/building-a-lovable-tool-with-ai.md",
-      "url": "/posts/building-a-lovable-tool-with-ai/",
       "similarity": 0.52
     },
     {
@@ -398,7 +419,8 @@
         "front-end-dev"
       ],
       "identifier": "mondays-rock",
-      "url": "/posts/mondays-rock/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mondays-rock/",
       "similarity": 0.51
     },
     {
@@ -417,7 +439,8 @@
       "thumbAlt": "An illustration of a person lost in thought, with thought bubbles and symbols representing ideas surrounding them, in the style of Basquiat, viewed from a close-up perspective --v 5 --ar 3:2",
       "title": "Rethinking My eMMail Workflow",
       "identifier": "rethinking-my-emmail-workflow",
-      "url": "/posts/rethinking-my-emmail-workflow/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/rethinking-my-emmail-workflow/",
       "similarity": 0.49
     },
     {
@@ -437,7 +460,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.46
     },
     {
@@ -457,7 +481,8 @@
         "front-end-dev"
       ],
       "identifier": "learning-javascript-problem-solving",
-      "url": "/posts/learning-javascript-problem-solving/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/learning-javascript-problem-solving/",
       "similarity": 0.41
     }
   ],
@@ -481,7 +506,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.4
     },
     {
@@ -501,7 +527,8 @@
         "front-end-dev"
       ],
       "identifier": "learning-javascript-problem-solving",
-      "url": "/posts/learning-javascript-problem-solving/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/learning-javascript-problem-solving/",
       "similarity": 0.39
     },
     {
@@ -520,7 +547,8 @@
         "front-end-dev"
       ],
       "identifier": "prop-data-preferences",
-      "url": "/posts/prop-data-preferences/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/prop-data-preferences/",
       "similarity": 0.37
     },
     {
@@ -539,7 +567,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.37
     },
     {
@@ -551,7 +580,8 @@
         "front-end-dev"
       ],
       "identifier": "mondays-rock",
-      "url": "/posts/mondays-rock/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mondays-rock/",
       "similarity": 0.36
     }
   ],
@@ -573,8 +603,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 10: Links Data and Requests",
       "identifier": "strapi-series-part-10-links-data-and-requests",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-10-links-data-and-requests/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-10-links-data-and-requests.md",
-      "url": "/posts/strapi-series-part-10-links-data-and-requests/",
       "similarity": 0.71
     },
     {
@@ -595,8 +626,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.61
     },
     {
@@ -619,8 +651,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.59
     },
     {
@@ -642,7 +675,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.58
     },
     {
@@ -661,7 +695,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.57
     }
   ],
@@ -682,7 +717,8 @@
       "thumbAlt": "An illustration of a person riding a rocket with a promotional banner trailing behind, soaring through the clouds and leaving a trail of fire, in the style of a thrilling action movie poster, viewed from a dramatic angle perspective --v 5 --ar 3:2",
       "title": "Fun With Responsive Email Banners",
       "identifier": "fun-with-responsive-email-banners",
-      "url": "/posts/fun-with-responsive-email-banners/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fun-with-responsive-email-banners/",
       "similarity": 0.56
     },
     {
@@ -702,7 +738,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.52
     },
     {
@@ -724,8 +761,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.51
     },
     {
@@ -748,8 +786,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.48
     },
     {
@@ -762,7 +801,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.48
     }
   ],
@@ -787,8 +827,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.72
     },
     {
@@ -810,8 +851,9 @@
       "thumbAlt": "An illustration of a mysterious book of spells with a glowing, arcane symbol on the cover, surrounded by flickering candles and an ominous mist, in the style of dark fantasy art, photorealistic, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 6: Coming Soon QA",
       "identifier": "strapi-series-part-6-coming-soon-qa",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-6-coming-soon-qa/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-6-coming-soon-qa.md",
-      "url": "/posts/strapi-series-part-6-coming-soon-qa/",
       "similarity": 0.63
     },
     {
@@ -830,7 +872,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.59
     },
     {
@@ -849,7 +892,8 @@
         "front-end-dev"
       ],
       "identifier": "you-cant-make-others-love-css",
-      "url": "/posts/you-cant-make-others-love-css/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/you-cant-make-others-love-css/",
       "similarity": 0.56
     },
     {
@@ -868,7 +912,8 @@
         "front-end-dev"
       ],
       "identifier": "getting-closer-to-critical-css-by-default",
-      "url": "/posts/getting-closer-to-critical-css-by-default/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/getting-closer-to-critical-css-by-default/",
       "similarity": 0.55
     }
   ],
@@ -892,8 +937,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.63
     },
     {
@@ -916,8 +962,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.53
     },
     {
@@ -937,8 +984,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 11: Header and Footer Links",
       "identifier": "strapi-series-part-11-header-and-footer-links",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-11-header-and-footer-links.md",
-      "url": "/posts/strapi-series-part-11-header-and-footer-links/",
       "similarity": 0.5
     },
     {
@@ -957,7 +1005,8 @@
         "front-end-dev"
       ],
       "identifier": "getting-closer-to-critical-css-by-default",
-      "url": "/posts/getting-closer-to-critical-css-by-default/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/getting-closer-to-critical-css-by-default/",
       "similarity": 0.48
     },
     {
@@ -972,8 +1021,9 @@
       "thumb": "/posts/front-end-dev/cursor-makes-web-development-fun/cursor-makes-web-development-fun.webp",
       "thumbAlt": "an animatronic cursor, smiling and happy, while the background is a dark, dystopian view of wires and computers --ar 3:2",
       "identifier": "cursor-makes-web-development-fun",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/cursor-makes-web-development-fun/",
       "path": "../../src/content/posts/front-end-dev/cursor-makes-web-development-fun.md",
-      "url": "/posts/cursor-makes-web-development-fun/",
       "similarity": 0.46
     }
   ],
@@ -997,8 +1047,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.72
     },
     {
@@ -1021,8 +1072,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.58
     },
     {
@@ -1043,8 +1095,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.56
     },
     {
@@ -1066,8 +1119,9 @@
       "thumbAlt": "An illustration of a mysterious book of spells with a glowing, arcane symbol on the cover, surrounded by flickering candles and an ominous mist, in the style of dark fantasy art, photorealistic, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 6: Coming Soon QA",
       "identifier": "strapi-series-part-6-coming-soon-qa",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-6-coming-soon-qa/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-6-coming-soon-qa.md",
-      "url": "/posts/strapi-series-part-6-coming-soon-qa/",
       "similarity": 0.53
     },
     {
@@ -1087,8 +1141,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.52
     }
   ],
@@ -1110,8 +1165,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.59
     },
     {
@@ -1134,8 +1190,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.58
     },
     {
@@ -1157,7 +1214,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.57
     },
     {
@@ -1179,8 +1237,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.53
     },
     {
@@ -1198,7 +1257,8 @@
       "thumbAlt": "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2",
       "title": "I Didn't Write This Blog Post",
       "identifier": "i-didnt-write-this-blog-post",
-      "url": "/posts/i-didnt-write-this-blog-post/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/i-didnt-write-this-blog-post/",
       "similarity": 0.53
     }
   ],
@@ -1221,8 +1281,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.73
     },
     {
@@ -1244,7 +1305,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.61
     },
     {
@@ -1266,7 +1328,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.5
     },
     {
@@ -1289,8 +1352,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.49
     },
     {
@@ -1310,8 +1374,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.47
     }
   ],
@@ -1334,8 +1399,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 3: Repo Setup",
       "identifier": "strapi-series-part-3-repo-setup",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-3-repo-setup/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-3-repo-setup.md",
-      "url": "/posts/strapi-series-part-3-repo-setup/",
       "similarity": 0.73
     },
     {
@@ -1355,8 +1421,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.61
     },
     {
@@ -1379,8 +1446,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.56
     },
     {
@@ -1402,7 +1470,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.55
     },
     {
@@ -1422,8 +1491,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 10: Links Data and Requests",
       "identifier": "strapi-series-part-10-links-data-and-requests",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-10-links-data-and-requests/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-10-links-data-and-requests.md",
-      "url": "/posts/strapi-series-part-10-links-data-and-requests/",
       "similarity": 0.52
     }
   ],
@@ -1444,7 +1514,8 @@
         "front-end-dev"
       ],
       "identifier": "prop-data-preferences",
-      "url": "/posts/prop-data-preferences/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/prop-data-preferences/",
       "similarity": 0.58
     },
     {
@@ -1464,8 +1535,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 10: Links Data and Requests",
       "identifier": "strapi-series-part-10-links-data-and-requests",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-10-links-data-and-requests/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-10-links-data-and-requests.md",
-      "url": "/posts/strapi-series-part-10-links-data-and-requests/",
       "similarity": 0.51
     },
     {
@@ -1487,8 +1559,9 @@
       "thumbAlt": "An illustration of a mysterious book of spells with a glowing, arcane symbol on the cover, surrounded by flickering candles and an ominous mist, in the style of dark fantasy art, photorealistic, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 6: Coming Soon QA",
       "identifier": "strapi-series-part-6-coming-soon-qa",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-6-coming-soon-qa/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-6-coming-soon-qa.md",
-      "url": "/posts/strapi-series-part-6-coming-soon-qa/",
       "similarity": 0.5
     },
     {
@@ -1511,8 +1584,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.5
     },
     {
@@ -1532,8 +1606,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.49
     }
   ],
@@ -1555,8 +1630,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.71
     },
     {
@@ -1575,7 +1651,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.54
     },
     {
@@ -1596,8 +1673,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.52
     },
     {
@@ -1617,8 +1695,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 11: Header and Footer Links",
       "identifier": "strapi-series-part-11-header-and-footer-links",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-11-header-and-footer-links.md",
-      "url": "/posts/strapi-series-part-11-header-and-footer-links/",
       "similarity": 0.51
     },
     {
@@ -1641,8 +1720,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.48
     }
   ],
@@ -1663,7 +1743,8 @@
       "thumbAlt": "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Pursuing a Nanodegree (1 of ?)",
       "identifier": "pursuing-a-nanodegree",
-      "url": "/posts/pursuing-a-nanodegree/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/pursuing-a-nanodegree/",
       "similarity": 0.62
     },
     {
@@ -1684,8 +1765,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 3: Repo Setup",
       "identifier": "strapi-series-part-3-repo-setup",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-3-repo-setup/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-3-repo-setup.md",
-      "url": "/posts/strapi-series-part-3-repo-setup/",
       "similarity": 0.61
     },
     {
@@ -1708,8 +1790,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.57
     },
     {
@@ -1730,8 +1813,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.55
     },
     {
@@ -1752,7 +1836,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.51
     }
   ],
@@ -1769,8 +1854,9 @@
       "thumbAlt": "a drafting schematic of a series of columns of different sizes --ar 3:2",
       "title": "Footer Link Columns With Subgrid",
       "identifier": "footer-link-columns-with-subgrid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/footer-link-columns-with-subgrid/",
       "path": "../../src/content/posts/front-end-dev/footer-link-columns-with-subgrid.md",
-      "url": "/posts/footer-link-columns-with-subgrid/",
       "similarity": 0.62
     },
     {
@@ -1785,8 +1871,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.52
     },
     {
@@ -1801,8 +1888,9 @@
       "thumbAlt": "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2",
       "title": "CSS Scrolling Images",
       "identifier": "css-scrolling-images",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/css-scrolling-images/",
       "path": "../../src/content/posts/front-end-dev/css-scrolling-images.md",
-      "url": "/posts/css-scrolling-images/",
       "similarity": 0.5
     },
     {
@@ -1817,8 +1905,9 @@
       "thumb": "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp",
       "thumbAlt": "playful illustration of a green sock being illuminated --ar 3:2",
       "identifier": "playing-with-relume-layouts",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-relume-layouts/",
       "path": "../../src/content/posts/front-end-dev/playing-with-relume-layouts.md",
-      "url": "/posts/playing-with-relume-layouts/",
       "similarity": 0.49
     },
     {
@@ -1837,7 +1926,8 @@
         "front-end-dev"
       ],
       "identifier": "getting-closer-to-critical-css-by-default",
-      "url": "/posts/getting-closer-to-critical-css-by-default/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/getting-closer-to-critical-css-by-default/",
       "similarity": 0.48
     }
   ],
@@ -1852,7 +1942,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.74
     },
     {
@@ -1871,7 +1962,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.63
     },
     {
@@ -1884,7 +1976,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-color-variable-pop-quiz",
-      "url": "/posts/sass-color-variable-pop-quiz/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-color-variable-pop-quiz/",
       "similarity": 0.57
     },
     {
@@ -1896,7 +1989,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.55
     },
     {
@@ -1915,7 +2009,8 @@
         "front-end-dev"
       ],
       "identifier": "getting-closer-to-critical-css-by-default",
-      "url": "/posts/getting-closer-to-critical-css-by-default/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/getting-closer-to-critical-css-by-default/",
       "similarity": 0.52
     }
   ],
@@ -1930,7 +2025,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.57
     },
     {
@@ -1943,7 +2039,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.5
     },
     {
@@ -1965,8 +2062,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.46
     },
     {
@@ -1978,7 +2076,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.46
     },
     {
@@ -2001,8 +2100,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.43
     }
   ],
@@ -2017,7 +2117,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.74
     },
     {
@@ -2036,7 +2137,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.59
     },
     {
@@ -2048,7 +2150,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.55
     },
     {
@@ -2067,7 +2170,8 @@
         "front-end-dev"
       ],
       "identifier": "you-cant-make-others-love-css",
-      "url": "/posts/you-cant-make-others-love-css/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/you-cant-make-others-love-css/",
       "similarity": 0.5
     },
     {
@@ -2080,7 +2184,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-color-variable-pop-quiz",
-      "url": "/posts/sass-color-variable-pop-quiz/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-color-variable-pop-quiz/",
       "similarity": 0.5
     }
   ],
@@ -2102,7 +2207,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.54
     },
     {
@@ -2121,7 +2227,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.54
     },
     {
@@ -2144,8 +2251,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.5
     },
     {
@@ -2157,7 +2265,8 @@
         "front-end-dev"
       ],
       "identifier": "going-live-with-number-five",
-      "url": "/posts/going-live-with-number-five/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/going-live-with-number-five/",
       "similarity": 0.5
     },
     {
@@ -2172,8 +2281,9 @@
       "thumb": "/posts/front-end-dev/building-a-lovable-tool-with-ai/building-a-lovable-tool-with-ai.webp",
       "thumbAlt": "A vibrant digital painting of a heart-shaped character chiseling a web app design from a monolithic stone slab, each chisel stroke revealing colorful UI elements like buttons and icons. A backdrop of a digital-meets-ancient workshop merges high-tech holograms with dusty tools. Warm light and stone textures dominate. Created Using: Hyperrealistic textures, layered digital painting techniques, warm color palette, high-energy composition, intricate character details, whimsical fantasy style, bold contrasts, ultra-HD rendering --ar 3:2 --v 6.0",
       "identifier": "building-a-lovable-tool-with-ai",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-lovable-tool-with-ai/",
       "path": "../../src/content/posts/front-end-dev/building-a-lovable-tool-with-ai.md",
-      "url": "/posts/building-a-lovable-tool-with-ai/",
       "similarity": 0.5
     }
   ],
@@ -2190,8 +2300,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "Webflow for Web Devs",
       "identifier": "webflow-for-web-devs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/webflow-for-web-devs/",
       "path": "../../src/content/posts/front-end-dev/webflow-for-web-devs.md",
-      "url": "/posts/webflow-for-web-devs/",
       "similarity": 0.56
     },
     {
@@ -2203,7 +2314,8 @@
         "front-end-dev"
       ],
       "identifier": "mondays-rock",
-      "url": "/posts/mondays-rock/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mondays-rock/",
       "similarity": 0.51
     },
     {
@@ -2226,8 +2338,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.49
     },
     {
@@ -2239,7 +2352,8 @@
         "front-end-dev"
       ],
       "identifier": "production-vs-shipping",
-      "url": "/posts/production-vs-shipping/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/production-vs-shipping/",
       "similarity": 0.49
     },
     {
@@ -2255,8 +2369,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.42
     }
   ],
@@ -2277,7 +2392,8 @@
       "thumbAlt": "An illustration of a person riding a rocket with a promotional banner trailing behind, soaring through the clouds and leaving a trail of fire, in the style of a thrilling action movie poster, viewed from a dramatic angle perspective --v 5 --ar 3:2",
       "title": "Fun With Responsive Email Banners",
       "identifier": "fun-with-responsive-email-banners",
-      "url": "/posts/fun-with-responsive-email-banners/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fun-with-responsive-email-banners/",
       "similarity": 0.67
     },
     {
@@ -2296,7 +2412,8 @@
       "thumbAlt": "An illustration of a person lost in thought, with thought bubbles and symbols representing ideas surrounding them, in the style of Basquiat, viewed from a close-up perspective --v 5 --ar 3:2",
       "title": "Rethinking My eMMail Workflow",
       "identifier": "rethinking-my-emmail-workflow",
-      "url": "/posts/rethinking-my-emmail-workflow/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/rethinking-my-emmail-workflow/",
       "similarity": 0.54
     },
     {
@@ -2317,8 +2434,9 @@
       "thumbAlt": "abstract shapes and colors, with letters, postpunk 80s retro --v 5 --ar 3:2",
       "title": "Strapi Series, Part 8: Font Sizes and Colors",
       "identifier": "strapi-series-part-8-font-sizes-and-colors",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors.md",
-      "url": "/posts/strapi-series-part-8-font-sizes-and-colors/",
       "similarity": 0.52
     },
     {
@@ -2338,8 +2456,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.5
     },
     {
@@ -2358,7 +2477,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.5
     }
   ],
@@ -2382,7 +2502,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.62
     },
     {
@@ -2401,7 +2522,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.54
     },
     {
@@ -2422,7 +2544,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.52
     },
     {
@@ -2444,7 +2567,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.49
     },
     {
@@ -2463,7 +2587,8 @@
         "front-end-dev"
       ],
       "identifier": "you-cant-make-others-love-css",
-      "url": "/posts/you-cant-make-others-love-css/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/you-cant-make-others-love-css/",
       "similarity": 0.47
     }
   ],
@@ -2485,8 +2610,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 11: Header and Footer Links",
       "identifier": "strapi-series-part-11-header-and-footer-links",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-11-header-and-footer-links.md",
-      "url": "/posts/strapi-series-part-11-header-and-footer-links/",
       "similarity": 0.58
     },
     {
@@ -2509,8 +2635,9 @@
       "thumbAlt": "An illustration of a monstrous creature with multiple tentacles reaching out to grab dozens of email icons, which are scattered throughout a chaotic, cluttered background. The creature's many eyes are fixed hungrily on the colorful icons, and its sharp teeth are bared in a menacing grin. The style is highly detailed and somewhat dark, with rich shadows and bright highlights creating a sense of depth and dimensionality. The perspective is slightly overhead, with the viewer looking down on the scene from a vantage point just above the creature's many limbs --v 5 --ar 3:2",
       "title": "Strapi Series, Part 5: A Coming Soon Component",
       "identifier": "strapi-series-part-5-coming-soon-component",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-5-coming-soon-component/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-5-coming-soon-component.md",
-      "url": "/posts/strapi-series-part-5-coming-soon-component/",
       "similarity": 0.49
     },
     {
@@ -2530,8 +2657,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.47
     },
     {
@@ -2551,7 +2679,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.45
     },
     {
@@ -2564,7 +2693,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-color-variable-pop-quiz",
-      "url": "/posts/sass-color-variable-pop-quiz/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-color-variable-pop-quiz/",
       "similarity": 0.43
     }
   ],
@@ -2578,7 +2708,8 @@
         "front-end-dev"
       ],
       "identifier": "mondays-rock",
-      "url": "/posts/mondays-rock/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mondays-rock/",
       "similarity": 0.59
     },
     {
@@ -2597,8 +2728,9 @@
       "thumbAlt": "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2",
       "title": "Render ATL 2023",
       "identifier": "render-atl-2023",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/render-atl-2023/",
       "path": "../../src/content/posts/front-end-dev/render-atl-2023.md",
-      "url": "/posts/render-atl-2023/",
       "similarity": 0.49
     },
     {
@@ -2620,7 +2752,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.48
     },
     {
@@ -2639,7 +2772,8 @@
       "thumbAlt": "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Pursuing a Nanodegree (1 of ?)",
       "identifier": "pursuing-a-nanodegree",
-      "url": "/posts/pursuing-a-nanodegree/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/pursuing-a-nanodegree/",
       "similarity": 0.47
     },
     {
@@ -2658,7 +2792,8 @@
         "front-end-dev"
       ],
       "identifier": "you-cant-make-others-love-css",
-      "url": "/posts/you-cant-make-others-love-css/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/you-cant-make-others-love-css/",
       "similarity": 0.45
     }
   ],
@@ -2675,8 +2810,9 @@
       "thumbAlt": "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2",
       "title": "CSS Scrolling Images",
       "identifier": "css-scrolling-images",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/css-scrolling-images/",
       "path": "../../src/content/posts/front-end-dev/css-scrolling-images.md",
-      "url": "/posts/css-scrolling-images/",
       "similarity": 0.62
     },
     {
@@ -2695,7 +2831,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.55
     },
     {
@@ -2718,8 +2855,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.52
     },
     {
@@ -2734,8 +2872,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.51
     },
     {
@@ -2755,7 +2894,8 @@
       "thumbAlt": "2d icons, 3d icons, grunge, ui, graphic design, high contrast, artstation --ar 3:2",
       "title": "Custom collection list markup in Eleventy",
       "identifier": "custom-collection-list-markup-in-eleventy",
-      "url": "/posts/custom-collection-list-markup-in-eleventy/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/custom-collection-list-markup-in-eleventy/",
       "similarity": 0.51
     }
   ],
@@ -2769,7 +2909,8 @@
         "front-end-dev"
       ],
       "identifier": "im-down-with-svg",
-      "url": "/posts/im-down-with-svg/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/im-down-with-svg/",
       "similarity": 0.5
     },
     {
@@ -2789,8 +2930,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.49
     },
     {
@@ -2809,7 +2951,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.47
     },
     {
@@ -2825,8 +2968,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.46
     },
     {
@@ -2838,7 +2982,8 @@
         "front-end-dev"
       ],
       "identifier": "going-live-with-number-five",
-      "url": "/posts/going-live-with-number-five/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/going-live-with-number-five/",
       "similarity": 0.43
     }
   ],
@@ -2853,7 +2998,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.55
     },
     {
@@ -2866,7 +3012,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.55
     },
     {
@@ -2881,8 +3028,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.53
     },
     {
@@ -2895,7 +3043,8 @@
         "front-end-dev"
       ],
       "identifier": "a-sass-noob-using-math-for-flexible-widths",
-      "url": "/posts/a-sass-noob-using-math-for-flexible-widths/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths/",
       "similarity": 0.53
     },
     {
@@ -2915,7 +3064,8 @@
       "thumbAlt": "2d icons, 3d icons, grunge, ui, graphic design, high contrast, artstation --ar 3:2",
       "title": "Custom collection list markup in Eleventy",
       "identifier": "custom-collection-list-markup-in-eleventy",
-      "url": "/posts/custom-collection-list-markup-in-eleventy/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/custom-collection-list-markup-in-eleventy/",
       "similarity": 0.52
     }
   ],
@@ -2932,8 +3082,9 @@
       "thumbAlt": "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2",
       "title": "CSS Scrolling Images",
       "identifier": "css-scrolling-images",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/css-scrolling-images/",
       "path": "../../src/content/posts/front-end-dev/css-scrolling-images.md",
-      "url": "/posts/css-scrolling-images/",
       "similarity": 0.6
     },
     {
@@ -2948,8 +3099,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.49
     },
     {
@@ -2964,8 +3116,9 @@
       "thumb": "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp",
       "thumbAlt": "playful illustration of a green sock being illuminated --ar 3:2",
       "identifier": "playing-with-relume-layouts",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-relume-layouts/",
       "path": "../../src/content/posts/front-end-dev/playing-with-relume-layouts.md",
-      "url": "/posts/playing-with-relume-layouts/",
       "similarity": 0.45
     },
     {
@@ -2977,7 +3130,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.45
     },
     {
@@ -3000,8 +3154,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.42
     }
   ],
@@ -3015,7 +3170,8 @@
         "front-end-dev"
       ],
       "identifier": "production-vs-shipping",
-      "url": "/posts/production-vs-shipping/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/production-vs-shipping/",
       "similarity": 0.59
     },
     {
@@ -3035,7 +3191,8 @@
         "front-end-dev"
       ],
       "identifier": "til-executing-local-ruby",
-      "url": "/posts/til-executing-local-ruby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/til-executing-local-ruby/",
       "similarity": 0.51
     },
     {
@@ -3054,8 +3211,9 @@
       "thumbAlt": "an illustration of a robot playing with a toy human --v 5 --s 777 --ar 3:2",
       "title": "Render ATL 2023",
       "identifier": "render-atl-2023",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/render-atl-2023/",
       "path": "../../src/content/posts/front-end-dev/render-atl-2023.md",
-      "url": "/posts/render-atl-2023/",
       "similarity": 0.51
     },
     {
@@ -3070,8 +3228,9 @@
       "thumb": "/posts/front-end-dev/building-a-lovable-tool-with-ai/building-a-lovable-tool-with-ai.webp",
       "thumbAlt": "A vibrant digital painting of a heart-shaped character chiseling a web app design from a monolithic stone slab, each chisel stroke revealing colorful UI elements like buttons and icons. A backdrop of a digital-meets-ancient workshop merges high-tech holograms with dusty tools. Warm light and stone textures dominate. Created Using: Hyperrealistic textures, layered digital painting techniques, warm color palette, high-energy composition, intricate character details, whimsical fantasy style, bold contrasts, ultra-HD rendering --ar 3:2 --v 6.0",
       "identifier": "building-a-lovable-tool-with-ai",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-lovable-tool-with-ai/",
       "path": "../../src/content/posts/front-end-dev/building-a-lovable-tool-with-ai.md",
-      "url": "/posts/building-a-lovable-tool-with-ai/",
       "similarity": 0.45
     },
     {
@@ -3090,7 +3249,8 @@
       "thumbAlt": "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Pursuing a Nanodegree (1 of ?)",
       "identifier": "pursuing-a-nanodegree",
-      "url": "/posts/pursuing-a-nanodegree/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/pursuing-a-nanodegree/",
       "similarity": 0.44
     }
   ],
@@ -3113,7 +3273,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.61
     },
     {
@@ -3135,7 +3296,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.48
     },
     {
@@ -3150,8 +3312,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "Webflow for Web Devs",
       "identifier": "webflow-for-web-devs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/webflow-for-web-devs/",
       "path": "../../src/content/posts/front-end-dev/webflow-for-web-devs.md",
-      "url": "/posts/webflow-for-web-devs/",
       "similarity": 0.47
     },
     {
@@ -3170,7 +3333,8 @@
         "front-end-dev"
       ],
       "identifier": "an-api-event",
-      "url": "/posts/an-api-event/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/an-api-event/",
       "similarity": 0.45
     },
     {
@@ -3190,8 +3354,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.41
     }
   ],
@@ -3214,7 +3379,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.49
     },
     {
@@ -3229,8 +3395,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.41
     },
     {
@@ -3249,7 +3416,8 @@
         "front-end-dev"
       ],
       "identifier": "prop-data-preferences",
-      "url": "/posts/prop-data-preferences/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/prop-data-preferences/",
       "similarity": 0.4
     },
     {
@@ -3268,7 +3436,8 @@
         "front-end-dev"
       ],
       "identifier": "photoshops-timeline-rocks",
-      "url": "/posts/photoshops-timeline-rocks/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/photoshops-timeline-rocks/",
       "similarity": 0.38
     },
     {
@@ -3283,8 +3452,9 @@
       "thumb": "/posts/front-end-dev/building-a-lovable-tool-with-ai/building-a-lovable-tool-with-ai.webp",
       "thumbAlt": "A vibrant digital painting of a heart-shaped character chiseling a web app design from a monolithic stone slab, each chisel stroke revealing colorful UI elements like buttons and icons. A backdrop of a digital-meets-ancient workshop merges high-tech holograms with dusty tools. Warm light and stone textures dominate. Created Using: Hyperrealistic textures, layered digital painting techniques, warm color palette, high-energy composition, intricate character details, whimsical fantasy style, bold contrasts, ultra-HD rendering --ar 3:2 --v 6.0",
       "identifier": "building-a-lovable-tool-with-ai",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-lovable-tool-with-ai/",
       "path": "../../src/content/posts/front-end-dev/building-a-lovable-tool-with-ai.md",
-      "url": "/posts/building-a-lovable-tool-with-ai/",
       "similarity": 0.37
     }
   ],
@@ -3299,7 +3469,8 @@
         "front-end-dev"
       ],
       "identifier": "a-sass-noob-using-math-for-flexible-widths",
-      "url": "/posts/a-sass-noob-using-math-for-flexible-widths/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths/",
       "similarity": 0.42
     },
     {
@@ -3319,7 +3490,8 @@
         "front-end-dev"
       ],
       "identifier": "til-executing-local-ruby",
-      "url": "/posts/til-executing-local-ruby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/til-executing-local-ruby/",
       "similarity": 0.41
     },
     {
@@ -3338,7 +3510,8 @@
       "thumbAlt": "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Pursuing a Nanodegree (1 of ?)",
       "identifier": "pursuing-a-nanodegree",
-      "url": "/posts/pursuing-a-nanodegree/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/pursuing-a-nanodegree/",
       "similarity": 0.4
     },
     {
@@ -3357,7 +3530,8 @@
         "front-end-dev"
       ],
       "identifier": "stumbling-through-learning-about-event-listeners",
-      "url": "/posts/stumbling-through-learning-about-event-listeners/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/stumbling-through-learning-about-event-listeners/",
       "similarity": 0.39
     },
     {
@@ -3370,7 +3544,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-color-variable-pop-quiz",
-      "url": "/posts/sass-color-variable-pop-quiz/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-color-variable-pop-quiz/",
       "similarity": 0.39
     }
   ],
@@ -3392,8 +3567,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.57
     },
     {
@@ -3408,8 +3584,9 @@
       "thumb": "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp",
       "thumbAlt": "playful illustration of a green sock being illuminated --ar 3:2",
       "identifier": "playing-with-relume-layouts",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-relume-layouts/",
       "path": "../../src/content/posts/front-end-dev/playing-with-relume-layouts.md",
-      "url": "/posts/playing-with-relume-layouts/",
       "similarity": 0.55
     },
     {
@@ -3428,7 +3605,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.55
     },
     {
@@ -3448,8 +3626,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 10: Links Data and Requests",
       "identifier": "strapi-series-part-10-links-data-and-requests",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-10-links-data-and-requests/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-10-links-data-and-requests.md",
-      "url": "/posts/strapi-series-part-10-links-data-and-requests/",
       "similarity": 0.54
     },
     {
@@ -3464,8 +3643,9 @@
       "thumbAlt": "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2",
       "title": "CSS Scrolling Images",
       "identifier": "css-scrolling-images",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/css-scrolling-images/",
       "path": "../../src/content/posts/front-end-dev/css-scrolling-images.md",
-      "url": "/posts/css-scrolling-images/",
       "similarity": 0.54
     }
   ],
@@ -3482,8 +3662,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.53
     },
     {
@@ -3502,7 +3683,8 @@
       "thumbAlt": "An illustration of a dense forest being condensed into a small glass jar, with miniature trees and wildlife inside, viewed from a side perspective, in the style of a whimsical painting --v 5 --ar 3:2",
       "title": "Playing With Data URIs",
       "identifier": "playing-with-data-uris",
-      "url": "/posts/playing-with-data-uris/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-data-uris/",
       "similarity": 0.5
     },
     {
@@ -3514,7 +3696,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.42
     },
     {
@@ -3529,8 +3712,9 @@
       "thumbAlt": "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2",
       "title": "CSS Scrolling Images",
       "identifier": "css-scrolling-images",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/css-scrolling-images/",
       "path": "../../src/content/posts/front-end-dev/css-scrolling-images.md",
-      "url": "/posts/css-scrolling-images/",
       "similarity": 0.42
     },
     {
@@ -3550,7 +3734,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.41
     }
   ],
@@ -3575,8 +3760,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.53
     },
     {
@@ -3591,8 +3777,9 @@
       "thumb": "/posts/front-end-dev/building-a-lovable-tool-with-ai/building-a-lovable-tool-with-ai.webp",
       "thumbAlt": "A vibrant digital painting of a heart-shaped character chiseling a web app design from a monolithic stone slab, each chisel stroke revealing colorful UI elements like buttons and icons. A backdrop of a digital-meets-ancient workshop merges high-tech holograms with dusty tools. Warm light and stone textures dominate. Created Using: Hyperrealistic textures, layered digital painting techniques, warm color palette, high-energy composition, intricate character details, whimsical fantasy style, bold contrasts, ultra-HD rendering --ar 3:2 --v 6.0",
       "identifier": "building-a-lovable-tool-with-ai",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-lovable-tool-with-ai/",
       "path": "../../src/content/posts/front-end-dev/building-a-lovable-tool-with-ai.md",
-      "url": "/posts/building-a-lovable-tool-with-ai/",
       "similarity": 0.5
     },
     {
@@ -3612,8 +3799,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.46
     },
     {
@@ -3635,7 +3823,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.43
     },
     {
@@ -3654,7 +3843,8 @@
       "thumbAlt": "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Pursuing a Nanodegree (1 of ?)",
       "identifier": "pursuing-a-nanodegree",
-      "url": "/posts/pursuing-a-nanodegree/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/pursuing-a-nanodegree/",
       "similarity": 0.42
     }
   ],
@@ -3675,7 +3865,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.59
     },
     {
@@ -3691,8 +3882,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.54
     },
     {
@@ -3711,7 +3903,8 @@
       "thumbAlt": "An illustration of a person lost in thought, with thought bubbles and symbols representing ideas surrounding them, in the style of Basquiat, viewed from a close-up perspective --v 5 --ar 3:2",
       "title": "Rethinking My eMMail Workflow",
       "identifier": "rethinking-my-emmail-workflow",
-      "url": "/posts/rethinking-my-emmail-workflow/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/rethinking-my-emmail-workflow/",
       "similarity": 0.5
     },
     {
@@ -3731,7 +3924,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.49
     },
     {
@@ -3753,7 +3947,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.48
     }
   ],
@@ -3774,7 +3969,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.66
     },
     {
@@ -3796,8 +3992,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.55
     },
     {
@@ -3816,7 +4013,8 @@
         "front-end-dev"
       ],
       "identifier": "you-cant-make-others-love-css",
-      "url": "/posts/you-cant-make-others-love-css/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/you-cant-make-others-love-css/",
       "similarity": 0.54
     },
     {
@@ -3835,7 +4033,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.53
     },
     {
@@ -3848,7 +4047,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.52
     }
   ],
@@ -3870,7 +4070,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.67
     },
     {
@@ -3891,8 +4092,9 @@
       "thumbAlt": "abstract shapes and colors, with letters, postpunk 80s retro --v 5 --ar 3:2",
       "title": "Strapi Series, Part 8: Font Sizes and Colors",
       "identifier": "strapi-series-part-8-font-sizes-and-colors",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors.md",
-      "url": "/posts/strapi-series-part-8-font-sizes-and-colors/",
       "similarity": 0.56
     },
     {
@@ -3911,7 +4113,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.55
     },
     {
@@ -3926,8 +4129,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.54
     },
     {
@@ -3947,8 +4151,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.53
     }
   ],
@@ -3969,7 +4174,8 @@
       "thumbAlt": "choosing between two tools that can both do a job, cinematic, photorealistic --ar 3:2 --v 5",
       "title": "Simple side nav: Flexbox vs. Grid",
       "identifier": "simple-side-nav-flexbox-vs-grid",
-      "url": "/posts/simple-side-nav-flexbox-vs-grid/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/simple-side-nav-flexbox-vs-grid/",
       "similarity": 0.62
     },
     {
@@ -3988,7 +4194,8 @@
       "thumbAlt": "An illustration of a person riding a rocket with a promotional banner trailing behind, soaring through the clouds and leaving a trail of fire, in the style of a thrilling action movie poster, viewed from a dramatic angle perspective --v 5 --ar 3:2",
       "title": "Fun With Responsive Email Banners",
       "identifier": "fun-with-responsive-email-banners",
-      "url": "/posts/fun-with-responsive-email-banners/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fun-with-responsive-email-banners/",
       "similarity": 0.51
     },
     {
@@ -4009,8 +4216,9 @@
       "thumbAlt": "abstract shapes and colors, with letters, postpunk 80s retro --v 5 --ar 3:2",
       "title": "Strapi Series, Part 8: Font Sizes and Colors",
       "identifier": "strapi-series-part-8-font-sizes-and-colors",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors.md",
-      "url": "/posts/strapi-series-part-8-font-sizes-and-colors/",
       "similarity": 0.47
     },
     {
@@ -4025,8 +4233,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.44
     },
     {
@@ -4046,7 +4255,8 @@
         "front-end-dev"
       ],
       "identifier": "reducing-html-email-code",
-      "url": "/posts/reducing-html-email-code/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/reducing-html-email-code/",
       "similarity": 0.39
     }
   ],
@@ -4069,8 +4279,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.4
     },
     {
@@ -4090,8 +4301,9 @@
       "thumbAlt": "As the sun sets outside, John sits in his dimly lit room, eyes glued to his computer screen. He's recording his latest tutorial, his voice laced with excitement as he explains the intricacies of coding. His computer desk is cluttered with books, papers, and empty coffee cups. John's hands dance over his keyboard, his eyes flicking back and forth between his notes and the screen. The camera lens captures the glow of the computer screen on his face, as well as the occasional flicker of frustration. --ar 3:2 --seed 3249781 --v 5.1",
       "title": "Strapi Series, Part 10: Links Data and Requests",
       "identifier": "strapi-series-part-10-links-data-and-requests",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-10-links-data-and-requests/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-10-links-data-and-requests.md",
-      "url": "/posts/strapi-series-part-10-links-data-and-requests/",
       "similarity": 0.4
     },
     {
@@ -4111,7 +4323,8 @@
       "thumbAlt": "A person fatigued while being attacked by code robots in a cinematic style with glorious lighting --ar 3:2 --v 5",
       "title": "Fighting Tooling Fatigue",
       "identifier": "fighting-tooling-fatigue",
-      "url": "/posts/fighting-tooling-fatigue/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fighting-tooling-fatigue/",
       "similarity": 0.39
     },
     {
@@ -4129,8 +4342,9 @@
       "cloudinaryThumb": "posts/eleventy-netlify-newb.jpg",
       "title": "Eleventy and Netlify for NPM newbs like me",
       "identifier": "eleventy-and-netlify-for-npm-newbs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/",
       "path": "../../src/content/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs.md",
-      "url": "/posts/eleventy-and-netlify-for-npm-newbs/",
       "similarity": 0.38
     },
     {
@@ -4146,8 +4360,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.35
     }
   ],
@@ -4167,8 +4382,9 @@
       "cloudinaryThumb": "posts/eleventy-netlify-newb.jpg",
       "title": "Eleventy and Netlify for NPM newbs like me",
       "identifier": "eleventy-and-netlify-for-npm-newbs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/",
       "path": "../../src/content/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs.md",
-      "url": "/posts/eleventy-and-netlify-for-npm-newbs/",
       "similarity": 0.6
     },
     {
@@ -4184,8 +4400,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.56
     },
     {
@@ -4200,8 +4417,9 @@
       "thumb": "/posts/front-end-dev/adding-tinacms-to-my-astro-site/adding-tina-to-my-astro-site-thumb.webp",
       "thumbAlt": "napoleon dynamite and tina the llama standing in a field, a rocket is flying in the sky above them --ar 3:2",
       "identifier": "Adding-TinaCMS-To-My-Astro-Site",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site/",
       "path": "../../src/content/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site.md",
-      "url": "/posts/Adding-TinaCMS-To-My-Astro-Site/",
       "similarity": 0.56
     },
     {
@@ -4223,8 +4441,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.49
     },
     {
@@ -4243,7 +4462,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.49
     }
   ],
@@ -4264,7 +4484,8 @@
       "thumbAlt": "An illustration of a mad scientist experimenting with a mixture of fire and various chemicals, in the style of a sci-fi movie poster, viewed from a side-facing perspective --v 5 --ar 3:2",
       "title": "Mixture and Firebase and Public APIs",
       "identifier": "mixture-and-firebase-and-public-apis",
-      "url": "/posts/mixture-and-firebase-and-public-apis/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mixture-and-firebase-and-public-apis/",
       "similarity": 0.61
     },
     {
@@ -4286,7 +4507,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.61
     },
     {
@@ -4306,8 +4528,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.56
     },
     {
@@ -4326,7 +4549,8 @@
       "thumbAlt": "An illustration of a student completing a nanodegree program, with a laptop and coding books on a desk, in the style of a vector graphic design, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Pursuing a Nanodegree (1 of ?)",
       "identifier": "pursuing-a-nanodegree",
-      "url": "/posts/pursuing-a-nanodegree/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/pursuing-a-nanodegree/",
       "similarity": 0.52
     },
     {
@@ -4347,8 +4571,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.51
     }
   ],
@@ -4369,7 +4594,8 @@
         "front-end-dev"
       ],
       "identifier": "you-cant-make-others-love-css",
-      "url": "/posts/you-cant-make-others-love-css/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/you-cant-make-others-love-css/",
       "similarity": 0.66
     },
     {
@@ -4388,7 +4614,8 @@
         "front-end-dev"
       ],
       "identifier": "getting-closer-to-critical-css-by-default",
-      "url": "/posts/getting-closer-to-critical-css-by-default/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/getting-closer-to-critical-css-by-default/",
       "similarity": 0.66
     },
     {
@@ -4401,7 +4628,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.63
     },
     {
@@ -4423,8 +4651,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.59
     },
     {
@@ -4437,7 +4666,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.59
     }
   ],
@@ -4459,7 +4689,8 @@
       "thumbAlt": "A person fatigued while being attacked by code robots in a cinematic style with glorious lighting --ar 3:2 --v 5",
       "title": "Fighting Tooling Fatigue",
       "identifier": "fighting-tooling-fatigue",
-      "url": "/posts/fighting-tooling-fatigue/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fighting-tooling-fatigue/",
       "similarity": 0.6
     },
     {
@@ -4478,7 +4709,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.5
     },
     {
@@ -4493,8 +4725,9 @@
       "thumb": "/posts/front-end-dev/adding-tinacms-to-my-astro-site/adding-tina-to-my-astro-site-thumb.webp",
       "thumbAlt": "napoleon dynamite and tina the llama standing in a field, a rocket is flying in the sky above them --ar 3:2",
       "identifier": "Adding-TinaCMS-To-My-Astro-Site",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site/",
       "path": "../../src/content/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site.md",
-      "url": "/posts/Adding-TinaCMS-To-My-Astro-Site/",
       "similarity": 0.5
     },
     {
@@ -4516,7 +4749,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.49
     },
     {
@@ -4531,8 +4765,9 @@
       "thumb": "/posts/front-end-dev/cursor-makes-web-development-fun/cursor-makes-web-development-fun.webp",
       "thumbAlt": "an animatronic cursor, smiling and happy, while the background is a dark, dystopian view of wires and computers --ar 3:2",
       "identifier": "cursor-makes-web-development-fun",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/cursor-makes-web-development-fun/",
       "path": "../../src/content/posts/front-end-dev/cursor-makes-web-development-fun.md",
-      "url": "/posts/cursor-makes-web-development-fun/",
       "similarity": 0.47
     }
   ],
@@ -4546,7 +4781,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.52
     },
     {
@@ -4561,8 +4797,9 @@
       "thumb": "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp",
       "thumbAlt": "playful illustration of a green sock being illuminated --ar 3:2",
       "identifier": "playing-with-relume-layouts",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-relume-layouts/",
       "path": "../../src/content/posts/front-end-dev/playing-with-relume-layouts.md",
-      "url": "/posts/playing-with-relume-layouts/",
       "similarity": 0.51
     },
     {
@@ -4582,8 +4819,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.48
     },
     {
@@ -4604,8 +4842,9 @@
       "thumbAlt": "abstract shapes and colors, with letters, postpunk 80s retro --v 5 --ar 3:2",
       "title": "Strapi Series, Part 8: Font Sizes and Colors",
       "identifier": "strapi-series-part-8-font-sizes-and-colors",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors.md",
-      "url": "/posts/strapi-series-part-8-font-sizes-and-colors/",
       "similarity": 0.47
     },
     {
@@ -4627,8 +4866,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.47
     }
   ],
@@ -4652,8 +4892,9 @@
       "thumbAlt": "an epic battle between a white wolf and a black wolf, with glorious lighting in the style of Ignasi Monreal artwork --v 5 --ar 3:2",
       "title": "Strapi Series, Part 7: Light and Dark Mode",
       "identifier": "strapi-series-part-7-light-and-dark-mode",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode.md",
-      "url": "/posts/strapi-series-part-7-light-and-dark-mode/",
       "similarity": 0.48
     },
     {
@@ -4668,8 +4909,9 @@
       "thumb": "/posts/front-end-dev/adding-tinacms-to-my-astro-site/adding-tina-to-my-astro-site-thumb.webp",
       "thumbAlt": "napoleon dynamite and tina the llama standing in a field, a rocket is flying in the sky above them --ar 3:2",
       "identifier": "Adding-TinaCMS-To-My-Astro-Site",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site/",
       "path": "../../src/content/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site.md",
-      "url": "/posts/Adding-TinaCMS-To-My-Astro-Site/",
       "similarity": 0.48
     },
     {
@@ -4682,7 +4924,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.47
     },
     {
@@ -4700,8 +4943,9 @@
       "cloudinaryThumb": "posts/eleventy-netlify-newb.jpg",
       "title": "Eleventy and Netlify for NPM newbs like me",
       "identifier": "eleventy-and-netlify-for-npm-newbs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/",
       "path": "../../src/content/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs.md",
-      "url": "/posts/eleventy-and-netlify-for-npm-newbs/",
       "similarity": 0.47
     },
     {
@@ -4723,8 +4967,9 @@
       "thumbAlt": "An illustration of a mysterious book of spells with a glowing, arcane symbol on the cover, surrounded by flickering candles and an ominous mist, in the style of dark fantasy art, photorealistic, viewed from a top-down perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 6: Coming Soon QA",
       "identifier": "strapi-series-part-6-coming-soon-qa",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-6-coming-soon-qa/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-6-coming-soon-qa.md",
-      "url": "/posts/strapi-series-part-6-coming-soon-qa/",
       "similarity": 0.46
     }
   ],
@@ -4741,8 +4986,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.62
     },
     {
@@ -4757,8 +5003,9 @@
       "thumb": "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp",
       "thumbAlt": "playful illustration of a green sock being illuminated --ar 3:2",
       "identifier": "playing-with-relume-layouts",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-relume-layouts/",
       "path": "../../src/content/posts/front-end-dev/playing-with-relume-layouts.md",
-      "url": "/posts/playing-with-relume-layouts/",
       "similarity": 0.62
     },
     {
@@ -4777,7 +5024,8 @@
         "front-end-dev"
       ],
       "identifier": "photoshops-timeline-rocks",
-      "url": "/posts/photoshops-timeline-rocks/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/photoshops-timeline-rocks/",
       "similarity": 0.6
     },
     {
@@ -4796,7 +5044,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.54
     },
     {
@@ -4815,7 +5064,8 @@
       "thumbAlt": "An illustration of a person riding a rocket with a promotional banner trailing behind, soaring through the clouds and leaving a trail of fire, in the style of a thrilling action movie poster, viewed from a dramatic angle perspective --v 5 --ar 3:2",
       "title": "Fun With Responsive Email Banners",
       "identifier": "fun-with-responsive-email-banners",
-      "url": "/posts/fun-with-responsive-email-banners/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fun-with-responsive-email-banners/",
       "similarity": 0.53
     }
   ],
@@ -4838,7 +5088,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.61
     },
     {
@@ -4858,8 +5109,9 @@
       "thumbAlt": "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2",
       "title": "Strapi Series, Part 9: Thinking In Data",
       "identifier": "strapi-series-part-9-thinking-in-data",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-9-thinking-in-data/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-9-thinking-in-data.md",
-      "url": "/posts/strapi-series-part-9-thinking-in-data/",
       "similarity": 0.58
     },
     {
@@ -4874,8 +5126,9 @@
       "thumb": "/posts/front-end-dev/building-a-lovable-tool-with-ai/building-a-lovable-tool-with-ai.webp",
       "thumbAlt": "A vibrant digital painting of a heart-shaped character chiseling a web app design from a monolithic stone slab, each chisel stroke revealing colorful UI elements like buttons and icons. A backdrop of a digital-meets-ancient workshop merges high-tech holograms with dusty tools. Warm light and stone textures dominate. Created Using: Hyperrealistic textures, layered digital painting techniques, warm color palette, high-energy composition, intricate character details, whimsical fantasy style, bold contrasts, ultra-HD rendering --ar 3:2 --v 6.0",
       "identifier": "building-a-lovable-tool-with-ai",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-lovable-tool-with-ai/",
       "path": "../../src/content/posts/front-end-dev/building-a-lovable-tool-with-ai.md",
-      "url": "/posts/building-a-lovable-tool-with-ai/",
       "similarity": 0.57
     },
     {
@@ -4894,7 +5147,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.52
     },
     {
@@ -4915,8 +5169,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 2: Architectural Decisions",
       "identifier": "strapi-series-part-2-architectural-decisions",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-2-architectural-decisions/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-2-architectural-decisions.md",
-      "url": "/posts/strapi-series-part-2-architectural-decisions/",
       "similarity": 0.51
     }
   ],
@@ -4940,7 +5195,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.57
     },
     {
@@ -4963,8 +5219,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.53
     },
     {
@@ -4984,7 +5241,8 @@
         "front-end-dev"
       ],
       "identifier": "til-executing-local-ruby",
-      "url": "/posts/til-executing-local-ruby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/til-executing-local-ruby/",
       "similarity": 0.52
     },
     {
@@ -5005,7 +5263,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.51
     },
     {
@@ -5024,7 +5283,8 @@
       "thumbAlt": "An illustration of a person lost in thought, with thought bubbles and symbols representing ideas surrounding them, in the style of Basquiat, viewed from a close-up perspective --v 5 --ar 3:2",
       "title": "Rethinking My eMMail Workflow",
       "identifier": "rethinking-my-emmail-workflow",
-      "url": "/posts/rethinking-my-emmail-workflow/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/rethinking-my-emmail-workflow/",
       "similarity": 0.5
     }
   ],
@@ -5047,7 +5307,8 @@
       "thumbAlt": "An illustration of a person integrating electronic parts into their body, with circuit boards and wires visible beneath their skin, in the style of a cyberpunk graphic novel, viewed from a side perspective --v 5 --ar 3:2",
       "title": "Experiment - Personal JSON-based API",
       "identifier": "experiment-personal-json-api",
-      "url": "/posts/experiment-personal-json-api/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/experiment-personal-json-api/",
       "similarity": 0.47
     },
     {
@@ -5066,7 +5327,8 @@
       "thumbAlt": "An illustration of a mad scientist experimenting with a mixture of fire and various chemicals, in the style of a sci-fi movie poster, viewed from a side-facing perspective --v 5 --ar 3:2",
       "title": "Mixture and Firebase and Public APIs",
       "identifier": "mixture-and-firebase-and-public-apis",
-      "url": "/posts/mixture-and-firebase-and-public-apis/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/mixture-and-firebase-and-public-apis/",
       "similarity": 0.45
     },
     {
@@ -5089,8 +5351,9 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 4: A Fake Company",
       "identifier": "strapi-series-part-4-a-fake-company",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-4-a-fake-company/",
       "path": "../../src/content/posts/front-end-dev/strapi-series-part-4-a-fake-company.md",
-      "url": "/posts/strapi-series-part-4-a-fake-company/",
       "similarity": 0.43
     },
     {
@@ -5105,8 +5368,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "Webflow for Web Devs",
       "identifier": "webflow-for-web-devs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/webflow-for-web-devs/",
       "path": "../../src/content/posts/front-end-dev/webflow-for-web-devs.md",
-      "url": "/posts/webflow-for-web-devs/",
       "similarity": 0.4
     },
     {
@@ -5128,7 +5392,8 @@
       "thumbAlt": "An illustration of an outline of a web project, with a person sketching the wireframe on a whiteboard, in the style of a technical drawing, viewed from a top-down perspective, with a computer and a notebook in the background. --v 5 --ar 3:2",
       "title": "Strapi Series, Part 1: Project Outline",
       "identifier": "strapi-series-part-1-project-outline",
-      "url": "/posts/strapi-series-part-1-project-outline/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/strapi-series-part-1-project-outline/",
       "similarity": 0.4
     }
   ],
@@ -5150,7 +5415,8 @@
       "thumbAlt": "A person fatigued while being attacked by code robots in a cinematic style with glorious lighting --ar 3:2 --v 5",
       "title": "Fighting Tooling Fatigue",
       "identifier": "fighting-tooling-fatigue",
-      "url": "/posts/fighting-tooling-fatigue/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fighting-tooling-fatigue/",
       "similarity": 0.56
     },
     {
@@ -5162,7 +5428,8 @@
         "front-end-dev"
       ],
       "identifier": "going-live-with-number-five",
-      "url": "/posts/going-live-with-number-five/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/going-live-with-number-five/",
       "similarity": 0.54
     },
     {
@@ -5181,7 +5448,8 @@
         "front-end-dev"
       ],
       "identifier": "injecting-a-banner-populated-by-cookie-data",
-      "url": "/posts/injecting-a-banner-populated-by-cookie-data/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data/",
       "similarity": 0.53
     },
     {
@@ -5196,8 +5464,9 @@
       "thumb": "/posts/front-end-dev/adding-tinacms-to-my-astro-site/adding-tina-to-my-astro-site-thumb.webp",
       "thumbAlt": "napoleon dynamite and tina the llama standing in a field, a rocket is flying in the sky above them --ar 3:2",
       "identifier": "Adding-TinaCMS-To-My-Astro-Site",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site/",
       "path": "../../src/content/posts/front-end-dev/Adding-TinaCMS-To-My-Astro-Site.md",
-      "url": "/posts/Adding-TinaCMS-To-My-Astro-Site/",
       "similarity": 0.51
     },
     {
@@ -5216,7 +5485,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.5
     }
   ],
@@ -5230,7 +5500,8 @@
         "front-end-dev"
       ],
       "identifier": "playing-with-css-hat",
-      "url": "/posts/playing-with-css-hat/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/playing-with-css-hat/",
       "similarity": 0.53
     },
     {
@@ -5249,7 +5520,8 @@
       "thumbAlt": "choosing between two tools that can both do a job, cinematic, photorealistic --ar 3:2 --v 5",
       "title": "Simple side nav: Flexbox vs. Grid",
       "identifier": "simple-side-nav-flexbox-vs-grid",
-      "url": "/posts/simple-side-nav-flexbox-vs-grid/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/simple-side-nav-flexbox-vs-grid/",
       "similarity": 0.47
     },
     {
@@ -5262,7 +5534,8 @@
         "front-end-dev"
       ],
       "identifier": "see-nick-preprocess",
-      "url": "/posts/see-nick-preprocess/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/see-nick-preprocess/",
       "similarity": 0.46
     },
     {
@@ -5275,7 +5548,8 @@
         "front-end-dev"
       ],
       "identifier": "sass-and-compass-pairing-with-michael-parenteau",
-      "url": "/posts/sass-and-compass-pairing-with-michael-parenteau/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau/",
       "similarity": 0.46
     },
     {
@@ -5290,8 +5564,9 @@
       "thumbAlt": "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2",
       "title": "Trendy UI with Clip-Path and Grid",
       "identifier": "trendy-ui-with-clip-path-and-grid",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/",
       "path": "../../src/content/posts/front-end-dev/trendy-ui-with-clip-path-and-grid.md",
-      "url": "/posts/trendy-ui-with-clip-path-and-grid/",
       "similarity": 0.43
     }
   ],
@@ -5313,7 +5588,8 @@
       "thumbAlt": "A person fatigued while being attacked by code robots in a cinematic style with glorious lighting --ar 3:2 --v 5",
       "title": "Fighting Tooling Fatigue",
       "identifier": "fighting-tooling-fatigue",
-      "url": "/posts/fighting-tooling-fatigue/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/fighting-tooling-fatigue/",
       "similarity": 0.56
     },
     {
@@ -5332,7 +5608,8 @@
         "front-end-dev"
       ],
       "identifier": "embracing-emotion-with-gatsby",
-      "url": "/posts/embracing-emotion-with-gatsby/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/embracing-emotion-with-gatsby/",
       "similarity": 0.56
     },
     {
@@ -5354,7 +5631,8 @@
         "front-end-dev"
       ],
       "identifier": "building-a-small-pwa-with-preact-and-firebase",
-      "url": "/posts/building-a-small-pwa-with-preact-and-firebase/",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase/",
       "similarity": 0.51
     },
     {
@@ -5370,8 +5648,9 @@
       "thumbAlt": "a wizard using a magic wand to create a website on a pedestal, cinematic, with shapes and colors flying around in the air --ar 3:2",
       "title": "A Short Review of My First Webflow Project",
       "identifier": "a-short-review-of-my-first-webflow-project",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/a-short-review-of-my-first-webflow-project/",
       "path": "../../src/content/posts/front-end-dev/a-short-review-of-my-first-webflow-project.md",
-      "url": "/posts/a-short-review-of-my-first-webflow-project/",
       "similarity": 0.51
     },
     {
@@ -5389,8 +5668,9 @@
       "cloudinaryThumb": "posts/eleventy-netlify-newb.jpg",
       "title": "Eleventy and Netlify for NPM newbs like me",
       "identifier": "eleventy-and-netlify-for-npm-newbs",
+      "category": "front-end-dev",
+      "url": "/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs/",
       "path": "../../src/content/posts/front-end-dev/eleventy-and-netlify-for-npm-newbs.md",
-      "url": "/posts/eleventy-and-netlify-for-npm-newbs/",
       "similarity": 0.5
     }
   ]

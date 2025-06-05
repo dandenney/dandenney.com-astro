@@ -75,13 +75,18 @@ async function processFile(path) {
     const fileName = pathParts[pathParts.length - 1].replace(/\.(md|mdx)$/, '')
     const identifier = data.slug || fileName
     
+    // Extract category from path (e.g., "front-end-dev" from "src/content/posts/front-end-dev/file.md")
+    const category = pathParts[pathParts.length - 2]
+    
     const plain = await getPlainText(content)
     return { 
       path, 
       content: plain, 
       frontmatter: {
         ...data,
-        identifier // Add identifier to frontmatter
+        identifier,
+        category,
+        url: `/posts/${category}/${identifier}/`
       }
     }
   } catch {
@@ -169,7 +174,7 @@ function topSimilar(idx, docs, embs, n) {
         : {
           ...d.frontmatter,
           path: d.path,
-          url: `/posts/${d.frontmatter.identifier}/`,
+          url: d.frontmatter.url,
           similarity: +dot(embs[idx], embs[j]).toFixed(2) // higher = more similar
         }
     )
