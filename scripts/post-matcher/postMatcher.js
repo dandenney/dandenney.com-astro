@@ -70,16 +70,20 @@ async function processFile(path) {
     const { content, data } = matter(fs.readFileSync(path, "utf-8"))
     if (data.draft) return null
     
-    // Generate slug from file path if not provided in frontmatter
-    if (!data.slug) {
-      // Remove the file extension and get the last part of the path
-      const pathParts = path.split('/')
-      const fileName = pathParts[pathParts.length - 1].replace(/\.(md|mdx)$/, '')
-      data.slug = fileName
-    }
+    // Use the file path as the identifier if no slug is provided
+    const pathParts = path.split('/')
+    const fileName = pathParts[pathParts.length - 1].replace(/\.(md|mdx)$/, '')
+    const identifier = data.slug || fileName
     
     const plain = await getPlainText(content)
-    return { path, content: plain, frontmatter: data }
+    return { 
+      path, 
+      content: plain, 
+      frontmatter: {
+        ...data,
+        identifier // Add identifier to frontmatter
+      }
+    }
   } catch {
     return null
   }
@@ -165,7 +169,7 @@ function topSimilar(idx, docs, embs, n) {
         : {
           ...d.frontmatter,
           path: d.path,
-          url: `/posts/${d.frontmatter.slug}/`,
+          url: `/posts/${d.frontmatter.identifier}/`,
           similarity: +dot(embs[idx], embs[j]).toFixed(2) // higher = more similar
         }
     )
@@ -175,11 +179,11 @@ function topSimilar(idx, docs, embs, n) {
 }
 
 /**
- * Computes all similarities for every document, returns as {slug: SimilarityResult[]} map.
+ * Computes all similarities for every document, returns as {identifier: SimilarityResult[]} map.
  */
 function allSimilarities(docs, embs, n) {
   return Object.fromEntries(
-    docs.map((d, i) => [d.frontmatter.slug, topSimilar(i, docs, embs, n)])
+    docs.map((d, i) => [d.frontmatter.identifier, topSimilar(i, docs, embs, n)])
   )
 }
 

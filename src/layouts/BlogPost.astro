@@ -4,8 +4,30 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ImageLightbox from '../components/ImageLightbox.astro';
 import { ViewTransitions } from 'astro:transitions';
+import similarities from '../assets/similarities.json';
 
-const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, thumbAlt } = Astro.props;
+const { 
+	title, 
+	description, 
+	strapiSeries, 
+	cloudinaryThumb, 
+	socialImageFilename, 
+	thumbAlt,
+	identifier,
+	slug 
+} = Astro.props;
+
+// Get the post identifier (either from identifier prop or slug)
+const postIdentifier = identifier || slug;
+
+// Get related posts if they exist
+const relatedPosts = postIdentifier && similarities[postIdentifier] 
+	? similarities[postIdentifier]
+		.filter(post => !post.draft)
+		.sort((a, b) => (b.similarity ?? 0) - (a.similarity ?? 0))
+		.slice(0, 3)
+	: [];
+
 ---
 
 <html lang="en" transition:animate="fade">
@@ -36,7 +58,6 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 				</header>
 
 				<div class="longform max-w-2xl mx-auto pb-16 pt-8 px-8 lg:px-0 blogpost">
-					
 					<slot />
 
 					{strapiSeries && (
@@ -69,9 +90,28 @@ const { title, description, strapiSeries, cloudinaryThumb, socialImageFilename, 
 							<a href="/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/">Part 11: Header and Footer Links</a>
 						</nav>
 					)}
-
 				</div>
 			</article>
+      {relatedPosts.length > 0 && (
+        <div class="bg-slate-50 border-t border-slate-200 py-16 dark:bg-slate-800">
+          <div class="has-links max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-2">Related Posts</h2>
+            <p class="text-gray-600 dark:text-gray-400">
+              Experiment based on <a href={`https://alexop.dev/posts/semantic-related-posts-astro-transformersjs`}>this post</a>
+            </p>
+            <ul class="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedPosts.map((post) => (
+                <li class="space-y-2">
+                  <a href={post.url} class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">
+                    {post.title}
+                  </a>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">{post.summary}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
 		</main>
 		<Footer />
 		<ImageLightbox />

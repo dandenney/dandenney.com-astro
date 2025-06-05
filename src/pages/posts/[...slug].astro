@@ -4,17 +4,26 @@ import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('posts');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+	return posts.map((post) => {
+		// Extract identifier from the post's path
+		const pathParts = post.id.split('/');
+		const fileName = pathParts[pathParts.length - 1].replace(/\.(md|mdx)$/, '');
+		
+		return {
+			params: { slug: post.slug },
+			props: {
+				...post,
+				identifier: fileName // Use the filename as the identifier
+			},
+		};
+	});
 }
-type Props = CollectionEntry<'posts'>;
+type Props = CollectionEntry<'posts'> & { identifier: string };
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} identifier={post.identifier}>
 	<Content />
 </BlogPost>
