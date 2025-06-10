@@ -1,4 +1,6 @@
 import { defineCollection, z } from "astro:content";
+import { docsLoader } from '@astrojs/starlight/loaders';
+import { docsSchema } from '@astrojs/starlight/schema';
 
 const posts = defineCollection({
   // Type-check frontmatter using a schema
@@ -50,4 +52,6 @@ const reviews = defineCollection({
   }),
 });
 
-export const collections = { blips, posts, reviews, tinkerings };
+const docs = defineCollection({ loader: docsLoader(), schema: docsSchema() });
+
+export const collections = { blips, docs, posts, reviews, tinkerings };
