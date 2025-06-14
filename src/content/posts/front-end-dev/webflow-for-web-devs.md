@@ -18,7 +18,9 @@ I figured since I was putting together a full talk, I should do a recording that
 
 This version was recorded at home, but it's super close to the final one that we did that night. The biggest difference is the end project, where we ended up doing "Uber for Cats" instead.
 
-<iframe src="https://www.youtube.com/embed/_aqcwIp9Dn0?si=IRDPK3hb7Z_6Oa84&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="mt-4 relative w-full pb-[56.25%]">
+  <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/_aqcwIp9Dn0?si=IRDPK3hb7Z_6Oa84&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## More to Come
 
