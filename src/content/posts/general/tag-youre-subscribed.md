@@ -128,6 +128,10 @@ I promise I skim all of these each week. When life gets busy, I will claim bankr
 
   This moves out of the front-end realm to more "tech" news, but it's another great collection of links to skim
 
+- **[Drew Barontini](https://drewbarontini.com/newsletter/)**
+
+  The most efficient front-end dev I've worked with and nowadays he puts a lot of that efficiency into product development
+
 ## Data Science
 
 I work at DataCamp and have a penchant for data visualization. These help me feel the pulse of that world.
@@ -163,6 +167,10 @@ You may want to skim over this if you're not into it, but I'm bullish on AI.
 - **[Neat Prompts](https://www.neatprompts.com)**
 
   Love the way these are grouped, makes it a very skimmable newsletter
+
+- **[Last Week in AI](https://lastweekin.ai)**
+
+  A little tough to skim than others because it's wordy and there's very little contrast between links and the long descriptions, but always good content
 
 - **[Product Hunt Daily](https://www.producthunt.com/newsletters/archive/daily)**
 
