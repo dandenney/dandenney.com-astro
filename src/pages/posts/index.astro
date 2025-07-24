@@ -81,17 +81,17 @@ const posts = (await getCollection('posts')).sort(
 					<div class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
 						{posts.map((post) => (
-							<article class="relative isolate flex flex-col justify-end overflow-hidden rounded bg-gray-900 px-8 pb-8 pt-40 transition-transform sm:pt-24 lg:pt-40 hover:scale-105">
-								<a href={`/posts/${post.slug}/`}>
-									{post.data.cloudinaryThumb ? <img class="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb}`} alt="{post.data.thumbAlt}" srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_704,q_auto/v1673896360/${post.data.cloudinaryThumb} 768w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/${post.data.cloudinaryThumb} 1200w`} /> : <img class="absolute inset-0 -z-10 h-full w-full object-cover" loading="lazy" src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/posts/slackin.png" alt="Placeholder image" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/posts/slackin.png 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_704,q_auto/v1673896360/posts/slackin.png 768w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/posts/slackin.png 1200w" /> }
-									<div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            			<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-            			<h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-										<span class="absolute inset-0"></span>
-										{post.data.title}
-									</h3>
-									<p class="text-white">{post.data.summary}</p>
+							<article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group">
+								<a href={`/posts/${post.slug}/`} class="absolute inset-0 z-20">
+									<span class="sr-only">Read {post.data.title}</span>
 								</a>
+								{post.data.cloudinaryThumb ? <img class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb}`} alt="{post.data.thumbAlt}" srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_704,q_auto/v1673896360/${post.data.cloudinaryThumb} 768w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/${post.data.cloudinaryThumb} 1200w`} /> : <img class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/posts/slackin.png" alt="Placeholder image" srcset="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/posts/slackin.png 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_704,q_auto/v1673896360/posts/slackin.png 768w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/posts/slackin.png 1200w" /> }
+								<div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90"></div>
+								<div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10 transition-shadow duration-300 group-hover:ring-gray-900/20"></div>
+								<h3 class="mt-3 text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+									{post.data.title}
+								</h3>
+								<p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">{post.data.summary}</p>
 							</article>
 							))
 						}
