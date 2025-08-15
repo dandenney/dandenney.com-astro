@@ -2,8 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import LazyLoader from "../components/LazyLoader.astro";
 import OptimizedImage from "../components/OptimizedImage.astro";
+import ReadingTime from "../components/ReadingTime.astro";
+import RSSLink from "../components/RSSLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.js";
 import { getLinks } from "../scripts/notion.js";
 import toTitleCase from "../helpers/toTitleCase.js";
@@ -70,13 +71,10 @@ const monthName = getMonthName();
               <figure
                 class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-24"
               >
-                <OptimizedImage
+                <img
                   src="/dan.svg"
                   alt="Illustration of Dan Denney"
-                  width={400}
-                  height={500}
                   class="h-full mx-auto"
-                  loading="eager"
                 />
               </figure>
             </div>
@@ -100,6 +98,17 @@ const monthName = getMonthName();
               They're mostly around front-end dev and web conferences, with some
               occasional life things sprinkled in.
             </p>
+            <div class="mt-6 flex justify-center">
+              <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                <div class="text-center">
+                  <div class="flex items-center gap-4 mb-1">
+                    <span class="text-sm text-gray-600 dark:text-gray-400">Stay updated:</span>
+                    <RSSLink size="md" />
+                  </div>
+                  <p class="text-xs text-gray-500 dark:text-gray-500">New posts published irregularly but with passion</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
@@ -120,7 +129,10 @@ const monthName = getMonthName();
                   />
                   <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
                   <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10 transition-shadow duration-300 group-hover:ring-gray-900/20" />
-                  <h3 class="mt-3 text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+                  <div class="flex items-center justify-between mt-3 mb-2">
+                    <ReadingTime content={post.body} class="text-gray-400" />
+                  </div>
+                  <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
                     {post.data.title}
                   </h3>
                   <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">{post.data.summary}</p>
@@ -210,30 +222,28 @@ const monthName = getMonthName();
                 > and archive them by month.
               </p>
             </div>
-            <LazyLoader class="col-span-2" fallback="Loading recent links...">
-              {
-                links.length > 0 ? (
-                  <ul class="has-links grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
-                    {links.map((link) => (
-                      <li>
-                        <a class="text-base leading-7" href={link.url}>
-                          {link.title}
-                        </a>
-                        {link.notes && (
-                          <span class="block text-sm dark:text-slate-300">
-                            {link.notes}
-                          </span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p class="flex justify-end items-center text-lg font-semibold leading-8 tracking-tight text-slate-400">
-                    No links yet in {monthName}
-                  </p>
-                )
-              }
-            </LazyLoader>
+            {
+              links.length > 0 ? (
+                <ul class="has-links col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+                  {links.map((link) => (
+                    <li>
+                      <a class="text-base leading-7" href={link.url}>
+                        {link.title}
+                      </a>
+                      {link.notes && (
+                        <span class="block text-sm dark:text-slate-300">
+                          {link.notes}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p class="col-span-2 flex justify-end items-center text-lg font-semibold leading-8 tracking-tight text-slate-400">
+                  No links yet in {monthName}
+                </p>
+              )
+            }
           </div>
         </div>
       </section>

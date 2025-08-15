@@ -1,6 +1,8 @@
 ---
 // MainLayout.astro
 //Import the Tracking ID
+import RSSLink from './RSSLink.astro';
+
 const gaSrc = `https://www.googletagmanager.com/gtag/js?id=G-39E050Z1SC`;
 const isProd = import.meta.env.PROD;
 ---
@@ -58,6 +60,7 @@ const isProd = import.meta.env.PROD;
     <a class="link" href="/blips">Blips</a>
     <a class="link" href="/posts">Posts</a>
     <a class="link" href="/no-reserv-ai-tions">No ReservAItions</a>
+    <RSSLink class="link" />
   </nav>
   <div class="dan has-links">
     <img alt="Illustration of Dan by Ricardo Gimenes" height="150" src="/dan-social-eb.svg" width="150" />

@@ -1,0 +1,19 @@
+---
+import { calculateReadingTime, formatReadingTime } from '../helpers/readingTime.js';
+
+interface Props {
+  content: string;
+  class?: string;
+}
+
+const { content, class: className = '' } = Astro.props;
+const readingTimeMinutes = calculateReadingTime(content);
+const formattedTime = formatReadingTime(readingTimeMinutes);
+---
+
+<span class={`reading-time inline-flex items-center text-sm text-gray-500 dark:text-gray-400 ${className}`}>
+  <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+  </svg>
+  {formattedTime}
+</span>
