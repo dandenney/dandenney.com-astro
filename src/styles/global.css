@@ -108,6 +108,15 @@
   cursor: pointer;
 }
 
+/* RSS Link Override */
+.has-links a.rss-link,
+.has-links a.rss-link:hover,
+.has-links a.rss-link:focus,
+.has-links a.rss-link:active {
+  background-image: none !important;
+  background-size: 0% 100% !important;
+}
+
 .longform.blogpost p:first-of-type {
   margin-top: 0;
 }

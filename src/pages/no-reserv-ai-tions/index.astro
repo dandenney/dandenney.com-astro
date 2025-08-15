@@ -4,7 +4,6 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 import toTitleCase from '../../helpers/toTitleCase.js';
-import { ViewTransitions } from 'astro:transitions';
 
 const reviews = (await getCollection('reviews')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -15,7 +14,6 @@ const reviews = (await getCollection('reviews')).sort(
 <html lang="en" transition:animate="fade">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
 		<style>     
 			@media screen and (min-width: 1024px) {  
 				.review-link {

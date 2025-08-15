@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  quality?: number;
+  format?: 'webp' | 'avif' | 'jpeg' | 'png';
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  class: className,
+  loading = 'lazy',
+  sizes,
+  quality = 80,
+  format = 'webp',
+  ...rest
+} = Astro.props;
+
+// Check if it's a Cloudinary URL or local image
+const isCloudinary = src.includes('cloudinary.com');
+const isExternal = src.startsWith('http');
+---
+
+{isExternal && !isCloudinary ? (
+  <img 
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    class={className}
+    loading={loading}
+    decoding="async"
+    {...rest}
+  />
+) : isCloudinary ? (
+  (() => {
+    // Extract the public ID from Cloudinary URL for optimization
+    const urlParts = src.split('/');
+    const uploadIndex = urlParts.findIndex(part => part === 'upload');
+    const publicId = urlParts.slice(uploadIndex + 1).join('/');
+    const baseUrl = urlParts.slice(0, uploadIndex + 1).join('/');
+    
+    // Generate optimized Cloudinary URLs
+    const webpSrc = `${baseUrl}/f_webp,q_${quality},w_${width || 800}/${publicId}`;
+    const fallbackSrc = `${baseUrl}/q_${quality},w_${width || 800}/${publicId}`;
+    
+    return (
+      <picture>
+        <source srcset={webpSrc} type="image/webp" />
+        <img 
+          src={fallbackSrc}
+          alt={alt}
+          width={width}
+          height={height}
+          class={className}
+          loading={loading}
+          decoding="async"
+          {...rest}
+        />
+      </picture>
+    );
+  })()
+) : (
+  <Image
+    src={src}
+    alt={alt}
+    width={width || 800}
+    height={height || 600}
+    class={className}
+    loading={loading}
+    quality={quality}
+    format={format}
+    {...rest}
+  />
+)}

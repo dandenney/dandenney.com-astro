@@ -24,6 +24,6 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data} identifier={post.identifier}>
+<BlogPost {...post.data} identifier={post.identifier} rawBody={post.body}>
 	<Content />
 </BlogPost>
