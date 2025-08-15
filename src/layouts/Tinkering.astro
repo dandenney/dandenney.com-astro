@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import { ViewTransitions } from 'astro:transitions';
 
 const { summary, title } = Astro.props;
 ---
@@ -8,7 +7,6 @@ const { summary, title } = Astro.props;
 <html lang="en" transition:animate="fade">
 	<head>
 		<BaseHead title={title} description={summary} />
-		<ViewTransitions />
 	</head>
 	<body>
 		<main>
