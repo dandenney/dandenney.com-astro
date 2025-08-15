@@ -1,0 +1,120 @@
+---
+interface Props {
+  type: 'website' | 'blogpost' | 'person' | 'restaurant';
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished?: Date;
+  dateModified?: Date;
+  author?: string;
+  // Restaurant-specific props
+  address?: {
+    streetAddress?: string;
+    addressLocality?: string;
+    addressRegion?: string;
+    addressCountry?: string;
+  };
+  cuisine?: string;
+  priceRange?: string;
+}
+
+const { 
+  type, 
+  title, 
+  description, 
+  url, 
+  image,
+  datePublished,
+  dateModified,
+  author,
+  address,
+  cuisine,
+  priceRange
+} = Astro.props;
+
+const generateStructuredData = () => {
+  const baseData = {
+    "@context": "https://schema.org",
+    "name": title,
+    "description": description,
+    "url": url,
+  };
+
+  if (image) {
+    baseData.image = image;
+  }
+
+  switch (type) {
+    case 'website':
+      return {
+        ...baseData,
+        "@type": "WebSite",
+        "author": {
+          "@type": "Person",
+          "name": "Dan Denney",
+          "url": "https://www.dandenney.com"
+        }
+      };
+
+    case 'blogpost':
+      return {
+        ...baseData,
+        "@type": "BlogPosting",
+        "headline": title,
+        "datePublished": datePublished?.toISOString(),
+        "dateModified": dateModified?.toISOString(),
+        "author": {
+          "@type": "Person",
+          "name": author || "Dan Denney",
+          "url": "https://www.dandenney.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dan Denney",
+          "url": "https://www.dandenney.com"
+        }
+      };
+
+    case 'person':
+      return {
+        ...baseData,
+        "@type": "Person",
+        "jobTitle": "Senior Software Engineer II",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "DataCamp"
+        },
+        "knowsAbout": ["Front-end Development", "JavaScript", "Web Design", "Astro", "React"],
+        "sameAs": [
+          "https://github.com/dandenney",
+          "https://twitter.com/dandenney"
+        ]
+      };
+
+    case 'restaurant':
+      return {
+        ...baseData,
+        "@type": "Restaurant",
+        "address": address ? {
+          "@type": "PostalAddress",
+          ...address
+        } : undefined,
+        "servesCuisine": cuisine,
+        "priceRange": priceRange,
+        "author": {
+          "@type": "Person",
+          "name": "Dan Denney (AI-assisted review)",
+          "url": "https://www.dandenney.com"
+        }
+      };
+
+    default:
+      return baseData;
+  }
+};
+
+const structuredData = generateStructuredData();
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

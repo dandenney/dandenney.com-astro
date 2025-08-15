@@ -1,0 +1,88 @@
+---
+interface Props {
+  threshold?: number;
+  rootMargin?: string;
+  class?: string;
+  fallback?: string;
+}
+
+const { 
+  threshold = 0.1, 
+  rootMargin = '50px',
+  class: className = '',
+  fallback = 'Loading content...'
+} = Astro.props;
+---
+
+<div 
+  class={`lazy-loader ${className}`}
+  data-threshold={threshold}
+  data-root-margin={rootMargin}
+>
+  <div class="loading-state flex items-center justify-center p-8">
+    <div class="flex items-center space-x-3">
+      <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-red-700 dark:border-red-400"></div>
+      <span class="text-gray-600 dark:text-gray-400">{fallback}</span>
+    </div>
+  </div>
+  
+  <div class="content-state hidden">
+    <slot />
+  </div>
+</div>
+
+<script>
+  class LazyLoader extends HTMLElement {
+    private observer: IntersectionObserver | null = null;
+    
+    connectedCallback() {
+      const threshold = parseFloat(this.dataset.threshold || '0.1');
+      const rootMargin = this.dataset.rootMargin || '50px';
+      
+      this.observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.loadContent();
+              this.observer?.unobserve(this);
+            }
+          });
+        },
+        { threshold, rootMargin }
+      );
+      
+      this.observer.observe(this);
+    }
+    
+    disconnectedCallback() {
+      this.observer?.disconnect();
+    }
+    
+    private async loadContent() {
+      const loadingState = this.querySelector('.loading-state');
+      const contentState = this.querySelector('.content-state');
+      
+      if (!loadingState || !contentState) return;
+      
+      // Simulate loading delay for demo purposes
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      loadingState.classList.add('hidden');
+      contentState.classList.remove('hidden');
+      
+      // Dispatch custom event
+      this.dispatchEvent(new CustomEvent('lazy-loaded', {
+        bubbles: true,
+        detail: { element: this }
+      }));
+    }
+  }
+  
+  customElements.define('lazy-loader', LazyLoader);
+</script>
+
+<style>
+  .lazy-loader {
+    min-height: 100px;
+  }
+</style>
