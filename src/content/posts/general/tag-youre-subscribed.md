@@ -10,16 +10,6 @@ thumbAlt: "A surreal mailman made of paper and Wi-Fi signals, juggling glowing e
 title: "Tag, You're Subscribed"
 ---
 
-<style>
-  li > p {
-    margin-top: 0 !important;
-  }
-
-  li {
-    margin-block-start: 1.5rem;
-  }
-</style>
-
 Email has been a large part of my web dev career. I learned to love building out [newsletters for Code School](https://reallygoodemails.com/school/what-makes-a-really-good-emails) and that led me to doing some conf talks and even creating a course! That may be one of the reasons I've valued them, but a very large part of it is the shift in social media for the web community. I now primarily rely on email newsletters for my industry news, sprinkling on some RSS and links from the seven apps I have to be part of to replace Twitter.
 
 Buckle up, because I have a loooootttt of them. To be fair, I do not "read" all of these, I mostly skim them for things I'm interested in. I'm grouping them by category and I'll start with web dev ones since that's likely the community this will reach the most.

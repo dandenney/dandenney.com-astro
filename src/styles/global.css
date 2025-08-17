@@ -117,6 +117,91 @@
   background-size: 0% 100% !important;
 }
 
+/* Link Tooltips */
+.longform a[href^="http"]:not(.no-tooltip),
+.has-links a[href^="http"]:not(.no-tooltip) {
+  position: relative;
+}
+
+.longform a[href^="http"]:not(.no-tooltip)::after,
+.has-links a[href^="http"]:not(.no-tooltip)::after {
+  content: attr(href);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  z-index: 50;
+  margin-bottom: 0.25rem;
+  max-width: 20rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  pointer-events: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.longform a[href^="http"]:not(.no-tooltip)::before,
+.has-links a[href^="http"]:not(.no-tooltip)::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  border: 6px solid transparent;
+  border-top-color: #f8fafc;
+  z-index: 51;
+  margin-bottom: 1px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.longform a[href^="http"]:not(.no-tooltip):hover::after,
+.has-links a[href^="http"]:not(.no-tooltip):hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.longform a[href^="http"]:not(.no-tooltip):hover::before,
+.has-links a[href^="http"]:not(.no-tooltip):hover::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.dark .longform a[href^="http"]:not(.no-tooltip)::after,
+.dark .has-links a[href^="http"]:not(.no-tooltip)::after {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.dark .longform a[href^="http"]:not(.no-tooltip)::before,
+.dark .has-links a[href^="http"]:not(.no-tooltip)::before {
+  border-top-color: #1e293b;
+}
+
+.dark .longform a[href^="http"]:not(.no-tooltip):hover::after,
+.dark .has-links a[href^="http"]:not(.no-tooltip):hover::after {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.dark .longform a[href^="http"]:not(.no-tooltip):hover::before,
+.dark .has-links a[href^="http"]:not(.no-tooltip):hover::before {
+  border-top-color: #1e293b;
+}
+
 .longform.blogpost p:first-of-type {
   margin-top: 0;
 }
@@ -369,3 +454,5 @@ pre .token.variable {
 .dark pre {
   background: #0f172a;
 }
+
+
