@@ -1,5 +1,5 @@
 ---
-summary: Trying to get AI to search like me
+summary: A model that makes up for the lack of IDE
 title: I heard Claude Code was good
 pubDate: '2025-08-24'
 ---
