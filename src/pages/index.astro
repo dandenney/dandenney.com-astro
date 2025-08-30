@@ -9,6 +9,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.js";
 import { getLinks } from "../scripts/notion.js";
 import toTitleCase from "../helpers/toTitleCase.js";
 import { getCollection } from "astro:content";
+import { ViewTransitions } from 'astro:transitions';
 
 const posts = (await getCollection("posts"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -33,9 +34,10 @@ const monthName = getMonthName();
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="fade">
+<html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} type="person" />
+    <ViewTransitions />
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main

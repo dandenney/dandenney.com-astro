@@ -3,6 +3,7 @@ import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import toTitleCase from '../../../helpers/toTitleCase.js';
+import { ViewTransitions } from 'astro:transitions';
 
 import ReviewLinkItem from '../../../components/ReviewLinkItem.astro';
 import ReviewLinkItemJs from '../../../components/ReviewLinkItemJs.astro';
@@ -35,9 +36,10 @@ const { reviews } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="fade">
+<html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+		<ViewTransitions />
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />

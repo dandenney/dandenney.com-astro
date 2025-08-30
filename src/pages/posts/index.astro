@@ -4,15 +4,17 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
+import { ViewTransitions } from 'astro:transitions';
 
 const posts = (await getCollection('posts')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 <!doctype html>
-<html lang="en" transition:animate="fade">
+<html lang="en">
 	<head>
 		<BaseHead title="Posts, aka Blog Posts | Dan Denney" description="Articles that I really wanted to share or that I felt compelled to write because I didn't find it when I was looking" />
+		<ViewTransitions />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<main class="bg-white relative shadow  z-10 dark:bg-slate-900 dark:text-slate-200">

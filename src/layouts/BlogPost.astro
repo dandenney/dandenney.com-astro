@@ -6,6 +6,7 @@ import ImageLightbox from '../components/ImageLightbox.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ReadingTime from '../components/ReadingTime.astro';
 import similarities from '../assets/similarities.json';
+import { ViewTransitions } from 'astro:transitions';
 
 const {
   title,
@@ -39,9 +40,10 @@ const relatedPosts =
 
 ---
 
-<html lang="en" transition:animate="fade">
+<html lang="en">
 	<head>
 		<BaseHead title={title} description={description} image={socialImageFilename} />
+		<ViewTransitions />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<Header />

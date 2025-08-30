@@ -3,15 +3,17 @@ import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import toTitleCase from '../../../helpers/toTitleCase.js'
+import { ViewTransitions } from 'astro:transitions';
 
 const allReviews = await Astro.glob('../../../content/reviews/*.md');
 const states = [...new Set(allReviews.map((review) => review.frontmatter.state).flat())].filter(state => state !== '').sort();
 
 ---
 <!doctype html>
-<html lang="en" transition:animate="fade">
+<html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions Cities | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
+		<ViewTransitions />
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />
