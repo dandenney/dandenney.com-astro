@@ -1,6 +1,6 @@
 ---
 summary: One of the best articles on AI products I've read
-title: Noted on Building AI Products In The Probabilistic Era
+title: Notes on Building AI Products In The Probabilistic Era
 pubDate: '2025-08-30'
 ---
 
