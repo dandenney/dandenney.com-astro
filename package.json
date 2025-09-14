@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "tina": "yarn tinacms dev -c 'astro dev'"
+    "tina": "yarn tinacms dev -c 'astro dev'",
+    "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
@@ -22,7 +23,7 @@
     "tinacms": "^1.6.3"
   },
   "devDependencies": {
-    "@notionhq/client": "^2.2.13",
+    "@notionhq/client": "^5.0.0",
     "@tinacms/cli": "^1.5.45"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
