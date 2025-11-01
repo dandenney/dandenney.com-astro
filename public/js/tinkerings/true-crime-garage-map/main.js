@@ -12,6 +12,51 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "The “KN” Murder ////// 793",
+      Release: "10/15/2024",
+      URL: "https://truecrimegarage.com/home/blog/7476034/the-kn-murder-793",
+      Earliest_Date: "8/12/1972",
+      Earliest_Year: "1972",
+      Notes: " K-Mart in Bloomington, Indiana",
+    },
+    geometry: {
+      coordinates: [-86.491920, 39.162754],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Main Line Murders /// 791-792",
+      Release: "10/08/2024",
+      URL: "https://truecrimegarage.com/home/blog/7473453/main-line-murders-791-792",
+      Earliest_Date: "6/22/1979",
+      Earliest_Year: "1979",
+      Notes: "Host Inn in Swatara Township, Dauphin County, Pennsylvania",
+    },
+    geometry: {
+      coordinates: [-76.800665, 40.241456],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "11 Skulls /// Israel Keyes",
+      Release: "09/24/2024",
+      URL: "https://truecrimegarage.com/home/blog/7467167/11-skulls-israel-keyes",
+      Earliest_Date: "6/8/2001",
+      Earliest_Year: "2001",
+      Notes: "8 Colbert Street, Essex Junction, Vermont",
+    },
+    geometry: {
+      coordinates: [-73.129577, 44.509910],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Out-R-Inn Murders ////// 787 ",
       Release: "09/18/2024",
       URL: "https://truecrimegarage.com/home/blog/7463902/out-r-inn-murders-787",
