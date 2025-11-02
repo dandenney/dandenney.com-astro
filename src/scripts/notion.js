@@ -83,6 +83,10 @@ export async function getLinks() {
         url: link.properties.URL.url,
       };
     });
+    
+    // Sort by date, newest first
+    results.sort((a, b) => b.created - a.created);
+    
     return results;
   } catch (error) {
     // Log the error for debugging
