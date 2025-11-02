@@ -7,7 +7,7 @@ description: Comforting classics, bold flavors, and craft beer served with effor
 heroImageAlt: Photo of pasta and a french dip
 heroImage: sedona-taphouse
 infoUrl: "https://www.sedonataphouse.com/locations/nashville-tn/"
-pubDate: 20245-09-17
+pubDate: 2025-09-17
 state: tennessee
 tags: [american]
 title: "Sedona Taphouse Nashville"
