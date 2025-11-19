@@ -1,0 +1,53 @@
+name: Generate Song Review
+
+on:
+  workflow_dispatch:
+    inputs:
+      spotify_url:
+        description: 'Spotify Track URL'
+        required: true
+        type: string
+
+jobs:
+  generate-review:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate Song Review
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}"
+
+      - name: Commit and push review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/songs/
+          if git diff --staged --quiet; then
+            echo "No new review generated"
+          else
+            git commit -m "feat(music): add AI-generated review
+
+🎵 ${{ inputs.spotify_url }}
+
+🤖 Generated with Claude Code"
+            git push
+          fi
