@@ -44,13 +44,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new review generated"
           else
-            git commit -m "$(cat <<'EOF'
-          feat(music): add AI-generated review
-
-          🎵 ${{ inputs.spotify_url }}
-
-          🤖 Generated with Claude Code
-          EOF
-          )"
+            COMMIT_MSG="feat(music): add AI-generated review"$'\n\n'"🎵 ${{ inputs.spotify_url }}"$'\n\n'"🤖 Generated with Claude Code"
+            git commit -m "$COMMIT_MSG"
             git push
           fi
