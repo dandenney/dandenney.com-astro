@@ -50,4 +50,24 @@ const reviews = defineCollection({
   }),
 });
 
-export const collections = { blips, posts, reviews, tinkerings };
+const songs = defineCollection({
+  schema: z.object({
+    title: z.string(), // Track name
+    artist: z.string(), // Primary artist
+    artists: z.array(z.string()), // All artists
+    album: z.string(), // Album name
+    releaseDate: z.string(), // YYYY-MM-DD
+    spotifyUrl: z.string().url(), // Track URL
+    spotifyId: z.string(), // Track ID
+    albumArt: z.string().optional(), // Album cover URL
+    duration: z.number(), // Duration in ms
+    genres: z.array(z.string()), // From artist data
+    preview: z.string().url().optional(), // 30s preview URL
+    pubDate: z.coerce.date(), // Review publish date
+    rating: z.number().min(1).max(5).optional(), // Star rating
+    tags: z.array(z.string()), // Custom tags
+    aiGenerated: z.boolean().default(true), // Flag for AI reviews
+  }),
+});
+
+export const collections = { blips, posts, reviews, songs, tinkerings };

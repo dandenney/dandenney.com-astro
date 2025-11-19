@@ -6,6 +6,8 @@ import { getCollection } from 'astro:content';
 import toTitleCase from '../../helpers/toTitleCase.js';
 import { ViewTransitions } from 'astro:transitions';
 
+export const prerender = true;
+
 const reviews = (await getCollection('reviews')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 4);

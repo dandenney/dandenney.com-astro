@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import SongReview from '../../layouts/SongReview.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const songs = await getCollection('songs');
+  return songs.map((song) => ({
+    params: { slug: song.slug },
+    props: song,
+  }));
+}
+
+type Props = CollectionEntry<'songs'>;
+
+const song = Astro.props;
+const { Content } = await song.render();
+---
+
+<SongReview {...song.data}>
+  <Content />
+</SongReview>

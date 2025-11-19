@@ -7,6 +7,8 @@ import ReviewLinkItem from '../../../components/ReviewLinkItem.astro';
 import ReviewLinkItemJs from '../../../components/ReviewLinkItemJs.astro';
 import { ViewTransitions } from 'astro:transitions';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const allReviews = await Astro.glob('../../../content/reviews/*.md');
 

@@ -8,6 +8,8 @@ import { ViewTransitions } from 'astro:transitions';
 
 import ReviewLinkItemJs from '../../components/ReviewLinkItemJs.astro';
 
+export const prerender = true;
+
 // Paginate same list of { astronaut } objects as the previous example
 export async function getStaticPaths({ paginate }) { 
   const reviews = (await getCollection('reviews')).sort(

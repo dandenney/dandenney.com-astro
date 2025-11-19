@@ -8,6 +8,8 @@ import RSSLink from "../components/RSSLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.js";
 import { getLinks } from "../scripts/notion.js";
 import toTitleCase from "../helpers/toTitleCase.js";
+
+export const prerender = true;
 import { getCollection } from "astro:content";
 import { ViewTransitions } from 'astro:transitions';
 

@@ -5,6 +5,8 @@ import Footer from '../../components/Footer.astro';
 import toTitleCase from '../../helpers/toTitleCase.js'
 import { ViewTransitions } from 'astro:transitions';
 
+export const prerender = true;
+
 const allReviews = await Astro.glob('../../content/reviews/*.md');
 const tags = [...new Set(allReviews.map((review) => review.frontmatter.tags).flat())].sort();
 
