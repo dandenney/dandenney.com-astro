@@ -2,7 +2,7 @@
 import { c as createComponent, r as renderComponent, a as renderHead, b as addAttribute, d as renderTemplate } from '../chunks/astro/server_P91Fz5pH.mjs';
 import { $ as $$BaseHead } from '../chunks/BaseHead_BitrlgCW.mjs';
 import { $ as $$Header, a as $$Footer } from '../chunks/Footer_BDU9wtE4.mjs';
-import { g as getCollection } from '../chunks/_astro_content_vuRDs4s-.mjs';
+import { g as getCollection } from '../chunks/_astro_content_CIR9DwrV.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {

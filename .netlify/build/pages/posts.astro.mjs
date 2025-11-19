@@ -3,7 +3,7 @@ import { c as createComponent, r as renderComponent, a as renderHead, b as addAt
 import { $ as $$BaseHead } from '../chunks/BaseHead_BitrlgCW.mjs';
 import { $ as $$Header, a as $$Footer } from '../chunks/Footer_BDU9wtE4.mjs';
 import { S as SITE_TITLE } from '../chunks/consts_BmF5LO0i.mjs';
-import { g as getCollection } from '../chunks/_astro_content_vuRDs4s-.mjs';
+import { g as getCollection } from '../chunks/_astro_content_CIR9DwrV.mjs';
 import { $ as $$ClientRouter } from '../chunks/ClientRouter_DP5sY-AE.mjs';
 export { renderers } from '../renderers.mjs';
 
