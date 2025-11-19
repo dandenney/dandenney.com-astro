@@ -1,0 +1,262 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+// import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Seasons of Dan - Music Listening History | Dan Denney"
+      description="A look at my music listening habits across different time periods, powered by Spotify"
+    />
+    <!-- <ViewTransitions /> -->
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <main
+      class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200"
+    >
+      <section class="relative isolate overflow-hidden pb-16">
+        <Header title={SITE_TITLE} />
+
+        <div class="mx-auto max-w-7xl pt-16 px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:mx-0">
+            <p
+              class="text-lg font-semibold leading-8 tracking-tight text-slate-400"
+            >
+              What I'm Listening To
+            </p>
+            <h1
+              class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+            >
+              Seasons of Dan
+            </h1>
+            <p class="mt-4 text-xl leading-8 text-gray-700 text-pretty dark:text-slate-100">
+              A look at what my listening actually looks like over time. Each
+              section shows my top tracks and artists from different time
+              periods.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            id="music-container"
+            class="grid grid-cols-1 gap-8 lg:grid-cols-3"
+          >
+            <!-- Loading state -->
+            <div class="col-span-full flex justify-center items-center py-20">
+              <div class="animate-pulse text-gray-400 dark:text-slate-400">
+                Loading your music data...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      interface Track {
+        name: string;
+        artists: Array<{ name: string }>;
+        album: {
+          name: string;
+          images: Array<{ url: string }>;
+        };
+        external_urls: {
+          spotify: string;
+        };
+      }
+
+      interface Artist {
+        name: string;
+        images: Array<{ url: string }>;
+        external_urls: {
+          spotify: string;
+        };
+        genres: string[];
+      }
+
+      interface TimeRangeData {
+        tracks: { items: Track[] };
+        artists: { items: Artist[] };
+      }
+
+      const timeRanges = [
+        {
+          key: "short_term",
+          title: "Right Now",
+          subtitle: "Last 4 weeks",
+          note: "",
+        },
+        {
+          key: "medium_term",
+          title: "This Year",
+          subtitle: "Last 6 months",
+          note: "",
+        },
+        {
+          key: "long_term",
+          title: "All-Timer Stuff",
+          subtitle: "Several years",
+          note: "",
+        },
+      ] as const;
+
+      async function fetchMusicData() {
+        const container = document.getElementById("music-container");
+        if (!container) return;
+
+        try {
+          const data: Record<string, TimeRangeData> = {};
+
+          // Fetch all data in parallel
+          await Promise.all(
+            timeRanges.map(async ({ key }) => {
+              const tracksUrl = `/api/spotify/tracks/${key}`;
+              const artistsUrl = `/api/spotify/artists/${key}`;
+
+              console.log("CLIENT: Fetching tracks from:", tracksUrl);
+              console.log("CLIENT: Fetching artists from:", artistsUrl);
+
+              const [tracksRes, artistsRes] = await Promise.all([
+                fetch(tracksUrl, { cache: "no-store" }),
+                fetch(artistsUrl, { cache: "no-store" }),
+              ]);
+
+              data[key] = {
+                tracks: await tracksRes.json(),
+                artists: await artistsRes.json(),
+              };
+            }),
+          );
+
+          // Render the data
+          container.innerHTML = timeRanges
+            .map(({ key, title, subtitle, note }) => {
+              const { tracks, artists } = data[key];
+
+              return `
+              <div class="relative isolate overflow-hidden p-8 rounded-2xl">
+                <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-slate-900/50"></div>
+
+                <div class="mb-6">
+                  <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100">${title}</h2>
+                  <p class="text-sm text-gray-600 dark:text-slate-400">${subtitle}</p>
+                  ${note ? `<p class="mt-2 text-sm italic text-gray-600 dark:text-slate-400">${note}</p>` : ""}
+                </div>
+
+                <div class="space-y-6">
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-3">Top Tracks</h3>
+                    <ol class="space-y-2">
+                      ${tracks.items
+                        .slice(0, 10)
+                        .map(
+                          (track, index) => `
+                        <li class="border-b-2 border-slate-200 last:border-0 flex items-center  gap-3 pb-4 pt-2 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors group">
+                          <span class="text-2xl font-bold text-gray-500 dark:text-slate-500 w-6">${index + 1}</span>
+                          ${
+                            track.album.images && track.album.images.length > 0
+                              ? `
+                            <img
+                              src="${track.album.images[track.album.images.length - 1].url}"
+                              alt="${track.album.name}"
+                              class="w-10 h-10 rounded shadow-sm"
+                            />
+                          `
+                              : ""
+                          }
+                          <div class="flex-1 min-w-0">
+                            <a
+                              href="${track.external_urls.spotify}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="block text-sm font-bold text-gray-900 dark:text-slate-100 truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+                            >
+                              ${track.name}
+                            </a>
+                            <p class="text-xs text-gray-600 dark:text-slate-400 truncate">
+                              ${track.artists.map((a) => a.name).join(", ")}
+                            </p>
+                          </div>
+                        </li>
+                      `,
+                        )
+                        .join("")}
+                    </ol>
+                  </div>
+
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-3">Top Artists</h3>
+                    <ol class="space-y-2">
+                      ${artists.items
+                        .slice(0, 10)
+                        .map(
+                          (artist, index) => `
+                        <li class="border-b-2 border-slate-200 last:border-0 flex items-center gap-3 pb-4 pt-2 rounded-lg hover:bg-white/50 dark:hover:bg-slate-800/50 transition-colors group">
+                          <span class="text-2xl font-bold text-gray-500 dark:text-slate-500 w-6">${index + 1}</span>
+                          ${
+                            artist.images && artist.images.length > 0
+                              ? `
+                            <img
+                              src="${artist.images[artist.images.length - 1].url}"
+                              alt="${artist.name}"
+                              class="w-10 h-10 rounded-full shadow-sm"
+                            />
+                          `
+                              : ""
+                          }
+                          <div class="flex-1 min-w-0">
+                            <a
+                              href="${artist.external_urls.spotify}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="block text-sm font-bold text-gray-900 dark:text-slate-100 truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-400"
+                            >
+                              ${artist.name}
+                            </a>
+                            ${
+                              artist.genres && artist.genres.length > 0
+                                ? `
+                              <p class="text-xs text-gray-600 dark:text-slate-400 truncate">
+                                ${artist.genres.slice(0, 2).join(", ")}
+                              </p>
+                            `
+                                : ""
+                            }
+                          </div>
+                        </li>
+                      `,
+                        )
+                        .join("")}
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            `;
+            })
+            .join("");
+        } catch (error) {
+          console.error("Error loading music data:", error);
+          container.innerHTML = `
+            <div class="col-span-full flex justify-center items-center py-20">
+              <div class="text-red-500 dark:text-red-400">
+                Failed to load music data. Please check your Spotify API credentials.
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // Load data when page loads
+      fetchMusicData();
+    </script>
+  </body>
+</html>
