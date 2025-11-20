@@ -1,0 +1,68 @@
+name: Generate Restaurant/Activity Review
+
+on:
+  workflow_dispatch:
+    inputs:
+      location:
+        description: 'Location name (e.g., "Husk Restaurant")'
+        required: true
+        type: string
+      city:
+        description: 'City (e.g., "nashville")'
+        required: true
+        type: string
+      state:
+        description: 'State (e.g., "tennessee") - optional for international'
+        required: false
+        type: string
+      country:
+        description: 'Country (e.g., "United States")'
+        required: true
+        type: string
+      items:
+        description: 'Food/drink/activities (comma-separated, e.g., "hot chicken, whiskey sour, live music")'
+        required: true
+        type: string
+
+jobs:
+  generate-review:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate Review
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          node scripts/generate-review.mjs \
+            --location "${{ inputs.location }}" \
+            --city "${{ inputs.city }}" \
+            --state "${{ inputs.state }}" \
+            --country "${{ inputs.country }}" \
+            --items "${{ inputs.items }}"
+
+      - name: Commit and push review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/reviews/
+          if git diff --staged --quiet; then
+            echo "No new review generated"
+          else
+            git commit -m "feat(reviews): add AI-generated review for ${{ inputs.location }}"
+            git push
+          fi

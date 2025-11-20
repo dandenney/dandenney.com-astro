@@ -34,12 +34,15 @@ const tinkerings = defineCollection({
 
 const reviews = defineCollection({
   schema: z.object({
+    address: z.string().optional(),
     city: z.string(),
+    coordinates: z.string().optional(),
     country: z.string(),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().optional(),
     heroImageAttribution: z.string().optional(),
     heroImageUrl: z.string().optional(),
+    infoUrl: z.string().optional(),
     state: z.string().optional(),
     title: z.string(),
     description: z.string(),
@@ -47,6 +50,7 @@ const reviews = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()),
+    aiGenerated: z.boolean().default(false), // Flag for AI-generated reviews
   }),
 });
 
