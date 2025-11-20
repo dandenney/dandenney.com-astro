@@ -50,9 +50,79 @@ function parseArguments() {
 }
 
 /**
+ * Search TripAdvisor for location information
+ */
+async function searchTripAdvisor(location, city, state, country) {
+  try {
+    // Construct search query
+    const searchQuery = `${location} ${city} ${state || ''} ${country} site:tripadvisor.com`;
+
+    console.log(`   Searching TripAdvisor for: ${location}, ${city}...`);
+
+    // Use a general web search to find the TripAdvisor page
+    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+
+    // For now, we'll use AI to help search and extract info
+    const prompt = `Search for "${location}" in ${city}${state ? `, ${state}` : ''}, ${country} on TripAdvisor.
+
+Based on your knowledge, provide:
+1. The most likely TripAdvisor URL for this location
+2. Street address if known
+3. Coordinates in the format: longitude, latitude (e.g., "-71.1167, 42.3736")
+
+If this is a well-known establishment, provide accurate information. If uncertain, indicate that in the response.
+
+Return as JSON with fields: infoUrl, address, coordinates (or null if unknown)`;
+
+    const response = await fetch(OPENAI_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: [
+          {
+            role: 'system',
+            content: 'You are a location research assistant. Provide accurate TripAdvisor URLs, addresses, and coordinates for restaurants and attractions. Return data as JSON.',
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+        temperature: 0.3,
+        max_tokens: 200,
+        response_format: { type: "json_object" },
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`OpenAI API error (TripAdvisor search): ${data.error?.message || 'Unknown error'}`);
+    }
+
+    return JSON.parse(data.choices[0].message.content.trim());
+  } catch (error) {
+    console.warn(`   ⚠️  TripAdvisor search failed: ${error.message}`);
+    return { infoUrl: null, address: null, coordinates: null };
+  }
+}
+
+/**
  * Generate metadata using OpenAI API (Step 1)
  */
 async function generateMetadata(params) {
+  // First, try to get TripAdvisor info
+  const tripAdvisorInfo = await searchTripAdvisor(
+    params.location,
+    params.city,
+    params.state,
+    params.country
+  );
+
   const prompt = `You are analyzing a location for a food/travel review. Based on the following information, generate metadata:
 
 Location: ${params.location}
@@ -64,8 +134,6 @@ Items experienced: ${params.items}
 Generate the following in JSON format:
 1. "tags": Array of 2-4 relevant tags (cuisine types, activity types, etc.) - lowercase, no spaces, use hyphens
 2. "description": A single compelling sentence (10-15 words) that captures the essence of this place
-3. "address": Best guess at the street address (if it's a known establishment)
-4. "infoUrl": Best guess at a TripAdvisor or official website URL (use "https://www.tripadvisor.com" if unsure)
 
 Return ONLY valid JSON with these fields. Be concise and accurate.`;
 
@@ -99,7 +167,15 @@ Return ONLY valid JSON with these fields. Be concise and accurate.`;
     throw new Error(`OpenAI API error (metadata): ${data.error?.message || 'Unknown error'}`);
   }
 
-  return JSON.parse(data.choices[0].message.content.trim());
+  const aiMetadata = JSON.parse(data.choices[0].message.content.trim());
+
+  // Merge TripAdvisor info with AI-generated metadata
+  return {
+    ...aiMetadata,
+    address: tripAdvisorInfo.address,
+    coordinates: tripAdvisorInfo.coordinates,
+    infoUrl: tripAdvisorInfo.infoUrl,
+  };
 }
 
 /**
