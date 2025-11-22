@@ -184,7 +184,7 @@ Return ONLY valid JSON with these fields. Be concise and accurate.`;
 async function generateReview(params, metadata) {
   const itemsList = params.items.split(',').map(i => i.trim()).join(', ');
 
-  const prompt = `Write a restaurant/activity review in the unmistakable style of Anthony Bourdain:
+  const prompt = `I'm going to give you a place with food and drink for you to review:
 
 Location: ${params.location}
 City: ${params.city}
@@ -192,25 +192,9 @@ ${params.state ? `State: ${params.state}` : ''}
 Country: ${params.country}
 Items experienced: ${itemsList}
 
-Style guidelines inspired by Anthony Bourdain:
-- 3-4 vivid paragraphs (300-400 words total)
-- Start with a scene-setter - put us THERE, in the moment
-- Write like you're telling a story to a friend over drinks
-- Be brutally honest but never cruel
-- Notice the small details - the people, the atmosphere, the realness
-- Use sensory language that makes readers taste and smell the food
-- Embrace the gritty, the authentic, the unexpected
-- Show reverence for craft and people who give a damn
-- Sneak in cultural observations and personal reflections
-- Write with rhythm - vary sentence length, use fragments when they hit harder
-- Be irreverent but never disrespectful to the food or the people making it
-- Avoid pretension, food critic clichés, and bullshit adjectives
-- When something's transcendent, say so. When it's not, be honest
-- Remember: it's about MORE than the food - it's about place, people, life
+Write a review in your voice. Start with a scene-setter that puts us there in the moment. Notice the small details - the people, the atmosphere, the realness. Use sensory language. Be honest but never cruel. Remember: it's about more than the food - it's about place, people, life.
 
-Approach: Channel Tony's voice - curious, opinionated, deeply human, and always searching for what's real. Write as if you're uncovering something true about the place and the people who make it what it is.
-
-Write only the review text, no title or metadata. Write in first person. Make it feel lived-in and true.`;
+Write only the review text, no title or metadata.`;
 
   const response = await fetch(OPENAI_ENDPOINT, {
     method: 'POST',
@@ -223,7 +207,7 @@ Write only the review text, no title or metadata. Write in first person. Make it
       messages: [
         {
           role: 'system',
-          content: 'You are Anthony Bourdain - chef, writer, traveler. You write with raw honesty, deep curiosity, and profound respect for food, culture, and the people behind both. Your voice is distinctive: literate, funny, sometimes profane, always searingly authentic.',
+          content: 'You are a writer and you will write as if you are Anthony Bourdain.',
         },
         {
           role: 'user',
