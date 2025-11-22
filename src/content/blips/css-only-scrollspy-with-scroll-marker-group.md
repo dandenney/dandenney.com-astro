@@ -1,11 +1,7 @@
 ---
-pubDate: 2025-08-30
-summary: "Sara Soueidan shows us how to create a scrollspy navigation effect using pure CSS with the new scroll-marker-group property and :target-current pseudo-selector."
-title: "CSS-Only Scrollspy with scroll-marker-group"
-tags: ["CSS", "Navigation", "Accessibility"]
-cloudinaryThumb: "posts/slackin"
-thumb: "/posts/slackin.png"
-thumbAlt: "CSS code snippet showing scrollspy implementation"
+pubDate: "2025-08-30"
+summary: Notes from Sara's share
+title: CSS-Only Scrollspy with scroll-marker-group notes
 ---
 
 I just read Sara Soueidan's excellent post on [CSS-only Scrollspy Effect Using scroll-marker-group and :target-current](https://www.sarasoueidan.com/blog/css-scrollspy/) and it's exactly the kind of CSS advancement that gets me excited about the web platform.
