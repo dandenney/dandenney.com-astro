@@ -192,8 +192,6 @@ ${params.state ? `State: ${params.state}` : ''}
 Country: ${params.country}
 Items experienced: ${itemsList}
 
-Write a review in your voice. Start with a scene-setter that puts us there in the moment. Notice the small details - the people, the atmosphere, the realness. Use sensory language. Be honest but never cruel. Remember: it's about more than the food - it's about place, people, life.
-
 Write only the review text, no title or metadata.`;
 
   const response = await fetch(OPENAI_ENDPOINT, {
