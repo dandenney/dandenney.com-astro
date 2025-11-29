@@ -11,7 +11,7 @@ duration: 295960
 genres: ["southern gothic","bluegrass","americana","newgrass","folk"]
 # preview: ""
 pubDate: "2025-11-19"
-tags: ["southern gothic","bluegrass","2012"]
+tags: ["southern gothic","bluegrass"]
 aiGenerated: true
 ---
 

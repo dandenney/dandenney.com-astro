@@ -39,8 +39,8 @@ The workflow will:
 
 ### 3. View Your Reviews
 
-- **Gallery**: `/music-reviews` - Grid view of all reviews
-- **Individual**: `/music-reviews/[slug]` - Full review with album art
+- **Gallery**: `/music/reviews` - Grid view of all reviews
+- **Individual**: `/music/reviews/[slug]` - Full review with album art
 - **Your Listening**: `/music` - Already exists, links to reviews
 
 ## Manual Usage
@@ -115,15 +115,15 @@ Your custom guidelines here...
 ### Adjust Review Display
 
 - **Layout**: Edit `src/layouts/SongReview.astro`
-- **Gallery**: Edit `src/pages/music-reviews/index.astro`
+- **Gallery**: Edit `src/pages/music/reviews/index.astro`
 - **Styling**: Modify Tailwind classes in either file
 
 ### Add Filtering
 
 Create new pages:
-- `/music-reviews/artists/[artist].astro` - Filter by artist
-- `/music-reviews/tags/[tag].astro` - Filter by genre/year
-- `/music-reviews/[page].astro` - Pagination
+- `/music/reviews/artists/[artist].astro` - Filter by artist
+- `/music/reviews/tags/[tag].astro` - Filter by genre/year
+- `/music/reviews/[page].astro` - Pagination
 
 ## Workflow Configuration
 
@@ -183,4 +183,4 @@ Potential additions:
 - **Workflow**: `.github/workflows/generate-song-review.yml`
 - **Schema**: `src/content/config.ts` (songs collection)
 - **Layout**: `src/layouts/SongReview.astro`
-- **Pages**: `src/pages/music-reviews/*.astro`
+- **Pages**: `src/pages/music/reviews/*.astro`

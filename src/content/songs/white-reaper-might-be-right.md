@@ -11,7 +11,7 @@ duration: 237013
 genres: ["garage rock"]
 # preview: ""
 pubDate: "2025-11-19"
-tags: ["garage rock","2019"]
+tags: ["garage rock"]
 aiGenerated: true
 ---
 

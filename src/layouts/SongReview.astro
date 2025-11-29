@@ -1,8 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 const {
   title,
@@ -14,14 +14,14 @@ const {
   duration,
   genres,
   tags,
-  aiGenerated
+  aiGenerated,
 } = Astro.props;
 
 // Format duration from ms to mm:ss
 const formatDuration = (ms: number) => {
   const minutes = Math.floor(ms / 60000);
   const seconds = ((ms % 60000) / 1000).toFixed(0);
-  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 };
 ---
 
@@ -42,91 +42,124 @@ const formatDuration = (ms: number) => {
   </head>
   <body class="bg-white dark:bg-slate-900">
     <Header />
-    <main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
-      <article class="max-w-screen-xl mx-auto px-4 pt-4">
-
-        <div class="max-w-2xl mx-auto my-8 xl:my-16">
-          <h1 class="text-4xl font-bold leading-tight tracking-tight md:text-6xl">{title}</h1>
-          <p class="text-2xl text-gray-600 dark:text-slate-400 mt-2">by {artist}</p>
-        </div>
-
-        <div class="max-w-2xl mx-auto mb-8">
-          {albumArt && (
-            <img
-              class="w-full max-w-md mx-auto rounded-lg shadow-lg"
-              src={albumArt}
-              alt={`Album art for ${album}`}
-            />
-          )}
-        </div>
-
-        <div class="max-w-2xl mx-auto mb-8">
-          <dl class="grid grid-cols-2 gap-4 text-sm md:text-base">
-            <div>
-              <dt class="font-bold text-gray-600 dark:text-slate-400">Album</dt>
-              <dd class="dark:text-slate-200">{album}</dd>
-            </div>
-            <div>
-              <dt class="font-bold text-gray-600 dark:text-slate-400">Released</dt>
-              <dd class="dark:text-slate-200">{releaseDate}</dd>
-            </div>
-            <div>
-              <dt class="font-bold text-gray-600 dark:text-slate-400">Duration</dt>
-              <dd class="dark:text-slate-200">{formatDuration(duration)}</dd>
-            </div>
-            <div>
-              <dt class="font-bold text-gray-600 dark:text-slate-400">Genre</dt>
-              <dd class="dark:text-slate-200">{genres.join(', ') || 'Unknown'}</dd>
-            </div>
-          </dl>
-
-          <div class="mt-4">
-            <a
-              href={spotifyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-colors"
+    <main
+      class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200"
+    >
+      <article class="max-w-screen-xl mx-auto px-4 pt-4 lg:flex lg:gap-12">
+        <div class="lg:sticky lg:top-4 lg:self-start">
+          <div class="max-w-2xl mx-auto my-8 lg:mt-0">
+            <h1
+              class="text-4xl font-bold leading-tight tracking-tight md:text-6xl"
             >
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-              </svg>
-              Listen on Spotify
-            </a>
+              {title}
+            </h1>
+            <p class="text-2xl text-gray-600 dark:text-slate-400 mt-2">
+              by {artist}
+            </p>
           </div>
 
-          {tags && tags.length > 0 && (
-            <div class="mt-4">
-              <ul class="flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <li>
-                    <a
-                      href={`/music-reviews/tags/${tag}`}
-                      class="inline-block bg-gray-200 dark:bg-slate-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors"
-                    >
-                      {tag}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <div class="max-w-2xl mx-auto mb-8">
+            {
+              albumArt && (
+                <img
+                  class="w-full max-w-md mx-auto rounded-lg shadow-lg lg:mx-0"
+                  src={albumArt}
+                  alt={`Album art for ${album}`}
+                />
+              )
+            }
+          </div>
 
-          {aiGenerated && (
-            <div class="mt-4 p-3 bg-blue-50 dark:bg-slate-800 rounded text-sm text-gray-600 dark:text-slate-400">
-              This review was generated using AI (OpenAI GPT-4o-mini)
+          <div class="max-w-2xl mx-auto mb-8">
+            <dl class="grid grid-cols-2 gap-4 text-sm md:text-base">
+              <div>
+                <dt class="font-bold text-gray-600 dark:text-slate-400">
+                  Album
+                </dt>
+                <dd class="dark:text-slate-200">{album}</dd>
+              </div>
+              {
+                genres && genres.length > 0 && (
+                  <div>
+                    <dt class="font-bold text-gray-600 dark:text-slate-400">
+                      Genre
+                    </dt>
+                    <dd class="dark:text-slate-200">{genres.join(", ")}</dd>
+                  </div>
+                )
+              }
+              <div>
+                <dt class="font-bold text-gray-600 dark:text-slate-400">
+                  Released
+                </dt>
+                <dd class="dark:text-slate-200">{releaseDate}</dd>
+              </div>
+              <div>
+                <dt class="font-bold text-gray-600 dark:text-slate-400">
+                  Duration
+                </dt>
+                <dd class="dark:text-slate-200">{formatDuration(duration)}</dd>
+              </div>
+            </dl>
+
+            <div class="mt-4">
+              <a
+                href={spotifyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition-colors"
+              >
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"
+                  ></path>
+                </svg>
+                Listen on Spotify
+              </a>
             </div>
-          )}
+
+            {
+              tags && tags.length > 0 && (
+                <div class="mt-4">
+                  <ul class="flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                      <li>
+                        <a
+                          href={`/music/reviews/tags/${tag}`}
+                          class="inline-block bg-gray-200 dark:bg-slate-700 px-3 py-1 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors"
+                        >
+                          {tag}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+          </div>
         </div>
 
         <div class="longform max-w-2xl mx-auto pb-12 lg:pb-24">
           <slot />
+          {
+            aiGenerated && (
+              <div class="mt-4 p-3 bg-blue-50 dark:bg-slate-800 rounded text-sm text-gray-600 dark:text-slate-400">
+                This review was generated using AI (OpenAI GPT-4o-mini)
+              </div>
+            )
+          }
+          <nav
+            class="max-w-2xl mx-auto flex flex-wrap gap-4 mt-12 pb-12 lg:pb-24"
+          >
+            <a href="/music/reviews" class="text-blue-600 dark:text-blue-400"
+              >← Back to Music Reviews</a
+            >
+            |
+            <a href="/music" class="text-blue-600 dark:text-blue-400"
+              >View Listening History</a
+            >
+          </nav>
         </div>
-
-        <nav class="max-w-2xl mx-auto flex flex-wrap gap-4 pb-12 lg:pb-24">
-          <a href="/music-reviews" class="text-blue-600 dark:text-blue-400 hover:underline">← Back to Music Reviews</a>
-          <a href="/music" class="text-blue-600 dark:text-blue-400 hover:underline">View Listening History</a>
-        </nav>
-
       </article>
     </main>
     <Footer />

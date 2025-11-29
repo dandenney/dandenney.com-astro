@@ -11,7 +11,7 @@ duration: 251000
 genres: []
 # preview: ""
 pubDate: "2025-11-29"
-tags: ["2023"]
+tags: []
 aiGenerated: true
 ---
 

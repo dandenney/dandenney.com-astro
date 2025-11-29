@@ -216,7 +216,7 @@ duration: ${track.duration_ms}
 genres: ${JSON.stringify(artist.genres)}
 ${previewUrl ? `preview: "${previewUrl}"` : '# preview: ""'}
 pubDate: "${new Date().toISOString().split('T')[0]}"
-tags: ${JSON.stringify([...new Set([...artist.genres.slice(0, 2), track.album.release_date.split('-')[0]])])}
+tags: ${JSON.stringify([...new Set(artist.genres.slice(0, 2))])}
 aiGenerated: true
 ---
 

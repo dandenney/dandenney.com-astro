@@ -11,7 +11,7 @@ duration: 261055
 genres: ["retro soul"]
 # preview: ""
 pubDate: "2025-11-19"
-tags: ["retro soul","2025"]
+tags: ["retro soul"]
 aiGenerated: true
 ---
 
