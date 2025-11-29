@@ -1,0 +1,108 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { getCollection } from "astro:content";
+import { ViewTransitions } from "astro:transitions";
+
+export const prerender = true;
+
+const songs = (await getCollection("songs")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Format duration from ms to mm:ss
+const formatDuration = (ms: number) => {
+  const minutes = Math.floor(ms / 60000);
+  const seconds = ((ms % 60000) / 1000).toFixed(0);
+  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Music Reviews"
+      description="AI-generated reviews of songs I'm listening to"
+    />
+    <ViewTransitions />
+    <style>
+      .reviews-list:has(.review-item:hover) .review-item:not(:hover) {
+        opacity: 0.25;
+      }
+      .review-item {
+        transition: opacity 0.3s ease-in-out;
+        will-change: opacity;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <Header />
+    <main
+      class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200 min-h-screen"
+    >
+      <div class="max-w-screen-xl mx-auto px-4 py-8">
+        <div class="mb-12">
+          <h1
+            class="text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-100 md:text-6xl"
+          >
+            Music Reviews
+          </h1>
+          <p class="mt-4 text-xl text-gray-600 dark:text-slate-300 max-w-3xl">
+            AI-generated reviews of songs I'm listening to. Each review is
+            automatically created when I share a Spotify link, using ChatGPT to
+            analyze the track's vibe, production, and emotional impact.
+          </p>
+          <p class="mt-4 has-links">
+            <a
+              href="/music"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >View my listening history</a
+            >
+          </p>
+        </div>
+
+        {
+          songs.length === 0 ? (
+            <div class="text-center py-12">
+              <p class="text-gray-600 dark:text-slate-400 text-lg">
+                No song reviews yet. Share a Spotify link in a PR to generate
+                your first review!
+              </p>
+            </div>
+          ) : (
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 reviews-list">
+              {songs.map((song) => (
+                <article class="review-item group p-4">
+                  <a
+                    href={`/music/reviews/${song.slug}/`}
+                    class="flex items-center gap-4 p-4 overflow-hidden transition-shadow duration-300 bg-white dark:bg-slate-800"
+                  >
+                    {song.data.albumArt && (
+                      <div class="aspect-square w-40 h-40 shrink-0 overflow-hidden">
+                        <img
+                          src={song.data.albumArt}
+                          alt={`Album art for ${song.data.album}`}
+                        />
+                      </div>
+                    )}
+                    <div class="flex flex-col justify-center w-48 h-48">
+                      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
+                        {song.data.title}
+                      </h2>
+                      <p class="text-gray-600 dark:text-slate-400 mt-1">
+                        {song.data.artist}
+                      </p>
+                    </div>
+                  </a>
+                </article>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
