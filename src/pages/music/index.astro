@@ -51,15 +51,53 @@ export const prerender = true;
             id="music-container"
             class="grid grid-cols-1 gap-8 lg:grid-cols-3"
           >
-            <!-- Loading state -->
-            <div class="col-span-full flex justify-center items-center py-20">
-              <div class="animate-pulse text-gray-400 dark:text-slate-400">
-                Loading your music data...
+            <!-- Skeleton loading state -->
+            {[1, 2, 3].map(() => (
+              <div class="skeleton-card relative isolate overflow-hidden p-8 rounded-2xl">
+                <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 dark:from-slate-800/50 dark:to-slate-900/50"></div>
+                <div class="animate-pulse">
+                  <div class="mb-6">
+                    <div class="h-8 bg-black/5 dark:bg-white/10 rounded w-32 mb-2"></div>
+                    <div class="h-4 bg-black/5 dark:bg-white/10 rounded w-24"></div>
+                  </div>
+                  <div class="space-y-6">
+                    <div>
+                      <div class="h-6 bg-black/5 dark:bg-white/10 rounded w-28 mb-3"></div>
+                      <div class="space-y-2">
+                        {[...Array(10)].map(() => (
+                          <div class="border-b-2 border-black/5 dark:border-white/5 flex items-center gap-3 pb-4 pt-2">
+                            <div class="w-6 h-6 bg-black/5 dark:bg-white/10 rounded"></div>
+                            <div class="w-10 h-10 bg-black/5 dark:bg-white/10 rounded"></div>
+                            <div class="flex-1 space-y-2">
+                              <div class="h-4 bg-black/5 dark:bg-white/10 rounded w-3/4"></div>
+                              <div class="h-3 bg-black/5 dark:bg-white/10 rounded w-1/2"></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div class="h-6 bg-black/5 dark:bg-white/10 rounded w-28 mb-3"></div>
+                      <div class="space-y-2">
+                        {[...Array(10)].map(() => (
+                          <div class="border-b-2 border-black/5 dark:border-white/5 flex items-center gap-3 pb-4 pt-2">
+                            <div class="w-6 h-6 bg-black/5 dark:bg-white/10 rounded"></div>
+                            <div class="w-10 h-10 bg-black/5 dark:bg-white/10 rounded-full"></div>
+                            <div class="flex-1 space-y-2">
+                              <div class="h-4 bg-black/5 dark:bg-white/10 rounded w-3/4"></div>
+                              <div class="h-3 bg-black/5 dark:bg-white/10 rounded w-1/2"></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-        <div class="has-links mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="has-links mx-auto max-w-7xl mt-8 px-6 text-center lg:px-8">
           <a href="/music/reviews">View music reviews</a>
         </div>
       </section>
