@@ -31,10 +31,6 @@ const formatDuration = (ms: number) => {
       .reviews-list:has(.review-item:hover) .review-item:not(:hover) {
         opacity: 0.25;
       }
-      .review-item {
-        transition: opacity 0.3s ease-in-out;
-        will-change: opacity;
-      }
     </style>
   </head>
   <body class="bg-white dark:bg-slate-900">
@@ -74,10 +70,10 @@ const formatDuration = (ms: number) => {
           ) : (
             <div class="grid md:grid-cols-2 lg:grid-cols-3 reviews-list">
               {songs.map((song) => (
-                <article class="review-item group p-4">
+                <article class="review-item group p-4 transition-opacity duration-1000 ease-in-out">
                   <a
                     href={`/music/reviews/${song.slug}/`}
-                    class="flex items-center gap-4 p-4 overflow-hidden transition-shadow duration-300 bg-white dark:bg-slate-800"
+                    class="flex items-center gap-4 p-4 overflow-hidden transition-shadow duration-500 bg-white dark:bg-slate-800"
                   >
                     {song.data.albumArt && (
                       <div class="aspect-square w-40 h-40 shrink-0 overflow-hidden">
