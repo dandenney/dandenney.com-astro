@@ -7,8 +7,8 @@ import { ViewTransitions } from "astro:transitions";
 
 export const prerender = true;
 
-const songs = (await getCollection("songs")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const songs = (await getCollection("songs")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title),
 );
 
 // Format duration from ms to mm:ss
@@ -28,8 +28,10 @@ const formatDuration = (ms: number) => {
     />
     <ViewTransitions />
     <style>
-      .reviews-list:has(.review-item:hover) .review-item:not(:hover) {
-        opacity: 0.5;
+      @media screen and (min-width: 1000px) {
+        .reviews-list:has(.review-item:hover) .review-item:not(:hover) {
+          opacity: 0.5;
+        }
       }
     </style>
   </head>
