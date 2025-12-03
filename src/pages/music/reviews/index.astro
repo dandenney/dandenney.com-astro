@@ -29,7 +29,7 @@ const formatDuration = (ms: number) => {
     <ViewTransitions />
     <style>
       .reviews-list:has(.review-item:hover) .review-item:not(:hover) {
-        opacity: 0.25;
+        opacity: 0.5;
       }
     </style>
   </head>
@@ -68,31 +68,30 @@ const formatDuration = (ms: number) => {
               </p>
             </div>
           ) : (
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 reviews-list">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 reviews-list lg:gap-12">
               {songs.map((song) => (
-                <article class="review-item group p-4 transition-opacity duration-1000 ease-in-out">
-                  <a
-                    href={`/music/reviews/${song.slug}/`}
-                    class="flex items-center gap-4 p-4 overflow-hidden transition-shadow duration-500 bg-white dark:bg-slate-800"
-                  >
-                    {song.data.albumArt && (
-                      <div class="aspect-square w-40 h-40 shrink-0 overflow-hidden">
-                        <img
-                          src={song.data.albumArt}
-                          alt={`Album art for ${song.data.album}`}
-                        />
-                      </div>
-                    )}
-                    <div class="flex flex-col justify-center w-48 h-48">
-                      <h2 class="text-lg font-bold text-gray-900 dark:text-slate-100 group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
-                        {song.data.title}
-                      </h2>
-                      <p class="text-gray-600 dark:text-slate-400 mt-1">
-                        {song.data.artist}
-                      </p>
+                <a
+                  href={`/music/reviews/${song.slug}/`}
+                  class="rounded-lg flex gap-4 review-item group transition-opacity duration-1000 ease-in-out"
+                >
+                  {song.data.albumArt && (
+                    <div class="aspect-square h-24 w-24 shrink-0 overflow-hidden lg:h-32 lg:w-32">
+                      <img
+                        class=""
+                        src={song.data.albumArt}
+                        alt={`Album art for ${song.data.album}`}
+                      />
                     </div>
-                  </a>
-                </article>
+                  )}
+                  <div class="flex flex-col justify-center">
+                    <h2 class="text-md font-bold text-gray-900 dark:text-slate-100 group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
+                      {song.data.title}
+                    </h2>
+                    <p class="text-gray-600 text-sm dark:text-slate-400 mt-1">
+                      {song.data.artist}
+                    </p>
+                  </div>
+                </a>
               ))}
             </div>
           )
