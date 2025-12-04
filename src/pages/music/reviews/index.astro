@@ -30,7 +30,7 @@ const formatDuration = (ms: number) => {
     <style>
       @media screen and (min-width: 1000px) {
         .reviews-list:has(.review-item:hover) .review-item:not(:hover) {
-          opacity: 0.5;
+          opacity: 0.70;
         }
       }
     </style>
@@ -77,9 +77,9 @@ const formatDuration = (ms: number) => {
                   class="rounded-lg flex gap-4 review-item group transition-opacity duration-1000 ease-in-out"
                 >
                   {song.data.albumArt && (
-                    <div class="aspect-square h-24 w-24 shrink-0 overflow-hidden lg:h-32 lg:w-32">
+                    <div class="aspect-square rounded-full h-24 w-24 shrink-0 overflow-hidden lg:h-32 lg:w-32">
                       <img
-                        class=""
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                         src={song.data.albumArt}
                         alt={`Album art for ${song.data.album}`}
                       />
