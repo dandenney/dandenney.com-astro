@@ -113,7 +113,8 @@ async function getArtistMetadata(artistId, accessToken) {
  * Generate review using OpenAI API
  */
 async function generateReview(track, artist) {
-  const prompt = `Write a music review for this song in the style of Amanda Petrusich:
+  const prompt = `
+Write a music review for this song in the style of Amanda Petrusich.
 
 Track: ${track.name}
 Artist: ${artist.name}
@@ -121,22 +122,45 @@ Album: ${track.album.name}
 Genre: ${artist.genres.join(', ') || 'Unknown'}
 Release Date: ${track.album.release_date}
 
-Style guidelines inspired by Amanda Petrusich's music criticism:
-- 2-3 thoughtful paragraphs (200-250 words)
-- Begin with a vivid, specific observation or moment that draws the reader in
-- Blend personal reflection with cultural or musical context
-- Use literary, evocative language that captures both sound and feeling
-- Pay attention to small details that reveal something larger about the song or artist
-- Explore the emotional resonance and what the song reveals about human experience
-- Consider the song's place in the artist's trajectory or within its genre
-- Be intellectually curious but emotionally honest
-- Avoid music journalism clichés and insider jargon
-- Write with warmth, vulnerability, and genuine insight
-- Let your sentences breathe - vary rhythm and length for texture
+Important context about your knowledge:
+- You do NOT have access to streaming audio.
+- You only know specific details about this song if they were part of your training data.
+- If you do not genuinely remember concrete aspects of this recording, do not pretend that you can hear it now.
 
-Approach: Think about what this song makes you feel, where it takes you, what it says about longing or joy or memory. Write as if you're discovering something true about music and about yourself.
+Decision rule:
+1. First, check your own knowledge.
+   - If you truly know this track (you can recall specific details about its sound, structure, or lyrics), write a detailed review that focuses on those specifics.
+   - If you do NOT know it beyond the metadata above, follow the "limited knowledge mode" below.
 
-Write only the review text, no title or metadata.`;
+When you DO know the track:
+- Write 2–3 thoughtful paragraphs (around 200–250 words).
+- Begin with a vivid, specific observation from the song itself (a lyric fragment, a production detail, a vocal moment, a particular section).
+- Focus on concrete musical details: instrumentation, arrangement choices, vocal delivery, rhythm, structure, and any notable shifts or surprises.
+- Blend those details with personal reflection and cultural or musical context.
+- Explore the emotional resonance and what the song reveals about human experience.
+- Situate the song in the artist's trajectory or within its genre when you can.
+- Avoid cliches and insider jargon.
+- Write with warmth, vulnerability, and genuine insight.
+
+"Limited knowledge" mode (when you do NOT know the track):
+- Do NOT invent specific lyrics, samples, guest features, or detailed sonic moments.
+- Start with one honest sentence that acknowledges the constraint, for example:
+  "With only the title and a few bare facts to go on, it is hard to say exactly how this song sounds, but it suggests..."
+- Then, in 2 short paragraphs, write a reflective piece that:
+  - Uses the title, artist name, genre, and release context as clues.
+  - Carefully imagines what someone might look for or feel in a song like this, using language like "likely", "might", "could".
+  - Focuses on themes, mood, and listening context rather than fake specifics.
+- The goal is to be honest about what you do not know while still giving the reader something thoughtful and evocative to hold onto.
+
+Style guidelines inspired by Amanda Petrusich:
+- Use literary, evocative language that captures both sound and feeling.
+- Blend close attention to detail with broader reflections on why music matters.
+- Be intellectually curious but emotionally honest.
+- Let your sentences breathe with varied rhythm and length.
+
+Output:
+- Write only the review text, no title or metadata.
+`;
 
   const response = await fetch(OPENAI_ENDPOINT, {
     method: 'POST',
