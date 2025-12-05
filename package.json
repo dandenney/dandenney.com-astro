@@ -20,6 +20,7 @@
     "@astrojs/sitemap": "3.4.1",
     "@astrojs/tailwind": "6.0.2",
     "astro": "^5.15.9",
+    "genius-lyrics-api": "^3.2.1",
     "tailwindcss": "^3",
     "tinacms": "^1.6.3"
   },

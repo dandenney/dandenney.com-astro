@@ -14,6 +14,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getLyrics } from 'genius-lyrics-api';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,6 +24,7 @@ const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GENIUS_API_KEY = process.env.GENIUS_API_KEY;
 const GITHUB_EVENT_PATH = process.env.GITHUB_EVENT_PATH;
 
 // Spotify API endpoints
@@ -110,9 +112,47 @@ async function getArtistMetadata(artistId, accessToken) {
 }
 
 /**
+ * Fetch song lyrics from Genius
+ */
+async function fetchLyrics(trackName, artistName) {
+  if (!GENIUS_API_KEY) {
+    console.warn(`   ⚠️  Genius API key not set. Skipping lyrics fetch.`);
+    return null;
+  }
+
+  try {
+    console.log(`   Fetching lyrics from Genius...`);
+
+    const options = {
+      apiKey: GENIUS_API_KEY,
+      title: trackName,
+      artist: artistName,
+      optimizeQuery: true
+    };
+
+    const lyrics = await getLyrics(options);
+
+    if (lyrics) {
+      console.log(`   ✓ Lyrics found`);
+      return lyrics;
+    } else {
+      console.log(`   ⚠️  Lyrics not found on Genius`);
+      return null;
+    }
+  } catch (error) {
+    console.warn(`   ⚠️  Failed to fetch lyrics: ${error.message}`);
+    return null;
+  }
+}
+
+/**
  * Generate review using OpenAI API
  */
-async function generateReview(track, artist) {
+async function generateReview(track, artist, lyrics = null) {
+  const lyricsSection = lyrics
+    ? `\n\nLyrics:\n${lyrics}\n`
+    : '\n\nNote: Lyrics were not available for this song.\n';
+
   const prompt = `
 Write a music review for this song in the style of Amanda Petrusich.
 
@@ -120,24 +160,25 @@ Track: ${track.name}
 Artist: ${artist.name}
 Album: ${track.album.name}
 Genre: ${artist.genres.join(', ') || 'Unknown'}
-Release Date: ${track.album.release_date}
-
+Release Date: ${track.album.release_date}${lyricsSection}
 Important context about your knowledge:
 - You do NOT have access to streaming audio.
 - You only know specific details about this song if they were part of your training data.
 - If you do not genuinely remember concrete aspects of this recording, do not pretend that you can hear it now.
 
 Decision rule:
-1. First, check your own knowledge.
+1. First, check your own knowledge and the provided lyrics.
+   - If lyrics are provided above, you MUST analyze them and incorporate them into your review. The lyrics are a critical part of understanding what makes this song meaningful.
    - If you truly know this track (you can recall specific details about its sound, structure, or lyrics), write a detailed review that focuses on those specifics.
-   - If you do NOT know it beyond the metadata above, follow the "limited knowledge mode" below.
+   - If you do NOT know it beyond the metadata and lyrics provided, follow the "limited knowledge mode" below.
 
-When you DO know the track:
+When you DO have lyrics (or know the track):
 - Write 2–3 thoughtful paragraphs (around 200–250 words).
-- Begin with a vivid, specific observation from the song itself (a lyric fragment, a production detail, a vocal moment, a particular section).
-- Focus on concrete musical details: instrumentation, arrangement choices, vocal delivery, rhythm, structure, and any notable shifts or surprises.
-- Blend those details with personal reflection and cultural or musical context.
-- Explore the emotional resonance and what the song reveals about human experience.
+- If lyrics are provided, BEGIN with a specific lyrical observation - a line, phrase, or image that stands out. The lyrics should be central to your analysis.
+- Analyze what the lyrics reveal: themes, imagery, storytelling, emotional truth, wordplay, or vulnerability.
+- Focus on concrete details: how the lyrics work with (or against) the musical elements, vocal delivery, rhythm, structure.
+- Blend lyrical analysis with personal reflection and cultural or musical context.
+- Explore the emotional resonance and what the song reveals about human experience through its words and sound.
 - Situate the song in the artist's trajectory or within its genre when you can.
 - Avoid cliches and insider jargon.
 - Write with warmth, vulnerability, and genuine insight.
@@ -218,7 +259,7 @@ function formatDuration(ms) {
 /**
  * Create markdown file with frontmatter and review
  */
-function createMarkdownFile(track, artist, review) {
+function createMarkdownFile(track, artist, review, lyrics = null) {
   const artistSlug = slugify(artist.name);
   const trackSlug = slugify(track.name);
   const filename = `${artistSlug}-${trackSlug}.md`;
@@ -226,6 +267,9 @@ function createMarkdownFile(track, artist, review) {
   const artistNames = track.artists.map(a => a.name);
   const albumArt = track.album.images[0]?.url || '';
   const previewUrl = track.preview_url || '';
+
+  // Add note about missing lyrics if they weren't found
+  const lyricsNote = !lyrics ? '\n\n> **Note:** Lyrics were not available for this review.\n' : '';
 
   const frontmatter = `---
 title: "${track.name.replace(/"/g, '\\"')}"
@@ -242,8 +286,9 @@ ${previewUrl ? `preview: "${previewUrl}"` : '# preview: ""'}
 pubDate: "${new Date().toISOString().split('T')[0]}"
 tags: ${JSON.stringify([...new Set(artist.genres.slice(0, 2))])}
 aiGenerated: true
+lyricsAvailable: ${lyrics ? 'true' : 'false'}
 ---
-
+${lyricsNote}
 ${review}
 `;
 
@@ -256,6 +301,7 @@ ${review}
   console.log(`   Artist: ${artist.name}`);
   console.log(`   Duration: ${formatDuration(track.duration_ms)}`);
   console.log(`   Genres: ${artist.genres.join(', ') || 'Unknown'}`);
+  console.log(`   Lyrics: ${lyrics ? 'Found' : 'Not found'}`);
   console.log(`   Path: ${outputPath}`);
 
   return filename;
@@ -347,13 +393,16 @@ async function main() {
       console.log('   Fetching artist metadata...');
       const artist = await getArtistMetadata(track.artists[0].id, accessToken);
 
+      // Fetch lyrics from Genius
+      const lyrics = await fetchLyrics(track.name, artist.name);
+
       // Generate AI review
       console.log('   Generating AI review...');
-      const review = await generateReview(track, artist);
+      const review = await generateReview(track, artist, lyrics);
 
       // Create markdown file
       console.log('   Creating markdown file...');
-      createMarkdownFile(track, artist, review);
+      createMarkdownFile(track, artist, review, lyrics);
 
       console.log('\n✨ Done!\n');
 
