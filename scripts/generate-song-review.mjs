@@ -122,6 +122,8 @@ async function fetchLyrics(trackName, artistName) {
 
   try {
     console.log(`   Fetching lyrics from Genius...`);
+    console.log(`   Search query: "${trackName}" by "${artistName}"`);
+    console.log(`   API key present: ${GENIUS_API_KEY ? 'yes (length: ' + GENIUS_API_KEY.length + ')' : 'no'}`);
 
     const options = {
       apiKey: GENIUS_API_KEY,
@@ -133,14 +135,15 @@ async function fetchLyrics(trackName, artistName) {
     const lyrics = await getLyrics(options);
 
     if (lyrics) {
-      console.log(`   ✓ Lyrics found`);
+      console.log(`   ✓ Lyrics found (${lyrics.length} characters)`);
       return lyrics;
     } else {
-      console.log(`   ⚠️  Lyrics not found on Genius`);
+      console.log(`   ⚠️  Lyrics not found on Genius (getLyrics returned null/empty)`);
       return null;
     }
   } catch (error) {
     console.warn(`   ⚠️  Failed to fetch lyrics: ${error.message}`);
+    console.warn(`   Error stack: ${error.stack}`);
     return null;
   }
 }
