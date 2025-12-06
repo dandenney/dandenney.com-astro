@@ -15,9 +15,14 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { getLyrics } from 'genius-lyrics-api';
+import axios from 'axios';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Configure axios defaults to bypass Genius blocking on GitHub Actions
+axios.defaults.headers.common['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+axios.defaults.timeout = 10000;
 
 // Environment variables
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
