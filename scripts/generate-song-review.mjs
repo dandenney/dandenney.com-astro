@@ -110,95 +110,18 @@ async function getArtistMetadata(artistId, accessToken) {
 }
 
 /**
- * Fetch song lyrics using web search
+ * Note: Lyrics fetching has been removed as it was unreliable.
+ * Reviews are now generated based on the AI's knowledge of the song.
  */
 async function fetchLyrics(trackName, artistName) {
-  try {
-    console.log(`   Fetching lyrics via web search...`);
-    console.log(`   Search query: "${trackName}" by "${artistName}"`);
-
-    // Search for lyrics using a lyrics-specific site
-    const searchQuery = `${trackName} ${artistName} lyrics site:genius.com OR site:azlyrics.com OR site:musixmatch.com`;
-    const encodedQuery = encodeURIComponent(searchQuery);
-
-    const response = await fetch(`https://html.duckduckgo.com/html/?q=${encodedQuery}`, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      }
-    });
-
-    if (!response.ok) {
-      console.warn(`   ⚠️  Search request failed with status: ${response.status}`);
-      return null;
-    }
-
-    const html = await response.text();
-
-    // Extract the first result URL from DuckDuckGo results
-    const urlMatch = html.match(/uddg=([^"&]+)/);
-    if (!urlMatch) {
-      console.log(`   ⚠️  No lyrics pages found in search results`);
-      return null;
-    }
-
-    const lyricsUrl = decodeURIComponent(urlMatch[1]);
-    console.log(`   Found lyrics page: ${lyricsUrl}`);
-
-    // Fetch the lyrics page
-    const lyricsResponse = await fetch(lyricsUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      }
-    });
-
-    if (!lyricsResponse.ok) {
-      console.warn(`   ⚠️  Failed to fetch lyrics page`);
-      return null;
-    }
-
-    const lyricsHtml = await lyricsResponse.text();
-
-    // Simple extraction based on common patterns
-    let lyrics = null;
-
-    // Try Genius.com pattern
-    if (lyricsUrl.includes('genius.com')) {
-      const geniusMatch = lyricsHtml.match(/<div[^>]*data-lyrics-container="true"[^>]*>(.*?)<\/div>/gs);
-      if (geniusMatch) {
-        lyrics = geniusMatch.map(m => m.replace(/<[^>]+>/g, '\n').replace(/\n+/g, '\n')).join('\n');
-      }
-    }
-
-    // Try AZLyrics pattern
-    if (!lyrics && lyricsUrl.includes('azlyrics.com')) {
-      const azMatch = lyricsHtml.match(/<!-- Usage of azlyrics\.com content.*?-->(.*?)<!-- MxM banner -->/s);
-      if (azMatch) {
-        lyrics = azMatch[1].replace(/<[^>]+>/g, '\n').replace(/\n+/g, '\n');
-      }
-    }
-
-    if (lyrics) {
-      lyrics = lyrics.trim();
-      console.log(`   ✓ Lyrics found (${lyrics.length} characters)`);
-      return lyrics;
-    } else {
-      console.log(`   ⚠️  Could not extract lyrics from page`);
-      return null;
-    }
-  } catch (error) {
-    console.warn(`   ⚠️  Failed to fetch lyrics: ${error.message}`);
-    return null;
-  }
+  console.log(`   Skipping lyrics fetch - will generate review from AI knowledge`);
+  return null;
 }
 
 /**
  * Generate review using OpenAI API
  */
 async function generateReview(track, artist, lyrics = null) {
-  const lyricsSection = lyrics
-    ? `\n\nLyrics:\n${lyrics}\n`
-    : '\n\nNote: Lyrics were not available for this song.\n';
-
   const prompt = `
 Write a music review for this song in the style of Amanda Petrusich.
 
@@ -206,47 +129,32 @@ Track: ${track.name}
 Artist: ${artist.name}
 Album: ${track.album.name}
 Genre: ${artist.genres.join(', ') || 'Unknown'}
-Release Date: ${track.album.release_date}${lyricsSection}
-Important context about your knowledge:
-- You do NOT have access to streaming audio.
-- You only know specific details about this song if they were part of your training data.
-- If you do not genuinely remember concrete aspects of this recording, do not pretend that you can hear it now.
+Release Date: ${track.album.release_date}
 
-Decision rule:
-1. First, check your own knowledge and the provided lyrics.
-   - If lyrics are provided above, you MUST analyze them and incorporate them into your review. The lyrics are a critical part of understanding what makes this song meaningful.
-   - If you truly know this track (you can recall specific details about its sound, structure, or lyrics), write a detailed review that focuses on those specifics.
-   - If you do NOT know it beyond the metadata and lyrics provided, follow the "limited knowledge mode" below.
+Important context:
+- You do NOT have access to streaming audio
+- Write based on what you genuinely know about this song from your training data
+- If you know specific details (lyrics, sound, structure), focus on those
+- If you don't know the song well, write about the artist's style, the genre, and what the title suggests
+- NEVER acknowledge that you lack information - just write the best review you can
 
-When you DO have lyrics (or know the track):
-- Write 2–3 thoughtful paragraphs (around 200–250 words).
-- If lyrics are provided, BEGIN with a specific lyrical observation - a line, phrase, or image that stands out. The lyrics should be central to your analysis.
-- Analyze what the lyrics reveal: themes, imagery, storytelling, emotional truth, wordplay, or vulnerability.
-- Focus on concrete details: how the lyrics work with (or against) the musical elements, vocal delivery, rhythm, structure.
-- Blend lyrical analysis with personal reflection and cultural or musical context.
-- Explore the emotional resonance and what the song reveals about human experience through its words and sound.
-- Situate the song in the artist's trajectory or within its genre when you can.
-- Avoid cliches and insider jargon.
-- Write with warmth, vulnerability, and genuine insight.
-
-"Limited knowledge" mode (when you do NOT know the track):
-- Do NOT invent specific lyrics, samples, guest features, or detailed sonic moments.
-- Start with one honest sentence that acknowledges the constraint, for example:
-  "With only the title and a few bare facts to go on, it is hard to say exactly how this song sounds, but it suggests..."
-- Then, in 2 short paragraphs, write a reflective piece that:
-  - Uses the title, artist name, genre, and release context as clues.
-  - Carefully imagines what someone might look for or feel in a song like this, using language like "likely", "might", "could".
-  - Focuses on themes, mood, and listening context rather than fake specifics.
-- The goal is to be honest about what you do not know while still giving the reader something thoughtful and evocative to hold onto.
-
-Style guidelines inspired by Amanda Petrusich:
-- Use literary, evocative language that captures both sound and feeling.
-- Blend close attention to detail with broader reflections on why music matters.
-- Be intellectually curious but emotionally honest.
-- Let your sentences breathe with varied rhythm and length.
+Guidelines:
+- Write 3 thoughtful paragraphs (around 200-250 words total)
+- Use literary, evocative language that captures both sound and feeling
+- Blend close attention to detail with broader reflections on why music matters
+- Be intellectually curious but emotionally honest
+- Let your sentences breathe with varied rhythm and length
+- Focus on themes, emotional resonance, and what the song reveals about human experience
+- Situate the song in the artist's trajectory or within its genre when possible
+- Avoid cliches and insider jargon
+- Write with warmth, vulnerability, and genuine insight
+- DO NOT mention whether lyrics were available or unavailable
+- DO NOT use phrases like "with only the title to go on" or "it's hard to say exactly"
+- Write as if you're familiar with the song, drawing on your knowledge of the artist and genre
 
 Output:
-- Write only the review text, no title or metadata.
+- Write only the review text, no title or metadata
+- Do not include any notes about missing information
 `;
 
   const response = await fetch(OPENAI_ENDPOINT, {
@@ -314,9 +222,6 @@ function createMarkdownFile(track, artist, review, lyrics = null) {
   const albumArt = track.album.images[0]?.url || '';
   const previewUrl = track.preview_url || '';
 
-  // Add note about missing lyrics if they weren't found
-  const lyricsNote = !lyrics ? '\n\n> **Note:** Lyrics were not available for this review.\n' : '';
-
   const frontmatter = `---
 title: "${track.name.replace(/"/g, '\\"')}"
 artist: "${artist.name.replace(/"/g, '\\"')}"
@@ -332,9 +237,8 @@ ${previewUrl ? `preview: "${previewUrl}"` : '# preview: ""'}
 pubDate: "${new Date().toISOString().split('T')[0]}"
 tags: ${JSON.stringify([...new Set(artist.genres.slice(0, 2))])}
 aiGenerated: true
-lyricsAvailable: ${lyrics ? 'true' : 'false'}
 ---
-${lyricsNote}
+
 ${review}
 `;
 
