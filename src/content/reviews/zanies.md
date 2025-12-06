@@ -9,7 +9,7 @@ heroImage: "zanies"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g55229-d605105-Reviews-Zanies_Comedy_Showcase-Nashville_Davidson_County_Tennessee.html"
 pubDate: 2025-04-23
 state: tennessee
-tags: [comedy-club, nightlife, live-entertainment, 18-plus, bikers' loop]
+tags: [comedy]
 title: "Zanies Comedy Night Club"
 ---
 

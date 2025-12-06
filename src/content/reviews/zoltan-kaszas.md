@@ -1,15 +1,15 @@
 ---
-address: "Nashville, TN, United States"
+address: "2025 8th Avenue South"
 city: "nashville"
-# coordinates: 0, 0
+coordinates: -86.7890, 36.1525
 country: United States
 description: Experience fantastic comedy and delicious food in vibrant Nashville.
-# heroImage: zoltan-kaszas
-# heroImageAlt: 'Photo of Zoltan Kaszas'
+heroAlt: "Photo of Zanies stage"
+heroImage: "zanies"
 infoUrl: "https://www.tripadvisor.com/Attraction_Review-g55229-d2630536-Reviews-Zoltan_Kaszas-Nashville_Tennessee.html"
 pubDate: 2025-12-06
 state: tennessee
-tags: ["comedy","american-cuisine","cocktails","craft-beer"]
+tags: ["comedy"]
 title: "Zoltan Kaszas"
 aiGenerated: true
 ---
