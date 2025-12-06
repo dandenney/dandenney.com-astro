@@ -34,7 +34,6 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GENIUS_API_KEY: ${{ secrets.GENIUS_API_KEY }}
         run: node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}"
 
       - name: Commit and push review

@@ -14,22 +14,15 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getLyrics } from 'genius-lyrics-api';
-import axios from 'axios';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// Configure axios defaults to bypass Genius blocking on GitHub Actions
-axios.defaults.headers.common['User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
-axios.defaults.timeout = 10000;
 
 // Environment variables
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const GENIUS_API_KEY = process.env.GENIUS_API_KEY;
 const GITHUB_EVENT_PATH = process.env.GITHUB_EVENT_PATH;
 
 // Spotify API endpoints
@@ -117,38 +110,83 @@ async function getArtistMetadata(artistId, accessToken) {
 }
 
 /**
- * Fetch song lyrics from Genius
+ * Fetch song lyrics using web search
  */
 async function fetchLyrics(trackName, artistName) {
-  if (!GENIUS_API_KEY) {
-    console.warn(`   ⚠️  Genius API key not set. Skipping lyrics fetch.`);
-    return null;
-  }
-
   try {
-    console.log(`   Fetching lyrics from Genius...`);
+    console.log(`   Fetching lyrics via web search...`);
     console.log(`   Search query: "${trackName}" by "${artistName}"`);
-    console.log(`   API key present: ${GENIUS_API_KEY ? 'yes (length: ' + GENIUS_API_KEY.length + ')' : 'no'}`);
 
-    const options = {
-      apiKey: GENIUS_API_KEY,
-      title: trackName,
-      artist: artistName,
-      optimizeQuery: true
-    };
+    // Search for lyrics using a lyrics-specific site
+    const searchQuery = `${trackName} ${artistName} lyrics site:genius.com OR site:azlyrics.com OR site:musixmatch.com`;
+    const encodedQuery = encodeURIComponent(searchQuery);
 
-    const lyrics = await getLyrics(options);
+    const response = await fetch(`https://html.duckduckgo.com/html/?q=${encodedQuery}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+
+    if (!response.ok) {
+      console.warn(`   ⚠️  Search request failed with status: ${response.status}`);
+      return null;
+    }
+
+    const html = await response.text();
+
+    // Extract the first result URL from DuckDuckGo results
+    const urlMatch = html.match(/uddg=([^"&]+)/);
+    if (!urlMatch) {
+      console.log(`   ⚠️  No lyrics pages found in search results`);
+      return null;
+    }
+
+    const lyricsUrl = decodeURIComponent(urlMatch[1]);
+    console.log(`   Found lyrics page: ${lyricsUrl}`);
+
+    // Fetch the lyrics page
+    const lyricsResponse = await fetch(lyricsUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+
+    if (!lyricsResponse.ok) {
+      console.warn(`   ⚠️  Failed to fetch lyrics page`);
+      return null;
+    }
+
+    const lyricsHtml = await lyricsResponse.text();
+
+    // Simple extraction based on common patterns
+    let lyrics = null;
+
+    // Try Genius.com pattern
+    if (lyricsUrl.includes('genius.com')) {
+      const geniusMatch = lyricsHtml.match(/<div[^>]*data-lyrics-container="true"[^>]*>(.*?)<\/div>/gs);
+      if (geniusMatch) {
+        lyrics = geniusMatch.map(m => m.replace(/<[^>]+>/g, '\n').replace(/\n+/g, '\n')).join('\n');
+      }
+    }
+
+    // Try AZLyrics pattern
+    if (!lyrics && lyricsUrl.includes('azlyrics.com')) {
+      const azMatch = lyricsHtml.match(/<!-- Usage of azlyrics\.com content.*?-->(.*?)<!-- MxM banner -->/s);
+      if (azMatch) {
+        lyrics = azMatch[1].replace(/<[^>]+>/g, '\n').replace(/\n+/g, '\n');
+      }
+    }
 
     if (lyrics) {
+      lyrics = lyrics.trim();
       console.log(`   ✓ Lyrics found (${lyrics.length} characters)`);
       return lyrics;
     } else {
-      console.log(`   ⚠️  Lyrics not found on Genius (getLyrics returned null/empty)`);
+      console.log(`   ⚠️  Could not extract lyrics from page`);
       return null;
     }
   } catch (error) {
     console.warn(`   ⚠️  Failed to fetch lyrics: ${error.message}`);
-    console.warn(`   Error stack: ${error.stack}`);
     return null;
   }
 }
