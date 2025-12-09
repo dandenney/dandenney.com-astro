@@ -8,7 +8,11 @@
  *
  * Usage:
  *   GitHub Actions: Triggered by PR comments containing Spotify URLs
- *   Local: node scripts/generate-song-review.mjs <spotify-url>
+ *   Local: node scripts/generate-song-review.mjs <spotify-url> [lyrics]
+ *
+ *   If lyrics are provided, they'll be included in the review prompt.
+ *   Lyrics should be passed as a quoted string:
+ *   node scripts/generate-song-review.mjs "https://..." "verse 1 lyrics\nchorus lyrics..."
  */
 
 import fs from 'fs';
@@ -109,19 +113,16 @@ async function getArtistMetadata(artistId, accessToken) {
   return data;
 }
 
-/**
- * Note: Lyrics fetching has been removed as it was unreliable.
- * Reviews are now generated based on the AI's knowledge of the song.
- */
-async function fetchLyrics(trackName, artistName) {
-  console.log(`   Skipping lyrics fetch - will generate review from AI knowledge`);
-  return null;
-}
 
 /**
  * Generate review using OpenAI API
  */
 async function generateReview(track, artist, lyrics = null) {
+  const lyricsSection = lyrics ? `
+Lyrics:
+${lyrics}
+` : '';
+
   const prompt = `
 Write a music review for this song in the style of Amanda Petrusich.
 
@@ -130,10 +131,10 @@ Artist: ${artist.name}
 Album: ${track.album.name}
 Genre: ${artist.genres.join(', ') || 'Unknown'}
 Release Date: ${track.album.release_date}
-
+${lyricsSection}
 Important context:
 - You do NOT have access to streaming audio
-- Write based on what you genuinely know about this song from your training data
+- Write based on what you genuinely know about this song from your training data${lyrics ? ' and the lyrics provided above' : ''}
 - If you know specific details (lyrics, sound, structure), focus on those
 - If you don't know the song well, write about the artist's style, the genre, and what the title suggests
 - NEVER acknowledge that you lack information - just write the best review you can
@@ -246,14 +247,6 @@ ${review}
 
   fs.writeFileSync(outputPath, frontmatter, 'utf8');
 
-  console.log(`✅ Created review: ${filename}`);
-  console.log(`   Track: ${track.name}`);
-  console.log(`   Artist: ${artist.name}`);
-  console.log(`   Duration: ${formatDuration(track.duration_ms)}`);
-  console.log(`   Genres: ${artist.genres.join(', ') || 'Unknown'}`);
-  console.log(`   Lyrics: ${lyrics ? 'Found' : 'Not found'}`);
-  console.log(`   Path: ${outputPath}`);
-
   return filename;
 }
 
@@ -287,8 +280,6 @@ function extractSpotifyUrlsFromGitHub() {
  * Main execution
  */
 async function main() {
-  console.log('🎵 Spotify Song Review Generator\n');
-
   // Validate environment variables
   if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET || !SPOTIFY_REFRESH_TOKEN) {
     console.error('❌ Missing Spotify credentials. Set SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REFRESH_TOKEN.');
@@ -300,70 +291,54 @@ async function main() {
     process.exit(1);
   }
 
-  // Get Spotify URLs
+  // Get Spotify URLs and optional lyrics
   let spotifyUrls = [];
+  let providedLyrics = null;
 
   if (process.argv.length > 2) {
     // Local mode: URL provided as argument
     spotifyUrls = [process.argv[2]];
-    console.log('📍 Running in local mode\n');
+    // Optional lyrics as second argument
+    providedLyrics = process.argv[3] || null;
   } else {
     // GitHub Actions mode: Extract from event
     spotifyUrls = extractSpotifyUrlsFromGitHub();
-    console.log('🤖 Running in GitHub Actions mode\n');
   }
 
   if (spotifyUrls.length === 0) {
-    console.log('ℹ️  No Spotify track URLs found. Nothing to do.');
     process.exit(0);
   }
-
-  console.log(`Found ${spotifyUrls.length} Spotify URL(s):\n`);
-  spotifyUrls.forEach((url, i) => console.log(`  ${i + 1}. ${url}`));
-  console.log('');
 
   // Process each URL
   for (const url of spotifyUrls) {
     try {
-      console.log(`\n🎧 Processing: ${url}\n`);
-
       // Extract track ID
       const trackId = extractTrackId(url);
-      console.log(`   Track ID: ${trackId}`);
 
       // Get Spotify access token
-      console.log('   Getting Spotify access token...');
       const accessToken = await getSpotifyAccessToken();
 
       // Fetch track metadata
-      console.log('   Fetching track metadata...');
       const track = await getTrackMetadata(trackId, accessToken);
 
       // Fetch artist metadata (for genres)
-      console.log('   Fetching artist metadata...');
       const artist = await getArtistMetadata(track.artists[0].id, accessToken);
 
-      // Fetch lyrics from Genius
-      const lyrics = await fetchLyrics(track.name, artist.name);
+      // Use provided lyrics or null
+      const lyrics = providedLyrics;
 
       // Generate AI review
-      console.log('   Generating AI review...');
       const review = await generateReview(track, artist, lyrics);
 
       // Create markdown file
-      console.log('   Creating markdown file...');
       createMarkdownFile(track, artist, review, lyrics);
 
-      console.log('\n✨ Done!\n');
-
     } catch (error) {
-      console.error(`\n❌ Error processing ${url}:`, error.message);
+      console.error(`❌ Error processing ${url}:`, error.message);
       console.error(error.stack);
       process.exit(1);
     }
   }
-
-  console.log(`\n🎉 Successfully generated ${spotifyUrls.length} review(s)!\n`);
 }
 
 main();
