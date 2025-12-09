@@ -7,6 +7,10 @@ on:
         description: 'Spotify Track URL'
         required: true
         type: string
+      lyrics:
+        description: 'Song lyrics (optional)'
+        required: false
+        type: string
 
 jobs:
   generate-review:
@@ -34,7 +38,12 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}"
+        run: |
+          if [ -n "${{ inputs.lyrics }}" ]; then
+            node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}" "${{ inputs.lyrics }}"
+          else
+            node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}"
+          fi
 
       - name: Commit and push review
         run: |
