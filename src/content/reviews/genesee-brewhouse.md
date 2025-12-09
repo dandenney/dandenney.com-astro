@@ -9,7 +9,7 @@ heroImage: "genesee-brew-house"
 heroImageAttribution: "Tripadvisor photo provided by Lathkill"
 heroImageUrl: "https://www.tripadvisor.com/Attraction_Review-g48503-d3512225-Reviews-Genesee_Brew_House-Rochester_Finger_Lakes_New_York.html#/media/3512225/?type=ALL_INCLUDING_RESTRICTED&albumid=-160&category=-160"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g48503-d10215321-Reviews-Genesee_Brewhouse-Rochester_Finger_Lakes_New_York.html"
-pubDate: 2025-12-09
+pubDate: 2025-12-06
 state: "new-york"
 tags: [brewery]
 title: "Genesee Brewhouse"

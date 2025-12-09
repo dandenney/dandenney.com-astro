@@ -7,7 +7,7 @@ description: Highland Park Diner offers hearty meals like Reuben Benedict and st
 heroImageAlt: "Photo of Highland Park Diner"
 heroImage: "highland-park-diner"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g48503-d1234567-Reviews-Highland_Park_Diner-Rochester_Finger_Lakes_New_York.html"
-pubDate: 2025-12-09
+pubDate: 2025-12-07
 state: "new-york"
 tags: [diner, breakfast]
 title: "Highland Park Diner"

@@ -7,7 +7,7 @@ description: Despite flight delays, the AC Hotel Arlington offered exceptional s
 heroImageAlt: "Photo of a chicken BLT"
 heroImage: "ac-hotel-arlington"
 infoUrl: "https://www.tripadvisor.com/Hotel_Review-g30242-d12345678-Reviews-AC_Hotel_Arlington-Arlington_Virginia.html"
-pubDate: 2025-12-09
+pubDate: 2025-12-07
 state: "virginia"
 tags: [american, hotel]
 title: "AC Hotel Arlington"
