@@ -4,17 +4,17 @@ city: "virginia"
 coordinates: -77.0715, 38.8873
 country: United States
 description: Despite flight delays, the AC Hotel Arlington offered exceptional service and delicious Roasted Chicken BLT.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of a chicken BLT"
+heroImage: "ac-hotel-arlington"
 infoUrl: "https://www.tripadvisor.com/Hotel_Review-g30242-d12345678-Reviews-AC_Hotel_Arlington-Arlington_Virginia.html"
 pubDate: 2025-12-09
 state: "virginia"
-tags: [american-cuisine, hotel-dining, travel-experience]
+tags: [american, hotel]
 title: "AC Hotel Arlington"
 aiGenerated: true
 ---
 
-Stuck in an airport purgatory, our flight delayed longer than a bad movie, we found ourselves wandering into the AC Hotel Arlington. The kind of place you might dismiss at first glance, but where serendipity can strike. It was here that we stumbled upon a Roasted Chicken BLT, a dish that was a surprising revelation, a beacon of comfort in an otherwise frustrating travel day.
+Stuck in DC, our flight rescheduled to the next morning, we found ourselves wandering into the AC Hotel Arlington. The kind of place you might dismiss at first glance, but where serendipity can strike. It was here that we stumbled upon a Roasted Chicken BLT, a dish that was a surprising revelation, a beacon of comfort in an otherwise frustrating travel day.
 
 The sandwich arrived like a warm hug, its rustic presentation promising something far beyond the usual airport fare. Each bite was a harmonious blend of crispy bacon, fresh lettuce, perfectly seasoned roasted chicken, and ripe tomatoes, all ensconced in bread that had been toasted just right—golden, warm, and inviting. The flavors mingled together like old friends, each ingredient playing its part beautifully, elevating the simple concept of a sandwich into something memorable.
 
