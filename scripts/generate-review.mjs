@@ -10,7 +10,7 @@
  *
  * Usage:
  *   GitHub Actions: Triggered by workflow dispatch
- *   Local: node scripts/generate-review.mjs --location "Place Name" --city "city" --state "state" --country "Country" --items "item1, item2, item3"
+ *   Local: node scripts/generate-review.mjs --location "Place Name" --city "city" --items "item1, item2, item3"
  */
 
 import fs from 'fs';
@@ -39,7 +39,7 @@ function parseArguments() {
   }
 
   // Validate required parameters
-  const required = ['location', 'city', 'country', 'items'];
+  const required = ['location', 'city', 'items'];
   for (const param of required) {
     if (!params[param]) {
       throw new Error(`Missing required parameter: --${param}`);
@@ -50,29 +50,22 @@ function parseArguments() {
 }
 
 /**
- * Search TripAdvisor for location information
+ * Search for location information using AI
  */
-async function searchTripAdvisor(location, city, state, country) {
+async function searchLocationInfo(location, city) {
   try {
-    // Construct search query
-    const searchQuery = `${location} ${city} ${state || ''} ${country} site:tripadvisor.com`;
-
-    console.log(`   Searching TripAdvisor for: ${location}, ${city}...`);
-
-    // Use a general web search to find the TripAdvisor page
-    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
-
-    // For now, we'll use AI to help search and extract info
-    const prompt = `Search for "${location}" in ${city}${state ? `, ${state}` : ''}, ${country} on TripAdvisor.
+    const prompt = `Search for "${location}" in ${city}.
 
 Based on your knowledge, provide:
 1. The most likely TripAdvisor URL for this location
 2. Street address if known
 3. Coordinates in the format: longitude, latitude (e.g., "-71.1167, 42.3736")
+4. State/province (if applicable)
+5. Country
 
-If this is a well-known establishment, provide accurate information. If uncertain, indicate that in the response.
+If this is a well-known establishment, provide accurate information. If uncertain, make your best inference based on the city name.
 
-Return as JSON with fields: infoUrl, address, coordinates (or null if unknown)`;
+Return as JSON with fields: infoUrl, address, coordinates, state, country (use null for unknown fields)`;
 
     const response = await fetch(OPENAI_ENDPOINT, {
       method: 'POST',
@@ -85,7 +78,7 @@ Return as JSON with fields: infoUrl, address, coordinates (or null if unknown)`;
         messages: [
           {
             role: 'system',
-            content: 'You are a location research assistant. Provide accurate TripAdvisor URLs, addresses, and coordinates for restaurants and attractions. Return data as JSON.',
+            content: 'You are a location research assistant. Provide accurate information about restaurants and attractions including their geographic details. Return data as JSON.',
           },
           {
             role: 'user',
@@ -93,7 +86,7 @@ Return as JSON with fields: infoUrl, address, coordinates (or null if unknown)`;
           },
         ],
         temperature: 0.3,
-        max_tokens: 200,
+        max_tokens: 300,
         response_format: { type: "json_object" },
       }),
     });
@@ -101,13 +94,13 @@ Return as JSON with fields: infoUrl, address, coordinates (or null if unknown)`;
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(`OpenAI API error (TripAdvisor search): ${data.error?.message || 'Unknown error'}`);
+      throw new Error(`OpenAI API error (location search): ${data.error?.message || 'Unknown error'}`);
     }
 
     return JSON.parse(data.choices[0].message.content.trim());
   } catch (error) {
-    console.warn(`   ⚠️  TripAdvisor search failed: ${error.message}`);
-    return { infoUrl: null, address: null, coordinates: null };
+    console.warn(`   ⚠️  Location search failed: ${error.message}`);
+    return { infoUrl: null, address: null, coordinates: null, state: null, country: null };
   }
 }
 
@@ -115,20 +108,19 @@ Return as JSON with fields: infoUrl, address, coordinates (or null if unknown)`;
  * Generate metadata using OpenAI API (Step 1)
  */
 async function generateMetadata(params) {
-  // First, try to get TripAdvisor info
-  const tripAdvisorInfo = await searchTripAdvisor(
-    params.location,
-    params.city,
-    params.state,
-    params.country
-  );
+  // First, get location info
+  const locationInfo = await searchLocationInfo(params.location, params.city);
+
+  // Use location info to fill in state/country if not provided
+  params.state = params.state || locationInfo.state;
+  params.country = params.country || locationInfo.country;
 
   const prompt = `You are analyzing a location for a food/travel review. Based on the following information, generate metadata:
 
 Location: ${params.location}
 City: ${params.city}
 ${params.state ? `State: ${params.state}` : ''}
-Country: ${params.country}
+${params.country ? `Country: ${params.country}` : ''}
 Items experienced: ${params.items}
 
 Generate the following in JSON format:
@@ -169,12 +161,12 @@ Return ONLY valid JSON with these fields. Be concise and accurate.`;
 
   const aiMetadata = JSON.parse(data.choices[0].message.content.trim());
 
-  // Merge TripAdvisor info with AI-generated metadata
+  // Merge location info with AI-generated metadata
   return {
     ...aiMetadata,
-    address: tripAdvisorInfo.address,
-    coordinates: tripAdvisorInfo.coordinates,
-    infoUrl: tripAdvisorInfo.infoUrl,
+    address: locationInfo.address,
+    coordinates: locationInfo.coordinates,
+    infoUrl: locationInfo.infoUrl,
   };
 }
 
@@ -251,8 +243,8 @@ city: "${params.city}"
 ${metadata.coordinates ? `coordinates: ${metadata.coordinates}` : '# coordinates: 0, 0'}
 country: ${params.country}
 description: ${metadata.description}
-${metadata.heroImage ? `heroImage: ${metadata.heroImage}` : `# heroImage: ${slug}`}
-${metadata.heroImageAlt ? `heroImageAlt: '${metadata.heroImageAlt.replace(/'/g, "\\'")}'` : `# heroImageAlt: 'Photo of ${params.location}'`}
+heroImageAlt: "Placeholder image"
+heroImage: "placeholder"
 ${metadata.infoUrl ? `infoUrl: "${metadata.infoUrl}"` : '# infoUrl: ""'}
 pubDate: ${new Date().toISOString().split('T')[0]}
 ${params.state ? `state: ${params.state.toLowerCase()}` : '# state: ""'}

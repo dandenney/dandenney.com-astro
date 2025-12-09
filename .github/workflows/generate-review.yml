@@ -11,14 +11,6 @@ on:
         description: 'City (e.g., "nashville")'
         required: true
         type: string
-      state:
-        description: 'State (e.g., "tennessee") - optional for international'
-        required: false
-        type: string
-      country:
-        description: 'Country (e.g., "United States")'
-        required: true
-        type: string
       items:
         description: 'Food/drink/activities (comma-separated, e.g., "hot chicken, whiskey sour, live music")'
         required: true
@@ -51,8 +43,6 @@ jobs:
           node scripts/generate-review.mjs \
             --location "${{ inputs.location }}" \
             --city "${{ inputs.city }}" \
-            --state "${{ inputs.state }}" \
-            --country "${{ inputs.country }}" \
             --items "${{ inputs.items }}"
 
       - name: Commit and push review
