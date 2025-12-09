@@ -239,7 +239,7 @@ function createMarkdownFile(params, metadata, review) {
 
   const frontmatter = `---
 ${metadata.address ? `address: "${metadata.address.replace(/"/g, '\\"')}"` : '# address: ""'}
-city: "${params.city}"
+city: "${params.city.toLowerCase()}"
 ${metadata.coordinates ? `coordinates: ${metadata.coordinates}` : '# coordinates: 0, 0'}
 country: ${params.country}
 description: ${metadata.description}
@@ -247,8 +247,8 @@ heroImageAlt: "Placeholder image"
 heroImage: "placeholder"
 ${metadata.infoUrl ? `infoUrl: "${metadata.infoUrl}"` : '# infoUrl: ""'}
 pubDate: ${new Date().toISOString().split('T')[0]}
-${params.state ? `state: ${params.state.toLowerCase()}` : '# state: ""'}
-tags: ${JSON.stringify(metadata.tags)}
+${params.state ? `state: "${params.state.toLowerCase().replace(/\s+/g, '-')}"` : '# state: ""'}
+tags: [${metadata.tags.join(', ')}]
 title: "${params.location.replace(/"/g, '\\"')}"
 aiGenerated: true
 ---

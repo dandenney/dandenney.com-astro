@@ -1,20 +1,22 @@
 ---
 address: "1150 South Ave, Rochester, NY 14620"
-city: "Rochester, NY"
+city: "rochester"
 coordinates: -77.5855, 43.1343
 country: United States
 description: Highland Park Diner offers hearty meals like Reuben Benedict and steak sandwiches in a cozy setting.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of Highland Park Diner"
+heroImage: "highland-park-diner"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g48503-d1234567-Reviews-Highland_Park_Diner-Rochester_Finger_Lakes_New_York.html"
 pubDate: 2025-12-09
-state: new york
-tags: ["diner-food","breakfast","brunch","comfort-food"]
+state: "new-york"
+tags: [diner, breakfast]
 title: "Highland Park Diner"
 aiGenerated: true
 ---
 
 There's something undeniably alluring about the faded charm of a diner, a refuge for the weary traveler and the local who knows exactly where to find comfort in a plate. Highland Park Diner in Rochester, NY, embodies that spirit, the kind of place where the coffee is strong, the waitstaff crack jokes like it’s their job—and it is—and the food is unapologetically straightforward. It's a world away from the pretentious complexity of haute cuisine, and that’s precisely why you’re here.
+
+![Photo of a mixed drink](/no-reserv-ai-tions/highland-park-diner-benedict.webp)
 
 Let’s talk about the Reuben Benedict. It’s a glorious chaos of flavors, a twist on the classic that manages to be both indulgent and satisfying. Picture perfectly poached eggs resting on a mound of corned beef, delicately draped with hollandaise that dances across the plate like a jazz riff. The hash browns, crisped to golden perfection, lend a homey crunch that complements the silken richness of the dish. It’s breakfast elevated but not so much that it forgets its roots—this is no fancy brunch but a hearty embrace that warms the soul on a chilly Rochester morning.
 

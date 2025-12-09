@@ -1,15 +1,17 @@
 ---
 address: "150 Doran Street, Rochester, NY 14609"
-city: "Rochester"
+city: "rochester"
 coordinates: -77.5883, 43.1571
 country: United States
 description: Enjoy refreshing Genny Cream Ale and Verna Cream Ale at this vibrant Rochester brewery.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of the street new Genesee Brewhouse"
+heroImage: "genesee-brew-house"
+heroImageAttribution: "Tripadvisor photo provided by Lathkill"
+heroImageUrl: "https://www.tripadvisor.com/Attraction_Review-g48503-d3512225-Reviews-Genesee_Brew_House-Rochester_Finger_Lakes_New_York.html#/media/3512225/?type=ALL_INCLUDING_RESTRICTED&albumid=-160&category=-160"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g48503-d10215321-Reviews-Genesee_Brewhouse-Rochester_Finger_Lakes_New_York.html"
 pubDate: 2025-12-09
-state: new york
-tags: ["craft-beer","brewery","local-brew","food-and-drink"]
+state: "new-york"
+tags: [brewery]
 title: "Genesee Brewhouse"
 aiGenerated: true
 ---
