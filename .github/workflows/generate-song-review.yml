@@ -38,12 +38,8 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          if [ -n "${{ inputs.lyrics }}" ]; then
-            node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}" "${{ inputs.lyrics }}"
-          else
-            node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}"
-          fi
+          SONG_LYRICS: ${{ inputs.lyrics }}
+        run: node scripts/generate-song-review.mjs "${{ inputs.spotify_url }}"
 
       - name: Commit and push review
         run: |

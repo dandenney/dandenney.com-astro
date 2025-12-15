@@ -7,12 +7,14 @@
  * Can be run via GitHub Actions or locally
  *
  * Usage:
- *   GitHub Actions: Triggered by PR comments containing Spotify URLs
+ *   GitHub Actions: Triggered by workflow with lyrics passed via SONG_LYRICS env var
  *   Local: node scripts/generate-song-review.mjs <spotify-url> [lyrics]
+ *     OR: SONG_LYRICS="lyrics here" node scripts/generate-song-review.mjs <spotify-url>
  *
  *   If lyrics are provided, they'll be included in the review prompt.
- *   Lyrics should be passed as a quoted string:
- *   node scripts/generate-song-review.mjs "https://..." "verse 1 lyrics\nchorus lyrics..."
+ *   Lyrics can be passed as:
+ *   - Command line argument: node scripts/generate-song-review.mjs "https://..." "verse 1 lyrics\nchorus lyrics..."
+ *   - Environment variable: SONG_LYRICS="verse 1 lyrics\nchorus lyrics..." node scripts/generate-song-review.mjs "https://..."
  */
 
 import fs from 'fs';
@@ -28,6 +30,7 @@ const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 const SPOTIFY_REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const GITHUB_EVENT_PATH = process.env.GITHUB_EVENT_PATH;
+const SONG_LYRICS = process.env.SONG_LYRICS;
 
 // Spotify API endpoints
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
@@ -298,11 +301,13 @@ async function main() {
   if (process.argv.length > 2) {
     // Local mode: URL provided as argument
     spotifyUrls = [process.argv[2]];
-    // Optional lyrics as second argument
-    providedLyrics = process.argv[3] || null;
+    // Optional lyrics as second argument or from environment variable
+    providedLyrics = process.argv[3] || SONG_LYRICS || null;
   } else {
     // GitHub Actions mode: Extract from event
     spotifyUrls = extractSpotifyUrlsFromGitHub();
+    // Use lyrics from environment variable if available
+    providedLyrics = SONG_LYRICS || null;
   }
 
   if (spotifyUrls.length === 0) {
