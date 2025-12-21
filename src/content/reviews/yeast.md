@@ -4,12 +4,12 @@ city: "nashville"
 coordinates: -86.3600, 36.2020
 country: United States
 description: Yeast offers delightful kolaches and coffee in a cozy Nashville atmosphere.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of a kolache"
+heroImage: "yeast"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d19912382-Reviews-Yeast-Nashville_Tennessee.html"
 pubDate: 2025-12-20
 state: "tennessee"
-tags: [kolaches, cafe, breakfast, nashville]
+tags: [kolaches, cafe, breakfast]
 title: "Yeast"
 aiGenerated: true
 ---

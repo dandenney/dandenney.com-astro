@@ -4,12 +4,12 @@ city: "nashville"
 coordinates: -86.6883, 36.2091
 country: United States
 description: Experience authentic Bavarian flavors and craft beers in a lively Nashville setting.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of large mugs of beer"
+heroImage: "bavarian-bierhaus"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d12345678-Reviews-Bavarian_Bierhaus-Nashville_Tennessee.html"
-pubDate: 2025-12-21
+pubDate: 2025-12-20
 state: "tennessee"
-tags: [german-cuisine, beer-tasting, casual-dining]
+tags: [german]
 title: "Bavarian Bierhaus"
 aiGenerated: true
 ---
