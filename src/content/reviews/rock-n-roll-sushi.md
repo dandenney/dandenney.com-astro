@@ -4,12 +4,12 @@ city: "nashville"
 coordinates: -86.7886, 36.1503
 country: United States
 description: Rock n Roll Sushi offers a vibrant twist on classic sushi in Nashville.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of tuna tartare"
+heroImage: "rock-n-roll-sushi"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d12345678-Reviews-Rock_n_Roll_Sushi-Nashville_Tennessee.html"
-pubDate: 2026-01-11
+pubDate: 2026-01-09
 state: "tennessee"
-tags: [sushi, japanese-cuisine, food-review, nashville-eats]
+tags: [sushi, japanese]
 title: "Rock n Roll Sushi"
 aiGenerated: true
 ---

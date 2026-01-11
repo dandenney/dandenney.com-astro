@@ -6854,7 +6854,6 @@ let episodes = {
 };
 
 function buildLocationList(data) {
-  console.log("asd;lkjasd;f");
   data.features.forEach(function(episode, i) {
     /**
      * Create a shortcut for `store.properties`,

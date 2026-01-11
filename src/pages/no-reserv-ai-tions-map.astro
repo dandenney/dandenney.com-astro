@@ -1,0 +1,442 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import toTitleCase from '../helpers/toTitleCase.js';
+
+export const prerender = true;
+
+// Fetch all reviews
+const allReviews = await getCollection('reviews');
+
+// Filter reviews with valid coordinates
+const reviewsWithCoordinates = allReviews.filter(review => {
+  if (!review.data.coordinates) return false;
+
+  try {
+    const parts = review.data.coordinates.split(',');
+    if (parts.length !== 2) return false;
+
+    const [lng, lat] = parts.map(coord => parseFloat(coord.trim()));
+
+    // Validate numeric and in range
+    if (isNaN(lng) || isNaN(lat)) return false;
+    if (lng < -180 || lng > 180 || lat < -90 || lat > 90) return false;
+
+    return true;
+  } catch (error) {
+    return false;
+  }
+});
+
+// Transform to GeoJSON FeatureCollection
+const geoJsonData = {
+  type: "FeatureCollection",
+  features: reviewsWithCoordinates.map((review, index) => {
+    const [lng, lat] = review.data.coordinates.split(',').map(coord => parseFloat(coord.trim()));
+
+    return {
+      type: "Feature",
+      properties: {
+        id: index,
+        title: review.data.title,
+        city: review.data.city,
+        state: review.data.state || '',
+        country: review.data.country,
+        address: review.data.address || '',
+        description: review.data.description,
+        tags: review.data.tags.join(', '),
+        url: `/no-reserv-ai-tions/${review.slug}/`,
+        pubDate: review.data.pubDate.toISOString()
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [lng, lat]
+      }
+    };
+  })
+};
+
+// Extract unique states and cities for filters
+const states = [...new Set(reviewsWithCoordinates
+  .filter(r => r.data.state)
+  .map(r => r.data.state))].sort();
+
+const cities = [...new Set(reviewsWithCoordinates
+  .map(r => r.data.city))].sort();
+
+const pageTitle = "No ReservAItions Map";
+const pageDescription = "Interactive map of all No ReservAItions restaurant reviews";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+      .flex-container {
+        display: flex;
+        min-height: 90vh;
+      }
+
+      /* Map */
+      #map {
+        flex: 1;
+        height: 90vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 400px;
+        padding: 1.5rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .count {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Filters */
+      .filters {
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid;
+      }
+
+      .filters label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-top: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .filters label:first-child {
+        margin-top: 0;
+      }
+
+      .filters select {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+      }
+
+      .filters select:focus {
+        outline: 2px solid #b91c1b;
+        outline-offset: 2px;
+      }
+
+      .dark .filters select:focus {
+        outline-color: #fda5a5;
+      }
+
+      .filters button {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .filters button:hover {
+        transform: scale(1.02);
+      }
+
+      /* Listings */
+      .listings {
+        flex: 1;
+        overflow-y: auto;
+      }
+
+      .listing-item {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 2px solid transparent;
+      }
+
+      .listing-item:hover {
+        border-color: #b91c1b;
+        transform: translateX(4px);
+      }
+
+      .dark .listing-item:hover {
+        border-color: #fda5a5;
+      }
+
+      .listing-item.active {
+        border-color: #b91c1b;
+      }
+
+      .dark .listing-item.active {
+        border-color: #fda5a5;
+      }
+
+      .listing-item h3 {
+        margin: 0 0 0.25rem 0;
+        font-size: 1.5rem;
+        font-weight: 900;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: -0.025em;
+      }
+
+      .listing-item .location {
+        font-size: 0.75rem;
+        margin: 0 0 0.75rem 0;
+        font-weight: 600;
+      }
+
+      .listing-item .description {
+        font-size: 1rem;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .listing-item .tags {
+        font-size: 0.6875rem;
+        margin-bottom: 0.75rem;
+        opacity: 0.7;
+        text-transform: lowercase;
+      }
+
+      .listing-item .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .listing-item a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      .listing-item a:hover {
+        opacity: 0.8;
+      }
+
+      .fly-button {
+        background: transparent;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .fly-button:hover {
+        transform: scale(1.2);
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .empty-state button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      /* Mapbox Popup Customization - Light mode */
+      .mapboxgl-popup-content {
+        background: #ffffff !important;
+        color: #1e293b;
+        font-family: inherit;
+        padding: 1rem !important;
+        border-radius: 0.5rem;
+        max-width: 300px;
+      }
+
+      /* Dark mode popup */
+      .dark .mapboxgl-popup-content {
+        background: #0f172a !important;
+        color: #e2e8f0;
+      }
+
+      .popup-content h3 {
+        margin: 0 0 0.375rem 0;
+        font-size: 1.75rem;
+        font-weight: 900;
+        line-height: 1.1;
+        text-transform: uppercase;
+        letter-spacing: -0.025em;
+      }
+
+      .popup-content .location {
+        font-size: 0.8125rem;
+        margin: 0 0 0.25rem 0;
+        font-weight: 600;
+      }
+
+      .popup-content .address {
+        font-size: 0.6875rem;
+        margin: 0 0 1rem 0;
+        opacity: 0.8;
+      }
+
+      .popup-content .description {
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+        line-height: 1.5;
+      }
+
+      .popup-content .tags {
+        font-size: 0.6875rem;
+        margin-bottom: 1rem;
+        opacity: 0.7;
+        text-transform: lowercase;
+      }
+
+      .popup-content .view-review {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        background-color: currentColor;
+        transition: all 0.2s;
+      }
+
+      .popup-content .view-review:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
+      }
+
+      /* Popup tips - Light mode */
+      .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+        border-bottom-color: #ffffff !important;
+      }
+
+      .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+        border-top-color: #ffffff !important;
+      }
+
+      .mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+        border-right-color: #ffffff !important;
+      }
+
+      .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+        border-left-color: #ffffff !important;
+      }
+
+      /* Popup tips - Dark mode */
+      .dark .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+        border-bottom-color: #0f172a !important;
+      }
+
+      .dark .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+        border-top-color: #0f172a !important;
+      }
+
+      .dark .mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+        border-right-color: #0f172a !important;
+      }
+
+      .dark .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+        border-left-color: #0f172a !important;
+      }
+
+      .mapboxgl-popup-close-button {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .flex-container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          max-height: 50vh;
+          order: 2;
+        }
+
+        #map {
+          height: 50vh;
+          order: 1;
+        }
+      }
+
+      /* Screen reader only */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <Header />
+    <main class="bg-white dark:bg-slate-900 dark:text-slate-200 flex-container shadow relative z-10">
+      <div class="sidebar bg-gray-50 dark:bg-slate-800">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{pageTitle}</h1>
+        <p class="count text-gray-600 dark:text-slate-400" id="count">Showing {reviewsWithCoordinates.length} restaurants</p>
+
+        <!-- Filter Controls -->
+        <div class="filters bg-white dark:bg-slate-900 border-gray-200 dark:border-slate-700">
+          <label for="state-filter" class="text-gray-700 dark:text-slate-200">Filter by State:</label>
+          <select id="state-filter" class="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 text-gray-900 dark:text-slate-100">
+            <option value="">All States</option>
+            {states.map(state => (
+              <option value={state}>{toTitleCase(state)}</option>
+            ))}
+          </select>
+
+          <label for="city-filter" class="text-gray-700 dark:text-slate-200">Filter by City:</label>
+          <select id="city-filter" class="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 text-gray-900 dark:text-slate-100">
+            <option value="">All Cities</option>
+            {cities.map(city => (
+              <option value={city}>{toTitleCase(city)}</option>
+            ))}
+          </select>
+
+          <button id="reset-filters" class="bg-red-700 hover:bg-red-800 text-white dark:bg-red-400 dark:hover:bg-red-500 dark:text-slate-900">Reset Filters</button>
+        </div>
+
+        <!-- Scrollable Listings -->
+        <div class="listings" id="listings"></div>
+      </div>
+
+      <div id="map" class="map"></div>
+    </main>
+    <Footer />
+
+    <script is:inline define:vars={{ geoJsonData }}>
+      window.restaurantData = geoJsonData;
+    </script>
+    <script is:inline src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script is:inline src="/js/no-reserv-ai-tions-map/main.js"></script>
+  </body>
+</html>

@@ -4,12 +4,12 @@ city: "nashville"
 coordinates: -86.8006, 36.1551
 country: United States
 description: Enjoy classic American comfort food with delicious burgers and shakes in Nashville.
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
+heroImageAlt: "Photo of a burger with onion rings"
+heroImage: "elliston-place-soda-shop"
 infoUrl: "https://www.tripadvisor.com/Restaurant_Review-g55229-d435850-Reviews-Elliston_Place_Soda_Shop-Nashville_Davidson_County_Tennessee.html"
-pubDate: 2026-01-11
+pubDate: 2026-01-10
 state: "tennessee"
-tags: [american-cuisine, casual-dining, burgers, desserts]
+tags: [american, retro]
 title: "Elliston Place Soda Shop"
 aiGenerated: true
 ---
