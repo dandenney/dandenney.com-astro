@@ -1,6 +1,6 @@
 ---
 address: "4601 Park Blvd"
-city: "pinellas park"
+city: "pinellas-park"
 coordinates: -82.6995, 27.8392
 country: United States
 description: Fast, flavorful comfort food that hits all the right notes.
