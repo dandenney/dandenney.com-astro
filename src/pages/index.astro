@@ -90,7 +90,7 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="pt-8 sm:pt-24">
+      <section class="py-8 sm:py-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h2
@@ -140,6 +140,127 @@ const monthName = getMonthName();
           </div>
           <div class="mt-16 flex justify-center">
             <a href="/posts" class="btn-link">View All Blog Posts</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-8 sm:py-24 bg-slate-50 dark:bg-slate-800">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2
+              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+            >
+              Side Projects
+            </h2>
+            <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-slate-100">
+              Experiments mixing my interests in music, organization, and modern web development
+            </p>
+          </div>
+          <div
+            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          >
+            <article
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+            >
+              <div class="flex items-center gap-x-4 text-xs">
+                <span
+                  class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
+                >
+                  Spotify API
+                </span>
+              </div>
+              <div class="group relative">
+                <h3
+                  class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
+                >
+                  <a href="/music">
+                    <span class="absolute inset-0"></span>
+                    Seasons of Dan
+                  </a>
+                </h3>
+                <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+                  A look at my music listening habits across different time
+                  periods. Using the Spotify API to show my top tracks and
+                  artists from the last 4 weeks, 6 months, and several years.
+                  It's fun to see how my taste evolves over time.
+                </p>
+              </div>
+              <div class="mt-auto">
+                <a href="/music" class="btn-link">View listening history</a>
+              </div>
+            </article>
+
+            <article
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+            >
+              <div class="flex items-center gap-x-4 text-xs">
+                <span
+                  class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
+                >
+                  AI Generated
+                </span>
+              </div>
+              <div class="group relative">
+                <h3
+                  class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
+                >
+                  <a href="/music/reviews">
+                    <span class="absolute inset-0"></span>
+                    Music Reviews
+                  </a>
+                </h3>
+                <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+                  AI-generated reviews of songs I'm listening to. I share a
+                  Spotify link, the lyrics, and ChatGPT automatically analyzes the track's
+                  vibe, production, and emotional impact. It's like having a
+                  music critic on tap.
+                </p>
+              </div>
+              <div class="mt-auto">
+                <a href="/music/reviews" class="btn-link">Read song reviews</a>
+              </div>
+            </article>
+
+            <article
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+            >
+              <div class="flex items-center gap-x-4 text-xs">
+                <span
+                  class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
+                >
+                  Next.js + Supabase
+                </span>
+              </div>
+              <div class="group relative">
+                <h3
+                  class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
+                >
+                  <a
+                    href="https://github.com/dandenney/side-by-side"
+                    target="_blank"
+                    rel="noopener noreferrer"
+              >
+                    <span class="absolute inset-0"></span>
+                    Side by Side
+                  </a>
+                </h3>
+                <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+                  A modern web app for organizing life's upcoming events, shared
+                  links, local places, and shopping lists. Built with Next.js,
+                  TypeScript, and Supabase to consolidate daily life management
+                  in one place.
+                </p>
+              </div>
+              <div class="mt-auto">
+                <a
+                  href="https://github.com/dandenney/side-by-side"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-link"
+                  >View on GitHub</a
+                >
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -242,6 +363,68 @@ const monthName = getMonthName();
                 </p>
               )
             }
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
+          >
+            <div class="w-full lg:max-w-lg lg:flex-auto">
+              <h2
+                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+              >
+                Join the Artificial Intelligencers
+              </h2>
+              <p
+                class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100"
+              >
+                I co-organize this Nashville meetup for anyone from beginners to experts who are willing to share their personal or professional journeys learning, experimenting, developing, and applying AI. We focus on real tools, real demos, and real talk.
+              </p>
+              <div class="mt-10 flex items-center gap-x-6">
+                <a
+                  href="https://www.meetup.com/artificialintelligencers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-link"
+                >
+                  Join on Meetup
+                </a>
+                <a
+                  href="https://www.nashvilleaiengineering.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-100"
+                >
+                  Visit our website <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+            <div class="w-full lg:max-w-xl lg:flex-auto">
+              <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <div class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600">
+                  <dt class="text-sm leading-6 text-gray-600 dark:text-slate-300">
+                    Members
+                  </dt>
+                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100">
+                    190+
+                  </dd>
+                </div>
+                <div class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600">
+                  <dt class="text-sm leading-6 text-gray-600 dark:text-slate-300">
+                    Location
+                  </dt>
+                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100">
+                    Nashville
+                  </dd>
+                </div>
+              </div>
+              <p class="mt-8 text-base leading-7 text-gray-600 dark:text-slate-300">
+                Our monthly events feature 15-20 minute presentations and demos, plus plenty of time for networking and collaboration. Whether you're sharing workflow automation, artistic applications, or research deep-dives, everyone's welcome.
+              </p>
+            </div>
           </div>
         </div>
       </section>
