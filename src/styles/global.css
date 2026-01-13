@@ -104,9 +104,32 @@
 .longform a:focus,
 .has-links a:focus,
 .longform a:hover,
-.has-links a:hover {
+.has-links a:hover,
+.has-links h3:hover {
   background-size: 100% 100%;
   cursor: pointer;
+}
+
+.has-links h3 {
+  @apply bg-no-repeat font-semibold no-underline text-red-700;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 90%,
+    #b91c1c 0
+  ); /* red-700 */
+  background-size: 0% 100%;
+  transition: background-size 0.4s ease;
+}
+
+.dark .has-links h3 {
+  @apply bg-no-repeat font-semibold no-underline text-red-300;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 90%,
+    #fca5a5 0
+  ); /* red-500 */
+  background-size: 0% 100%;
+  transition: background-size 0.4s ease;
 }
 
 /* RSS Link Override */

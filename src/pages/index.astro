@@ -108,7 +108,7 @@ const monthName = getMonthName();
           >
             {
               posts.map((post) => (
-                <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group">
+                <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-all duration-300 hover:scale-[1.02] hover:shadow-md group">
                   <a
                     href={`/posts/${post.slug}/`}
                     class="absolute inset-0 z-20"
@@ -160,23 +160,23 @@ const monthName = getMonthName();
             class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
             <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
-              <div class="flex items-center gap-x-4 text-xs">
+              <a href="/music" class="absolute inset-0 z-0" aria-label="Seasons of Dan">
+                <span class="sr-only">Seasons of Dan</span>
+              </a>
+              <div class="flex items-center gap-x-4 text-xs relative z-10">
                 <span
                   class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
                 >
                   Spotify API
                 </span>
               </div>
-              <div class="group relative">
+              <div class="group relative z-10">
                 <h3
                   class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
                 >
-                  <a href="/music">
-                    <span class="absolute inset-0"></span>
-                    Seasons of Dan
-                  </a>
+                  Seasons of Dan
                 </h3>
                 <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
                   A look at my music listening habits across different time
@@ -185,29 +185,29 @@ const monthName = getMonthName();
                   It's fun to see how my taste evolves over time.
                 </p>
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto relative z-10">
                 <a href="/music" class="btn-link">View listening history</a>
               </div>
             </article>
 
             <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
-              <div class="flex items-center gap-x-4 text-xs">
+              <a href="/music/reviews" class="absolute inset-0 z-0" aria-label="Music Reviews">
+                <span class="sr-only">Music Reviews</span>
+              </a>
+              <div class="flex items-center gap-x-4 text-xs relative z-10">
                 <span
                   class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
                 >
                   AI Generated
                 </span>
               </div>
-              <div class="group relative">
+              <div class="group relative z-10">
                 <h3
                   class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
                 >
-                  <a href="/music/reviews">
-                    <span class="absolute inset-0"></span>
-                    Music Reviews
-                  </a>
+                  Music Reviews
                 </h3>
                 <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
                   AI-generated reviews of songs I'm listening to. I share a
@@ -216,33 +216,35 @@ const monthName = getMonthName();
                   music critic on tap.
                 </p>
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto relative z-10">
                 <a href="/music/reviews" class="btn-link">Read song reviews</a>
               </div>
             </article>
 
             <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
-              <div class="flex items-center gap-x-4 text-xs">
+              <a
+                href="https://github.com/dandenney/side-by-side"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute inset-0 z-0"
+                aria-label="Side by Side"
+              >
+                <span class="sr-only">Side by Side</span>
+              </a>
+              <div class="flex items-center gap-x-4 text-xs relative z-10">
                 <span
                   class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
                 >
                   Next.js + Supabase
                 </span>
               </div>
-              <div class="group relative">
+              <div class="group relative z-10">
                 <h3
                   class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
                 >
-                  <a
-                    href="https://github.com/dandenney/side-by-side"
-                    target="_blank"
-                    rel="noopener noreferrer"
-              >
-                    <span class="absolute inset-0"></span>
-                    Side by Side
-                  </a>
+                  Side by Side
                 </h3>
                 <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
                   A modern web app for organizing life's upcoming events, shared
@@ -251,7 +253,7 @@ const monthName = getMonthName();
                   in one place.
                 </p>
               </div>
-              <div class="mt-auto">
+              <div class="mt-auto relative z-10">
                 <a
                   href="https://github.com/dandenney/side-by-side"
                   target="_blank"
@@ -322,7 +324,7 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="pb-32 md:pt-16">
+      <section class="py-8 sm:py-24 bg-slate-50 dark:bg-slate-800">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div
             class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
@@ -343,17 +345,27 @@ const monthName = getMonthName();
             </div>
             {
               links.length > 0 ? (
-                <ul class="has-links col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+                <ul class="col-span-2 grid grid-cols-1 gap-8 sm:grid-cols-2">
                   {links.map((link) => (
                     <li>
-                      <a class="text-base leading-7" href={link.url}>
-                        {link.title}
-                      </a>
-                      {link.notes && (
-                        <span class="block text-sm dark:text-slate-300">
-                          {link.notes}
-                        </span>
-                      )}
+                      <article
+                        class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 dark:bg-slate-900 dark:ring-slate-700"
+                      >
+                        <div>
+                          <h3
+                            class="font-semibold leading-6 has-links"
+                          >
+                            <a href={link.url} class="text-red-700 dark:text-red-400 no-underline">
+                              {link.title}
+                            </a>
+                          </h3>
+                          {link.notes && (
+                            <p class="mt-2 text-sm leading-7 text-gray-600 dark:text-slate-300"> 
+                              {link.notes}
+                            </p>
+                          )}
+                        </div>
+                      </article>
                     </li>
                   ))}
                 </ul>
