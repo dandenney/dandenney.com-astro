@@ -1,0 +1,414 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const title = "Roulettingale Generator";
+const description = "Simulate the Martingale betting system on roulette and track results over time";
+
+const casinos = [
+  { name: "MGM", minBet: 25, maxBet: 10000 },
+  { name: "Beau Rivage", minBet: 10, maxBet: 10000 },
+  { name: "Mirage", minBet: 25, maxBet: 20000 },
+];
+
+const betTypes = [
+  { value: "red", label: "Red" },
+  { value: "black", label: "Black" },
+  { value: "even", label: "Even" },
+  { value: "odd", label: "Odd" },
+  { value: "1-18", label: "1-18" },
+  { value: "19-36", label: "19-36" },
+  { value: "random", label: "Random" },
+];
+
+// Roulette wheel data (American roulette with 0 and 00)
+const wheelNumbers = [
+  { number: 0, color: "green" },
+  { number: "00", color: "green" },
+  { number: 1, color: "red" },
+  { number: 2, color: "black" },
+  { number: 3, color: "red" },
+  { number: 4, color: "black" },
+  { number: 5, color: "red" },
+  { number: 6, color: "black" },
+  { number: 7, color: "red" },
+  { number: 8, color: "black" },
+  { number: 9, color: "red" },
+  { number: 10, color: "black" },
+  { number: 11, color: "black" },
+  { number: 12, color: "red" },
+  { number: 13, color: "black" },
+  { number: 14, color: "red" },
+  { number: 15, color: "black" },
+  { number: 16, color: "red" },
+  { number: 17, color: "black" },
+  { number: 18, color: "red" },
+  { number: 19, color: "red" },
+  { number: 20, color: "black" },
+  { number: 21, color: "red" },
+  { number: 22, color: "black" },
+  { number: 23, color: "red" },
+  { number: 24, color: "black" },
+  { number: 25, color: "red" },
+  { number: 26, color: "black" },
+  { number: 27, color: "red" },
+  { number: 28, color: "black" },
+  { number: 29, color: "black" },
+  { number: 30, color: "red" },
+  { number: 31, color: "black" },
+  { number: 32, color: "red" },
+  { number: 33, color: "black" },
+  { number: 34, color: "red" },
+  { number: 35, color: "black" },
+  { number: 36, color: "red" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      .spin-row {
+        animation: slideIn 0.3s ease-out;
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .number-green { background-color: #16a34a; color: white; }
+      .number-red { background-color: #dc2626; color: white; }
+      .number-black { background-color: #1f2937; color: white; }
+      .win { color: #16a34a; font-weight: 600; }
+      .loss { color: #dc2626; font-weight: 600; }
+      .running { animation: pulse 1s infinite; }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <Header />
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">{title}</h1>
+      <p class="text-gray-600 mb-8">
+        Test the Martingale betting system. Double your bet after each loss until you hit your profit goal or can't cover the next bet.
+        <span class="text-sm italic">(Bet type is cosmetic - all 50/50 bets have identical odds)</span>
+      </p>
+
+      <!-- Setup Form -->
+      <div id="setup-form" class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-xl font-semibold mb-4">Session Setup</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Casino</label>
+            <select id="casino-select" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              {casinos.map((casino) => (
+                <option value={JSON.stringify(casino)}>
+                  {casino.name} (${casino.minBet} - ${casino.maxBet.toLocaleString()})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Profit Goal ($)</label>
+            <input
+              type="number"
+              id="profit-goal"
+              value="100"
+              min="1"
+              class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Bet Type</label>
+            <select id="bet-type" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              {betTypes.map((bet) => (
+                <option value={bet.value}>{bet.label}</option>
+              ))}
+            </select>
+          </div>
+
+          <div class="flex items-end">
+            <button
+              id="run-session"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+            >
+              Run Session
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session Progress -->
+      <div id="session-progress" class="hidden">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold">Session Progress</h2>
+            <div id="session-status" class="text-sm font-medium px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 running">
+              Running...
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 text-center mb-6">
+            <div>
+              <div class="text-2xl font-bold" id="current-profit">$0</div>
+              <div class="text-sm text-gray-500">Current Profit</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold" id="current-bet">$0</div>
+              <div class="text-sm text-gray-500">Current Bet</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold" id="spin-count">0</div>
+              <div class="text-sm text-gray-500">Spins</div>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-3 py-2 text-left">#</th>
+                  <th class="px-3 py-2 text-left">Bet</th>
+                  <th class="px-3 py-2 text-left">Amount</th>
+                  <th class="px-3 py-2 text-center">Number</th>
+                  <th class="px-3 py-2 text-center">Result</th>
+                  <th class="px-3 py-2 text-right">Profit</th>
+                </tr>
+              </thead>
+              <tbody id="spins-table"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Result -->
+      <div id="final-result" class="hidden bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Session Complete</h2>
+        <div id="result-message" class="text-lg mb-4"></div>
+        <button
+          id="new-session"
+          class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+        >
+          Run Another Session
+        </button>
+      </div>
+    </main>
+    <Footer />
+
+    <script define:vars={{ wheelNumbers }}>
+      const wheel = wheelNumbers;
+
+      function spin() {
+        const index = Math.floor(Math.random() * wheel.length);
+        return wheel[index];
+      }
+
+      function getBetTypeForSpin(selectedType) {
+        if (selectedType === 'random') {
+          const types = ['red', 'black', 'even', 'odd', '1-18', '19-36'];
+          return types[Math.floor(Math.random() * types.length)];
+        }
+        return selectedType;
+      }
+
+      function checkWin(result, betType) {
+        const num = result.number;
+
+        // Green always loses for 50/50 bets
+        if (result.color === 'green') return false;
+
+        const numValue = typeof num === 'number' ? num : 0;
+
+        switch (betType) {
+          case 'red': return result.color === 'red';
+          case 'black': return result.color === 'black';
+          case 'even': return numValue % 2 === 0;
+          case 'odd': return numValue % 2 === 1;
+          case '1-18': return numValue >= 1 && numValue <= 18;
+          case '19-36': return numValue >= 19 && numValue <= 36;
+          default: return false;
+        }
+      }
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      async function runSession() {
+        const casinoSelect = document.getElementById('casino-select');
+        const profitGoalInput = document.getElementById('profit-goal');
+        const betTypeSelect = document.getElementById('bet-type');
+        const runButton = document.getElementById('run-session');
+
+        const casino = JSON.parse(casinoSelect.value);
+        const profitGoal = parseInt(profitGoalInput.value, 10);
+        const selectedBetType = betTypeSelect.value;
+        const baseBet = casino.minBet;
+
+        // Disable form
+        runButton.disabled = true;
+
+        // Show progress
+        document.getElementById('setup-form').classList.add('opacity-50');
+        document.getElementById('session-progress').classList.remove('hidden');
+        document.getElementById('final-result').classList.add('hidden');
+
+        // Reset display
+        const spinsTable = document.getElementById('spins-table');
+        spinsTable.innerHTML = '';
+
+        let currentProfit = 0;
+        let currentBet = baseBet;
+        let spins = [];
+        let spinNumber = 0;
+
+        // Run simulation
+        while (currentProfit < profitGoal) {
+          // Check if we can afford the bet
+          if (currentBet > casino.maxBet) {
+            break; // Busted - can't cover the bet
+          }
+
+          spinNumber++;
+          const betType = getBetTypeForSpin(selectedBetType);
+          const thisBet = currentBet; // Capture bet amount before result
+          const result = spin();
+          const won = checkWin(result, betType);
+
+          if (won) {
+            currentProfit += thisBet;
+            currentBet = baseBet; // Reset to base bet
+          } else {
+            currentProfit -= thisBet;
+            currentBet = thisBet * 2; // Double the bet for next spin
+          }
+
+          spins.push({
+            bet: thisBet,
+            betType,
+            number: result.number,
+            color: result.color,
+            win: won,
+            profit: currentProfit
+          });
+
+          // Update display
+          updateDisplay({
+            spinNumber,
+            betType,
+            betAmount: thisBet,
+            number: result.number,
+            color: result.color,
+            won
+          }, currentProfit, currentBet, spinNumber);
+
+          // Wait for dramatic effect
+          await sleep(1000);
+        }
+
+        // Determine outcome
+        const outcome = currentProfit >= profitGoal ? 'goal' : 'busted';
+
+        // Update status
+        const statusEl = document.getElementById('session-status');
+        statusEl.classList.remove('running', 'bg-yellow-100', 'text-yellow-800');
+        if (outcome === 'goal') {
+          statusEl.classList.add('bg-green-100', 'text-green-800');
+          statusEl.textContent = 'Goal Reached!';
+        } else {
+          statusEl.classList.add('bg-red-100', 'text-red-800');
+          statusEl.textContent = 'Busted!';
+        }
+
+        // Save session
+        const sessionData = {
+          casino,
+          profitGoal,
+          betType: selectedBetType,
+          baseBet,
+          spins,
+          outcome,
+          finalProfit: currentProfit,
+          totalSpins: spinNumber
+        };
+
+        try {
+          await fetch('/api/roulettingale-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(sessionData)
+          });
+        } catch (err) {
+          console.error('Failed to save session:', err);
+        }
+
+        // Show final result
+        const resultEl = document.getElementById('final-result');
+        const messageEl = document.getElementById('result-message');
+        resultEl.classList.remove('hidden');
+
+        if (outcome === 'goal') {
+          messageEl.innerHTML = `<span class="win">Success!</span> Hit the $${profitGoal} profit goal in ${spinNumber} spins.`;
+        } else {
+          messageEl.innerHTML = `<span class="loss">Busted!</span> Couldn't cover the next bet ($${currentBet.toLocaleString()}) after ${spinNumber} spins. Final profit: <span class="loss">$${currentProfit.toLocaleString()}</span>`;
+        }
+
+        // Re-enable form
+        runButton.disabled = false;
+        document.getElementById('setup-form').classList.remove('opacity-50');
+      }
+
+      function updateDisplay(spinData, currentProfit, nextBet, spinCount) {
+        // Update stats
+        const profitEl = document.getElementById('current-profit');
+        profitEl.textContent = `$${currentProfit.toLocaleString()}`;
+        profitEl.className = `text-2xl font-bold ${currentProfit >= 0 ? 'win' : 'loss'}`;
+
+        document.getElementById('current-bet').textContent = `$${nextBet.toLocaleString()}`;
+        document.getElementById('spin-count').textContent = spinCount;
+
+        // Add row to table
+        const spinsTable = document.getElementById('spins-table');
+        const row = document.createElement('tr');
+        row.className = 'spin-row border-b border-gray-100';
+        row.innerHTML = `
+          <td class="px-3 py-2">${spinData.spinNumber}</td>
+          <td class="px-3 py-2 capitalize">${spinData.betType}</td>
+          <td class="px-3 py-2">$${spinData.betAmount.toLocaleString()}</td>
+          <td class="px-3 py-2 text-center">
+            <span class="inline-block w-8 h-8 leading-8 rounded-full text-sm font-bold number-${spinData.color}">
+              ${spinData.number}
+            </span>
+          </td>
+          <td class="px-3 py-2 text-center ${spinData.won ? 'win' : 'loss'}">${spinData.won ? 'Win' : 'Loss'}</td>
+          <td class="px-3 py-2 text-right ${currentProfit >= 0 ? 'win' : 'loss'}">$${currentProfit.toLocaleString()}</td>
+        `;
+        spinsTable.insertBefore(row, spinsTable.firstChild);
+      }
+
+      // Event listeners
+      document.getElementById('run-session').addEventListener('click', runSession);
+      document.getElementById('new-session').addEventListener('click', () => {
+        document.getElementById('session-progress').classList.add('hidden');
+        document.getElementById('final-result').classList.add('hidden');
+        const statusEl = document.getElementById('session-status');
+        statusEl.className = 'text-sm font-medium px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 running';
+        statusEl.textContent = 'Running...';
+        runSession();
+      });
+    </script>
+  </body>
+</html>

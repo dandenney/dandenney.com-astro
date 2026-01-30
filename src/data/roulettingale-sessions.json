@@ -1,0 +1,1007 @@
+{
+  "sessions": [
+    {
+      "id": 1,
+      "timestamp": "2026-01-30T04:05:05.041Z",
+      "casino": {
+        "name": "MGM",
+        "minBet": 25,
+        "maxBet": 10000
+      },
+      "profitGoal": 500,
+      "betType": "1-18",
+      "baseBet": 25,
+      "spins": [
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 34,
+          "color": "red",
+          "win": false,
+          "profit": -25
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 26,
+          "color": "black",
+          "win": false,
+          "profit": -75
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 20,
+          "color": "black",
+          "win": false,
+          "profit": -175
+        },
+        {
+          "bet": 200,
+          "betType": "1-18",
+          "number": 17,
+          "color": "black",
+          "win": true,
+          "profit": 25
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 18,
+          "color": "red",
+          "win": true,
+          "profit": 50
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 1,
+          "color": "red",
+          "win": true,
+          "profit": 75
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 6,
+          "color": "black",
+          "win": true,
+          "profit": 100
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 125
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 0,
+          "color": "green",
+          "win": false,
+          "profit": 100
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 8,
+          "color": "black",
+          "win": true,
+          "profit": 150
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 22,
+          "color": "black",
+          "win": false,
+          "profit": 125
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 24,
+          "color": "black",
+          "win": false,
+          "profit": 75
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 2,
+          "color": "black",
+          "win": true,
+          "profit": 175
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 13,
+          "color": "black",
+          "win": true,
+          "profit": 200
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 11,
+          "color": "black",
+          "win": true,
+          "profit": 225
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 9,
+          "color": "red",
+          "win": true,
+          "profit": 250
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 13,
+          "color": "black",
+          "win": true,
+          "profit": 275
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 17,
+          "color": "black",
+          "win": true,
+          "profit": 300
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 11,
+          "color": "black",
+          "win": true,
+          "profit": 325
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 19,
+          "color": "red",
+          "win": false,
+          "profit": 300
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 27,
+          "color": "red",
+          "win": false,
+          "profit": 250
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 11,
+          "color": "black",
+          "win": true,
+          "profit": 350
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 28,
+          "color": "black",
+          "win": false,
+          "profit": 325
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 19,
+          "color": "red",
+          "win": false,
+          "profit": 275
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 33,
+          "color": "black",
+          "win": false,
+          "profit": 175
+        },
+        {
+          "bet": 200,
+          "betType": "1-18",
+          "number": 10,
+          "color": "black",
+          "win": true,
+          "profit": 375
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 35,
+          "color": "black",
+          "win": false,
+          "profit": 350
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 29,
+          "color": "black",
+          "win": false,
+          "profit": 300
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 36,
+          "color": "red",
+          "win": false,
+          "profit": 200
+        },
+        {
+          "bet": 200,
+          "betType": "1-18",
+          "number": 34,
+          "color": "red",
+          "win": false,
+          "profit": 0
+        },
+        {
+          "bet": 400,
+          "betType": "1-18",
+          "number": 12,
+          "color": "red",
+          "win": true,
+          "profit": 400
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 29,
+          "color": "black",
+          "win": false,
+          "profit": 375
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 12,
+          "color": "red",
+          "win": true,
+          "profit": 425
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 27,
+          "color": "red",
+          "win": false,
+          "profit": 400
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 23,
+          "color": "red",
+          "win": false,
+          "profit": 350
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 34,
+          "color": "red",
+          "win": false,
+          "profit": 250
+        },
+        {
+          "bet": 200,
+          "betType": "1-18",
+          "number": 19,
+          "color": "red",
+          "win": false,
+          "profit": 50
+        },
+        {
+          "bet": 400,
+          "betType": "1-18",
+          "number": 26,
+          "color": "black",
+          "win": false,
+          "profit": -350
+        },
+        {
+          "bet": 800,
+          "betType": "1-18",
+          "number": 20,
+          "color": "black",
+          "win": false,
+          "profit": -1150
+        },
+        {
+          "bet": 1600,
+          "betType": "1-18",
+          "number": 20,
+          "color": "black",
+          "win": false,
+          "profit": -2750
+        },
+        {
+          "bet": 3200,
+          "betType": "1-18",
+          "number": 27,
+          "color": "red",
+          "win": false,
+          "profit": -5950
+        },
+        {
+          "bet": 6400,
+          "betType": "1-18",
+          "number": 5,
+          "color": "red",
+          "win": true,
+          "profit": 450
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 6,
+          "color": "black",
+          "win": true,
+          "profit": 475
+        },
+        {
+          "bet": 25,
+          "betType": "1-18",
+          "number": 31,
+          "color": "black",
+          "win": false,
+          "profit": 450
+        },
+        {
+          "bet": 50,
+          "betType": "1-18",
+          "number": 24,
+          "color": "black",
+          "win": false,
+          "profit": 400
+        },
+        {
+          "bet": 100,
+          "betType": "1-18",
+          "number": 31,
+          "color": "black",
+          "win": false,
+          "profit": 300
+        },
+        {
+          "bet": 200,
+          "betType": "1-18",
+          "number": 31,
+          "color": "black",
+          "win": false,
+          "profit": 100
+        },
+        {
+          "bet": 400,
+          "betType": "1-18",
+          "number": 25,
+          "color": "red",
+          "win": false,
+          "profit": -300
+        },
+        {
+          "bet": 800,
+          "betType": "1-18",
+          "number": 6,
+          "color": "black",
+          "win": true,
+          "profit": 500
+        }
+      ],
+      "outcome": "goal",
+      "finalProfit": 500,
+      "totalSpins": 49
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-01-30T04:07:12.681Z",
+      "casino": {
+        "name": "MGM",
+        "minBet": 25,
+        "maxBet": 10000
+      },
+      "profitGoal": 500,
+      "betType": "even",
+      "baseBet": 25,
+      "spins": [
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 5,
+          "color": "red",
+          "win": false,
+          "profit": -25
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 26,
+          "color": "black",
+          "win": true,
+          "profit": 25
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 22,
+          "color": "black",
+          "win": true,
+          "profit": 50
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 15,
+          "color": "black",
+          "win": false,
+          "profit": 25
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 7,
+          "color": "red",
+          "win": false,
+          "profit": -25
+        },
+        {
+          "bet": 100,
+          "betType": "even",
+          "number": 36,
+          "color": "red",
+          "win": true,
+          "profit": 75
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 17,
+          "color": "black",
+          "win": false,
+          "profit": 50
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 3,
+          "color": "red",
+          "win": false,
+          "profit": 0
+        },
+        {
+          "bet": 100,
+          "betType": "even",
+          "number": 3,
+          "color": "red",
+          "win": false,
+          "profit": -100
+        },
+        {
+          "bet": 200,
+          "betType": "even",
+          "number": 11,
+          "color": "black",
+          "win": false,
+          "profit": -300
+        },
+        {
+          "bet": 400,
+          "betType": "even",
+          "number": 16,
+          "color": "red",
+          "win": true,
+          "profit": 100
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 22,
+          "color": "black",
+          "win": true,
+          "profit": 125
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 32,
+          "color": "red",
+          "win": true,
+          "profit": 150
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 5,
+          "color": "red",
+          "win": false,
+          "profit": 125
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 33,
+          "color": "black",
+          "win": false,
+          "profit": 75
+        },
+        {
+          "bet": 100,
+          "betType": "even",
+          "number": 21,
+          "color": "red",
+          "win": false,
+          "profit": -25
+        },
+        {
+          "bet": 200,
+          "betType": "even",
+          "number": 13,
+          "color": "black",
+          "win": false,
+          "profit": -225
+        },
+        {
+          "bet": 400,
+          "betType": "even",
+          "number": 16,
+          "color": "red",
+          "win": true,
+          "profit": 175
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 28,
+          "color": "black",
+          "win": true,
+          "profit": 200
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 225
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 250
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 20,
+          "color": "black",
+          "win": true,
+          "profit": 275
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 30,
+          "color": "red",
+          "win": true,
+          "profit": 300
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 9,
+          "color": "red",
+          "win": false,
+          "profit": 275
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 18,
+          "color": "red",
+          "win": true,
+          "profit": 325
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 16,
+          "color": "red",
+          "win": true,
+          "profit": 350
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 13,
+          "color": "black",
+          "win": false,
+          "profit": 325
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 30,
+          "color": "red",
+          "win": true,
+          "profit": 375
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 26,
+          "color": "black",
+          "win": true,
+          "profit": 400
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 20,
+          "color": "black",
+          "win": true,
+          "profit": 425
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 2,
+          "color": "black",
+          "win": true,
+          "profit": 450
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 19,
+          "color": "red",
+          "win": false,
+          "profit": 425
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 20,
+          "color": "black",
+          "win": true,
+          "profit": 475
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 0,
+          "color": "green",
+          "win": false,
+          "profit": 450
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 500
+        }
+      ],
+      "outcome": "goal",
+      "finalProfit": 500,
+      "totalSpins": 35
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-01-30T04:16:09.377Z",
+      "casino": {
+        "name": "MGM",
+        "minBet": 25,
+        "maxBet": 10000
+      },
+      "profitGoal": 500,
+      "betType": "even",
+      "baseBet": 25,
+      "spins": [
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 25
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 21,
+          "color": "red",
+          "win": false,
+          "profit": 0
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 50
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 9,
+          "color": "red",
+          "win": false,
+          "profit": 25
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 20,
+          "color": "black",
+          "win": true,
+          "profit": 75
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 11,
+          "color": "black",
+          "win": false,
+          "profit": 50
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 21,
+          "color": "red",
+          "win": false,
+          "profit": 0
+        },
+        {
+          "bet": 100,
+          "betType": "even",
+          "number": 30,
+          "color": "red",
+          "win": true,
+          "profit": 100
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 34,
+          "color": "red",
+          "win": true,
+          "profit": 125
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 26,
+          "color": "black",
+          "win": true,
+          "profit": 150
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 26,
+          "color": "black",
+          "win": true,
+          "profit": 175
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 9,
+          "color": "red",
+          "win": false,
+          "profit": 150
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 8,
+          "color": "black",
+          "win": true,
+          "profit": 200
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 2,
+          "color": "black",
+          "win": true,
+          "profit": 225
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 10,
+          "color": "black",
+          "win": true,
+          "profit": 250
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 25,
+          "color": "red",
+          "win": false,
+          "profit": 225
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 25,
+          "color": "red",
+          "win": false,
+          "profit": 175
+        },
+        {
+          "bet": 100,
+          "betType": "even",
+          "number": 32,
+          "color": "red",
+          "win": true,
+          "profit": 275
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 4,
+          "color": "black",
+          "win": true,
+          "profit": 300
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 2,
+          "color": "black",
+          "win": true,
+          "profit": 325
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 21,
+          "color": "red",
+          "win": false,
+          "profit": 300
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 32,
+          "color": "red",
+          "win": true,
+          "profit": 350
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 5,
+          "color": "red",
+          "win": false,
+          "profit": 325
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 8,
+          "color": "black",
+          "win": true,
+          "profit": 375
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": "00",
+          "color": "green",
+          "win": false,
+          "profit": 350
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 7,
+          "color": "red",
+          "win": false,
+          "profit": 300
+        },
+        {
+          "bet": 100,
+          "betType": "even",
+          "number": "00",
+          "color": "green",
+          "win": false,
+          "profit": 200
+        },
+        {
+          "bet": 200,
+          "betType": "even",
+          "number": "00",
+          "color": "green",
+          "win": false,
+          "profit": 0
+        },
+        {
+          "bet": 400,
+          "betType": "even",
+          "number": 24,
+          "color": "black",
+          "win": true,
+          "profit": 400
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 34,
+          "color": "red",
+          "win": true,
+          "profit": 425
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 17,
+          "color": "black",
+          "win": false,
+          "profit": 400
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 30,
+          "color": "red",
+          "win": true,
+          "profit": 450
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 5,
+          "color": "red",
+          "win": false,
+          "profit": 425
+        },
+        {
+          "bet": 50,
+          "betType": "even",
+          "number": 22,
+          "color": "black",
+          "win": true,
+          "profit": 475
+        },
+        {
+          "bet": 25,
+          "betType": "even",
+          "number": 24,
+          "color": "black",
+          "win": true,
+          "profit": 500
+        }
+      ],
+      "outcome": "goal",
+      "finalProfit": 500,
+      "totalSpins": 35
+    }
+  ]
+}
