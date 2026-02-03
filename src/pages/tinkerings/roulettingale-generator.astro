@@ -1,0 +1,1201 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const title = "Roulettingale Generator";
+const description = "Simulate the Martingale betting system on roulette and track results over time";
+
+const casinos = [
+  { name: "MGM", minBet: 25, maxBet: 10000 },
+  { name: "Beau Rivage", minBet: 10, maxBet: 10000 },
+  { name: "Mirage", minBet: 25, maxBet: 20000 },
+];
+
+const betTypes = [
+  { value: "red", label: "Red" },
+  { value: "black", label: "Black" },
+  { value: "even", label: "Even" },
+  { value: "odd", label: "Odd" },
+  { value: "1-18", label: "1-18" },
+  { value: "19-36", label: "19-36" },
+  { value: "random", label: "Random" },
+];
+
+// Roulette wheel data (American roulette with 0 and 00)
+const wheelNumbers = [
+  { number: 0, color: "green" },
+  { number: "00", color: "green" },
+  { number: 1, color: "red" },
+  { number: 2, color: "black" },
+  { number: 3, color: "red" },
+  { number: 4, color: "black" },
+  { number: 5, color: "red" },
+  { number: 6, color: "black" },
+  { number: 7, color: "red" },
+  { number: 8, color: "black" },
+  { number: 9, color: "red" },
+  { number: 10, color: "black" },
+  { number: 11, color: "black" },
+  { number: 12, color: "red" },
+  { number: 13, color: "black" },
+  { number: 14, color: "red" },
+  { number: 15, color: "black" },
+  { number: 16, color: "red" },
+  { number: 17, color: "black" },
+  { number: 18, color: "red" },
+  { number: 19, color: "red" },
+  { number: 20, color: "black" },
+  { number: 21, color: "red" },
+  { number: 22, color: "black" },
+  { number: 23, color: "red" },
+  { number: 24, color: "black" },
+  { number: 25, color: "red" },
+  { number: 26, color: "black" },
+  { number: 27, color: "red" },
+  { number: 28, color: "black" },
+  { number: 29, color: "black" },
+  { number: 30, color: "red" },
+  { number: 31, color: "black" },
+  { number: 32, color: "red" },
+  { number: 33, color: "black" },
+  { number: 34, color: "red" },
+  { number: 35, color: "black" },
+  { number: 36, color: "red" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+
+      body {
+        background: #f9fafb;
+        font-family: 'Lora', Georgia, serif;
+        font-weight: 400;
+        color: #535353;
+        min-height: 100vh;
+      }
+
+      h1, h2, h3, h4, h5 {
+        color: #7a6952;
+        font-family: 'Lora', Georgia, serif;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1.25rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .card {
+        background: #f9faf9;
+        border: 1px solid #d7d2cb;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(122, 105, 82, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+        padding: 2rem;
+      }
+
+      .wheel {
+        display: block;
+        margin: 0 auto 1.5rem;
+        width: 160px;
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+      }
+
+      /* Form inputs */
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      .form-select, .form-input {
+        background: #fff;
+        border: 1px solid #d7d2cb;
+        border-radius: 6px;
+        color: #535353;
+        font-family: 'Lora', Georgia, serif;
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+        width: 100%;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+
+      .form-select:focus, .form-input:focus {
+        outline: none;
+        border-color: #7a6952;
+        box-shadow: 0 0 0 3px rgba(122, 105, 82, 0.15);
+      }
+
+      .form-label {
+        color: #7a6952;
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.6rem;
+        text-transform: uppercase;
+      }
+
+      /* Buttons */
+      .btn {
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: 'Lora', Georgia, serif;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.875rem 1.75rem;
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(180deg, #8a7962 0%, #7a6952 100%);
+        box-shadow: 0 2px 4px rgba(122, 105, 82, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(180deg, #7a6952 0%, #5d4f3d 100%);
+        box-shadow: 0 3px 8px rgba(122, 105, 82, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        transform: translateY(-1px);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+      }
+
+      .btn-primary:disabled {
+        background: #bfbfbf;
+        box-shadow: none;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .btn-success {
+        background: linear-gradient(180deg, #8aaa96 0%, #799985 100%);
+        box-shadow: 0 2px 4px rgba(121, 153, 133, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      .btn-success:hover {
+        background: linear-gradient(180deg, #799985 0%, #588067 100%);
+        box-shadow: 0 3px 8px rgba(121, 153, 133, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        transform: translateY(-1px);
+      }
+
+      /* Stats */
+      .stats-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1.75rem 0;
+      }
+
+      .stat-card {
+        background: linear-gradient(180deg, #fff 0%, #f7f9f7 100%);
+        border: 1px solid #e5e0d9;
+        border-radius: 8px;
+        padding: 1.25rem 1rem;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: #8a8a8a;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      /* Number badges - :global for dynamic content */
+      :global(.number-badge) {
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+        height: 2.25rem;
+        width: 2.25rem;
+      }
+
+      :global(.number-green) {
+        background: linear-gradient(180deg, #6a9575 0%, #588067 100%);
+        color: #fff;
+      }
+      :global(.number-red) {
+        background: linear-gradient(180deg, #d56a54 0%, #c55842 100%);
+        color: #fff;
+      }
+      :global(.number-black) {
+        background: linear-gradient(180deg, #3a4550 0%, #1f2937 100%);
+        color: #fff;
+      }
+
+      /* Win/Loss badges - :global for dynamic content */
+      :global(.result-badge) {
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        height: 1.75rem;
+        width: 1.75rem;
+      }
+
+      :global(.result-win) {
+        background: linear-gradient(180deg, #8aaa96 0%, #799985 100%);
+        box-shadow: 0 1px 3px rgba(121, 153, 133, 0.4);
+        color: #fff;
+      }
+
+      :global(.result-loss) {
+        background: linear-gradient(180deg, #db7a6a 0%, #c55842 100%);
+        box-shadow: 0 1px 3px rgba(197, 88, 66, 0.4);
+        color: #fff;
+      }
+
+      /* Table */
+      .table-wrapper {
+        background: #fff;
+        border: 1px solid #d7d2cb;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        overflow: hidden;
+      }
+
+      .table-scroll {
+        overflow-x: auto;
+        max-height: 450px;
+        overflow-y: auto;
+      }
+
+      .spins-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 0.9rem;
+        width: 100%;
+      }
+
+      .spins-table th {
+        background: linear-gradient(180deg, #f5efd5 0%, #ede3ba 100%);
+        border-bottom: 2px solid #d9cfaa;
+        color: #7a6952;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        padding: 1rem 1rem;
+        position: sticky;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        z-index: 1;
+      }
+
+      .spins-table td {
+        padding: 1rem 1rem;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      /* Use :global for dynamically added rows */
+      :global(.spins-table tbody tr:nth-child(odd) td) {
+        background: #e9efe9;
+      }
+
+      :global(.spins-table tbody tr:nth-child(even) td) {
+        background: #fff;
+      }
+
+      :global(.spins-table tbody tr:nth-child(odd) td:first-child) {
+        border-left: 3px solid #c8d5c8;
+      }
+
+      :global(.spins-table tbody tr:nth-child(even) td:first-child) {
+        border-left: 3px solid transparent;
+      }
+
+      :global(.spins-table tbody tr) {
+        transition: background 0.15s ease;
+      }
+
+      :global(.spins-table tbody tr:hover td) {
+        background: #dce5dc;
+      }
+
+      :global(.spin-row td) {
+        padding: 1rem 1rem;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      :global(.dollars)::before {
+        content: "$";
+        font-size: 80%;
+        opacity: 0.7;
+      }
+
+      :global(.positive) { color: #588067; }
+      :global(.negative) { color: #c55842; }
+
+      /* Status badge */
+      .status-badge {
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        padding: 0.4rem 1rem;
+      }
+
+      .status-running {
+        background: linear-gradient(180deg, #f5efd5 0%, #ede3ba 100%);
+        box-shadow: 0 1px 3px rgba(122, 105, 82, 0.2);
+        color: #7a6952;
+      }
+
+      .status-goal {
+        background: linear-gradient(180deg, #8aaa96 0%, #799985 100%);
+        box-shadow: 0 1px 3px rgba(121, 153, 133, 0.3);
+        color: #fff;
+      }
+
+      .status-busted {
+        background: linear-gradient(180deg, #db7a6a 0%, #c55842 100%);
+        box-shadow: 0 1px 3px rgba(197, 88, 66, 0.3);
+        color: #fff;
+      }
+
+      /* Session history */
+      :global(.session-list) {
+        display: grid;
+        gap: 1rem;
+      }
+
+      :global(.session-item) {
+        background: #f7f9f5;
+        border: 1px solid #dbe4d6;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      :global(.session-item summary) {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: space-between;
+        list-style: none;
+        padding: 1.25rem 1.5rem;
+      }
+
+      :global(.session-item summary::-webkit-details-marker) {
+        display: none;
+      }
+
+      :global(.session-item summary::marker) {
+        content: "";
+      }
+
+      :global(.session-item[open] summary) {
+        background: #f2f6f0;
+        border-bottom: 1px solid #dbe4d6;
+      }
+
+      :global(.session-summary-row) {
+        align-items: center;
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: auto 1fr;
+        width: 100%;
+      }
+
+      :global(.session-badge) {
+        align-items: center;
+        background: #dfe9df;
+        border-radius: 50%;
+        color: #7aa184;
+        display: flex;
+        font-size: 1.1rem;
+        font-weight: 600;
+        height: 64px;
+        justify-content: center;
+        width: 64px;
+      }
+
+      :global(.session-metrics) {
+        display: grid;
+        gap: 0.75rem 1.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media (min-width: 720px) {
+        :global(.session-metrics) {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      :global(.session-metric) {
+        color: #7a6952;
+        display: grid;
+        gap: 0.2rem;
+        font-size: 0.9rem;
+      }
+
+      :global(.session-metric span) {
+        color: #c05c4a;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      :global(.session-toggle) {
+        align-items: center;
+        background: #a24a3a;
+        border-radius: 50%;
+        color: #fff;
+        display: inline-flex;
+        font-size: 1.1rem;
+        font-weight: 700;
+        height: 34px;
+        justify-content: center;
+        width: 34px;
+      }
+
+      :global(.session-toggle::before) {
+        content: "+";
+        line-height: 1;
+      }
+
+      :global(.session-item[open] .session-toggle) {
+        background: #7a8d7a;
+      }
+
+      :global(.session-item[open] .session-toggle::before) {
+        content: "–";
+      }
+
+      :global(.session-body) {
+        padding: 1.25rem 1.5rem 1.75rem;
+      }
+
+      :global(.session-kpis) {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-bottom: 1rem;
+      }
+
+      @media (min-width: 640px) {
+        :global(.session-kpis) {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      :global(.session-kpi) {
+        background: #f2f6f0;
+        border: 1px solid #dbe4d6;
+        border-radius: 8px;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      :global(.session-kpi-value) {
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+
+      :global(.session-kpi-label) {
+        color: #8a8a8a;
+        font-size: 0.65rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      :global(.session-table) {
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 0.9rem;
+        width: 100%;
+      }
+
+      :global(.session-table th) {
+        background: #f2f6f0;
+        border-bottom: 1px solid #dbe4d6;
+        color: #7a6952;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        padding: 0.75rem 0.5rem;
+        position: sticky;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+      }
+
+      :global(.session-table td) {
+        border-bottom: 1px solid #e2e9de;
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      :global(.session-empty) {
+        color: #8a8a8a;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      :global(.session-table tbody tr:nth-child(odd) td) {
+        background: #f7f9f5;
+      }
+
+      :global(.session-table tbody tr:nth-child(even) td) {
+        background: #fbfcfa;
+      }
+
+      :global(.session-table tbody tr:hover td) {
+        background: #eef3ec;
+      }
+
+      /* Progress header */
+      .progress-header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+
+      .progress-header h2 {
+        margin: 0;
+      }
+
+      /* Animations - :global for dynamic content */
+      :global(.spin-row) {
+        animation: slideIn 0.3s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .running {
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+
+      /* Layout helpers */
+      .cell {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 0 1.5rem 2rem;
+      }
+
+      .grid-2 {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 640px) {
+        .grid-2 {
+          gap: 1.5rem;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .text-center { text-align: center; }
+      .mt-1 { margin-top: 1.5rem; }
+      .mt-2 { margin-top: 2.5rem; }
+      .mb-1 { margin-bottom: 1.5rem; }
+      .mb-2 { margin-bottom: 2.5rem; }
+
+      .note {
+        color: #8a8a8a;
+        font-size: 0.8rem;
+        font-style: italic;
+        margin-top: 0.75rem;
+      }
+
+      /* Intro section */
+      .intro {
+        margin-bottom: 2rem;
+      }
+
+      .intro p {
+        color: #6a6a6a;
+        font-size: 1.05rem;
+        margin: 0;
+      }
+
+      /* Final result */
+      .final-result {
+        text-align: center;
+      }
+
+      .final-result h2 {
+        margin-bottom: 1rem;
+      }
+
+      .result-message {
+        background: linear-gradient(180deg, #fff 0%, #f7f9f7 100%);
+        border: 1px solid #e5e0d9;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 0 auto 1.75rem;
+        max-width: 500px;
+        padding: 1.25rem 1.5rem;
+      }
+
+      .hidden { display: none; }
+      .opacity-50 { opacity: 0.5; }
+
+      /* Main content for revealing footer */
+      .main-content {
+        background: linear-gradient(180deg, #e8ede8 0%, #ecf1ec 100%);
+        padding-bottom: 4rem;
+        padding-top: 2rem;
+      }
+
+      .relative { position: relative; }
+      .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); }
+      .z-10 { z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main class="main-content relative shadow-lg z-10">
+      <div class="cell">
+        <div class="text-center intro">
+        <img class="wheel" src="/tinkerings/roulettingale/roulette-wheel.svg" alt="Roulette wheel" />
+        <h1>{title}</h1>
+        <p>
+          Test the Martingale betting system. Double your bet after each loss until you hit your profit goal or bust.
+        </p>
+        <p class="note">Bet type is cosmetic — all 50/50 bets have identical odds (~47.4%)</p>
+      </div>
+
+      <!-- Setup Form -->
+      <div id="setup-form" class="card mt-1">
+        <h2 class="text-center">Session Setup</h2>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label">Casino</label>
+            <select id="casino-select" class="form-select">
+              {casinos.map((casino) => (
+                <option value={JSON.stringify(casino)}>
+                  {casino.name} (${casino.minBet} – ${casino.maxBet.toLocaleString()})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Profit Goal</label>
+            <input
+              type="number"
+              id="profit-goal"
+              value="500"
+              min="1"
+              class="form-input"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Bet Type</label>
+            <select id="bet-type" class="form-select">
+              {betTypes.map((bet) => (
+                <option value={bet.value}>{bet.label}</option>
+              ))}
+            </select>
+          </div>
+
+          <div class="form-group" style="display: flex; align-items: flex-end;">
+            <button id="run-session" class="btn btn-primary" style="width: 100%;">
+              Run Session
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session Progress -->
+      <div id="session-progress" class="hidden">
+        <div class="card mt-2">
+          <div class="progress-header">
+            <h2>Session Progress</h2>
+            <span id="session-status" class="status-badge status-running running">Running...</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value" id="current-profit">$0</div>
+              <div class="stat-label">Current Profit</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="current-bet">$0</div>
+              <div class="stat-label">Next Bet</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="spin-count">0</div>
+              <div class="stat-label">Spins</div>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <div class="table-scroll">
+              <table class="spins-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Bet Type</th>
+                    <th>Amount</th>
+                    <th>Number</th>
+                    <th>Result</th>
+                    <th>Profit</th>
+                  </tr>
+                </thead>
+                <tbody id="spins-table"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Result -->
+      <div id="final-result" class="hidden card mt-2 final-result">
+        <h2>Session Complete</h2>
+        <p id="result-message" class="result-message"></p>
+        <button id="new-session" class="btn btn-success">
+          Run Another Session
+        </button>
+      </div>
+
+      <!-- Session History -->
+      <div id="session-history" class="card mt-2 session-history">
+        <div class="progress-header">
+          <h2>Session History</h2>
+          <span id="session-history-count" class="status-badge status-running">0 Runs</span>
+        </div>
+        <div id="session-history-list" class="session-list"></div>
+        <p id="session-history-empty" class="session-empty hidden">No saved sessions yet. Run one to see details here.</p>
+      </div>
+      </div>
+    </main>
+    <Footer />
+
+    <script define:vars={{ wheelNumbers }}>
+      const wheel = wheelNumbers;
+
+      function spin() {
+        const index = Math.floor(Math.random() * wheel.length);
+        return wheel[index];
+      }
+
+      function getBetTypeForSpin(selectedType) {
+        if (selectedType === 'random') {
+          const types = ['red', 'black', 'even', 'odd', '1-18', '19-36'];
+          return types[Math.floor(Math.random() * types.length)];
+        }
+        return selectedType;
+      }
+
+      function checkWin(result, betType) {
+        const num = result.number;
+
+        // Green always loses for 50/50 bets
+        if (result.color === 'green') return false;
+
+        const numValue = typeof num === 'number' ? num : 0;
+
+        switch (betType) {
+          case 'red': return result.color === 'red';
+          case 'black': return result.color === 'black';
+          case 'even': return numValue % 2 === 0;
+          case 'odd': return numValue % 2 === 1;
+          case '1-18': return numValue >= 1 && numValue <= 18;
+          case '19-36': return numValue >= 19 && numValue <= 36;
+          default: return false;
+        }
+      }
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      function formatCurrency(amount) {
+        const value = typeof amount === 'number' ? amount : 0;
+        return `$${value.toLocaleString()}`;
+      }
+
+      function formatDate(isoString) {
+        if (!isoString) return 'Unknown date';
+        const date = new Date(isoString);
+        return date.toLocaleString(undefined, {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit'
+        });
+      }
+
+      function formatBetType(betType) {
+        if (!betType) return '';
+        return betType.replace('-', '–').toUpperCase();
+      }
+
+      function buildSpinsTable(spins) {
+        const table = document.createElement('table');
+        table.className = 'session-table';
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Bet</th>
+              <th>Amount</th>
+              <th>Number</th>
+              <th>Result</th>
+              <th>Profit</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        `;
+
+        const tbody = table.querySelector('tbody');
+        spins.forEach((spin, index) => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${index + 1}</td>
+            <td style="text-transform: capitalize;">${spin.betType}</td>
+            <td><span class="dollars">${spin.bet.toLocaleString()}</span></td>
+            <td>
+              <span class="number-badge number-${spin.color}">
+                ${spin.number}
+              </span>
+            </td>
+            <td>
+              <span class="result-badge ${spin.win ? 'result-win' : 'result-loss'}">
+                ${spin.win ? '✓' : '✗'}
+              </span>
+            </td>
+            <td class="${spin.profit >= 0 ? 'positive' : 'negative'}">
+              <span class="dollars">${spin.profit.toLocaleString()}</span>
+            </td>
+          `;
+          tbody.appendChild(row);
+        });
+
+        return table;
+      }
+
+      function buildSessionItem(session) {
+        const details = document.createElement('details');
+        details.className = 'session-item';
+
+        const spins = session.spins || [];
+        const wins = spins.filter((spin) => spin.win).length;
+        const maxBet = spins.length ? Math.max(...spins.map((spin) => spin.bet)) : 0;
+        const minProfit = spins.length ? Math.min(...spins.map((spin) => spin.profit)) : 0;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = `
+          <div class="session-summary-row">
+            <div class="session-badge">${String(session.id).padStart(3, '0')}</div>
+            <div class="session-metrics">
+              <div class="session-metric">Wins: <span>${wins}</span></div>
+              <div class="session-metric">Spins: <span>${session.totalSpins}</span></div>
+              <div class="session-metric">Max Bet: <span>${maxBet}</span><small> (x)</small></div>
+              <div class="session-metric">Min Bankroll: <span>${minProfit}</span><small> (x)</small></div>
+            </div>
+          </div>
+          <span class="session-toggle" aria-hidden="true"></span>
+        `;
+
+        const body = document.createElement('div');
+        body.className = 'session-body';
+
+        const kpis = document.createElement('div');
+        kpis.className = 'session-kpis';
+        kpis.innerHTML = `
+          <div class="session-kpi">
+            <div class="session-kpi-value">${session.casino?.name || '—'}</div>
+            <div class="session-kpi-label">Casino</div>
+          </div>
+          <div class="session-kpi">
+            <div class="session-kpi-value">${formatCurrency(session.baseBet)}</div>
+            <div class="session-kpi-label">Base Bet</div>
+          </div>
+          <div class="session-kpi">
+            <div class="session-kpi-value">${formatCurrency(session.finalProfit)}</div>
+            <div class="session-kpi-label">Final Profit</div>
+          </div>
+          <div class="session-kpi">
+            <div class="session-kpi-value">${session.totalSpins}</div>
+            <div class="session-kpi-label">Spins</div>
+          </div>
+        `;
+
+        const tableWrapper = document.createElement('div');
+        tableWrapper.className = 'table-wrapper';
+        const tableScroll = document.createElement('div');
+        tableScroll.className = 'table-scroll';
+        tableScroll.appendChild(buildSpinsTable(session.spins || []));
+        tableWrapper.appendChild(tableScroll);
+
+        body.appendChild(kpis);
+        body.appendChild(tableWrapper);
+
+        details.appendChild(summary);
+        details.appendChild(body);
+
+        return details;
+      }
+
+      function updateSessionHistory(sessions) {
+        const historyList = document.getElementById('session-history-list');
+        const historyEmpty = document.getElementById('session-history-empty');
+        const historyCount = document.getElementById('session-history-count');
+
+        const sorted = [...sessions].sort((a, b) => {
+          const timeA = new Date(a.timestamp).getTime();
+          const timeB = new Date(b.timestamp).getTime();
+          return timeB - timeA;
+        });
+
+        historyList.innerHTML = '';
+        sorted.forEach((session) => {
+          historyList.appendChild(buildSessionItem(session));
+        });
+
+        historyEmpty.classList.toggle('hidden', sorted.length > 0);
+        historyCount.textContent = `${sorted.length} Run${sorted.length === 1 ? '' : 's'}`;
+      }
+
+      async function fetchSessionHistory() {
+        try {
+          const response = await fetch('/api/roulettingale-session');
+          if (!response.ok) return;
+          const data = await response.json();
+          updateSessionHistory(data.sessions || []);
+        } catch (error) {
+          console.error('Failed to load sessions:', error);
+        }
+      }
+
+      async function runSession() {
+        const casinoSelect = document.getElementById('casino-select');
+        const profitGoalInput = document.getElementById('profit-goal');
+        const betTypeSelect = document.getElementById('bet-type');
+        const runButton = document.getElementById('run-session');
+
+        const casino = JSON.parse(casinoSelect.value);
+        const profitGoal = parseInt(profitGoalInput.value, 10);
+        const selectedBetType = betTypeSelect.value;
+        const baseBet = casino.minBet;
+
+        // Disable form
+        runButton.disabled = true;
+
+        // Show progress
+        document.getElementById('setup-form').classList.add('opacity-50');
+        document.getElementById('session-progress').classList.remove('hidden');
+        document.getElementById('final-result').classList.add('hidden');
+
+        // Reset display
+        const spinsTable = document.getElementById('spins-table');
+        spinsTable.innerHTML = '';
+
+        let currentProfit = 0;
+        let currentBet = baseBet;
+        let spins = [];
+        let spinNumber = 0;
+
+        // Update initial display
+        document.getElementById('current-profit').textContent = '$0';
+        document.getElementById('current-profit').className = 'stat-value';
+        document.getElementById('current-bet').textContent = `$${baseBet}`;
+        document.getElementById('spin-count').textContent = '0';
+
+        // Reset status
+        const statusEl = document.getElementById('session-status');
+        statusEl.className = 'status-badge status-running running';
+        statusEl.textContent = 'Running...';
+
+        // Run simulation
+        while (currentProfit < profitGoal) {
+          // Check if we can afford the bet
+          if (currentBet > casino.maxBet) {
+            break; // Busted - can't cover the bet
+          }
+
+          spinNumber++;
+          const betType = getBetTypeForSpin(selectedBetType);
+          const thisBet = currentBet; // Capture bet amount before result
+          const result = spin();
+          const won = checkWin(result, betType);
+
+          if (won) {
+            currentProfit += thisBet;
+            currentBet = baseBet; // Reset to base bet
+          } else {
+            currentProfit -= thisBet;
+            currentBet = thisBet * 2; // Double the bet for next spin
+          }
+
+          spins.push({
+            bet: thisBet,
+            betType,
+            number: result.number,
+            color: result.color,
+            win: won,
+            profit: currentProfit
+          });
+
+          // Update display
+          updateDisplay({
+            spinNumber,
+            betType,
+            betAmount: thisBet,
+            number: result.number,
+            color: result.color,
+            won
+          }, currentProfit, currentBet, spinNumber);
+
+          // Wait for dramatic effect
+          await sleep(1000);
+        }
+
+        // Determine outcome
+        const outcome = currentProfit >= profitGoal ? 'goal' : 'busted';
+
+        // Update status
+        statusEl.classList.remove('running', 'status-running');
+        if (outcome === 'goal') {
+          statusEl.classList.add('status-goal');
+          statusEl.textContent = 'Goal Reached!';
+        } else {
+          statusEl.classList.add('status-busted');
+          statusEl.textContent = 'Busted!';
+        }
+
+        // Save session
+        const sessionData = {
+          casino,
+          profitGoal,
+          betType: selectedBetType,
+          baseBet,
+          spins,
+          outcome,
+          finalProfit: currentProfit,
+          totalSpins: spinNumber
+        };
+
+        try {
+          const response = await fetch('/api/roulettingale-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(sessionData)
+          });
+          if (response.ok) {
+            await response.json();
+            await fetchSessionHistory();
+          }
+        } catch (err) {
+          console.error('Failed to save session:', err);
+        }
+
+        // Show final result
+        const resultEl = document.getElementById('final-result');
+        const messageEl = document.getElementById('result-message');
+        resultEl.classList.remove('hidden');
+
+        if (outcome === 'goal') {
+          messageEl.innerHTML = `<span class="positive"><strong>Success!</strong></span> Hit the <span class="dollars">${profitGoal}</span> profit goal in <strong>${spinNumber}</strong> spins.`;
+        } else {
+          messageEl.innerHTML = `<span class="negative"><strong>Busted!</strong></span> Couldn't cover the next bet (<span class="dollars">${currentBet.toLocaleString()}</span>) after <strong>${spinNumber}</strong> spins.<br>Final profit: <span class="negative dollars">${currentProfit.toLocaleString()}</span>`;
+        }
+
+        // Re-enable form
+        runButton.disabled = false;
+        document.getElementById('setup-form').classList.remove('opacity-50');
+      }
+
+      function updateDisplay(spinData, currentProfit, nextBet, spinCount) {
+        // Update stats
+        const profitEl = document.getElementById('current-profit');
+        profitEl.textContent = `$${currentProfit.toLocaleString()}`;
+        profitEl.className = `stat-value ${currentProfit >= 0 ? 'positive' : 'negative'}`;
+
+        document.getElementById('current-bet').textContent = `$${nextBet.toLocaleString()}`;
+        document.getElementById('spin-count').textContent = spinCount;
+
+        // Add row to table
+        const spinsTable = document.getElementById('spins-table');
+        const row = document.createElement('tr');
+        row.className = 'spin-row';
+        row.innerHTML = `
+          <td>${spinData.spinNumber}</td>
+          <td style="text-transform: capitalize;">${spinData.betType}</td>
+          <td><span class="dollars">${spinData.betAmount.toLocaleString()}</span></td>
+          <td>
+            <span class="number-badge number-${spinData.color}">
+              ${spinData.number}
+            </span>
+          </td>
+          <td>
+            <span class="result-badge ${spinData.won ? 'result-win' : 'result-loss'}">
+              ${spinData.won ? '✓' : '✗'}
+            </span>
+          </td>
+          <td class="${currentProfit >= 0 ? 'positive' : 'negative'}">
+            <span class="dollars">${currentProfit.toLocaleString()}</span>
+          </td>
+        `;
+        spinsTable.insertBefore(row, spinsTable.firstChild);
+      }
+
+      // Event listeners
+      document.getElementById('run-session').addEventListener('click', runSession);
+      document.getElementById('new-session').addEventListener('click', () => {
+        document.getElementById('session-progress').classList.add('hidden');
+        document.getElementById('final-result').classList.add('hidden');
+        runSession();
+      });
+
+      fetchSessionHistory();
+    </script>
+  </body>
+</html>
