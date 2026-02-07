@@ -1,9 +1,7 @@
 ---
-path: "/blips/it-depends"
+summary: Reaction to a counter correction of web behavior
 title: It Depends
 pubDate: "2026-02-07"
-tags:
-  - blips
 ---
 
 I ran into this [Mast](https://beige.party/@maxleibman/114441790730464541?ref=sidebar)? from sidebar.io and it struck a chord. I think much differently than this and I think the purpose of the original share is to get websites to stop offering these things. While I agree that the way they are done are often overkill, I do want many of these things. But, it depends.
