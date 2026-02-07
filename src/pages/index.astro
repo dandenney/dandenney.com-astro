@@ -11,7 +11,7 @@ import toTitleCase from "../helpers/toTitleCase.js";
 
 export const prerender = true;
 import { getCollection } from "astro:content";
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 const posts = (await getCollection("posts"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -153,7 +153,8 @@ const monthName = getMonthName();
               Side Projects
             </h2>
             <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-slate-100">
-              Experiments mixing my interests in music, organization, and modern web development
+              Experiments mixing my interests in music, organization, and modern
+              web development
             </p>
           </div>
           <div
@@ -162,7 +163,11 @@ const monthName = getMonthName();
             <article
               class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
-              <a href="/music" class="absolute inset-0 z-0" aria-label="Seasons of Dan">
+              <a
+                href="/music"
+                class="absolute inset-0 z-0"
+                aria-label="Seasons of Dan"
+              >
                 <span class="sr-only">Seasons of Dan</span>
               </a>
               <div class="flex items-center gap-x-4 text-xs relative z-10">
@@ -178,7 +183,9 @@ const monthName = getMonthName();
                 >
                   Seasons of Dan
                 </h3>
-                <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+                <p
+                  class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300"
+                >
                   A look at my music listening habits across different time
                   periods. Using the Spotify API to show my top tracks and
                   artists from the last 4 weeks, 6 months, and several years.
@@ -193,7 +200,11 @@ const monthName = getMonthName();
             <article
               class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
-              <a href="/music/reviews" class="absolute inset-0 z-0" aria-label="Music Reviews">
+              <a
+                href="/music/reviews"
+                class="absolute inset-0 z-0"
+                aria-label="Music Reviews"
+              >
                 <span class="sr-only">Music Reviews</span>
               </a>
               <div class="flex items-center gap-x-4 text-xs relative z-10">
@@ -209,11 +220,13 @@ const monthName = getMonthName();
                 >
                   Music Reviews
                 </h3>
-                <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+                <p
+                  class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300"
+                >
                   AI-generated reviews of songs I'm listening to. I share a
-                  Spotify link, the lyrics, and ChatGPT automatically analyzes the track's
-                  vibe, production, and emotional impact. It's like having a
-                  music critic on tap.
+                  Spotify link, the lyrics, and ChatGPT automatically analyzes
+                  the track's vibe, production, and emotional impact. It's like
+                  having a music critic on tap.
                 </p>
               </div>
               <div class="mt-auto relative z-10">
@@ -246,7 +259,9 @@ const monthName = getMonthName();
                 >
                   Side by Side
                 </h3>
-                <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+                <p
+                  class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300"
+                >
                   A modern web app for organizing life's upcoming events, shared
                   links, local places, and shopping lists. Built with Next.js,
                   TypeScript, and Supabase to consolidate daily life management
@@ -258,8 +273,7 @@ const monthName = getMonthName();
                   href="https://github.com/dandenney/side-by-side"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn-link"
-                  >View on GitHub</a
+                  class="btn-link">View on GitHub</a
                 >
               </div>
             </article>
@@ -324,49 +338,43 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="py-8 sm:py-24 bg-slate-50 dark:bg-slate-800">
+      <section class="bg-slate-50 dark:bg-slate-800 py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+            class="mx-auto flex max-w-2xl flex-col justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
           >
-            <div>
+            <div class="w-full lg:max-w-lg lg:flex-auto">
               <h2
                 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
               >
-                Recent finds from around the web
+                Most Recent Finds
               </h2>
               <p
                 class="has-links mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100"
               >
-                I'm starting to stash everything in a <a href="/library"
-                  >"library"</a
-                > and archive them by month.
+                I keep a stash to stash of everything I've read or watched and
+                found valuable, in a <a href="/library">"library"</a> and archive
+                them by month.
               </p>
             </div>
+
             {
               links.length > 0 ? (
-                <ul class="col-span-2 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <ul class="has-links -my-4 divide-y divide-gray-100 dark:divide-slate-600">
                   {links.map((link) => (
-                    <li>
-                      <article
-                        class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 dark:bg-slate-900 dark:ring-slate-700"
+                    <li class="py-4">
+                      <a
+                        href={link.url}
+                        class="text-red-700 dark:text-red-400 no-underline"
                       >
-                        <div>
-                          <h3
-                            class="font-semibold leading-6 has-links"
-                          >
-                            <a href={link.url} class="text-red-700 dark:text-red-400 no-underline">
-                              {link.title}
-                            </a>
-                          </h3>
-                          {link.notes && (
-                            <p class="mt-2 text-sm leading-7 text-gray-600 dark:text-slate-300"> 
-                              {link.notes}
-                            </p>
-                          )}
-                        </div>
-                      </article>
-                    </li>
+                        {link.title}
+                      </a>
+                      {link.notes && (
+                        <p class="mt-0 text-sm leading-7 text-gray-600 dark:text-slate-300">
+                          {link.notes}
+                        </p>
+                      )}
+                  </li>
                   ))}
                 </ul>
               ) : (
@@ -393,7 +401,10 @@ const monthName = getMonthName();
               <p
                 class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100"
               >
-                I co-organize this Nashville meetup for anyone from beginners to experts who are willing to share their personal or professional journeys learning, experimenting, developing, and applying AI. We focus on real tools, real demos, and real talk.
+                I co-organize this Nashville meetup for anyone from beginners to
+                experts who are willing to share their personal or professional
+                journeys learning, experimenting, developing, and applying AI.
+                We focus on real tools, real demos, and real talk.
               </p>
               <div class="mt-10 flex items-center gap-x-6">
                 <a
@@ -416,25 +427,42 @@ const monthName = getMonthName();
             </div>
             <div class="w-full lg:max-w-xl lg:flex-auto">
               <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <div class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600">
-                  <dt class="text-sm leading-6 text-gray-600 dark:text-slate-300">
+                <div
+                  class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600"
+                >
+                  <dt
+                    class="text-sm leading-6 text-gray-600 dark:text-slate-300"
+                  >
                     Members
                   </dt>
-                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100">
+                  <dd
+                    class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100"
+                  >
                     190+
                   </dd>
                 </div>
-                <div class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600">
-                  <dt class="text-sm leading-6 text-gray-600 dark:text-slate-300">
+                <div
+                  class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600"
+                >
+                  <dt
+                    class="text-sm leading-6 text-gray-600 dark:text-slate-300"
+                  >
                     Location
                   </dt>
-                  <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100">
+                  <dd
+                    class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100"
+                  >
                     Nashville
                   </dd>
                 </div>
               </div>
-              <p class="mt-8 text-base leading-7 text-gray-600 dark:text-slate-300">
-                Our monthly events feature 15-20 minute presentations and demos, plus plenty of time for networking and collaboration. Whether you're sharing workflow automation, artistic applications, or research deep-dives, everyone's welcome.
+              <p
+                class="mt-8 text-base leading-7 text-gray-600 dark:text-slate-300"
+              >
+                Our monthly events feature 15-20 minute presentations and demos,
+                plus plenty of time for networking and collaboration. Whether
+                you're sharing workflow automation, artistic applications, or
+                research deep-dives, everyone's welcome.
               </p>
             </div>
           </div>
