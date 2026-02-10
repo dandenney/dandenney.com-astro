@@ -1,0 +1,202 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ImageLightbox from '../components/ImageLightbox.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ReadingTime from '../components/ReadingTime.astro';
+import similarities from '../assets/similarities.json';
+import { ViewTransitions } from 'astro:transitions';
+
+const {
+  title,
+  description,
+  strapiSeries,
+  cloudinaryThumb,
+  socialImageFilename,
+  thumbAlt,
+  identifier,
+  slug,
+  rawBody,
+} = Astro.props;
+
+// Generate breadcrumb items
+const breadcrumbItems = [
+  { label: 'Posts', href: '/posts' },
+  { label: title }
+];
+
+// Get the post identifier (either from identifier prop or slug)
+const postIdentifier = identifier || slug;
+
+// Get related posts if they exist
+const relatedPosts =
+  postIdentifier && similarities[postIdentifier]
+    ? similarities[postIdentifier]
+        .filter((post) => !post.draft)
+        .sort((a, b) => (b.similarity ?? 0) - (a.similarity ?? 0))
+        .slice(0, 2)
+    : [];
+
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} image={socialImageFilename} />
+		<ViewTransitions />
+	</head>
+	<body class="bg-white dark:bg-slate-900">
+		<Header />
+		<main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
+			<article>
+				<h1 class="px-8 py-8 text-4xl font-black tracking-tight text-center text-balance sm:text-6xl lg:px-0 lg:text-8xl animate-fade-text z-20 dark:text-white">
+          <span class="block max-w-4xl mx-auto">{title}</span>
+        </h1>
+
+				<div class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0 blogpost">
+					{rawBody && (
+						<div class="mb-6">
+							<ReadingTime content={rawBody} />
+						</div>
+					)}
+					<slot />
+
+					{strapiSeries && (
+						<h2>Series Posts</h2>
+
+						<style>
+							.strapi-series-toc {
+								display: flex;
+								flex-direction: column;
+								align-items: flex-start;
+								padding-bottom: 3rem;
+							}
+
+							.strapi-series-toc a {    
+								margin-top: 0.5rem;
+							}
+						</style>
+
+						<nav class="has-links strapi-series-toc">
+							<a href="/posts/front-end-dev/strapi-series-part-1-project-outline">Part 1: Project Outline</a>
+							<a href="/posts/front-end-dev/strapi-series-part-2-architectural-decisions">Part 2: Architectural Decisions</a>
+							<a href="/posts/front-end-dev/strapi-series-part-3-repo-setup">Part 3: Repo Setup</a>
+							<a href="/posts/front-end-dev/strapi-series-part-4-a-fake-company">Part 4: A Fake Company</a>
+							<a href="/posts/front-end-dev/strapi-series-part-5-coming-soon-component">Part 5: A Coming Soon Component</a>
+							<a href="/posts/front-end-dev/strapi-series-part-6-coming-soon-qa">Part 6: Coming Soon QA</a>
+							<a href="/posts/front-end-dev/strapi-series-part-7-light-and-dark-mode">Part 7: Light and Dark Mode</a>
+							<a href="/posts/front-end-dev/strapi-series-part-8-font-sizes-and-colors">Part 8: Font Sizes and Colors</a>
+							<a href="/posts/front-end-dev/strapi-series-part-9-thinking-in-data">Part 9: Thinking in Data</a>
+							<a href="/posts/front-end-dev/strapi-series-part-10-links-data-and-requests">Part 10: Links Data and Requests</a>
+							<a href="/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/">Part 11: Header and Footer Links</a>
+						</nav>
+					)}
+				</div>
+			</article>
+			
+			<Breadcrumb items={breadcrumbItems} class="py-8" />
+			
+      {relatedPosts.length > 0 && (
+        <section class="mx-auto max-w-7xl px-6 lg:px-8 py-16">
+          <div class="mx-auto max-w-2xl">
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+              Related Posts
+            </h2>
+            <p class="has-links text-gray-600 dark:text-gray-400">
+              Experiment based on <a href={`https://alexop.dev/posts/semantic-related-posts-astro-transformersjs`}>this post</a>
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              {relatedPosts.map((post) => (
+                <article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                  <a href={post.url} class="absolute inset-0 z-20">
+                    <span class="sr-only">Read {post.title}</span>
+                  </a>
+                  {post.cloudinaryThumb ? (
+                    <img
+                      src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.cloudinaryThumb}`}
+                      alt={post.thumbAlt || post.title}
+                      class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <img
+                      src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/posts/slackin.png"
+                      alt="Placeholder image"
+                      class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
+                  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10 transition-shadow duration-300 group-hover:ring-gray-900/20" />
+                  <h3 class="mt-3 text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+                    {post.title}
+                  </h3>
+                  <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">{post.summary}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        )
+      }
+		</main>
+		<Footer />
+		<ImageLightbox />
+
+		<style>
+			@keyframes fade {
+				from {
+					opacity: 0.6;
+				}
+				to {
+					opacity: 0;
+				}
+			}
+
+			@keyframes fadeText {
+				from {
+					opacity: 1;
+				}
+				to {
+					opacity: 0.2;
+				}
+			}
+
+			.animate-fade-overlay {
+				opacity: 0.6;
+			}
+
+			@supports (animation-timeline: scroll()) {
+				.animate-fade-overlay {
+					animation: fade linear both;
+					animation-timeline: scroll();
+					animation-range: 0 400px;
+				}
+			}
+
+			.animate-fade-text {
+				opacity: 1;
+			}
+
+			@supports (animation-timeline: scroll()) {
+				.animate-fade-text {
+					animation: fadeText linear both;
+					animation-timeline: scroll();
+					animation-range: 0 300px;
+				}
+			}
+
+			@keyframes imageFadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			.animate-image-fade-in {
+				opacity: 0;
+				animation: imageFadeIn 0.5s ease-in forwards;
+			}
+		</style>
+	</body>
+</html>

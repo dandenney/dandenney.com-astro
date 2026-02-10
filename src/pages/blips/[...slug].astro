@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import Blip from '../../layouts/Blip.astro';
 
 export const prerender = true;
 
@@ -17,6 +17,6 @@ const blip = Astro.props;
 const { Content } = await blip.render();
 ---
 
-<BlogPost {...blip.data}>
+<Blip {...blip.data}>
 	<Content />
-</BlogPost>
+</Blip>
