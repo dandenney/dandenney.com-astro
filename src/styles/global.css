@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TOC Colors */
+
+:root {
+  --toc-active-color: #b91c1c;
+  --toc-inactive-color: #6b7280;
+  --toc-active-border: #b91c1c;
+}
+
+.dark {
+  --toc-active-color: #fca5a5;
+  --toc-inactive-color: #9ca3af;
+  --toc-active-border: #fca5a5;
+}
+
 /* Scroll */
 
 
