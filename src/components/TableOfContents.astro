@@ -1,0 +1,124 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+
+const timelineNames = headings.map(h => `--toc-${h.slug}`).join(', ');
+
+const dynamicStyles = `
+  .toc-scope {
+    timeline-scope: ${timelineNames};
+  }
+
+  @supports (animation-timeline: view()) {
+    ${headings.map(h => `[id="${h.slug}"] {
+      view-timeline-name: --toc-${h.slug};
+      view-timeline-axis: block;
+    }`).join('\n    ')}
+
+    ${headings.map(h => `a[data-toc-slug="${h.slug}"] {
+      animation: toc-active linear both;
+      animation-timeline: --toc-${h.slug};
+      animation-range: cover 0% cover 100%;
+    }`).join('\n    ')}
+  }
+`;
+---
+
+<nav class="toc hidden xl:block" aria-label="Table of contents">
+  <div class="toc-sticky">
+    <p class="toc-heading">Contents</p>
+    <ul class="toc-list">
+      {headings.map((heading) => (
+        <li class={heading.depth === 3 ? 'toc-indent' : ''}>
+          <a
+            href={`#${heading.slug}`}
+            class="toc-link"
+            data-toc-slug={heading.slug}
+          >
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style set:html={dynamicStyles}></style>
+
+<style>
+  .toc {
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    width: 14rem;
+    height: 100%;
+    padding-top: 2rem;
+  }
+
+  .toc-sticky {
+    position: sticky;
+    top: 6rem;
+  }
+
+  .toc-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--toc-inactive-color);
+    margin-bottom: 1rem;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .toc-indent {
+    padding-left: 1rem;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 0.25rem 0 0.25rem 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--toc-inactive-color);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.2s ease;
+    background-image: none !important;
+    background-size: 0 !important;
+    font-weight: 400 !important;
+  }
+
+  .toc-link:hover {
+    color: var(--toc-active-color);
+    background-image: none !important;
+    background-size: 0 !important;
+  }
+
+  @keyframes toc-active {
+    0% {
+      color: var(--toc-active-color);
+      border-left-color: var(--toc-active-border);
+    }
+    100% {
+      color: var(--toc-inactive-color);
+      border-left-color: transparent;
+    }
+  }
+</style>

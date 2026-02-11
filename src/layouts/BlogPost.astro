@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import ImageLightbox from '../components/ImageLightbox.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ReadingTime from '../components/ReadingTime.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 import similarities from '../assets/similarities.json';
 import { ViewTransitions } from 'astro:transitions';
 
@@ -18,7 +19,10 @@ const {
   identifier,
   slug,
   rawBody,
+  headings = [],
 } = Astro.props;
+
+const filteredHeadings = headings.filter((h: { depth: number }) => h.depth === 2 || h.depth === 3);
 
 // Generate breadcrumb items
 const breadcrumbItems = [
@@ -48,16 +52,16 @@ const relatedPosts =
 	<body class="bg-white dark:bg-slate-900">
 		<Header />
 		<main class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200">
-			<article>
+			<article class="toc-scope">
 				<header class="longform grid aspect-[3/2] bg-slate-900">
 					{cloudinaryThumb && (
 						<>
-							<img 
-								alt={thumbAlt} 
-								class="block col-start-1 row-start-1 w-full h-full object-cover animate-image-fade-in z-0 no-lightbox" 
+							<img
+								alt={thumbAlt}
+								class="block col-start-1 row-start-1 w-full h-full object-cover animate-image-fade-in z-0 no-lightbox"
 								loading="eager"
-								src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`} 
-								srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`} 
+								src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_375,q_auto/v1673896360/${cloudinaryThumb}`}
+								srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_750,q_auto/v1673896360/${cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1000,q_auto/v1673896360/${cloudinaryThumb} 500w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_1344,q_auto/v1673896360/${cloudinaryThumb} 672w,`}
 							/>
 							<div class="col-start-1 row-start-1 bg-black w-full h-full animate-fade-overlay z-10"></div>
 						</>
@@ -67,7 +71,12 @@ const relatedPosts =
 					</h1>
 				</header>
 
-				<div class="longform max-w-2xl mx-auto pb-16 pt-8 px-8 lg:px-0 blogpost">
+				<div class="relative">
+					{filteredHeadings.length >= 2 && (
+						<TableOfContents headings={filteredHeadings} />
+					)}
+
+			<div class="longform max-w-2xl mx-auto pb-16 pt-8 px-8 lg:px-0 blogpost">
 					{rawBody && (
 						<div class="mb-6">
 							<ReadingTime content={rawBody} />
@@ -105,6 +114,7 @@ const relatedPosts =
 							<a href="/posts/front-end-dev/strapi-series-part-11-header-and-footer-links/">Part 11: Header and Footer Links</a>
 						</nav>
 					)}
+				</div>
 				</div>
 			</article>
 			
