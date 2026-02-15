@@ -6,7 +6,7 @@ tags:
   - front-end-dev
 cloudinaryThumb: "posts/trendy-ui-with-clip-path-and-grid.png"
 thumb: "/posts/front-end-dev/trendy-ui-with-clip-path-and-grid/trendy-ui-with-clip-path-and-grid-thumb.webp"
-thumbAlt: "a fun illustration of a trendy UI with rounded shapes, large typography, CSS grid pattern --ar 3:2"
+thumbAlt: "a fun illustration of a trendy UI with rounded-sm shapes, large typography, CSS grid pattern --ar 3:2"
 title: "Trendy UI with Clip-Path and Grid"
 ---
 
@@ -653,7 +653,7 @@ First things first, we're going to stack our text content on top of the other gr
 
 </style>
 
-<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative lg:hidden" role="alert">
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative lg:hidden" role="alert">
   <strong class="font-bold">Small screen alert!</strong>
   <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
 </p>
@@ -920,7 +920,7 @@ If you pretend real hard, you can see the layout taking shape!
 
 </div><!-- Close Code UI -->
 
-<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative lg:hidden" role="alert">
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative lg:hidden" role="alert">
   <strong class="font-bold">Small screen alert!</strong>
   <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
 </p>
@@ -1203,7 +1203,7 @@ Reminder: the full code is in the pen, so here I'm just going to show the new SV
 
 </style>
 
-<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative lg:hidden" role="alert">
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative lg:hidden" role="alert">
   <strong class="font-bold">Small screen alert!</strong>
   <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
 </p>
@@ -1565,7 +1565,7 @@ Then, here is the new SVG for the full screen `clip-path`.
 
 </div>
 
-<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative xl:hidden" role="alert">
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative xl:hidden" role="alert">
   <strong class="font-bold">Small screen alert!</strong>
   <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
 </p>
@@ -1815,7 +1815,7 @@ I used a combination of Midjourney and ChatGPT to make some icons and style them
 }
 </style>
 
-<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative xl:hidden" role="alert">
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative xl:hidden" role="alert">
   <strong class="font-bold">Small screen alert!</strong>
   <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
 </p>
@@ -2173,7 +2173,7 @@ I don't love some of the issues still and I think I could find some creative sol
 
 If you're interested in fixing it, fork this pen and show me your tricks!
 
-<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative xl:hidden" role="alert">
+<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-sm relative xl:hidden" role="alert">
   <strong class="font-bold">Small screen alert!</strong>
   <span class="block sm:inline">The demos are best viewed on a screen at least 1200px wide, on mobile they're going to appear the same each time from here.</span>
 </p>

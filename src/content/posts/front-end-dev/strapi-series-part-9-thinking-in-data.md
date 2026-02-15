@@ -11,7 +11,7 @@ tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-thinking-in-data.png"
 thumb: "posts/front-end-dev/strapi-thinking-in-data/strapi-thinking-in-data-thumb.webp"
-thumbAlt: "An illustration of a boxer being punched in the face by another boxer, with the boxing ring in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2"
+thumbAlt: "An illustration of a boxer being punched in the face by another boxer, with the boxing ring-3 in the background, in the style of an oil painting, viewed from an overhead perspective --v 5 --ar 3:2"
 title: "Strapi Series, Part 9: Thinking In Data"
 ---
 

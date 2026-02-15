@@ -56,8 +56,8 @@ const reviews = (await getCollection('reviews')).sort(
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<Header />
-		<main class="bg-white relative shadow z-10 lg:flex lg:items-center dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
-			<div class="max-w-screen-xl mx-auto px-4 py-4 lg:grid lg:grid-cols-2 lg:gap-8">
+		<main class="bg-white relative shadow-xs z-10 lg:flex lg:items-center dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
+			<div class="max-w-(--breakpoint-xl) mx-auto px-4 py-4 lg:grid lg:grid-cols-2 lg:gap-8">
 				<div>
 					<div class="sticky top-24">
 						<h1>
@@ -94,7 +94,7 @@ const reviews = (await getCollection('reviews')).sort(
 
 						<p class="has-links mt-8">See them all by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or by <a href="/no-reserv-ai-tions/tags">tag</a></p>
 
-						<h2 class="text-4xl font-bold mt-16 tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100 md:flex-shrink-0">Latest Reviews</h2>
+						<h2 class="text-4xl font-bold mt-16 tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100 md:shrink-0">Latest Reviews</h2>
 
 						<ul class="lg:grid lg:grid-cols-1 lg:grid-rows-1 lg:items-start lg:mt-12" id="descriptions">
 							<li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
@@ -132,7 +132,7 @@ const reviews = (await getCollection('reviews')).sort(
 							{reviews.map((review) => (
 								<li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
 									<a class="review-link block duration-300 group relative isolate transition-all sm:mt-0" href={`/no-reserv-ai-tions/${review.slug}/`}>
-										<div class="max-w-2xl mx-auto sm:gap-8 lg:max-w-screen-2xl sm:flex sm:items-start">
+										<div class="max-w-2xl mx-auto sm:gap-8 lg:max-w-(--breakpoint-2xl) sm:flex sm:items-start">
 											<img class="mb-4 sm:max-w-[240px] sm:h-auto lg:hidden" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 											<div>
 												<div class="flex items-center gap-x-4 text-sm dark:text-white">
