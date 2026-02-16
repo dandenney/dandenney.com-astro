@@ -380,7 +380,6 @@ If you have any information about these victims, please share on the [Gilgo News
 
 </div>
 
-<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
 <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
 <script src="/js/posts/true-crime/mapping-the-long-island-murder-victims/stickyfill.min.js"></script>
 <script src="/js/posts/true-crime/mapping-the-long-island-murder-victims/scrollama.min.js"></script>
