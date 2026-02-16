@@ -43,11 +43,11 @@ const monthName = getMonthName();
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main
-      class="bg-white relative shadow z-10 dark:bg-slate-900 dark:text-slate-200"
+      class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
       <section class="dark:bg-slate-900">
         <div
-          class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 dark:from-slate-400/20"
+          class="relative isolate overflow-hidden bg-linear-to-b from-indigo-100/20 dark:from-slate-400/20"
         >
           <Header title={SITE_TITLE} />
           <div
@@ -73,7 +73,7 @@ const monthName = getMonthName();
                 </p>
               </div>
               <figure
-                class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-24"
+                class="mt-10 aspect-6/5 w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-24"
               >
                 <img
                   src="/dan.svg"
@@ -84,7 +84,7 @@ const monthName = getMonthName();
             </div>
           </div>
           <div
-            class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32 dark:from-slate-900"
+            class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-linear-to-t from-white sm:h-32 dark:from-slate-900"
           >
           </div>
         </div>
@@ -123,7 +123,7 @@ const monthName = getMonthName();
                     class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
                   <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10 transition-shadow duration-300 group-hover:ring-gray-900/20" />
                   <div class="flex items-center justify-between mt-3 mb-2">
                     <ReadingTime content={post.body} class="text-gray-400" />
@@ -161,7 +161,7 @@ const monthName = getMonthName();
             class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
             <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-xs ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
               <a
                 href="/music"
@@ -198,7 +198,7 @@ const monthName = getMonthName();
             </article>
 
             <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-xs ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
               <a
                 href="/music/reviews"
@@ -235,7 +235,7 @@ const monthName = getMonthName();
             </article>
 
             <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-xs ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
             >
               <a
                 href="https://github.com/dandenney/side-by-side"
@@ -574,9 +574,9 @@ const monthName = getMonthName();
                       class="block duration-300 group relative isolate mt-4 p-4 transition-all sm:mt-0 hover:bg-red-700 dark:text-red-400 dark:hover:bg-red-400"
                       href={`/no-reserv-ai-tions/${review.slug}`}
                     >
-                      <div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-screen-2xl">
+                      <div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-(--breakpoint-2xl)">
                         <figure
-                          class="bg-white duration-300 flex-shrink-0 pb-5 pt-2 px-2 shadow-sm shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3"
+                          class="bg-white duration-300 shrink-0 pb-5 pt-2 px-2 shadow-xs shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3"
                           transition:name={`${review.data.title}-img`}
                         >
                           <img
