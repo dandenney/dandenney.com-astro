@@ -1,6 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-*: initial;
+  --font-sans: "Montserrat", "Arial Black", Arial, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 /* TOC Colors */
 
@@ -251,11 +274,11 @@
 }
 
 .btn-link {
-  @apply rounded-md bg-red-700 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-sm hover:bg-red-800 hover:scale-105 focus-visible:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700;
+  @apply rounded-md bg-red-700 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-800 hover:scale-105 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700;
 }
 
 .dark .btn-link {
-  @apply rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-sm hover:bg-red-500 hover:scale-105 focus-visible:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500;
+  @apply rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-500 hover:scale-105 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500;
 }
 
 /* Bleed Options */

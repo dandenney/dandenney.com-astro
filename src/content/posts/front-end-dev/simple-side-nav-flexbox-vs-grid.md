@@ -53,12 +53,12 @@ Internal content aside, here's a minimal amount of CSS to achieve the layout.
   }
 
   .yucky {
-    flex-grow: 1;
+    grow: 1;
   }
 }
 ```
 
-The `flex-grow` is technically optional if you don't want to ensure that your content and footer take up the full width of the remaining space.
+The `grow` is technically optional if you don't want to ensure that your content and footer take up the full width of the remaining space.
 
 ## Grid
 
