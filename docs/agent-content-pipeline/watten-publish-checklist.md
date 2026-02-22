@@ -1,0 +1,41 @@
+# Watten Publish Checklist (Pre-PR Gate)
+
+## 1) Packet validation
+- [ ] Packet JSON matches correct schema file
+- [ ] `confidence` + `sources` present
+- [ ] `flags` surfaced in PR notes
+
+## 2) Frontmatter validation
+
+### No Reservaitions (`src/content/reviews/*.md`)
+- [ ] Required fields present: `title`, `city`, `country`, `description`, `pubDate`, `tags`, `aiGenerated`
+- [ ] `city`/`state` normalized (lowercase/hyphen where expected)
+- [ ] `pubDate` format `YYYY-MM-DD`
+- [ ] `tags` non-empty array
+
+### Music (`src/content/songs/*.md`)
+- [ ] Required fields present: `title`, `artist`, `artists`, `album`, `releaseDate`, `spotifyUrl`, `spotifyId`, `albumArt`, `duration`, `genres`, `pubDate`, `tags`, `aiGenerated`
+- [ ] Spotify URL and ID consistent
+- [ ] `duration` is integer milliseconds
+- [ ] `artists` and `genres` arrays non-empty when data exists
+
+## 3) File/path/slug rules
+- [ ] Filename slug matches project conventions
+- [ ] Target collection path is correct
+- [ ] Duplicate slug/file check run before write
+
+## 4) Content quality gates
+- [ ] Body aligns with section style pack
+- [ ] No unsupported factual claims outside packet/notes
+- [ ] Contains at least one caveat/trade-off sentence
+
+## 5) Project checks
+- [ ] Run `yarn` install if needed
+- [ ] Run collection/schema check (Astro build or relevant script)
+- [ ] Optional: run `yarn build` before PR for full confidence
+
+## 6) PR requirements
+- [ ] Include source packet summary
+- [ ] Include assumptions + confidence level
+- [ ] Include fallback notes for missing fields
+- [ ] Label PR as `content/ai-assisted`

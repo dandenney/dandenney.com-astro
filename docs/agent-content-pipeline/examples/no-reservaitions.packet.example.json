@@ -1,0 +1,43 @@
+{
+  "type": "no-reservaitions",
+  "sourceInput": {
+    "location": "Example Bistro",
+    "city": "nashville",
+    "items": ["short rib", "negroni"],
+    "notes": "Busy Saturday, sat at bar"
+  },
+  "location": {
+    "title": "Example Bistro",
+    "address": "123 Main St",
+    "city": "nashville",
+    "state": "tennessee",
+    "country": "usa",
+    "coordinates": "-86.7816, 36.1627",
+    "infoUrl": "https://example.com"
+  },
+  "frontmatter": {
+    "title": "Example Bistro",
+    "address": "123 Main St",
+    "city": "nashville",
+    "state": "tennessee",
+    "country": "usa",
+    "coordinates": "-86.7816, 36.1627",
+    "description": "A cozy neighborhood spot with strong cocktails and confident cooking.",
+    "heroImageAlt": "Placeholder image",
+    "heroImage": "placeholder",
+    "infoUrl": "https://example.com",
+    "pubDate": "2026-02-21",
+    "tags": ["american", "cocktails"],
+    "aiGenerated": true
+  },
+  "bodyBrief": {
+    "angle": "Neighborhood place worth revisiting for one standout dish.",
+    "mustInclude": ["short rib texture", "drink balance", "service pacing"],
+    "mustAvoid": ["celebrity chef name drops"]
+  },
+  "sources": [
+    { "url": "https://example.com", "kind": "official-site", "note": "hours/menu" }
+  ],
+  "confidence": "medium",
+  "flags": []
+}

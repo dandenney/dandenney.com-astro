@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "No Reservaitions Content Packet",
+  "type": "object",
+  "required": [
+    "type",
+    "sourceInput",
+    "location",
+    "frontmatter",
+    "bodyBrief",
+    "sources",
+    "confidence"
+  ],
+  "properties": {
+    "type": { "const": "no-reservaitions" },
+    "sourceInput": {
+      "type": "object",
+      "required": ["location", "city", "items"],
+      "properties": {
+        "location": { "type": "string" },
+        "city": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "location": {
+      "type": "object",
+      "required": ["title", "city", "country"],
+      "properties": {
+        "title": { "type": "string" },
+        "address": { "type": ["string", "null"] },
+        "city": { "type": "string" },
+        "state": { "type": ["string", "null"] },
+        "country": { "type": "string" },
+        "coordinates": { "type": ["string", "null"] },
+        "infoUrl": { "type": ["string", "null"], "format": "uri" }
+      }
+    },
+    "frontmatter": {
+      "type": "object",
+      "required": ["title", "city", "country", "description", "tags", "pubDate", "aiGenerated"],
+      "properties": {
+        "title": { "type": "string" },
+        "address": { "type": ["string", "null"] },
+        "city": { "type": "string" },
+        "state": { "type": ["string", "null"] },
+        "country": { "type": "string" },
+        "coordinates": { "type": ["string", "null"] },
+        "description": { "type": "string" },
+        "heroImageAlt": { "type": "string" },
+        "heroImage": { "type": "string" },
+        "infoUrl": { "type": ["string", "null"], "format": "uri" },
+        "pubDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "aiGenerated": { "type": "boolean" }
+      }
+    },
+    "bodyBrief": {
+      "type": "object",
+      "required": ["angle", "mustInclude", "mustAvoid"],
+      "properties": {
+        "angle": { "type": "string" },
+        "mustInclude": { "type": "array", "items": { "type": "string" } },
+        "mustAvoid": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "kind"],
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "kind": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+    "flags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -10,7 +10,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "tina": "yarn tinacms dev -c 'astro dev'",
-    "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs"
+    "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs",
+    "agent:packet:validate": "node scripts/agent-content/validate-packet.mjs",
+    "agent:content:publish": "node scripts/agent-content/publish-from-packet.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
