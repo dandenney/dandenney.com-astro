@@ -14,6 +14,11 @@ Build a `music-review` packet with validated Spotify metadata and lyrics researc
 - `sources[]` with each lookup attempt and result note
 - `flags[]` includes `lyrics-missing` when unresolved
 
+## Pause gate (Dan preference)
+- If full lyrics cannot be retrieved from a reliable source, **stop before drafting**.
+- Return a blocker message to Shelby: `LYRICS_BLOCKED` with attempted sources.
+- Do not send packet to Quillan until Dan provides lyrics or approves fallback mode.
+
 ## Lyrics lookup sequence
 1. Use user-provided lyrics when present
 2. Search official/licensed lyric pages

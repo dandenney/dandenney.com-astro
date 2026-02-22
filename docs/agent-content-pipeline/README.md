@@ -36,6 +36,10 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
   - `lyrics.source`: source URL or `null`
 - If lyrics remain missing, Leif must set a `lyrics-missing` flag and explain attempt history in `sources` notes.
 
+### Pause behavior (default)
+If full lyrics are unavailable from reliable sources, the workflow pauses before drafting.
+Shelby returns a blocker message and waits for Dan to provide lyrics or approve fallback mode.
+
 ## Primary Decision
 - Agent pipeline is primary path
 - GitHub Actions retained as temporary fallback

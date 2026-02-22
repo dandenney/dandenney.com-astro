@@ -23,6 +23,12 @@ Before Quillan writes, Leif must perform lyrics research and set packet fields:
 
 Leif must append source evidence in `sources[]` and include a `lyrics-missing` flag when unresolved.
 
+### Music pause gate
+If full lyrics are unavailable, workflow pauses before writing.
+- Shelby sends Dan a blocker summary with attempted sources.
+- Dan can provide lyrics manually or approve a fallback no-lyrics review.
+- Default is **pause** (no Quillan draft, no publish).
+
 ## Standard paths
 - Temporary run files: `docs/agent-content-pipeline/runs/<timestamp>/`
 - Final content:
