@@ -49,6 +49,13 @@ if (packet.type === 'no-reservaitions') {
   }
   required(packet.frontmatter, ['title', 'address', 'city', 'state', 'country', 'coordinates', 'description', 'pubDate', 'tags', 'aiGenerated'], 'frontmatter');
 
+  if (packet.frontmatter.heroImage) {
+    const hero = String(packet.frontmatter.heroImage);
+    if (hero.includes('/') || hero.includes('\\') || hero.includes('.webp')) {
+      fail('frontmatter.heroImage must be basename only (e.g. "melt-n-dip"), not a path/extension');
+    }
+  }
+
   const raw = String(packet.frontmatter.coordinates || '');
   const parts = raw.split(',').map((p) => p.trim());
   if (parts.length !== 2) fail('frontmatter.coordinates must be "lng, lat"');

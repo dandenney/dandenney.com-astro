@@ -54,4 +54,5 @@ yarn agent:content:publish --packet docs/agent-content-pipeline/runs/<run>/packe
 - Packet validates
 - Dry-run succeeds
 - Output file path and slug match conventions
+- No-reservaitions `heroImage` is basename only (`<slug>`, not path)
 - Astro build passes before PR
