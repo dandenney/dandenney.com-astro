@@ -18,7 +18,8 @@ Stay honest about certainty. Don’t fake listening details.
 
 ## Must include
 - Reference metadata from packet (artist, track, album, release context)
-- Use lyrics only if present in packet (`lyrics.status` provided/fetched)
+- Use lyrics when Leif provides them in packet (`lyrics.status` = `provided|fetched`)
+- If `lyrics.status` = `missing`, include one explicit caveat sentence
 - Name one concrete musical or structural detail with caution language when needed
 
 ## Must avoid

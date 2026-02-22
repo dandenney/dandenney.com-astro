@@ -15,6 +15,8 @@
 
 ### Music (`src/content/songs/*.md`)
 - [ ] Required fields present: `title`, `artist`, `artists`, `album`, `releaseDate`, `spotifyUrl`, `spotifyId`, `albumArt`, `duration`, `genres`, `pubDate`, `tags`, `aiGenerated`
+- [ ] Packet includes `lyrics.status|text|source`
+- [ ] If `lyrics.status = missing`, `flags` includes `lyrics-missing` and PR notes list lookup attempts
 - [ ] Spotify URL and ID consistent
 - [ ] `duration` is integer milliseconds
 - [ ] `artists` and `genres` arrays non-empty when data exists
