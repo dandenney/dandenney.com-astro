@@ -1,0 +1,9 @@
+{
+  "type": "no-reservaitions",
+  "sourceInput": {
+    "location": "REPLACE_ME",
+    "city": "REPLACE_ME",
+    "items": ["item one", "item two"],
+    "notes": "Optional personal notes"
+  }
+}

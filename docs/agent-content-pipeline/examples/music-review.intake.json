@@ -1,0 +1,8 @@
+{
+  "type": "music-review",
+  "sourceInput": {
+    "spotifyUrl": "https://open.spotify.com/track/REPLACE_ME",
+    "lyricsProvided": null,
+    "notes": "Optional personal notes"
+  }
+}

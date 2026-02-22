@@ -1,0 +1,52 @@
+{
+  "type": "music-review",
+  "sourceInput": {
+    "spotifyUrl": "https://open.spotify.com/track/123456",
+    "lyricsProvided": null,
+    "notes": "Heard this on a drive home"
+  },
+  "spotify": {
+    "track": "Example Song",
+    "artist": "Example Artist",
+    "artists": ["Example Artist"],
+    "album": "Example Album",
+    "releaseDate": "2024-01-12",
+    "spotifyId": "123456",
+    "spotifyUrl": "https://open.spotify.com/track/123456",
+    "albumArt": "https://i.scdn.co/image/example",
+    "duration": 192000,
+    "genres": ["indie pop"],
+    "preview": null
+  },
+  "lyrics": {
+    "status": "missing",
+    "text": null,
+    "source": null
+  },
+  "frontmatter": {
+    "title": "Example Song",
+    "artist": "Example Artist",
+    "artists": ["Example Artist"],
+    "album": "Example Album",
+    "releaseDate": "2024-01-12",
+    "spotifyUrl": "https://open.spotify.com/track/123456",
+    "spotifyId": "123456",
+    "albumArt": "https://i.scdn.co/image/example",
+    "duration": 192000,
+    "genres": ["indie pop"],
+    "preview": null,
+    "pubDate": "2026-02-21",
+    "tags": ["indie pop", "2024"],
+    "aiGenerated": true
+  },
+  "bodyBrief": {
+    "angle": "Low-key production with a sticky chorus.",
+    "mustInclude": ["context from release era", "one replay-value note"],
+    "mustAvoid": ["claims about hidden bridge details without evidence"]
+  },
+  "sources": [
+    { "url": "https://open.spotify.com/track/123456", "kind": "spotify-track", "note": "core metadata" }
+  ],
+  "confidence": "high",
+  "flags": []
+}

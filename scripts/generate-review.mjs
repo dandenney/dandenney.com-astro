@@ -56,16 +56,18 @@ async function searchLocationInfo(location, city) {
   try {
     const prompt = `Search for "${location}" in ${city}.
 
-Based on your knowledge, provide:
-1. The most likely TripAdvisor URL for this location
-2. Street address if known
-3. Coordinates in the format: longitude, latitude (e.g., "-71.1167, 42.3736")
-4. State/province (if applicable)
-5. Country
+This output feeds a Mapbox map, so formatting must be strict.
+Return JSON with these exact fields:
+- infoUrl (string or null)
+- address (string or null)
+- coordinates (string or null) in EXACT format: "<longitude>, <latitude>" using decimal degrees (example: "-86.7816, 36.1627")
+- state (string or null) in lowercase words/hyphen format (example: "new-york")
+- country (string or null) as canonical country name (example: "United States")
 
-If this is a well-known establishment, provide accurate information. If uncertain, make your best inference based on the city name.
-
-Return as JSON with fields: infoUrl, address, coordinates, state, country (use null for unknown fields)`;
+Rules:
+- If uncertain, return null for that field.
+- Never wrap numeric coordinates in quotes inside the coordinate string.
+- Never return extra keys.`;
 
     const response = await fetch(OPENAI_ENDPOINT, {
       method: 'POST',
@@ -112,8 +114,8 @@ async function generateMetadata(params) {
   const locationInfo = await searchLocationInfo(params.location, params.city);
 
   // Use location info to fill in state/country if not provided
-  params.state = params.state || locationInfo.state;
-  params.country = params.country || locationInfo.country;
+  params.state = normalizeState(params.state || locationInfo.state);
+  params.country = params.country || locationInfo.country || 'United States';
 
   const prompt = `You are analyzing a location for a food/travel review. Based on the following information, generate metadata:
 
@@ -230,6 +232,23 @@ function slugify(text) {
     .trim();
 }
 
+function normalizeState(value) {
+  if (!value) return null;
+  return String(value).toLowerCase().trim().replace(/\s+/g, '-');
+}
+
+function normalizeCoordinates(value) {
+  if (!value) return null;
+  const cleaned = String(value).replace(/["']/g, '').trim();
+  const parts = cleaned.split(',').map((p) => p.trim());
+  if (parts.length !== 2) return null;
+  const lng = Number(parts[0]);
+  const lat = Number(parts[1]);
+  if (Number.isNaN(lng) || Number.isNaN(lat)) return null;
+  if (lng < -180 || lng > 180 || lat < -90 || lat > 90) return null;
+  return `${lng.toFixed(6)}, ${lat.toFixed(6)}`;
+}
+
 /**
  * Create markdown file with frontmatter and review
  */
@@ -237,17 +256,21 @@ function createMarkdownFile(params, metadata, review) {
   const slug = slugify(params.location);
   const filename = `${slug}.md`;
 
+  const normalizedState = normalizeState(params.state);
+  const normalizedCoordinates = normalizeCoordinates(metadata.coordinates);
+  const normalizedCountry = params.country || 'United States';
+
   const frontmatter = `---
 ${metadata.address ? `address: "${metadata.address.replace(/"/g, '\\"')}"` : '# address: ""'}
 city: "${params.city.toLowerCase()}"
-${metadata.coordinates ? `coordinates: ${metadata.coordinates}` : '# coordinates: 0, 0'}
-country: ${params.country}
-description: ${metadata.description}
+${normalizedCoordinates ? `coordinates: ${normalizedCoordinates}` : '# coordinates: -86.781600, 36.162700'}
+country: "${normalizedCountry.replace(/"/g, '\\"')}"
+description: "${String(metadata.description || '').replace(/"/g, '\\"')}"
 heroImageAlt: "Placeholder image"
 heroImage: "placeholder"
 ${metadata.infoUrl ? `infoUrl: "${metadata.infoUrl}"` : '# infoUrl: ""'}
 pubDate: ${new Date().toISOString().split('T')[0]}
-${params.state ? `state: "${params.state.toLowerCase().replace(/\s+/g, '-')}"` : '# state: ""'}
+${normalizedState ? `state: "${normalizedState}"` : '# state: ""'}
 tags: [${metadata.tags.join(', ')}]
 title: "${params.location.replace(/"/g, '\\"')}"
 aiGenerated: true
