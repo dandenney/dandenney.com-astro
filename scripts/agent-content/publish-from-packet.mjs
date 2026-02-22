@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execFileSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -46,10 +47,11 @@ function fail(msg) {
 
 const packetPath = arg('--packet');
 const bodyPath = arg('--body');
+const imagePath = arg('--image');
 const dryRun = process.argv.includes('--dry-run');
 
 if (!packetPath || !bodyPath) {
-  fail('Usage: node scripts/agent-content/publish-from-packet.mjs --packet <packet.json> --body <body.md> [--dry-run]');
+  fail('Usage: node scripts/agent-content/publish-from-packet.mjs --packet <packet.json> --body <body.md> [--image <photo>] [--dry-run]');
 }
 if (!fs.existsSync(packetPath)) fail(`Packet not found: ${packetPath}`);
 if (!fs.existsSync(bodyPath)) fail(`Body not found: ${bodyPath}`);
@@ -80,12 +82,35 @@ if (fs.existsSync(outPath)) {
   fail(`Target file already exists: ${outPath}`);
 }
 
+// Optional image processing for no-reservaitions posts
+let imageSummary = null;
+if (packet.type === 'no-reservaitions' && imagePath) {
+  if (!fs.existsSync(imagePath)) fail(`Image not found: ${imagePath}`);
+  const slug = slugify(packet.frontmatter.title);
+  const noresOutDir = path.join(repoRoot, 'public', 'no-reserv-ai-tions');
+  const processor = path.join(repoRoot, 'scripts', 'agent-content', 'process-nores-image.mjs');
+
+  const raw = execFileSync('node', [processor, '--input', imagePath, '--slug', slug, '--out-dir', noresOutDir, '--public-prefix', '/no-reserv-ai-tions'], { encoding: 'utf8' });
+  const result = JSON.parse(raw);
+
+  packet.frontmatter.heroImage = result.full.publicPath;
+  packet.frontmatter.heroImageAlt = packet.frontmatter.heroImageAlt || `${packet.frontmatter.title} photo`;
+  imageSummary = result;
+}
+
 const content = `${toFrontmatter(packet.frontmatter)}${body}\n`;
 
 if (dryRun) {
   console.log(`🧪 Dry run OK. Would write: ${outPath}`);
+  if (packet.type === 'no-reservaitions' && imagePath) {
+    console.log(`🧪 Image dry run target dir: ${path.join(repoRoot, 'public', 'no-reserv-ai-tions')}`);
+  }
   process.exit(0);
 }
 
 fs.writeFileSync(outPath, content, 'utf8');
 console.log(`✅ Wrote ${outPath}`);
+if (imageSummary) {
+  console.log(`✅ Wrote image: ${imageSummary.full.file}`);
+  console.log(`✅ Wrote thumb: ${imageSummary.thumb.file}`);
+}

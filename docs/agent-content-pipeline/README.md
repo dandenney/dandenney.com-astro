@@ -12,10 +12,14 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
 
 ## Flow
 1. Intake from Dan
+   - No reservaitions can include a photo attachment
 2. Leif creates packet JSON
    - For music: Leif must run lyrics research (web search + source validation) and populate `lyrics.status|text|source`
 3. Quillan drafts review body from packet + style pack
 4. Watten publishes file and opens PR
+   - For no-reservaitions with image, Watten generates:
+     - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
+     - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
 5. Shelby posts summary + risks/assumptions
 
 ## Music lyrics requirement

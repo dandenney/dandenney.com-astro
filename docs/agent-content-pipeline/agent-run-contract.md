@@ -6,6 +6,7 @@ Use this contract when asking Shelby to run end-to-end content generation.
 - `type`: `no-reservaitions` or `music-review`
 - `sourceInput`: section-specific intake
 - `notes`: optional personal context
+- `image` (optional, no-reservaitions): raw photo attachment
 - `publishMode`: `dry-run` or `publish`
 
 ## Required artifacts per run
@@ -42,6 +43,11 @@ yarn agent:content:publish --packet docs/agent-content-pipeline/runs/<run>/packe
 Publish file:
 ```bash
 yarn agent:content:publish --packet docs/agent-content-pipeline/runs/<run>/packet.json --body docs/agent-content-pipeline/runs/<run>/body.md
+```
+
+Publish no-reservaitions file with image processing:
+```bash
+yarn agent:content:publish --packet docs/agent-content-pipeline/runs/<run>/packet.json --body docs/agent-content-pipeline/runs/<run>/body.md --image /path/to/photo.jpg
 ```
 
 ## Acceptance criteria

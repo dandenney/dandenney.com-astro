@@ -12,6 +12,10 @@
 - [ ] `city`/`state` normalized (lowercase/hyphen where expected)
 - [ ] `pubDate` format `YYYY-MM-DD`
 - [ ] `tags` non-empty array
+- [ ] If image provided: generated assets exist
+  - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
+  - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
+- [ ] If image provided: `heroImage` in frontmatter points to `/no-reserv-ai-tions/<slug>.webp`
 
 ### Music (`src/content/songs/*.md`)
 - [ ] Required fields present: `title`, `artist`, `artists`, `album`, `releaseDate`, `spotifyUrl`, `spotifyId`, `albumArt`, `duration`, `genres`, `pubDate`, `tags`, `aiGenerated`
