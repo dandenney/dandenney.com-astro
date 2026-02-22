@@ -93,7 +93,8 @@ if (packet.type === 'no-reservaitions' && imagePath) {
   const raw = execFileSync('node', [processor, '--input', imagePath, '--slug', slug, '--out-dir', noresOutDir, '--public-prefix', '/no-reserv-ai-tions'], { encoding: 'utf8' });
   const result = JSON.parse(raw);
 
-  packet.frontmatter.heroImage = result.full.publicPath;
+  // Site templates expect heroImage as basename (without path/extension)
+  packet.frontmatter.heroImage = slug;
   packet.frontmatter.heroImageAlt = packet.frontmatter.heroImageAlt || `${packet.frontmatter.title} photo`;
   imageSummary = result;
 }

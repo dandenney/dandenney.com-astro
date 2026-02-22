@@ -7,7 +7,7 @@ country: "United States"
 coordinates: "-82.633816, 27.774164"
 description: "Dessert-first stop with rich waffles built for sharing and sugar commitment."
 heroImageAlt: "Melt N Dip dessert waffle"
-heroImage: "/no-reserv-ai-tions/melt-n-dip.webp"
+heroImage: "melt-n-dip"
 infoUrl: "https://meltndip.com"
 pubDate: "2026-02-22"
 tags: ["dessert","waffles","chocolate"]

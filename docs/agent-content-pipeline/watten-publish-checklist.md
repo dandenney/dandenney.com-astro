@@ -17,7 +17,7 @@
 - [ ] If image provided: generated assets exist
   - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
   - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
-- [ ] If image provided: `heroImage` in frontmatter points to `/no-reserv-ai-tions/<slug>.webp`
+- [ ] If image provided: `heroImage` in frontmatter is set to `<slug>` (basename only)
 
 ### Music (`src/content/songs/*.md`)
 - [ ] Required fields present: `title`, `artist`, `artists`, `album`, `releaseDate`, `spotifyUrl`, `spotifyId`, `albumArt`, `duration`, `genres`, `pubDate`, `tags`, `aiGenerated`
