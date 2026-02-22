@@ -24,3 +24,6 @@ pnpm-debug.log*
 node_modules
 # Local Netlify folder
 .netlify
+
+# Agent pipeline transient run artifacts
+docs/agent-content-pipeline/runs/

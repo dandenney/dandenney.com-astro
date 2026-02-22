@@ -32,6 +32,7 @@ function yamlValue(v) {
 function toFrontmatter(obj) {
   const lines = ['---'];
   for (const [k, v] of Object.entries(obj)) {
+    if (v === null || v === undefined) continue;
     lines.push(`${k}: ${yamlValue(v)}`);
   }
   lines.push('---', '');
