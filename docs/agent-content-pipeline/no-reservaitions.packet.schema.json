@@ -29,27 +29,27 @@
     },
     "location": {
       "type": "object",
-      "required": ["title", "city", "country"],
+      "required": ["title", "address", "city", "state", "country", "coordinates"],
       "properties": {
         "title": { "type": "string" },
-        "address": { "type": ["string", "null"] },
+        "address": { "type": "string" },
         "city": { "type": "string" },
-        "state": { "type": ["string", "null"] },
+        "state": { "type": "string" },
         "country": { "type": "string" },
-        "coordinates": { "type": ["string", "null"] },
+        "coordinates": { "type": "string", "pattern": "^-?\\d{1,3}\\.\\d{4,},\\s*-?\\d{1,2}\\.\\d{4,}$" },
         "infoUrl": { "type": ["string", "null"], "format": "uri" }
       }
     },
     "frontmatter": {
       "type": "object",
-      "required": ["title", "city", "country", "description", "tags", "pubDate", "aiGenerated"],
+      "required": ["title", "address", "city", "state", "country", "coordinates", "description", "tags", "pubDate", "aiGenerated"],
       "properties": {
         "title": { "type": "string" },
-        "address": { "type": ["string", "null"] },
+        "address": { "type": "string" },
         "city": { "type": "string" },
-        "state": { "type": ["string", "null"] },
+        "state": { "type": "string" },
         "country": { "type": "string" },
-        "coordinates": { "type": ["string", "null"] },
+        "coordinates": { "type": "string", "pattern": "^-?\\d{1,3}\\.\\d{4,},\\s*-?\\d{1,2}\\.\\d{4,}$" },
         "description": { "type": "string" },
         "heroImageAlt": { "type": "string" },
         "heroImage": { "type": "string" },

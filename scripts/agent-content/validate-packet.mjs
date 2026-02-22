@@ -47,7 +47,15 @@ if (packet.type === 'no-reservaitions') {
   if (!Array.isArray(packet.sourceInput.items) || packet.sourceInput.items.length < 1) {
     fail('sourceInput.items must be an array with at least 1 item');
   }
-  required(packet.frontmatter, ['title', 'city', 'country', 'description', 'pubDate', 'tags', 'aiGenerated'], 'frontmatter');
+  required(packet.frontmatter, ['title', 'address', 'city', 'state', 'country', 'coordinates', 'description', 'pubDate', 'tags', 'aiGenerated'], 'frontmatter');
+
+  const raw = String(packet.frontmatter.coordinates || '');
+  const parts = raw.split(',').map((p) => p.trim());
+  if (parts.length !== 2) fail('frontmatter.coordinates must be "lng, lat"');
+  const lng = Number(parts[0]);
+  const lat = Number(parts[1]);
+  if (Number.isNaN(lng) || Number.isNaN(lat)) fail('frontmatter.coordinates must contain numeric longitude, latitude');
+  if (lng < -180 || lng > 180 || lat < -90 || lat > 90) fail('frontmatter.coordinates out of range');
 } else {
   required(packet.sourceInput, ['spotifyUrl'], 'sourceInput');
   required(packet, ['spotify'], 'packet');

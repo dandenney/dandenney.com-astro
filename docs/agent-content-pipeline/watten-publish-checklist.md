@@ -8,7 +8,9 @@
 ## 2) Frontmatter validation
 
 ### No Reservaitions (`src/content/reviews/*.md`)
-- [ ] Required fields present: `title`, `city`, `country`, `description`, `pubDate`, `tags`, `aiGenerated`
+- [ ] Required fields present: `title`, `address`, `city`, `state`, `country`, `coordinates`, `description`, `pubDate`, `tags`, `aiGenerated`
+- [ ] `coordinates` format is `lng, lat` (example: `-86.7816, 36.1627`)
+- [ ] `coordinates` parse to valid numeric ranges (lng -180..180, lat -90..90)
 - [ ] `city`/`state` normalized (lowercase/hyphen where expected)
 - [ ] `pubDate` format `YYYY-MM-DD`
 - [ ] `tags` non-empty array

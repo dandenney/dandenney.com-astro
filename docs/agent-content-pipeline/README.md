@@ -14,6 +14,8 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
 1. Intake from Dan
    - No reservaitions can include a photo attachment
 2. Leif creates packet JSON
+   - For no-reservaitions: address + coordinates are required for map compatibility
+   - Coordinates format must be exactly: `longitude, latitude` (example: `-86.7816, 36.1627`)
    - For music: Leif must run lyrics research (web search + source validation) and populate `lyrics.status|text|source`
 3. Quillan drafts review body from packet + style pack
 4. Watten publishes file and opens PR
@@ -37,6 +39,10 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
 ## Primary Decision
 - Agent pipeline is primary path
 - GitHub Actions retained as temporary fallback
+
+## Research briefs
+- No Reservaitions (map-ready): `leif-no-reservaitions-research-brief.md`
+- Music (lyrics-first): `leif-music-research-brief.md`
 
 ## Pilot Plan
 - 1 No Reservaitions item
