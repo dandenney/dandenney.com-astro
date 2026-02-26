@@ -11,7 +11,9 @@ export function calculateReadingTime(content, wordsPerMinute = 200) {
 
   // Remove HTML tags and clean up the content
   const cleanContent = content
-    .replace(/<[^>]*>/g, '') // Remove HTML tags
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '') // Remove style blocks and their content
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '') // Remove script blocks and their content
+    .replace(/<[^>]*>/g, '') // Remove remaining HTML tags
     .replace(/\s+/g, ' ') // Normalize whitespace
     .trim();
 
