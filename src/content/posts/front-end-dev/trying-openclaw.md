@@ -1405,7 +1405,7 @@ main {
 
 .longform.blogpost {
   background: #0d0e10;
-  color: #c9d1d9;
+  color: #ffffff;
 }
 
 .longform.blogpost h2,
@@ -1569,7 +1569,7 @@ As with nearly everything going in the AI space, I was curious though. So, when 
   </div>
   <div class="oc-attempt oc-attempt-vps" data-oc-reveal>
     <span class="oc-attempt-label">Attempt 01 — VPS</span>
-    <p>The next 24 hours from the talk were a roller coaster of emotions. I came home excited and started figuring out a way to just get one going for a test. I didn't want it on anything I owned or connected to anything I use, so I looked for some VPS solutions. I got one set up before bed and got the initial installation going, but it was a pain in the ass.</p>
+    <p>The next 24 hours from the talk were a roller coaster of emotions. I came home excited and started figuring out a way to just get one going for a test. I didn't want it on anything I owned or connected to anything I use, so I looked for some VPS solutions. I got one set up before bed and got the initial installation going, but it was a pain in the ass. It was my fault though, I wasn't properly reading the docs and so I was trying to execute commands in the GUI, then in SSH, then finally in the Docker after SSH.</p>
     <div class="oc-spiral-code">
       <span class="oc-spiral-wrong">openclaw --start</span>
       <span class="oc-spiral-note">ran it inside the dashboard, not the shell</span>
@@ -1821,7 +1821,7 @@ The second best part is the removal of friction for doing simple things.
 <svg class="oc-music-wave-bg" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true"><path d="M0,200 C50,100 100,300 150,200 C200,100 250,300 300,200 C350,100 400,300 450,200 C500,100 550,300 600,200 C650,100 700,300 750,200 C800,100 850,300 900,200 C950,100 1000,300 1050,200 C1100,100 1150,300 1200,200" fill="none" stroke="#9b5de5" stroke-width="3"/><path d="M0,280 C75,200 150,360 225,280 C300,200 375,360 450,280 C525,200 600,360 675,280 C750,200 825,360 900,280 C975,200 1050,360 1125,280 L1200,280" fill="none" stroke="#9b5de5" stroke-width="1.5"/></svg>
 <div class="oc-music-content">
 <span class="oc-music-section-label">Example Two · Music Reviews</span>
-<p class="oc-music-prose">Similarly, I generate music reviews of songs in my <a href="https://open.spotify.com/playlist/0bscM0iqnWBVzY9xMCHc4y?si=9cdd9f720f10475c">Lately</a> playlist. Brutal honesty here, but one of my character flaws is that I keep my emotions pretty tucked down. Music brings them out, but I'm so good at stashing them that I can't always explain why. "What makes me enjoy this song so much?" Generating a review helps me dive into the lyrics further and I learn something about them, the musician, and myself.</p>
+<p class="oc-music-prose">Similarly, I generate music reviews of songs in my <a href="https://open.spotify.com/playlist/0bscM0iqnWBVzY9xMCHc4y?si=9cdd9f720f10475c">Lately</a> playlist. Music is my love and sometimes I know exactly why I love a song and sometimes I'm like "What makes me enjoy this song so much?" Generating a review helps me dive into the lyrics further and I learn something about them, the musician, and myself.</p>
 <p class="oc-music-prose">This flow started with a GitHub action. I wanted to do it forever, but I knew I wouldn't commit to a flow like the No ReservAItions ones. Now, I can just @ Shelby the link to the song and get things going.</p>
 <p class="oc-music-prose">Brief interlude here, but this brings me so much joy. I didn't need a review to know why I love <a href="https://www.dandenney.com/music/reviews/stephen-wilson-jr-im-a-song-live-at-the-print-shop/">this song</a>, but isn't this beautiful?</p>
 <blockquote class="oc-pullquote"><span class="quote">&ldquo;</span> As he navigates the intersections of personal and collective histories, Wilson's artistry speaks to a universal truth: we are all, in some way, a collection of songs—woven from our joys, regrets, and the fleeting instances that shape our lives.<span class="quote">&rdquo;</span></span><cite class="oc-pullquote-source">— Quillan on Stephen Wilson Jr., "I'm a Song (Live at the Print Shop)"</cite></blockquote>
