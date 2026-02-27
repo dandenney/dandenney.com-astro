@@ -4,8 +4,7 @@ socialImageFilename: "og-trying-openclaw.jpg"
 summary: "Initial setup and some simple automations"
 tags:
   - front-end-dev
-cloudinaryThumb: "posts/trying-openclaw.png"
-thumb: "/posts/front-end-dev/trying-openclaw/trying-openclaw-thumb.webp"
+thumb: "/posts/front-end-dev/trying-openclaw/trying-openclaw.webp"
 thumbAlt: "a playful illustration of rows and rows of photos of various food items, with the illustion of motion --ar 3:2"
 title: "Trying OpenClaw"
 ---
