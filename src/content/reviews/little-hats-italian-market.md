@@ -1,6 +1,6 @@
 ---
 address: "1234 Example St, Nashville, TN 37201, United States"
-city: "Nashville"
+city: "nashville"
 coordinates: -86.7816, 36.1627
 country: United States
 description: Little Hats Italian Market offers a delightful mix of authentic Italian flavors and hearty sandwiches.

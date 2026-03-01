@@ -12,11 +12,13 @@ export const prerender = true;
 export async function getStaticPaths() {
   const allReviews = await Astro.glob('../../../content/reviews/*.md');
 
-  const uniqueCities = [...new Set(allReviews.map((review) => review.frontmatter.city).flat())];
+  // Normalize to lowercase so "Nashville" and "nashville" become one page
+  const uniqueCities = [...new Set(allReviews.map((review) => String(review.frontmatter.city).toLowerCase()))];
 
   return uniqueCities.map((city) => {
-    const filteredReviews = allReviews.filter((review) => 
-      review.frontmatter.city.includes(city)
+    const cityLower = city.toLowerCase();
+    const filteredReviews = allReviews.filter((review) =>
+      String(review.frontmatter.city).toLowerCase() === cityLower
     ).map((review) => {
       // Extract the slug from the file path
       // This example assumes file names are suitable for use as slugs

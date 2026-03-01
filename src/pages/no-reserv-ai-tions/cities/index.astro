@@ -8,7 +8,8 @@ import { ViewTransitions } from 'astro:transitions';
 export const prerender = true;
 
 const allReviews = await Astro.glob('../../../content/reviews/*.md');
-const cities = [...new Set(allReviews.map((review) => review.frontmatter.city).flat())].sort();
+// Dedupe by lowercase so "Nashville" and "nashville" show as one city
+const cities = [...new Set(allReviews.map((review) => String(review.frontmatter.city).toLowerCase()))].sort();
 
 ---
 <!doctype html>
