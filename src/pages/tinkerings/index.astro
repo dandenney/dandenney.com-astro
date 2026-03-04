@@ -2,54 +2,86 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
+import { ViewTransitions } from 'astro:transitions';
 
 const tinkerings = (await getCollection('tinkerings')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title="Tinkerings | Dan Denney" description="Projects with some technical bit that I learned in order to create" />
+		<ViewTransitions />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
-		<Header />
 		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
-			<section class="pb-24 pt-16 relative shadow-xs z-10 sm:pb-32">
-				<div class="mx-auto max-w-7xl px-6 lg:px-8">
-					<div class="mx-auto max-w-2xl lg:max-w-4xl">
-						<p class="text-lg font-semibold leading-8 tracking-tight text-slate-400 dark:text-slate-400">This Used To Be My Playground</p>
-						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-slate-100">Tinkerings</h1>
-						<p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none dark:text-slate-100">
-							The projects are all scratching some itch, either technical or part of my interests. Each has some technical bit that I learned in order to build, but they're focused on things like my love for music and trying to beat number systems.
-						</p>
-						<div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-							{tinkerings.map((tinkering) => (
-								<article class="relative isolate flex flex-col gap-8 lg:flex-row lg:items-center">
-									<div class="relative aspect-video sm:aspect-2/1 lg:aspect-square lg:w-48 lg:shrink-0">
-										<img src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_880,q_auto/${tinkering.data.thumb ? tinkering.data.thumb : 'posts/slackin.png'}`} alt="{% if tinkering.data.thumb %}{{ tinkering.data.thumbAlt }}{% else %}slacking on my imagin'{% endif %}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
-										<div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+			<Header title={SITE_TITLE} />
+
+			<section class="pt-16 pb-24">
+				<div class="px-8">
+					<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+						<span class="whitespace-nowrap">[&nbsp;{tinkerings.length} projects&nbsp;]</span>
+					</p>
+					<h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">Tinkerings</h1>
+					<p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-100">
+						Each scratches some itch, either technical or personal. Projects focused on things like my love for music and trying to beat number systems.
+					</p>
+				</div>
+
+				<div class="tinkerings-grid mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+					{tinkerings.map((tinkering, i) => {
+						const wideIndices = new Set([0, 5]);
+						const isWide = wideIndices.has(i);
+						const dateStr = tinkering.data.pubDate.toLocaleDateString('en-US', {
+							month: 'short',
+							day: 'numeric',
+							year: 'numeric',
+						});
+						const thumbUrl = tinkering.data.thumb
+							? `https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_600,q_auto/${tinkering.data.thumb}`
+							: null;
+						return (
+							<a
+								href={`/tinkerings/${tinkering.slug}/`}
+								class:list={[
+									"tinkerings-grid-item group relative flex flex-col no-underline bg-slate-50 dark:bg-slate-800",
+									isWide ? "md:col-span-2" : "",
+								]}
+							>
+								{thumbUrl && (
+									<div class="aspect-video overflow-hidden">
+										<img
+											src={thumbUrl}
+											alt={tinkering.data.thumbAlt || tinkering.data.title}
+											class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+											loading="lazy"
+										/>
 									</div>
-									<div>
-										<div class="group relative max-w-xl">
-											<h3 class="has-links mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-												<a href={`/tinkerings/${tinkering.slug}/`}>
-													<span class="absolute inset-0"></span>
-													{tinkering.data.title}
-												</a>
-											</h3>
-											<p class="mt-2 text-sm leading-6 text-gray-600 dark:text-slate-300">
+								)}
+								<div class="flex flex-1 items-start justify-between gap-4 p-6 md:p-8">
+									<div class="min-w-0 flex-1">
+										<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+											<span class="whitespace-nowrap">[&nbsp;{dateStr}&nbsp;]</span>
+										</p>
+										<h3 class="mt-3 text-lg font-semibold leading-snug text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
+											{tinkering.data.title}
+										</h3>
+										{tinkering.data.summary && (
+											<p class="mt-3 text-sm leading-relaxed text-gray-500 dark:text-slate-400">
 												{tinkering.data.summary}
 											</p>
-										</div>
+										)}
 									</div>
-								</article>
-								))
-							}
-						</div>
-					</div>
+									<svg class="shrink-0 mt-1 text-gray-300 transition-colors group-hover:text-red-400 dark:text-slate-600 dark:group-hover:text-red-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+										<path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+							</a>
+						);
+					})}
 				</div>
 			</section>
 		</main>
