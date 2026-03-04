@@ -19,11 +19,11 @@ const posts = (await getCollection("posts"))
 
 const blips = (await getCollection("blips"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 5);
+  .slice(0, 4);
 
 const reviews = (await getCollection("reviews"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 2);
+  .slice(0, 4);
 
 const links = await getLinks();
 
@@ -423,341 +423,316 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="py-8 sm:py-24 bg-slate-50 dark:bg-slate-800">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center">
-            <h2
-              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
-            >
-              Side Projects
-            </h2>
-            <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-slate-100">
-              Experiments mixing my interests in music, organization, and modern
-              web development
-            </p>
-          </div>
-          <div
-            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+      <section class="flex min-h-[100dvh] flex-col bg-slate-50 dark:bg-slate-800">
+        <div class="px-8 pt-24 pb-8">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
-            <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-xs ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+            Side Projects
+          </h2>
+          <p class="mt-2 max-w-3xl text-lg leading-8 text-gray-600 dark:text-slate-100">
+            Experiments mixing my interests in music, organization, and modern
+            web development
+          </p>
+        </div>
+        <div
+          class="grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 transition-all duration-300 hover:shadow-md">
+            <a
+              href="/music"
+              class="absolute inset-0 z-20"
             >
-              <a
-                href="/music"
-                class="absolute inset-0 z-0"
-                aria-label="Seasons of Dan"
-              >
-                <span class="sr-only">Seasons of Dan</span>
-              </a>
-              <div class="flex items-center gap-x-4 text-xs relative z-10">
-                <span
-                  class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
-                >
-                  Spotify API
-                </span>
-              </div>
-              <div class="group relative z-10">
-                <h3
-                  class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
-                >
-                  Seasons of Dan
-                </h3>
-                <p
-                  class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300"
-                >
-                  A look at my music listening habits across different time
-                  periods. Using the Spotify API to show my top tracks and
-                  artists from the last 4 weeks, 6 months, and several years.
-                  It's fun to see how my taste evolves over time.
-                </p>
-              </div>
-              <div class="mt-auto relative z-10">
-                <a href="/music" class="btn-link">View listening history</a>
-              </div>
-            </article>
+              <span class="sr-only">Seasons of Dan</span>
+            </a>
+            <OptimizedImage
+              src="/seasons-of-dan.webp"
+              alt="Seasons of Dan - Spotify listening history"
+              width={1312}
+              height={940}
+              class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
+            <div class="flex items-center gap-x-4 text-xs mb-3 relative z-10">
+              <span class="border border-white/20 rounded-full px-3 py-1.5 font-medium text-white/70">
+                Spotify API
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+              Seasons of Dan
+            </h3>
+            <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+              A look at my music listening habits across different time
+              periods, showing top tracks and artists over time.
+            </p>
+            <p class="mt-3 relative z-10 text-sm font-semibold text-red-400 transition-colors group-hover:text-red-300">
+              View listening history &rarr;
+            </p>
+          </article>
 
-            <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-xs ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+          <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 transition-all duration-300 hover:shadow-md">
+            <a
+              href="/music/reviews"
+              class="absolute inset-0 z-20"
             >
-              <a
-                href="/music/reviews"
-                class="absolute inset-0 z-0"
-                aria-label="Music Reviews"
-              >
-                <span class="sr-only">Music Reviews</span>
-              </a>
-              <div class="flex items-center gap-x-4 text-xs relative z-10">
-                <span
-                  class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
-                >
-                  AI Generated
-                </span>
-              </div>
-              <div class="group relative z-10">
-                <h3
-                  class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
-                >
-                  Music Reviews
-                </h3>
-                <p
-                  class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300"
-                >
-                  AI-generated reviews of songs I'm listening to. I share a
-                  Spotify link, the lyrics, and ChatGPT automatically analyzes
-                  the track's vibe, production, and emotional impact. It's like
-                  having a music critic on tap.
-                </p>
-              </div>
-              <div class="mt-auto relative z-10">
-                <a href="/music/reviews" class="btn-link">Read song reviews</a>
-              </div>
-            </article>
+              <span class="sr-only">Music Reviews</span>
+            </a>
+            <OptimizedImage
+              src="/music-reviews.webp"
+              alt="Music Reviews - AI-generated song analysis"
+              width={1312}
+              height={940}
+              class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
+            <div class="flex items-center gap-x-4 text-xs mb-3 relative z-10">
+              <span class="border border-white/20 rounded-full px-3 py-1.5 font-medium text-white/70">
+                AI Generated
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+              Music Reviews
+            </h3>
+            <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+              AI-generated reviews analyzing the vibe, production, and
+              emotional impact of songs I'm listening to.
+            </p>
+            <p class="mt-3 relative z-10 text-sm font-semibold text-red-400 transition-colors group-hover:text-red-300">
+              Read song reviews &rarr;
+            </p>
+          </article>
 
-            <article
-              class="relative isolate flex flex-col gap-6 rounded-2xl bg-white p-8 shadow-xs ring-1 ring-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:bg-slate-900 dark:ring-slate-700"
+          <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 transition-all duration-300 hover:shadow-md">
+            <a
+              href="https://github.com/dandenney/side-by-side"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="absolute inset-0 z-20"
             >
-              <a
-                href="https://github.com/dandenney/side-by-side"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="absolute inset-0 z-0"
-                aria-label="Side by Side"
-              >
-                <span class="sr-only">Side by Side</span>
-              </a>
-              <div class="flex items-center gap-x-4 text-xs relative z-10">
-                <span
-                  class="border border-gray-200 dark:border-slate-700 relative z-10 rounded-full px-3 py-1.5 font-medium"
-                >
-                  Next.js + Supabase
-                </span>
-              </div>
-              <div class="group relative z-10">
-                <h3
-                  class="text-2xl font-semibold leading-6 text-gray-900 dark:text-slate-100"
-                >
-                  Side by Side
-                </h3>
-                <p
-                  class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300"
-                >
-                  A modern web app for organizing life's upcoming events, shared
-                  links, local places, and shopping lists. Built with Next.js,
-                  TypeScript, and Supabase to consolidate daily life management
-                  in one place.
-                </p>
-              </div>
-              <div class="mt-auto relative z-10">
-                <a
-                  href="https://github.com/dandenney/side-by-side"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-link">View on GitHub</a
-                >
-              </div>
-            </article>
-          </div>
+              <span class="sr-only">Side by Side</span>
+            </a>
+            <OptimizedImage
+              src="/side-by-side.webp"
+              alt="Side by Side - life organizer app"
+              width={1312}
+              height={940}
+              class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
+            <div class="flex items-center gap-x-4 text-xs mb-3 relative z-10">
+              <span class="border border-white/20 rounded-full px-3 py-1.5 font-medium text-white/70">
+                Next.js + Supabase
+              </span>
+            </div>
+            <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+              Side by Side
+            </h3>
+            <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+              A web app for organizing life's events, shared links, local
+              places, and shopping lists in one place.
+            </p>
+            <p class="mt-3 relative z-10 text-sm font-semibold text-red-400 transition-colors group-hover:text-red-300">
+              View on GitHub &rarr;
+            </p>
+          </article>
         </div>
       </section>
 
       <section class="py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div
-            class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
+        <div class="px-8">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
-            <div class="w-full lg:max-w-lg lg:flex-auto">
-              <h2
-                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
-              >
-                Most Recent Blips
-              </h2>
-              <p
-                class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100"
-              >
-                Shorter than a blog post, longer than a tweet. This is where I
-                share quick reactions or stash things I want to remember.
-              </p>
-              <OptimizedImage
-                src="/blip-too.webp"
-                alt="Illustration of blocks"
-                width={512}
-                height={512}
-                class="mt-8 w-full rounded-2xl bg-gray-50 object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div class="w-full lg:max-w-xl lg:flex-auto">
-              <h3 class="sr-only">Job openings</h3>
-              <ul
-                class="has-links -my-8 divide-y divide-gray-100 dark:divide-slate-600"
-              >
-                {
-                  blips.map((blip) => (
-                    <li class="py-8">
-                      <a
-                        class="text-base leading-7"
-                        href={`/blips/${blip.slug}/`}
-                      >
-                        {blip.data.title}
-                      </a>
-                      <p class="text-sm dark:text-slate-300">
+            Most Recent Blips
+          </h2>
+          <p
+            class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-slate-100"
+          >
+            Shorter than a blog post, longer than a tweet. This is where I
+            share quick reactions or stash things I want to remember.
+          </p>
+        </div>
+
+        <div class="blips-grid mt-12 grid grid-cols-1 md:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+          {
+            blips.map((blip, i) => {
+              const wideIndices = new Set([0, 3]);
+              const isWide = wideIndices.has(i);
+              const dateStr = blip.data.pubDate.toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              });
+              return (
+                <a
+                  href={`/blips/${blip.slug}/`}
+                  class:list={[
+                    "blips-grid-item group relative flex items-center justify-between no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-800",
+                    isWide ? "md:col-span-2" : "",
+                  ]}
+                >
+                  <div class="min-w-0 flex-1 pr-4 md:pr-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+                      <span class="whitespace-nowrap">[&nbsp;{dateStr}&nbsp;]</span>
+                    </p>
+                    <h3 class="mt-3 text-lg font-semibold leading-snug text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
+                      {blip.data.title}
+                    </h3>
+                    {blip.data.summary && (
+                      <p class="mt-3 text-sm leading-relaxed text-gray-500 dark:text-slate-400">
                         {blip.data.summary}
                       </p>
-                    </li>
-                  ))
-                }
-              </ul>
-              <div
-                class="mt-8 flex border-t border-gray-100 pt-8 dark:border-slate-600"
-              >
-                <a href="/blips" class="btn-link">View All Blips</a>
-              </div>
-            </div>
-          </div>
+                    )}
+                  </div>
+                  <svg class="blip-radar shrink-0" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <circle class="blip-ring blip-ring-3" cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.75" />
+                    <circle class="blip-ring blip-ring-2" cx="16" cy="16" r="10" stroke="currentColor" stroke-width="0.75" />
+                    <circle class="blip-ring blip-ring-1" cx="16" cy="16" r="5" stroke="currentColor" stroke-width="0.75" />
+                    <circle class="blip-core" cx="16" cy="16" r="2.5" fill="currentColor" />
+                  </svg>
+                </a>
+              );
+            })
+          }
+        </div>
+
+        <div class="mt-8 px-8">
+          <a href="/blips" class="btn-link">View All Blips</a>
         </div>
       </section>
 
-      <section class="bg-slate-50 dark:bg-slate-800 py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <h2
-              class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
-            >
-              Most Recent Finds
-            </h2>
-            <p
-              class="has-links mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-slate-100"
-            >
-              I keep a stash to stash of everything I've read or watched and
-              found valuable, in a <a href="/library">"library"</a> and archive them
-              by month.
-            </p>
-
-            {
-              links.length > 0 ? (
-                <ul class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {links.map((link) => (
-                    <li>
-                      <a
-                        href={link.url}
-                        class="group block h-full rounded-2xl border border-gray-200 bg-white p-6 no-underline shadow-xs transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-gray-300 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600"
-                      >
-                        <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-slate-400">
-                          {link.created.toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
-                        </p>
-                        <h3 class="mt-2 text-lg font-semibold leading-6 text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
-                          {link.title}
-                        </h3>
-                        {link.notes && (
-                          <p class="mt-3 text-sm leading-7 text-gray-600 dark:text-slate-300">
-                            {link.notes}
-                          </p>
-                        )}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p class="mt-12 text-lg font-semibold leading-8 tracking-tight text-slate-400">
-                  No links yet in {monthName}
-                </p>
-              )
-            }
-          </div>
-        </div>
-      </section>
-
-      <section class="py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div
-            class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
+      <section class="bg-slate-50 dark:bg-slate-800 pt-32">
+        <div class="px-8">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
-            <div class="w-full lg:max-w-lg lg:flex-auto">
-              <h2
-                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
-              >
-                Join the Artificial Intelligencers
-              </h2>
-              <p
-                class="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-100"
-              >
-                I co-organize this Nashville meetup for anyone from beginners to
-                experts who are willing to share their personal or professional
-                journeys learning, experimenting, developing, and applying AI.
-                We focus on real tools, real demos, and real talk.
-              </p>
-              <div class="mt-10 flex items-center gap-x-6">
-                <a
-                  href="https://www.meetup.com/artificialintelligencers/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-link"
-                >
-                  Join on Meetup
-                </a>
-                <a
-                  href="https://www.nashvilleaiengineering.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm font-semibold leading-6 text-gray-900 dark:text-slate-100"
-                >
-                  Visit our website <span aria-hidden="true">→</span>
-                </a>
-              </div>
+            Most Recent Finds
+          </h2>
+          <p
+            class="has-links mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-slate-100"
+          >
+            I keep a stash of everything I've read or watched and
+            found valuable, in a <a href="/library">"library"</a> and archive them
+            by month.
+          </p>
+        </div>
+
+        {
+          links.length > 0 ? (
+            <div class="finds-grid mt-12 grid grid-cols-1 md:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+              {links.map((link, i) => {
+                const wideIndices = new Set([0, 5, 11, 18, 24]);
+                const isWide = wideIndices.has(i);
+                const dateStr = link.created.toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                });
+                return (
+                  <a
+                    href={link.url}
+                    class:list={[
+                      "finds-grid-item group block no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-800",
+                      isWide ? "md:col-span-2" : "",
+                    ]}
+                  >
+                    <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+                      <span class="whitespace-nowrap">[&nbsp;{dateStr}&nbsp;]</span>
+                    </p>
+                    <h3 class="mt-3 text-lg font-semibold leading-snug text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
+                      {link.title}
+                    </h3>
+                    {link.notes && (
+                      <p class="mt-3 text-sm leading-relaxed text-gray-500 dark:text-slate-400">
+                        {link.notes}
+                      </p>
+                    )}
+                  </a>
+                );
+              })}
             </div>
-            <div class="w-full lg:max-w-xl lg:flex-auto">
-              <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <div
-                  class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600"
-                >
-                  <dt
-                    class="text-sm leading-6 text-gray-600 dark:text-slate-300"
-                  >
-                    Members
-                  </dt>
-                  <dd
-                    class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100"
-                  >
-                    190+
-                  </dd>
-                </div>
-                <div
-                  class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6 dark:border-slate-600"
-                >
-                  <dt
-                    class="text-sm leading-6 text-gray-600 dark:text-slate-300"
-                  >
-                    Location
-                  </dt>
-                  <dd
-                    class="order-first text-3xl font-semibold tracking-tight text-gray-900 dark:text-slate-100"
-                  >
-                    Nashville
-                  </dd>
-                </div>
-              </div>
-              <p
-                class="mt-8 text-base leading-7 text-gray-600 dark:text-slate-300"
-              >
-                Our monthly events feature 15-20 minute presentations and demos,
-                plus plenty of time for networking and collaboration. Whether
-                you're sharing workflow automation, artistic applications, or
-                research deep-dives, everyone's welcome.
+          ) : (
+            <div class="px-8">
+              <p class="mt-12 text-lg font-semibold leading-8 tracking-tight text-slate-400">
+                No links yet in {monthName}
               </p>
             </div>
+          )
+        }
+      </section>
+
+      <section class="relative isolate overflow-hidden bg-white dark:bg-slate-900">
+        <svg aria-hidden="true" class="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 dark:stroke-slate-700">
+          <defs>
+            <pattern id="ai-grid" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+              <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y="-1" class="overflow-visible fill-gray-50 dark:fill-slate-800">
+            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
+          </svg>
+          <rect width="100%" height="100%" fill="url(#ai-grid)" stroke-width="0" />
+        </svg>
+        <div aria-hidden="true" class="absolute top-10 left-[calc(50%-4rem)] -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:top-[calc(50%-30rem)] lg:left-48 xl:left-[calc(50%-24rem)]">
+          <div style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)" class="aspect-1108/632 w-277 bg-linear-to-r from-blue-50 to-blue-200 opacity-50 dark:from-blue-200 dark:to-blue-500 dark:opacity-10"></div>
+        </div>
+        <div class="px-8 pt-10 pb-24 sm:pb-32 lg:flex lg:items-center lg:gap-x-10 lg:py-40">
+          <div class="max-w-xl shrink-0 lg:pt-8">
+            <div class="mt-24 sm:mt-32 lg:mt-0">
+              <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+                <span class="whitespace-nowrap">[&nbsp;280+ members&nbsp;]</span>
+              </p>
+            </div>
+            <h2 class="mt-10 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl dark:text-slate-100">Join the Artificial Intelligencers</h2>
+            <p class="mt-8 text-lg leading-8 text-gray-600 dark:text-slate-100">
+              I co-organize this Nashville meetup for anyone from beginners to
+              experts who are willing to share their personal or professional
+              journeys learning, experimenting, developing, and applying AI.
+              We focus on real tools, real demos, and real talk.
+            </p>
+            <p class="mt-4 text-base leading-7 text-gray-600 dark:text-slate-300">
+              Our monthly events feature 15-20 minute presentations and demos,
+              plus plenty of time for networking and collaboration. Whether
+              you're sharing workflow automation, artistic applications, or
+              research deep-dives, everyone's welcome.
+            </p>
+            <div class="mt-10 flex items-center gap-x-6">
+              <a
+                href="https://www.meetup.com/artificialintelligencers/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-link"
+              >
+                Join on Meetup
+              </a>
+              <a
+                href="https://www.nashvilleaiengineering.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm/6 font-semibold text-gray-900 dark:text-slate-100"
+              >
+                Visit our website <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-1">
+            <OptimizedImage
+              src="/artificial-intelligencers.webp"
+              alt="Artificial Intelligencers meetup website screenshot"
+              width={1456}
+              height={862}
+              class="w-full rounded-md shadow-xl ring-1 ring-gray-900/10 dark:ring-slate-700"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
 
       <section class="bg-slate-50 dark:bg-slate-900 py-24 sm:py-32">
-        <div
-          class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 px-6 lg:gap-y-16 lg:grid-cols-2 lg:px-8"
-        >
-          <div class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
+        <div class="px-8">
             <svg
               width="240"
               height="79"
@@ -839,64 +814,53 @@ const monthName = getMonthName();
                 d="M62.1347 31V17H65V31H62.1347Z"
                 class="fill-red-700 dark:fill-red-400"></path>
             </svg>
-            <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-slate-100">
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-100">
               Cooking and enjoying food and drinks are my hobbies outside of web
               development. With No ReservAItions, I've found a way to mix the
               two. I'm using ChatGPT to create reviews for the places that I
               visit in the spirit of Anthony Bourdain and I'm having so much fun
               with it!
             </p>
-          </div>
-          <div class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-none lg:pt-0">
-            <ul>
-              {
-                reviews.map((review) => (
-                  <li>
-                    <a
-                      class="block duration-300 group relative isolate mt-4 p-4 transition-all sm:mt-0 hover:bg-red-700 dark:text-red-400 dark:hover:bg-red-400"
-                      href={`/no-reserv-ai-tions/${review.slug}`}
-                    >
-                      <div class="flex flex-col gap-4 items-start max-w-2xl mx-auto sm:flex-row sm:gap-8 lg:max-w-(--breakpoint-2xl)">
-                        <figure
-                          class="bg-white duration-300 shrink-0 pb-5 pt-2 px-2 shadow-xs shadow-slate-10/20 transition-transform w-52 group-hover:-rotate-3"
-                          transition:name={`${review.data.title}-img`}
-                        >
-                          <img
-                            src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`}
-                            alt={review.data.heroImageAlt}
-                            height="144"
-                            width="192"
-                          />
-                        </figure>
-                        <div>
-                          <div class="flex items-center gap-x-4 text-slate-500 text-sm dark:text-slate-300 group-hover:text-white">
-                            {toTitleCase(review.data.city)},{" "}
-                            {review.data.country === "United States"
-                              ? toTitleCase(review.data.state)
-                              : review.data.country}
-                          </div>
-                          <div class="group relative">
-                            <h3 class="duration-300 font-bold mt-2 text-4xl  text-red-700 dark:text-red-400 transition-color uppercase md:text-5xl group-hover:text-white">
-                              <span class="absolute inset-0" />
-                              {review.data.title}
-                            </h3>
-                            <p class="duration-500 mt-2 text-gray-600 text-sm dark:text-slate-100 group-hover:text-white">
-                              {review.data.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-            <div class="mt-16 lg:pl-4">
-              <a href="/no-reserv-ai-tions" class="btn-link"
-                >View No ReservAItions</a
+        </div>
+
+        <div class="reviews-grid mt-12 grid grid-cols-1 md:grid-cols-2 border-y border-gray-200 dark:border-slate-700">
+          {
+            reviews.map((review) => (
+              <a
+                class="reviews-grid-item group flex items-center gap-6 md:gap-8 no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-900"
+                href={`/no-reserv-ai-tions/${review.slug}`}
               >
-            </div>
-          </div>
+                <figure
+                  class="shrink-0 bg-white pb-4 pt-2 px-2 shadow-sm transition-transform duration-300 group-hover:-rotate-3"
+                  transition:name={`${review.data.title}-img`}
+                >
+                  <img
+                    src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`}
+                    alt={review.data.heroImageAlt}
+                    height="120"
+                    width="160"
+                    class="w-32 md:w-40"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="min-w-0">
+                  <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+                    <span class="whitespace-nowrap">[&nbsp;{toTitleCase(review.data.city)}, {review.data.country === "United States" ? toTitleCase(review.data.state) : review.data.country}&nbsp;]</span>
+                  </p>
+                  <h3 class="mt-2 text-2xl font-bold uppercase leading-tight text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300 md:text-3xl">
+                    {review.data.title}
+                  </h3>
+                  <p class="mt-2 text-sm leading-relaxed text-gray-500 dark:text-slate-400 line-clamp-2">
+                    {review.data.description}
+                  </p>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="mt-8 px-8">
+          <a href="/no-reserv-ai-tions" class="btn-link">View No ReservAItions</a>
         </div>
       </section>
     </main>
