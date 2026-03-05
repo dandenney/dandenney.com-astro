@@ -112,8 +112,8 @@
 
 /* Links */
 
-.longform a,
-.has-links a {
+.longform a:not(.btn-link),
+.has-links a:not(.btn-link) {
   @apply bg-no-repeat font-semibold no-underline text-red-700;
   background-image: linear-gradient(
     to bottom,
@@ -124,8 +124,8 @@
   transition: background-size 0.4s ease;
 }
 
-.dark .longform a,
-.dark .has-links a {
+.dark .longform a:not(.btn-link),
+.dark .has-links a:not(.btn-link) {
   @apply bg-no-repeat font-semibold no-underline text-red-300;
   background-image: linear-gradient(
     to bottom,
@@ -498,6 +498,10 @@
     margin-right: -12.5%;
     transform: none;
   }
+}
+
+.review img {
+  border-radius: 0.5rem;
 }
 
 /* Generated Images */

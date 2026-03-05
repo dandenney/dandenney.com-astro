@@ -56,9 +56,9 @@ const reviews = (await getCollection('reviews')).sort(
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<Header />
-		<main class="bg-white relative shadow-xs z-10 lg:flex lg:items-center dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
-			<div class="max-w-(--breakpoint-xl) mx-auto px-4 py-4 lg:grid lg:grid-cols-2 lg:gap-8">
-				<div>
+		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
+			<div class="lg:grid lg:grid-cols-2">
+				<div class="px-4 py-4 lg:px-12 xl:px-16">
 					<div class="sticky top-24">
 						<h1>
 							<span class="sr-only">No Reserv<span class="uppercase">ai</span>tions</span>
@@ -132,7 +132,7 @@ const reviews = (await getCollection('reviews')).sort(
 							{reviews.map((review) => (
 								<li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
 									<a class="review-link block duration-300 group relative isolate transition-all sm:mt-0" href={`/no-reserv-ai-tions/${review.slug}/`}>
-										<div class="max-w-2xl mx-auto sm:gap-8 lg:max-w-(--breakpoint-2xl) sm:flex sm:items-start">
+										<div class="max-w-2xl mx-auto sm:gap-8 sm:flex sm:items-start">
 											<img class="mb-4 sm:max-w-[240px] sm:h-auto lg:hidden" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 											<div>
 												<div class="flex items-center gap-x-4 text-sm dark:text-white">
@@ -156,12 +156,12 @@ const reviews = (await getCollection('reviews')).sort(
 				<div>
 					<ul id="images" class="hidden mb-24 lg:block">
 						<li class="photo-container overflow-hidden min-h-[70dvh]">
-							<img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="h-full w-full object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n-portrait.webp" />	
+							<img alt="Midjourney generated image of Anthony Bourdain in Nashville" class="h-full w-full object-cover" src="/no-reserv-ai-tions/ai-nthony-bourd-ai-n-portrait.webp" />
 						</li>
 						{reviews.map((review) => (
 							<li class="min-h-[80dvh] overflow-hidden relative">
-								<a class="absolute bottom-0 left-0 right-0 top-16 block duration-300 group isolate  transition-all sm:mt-0  hover:bg-red-700 dark:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}/`}>
-									<img class="absolute h-full inset-x-2/4	max-w-[unset] top-0 -translate-x-2/4	" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
+								<a class="absolute inset-0 block duration-300 group isolate transition-all sm:mt-0 hover:bg-red-700 dark:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}/`}>
+									<img class="h-full w-full object-cover" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 								</a>
 							</li>
 						))}

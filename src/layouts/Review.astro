@@ -13,77 +13,98 @@ const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, h
 		<BaseHead title={title} description={description} />
 		<ViewTransitions />
 		<style>
-			@media screen and (min-width: 768px) {
-				.longform {
-					font-size: 1.25rem;
-				}
+			.hero-image-wrapper {
+				overflow: hidden;
+			}
+			.hero-image-wrapper img {
+				transition: transform 0.6s ease-out;
 			}
 		</style>
 	</head>
-	<body class="bg-white dark:bg-slate-900">
+	<body class="bg-slate-100 dark:bg-slate-950">
 		<Header />
-		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
-			<article class="max-w-(--breakpoint-xl) mx-auto px-4 pt-4">
+		<main class="bg-slate-100 border-b border-slate-200 relative shadow-xs z-10 dark:bg-slate-950 dark:border-slate-800">
 
-				<h1 class="text-4xl font-bold leading-tight max-w-2xl my-8 tracking-tight xl:my-16 md:text-6xl xl:text-8xl">{title}</h1>
+			<!-- Title section: centered on gray background -->
+			<div class="bg-slate-100 px-4 pt-8 dark:bg-slate-950 lg:px-8 lg:pt-16">
+				<div class="max-w-(--breakpoint-xl) mx-auto text-center">
+					<p class="has-links text-sm text-gray-500 dark:text-slate-400">
+						<a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></>}
+					</p>
 
-				<div class="w-full md:flex md:justify-end md:pr-12">
-					<div class="max-w-lg">
-						<p class="lg:text-xl">{description}</p>
-						<ul class="has-links flex flex-wrap font-decorative gap-x-4 text-sm">
-							<li class="text-gray-600 mt-4 dark:text-slate-100"><a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></> }</li>
-							<li class="mt-4 text-gray-300 dark:text-slate-100">
-								{tags && tags.map((tag, index) => (
-									<>
-										{index > 0 ? '• ' : ''}
-										<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
-									</>
-								))}
-							</li>
-						</ul>
+					<h1 class="text-4xl text-balance font-bold leading-tight max-w-3xl mx-auto mt-4 tracking-tight md:text-6xl xl:text-7xl dark:text-white">{title}</h1>
+
+					<p class="mt-4 text-balance max-w-2xl mx-auto text-lg text-gray-600 dark:text-slate-300 lg:text-xl">{description}</p>
+
+					{tags && (
+						<p class="has-links mt-4 text-sm text-gray-400 dark:text-slate-500">
+							{tags.map((tag, index) => (
+								<>
+									{index > 0 ? ' · ' : ''}
+									<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
+								</>
+							))}
+						</p>
+					)}
+				</div>
+			</div>
+
+			<!-- Image + white card: card starts behind the image, image sits on top -->
+			<div class="relative px-4 pt-8 lg:px-8 lg:pt-12">
+				<!-- White card: starts partway up the image area -->
+				<div class="absolute inset-x-4 -bottom-4 top-[40%] bg-white rounded-t-2xl dark:bg-slate-900 lg:inset-x-8"></div>
+
+				<!-- Image: narrower than the card, layered on top -->
+				<div class="hero-image-wrapper relative z-10 max-w-5xl mx-auto rounded-lg" id="hero-wrapper">
+					<img
+						class="w-full rounded-lg"
+						id="photo"
+						src={`/no-reserv-ai-tions/${heroImage}.webp`}
+						alt={heroImageAlt}
+					/>
+				</div>
+				{heroImageAttribution && (
+					<div class="has-links relative z-10 max-w-5xl mx-auto mt-2 text-center">
+						<small class="text-xs text-slate-500">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
 					</div>
-				</div>
+				)}
+			</div>
 
-				<div class="my-8 xl:my-16 xl:flex xl:justify-end">
-					<figure class="has-links flex flex-col items-end">
-						<img class="w-9/12 md:min-w-[50%] md:w-6/12" id="photo" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroImageAlt} />
-						{heroImageAttribution && (
-							<small class="mt-8 text-xs text-slate-600">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
-						)}
-					</figure>
-				</div>
+			<!-- White content card: continues seamlessly from the background above -->
+			<div class="px-4 lg:px-8">
+				<article class="bg-white dark:bg-slate-900 mx-auto rounded-b-2xl px-6 pt-4 pb-12 shadow-sm lg:px-16 lg:pt-6 lg:pb-16 xl:px-24">
+					<div class="longform review max-w-3xl mx-auto">
+						<slot />
+					</div>
+				</article>
+			</div>
 
-				<div class="longform review max-w-3xl mx-auto pb-12 lg:pb-24">
-					<slot />
-				</div>
+			<nav class="has-links flex flex-wrap gap-x-4 justify-end max-w-3xl mx-auto px-4 py-12 text-gray-600 lg:py-16 dark:text-slate-300">
+				<a href="/no-reserv-ai-tions" class="btn-link">← Back to No Reserv-AI-tions</a>
+				<p class="mt-2">Or view by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
+			</nav>
 
-				<nav class="flex flex-wrap gap-x-4 justify-end pb-12 lg:pb-24">
-					<a href="/no-reserv-ai-tions" class="btn-link ">← Back to No Reserv-AI-tions</a>
-					<p class="has-links mt-2">Or view by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
-				</nav>
-
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" is:inline></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" is:inline></script>
-
-				<script is:inline>
-					document.addEventListener('astro:page-load', () => {
-						gsap.registerPlugin(ScrollTrigger);
-
-						gsap.to("#photo", {
-							transformOrigin: "100% 0",
-							width: '100%',
-							scrollTrigger: {
-								trigger: "#photo",
-								start: "top center",
-								end: "top top",
-								scrub: true
-							}
-						});
-					});
-				</script>
-
-			</article>
 		</main>
 		<Footer />
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" is:inline></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" is:inline></script>
+
+		<script is:inline>
+			document.addEventListener('astro:page-load', () => {
+				gsap.registerPlugin(ScrollTrigger);
+
+				gsap.to("#photo", {
+					yPercent: -8,
+					ease: "none",
+					scrollTrigger: {
+						trigger: "#hero-wrapper",
+						start: "top bottom",
+						end: "bottom top",
+						scrub: true
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
