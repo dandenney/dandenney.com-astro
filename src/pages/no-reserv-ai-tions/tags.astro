@@ -8,28 +8,117 @@ import { ViewTransitions } from 'astro:transitions';
 export const prerender = true;
 
 const allReviews = await Astro.glob('../../content/reviews/*.md');
-const tags = [...new Set(allReviews.map((review) => review.frontmatter.tags).flat())].sort();
 
+// Build tag data: name, count, and a representative image
+const tagMap = new Map();
+for (const review of allReviews) {
+	const tags = review.frontmatter.tags || [];
+	for (const tag of tags) {
+		const tagKey = String(tag).toLowerCase();
+		if (!tagMap.has(tagKey)) {
+			tagMap.set(tagKey, {
+				name: tagKey,
+				count: 0,
+				image: review.frontmatter.heroImage,
+				imageAlt: review.frontmatter.heroImageAlt,
+			});
+		}
+		tagMap.get(tagKey).count++;
+	}
+}
+
+const tags = [...tagMap.values()].sort((a, b) => b.count - a.count);
+const maxCount = tags[0]?.count || 1;
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions Tags | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
 		<ViewTransitions />
+		<style>
+			.tag-card {
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			.tag-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+			}
+			.tag-card:hover img {
+				transform: scale(1.08);
+			}
+			.tag-card img {
+				transition: transform 0.6s ease;
+			}
+			.tag-card:hover .tag-overlay {
+				background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+			}
+			.tag-overlay {
+				background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+				transition: background 0.3s ease;
+			}
+		</style>
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />
-		<main class="bg-slate-50 dark:bg-slate-900 relative shadow-xs z-10 dark:text-slate-200" style="min-height: 90dvh;">
-			<section class="max-w-(--breakpoint-xl) mx-auto pb-24 pt-8 px-4">
-				<h2 class="border-b text-center text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:shrink-0 md:text-left xl:border-0 xl:text-6xl">No ReservAItions Tags</h2>
-        <p class="mt-2 text-gray-600 dark:text-slate-100">Tagged reviews of food, music, and events with the help of AI</p>
-        <nav class="has-links flex flex-wrap items-start mt-8 gap-x-8 gap-y-4 xl:gap-x-12 xl:gap-y-8">
-          {tags.map((tag) => (
-            <a class="md:text-2xl xl:text-4xl" href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
-          ))}
-        </nav>
-      </section>
-    </main>
-    <Footer />
-  </body>
+		<main class="bg-slate-50 relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
+			<section class="mx-auto pb-24 pt-8 px-4 max-w-(--breakpoint-2xl)">
+				<div class="mb-8">
+					<h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 xl:text-6xl">Tags</h2>
+					<p class="mt-2 text-gray-600 dark:text-slate-300">
+						<span class="whitespace-nowrap">[&nbsp;{tags.length} tags across {allReviews.length} reviews&nbsp;]</span>
+					</p>
+				</div>
+
+				<!-- Top tags as image cards -->
+				<div class="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-6 xl:gap-4">
+					{tags.slice(0, 12).map((tag, i) => (
+						<a
+							href={`/no-reserv-ai-tions/${tag.name}`}
+							class:list={[
+								"tag-card relative block overflow-hidden rounded-lg aspect-square",
+								i < 2 ? "col-span-2 row-span-2 md:col-span-2 md:row-span-2" : "",
+							]}
+						>
+							<img
+								src={`/no-reserv-ai-tions/${tag.image}.webp`}
+								alt={tag.imageAlt}
+								class="absolute inset-0 h-full w-full object-cover"
+								loading="eager"
+							/>
+							<div class="tag-overlay absolute inset-0 flex flex-col justify-end p-4 lg:p-5">
+								<h3 class="text-lg font-bold text-white leading-tight lg:text-xl">
+									{toTitleCase(tag.name)}
+								</h3>
+								<span class="mt-1 inline-block w-fit rounded-full bg-white/20 px-2 py-0.5 text-xs text-white backdrop-blur-sm">
+									{tag.count}
+								</span>
+							</div>
+						</a>
+					))}
+				</div>
+
+				<!-- Remaining tags -->
+				{tags.length > 12 && (
+					<div class="mt-12">
+						<h3 class="text-lg font-semibold text-gray-700 dark:text-slate-300 mb-4">All Tags</h3>
+						<nav class="has-links flex flex-wrap gap-x-6 gap-y-3">
+							{tags.slice(12).map((tag) => {
+								const ratio = tag.count / maxCount;
+								const size = ratio > 0.3 ? 'text-xl' : ratio > 0.15 ? 'text-base' : 'text-sm';
+								return (
+									<a
+										href={`/no-reserv-ai-tions/${tag.name}`}
+										class={size}
+									>
+										{toTitleCase(tag.name)} <span class="text-gray-400 dark:text-slate-500 text-xs">[&nbsp;{tag.count}&nbsp;]</span>
+									</a>
+								);
+							})}
+						</nav>
+					</div>
+				)}
+			</section>
+		</main>
+		<Footer />
+	</body>
 </html>
