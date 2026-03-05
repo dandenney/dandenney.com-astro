@@ -290,7 +290,8 @@
 .reviews-list-grid,
 .reviews-grid,
 .posts-grid,
-.posts-intro-grid {
+.posts-intro-grid,
+.side-projects-grid {
   gap: 1px;
   background-color: transparent;
   background-image: repeating-linear-gradient(
@@ -309,7 +310,8 @@
 .dark .reviews-list-grid,
 .dark .reviews-grid,
 .dark .posts-grid,
-.dark .posts-intro-grid {
+.dark .posts-intro-grid,
+.dark .side-projects-grid {
   background-color: transparent;
   background-image: repeating-linear-gradient(
     -45deg,
@@ -328,7 +330,8 @@
 .reviews-list-grid > *,
 .reviews-grid > *,
 .posts-grid > *,
-.posts-intro-grid > * {
+.posts-intro-grid > *,
+.side-projects-grid > * {
   box-shadow: 0 0 0 0.5px #e2e8f0;
 }
 
@@ -339,7 +342,8 @@
 .dark .reviews-list-grid > *,
 .dark .reviews-grid > *,
 .dark .posts-grid > *,
-.dark .posts-intro-grid > * {
+.dark .posts-intro-grid > *,
+.dark .side-projects-grid > * {
   box-shadow: 0 0 0 0.5px #334155;
 }
 
@@ -351,7 +355,8 @@
 .blips-grid-item:hover,
 .tinkerings-grid-item:hover,
 .music-grid-item:hover,
-.reviews-list-grid-item:hover {
+.reviews-list-grid-item:hover,
+.side-projects-grid-item:hover {
   background-color: #ffffff !important;
 }
 
@@ -359,7 +364,8 @@
 .dark .blips-grid-item:hover,
 .dark .tinkerings-grid-item:hover,
 .dark .music-grid-item:hover,
-.dark .reviews-list-grid-item:hover {
+.dark .reviews-list-grid-item:hover,
+.dark .side-projects-grid-item:hover {
   background-color: #0f172a !important;
 }
 

@@ -423,7 +423,7 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="flex min-h-[100dvh] flex-col bg-slate-50 dark:bg-slate-800">
+      <section class="flex flex-col bg-slate-50 dark:bg-slate-800">
         <div class="px-8 pt-24 pb-8">
           <h2
             class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
@@ -436,108 +436,85 @@ const monthName = getMonthName();
           </p>
         </div>
         <div
-          class="grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          class="side-projects-grid grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700"
         >
-          <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 transition-all duration-300 hover:shadow-md">
-            <a
-              href="/music"
-              class="absolute inset-0 z-20"
-            >
-              <span class="sr-only">Seasons of Dan</span>
-            </a>
-            <OptimizedImage
-              src="/seasons-of-dan.webp"
-              alt="Seasons of Dan - Spotify listening history"
-              width={1312}
-              height={940}
-              class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
-            <div class="flex items-center gap-x-4 text-xs mb-3 relative z-10">
-              <span class="border border-white/20 rounded-full px-3 py-1.5 font-medium text-white/70">
-                Spotify API
-              </span>
+          <a href="/music" class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
+            <div class="overflow-hidden">
+              <OptimizedImage
+                src="/seasons-of-dan.webp"
+                alt="Seasons of Dan - Spotify listening history"
+                width={1312}
+                height={940}
+                class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+            <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              <span class="whitespace-nowrap">[&nbsp;Spotify API&nbsp;]</span>
+            </p>
+            <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
               Seasons of Dan
             </h3>
-            <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
               A look at my music listening habits across different time
               periods, showing top tracks and artists over time.
             </p>
-            <p class="mt-3 relative z-10 text-sm font-semibold text-red-400 transition-colors group-hover:text-red-300">
+            <p class="mt-3 text-sm font-semibold text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
               View listening history &rarr;
             </p>
-          </article>
+          </a>
 
-          <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 transition-all duration-300 hover:shadow-md">
-            <a
-              href="/music/reviews"
-              class="absolute inset-0 z-20"
-            >
-              <span class="sr-only">Music Reviews</span>
-            </a>
-            <OptimizedImage
-              src="/music-reviews.webp"
-              alt="Music Reviews - AI-generated song analysis"
-              width={1312}
-              height={940}
-              class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
-            <div class="flex items-center gap-x-4 text-xs mb-3 relative z-10">
-              <span class="border border-white/20 rounded-full px-3 py-1.5 font-medium text-white/70">
-                AI Generated
-              </span>
+          <a href="/music/reviews" class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
+            <div class="overflow-hidden">
+              <OptimizedImage
+                src="/music-reviews.webp"
+                alt="Music Reviews - AI-generated song analysis"
+                width={1312}
+                height={940}
+                class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+            <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              <span class="whitespace-nowrap">[&nbsp;AI Generated&nbsp;]</span>
+            </p>
+            <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
               Music Reviews
             </h3>
-            <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
               AI-generated reviews analyzing the vibe, production, and
               emotional impact of songs I'm listening to.
             </p>
-            <p class="mt-3 relative z-10 text-sm font-semibold text-red-400 transition-colors group-hover:text-red-300">
+            <p class="mt-3 text-sm font-semibold text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
               Read song reviews &rarr;
             </p>
-          </article>
+          </a>
 
-          <article class="group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 transition-all duration-300 hover:shadow-md">
-            <a
-              href="https://github.com/dandenney/side-by-side"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="absolute inset-0 z-20"
-            >
-              <span class="sr-only">Side by Side</span>
-            </a>
-            <OptimizedImage
-              src="/side-by-side.webp"
-              alt="Side by Side - life organizer app"
-              width={1312}
-              height={940}
-              class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              loading="lazy"
-            />
-            <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
-            <div class="flex items-center gap-x-4 text-xs mb-3 relative z-10">
-              <span class="border border-white/20 rounded-full px-3 py-1.5 font-medium text-white/70">
-                Next.js + Supabase
-              </span>
+          <a href="https://github.com/dandenney/side-by-side" target="_blank" rel="noopener noreferrer" class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
+            <div class="overflow-hidden">
+              <OptimizedImage
+                src="/side-by-side.webp"
+                alt="Side by Side - life organizer app"
+                width={1312}
+                height={940}
+                class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
             </div>
-            <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+            <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              <span class="whitespace-nowrap">[&nbsp;Next.js + Supabase&nbsp;]</span>
+            </p>
+            <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
               Side by Side
             </h3>
-            <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
               A web app for organizing life's events, shared links, local
               places, and shopping lists in one place.
             </p>
-            <p class="mt-3 relative z-10 text-sm font-semibold text-red-400 transition-colors group-hover:text-red-300">
+            <p class="mt-3 text-sm font-semibold text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
               View on GitHub &rarr;
             </p>
-          </article>
+          </a>
         </div>
       </section>
 
