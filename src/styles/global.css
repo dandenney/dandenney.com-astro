@@ -716,7 +716,6 @@ pre .token.variable {
 
 
 .cta {
-  opacity: 0.8;
   background-size: 10px 10px;
   background-image: repeating-linear-gradient(45deg, #e2e8f0 0, #e2e8f0 1px, #f9fafc 0, #f9fafc 50%);
 }
