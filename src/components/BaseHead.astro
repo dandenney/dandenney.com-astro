@@ -8,7 +8,7 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
-	type?: 'website' | 'blogpost' | 'person';
+	type?: 'website' | 'blogpost' | 'person' | 'restaurant';
 	datePublished?: Date;
 	dateModified?: Date;
 	author?: string;
@@ -16,15 +16,17 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { 
-	title, 
-	description, 
+const {
+	title,
+	description,
 	image = '/blog-placeholder-1.jpg',
 	type = 'website',
 	datePublished,
 	dateModified,
-	author
+	author = 'Dan Denney'
 } = Astro.props;
+
+const ogType = type === 'blogpost' ? 'article' : type === 'person' ? 'profile' : 'website';
 ---
 
 <!-- Global Metadata -->
@@ -39,17 +41,24 @@ const {
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL.href} />
 
+<!-- RSS Autodiscovery -->
+<link rel="alternate" type="application/rss+xml" title="Dan Denney - Posts" href="/rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Dan Denney - Blips" href="/blips/rss.xml" />
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="author" content={author} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
 <meta property="og:url" content={Astro.url.href} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url).href} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Dan Denney" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -57,6 +66,8 @@ const {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url).href} />
+<meta property="twitter:creator" content="@dandenney" />
+<meta property="twitter:site" content="@dandenney" />
 
 <script is:inline>
 	const theme = (() => {

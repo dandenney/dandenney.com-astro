@@ -32,6 +32,15 @@ const formatDuration = (ms: number) => {
       description={`AI-generated review of ${title} by ${artist}`}
     />
     <ViewTransitions />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MusicRecording",
+      "name": title,
+      "byArtist": { "@type": "MusicGroup", "name": artist },
+      "inAlbum": { "@type": "MusicAlbum", "name": album },
+      "url": spotifyUrl,
+      ...(albumArt ? { "image": albumArt } : {})
+    })} />
     <style>
       @media screen and (min-width: 768px) {
         .longform {
