@@ -274,7 +274,7 @@
 }
 
 .btn-link {
-  @apply rounded-md bg-red-700 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-800 hover:scale-105 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700;
+  @apply rounded-md bg-red-700 px-5 py-4 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-800 hover:scale-105 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700;
 }
 
 .dark .btn-link {
@@ -715,3 +715,8 @@ pre .token.variable {
 }
 
 
+.cta {
+  opacity: 0.8;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(45deg, #e2e8f0 0, #e2e8f0 1px, #f9fafc 0, #f9fafc 50%);
+}
