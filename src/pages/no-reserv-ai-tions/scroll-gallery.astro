@@ -1,0 +1,379 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+const reviews = (await getCollection('reviews'))
+  .filter((review) => review.data.heroImage)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 8)
+  .map((review) => ({
+    slug: review.slug,
+    title: review.data.title,
+    description: review.data.description,
+    city: review.data.city,
+    state: review.data.state,
+    country: review.data.country,
+    heroImage: review.data.heroImage,
+    heroImageAlt: review.data.heroImageAlt ?? `Photo from ${review.data.title}`,
+    pubDate: review.data.pubDate.toISOString(),
+  }));
+
+const reviewPayload = JSON.stringify(reviews);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="No ReservAItions Scroll Gallery"
+      description="An experimental scroll-reactive No ReservAItions gallery with graceful motion and rendering fallbacks."
+    />
+    <style>
+      .nra-wrap {
+        --bg-1: #0f172a;
+        --bg-2: #312e81;
+        --bg-3: #0b1020;
+        min-height: 100dvh;
+        background: radial-gradient(1200px 700px at 20% 20%, var(--bg-2), transparent 65%),
+          radial-gradient(1000px 600px at 80% 80%, #7f1d1d55, transparent 65%),
+          linear-gradient(145deg, var(--bg-1), var(--bg-3));
+        color: #f8fafc;
+      }
+
+      .nra-shell {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+        padding: 2rem 0 6rem;
+      }
+
+      .nra-heading {
+        max-width: 65ch;
+      }
+
+      .nra-heading h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+      }
+
+      .nra-heading p {
+        color: #cbd5e1;
+      }
+
+      .nra-viewport {
+        position: sticky;
+        top: 1.2rem;
+        height: min(72dvh, 640px);
+        margin: 2rem 0;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        border: 1px solid #ffffff22;
+        background: #02061766;
+        box-shadow: 0 18px 60px #00000066;
+      }
+
+      .nra-canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .nra-track {
+        position: relative;
+      }
+
+      .nra-step {
+        min-height: 74dvh;
+        padding: 2rem 0;
+        display: grid;
+        align-items: center;
+      }
+
+      .nra-step-card {
+        max-width: 40rem;
+        border-radius: 1rem;
+        border: 1px solid #ffffff20;
+        background: #020617b0;
+        backdrop-filter: blur(8px);
+        padding: 1.25rem;
+      }
+
+      .nra-step h2 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.3rem, 2.6vw, 2rem);
+      }
+
+      .nra-step p {
+        margin: 0.5rem 0;
+        color: #dbeafe;
+      }
+
+      .nra-meta {
+        color: #93c5fd;
+        font-size: 0.9rem;
+      }
+
+      .nra-link {
+        display: inline-block;
+        margin-top: 0.75rem;
+        color: #fca5a5;
+      }
+
+      .nra-fallback {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .nra-fallback[hidden] { display: none; }
+
+      .nra-fallback img {
+        border-radius: 0.75rem;
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+
+      @media (max-width: 900px) {
+        .nra-viewport {
+          position: relative;
+          top: auto;
+          height: 48dvh;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nra-viewport { display: none; }
+        .nra-step { min-height: auto; padding: 1.25rem 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main class="nra-wrap">
+      <div class="nra-shell">
+        <div class="nra-heading">
+          <h1>No ReservAItions: Scroll Gallery</h1>
+          <p>
+            A scroll-reactive experiment inspired by modern 3D gallery motion. This version keeps it production-safe:
+            no external animation libraries, reduced-motion support, and a static fallback if canvas/web APIs are unavailable.
+          </p>
+          <p><a class="nra-link" href="/no-reserv-ai-tions">← Back to No ReservAItions</a></p>
+        </div>
+
+        <section class="nra-viewport" aria-hidden="true">
+          <canvas id="nra-canvas" class="nra-canvas"></canvas>
+        </section>
+
+        <section id="nra-fallback" class="nra-fallback" hidden>
+          {reviews.map((review) => (
+            <article class="nra-step-card">
+              <img src={`/no-reserv-ai-tions/${review.heroImage}.webp`} alt={review.heroImageAlt} loading="lazy" decoding="async" />
+              <h2>{review.title}</h2>
+              <p>{review.description}</p>
+              <a class="nra-link" href={`/no-reserv-ai-tions/${review.slug}`}>Read full review</a>
+            </article>
+          ))}
+        </section>
+
+        <section class="nra-track" aria-label="Scroll through featured reviews">
+          {reviews.map((review, index) => (
+            <article class="nra-step" data-index={index}>
+              <div class="nra-step-card">
+                <p class="nra-meta">
+                  {review.city}{review.state ? `, ${review.state}` : ''}{review.country !== 'United States' ? `, ${review.country}` : ''}
+                </p>
+                <h2>{review.title}</h2>
+                <p>{review.description}</p>
+                <a class="nra-link" href={`/no-reserv-ai-tions/${review.slug}`}>Read full review</a>
+              </div>
+            </article>
+          ))}
+        </section>
+      </div>
+    </main>
+    <Footer />
+
+    <script is:inline define:vars={{ reviewPayload }}>
+      const initScrollGallery = () => {
+        if (window.__nraScrollGalleryInit) return;
+        window.__nraScrollGalleryInit = true;
+
+        const reviews = JSON.parse(reviewPayload);
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const canvas = document.getElementById('nra-canvas');
+        const fallback = document.getElementById('nra-fallback');
+        const steps = Array.from(document.querySelectorAll('.nra-step'));
+
+        if (prefersReduced || !canvas || !canvas.getContext || !('IntersectionObserver' in window)) {
+          fallback?.removeAttribute('hidden');
+          return;
+        }
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          fallback?.removeAttribute('hidden');
+          return;
+        }
+
+        const DPR_CAP = 1.75;
+        const images = reviews.map((item) => {
+          const img = new Image();
+          img.src = `/no-reserv-ai-tions/${item.heroImage}.webp`;
+          img.loading = 'eager';
+          img.decoding = 'async';
+          return img;
+        });
+
+        let activeIndex = 0;
+        let progress = 0;
+        let targetProgress = 0;
+        let mood = 0;
+        let lastScrollY = window.scrollY;
+        let velocity = 0;
+        let raf = null;
+
+        const resize = () => {
+          const dpr = Math.min(window.devicePixelRatio || 1, DPR_CAP);
+          const bounds = canvas.getBoundingClientRect();
+          canvas.width = Math.max(1, Math.floor(bounds.width * dpr));
+          canvas.height = Math.max(1, Math.floor(bounds.height * dpr));
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        };
+
+        const drawCard = (img, idx) => {
+          const w = canvas.clientWidth;
+          const h = canvas.clientHeight;
+          const centerX = w * 0.5;
+          const centerY = h * 0.5;
+          const depth = idx - activeIndex - progress;
+          const z = Math.max(-1.5, Math.min(1.5, depth));
+          const scale = 1 - Math.abs(z) * 0.18;
+          const y = centerY + z * 120;
+          const x = centerX + z * 80;
+
+          const cardW = Math.min(560, w * 0.72) * scale;
+          const cardH = cardW * 0.68;
+          const tilt = z * 0.08 + velocity * 0.0015;
+
+          ctx.save();
+          ctx.translate(x, y);
+          ctx.rotate(tilt);
+          ctx.globalAlpha = Math.max(0, 1 - Math.abs(z) * 0.45);
+
+          ctx.fillStyle = '#020617ee';
+          ctx.strokeStyle = '#ffffff22';
+          ctx.lineWidth = 1;
+          const left = -cardW / 2;
+          const top = -cardH / 2;
+          const radius = 16;
+
+          ctx.beginPath();
+          ctx.moveTo(left + radius, top);
+          ctx.arcTo(left + cardW, top, left + cardW, top + cardH, radius);
+          ctx.arcTo(left + cardW, top + cardH, left, top + cardH, radius);
+          ctx.arcTo(left, top + cardH, left, top, radius);
+          ctx.arcTo(left, top, left + cardW, top, radius);
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+
+          if (img && img.complete) {
+            const pad = 14;
+            const drawW = cardW - pad * 2;
+            const drawH = cardH - pad * 2;
+            ctx.save();
+            ctx.beginPath();
+            ctx.rect(left + pad, top + pad, drawW, drawH);
+            ctx.clip();
+
+            const imageRatio = img.naturalWidth / img.naturalHeight;
+            const cardRatio = drawW / drawH;
+            let sx = 0, sy = 0, sw = img.naturalWidth, sh = img.naturalHeight;
+
+            if (imageRatio > cardRatio) {
+              sw = img.naturalHeight * cardRatio;
+              sx = (img.naturalWidth - sw) / 2;
+            } else {
+              sh = img.naturalWidth / cardRatio;
+              sy = (img.naturalHeight - sh) / 2;
+            }
+
+            ctx.drawImage(img, sx, sy, sw, sh, left + pad, top + pad, drawW, drawH);
+            ctx.restore();
+          }
+
+          if (Math.abs(z) < 0.55) {
+            const text = reviews[idx].title;
+            ctx.fillStyle = '#f8fafc';
+            ctx.font = '600 22px Inter, system-ui, sans-serif';
+            ctx.fillText(text, left + 24, top + cardH - 24);
+          }
+
+          ctx.restore();
+        };
+
+        const render = () => {
+          const w = canvas.clientWidth;
+          const h = canvas.clientHeight;
+          progress += (targetProgress - progress) * 0.12;
+          velocity = (window.scrollY - lastScrollY) * 0.85 + velocity * 0.15;
+          lastScrollY = window.scrollY;
+          mood += (Math.min(1, Math.abs(velocity) / 70) - mood) * 0.06;
+
+          const r = Math.floor(15 + mood * 24);
+          const g = Math.floor(23 + mood * 8);
+          const b = Math.floor(42 + mood * 30);
+          const grad = ctx.createLinearGradient(0, 0, w, h);
+          grad.addColorStop(0, `rgb(${r},${g},${b})`);
+          grad.addColorStop(1, `rgb(${10 + Math.floor(mood * 28)}, 16, ${30 + Math.floor(mood * 20)})`);
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, w, h);
+
+          for (let i = reviews.length - 1; i >= 0; i--) {
+            drawCard(images[i], i, progress);
+          }
+
+          raf = requestAnimationFrame(render);
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const idx = Number(entry.target.getAttribute('data-index') || 0);
+            activeIndex = idx;
+          });
+        }, { threshold: 0.6 });
+
+        steps.forEach((step) => observer.observe(step));
+
+        const onScroll = () => {
+          const current = steps[activeIndex];
+          if (!current) return;
+          const rect = current.getBoundingClientRect();
+          targetProgress = Math.max(-1, Math.min(1, (window.innerHeight * 0.5 - rect.top) / Math.max(rect.height, 1)));
+        };
+
+        resize();
+        onScroll();
+        render();
+
+        window.addEventListener('resize', resize, { passive: true });
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        window.addEventListener('beforeunload', () => {
+          observer.disconnect();
+          if (raf) cancelAnimationFrame(raf);
+        }, { once: true });
+      };
+
+      document.addEventListener('astro:page-load', initScrollGallery, { once: true });
+      if (document.readyState !== 'loading') initScrollGallery();
+    </script>
+  </body>
+</html>
