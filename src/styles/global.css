@@ -102,6 +102,24 @@
   margin-top: 0.25rem;
 }
 
+.longform ul,
+.longform ol {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.longform ul {
+  list-style-type: disc;
+}
+
+.longform ol {
+  list-style-type: decimal;
+}
+
+.longform li + li {
+  margin-top: 0.25rem;
+}
+
 .longform .chatgpt blockquote {
   border-color: #c084fc; /* purple-400 */
 }
@@ -263,8 +281,15 @@
   border-top-color: #1e293b;
 }
 
-.longform.blogpost p:first-of-type {
+.longform.blogpost > p:first-of-type {
   margin-top: 0;
+}
+
+.longform ul + h2,
+.longform ul + h3,
+.longform ol + h2,
+.longform ol + h3 {
+  margin-top: 3rem;
 }
 
 @media (min-width: 1200px) {
