@@ -1,0 +1,163 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+import { ViewTransitions } from "astro:transitions";
+import {
+  martingaleBets,
+  startingBalance,
+  type MartingaleBet,
+} from "../data/martingaleBets";
+
+const currency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+});
+
+const orderedBets = [...martingaleBets].sort((a, b) =>
+  a.date.localeCompare(b.date),
+);
+
+const totalWagers = orderedBets.length;
+const wins = orderedBets.filter((bet) => bet.result === "win").length;
+const netPL = orderedBets.reduce((sum, bet) => sum + bet.balanceImpact, 0);
+const currentBalance = startingBalance + netPL;
+const winRate = totalWagers ? (wins / totalWagers) * 100 : 0;
+
+const withRunningBalance = orderedBets.map((bet) => ({
+  ...bet,
+  runningBalance:
+    startingBalance +
+    orderedBets
+      .slice(0, orderedBets.indexOf(bet) + 1)
+      .reduce((sum, current) => sum + current.balanceImpact, 0),
+}));
+
+const formatDate = (dateString: MartingaleBet["date"]) =>
+  new Date(`${dateString}T00:00:00`).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+const summaryCards = [
+  { label: "Starting Balance", value: currency.format(startingBalance) },
+  {
+    label: "Current Balance",
+    value: currency.format(currentBalance),
+    tone: currentBalance >= startingBalance ? "up" : "down",
+  },
+  {
+    label: "Net P/L",
+    value: `${netPL >= 0 ? "+" : ""}${currency.format(netPL)}`,
+    tone: netPL >= 0 ? "up" : "down",
+  },
+  { label: "Win Rate", value: `${winRate.toFixed(0)}%` },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Martingale Bet Tracker | Dan Denney"
+      description="A clean snapshot of a Martingale betting streak with summary metrics and a bet-by-bet ledger."
+    />
+    <ViewTransitions />
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <main class="relative isolate min-h-screen overflow-hidden bg-slate-950">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(56,189,248,.22),transparent_40%),radial-gradient(circle_at_85%_15%,rgba(236,72,153,.2),transparent_45%)]"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 opacity-35 [background-image:linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] [background-size:22px_22px]"></div>
+
+      <Header title={SITE_TITLE} />
+
+      <section class="mx-auto max-w-7xl px-5 pb-20 pt-10 sm:px-8 sm:pt-16">
+        <p class="text-xs font-mono uppercase tracking-[0.3em] text-cyan-300/80">
+          [ Martingale Log ]
+        </p>
+        <h1 class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+          Bet Tracker
+        </h1>
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          A simple ledger for tracking Martingale sessions with clean spacing,
+          fast scanning, and enough structure to wire into real data later.
+        </p>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {summaryCards.map((card) => (
+            <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
+              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{card.label}</p>
+              <p
+                class:list={[
+                  "mt-3 text-2xl font-semibold",
+                  card.tone === "up"
+                    ? "text-emerald-300"
+                    : card.tone === "down"
+                      ? "text-rose-300"
+                      : "text-white",
+                ]}
+              >
+                {card.value}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[760px] border-collapse text-left">
+              <thead class="bg-slate-900">
+                <tr class="border-b border-slate-700/80 text-xs uppercase tracking-[0.18em] text-slate-400">
+                  <th class="px-4 py-4 font-medium sm:px-6">Date</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Pick</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Line</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Amount</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Win / Loss</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Balance Impact</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Running Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                {withRunningBalance.map((bet) => (
+                  <tr class="border-b border-slate-800/80 text-sm text-slate-200 hover:bg-slate-800/40">
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{formatDate(bet.date)}</td>
+                    <td class="px-4 py-4 font-medium text-white sm:px-6">{bet.pick}</td>
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{bet.line}</td>
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{currency.format(bet.amount)}</td>
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
+                      <span
+                        class:list={[
+                          "inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider",
+                          bet.result === "win"
+                            ? "bg-emerald-500/20 text-emerald-300"
+                            : "bg-rose-500/20 text-rose-300",
+                        ]}
+                      >
+                        {bet.result}
+                      </span>
+                    </td>
+                    <td
+                      class:list={[
+                        "whitespace-nowrap px-4 py-4 font-semibold sm:px-6",
+                        bet.balanceImpact >= 0 ? "text-emerald-300" : "text-rose-300",
+                      ]}
+                    >
+                      {bet.balanceImpact >= 0 ? "+" : ""}{currency.format(bet.balanceImpact)}
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-4 font-medium text-cyan-200 sm:px-6">
+                      {currency.format(bet.runningBalance)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
