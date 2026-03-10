@@ -14,7 +14,8 @@ import {
 const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
-  maximumFractionDigits: 0,
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
 });
 
 const orderedBets = [...martingaleBets].sort((a, b) =>
@@ -187,7 +188,7 @@ const summaryCards = [
             </p>
             <p class="mt-2 text-xs text-slate-400">
               {firstBetDate
-                ? `Simulated from ${formatDate(firstBetDate)} to ${formatDate(benchmarkAsOfDate)} on $${hysaBenchmark.principal} benchmark principal`
+                ? `Simulated from ${formatDate(firstBetDate)} to ${formatDate(benchmarkAsOfDate)} on ${currency.format(hysaBenchmark.principal)} benchmark principal`
                 : "Add at least one bet date to calculate the benchmark."}
             </p>
           </article>
