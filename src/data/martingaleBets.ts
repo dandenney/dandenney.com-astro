@@ -17,7 +17,7 @@ export interface HysaBenchmarkConfig {
   asOfDate?: string;
 }
 
-export const startingBalance = 1000;
+export const startingBalance = 500;
 
 export const hysaBenchmark: HysaBenchmarkConfig = {
   principal: 500,

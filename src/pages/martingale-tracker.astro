@@ -107,9 +107,9 @@ if (firstBetDate) {
 const strategyVsHysaDelta = currentBalance - hysaCurrentValue;
 
 const summaryCards = [
-  { label: "Starting Balance", value: currency.format(startingBalance) },
+  { label: "Strategy Starting Balance", value: currency.format(startingBalance) },
   {
-    label: "Current Balance",
+    label: "Strategy Current Balance",
     value: currency.format(currentBalance),
     tone: currentBalance >= startingBalance ? "up" : "down",
   },
@@ -152,7 +152,7 @@ const summaryCards = [
         </h1>
         <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
           A simple ledger for tracking Martingale sessions with clean spacing,
-          fast scanning, and now live entries instead of demo seed data.
+          fast scanning, and a side-by-side HYSA simulation benchmark.
         </p>
         <p class="mt-3 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan-200">
           Live data mode
@@ -182,14 +182,17 @@ const summaryCards = [
           <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
             <p class="text-xs uppercase tracking-[0.2em] text-slate-400">HYSA Benchmark (4.2% APY)</p>
             <p class="mt-3 text-2xl font-semibold text-cyan-200">{currency.format(hysaCurrentValue)}</p>
+            <p class="mt-2 text-xs text-cyan-300/90">
+              Simulation benchmark only; not additional capital in play.
+            </p>
             <p class="mt-2 text-xs text-slate-400">
               {firstBetDate
-                ? `From ${formatDate(firstBetDate)} to ${formatDate(benchmarkAsOfDate)} on $${hysaBenchmark.principal} principal`
+                ? `Simulated from ${formatDate(firstBetDate)} to ${formatDate(benchmarkAsOfDate)} on $${hysaBenchmark.principal} benchmark principal`
                 : "Add at least one bet date to calculate the benchmark."}
             </p>
           </article>
           <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
-            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Strategy vs HYSA Delta</p>
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Strategy vs HYSA (Comparison Delta)</p>
             <p
               class:list={[
                 "mt-3 text-2xl font-semibold",
@@ -199,7 +202,7 @@ const summaryCards = [
               {`${strategyVsHysaDelta >= 0 ? "+" : ""}${currency.format(strategyVsHysaDelta)}`}
             </p>
             <p class="mt-2 text-xs text-slate-400">
-              Current strategy balance minus HYSA benchmark value.
+              Side-by-side comparison only: current strategy balance minus simulated HYSA value.
             </p>
           </article>
         </div>
