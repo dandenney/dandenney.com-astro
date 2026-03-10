@@ -50,7 +50,7 @@ export const martingaleBets: MartingaleBet[] = [
     date: "2026-03-10",
     seriesId: "B",
     pick: "Lakers +3",
-    line: "TOKEN",
+    line: "-112",
     amount: 30,
     result: "pending",
     balanceImpact: 0,
