@@ -42,8 +42,8 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Wizards/Heat Under 242.5",
     line: "-110",
     amount: 60,
-    result: "pending",
-    balanceImpact: 0,
+    result: "loss",
+    balanceImpact: -60,
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Lakers +3",
     line: "-112",
     amount: 30,
-    result: "pending",
-    balanceImpact: 0,
+    result: "win",
+    balanceImpact: 26.79,
   },
 ];
