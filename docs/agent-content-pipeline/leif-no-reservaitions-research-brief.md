@@ -16,6 +16,7 @@ Build a `no-reservaitions` packet with map-ready location data.
 ## Rules
 - Coordinates must be decimal degrees and valid ranges.
 - If source confidence is weak, include notes in `sources` and set `confidence` lower.
+- If location is ambiguous, propose the top candidate (name + full address) and explicitly ask Dan to confirm before blocking the run.
 - Do not output coordinates with extra quotes or brackets.
 - Prefer official location site + map provider corroboration.
 

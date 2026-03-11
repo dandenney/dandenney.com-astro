@@ -3,6 +3,7 @@
 ## 1) Packet validation
 - [ ] Packet JSON matches correct schema file
 - [ ] `confidence` + `sources` present
+- [ ] If location was ambiguous, run notes show top candidate + explicit confirmation request before blocking
 - [ ] `flags` surfaced in PR notes
 
 ## 2) Frontmatter validation
