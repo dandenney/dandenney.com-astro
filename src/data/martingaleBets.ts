@@ -53,7 +53,7 @@ export const martingaleBets: MartingaleBet[] = [
     line: "-112",
     amount: 30,
     result: "win",
-    balanceImpact: 26.79,
+    balanceImpact: 56.79,
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Nuggets -6.5",
     line: "-110",
     amount: 120,
-    result: "pending",
-    balanceImpact: 0,
+    result: "win",
+    balanceImpact: 229.09,
   },
 ];
