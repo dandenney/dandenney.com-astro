@@ -8,7 +8,14 @@ export interface MartingaleBet {
   line: string;
   amount: number;
   result: BetResult;
-  balanceImpact: number;
+  // Cashflow model (explicit ledger):
+  // - stakeOut is always debited at bet placement.
+  // - returnAmount is only credited after settlement (0 for losses, undefined for pending).
+  stakeOut?: number;
+  returnAmount?: number;
+  // Legacy field retained for backward compatibility with older rows/history.
+  // New calculations should prefer stakeOut/returnAmount via helpers below.
+  balanceImpact?: number;
 }
 
 export interface HysaBenchmarkConfig {
@@ -33,6 +40,8 @@ export const martingaleBets: MartingaleBet[] = [
     line: "-106",
     amount: 30,
     result: "loss",
+    stakeOut: 30,
+    returnAmount: 0,
     balanceImpact: -30,
   },
   {
@@ -43,6 +52,8 @@ export const martingaleBets: MartingaleBet[] = [
     line: "-110",
     amount: 60,
     result: "loss",
+    stakeOut: 60,
+    returnAmount: 0,
     balanceImpact: -60,
   },
   {
@@ -53,6 +64,8 @@ export const martingaleBets: MartingaleBet[] = [
     line: "-112",
     amount: 30,
     result: "win",
+    stakeOut: 30,
+    returnAmount: 56.79,
     balanceImpact: 56.79,
   },
   {
@@ -63,6 +76,26 @@ export const martingaleBets: MartingaleBet[] = [
     line: "-110",
     amount: 120,
     result: "win",
+    stakeOut: 120,
+    returnAmount: 229.09,
     balanceImpact: 229.09,
   },
 ];
+
+export const getStakeOut = (bet: MartingaleBet): number =>
+  Number((bet.stakeOut ?? bet.amount).toFixed(2));
+
+export const getReturnAmount = (bet: MartingaleBet): number => {
+  if (bet.result === "pending") return 0;
+  if (typeof bet.returnAmount === "number") return Number(bet.returnAmount.toFixed(2));
+
+  // Legacy migration fallback for older records that only stored net impact.
+  if (typeof bet.balanceImpact === "number") {
+    return Number((bet.balanceImpact > 0 ? bet.balanceImpact : 0).toFixed(2));
+  }
+
+  return 0;
+};
+
+export const getNetImpact = (bet: MartingaleBet): number =>
+  Number((getReturnAmount(bet) - getStakeOut(bet)).toFixed(2));
