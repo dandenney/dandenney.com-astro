@@ -32,11 +32,40 @@ export interface ShippConnectionState {
   lastError: string | null;
 }
 
+export type PregameCheckpointType = "T-120" | "T-30" | "T-10" | "LOCK";
+export type PregameRecommendation = "Bet" | "No Bet" | "Reduce Stake";
+
+export interface PregameCheckpointDelta {
+  previousCheckpoint: PregameCheckpointType | null;
+  previousRecommendation: PregameRecommendation | null;
+  confidenceChange: number;
+  evidenceChange: number;
+  newSignalsSinceLast: number;
+}
+
+export interface PregameCheckpointPacket {
+  betId: number;
+  seriesId: string;
+  checkpoint: PregameCheckpointType;
+  recommendation: PregameRecommendation;
+  confidence: number;
+  status: "active" | "locked";
+  reason: string;
+  insufficientData: boolean;
+  matchedSignalsCount: number;
+  matchedSignalIds: string[];
+  generatedAt: string;
+  deltaFromLast: PregameCheckpointDelta;
+}
+
 export interface ShippState {
   version: 1;
   updatedAt: string | null;
   connections: Record<string, ShippConnectionState>;
   latestSignals: NormalizedShippSignal[];
+  checkpoints?: {
+    byBetId: Record<string, PregameCheckpointPacket[]>;
+  };
 }
 
 export interface PollConnectionInput {
