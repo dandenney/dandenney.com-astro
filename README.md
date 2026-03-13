@@ -61,12 +61,45 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Shipp MVP integration (capital game)
+## Shipp MVP integration (sports betting tracker first)
+
+Primary scope now lives on `/martingale-tracker` (pending bet signal panel).
+Secondary/future scope: capital-game reuse once signal relevance scoring matures.
 
 See `docs/shipp-integration.md` for:
 - required env vars (`SHIPP_API_KEY`, `SHIPP_CONNECTION_ID` / `SHIPP_CONNECTION_IDS`)
 - manual fetch endpoint (`POST /api/shipp/fetch`)
 - normalized signal state location (`src/data/shipp-state.json`)
+- bet-to-signal matching assumptions used by the tracker panel
+
+## Netlify env sync
+
+Use this workflow to push local runtime env vars (including Shipp vars) to the linked Netlify site.
+
+1. Install the Netlify CLI (one time):
+   - `npm install -g netlify-cli`
+2. Link this repo to your Netlify site (one time):
+   - `netlify link`
+3. Create a local env file (default: `.env.netlify`) using this template:
+
+```bash
+# Example only — do not commit real values
+PUBLIC_SITE_URL=https://example.com
+SHIPP_API_KEY=replace_me
+SHIPP_CONNECTION_ID=replace_me
+# Optional multi-connection format:
+# SHIPP_CONNECTION_IDS=id_1,id_2
+```
+
+4. Sync to Netlify:
+   - `npm run netlify:env:sync`
+   - Optional custom file: `NETLIFY_ENV_FILE=.env.staging npm run netlify:env:sync`
+
+After syncing, verify env var names with:
+- `netlify env:list`
+
+Then redeploy so runtime env changes take effect:
+- `netlify deploy --prod`
 
 ## 👀 Want to learn more?
 
