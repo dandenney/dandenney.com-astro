@@ -1,0 +1,245 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+import { ViewTransitions } from "astro:transitions";
+import {
+  capitalGameConfig,
+  capitalGameEntries,
+  buildEquityCurve,
+  getNetFlow,
+  sortEntriesByDate,
+} from "../data/capitalGame";
+
+const currency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
+const orderedEntries = sortEntriesByDate(capitalGameEntries);
+const equityCurve = buildEquityCurve(orderedEntries, capitalGameConfig);
+
+const currentEquity = equityCurve.at(-1)?.equity ?? capitalGameConfig.startingCapital;
+const currentTargetEquity = equityCurve.at(-1)?.targetEquity ?? capitalGameConfig.startingCapital;
+const gapToTarget = Number((currentEquity - currentTargetEquity).toFixed(2));
+const totalNetFlow = Number(
+  orderedEntries.reduce((sum, entry) => sum + getNetFlow(entry), 0).toFixed(2),
+);
+const totalReturnPct = (totalNetFlow / capitalGameConfig.startingCapital) * 100;
+
+const latestDate = equityCurve.at(-1)?.date;
+const latestMonthKey = latestDate ? latestDate.slice(0, 7) : null;
+const monthEntries = latestMonthKey
+  ? orderedEntries.filter((entry) => entry.date.startsWith(latestMonthKey))
+  : [];
+const monthNetFlow = Number(monthEntries.reduce((sum, entry) => sum + getNetFlow(entry), 0).toFixed(2));
+
+const monthStartEquity = latestMonthKey
+  ? (() => {
+      const monthFirstEntryIndex = equityCurve.findIndex((point) => point.date.startsWith(latestMonthKey));
+      if (monthFirstEntryIndex <= 0) return capitalGameConfig.startingCapital;
+      return equityCurve[monthFirstEntryIndex - 1].equity;
+    })()
+  : capitalGameConfig.startingCapital;
+
+const monthToDateReturnPct = monthStartEquity > 0 ? (monthNetFlow / monthStartEquity) * 100 : 0;
+const monthTargetGain = Number((monthStartEquity * capitalGameConfig.monthlyTargetRate).toFixed(2));
+const monthGapToTarget = Number((monthNetFlow - monthTargetGain).toFixed(2));
+
+let runningPeak = capitalGameConfig.startingCapital;
+let maxDrawdownPct = 0;
+for (const point of equityCurve) {
+  runningPeak = Math.max(runningPeak, point.equity);
+  const drawdownPct = runningPeak > 0 ? ((runningPeak - point.equity) / runningPeak) * 100 : 0;
+  maxDrawdownPct = Math.max(maxDrawdownPct, drawdownPct);
+}
+
+const closedEntries = orderedEntries.filter((entry) => entry.status === "closed");
+const winners = closedEntries.filter((entry) => getNetFlow(entry) > 0).length;
+const winRate = closedEntries.length ? (winners / closedEntries.length) * 100 : 0;
+
+const formatDate = (dateString: string) =>
+  new Date(`${dateString}T00:00:00`).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+const series = equityCurve.map((point, index) => ({
+  ...point,
+  step: index + 1,
+}));
+
+const chartMax = Math.max(...series.map((point) => Math.max(point.equity, point.targetEquity)));
+const chartMin = Math.min(capitalGameConfig.startingCapital, ...series.map((point) => Math.min(point.equity, point.targetEquity)));
+
+const toChartY = (value: number) => {
+  if (chartMax === chartMin) return 160;
+  const normalized = (value - chartMin) / (chartMax - chartMin);
+  return Number((220 - normalized * 160).toFixed(2));
+};
+
+const actualPoints = series.map((point, idx) => `${idx * 88 + 20},${toChartY(point.equity)}`).join(" ");
+const targetPoints = series
+  .map((point, idx) => `${idx * 88 + 20},${toChartY(point.targetEquity)}`)
+  .join(" ");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Capital Growth Game Dashboard | Dan Denney"
+      description="$1,000 capital growth game dashboard with monthly +10% target tracking, drawdown, and transaction ledger."
+    />
+    <ViewTransitions />
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <main class="relative z-10 bg-slate-950">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_10%_10%,rgba(34,197,94,.20),transparent_35%),radial-gradient(circle_at_85%_15%,rgba(59,130,246,.18),transparent_42%)]"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] [background-size:18px_18px]"></div>
+
+      <Header title={SITE_TITLE} />
+
+      <section class="mx-auto max-w-7xl px-5 pb-24 pt-10 sm:px-8 sm:pt-16">
+        <p class="text-xs font-mono uppercase tracking-[0.3em] text-emerald-300/80">[ $1K Capital Game ]</p>
+        <h1 class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">Growth Dashboard</h1>
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          Start at <strong>$1,000</strong>, target <strong>+10% per month</strong>, and track actual vs target with a clean performance ledger.
+        </p>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 backdrop-blur-sm">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Current Equity</p>
+            <p class="mt-3 text-2xl font-semibold text-emerald-300">{currency.format(currentEquity)}</p>
+          </article>
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 backdrop-blur-sm">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Month-to-Date Return</p>
+            <p class:list={["mt-3 text-2xl font-semibold", monthToDateReturnPct >= 0 ? "text-emerald-300" : "text-rose-300"]}>
+              {`${monthToDateReturnPct >= 0 ? "+" : ""}${monthToDateReturnPct.toFixed(2)}%`}
+            </p>
+          </article>
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 backdrop-blur-sm">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Gap to Monthly Target</p>
+            <p class:list={["mt-3 text-2xl font-semibold", monthGapToTarget >= 0 ? "text-emerald-300" : "text-rose-300"]}>
+              {`${monthGapToTarget >= 0 ? "+" : ""}${currency.format(monthGapToTarget)}`}
+            </p>
+            <p class="mt-1 text-xs text-slate-400">Target gain this month: {currency.format(monthTargetGain)}</p>
+          </article>
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 backdrop-blur-sm">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Max Drawdown</p>
+            <p class="mt-3 text-2xl font-semibold text-amber-300">-{maxDrawdownPct.toFixed(2)}%</p>
+          </article>
+        </div>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-3">
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Total Return</p>
+            <p class:list={["mt-3 text-xl font-semibold", totalNetFlow >= 0 ? "text-emerald-300" : "text-rose-300"]}>
+              {`${totalReturnPct >= 0 ? "+" : ""}${totalReturnPct.toFixed(2)}%`}
+            </p>
+          </article>
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Win Rate (Closed)</p>
+            <p class="mt-3 text-xl font-semibold text-sky-300">{winRate.toFixed(0)}%</p>
+          </article>
+          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Target vs Actual Equity</p>
+            <p class:list={["mt-3 text-xl font-semibold", gapToTarget >= 0 ? "text-emerald-300" : "text-rose-300"]}>
+              {`${gapToTarget >= 0 ? "+" : ""}${currency.format(gapToTarget)}`}
+            </p>
+            <p class="mt-1 text-xs text-slate-400">Target equity now: {currency.format(currentTargetEquity)}</p>
+          </article>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 p-4 sm:p-6">
+          <div class="mb-4 flex items-center justify-between">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Equity Curve vs +10%/mo Target</p>
+            <div class="flex gap-3 text-xs text-slate-300">
+              <span class="inline-flex items-center gap-1"><span class="size-2 rounded-full bg-emerald-300"></span>Actual</span>
+              <span class="inline-flex items-center gap-1"><span class="size-2 rounded-full bg-sky-300"></span>Target</span>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <svg width={Math.max(760, series.length * 88)} height="240" viewBox={`0 0 ${Math.max(760, series.length * 88)} 240`} class="w-full min-w-[760px]">
+              <line x1="20" y1="220" x2={Math.max(740, series.length * 88 - 20)} y2="220" stroke="rgba(148,163,184,0.35)" stroke-width="1" />
+              <polyline fill="none" stroke="rgba(56,189,248,0.8)" stroke-width="2" stroke-dasharray="5 5" points={targetPoints} />
+              <polyline fill="none" stroke="rgba(74,222,128,0.95)" stroke-width="3" points={actualPoints} />
+              {series.map((point, idx) => (
+                <g>
+                  <circle cx={idx * 88 + 20} cy={toChartY(point.equity)} r="4" fill="rgba(74,222,128,1)" />
+                  <text x={idx * 88 + 20} y="236" text-anchor="middle" fill="rgba(148,163,184,0.95)" font-size="10">
+                    {point.date.slice(5)}
+                  </text>
+                </g>
+              ))}
+            </svg>
+          </div>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
+          <div class="border-b border-slate-700/80 px-4 py-3 sm:px-6">
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Ledger</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[1140px] border-collapse text-left">
+              <thead class="bg-slate-900/70">
+                <tr class="border-b border-slate-700/80 text-xs uppercase tracking-[0.18em] text-slate-400">
+                  <th class="px-4 py-4 font-medium sm:px-6">Date</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Asset</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Class</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Side</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Amount In</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Amount Out</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Realized P/L</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Status</th>
+                  <th class="px-4 py-4 font-medium sm:px-6">Tags / Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orderedEntries.map((entry) => (
+                  <tr class="border-b border-slate-800/80 text-sm text-slate-200 hover:bg-slate-800/40">
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{formatDate(entry.date)}</td>
+                    <td class="whitespace-nowrap px-4 py-4 font-semibold text-white sm:px-6">{entry.asset}</td>
+                    <td class="whitespace-nowrap px-4 py-4 capitalize sm:px-6">{entry.assetClass}</td>
+                    <td class="whitespace-nowrap px-4 py-4 uppercase sm:px-6">{entry.side}</td>
+                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", entry.amountIn > 0 ? "text-emerald-300" : "text-slate-400"]}>
+                      {entry.amountIn > 0 ? `+${currency.format(entry.amountIn)}` : "—"}
+                    </td>
+                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", entry.amountOut > 0 ? "text-rose-300" : "text-slate-400"]}>
+                      {entry.amountOut > 0 ? `-${currency.format(entry.amountOut)}` : "—"}
+                    </td>
+                    <td class:list={[
+                      "whitespace-nowrap px-4 py-4 font-semibold sm:px-6",
+                      (entry.realizedPL ?? 0) >= 0 ? "text-emerald-300" : "text-rose-300",
+                    ]}>
+                      {typeof entry.realizedPL === "number"
+                        ? `${entry.realizedPL >= 0 ? "+" : ""}${currency.format(entry.realizedPL)}`
+                        : "—"}
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
+                      <span class:list={[
+                        "inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider",
+                        entry.status === "closed" ? "bg-emerald-500/20 text-emerald-300" : "bg-amber-500/20 text-amber-200",
+                      ]}>
+                        {entry.status}
+                      </span>
+                    </td>
+                    <td class="px-4 py-4 text-slate-300 sm:px-6">
+                      <p class="text-xs uppercase tracking-wider text-slate-400">{entry.tags.join(" • ")}</p>
+                      {entry.notes ? <p class="mt-1 text-xs text-slate-300">{entry.notes}</p> : null}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
