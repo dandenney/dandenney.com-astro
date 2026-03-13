@@ -12,7 +12,8 @@
     "tina": "yarn tinacms dev -c 'astro dev'",
     "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs",
     "agent:packet:validate": "node scripts/agent-content/validate-packet.mjs",
-    "agent:content:publish": "node scripts/agent-content/publish-from-packet.mjs"
+    "agent:content:publish": "node scripts/agent-content/publish-from-packet.mjs",
+    "netlify:env:sync": "./scripts/sync-netlify-env.sh"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",

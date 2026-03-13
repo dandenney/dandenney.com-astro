@@ -68,6 +68,35 @@ See `docs/shipp-integration.md` for:
 - manual fetch endpoint (`POST /api/shipp/fetch`)
 - normalized signal state location (`src/data/shipp-state.json`)
 
+## Netlify env sync
+
+Use this workflow to push local runtime env vars (including Shipp vars) to the linked Netlify site.
+
+1. Install the Netlify CLI (one time):
+   - `npm install -g netlify-cli`
+2. Link this repo to your Netlify site (one time):
+   - `netlify link`
+3. Create a local env file (default: `.env.netlify`) using this template:
+
+```bash
+# Example only — do not commit real values
+PUBLIC_SITE_URL=https://example.com
+SHIPP_API_KEY=replace_me
+SHIPP_CONNECTION_ID=replace_me
+# Optional multi-connection format:
+# SHIPP_CONNECTION_IDS=id_1,id_2
+```
+
+4. Sync to Netlify:
+   - `npm run netlify:env:sync`
+   - Optional custom file: `NETLIFY_ENV_FILE=.env.staging npm run netlify:env:sync`
+
+After syncing, verify env var names with:
+- `netlify env:list`
+
+Then redeploy so runtime env changes take effect:
+- `netlify deploy --prod`
+
 ## 👀 Want to learn more?
 
 Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
