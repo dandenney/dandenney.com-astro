@@ -1,6 +1,9 @@
-# Shipp MVP Integration (Capital Game Dashboard)
+# Shipp MVP Integration (Sports Betting Tracker First)
 
 This project includes a server-side Shipp integration for manual signal ingestion.
+
+Primary scope: sports betting UX on `/martingale-tracker`.
+Secondary future scope: optional reuse on capital-game dashboards.
 
 ## 1) Add API key + connection IDs
 
@@ -42,7 +45,7 @@ curl -sS -X POST http://localhost:4321/api/shipp/fetch \
 curl -sS http://localhost:4321/api/shipp/signals
 ```
 
-Signals are also shown in `/capital-game-dashboard` under **Shipp Signal Feed (Debug)**.
+Signals are shown in `/martingale-tracker` under **Pending Bet Signal Panel**.
 
 ## 4) Persistence/state files
 
@@ -55,8 +58,24 @@ It tracks:
 - last run/success/error metadata
 - `latestSignals` (normalized, deduped, capped)
 
-## 5) Non-breaking behavior
+## 5) Bet-to-signal matching assumptions (lightweight MVP)
 
-- Dashboard keeps existing capital game logic intact.
-- Shipp section is read-only/debug-only.
+Current matching is intentionally conservative and simple:
+
+- only **pending** bets are evaluated
+- signal relevance is based on:
+  - overlap between bet pick tokens and normalized signal team/game tokens
+  - inferred sport alignment (`NBA` inference only in MVP)
+- if no match is found, UI explicitly shows: **"No relevant updates yet"**
+- optional per-match debug details are available via a collapsible "Matching notes" row
+
+Why this approach:
+- keeps the UX clear and non-debuggy by default
+- avoids duplicate Shipp ingestion logic (reuses existing normalized state)
+- keeps humans in the loop with zero auto-bet execution
+
+## 6) Non-breaking behavior
+
+- Existing capital-game logic remains intact.
+- Shipp bet panel is read-only decision support.
 - No automatic bet placement is performed.

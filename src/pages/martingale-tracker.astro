@@ -13,6 +13,8 @@ import {
   getNetImpact,
   type MartingaleBet,
 } from "../data/martingaleBets";
+import { readShippState } from "@/server/shipp/state";
+import { matchSignalsForBet } from "@/server/shipp/matching";
 
 const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -118,6 +120,15 @@ if (firstBetDate) {
 
 const strategyVsHysaDelta = currentBalance - hysaCurrentValue;
 
+const shippState = await readShippState();
+const recentSignals = shippState.latestSignals.slice(0, 25);
+const pendingBetSignalMatches = orderedBets
+  .filter((bet) => bet.result === "pending")
+  .map((bet) => ({
+    bet,
+    matches: matchSignalsForBet(bet, recentSignals).slice(0, 3),
+  }));
+
 const summaryCards = [
   { label: "Strategy Starting Balance", value: currency.format(startingBalance) },
   {
@@ -221,6 +232,58 @@ const summaryCards = [
             </p>
           </article>
         </div>
+
+        <section class="mt-10 rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm sm:p-6">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Pending Bet Signal Panel</p>
+              <p class="mt-1 text-xs text-slate-400">
+                Read-only updates from Shipp. Manual decision flow only (no auto-bets).
+              </p>
+            </div>
+            <p class="text-xs text-slate-400">Last Shipp update: {shippState.updatedAt ?? "never"}</p>
+          </div>
+
+          {pendingBetSignalMatches.length ? (
+            <div class="mt-4 grid gap-4 lg:grid-cols-2">
+              {pendingBetSignalMatches.map(({ bet, matches }) => (
+                <article class="rounded-xl border border-slate-700/80 bg-slate-950/40 p-4">
+                  <p class="text-xs uppercase tracking-[0.16em] text-cyan-300">{bet.seriesId} · Pending</p>
+                  <p class="mt-2 text-sm font-semibold text-white">{bet.pick}</p>
+                  <p class="mt-1 text-xs text-slate-400">Line {bet.line} · Stake {currency.format(getStakeOut(bet))}</p>
+
+                  {matches.length ? (
+                    <ul class="mt-3 space-y-2">
+                      {matches.map(({ signal, reasons }) => (
+                        <li class="rounded-lg border border-cyan-500/25 bg-cyan-500/5 p-3">
+                          <p class="text-xs text-cyan-100">
+                            {new Date(signal.receivedAt).toLocaleString("en-US")} · {(signal.sport ?? "unknown").toUpperCase()} · {signal.eventType ?? "update"}
+                          </p>
+                          <p class="mt-1 text-sm text-slate-200">{signal.description ?? "Signal update"}</p>
+                          <p class="mt-1 text-xs text-slate-300">{signal.home ?? "—"} {signal.homePoints ?? "—"} - {signal.awayPoints ?? "—"} {signal.away ?? "—"}</p>
+                          <details class="mt-2 text-xs text-slate-400">
+                            <summary class="cursor-pointer">Matching notes</summary>
+                            <ul class="mt-1 list-disc pl-4">
+                              {reasons.map((reason) => <li>{reason}</li>)}
+                            </ul>
+                          </details>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p class="mt-3 rounded-lg border border-slate-700/80 bg-slate-900/50 p-3 text-sm text-slate-300">
+                      No relevant updates yet
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p class="mt-4 rounded-lg border border-slate-700/80 bg-slate-900/50 p-3 text-sm text-slate-300">
+              No pending bets right now.
+            </p>
+          )}
+        </section>
 
         <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
           <div class="border-b border-slate-700/80 px-4 py-3 sm:px-6">

@@ -61,12 +61,16 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Shipp MVP integration (capital game)
+## Shipp MVP integration (sports betting tracker first)
+
+Primary scope now lives on `/martingale-tracker` (pending bet signal panel).
+Secondary/future scope: capital-game reuse once signal relevance scoring matures.
 
 See `docs/shipp-integration.md` for:
 - required env vars (`SHIPP_API_KEY`, `SHIPP_CONNECTION_ID` / `SHIPP_CONNECTION_IDS`)
 - manual fetch endpoint (`POST /api/shipp/fetch`)
 - normalized signal state location (`src/data/shipp-state.json`)
+- bet-to-signal matching assumptions used by the tracker panel
 
 ## Netlify env sync
 
