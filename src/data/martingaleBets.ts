@@ -92,6 +92,16 @@ export const martingaleBets: MartingaleBet[] = [
     returnAmount: 58.3,
     balanceImpact: 58.3,
   },
+  {
+    id: 6,
+    date: "2026-03-13",
+    seriesId: "D",
+    pick: "Scoot Henderson Over 4.5 Assists",
+    line: "+100",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
