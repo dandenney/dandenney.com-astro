@@ -1,46 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-13T16:22:39.304Z",
-  "connections": {
-    "demo-conn": {
-      "sinceEventId": "mock-1773418959304",
-      "lastRunAt": "2026-03-13T16:22:39.304Z",
-      "lastSuccessAt": "2026-03-13T16:22:39.304Z",
-      "lastError": null
-    }
-  },
-  "latestSignals": [
-    {
-      "id": "demo-conn:mock-1773418959304:2026-03-13T16:22:39.304Z",
-      "connectionId": "demo-conn",
-      "eventCursor": "mock-1773418959304",
-      "gameId": "LAL-vs-BOS",
-      "sport": "nba",
-      "eventType": "score",
-      "description": "Mock signal for local integration validation",
-      "period": 3,
-      "gameClock": "04:12",
-      "home": "Lakers",
-      "away": "Celtics",
-      "homePoints": 92,
-      "awayPoints": 95,
-      "wallClockStart": "2026-03-13T16:22:39.304Z",
-      "wallClockEnd": null,
-      "receivedAt": "2026-03-13T16:22:39.304Z",
-      "raw": {
-        "attribution_id": "mock-1773418959304",
-        "game_id": "LAL-vs-BOS",
-        "sport": "nba",
-        "type": "score",
-        "desc": "Mock signal for local integration validation",
-        "game_period": 3,
-        "game_clock": "04:12",
-        "home": "Lakers",
-        "away": "Celtics",
-        "home_points": 92,
-        "away_points": 95,
-        "wall_clock_start": "2026-03-13T16:22:39.304Z"
-      }
-    }
-  ]
+  "updatedAt": null,
+  "connections": {},
+  "latestSignals": []
 }
