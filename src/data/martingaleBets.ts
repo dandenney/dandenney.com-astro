@@ -87,8 +87,10 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Celtics +6.5",
     line: "-106",
     amount: 30,
-    result: "pending",
+    result: "win",
     stakeOut: 30,
+    returnAmount: 58.3,
+    balanceImpact: 58.3,
   },
 ];
 
