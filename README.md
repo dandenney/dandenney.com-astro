@@ -61,6 +61,13 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## Shipp MVP integration (capital game)
+
+See `docs/shipp-integration.md` for:
+- required env vars (`SHIPP_API_KEY`, `SHIPP_CONNECTION_ID` / `SHIPP_CONNECTION_IDS`)
+- manual fetch endpoint (`POST /api/shipp/fetch`)
+- normalized signal state location (`src/data/shipp-state.json`)
+
 ## 👀 Want to learn more?
 
 Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
