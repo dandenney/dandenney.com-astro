@@ -17,6 +17,7 @@ const defaultState = (): ShippState => ({
   updatedAt: new Date().toISOString(),
   connections: {},
   latestSignals: [],
+  checkpoints: { byBetId: {} },
 });
 
 export const readShippState = async (): Promise<ShippState> => {
@@ -28,6 +29,9 @@ export const readShippState = async (): Promise<ShippState> => {
       ...parsed,
       connections: parsed.connections ?? {},
       latestSignals: parsed.latestSignals ?? [],
+      checkpoints: {
+        byBetId: parsed.checkpoints?.byBetId ?? {},
+      },
     };
   } catch {
     return defaultState();
