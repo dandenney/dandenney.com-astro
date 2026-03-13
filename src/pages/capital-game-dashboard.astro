@@ -6,7 +6,7 @@ import { SITE_TITLE } from "../consts";
 import { ViewTransitions } from "astro:transitions";
 import {
   capitalGameConfig,
-  capitalGameEntries,
+  loadCapitalGameEntries,
   buildEquityCurve,
   getNetFlow,
   sortEntriesByDate,
@@ -19,7 +19,8 @@ const currency = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 2,
 });
 
-const orderedEntries = sortEntriesByDate(capitalGameEntries);
+const ledgerLoad = await loadCapitalGameEntries();
+const orderedEntries = sortEntriesByDate(ledgerLoad.entries);
 const equityCurve = buildEquityCurve(orderedEntries, capitalGameConfig);
 
 const currentEquity = equityCurve.at(-1)?.equity ?? capitalGameConfig.startingCapital;
@@ -110,6 +111,16 @@ const targetPoints = series
         <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
           Start at <strong>$1,000</strong>, target <strong>+10% per month</strong>, and track actual vs target with a clean performance ledger.
         </p>
+
+        {ledgerLoad.source === "fallback" ? (
+          <div class="mt-4 rounded-xl border border-amber-500/60 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+            <p class="font-semibold uppercase tracking-wider">Fallback ledger active</p>
+            <p class="mt-1">Real ledger could not be loaded from <code>{ledgerLoad.path}</code>.</p>
+            {ledgerLoad.message ? <p class="mt-1 text-amber-200/90">Reason: {ledgerLoad.message}</p> : null}
+          </div>
+        ) : (
+          <p class="mt-4 text-xs uppercase tracking-[0.2em] text-emerald-300/80">Live data source: real ledger</p>
+        )}
 
         <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 backdrop-blur-sm">

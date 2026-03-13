@@ -1,3 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+
 export type AssetClass = "stock" | "commodity" | "crypto" | "other";
 export type PositionSide = "long" | "short";
 export type EntryStatus = "open" | "closed";
@@ -26,114 +29,101 @@ export const capitalGameConfig: CapitalGameConfig = {
   monthlyTargetRate: 0.1,
 };
 
-// Fake starter ledger (small and realistic-ish): deposits/withdrawals are represented
-// as cash in/out at entry level, so equity is start + sum(amountIn - amountOut).
-export const capitalGameEntries: CapitalGameEntry[] = [
+const REAL_LEDGER_PATH = fileURLToPath(new URL("./capitalGameLedger.real.json", import.meta.url));
+
+// Emergency fallback only. Used if the canonical real ledger file is missing,
+// unreadable, invalid JSON, or has no valid entries.
+export const capitalGameFallbackEntries: CapitalGameEntry[] = [
   {
-    id: "cg-001",
-    date: "2026-01-03",
+    id: "fallback-001",
+    date: "2026-03-01",
     asset: "SPY",
     assetClass: "stock",
     side: "long",
-    amountIn: 22,
+    amountIn: 10,
     amountOut: 0,
-    realizedPL: 22,
+    realizedPL: 10,
     status: "closed",
-    notes: "Quick momentum scalp after CPI drift.",
-    tags: ["day-trade", "index"],
-  },
-  {
-    id: "cg-002",
-    date: "2026-01-15",
-    asset: "GC",
-    assetClass: "commodity",
-    side: "long",
-    amountIn: 14,
-    amountOut: 0,
-    realizedPL: 14,
-    status: "closed",
-    notes: "Gold bounce into resistance.",
-    tags: ["futures", "swing"],
-  },
-  {
-    id: "cg-003",
-    date: "2026-02-04",
-    asset: "BTC",
-    assetClass: "crypto",
-    side: "long",
-    amountIn: 31,
-    amountOut: 0,
-    realizedPL: 31,
-    status: "closed",
-    notes: "Took partial into strength.",
-    tags: ["crypto", "swing"],
-  },
-  {
-    id: "cg-004",
-    date: "2026-02-11",
-    asset: "TSLA",
-    assetClass: "stock",
-    side: "short",
-    amountIn: 0,
-    amountOut: 38,
-    realizedPL: -38,
-    status: "closed",
-    notes: "Squeezed out; respected stop.",
-    tags: ["equity", "loss"],
-  },
-  {
-    id: "cg-005",
-    date: "2026-02-20",
-    asset: "ETH",
-    assetClass: "crypto",
-    side: "long",
-    amountIn: 47,
-    amountOut: 0,
-    realizedPL: 47,
-    status: "closed",
-    notes: "Breakout continuation.",
-    tags: ["crypto", "trend"],
-  },
-  {
-    id: "cg-006",
-    date: "2026-03-02",
-    asset: "AAPL",
-    assetClass: "stock",
-    side: "long",
-    amountIn: 0,
-    amountOut: 21,
-    realizedPL: -21,
-    status: "closed",
-    notes: "Gap failed, took planned loss.",
-    tags: ["equity", "risk"],
-  },
-  {
-    id: "cg-007",
-    date: "2026-03-05",
-    asset: "NQ",
-    assetClass: "other",
-    side: "long",
-    amountIn: 18,
-    amountOut: 0,
-    realizedPL: 18,
-    status: "open",
-    notes: "Runner still open; partial realized.",
-    tags: ["index", "open"],
-  },
-  {
-    id: "cg-008",
-    date: "2026-03-11",
-    asset: "SOL",
-    assetClass: "crypto",
-    side: "long",
-    amountIn: 36,
-    amountOut: 0,
-    realizedPL: 36,
-    status: "closed",
-    notes: "Momentum rotation; scaled out into spike.",
-    tags: ["crypto", "winner"],
+    notes: "Fallback sample entry.",
+    tags: ["fallback"],
   },
 ];
+
+export interface CapitalGameLedgerLoadResult {
+  entries: CapitalGameEntry[];
+  source: "real" | "fallback";
+  message?: string;
+  path: string;
+}
+
+const isStringArray = (value: unknown): value is string[] =>
+  Array.isArray(value) && value.every((item) => typeof item === "string");
+
+const isValidEntry = (value: unknown): value is CapitalGameEntry => {
+  if (!value || typeof value !== "object") return false;
+
+  const entry = value as Record<string, unknown>;
+
+  return (
+    typeof entry.id === "string" &&
+    typeof entry.date === "string" &&
+    /^\d{4}-\d{2}-\d{2}$/.test(entry.date) &&
+    typeof entry.asset === "string" &&
+    ["stock", "commodity", "crypto", "other"].includes(String(entry.assetClass)) &&
+    ["long", "short"].includes(String(entry.side)) &&
+    typeof entry.amountIn === "number" &&
+    Number.isFinite(entry.amountIn) &&
+    typeof entry.amountOut === "number" &&
+    Number.isFinite(entry.amountOut) &&
+    (typeof entry.realizedPL === "undefined" ||
+      (typeof entry.realizedPL === "number" && Number.isFinite(entry.realizedPL))) &&
+    ["open", "closed"].includes(String(entry.status)) &&
+    (typeof entry.notes === "undefined" || typeof entry.notes === "string") &&
+    isStringArray(entry.tags)
+  );
+};
+
+export const loadCapitalGameEntries = async (): Promise<CapitalGameLedgerLoadResult> => {
+  try {
+    const raw = await readFile(REAL_LEDGER_PATH, "utf-8");
+    const parsed = JSON.parse(raw) as unknown;
+
+    if (!Array.isArray(parsed)) {
+      return {
+        entries: capitalGameFallbackEntries,
+        source: "fallback",
+        message: "Real ledger is not an array.",
+        path: REAL_LEDGER_PATH,
+      };
+    }
+
+    const validEntries = parsed.filter(isValidEntry);
+
+    if (validEntries.length === 0) {
+      return {
+        entries: capitalGameFallbackEntries,
+        source: "fallback",
+        message: "Real ledger has no valid entries.",
+        path: REAL_LEDGER_PATH,
+      };
+    }
+
+    return {
+      entries: validEntries,
+      source: "real",
+      path: REAL_LEDGER_PATH,
+    };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unknown ledger read error.";
+
+    return {
+      entries: capitalGameFallbackEntries,
+      source: "fallback",
+      message,
+      path: REAL_LEDGER_PATH,
+    };
+  }
+};
 
 export interface EquityPoint {
   date: string;
