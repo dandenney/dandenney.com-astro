@@ -99,8 +99,10 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Scoot Henderson Over 4.5 Assists",
     line: "+100",
     amount: 30,
-    result: "pending",
+    result: "loss",
     stakeOut: 30,
+    returnAmount: 0,
+    balanceImpact: 0,
   },
 ];
 
