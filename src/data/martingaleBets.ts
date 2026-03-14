@@ -107,7 +107,7 @@ export const martingaleBets: MartingaleBet[] = [
   {
     id: 7,
     date: "2026-03-14",
-    seriesId: "E",
+    seriesId: "D",
     pick: "CHA@SA Over",
     line: "-112",
     amount: 60,
