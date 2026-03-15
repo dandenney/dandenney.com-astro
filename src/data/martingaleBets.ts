@@ -2,6 +2,7 @@ export type BetResult = "win" | "loss" | "pending";
 
 export interface MartingaleBet {
   id: number;
+  owner?: "Dan" | "GardenOf";
   date: string;
   seriesId: string;
   pick: string;
@@ -115,6 +116,28 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 60,
     returnAmount: 217.36,
     balanceImpact: 217.36,
+  },
+  {
+    id: 8,
+    owner: "Dan",
+    date: "2026-03-15",
+    seriesId: "D",
+    pick: "Justin Edwards Over 11.5 Points",
+    line: "-112",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
+  },
+  {
+    id: 9,
+    owner: "GardenOf",
+    date: "2026-03-15",
+    seriesId: "A",
+    pick: "Justin Edwards Over 11.5 Points",
+    line: "-112",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
   },
 ];
 
