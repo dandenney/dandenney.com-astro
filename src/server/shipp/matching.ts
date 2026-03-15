@@ -51,6 +51,9 @@ const inferBetSport = (bet: MartingaleBet): string | null => {
     "blazers",
     "scoot",
     "henderson",
+    "edwards",
+    "sixers",
+    "philadelphia",
   ];
 
   return nbaTokens.some((token) => pick.includes(token)) ? "nba" : null;
