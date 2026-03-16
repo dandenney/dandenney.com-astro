@@ -1,0 +1,54 @@
+name: Shipp Signal Sync
+
+on:
+  schedule:
+    # Every 30 minutes from 6pm–midnight ET (23:00–05:00 UTC) on weekdays
+    - cron: "0,30 23 * * 1-5"
+    - cron: "0,30 0-4 * * 2-6"
+  workflow_dispatch:
+    inputs:
+      checkpoint:
+        description: "Checkpoint type (T-120, T-30, T-10, LOCK)"
+        required: false
+        default: "T-120"
+        type: choice
+        options:
+          - T-120
+          - T-30
+          - T-10
+          - LOCK
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Shipp sync
+        env:
+          SHIPP_API_KEY: ${{ secrets.SHIPP_API_KEY }}
+          SHIPP_CONNECTION_IDS: ${{ secrets.SHIPP_CONNECTION_IDS }}
+          SHIPP_CHECKPOINT: ${{ inputs.checkpoint || 'T-120' }}
+        run: node scripts/shipp-sync.mjs
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/shipp-state.json
+          if git diff --staged --quiet; then
+            echo "No changes to shipp-state.json"
+          else
+            git commit -m "chore(shipp): sync signals [${{ inputs.checkpoint || 'T-120' }}] $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

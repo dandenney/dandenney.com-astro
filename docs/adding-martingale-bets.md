@@ -60,6 +60,7 @@ const nbaTokens = [
   "nuggets", "trail", "blazers",
   "scoot", "henderson",   // Scoot Henderson
   "edwards",              // Justin Edwards
+  "sensabaugh",           // Brice Sensabaugh
   "sixers", "philadelphia",
 ];
 ```
