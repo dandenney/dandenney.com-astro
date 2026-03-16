@@ -58,10 +58,11 @@ Current list for reference (as of March 2026):
 const nbaTokens = [
   "lakers", "celtics", "knicks", "wizards", "heat",
   "nuggets", "trail", "blazers",
-  "scoot", "henderson",   // Scoot Henderson
-  "edwards",              // Justin Edwards
-  "sensabaugh",           // Brice Sensabaugh
-  "suns", "phoenix",      // Phoenix Suns
+  "scoot", "henderson",           // Scoot Henderson
+  "edwards",                      // Justin Edwards
+  "sensabaugh",                   // Brice Sensabaugh
+  "suns", "phoenix", "pho",       // Phoenix Suns
+  "bos", "boston",                // Boston Celtics (abbrev)
   "sixers", "philadelphia",
 ];
 ```

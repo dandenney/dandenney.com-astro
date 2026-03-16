@@ -97,8 +97,8 @@ function normalizeRow(row, connectionId) {
     description: firstString(row, ["desc", "description"]),
     period: asNumber(row.game_period),
     gameClock: firstString(row, ["game_clock"]),
-    home: firstString(row, ["home", "home_team"]),
-    away: firstString(row, ["away", "away_team"]),
+    home: firstString(row, ["home", "home_team", "home_name"]),
+    away: firstString(row, ["away", "away_team", "away_name"]),
     homePoints: asNumber(row.home_points),
     awayPoints: asNumber(row.away_points),
     wallClockStart,
@@ -157,7 +157,10 @@ const STOP_WORDS = new Set([
 ]);
 const NBA_TOKENS = [
   "lakers", "celtics", "knicks", "wizards", "heat", "nuggets", "trail", "blazers",
-  "scoot", "henderson", "edwards", "sensabaugh", "suns", "phoenix", "sixers", "philadelphia",
+  "scoot", "henderson", "edwards", "sensabaugh",
+  "suns", "phoenix", "pho",       // Phoenix Suns
+  "bos", "boston",                // Boston Celtics (abbrev; "celtics" already above)
+  "sixers", "philadelphia",
 ];
 
 function tokenize(v) {

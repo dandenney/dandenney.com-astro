@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-16T01:06:37.033Z",
+  "updatedAt": "2026-03-16T22:12:23.329Z",
   "connections": {
     "01KKM3C5MFBPVV4BSNEMMBRNVT": {
       "sinceEventId": "01KKSTJ3Z73FSBBQYPGADRS0B6",
-      "lastRunAt": "2026-03-16T01:06:34.885Z",
+      "lastRunAt": "2026-03-16T22:12:20.994Z",
       "lastSuccessAt": "2026-03-15T23:02:01.471Z",
       "lastError": "Shipp 01KKM3C5MFBPVV4BSNEMMBRNVT (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     },
     "01KKM1TDA5SPAN8YGXZ7T1V82E": {
       "sinceEventId": "01JRKQ3M9DBGRPH8Y4AQAER1PZ",
-      "lastRunAt": "2026-03-16T01:06:35.164Z",
-      "lastSuccessAt": "2026-03-16T01:06:37.018Z",
+      "lastRunAt": "2026-03-16T22:12:21.261Z",
+      "lastSuccessAt": "2026-03-16T22:12:23.314Z",
       "lastError": null
     }
   },
@@ -5571,6 +5571,66 @@
             "confidenceChange": 0,
             "evidenceChange": 0,
             "newSignalsSinceLast": 0
+          }
+        }
+      ],
+      "14": [
+        {
+          "betId": 14,
+          "checkpoint": "T-120",
+          "recommendation": "Bet",
+          "confidence": 60,
+          "status": "active",
+          "reason": "Pregame signals aligned.",
+          "insufficientData": false,
+          "matchedSignalsCount": 8,
+          "matchedSignalIds": [
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:42:03Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3M9DBGRPH8Y4AQAER1PZ:2026-03-15T22:51:04Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:49:37Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:48:42Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3M9DBGRPH8Y4AQAER1PZ:2026-03-15T22:59:32Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:59:32Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3M9DBGRPH8Y4AQAER1PZ:2026-03-15T22:54:40Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:53:15Z"
+          ],
+          "generatedAt": "2026-03-16T22:12:23.327Z",
+          "deltaFromLast": {
+            "previousCheckpoint": null,
+            "previousRecommendation": null,
+            "confidenceChange": 60,
+            "evidenceChange": 8,
+            "newSignalsSinceLast": 8
+          }
+        }
+      ],
+      "15": [
+        {
+          "betId": 15,
+          "checkpoint": "T-120",
+          "recommendation": "Bet",
+          "confidence": 60,
+          "status": "active",
+          "reason": "Pregame signals aligned.",
+          "insufficientData": false,
+          "matchedSignalsCount": 8,
+          "matchedSignalIds": [
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:42:03Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3M9DBGRPH8Y4AQAER1PZ:2026-03-15T22:51:04Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:49:37Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:48:42Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3M9DBGRPH8Y4AQAER1PZ:2026-03-15T22:59:32Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:59:32Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3M9DBGRPH8Y4AQAER1PZ:2026-03-15T22:54:40Z",
+            "01KKM1TDA5SPAN8YGXZ7T1V82E:01JRKQ3CMM7X5FAECWQR37N9XY:2026-03-15T22:53:15Z"
+          ],
+          "generatedAt": "2026-03-16T22:12:23.327Z",
+          "deltaFromLast": {
+            "previousCheckpoint": null,
+            "previousRecommendation": null,
+            "confidenceChange": 60,
+            "evidenceChange": 8,
+            "newSignalsSinceLast": 8
           }
         }
       ]
