@@ -157,7 +157,7 @@ const STOP_WORDS = new Set([
 ]);
 const NBA_TOKENS = [
   "lakers", "celtics", "knicks", "wizards", "heat", "nuggets", "trail", "blazers",
-  "scoot", "henderson", "edwards", "sensabaugh", "sixers", "philadelphia",
+  "scoot", "henderson", "edwards", "sensabaugh", "suns", "phoenix", "sixers", "philadelphia",
 ];
 
 function tokenize(v) {

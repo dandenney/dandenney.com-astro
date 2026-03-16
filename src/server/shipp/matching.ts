@@ -53,6 +53,7 @@ const inferBetSport = (bet: MartingaleBet): string | null => {
     "henderson",
     "edwards",              // Justin Edwards
     "sensabaugh",           // Brice Sensabaugh
+    "suns", "phoenix",      // Phoenix Suns
     "sixers",
     "philadelphia",
   ];
