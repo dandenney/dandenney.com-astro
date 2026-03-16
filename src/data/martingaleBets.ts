@@ -161,8 +161,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Brice Sensabaugh Over 22.5 Points",
     line: "-113",
     amount: 30,
-    result: "pending",
+    result: "loss",
     stakeOut: 30,
+    returnAmount: 0,
   },
   {
     id: 13,
@@ -172,8 +173,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Brice Sensabaugh Over 22.5 Points",
     line: "-113",
     amount: 30,
-    result: "pending",
+    result: "loss",
     stakeOut: 30,
+    returnAmount: 0,
   },
 ];
 
