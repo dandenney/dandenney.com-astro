@@ -544,8 +544,12 @@ const gardenSummaryCards = [
                     <td class="whitespace-nowrap px-4 py-4 font-semibold text-white sm:px-6">{series.seriesId}</td>
                     <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.betsCount}</td>
                     <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.lossesCount}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.status}</td>
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold sm:px-6">{`${series.netImpact >= 0 ? "+" : ""}${currency.format(series.netImpact)}`}</td>
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
+                      <span class:list={["inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider", series.status === "Won" ? "bg-emerald-500/20 text-emerald-300" : series.status === "Full Fail" ? "bg-rose-500/20 text-rose-300" : "bg-amber-500/20 text-amber-200"]}>
+                        {series.status}
+                      </span>
+                    </td>
+                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", series.netImpact >= 0 ? "text-emerald-300" : "text-rose-300"]}>{`${series.netImpact >= 0 ? "+" : ""}${currency.format(series.netImpact)}`}</td>
                   </tr>
                 ))}
               </tbody>
@@ -569,9 +573,13 @@ const gardenSummaryCards = [
                     <td class="px-4 py-4 font-medium text-white sm:px-6">{bet.pick}</td>
                     <td class="whitespace-nowrap px-4 py-4 sm:px-6">{bet.line}</td>
                     <td class="whitespace-nowrap px-4 py-4 text-rose-300 sm:px-6">-{currency.format(bet.stakeOut)}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{bet.result}</td>
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold sm:px-6">{bet.result === "pending" ? "Pending (" + currency.format(0) + ")" : `+${currency.format(bet.returnAmount)}`}</td>
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold sm:px-6">{`${bet.netImpact >= 0 ? "+" : ""}${currency.format(bet.netImpact)}`}</td>
+                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
+                      <span class:list={["inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider", bet.result === "win" ? "bg-emerald-500/20 text-emerald-300" : bet.result === "loss" ? "bg-rose-500/20 text-rose-300" : "bg-amber-500/20 text-amber-200"]}>
+                        {bet.result === "pending" ? "Pending" : bet.result}
+                      </span>
+                    </td>
+                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", bet.returnAmount > 0 ? "text-emerald-300" : "text-slate-300"]}>{bet.result === "pending" ? "Pending (" + currency.format(0) + ")" : `+${currency.format(bet.returnAmount)}`}</td>
+                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", bet.netImpact >= 0 ? "text-emerald-300" : "text-rose-300"]}>{`${bet.netImpact >= 0 ? "+" : ""}${currency.format(bet.netImpact)}`}</td>
                     <td class="whitespace-nowrap px-4 py-4 font-medium text-cyan-200 sm:px-6">{currency.format(bet.runningBalance)}</td>
                   </tr>
                 ))}
