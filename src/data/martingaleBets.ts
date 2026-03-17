@@ -185,8 +185,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "PHO/BOS Over 213.5",
     line: "-110",
     amount: 60,
-    result: "pending",
+    result: "win",
     stakeOut: 60,
+    returnAmount: 114.54,
   },
   {
     id: 15,
@@ -196,8 +197,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "PHO/BOS Over 213.5",
     line: "-110",
     amount: 60,
-    result: "pending",
+    result: "win",
     stakeOut: 60,
+    returnAmount: 114.55,
   },
 ];
 
