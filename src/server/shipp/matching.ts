@@ -57,6 +57,8 @@ const inferBetSport = (bet: MartingaleBet): string | null => {
     "bos", "boston",            // Boston Celtics (abbrev; "celtics" already above)
     "sixers",
     "philadelphia",
+    "cavaliers", "cleveland", "cle", // Cleveland Cavaliers
+    "bucks", "milwaukee", "mil",     // Milwaukee Bucks
   ];
 
   return nbaTokens.some((token) => pick.includes(token)) ? "nba" : null;
