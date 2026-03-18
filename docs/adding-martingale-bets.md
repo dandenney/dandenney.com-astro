@@ -75,7 +75,38 @@ When a result comes in, update the existing entry in `martingaleBets.ts`:
 
 ```ts
 result: "win",           // or "loss"
-returnAmount: 56.79,     // total returned (stake + profit); 0 for losses
+returnAmount: 56.79,      // total returned (stake + profit); 0 for losses
 ```
 
 Leave `stakeOut` as-is — it represents the debit at placement time.
+
+### Dan/Garden split rule (important)
+
+When Dan and GardenOf both place the same bet and both win:
+
+1. Compute combined return for both bets
+2. Split evenly to cents
+3. If there is an odd penny, **GardenOf gets the extra penny**
+
+Example:
+- Combined return: `152.73`
+- Dan: `76.36`
+- GardenOf: `76.37`
+
+## Daily auto-settlement cron
+
+A GitHub Actions workflow now runs daily:
+
+- File: `.github/workflows/settle-pending-bets.yml`
+- Script: `scripts/settle-pending-bets.mjs`
+
+Current behavior:
+- Scans pending bets in `martingaleBets.ts`
+- Matches completed NBA games (ESPN scoreboard API)
+- Settles supported matchup totals (`Team A @ Team B Over/Under X`)
+- Applies Dan/Garden split + odd-penny-to-Garden rule for paired wins
+- Commits/pushes updates automatically when changes exist
+
+For best auto-settlement reliability, keep matchup picks in this format:
+
+`<Away Team> @ <Home Team> Over|Under <Total>`

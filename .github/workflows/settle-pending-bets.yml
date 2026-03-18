@@ -1,0 +1,37 @@
+name: Settle Pending Bets
+
+on:
+  schedule:
+    # Daily at 12:30 UTC (~5:30am PT, adjusts with DST)
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  settle:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Settle pending bets
+        run: APPLY=1 node scripts/settle-pending-bets.mjs
+
+      - name: Commit updated bets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/martingaleBets.ts
+          if git diff --staged --quiet; then
+            echo "No bet settlements to commit"
+          else
+            git commit -m "chore(martingale): settle pending bets $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
