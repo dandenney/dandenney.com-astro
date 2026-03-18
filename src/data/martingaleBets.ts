@@ -209,8 +209,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "CLE @ MIL Over 228.5",
     line: "-110",
     amount: 40,
-    result: "pending",
+    result: "win",
     stakeOut: 40,
+    returnAmount: 76.36,
   },
   {
     id: 17,
@@ -220,8 +221,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "CLE @ MIL Over 228.5",
     line: "-110",
     amount: 40,
-    result: "pending",
+    result: "win",
     stakeOut: 40,
+    returnAmount: 76.37,
   },
 ];
 
