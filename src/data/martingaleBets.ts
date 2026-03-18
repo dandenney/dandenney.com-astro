@@ -225,6 +225,28 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 40,
     returnAmount: 76.37,
   },
+  {
+    id: 18,
+    owner: "Dan",
+    date: "2026-03-18",
+    seriesId: "H",
+    pick: "Oklahoma City Thunder @ Brooklyn Nets Over 214.5",
+    line: "-108",
+    amount: 40,
+    result: "pending",
+    stakeOut: 40,
+  },
+  {
+    id: 19,
+    owner: "GardenOf",
+    date: "2026-03-18",
+    seriesId: "D",
+    pick: "Oklahoma City Thunder @ Brooklyn Nets Over 214.5",
+    line: "-108",
+    amount: 40,
+    result: "pending",
+    stakeOut: 40,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
