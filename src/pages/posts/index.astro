@@ -87,7 +87,7 @@ const blogroll = [
 								return (
 									<article
 										class:list={[
-											"group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 sm:pt-32 lg:pt-48 transition-all duration-300 hover:shadow-md",
+											"group relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-48 sm:pt-32 lg:pt-48 transition-shadow duration-300 [@media(hover:hover)]:hover:shadow-md",
 											isWide ? "sm:col-span-2" : "",
 										]}
 									>
@@ -96,7 +96,7 @@ const blogroll = [
 										</a>
 										{post.data.cloudinaryThumb ? (
 											<img
-												class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+												class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
 												loading="lazy"
 												src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb}`}
 												alt={post.data.thumbAlt || post.data.title}
@@ -104,24 +104,24 @@ const blogroll = [
 											/>
 										) : post.data.thumb ? (
 											<img
-												class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+												class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
 												loading="lazy"
 												src={post.data.thumb}
 												alt={post.data.thumbAlt || post.data.title}
 											/>
 										) : (
 											<img
-												class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+												class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
 												loading="lazy"
 												src="https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/posts/slackin.png"
 												alt="Placeholder image"
 											/>
 										)}
 										<div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
-										<h3 class="mt-3 text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+										<h3 class="mt-3 text-lg font-semibold leading-6 text-white transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-y-[-2px]">
 											{post.data.title}
 										</h3>
-										<p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">{post.data.summary}</p>
+										<p class="mt-2 text-sm text-gray-300 transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-y-[-2px]">{post.data.summary}</p>
 									</article>
 								);
 							})}

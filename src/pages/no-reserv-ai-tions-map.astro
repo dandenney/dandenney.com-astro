@@ -145,11 +145,18 @@ const pageDescription = "Interactive map of all No ReservAItions restaurant revi
         border-radius: 0.5rem;
         font-weight: 600;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: transform 0.2s;
       }
 
-      .filters button:hover {
-        transform: scale(1.02);
+      @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .filters button:hover {
+          transform: scale(1.02);
+        }
+      }
+
+      .filters button:focus-visible {
+        outline: 2px solid #b91c1b;
+        outline-offset: 2px;
       }
 
       /* Listings */
@@ -163,17 +170,29 @@ const pageDescription = "Interactive map of all No ReservAItions restaurant revi
         margin-bottom: 0.75rem;
         border-radius: 0.5rem;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: border-color 0.2s, transform 0.2s;
         border: 2px solid transparent;
       }
 
-      .listing-item:hover {
-        border-color: #b91c1b;
-        transform: translateX(4px);
+      @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .listing-item:hover {
+          border-color: #b91c1b;
+          transform: translateX(4px);
+        }
+
+        .dark .listing-item:hover {
+          border-color: #fda5a5;
+        }
       }
 
-      .dark .listing-item:hover {
-        border-color: #fda5a5;
+      @media (hover: hover) and (prefers-reduced-motion: reduce) {
+        .listing-item:hover {
+          border-color: #b91c1b;
+        }
+
+        .dark .listing-item:hover {
+          border-color: #fda5a5;
+        }
       }
 
       .listing-item.active {
@@ -231,8 +250,16 @@ const pageDescription = "Interactive map of all No ReservAItions restaurant revi
         font-size: 0.875rem;
       }
 
-      .listing-item a:hover {
-        opacity: 0.8;
+      @media (hover: hover) {
+        .listing-item a:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .listing-item a:focus-visible {
+        outline: 2px solid #b91c1b;
+        outline-offset: 2px;
+        border-radius: 2px;
       }
 
       .fly-button {
@@ -241,10 +268,21 @@ const pageDescription = "Interactive map of all No ReservAItions restaurant revi
         font-size: 1.25rem;
         cursor: pointer;
         transition: transform 0.2s;
+        padding: 0.5rem;
+        min-width: 44px;
+        min-height: 44px;
       }
 
-      .fly-button:hover {
-        transform: scale(1.2);
+      @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .fly-button:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      .fly-button:focus-visible {
+        outline: 2px solid #b91c1b;
+        outline-offset: 2px;
+        border-radius: 4px;
       }
 
       .empty-state {
@@ -318,12 +356,19 @@ const pageDescription = "Interactive map of all No ReservAItions restaurant revi
         padding: 0.5rem 1rem;
         border-radius: 0.25rem;
         background-color: currentColor;
-        transition: all 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
       }
 
-      .popup-content .view-review:hover {
-        transform: translateY(-1px);
-        opacity: 0.9;
+      @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+        .popup-content .view-review:hover {
+          transform: translateY(-1px);
+          opacity: 0.9;
+        }
+      }
+
+      .popup-content .view-review:focus-visible {
+        outline: 2px solid #b91c1b;
+        outline-offset: 2px;
       }
 
       /* Popup tips - Light mode */

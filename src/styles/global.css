@@ -139,7 +139,7 @@
     #b91c1c 0
   ); /* red-700 */
   background-size: 0% 100%;
-  transition: background-size 0.4s ease;
+  transition: background-size 0.2s ease;
 }
 
 .dark .longform a:not(.btn-link),
@@ -151,7 +151,7 @@
     #fca5a5 0
   ); /* red-500 */
   background-size: 0% 100%;
-  transition: background-size 0.4s ease;
+  transition: background-size 0.2s ease;
 }
 
 .longform a:active,
@@ -245,6 +245,15 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .longform a[href^="http"]:not(.no-tooltip)::after,
+  .has-links a[href^="http"]:not(.no-tooltip)::after,
+  .longform a[href^="http"]:not(.no-tooltip)::before,
+  .has-links a[href^="http"]:not(.no-tooltip)::before {
+    transition: none;
+  }
+}
+
 .longform a[href^="http"]:not(.no-tooltip):hover::after,
 .has-links a[href^="http"]:not(.no-tooltip):hover::after {
   opacity: 1;
@@ -299,11 +308,17 @@
 }
 
 .btn-link {
-  @apply rounded-md bg-red-700 px-5 py-4 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-800 hover:scale-105 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700;
+  @apply rounded-md bg-red-700 px-5 py-4 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-800 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700;
+}
+
+@media (hover: hover) {
+  .btn-link:hover {
+    scale: 1.05;
+  }
 }
 
 .dark .btn-link {
-  @apply rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-500 hover:scale-105 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500;
+  @apply rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-500 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500;
 }
 
 /* Grid shared — diagonal lines for empty cells, solid borders between items */
@@ -376,22 +391,24 @@
   transition: background-color 0.2s ease;
 }
 
-.finds-grid-item:hover,
-.blips-grid-item:hover,
-.tinkerings-grid-item:hover,
-.music-grid-item:hover,
-.reviews-list-grid-item:hover,
-.side-projects-grid-item:hover {
-  background-color: #ffffff !important;
-}
+@media (hover: hover) {
+  .finds-grid-item:hover,
+  .blips-grid-item:hover,
+  .tinkerings-grid-item:hover,
+  .music-grid-item:hover,
+  .reviews-list-grid-item:hover,
+  .side-projects-grid-item:hover {
+    background-color: #ffffff !important;
+  }
 
-.dark .finds-grid-item:hover,
-.dark .blips-grid-item:hover,
-.dark .tinkerings-grid-item:hover,
-.dark .music-grid-item:hover,
-.dark .reviews-list-grid-item:hover,
-.dark .side-projects-grid-item:hover {
-  background-color: #0f172a !important;
+  .dark .finds-grid-item:hover,
+  .dark .blips-grid-item:hover,
+  .dark .tinkerings-grid-item:hover,
+  .dark .music-grid-item:hover,
+  .dark .reviews-list-grid-item:hover,
+  .dark .side-projects-grid-item:hover {
+    background-color: #0f172a !important;
+  }
 }
 
 /* Blips Grid */
@@ -429,16 +446,18 @@
   opacity: 1;
 }
 
-.blips-grid-item:hover .blip-ring-1 {
-  animation: blip-pulse 1.5s ease-out infinite;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .blips-grid-item:hover .blip-ring-1 {
+    animation: blip-pulse 1.5s ease-out infinite;
+  }
 
-.blips-grid-item:hover .blip-ring-2 {
-  animation: blip-pulse 1.5s ease-out 0.3s infinite;
-}
+  .blips-grid-item:hover .blip-ring-2 {
+    animation: blip-pulse 1.5s ease-out 0.3s infinite;
+  }
 
-.blips-grid-item:hover .blip-ring-3 {
-  animation: blip-pulse 1.5s ease-out 0.6s infinite;
+  .blips-grid-item:hover .blip-ring-3 {
+    animation: blip-pulse 1.5s ease-out 0.6s infinite;
+  }
 }
 
 .blip-core {
@@ -486,12 +505,14 @@
   transition: background-color 0.2s ease;
 }
 
-.reviews-grid-item:hover {
-  background-color: #ffffff !important;
-}
+@media (hover: hover) {
+  .reviews-grid-item:hover {
+    background-color: #ffffff !important;
+  }
 
-.dark .reviews-grid-item:hover {
-  background-color: #0f172a !important;
+  .dark .reviews-grid-item:hover {
+    background-color: #0f172a !important;
+  }
 }
 
 /* Bleed Options */
@@ -607,7 +628,7 @@
   border-radius: 4px;
   cursor: nwse-resize;
   opacity: 0.5;
-  transition: all 0.2s ease;
+  transition: opacity 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;

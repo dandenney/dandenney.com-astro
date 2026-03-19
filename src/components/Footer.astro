@@ -31,8 +31,16 @@ const isProd = import.meta.env.PROD;
     margin-bottom: 1rem;
   }
 
-  .site-footer .link:hover {
-    transform: scale(1.1);
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .site-footer .link:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .site-footer .link:focus-visible {
+    outline: 2px solid #b91c1c;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 
   .site-footer .dan {

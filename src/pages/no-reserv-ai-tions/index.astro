@@ -131,7 +131,7 @@ const reviews = (await getCollection('reviews')).sort(
 							</li>
 							{reviews.map((review) => (
 								<li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
-									<a class="review-link block duration-300 group relative isolate transition-all sm:mt-0" href={`/no-reserv-ai-tions/${review.slug}/`}>
+									<a class="review-link block duration-300 group relative isolate sm:mt-0" href={`/no-reserv-ai-tions/${review.slug}/`}>
 										<div class="max-w-2xl mx-auto sm:gap-8 sm:flex sm:items-start">
 											<img class="mb-4 sm:max-w-[240px] sm:h-auto lg:hidden" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 											<div>
@@ -160,7 +160,7 @@ const reviews = (await getCollection('reviews')).sort(
 						</li>
 						{reviews.map((review) => (
 							<li class="min-h-[80dvh] overflow-hidden relative">
-								<a class="absolute inset-0 block duration-300 group isolate transition-all sm:mt-0 hover:bg-red-700 dark:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}/`}>
+								<a class="absolute inset-0 block duration-300 group isolate transition-colors sm:mt-0 [@media(hover:hover)]:hover:bg-red-700 dark:[@media(hover:hover)]:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}/`}>
 									<img class="h-full w-full object-cover" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 								</a>
 							</li>

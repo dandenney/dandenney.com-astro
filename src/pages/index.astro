@@ -388,7 +388,7 @@ const monthName = getMonthName();
         >
           {
             posts.map((post) => (
-              <article class="relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-all duration-300 hover:shadow-md group">
+              <article class="relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-shadow duration-300 hover:shadow-md group">
                 <a
                   href={`/posts/${post.slug}/`}
                   class="absolute inset-0 z-20"
@@ -400,7 +400,7 @@ const monthName = getMonthName();
                   alt={post.data.thumbAlt}
                   width={686}
                   height={457}
-                  class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
                   loading="lazy"
                 />
                 <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
@@ -408,10 +408,10 @@ const monthName = getMonthName();
                 <div class="flex items-center justify-between mt-3 mb-2">
                   <ReadingTime content={post.body} class="text-gray-400" />
                 </div>
-                <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
+                <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-y-[-2px]">
                   {post.data.title}
                 </h3>
-                <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 group-hover:translate-y-[-2px]">
+                <p class="mt-2 text-sm text-gray-300 transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-y-[-2px]">
                   {post.data.summary}
                 </p>
               </article>
@@ -445,7 +445,7 @@ const monthName = getMonthName();
                 alt="Seasons of Dan - Spotify listening history"
                 width={1312}
                 height={940}
-                class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -471,7 +471,7 @@ const monthName = getMonthName();
                 alt="Music Reviews - AI-generated song analysis"
                 width={1312}
                 height={940}
-                class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -497,7 +497,7 @@ const monthName = getMonthName();
                 alt="Side by Side - life organizer app"
                 width={1312}
                 height={940}
-                class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -808,7 +808,7 @@ const monthName = getMonthName();
                 href={`/no-reserv-ai-tions/${review.slug}`}
               >
                 <figure
-                  class="shrink-0 bg-white pb-4 pt-2 px-2 shadow-sm transition-transform duration-300 group-hover:-rotate-3"
+                  class="shrink-0 bg-white pb-4 pt-2 px-2 shadow-sm transition-transform duration-300 [@media(hover:hover)]:group-hover:-rotate-3"
                   transition:name={`${review.data.title}-img`}
                 >
                   <img

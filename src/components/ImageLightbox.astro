@@ -58,7 +58,7 @@
     justify-content: center;
     z-index: 1000;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
     cursor: zoom-out;
   }
 
@@ -84,11 +84,13 @@
   }
 
   /* Optional: Add a subtle zoom effect on hover for images that can be lightboxed */
-  .longform img:not(.no-lightbox) {
-    transition: transform 0.2s ease;
-  }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .longform img:not(.no-lightbox) {
+      transition: transform 0.2s ease;
+    }
 
-  .longform img:not(.no-lightbox):hover {
-    transform: scale(1.02);
+    .longform img:not(.no-lightbox):hover {
+      transform: scale(1.02);
+    }
   }
 </style> 
