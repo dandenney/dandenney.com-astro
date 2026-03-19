@@ -61,6 +61,8 @@ const inferBetSport = (bet: MartingaleBet): string | null => {
     "bucks", "milwaukee", "mil",     // Milwaukee Bucks
     "thunder", "oklahoma", "okc",    // Oklahoma City Thunder
     "nets", "brooklyn", "bkn",       // Brooklyn Nets
+    "duren",                           // Jalen Duren
+    "pistons", "detroit", "det",    // Detroit Pistons
   ];
 
   return nbaTokens.some((token) => pick.includes(token)) ? "nba" : null;
