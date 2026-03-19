@@ -233,8 +233,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Oklahoma City Thunder @ Brooklyn Nets Over 214.5",
     line: "-108",
     amount: 40,
-    result: "pending",
+    result: "loss",
     stakeOut: 40,
+    returnAmount: 0.00,
   },
   {
     id: 19,
@@ -244,8 +245,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Oklahoma City Thunder @ Brooklyn Nets Over 214.5",
     line: "-108",
     amount: 40,
-    result: "pending",
+    result: "loss",
     stakeOut: 40,
+    returnAmount: 0.00,
   },
 ];
 
