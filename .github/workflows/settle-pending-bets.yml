@@ -2,9 +2,16 @@ name: Settle Pending Bets
 
 on:
   schedule:
-    # Daily at 12:30 UTC (~5:30am PT, adjusts with DST)
+    # Redundant morning windows in US Central to avoid GitHub schedule jitter.
+    # 11:30/12:30/13:30 UTC = 6:30/7:30/8:30 AM CDT (5:30/6:30/7:30 AM CST)
+    - cron: "30 11 * * *"
     - cron: "30 12 * * *"
+    - cron: "30 13 * * *"
   workflow_dispatch:
+
+concurrency:
+  group: settle-pending-bets
+  cancel-in-progress: false
 
 jobs:
   settle:
