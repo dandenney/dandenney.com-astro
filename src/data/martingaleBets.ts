@@ -257,8 +257,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Jalen Duren Over 23.5 Points",
     line: "-114",
     amount: 80,
-    result: "pending",
+    result: "win",
     stakeOut: 80,
+    returnAmount: 150.18,
   },
   {
     id: 21,
@@ -268,8 +269,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Jalen Duren Over 23.5 Points",
     line: "-114",
     amount: 80,
-    result: "pending",
+    result: "win",
     stakeOut: 80,
+    returnAmount: 150.18,
   },
 ];
 

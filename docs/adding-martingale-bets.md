@@ -102,11 +102,17 @@ A GitHub Actions workflow now runs daily:
 
 Current behavior:
 - Scans pending bets in `martingaleBets.ts`
-- Matches completed NBA games (ESPN scoreboard API)
+- Matches completed NBA games (ESPN scoreboard + summary APIs)
 - Settles supported matchup totals (`Team A @ Team B Over/Under X`)
+- Settles supported player props:
+  - `Player Over/Under X Points`
+  - `Player Over/Under X Assists`
+  - `Player Over/Under X Rebounds`
+  - `Player Over/Under X Threes`
 - Applies Dan/Garden split + odd-penny-to-Garden rule for paired wins
 - Commits/pushes updates automatically when changes exist
 
-For best auto-settlement reliability, keep matchup picks in this format:
+For best auto-settlement reliability, keep picks in one of these formats:
 
-`<Away Team> @ <Home Team> Over|Under <Total>`
+- `<Away Team> @ <Home Team> Over|Under <Total>`
+- `<Player Name> Over|Under <Line> Points|Assists|Rebounds|Threes`

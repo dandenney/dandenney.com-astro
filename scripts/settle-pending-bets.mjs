@@ -2,15 +2,20 @@
 /**
  * settle-pending-bets.mjs
  *
- * Daily settlement helper for pending NBA over/under bets with explicit matchup text:
- *   "Team A @ Team B Over 214.5"
+ * Daily settlement helper for pending NBA bets.
  *
- * Data source: ESPN public NBA scoreboard endpoint (no API key).
+ * Currently supports:
+ * - Matchup totals: "Team A @ Team B Over 214.5"
+ * - Player props:   "Jalen Duren Over 23.5 Points"
+ *                   "Scoot Henderson Over 4.5 Assists"
+ *                   "Player Over/Under X Rebounds|Threes"
+ *
+ * Data source: ESPN public NBA scoreboard + summary endpoints (no API key).
  *
  * Behavior:
  * - Finds pending bets in src/data/martingaleBets.ts
- * - Matches completed games by team names + bet date
- * - Computes win/loss from final total and over/under line
+ * - Resolves completed games around the bet date
+ * - Computes win/loss from final score or player stat line
  * - Sets result + returnAmount in martingaleBets.ts
  * - For paired Dan/Garden bets with same pick/date/line/amount that WIN,
  *   splits combined return and gives odd penny to GardenOf.
@@ -29,6 +34,7 @@ const BETS_FILE = path.join(ROOT, "src/data/martingaleBets.ts");
 const APPLY = process.env.APPLY === "1";
 
 const SCOREBOARD_BASE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard";
+const SUMMARY_BASE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary";
 
 const round2 = (n) => Math.round((n + Number.EPSILON) * 100) / 100;
 const toDateKey = (iso) => iso.replace(/-/g, "");
@@ -46,15 +52,32 @@ function normalizeToken(s) {
     .trim();
 }
 
-function parsePick(pick) {
+function parseMatchupTotalPick(pick) {
   const m = pick.match(/^(.*?)\s*@\s*(.*?)\s+(Over|Under)\s+([0-9]+(?:\.[0-9]+)?)$/i);
   if (!m) return null;
   return {
+    type: "matchup-total",
     awayRaw: m[1].trim(),
     homeRaw: m[2].trim(),
     side: m[3].toLowerCase(),
-    totalLine: Number(m[4]),
+    line: Number(m[4]),
   };
+}
+
+function parsePlayerPropPick(pick) {
+  const m = pick.match(/^(.*?)\s+(Over|Under)\s+([0-9]+(?:\.[0-9]+)?)\s+(Points|Assists|Rebounds|Threes)$/i);
+  if (!m) return null;
+  return {
+    type: "player-prop",
+    playerRaw: m[1].trim(),
+    side: m[2].toLowerCase(),
+    line: Number(m[3]),
+    statLabel: m[4].toLowerCase(),
+  };
+}
+
+function parsePick(pick) {
+  return parseMatchupTotalPick(pick) ?? parsePlayerPropPick(pick);
 }
 
 function parseBetsFromSource(src) {
@@ -141,6 +164,16 @@ async function fetchCompletedGamesFor(dateIso) {
   return games;
 }
 
+const summaryCache = new Map();
+async function fetchGameSummary(eventId) {
+  if (summaryCache.has(eventId)) return summaryCache.get(eventId);
+  const res = await fetch(`${SUMMARY_BASE}?event=${eventId}`);
+  if (!res.ok) return null;
+  const data = await res.json();
+  summaryCache.set(eventId, data);
+  return data;
+}
+
 function teamMatches(pickTeamRaw, gameTeam) {
   const pick = normalizeToken(pickTeamRaw);
   const candidates = [
@@ -156,10 +189,56 @@ function teamMatches(pickTeamRaw, gameTeam) {
 
 function findMatchingGame(parsedPick, games) {
   return games.find(
-    (g) =>
-      teamMatches(parsedPick.awayRaw, g.away) &&
-      teamMatches(parsedPick.homeRaw, g.home),
+    (g) => teamMatches(parsedPick.awayRaw, g.away) && teamMatches(parsedPick.homeRaw, g.home),
   );
+}
+
+function playerNameMatches(targetName, espnName) {
+  const target = normalizeToken(targetName);
+  const espn = normalizeToken(espnName);
+  return target === espn;
+}
+
+const PROP_STAT_LABEL_MAP = {
+  points: ["PTS", "points"],
+  assists: ["AST", "assists"],
+  rebounds: ["REB", "rebounds"],
+  threes: ["3PT", "threePointFieldGoalsMade-threePointFieldGoalsAttempted"],
+};
+
+function getPlayerStatValue(summary, playerRaw, statLabel) {
+  const groups = summary?.boxscore?.players ?? [];
+  const wanted = PROP_STAT_LABEL_MAP[statLabel];
+  if (!wanted) return null;
+
+  for (const group of groups) {
+    for (const statBlock of group.statistics ?? []) {
+      const labels = statBlock.labels ?? [];
+      const keys = statBlock.keys ?? [];
+      const idx = labels.findIndex((label) => wanted.includes(label));
+      const idxFromKeys = idx >= 0 ? idx : keys.findIndex((key) => wanted.includes(key));
+      const statIndex = idxFromKeys;
+      if (statIndex < 0) continue;
+
+      for (const athlete of statBlock.athletes ?? []) {
+        const name = athlete?.athlete?.displayName;
+        if (!name || !playerNameMatches(playerRaw, name)) continue;
+        const rawValue = athlete.stats?.[statIndex];
+        if (rawValue == null) return null;
+
+        if (statLabel === "threes") {
+          const made = String(rawValue).split("-")[0];
+          const n = Number(made);
+          return Number.isFinite(n) ? n : null;
+        }
+
+        const n = Number(rawValue);
+        return Number.isFinite(n) ? n : null;
+      }
+    }
+  }
+
+  return null;
 }
 
 function updateBetBlock(source, betId, nextResult, nextReturnAmount) {
@@ -194,6 +273,7 @@ if (!pending.length) {
 
 let nextSrc = src;
 const decisions = [];
+const gamesCache = new Map();
 
 for (const bet of pending) {
   const parsed = parsePick(bet.pick);
@@ -202,23 +282,54 @@ for (const bet of pending) {
     continue;
   }
 
-  const games = await fetchCompletedGamesFor(bet.date);
-  const game = findMatchingGame(parsed, games);
-  if (!game) {
-    console.log(`No completed game found yet for bet ${bet.id}: ${bet.pick}`);
+  const games = gamesCache.get(bet.date) ?? await fetchCompletedGamesFor(bet.date);
+  gamesCache.set(bet.date, games);
+
+  if (parsed.type === "matchup-total") {
+    const game = findMatchingGame(parsed, games);
+    if (!game) {
+      console.log(`No completed game found yet for bet ${bet.id}: ${bet.pick}`);
+      continue;
+    }
+
+    const total = game.home.score + game.away.score;
+    const isWin = parsed.side === "over" ? total > parsed.line : total < parsed.line;
+
+    decisions.push({
+      betId: bet.id,
+      owner: bet.owner,
+      key: pairKey(bet),
+      result: isWin ? "win" : "loss",
+      baseReturn: isWin ? americanReturn(bet.amount, bet.line) : 0,
+    });
     continue;
   }
 
-  const total = game.home.score + game.away.score;
-  const isWin = parsed.side === "over" ? total > parsed.totalLine : total < parsed.totalLine;
+  if (parsed.type === "player-prop") {
+    let statValue = null;
+    for (const game of games) {
+      const summary = await fetchGameSummary(game.eventId);
+      const found = getPlayerStatValue(summary, parsed.playerRaw, parsed.statLabel);
+      if (found == null) continue;
+      statValue = found;
+      break;
+    }
 
-  decisions.push({
-    betId: bet.id,
-    owner: bet.owner,
-    key: pairKey(bet),
-    result: isWin ? "win" : "loss",
-    baseReturn: isWin ? americanReturn(bet.amount, bet.line) : 0,
-  });
+    if (statValue == null) {
+      console.log(`No completed player box score found yet for bet ${bet.id}: ${bet.pick}`);
+      continue;
+    }
+
+    const isWin = parsed.side === "over" ? statValue > parsed.line : statValue < parsed.line;
+    decisions.push({
+      betId: bet.id,
+      owner: bet.owner,
+      key: pairKey(bet),
+      result: isWin ? "win" : "loss",
+      baseReturn: isWin ? americanReturn(bet.amount, bet.line) : 0,
+    });
+    continue;
+  }
 }
 
 const grouped = new Map();
@@ -228,7 +339,7 @@ for (const d of decisions) {
   grouped.set(d.key, list);
 }
 
-for (const [_, list] of grouped.entries()) {
+for (const list of grouped.values()) {
   const dan = list.find((d) => d.owner === "Dan");
   const garden = list.find((d) => d.owner === "GardenOf");
 
