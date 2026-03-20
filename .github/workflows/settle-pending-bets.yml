@@ -2,11 +2,8 @@ name: Settle Pending Bets
 
 on:
   schedule:
-    # Redundant morning windows in US Central to avoid GitHub schedule jitter.
-    # 11:30/12:30/13:30 UTC = 6:30/7:30/8:30 AM CDT (5:30/6:30/7:30 AM CST)
-    - cron: "30 11 * * *"
-    - cron: "30 12 * * *"
-    - cron: "30 13 * * *"
+    # Every 30 minutes; script only settles bets once scheduledStart + 3h has passed.
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 concurrency:

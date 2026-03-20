@@ -104,15 +104,19 @@ Current behavior:
 - Scans pending bets in `martingaleBets.ts`
 - Matches completed NBA games (ESPN scoreboard + summary APIs)
 - Settles supported matchup totals (`Team A @ Team B Over/Under X`)
+- Settles supported team spreads (`Team Name +7`, `Team Name -4.5`)
 - Settles supported player props:
   - `Player Over/Under X Points`
   - `Player Over/Under X Assists`
   - `Player Over/Under X Rebounds`
   - `Player Over/Under X Threes`
+- Uses `scheduledStart` + ~3 hours as the default earliest settlement window when available
+- Supports targeted resolution via `node scripts/settle-pending-bets.mjs --bet-id <id>`
 - Applies Dan/Garden split + odd-penny-to-Garden rule for paired wins
 - Commits/pushes updates automatically when changes exist
 
 For best auto-settlement reliability, keep picks in one of these formats:
 
 - `<Away Team> @ <Home Team> Over|Under <Total>`
+- `<Team Name> +7` or `<Team Name> -4.5`
 - `<Player Name> Over|Under <Line> Points|Assists|Rebounds|Threes`

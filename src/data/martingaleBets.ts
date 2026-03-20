@@ -14,6 +14,9 @@ export interface MartingaleBet {
   // - returnAmount is only credited after settlement (0 for losses, undefined for pending).
   stakeOut?: number;
   returnAmount?: number;
+  // Optional metadata for targeted scheduling/settlement.
+  eventId?: string;
+  scheduledStart?: string;
   // Legacy field retained for backward compatibility with older rows/history.
   // New calculations should prefer stakeOut/returnAmount via helpers below.
   balanceImpact?: number;
@@ -283,6 +286,8 @@ export const martingaleBets: MartingaleBet[] = [
     amount: 40,
     result: "pending",
     stakeOut: 40,
+    eventId: "401810876",
+    scheduledStart: "2026-03-21T01:00:00Z",
   },
   {
     id: 23,
@@ -294,6 +299,8 @@ export const martingaleBets: MartingaleBet[] = [
     amount: 40,
     result: "pending",
     stakeOut: 40,
+    eventId: "401810876",
+    scheduledStart: "2026-03-21T01:00:00Z",
   },
 ];
 
