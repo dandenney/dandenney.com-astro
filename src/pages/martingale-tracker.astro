@@ -78,17 +78,11 @@ const seriesSummaries: SeriesSummary[] = Array.from(seriesMap.entries()).map(
   ([seriesId, bets]) => {
     const lossesCount = bets.filter((bet) => bet.result === "loss").length;
     const hasWin = bets.some((bet) => bet.result === "win");
-
-    // Pending entries never force a completion state. A series is:
-    // - Won if a settled win is recorded.
-    // - Full Fail when 3+ losses are reached with no win.
-    // - In Progress otherwise.
     const status: SeriesStatus = hasWin
       ? "Won"
       : lossesCount >= 3
         ? "Full Fail"
         : "In Progress";
-
     return {
       seriesId,
       betsCount: bets.length,
@@ -115,10 +109,6 @@ if (firstBetDate) {
   const asOfDateMs = new Date(`${benchmarkAsOfDate}T00:00:00`).getTime();
   const elapsedMs = Math.max(asOfDateMs - startDateMs, 0);
   const elapsedYears = elapsedMs / (1000 * 60 * 60 * 24 * 365.25);
-
-  // APY is annualized growth, so we use compound growth over fractional years:
-  // FV = P * (1 + r)^t
-  // where P = principal, r = APY, t = elapsed years from first bet to as-of date.
   hysaCurrentValue =
     hysaBenchmark.principal * Math.pow(1 + hysaBenchmark.annualYield, elapsedYears);
 }
@@ -131,32 +121,8 @@ const pendingBetCheckpoints = orderedBets
   .map((bet) => {
     const packets = shippState.checkpoints?.byBetId?.[String(bet.id)] ?? [];
     const latestPacket = [...packets].sort((a, b) => b.generatedAt.localeCompare(a.generatedAt))[0] ?? null;
-
-    return {
-      bet,
-      latestPacket,
-    };
+    return { bet, latestPacket };
   });
-
-const summaryCards = [
-  { label: "Strategy Starting Balance", value: currency.format(startingBalance) },
-  {
-    label: "Strategy Current Balance",
-    value: currency.format(currentBalance),
-    tone: currentBalance >= startingBalance ? "up" : "down",
-  },
-  {
-    label: "Net P/L",
-    value: `${netPL >= 0 ? "+" : ""}${currency.format(netPL)}`,
-    tone: netPL >= 0 ? "up" : "down",
-  },
-  {
-    label: "Win Rate (Settled)",
-    value: settledBets.length ? `${winRate.toFixed(0)}%` : "—",
-  },
-  { label: "Pending Bets", value: `${pendingBets}` },
-  { label: "Total Logged", value: `${totalWagers}` },
-];
 
 const gardenSettledBets = gardenOrderedBets.filter((bet) => bet.result !== "pending");
 const gardenPendingBets = gardenOrderedBets.filter((bet) => bet.result === "pending").length;
@@ -194,7 +160,6 @@ const gardenSeriesSummaries: SeriesSummary[] = Array.from(gardenSeriesMap.entrie
     const lossesCount = bets.filter((bet) => bet.result === "loss").length;
     const hasWin = bets.some((bet) => bet.result === "win");
     const status: SeriesStatus = hasWin ? "Won" : lossesCount >= 3 ? "Full Fail" : "In Progress";
-
     return {
       seriesId,
       betsCount: bets.length,
@@ -210,36 +175,34 @@ const gardenPendingBetCheckpoints = gardenOrderedBets
   .map((bet) => {
     const packets = shippState.checkpoints?.byBetId?.[String(bet.id)] ?? [];
     const latestPacket = [...packets].sort((a, b) => b.generatedAt.localeCompare(a.generatedAt))[0] ?? null;
-
-    return {
-      bet,
-      latestPacket,
-    };
+    return { bet, latestPacket };
   });
 
-const gardenSummaryCards = [
-  { label: "GardenOf Starting Balance", value: currency.format(startingBalance) },
-  {
-    label: "GardenOf Current Balance",
-    value: currency.format(gardenCurrentBalance),
-    tone: gardenCurrentBalance >= startingBalance ? "up" : "down",
-  },
-  {
-    label: "Net P/L",
-    value: `${gardenNetPL >= 0 ? "+" : ""}${currency.format(gardenNetPL)}`,
-    tone: gardenNetPL >= 0 ? "up" : "down",
-  },
-  {
-    label: "Win Rate (Settled)",
-    value: gardenSettledBets.length ? `${gardenWinRate.toFixed(0)}%` : "—",
-  },
-  { label: "Pending Bets", value: `${gardenPendingBets}` },
-  { label: "Total Logged", value: `${gardenOrderedBets.length}` },
-];
+// Hero active bets with checkpoint data merged in
+const danActiveBets = orderedBets
+  .filter((bet) => bet.result === "pending")
+  .map((bet) => ({
+    ...bet,
+    latestPacket: pendingBetCheckpoints.find((c) => c.bet.id === bet.id)?.latestPacket ?? null,
+  }));
+
+const gardenActiveBetsList = gardenOrderedBets
+  .filter((bet) => bet.result === "pending")
+  .map((bet) => ({
+    ...bet,
+    latestPacket: gardenPendingBetCheckpoints.find((c) => c.bet.id === bet.id)?.latestPacket ?? null,
+  }));
+
+// Descending order for tables
+const withRunningBalanceDesc = [...withRunningBalance].reverse();
+const gardenWithRunningBalanceDesc = [...gardenWithRunningBalance].reverse();
+const seriesSummariesDesc = [...seriesSummaries].reverse();
+const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <BaseHead
       title="Martingale Bet Tracker | Dan Denney"
@@ -247,347 +210,487 @@ const gardenSummaryCards = [
     />
     <ViewTransitions />
   </head>
-  <body class="bg-slate-950 text-slate-100">
-    <main class="relative z-10 bg-slate-950 shadow-xs">
-      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(56,189,248,.22),transparent_40%),radial-gradient(circle_at_85%_15%,rgba(236,72,153,.2),transparent_45%)]"></div>
-      <div class="pointer-events-none absolute inset-0 -z-10 opacity-35 [background-image:linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] [background-size:22px_22px]"></div>
+  <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden">
+    <main class="relative z-10 bg-slate-950">
 
-      <Header title={SITE_TITLE} />
+    <!-- ═══════════════════════════════════════════════════════
+         HERO — full-bleed image with active bet objectives
+    ═══════════════════════════════════════════════════════ -->
+    <section class="relative w-full min-h-[80vh] flex flex-col overflow-hidden">
+      <!-- Background image -->
+      <img
+        src="/Gemini_Generated_Image_1oadbf1oadbf1oad.webp"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        alt=""
+        loading="eager"
+      />
+      <!-- Dark gradient overlays -->
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/65 to-slate-950"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/50"></div>
+      <!-- Tactical grid -->
+      <div class="absolute inset-0 [background-image:linear-gradient(rgba(6,182,212,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.04)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+      <!-- Corner accent marks -->
+      <div class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-cyan-500/50"></div>
+      <div class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-cyan-500/50"></div>
+      <div class="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-cyan-500/20"></div>
+      <div class="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-cyan-500/20"></div>
 
-      <section class="mx-auto max-w-7xl px-5 pb-24 pt-10 sm:px-8 sm:pt-16">
-        <p class="text-xs font-mono uppercase tracking-[0.3em] text-cyan-300/80">
-          [ Martingale Log ]
-        </p>
-        <h1 class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-          Bet Tracker
-        </h1>
-        <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
-          A simple ledger for tracking Martingale sessions with clean spacing,
-          fast scanning, and a side-by-side HYSA simulation benchmark.
-        </p>
-        <p class="mt-3 inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan-200">
-          Pregame checkpoint mode
-        </p>
-        <p class="mt-4 max-w-3xl text-xs leading-6 text-slate-400">
-          Accounting note: each placed bet debits stake immediately, then settlement credits only the return amount (0 on losses, no credit while pending).
-        </p>
+      <!-- Nav -->
+      <div class="relative z-10 border-b border-white/5 backdrop-blur-sm">
+        <Header title={SITE_TITLE} />
+      </div>
 
-        <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {summaryCards.map((card) => (
-            <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
-              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{card.label}</p>
-              <p
-                class:list={[
-                  "mt-3 text-2xl font-semibold",
-                  card.tone === "up"
-                    ? "text-emerald-300"
-                    : card.tone === "down"
-                      ? "text-rose-300"
-                      : "text-white",
-                ]}
-              >
-                {card.value}
-              </p>
-            </article>
-          ))}
-        </div>
+      <!-- Hero body -->
+      <div class="relative z-10 flex-1 flex flex-col lg:flex-row lg:items-end gap-8 lg:gap-12 px-6 lg:px-12 xl:px-16 pb-12 pt-8">
 
-        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
-            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">HYSA Benchmark (4.2% APY)</p>
-            <p class="mt-3 text-2xl font-semibold text-cyan-200">{currency.format(hysaCurrentValue)}</p>
-            <p class="mt-2 text-xs text-cyan-300/90">
-              Simulation benchmark only; not additional capital in play.
-            </p>
-            <p class="mt-2 text-xs text-slate-400">
-              {firstBetDate
-                ? `Simulated from ${formatDate(firstBetDate)} to ${formatDate(benchmarkAsOfDate)} on ${currency.format(hysaBenchmark.principal)} benchmark principal`
-                : "Add at least one bet date to calculate the benchmark."}
-            </p>
-          </article>
-          <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
-            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Strategy vs HYSA (Comparison Delta)</p>
-            <p
-              class:list={[
-                "mt-3 text-2xl font-semibold",
-                strategyVsHysaDelta >= 0 ? "text-emerald-300" : "text-rose-300",
-              ]}
-            >
-              {`${strategyVsHysaDelta >= 0 ? "+" : ""}${currency.format(strategyVsHysaDelta)}`}
-            </p>
-            <p class="mt-2 text-xs text-slate-400">
-              Side-by-side comparison only: current strategy balance minus simulated HYSA value.
-            </p>
-          </article>
-        </div>
-
-        <section class="mt-10 rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm sm:p-6">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Pregame Checkpoint Panel</p>
-              <p class="mt-1 text-xs text-slate-400">
-                T-120, T-30, T-10, and LOCK packets only. In-game signal noise is intentionally de-emphasized.
-              </p>
-            </div>
-            <p class="text-xs text-slate-400">Last Shipp update: {shippState.updatedAt ?? "never"}</p>
+        <!-- Left column: identity -->
+        <div class="flex flex-col justify-end lg:w-[38%] flex-shrink-0">
+          <!-- HUD label -->
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
+            <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-cyan-400/80">Martingale Command Center · Live</p>
           </div>
 
-          {pendingBetCheckpoints.length ? (
-            <div class="mt-4 grid gap-4 lg:grid-cols-2">
-              {pendingBetCheckpoints.map(({ bet, latestPacket }) => (
-                <article class="rounded-xl border border-slate-700/80 bg-slate-950/40 p-4">
-                  <p class="text-xs uppercase tracking-[0.16em] text-cyan-300">{bet.seriesId} · Pending</p>
-                  <p class="mt-2 text-sm font-semibold text-white">{bet.pick}</p>
-                  <p class="mt-1 text-xs text-slate-400">Line {bet.line} · Stake {currency.format(getStakeOut(bet))}</p>
+          <h1 class="text-6xl lg:text-8xl font-black uppercase tracking-tighter text-white leading-none drop-shadow-2xl">
+            Bet<br />Tracker
+          </h1>
+        </div>
 
-                  {latestPacket ? (
-                    <div class="mt-3 space-y-2 rounded-lg border border-cyan-500/25 bg-cyan-500/5 p-3">
-                      <p class="text-xs uppercase tracking-[0.14em] text-cyan-100">
-                        Checkpoint: {latestPacket.checkpoint} · {latestPacket.status}
-                      </p>
-                      <p class="text-sm text-slate-100">
-                        Recommendation: <strong>{latestPacket.recommendation}</strong> ({latestPacket.confidence}% confidence)
-                      </p>
-                      <p class="text-xs text-slate-300">{latestPacket.reason}</p>
-                      <p class="text-xs text-slate-300">
-                        Deltas: confidence {latestPacket.deltaFromLast.confidenceChange >= 0 ? "+" : ""}{latestPacket.deltaFromLast.confidenceChange},
-                        evidence {latestPacket.deltaFromLast.evidenceChange >= 0 ? "+" : ""}{latestPacket.deltaFromLast.evidenceChange},
-                        new packets {latestPacket.deltaFromLast.newSignalsSinceLast}
-                      </p>
-                      <p class="text-xs text-slate-400">
-                        {latestPacket.insufficientData
-                          ? "Fallback: insufficient data — default to NO BET until next checkpoint packet."
-                          : "Human-in-loop only: recommendation is advisory and never triggers an auto-bet."}
-                      </p>
+        <!-- Right column: active objective cards -->
+        <div class="flex-1 grid gap-4 sm:grid-cols-2">
+
+          <!-- Dan active bet -->
+          <div class="relative border border-cyan-500/30 bg-slate-950/75 backdrop-blur-md p-5 overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-500 via-cyan-400/60 to-transparent"></div>
+            <div class="flex items-center justify-between mb-4">
+              <p class="font-mono text-[9px] uppercase tracking-[0.45em] text-cyan-400">// Dan · Active Objective</p>
+              {danActiveBets.length > 0 ? (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[8px] uppercase tracking-[0.2em]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                  Pending
+                </span>
+              ) : (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[8px] uppercase tracking-[0.2em]">
+                  Standby
+                </span>
+              )}
+            </div>
+
+            {danActiveBets.length > 0 ? (
+              danActiveBets.map((bet) => (
+                <div>
+                  <p class="text-lg font-bold text-white leading-snug">{bet.pick}</p>
+                  <div class="mt-4 grid grid-cols-3 gap-4 border-t border-slate-700/40 pt-4">
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Series</p>
+                      <p class="font-mono text-2xl font-bold text-cyan-300">{bet.seriesId}</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Line</p>
+                      <p class="font-mono text-2xl font-bold text-white">{bet.line}</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Stake</p>
+                      <p class="font-mono text-2xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                    </div>
+                  </div>
+                  {bet.latestPacket ? (
+                    <div class="mt-4 border-t border-slate-700/40 pt-4">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
+                      </div>
+                      <div class="flex items-baseline gap-2">
+                        <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
+                        <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
+                      </div>
+                      <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
                     </div>
                   ) : (
-                    <p class="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/10 p-3 text-sm text-amber-100">
-                      No pregame checkpoint packet yet. Fallback: No Bet until T-120 is captured.
-                    </p>
+                    <div class="mt-4 border-t border-slate-700/40 pt-4">
+                      <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
+                      <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
+                    </div>
                   )}
-                </article>
-              ))}
+                </div>
+              ))
+            ) : (
+              <div>
+                <p class="font-mono text-sm font-bold text-slate-400 uppercase tracking-wider">No Active Bet</p>
+                <p class="mt-1 font-mono text-[9px] text-slate-600 uppercase tracking-wider">Next Bet Pending · New Series Start</p>
+                <div class="mt-4 grid grid-cols-2 gap-4 border-t border-slate-700/40 pt-4">
+                  <div>
+                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
+                    <p class="font-mono text-2xl font-bold text-cyan-300">$30.00</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                    <p class="font-mono text-2xl font-bold text-white">New Series</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <!-- GardenOf active bet -->
+          <div class="relative border border-violet-500/30 bg-slate-950/75 backdrop-blur-md p-5 overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-violet-500 via-violet-400/60 to-transparent"></div>
+            <div class="flex items-center justify-between mb-4">
+              <p class="font-mono text-[9px] uppercase tracking-[0.45em] text-violet-400">// GardenOf · Active Objective</p>
+              {gardenActiveBetsList.length > 0 ? (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[8px] uppercase tracking-[0.2em]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                  Pending
+                </span>
+              ) : (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[8px] uppercase tracking-[0.2em]">
+                  Standby
+                </span>
+              )}
             </div>
-          ) : (
-            <p class="mt-4 rounded-lg border border-slate-700/80 bg-slate-900/50 p-3 text-sm text-slate-300">
-              No pending bets right now.
-            </p>
-          )}
-        </section>
 
-        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
-          <div class="border-b border-slate-700/80 px-4 py-3 sm:px-6">
-            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">Series Summary</p>
+            {gardenActiveBetsList.length > 0 ? (
+              gardenActiveBetsList.map((bet) => (
+                <div>
+                  <p class="text-lg font-bold text-white leading-snug">{bet.pick}</p>
+                  <div class="mt-4 grid grid-cols-3 gap-4 border-t border-slate-700/40 pt-4">
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Series</p>
+                      <p class="font-mono text-2xl font-bold text-violet-300">{bet.seriesId}</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Line</p>
+                      <p class="font-mono text-2xl font-bold text-white">{bet.line}</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Stake</p>
+                      <p class="font-mono text-2xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                    </div>
+                  </div>
+                  {bet.latestPacket ? (
+                    <div class="mt-4 border-t border-slate-700/40 pt-4">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
+                      </div>
+                      <div class="flex items-baseline gap-2">
+                        <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
+                        <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
+                      </div>
+                      <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
+                    </div>
+                  ) : (
+                    <div class="mt-4 border-t border-slate-700/40 pt-4">
+                      <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
+                      <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <div>
+                <p class="font-mono text-sm font-bold text-slate-400 uppercase tracking-wider">No Active Bet</p>
+                <p class="mt-1 font-mono text-[9px] text-slate-600 uppercase tracking-wider">Next Bet Pending · New Series Start</p>
+                <div class="mt-4 grid grid-cols-2 gap-4 border-t border-slate-700/40 pt-4">
+                  <div>
+                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
+                    <p class="font-mono text-2xl font-bold text-violet-300">$30.00</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                    <p class="font-mono text-2xl font-bold text-white">New Series</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          <div class="overflow-x-auto">
-            <table class="w-full min-w-[620px] border-collapse text-left">
-              <thead class="bg-slate-900/70">
-                <tr class="border-b border-slate-700/80 text-xs uppercase tracking-[0.18em] text-slate-400">
-                  <th class="px-4 py-4 font-medium sm:px-6">Series</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Bets</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Losses</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Status</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Net Impact</th>
-                </tr>
-              </thead>
-              <tbody>
-                {seriesSummaries.map((series) => (
-                  <tr class="border-b border-slate-800/80 text-sm text-slate-200 hover:bg-slate-800/40">
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold text-white sm:px-6">
-                      {series.seriesId}
-                    </td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.betsCount}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.lossesCount}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
-                      <span
-                        class:list={[
-                          "inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider",
-                          series.status === "Won"
-                            ? "bg-emerald-500/20 text-emerald-300"
-                            : series.status === "Full Fail"
-                              ? "bg-rose-500/20 text-rose-300"
-                              : "bg-amber-500/20 text-amber-200",
-                        ]}
-                      >
-                        {series.status}
-                      </span>
-                    </td>
-                    <td
-                      class:list={[
-                        "whitespace-nowrap px-4 py-4 font-semibold sm:px-6",
-                        series.netImpact >= 0 ? "text-emerald-300" : "text-rose-300",
-                      ]}
-                    >
-                      {`${series.netImpact >= 0 ? "+" : ""}${currency.format(series.netImpact)}`}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         STATS — performance metrics for both accounts
+    ═══════════════════════════════════════════════════════ -->
+    <section class="w-full bg-slate-950 px-6 lg:px-12 xl:px-16 py-16">
+      <div class="flex items-center gap-4 mb-10">
+        <div class="h-px w-10 bg-cyan-500/60"></div>
+        <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-slate-500">// Performance Metrics</p>
+        <div class="h-px flex-1 bg-slate-800/60"></div>
+      </div>
+
+      <div class="grid gap-10 lg:grid-cols-2">
+
+        <!-- Dan stats -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-1 h-7 bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
+            <p class="font-mono text-xs uppercase tracking-[0.4em] text-cyan-300 font-bold">Dan</p>
+            <p class="font-mono text-[9px] text-slate-400 uppercase tracking-wider">· {totalWagers} bets · {settledBets.length} settled · {pendingBets} pending</p>
           </div>
-        </div>
 
-        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
-          <div class="overflow-x-auto">
-            <table class="w-full min-w-[1080px] border-collapse text-left">
-              <thead class="bg-slate-900">
-                <tr class="border-b border-slate-700/80 text-xs uppercase tracking-[0.18em] text-slate-400">
-                  <th class="px-4 py-4 font-medium sm:px-6">Series</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Date</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Pick</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Line</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Stake Out</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Result</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Return In</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Net Impact</th>
-                  <th class="px-4 py-4 font-medium sm:px-6">Running Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {withRunningBalance.map((bet) => (
-                  <tr class="border-b border-slate-800/80 text-sm text-slate-200 hover:bg-slate-800/40">
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold text-cyan-200 sm:px-6">
-                      {bet.seriesId}
-                    </td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{formatDate(bet.date)}</td>
-                    <td class="px-4 py-4 font-medium text-white sm:px-6">{bet.pick}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{bet.line}</td>
-                    <td class="whitespace-nowrap px-4 py-4 text-rose-300 sm:px-6">-{currency.format(bet.stakeOut)}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
-                      <span
-                        class:list={[
-                          "inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider",
-                          bet.result === "win"
-                            ? "bg-emerald-500/20 text-emerald-300"
-                            : bet.result === "loss"
-                              ? "bg-rose-500/20 text-rose-300"
-                              : "bg-amber-500/20 text-amber-200",
-                        ]}
-                      >
-                        {bet.result === "pending" ? "Pending" : bet.result}
-                      </span>
-                    </td>
-                    <td
-                      class:list={[
-                        "whitespace-nowrap px-4 py-4 font-semibold sm:px-6",
-                        bet.returnAmount > 0 ? "text-emerald-300" : "text-slate-300",
-                      ]}
-                    >
-                      {bet.result === "pending" ? "Pending (" + currency.format(0) + ")" : `+${currency.format(bet.returnAmount)}`}
-                    </td>
-                    <td
-                      class:list={[
-                        "whitespace-nowrap px-4 py-4 font-semibold sm:px-6",
-                        bet.netImpact >= 0 ? "text-emerald-300" : "text-rose-300",
-                      ]}
-                    >
-                      {`${bet.netImpact >= 0 ? "+" : ""}${currency.format(bet.netImpact)}`}
-                    </td>
-                    <td class="whitespace-nowrap px-4 py-4 font-medium text-cyan-200 sm:px-6">
-                      {currency.format(bet.runningBalance)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <h2 class="mt-16 text-2xl font-semibold tracking-tight text-white sm:text-3xl">GardenOf</h2>
-
-        <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {gardenSummaryCards.map((card) => (
-            <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm">
-              <p class="text-xs uppercase tracking-[0.2em] text-slate-400">{card.label}</p>
-              <p class:list={[
-                "mt-3 text-2xl font-semibold",
-                card.tone === "up" ? "text-emerald-300" : card.tone === "down" ? "text-rose-300" : "text-white",
-              ]}>
-                {card.value}
-              </p>
-            </article>
-          ))}
-        </div>
-
-        <section class="mt-10 rounded-2xl border border-slate-700/80 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/50 backdrop-blur-sm sm:p-6">
-          <p class="text-xs uppercase tracking-[0.18em] text-slate-400">GardenOf Pregame Checkpoint Panel</p>
-          {gardenPendingBetCheckpoints.length ? (
-            <div class="mt-4 grid gap-4 lg:grid-cols-2">
-              {gardenPendingBetCheckpoints.map(({ bet, latestPacket }) => (
-                <article class="rounded-xl border border-slate-700/80 bg-slate-950/40 p-4">
-                  <p class="text-xs uppercase tracking-[0.16em] text-cyan-300">{bet.seriesId} · Pending</p>
-                  <p class="mt-2 text-sm font-semibold text-white">{bet.pick}</p>
-                  <p class="mt-1 text-xs text-slate-400">Line {bet.line} · Stake {currency.format(getStakeOut(bet))}</p>
-                  {latestPacket ? <p class="mt-3 text-xs text-cyan-100">Checkpoint: {latestPacket.checkpoint} · {latestPacket.status}</p> : <p class="mt-3 text-xs text-amber-100">No pregame checkpoint packet yet.</p>}
-                </article>
-              ))}
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2 sm:col-span-1">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
+              <p class="font-mono text-2xl font-bold text-white">{currency.format(startingBalance)}</p>
             </div>
-          ) : (
-            <p class="mt-4 rounded-lg border border-slate-700/80 bg-slate-900/50 p-3 text-sm text-slate-300">No pending bets right now.</p>
-          )}
-        </section>
-
-        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
-          <div class="border-b border-slate-700/80 px-4 py-3 sm:px-6">
-            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">GardenOf Series Summary</p>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="w-full min-w-[620px] border-collapse text-left">
-              <thead class="bg-slate-900/70">
-                <tr class="border-b border-slate-700/80 text-xs uppercase tracking-[0.18em] text-slate-400">
-                  <th class="px-4 py-4 font-medium sm:px-6">Series</th><th class="px-4 py-4 font-medium sm:px-6">Bets</th><th class="px-4 py-4 font-medium sm:px-6">Losses</th><th class="px-4 py-4 font-medium sm:px-6">Status</th><th class="px-4 py-4 font-medium sm:px-6">Net Impact</th>
-                </tr>
-              </thead>
-              <tbody>
-                {gardenSeriesSummaries.map((series) => (
-                  <tr class="border-b border-slate-800/80 text-sm text-slate-200 hover:bg-slate-800/40">
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold text-white sm:px-6">{series.seriesId}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.betsCount}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{series.lossesCount}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
-                      <span class:list={["inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider", series.status === "Won" ? "bg-emerald-500/20 text-emerald-300" : series.status === "Full Fail" ? "bg-rose-500/20 text-rose-300" : "bg-amber-500/20 text-amber-200"]}>
-                        {series.status}
-                      </span>
-                    </td>
-                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", series.netImpact >= 0 ? "text-emerald-300" : "text-rose-300"]}>{`${series.netImpact >= 0 ? "+" : ""}${currency.format(series.netImpact)}`}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
+              <p class:list={["font-mono text-2xl font-bold", currentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(currentBalance)}</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
+              <p class:list={["font-mono text-2xl font-bold", netPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{netPL >= 0 ? "+" : ""}{currency.format(netPL)}</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
+              <p class="font-mono text-2xl font-bold text-white">{settledBets.length ? `${winRate.toFixed(0)}%` : "—"}</p>
+            </div>
+            <div class="relative border border-cyan-500/20 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">HYSA Benchmark</p>
+              <p class="font-mono text-2xl font-bold text-cyan-300">{currency.format(hysaCurrentValue)}</p>
+              <p class="font-mono text-[8px] text-slate-600 mt-1 uppercase">4.2% APY · Sim only</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">vs HYSA Delta</p>
+              <p class:list={["font-mono text-2xl font-bold", strategyVsHysaDelta >= 0 ? "text-emerald-400" : "text-rose-400"]}>{strategyVsHysaDelta >= 0 ? "+" : ""}{currency.format(strategyVsHysaDelta)}</p>
+            </div>
           </div>
         </div>
 
-        <div class="mt-10 overflow-hidden rounded-2xl border border-slate-700/80 bg-slate-900/70 shadow-2xl shadow-slate-950/60">
-          <div class="overflow-x-auto">
-            <table class="w-full min-w-[1080px] border-collapse text-left">
-              <thead class="bg-slate-900">
-                <tr class="border-b border-slate-700/80 text-xs uppercase tracking-[0.18em] text-slate-400">
-                  <th class="px-4 py-4 font-medium sm:px-6">Series</th><th class="px-4 py-4 font-medium sm:px-6">Date</th><th class="px-4 py-4 font-medium sm:px-6">Pick</th><th class="px-4 py-4 font-medium sm:px-6">Line</th><th class="px-4 py-4 font-medium sm:px-6">Stake Out</th><th class="px-4 py-4 font-medium sm:px-6">Result</th><th class="px-4 py-4 font-medium sm:px-6">Return In</th><th class="px-4 py-4 font-medium sm:px-6">Net Impact</th><th class="px-4 py-4 font-medium sm:px-6">Running Balance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {gardenWithRunningBalance.map((bet) => (
-                  <tr class="border-b border-slate-800/80 text-sm text-slate-200 hover:bg-slate-800/40">
-                    <td class="whitespace-nowrap px-4 py-4 font-semibold text-cyan-200 sm:px-6">{bet.seriesId}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{formatDate(bet.date)}</td>
-                    <td class="px-4 py-4 font-medium text-white sm:px-6">{bet.pick}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">{bet.line}</td>
-                    <td class="whitespace-nowrap px-4 py-4 text-rose-300 sm:px-6">-{currency.format(bet.stakeOut)}</td>
-                    <td class="whitespace-nowrap px-4 py-4 sm:px-6">
-                      <span class:list={["inline-flex rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wider", bet.result === "win" ? "bg-emerald-500/20 text-emerald-300" : bet.result === "loss" ? "bg-rose-500/20 text-rose-300" : "bg-amber-500/20 text-amber-200"]}>
-                        {bet.result === "pending" ? "Pending" : bet.result}
-                      </span>
-                    </td>
-                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", bet.returnAmount > 0 ? "text-emerald-300" : "text-slate-300"]}>{bet.result === "pending" ? "Pending (" + currency.format(0) + ")" : `+${currency.format(bet.returnAmount)}`}</td>
-                    <td class:list={["whitespace-nowrap px-4 py-4 font-semibold sm:px-6", bet.netImpact >= 0 ? "text-emerald-300" : "text-rose-300"]}>{`${bet.netImpact >= 0 ? "+" : ""}${currency.format(bet.netImpact)}`}</td>
-                    <td class="whitespace-nowrap px-4 py-4 font-medium text-cyan-200 sm:px-6">{currency.format(bet.runningBalance)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <!-- GardenOf stats -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-1 h-7 bg-violet-400 shadow-[0_0_10px_rgba(167,139,250,0.5)]"></div>
+            <p class="font-mono text-xs uppercase tracking-[0.4em] text-violet-300 font-bold">GardenOf</p>
+            <p class="font-mono text-[9px] text-slate-400 uppercase tracking-wider">· {gardenOrderedBets.length} bets · {gardenSettledBets.length} settled · {gardenPendingBets} pending</p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2 sm:col-span-1">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
+              <p class="font-mono text-2xl font-bold text-white">{currency.format(startingBalance)}</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/40 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
+              <p class:list={["font-mono text-2xl font-bold", gardenCurrentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(gardenCurrentBalance)}</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/40 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
+              <p class:list={["font-mono text-2xl font-bold", gardenNetPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{gardenNetPL >= 0 ? "+" : ""}{currency.format(gardenNetPL)}</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
+              <p class="font-mono text-2xl font-bold text-white">{gardenSettledBets.length ? `${gardenWinRate.toFixed(0)}%` : "—"}</p>
+            </div>
+            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2">
+              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Total Logged</p>
+              <p class="font-mono text-2xl font-bold text-white">{gardenOrderedBets.length} bets</p>
+            </div>
           </div>
         </div>
-      </section>
+
+      </div>
+
+      <p class="mt-10 font-mono text-[8px] text-slate-700 uppercase tracking-wider border-t border-slate-800/40 pt-5">
+        Accounting: Each placed bet debits stake immediately. Settlement credits return amount only (0 on losses, no credit while pending).
+      </p>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         HISTORY — series summaries + full ledgers, descending
+    ═══════════════════════════════════════════════════════ -->
+    <section class="w-full px-6 lg:px-12 xl:px-16 py-16 border-t border-slate-800/50">
+      <div class="flex items-center gap-4 mb-12">
+        <div class="h-px w-10 bg-slate-500/60"></div>
+        <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-slate-500">// Bet History Ledger</p>
+        <div class="h-px flex-1 bg-slate-800/60"></div>
+      </div>
+
+      <!-- ── Dan ── -->
+      <div class="mb-20">
+
+        <!-- Dan series summary -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-cyan-300 font-bold">Dan · Series Summary</p>
+        </div>
+        <div class="overflow-x-auto mb-12">
+          <table class="w-full border-collapse text-left min-w-[480px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {seriesSummariesDesc.map((series) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                  <td class="py-3 pr-8">
+                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {series.status}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Dan full ledger -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-cyan-300 font-bold">Dan · Full Ledger</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-left min-w-[960px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {withRunningBalanceDesc.map((bet) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-6 font-mono font-bold text-cyan-300 text-sm whitespace-nowrap">{bet.seriesId}</td>
+                  <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
+                  <td class="py-3 pr-6 text-sm text-white">{bet.pick}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-rose-400 whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
+                  <td class="py-3 pr-6 whitespace-nowrap">
+                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {bet.result === "pending" ? "Pending" : bet.result}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-6 font-mono text-sm whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
+                    {bet.result === "pending" ? "—" : `+${currency.format(bet.returnAmount)}`}
+                  </td>
+                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {bet.netImpact >= 0 ? "+" : ""}{currency.format(bet.netImpact)}
+                  </td>
+                  <td class="py-3 pr-6 font-mono text-sm text-cyan-300 whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── GardenOf ── -->
+      <div class="border-t border-slate-800/50 pt-16">
+
+        <!-- GardenOf series summary -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-violet-300 font-bold">GardenOf · Series Summary</p>
+        </div>
+        <div class="overflow-x-auto mb-12">
+          <table class="w-full border-collapse text-left min-w-[480px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {gardenSeriesSummariesDesc.map((series) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                  <td class="py-3 pr-8">
+                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {series.status}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- GardenOf full ledger -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-violet-300 font-bold">GardenOf · Full Ledger</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-left min-w-[960px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {gardenWithRunningBalanceDesc.map((bet) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-6 font-mono font-bold text-violet-300 text-sm whitespace-nowrap">{bet.seriesId}</td>
+                  <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
+                  <td class="py-3 pr-6 text-sm text-white">{bet.pick}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-rose-400 whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
+                  <td class="py-3 pr-6 whitespace-nowrap">
+                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {bet.result === "pending" ? "Pending" : bet.result}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-6 font-mono text-sm whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
+                    {bet.result === "pending" ? "—" : `+${currency.format(bet.returnAmount)}`}
+                  </td>
+                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {bet.netImpact >= 0 ? "+" : ""}{currency.format(bet.netImpact)}
+                  </td>
+                  <td class="py-3 pr-6 font-mono text-sm text-violet-300 whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
     </main>
     <Footer />
   </body>
