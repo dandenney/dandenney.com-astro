@@ -599,44 +599,87 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
         <div class="h-px flex-1 bg-slate-800/60"></div>
       </div>
 
+      <!-- ── Series Summaries (two-col on lg) ── -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+        <!-- Dan series summary -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-1 h-6 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]"></div>
+            <p class="font-mono text-xs uppercase tracking-[0.35em] text-cyan-300 font-bold">Dan · Series Summary</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left min-w-[480px]">
+              <thead>
+                <tr class="border-b border-slate-700/50">
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                {seriesSummariesDesc.map((series) => (
+                  <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                    <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
+                    <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                    <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                    <td class="py-3 pr-8">
+                      <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                        {series.status}
+                      </span>
+                    </td>
+                    <td class:list={["py-3 pr-8 font-mono text-sm font-bold", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                      {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- GardenOf series summary -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-1 h-6 bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.4)]"></div>
+            <p class="font-mono text-xs uppercase tracking-[0.35em] text-violet-300 font-bold">GardenOf · Series Summary</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left min-w-[480px]">
+              <thead>
+                <tr class="border-b border-slate-700/50">
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+                </tr>
+              </thead>
+              <tbody>
+                {gardenSeriesSummariesDesc.map((series) => (
+                  <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                    <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
+                    <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                    <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                    <td class="py-3 pr-8">
+                      <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                        {series.status}
+                      </span>
+                    </td>
+                    <td class:list={["py-3 pr-8 font-mono text-sm font-bold", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                      {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
       <!-- ── Dan ── -->
       <div class="mb-20">
-
-        <!-- Dan series summary -->
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-1 h-6 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]"></div>
-          <p class="font-mono text-xs uppercase tracking-[0.35em] text-cyan-300 font-bold">Dan · Series Summary</p>
-        </div>
-        <div class="overflow-x-auto mb-12">
-          <table class="w-full border-collapse text-left min-w-[480px]">
-            <thead>
-              <tr class="border-b border-slate-700/50">
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              {seriesSummariesDesc.map((series) => (
-                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
-                  <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
-                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
-                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
-                  <td class="py-3 pr-8">
-                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
-                      {series.status}
-                    </span>
-                  </td>
-                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
-                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
 
         <!-- Dan full ledger -->
         <div class="flex items-center gap-3 mb-5">
@@ -687,42 +730,6 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
 
       <!-- ── GardenOf ── -->
       <div class="border-t border-slate-800/50 pt-16">
-
-        <!-- GardenOf series summary -->
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-1 h-6 bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.4)]"></div>
-          <p class="font-mono text-xs uppercase tracking-[0.35em] text-violet-300 font-bold">GardenOf · Series Summary</p>
-        </div>
-        <div class="overflow-x-auto mb-12">
-          <table class="w-full border-collapse text-left min-w-[480px]">
-            <thead>
-              <tr class="border-b border-slate-700/50">
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              {gardenSeriesSummariesDesc.map((series) => (
-                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
-                  <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
-                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
-                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
-                  <td class="py-3 pr-8">
-                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
-                      {series.status}
-                    </span>
-                  </td>
-                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
-                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
 
         <!-- GardenOf full ledger -->
         <div class="flex items-center gap-3 mb-5">
