@@ -256,14 +256,18 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
           </h1>
         </div>
 
-        <!-- Right column: active objective cards -->
-        <div class="flex-1 grid gap-4 sm:grid-cols-2">
+        <!-- Right column: featured active objective card -->
+        <div class="flex-1">
+          <div class="relative border border-slate-700/40 bg-slate-950/75 backdrop-blur-md overflow-hidden">
+            <!-- Dual-owner accent line -->
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-500 via-violet-400 to-violet-500"></div>
 
-          <!-- Dan active bet -->
-          <div class="relative border border-cyan-500/30 bg-slate-950/75 backdrop-blur-md p-5 overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-500 via-cyan-400/60 to-transparent"></div>
-            <div class="flex items-center justify-between mb-4">
-              <p class="font-mono text-[9px] uppercase tracking-[0.45em] text-cyan-400">// Dan · Active Objective</p>
+            <!-- Header -->
+            <div class="flex items-center justify-between px-6 pt-5 pb-4 border-b border-slate-700/40">
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
+                <p class="font-mono text-[9px] uppercase tracking-[0.45em] text-cyan-400/80">Active Objective</p>
+              </div>
               {danActiveBets.length > 0 ? (
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[8px] uppercase tracking-[0.2em]">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
@@ -276,133 +280,122 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
               )}
             </div>
 
-            {danActiveBets.length > 0 ? (
-              danActiveBets.map((bet) => (
-                <div>
-                  <p class="text-lg font-bold text-white leading-snug">{bet.pick}</p>
-                  <div class="mt-4 grid grid-cols-3 gap-4 border-t border-slate-700/40 pt-4">
-                    <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Series</p>
-                      <p class="font-mono text-2xl font-bold text-cyan-300">{bet.seriesId}</p>
-                    </div>
-                    <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Line</p>
-                      <p class="font-mono text-2xl font-bold text-white">{bet.line}</p>
-                    </div>
-                    <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Stake</p>
-                      <p class="font-mono text-2xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
-                    </div>
-                  </div>
-                  {bet.latestPacket ? (
-                    <div class="mt-4 border-t border-slate-700/40 pt-4">
-                      <div class="flex items-center gap-2 mb-2">
-                        <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
-                      </div>
-                      <div class="flex items-baseline gap-2">
-                        <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
-                        <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
-                      </div>
-                      <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
-                    </div>
-                  ) : (
-                    <div class="mt-4 border-t border-slate-700/40 pt-4">
-                      <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
-                      <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
-                    </div>
-                  )}
-                </div>
-              ))
-            ) : (
-              <div>
-                <p class="font-mono text-sm font-bold text-slate-400 uppercase tracking-wider">No Active Bet</p>
-                <p class="mt-1 font-mono text-[9px] text-slate-600 uppercase tracking-wider">Next Bet Pending · New Series Start</p>
-                <div class="mt-4 grid grid-cols-2 gap-4 border-t border-slate-700/40 pt-4">
-                  <div>
-                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
-                    <p class="font-mono text-2xl font-bold text-cyan-300">$30.00</p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
-                    <p class="font-mono text-2xl font-bold text-white">New Series</p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <!-- GardenOf active bet -->
-          <div class="relative border border-violet-500/30 bg-slate-950/75 backdrop-blur-md p-5 overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-violet-500 via-violet-400/60 to-transparent"></div>
-            <div class="flex items-center justify-between mb-4">
-              <p class="font-mono text-[9px] uppercase tracking-[0.45em] text-violet-400">// GardenOf · Active Objective</p>
-              {gardenActiveBetsList.length > 0 ? (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[8px] uppercase tracking-[0.2em]">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                  Pending
-                </span>
+            <!-- Featured pick name -->
+            <div class="px-6 py-6">
+              {danActiveBets.length > 0 ? (
+                <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tight leading-none">{danActiveBets[0].pick}</p>
               ) : (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[8px] uppercase tracking-[0.2em]">
-                  Standby
-                </span>
+                <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-600 uppercase tracking-tight leading-none">No Active Bet</p>
               )}
             </div>
 
-            {gardenActiveBetsList.length > 0 ? (
-              gardenActiveBetsList.map((bet) => (
-                <div>
-                  <p class="text-lg font-bold text-white leading-snug">{bet.pick}</p>
-                  <div class="mt-4 grid grid-cols-3 gap-4 border-t border-slate-700/40 pt-4">
-                    <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Series</p>
-                      <p class="font-mono text-2xl font-bold text-violet-300">{bet.seriesId}</p>
-                    </div>
-                    <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Line</p>
-                      <p class="font-mono text-2xl font-bold text-white">{bet.line}</p>
-                    </div>
-                    <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-1">Stake</p>
-                      <p class="font-mono text-2xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
-                    </div>
-                  </div>
-                  {bet.latestPacket ? (
-                    <div class="mt-4 border-t border-slate-700/40 pt-4">
-                      <div class="flex items-center gap-2 mb-2">
-                        <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
-                      </div>
-                      <div class="flex items-baseline gap-2">
-                        <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
-                        <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
-                      </div>
-                      <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
-                    </div>
-                  ) : (
-                    <div class="mt-4 border-t border-slate-700/40 pt-4">
-                      <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
-                      <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
-                    </div>
-                  )}
-                </div>
-              ))
-            ) : (
-              <div>
-                <p class="font-mono text-sm font-bold text-slate-400 uppercase tracking-wider">No Active Bet</p>
-                <p class="mt-1 font-mono text-[9px] text-slate-600 uppercase tracking-wider">Next Bet Pending · New Series Start</p>
-                <div class="mt-4 grid grid-cols-2 gap-4 border-t border-slate-700/40 pt-4">
-                  <div>
-                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
-                    <p class="font-mono text-2xl font-bold text-violet-300">$30.00</p>
-                  </div>
-                  <div>
-                    <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
-                    <p class="font-mono text-2xl font-bold text-white">New Series</p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+            <!-- Per-owner metadata: Dan | GardenOf -->
+            <div class="grid grid-cols-2 divide-x divide-slate-700/40 border-t border-slate-700/40">
 
+              <!-- Dan -->
+              <div class="px-6 py-4">
+                <p class="font-mono text-[9px] uppercase tracking-[0.4em] text-cyan-400 mb-3">// Dan</p>
+                {danActiveBets.length > 0 ? (
+                  danActiveBets.map((bet) => (
+                    <div>
+                      <div class="grid grid-cols-3 gap-3">
+                        <div>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                          <p class="font-mono text-xl font-bold text-cyan-300">{bet.seriesId}</p>
+                        </div>
+                        <div>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
+                          <p class="font-mono text-xl font-bold text-white">{bet.line}</p>
+                        </div>
+                        <div>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
+                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                        </div>
+                      </div>
+                      {bet.latestPacket ? (
+                        <div class="mt-3 border-t border-slate-700/40 pt-3">
+                          <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
+                          <div class="flex items-baseline gap-2 mt-1">
+                            <p class:list={["font-mono text-sm font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
+                            <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
+                          </div>
+                          <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
+                        </div>
+                      ) : (
+                        <div class="mt-3 border-t border-slate-700/40 pt-3">
+                          <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
+                          <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <div class="grid grid-cols-2 gap-3">
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
+                      <p class="font-mono text-xl font-bold text-cyan-300">$30.00</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                      <p class="font-mono text-xl font-bold text-white">New Series</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <!-- GardenOf -->
+              <div class="px-6 py-4">
+                <p class="font-mono text-[9px] uppercase tracking-[0.4em] text-violet-400 mb-3">// GardenOf</p>
+                {gardenActiveBetsList.length > 0 ? (
+                  gardenActiveBetsList.map((bet) => (
+                    <div>
+                      <div class="grid grid-cols-3 gap-3">
+                        <div>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                          <p class="font-mono text-xl font-bold text-violet-300">{bet.seriesId}</p>
+                        </div>
+                        <div>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
+                          <p class="font-mono text-xl font-bold text-white">{bet.line}</p>
+                        </div>
+                        <div>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
+                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                        </div>
+                      </div>
+                      {bet.latestPacket ? (
+                        <div class="mt-3 border-t border-slate-700/40 pt-3">
+                          <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
+                          <div class="flex items-baseline gap-2 mt-1">
+                            <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
+                            <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
+                          </div>
+                          <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
+                        </div>
+                      ) : (
+                        <div class="mt-3 border-t border-slate-700/40 pt-3">
+                          <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
+                          <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <div class="grid grid-cols-2 gap-3">
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
+                      <p class="font-mono text-xl font-bold text-violet-300">$30.00</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                      <p class="font-mono text-xl font-bold text-white">New Series</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
