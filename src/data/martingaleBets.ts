@@ -351,3 +351,7 @@ export const getReturnAmount = (bet: MartingaleBet): number => {
 
 export const getNetImpact = (bet: MartingaleBet): number =>
   Number((getReturnAmount(bet) - getStakeOut(bet)).toFixed(2));
+
+/** First bet in a new series: largest multiple of 10 where balance >= 15× stake */
+export const getNewSeriesStake = (balance: number): number =>
+  Math.max(10, Math.floor(balance / 15 / 10) * 10);
