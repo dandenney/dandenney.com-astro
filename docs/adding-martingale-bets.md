@@ -2,6 +2,26 @@
 
 Instructions for adding a new bet to the tracker and keeping the shipp.ai signal matching up to date.
 
+## Martingale system rules
+
+The martingale strategy tracks bets in **series**. Each series is identified by a letter (A, B, C, ...).
+
+1. **A series starts** with a single bet and **ends with a win**.
+2. **On a loss**, the series continues — the next bet **doubles** the previous stake.
+3. **On a win**, the series is complete. The next bet starts a **new series** with a fresh stake.
+4. **First bet in a new series**: the largest multiple of $10 where the person's balance is at least 15× the stake. Formula: `Math.floor(balance / 15 / 10) * 10`, minimum $10. This is implemented in `getNewSeriesStake()` in `martingaleBets.ts`.
+5. **"Next Stake" while in a series** (after a loss): always 2× the last bet's stake.
+
+### Hero display states
+
+The hero card shows the current state for each owner (Dan, GardenOf):
+
+| State | When | Shows |
+|---|---|---|
+| **Pending** | There's an active (unsettled) bet | The pick, line, series, and next stake if it loses (2×) |
+| **Continuing Series** | Last bet was a loss, no new bet placed | Current series letter, next stake (2× last), amber status |
+| **New Series Ready** | Last bet was a win, no new bet placed | Next series letter, fresh stake from balance, green status |
+
 ## Information needed for a new bet
 
 Provide all of these:
