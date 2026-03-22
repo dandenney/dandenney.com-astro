@@ -67,6 +67,63 @@ interface SeriesSummary {
   netImpact: number;
 }
 
+interface HeroSeriesState {
+  currentSeriesId: string | null;
+  nextSeriesId: string | null;
+  displaySeriesId: string | null;
+  status: "In Progress" | "New Series Ready";
+  lastBetAmount: number | null;
+  nextBetStake: number | null;
+  lastBet: MartingaleBet | null;
+}
+
+const getNextSeriesId = (seriesId: string | null): string | null => {
+  if (!seriesId) return null;
+  if (!/^[A-Z]$/.test(seriesId)) return seriesId;
+  if (seriesId === "Z") return "AA";
+  return String.fromCharCode(seriesId.charCodeAt(0) + 1);
+};
+
+const getHeroSeriesState = (bets: MartingaleBet[]): HeroSeriesState => {
+  const lastBet = bets[bets.length - 1] ?? null;
+  if (!lastBet) {
+    return {
+      currentSeriesId: null,
+      nextSeriesId: null,
+      displaySeriesId: null,
+      status: "New Series Ready",
+      lastBetAmount: null,
+      nextBetStake: null,
+      lastBet: null,
+    };
+  }
+
+  const lastBetAmount = getStakeOut(lastBet);
+  const nextSeriesId = getNextSeriesId(lastBet.seriesId);
+
+  if (lastBet.result === "pending") {
+    return {
+      currentSeriesId: lastBet.seriesId,
+      nextSeriesId,
+      displaySeriesId: lastBet.seriesId,
+      status: "In Progress",
+      lastBetAmount,
+      nextBetStake: Number((lastBetAmount * 2).toFixed(2)),
+      lastBet,
+    };
+  }
+
+  return {
+    currentSeriesId: lastBet.seriesId,
+    nextSeriesId,
+    displaySeriesId: nextSeriesId,
+    status: "New Series Ready",
+    lastBetAmount,
+    nextBetStake: lastBetAmount,
+    lastBet,
+  };
+};
+
 const seriesMap = new Map<string, MartingaleBet[]>();
 for (const bet of orderedBets) {
   const existing = seriesMap.get(bet.seriesId) ?? [];
@@ -124,6 +181,8 @@ const pendingBetCheckpoints = orderedBets
     return { bet, latestPacket };
   });
 
+const danHeroSeriesState = getHeroSeriesState(orderedBets);
+
 const gardenSettledBets = gardenOrderedBets.filter((bet) => bet.result !== "pending");
 const gardenPendingBets = gardenOrderedBets.filter((bet) => bet.result === "pending").length;
 const gardenWins = gardenSettledBets.filter((bet) => bet.result === "win").length;
@@ -178,6 +237,8 @@ const gardenPendingBetCheckpoints = gardenOrderedBets
     return { bet, latestPacket };
   });
 
+const gardenHeroSeriesState = getHeroSeriesState(gardenOrderedBets);
+
 // Hero active bets with checkpoint data merged in
 const danActiveBets = orderedBets
   .filter((bet) => bet.result === "pending")
@@ -198,7 +259,6 @@ const withRunningBalanceDesc = [...withRunningBalance].reverse();
 const gardenWithRunningBalanceDesc = [...gardenWithRunningBalance].reverse();
 const seriesSummariesDesc = [...seriesSummaries].reverse();
 const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
-
 ---
 
 <!doctype html>
@@ -301,15 +361,15 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                       <div class="grid grid-cols-3 gap-3">
                         <div>
                           <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
-                          <p class="font-mono text-xl font-bold text-cyan-300">{bet.seriesId}</p>
+                          <p class="font-mono text-xl font-bold text-cyan-300">{danHeroSeriesState.displaySeriesId ?? bet.seriesId}</p>
                         </div>
                         <div>
                           <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
                           <p class="font-mono text-xl font-bold text-white">{bet.line}</p>
                         </div>
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
-                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
+                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(danHeroSeriesState.nextBetStake ?? getStakeOut(bet) * 2)}</p>
                         </div>
                       </div>
                       {bet.latestPacket ? (
@@ -330,14 +390,18 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                     </div>
                   ))
                 ) : (
-                  <div class="grid grid-cols-2 gap-3">
+                  <div class="grid grid-cols-3 gap-3">
                     <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
-                      <p class="font-mono text-xl font-bold text-cyan-300">$30.00</p>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                      <p class="font-mono text-xl font-bold text-cyan-300">{danHeroSeriesState.displaySeriesId ?? "—"}</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Last Bet</p>
+                      <p class="font-mono text-xl font-bold text-rose-300">{danHeroSeriesState.lastBetAmount ? currency.format(danHeroSeriesState.lastBetAmount) : "—"}</p>
                     </div>
                     <div>
                       <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
-                      <p class="font-mono text-xl font-bold text-white">New Series</p>
+                      <p class="font-mono text-xl font-bold text-white">{danHeroSeriesState.status}</p>
                     </div>
                   </div>
                 )}
@@ -352,15 +416,15 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                       <div class="grid grid-cols-3 gap-3">
                         <div>
                           <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
-                          <p class="font-mono text-xl font-bold text-violet-300">{bet.seriesId}</p>
+                          <p class="font-mono text-xl font-bold text-violet-300">{gardenHeroSeriesState.displaySeriesId ?? bet.seriesId}</p>
                         </div>
                         <div>
                           <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
                           <p class="font-mono text-xl font-bold text-white">{bet.line}</p>
                         </div>
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
-                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
+                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(gardenHeroSeriesState.nextBetStake ?? getStakeOut(bet) * 2)}</p>
                         </div>
                       </div>
                       {bet.latestPacket ? (
@@ -381,14 +445,18 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                     </div>
                   ))
                 ) : (
-                  <div class="grid grid-cols-2 gap-3">
+                  <div class="grid grid-cols-3 gap-3">
                     <div>
-                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Rec. Stake</p>
-                      <p class="font-mono text-xl font-bold text-violet-300">$30.00</p>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                      <p class="font-mono text-xl font-bold text-violet-300">{gardenHeroSeriesState.displaySeriesId ?? "—"}</p>
+                    </div>
+                    <div>
+                      <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Last Bet</p>
+                      <p class="font-mono text-xl font-bold text-rose-300">{gardenHeroSeriesState.lastBetAmount ? currency.format(gardenHeroSeriesState.lastBetAmount) : "—"}</p>
                     </div>
                     <div>
                       <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
-                      <p class="font-mono text-xl font-bold text-white">New Series</p>
+                      <p class="font-mono text-xl font-bold text-white">{gardenHeroSeriesState.status}</p>
                     </div>
                   </div>
                 )}
