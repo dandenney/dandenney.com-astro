@@ -1,22 +1,25 @@
 ---
-address: "Nashville, TN"
-city: nashville
-country: United States
-description: Bright breakfast plates and solid coffee in a playful downtown stop
-heroImageAlt: "Avocado toast with pickled onions and salad, plus a breakfast sandwich and coffee drinks"
-pubDate: 2026-03-22
-state: tennessee
-tags: [breakfast, cafe, coffee]
 title: "Funny Library Coffee Shop"
+address: "1 Music Square W, Nashville, TN 37203"
+city: "nashville"
+state: "tennessee"
+country: "United States"
+coordinates: "-86.793321, 36.151555"
+description: "Playful breakfast stop with polished plates and coffee that keeps pace."
+heroImageAlt: "Avocado toast, breakfast sandwich, cappuccino, and iced Americano at Funny Library Coffee Shop"
+heroImage: "funny-library-coffee-shop"
+pubDate: "2026-03-22"
+tags: ["breakfast","coffee","cafe"]
 aiGenerated: true
 ---
+Funny Library Coffee Shop feels like the kind of place that understands breakfast is supposed to be both useful and a little fun. The room, the plating, even the naming all point in that direction, but the bigger win is that the food actually holds up once the novelty wears off.
 
-Funny Library Coffee Shop feels like the kind of place that knows exactly what it wants to be—bright, casual, a little cheeky, and built for the first good meal of the day. It doesn’t look like it’s trying too hard, which helps. The food does enough talking on its own.
+The avocado toast came out looking composed without tipping into precious. Thick avocado, bright pickled onions, a little greensy freshness on the side, and enough crunch underneath to keep the whole thing from turning soft and sleepy. It read light, but not flimsy. More importantly, it tasted awake.
 
-The avocado toast came dressed to be noticed. A thick green swipe of avocado sat on crisp toast, with a fresh little pile of greens and pickled onions bringing brightness and bite. It looked polished without feeling precious. More importantly, it ate well: creamy, sharp, fresh, and light in a way that still felt like breakfast instead of garnish pretending to be a meal.
+The breakfast sandwich was the better balance play. Warm, filling, and less interested in making a visual argument. Egg, bacon, cheese, bun—simple structure, no wasted motion. If the avocado toast was the sharper, fresher option, the sandwich was the one that made sure breakfast still felt like breakfast.
 
-The breakfast sandwich brought the balance. Soft bun, egg, bacon, and cheese—simple structure, no wasted motion. The kind of sandwich that works because it respects the assignment. Warm, salty, satisfying, and easy to imagine ordering again without overthinking it.
+Coffee did its part too. The cappuccino made the meal feel a little more civilized, smooth and warm in the way you want when the table is still settling in. The iced Americano pushed the other direction: colder, sharper, more utilitarian. Together they made a nice split-screen of what this place seems to do well—give you enough range to order for mood instead of just caffeine.
 
-Coffee-wise, the cappuccino and iced Americano both did what they needed to do. No drama, no disappointment. The cappuccino looked smooth and clean, while the iced Americano gave the meal a sharper, colder edge that fit the Nashville morning just right.
+The only real caveat is that this is more polished brunch-stop energy than rough-around-the-edges coffee counter energy. If you want something messier or more incidental, this might feel a little composed. But if you want breakfast that looks good, tastes good, and doesn’t collapse under its own aesthetic choices, Funny Library makes a solid case for itself.
 
-Funny Library isn’t trying to be a grand statement breakfast. It’s trying to be a place you’re glad you picked, and that’s exactly where it lands. Good coffee, smart breakfast choices, and enough personality to make it memorable without turning into a gimmick.
+Come here when you want a breakfast that feels a little dressed up without becoming a whole production.
