@@ -68,6 +68,8 @@ const inferBetSport = (bet: MartingaleBet): string | null => {
     "jazz", "utah", "uta",          // Utah Jazz
     "robert", "williams",            // Robert Williams III
     "timberwolves", "minnesota", "min", // Minnesota Timberwolves
+    "jordan", "miller",              // Jordan Miller
+    "clippers", "lac", "angeles",  // LA Clippers
   ];
 
   return nbaTokens.some((token) => pick.includes(token)) ? "nba" : null;
