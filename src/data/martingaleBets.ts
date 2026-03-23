@@ -360,6 +360,32 @@ export const martingaleBets: MartingaleBet[] = [
     eventId: "401810887",
     scheduledStart: "2026-03-22T21:00:00Z",
   },
+  {
+    id: 28,
+    owner: "Dan",
+    date: "2026-03-22",
+    seriesId: "K",
+    pick: "Minnesota Timberwolves @ Boston Celtics Over 221.5",
+    line: "-110",
+    amount: 50,
+    result: "pending",
+    stakeOut: 50,
+    eventId: "401810890",
+    scheduledStart: "2026-03-23T00:00:00Z",
+  },
+  {
+    id: 29,
+    owner: "GardenOf",
+    date: "2026-03-22",
+    seriesId: "G",
+    pick: "Minnesota Timberwolves @ Boston Celtics Over 221.5",
+    line: "-110",
+    amount: 40,
+    result: "pending",
+    stakeOut: 40,
+    eventId: "401810890",
+    scheduledStart: "2026-03-23T00:00:00Z",
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
