@@ -416,6 +416,32 @@ export const martingaleBets: MartingaleBet[] = [
     eventId: "401810901",
     scheduledStart: "2026-03-24T02:30:00Z",
   },
+  {
+    id: 32,
+    owner: "Dan",
+    date: "2026-03-24",
+    seriesId: "K",
+    pick: "Devin Booker Over 25.5 Points",
+    line: "-118",
+    amount: 200,
+    result: "pending",
+    stakeOut: 200,
+    eventId: "401810905",
+    scheduledStart: "2026-03-25T03:00:00Z",
+  },
+  {
+    id: 33,
+    owner: "GardenOf",
+    date: "2026-03-24",
+    seriesId: "G",
+    pick: "Devin Booker Over 25.5 Points",
+    line: "-118",
+    amount: 160,
+    result: "pending",
+    stakeOut: 160,
+    eventId: "401810905",
+    scheduledStart: "2026-03-25T03:00:00Z",
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
