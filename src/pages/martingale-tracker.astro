@@ -285,7 +285,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
     />
     <ViewTransitions />
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden">
+  <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden antialiased">
     <main class="relative z-10 bg-slate-950">
 
     <!-- ═══════════════════════════════════════════════════════
@@ -326,7 +326,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-cyan-400/80">Martingale Command Center · Live</p>
           </div>
 
-          <h1 class="text-6xl lg:text-8xl font-black uppercase tracking-tighter text-white leading-none drop-shadow-2xl">
+          <h1 class="text-6xl lg:text-8xl font-black uppercase tracking-tighter text-white leading-none drop-shadow-2xl text-balance">
             Bet<br />Tracker
           </h1>
         </div>
@@ -386,7 +386,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                         </div>
                         <div>
                           <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
-                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                          <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(getStakeOut(bet))}</p>
                         </div>
                       </div>
                       {bet.latestPacket ? (
@@ -415,7 +415,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                       </div>
                       <div>
                         <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
-                        <p class="font-mono text-xl font-bold text-rose-300">{danHeroSeriesState.nextBetStake ? currency.format(danHeroSeriesState.nextBetStake) : "—"}</p>
+                        <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{danHeroSeriesState.nextBetStake ? currency.format(danHeroSeriesState.nextBetStake) : "—"}</p>
                       </div>
                       <div>
                         <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
@@ -443,7 +443,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                         </div>
                         <div>
                           <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
-                          <p class="font-mono text-xl font-bold text-rose-300">{currency.format(getStakeOut(bet))}</p>
+                          <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(getStakeOut(bet))}</p>
                         </div>
                       </div>
                       {bet.latestPacket ? (
@@ -472,7 +472,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                       </div>
                       <div>
                         <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
-                        <p class="font-mono text-xl font-bold text-rose-300">{gardenHeroSeriesState.nextBetStake ? currency.format(gardenHeroSeriesState.nextBetStake) : "—"}</p>
+                        <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{gardenHeroSeriesState.nextBetStake ? currency.format(gardenHeroSeriesState.nextBetStake) : "—"}</p>
                       </div>
                       <div>
                         <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
@@ -513,33 +513,33 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2 sm:col-span-1">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
-              <p class="font-mono text-2xl font-bold text-white">{currency.format(startingBalance)}</p>
+              <p class="font-mono text-2xl font-bold tabular-nums text-white">{currency.format(startingBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
-              <p class:list={["font-mono text-2xl font-bold", currentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(currentBalance)}</p>
+              <p class:list={["font-mono text-2xl font-bold tabular-nums", currentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(currentBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
-              <p class:list={["font-mono text-2xl font-bold", netPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{netPL >= 0 ? "+" : ""}{currency.format(netPL)}</p>
+              <p class:list={["font-mono text-2xl font-bold tabular-nums", netPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{netPL >= 0 ? "+" : ""}{currency.format(netPL)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
-              <p class="font-mono text-2xl font-bold text-white">{settledBets.length ? `${winRate.toFixed(0)}%` : "—"}</p>
+              <p class="font-mono text-2xl font-bold tabular-nums text-white">{settledBets.length ? `${winRate.toFixed(0)}%` : "—"}</p>
             </div>
             <div class="relative border border-cyan-500/20 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">HYSA Benchmark</p>
-              <p class="font-mono text-2xl font-bold text-cyan-300">{currency.format(hysaCurrentValue)}</p>
+              <p class="font-mono text-2xl font-bold tabular-nums text-cyan-300">{currency.format(hysaCurrentValue)}</p>
               <p class="font-mono text-[8px] text-slate-600 mt-1 uppercase">4.2% APY · Sim only</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">vs HYSA Delta</p>
-              <p class:list={["font-mono text-2xl font-bold", strategyVsHysaDelta >= 0 ? "text-emerald-400" : "text-rose-400"]}>{strategyVsHysaDelta >= 0 ? "+" : ""}{currency.format(strategyVsHysaDelta)}</p>
+              <p class:list={["font-mono text-2xl font-bold tabular-nums", strategyVsHysaDelta >= 0 ? "text-emerald-400" : "text-rose-400"]}>{strategyVsHysaDelta >= 0 ? "+" : ""}{currency.format(strategyVsHysaDelta)}</p>
             </div>
           </div>
         </div>
@@ -556,27 +556,27 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2 sm:col-span-1">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
-              <p class="font-mono text-2xl font-bold text-white">{currency.format(startingBalance)}</p>
+              <p class="font-mono text-2xl font-bold tabular-nums text-white">{currency.format(startingBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/40 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
-              <p class:list={["font-mono text-2xl font-bold", gardenCurrentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(gardenCurrentBalance)}</p>
+              <p class:list={["font-mono text-2xl font-bold tabular-nums", gardenCurrentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(gardenCurrentBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/40 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
-              <p class:list={["font-mono text-2xl font-bold", gardenNetPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{gardenNetPL >= 0 ? "+" : ""}{currency.format(gardenNetPL)}</p>
+              <p class:list={["font-mono text-2xl font-bold tabular-nums", gardenNetPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{gardenNetPL >= 0 ? "+" : ""}{currency.format(gardenNetPL)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
-              <p class="font-mono text-2xl font-bold text-white">{gardenSettledBets.length ? `${gardenWinRate.toFixed(0)}%` : "—"}</p>
+              <p class="font-mono text-2xl font-bold tabular-nums text-white">{gardenSettledBets.length ? `${gardenWinRate.toFixed(0)}%` : "—"}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
               <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Total Logged</p>
-              <p class="font-mono text-2xl font-bold text-white">{gardenOrderedBets.length} bets</p>
+              <p class="font-mono text-2xl font-bold tabular-nums text-white">{gardenOrderedBets.length} bets</p>
             </div>
           </div>
         </div>
@@ -681,6 +681,45 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
       <!-- ── Dan ── -->
       <div class="mb-20">
 
+<<<<<<< HEAD
+=======
+        <!-- Dan series summary -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-cyan-300 font-bold">Dan · Series Summary</p>
+        </div>
+        <div class="overflow-x-auto mb-12">
+          <table class="w-full border-collapse text-left min-w-[480px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {seriesSummariesDesc.map((series) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                  <td class="py-3 pr-8">
+                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {series.status}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold tabular-nums", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+>>>>>>> 7358819 (feat(skills): add make-interfaces-feel-better skill)
         <!-- Dan full ledger -->
         <div class="flex items-center gap-3 mb-5">
           <div class="w-1 h-6 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.4)]"></div>
@@ -708,19 +747,19 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                   <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
                   <td class="py-3 pr-6 text-sm text-white">{bet.pick}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
-                  <td class="py-3 pr-6 font-mono text-sm text-rose-400 whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-rose-400 tabular-nums whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
                   <td class="py-3 pr-6 whitespace-nowrap">
                     <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
                       {bet.result === "pending" ? "Pending" : bet.result}
                     </span>
                   </td>
-                  <td class:list={["py-3 pr-6 font-mono text-sm whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
+                  <td class:list={["py-3 pr-6 font-mono text-sm tabular-nums whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
                     {bet.result === "pending" ? "—" : `+${currency.format(bet.returnAmount)}`}
                   </td>
-                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold tabular-nums whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
                     {bet.netImpact >= 0 ? "+" : ""}{currency.format(bet.netImpact)}
                   </td>
-                  <td class="py-3 pr-6 font-mono text-sm text-cyan-300 whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-cyan-300 tabular-nums whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
                 </tr>
               ))}
             </tbody>
@@ -731,6 +770,45 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
       <!-- ── GardenOf ── -->
       <div class="border-t border-slate-800/50 pt-16">
 
+<<<<<<< HEAD
+=======
+        <!-- GardenOf series summary -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-violet-300 font-bold">GardenOf · Series Summary</p>
+        </div>
+        <div class="overflow-x-auto mb-12">
+          <table class="w-full border-collapse text-left min-w-[480px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {gardenSeriesSummariesDesc.map((series) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                  <td class="py-3 pr-8">
+                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {series.status}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold tabular-nums", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+>>>>>>> 7358819 (feat(skills): add make-interfaces-feel-better skill)
         <!-- GardenOf full ledger -->
         <div class="flex items-center gap-3 mb-5">
           <div class="w-1 h-6 bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.4)]"></div>
@@ -758,19 +836,19 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                   <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
                   <td class="py-3 pr-6 text-sm text-white">{bet.pick}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
-                  <td class="py-3 pr-6 font-mono text-sm text-rose-400 whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-rose-400 tabular-nums whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
                   <td class="py-3 pr-6 whitespace-nowrap">
                     <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
                       {bet.result === "pending" ? "Pending" : bet.result}
                     </span>
                   </td>
-                  <td class:list={["py-3 pr-6 font-mono text-sm whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
+                  <td class:list={["py-3 pr-6 font-mono text-sm tabular-nums whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
                     {bet.result === "pending" ? "—" : `+${currency.format(bet.returnAmount)}`}
                   </td>
-                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold tabular-nums whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
                     {bet.netImpact >= 0 ? "+" : ""}{currency.format(bet.netImpact)}
                   </td>
-                  <td class="py-3 pr-6 font-mono text-sm text-violet-300 whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-violet-300 tabular-nums whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
                 </tr>
               ))}
             </tbody>
