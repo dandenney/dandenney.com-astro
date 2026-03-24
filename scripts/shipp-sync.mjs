@@ -157,10 +157,25 @@ const STOP_WORDS = new Set([
 ]);
 const NBA_TOKENS = [
   "lakers", "celtics", "knicks", "wizards", "heat", "nuggets", "trail", "blazers",
-  "scoot", "henderson", "edwards", "sensabaugh",
+  "scoot", "henderson",           // Scoot Henderson
+  "edwards",                      // Justin Edwards
+  "sensabaugh",                   // Brice Sensabaugh
   "suns", "phoenix", "pho",       // Phoenix Suns
   "bos", "boston",                // Boston Celtics (abbrev; "celtics" already above)
   "sixers", "philadelphia",
+  "cavaliers", "cleveland", "cle", // Cleveland Cavaliers
+  "bucks", "milwaukee", "mil",     // Milwaukee Bucks
+  "thunder", "oklahoma", "okc",    // Oklahoma City Thunder
+  "nets", "brooklyn", "bkn",       // Brooklyn Nets
+  "duren",                         // Jalen Duren
+  "pistons", "detroit", "det",     // Detroit Pistons
+  "raptors", "toronto", "tor",     // Toronto Raptors
+  "denver",                        // Denver Nuggets ("nuggets" already above)
+  "jazz", "utah", "uta",           // Utah Jazz
+  "robert", "williams",            // Robert Williams III
+  "timberwolves", "minnesota", "min", // Minnesota Timberwolves
+  "jordan", "miller",              // Jordan Miller
+  "clippers", "lac", "angeles",    // LA Clippers
 ];
 
 function tokenize(v) {
