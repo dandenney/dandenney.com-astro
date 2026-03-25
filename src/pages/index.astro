@@ -369,8 +369,8 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="py-8 sm:py-24">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <section class="py-16 sm:py-24">
+        <div class="mx-auto max-w-[1800px] px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h2
               class="flex items-center gap-4 justify-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
@@ -418,13 +418,13 @@ const monthName = getMonthName();
             ))
           }
         </div>
-        <div class="bg-slate-50 dark:bg-slate-800 flex justify-center p-8 cta border-b">
+        <div class="bg-slate-50 dark:bg-slate-800 flex justify-end p-8 cta border-b">
           <a href="/posts" class="btn-link">View All Blog Posts</a>
         </div>
       </section>
 
-      <section class="flex flex-col bg-slate-50 dark:bg-slate-800">
-        <div class="p-8">
+      <section class="flex flex-col bg-slate-50 dark:bg-slate-800 py-16 sm:py-24">
+        <div class="mx-auto max-w-[1800px] w-full p-8">
           <h2
             class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
@@ -436,7 +436,7 @@ const monthName = getMonthName();
           </p>
         </div>
         <div
-          class="side-projects-grid grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700"
+          class="side-projects-grid mx-auto max-w-[1800px] w-full grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700"
         >
           <a href="/music" class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
             <div class="overflow-hidden">
@@ -518,8 +518,8 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="py-32">
-        <div class="px-8">
+      <section class="py-16 sm:py-24">
+        <div class="mx-auto max-w-[1800px] w-full px-8">
           <h2
             class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
@@ -533,7 +533,7 @@ const monthName = getMonthName();
           </p>
         </div>
 
-        <div class="blips-grid mt-12 grid grid-cols-1 md:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+        <div class="blips-grid mx-auto max-w-[1800px] w-full mt-12 grid grid-cols-1 md:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
           {
             blips.map((blip, i) => {
               const wideIndices = new Set([0, 3]);
@@ -581,25 +581,23 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="bg-slate-50 dark:bg-slate-800 pt-8">
-        <div class="px-8">
+      <section class="bg-slate-50 dark:bg-slate-800 py-16 sm:py-24">
+        <div class="mx-auto max-w-[1800px] w-full px-8">
           <h2
             class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
-            Most Recent Finds
+            {monthName}'s Finds
           </h2>
           <p
             class="has-links mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-slate-100"
           >
-            I keep a stash of everything I've read or watched and
-            found valuable, in a <a href="/library">"library"</a> and archive them
-            by month.
+            Things I've read or watched this month and found worth keeping. Everything gets archived in the <a href="/library">library</a> at the end of the month.
           </p>
         </div>
 
         {
           links.length > 0 ? (
-            <div class="finds-grid mt-12 grid grid-cols-1 md:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+            <div class="finds-grid mx-auto max-w-[1800px] w-full mt-12 grid grid-cols-1 md:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
               {links.map((link, i) => {
                 const wideIndices = new Set([0, 5, 11, 18, 24]);
                 const isWide = wideIndices.has(i);
@@ -639,26 +637,15 @@ const monthName = getMonthName();
             </div>
           )
         }
+        <div class="border-b cta flex justify-end p-8">
+          <a href="/library" class="btn-link">View the Library</a>
+        </div>
       </section>
 
-      <section class="relative isolate overflow-hidden bg-white dark:bg-slate-900">
-        <svg aria-hidden="true" class="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 dark:stroke-slate-700">
-          <defs>
-            <pattern id="ai-grid" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="-1" class="overflow-visible fill-gray-50 dark:fill-slate-800">
-            <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-          </svg>
-          <rect width="100%" height="100%" fill="url(#ai-grid)" stroke-width="0" />
-        </svg>
-        <div aria-hidden="true" class="absolute top-10 left-[calc(50%-4rem)] -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:top-[calc(50%-30rem)] lg:left-48 xl:left-[calc(50%-24rem)]">
-          <div style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)" class="aspect-1108/632 w-277 bg-linear-to-r from-blue-50 to-blue-200 opacity-50 dark:from-blue-200 dark:to-blue-500 dark:opacity-10"></div>
-        </div>
-        <div class="px-8 pt-10 pb-24 sm:pb-32 lg:flex lg:items-center lg:gap-x-10 lg:py-12">
-          <div class="max-w-xl shrink-0 lg:pt-8">
-            <div class="mt-24 sm:mt-32 lg:mt-0">
+      <section class="bg-white dark:bg-slate-900">
+        <div class="mx-auto max-w-[1800px] px-8 py-16 sm:py-24 lg:flex lg:items-center lg:gap-x-10">
+          <div class="max-w-xl shrink-0">
+            <div>
               <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
                 <span class="whitespace-nowrap">[&nbsp;280+ members&nbsp;]</span>
               </p>
@@ -708,8 +695,8 @@ const monthName = getMonthName();
         </div>
       </section>
 
-      <section class="bg-slate-50 dark:bg-slate-900 pt-24 sm:pt-32">
-        <div class="px-8">
+      <section class="bg-slate-50 dark:bg-slate-900 py-16 sm:py-24">
+        <div class="mx-auto max-w-[1800px] w-full px-8">
             <svg
               width="240"
               height="79"
@@ -800,7 +787,7 @@ const monthName = getMonthName();
             </p>
         </div>
 
-        <div class="reviews-grid mt-12 grid grid-cols-1 md:grid-cols-2 border-y border-gray-200 dark:border-slate-700">
+        <div class="reviews-grid mx-auto max-w-[1800px] w-full mt-12 grid grid-cols-1 md:grid-cols-2 border-y border-gray-200 dark:border-slate-700">
           {
             reviews.map((review) => (
               <a
@@ -836,7 +823,7 @@ const monthName = getMonthName();
           }
         </div>
 
-        <div class="border-b cta flex justify-center p-8">
+        <div class="border-b cta flex justify-end p-8">
           <a href="/no-reserv-ai-tions" class="btn-link">View No ReservAItions</a>
         </div>
       </section>
