@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-25T00:43:06.919Z",
+  "updatedAt": "2026-03-25T01:40:28.511Z",
   "connections": {
     "01KKM3C5MFBPVV4BSNEMMBRNVT": {
       "sinceEventId": "01KKSTJ3Z73FSBBQYPGADRS0B6",
-      "lastRunAt": "2026-03-25T00:43:06.468Z",
+      "lastRunAt": "2026-03-25T01:40:28.082Z",
       "lastSuccessAt": "2026-03-15T23:02:01.471Z",
       "lastError": "Shipp 01KKM3C5MFBPVV4BSNEMMBRNVT (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     },
     "01KKM1TDA5SPAN8YGXZ7T1V82E": {
       "sinceEventId": "01JRKQ3M9DBGRPH8Y4AQAER1PZ",
-      "lastRunAt": "2026-03-25T00:43:06.823Z",
+      "lastRunAt": "2026-03-25T01:40:28.404Z",
       "lastSuccessAt": "2026-03-16T22:12:23.314Z",
       "lastError": "Shipp 01KKM1TDA5SPAN8YGXZ7T1V82E (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     }
@@ -5645,7 +5645,7 @@
           "insufficientData": true,
           "matchedSignalsCount": 0,
           "matchedSignalIds": [],
-          "generatedAt": "2026-03-25T00:43:06.917Z",
+          "generatedAt": "2026-03-25T01:40:28.509Z",
           "deltaFromLast": {
             "previousCheckpoint": "T-120",
             "previousRecommendation": "No Bet",
@@ -5666,7 +5666,7 @@
           "insufficientData": true,
           "matchedSignalsCount": 0,
           "matchedSignalIds": [],
-          "generatedAt": "2026-03-25T00:43:06.917Z",
+          "generatedAt": "2026-03-25T01:40:28.509Z",
           "deltaFromLast": {
             "previousCheckpoint": "T-120",
             "previousRecommendation": "No Bet",
