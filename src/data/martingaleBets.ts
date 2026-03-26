@@ -453,7 +453,7 @@ export const martingaleBets: MartingaleBet[] = [
     line: "-111",
     amount: 30,
     result: "pending",
-    stakeOut: 200,
+    stakeOut: 30,
     returnAmount: 0.00,
     eventId: "401810916",
     scheduledStart: "2026-03-26T03:00:00Z",
