@@ -217,9 +217,9 @@ const maxPossibleStreak = Math.max(...pathsForClient.map((p) => p.maxStreak));
         return STREAK_COLORS[Math.min(n, STREAK_COLORS.length - 1)];
       }
 
-      function nodeColor(outcome, isForced) {
-        if (outcome === "win") return isForced ? "#064e3b" : "#10b981";
-        if (outcome === "loss") return isForced ? "#450a0a" : "#ef4444";
+      function nodeColor(outcome) {
+        if (outcome === "win") return "#10b981";
+        if (outcome === "loss") return "#ef4444";
         return "#475569";
       }
 
@@ -276,7 +276,7 @@ const maxPossibleStreak = Math.max(...pathsForClient.map((p) => p.maxStreak));
         .attr("cx", (d) => d.x)
         .attr("cy", (d) => d.y)
         .attr("r", NODE_R)
-        .attr("fill", (d) => nodeColor(d.outcome, d.isForced))
+        .attr("fill", (d) => nodeColor(d.outcome))
         .attr("data-row-start", (d) => d.rowStart)
         .attr("data-row-end", (d) => d.rowEnd)
         .style("cursor", "pointer");
