@@ -1,0 +1,370 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { expertPicks } from "../data/expertPicks";
+
+export const prerender = true;
+
+function extractDateKey(dt: string) {
+  return dt.match(/(\w+ \d+ \d+)/)?.[1] ?? "";
+}
+
+const barnerPicks = expertPicks.filter((p) => p.authorName === "Mike Barner");
+
+const byDate = new Map<string, (typeof barnerPicks)[number][]>();
+for (const pick of barnerPicks) {
+  const key = extractDateKey(pick.gameDateTime);
+  const existing = byDate.get(key) ?? [];
+  existing.push(pick);
+  byDate.set(key, existing);
+}
+
+const sortedDates = Array.from(byDate.keys()).sort(
+  (a, b) => new Date(a).getTime() - new Date(b).getTime(),
+);
+
+const dayInfos = sortedDates.map((dateKey) => {
+  const picks = byDate.get(dateKey)!;
+  const outcomes = new Set(picks.map((p) => p.result));
+  const isBranching = outcomes.has("win") && outcomes.has("loss");
+  return {
+    dateKey,
+    isBranching,
+    forcedOutcome: isBranching ? null : (picks[0].result as string),
+    winPicks: picks.filter((p) => p.result === "win").map((p) => p.betTitle),
+    lossPicks: picks.filter((p) => p.result === "loss").map((p) => p.betTitle),
+  };
+});
+
+const kArr = dayInfos.map((d) => (d.isBranching ? 2 : 1));
+const rowspanArr: number[] = kArr.map((_, c) => {
+  let p = 1;
+  for (let i = c + 1; i < kArr.length; i++) p *= kArr[i];
+  return p;
+});
+const totalPaths: number = kArr.reduce((a: number, b: number) => a * b, 1);
+
+function cellOutcome(row: number, col: number): string {
+  if (!dayInfos[col].isBranching) return dayInfos[col].forcedOutcome!;
+  return Math.floor(row / rowspanArr[col]) % 2 === 0 ? "win" : "loss";
+}
+
+// Layout
+const LEAF_H = 12;
+const COL_W = 68;
+const NODE_R = 4;
+const TOP_PAD = 40;
+const LEFT_PAD = 8;
+const svgH = TOP_PAD + totalPaths * LEAF_H + 16;
+const svgW = LEFT_PAD + sortedDates.length * COL_W + 16;
+
+// Build nodes
+const nodeAt: string[][] = Array.from({ length: totalPaths }, () =>
+  new Array(sortedDates.length).fill(""),
+);
+
+interface NodeForClient {
+  id: string;
+  col: number;
+  rowStart: number;
+  rowEnd: number;
+  x: number;
+  y: number;
+  outcome: string;
+  isForced: boolean;
+  label: string; // date + outcome + bets
+}
+
+const nodesForClient: NodeForClient[] = [];
+
+for (let col = 0; col < sortedDates.length; col++) {
+  const rs = rowspanArr[col];
+  const blockSize = rs * kArr[col];
+  const day = dayInfos[col];
+
+  for (let row = 0; row < totalPaths; row++) {
+    if (row % blockSize % rs !== 0) continue;
+
+    const outcome = cellOutcome(row, col);
+    const rowEnd = row + rs - 1;
+    const picks = outcome === "win" ? day.winPicks : day.lossPicks;
+    const id = `n${col}_${row}`;
+
+    nodesForClient.push({
+      id,
+      col,
+      rowStart: row,
+      rowEnd,
+      x: LEFT_PAD + col * COL_W + COL_W / 2,
+      y: TOP_PAD + (row + rs / 2) * LEAF_H,
+      outcome,
+      isForced: !day.isBranching,
+      label: [day.dateKey, outcome.toUpperCase(), ...picks].join("\n"),
+    });
+
+    for (let r = row; r <= rowEnd; r++) nodeAt[r][col] = id;
+  }
+}
+
+const nodeByIdMap = new Map(nodesForClient.map((n) => [n.id, n]));
+
+// Build per-path data: points (through node centers) + running L streak
+interface PathForClient {
+  row: number;
+  points: { x: number; y: number }[];
+  streaks: number[];
+  maxStreak: number;
+}
+
+const pathsForClient: PathForClient[] = Array.from({ length: totalPaths }, (_, row) => {
+  let streak = 0;
+  const streaks: number[] = [];
+  const points: { x: number; y: number }[] = [];
+
+  for (let col = 0; col < sortedDates.length; col++) {
+    const outcome = cellOutcome(row, col);
+    if (outcome === "loss") streak++;
+    else if (outcome === "win") streak = 0;
+    streaks.push(streak);
+    const node = nodeByIdMap.get(nodeAt[row][col])!;
+    points.push({ x: node.x, y: node.y });
+  }
+
+  return { row, points, streaks, maxStreak: Math.max(...streaks) };
+});
+
+const colHeaders = sortedDates.map((key) =>
+  new Date(key).toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+);
+
+const maxPossibleStreak = Math.max(...pathsForClient.map((p) => p.maxStreak));
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="Expert Picks Tree | Dan Denney"
+      description="Interactive decision tree of all possible paths through Mike Barner's picks."
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <main class="px-4 py-10">
+
+      <header class="mb-5 max-w-3xl">
+        <h1 class="text-2xl font-bold text-white">Mike Barner — Decision Tree</h1>
+        <p class="text-slate-400 text-sm mt-1">
+          {sortedDates.length} pick days · {totalPaths} W/L paths · max possible loss streak: {maxPossibleStreak}
+        </p>
+        <p class="text-slate-500 text-xs mt-1">
+          Each line is one possible path. Color = max consecutive losses on that path.
+          Click any node to isolate paths through it. Scroll/pinch to zoom.
+        </p>
+      </header>
+
+      <!-- Filter controls -->
+      <div class="flex flex-wrap items-center gap-2 mb-4 text-sm">
+        <span class="text-slate-500 text-xs">Show paths with max L streak:</span>
+        <button data-min="0"  class="streak-btn active px-3 py-1 rounded border border-slate-700 text-slate-300 text-xs hover:bg-slate-800">All</button>
+        <button data-min="1"  class="streak-btn px-3 py-1 rounded border border-slate-700 text-slate-400 text-xs hover:bg-slate-800">≥ 1</button>
+        <button data-min="2"  class="streak-btn px-3 py-1 rounded border border-slate-700 text-slate-400 text-xs hover:bg-slate-800">≥ 2</button>
+        <button data-min="3"  class="streak-btn px-3 py-1 rounded border border-slate-700 text-slate-400 text-xs hover:bg-slate-800">≥ 3</button>
+        <button data-min="4"  class="streak-btn px-3 py-1 rounded border border-slate-700 text-slate-400 text-xs hover:bg-slate-800">≥ 4</button>
+        <button data-min="5"  class="streak-btn px-3 py-1 rounded border border-slate-700 text-slate-400 text-xs hover:bg-slate-800">≥ 5</button>
+        <span id="path-count" class="text-slate-600 text-xs ml-2"></span>
+        <button id="reset-btn" class="ml-auto px-3 py-1 rounded border border-slate-800 text-slate-600 text-xs hover:bg-slate-900 hidden">Reset selection</button>
+      </div>
+
+      <!-- SVG container -->
+      <div class="overflow-x-auto overflow-y-auto rounded-lg border border-slate-800 bg-slate-900/30" style="max-height: 80vh;">
+        <svg id="tree-svg" style={`display:block; min-width:${svgW}px;`}></svg>
+      </div>
+
+    </main>
+
+    <!-- Tooltip -->
+    <div
+      id="tooltip"
+      class="pointer-events-none fixed hidden z-50 rounded bg-slate-800 border border-slate-700 px-3 py-2 text-xs text-slate-200 shadow-xl max-w-xs"
+      style="white-space: pre-wrap;"
+    ></div>
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script
+      is:inline
+      define:vars={{
+        nodes: nodesForClient,
+        paths: pathsForClient,
+        svgW,
+        svgH,
+        colHeaders,
+        TOP_PAD,
+        LEFT_PAD,
+        COL_W,
+        NODE_R,
+      }}
+    >
+      const STREAK_COLORS = [
+        "#10b981", // 0 — emerald
+        "#84cc16", // 1 — lime
+        "#facc15", // 2 — yellow
+        "#f97316", // 3 — orange
+        "#ef4444", // 4 — red
+        "#dc2626", // 5 — red-600
+        "#991b1b", // 6+ — red-800
+      ];
+
+      function streakColor(n) {
+        return STREAK_COLORS[Math.min(n, STREAK_COLORS.length - 1)];
+      }
+
+      function nodeColor(outcome, isForced) {
+        if (outcome === "win") return isForced ? "#064e3b" : "#10b981";
+        if (outcome === "loss") return isForced ? "#450a0a" : "#ef4444";
+        return "#475569";
+      }
+
+      const svg = d3.select("#tree-svg").attr("width", svgW).attr("height", svgH);
+
+      // Zoomable group
+      const root = svg.append("g");
+      svg.call(
+        d3.zoom().scaleExtent([0.3, 6]).on("zoom", (e) => root.attr("transform", e.transform)),
+      );
+
+      // Column date headers
+      root
+        .append("g")
+        .selectAll("text")
+        .data(colHeaders)
+        .join("text")
+        .attr("x", (_, i) => LEFT_PAD + i * COL_W + COL_W / 2)
+        .attr("y", TOP_PAD - 10)
+        .attr("text-anchor", "middle")
+        .attr("font-size", 9)
+        .attr("fill", "#64748b")
+        .attr("font-family", "monospace")
+        .text((d) => d);
+
+      // Individual paths
+      const pathLine = d3
+        .line()
+        .x((d) => d.x)
+        .y((d) => d.y)
+        .curve(d3.curveCatmullRom.alpha(0.5));
+
+      const pathGroup = root.append("g").attr("class", "paths");
+
+      const pathEls = pathGroup
+        .selectAll("path")
+        .data(paths)
+        .join("path")
+        .attr("d", (d) => pathLine(d.points))
+        .attr("stroke", (d) => streakColor(d.maxStreak))
+        .attr("stroke-width", 0.9)
+        .attr("fill", "none")
+        .attr("opacity", 0.55)
+        .attr("data-max-streak", (d) => d.maxStreak)
+        .attr("data-row", (d) => d.row);
+
+      // Nodes
+      const nodeGroup = root.append("g").attr("class", "nodes");
+
+      const nodeEls = nodeGroup
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("cx", (d) => d.x)
+        .attr("cy", (d) => d.y)
+        .attr("r", NODE_R)
+        .attr("fill", (d) => nodeColor(d.outcome, d.isForced))
+        .attr("data-row-start", (d) => d.rowStart)
+        .attr("data-row-end", (d) => d.rowEnd)
+        .style("cursor", "pointer");
+
+      // Tooltip
+      const tooltip = document.getElementById("tooltip");
+
+      nodeEls
+        .on("mouseover", function (event, d) {
+          tooltip.textContent = d.label;
+          tooltip.classList.remove("hidden");
+        })
+        .on("mousemove", function (event) {
+          tooltip.style.left = event.clientX + 14 + "px";
+          tooltip.style.top = event.clientY - 10 + "px";
+        })
+        .on("mouseout", function () {
+          tooltip.classList.add("hidden");
+        });
+
+      // State
+      let activeMin = 0;
+      let selectedNode = null;
+      const pathCountEl = document.getElementById("path-count");
+      const resetBtn = document.getElementById("reset-btn");
+
+      function applyFilter() {
+        pathEls.each(function (d) {
+          const passesStreak = d.maxStreak >= activeMin;
+          const passesNode =
+            selectedNode === null ||
+            (d.row >= selectedNode.rowStart && d.row <= selectedNode.rowEnd);
+          const show = passesStreak && passesNode;
+          d3.select(this)
+            .attr("opacity", show ? 0.75 : 0.03)
+            .attr("stroke-width", show ? 1.2 : 0.4);
+        });
+
+        const visCount = paths.filter(
+          (d) =>
+            d.maxStreak >= activeMin &&
+            (selectedNode === null ||
+              (d.row >= selectedNode.rowStart && d.row <= selectedNode.rowEnd)),
+        ).length;
+        pathCountEl.textContent = `${visCount} of ${paths.length} paths`;
+      }
+
+      // Streak filter buttons
+      document.querySelectorAll(".streak-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".streak-btn").forEach((b) => {
+            b.classList.remove("active", "bg-slate-700", "text-white");
+          });
+          btn.classList.add("active", "bg-slate-700", "text-white");
+          activeMin = parseInt(btn.getAttribute("data-min"));
+          applyFilter();
+        });
+      });
+
+      // Node click: select / deselect
+      nodeEls.on("click", function (_event, d) {
+        _event.stopPropagation();
+        if (selectedNode && selectedNode.id === d.id) {
+          selectedNode = null;
+          resetBtn.classList.add("hidden");
+        } else {
+          selectedNode = d;
+          resetBtn.classList.remove("hidden");
+        }
+        applyFilter();
+      });
+
+      // Click background to deselect
+      svg.on("click", () => {
+        selectedNode = null;
+        resetBtn.classList.add("hidden");
+        applyFilter();
+      });
+
+      // Reset button
+      resetBtn.addEventListener("click", () => {
+        selectedNode = null;
+        resetBtn.classList.add("hidden");
+        applyFilter();
+      });
+
+      // Initial count
+      applyFilter();
+    </script>
+  </body>
+</html>
