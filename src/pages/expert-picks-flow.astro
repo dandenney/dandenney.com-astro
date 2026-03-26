@@ -1,0 +1,317 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { expertPicks, type ExpertPick } from "../data/expertPicks";
+
+export const prerender = true;
+
+const OUTLIER_PREFIX = "Mar 8 2026";
+
+function extractDateKey(gameDateTime: string): string {
+  return gameDateTime.match(/(\w+ \d+ \d+)/)?.[1] ?? "";
+}
+
+// All picks grouped by date (pool view)
+const byDate = new Map<string, ExpertPick[]>();
+for (const pick of expertPicks) {
+  const key = extractDateKey(pick.gameDateTime);
+  if (key === OUTLIER_PREFIX) continue;
+  const existing = byDate.get(key) ?? [];
+  existing.push(pick);
+  byDate.set(key, existing);
+}
+
+const sortedDates = Array.from(byDate.keys()).sort(
+  (a, b) => new Date(a).getTime() - new Date(b).getTime(),
+);
+
+interface DaySummary {
+  dateKey: string;
+  picks: ExpertPick[];
+  wins: ExpertPick[];
+  losses: ExpertPick[];
+}
+
+const days: DaySummary[] = sortedDates.map((dateKey) => {
+  const picks = byDate.get(dateKey)!;
+  return {
+    dateKey,
+    picks,
+    wins: picks.filter((p) => p.result === "win"),
+    losses: picks.filter((p) => p.result === "loss"),
+  };
+});
+
+// ─── Matt Severance path table ───────────────────────────────────────────────
+
+const mattPicks = expertPicks.filter(
+  (p) => p.authorName === "Matt Severance" && extractDateKey(p.gameDateTime) !== OUTLIER_PREFIX,
+);
+
+const mattByDate = new Map<string, ExpertPick[]>();
+for (const pick of mattPicks) {
+  const key = extractDateKey(pick.gameDateTime);
+  const existing = mattByDate.get(key) ?? [];
+  existing.push(pick);
+  mattByDate.set(key, existing);
+}
+
+const mattDates = Array.from(mattByDate.keys()).sort(
+  (a, b) => new Date(a).getTime() - new Date(b).getTime(),
+);
+
+const mattDayGroups = mattDates.map((date) => ({
+  dateKey: date,
+  picks: mattByDate.get(date)!,
+}));
+
+const kArr = mattDayGroups.map((d) => d.picks.length);
+// rowspan[c] = product of k[c+1 .. end] — how many paths share each pick at column c
+const rowspanArr = kArr.map((_, col) => kArr.slice(col + 1).reduce((a, b) => a * b, 1));
+const totalPaths = kArr.reduce((a, b) => a * b, 1);
+
+function cellPick(row: number, col: number): ExpertPick {
+  const rs = rowspanArr[col];
+  const blockSize = rs * kArr[col];
+  const posInBlock = row % blockSize;
+  const pickIndex = Math.floor(posInBlock / rs);
+  return mattDayGroups[col].picks[pickIndex];
+}
+
+const mattFirstPick = mattPicks[0];
+
+// Per-expert daily sequences
+// When an expert has multiple picks on one day, that day is "mixed" — we track
+// best possible outcome (had any W) and worst possible outcome (had any L).
+interface ExpertDaySlot {
+  dateKey: string;
+  picks: ExpertPick[];          // their picks on this day (may be 0)
+  hasAnyWin: boolean;
+  hasAnyLoss: boolean;
+  allSame: "win" | "loss" | "push" | "mixed" | "none";
+}
+
+interface ExpertFlow {
+  name: string;
+  otherName: string;
+  imageUrl: string | null;
+  days: ExpertDaySlot[];
+  // Streak stats calculated optimistically (any win = win) and pessimistically (any loss = loss)
+  bestLongestStreak: number;
+  worstLongestStreak: number;
+  activeDays: number;
+}
+
+const allAuthors = Array.from(new Set(expertPicks.map((p) => p.authorName))).sort();
+
+const expertFlows: ExpertFlow[] = allAuthors.map((name) => {
+  const authorPicks = expertPicks.filter(
+    (p) => p.authorName === name && extractDateKey(p.gameDateTime) !== OUTLIER_PREFIX,
+  );
+  const firstPick = authorPicks[0];
+
+  const expertDays: ExpertDaySlot[] = sortedDates.map((dateKey) => {
+    const dayPicks = authorPicks.filter((p) => extractDateKey(p.gameDateTime) === dateKey);
+    const hasAnyWin = dayPicks.some((p) => p.result === "win");
+    const hasAnyLoss = dayPicks.some((p) => p.result === "loss");
+    const results = new Set(dayPicks.map((p) => p.result));
+    let allSame: ExpertDaySlot["allSame"] = "none";
+    if (dayPicks.length === 0) {
+      allSame = "none";
+    } else if (results.size === 1) {
+      allSame = [...results][0] as "win" | "loss" | "push";
+    } else {
+      allSame = "mixed";
+    }
+    return { dateKey, picks: dayPicks, hasAnyWin, hasAnyLoss, allSame };
+  });
+
+  // Streak stats — only over days they had a pick
+  const activeDays = expertDays.filter((d) => d.picks.length > 0);
+
+  let bStreak = 0;
+  let bestLongestStreak = 0;
+  for (const d of activeDays) {
+    if (d.hasAnyWin) {
+      bStreak = 0;
+    } else {
+      bStreak++;
+      if (bStreak > bestLongestStreak) bestLongestStreak = bStreak;
+    }
+  }
+
+  let wStreak = 0;
+  let worstLongestStreak = 0;
+  for (const d of activeDays) {
+    if (d.hasAnyLoss) {
+      wStreak++;
+      if (wStreak > worstLongestStreak) worstLongestStreak = wStreak;
+    } else {
+      wStreak = 0;
+    }
+  }
+
+  return {
+    name,
+    otherName: firstPick?.authorOtherName ?? "",
+    imageUrl: firstPick?.authorImageUrl ?? null,
+    days: expertDays,
+    bestLongestStreak,
+    worstLongestStreak,
+    activeDays: activeDays.length,
+  };
+});
+
+// Sort by most active
+expertFlows.sort((a, b) => b.activeDays - a.activeDays);
+
+function formatDate(key: string) {
+  return new Date(key).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="Expert Picks Flow | Dan Denney"
+      description="Day-by-day betting flow showing possible win/loss paths from CBS SportsLine expert picks."
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <main class="mx-auto max-w-7xl px-4 py-12 space-y-16">
+
+      <header>
+        <h1 class="text-3xl font-bold text-white">Betting Flow</h1>
+        <p class="mt-1 text-slate-400 text-sm">
+          {days.length} days · Mar 9 – Mar 25 · one pick per day
+        </p>
+      </header>
+
+      <!-- ═══════════════════════════════════════════════════════
+           DAILY FLOW GRID — full pool of picks per day
+      ═══════════════════════════════════════════════════════ -->
+      <section>
+        <h2 class="text-lg font-semibold text-slate-300 mb-1">All Picks by Day</h2>
+        <p class="text-slate-500 text-sm mb-6">The full pool. Pick one badge per row to trace any path.</p>
+
+        <div class="space-y-3">
+          {days.map(({ dateKey, picks, wins, losses }) => (
+            <div class="flex items-start gap-4 rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-3">
+              <div class="shrink-0 w-20">
+                <div class="text-sm font-semibold text-slate-200">{formatDate(dateKey)}</div>
+                <div class="text-xs text-slate-500 mt-0.5">
+                  <span class="text-emerald-400">{wins.length}W</span>
+                  {" / "}
+                  <span class="text-red-400">{losses.length}L</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                {picks.map((pick) => (
+                  <span
+                    class={[
+                      "inline-flex items-center gap-1.5 rounded px-2 py-1 text-xs font-medium border",
+                      pick.result === "win"
+                        ? "bg-emerald-900/40 border-emerald-800 text-emerald-300"
+                        : pick.result === "loss"
+                          ? "bg-red-900/40 border-red-900 text-red-300"
+                          : "bg-slate-800 border-slate-700 text-slate-300",
+                    ].join(" ")}
+                  >
+                    <span class="opacity-70">{pick.authorOtherName}</span>
+                    <span class="opacity-40">·</span>
+                    <span>{pick.betType}</span>
+                    <span class={["font-bold", pick.result === "win" ? "text-emerald-400" : pick.result === "loss" ? "text-red-400" : "text-slate-400"].join(" ")}>
+                      {pick.result === "win" ? "W" : pick.result === "loss" ? "L" : "P"}
+                    </span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════
+           MATT SEVERANCE PATH TABLE
+      ═══════════════════════════════════════════════════════ -->
+      <section>
+        <!-- Expert header -->
+        <div class="flex items-center gap-3 mb-4">
+          {mattFirstPick?.authorImageUrl && (
+            <img src={mattFirstPick.authorImageUrl} alt="Matt Severance" class="w-10 h-10 rounded-full object-cover bg-slate-800 shrink-0" />
+          )}
+          <div>
+            <span class="font-semibold text-white">Matt Severance</span>
+            <span class="text-slate-500 text-sm ml-2">{mattFirstPick?.authorOtherName}</span>
+          </div>
+          <div class="ml-auto text-xs text-slate-500">
+            {totalPaths} possible paths across {mattDayGroups.length} pick days
+          </div>
+        </div>
+
+        <p class="text-slate-500 text-sm mb-4">
+          Each row is one possible path through Matt's picks. Columns are his pick days.
+          Single-pick days span all paths (forced outcome). Hover any cell for bet details.
+        </p>
+
+        <div class="overflow-x-auto rounded-lg border border-slate-800">
+          <table class="text-xs border-collapse">
+            <!-- Date header -->
+            <thead>
+              <tr class="bg-slate-900 border-b border-slate-800">
+                <th class="px-3 py-2 text-left text-slate-500 font-normal whitespace-nowrap border-r border-slate-800">
+                  Path
+                </th>
+                {mattDayGroups.map((group) => (
+                  <th class="px-3 py-2 text-center text-slate-400 font-medium whitespace-nowrap border-r border-slate-800 last:border-r-0">
+                    {formatDate(group.dateKey)}
+                    {group.picks.length > 1 && (
+                      <span class="ml-1 text-yellow-500 text-xs">({group.picks.length})</span>
+                    )}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {Array.from({ length: totalPaths }, (_, row) => (
+                <tr class="border-b border-slate-800/50 last:border-b-0">
+                  <td class="px-3 py-2 text-slate-600 border-r border-slate-800 whitespace-nowrap">
+                    {row + 1}
+                  </td>
+                  {mattDayGroups.map((_, col) => {
+                    const pick = cellPick(row, col);
+                    const isForced = kArr[col] === 1;
+                    const tooltip = `${pick.betTitle} (${pick.betType})`;
+                    return (
+                      <td
+                        title={tooltip}
+                        class={[
+                          "px-3 py-2 text-center font-bold border-r border-slate-800 last:border-r-0",
+                          pick.result === "win"
+                            ? isForced ? "bg-emerald-950/40 text-emerald-400" : "bg-emerald-950/70 text-emerald-300"
+                            : pick.result === "loss"
+                              ? isForced ? "bg-red-950/40 text-red-400" : "bg-red-950/70 text-red-300"
+                              : "bg-slate-800/60 text-slate-400",
+                        ].join(" ")}
+                      >
+                        {pick.result === "win" ? "W" : pick.result === "loss" ? "L" : "P"}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-slate-600 text-xs mt-2">
+          Brighter cells = branching days (you had a choice). Dimmer cells = forced outcome (only one pick that day).
+          Numbers in column header = picks available that day.
+        </p>
+      </section>
+
+    </main>
+  </body>
+</html>
