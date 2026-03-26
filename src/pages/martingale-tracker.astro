@@ -340,16 +340,16 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             <!-- Header -->
             <div class="flex items-center justify-between px-6 pt-5 pb-4 border-b border-slate-700/40">
               <div class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
-                <p class="font-mono text-[9px] uppercase tracking-[0.45em] text-cyan-400/80">Active Objective</p>
+                <div class="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.45em] text-cyan-400/80">Active Objective</p>
               </div>
               {danActiveBets.length > 0 ? (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[8px] uppercase tracking-[0.2em]">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[10px] uppercase tracking-[0.2em]">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                   Pending
                 </span>
               ) : (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[8px] uppercase tracking-[0.2em]">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em]">
                   Standby
                 </span>
               )}
@@ -371,37 +371,37 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
 
               <!-- Dan -->
               <div class="px-6 py-4">
-                <p class="font-mono text-[9px] uppercase tracking-[0.4em] text-cyan-400 mb-3">// Dan</p>
+                <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-cyan-400 mb-3">// Dan</p>
                 {danActiveBets.length > 0 ? (
                   danActiveBets.map((bet) => (
                     <div>
                       <div class="grid grid-cols-3 gap-3">
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
                           <p class="font-mono text-xl font-bold text-cyan-300">{danHeroSeriesState.displaySeriesId ?? bet.seriesId}</p>
                         </div>
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
+                          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
                           <p class="font-mono text-xl font-bold text-white">{bet.line}</p>
                         </div>
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
+                          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
                           <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(getStakeOut(bet))}</p>
                         </div>
                       </div>
                       {bet.latestPacket ? (
                         <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
+                          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
                           <div class="flex items-baseline gap-2 mt-1">
                             <p class:list={["font-mono text-sm font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
-                            <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
+                            <p class="font-mono text-[10px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
                           </div>
-                          <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
+                          <p class="mt-1 font-mono text-[10px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
                         </div>
                       ) : (
                         <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
-                          <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
+                          <p class="font-mono text-[10px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
+                          <p class="font-mono text-[10px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
                         </div>
                       )}
                     </div>
@@ -410,15 +410,15 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                   <div>
                     <div class="grid grid-cols-3 gap-3">
                       <div>
-                        <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">{danHeroSeriesState.status === "Continuing Series" ? "Series" : "Next Series"}</p>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">{danHeroSeriesState.status === "Continuing Series" ? "Series" : "Next Series"}</p>
                         <p class="font-mono text-xl font-bold text-cyan-300">{danHeroSeriesState.displaySeriesId ?? "—"}</p>
                       </div>
                       <div>
-                        <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
                         <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{danHeroSeriesState.nextBetStake ? currency.format(danHeroSeriesState.nextBetStake) : "—"}</p>
                       </div>
                       <div>
-                        <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
                         <p class:list={["font-mono text-sm font-bold", danHeroSeriesState.status === "Continuing Series" ? "text-amber-300" : "text-emerald-400"]}>{danHeroSeriesState.status}</p>
                       </div>
                     </div>
@@ -428,37 +428,37 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
 
               <!-- GardenOf -->
               <div class="px-6 py-4">
-                <p class="font-mono text-[9px] uppercase tracking-[0.4em] text-violet-400 mb-3">// GardenOf</p>
+                <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-violet-400 mb-3">// GardenOf</p>
                 {gardenActiveBetsList.length > 0 ? (
                   gardenActiveBetsList.map((bet) => (
                     <div>
                       <div class="grid grid-cols-3 gap-3">
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
                           <p class="font-mono text-xl font-bold text-violet-300">{gardenHeroSeriesState.displaySeriesId ?? bet.seriesId}</p>
                         </div>
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
+                          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
                           <p class="font-mono text-xl font-bold text-white">{bet.line}</p>
                         </div>
                         <div>
-                          <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
+                          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
                           <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(getStakeOut(bet))}</p>
                         </div>
                       </div>
                       {bet.latestPacket ? (
                         <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <span class="font-mono text-[7px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
+                          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
                           <div class="flex items-baseline gap-2 mt-1">
                             <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
-                            <p class="font-mono text-[9px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
+                            <p class="font-mono text-[10px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
                           </div>
-                          <p class="mt-1 font-mono text-[9px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
+                          <p class="mt-1 font-mono text-[10px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
                         </div>
                       ) : (
                         <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <p class="font-mono text-[8px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
-                          <p class="font-mono text-[8px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
+                          <p class="font-mono text-[10px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
+                          <p class="font-mono text-[10px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
                         </div>
                       )}
                     </div>
@@ -467,15 +467,15 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                   <div>
                     <div class="grid grid-cols-3 gap-3">
                       <div>
-                        <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">{gardenHeroSeriesState.status === "Continuing Series" ? "Series" : "Next Series"}</p>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">{gardenHeroSeriesState.status === "Continuing Series" ? "Series" : "Next Series"}</p>
                         <p class="font-mono text-xl font-bold text-violet-300">{gardenHeroSeriesState.displaySeriesId ?? "—"}</p>
                       </div>
                       <div>
-                        <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
                         <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{gardenHeroSeriesState.nextBetStake ? currency.format(gardenHeroSeriesState.nextBetStake) : "—"}</p>
                       </div>
                       <div>
-                        <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
                         <p class:list={["font-mono text-sm font-bold", gardenHeroSeriesState.status === "Continuing Series" ? "text-amber-300" : "text-emerald-400"]}>{gardenHeroSeriesState.status}</p>
                       </div>
                     </div>
@@ -506,39 +506,39 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
           <div class="flex items-center gap-3 mb-5">
             <div class="w-1 h-7 bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.5)]"></div>
             <p class="font-mono text-xs uppercase tracking-[0.4em] text-cyan-300 font-bold">Dan</p>
-            <p class="font-mono text-[9px] text-slate-400 uppercase tracking-wider">· {totalWagers} bets · {settledBets.length} settled · {pendingBets} pending</p>
+            <p class="font-mono text-[10px] text-slate-400 uppercase tracking-wider">· {totalWagers} bets · {settledBets.length} settled · {pendingBets} pending</p>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2 sm:col-span-1">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
               <p class="font-mono text-2xl font-bold tabular-nums text-white">{currency.format(startingBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
               <p class:list={["font-mono text-2xl font-bold tabular-nums", currentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(currentBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
               <p class:list={["font-mono text-2xl font-bold tabular-nums", netPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{netPL >= 0 ? "+" : ""}{currency.format(netPL)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
               <p class="font-mono text-2xl font-bold tabular-nums text-white">{settledBets.length ? `${winRate.toFixed(0)}%` : "—"}</p>
             </div>
             <div class="relative border border-cyan-500/20 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-cyan-500/40 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">HYSA Benchmark</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">HYSA Benchmark</p>
               <p class="font-mono text-2xl font-bold tabular-nums text-cyan-300">{currency.format(hysaCurrentValue)}</p>
-              <p class="font-mono text-[8px] text-slate-600 mt-1 uppercase">4.2% APY · Sim only</p>
+              <p class="font-mono text-[10px] text-slate-600 mt-1 uppercase">4.2% APY · Sim only</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">vs HYSA Delta</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">vs HYSA Delta</p>
               <p class:list={["font-mono text-2xl font-bold tabular-nums", strategyVsHysaDelta >= 0 ? "text-emerald-400" : "text-rose-400"]}>{strategyVsHysaDelta >= 0 ? "+" : ""}{currency.format(strategyVsHysaDelta)}</p>
             </div>
           </div>
@@ -549,41 +549,36 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
           <div class="flex items-center gap-3 mb-5">
             <div class="w-1 h-7 bg-violet-400 shadow-[0_0_10px_rgba(167,139,250,0.5)]"></div>
             <p class="font-mono text-xs uppercase tracking-[0.4em] text-violet-300 font-bold">GardenOf</p>
-            <p class="font-mono text-[9px] text-slate-400 uppercase tracking-wider">· {gardenOrderedBets.length} bets · {gardenSettledBets.length} settled · {gardenPendingBets} pending</p>
+            <p class="font-mono text-[10px] text-slate-400 uppercase tracking-wider">· {gardenOrderedBets.length} bets · {gardenSettledBets.length} settled · {gardenPendingBets} pending</p>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2 sm:col-span-1">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
               <p class="font-mono text-2xl font-bold tabular-nums text-white">{currency.format(startingBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/40 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
               <p class:list={["font-mono text-2xl font-bold tabular-nums", gardenCurrentBalance >= startingBalance ? "text-emerald-400" : "text-rose-400"]}>{currency.format(gardenCurrentBalance)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/40 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
               <p class:list={["font-mono text-2xl font-bold tabular-nums", gardenNetPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{gardenNetPL >= 0 ? "+" : ""}{currency.format(gardenNetPL)}</p>
             </div>
             <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
               <p class="font-mono text-2xl font-bold tabular-nums text-white">{gardenSettledBets.length ? `${gardenWinRate.toFixed(0)}%` : "—"}</p>
-            </div>
-            <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden col-span-2">
-              <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
-              <p class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 mb-2">Total Logged</p>
-              <p class="font-mono text-2xl font-bold tabular-nums text-white">{gardenOrderedBets.length} bets</p>
             </div>
           </div>
         </div>
 
       </div>
 
-      <p class="mt-10 font-mono text-[8px] text-slate-700 uppercase tracking-wider border-t border-slate-800/40 pt-5">
+      <p class="mt-10 font-mono text-[10px] text-slate-500 uppercase tracking-wider border-t border-slate-800/40 pt-5">
         Accounting: Each placed bet debits stake immediately. Settlement credits return amount only (0 on losses, no credit while pending).
       </p>
     </section>
@@ -611,11 +606,11 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             <table class="w-full border-collapse text-left min-w-[480px]">
               <thead>
                 <tr class="border-b border-slate-700/50">
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
                 </tr>
               </thead>
               <tbody>
@@ -625,7 +620,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
                     <td class="py-3 pr-8">
-                      <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      <span class:list={["font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
                         {series.status}
                       </span>
                     </td>
@@ -649,11 +644,11 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             <table class="w-full border-collapse text-left min-w-[480px]">
               <thead>
                 <tr class="border-b border-slate-700/50">
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
-                  <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                  <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
                 </tr>
               </thead>
               <tbody>
@@ -663,7 +658,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
                     <td class="py-3 pr-8">
-                      <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      <span class:list={["font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
                         {series.status}
                       </span>
                     </td>
@@ -690,15 +685,15 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
           <table class="w-full border-collapse text-left min-w-[960px]">
             <thead>
               <tr class="border-b border-slate-700/50">
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
               </tr>
             </thead>
             <tbody>
@@ -706,11 +701,11 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                 <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
                   <td class="py-3 pr-6 font-mono font-bold text-cyan-300 text-sm whitespace-nowrap">{bet.seriesId}</td>
                   <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
-                  <td class="py-3 pr-6 text-sm text-white">{bet.pick}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-white">{bet.pick}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-rose-400 tabular-nums whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
                   <td class="py-3 pr-6 whitespace-nowrap">
-                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                    <span class:list={["font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
                       {bet.result === "pending" ? "Pending" : bet.result}
                     </span>
                   </td>
@@ -740,15 +735,15 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
           <table class="w-full border-collapse text-left min-w-[960px]">
             <thead>
               <tr class="border-b border-slate-700/50">
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
-                <th class="font-mono text-[8px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
               </tr>
             </thead>
             <tbody>
@@ -756,11 +751,11 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                 <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
                   <td class="py-3 pr-6 font-mono font-bold text-violet-300 text-sm whitespace-nowrap">{bet.seriesId}</td>
                   <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
-                  <td class="py-3 pr-6 text-sm text-white">{bet.pick}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-white">{bet.pick}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-rose-400 tabular-nums whitespace-nowrap">-{currency.format(bet.stakeOut)}</td>
                   <td class="py-3 pr-6 whitespace-nowrap">
-                    <span class:list={["font-mono text-[8px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                    <span class:list={["font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border", bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
                       {bet.result === "pending" ? "Pending" : bet.result}
                     </span>
                   </td>
