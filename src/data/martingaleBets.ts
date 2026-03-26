@@ -466,7 +466,7 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Tristan da Silva Over 11.5 Total Points -114",
     line: "-111",
     amount: 30,
-    result: "loss",
+    result: "pending",
     stakeOut: 30,
     returnAmount: 0.00,
     eventId: "401810916",
