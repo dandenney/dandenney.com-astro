@@ -472,6 +472,32 @@ export const martingaleBets: MartingaleBet[] = [
     eventId: "401810916",
     scheduledStart: "2026-03-25T03:00:00Z",
   },
+  {
+    id: 36,
+    owner: "Dan",
+    date: "2026-03-27",
+    seriesId: "L",
+    pick: "Jared McCain Over 8.5 Points",
+    line: "-130",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
+    eventId: "401810925",
+    scheduledStart: "2026-03-28T00:00:00Z",
+  },
+  {
+    id: 37,
+    owner: "GardenOf",
+    date: "2026-03-27",
+    seriesId: "H",
+    pick: "Jared McCain Over 8.5 Points",
+    line: "-130",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
+    eventId: "401810925",
+    scheduledStart: "2026-03-28T00:00:00Z",
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
