@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-27T03:12:37.241Z",
+  "updatedAt": "2026-03-27T04:21:40.318Z",
   "connections": {
     "01KKM3C5MFBPVV4BSNEMMBRNVT": {
       "sinceEventId": "01KKSTJ3Z73FSBBQYPGADRS0B6",
-      "lastRunAt": "2026-03-27T03:12:36.423Z",
+      "lastRunAt": "2026-03-27T04:21:39.366Z",
       "lastSuccessAt": "2026-03-15T23:02:01.471Z",
-      "lastError": "Shipp 01KKM3C5MFBPVV4BSNEMMBRNVT (500): {\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\",\"error\":\"request failed\"}"
+      "lastError": "Shipp 01KKM3C5MFBPVV4BSNEMMBRNVT (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     },
     "01KKM1TDA5SPAN8YGXZ7T1V82E": {
       "sinceEventId": "01JRKQ3M9DBGRPH8Y4AQAER1PZ",
-      "lastRunAt": "2026-03-27T03:12:36.989Z",
+      "lastRunAt": "2026-03-27T04:21:39.931Z",
       "lastSuccessAt": "2026-03-16T22:12:23.314Z",
       "lastError": "Shipp 01KKM1TDA5SPAN8YGXZ7T1V82E (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     }
