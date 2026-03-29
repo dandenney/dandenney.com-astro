@@ -528,6 +528,32 @@ export const martingaleBets: MartingaleBet[] = [
     eventId: "401810936",
     scheduledStart: "2026-03-29T02:00:00Z",
   },
+  {
+    id: 40,
+    owner: "Dan",
+    date: "2026-03-29",
+    seriesId: "M",
+    pick: "Dejounte Murray Under 27.5 Points + Rebounds + Assists",
+    line: "-119",
+    amount: 120,
+    result: "pending",
+    stakeOut: 120,
+    eventId: "401810943",
+    scheduledStart: "2026-03-29T23:00:00Z",
+  },
+  {
+    id: 41,
+    owner: "GardenOf",
+    date: "2026-03-29",
+    seriesId: "I",
+    pick: "Dejounte Murray Under 27.5 Points + Rebounds + Assists",
+    line: "-119",
+    amount: 120,
+    result: "pending",
+    stakeOut: 120,
+    eventId: "401810943",
+    scheduledStart: "2026-03-29T23:00:00Z",
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
