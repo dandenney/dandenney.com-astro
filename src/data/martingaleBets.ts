@@ -556,6 +556,32 @@ export const martingaleBets: MartingaleBet[] = [
     eventId: "401810943",
     scheduledStart: "2026-03-29T23:00:00Z",
   },
+  {
+    id: 42,
+    owner: "Dan",
+    date: "2026-03-30",
+    seriesId: "N",
+    pick: "Rudy Gobert Under 12.5 Rebounds",
+    line: "-136",
+    amount: 60,
+    result: "pending",
+    stakeOut: 60,
+    eventId: "401810950",
+    scheduledStart: "2026-03-31T00:30:00Z",
+  },
+  {
+    id: 43,
+    owner: "GardenOf",
+    date: "2026-03-30",
+    seriesId: "J",
+    pick: "Rudy Gobert Under 12.5 Rebounds",
+    line: "-136",
+    amount: 60,
+    result: "pending",
+    stakeOut: 60,
+    eventId: "401810950",
+    scheduledStart: "2026-03-31T00:30:00Z",
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
