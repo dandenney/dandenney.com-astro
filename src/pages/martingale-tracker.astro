@@ -101,6 +101,8 @@ const getHeroSeriesState = (bets: MartingaleBet[], balance: number): HeroSeriesS
 
   const lastBetAmount = getStakeOut(lastBet);
   const nextSeriesId = getNextSeriesId(lastBet.seriesId);
+  const seriesBets = bets.filter((bet) => bet.seriesId === lastBet.seriesId);
+  const lossesCount = seriesBets.filter((bet) => bet.result === "loss").length;
 
   if (lastBet.result === "pending") {
     return {
@@ -114,15 +116,15 @@ const getHeroSeriesState = (bets: MartingaleBet[], balance: number): HeroSeriesS
     };
   }
 
-  // Last bet was a loss — still in the same series, next bet doubles
   if (lastBet.result === "loss") {
+    const fullFail = lossesCount >= 3;
     return {
       currentSeriesId: lastBet.seriesId,
       nextSeriesId,
-      displaySeriesId: lastBet.seriesId,
-      status: "Continuing Series",
+      displaySeriesId: fullFail ? nextSeriesId : lastBet.seriesId,
+      status: fullFail ? "New Series Ready" : "Continuing Series",
       lastBetAmount,
-      nextBetStake: Number((lastBetAmount * 2).toFixed(2)),
+      nextBetStake: fullFail ? getNewSeriesStake(balance) : Number((lastBetAmount * 2).toFixed(2)),
       lastBet,
     };
   }
