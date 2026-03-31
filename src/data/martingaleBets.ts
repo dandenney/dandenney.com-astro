@@ -584,6 +584,32 @@ export const martingaleBets: MartingaleBet[] = [
     eventId: "401810950",
     scheduledStart: "2026-03-31T00:30:00Z",
   },
+  {
+    id: 44,
+    owner: "Dan",
+    date: "2026-03-31",
+    seriesId: "O",
+    pick: "Duncan Robinson Over 4.5 Rebounds + Assists",
+    line: "-130",
+    amount: 60,
+    result: "pending",
+    stakeOut: 60,
+    eventId: "401810956",
+    scheduledStart: "2026-04-01T00:00:00Z",
+  },
+  {
+    id: 45,
+    owner: "GardenOf",
+    date: "2026-03-31",
+    seriesId: "K",
+    pick: "Duncan Robinson Over 4.5 Rebounds + Assists",
+    line: "-130",
+    amount: 60,
+    result: "pending",
+    stakeOut: 60,
+    eventId: "401810956",
+    scheduledStart: "2026-04-01T00:00:00Z",
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
