@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "updatedAt": "2026-03-31T05:17:53.957Z",
+  "updatedAt": "2026-03-31T23:15:27.138Z",
   "connections": {
     "01KKM3C5MFBPVV4BSNEMMBRNVT": {
       "sinceEventId": "01KKSTJ3Z73FSBBQYPGADRS0B6",
-      "lastRunAt": "2026-03-31T05:17:52.926Z",
+      "lastRunAt": "2026-03-31T23:15:26.605Z",
       "lastSuccessAt": "2026-03-15T23:02:01.471Z",
       "lastError": "Shipp 01KKM3C5MFBPVV4BSNEMMBRNVT (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     },
     "01KKM1TDA5SPAN8YGXZ7T1V82E": {
       "sinceEventId": "01JRKQ3M9DBGRPH8Y4AQAER1PZ",
-      "lastRunAt": "2026-03-31T05:17:53.605Z",
+      "lastRunAt": "2026-03-31T23:15:27.016Z",
       "lastSuccessAt": "2026-03-16T22:12:23.314Z",
       "lastError": "Shipp 01KKM1TDA5SPAN8YGXZ7T1V82E (500): {\"error\":\"request failed\",\"hint\":\"Try again. If this persists, verify your connection_id and filter_instructions, or contact support with the time of the request.\"}"
     }
@@ -5755,6 +5755,48 @@
             "previousCheckpoint": "T-120",
             "previousRecommendation": "No Bet",
             "confidenceChange": 0,
+            "evidenceChange": 0,
+            "newSignalsSinceLast": 0
+          }
+        }
+      ],
+      "44": [
+        {
+          "betId": 44,
+          "checkpoint": "T-120",
+          "recommendation": "No Bet",
+          "confidence": 20,
+          "status": "active",
+          "reason": "Insufficient pregame data.",
+          "insufficientData": true,
+          "matchedSignalsCount": 0,
+          "matchedSignalIds": [],
+          "generatedAt": "2026-03-31T23:15:27.135Z",
+          "deltaFromLast": {
+            "previousCheckpoint": null,
+            "previousRecommendation": null,
+            "confidenceChange": 20,
+            "evidenceChange": 0,
+            "newSignalsSinceLast": 0
+          }
+        }
+      ],
+      "45": [
+        {
+          "betId": 45,
+          "checkpoint": "T-120",
+          "recommendation": "No Bet",
+          "confidence": 20,
+          "status": "active",
+          "reason": "Insufficient pregame data.",
+          "insufficientData": true,
+          "matchedSignalsCount": 0,
+          "matchedSignalIds": [],
+          "generatedAt": "2026-03-31T23:15:27.135Z",
+          "deltaFromLast": {
+            "previousCheckpoint": null,
+            "previousRecommendation": null,
+            "confidenceChange": 20,
             "evidenceChange": 0,
             "newSignalsSinceLast": 0
           }
