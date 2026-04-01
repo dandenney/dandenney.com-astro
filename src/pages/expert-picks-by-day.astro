@@ -41,8 +41,18 @@ for (const pick of expertPicks) {
   dayMap.set(pick.authorName, existing);
 }
 
+const monthOrder: Record<string, number> = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+};
+
+function dateKeyToSortKey(dateKey: string): number {
+  const [month, day, year] = dateKey.split(" ");
+  return parseInt(year) * 10000 + (monthOrder[month] ?? 0) * 100 + parseInt(day);
+}
+
 const sortedDates = Array.from(byDate.keys()).sort(
-  (a, b) => new Date(a).getTime() - new Date(b).getTime(),
+  (a, b) => dateKeyToSortKey(a) - dateKeyToSortKey(b),
 );
 
 // Determine max picks per author per day (to set column widths)
@@ -69,10 +79,9 @@ for (const author of authors) {
   }
 }
 
-// Format date for display
+// Format date for display — use the string directly, no Date parsing
 function formatDate(dateKey: string): string {
-  const d = new Date(dateKey);
-  return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  return dateKey;
 }
 ---
 
