@@ -33,7 +33,7 @@ Five collections, each backed by Markdown/MDX files:
 - `reviews` — restaurant/venue reviews ("No Reservaitions"), with city/state/coordinates for map rendering; `aiGenerated` flag tracks AI-assisted entries
 - `songs` — music reviews with Spotify metadata; almost all `aiGenerated: true`
 
-Most pages use `export const prerender = true` for static generation, even in SSR mode. Dynamic pages (martingale tracker, shipp fetch endpoints) run server-side.
+Most pages use `export const prerender = true` for static generation, even in SSR mode. Dynamic pages (martingale tracker) run server-side.
 
 ### Layouts
 
@@ -46,15 +46,12 @@ Most pages use `export const prerender = true` for static generation, even in SS
 ### Key Data Files
 
 - `src/data/martingaleBets.ts` — all bet records; contains logic helpers (`getNewSeriesStake`, `getStakeOut`, `getReturnAmount`, `getNetImpact`)
-- `src/data/shipp-state.json` — cached shipp.ai signal state (written by `scripts/shipp-sync.mjs`)
-- `src/server/shipp/` — server-only shipp.ai integration: client, normalizer, state reader, matching logic
 
 ### Martingale Tracker (`/martingale-tracker`)
 
 Full instructions for adding bets and settling results are in `docs/adding-martingale-bets.md`. Short version:
 1. Append to `src/data/martingaleBets.ts` — use the next sequential `id`
-2. Update `nbaTokens` in `src/server/shipp/matching.ts` if a new player/team appears in the pick
-3. Settle by updating `result` and adding `returnAmount`; odd-penny splits go to GardenOf
+2. Settle by updating `result` and adding `returnAmount`; odd-penny splits go to GardenOf
 
 ### Agent Content Pipeline
 
@@ -62,7 +59,6 @@ Full instructions for adding bets and settling results are in `docs/adding-marti
 
 ### GitHub Actions
 
-- `shipp-sync.yml` — syncs shipp.ai signal data to `src/data/shipp-state.json`
 - `settle-pending-bets.yml` — daily auto-settlement via ESPN APIs; run manually with `--bet-id <id>`
 - `generate-review.yml` / `generate-song-review.yml` — legacy AI content generation (being replaced by agent pipeline)
 
@@ -78,4 +74,4 @@ Before committing, verify all new/modified assets (images, fonts, etc.) are stag
 
 ## Debugging
 
-When debugging integration issues (shipp.ai, Notion, Spotify), check `.env.local` for required API keys before diving into code changes.
+When debugging integration issues (Notion, Spotify), check `.env.local` for required API keys before diving into code changes.

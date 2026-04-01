@@ -14,8 +14,6 @@ import {
   getNewSeriesStake,
   type MartingaleBet,
 } from "../data/martingaleBets";
-import { readShippState } from "@/server/shipp/state";
-
 const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -189,15 +187,6 @@ if (firstBetDate) {
 
 const strategyVsHysaDelta = currentBalance - hysaCurrentValue;
 
-const shippState = await readShippState();
-const pendingBetCheckpoints = orderedBets
-  .filter((bet) => bet.result === "pending")
-  .map((bet) => {
-    const packets = shippState.checkpoints?.byBetId?.[String(bet.id)] ?? [];
-    const latestPacket = [...packets].sort((a, b) => b.generatedAt.localeCompare(a.generatedAt))[0] ?? null;
-    return { bet, latestPacket };
-  });
-
 const danHeroSeriesState = getHeroSeriesState(orderedBets, currentBalance);
 
 const gardenSettledBets = gardenOrderedBets.filter((bet) => bet.result !== "pending");
@@ -246,30 +235,10 @@ const gardenSeriesSummaries: SeriesSummary[] = Array.from(gardenSeriesMap.entrie
   },
 );
 
-const gardenPendingBetCheckpoints = gardenOrderedBets
-  .filter((bet) => bet.result === "pending")
-  .map((bet) => {
-    const packets = shippState.checkpoints?.byBetId?.[String(bet.id)] ?? [];
-    const latestPacket = [...packets].sort((a, b) => b.generatedAt.localeCompare(a.generatedAt))[0] ?? null;
-    return { bet, latestPacket };
-  });
-
 const gardenHeroSeriesState = getHeroSeriesState(gardenOrderedBets, gardenCurrentBalance);
 
-// Hero active bets with checkpoint data merged in
-const danActiveBets = orderedBets
-  .filter((bet) => bet.result === "pending")
-  .map((bet) => ({
-    ...bet,
-    latestPacket: pendingBetCheckpoints.find((c) => c.bet.id === bet.id)?.latestPacket ?? null,
-  }));
-
-const gardenActiveBetsList = gardenOrderedBets
-  .filter((bet) => bet.result === "pending")
-  .map((bet) => ({
-    ...bet,
-    latestPacket: gardenPendingBetCheckpoints.find((c) => c.bet.id === bet.id)?.latestPacket ?? null,
-  }));
+const danActiveBets = orderedBets.filter((bet) => bet.result === "pending");
+const gardenActiveBetsList = gardenOrderedBets.filter((bet) => bet.result === "pending");
 
 // Descending order for tables
 const withRunningBalanceDesc = [...withRunningBalance].reverse();
@@ -391,21 +360,6 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                           <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(getStakeOut(bet))}</p>
                         </div>
                       </div>
-                      {bet.latestPacket ? (
-                        <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
-                          <div class="flex items-baseline gap-2 mt-1">
-                            <p class:list={["font-mono text-sm font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
-                            <p class="font-mono text-[10px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
-                          </div>
-                          <p class="mt-1 font-mono text-[10px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
-                        </div>
-                      ) : (
-                        <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <p class="font-mono text-[10px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
-                          <p class="font-mono text-[10px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
-                        </div>
-                      )}
                     </div>
                   ))
                 ) : (
@@ -448,21 +402,6 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                           <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(getStakeOut(bet))}</p>
                         </div>
                       </div>
-                      {bet.latestPacket ? (
-                        <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">{bet.latestPacket.checkpoint} · {bet.latestPacket.status}</span>
-                          <div class="flex items-baseline gap-2 mt-1">
-                            <p class:list={["font-mono text-base font-bold uppercase tracking-wide", bet.latestPacket.recommendation === "PLAY" || bet.latestPacket.recommendation === "BET" ? "text-emerald-400" : "text-rose-400"]}>{bet.latestPacket.recommendation}</p>
-                            <p class="font-mono text-[10px] text-slate-400">{bet.latestPacket.confidence}% confidence</p>
-                          </div>
-                          <p class="mt-1 font-mono text-[10px] text-slate-400 leading-relaxed line-clamp-2">{bet.latestPacket.reason}</p>
-                        </div>
-                      ) : (
-                        <div class="mt-3 border-t border-slate-700/40 pt-3">
-                          <p class="font-mono text-[10px] uppercase tracking-wider text-amber-400">No Checkpoint Yet</p>
-                          <p class="font-mono text-[10px] text-slate-500 mt-0.5">Fallback: no bet until T-120 captured</p>
-                        </div>
-                      )}
                     </div>
                   ))
                 ) : (

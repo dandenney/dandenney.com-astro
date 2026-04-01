@@ -1,6 +1,6 @@
 # Adding Martingale Bets
 
-Instructions for adding a new bet to the tracker and keeping the shipp.ai signal matching up to date.
+Instructions for adding a new bet to the tracker.
 
 ## Martingale system rules
 
@@ -59,37 +59,7 @@ Append to the `martingaleBets` array. Use the next sequential integer for `id` (
 
 Leave `returnAmount` off for pending bets. Add it (along with updating `result`) when the bet settles.
 
-## Step 2: Update signal matching in `matching.ts`
-
-File: `src/server/shipp/matching.ts`
-
-The `nbaTokens` list drives two things:
-1. Whether a bet's pick is recognized as NBA (enabling sport-level signal matching)
-2. Whether team/player tokens in the pick overlap with signal team names
-
-**Check after every new bet:**
-
-- If the pick contains a **player name** not already in `nbaTokens`, add their last name (and first name only if the last name is too generic). Follow the existing pattern — `"scoot"` and `"henderson"` for Scoot Henderson, `"edwards"` for Justin Edwards.
-- If the pick contains a **team name or abbreviation** (e.g. `CHA`, `SA`, `Celtics`) not already covered, add lowercase tokens for the team's city, nickname, and common abbreviation.
-
-Current list for reference (as of March 2026):
-
-```ts
-const nbaTokens = [
-  "lakers", "celtics", "knicks", "wizards", "heat",
-  "nuggets", "trail", "blazers",
-  "scoot", "henderson",           // Scoot Henderson
-  "edwards",                      // Justin Edwards
-  "sensabaugh",                   // Brice Sensabaugh
-  "suns", "phoenix", "pho",       // Phoenix Suns
-  "bos", "boston",                // Boston Celtics (abbrev)
-  "sixers", "philadelphia",
-];
-```
-
-Add entries here as new players or teams appear in picks. Keep entries lowercase.
-
-## Step 3: Settling a bet
+## Step 2: Settling a bet
 
 When a result comes in, update the existing entry in `martingaleBets.ts`:
 
