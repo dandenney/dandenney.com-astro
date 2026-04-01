@@ -1,0 +1,227 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { expertPicks, type ExpertPick } from "../data/expertPicks";
+
+export const prerender = true;
+
+function extractDateKey(gameDateTime: string): string {
+  return gameDateTime.match(/(\w+ \d+ \d+)/)?.[1] ?? "";
+}
+
+// Collect all unique experts (sorted by total pick count desc)
+const authorPickCounts = new Map<string, number>();
+const authorImageUrls = new Map<string, string | null>();
+const authorOtherNames = new Map<string, string>();
+
+for (const pick of expertPicks) {
+  authorPickCounts.set(pick.authorName, (authorPickCounts.get(pick.authorName) ?? 0) + 1);
+  if (!authorImageUrls.has(pick.authorName)) {
+    authorImageUrls.set(pick.authorName, pick.authorImageUrl);
+  }
+  if (!authorOtherNames.has(pick.authorName)) {
+    authorOtherNames.set(pick.authorName, pick.authorOtherName);
+  }
+}
+
+const authors = Array.from(authorPickCounts.entries())
+  .sort((a, b) => b[1] - a[1])
+  .map(([name]) => name);
+
+// Group picks by date, then by author
+const byDate = new Map<string, Map<string, ExpertPick[]>>();
+
+for (const pick of expertPicks) {
+  const dateKey = extractDateKey(pick.gameDateTime);
+  if (!byDate.has(dateKey)) {
+    byDate.set(dateKey, new Map());
+  }
+  const dayMap = byDate.get(dateKey)!;
+  const existing = dayMap.get(pick.authorName) ?? [];
+  existing.push(pick);
+  dayMap.set(pick.authorName, existing);
+}
+
+const sortedDates = Array.from(byDate.keys()).sort(
+  (a, b) => new Date(a).getTime() - new Date(b).getTime(),
+);
+
+// Determine max picks per author per day (to set column widths)
+const maxPicksPerAuthor = new Map<string, number>();
+for (const author of authors) {
+  let max = 0;
+  for (const [, dayMap] of byDate) {
+    const count = dayMap.get(author)?.length ?? 0;
+    if (count > max) max = count;
+  }
+  maxPicksPerAuthor.set(author, max);
+}
+
+// Build column slots: each author gets N columns where N = their max picks per day
+interface ColumnSlot {
+  author: string;
+  slotIndex: number; // 0-based within that author's group
+}
+const columns: ColumnSlot[] = [];
+for (const author of authors) {
+  const maxSlots = maxPicksPerAuthor.get(author) ?? 1;
+  for (let i = 0; i < maxSlots; i++) {
+    columns.push({ author, slotIndex: i });
+  }
+}
+
+// Format date for display
+function formatDate(dateKey: string): string {
+  const d = new Date(dateKey);
+  return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+}
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="Expert Picks by Day | Dan Denney"
+      description="CBS SportsLine expert picks visualized as a daily grid."
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <main class="mx-auto max-w-full px-2 py-8">
+      <h1 class="text-2xl font-bold text-center mb-6 text-slate-100">Expert Picks by Day</h1>
+
+      <!-- Expert legend -->
+      <div class="flex flex-wrap gap-3 justify-center mb-6">
+        {authors.map((author) => {
+          const img = authorImageUrls.get(author);
+          const other = authorOtherNames.get(author);
+          return (
+            <div class="flex flex-col items-center gap-1">
+              {img ? (
+                <img
+                  src={img}
+                  alt={author}
+                  title={`${author} — ${other}`}
+                  class="w-8 h-8 rounded-full object-cover border border-slate-700"
+                />
+              ) : (
+                <div
+                  class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs font-bold text-slate-300"
+                  title={`${author} — ${other}`}
+                >
+                  {author.split(" ").map((w: string) => w[0]).join("").slice(0, 2)}
+                </div>
+              )}
+              <span class="text-[9px] text-slate-400 text-center leading-tight max-w-[40px] break-words">
+                {author.split(" ")[0]}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      <!-- Grid -->
+      <div class="overflow-x-auto">
+        <table class="border-collapse text-xs w-full">
+          <thead>
+            <tr>
+              <!-- Date label column -->
+              <th class="sticky left-0 bg-slate-950 z-10 px-2 py-1 text-left text-slate-400 font-medium whitespace-nowrap border-b border-slate-700 text-[10px]">
+                Date
+              </th>
+              <!-- One th per column slot, group by author -->
+              {columns.map(({ author, slotIndex }) => {
+                const img = authorImageUrls.get(author);
+                const isFirstSlot = slotIndex === 0;
+                const authorSlots = maxPicksPerAuthor.get(author) ?? 1;
+                return (
+                  <th
+                    class="px-0.5 py-1 border-b border-slate-700 text-center"
+                    style={isFirstSlot && authorSlots > 1 ? `border-left: 1px solid rgb(51 65 85)` : ""}
+                  >
+                    {isFirstSlot ? (
+                      img ? (
+                        <img
+                          src={img}
+                          alt={author}
+                          title={author}
+                          class="w-5 h-5 rounded-full object-cover mx-auto border border-slate-700"
+                        />
+                      ) : (
+                        <div
+                          class="w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center text-[8px] font-bold text-slate-300 mx-auto"
+                          title={author}
+                        >
+                          {author.split(" ").map((w: string) => w[0]).join("").slice(0, 2)}
+                        </div>
+                      )
+                    ) : (
+                      <div class="w-5 h-5 mx-auto" />
+                    )}
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            {sortedDates.map((dateKey) => {
+              const dayMap = byDate.get(dateKey)!;
+              return (
+                <tr class="hover:bg-slate-900/40 border-b border-slate-700">
+                  <td class="sticky left-0 z-10 bg-slate-950 px-2 py-3 text-slate-400 whitespace-nowrap font-medium text-[10px]">
+                    {formatDate(dateKey)}
+                  </td>
+                  {columns.map(({ author, slotIndex }) => {
+                    const picks = dayMap.get(author) ?? [];
+                    const pick = picks[slotIndex];
+                    if (!pick) {
+                      return (
+                        <td class="px-0.5 py-3">
+                          <div class="w-5 h-5 rounded-sm bg-slate-900 mx-auto" />
+                        </td>
+                      );
+                    }
+                    const isWin = pick.result === "win";
+                    const isLoss = pick.result === "loss";
+                    const bgClass = isWin
+                      ? "bg-emerald-700 hover:bg-emerald-600"
+                      : isLoss
+                        ? "bg-red-800 hover:bg-red-700"
+                        : "bg-slate-500 hover:bg-slate-400";
+                    const tooltipText = `${pick.betTitle}\n${pick.awayTeam} @ ${pick.homeTeam}\n${pick.result.toUpperCase()}`;
+                    return (
+                      <td class="px-0.5 py-3">
+                        <div
+                          class={`w-5 h-5 rounded-sm mx-auto cursor-default ${bgClass}`}
+                          title={tooltipText}
+                        />
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Legend -->
+      <div class="flex gap-4 justify-center mt-6 text-xs text-slate-400">
+        <div class="flex items-center gap-1.5">
+          <div class="w-4 h-4 rounded-sm bg-emerald-700" />
+          <span>Win</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-4 h-4 rounded-sm bg-red-800" />
+          <span>Loss</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-4 h-4 rounded-sm bg-slate-500" />
+          <span>Push</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-4 h-4 rounded-sm bg-slate-900 border border-slate-800" />
+          <span>No pick</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
