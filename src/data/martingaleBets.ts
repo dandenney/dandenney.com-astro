@@ -620,8 +620,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Seattle Mariners Money Line",
     line: "-115",
     amount: 60,
-    result: "pending",
+    result: "loss",
     stakeOut: 60,
+    returnAmount: 0,
   },
   {
     id: 47,
@@ -631,8 +632,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Seattle Mariners Money Line",
     line: "-115",
     amount: 60,
-    result: "pending",
+    result: "loss",
     stakeOut: 60,
+    returnAmount: 0,
   },
 ];
 
