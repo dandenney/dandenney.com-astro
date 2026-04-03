@@ -644,8 +644,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Toumani Camara Over 14.5 Points",
     line: "-102",
     amount: 120,
-    result: "pending",
+    result: "win",
     stakeOut: 120,
+    returnAmount: 237.65,
   },
   {
     id: 49,
@@ -655,8 +656,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Toumani Camara Over 14.5 Points",
     line: "-102",
     amount: 120,
-    result: "pending",
+    result: "win",
     stakeOut: 120,
+    returnAmount: 237.65,
   },
 ];
 
