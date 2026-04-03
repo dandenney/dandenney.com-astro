@@ -660,6 +660,16 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 120,
     returnAmount: 237.65,
   },
+  {
+    id: 50,
+    date: "2026-04-03",
+    seriesId: "P",
+    pick: "Sacramento Kings +5.5",
+    line: "-110",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
