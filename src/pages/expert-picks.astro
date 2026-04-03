@@ -102,10 +102,7 @@ bettors.sort((a, b) => b.picks.length - a.picks.length);
                   {picks.map((pick) => (
                     <tr class="bg-slate-950 hover:bg-slate-900 transition-colors">
                       <td class="px-4 py-3 whitespace-nowrap text-slate-300">
-                        {new Date(pick.gameDateTime).toLocaleDateString("en-US", {
-                          month: "short",
-                          day: "numeric",
-                        })}
+                        {pick.gameDateTime.split(",")[0].replace(/\s+\d{4}$/, "").trim()}
                       </td>
                       <td class="px-4 py-3 whitespace-nowrap text-slate-300">
                         <span>{pick.homeTeam}</span>
