@@ -662,6 +662,7 @@ export const martingaleBets: MartingaleBet[] = [
   },
   {
     id: 50,
+    owner: "Dan",
     date: "2026-04-03",
     seriesId: "P",
     pick: "Sacramento Kings +5.5",
@@ -669,7 +670,29 @@ export const martingaleBets: MartingaleBet[] = [
     amount: 30,
     result: "loss",
     stakeOut: 30,
-    returnAmount: 0.00,
+    returnAmount: 0.0,
+  },
+  {
+    id: 51,
+    owner: "Dan",
+    date: "2026-04-04",
+    seriesId: "Q",
+    pick: "New York Yankees -1.5",
+    line: "+112",
+    amount: 10,
+    result: "pending",
+    stakeOut: 10,
+  },
+  {
+    id: 52,
+    owner: "GardenOf",
+    date: "2026-04-04",
+    seriesId: "L",
+    pick: "New York Yankees -1.5",
+    line: "+112",
+    amount: 10,
+    result: "pending",
+    stakeOut: 10,
   },
 ];
 
