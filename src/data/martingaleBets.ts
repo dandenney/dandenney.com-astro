@@ -707,6 +707,28 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 0,
     returnAmount: 24.99,
   },
+  {
+    id: 54,
+    owner: "Dan",
+    date: "2026-04-05",
+    seriesId: "R",
+    pick: "Joel Embiid Under 30.5 Points + Assists",
+    line: "-108",
+    amount: 20,
+    result: "pending",
+    stakeOut: 20,
+  },
+  {
+    id: 55,
+    owner: "GardenOf",
+    date: "2026-04-05",
+    seriesId: "M",
+    pick: "Joel Embiid Under 30.5 Points + Assists",
+    line: "-108",
+    amount: 10,
+    result: "pending",
+    stakeOut: 10,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
