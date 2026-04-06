@@ -1,0 +1,485 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE } from "../consts";
+import { ViewTransitions } from "astro:transitions";
+import {
+  dkBets,
+  dkStartingBalance,
+  dkStartingBonusCash,
+  getDKReturnAmount,
+  getDKNetImpact,
+  getDKNewSeriesStake,
+  type DKBet,
+} from "../data/draftKingsBets";
+
+const currency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
+const MAX_LOSSES = 6;
+
+const allOrderedBets = [...dkBets].sort(
+  (a, b) => a.date.localeCompare(b.date) || a.id - b.id,
+);
+
+// Series bets exclude bonus bets (bonus bets don't advance a series)
+const seriesBets = allOrderedBets.filter((bet) => bet.seriesId !== undefined && !bet.isBonus);
+
+// Stats over all bets (bonus bets affect the balance)
+const settledBets = allOrderedBets.filter(
+  (bet) => bet.result !== "pending" && bet.result !== "void",
+);
+const pendingBets = allOrderedBets.filter((bet) => bet.result === "pending");
+const wins = settledBets.filter((bet) => bet.result === "win").length;
+const losses = settledBets.filter((bet) => bet.result === "loss").length;
+const totalReturns = allOrderedBets.reduce((sum, bet) => sum + getDKReturnAmount(bet), 0);
+const totalStaked = allOrderedBets.reduce((sum, bet) => sum + bet.stakeOut, 0);
+const netPL = Number((totalReturns - totalStaked).toFixed(2));
+const effectiveStart = dkStartingBalance + dkStartingBonusCash;
+const currentBalance = Number((effectiveStart + netPL).toFixed(2));
+const winRate = settledBets.length ? (wins / settledBets.length) * 100 : 0;
+
+// Running balance across all bets (ascending)
+const withRunningBalance = allOrderedBets.map((bet, index) => ({
+  ...bet,
+  returnAmount: getDKReturnAmount(bet),
+  netImpact: getDKNetImpact(bet),
+  runningBalance: Number(
+    (
+      effectiveStart +
+      allOrderedBets
+        .slice(0, index + 1)
+        .reduce((sum, current) => sum + getDKNetImpact(current), 0)
+    ).toFixed(2),
+  ),
+}));
+
+// Series state logic
+type SeriesStatus = "In Progress" | "Won" | "Full Fail";
+
+interface SeriesSummary {
+  seriesId: string;
+  betsCount: number;
+  lossesCount: number;
+  status: SeriesStatus;
+  netImpact: number;
+}
+
+interface HeroSeriesState {
+  displaySeriesId: string | null;
+  nextSeriesId: string | null;
+  status: "Pending" | "Continuing Series" | "New Series Ready";
+  nextBetStake: number | null;
+  lastBet: DKBet | null;
+}
+
+const getNextSeriesId = (seriesId: string | null): string | null => {
+  if (!seriesId) return null;
+  if (!/^[A-Z]$/.test(seriesId)) return seriesId;
+  if (seriesId === "Z") return "AA";
+  return String.fromCharCode(seriesId.charCodeAt(0) + 1);
+};
+
+const getHeroSeriesState = (bets: DKBet[], balance: number): HeroSeriesState => {
+  const lastBet = bets[bets.length - 1] ?? null;
+  if (!lastBet) {
+    return {
+      displaySeriesId: "A",
+      nextSeriesId: "A",
+      status: "New Series Ready",
+      nextBetStake: getDKNewSeriesStake(balance),
+      lastBet: null,
+    };
+  }
+
+  const nextSeriesId = getNextSeriesId(lastBet.seriesId ?? null);
+
+  if (lastBet.result === "pending") {
+    return {
+      displaySeriesId: lastBet.seriesId ?? null,
+      nextSeriesId,
+      status: "Pending",
+      nextBetStake: Number((lastBet.stakeOut * 2).toFixed(2)),
+      lastBet,
+    };
+  }
+
+  if (lastBet.result === "void") {
+    // Void: re-bet the same stake, series unchanged
+    return {
+      displaySeriesId: lastBet.seriesId ?? null,
+      nextSeriesId,
+      status: "Continuing Series",
+      nextBetStake: lastBet.stakeOut,
+      lastBet,
+    };
+  }
+
+  if (lastBet.result === "loss") {
+    const seriesLosses = bets
+      .filter((b) => b.seriesId === lastBet.seriesId)
+      .filter((b) => b.result === "loss").length;
+    const fullFail = seriesLosses >= MAX_LOSSES;
+    return {
+      displaySeriesId: fullFail ? nextSeriesId : (lastBet.seriesId ?? null),
+      nextSeriesId,
+      status: fullFail ? "New Series Ready" : "Continuing Series",
+      nextBetStake: fullFail
+        ? getDKNewSeriesStake(balance)
+        : Number((lastBet.stakeOut * 2).toFixed(2)),
+      lastBet,
+    };
+  }
+
+  // Win — series complete
+  return {
+    displaySeriesId: nextSeriesId,
+    nextSeriesId,
+    status: "New Series Ready",
+    nextBetStake: getDKNewSeriesStake(balance),
+    lastBet,
+  };
+};
+
+// Build series summaries from non-bonus series bets only
+const seriesMap = new Map<string, DKBet[]>();
+for (const bet of seriesBets) {
+  const existing = seriesMap.get(bet.seriesId!) ?? [];
+  existing.push(bet);
+  seriesMap.set(bet.seriesId!, existing);
+}
+
+const seriesSummaries: SeriesSummary[] = Array.from(seriesMap.entries()).map(
+  ([seriesId, bets]) => {
+    const lossesCount = bets.filter((bet) => bet.result === "loss").length;
+    const hasWin = bets.some((bet) => bet.result === "win");
+    const status: SeriesStatus = hasWin
+      ? "Won"
+      : lossesCount >= MAX_LOSSES
+        ? "Full Fail"
+        : "In Progress";
+    return {
+      seriesId,
+      betsCount: bets.length,
+      lossesCount,
+      status,
+      netImpact: Number(
+        bets.reduce((sum, bet) => sum + getDKNetImpact(bet), 0).toFixed(2),
+      ),
+    };
+  },
+);
+
+const formatDate = (dateString: DKBet["date"]) =>
+  new Date(`${dateString}T00:00:00`).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+const heroState = getHeroSeriesState(seriesBets, currentBalance);
+const activeBets = allOrderedBets.filter((bet) => bet.result === "pending");
+
+// Descending order for tables
+const withRunningBalanceDesc = [...withRunningBalance].reverse();
+const seriesSummariesDesc = [...seriesSummaries].reverse();
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="DK Bet Tracker | Dan Denney"
+      description="A 6-loss-max martingale bet tracker for DraftKings with running balance and series ledger."
+    />
+    <ViewTransitions />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden antialiased">
+    <main class="relative z-10 bg-slate-950">
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="relative w-full min-h-[80vh] flex flex-col overflow-hidden">
+      <img
+        src="/bet-background.webp"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        alt=""
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/65 to-slate-950"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-slate-950/50"></div>
+      <div class="absolute inset-0 [background-image:linear-gradient(rgba(234,179,8,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(234,179,8,0.04)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+      <div class="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-yellow-500/50"></div>
+      <div class="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-yellow-500/50"></div>
+      <div class="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-yellow-500/20"></div>
+      <div class="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-yellow-500/20"></div>
+
+      <div class="relative z-10 border-b border-white/5 backdrop-blur-sm">
+        <Header title={SITE_TITLE} />
+      </div>
+
+      <div class="relative z-10 flex-1 flex flex-col lg:flex-row lg:items-end gap-8 lg:gap-12 px-6 lg:px-12 xl:px-16 pb-12 pt-8">
+
+        <!-- Left: identity -->
+        <div class="flex flex-col justify-end lg:w-[38%] flex-shrink-0">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_8px_rgba(234,179,8,0.8)]"></div>
+            <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-yellow-400/80">DraftKings · 6-Loss Max · Live</p>
+          </div>
+          <h1 class="text-6xl lg:text-8xl font-black uppercase tracking-tighter text-white leading-none drop-shadow-2xl text-balance">
+            DK<br />Tracker
+          </h1>
+        </div>
+
+        <!-- Right: active objective card -->
+        <div class="flex-1">
+          <div class="relative border border-slate-700/40 bg-slate-950/75 backdrop-blur-md overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-yellow-500 via-yellow-400 to-amber-500"></div>
+
+            <div class="flex items-center justify-between px-6 pt-5 pb-4 border-b border-slate-700/40">
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.8)]"></div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.45em] text-yellow-400/80">Active Objective</p>
+              </div>
+              {activeBets.length > 0 ? (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/15 border border-amber-500/35 text-amber-300 font-mono text-[10px] uppercase tracking-[0.2em]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                  Pending
+                </span>
+              ) : (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em]">
+                  Standby
+                </span>
+              )}
+            </div>
+
+            <div class="px-6 py-6">
+              {activeBets.length > 0 ? (
+                <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tight leading-none">{activeBets[0].pick}</p>
+              ) : (
+                <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-600 uppercase tracking-tight leading-none">No Current Bet</p>
+              )}
+            </div>
+
+            <div class="px-6 pb-5 border-t border-slate-700/40 pt-4">
+              <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-yellow-400 mb-3">// Status</p>
+              {activeBets.length > 0 ? (
+                <div class="grid grid-cols-3 gap-3">
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Series</p>
+                    <p class="font-mono text-xl font-bold text-yellow-300">{heroState.displaySeriesId ?? activeBets[0].seriesId}</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Line</p>
+                    <p class="font-mono text-xl font-bold text-white">{activeBets[0].line}</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Stake</p>
+                    <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{currency.format(activeBets[0].stakeOut)}</p>
+                  </div>
+                </div>
+              ) : (
+                <div class="grid grid-cols-3 gap-3">
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">{heroState.status === "Continuing Series" ? "Series" : "Next Series"}</p>
+                    <p class="font-mono text-xl font-bold text-yellow-300">{heroState.displaySeriesId ?? "—"}</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Next Stake</p>
+                    <p class="font-mono text-xl font-bold text-rose-300 tabular-nums">{heroState.nextBetStake ? currency.format(heroState.nextBetStake) : "—"}</p>
+                  </div>
+                  <div>
+                    <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Status</p>
+                    <p class:list={["font-mono text-sm font-bold", heroState.status === "Continuing Series" ? "text-amber-300" : "text-emerald-400"]}>{heroState.status}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         STATS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="w-full bg-slate-950 px-6 lg:px-12 xl:px-16 py-16">
+      <div class="flex items-center gap-4 mb-10">
+        <div class="h-px w-10 bg-yellow-500/60"></div>
+        <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-slate-500">// Performance Metrics</p>
+        <div class="h-px flex-1 bg-slate-800/60"></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-1 h-7 bg-yellow-400 shadow-[0_0_10px_rgba(234,179,8,0.5)]"></div>
+        <p class="font-mono text-xs uppercase tracking-[0.4em] text-yellow-300 font-bold">DraftKings</p>
+        <p class="font-mono text-[10px] text-slate-400 uppercase tracking-wider">
+          · {allOrderedBets.length} bets · {settledBets.length} settled · {pendingBets.length} pending
+          · {allOrderedBets.filter(b => b.isBonus).length} bonus bets
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Starting Balance</p>
+          <p class="font-mono text-2xl font-bold tabular-nums text-white">{currency.format(dkStartingBalance)}</p>
+          <p class="font-mono text-[10px] text-amber-400/70 mt-1">+{currency.format(dkStartingBonusCash)} promo cash</p>
+        </div>
+        <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-yellow-500/40 to-transparent"></div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Current Balance</p>
+          <p class:list={["font-mono text-2xl font-bold tabular-nums", currentBalance >= effectiveStart ? "text-emerald-400" : "text-rose-400"]}>{currency.format(currentBalance)}</p>
+        </div>
+        <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-yellow-500/40 to-transparent"></div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Net P/L</p>
+          <p class:list={["font-mono text-2xl font-bold tabular-nums", netPL >= 0 ? "text-emerald-400" : "text-rose-400"]}>{netPL >= 0 ? "+" : ""}{currency.format(netPL)}</p>
+        </div>
+        <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
+          <p class="font-mono text-2xl font-bold tabular-nums text-white">{settledBets.length ? `${winRate.toFixed(0)}%` : "—"}</p>
+          <p class="font-mono text-[10px] text-slate-600 mt-1">{wins}W – {losses}L</p>
+        </div>
+        <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Max Losses / Series</p>
+          <p class="font-mono text-2xl font-bold tabular-nums text-yellow-300">{MAX_LOSSES}</p>
+          <p class="font-mono text-[10px] text-slate-600 mt-1 uppercase">before reset</p>
+        </div>
+      </div>
+
+      <p class="mt-10 font-mono text-[10px] text-slate-500 uppercase tracking-wider border-t border-slate-800/40 pt-5">
+        Accounting: Each placed bet debits stake immediately. Bonus bets have $0 stake — only returns count. Void bets refund the stake (net $0).
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HISTORY
+    ═══════════════════════════════════════════════════════ -->
+    <section class="w-full px-6 lg:px-12 xl:px-16 py-16 border-t border-slate-800/50">
+      <div class="flex items-center gap-4 mb-12">
+        <div class="h-px w-10 bg-slate-500/60"></div>
+        <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-slate-500">// Bet History Ledger</p>
+        <div class="h-px flex-1 bg-slate-800/60"></div>
+      </div>
+
+      <!-- Series Summaries -->
+      <div class="mb-20">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-yellow-300 font-bold">Series Summary</p>
+          <p class="font-mono text-[10px] text-slate-500 uppercase tracking-wider">· {MAX_LOSSES}-loss max · bonus bets excluded from series</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-left min-w-[480px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Status</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Net Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              {seriesSummariesDesc.map((series) => (
+                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <td class="py-3 pr-8 font-mono font-bold text-yellow-300">{series.seriesId}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
+                  <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
+                  <td class="py-3 pr-8">
+                    <span class:list={["font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border", series.status === "Won" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : series.status === "Full Fail" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" : "border-amber-500/30 bg-amber-500/10 text-amber-300"]}>
+                      {series.status}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-8 font-mono text-sm font-bold tabular-nums", series.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {series.netImpact >= 0 ? "+" : ""}{currency.format(series.netImpact)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Full Ledger -->
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-1 h-6 bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.4)]"></div>
+          <p class="font-mono text-xs uppercase tracking-[0.35em] text-yellow-300 font-bold">Full Ledger</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-left min-w-[960px]">
+            <thead>
+              <tr class="border-b border-slate-700/50">
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Line</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Stake Out</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Result</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Return In</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Net Impact</th>
+                <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {withRunningBalanceDesc.map((bet) => (
+                <tr class:list={["border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors", bet.isBonus ? "opacity-70" : ""]}>
+                  <td class="py-3 pr-6 font-mono font-bold text-yellow-300 text-sm whitespace-nowrap">
+                    {bet.isBonus ? (
+                      <span class="text-slate-600 font-normal text-[10px] uppercase tracking-wider">bonus</span>
+                    ) : (
+                      bet.seriesId ?? "—"
+                    )}
+                  </td>
+                  <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
+                  <td class="py-3 pr-6 font-mono text-sm text-white">
+                    {bet.pick}
+                    {bet.notes && <span class="ml-2 text-[10px] text-slate-500 font-normal uppercase tracking-wider">[{bet.notes}]</span>}
+                  </td>
+                  <td class="py-3 pr-6 font-mono text-sm text-slate-300 whitespace-nowrap">{bet.line}</td>
+                  <td class="py-3 pr-6 font-mono text-sm tabular-nums whitespace-nowrap">
+                    {bet.stakeOut > 0 ? (
+                      <span class="text-rose-400">-{currency.format(bet.stakeOut)}</span>
+                    ) : (
+                      <span class="text-slate-600">free</span>
+                    )}
+                  </td>
+                  <td class="py-3 pr-6 whitespace-nowrap">
+                    <span class:list={["font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 border",
+                      bet.result === "win" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" :
+                      bet.result === "loss" ? "border-rose-500/30 bg-rose-500/10 text-rose-400" :
+                      bet.result === "void" ? "border-slate-500/30 bg-slate-500/10 text-slate-400" :
+                      "border-amber-500/30 bg-amber-500/10 text-amber-300"
+                    ]}>
+                      {bet.result}
+                    </span>
+                  </td>
+                  <td class:list={["py-3 pr-6 font-mono text-sm tabular-nums whitespace-nowrap", bet.returnAmount > 0 ? "text-emerald-400" : "text-slate-600"]}>
+                    {bet.result === "pending" ? "—" : `+${currency.format(bet.returnAmount)}`}
+                  </td>
+                  <td class:list={["py-3 pr-6 font-mono text-sm font-bold tabular-nums whitespace-nowrap", bet.netImpact >= 0 ? "text-emerald-400" : "text-rose-400"]}>
+                    {bet.netImpact >= 0 ? "+" : ""}{currency.format(bet.netImpact)}
+                  </td>
+                  <td class="py-3 pr-6 font-mono text-sm text-yellow-300 tabular-nums whitespace-nowrap">{currency.format(bet.runningBalance)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    </main>
+  </body>
+</html>
