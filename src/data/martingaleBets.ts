@@ -725,9 +725,9 @@ export const martingaleBets: MartingaleBet[] = [
     seriesId: "M",
     pick: "Joel Embiid Under 30.5 Points + Assists",
     line: "-108",
-    amount: 10,
+    amount: 20,
     result: "pending",
-    stakeOut: 10,
+    stakeOut: 20,
   },
 ];
 
