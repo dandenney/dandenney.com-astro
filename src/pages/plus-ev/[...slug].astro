@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PlusEVPost from "../../layouts/PlusEVPost.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("plus-ev");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<"plus-ev">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<PlusEVPost {...post.data}>
+  <Content />
+</PlusEVPost>

@@ -74,4 +74,14 @@ const songs = defineCollection({
   }),
 });
 
-export const collections = { blips, posts, reviews, songs, tinkerings };
+const plusEv = defineCollection({
+  schema: z.object({
+    pubDate: z.coerce.date(),
+    title: z.string(),
+    summary: z.string(),
+    sport: z.enum(["nba", "mlb", "both"]).optional(),
+    recapDate: z.string().optional(),
+  }),
+});
+
+export const collections = { blips, "plus-ev": plusEv, posts, reviews, songs, tinkerings };

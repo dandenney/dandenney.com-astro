@@ -1,0 +1,311 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import { getCollection } from "astro:content";
+import {
+  martingaleBets,
+  startingBalance,
+  hysaBenchmark,
+  getStakeOut,
+  getReturnAmount,
+} from "../../data/martingaleBets";
+import { expertPicks } from "../../data/expertPicks";
+import { mlbExpertPicks } from "../../data/mlbExpertPicks";
+
+export const prerender = true;
+
+// ── Posts ────────────────────────────────────────────────────────────────────
+const posts = (await getCollection("plus-ev")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// ── Martingale stats ─────────────────────────────────────────────────────────
+const danBets = martingaleBets.filter((b) => !b.owner || b.owner === "Dan");
+const settledBets = danBets.filter((b) => b.result !== "pending");
+const pendingCount = danBets.filter((b) => b.result === "pending").length;
+const wins = settledBets.filter((b) => b.result === "win").length;
+const losses = settledBets.filter((b) => b.result === "loss").length;
+const totalStaked = danBets.reduce((sum, b) => sum + getStakeOut(b), 0);
+const totalReturns = danBets.reduce((sum, b) => sum + getReturnAmount(b), 0);
+const netPL = Number((totalReturns - totalStaked).toFixed(2));
+const currentBalance = Number((startingBalance + netPL).toFixed(2));
+const winRate = settledBets.length ? (wins / settledBets.length) * 100 : 0;
+
+// Current loss streak (from most recent bets backward)
+let currentLossStreak = 0;
+for (const bet of [...settledBets].reverse()) {
+  if (bet.result === "loss") currentLossStreak++;
+  else break;
+}
+
+// Days active
+const firstBetDate = new Date(danBets[0].date);
+const today = new Date();
+const daysActive = Math.floor(
+  (today.getTime() - firstBetDate.getTime()) / 86400000
+);
+
+// HYSA benchmark — simple interest
+const hysaValue = Number(
+  (hysaBenchmark.principal * (1 + hysaBenchmark.annualYield * (daysActive / 365))).toFixed(2)
+);
+const hysaGain = Number((hysaValue - hysaBenchmark.principal).toFixed(2));
+const vsHysa = Number((currentBalance - hysaValue).toFixed(2));
+
+// ── NBA expert picks stats ────────────────────────────────────────────────────
+const nbaSettled = expertPicks.filter(
+  (p) => p.result === "win" || p.result === "loss" || p.result === "push"
+);
+const nbaWins = nbaSettled.filter((p) => p.result === "win").length;
+const nbaWinRate = nbaSettled.length ? (nbaWins / nbaSettled.length) * 100 : 0;
+
+// Best NBA expert (min 10 settled picks)
+const nbaExpertMap = new Map<string, { wins: number; total: number }>();
+for (const pick of nbaSettled) {
+  const e = nbaExpertMap.get(pick.authorName) ?? { wins: 0, total: 0 };
+  e.total++;
+  if (pick.result === "win") e.wins++;
+  nbaExpertMap.set(pick.authorName, e);
+}
+const bestNbaExpert = Array.from(nbaExpertMap.entries())
+  .filter(([, d]) => d.total >= 10)
+  .map(([name, d]) => ({ name, rate: (d.wins / d.total) * 100, total: d.total }))
+  .sort((a, b) => b.rate - a.rate)[0] ?? null;
+
+// ── MLB expert picks stats ────────────────────────────────────────────────────
+const mlbSettled = mlbExpertPicks.filter(
+  (p) => p.result === "win" || p.result === "loss" || p.result === "push"
+);
+const mlbWins = mlbSettled.filter((p) => p.result === "win").length;
+const mlbWinRate = mlbSettled.length ? (mlbWins / mlbSettled.length) * 100 : 0;
+
+// Best MLB expert (min 5 settled picks — season is younger)
+const mlbExpertMap = new Map<string, { wins: number; total: number }>();
+for (const pick of mlbSettled) {
+  const e = mlbExpertMap.get(pick.authorName) ?? { wins: 0, total: 0 };
+  e.total++;
+  if (pick.result === "win") e.wins++;
+  mlbExpertMap.set(pick.authorName, e);
+}
+const bestMlbExpert = Array.from(mlbExpertMap.entries())
+  .filter(([, d]) => d.total >= 5)
+  .map(([name, d]) => ({ name, rate: (d.wins / d.total) * 100, total: d.total }))
+  .sort((a, b) => b.rate - a.rate)[0] ?? null;
+
+// ── Formatters ────────────────────────────────────────────────────────────────
+const currency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 2,
+});
+const pct = (n: number) => `${n.toFixed(1)}%`;
+const sign = (n: number) => (n >= 0 ? "+" : "");
+
+const startDateStr = firstBetDate.toLocaleDateString("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="Plus EV | Dan Denney"
+      description="A data-driven sports betting experiment, recapped daily by Gale."
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <main class="mx-auto max-w-4xl px-4 py-12 space-y-16">
+
+      <!-- Header -->
+      <header>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 rounded-full bg-emerald-900 flex items-center justify-center flex-shrink-0">
+            <span class="text-emerald-400 text-sm font-bold">G</span>
+          </div>
+          <span class="text-slate-500 text-sm">by Gale</span>
+        </div>
+        <h1 class="text-4xl font-bold text-white tracking-tight">Plus EV</h1>
+        <p class="mt-2 text-slate-400 max-w-xl">
+          A data-driven sports betting experiment. Tracking expert picks, running them through LLMs, placing real bets with a martingale system — and recapping it all daily.
+        </p>
+      </header>
+
+      <!-- Stats -->
+      <section>
+        <p class="text-xs font-mono uppercase tracking-widest text-slate-600 mb-6">The numbers</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <!-- Bankroll -->
+          <div class="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-3">Bankroll</p>
+            <p class:list={["text-2xl font-bold tabular-nums", currentBalance >= startingBalance ? "text-emerald-400" : "text-red-400"]}>
+              {currency.format(currentBalance)}
+            </p>
+            <p class="text-xs text-slate-600 mt-1">
+              started {currency.format(startingBalance)}
+            </p>
+            <p class:list={["text-xs mt-2 font-mono", netPL >= 0 ? "text-emerald-500" : "text-red-500"]}>
+              {sign(netPL)}{currency.format(netPL)} net
+            </p>
+            <div class="mt-3 pt-3 border-t border-slate-800">
+              <p class="text-xs text-slate-600">
+                vs HYSA ({pct(hysaBenchmark.annualYield * 100)}):
+                <span class:list={["font-mono", vsHysa >= 0 ? "text-emerald-600" : "text-slate-500"]}>
+                  {sign(vsHysa)}{currency.format(vsHysa)}
+                </span>
+              </p>
+              <p class="text-xs text-slate-700 mt-0.5">HYSA would have earned {currency.format(hysaGain)}</p>
+            </div>
+          </div>
+
+          <!-- Record -->
+          <div class="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-3">Bet Record</p>
+            <p class="text-2xl font-bold tabular-nums text-white">
+              <span class="text-emerald-400">{wins}</span>
+              <span class="text-slate-600">–</span>
+              <span class="text-red-400">{losses}</span>
+            </p>
+            <p class="text-xs text-slate-600 mt-1">{pct(winRate)} win rate</p>
+            <p class="text-xs text-slate-600 mt-0.5">{danBets.length} bets placed</p>
+            {pendingCount > 0 && (
+              <p class="text-xs text-slate-600 mt-0.5">{pendingCount} pending</p>
+            )}
+            {currentLossStreak > 0 && (
+              <div class="mt-3 pt-3 border-t border-slate-800">
+                <p class="text-xs text-orange-500 font-mono">{currentLossStreak}-game L streak</p>
+              </div>
+            )}
+            {currentLossStreak === 0 && (
+              <div class="mt-3 pt-3 border-t border-slate-800">
+                <p class="text-xs text-slate-600 font-mono">no active L streak</p>
+              </div>
+            )}
+          </div>
+
+          <!-- Days Running -->
+          <div class="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-3">Running</p>
+            <p class="text-2xl font-bold tabular-nums text-white">{daysActive} <span class="text-base font-normal text-slate-500">days</span></p>
+            <p class="text-xs text-slate-600 mt-1">since {startDateStr}</p>
+            {posts.length > 0 && (
+              <div class="mt-3 pt-3 border-t border-slate-800">
+                <p class="text-xs text-slate-600">{posts.length} recap{posts.length !== 1 ? "s" : ""} from Gale</p>
+                <p class="text-xs text-slate-600 mt-0.5">
+                  latest:{" "}
+                  {posts[0].data.pubDate.toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    timeZone: "UTC",
+                  })}
+                </p>
+              </div>
+            )}
+          </div>
+
+          <!-- Expert Pool -->
+          <div class="rounded-lg border border-slate-800 bg-slate-900/50 p-5">
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-3">Expert Pool</p>
+            <p class="text-2xl font-bold tabular-nums text-white">
+              {nbaSettled.length + mlbSettled.length}
+              <span class="text-base font-normal text-slate-500">picks</span>
+            </p>
+            <p class="text-xs text-slate-600 mt-1">tracked &amp; settled</p>
+            <div class="mt-3 pt-3 border-t border-slate-800 space-y-1.5">
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-slate-600 font-mono">NBA</span>
+                <span class="text-xs text-slate-400">{pct(nbaWinRate)}</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-slate-600 font-mono">MLB</span>
+                <span class="text-xs text-slate-400">{mlbSettled.length > 0 ? pct(mlbWinRate) : "—"}</span>
+              </div>
+              {(bestNbaExpert || bestMlbExpert) && (
+                <div class="pt-1.5 border-t border-slate-800/50 space-y-1">
+                  {bestNbaExpert && (
+                    <p class="text-xs text-slate-600">best NBA: <span class="text-emerald-600">{bestNbaExpert.name.split(" ")[0]}</span> ({pct(bestNbaExpert.rate)})</p>
+                  )}
+                  {bestMlbExpert && (
+                    <p class="text-xs text-slate-600">best MLB: <span class="text-emerald-600">{bestMlbExpert.name.split(" ")[0]}</span> ({pct(bestMlbExpert.rate)})</p>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Dashboard links -->
+      <section>
+        <p class="text-xs font-mono uppercase tracking-widest text-slate-600 mb-4">Live data</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="/martingale-tracker" class="group flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900/30 px-5 py-4 hover:border-emerald-800 hover:bg-emerald-950/20 transition-colors">
+            <div>
+              <p class="text-sm font-medium text-slate-300 group-hover:text-emerald-400 transition-colors">Martingale Tracker</p>
+              <p class="text-xs text-slate-600 mt-0.5">Real-money bet ledger</p>
+            </div>
+            <svg class="text-slate-700 group-hover:text-emerald-600 transition-colors" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/expert-picks" class="group flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900/30 px-5 py-4 hover:border-emerald-800 hover:bg-emerald-950/20 transition-colors">
+            <div>
+              <p class="text-sm font-medium text-slate-300 group-hover:text-emerald-400 transition-colors">NBA Expert Picks</p>
+              <p class="text-xs text-slate-600 mt-0.5">{expertPicks.length} picks · {nbaExpertMap.size} experts</p>
+            </div>
+            <svg class="text-slate-700 group-hover:text-emerald-600 transition-colors" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/mlb-expert-picks" class="group flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900/30 px-5 py-4 hover:border-emerald-800 hover:bg-emerald-950/20 transition-colors">
+            <div>
+              <p class="text-sm font-medium text-slate-300 group-hover:text-emerald-400 transition-colors">MLB Expert Picks</p>
+              <p class="text-xs text-slate-600 mt-0.5">{mlbExpertPicks.length} picks · {mlbExpertMap.size} experts</p>
+            </div>
+            <svg class="text-slate-700 group-hover:text-emerald-600 transition-colors" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Posts -->
+      <section>
+        <p class="text-xs font-mono uppercase tracking-widest text-slate-600 mb-6">Recaps from Gale</p>
+        {posts.length === 0 ? (
+          <p class="text-slate-600 text-sm">No recaps yet. Check back tomorrow.</p>
+        ) : (
+          <div class="space-y-px rounded-lg border border-slate-800 overflow-hidden">
+            {posts.map((post) => {
+              const dateStr = post.data.pubDate.toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+                timeZone: "UTC",
+              });
+              const sportLabel =
+                post.data.sport === "nba" ? "NBA" :
+                post.data.sport === "mlb" ? "MLB" :
+                post.data.sport === "both" ? "NBA + MLB" : null;
+              return (
+                <a
+                  href={`/plus-ev/${post.slug}/`}
+                  class="group flex items-center gap-4 bg-slate-900/30 hover:bg-slate-900 px-5 py-4 transition-colors"
+                >
+                  <time class="text-xs text-slate-600 font-mono w-24 flex-shrink-0">{dateStr}</time>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors truncate">{post.data.title}</p>
+                    <p class="text-xs text-slate-600 mt-0.5 truncate">{post.data.summary}</p>
+                  </div>
+                  {sportLabel && (
+                    <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-500 font-mono flex-shrink-0">{sportLabel}</span>
+                  )}
+                  <svg class="text-slate-700 group-hover:text-slate-500 transition-colors flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </section>
+
+    </main>
+  </body>
+</html>
