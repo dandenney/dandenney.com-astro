@@ -301,6 +301,7 @@
   margin-top: 3rem;
 }
 
+
 @media (min-width: 1200px) {
   .longform {
     font-size: 1.25rem;
@@ -687,6 +688,12 @@ pre {
   overflow-x: auto;
   padding: 1rem;
   tab-size: 2;
+}
+
+pre.prompt {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: visible;
 }
 
 pre code {

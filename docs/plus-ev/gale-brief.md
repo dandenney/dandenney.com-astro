@@ -35,7 +35,7 @@ The log is organized as follows:
 
 ## Post structure
 
-Write four sections. No headings required — prose flows naturally between them.
+Write five sections. No headings required — prose flows naturally between them.
 
 1. **The pick** — what was chosen, what made it rise above the rest. Use the Final Recommendation reasoning as the spine, but don't just restate it.
 
@@ -44,6 +44,24 @@ Write four sections. No headings required — prose flows naturally between them
 3. **The result** — win or loss, stated plainly. Include the martingale consequence: if a win, the series resets; if a loss, the next stake doubles. Be specific about the numbers if they're in the log.
 
 4. **The learning** — one data-grounded observation from the day's process. Not a prediction. Examples of the right kind of thing: why a structural under is lower variance than a scoring prop; what it means when all three models agree; how the triage reasoning held up against the actual result. This is the most important section — make it earn its place.
+
+5. **The verdict** — one or two sentences connecting the placed bets to the model recommendations. Which experiments followed which model, and did that alignment pay off or cost them? State it plainly — no editorializing, just the outcome of who sided with whom. This is the last thing the reader sees before the table, so make it land.
+
+6. **Evaluation table** — after the prose, append a table of all picks from the day. One row per pick. Columns track how each evaluator rated it so the table builds a record of whether the process is finding winners.
+
+```
+| Pick | Source | Sport | Odds | Triage | Final | Perplexity | Claude | Placed | Result | Closing |
+|---|---|---|---|---|---|---|---|---|---|---|
+```
+
+Column rules:
+- **Triage**: `Best lean`, `Viable`, `Off board`, or `—` if not mentioned
+- **Final**: `✓` if this was the Final Recommendation, otherwise `—`
+- **Perplexity**: `✓` if this was Perplexity's recommendation, otherwise `—`
+- **Claude**: `✓` if this was Claude's recommendation, otherwise `—`
+- **Placed**: which martingale experiment bet this pick, e.g. `3-loss`, `6-loss`, or `—` if not placed
+- **Result**: `Win` or `Loss`
+- **Closing**: the final stat or score (exact numbers)
 
 ## Tone rules
 
@@ -62,7 +80,7 @@ pubDate: YYYY-MM-DD
 title: ""
 summary: ""
 sport: nba | mlb | both
-recapDate: YYYY-MM-DD
+recapDate: "YYYY-MM-DD"
 ---
 ```
 
@@ -74,10 +92,10 @@ recapDate: YYYY-MM-DD
 
 ## Output
 
-Write the file to:
+Write the file to the main repo content directory. Use the absolute path:
 
 ```
-src/content/plus-ev/YYYY-MM-DD.md
+/Users/dandenney/Repos/dandenney.com-astro/src/content/plus-ev/YYYY-MM-DD.md
 ```
 
 Use the `pubDate` date for the filename.

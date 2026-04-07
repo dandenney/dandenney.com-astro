@@ -20,7 +20,7 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
 
-    <div class="mx-auto max-w-2xl px-4 py-12">
+    <div class="mx-auto max-w-2xl px-4 pt-12">
 
       <!-- Back link -->
       <a href="/plus-ev" class="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-emerald-400 transition-colors mb-10">
@@ -53,11 +53,14 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
         </div>
       </header>
 
-      <!-- Post content -->
-      <article class="longform">
-        <slot />
-      </article>
+    </div>
 
+    <!-- Article is full-width so the table can size freely -->
+    <article class="longform px-4 pb-12">
+      <slot />
+    </article>
+
+    <div class="mx-auto max-w-2xl px-4 pb-12">
       <!-- Dashboard links footer -->
       <footer class="mt-16 pt-8 border-t border-slate-800">
         <p class="text-xs text-slate-600 uppercase tracking-widest font-mono mb-4">Live data</p>
@@ -76,7 +79,87 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
           </a>
         </div>
       </footer>
-
     </div>
+
   </body>
 </html>
+
+<style>
+  /* Constrain prose to readable width, centered */
+  article :global(p),
+  article :global(ul),
+  article :global(ol) {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Table sizes to content and centers freely */
+  article :global(table) {
+    display: table;
+    border-collapse: collapse;
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.4;
+    margin: 2.5rem auto 0;
+    white-space: nowrap;
+  }
+
+  article :global(th) {
+    font-family: ui-monospace, monospace;
+    font-size: 0.6875rem; /* 11px */
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #334155; /* slate-700 */
+    color: #64748b; /* slate-500 */
+  }
+
+  article :global(td) {
+    padding: 0.625rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #1e293b; /* slate-800 */
+    color: #cbd5e1; /* slate-300 */
+  }
+
+  article :global(tr:hover td) {
+    background: #0f172a; /* slate-900 */
+  }
+
+  article :global(td.cell-win) {
+    color: #34d399; /* emerald-400 */
+  }
+
+  article :global(td.cell-loss) {
+    color: #f87171; /* red-400 */
+  }
+</style>
+
+<script>
+  document.querySelectorAll("article table").forEach((table) => {
+    const headers = Array.from(table.querySelectorAll("th")).map((th) =>
+      th.textContent?.trim().toLowerCase()
+    );
+    const resultIdx = headers.indexOf("result");
+    const coloredCols = ["final", "perplexity", "claude", "placed"];
+    const coloredIdxs = coloredCols.map((name) => headers.indexOf(name)).filter((i) => i !== -1);
+    if (resultIdx === -1) return;
+
+    table.querySelectorAll("tbody tr").forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      const result = cells[resultIdx]?.textContent?.trim().toLowerCase();
+      if (!result) return;
+
+      const isWin = result === "win";
+      const isLoss = result === "loss";
+      if (!isWin && !isLoss) return;
+
+      const cls = isWin ? "cell-win" : "cell-loss";
+      coloredIdxs.forEach((i) => {
+        const cell = cells[i];
+        if (cell && cell.textContent?.trim() !== "—") cell.classList.add(cls);
+      });
+    });
+  });
+</script>
