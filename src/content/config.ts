@@ -84,4 +84,22 @@ const plusEv = defineCollection({
   }),
 });
 
-export const collections = { blips, "plus-ev": plusEv, posts, reviews, songs, tinkerings };
+const artificiallyIntelligent = defineCollection({
+  schema: z.object({
+    pubDate: z.coerce.date(),
+    title: z.string(),
+    summary: z.string().optional(),
+    githubPath: z.string(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = {
+  "artificially-intelligent": artificiallyIntelligent,
+  blips,
+  "plus-ev": plusEv,
+  posts,
+  reviews,
+  songs,
+  tinkerings,
+};

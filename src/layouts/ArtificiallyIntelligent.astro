@@ -1,0 +1,98 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { ViewTransitions } from 'astro:transitions';
+import { getLastCommit } from '../lib/github';
+
+const { title, pubDate, summary, githubPath } = Astro.props;
+
+const breadcrumbItems = [
+  { label: 'Artificially Intelligent', href: '/artificially-intelligent' },
+  { label: title },
+];
+
+const commit = await getLastCommit(githubPath);
+const commitDate = commit
+  ? new Date(commit.commit.author.date).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    })
+  : null;
+const commitMessage = commit?.commit.message.split('\n')[0] ?? null;
+const repoUrl = `https://github.com/dandenney/artificially-intelligent/tree/main/${githubPath}`;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={`${title} | Artificially Intelligent`} description={summary ?? title} type="blogpost" datePublished={pubDate} author="Dan Denney" />
+    <ViewTransitions />
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <Header />
+    <main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+      <article>
+        <h1 class="px-8 py-8 text-4xl font-black tracking-tight text-center text-balance sm:text-6xl lg:px-0 lg:text-8xl animate-fade-text z-20 dark:text-white">
+          <span class="block max-w-4xl mx-auto">{title}</span>
+        </h1>
+
+        <div class="max-w-2xl mx-auto pb-16 px-8 lg:px-0">
+          <div class="mb-8 flex items-center justify-between gap-4 flex-wrap">
+            <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              <span class="whitespace-nowrap">[&nbsp;{pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}&nbsp;]</span>
+            </p>
+
+            <a
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-xs text-gray-600 transition-colors hover:border-gray-300 hover:bg-gray-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:hover:border-slate-600 dark:hover:bg-slate-700"
+            >
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              <span>View source</span>
+              {commitDate && (
+                <span class="text-gray-400 dark:text-slate-500">· updated {commitDate}</span>
+              )}
+            </a>
+          </div>
+
+          {commitMessage && (
+            <p class="mb-8 text-xs font-mono text-gray-400 dark:text-slate-500 border-l-2 border-gray-200 dark:border-slate-700 pl-3 italic">
+              last commit: {commitMessage}
+            </p>
+          )}
+
+          <div class="longform blogpost">
+            <slot />
+          </div>
+        </div>
+      </article>
+
+      <Breadcrumb items={breadcrumbItems} class="py-8" />
+    </main>
+    <Footer />
+
+    <style>
+      @keyframes fadeText {
+        from { opacity: 1; }
+        to { opacity: 0.2; }
+      }
+
+      .animate-fade-text {
+        opacity: 1;
+      }
+
+      @supports (animation-timeline: scroll()) {
+        .animate-fade-text {
+          animation: fadeText linear both;
+          animation-timeline: scroll();
+          animation-range: 0 300px;
+        }
+      }
+    </style>
+  </body>
+</html>
