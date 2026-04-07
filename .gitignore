@@ -2,6 +2,8 @@
 dist/
 # generated types
 .astro/
+# Claude Code worktrees
+.claude/worktrees/
 
 # dependencies
 node_modules/
