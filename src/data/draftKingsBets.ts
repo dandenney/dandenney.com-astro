@@ -15,7 +15,7 @@ export interface DKBet {
 
 export const dkStartingBalance = 750;
 // Promo/bonus cash credited at account open — not winnings, not real cash deposit
-export const dkStartingBonusCash = 36.54;
+export const dkStartingBonusCash = 33.00;
 
 export const dkBets: DKBet[] = [
   // Series A
@@ -266,6 +266,28 @@ export const dkBets: DKBet[] = [
     line: "+108",
     stakeOut: 60,
     result: "loss",
+    returnAmount: 0,
+  },
+  // Bonus bet
+  {
+    id: 24,
+    date: "2026-04-07",
+    pick: "Cleveland Guardians Moneyline",
+    line: "-141",
+    stakeOut: 0,
+    result: "win",
+    returnAmount: 3.54,
+    isBonus: true,
+  },
+  // Series I — re-bet same stake after void
+  {
+    id: 25,
+    date: "2026-04-08",
+    seriesId: "J",
+    pick: "Detroit Tigers -1.5",
+    line: "+108",
+    stakeOut: 120,
+    result: "pending",
     returnAmount: 0,
   },
 ];
