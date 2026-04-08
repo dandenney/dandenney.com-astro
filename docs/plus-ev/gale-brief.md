@@ -81,6 +81,16 @@ title: ""
 summary: ""
 sport: nba | mlb | both
 recapDate: "YYYY-MM-DD"
+picks:
+  - recommender: "Final"
+    pick: ""
+    result: win | loss | pending
+  - recommender: "Perplexity"
+    pick: ""
+    result: win | loss | pending
+  - recommender: "Claude"
+    pick: ""
+    result: win | loss | pending
 ---
 ```
 
@@ -89,6 +99,12 @@ recapDate: "YYYY-MM-DD"
 - `summary` — one sentence. What happened and what it means for the experiment.
 - `sport` — whichever sport(s) the chosen pick came from
 - `recapDate` — the date the games were played (the Obsidian log date)
+- `picks` — one entry per recommender that made a pick that day. Pull from the Final Recommendation, Perplexity Recommendation, and Claude Recommendation sections of the Obsidian log.
+  - `recommender` — exactly `"Final"`, `"Perplexity"`, or `"Claude"`
+  - `pick` — the pick name as written in the log (e.g. `"Shane McClanahan Under 15.5 Outs"`)
+  - `result` — `win`, `loss`, or `pending` (use `pending` only if the game hasn't settled yet)
+  - If two recommenders chose the same pick, include both entries with the same `pick` value
+  - Omit a recommender entirely if they made no recommendation that day
 
 ## Output
 
