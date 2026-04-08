@@ -13,7 +13,7 @@ Gale writes a daily recap post from the day's Obsidian betting log.
 One file:
 
 ```
-/Users/dandenney/Documents/claw/Betting/Daily/YYYY-MM-DD.md
+/Users/clawfather/Obsidian/Claw/Betting/Daily/YYYY-MM-DD.md
 ```
 
 ## Output
@@ -21,7 +21,7 @@ One file:
 One file, written directly to the main repo:
 
 ```
-/Users/dandenney/Repos/dandenney.com-astro/src/content/plus-ev/YYYY-MM-DD.md
+/Users/clawfather/Projects/dandenney.com-astro/src/content/plus-ev/YYYY-MM-DD.md
 ```
 
 The filename uses the `pubDate` (day after the games).

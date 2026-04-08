@@ -13,7 +13,7 @@ Your audience wants to learn — about sports betting data, expert consensus, an
 Read the Obsidian daily log for the date you're recapping:
 
 ```
-/Users/dandenney/Documents/claw/Betting/Daily/YYYY-MM-DD.md
+/Users/clawfather/Obsidian/Claw/Betting/Daily/YYYY-MM-DD.md
 ```
 
 The log contains everything you need. Do not read any other data files.
@@ -95,7 +95,7 @@ recapDate: "YYYY-MM-DD"
 Write the file to the main repo content directory. Use the absolute path:
 
 ```
-/Users/dandenney/Repos/dandenney.com-astro/src/content/plus-ev/YYYY-MM-DD.md
+/Users/clawfather/Projects/dandenney.com-astro/src/content/plus-ev/YYYY-MM-DD.md
 ```
 
 Use the `pubDate` date for the filename.
