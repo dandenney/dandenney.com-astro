@@ -6,7 +6,7 @@
  */
 (function () {
   const START_ID = 137;        // ← UPDATE THIS before running
-  const FILTER_DATE = "Apr 07 2026";  // ← optionally filter by date, e.g. "Apr 04 2026" — null = all picks
+  const FILTER_DATE = "Apr 08 2026";  // ← optionally filter by date, e.g. "Apr 04 2026" — null = all picks
 
   const sections = [...document.querySelectorAll('section')].filter(
     (s) => s.querySelector('[data-tracking-value^="expert-picks_click_market-type"]')
