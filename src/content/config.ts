@@ -81,6 +81,15 @@ const plusEv = defineCollection({
     summary: z.string(),
     sport: z.enum(["nba", "mlb", "both"]).optional(),
     recapDate: z.string().optional(),
+    picks: z
+      .array(
+        z.object({
+          recommender: z.string(),
+          pick: z.string(),
+          result: z.enum(["win", "loss", "pending"]),
+        })
+      )
+      .optional(),
   }),
 });
 

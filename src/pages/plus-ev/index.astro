@@ -10,57 +10,111 @@ import {
   getStakeOut,
   getReturnAmount,
 } from "../../data/martingaleBets";
+import {
+  dkBets,
+  dkStartingBalance,
+  dkStartingBonusCash,
+  getDKReturnAmount,
+} from "../../data/draftKingsBets";
 import { expertPicks } from "../../data/expertPicks";
 import { mlbExpertPicks } from "../../data/mlbExpertPicks";
 
 export const prerender = true;
 
-// ── Posts ────────────────────────────────────────────────────────────────────
+// ── Posts ─────────────────────────────────────────────────────────────────────
 const posts = (await getCollection("plus-ev")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const featuredPost = posts[0] ?? null;
+const archivePosts = posts.slice(1);
 
-// ── Martingale stats ─────────────────────────────────────────────────────────
+// ── Martingale stats ──────────────────────────────────────────────────────────
 const danBets = martingaleBets.filter((b) => !b.owner || b.owner === "Dan");
-const settledBets = danBets.filter((b) => b.result !== "pending");
-const pendingCount = danBets.filter((b) => b.result === "pending").length;
-const wins = settledBets.filter((b) => b.result === "win").length;
-const losses = settledBets.filter((b) => b.result === "loss").length;
-const totalStaked = danBets.reduce((sum, b) => sum + getStakeOut(b), 0);
-const totalReturns = danBets.reduce((sum, b) => sum + getReturnAmount(b), 0);
-const netPL = Number((totalReturns - totalStaked).toFixed(2));
-const currentBalance = Number((startingBalance + netPL).toFixed(2));
-const winRate = settledBets.length ? (wins / settledBets.length) * 100 : 0;
+const mSettledBets = danBets.filter((b) => b.result !== "pending");
+const mWins = mSettledBets.filter((b) => b.result === "win").length;
+const mLosses = mSettledBets.filter((b) => b.result === "loss").length;
+const mTotalStaked = danBets.reduce((sum, b) => sum + getStakeOut(b), 0);
+const mTotalReturns = danBets.reduce((sum, b) => sum + getReturnAmount(b), 0);
+const mNetPL = Number((mTotalReturns - mTotalStaked).toFixed(2));
+const mCurrentBalance = Number((startingBalance + mNetPL).toFixed(2));
+const mWinRate = mSettledBets.length ? (mWins / mSettledBets.length) * 100 : 0;
+const mPendingCount = danBets.filter((b) => b.result === "pending").length;
 
-// Current loss streak (from most recent bets backward)
-let currentLossStreak = 0;
-for (const bet of [...settledBets].reverse()) {
-  if (bet.result === "loss") currentLossStreak++;
+let mCurrentLossStreak = 0;
+for (const bet of [...mSettledBets].reverse()) {
+  if (bet.result === "loss") mCurrentLossStreak++;
   else break;
 }
 
-// Days active
+// ── Martingale current series state ───────────────────────────────────────────
+const martingaleMaxLosses = 3;
+const latestDanBet = danBets[danBets.length - 1];
+const currentMSeriesId = latestDanBet?.seriesId ?? null;
+const currentMSeriesBets = currentMSeriesId
+  ? danBets.filter((b) => b.seriesId === currentMSeriesId)
+  : [];
+const currentMLosses = currentMSeriesBets.filter((b) => b.result === "loss").length;
+const currentMPendingBet =
+  currentMSeriesBets.find((b) => b.result === "pending") ?? null;
+
+// ── DK stats ──────────────────────────────────────────────────────────────────
+const dkEffectiveStart = dkStartingBalance + dkStartingBonusCash;
+const dkSettledBets = dkBets.filter(
+  (b) => b.result !== "pending" && b.result !== "void"
+);
+const dkWins = dkSettledBets.filter((b) => b.result === "win").length;
+const dkLosses = dkSettledBets.filter((b) => b.result === "loss").length;
+const dkTotalReturns = dkBets.reduce((sum, b) => sum + getDKReturnAmount(b), 0);
+const dkTotalStaked = dkBets.reduce((sum, b) => sum + b.stakeOut, 0);
+const dkNetPL = Number((dkTotalReturns - dkTotalStaked).toFixed(2));
+const dkCurrentBalance = Number((dkEffectiveStart + dkNetPL).toFixed(2));
+const dkWinRate = dkSettledBets.length ? (dkWins / dkSettledBets.length) * 100 : 0;
+const dkPendingCount = dkBets.filter((b) => b.result === "pending").length;
+
+let dkCurrentLossStreak = 0;
+for (const bet of [...dkSettledBets].reverse()) {
+  if (bet.result === "loss") dkCurrentLossStreak++;
+  else break;
+}
+
+// ── DK current series state ───────────────────────────────────────────────────
+const dkMaxLosses = 6;
+const dkSeriesBetsArr = dkBets.filter(
+  (b) => b.seriesId !== undefined && !b.isBonus
+);
+const latestDKSeriesBet = dkSeriesBetsArr[dkSeriesBetsArr.length - 1];
+const currentDKSeriesId = latestDKSeriesBet?.seriesId ?? null;
+const currentDKSeriesBetsArr = currentDKSeriesId
+  ? dkSeriesBetsArr.filter((b) => b.seriesId === currentDKSeriesId)
+  : [];
+const currentDKLosses = currentDKSeriesBetsArr.filter(
+  (b) => b.result === "loss"
+).length;
+const currentDKPendingBet =
+  currentDKSeriesBetsArr.find((b) => b.result === "pending") ?? null;
+
+// ── Days active + HYSA ────────────────────────────────────────────────────────
 const firstBetDate = new Date(danBets[0].date);
 const today = new Date();
 const daysActive = Math.floor(
   (today.getTime() - firstBetDate.getTime()) / 86400000
 );
-
-// HYSA benchmark — simple interest
 const hysaValue = Number(
-  (hysaBenchmark.principal * (1 + hysaBenchmark.annualYield * (daysActive / 365))).toFixed(2)
+  (
+    hysaBenchmark.principal *
+    (1 + hysaBenchmark.annualYield * (daysActive / 365))
+  ).toFixed(2)
 );
 const hysaGain = Number((hysaValue - hysaBenchmark.principal).toFixed(2));
-const vsHysa = Number((currentBalance - hysaValue).toFixed(2));
+const vsHysa = Number((mCurrentBalance - hysaValue).toFixed(2));
 
-// ── NBA expert picks stats ────────────────────────────────────────────────────
+// ── Expert pool stats ─────────────────────────────────────────────────────────
 const nbaSettled = expertPicks.filter(
   (p) => p.result === "win" || p.result === "loss" || p.result === "push"
 );
 const nbaWins = nbaSettled.filter((p) => p.result === "win").length;
 const nbaWinRate = nbaSettled.length ? (nbaWins / nbaSettled.length) * 100 : 0;
 
-// Best NBA expert (min 10 settled picks)
 const nbaExpertMap = new Map<string, { wins: number; total: number }>();
 for (const pick of nbaSettled) {
   const e = nbaExpertMap.get(pick.authorName) ?? { wins: 0, total: 0 };
@@ -68,19 +122,18 @@ for (const pick of nbaSettled) {
   if (pick.result === "win") e.wins++;
   nbaExpertMap.set(pick.authorName, e);
 }
-const bestNbaExpert = Array.from(nbaExpertMap.entries())
-  .filter(([, d]) => d.total >= 10)
-  .map(([name, d]) => ({ name, rate: (d.wins / d.total) * 100, total: d.total }))
-  .sort((a, b) => b.rate - a.rate)[0] ?? null;
+const bestNbaExpert =
+  Array.from(nbaExpertMap.entries())
+    .filter(([, d]) => d.total >= 10)
+    .map(([name, d]) => ({ name, rate: (d.wins / d.total) * 100, total: d.total }))
+    .sort((a, b) => b.rate - a.rate)[0] ?? null;
 
-// ── MLB expert picks stats ────────────────────────────────────────────────────
 const mlbSettled = mlbExpertPicks.filter(
   (p) => p.result === "win" || p.result === "loss" || p.result === "push"
 );
 const mlbWins = mlbSettled.filter((p) => p.result === "win").length;
 const mlbWinRate = mlbSettled.length ? (mlbWins / mlbSettled.length) * 100 : 0;
 
-// Best MLB expert (min 5 settled picks — season is younger)
 const mlbExpertMap = new Map<string, { wins: number; total: number }>();
 for (const pick of mlbSettled) {
   const e = mlbExpertMap.get(pick.authorName) ?? { wins: 0, total: 0 };
@@ -88,10 +141,11 @@ for (const pick of mlbSettled) {
   if (pick.result === "win") e.wins++;
   mlbExpertMap.set(pick.authorName, e);
 }
-const bestMlbExpert = Array.from(mlbExpertMap.entries())
-  .filter(([, d]) => d.total >= 5)
-  .map(([name, d]) => ({ name, rate: (d.wins / d.total) * 100, total: d.total }))
-  .sort((a, b) => b.rate - a.rate)[0] ?? null;
+const bestMlbExpert =
+  Array.from(mlbExpertMap.entries())
+    .filter(([, d]) => d.total >= 5)
+    .map(([name, d]) => ({ name, rate: (d.wins / d.total) * 100, total: d.total }))
+    .sort((a, b) => b.rate - a.rate)[0] ?? null;
 
 // ── Formatters ────────────────────────────────────────────────────────────────
 const currency = new Intl.NumberFormat("en-US", {
@@ -120,254 +174,419 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
 
-    <!-- Site nav -->
     <div class="relative z-10 border-b border-white/5 backdrop-blur-sm">
       <Header title={SITE_TITLE} />
     </div>
 
     <main>
 
-      <!-- Hero -->
+      <!-- Today's Action (repurposed hero) -->
       <section class="relative overflow-hidden border-b border-slate-800">
-        <!-- Emerald grid overlay -->
         <div class="absolute inset-0 [background-image:linear-gradient(rgba(52,211,153,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(52,211,153,0.04)_1px,transparent_1px)] [background-size:48px_48px]"></div>
-        <!-- Corner accents -->
         <div class="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-emerald-500/40"></div>
         <div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-emerald-500/40"></div>
 
-        <div class="relative z-10 mx-auto max-w-7xl px-6 py-16">
+        <div class="relative z-10 mx-auto max-w-7xl px-6 py-10">
 
-          <!-- HUD label -->
-          <div class="flex items-center gap-3 mb-6">
+          <div class="flex items-center gap-3 mb-8">
             <div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
-            <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-emerald-400/80">Sports Betting Research</p>
+            <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-emerald-400/80">Plus EV · Today's Action</p>
           </div>
 
-          <h1 class="text-6xl lg:text-7xl font-black uppercase tracking-tighter text-white leading-none">
-            Plus EV
-          </h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-700/30">
 
-          <p class="mt-5 text-slate-300 max-w-2xl text-lg leading-relaxed">
-            A data-driven experiment in finding positive expected value. Tracking expert picks, running them through LLMs, and placing real bets with a martingale system.
-          </p>
+            <!-- Martingale panel -->
+            <div class="bg-slate-950/90 p-6 space-y-5">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400">Martingale</p>
+                  <p class="text-2xl font-black text-white mt-1">
+                    Series {currentMSeriesId ?? "—"}
+                  </p>
+                </div>
+                <a
+                  href="/martingale-tracker"
+                  class="flex items-center gap-1 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors mt-1"
+                >
+                  Full tracker
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
 
-          <!-- Ownership row -->
-          <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0">
-                <span class="text-slate-300 text-sm font-black">D</span>
+              <!-- Loss pips -->
+              <div class="flex items-center gap-2">
+                {Array.from({ length: martingaleMaxLosses }).map((_, i) => (
+                  <div
+                    class:list={[
+                      "w-3 h-3 rounded-full border",
+                      i < currentMLosses
+                        ? "bg-red-500 border-red-500"
+                        : "border-slate-600 bg-transparent",
+                    ]}
+                  ></div>
+                ))}
+                <span class="text-xs text-slate-500 font-mono ml-1">
+                  {currentMLosses} of {martingaleMaxLosses} losses
+                </span>
               </div>
-              <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-500 leading-none mb-1">Project</p>
-                <p class="text-sm font-bold text-white">Dan Denney</p>
-              </div>
+
+              <!-- Pending bet -->
+              {currentMPendingBet ? (
+                <div class="border border-emerald-800/40 bg-emerald-950/20 p-4 space-y-2">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-emerald-400/70">Active Bet</p>
+                  <p class="text-sm font-bold text-white leading-snug">{currentMPendingBet.pick}</p>
+                  <div class="flex items-center gap-3">
+                    <span class="text-xs font-mono text-slate-400">{currentMPendingBet.line}</span>
+                    <span class="text-xs font-mono font-bold text-slate-200">{currency.format(getStakeOut(currentMPendingBet))}</span>
+                  </div>
+                </div>
+              ) : (
+                <div class="border border-slate-700/40 p-4">
+                  <p class="text-xs text-slate-500 font-mono">No active bet today</p>
+                </div>
+              )}
             </div>
-            <div class="w-px h-8 bg-slate-800 hidden sm:block"></div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-emerald-900/60 border border-emerald-700/40 flex items-center justify-center flex-shrink-0">
-                <span class="text-emerald-400 text-sm font-black">G</span>
+
+            <!-- DK panel -->
+            <div class="bg-slate-950/90 p-6 space-y-5">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400">DraftKings</p>
+                  <p class="text-2xl font-black text-white mt-1">
+                    Series {currentDKSeriesId ?? "—"}
+                  </p>
+                </div>
+                <a
+                  href="/dk-tracker"
+                  class="flex items-center gap-1 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors mt-1"
+                >
+                  Full tracker
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
               </div>
-              <div>
-                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-500 leading-none mb-1">Daily Recaps</p>
-                <p class="text-sm font-bold text-emerald-400">Gale <span class="text-slate-500 font-normal">(AI)</span></p>
+
+              <!-- Loss pips -->
+              <div class="flex items-center gap-2">
+                {Array.from({ length: dkMaxLosses }).map((_, i) => (
+                  <div
+                    class:list={[
+                      "w-3 h-3 rounded-full border",
+                      i < currentDKLosses
+                        ? "bg-red-500 border-red-500"
+                        : "border-slate-600 bg-transparent",
+                    ]}
+                  ></div>
+                ))}
+                <span class="text-xs text-slate-500 font-mono ml-1">
+                  {currentDKLosses} of {dkMaxLosses} losses
+                </span>
               </div>
+
+              <!-- Pending bet -->
+              {currentDKPendingBet ? (
+                <div class="border border-emerald-800/40 bg-emerald-950/20 p-4 space-y-2">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-emerald-400/70">Active Bet</p>
+                  <p class="text-sm font-bold text-white leading-snug">{currentDKPendingBet.pick}</p>
+                  <div class="flex items-center gap-3">
+                    <span class="text-xs font-mono text-slate-400">{currentDKPendingBet.line}</span>
+                    <span class="text-xs font-mono font-bold text-slate-200">{currency.format(currentDKPendingBet.stakeOut)}</span>
+                  </div>
+                </div>
+              ) : (
+                <div class="border border-slate-700/40 p-4">
+                  <p class="text-xs text-slate-500 font-mono">No active bet today</p>
+                </div>
+              )}
             </div>
+
           </div>
-
         </div>
       </section>
 
       <div class="mx-auto max-w-7xl px-6 py-16 space-y-20">
 
+        <!-- Featured Recap -->
+        {featuredPost && (
+          <section>
+            <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-emerald-400/70 mb-6">Latest Recap</p>
+            <div class="border border-slate-700/60 bg-slate-900/30">
+              <div class="p-6 md:p-8 space-y-6">
+
+                <!-- Header -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <time class="text-xs text-slate-500 font-mono tabular-nums">
+                    {featuredPost.data.pubDate.toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                      timeZone: "UTC",
+                    })}
+                  </time>
+                  {featuredPost.data.sport && (
+                    <span class="text-xs px-2 py-0.5 bg-emerald-900/30 border border-emerald-800/40 text-emerald-400 font-mono">
+                      {featuredPost.data.sport === "nba"
+                        ? "NBA"
+                        : featuredPost.data.sport === "mlb"
+                          ? "MLB"
+                          : "NBA + MLB"}
+                    </span>
+                  )}
+                </div>
+
+                <div>
+                  <h2 class="text-2xl md:text-3xl font-black text-white leading-tight">
+                    {featuredPost.data.title}
+                  </h2>
+                  <p class="mt-3 text-slate-300 leading-relaxed">{featuredPost.data.summary}</p>
+                </div>
+
+                <!-- Picks -->
+                {featuredPost.data.picks && featuredPost.data.picks.length > 0 && (
+                  <div class="border-t border-slate-700/60 pt-5 space-y-3">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400">Model Picks</p>
+                    <div class="space-y-2">
+                      {featuredPost.data.picks.map((p: { recommender: string; pick: string; result: "win" | "loss" | "pending" }) => (
+                        <div class="flex items-center gap-3 flex-wrap">
+                          <span class="font-mono text-xs text-slate-400 w-20 flex-shrink-0">{p.recommender}</span>
+                          <span class="text-sm text-slate-200 flex-1 min-w-0">{p.pick}</span>
+                          <span
+                            class:list={[
+                              "text-xs font-mono font-bold px-2 py-0.5 flex-shrink-0",
+                              p.result === "win"
+                                ? "text-emerald-400 bg-emerald-900/30 border border-emerald-800/40"
+                                : p.result === "loss"
+                                  ? "text-red-400 bg-red-900/30 border border-red-800/40"
+                                  : "text-slate-400 bg-slate-800/30 border border-slate-700/40",
+                            ]}
+                          >
+                            {p.result.toUpperCase()}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <!-- Link -->
+                <div class="pt-2">
+                  <a
+                    href={`/plus-ev/${featuredPost.slug}/`}
+                    class="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    Read full recap
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        )}
+
         <!-- Stats -->
         <section>
           <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-emerald-400/70 mb-6">The Numbers</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-700/30 lg:[grid-template-rows:auto_auto_1fr_auto]">
+          <div class="space-y-px">
 
-            <!-- Bankroll -->
-            <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
-              <!-- Row 1: label -->
-              <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">Bankroll</p>
-              <!-- Row 2: number -->
-              <div>
-                <p class:list={["text-3xl font-black tabular-nums tracking-tight", currentBalance >= startingBalance ? "text-emerald-400" : "text-red-400"]}>
-                  {currency.format(currentBalance)}
-                </p>
-              </div>
-              <!-- Row 3: supporting text -->
-              <div class="mt-2 lg:mt-0 self-start space-y-1.5 pb-4">
-                <p class="text-xs text-slate-300">started {currency.format(startingBalance)}</p>
-                <p class:list={["text-sm font-mono font-bold tabular-nums", netPL >= 0 ? "text-emerald-500" : "text-red-500"]}>
-                  {sign(netPL)}{currency.format(netPL)}
-                </p>
-              </div>
-              <!-- Row 4: bottom -->
-              <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
-                <p class="text-xs text-slate-400">
-                  vs HYSA ({pct(hysaBenchmark.annualYield * 100)}):{"  "}
-                  <span class:list={["font-mono font-bold", vsHysa >= 0 ? "text-emerald-400" : "text-slate-400"]}>
-                    {sign(vsHysa)}{currency.format(vsHysa)}
-                  </span>
-                </p>
-                <p class="text-xs text-slate-600 mt-0.5">HYSA would have earned {currency.format(hysaGain)}</p>
-              </div>
-            </div>
+            <!-- Row 1: Bankrolls + Records -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-700/30 lg:[grid-template-rows:auto_auto_1fr_auto]">
 
-            <!-- Record -->
-            <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
-              <!-- Row 1: label -->
-              <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">Bet Record</p>
-              <!-- Row 2: number -->
-              <div>
-                <div class="flex items-baseline gap-2">
-                  <span class="text-3xl font-black tabular-nums tracking-tight text-emerald-400">{wins}</span>
-                  <span class="text-base font-normal text-slate-600">–</span>
-                  <span class="text-3xl font-black tabular-nums tracking-tight text-red-400">{losses}</span>
+              <!-- Martingale Bankroll -->
+              <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
+                <!-- Row 1: label -->
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">Martingale Bankroll</p>
+                <!-- Row 2: number -->
+                <div>
+                  <p class:list={["text-3xl font-black tabular-nums tracking-tight", mCurrentBalance >= startingBalance ? "text-emerald-400" : "text-red-400"]}>
+                    {currency.format(mCurrentBalance)}
+                  </p>
+                </div>
+                <!-- Row 3: supporting -->
+                <div class="mt-2 lg:mt-0 self-start space-y-1.5 pb-4">
+                  <p class="text-xs text-slate-300">started {currency.format(startingBalance)}</p>
+                  <p class:list={["text-sm font-mono font-bold tabular-nums", mNetPL >= 0 ? "text-emerald-500" : "text-red-500"]}>
+                    {sign(mNetPL)}{currency.format(mNetPL)}
+                  </p>
+                </div>
+                <!-- Row 4: bottom -->
+                <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
+                  <p class="text-xs text-slate-400">
+                    vs HYSA ({pct(hysaBenchmark.annualYield * 100)}):{"  "}
+                    <span class:list={["font-mono font-bold", vsHysa >= 0 ? "text-emerald-400" : "text-slate-400"]}>
+                      {sign(vsHysa)}{currency.format(vsHysa)}
+                    </span>
+                  </p>
+                  <p class="text-xs text-slate-600 mt-0.5">HYSA would have earned {currency.format(hysaGain)}</p>
                 </div>
               </div>
-              <!-- Row 3: supporting text -->
-              <div class="mt-2 lg:mt-0 self-start space-y-1.5 pb-4">
-                <p class="text-xs text-slate-300">{pct(winRate)} win rate</p>
-                <p class="text-xs text-slate-300">{danBets.length} bets placed</p>
-                {pendingCount > 0 && (
-                  <p class="text-xs text-slate-300">{pendingCount} pending</p>
-                )}
+
+              <!-- Martingale Record -->
+              <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
+                <!-- Row 1: label -->
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">Martingale Record</p>
+                <!-- Row 2: number -->
+                <div>
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-black tabular-nums tracking-tight text-emerald-400">{mWins}</span>
+                    <span class="text-base font-normal text-slate-600">–</span>
+                    <span class="text-3xl font-black tabular-nums tracking-tight text-red-400">{mLosses}</span>
+                  </div>
+                </div>
+                <!-- Row 3: supporting -->
+                <div class="mt-2 lg:mt-0 self-start space-y-1.5 pb-4">
+                  <p class="text-xs text-slate-300">{pct(mWinRate)} win rate</p>
+                  <p class="text-xs text-slate-300">{danBets.length} bets placed</p>
+                  {mPendingCount > 0 && (
+                    <p class="text-xs text-slate-300">{mPendingCount} pending</p>
+                  )}
+                </div>
+                <!-- Row 4: bottom -->
+                <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
+                  {mCurrentLossStreak > 0 ? (
+                    <p class="text-xs text-orange-400 font-mono font-bold">{mCurrentLossStreak}-loss streak</p>
+                  ) : (
+                    <p class="text-xs text-slate-600 font-mono">no active loss streak</p>
+                  )}
+                </div>
               </div>
-              <!-- Row 4: bottom -->
-              <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
-                {currentLossStreak > 0 ? (
-                  <p class="text-xs text-orange-400 font-mono font-bold">{currentLossStreak}-game loss streak</p>
-                ) : (
-                  <p class="text-xs text-slate-600 font-mono">no active loss streak</p>
-                )}
+
+              <!-- DK Bankroll -->
+              <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
+                <!-- Row 1: label -->
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">DK Bankroll</p>
+                <!-- Row 2: number -->
+                <div>
+                  <p class:list={["text-3xl font-black tabular-nums tracking-tight", dkCurrentBalance >= dkEffectiveStart ? "text-emerald-400" : "text-red-400"]}>
+                    {currency.format(dkCurrentBalance)}
+                  </p>
+                </div>
+                <!-- Row 3: supporting -->
+                <div class="mt-2 lg:mt-0 self-start space-y-1.5 pb-4">
+                  <p class="text-xs text-slate-300">started {currency.format(dkStartingBalance)}</p>
+                  <p class:list={["text-sm font-mono font-bold tabular-nums", dkNetPL >= 0 ? "text-emerald-500" : "text-red-500"]}>
+                    {sign(dkNetPL)}{currency.format(dkNetPL)}
+                  </p>
+                </div>
+                <!-- Row 4: bottom -->
+                <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
+                  <p class="text-xs text-slate-600">{currency.format(dkStartingBonusCash)} bonus cash included</p>
+                </div>
               </div>
+
+              <!-- DK Record -->
+              <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
+                <!-- Row 1: label -->
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">DK Record</p>
+                <!-- Row 2: number -->
+                <div>
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-black tabular-nums tracking-tight text-emerald-400">{dkWins}</span>
+                    <span class="text-base font-normal text-slate-600">–</span>
+                    <span class="text-3xl font-black tabular-nums tracking-tight text-red-400">{dkLosses}</span>
+                  </div>
+                </div>
+                <!-- Row 3: supporting -->
+                <div class="mt-2 lg:mt-0 self-start space-y-1.5 pb-4">
+                  <p class="text-xs text-slate-300">{pct(dkWinRate)} win rate</p>
+                  <p class="text-xs text-slate-300">{dkBets.filter(b => !b.isBonus).length} bets placed</p>
+                  {dkPendingCount > 0 && (
+                    <p class="text-xs text-slate-300">{dkPendingCount} pending</p>
+                  )}
+                </div>
+                <!-- Row 4: bottom -->
+                <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
+                  {dkCurrentLossStreak > 0 ? (
+                    <p class="text-xs text-orange-400 font-mono font-bold">{dkCurrentLossStreak}-loss streak</p>
+                  ) : (
+                    <p class="text-xs text-slate-600 font-mono">no active loss streak</p>
+                  )}
+                </div>
+              </div>
+
             </div>
 
-            <!-- Days Running -->
-            <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
-              <!-- Row 1: label -->
-              <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">Running</p>
-              <!-- Row 2: number -->
-              <div>
+            <!-- Row 2: Running + Expert Pool -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-slate-700/30">
+
+              <!-- Days Running -->
+              <div class="bg-slate-950 p-6 space-y-4">
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400">Running</p>
                 <p class="text-3xl font-black tabular-nums tracking-tight text-white">
                   {daysActive}
                   <span class="text-lg font-normal text-slate-500 ml-1">days</span>
                 </p>
-              </div>
-              <!-- Row 3: supporting text -->
-              <div class="mt-2 lg:mt-0 self-start pb-4">
                 <p class="text-xs text-slate-300">since {startDateStr}</p>
+                <div class="pt-4 border-t border-slate-700/60">
+                  {posts.length > 0 ? (
+                    <>
+                      <p class="text-xs text-slate-400">{posts.length} recap{posts.length !== 1 ? "s" : ""} from Gale</p>
+                      <p class="text-xs text-slate-600 mt-0.5">
+                        latest:{" "}
+                        {posts[0].data.pubDate.toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                          timeZone: "UTC",
+                        })}
+                      </p>
+                    </>
+                  ) : (
+                    <p class="text-xs text-slate-600 font-mono">no recaps yet</p>
+                  )}
+                </div>
               </div>
-              <!-- Row 4: bottom -->
-              <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
-                {posts.length > 0 ? (
-                  <>
-                    <p class="text-xs text-slate-400">{posts.length} recap{posts.length !== 1 ? "s" : ""} from Gale</p>
-                    <p class="text-xs text-slate-600 mt-0.5">
-                      latest:{" "}
-                      {posts[0].data.pubDate.toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        timeZone: "UTC",
-                      })}
-                    </p>
-                  </>
-                ) : (
-                  <p class="text-xs text-slate-600 font-mono">no recaps yet</p>
-                )}
-              </div>
-            </div>
 
-            <!-- Expert Pool -->
-            <div class="bg-slate-950 p-6 flex flex-col lg:grid lg:[grid-row:span_4] lg:[grid-template-rows:subgrid] lg:[row-gap:0]">
-              <!-- Row 1: label -->
-              <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400 pb-4">Expert Pool</p>
-              <!-- Row 2: number -->
-              <div>
+              <!-- Expert Pool -->
+              <div class="bg-slate-950 p-6 space-y-4">
+                <p class="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-400">Expert Pool</p>
                 <p class="text-3xl font-black tabular-nums tracking-tight text-white">
                   {nbaSettled.length + mlbSettled.length}
                   <span class="text-lg font-normal text-slate-500 ml-1">picks</span>
                 </p>
-              </div>
-              <!-- Row 3: supporting text -->
-              <div class="mt-2 lg:mt-0 self-start pb-4">
                 <p class="text-xs text-slate-300">tracked &amp; settled</p>
-              </div>
-              <!-- Row 4: bottom -->
-              <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60 space-y-2">
-                <div class="flex justify-between items-center">
-                  <span class="text-xs text-slate-500 font-mono">NBA</span>
-                  <span class="text-xs font-mono font-bold text-slate-300">{pct(nbaWinRate)}</span>
+                <div class="pt-4 border-t border-slate-700/60 space-y-2">
+                  <a href="/expert-picks" class="flex justify-between items-center group">
+                    <span class="text-xs text-slate-500 font-mono group-hover:text-slate-400 transition-colors">NBA</span>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-emerald-400 transition-colors">{pct(nbaWinRate)}</span>
+                  </a>
+                  <a href="/mlb-expert-picks" class="flex justify-between items-center group">
+                    <span class="text-xs text-slate-500 font-mono group-hover:text-slate-400 transition-colors">MLB</span>
+                    <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-emerald-400 transition-colors">{mlbSettled.length > 0 ? pct(mlbWinRate) : "—"}</span>
+                  </a>
+                  {(bestNbaExpert || bestMlbExpert) && (
+                    <div class="pt-2 border-t border-slate-700/40 space-y-1.5">
+                      {bestNbaExpert && (
+                        <div class="flex justify-between items-baseline">
+                          <span class="text-xs text-slate-300">best NBA: <span class="text-emerald-400 font-semibold">{bestNbaExpert.name.split(" ")[0]}</span></span>
+                          <span class="text-xs font-mono font-bold text-emerald-400">{pct(bestNbaExpert.rate)}</span>
+                        </div>
+                      )}
+                      {bestMlbExpert && (
+                        <div class="flex justify-between items-baseline">
+                          <span class="text-xs text-slate-300">best MLB: <span class="text-emerald-400 font-semibold">{bestMlbExpert.name.split(" ")[0]}</span></span>
+                          <span class="text-xs font-mono font-bold text-emerald-400">{pct(bestMlbExpert.rate)}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
-                <div class="flex justify-between items-center">
-                  <span class="text-xs text-slate-500 font-mono">MLB</span>
-                  <span class="text-xs font-mono font-bold text-slate-300">{mlbSettled.length > 0 ? pct(mlbWinRate) : "—"}</span>
-                </div>
-                {(bestNbaExpert || bestMlbExpert) && (
-                  <div class="pt-2 border-t border-slate-700/40 space-y-1.5">
-                    {bestNbaExpert && (
-                      <div class="flex justify-between items-baseline">
-                        <span class="text-xs text-slate-300">best NBA: <span class="text-emerald-400 font-semibold">{bestNbaExpert.name.split(" ")[0]}</span></span>
-                        <span class="text-xs font-mono font-bold text-emerald-400">{pct(bestNbaExpert.rate)}</span>
-                      </div>
-                    )}
-                    {bestMlbExpert && (
-                      <div class="flex justify-between items-baseline">
-                        <span class="text-xs text-slate-300">best MLB: <span class="text-emerald-400 font-semibold">{bestMlbExpert.name.split(" ")[0]}</span></span>
-                        <span class="text-xs font-mono font-bold text-emerald-400">{pct(bestMlbExpert.rate)}</span>
-                      </div>
-                    )}
-                  </div>
-                )}
               </div>
+
             </div>
-
           </div>
         </section>
 
-        <!-- Dashboard links -->
-        <section>
-          <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-emerald-400/70 mb-6">Live Data</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-800/50">
-            <a href="/martingale-tracker" class="group flex items-center justify-between bg-slate-950 hover:bg-slate-900 px-6 py-5 transition-colors">
-              <div>
-                <p class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">Martingale Tracker</p>
-                <p class="text-xs text-slate-500 mt-0.5">3-loss max · two-account ledger</p>
-              </div>
-              <svg class="text-slate-700 group-hover:text-emerald-500 transition-colors flex-shrink-0 ml-4" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="/dk-tracker" class="group flex items-center justify-between bg-slate-950 hover:bg-slate-900 px-6 py-5 transition-colors">
-              <div>
-                <p class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">DK Tracker</p>
-                <p class="text-xs text-slate-500 mt-0.5">6-loss max · DraftKings ledger</p>
-              </div>
-              <svg class="text-slate-700 group-hover:text-emerald-500 transition-colors flex-shrink-0 ml-4" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="/expert-picks" class="group flex items-center justify-between bg-slate-950 hover:bg-slate-900 px-6 py-5 transition-colors">
-              <div>
-                <p class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">NBA Expert Picks</p>
-                <p class="text-xs text-slate-500 mt-0.5">{expertPicks.length} picks · {nbaExpertMap.size} experts</p>
-              </div>
-              <svg class="text-slate-700 group-hover:text-emerald-500 transition-colors flex-shrink-0 ml-4" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="/mlb-expert-picks" class="group flex items-center justify-between bg-slate-950 hover:bg-slate-900 px-6 py-5 transition-colors">
-              <div>
-                <p class="text-sm font-bold text-slate-200 group-hover:text-white transition-colors">MLB Expert Picks</p>
-                <p class="text-xs text-slate-500 mt-0.5">{mlbExpertPicks.length} picks · {mlbExpertMap.size} experts</p>
-              </div>
-              <svg class="text-slate-700 group-hover:text-emerald-500 transition-colors flex-shrink-0 ml-4" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </section>
-
-        <!-- Posts -->
-        <section>
-          <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-emerald-400/70 mb-6">Recaps from Gale</p>
-          {posts.length === 0 ? (
-            <p class="text-slate-500 text-sm font-mono">No recaps yet. Check back tomorrow.</p>
-          ) : (
+        <!-- Recaps Archive -->
+        {archivePosts.length > 0 && (
+          <section>
+            <p class="font-mono text-[10px] uppercase tracking-[0.4em] text-emerald-400/70 mb-6">Recap Archive</p>
             <div class="divide-y divide-slate-800/60">
-              {posts.map((post) => {
+              {archivePosts.map((post) => {
                 const dateStr = post.data.pubDate.toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
@@ -375,9 +594,13 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   timeZone: "UTC",
                 });
                 const sportLabel =
-                  post.data.sport === "nba" ? "NBA" :
-                  post.data.sport === "mlb" ? "MLB" :
-                  post.data.sport === "both" ? "NBA + MLB" : null;
+                  post.data.sport === "nba"
+                    ? "NBA"
+                    : post.data.sport === "mlb"
+                      ? "MLB"
+                      : post.data.sport === "both"
+                        ? "NBA + MLB"
+                        : null;
                 return (
                   <a
                     href={`/plus-ev/${post.slug}/`}
@@ -391,13 +614,15 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                     {sportLabel && (
                       <span class="text-xs px-2 py-0.5 bg-emerald-900/30 border border-emerald-800/40 text-emerald-400 font-mono flex-shrink-0">{sportLabel}</span>
                     )}
-                    <svg class="text-slate-700 group-hover:text-slate-500 transition-colors flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="text-slate-700 group-hover:text-slate-500 transition-colors flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                   </a>
                 );
               })}
             </div>
-          )}
-        </section>
+          </section>
+        )}
 
       </div>
     </main>
