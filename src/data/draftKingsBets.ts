@@ -261,7 +261,7 @@ export const dkBets: DKBet[] = [
   {
     id: 23,
     date: "2026-04-07",
-    seriesId: "J",
+    seriesId: "I",
     pick: "Cam Schlittler Pitcher to Record a Win",
     line: "+108",
     stakeOut: 60,
@@ -283,7 +283,7 @@ export const dkBets: DKBet[] = [
   {
     id: 25,
     date: "2026-04-08",
-    seriesId: "J",
+    seriesId: "I",
     pick: "Detroit Tigers -1.5",
     line: "+108",
     stakeOut: 120,
