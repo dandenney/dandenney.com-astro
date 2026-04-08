@@ -15,7 +15,7 @@ export interface DKBet {
 
 export const dkStartingBalance = 750;
 // Promo/bonus cash credited at account open — not winnings, not real cash deposit
-export const dkStartingBonusCash = 29;
+export const dkStartingBonusCash = 36.54;
 
 export const dkBets: DKBet[] = [
   // Series A
@@ -254,7 +254,19 @@ export const dkBets: DKBet[] = [
     pick: "Joel Embiid Under 40.5 Points + Rebounds + Assists",
     line: "-117",
     stakeOut: 30,
-    result: "pending",
+    result: "loss",
+    returnAmount: 0,
+  },
+  // Series I — re-bet same stake after void
+  {
+    id: 23,
+    date: "2026-04-07",
+    seriesId: "J",
+    pick: "Cam Schlittler Pitcher to Record a Win",
+    line: "+108",
+    stakeOut: 60,
+    result: "loss",
+    returnAmount: 0,
   },
 ];
 
