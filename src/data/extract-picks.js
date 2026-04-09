@@ -5,7 +5,7 @@
  * BEFORE RUNNING: Update START_ID to the next sequential ID for expertPicks.ts
  */
 (function () {
-  const START_ID = 137;        // ← UPDATE THIS before running
+  const START_ID = 150;        // ← UPDATE THIS before running
   const FILTER_DATE = "Apr 08 2026";  // ← optionally filter by date, e.g. "Apr 04 2026" — null = all picks
 
   const sections = [...document.querySelectorAll('section')].filter(

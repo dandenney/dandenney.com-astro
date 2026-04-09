@@ -287,7 +287,7 @@ export const dkBets: DKBet[] = [
     pick: "Detroit Tigers -1.5",
     line: "+108",
     stakeOut: 120,
-    result: "pending",
+    result: "loss",
     returnAmount: 0,
   },
 ];
