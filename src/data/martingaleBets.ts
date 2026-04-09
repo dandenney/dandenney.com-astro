@@ -763,8 +763,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Detroit Tigers -1.5",
     line: "+112",
     amount: 20,
-    result: "pending",
+    result: "win",
     stakeOut: 20,
+    returnAmount: 42.40,
   },
   {
     id: 59,
@@ -774,8 +775,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Detroit Tigers -1.5",
     line: "+112",
     amount: 20,
-    result: "pending",
+    result: "win",
     stakeOut: 20,
+    returnAmount: 42.40,
   },
 ];
 
