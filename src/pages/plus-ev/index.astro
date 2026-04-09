@@ -179,6 +179,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
     </div>
 
     <main>
+      <h1 class="sr-only">Plus EV</h1>
 
       <!-- Today's Action (repurposed hero) -->
       <section class="relative overflow-hidden border-b border-slate-800">
@@ -422,7 +423,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                       {sign(vsHysa)}{currency.format(vsHysa)}
                     </span>
                   </p>
-                  <p class="text-xs text-slate-600 mt-0.5">HYSA would have earned {currency.format(hysaGain)}</p>
+                  <p class="text-xs text-slate-500 mt-0.5">HYSA would have earned {currency.format(hysaGain)}</p>
                 </div>
               </div>
 
@@ -451,7 +452,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   {mCurrentLossStreak > 0 ? (
                     <p class="text-xs text-orange-400 font-mono font-bold">{mCurrentLossStreak}-loss streak</p>
                   ) : (
-                    <p class="text-xs text-slate-600 font-mono">no active loss streak</p>
+                    <p class="text-xs text-slate-500 font-mono">no active loss streak</p>
                   )}
                 </div>
               </div>
@@ -475,7 +476,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                 </div>
                 <!-- Row 4: bottom -->
                 <div class="mt-auto lg:mt-0 pt-4 border-t border-slate-700/60">
-                  <p class="text-xs text-slate-600">{currency.format(dkStartingBonusCash)} bonus cash included</p>
+                  <p class="text-xs text-slate-500">{currency.format(dkStartingBonusCash)} bonus cash included</p>
                 </div>
               </div>
 
@@ -504,7 +505,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   {dkCurrentLossStreak > 0 ? (
                     <p class="text-xs text-orange-400 font-mono font-bold">{dkCurrentLossStreak}-loss streak</p>
                   ) : (
-                    <p class="text-xs text-slate-600 font-mono">no active loss streak</p>
+                    <p class="text-xs text-slate-500 font-mono">no active loss streak</p>
                   )}
                 </div>
               </div>
@@ -526,7 +527,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   {posts.length > 0 ? (
                     <>
                       <p class="text-xs text-slate-400">{posts.length} recap{posts.length !== 1 ? "s" : ""} from Gale</p>
-                      <p class="text-xs text-slate-600 mt-0.5">
+                      <p class="text-xs text-slate-500 mt-0.5">
                         latest:{" "}
                         {posts[0].data.pubDate.toLocaleDateString("en-US", {
                           month: "short",
@@ -536,7 +537,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                       </p>
                     </>
                   ) : (
-                    <p class="text-xs text-slate-600 font-mono">no recaps yet</p>
+                    <p class="text-xs text-slate-500 font-mono">no recaps yet</p>
                   )}
                 </div>
               </div>

@@ -1,5 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE } from "../consts";
 
 const { title, summary, pubDate, sport } = Astro.props;
 
@@ -20,7 +22,11 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
 
-    <div class="mx-auto max-w-2xl px-4 pt-12">
+    <div class="relative z-10 border-b border-white/5 backdrop-blur-sm">
+      <Header title={SITE_TITLE} />
+    </div>
+
+    <div class="mx-auto max-w-2xl px-4 pt-10">
 
       <!-- Back link -->
       <a href="/plus-ev" class="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-emerald-400 transition-colors mb-10">
@@ -35,10 +41,10 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
         <div class="flex items-center gap-3 mb-4">
           <time class="text-xs text-slate-500 font-mono">{dateStr}</time>
           {sportLabel && (
-            <span class="text-xs px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-400 font-mono">{sportLabel}</span>
+            <span class="text-xs px-2 py-0.5 bg-emerald-900/30 border border-emerald-800/40 text-emerald-400 font-mono">{sportLabel}</span>
           )}
         </div>
-        <h1 class="text-2xl font-bold text-white leading-snug">{title}</h1>
+        <h1 class="text-3xl font-black text-white leading-snug">{title}</h1>
         <p class="mt-2 text-slate-400 text-sm">{summary}</p>
 
         <!-- Byline -->
@@ -88,7 +94,10 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
   /* Constrain prose to readable width, centered */
   article :global(p),
   article :global(ul),
-  article :global(ol) {
+  article :global(ol),
+  article :global(h2),
+  article :global(h3),
+  article :global(h4) {
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
