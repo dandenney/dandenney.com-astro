@@ -320,7 +320,8 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                   Pending
                 </span>
               ) : (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em]">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/20 border border-slate-600/30 text-slate-500 font-mono text-[10px] uppercase tracking-[0.2em]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-500/60"></span>
                   Standby
                 </span>
               )}
@@ -332,7 +333,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
                 <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tight leading-none">{danActiveBets[0].pick}</p>
               ) : (
                 <div>
-                  <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-600 uppercase tracking-tight leading-none">No Current Bet</p>
+                  <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-500 uppercase tracking-tight leading-none">No Current Bet</p>
                 </div>
               )}
             </div>
@@ -529,10 +530,16 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
          HISTORY — series summaries + full ledgers, descending
     ═══════════════════════════════════════════════════════ -->
     <section class="w-full px-6 lg:px-12 xl:px-16 py-16 border-t border-slate-800/50">
-      <div class="flex items-center gap-4 mb-12">
-        <div class="h-px w-10 bg-slate-500/60"></div>
-        <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-slate-500">// Bet History Ledger</p>
-        <div class="h-px flex-1 bg-slate-800/60"></div>
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-12">
+        <div class="flex items-center gap-4 flex-1">
+          <div class="h-px w-10 bg-slate-500/60"></div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.5em] text-slate-500">// Bet History Ledger</p>
+          <div class="h-px flex-1 bg-slate-800/60"></div>
+        </div>
+        <div class="flex items-center gap-3 flex-shrink-0">
+          <a href="#dan-ledger" class="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-400/70 hover:text-cyan-300 transition-colors border border-cyan-500/20 hover:border-cyan-500/40 px-2.5 py-1">↓ Dan</a>
+          <a href="#garden-ledger" class="font-mono text-[10px] uppercase tracking-[0.2em] text-violet-400/70 hover:text-violet-300 transition-colors border border-violet-500/20 hover:border-violet-500/40 px-2.5 py-1">↓ GardenOf</a>
+        </div>
       </div>
 
       <!-- ── Series Summaries (two-col on lg) ── -->
@@ -556,7 +563,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
               </thead>
               <tbody>
                 {seriesSummariesDesc.map((series) => (
-                  <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <tr class="border-b border-slate-800/20 odd:bg-slate-900/10 hover:bg-slate-800/20 transition-colors">
                     <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
@@ -594,7 +601,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
               </thead>
               <tbody>
                 {gardenSeriesSummariesDesc.map((series) => (
-                  <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                  <tr class="border-b border-slate-800/20 odd:bg-slate-900/10 hover:bg-slate-800/20 transition-colors">
                     <td class="py-3 pr-8 font-mono font-bold text-white">{series.seriesId}</td>
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
                     <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
@@ -615,7 +622,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
       </div>
 
       <!-- ── Dan ── -->
-      <div class="mb-20">
+      <div class="mb-20" id="dan-ledger">
 
         <!-- Dan full ledger -->
         <div class="flex items-center gap-3 mb-5">
@@ -624,8 +631,8 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
         </div>
         <div class="overflow-x-auto">
           <table class="w-full border-collapse text-left min-w-[960px]">
-            <thead>
-              <tr class="border-b border-slate-700/50">
+            <thead class="sticky top-0 z-10 bg-slate-950 shadow-[0_1px_0_rgba(51,65,85,0.5)]">
+              <tr>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
@@ -639,7 +646,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             </thead>
             <tbody>
               {withRunningBalanceDesc.map((bet) => (
-                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                <tr class="border-b border-slate-800/20 odd:bg-slate-900/10 hover:bg-slate-800/20 transition-colors">
                   <td class="py-3 pr-6 font-mono font-bold text-cyan-300 text-sm whitespace-nowrap">{bet.seriesId}</td>
                   <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-white">{bet.pick}</td>
@@ -665,7 +672,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
       </div>
 
       <!-- ── GardenOf ── -->
-      <div class="border-t border-slate-800/50 pt-16">
+      <div class="border-t border-slate-800/50 pt-16" id="garden-ledger">
 
         <!-- GardenOf full ledger -->
         <div class="flex items-center gap-3 mb-5">
@@ -674,8 +681,8 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
         </div>
         <div class="overflow-x-auto">
           <table class="w-full border-collapse text-left min-w-[960px]">
-            <thead>
-              <tr class="border-b border-slate-700/50">
+            <thead class="sticky top-0 z-10 bg-slate-950 shadow-[0_1px_0_rgba(51,65,85,0.5)]">
+              <tr>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
@@ -689,7 +696,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
             </thead>
             <tbody>
               {gardenWithRunningBalanceDesc.map((bet) => (
-                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                <tr class="border-b border-slate-800/20 odd:bg-slate-900/10 hover:bg-slate-800/20 transition-colors">
                   <td class="py-3 pr-6 font-mono font-bold text-violet-300 text-sm whitespace-nowrap">{bet.seriesId}</td>
                   <td class="py-3 pr-6 font-mono text-xs text-slate-500 whitespace-nowrap">{formatDate(bet.date)}</td>
                   <td class="py-3 pr-6 font-mono text-sm text-white">{bet.pick}</td>

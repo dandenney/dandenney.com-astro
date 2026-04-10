@@ -290,6 +290,17 @@ export const dkBets: DKBet[] = [
     result: "loss",
     returnAmount: 0,
   },
+  // Series I — re-bet same stake after void
+  {
+    id: 26,
+    date: "2026-04-09",
+    seriesId: "I",
+    pick: "RJ Barrett Under 30.5 Total Points + Assists + Rebounds",
+    line: "-119",
+    stakeOut: 240,
+    result: "pending",
+    returnAmount: 0,
+  },
 ];
 
 export const getDKReturnAmount = (bet: DKBet): number => {

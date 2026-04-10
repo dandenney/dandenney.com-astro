@@ -803,6 +803,30 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 20,
     returnAmount: 0,
   },
+  {
+    id: 62,
+    owner: "Dan",
+    date: "2026-04-09",
+    seriesId: "T",
+    pick: "Randy Vasquez Over 4.5 Total Pitcher Strikeouts",
+    line: "-140",
+    amount: 40,
+    result: "pending",
+    stakeOut: 20,
+    returnAmount: 0,
+  },
+  {
+    id: 63,
+    owner: "GardenOf",
+    date: "2026-04-09",
+    seriesId: "O",
+    pick: "Randy Vasquez Over 4.5 Total Pitcher Strikeouts",
+    line: "-140",
+    amount: 40,
+    result: "pending",
+    stakeOut: 40,
+    returnAmount: 0,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>

@@ -252,7 +252,8 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
                   Pending
                 </span>
               ) : (
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/50 border border-slate-600/40 text-slate-400 font-mono text-[10px] uppercase tracking-[0.2em]">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-700/20 border border-slate-600/30 text-slate-500 font-mono text-[10px] uppercase tracking-[0.2em]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-500/60"></span>
                   Standby
                 </span>
               )}
@@ -262,7 +263,7 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
               {activeBets.length > 0 ? (
                 <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-white uppercase tracking-tight leading-none">{activeBets[0].pick}</p>
               ) : (
-                <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-600 uppercase tracking-tight leading-none">No Current Bet</p>
+                <p class="text-3xl lg:text-4xl xl:text-5xl font-black text-slate-500 uppercase tracking-tight leading-none">No Current Bet</p>
               )}
             </div>
 
@@ -346,13 +347,13 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
           <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
           <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Win Rate</p>
           <p class="font-mono text-2xl font-bold tabular-nums text-white">{settledBets.length ? `${winRate.toFixed(0)}%` : "—"}</p>
-          <p class="font-mono text-[10px] text-slate-600 mt-1">{wins}W – {losses}L</p>
+          <p class="font-mono text-[10px] text-slate-500 mt-1">{wins}W – {losses}L</p>
         </div>
         <div class="relative border border-slate-700/50 bg-slate-900/40 p-4 overflow-hidden">
           <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-slate-600/60 to-transparent"></div>
           <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-2">Max Losses / Series</p>
           <p class="font-mono text-2xl font-bold tabular-nums text-yellow-300">{MAX_LOSSES}</p>
-          <p class="font-mono text-[10px] text-slate-600 mt-1 uppercase">before reset</p>
+          <p class="font-mono text-[10px] text-slate-500 mt-1 uppercase">before reset</p>
         </div>
       </div>
 
@@ -380,8 +381,8 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
         </div>
         <div class="overflow-x-auto">
           <table class="w-full border-collapse text-left min-w-[480px]">
-            <thead>
-              <tr class="border-b border-slate-700/50">
+            <thead class="sticky top-0 z-10 bg-slate-950 shadow-[0_1px_0_rgba(51,65,85,0.5)]">
+              <tr>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Series</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Bets</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-8 font-medium">Losses</th>
@@ -391,7 +392,7 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
             </thead>
             <tbody>
               {seriesSummariesDesc.map((series) => (
-                <tr class="border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors">
+                <tr class="border-b border-slate-800/20 odd:bg-slate-900/10 hover:bg-slate-800/20 transition-colors">
                   <td class="py-3 pr-8 font-mono font-bold text-yellow-300">{series.seriesId}</td>
                   <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.betsCount}</td>
                   <td class="py-3 pr-8 font-mono text-sm text-slate-400">{series.lossesCount}</td>
@@ -418,8 +419,8 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
         </div>
         <div class="overflow-x-auto">
           <table class="w-full border-collapse text-left min-w-[960px]">
-            <thead>
-              <tr class="border-b border-slate-700/50">
+            <thead class="sticky top-0 z-10 bg-slate-950 shadow-[0_1px_0_rgba(51,65,85,0.5)]">
+              <tr>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Series</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Date</th>
                 <th class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 py-3 pr-6 font-medium">Pick</th>
@@ -433,7 +434,7 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
             </thead>
             <tbody>
               {withRunningBalanceDesc.map((bet) => (
-                <tr class:list={["border-b border-slate-800/30 hover:bg-slate-900/20 transition-colors", bet.isBonus ? "opacity-70" : ""]}>
+                <tr class:list={["border-b border-slate-800/20 odd:bg-slate-900/10 hover:bg-slate-800/20 transition-colors", bet.isBonus ? "opacity-70" : ""]}>
                   <td class="py-3 pr-6 font-mono font-bold text-yellow-300 text-sm whitespace-nowrap">
                     {bet.isBonus ? (
                       <span class="text-slate-600 font-normal text-[10px] uppercase tracking-wider">bonus</span>
