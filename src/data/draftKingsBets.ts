@@ -298,7 +298,7 @@ export const dkBets: DKBet[] = [
     pick: "RJ Barrett Under 30.5 Total Points + Assists + Rebounds",
     line: "-119",
     stakeOut: 240,
-    result: "pending",
+    result: "loss",
     returnAmount: 0,
   },
 ];

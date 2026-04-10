@@ -811,9 +811,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Randy Vasquez Over 4.5 Total Pitcher Strikeouts",
     line: "-140",
     amount: 40,
-    result: "pending",
+    result: "win",
     stakeOut: 20,
-    returnAmount: 0,
+    returnAmount: 68.57,
   },
   {
     id: 63,
@@ -823,9 +823,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Randy Vasquez Over 4.5 Total Pitcher Strikeouts",
     line: "-140",
     amount: 40,
-    result: "pending",
+    result: "win",
     stakeOut: 40,
-    returnAmount: 0,
+    returnAmount: 68.57,
   },
 ];
 
