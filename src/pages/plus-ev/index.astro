@@ -49,10 +49,14 @@ for (const bet of [...mSettledBets].reverse()) {
 // ── Martingale current series state ───────────────────────────────────────────
 const martingaleMaxLosses = 3;
 const latestDanBet = danBets[danBets.length - 1];
-const currentMSeriesId = latestDanBet?.seriesId ?? null;
-const currentMSeriesBets = currentMSeriesId
-  ? danBets.filter((b) => b.seriesId === currentMSeriesId)
+const latestMSeriesId = latestDanBet?.seriesId ?? null;
+const latestMSeriesBets = latestMSeriesId
+  ? danBets.filter((b) => b.seriesId === latestMSeriesId)
   : [];
+// A series is cleared once it contains a win — no active series in that case
+const latestMSeriesWon = latestMSeriesBets.some((b) => b.result === "win");
+const currentMSeriesId = latestMSeriesWon ? null : latestMSeriesId;
+const currentMSeriesBets = latestMSeriesWon ? [] : latestMSeriesBets;
 const currentMLosses = currentMSeriesBets.filter((b) => b.result === "loss").length;
 const currentMPendingBet =
   currentMSeriesBets.find((b) => b.result === "pending") ?? null;

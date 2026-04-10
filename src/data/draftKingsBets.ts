@@ -301,6 +301,18 @@ export const dkBets: DKBet[] = [
     result: "loss",
     returnAmount: 0,
   },
+  // Series I — re-bet same stake after void
+  {
+    id: 26,
+    date: "2026-04-10",
+    seriesId: "I",
+    pick: "Brooklyn Under 104.5 Total Points",
+    line: "-114",
+    stakeOut: 480,
+    result: "pending",
+    returnAmount: 0,
+  },
+  // Series I — re-bet same stake after void
 ];
 
 export const getDKReturnAmount = (bet: DKBet): number => {
