@@ -309,7 +309,7 @@ export const dkBets: DKBet[] = [
     pick: "Brooklyn Under 104.5 Total Points",
     line: "-114",
     stakeOut: 480,
-    result: "pending",
+    result: "loss",
     returnAmount: 0,
   },
   // Series I — re-bet same stake after void

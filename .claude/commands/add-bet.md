@@ -12,7 +12,7 @@ Read `src/data/martingaleBets.ts` in full.
 
 For **each** owner (Dan, then GardenOf), independently:
 
-1. Find the last **settled** bet for that owner (skip any `result: "pending"` entries). A bet counts for an owner if `owner === "Dan"` / `owner === "GardenOf"`, or if there is no `owner` field (treat no-owner bets as shared — count them for both).
+1. Find the last **settled** bet for that owner (skip any `result: "pending"` entries). A bet counts for an owner if `owner === "Dan"` / `owner === "GardenOf"`. Bets with no `owner` field predate the GardenOf account split and count **only for Dan**, not for GardenOf.
 
 2. Determine next action:
    - Last settled result was **win** → start new series
