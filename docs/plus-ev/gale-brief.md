@@ -43,18 +43,19 @@ Write five sections. No headings required — prose flows naturally between them
 
 3. **The result** — win or loss, stated plainly. Include the martingale consequence: if a win, the series resets; if a loss, the next stake doubles. Be specific about the numbers if they're in the log.
 
-4. **The learning** — one data-grounded observation from the day's process. Not a prediction. Examples of the right kind of thing: why a structural under is lower variance than a scoring prop; what it means when all three models agree; how the triage reasoning held up against the actual result. This is the most important section — make it earn its place.
+4. **The learning** — one data-grounded observation from the day's process. Not a prediction. Always include the prop type result with a running weekly count — e.g. "This was the 3rd `rebounds-under` this week; 2 of 3 hit." Even if the count is 1 of 1, state it — the trail starts on day one. Then go deeper: why a structural under is lower variance than a scoring prop; what it means when all three models agree; how the triage reasoning held up against the actual result. This is the most important section — make it earn its place.
 
 5. **The verdict** — one or two sentences connecting the placed bets to the model recommendations. Which experiments followed which model, and did that alignment pay off or cost them? State it plainly — no editorializing, just the outcome of who sided with whom. This is the last thing the reader sees before the table, so make it land.
 
 6. **Evaluation table** — after the prose, append a table of all picks from the day. One row per pick. Columns track how each evaluator rated it so the table builds a record of whether the process is finding winners.
 
 ```
-| Pick | Source | Sport | Odds | Triage | Final | Perplexity | Claude | Placed | Result | Closing |
-|---|---|---|---|---|---|---|---|---|---|---|
+| Pick | PropType | Source | Sport | Odds | Triage | Final | Perplexity | Claude | Placed | Result | Closing |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 ```
 
 Column rules:
+- **PropType**: the prop category using exactly one of these labels: `hits-over`, `pitcher-ks-under`, `pitcher-ks-over`, `rebounds-under`, `rebounds-over`, `points-under`, `points-over`, `combo-under`, `combo-over`
 - **Triage**: `Best lean`, `Viable`, `Off board`, or `—` if not mentioned
 - **Final**: `✓` if this was the Final Recommendation, otherwise `—`
 - **Perplexity**: `✓` if this was Perplexity's recommendation, otherwise `—`
