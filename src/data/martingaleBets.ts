@@ -907,9 +907,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Donovan Clingan Under 10.5 Rebounds",
     line: "-132",
     amount: 30,
-    result: "pending",
+    result: "win",
     stakeOut: 30,
-    returnAmount: 0,
+    returnAmount: 52.73,
   },
   {
     id: 71,
@@ -919,9 +919,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Donovan Clingan Under 10.5 Rebounds",
     line: "-132",
     amount: 20,
-    result: "pending",
+    result: "win",
     stakeOut: 20,
-    returnAmount: 0,
+    returnAmount: 35.15,
   },
 ];
 
