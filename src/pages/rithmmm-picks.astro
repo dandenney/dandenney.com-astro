@@ -1,0 +1,292 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { rithhmmPicks, type RithhmmPick, type RithhmmPropType } from "../data/rithhmmPicks";
+
+export const prerender = true;
+
+const resolved = rithhmmPicks.filter((p) => p.result !== "pending");
+const pendingCount = rithhmmPicks.filter((p) => p.result === "pending").length;
+
+// Group by date descending
+const dateMap = new Map<string, RithhmmPick[]>();
+for (const pick of resolved) {
+  const existing = dateMap.get(pick.date) ?? [];
+  existing.push(pick);
+  dateMap.set(pick.date, existing);
+}
+const dates = Array.from(dateMap.entries()).sort(([a], [b]) => b.localeCompare(a));
+
+// Overall stats
+const totalWins = resolved.filter((p) => p.result === "win").length;
+const totalLosses = resolved.filter((p) => p.result === "loss").length;
+const overallWinPct = totalWins + totalLosses > 0 ? Math.round((totalWins / (totalWins + totalLosses)) * 100) : 0;
+
+// Streak calculations over chronological resolved picks
+const chronological = [...resolved].sort((a, b) => a.date.localeCompare(b.date) || a.id - b.id);
+
+let longestLossStreak = 0;
+let currentLossRun = 0;
+for (const pick of chronological) {
+  if (pick.result === "loss") {
+    currentLossRun++;
+    if (currentLossRun > longestLossStreak) longestLossStreak = currentLossRun;
+  } else {
+    currentLossRun = 0;
+  }
+}
+
+let currentStreakType: "win" | "loss" | null = null;
+let currentStreakCount = 0;
+for (let i = chronological.length - 1; i >= 0; i--) {
+  const r = chronological[i].result;
+  if (i === chronological.length - 1) {
+    currentStreakType = r === "push" ? null : (r as "win" | "loss");
+    currentStreakCount = r === "push" ? 0 : 1;
+  } else if (r === currentStreakType) {
+    currentStreakCount++;
+  } else {
+    break;
+  }
+}
+
+// Sport breakdown
+const mlbResolved = resolved.filter((p) => p.sport === "MLB");
+const nbaResolved = resolved.filter((p) => p.sport === "NBA");
+const mlbWins = mlbResolved.filter((p) => p.result === "win").length;
+const mlbLosses = mlbResolved.filter((p) => p.result === "loss").length;
+const mlbWinPct = mlbWins + mlbLosses > 0 ? Math.round((mlbWins / (mlbWins + mlbLosses)) * 100) : 0;
+const nbaWins = nbaResolved.filter((p) => p.result === "win").length;
+const nbaLosses = nbaResolved.filter((p) => p.result === "loss").length;
+const nbaWinPct = nbaWins + nbaLosses > 0 ? Math.round((nbaWins / (nbaWins + nbaLosses)) * 100) : 0;
+
+function propTypeBadge(type: RithhmmPropType): { label: string; classes: string } {
+  const map: Record<RithhmmPropType, { label: string; classes: string }> = {
+    "hits-over": { label: "Hits Over", classes: "bg-cyan-900/40 text-cyan-400 border-cyan-800/50" },
+    "hits-under": { label: "Hits Under", classes: "bg-teal-900/40 text-teal-400 border-teal-800/50" },
+    "rebounds-under": { label: "Rebs Under", classes: "bg-purple-900/40 text-purple-400 border-purple-800/50" },
+    "points-under": { label: "Pts Under", classes: "bg-orange-900/40 text-orange-400 border-orange-800/50" },
+    "combo-under": { label: "Combo Under", classes: "bg-blue-900/40 text-blue-400 border-blue-800/50" },
+    "pitcher-ks-under": { label: "Pitcher Ks", classes: "bg-yellow-900/40 text-yellow-400 border-yellow-800/50" },
+  };
+  return map[type];
+}
+
+function formatDate(d: string): string {
+  const [, m, day] = d.split("-");
+  const months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${months[parseInt(m)]} ${parseInt(day)}`;
+}
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="Rithmmm Picks | Dan Denney"
+      description="Rithmmm Smart Signal daily picks tracked by date."
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <main class="mx-auto max-w-5xl px-4 py-12 space-y-10">
+
+      <!-- Page header -->
+      <header class="space-y-6">
+        <div>
+          <h1 class="text-4xl font-bold text-white tracking-tight">Rithmmm Picks</h1>
+          <p class="mt-1 text-slate-400">Smart Signal daily board — resolved picks only</p>
+        </div>
+
+        <!-- Summary bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-slate-900 border border-slate-800 rounded-xl px-5 py-4">
+            <div class="text-2xl font-bold text-white">{resolved.length}</div>
+            <div class="text-xs text-slate-500 mt-0.5 uppercase tracking-wider">Total Picks</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-xl px-5 py-4">
+            <div class="text-2xl font-bold text-emerald-400">{totalWins}</div>
+            <div class="text-xs text-slate-500 mt-0.5 uppercase tracking-wider">Wins</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-xl px-5 py-4">
+            <div class="text-2xl font-bold text-red-400">{totalLosses}</div>
+            <div class="text-xs text-slate-500 mt-0.5 uppercase tracking-wider">Losses</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-xl px-5 py-4">
+            <div class={`text-2xl font-bold ${overallWinPct >= 60 ? "text-emerald-400" : overallWinPct >= 50 ? "text-yellow-400" : "text-red-400"}`}>
+              {overallWinPct}%
+            </div>
+            <div class="text-xs text-slate-500 mt-0.5 uppercase tracking-wider">Win Rate</div>
+          </div>
+        </div>
+
+        <!-- Streak + sport breakdown row -->
+        <div class="flex flex-wrap items-center gap-3">
+          {currentStreakType && currentStreakCount > 1 && (
+            <span class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold border ${
+              currentStreakType === "win"
+                ? "bg-emerald-900/30 text-emerald-400 border-emerald-800/40"
+                : "bg-red-900/30 text-red-400 border-red-800/40"
+            }`}>
+              {currentStreakCount} {currentStreakType === "win" ? "W" : "L"} streak
+            </span>
+          )}
+
+          <span class="text-slate-500 text-sm">
+            <span class="text-orange-400 font-semibold">{longestLossStreak}</span>
+            <span class="ml-1">max L streak</span>
+          </span>
+
+          {pendingCount > 0 && (
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-semibold bg-slate-800 text-slate-400 border border-slate-700">
+              {pendingCount} pending
+            </span>
+          )}
+
+          <div class="flex items-center gap-2 ml-auto">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-900/20 text-emerald-400 border border-emerald-800/30">
+              MLB {mlbWins}–{mlbLosses}
+              <span class="text-emerald-600 font-normal">{mlbWinPct}%</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-orange-900/20 text-orange-400 border border-orange-800/30">
+              NBA {nbaWins}–{nbaLosses}
+              <span class="text-orange-600 font-normal">{nbaWinPct}%</span>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Date groups -->
+      {dates.map(([date, picks]) => {
+        const wins = picks.filter((p) => p.result === "win").length;
+        const losses = picks.filter((p) => p.result === "loss").length;
+        const winPct = wins + losses > 0 ? Math.round((wins / (wins + losses)) * 100) : 0;
+
+        let dayStreakType: "win" | "loss" | null = null;
+        let dayStreakCount = 0;
+        for (let i = picks.length - 1; i >= 0; i--) {
+          const r = picks[i].result;
+          if (i === picks.length - 1) {
+            dayStreakType = r === "push" ? null : (r as "win" | "loss");
+            dayStreakCount = r === "push" ? 0 : 1;
+          } else if (r === dayStreakType) {
+            dayStreakCount++;
+          } else {
+            break;
+          }
+        }
+
+        return (
+          <section class="space-y-2">
+            <!-- Day header -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl px-5 py-4 flex flex-wrap items-center gap-4">
+              <h2 class="text-lg font-semibold text-white">{formatDate(date)}</h2>
+              <div class="flex items-center gap-3 text-sm">
+                <span>
+                  <span class="text-emerald-400 font-semibold">{wins}</span>
+                  <span class="text-slate-500 ml-1">W</span>
+                </span>
+                <span>
+                  <span class="text-red-400 font-semibold">{losses}</span>
+                  <span class="text-slate-500 ml-1">L</span>
+                </span>
+                <span class={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border ${
+                  winPct >= 60 ? "bg-emerald-900/40 text-emerald-400 border-emerald-800/50" :
+                  winPct >= 50 ? "bg-yellow-900/40 text-yellow-400 border-yellow-800/50" :
+                  "bg-red-900/40 text-red-400 border-red-800/50"
+                }`}>
+                  {winPct}%
+                </span>
+                {dayStreakType && dayStreakCount > 1 && (
+                  <span class={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold ${
+                    dayStreakType === "win"
+                      ? "bg-emerald-900/30 text-emerald-400 border border-emerald-800/40"
+                      : "bg-red-900/30 text-red-400 border border-red-800/40"
+                  }`}>
+                    {dayStreakCount} {dayStreakType === "win" ? "W" : "L"} streak
+                  </span>
+                )}
+              </div>
+              <span class="text-slate-600 text-xs ml-auto">{picks.length} picks</span>
+            </div>
+
+            <!-- Picks table -->
+            <div class="overflow-x-auto rounded-xl border border-slate-800">
+              <table class="w-full text-sm text-left">
+                <thead class="bg-slate-900/80 text-slate-500 uppercase text-xs tracking-wider border-b border-slate-800">
+                  <tr>
+                    <th class="px-4 py-3 whitespace-nowrap">Sport</th>
+                    <th class="px-4 py-3 whitespace-nowrap">Type</th>
+                    <th class="px-4 py-3">Pick</th>
+                    <th class="px-4 py-3 whitespace-nowrap">Odds</th>
+                    <th class="px-4 py-3 whitespace-nowrap">Conf</th>
+                    <th class="px-4 py-3 whitespace-nowrap hidden sm:table-cell">Model</th>
+                    <th class="px-4 py-3 whitespace-nowrap hidden md:table-cell">L10</th>
+                    <th class="px-4 py-3 whitespace-nowrap text-center">Result</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/60">
+                  {picks.map((pick) => {
+                    const badge = propTypeBadge(pick.propType);
+                    return (
+                      <Fragment>
+                        <tr class="bg-slate-950 hover:bg-slate-900/60 transition-colors">
+                          <td class="px-4 py-3 whitespace-nowrap">
+                            <span class={`inline-block px-2 py-0.5 rounded text-xs font-medium border ${
+                              pick.sport === "MLB"
+                                ? "bg-emerald-900/30 text-emerald-400 border-emerald-800/40"
+                                : "bg-orange-900/30 text-orange-400 border-orange-800/40"
+                            }`}>
+                              {pick.sport}
+                            </span>
+                          </td>
+                          <td class="px-4 py-3 whitespace-nowrap">
+                            <span class={`inline-block px-2 py-0.5 rounded text-xs border ${badge.classes}`}>
+                              {badge.label}
+                            </span>
+                          </td>
+                          <td class="px-4 py-3">
+                            <div class="text-slate-100">{pick.pick}</div>
+                            <div class="text-xs text-slate-500 mt-0.5">{pick.matchup}</div>
+                          </td>
+                          <td class="px-4 py-3 whitespace-nowrap text-slate-400 font-mono text-xs">
+                            {pick.odds}
+                          </td>
+                          <td class="px-4 py-3 whitespace-nowrap">
+                            <span class={`text-sm font-semibold ${
+                              pick.confidence >= 68 ? "text-emerald-400" :
+                              pick.confidence >= 62 ? "text-yellow-400" :
+                              "text-slate-400"
+                            }`}>
+                              {pick.confidence}%
+                            </span>
+                          </td>
+                          <td class="px-4 py-3 whitespace-nowrap text-slate-400 text-xs hidden sm:table-cell">
+                            {pick.modelProjection}
+                          </td>
+                          <td class="px-4 py-3 whitespace-nowrap text-slate-500 text-xs hidden md:table-cell">
+                            {pick.recentForm}
+                          </td>
+                          <td class="px-4 py-3 text-center whitespace-nowrap">
+                            {pick.result === "win" && (
+                              <span class="inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold bg-emerald-900/50 text-emerald-400 border border-emerald-800/50">W</span>
+                            )}
+                            {pick.result === "loss" && (
+                              <span class="inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold bg-red-900/50 text-red-400 border border-red-800/50">L</span>
+                            )}
+                            {pick.result === "push" && (
+                              <span class="inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-700 text-slate-300 border border-slate-600">P</span>
+                            )}
+                          </td>
+                        </tr>
+                      </Fragment>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        );
+      })}
+
+    </main>
+  </body>
+</html>
