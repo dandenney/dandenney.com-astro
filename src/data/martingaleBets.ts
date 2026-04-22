@@ -957,7 +957,7 @@ export const martingaleBets: MartingaleBet[] = [
     amount: 60,
     result: "win",
     stakeOut: 60,
-    returnAmount: 73.33,
+    returnAmount: 88.00,
   },
   {
     id: 75,
@@ -969,7 +969,7 @@ export const martingaleBets: MartingaleBet[] = [
     amount: 40,
     result: "win",
     stakeOut: 40,
-    returnAmount: 73.34,
+    returnAmount: 58.67,
   },
 ];
 
