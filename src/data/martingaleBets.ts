@@ -955,9 +955,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Kevin Durant Under 32.5 Pts + Rebs + Asts",
     line: "-120",
     amount: 60,
-    result: "pending",
+    result: "win",
     stakeOut: 60,
-    returnAmount: 0,
+    returnAmount: 73.33,
   },
   {
     id: 75,
@@ -967,9 +967,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Kevin Durant Under 32.5 Pts + Rebs + Asts",
     line: "-120",
     amount: 40,
-    result: "pending",
+    result: "win",
     stakeOut: 40,
-    returnAmount: 0,
+    returnAmount: 73.34,
   },
 ];
 
