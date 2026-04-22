@@ -18,10 +18,12 @@ Parse `$ARGUMENTS`: first word is `won` or `lost`. If `won`, the second word is 
 4. **If won:**
    - The provided return amount is the **combined** return for all pending bets.
    - If there are 2 pending bets (one Dan, one GardenOf):
-     - Split evenly to the cent.
-     - If there is an odd penny (combined return has an odd cent), GardenOf gets the extra penny.
-     - Dan: `Math.floor(total * 100 / 2) / 100`
-     - GardenOf: `total - Dan's amount` (rounded to 2 decimal places)
+     - Split **proportionally** based on each bet's `stakeOut` (or `amount` if `stakeOut` is absent).
+     - `totalStake = danStake + gardenOfStake`
+     - Dan: `Math.floor(total * 100 * danStake / totalStake) / 100`
+     - GardenOf: `Math.round((total - danAmount) * 100) / 100`
+     - (GardenOf absorbs any odd-penny rounding remainder.)
+     - If both stakes are equal, this reduces to the old 50/50 split.
    - If there is only 1 pending bet, assign the full return amount to it.
    - Set `result: "win"` and `returnAmount: <calculated amount>` on each entry.
 
