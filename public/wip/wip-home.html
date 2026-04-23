@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tennessee Senior Olympics - Hero Slider 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --red: #e61b39;
+      --blue: #015fad;
+      --white: #ffffff;
+      --off-white: #f5f5f7;
+      --dark: #111118;
+      --gray-900: #1a1a24;
+      --gray-600: #6b7080;
+      --slide-speed: 1600ms;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      :root {
+        --slide-speed: 0ms;
+      }
+      .slide__content > * {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    body {
+      font-family: 'Oswald', system-ui, -apple-system, sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* --- Navbar --- */
+    .navbar {
+      background: var(--white);
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .navbar__logo img {
+      height: 52px;
+      width: auto;
+    }
+
+    .navbar__links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .navbar__link {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      transition: background 200ms, color 200ms;
+    }
+
+    .navbar__link:hover {
+      background: var(--off-white);
+      color: var(--blue);
+    }
+
+    .navbar__link:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+    }
+
+    .navbar__link--cta {
+      background: var(--red);
+      color: var(--white);
+      margin-left: 0.5rem;
+    }
+
+    .navbar__link--cta:hover {
+      background: #cc1632;
+      color: var(--white);
+    }
+
+    /* Mobile nav toggle */
+    .navbar__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .navbar__toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--dark);
+      margin: 5px 0;
+      transition: transform 200ms;
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        padding: 0 1.5rem;
+      }
+
+      .navbar__toggle {
+        display: block;
+      }
+
+      .navbar__links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        gap: 0.25rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 100;
+      }
+
+      .navbar__links--open {
+        display: flex;
+      }
+
+      .navbar__link {
+        width: 100%;
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    /* ========== SLIDER ========== */
+    .slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider__track {
+      display: flex;
+      transition: transform var(--slide-speed) cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    /* --- Slide split layout --- */
+    .slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      min-height: clamp(400px, 60vh, 680px);
+    }
+
+    /* Alternate: slides 1 & 3 = content LEFT, slide 2 = content RIGHT */
+    .slide--reversed {
+      direction: rtl;
+    }
+
+    .slide--reversed > * {
+      direction: ltr;
+    }
+
+    /* Content side */
+    .slide__content-side {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: clamp(2.5rem, 5vw, 5rem);
+      overflow: hidden;
+    }
+
+    /* Color theming per slide — top-to-bottom gradient, light to dark */
+    .slide[data-slide="join"] .slide__content-side {
+      background: linear-gradient(to bottom, #f23955, #9c0f26);
+    }
+
+    .slide[data-slide="sports"] .slide__content-side {
+      background: linear-gradient(to bottom, #0378da, #013870);
+    }
+
+    .slide[data-slide="fame"] .slide__content-side {
+      background: linear-gradient(to bottom, #ffffff, #e8eaef);
+    }
+
+    .slide[data-slide="participate"] .slide__content-side {
+      background: linear-gradient(to bottom, #2a2f3d, #0c0f18);
+    }
+
+    /* Angled edge connecting content to image */
+    .slide__content-side::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 100px;
+      height: 100%;
+      background: inherit;
+      transform: skewX(-4deg);
+      z-index: 2;
+    }
+
+    .slide--reversed .slide__content-side::after {
+      right: auto;
+      left: -50px;
+      transform: skewX(4deg);
+    }
+
+    .slide__content {
+      position: relative;
+      z-index: 3;
+      max-width: 480px;
+    }
+
+    /* Tag / eyebrow — thin left border accent */
+    .slide__tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      padding-left: 0.85rem;
+      margin-bottom: 1.25rem;
+      border-left: 3px solid;
+    }
+
+    .slide[data-slide="join"] .slide__tag {
+      border-color: var(--white);
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .slide[data-slide="sports"] .slide__tag {
+      border-color: var(--white);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .slide[data-slide="fame"] .slide__tag {
+      border-color: var(--red);
+      color: rgba(17, 17, 24, 0.7);
+    }
+
+    .slide[data-slide="participate"] .slide__tag {
+      border-color: var(--red);
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .slide[data-slide="fame"] .slide__title {
+      color: var(--dark);
+    }
+
+    .slide[data-slide="fame"] .slide__desc {
+      color: var(--dark);
+    }
+
+    .slide__title {
+      font-size: clamp(2.5rem, 5.5vw, 4rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    .slide__desc {
+      font-size: clamp(1.2rem, 1.9vw, 1.4rem);
+      line-height: 1.55;
+      color: var(--white);
+      margin-bottom: 2.25rem;
+      max-width: 460px;
+      font-weight: 500;
+    }
+
+    .slide__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.75rem 1.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: transform 250ms, box-shadow 250ms, background 250ms;
+      font-family: inherit;
+    }
+
+    .slide[data-slide="join"] .slide__cta {
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    .slide[data-slide="sports"] .slide__cta {
+      background: var(--white);
+      color: var(--blue);
+    }
+
+    .slide[data-slide="fame"] .slide__cta {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    /* Ways-to-participate slide — action list */
+    .slide__actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      max-width: 460px;
+    }
+
+    .slide__action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1.15rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 3px;
+      transition: background 200ms, border-color 200ms, transform 200ms;
+    }
+
+    .slide__action:hover,
+    .slide__action:focus-visible {
+      background: var(--red);
+      border-color: var(--red);
+      transform: translateY(-2px);
+    }
+
+    .slide__action:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 3px;
+    }
+
+    .slide__action-arrow {
+      font-size: 1.1em;
+      opacity: 0.6;
+      transition: opacity 200ms, transform 200ms;
+    }
+
+    .slide__action:hover .slide__action-arrow {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 600px) {
+      .slide__actions {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .slide__cta-arrow {
+      display: inline-block;
+      transition: transform 250ms;
+      font-size: 1.1em;
+    }
+
+    .slide__cta:hover .slide__cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .slide__cta:hover,
+    .slide__cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide__cta:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 3px;
+    }
+
+    /* Image side */
+    .slide__image-side {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide__image-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ========== SLIDER CONTROLS ========== */
+    .slider__nav {
+      position: absolute;
+      bottom: 2rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Nav floats on the content side — left for normal, right for reversed */
+    .slider__nav--left {
+      left: clamp(2.5rem, 5vw, 5rem);
+    }
+
+    .slider__nav--right {
+      right: clamp(2.5rem, 5vw, 5rem);
+    }
+
+    .slider__btn {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 250ms, border-color 250ms;
+    }
+
+    .slider__btn:hover,
+    .slider__btn:focus-visible {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white);
+    }
+
+    .slider__btn:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    /* Dark nav styling when current slide has a light background */
+    .slider--light-nav .slider__btn {
+      background: rgba(0, 0, 0, 0.08);
+      border-color: rgba(0, 0, 0, 0.2);
+      color: var(--dark);
+    }
+
+    .slider--light-nav .slider__counter {
+      color: rgba(17, 17, 24, 0.75);
+    }
+
+    .slider--light-nav .slider__counter strong {
+      color: var(--dark);
+    }
+
+    .slider__counter {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+      min-width: 48px;
+      text-align: center;
+      letter-spacing: 0.08em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slider__counter strong {
+      color: var(--white);
+      font-weight: 900;
+    }
+
+    /* ========== PROGRESS BAR ========== */
+    .slider__progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .slider__progress-fill {
+      height: 100%;
+      background: var(--red);
+      width: 0%;
+      transition: width 50ms linear;
+      box-shadow: 0 0 12px rgba(230, 27, 57, 0.6);
+    }
+
+    /* ========== SPORTS SHOWCASE ========== */
+    .sports-showcase {
+      background: var(--white);
+      padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top accent line */
+    .sports-showcase::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(230, 27, 57, 0.5), transparent);
+    }
+
+    .sports-showcase__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- Header block: centered headline + copy + CTA --- */
+    .sports-showcase__header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+
+    .sports-showcase__eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+      padding-left: 0.85rem;
+      border-left: 3px solid var(--red);
+    }
+
+    .sports-showcase__heading {
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+    }
+
+    .sports-showcase__desc {
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      line-height: 1.6;
+      color: var(--gray-600);
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .sports-showcase__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: var(--white);
+      background: var(--red);
+      border-radius: 3px;
+      transition: transform 250ms, box-shadow 250ms, background 250ms;
+      font-family: inherit;
+    }
+
+    .sports-showcase__cta:hover,
+    .sports-showcase__cta:focus-visible {
+      background: #cc1632;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(230, 27, 57, 0.3);
+    }
+
+    .sports-showcase__cta:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    .sports-showcase__cta-arrow {
+      display: inline-block;
+      transition: transform 250ms;
+      font-size: 1.1em;
+    }
+
+    .sports-showcase__cta:hover .sports-showcase__cta-arrow {
+      transform: translateX(4px);
+    }
+
+    /* --- Photo collage: named grid areas for precise placement --- */
+    .sports-collage {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "a  e  c"
+        "b  e  d"
+        "f  e  g";
+      gap: 0.85rem;
+    }
+
+    .sports-collage__item { position: relative; border-radius: 4px; overflow: hidden; background: var(--off-white); }
+    .sports-collage__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 600ms cubic-bezier(0.25, 1, 0.5, 1); }
+    .sports-collage__item:hover img { transform: scale(1.05); }
+
+    .sports-collage__item:nth-child(1) { grid-area: a; aspect-ratio: 4 / 3; }   /* top left */
+    .sports-collage__item:nth-child(2) { grid-area: b; aspect-ratio: 3 / 2; }   /* mid left — weightlifting */
+    .sports-collage__item:nth-child(3) { grid-area: c; aspect-ratio: 4 / 3; }   /* top right */
+    .sports-collage__item:nth-child(4) { grid-area: d; aspect-ratio: 3 / 2; }   /* mid right */
+    .sports-collage__item:nth-child(5) { grid-area: e; }                         /* center — spans all 3 rows */
+    .sports-collage__item:nth-child(6) { grid-area: f; aspect-ratio: 3 / 2; }   /* bottom left */
+    .sports-collage__item:nth-child(7) { grid-area: g; aspect-ratio: 3 / 2; }   /* bottom right */
+
+    /* Sport label overlay */
+    .sports-collage__label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2.5rem 1rem 0.85rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transform: translateY(100%);
+      transition: transform 400ms cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .sports-collage__item:hover .sports-collage__label {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 800px) {
+      .sports-collage {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "a  c"
+          "b  d"
+          "e  e"
+          "f  g";
+        grid-template-rows: auto;
+      }
+
+      .sports-collage__item:nth-child(5) { aspect-ratio: 3 / 4; }
+
+      .sports-collage__label {
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sports-collage {
+        gap: 0.5rem;
+      }
+    }
+
+    /* ========== FEATURE CTAS ========== */
+    .features {
+      background-color: var(--white);
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .features::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(230, 27, 57, 0.6), transparent);
+    }
+
+    .features__grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .features__col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* --- Quick link cards (Results / Schedule) --- */
+    .feature-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 40% 1fr;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 300ms cubic-bezier(0.65, 0, 0.35, 1), box-shadow 300ms;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      flex: 1;
+      min-height: 140px;
+    }
+
+    .feature-card--results {
+      background: linear-gradient(135deg, #f23955 0%, #9c0f26 100%);
+    }
+
+    .feature-card--results .feature-card__map {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      margin: 1.25rem 0 1.25rem 1.25rem;
+      border-radius: 3px;
+      border: 5px solid rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+    }
+
+    .feature-card--results .feature-card__map img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 500ms cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .feature-card--results:hover .feature-card__map img,
+    .feature-card--results:focus-visible .feature-card__map img {
+      transform: scale(1.06);
+    }
+
+    .feature-card--schedule {
+      background: linear-gradient(135deg, #0378da 0%, #013870 100%);
+    }
+
+    .feature-card--nsga {
+      background: linear-gradient(135deg, #2a2f3d 0%, #0c0f18 100%);
+    }
+
+    .feature-card--nsga .feature-card__image {
+      background: var(--white);
+    }
+
+    .feature-card--nsga .feature-card__image img {
+      object-fit: contain;
+      padding: 0.5rem;
+    }
+
+    .feature-card__image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      margin: 1.25rem 0 1.25rem 1.25rem;
+      border-radius: 3px;
+      border: 5px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .feature-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 500ms cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .feature-card:hover .feature-card__image img,
+    .feature-card:focus-visible .feature-card__image img {
+      transform: scale(1.06);
+    }
+
+    .feature-card__body {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 1.75rem;
+    }
+
+    /* Angled accent bar echoing the slider's skewed edge */
+    .feature-card__body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 60px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      transform: skewX(-12deg);
+      transition: background 300ms, right 300ms;
+    }
+
+    .feature-card:hover,
+    .feature-card:focus-visible {
+      transform: scale(1.03);
+    }
+
+    .feature-card:hover .feature-card__body::after,
+    .feature-card:focus-visible .feature-card__body::after {
+      background: rgba(255, 255, 255, 0.14);
+      right: -20px;
+    }
+
+    .feature-card:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 3px;
+    }
+
+    .feature-card__text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-card__eyebrow {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 0.35rem;
+    }
+
+    .feature-card__label {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .feature-card__arrow {
+      margin-left: auto;
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+      opacity: 0.7;
+      transition: transform 300ms, opacity 300ms;
+    }
+
+    .feature-card:hover .feature-card__arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* --- State Finals hero card --- */
+    .feature-hero {
+      position: relative;
+      padding: clamp(2.25rem, 4vw, 3rem);
+      background: linear-gradient(135deg, #e61b39 0%, #7a0a1c 100%);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      min-height: 100%;
+    }
+
+    /* Tristar accent — upper right, offset off the edge */
+    .feature-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      background-image: url('Assets/Tristar-white-opaque-30.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .feature-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -10%;
+      width: 60%;
+      height: 120%;
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .feature-hero__inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-hero__tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      padding-left: 0.85rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+      border-left: 3px solid var(--white);
+    }
+
+    .feature-hero__title {
+      font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.02;
+      color: var(--white);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-hero__title span {
+      display: block;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.65em;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    .feature-hero__desc {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1.75rem;
+      max-width: 480px;
+      font-weight: 500;
+    }
+
+    .feature-hero__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .feature-hero__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: transform 250ms, box-shadow 250ms, background 250ms;
+      font-family: inherit;
+    }
+
+    .feature-hero__btn--primary {
+      background: var(--white);
+      color: var(--red);
+    }
+
+    .feature-hero__btn--primary:hover,
+    .feature-hero__btn--primary:focus-visible {
+      background: var(--off-white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .feature-hero__btn--secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .feature-hero__btn--secondary:hover,
+    .feature-hero__btn--secondary:focus-visible {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .feature-hero__btn:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 3px;
+    }
+
+    .feature-hero__btn-arrow {
+      display: inline-block;
+      transition: transform 250ms;
+      font-size: 1.1em;
+    }
+
+    .feature-hero__btn:hover .feature-hero__btn-arrow {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 900px) {
+      .features__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .feature-card {
+        grid-template-columns: 45% 1fr;
+        min-height: 120px;
+      }
+
+      .feature-card__body {
+        padding: 1.25rem 1.25rem;
+      }
+
+      .feature-card__label {
+        font-size: 1.2rem;
+      }
+
+      .feature-card__arrow {
+        display: none;
+      }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 800px) {
+      .slide {
+        grid-template-columns: 1fr;
+        grid-template-rows: 220px auto;
+      }
+
+      .slide--reversed {
+        direction: ltr;
+      }
+
+      .slide__image-side {
+        order: -1;
+      }
+
+      .slide__content-side::after {
+        display: none;
+      }
+
+      .slide__content-side {
+        padding: 2rem 1.5rem 3.5rem;
+      }
+
+      .slider__nav {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%);
+        bottom: 1rem;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(12px);
+        padding: 0.35rem 0.6rem;
+        border-radius: 999px;
+      }
+    }
+
+    /* ========== SPONSORS ========== */
+    .sponsors {
+      background: var(--dark);
+      padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Angled accent stripe — echoes the slider's skewX motif */
+    .sponsors::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -5%;
+      width: 35%;
+      height: 160%;
+      background: linear-gradient(135deg, rgba(230, 27, 57, 0.06) 0%, transparent 60%);
+      transform: skewX(-14deg);
+      pointer-events: none;
+    }
+
+    .sponsors::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: -8%;
+      width: 40%;
+      height: 140%;
+      background: radial-gradient(ellipse at center, rgba(1, 95, 173, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .sponsors__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sponsors__header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+
+    .sponsors__eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+      padding-left: 0.85rem;
+      border-left: 3px solid var(--red);
+    }
+
+    .sponsors__heading {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+    }
+
+    .sponsors__desc {
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
+    }
+
+    /* --- Tier sections --- */
+    .sponsors__tier {
+      margin-bottom: 2.5rem;
+    }
+
+    .sponsors__tier:last-child {
+      margin-bottom: 0;
+    }
+
+    .sponsors__tier-label {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .sponsors__tier-label::before,
+    .sponsors__tier-label::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: calc(50% - 80px);
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .sponsors__tier-label::before { left: 0; }
+    .sponsors__tier-label::after { right: 0; }
+
+    /* Logo containers */
+    .sponsors__logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .sponsors__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      border-radius: 6px;
+      padding: 1.25rem 2rem;
+      transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 300ms;
+    }
+
+    .sponsors__logo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .sponsors__logo img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Presenting tier — largest */
+    .sponsors__tier--presenting .sponsors__logo {
+      padding: 1.75rem 2.5rem;
+    }
+
+    .sponsors__tier--presenting .sponsors__logo img {
+      max-height: 70px;
+      width: auto;
+    }
+
+    /* Title tier */
+    .sponsors__tier--title .sponsors__logo img {
+      max-height: 56px;
+      width: auto;
+    }
+
+    /* Supporting tier — smaller */
+    .sponsors__tier--supporting .sponsors__logo {
+      padding: 1rem 1.5rem;
+    }
+
+    .sponsors__tier--supporting .sponsors__logo img {
+      max-height: 44px;
+      width: auto;
+    }
+
+    /* Divider between tiers */
+    .sponsors__divider {
+      width: 60px;
+      height: 3px;
+      background: var(--red);
+      margin: 0 auto 2.5rem;
+      border: none;
+      border-radius: 2px;
+    }
+
+    /* CTA */
+    .sponsors__footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .sponsors__cta {
+      display: inline-flex;
+      align-items: center
+      gap: 0.65rem;
+      padding: 0.85rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-radius: 3px;
+      transition: background 250ms, border-color 250ms, transform 250ms;
+      font-family: inherit;
+    }
+
+    .sponsors__cta:hover,
+    .sponsors__cta:focus-visible {
+      background: var(--red);
+      border-color: var(--red);
+      transform: translateY(-2px);
+    }
+
+    .sponsors__cta:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 3px;
+    }
+
+    .sponsors__cta-arrow {
+      display: inline-block;
+      transition: transform 250ms;
+      font-size: 1.1em;
+    }
+
+    .sponsors__cta:hover .sponsors__cta-arrow {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 600px) {
+      .sponsors__logos {
+        gap: 1.25rem;
+      }
+
+      .sponsors__logo {
+        padding: 1rem 1.25rem;
+      }
+
+      .sponsors__tier--presenting .sponsors__logo {
+        padding: 1.25rem 1.75rem;
+      }
+
+      .sponsors__tier--presenting .sponsors__logo img {
+        max-height: 50px;
+      }
+
+      .sponsors__tier--title .sponsors__logo img {
+        max-height: 42px;
+      }
+
+      .sponsors__tier--supporting .sponsors__logo img {
+        max-height: 34px;
+      }
+    }
+
+    /* ========== SR-only ========== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero" aria-label="Tennessee Senior Olympics Hero">
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#" class="navbar__logo" aria-label="Tennessee Senior Olympics Home">
+      <img src="Assets/TNSr_Logo.png" alt="Tennessee Senior Olympics logo">
+    </a>
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="navbar__links" id="navLinks" role="menubar">
+      <li role="none"><a href="#" class="navbar__link" role="menuitem">About</a></li>
+      <li role="none"><a href="#" class="navbar__link" role="menuitem">Sports</a></li>
+      <li role="none"><a href="#" class="navbar__link" role="menuitem">Results</a></li>
+      <li role="none"><a href="#" class="navbar__link" role="menuitem">Schedule</a></li>
+      <li role="none"><a href="#" class="navbar__link" role="menuitem">Hall of Fame</a></li>
+      <li role="none"><a href="#" class="navbar__link" role="menuitem">Contact</a></li>
+      <li role="none"><a href="#" class="navbar__link navbar__link--cta" role="menuitem">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Slider -->
+  <div class="slider" role="region" aria-roledescription="carousel" aria-label="Featured highlights">
+    <div class="slider__track" id="sliderTrack">
+
+      <!-- Slide 1: How to Join — content LEFT, image RIGHT -->
+      <div class="slide" data-slide="join" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4: How to Join">
+        <div class="slide__content-side">
+          <div class="slide__content">
+            <span class="slide__tag">Get Started</span>
+            <h2 class="slide__title">How to Join</h2>
+            <p class="slide__desc">Athletes 50 and over compete in 20+ sports across Tennessee. Registration is open &mdash; find your event and get in the game.</p>
+            <a href="#" class="slide__cta">Register Now <span class="slide__cta-arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="slide__image-side">
+          <img src="Assets/how-to-join.jpg" alt="Athletes competing at a Senior Olympics event" loading="eager">
+        </div>
+      </div>
+
+      <!-- Slide 2: Sports — content RIGHT, image LEFT (reversed) -->
+      <div class="slide slide--reversed" data-slide="sports" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4: Sports">
+        <div class="slide__content-side">
+          <div class="slide__content">
+            <span class="slide__tag">Compete</span>
+            <h2 class="slide__title">Our Sports</h2>
+            <p class="slide__desc">From track &amp; field to pickleball, swimming to basketball &mdash; discover all the sports you can compete in.</p>
+            <a href="#" class="slide__cta">View All Sports <span class="slide__cta-arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="slide__image-side">
+          <img src="TSO/Mockups/Assets/sports.jpg" alt="Variety of sports available at the Tennessee Senior Olympics" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Slide 3: Hall of Fame — content LEFT, image RIGHT -->
+      <div class="slide" data-slide="fame" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4: Hall of Fame">
+        <div class="slide__content-side">
+          <div class="slide__content">
+            <span class="slide__tag">Legends</span>
+            <h2 class="slide__title">Hall of Fame</h2>
+            <p class="slide__desc">Celebrating the outstanding athletes who have made their mark in Tennessee Senior Olympics history.</p>
+            <a href="#" class="slide__cta">Meet the Legends <span class="slide__cta-arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+        <div class="slide__image-side">
+          <img src="Assets/hall-of-fame.jpg" alt="Hall of Fame athletes celebrated at the Tennessee Senior Olympics" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Slide 4: Ways to Participate — content RIGHT, image LEFT (reversed) -->
+      <div class="slide slide--reversed" data-slide="participate" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4: Ways to Participate">
+        <div class="slide__content-side">
+          <div class="slide__content">
+            <span class="slide__tag">Get Involved</span>
+            <h2 class="slide__title">Be Part of the Games</h2>
+            <p class="slide__desc">There&rsquo;s a place for everyone &mdash; on the field, on the sidelines, and behind the scenes.</p>
+            <div class="slide__actions">
+              <a href="#" class="slide__action">Compete <span class="slide__action-arrow" aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="slide__action">Volunteer <span class="slide__action-arrow" aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="slide__action">Ambassador <span class="slide__action-arrow" aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="slide__action">Sponsor <span class="slide__action-arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="slide__image-side">
+          <img src="Assets/ways-to-participate.jpg" alt="People participating in the Tennessee Senior Olympics in many roles" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls — positioned on the content side -->
+    <div class="slider__nav slider__nav--left" id="sliderNav">
+      <button class="slider__btn" id="prevBtn" aria-label="Previous slide">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="slider__counter" aria-live="polite"><strong id="currentNum">1</strong> <span>/ 4</span></div>
+      <button class="slider__btn" id="nextBtn" aria-label="Next slide">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- Progress -->
+    <div class="slider__progress" role="progressbar" aria-label="Slide autoplay timer" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="slider__progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <!-- Feature CTAs -->
+  <section class="features" aria-label="Quick links and featured event">
+    <div class="features__grid">
+
+      <div class="features__col">
+        <a href="#" class="feature-card feature-card--results">
+          <div class="feature-card__map">
+            <img src="Assets/Gemini_TN_Outline_005dac.png" alt="Map of Tennessee with district location pins" loading="lazy">
+          </div>
+          <div class="feature-card__body">
+            <span class="feature-card__text">
+              <span class="feature-card__eyebrow">Find</span>
+              <span class="feature-card__label">Your District</span>
+            </span>
+            <span class="feature-card__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="#" class="feature-card feature-card--schedule">
+          <div class="feature-card__image">
+            <img src="Assets/Gemini_Generated_Image_psuie4psuie4psui.png" alt="2026 Tennessee Senior Olympics schedule" loading="lazy">
+          </div>
+          <div class="feature-card__body">
+            <span class="feature-card__text">
+              <span class="feature-card__eyebrow">Plan Ahead</span>
+              <span class="feature-card__label">2026 Schedule</span>
+            </span>
+            <span class="feature-card__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="#" class="feature-card feature-card--nsga">
+          <div class="feature-card__image">
+            <img src="Assets/NSGA_FullColor_Vector.jpg" alt="National Senior Games Association">
+          </div>
+          <div class="feature-card__body">
+            <span class="feature-card__text">
+              <span class="feature-card__eyebrow">Proud Member</span>
+              <span class="feature-card__label">National Senior Games</span>
+            </span>
+            <span class="feature-card__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <div class="feature-hero">
+        <div class="feature-hero__inner">
+          <span class="feature-hero__tag">Don't Miss It</span>
+          <h2 class="feature-hero__title">State Finals<span>2026</span></h2>
+          <p class="feature-hero__desc">The top athletes from across Tennessee converge for the championship event of the year. Your place on the podium starts here.</p>
+          <div class="feature-hero__buttons">
+            <a href="#" class="feature-hero__btn feature-hero__btn--primary">Register Now <span class="feature-hero__btn-arrow" aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="feature-hero__btn feature-hero__btn--secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sports Showcase -->
+  <section class="sports-showcase" aria-label="Explore our sports">
+    <div class="sports-showcase__inner">
+
+      <div class="sports-showcase__header">
+        <span class="sports-showcase__eyebrow">23 Sports &amp; Counting</span>
+        <h2 class="sports-showcase__heading">Your Next Chapter Starts on the Field</h2>
+        <p class="sports-showcase__desc">From the crack of the starting pistol to the final lap in the pool, Tennessee Senior Olympics offers 23 sports designed for athletes who refuse to slow down. Whether you're a lifelong competitor or picking up a paddle for the first time, there's a place for you here.</p>
+        <a href="#" class="sports-showcase__cta">
+          Explore All Sports <span class="sports-showcase__cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="sports-collage" aria-label="Sports photo collage">
+        <!-- 1: top left -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/womens-volleyball-action-2025.jpg" alt="Women's volleyball teams competing at the net" loading="lazy">
+          <span class="sports-collage__label">Volleyball</span>
+        </div>
+        <!-- 2: mid left -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/weights-2025-focus-eyes.jpg" alt="Athlete squatting heavy weight with intense focus" loading="lazy">
+          <span class="sports-collage__label">Weightlifting</span>
+        </div>
+        <!-- 3: top right -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/bowling-2025.jpg" alt="Bowling teammates enjoying the competition together" loading="lazy">
+          <span class="sports-collage__label">Bowling</span>
+        </div>
+        <!-- 4: mid right -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/cyclist-2025-starting-line.jpg" alt="Pack of cyclists launching from the starting line" loading="lazy">
+          <span class="sports-collage__label">Cycling</span>
+        </div>
+        <!-- 5: center — spans all 3 rows -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/woman-posed-2025-BLING.jpg" alt="Athlete proudly displaying her collection of medals" loading="lazy">
+          <span class="sports-collage__label">Medal Winner</span>
+        </div>
+        <!-- 6: bottom left -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/basketball-2025-maddogs-medals.jpg" alt="Maddogs basketball team celebrating with medals" loading="lazy">
+          <span class="sports-collage__label">Basketball</span>
+        </div>
+        <!-- 7: bottom right -->
+        <div class="sports-collage__item">
+          <img src="Assets/Photos/track-finishline-2025.jpg" alt="Athletes sprinting toward the finish line" loading="lazy">
+          <span class="sports-collage__label">Track &amp; Field</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section class="sponsors" aria-label="Our sponsors">
+    <div class="sponsors__inner">
+
+      <div class="sponsors__header">
+        <span class="sponsors__eyebrow">Our Partners</span>
+        <h2 class="sponsors__heading">Powered by Community</h2>
+        <p class="sponsors__desc">Every medal, every finish line, every moment of triumph is made possible by the organizations that believe in the power of senior athletics. Their support keeps the games alive and growing&mdash;and keeps our athletes competing.</p>
+      </div>
+
+      <!-- Presenting Sponsor -->
+      <div class="sponsors__tier sponsors__tier--presenting">
+        <div class="sponsors__tier-label">Presenting Sponsor</div>
+        <div class="sponsors__logos">
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/BCBST_logo_Presenting.png" alt="BlueCross BlueShield of Tennessee">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Title Sponsors -->
+      <div class="sponsors__tier sponsors__tier--title">
+        <div class="sponsors__tier-label">Title Sponsors</div>
+        <div class="sponsors__logos">
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/Franklin-TN-Script-Title.jpg" alt="Franklin, Tennessee">
+          </div>
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/WCPR_Logo_White_Background_Title.jpg" alt="Williamson County Parks and Recreation">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Supporting Sponsors -->
+      <div class="sponsors__tier sponsors__tier--supporting">
+        <div class="sponsors__tier-label">Supporting Sponsors</div>
+        <div class="sponsors__logos">
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/WH logo_primary_rgb@3x.png" alt="Williamson Health">
+          </div>
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/JD Logo White Red (002) 2026_0.jpeg" alt="Jason's Deli">
+          </div>
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/logo_1.png" alt="Chattanooga Sports">
+          </div>
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/logo.gif" alt="The Memorial Foundation">
+          </div>
+          <div class="sponsors__logo">
+            <img src="Assets/SponsorLogos/logo-wide_0 Sharing Change.png" alt="Sharing Change">
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsors__footer">
+        <a href="#" class="sponsors__cta">
+          Become a Sponsor <span class="sponsors__cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</section>
+
+<script>
+  (() => {
+    const track = document.getElementById('sliderTrack');
+    const currentNum = document.getElementById('currentNum');
+    const progressFill = document.getElementById('progressFill');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const sliderNav = document.getElementById('sliderNav');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let current = 0;
+    let autoplayTimer;
+    let progressTimer;
+    let autoplayStopped = false;
+    const AUTOPLAY_MS = 6000;
+    const PROGRESS_INTERVAL = 50;
+
+    function goTo(index) {
+      // Manual navigation wraps; autoplay-driven advancement is capped in startAutoplay
+      current = ((index % totalSlides) + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      currentNum.textContent = current + 1;
+
+      // Move nav to match content side
+      const isReversed = slides[current].classList.contains('slide--reversed');
+      sliderNav.classList.toggle('slider__nav--left', !isReversed);
+      sliderNav.classList.toggle('slider__nav--right', isReversed);
+
+      // Toggle light-background nav styling
+      const slideName = slides[current].dataset.slide;
+      slider.classList.toggle('slider--light-nav', slideName === 'fame');
+
+      // If we've reached the last slide, stop autoplay permanently
+      if (current === totalSlides - 1) {
+        autoplayStopped = true;
+        clearTimeout(autoplayTimer);
+        clearInterval(progressTimer);
+        progressFill.style.width = '100%';
+      } else {
+        startAutoplay();
+      }
+    }
+
+    prevBtn.addEventListener('click', () => { autoplayStopped = true; clearTimeout(autoplayTimer); clearInterval(progressTimer); goToManual(current - 1); });
+    nextBtn.addEventListener('click', () => { autoplayStopped = true; clearTimeout(autoplayTimer); clearInterval(progressTimer); goToManual(current + 1); });
+
+    document.querySelector('.slider').addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { autoplayStopped = true; clearTimeout(autoplayTimer); clearInterval(progressTimer); goToManual(current + 1); }
+      if (e.key === 'ArrowLeft') { autoplayStopped = true; clearTimeout(autoplayTimer); clearInterval(progressTimer); goToManual(current - 1); }
+    });
+
+    // Manual navigation — wraps around but does not restart autoplay
+    function goToManual(index) {
+      current = ((index % totalSlides) + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      currentNum.textContent = current + 1;
+
+      const isReversed = slides[current].classList.contains('slide--reversed');
+      sliderNav.classList.toggle('slider__nav--left', !isReversed);
+      sliderNav.classList.toggle('slider__nav--right', isReversed);
+
+      const slideName = slides[current].dataset.slide;
+      slider.classList.toggle('slider--light-nav', slideName === 'fame');
+
+      // Hide the progress bar since autoplay is stopped
+      progressFill.style.width = '0%';
+    }
+
+    // Autoplay — setTimeout; stops after reaching the last slide
+    function startAutoplay() {
+      if (autoplayStopped) return;
+      clearTimeout(autoplayTimer);
+      autoplayTimer = setTimeout(() => goTo(current + 1), AUTOPLAY_MS);
+      startProgress();
+    }
+
+    // Progress bar
+    let progressStart;
+
+    function startProgress() {
+      clearInterval(progressTimer);
+      progressStart = Date.now();
+      progressTimer = setInterval(() => {
+        const elapsed = Date.now() - progressStart;
+        const pct = Math.min((elapsed / AUTOPLAY_MS) * 100, 100);
+        progressFill.style.width = pct + '%';
+      }, PROGRESS_INTERVAL);
+    }
+
+    // Pause on hover / focus (only while autoplay is still running)
+    const slider = document.querySelector('.slider');
+    slider.addEventListener('mouseenter', () => { if (!autoplayStopped) { clearTimeout(autoplayTimer); clearInterval(progressTimer); } });
+    slider.addEventListener('mouseleave', () => { if (!autoplayStopped) startAutoplay(); });
+    slider.addEventListener('focusin', () => { if (!autoplayStopped) { clearTimeout(autoplayTimer); clearInterval(progressTimer); } });
+    slider.addEventListener('focusout', () => { if (!autoplayStopped) startAutoplay(); });
+
+    startAutoplay();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('navbar__links--open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+  })();
+</script>
+
+</body>
+</html>
