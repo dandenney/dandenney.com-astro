@@ -1003,9 +1003,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Chicago Cubs +1.5",
     line: "-175",
     amount: 60,
-    result: "pending",
+    result: "win",
     stakeOut: 60,
-    returnAmount: 0,
+    returnAmount: 94.28,
   },
   {
     id: 79,
@@ -1015,9 +1015,9 @@ export const martingaleBets: MartingaleBet[] = [
     pick: "Chicago Cubs +1.5",
     line: "-175",
     amount: 40,
-    result: "pending",
+    result: "win",
     stakeOut: 40,
-    returnAmount: 0,
+    returnAmount: 62.86,
   },
 ];
 
