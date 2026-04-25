@@ -59,6 +59,20 @@ const nbaWins = nbaResolved.filter((p) => p.result === "win").length;
 const nbaLosses = nbaResolved.filter((p) => p.result === "loss").length;
 const nbaWinPct = nbaWins + nbaLosses > 0 ? Math.round((nbaWins / (nbaWins + nbaLosses)) * 100) : 0;
 
+const STAKE = 30;
+
+function calcReturn(odds: string, result: string): number {
+  if (result === "push") return 0;
+  const o = parseInt(odds);
+  const profit = o < 0 ? STAKE * (100 / Math.abs(o)) : STAKE * (o / 100);
+  return result === "win" ? profit : -STAKE;
+}
+
+function fmtReturn(n: number): string {
+  const abs = Math.abs(n).toFixed(2);
+  return n >= 0 ? `+$${abs}` : `-$${abs}`;
+}
+
 function propTypeBadge(type: RithhmmPropType): { label: string; classes: string } {
   const map: Record<RithhmmPropType, { label: string; classes: string }> = {
     "hits-over": { label: "Hits Over", classes: "bg-cyan-900/40 text-cyan-400 border-cyan-800/50" },
@@ -194,6 +208,7 @@ function formatDate(d: string): string {
         const wins = picks.filter((p) => p.result === "win").length;
         const losses = picks.filter((p) => p.result === "loss").length;
         const winPct = wins + losses > 0 ? Math.round((wins / (wins + losses)) * 100) : 0;
+        const dayNet = picks.reduce((sum, p) => sum + calcReturn(p.odds, p.result), 0);
 
         let dayStreakType: "win" | "loss" | null = null;
         let dayStreakCount = 0;
@@ -240,7 +255,10 @@ function formatDate(d: string): string {
                   </span>
                 )}
               </div>
-              <span class="text-slate-600 text-xs ml-auto">{picks.length} picks</span>
+              <span class={`text-sm font-semibold tabular-nums font-mono ml-auto ${dayNet >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                {fmtReturn(dayNet)}
+              </span>
+              <span class="text-slate-600 text-xs">{picks.length} picks</span>
             </div>
 
             <!-- Picks table -->
@@ -256,6 +274,7 @@ function formatDate(d: string): string {
                     <th class="px-4 py-3 whitespace-nowrap hidden sm:table-cell">Model</th>
                     <th class="px-4 py-3 whitespace-nowrap hidden md:table-cell">L10</th>
                     <th class="px-4 py-3 whitespace-nowrap text-center">Result</th>
+                    <th class="px-4 py-3 whitespace-nowrap text-right">$30</th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-800/60">
@@ -310,6 +329,13 @@ function formatDate(d: string): string {
                             {pick.result === "push" && (
                               <span class="inline-block px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-700 text-slate-300 border border-slate-600">P</span>
                             )}
+                          </td>
+                          <td class={`px-4 py-3 whitespace-nowrap text-right font-mono text-xs ${
+                            pick.result === "win" ? "text-emerald-400" :
+                            pick.result === "loss" ? "text-red-400" :
+                            "text-slate-400"
+                          }`}>
+                            {fmtReturn(calcReturn(pick.odds, pick.result))}
                           </td>
                         </tr>
                       </Fragment>
