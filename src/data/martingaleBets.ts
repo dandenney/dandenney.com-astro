@@ -1115,6 +1115,30 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 40,
     returnAmount: 62.86,
   },
+  {
+    id: 88,
+    owner: "Dan",
+    date: "2026-04-29",
+    seriesId: "BB",
+    pick: "Ausar Thompson Under 1.5 Blocks",
+    line: "-166",
+    amount: 30,
+    result: "pending",
+    stakeOut: 30,
+    returnAmount: 0,
+  },
+  {
+    id: 89,
+    owner: "GardenOf",
+    date: "2026-04-29",
+    seriesId: "W",
+    pick: "Ausar Thompson Under 1.5 Blocks",
+    line: "-166",
+    amount: 20,
+    result: "pending",
+    stakeOut: 20,
+    returnAmount: 0,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>

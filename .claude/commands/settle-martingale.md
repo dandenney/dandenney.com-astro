@@ -29,7 +29,15 @@ Parse `$ARGUMENTS`: first word is `won` or `lost`. If `won`, the second word is 
 
 5. Edit `src/data/martingaleBets.ts` to update the affected entries in place (do not reorder or remove entries).
 
-6. Display a confirmation:
+6. Commit and push:
+   - If there are unstaged changes to other files, stash them first (`git stash`).
+   - Run `git pull --rebase` to sync with remote.
+   - If you stashed, restore with `git stash pop`.
+   - Stage only `src/data/martingaleBets.ts` and commit with message format:
+     `settle(martingale-bets): settle <pick> <result> (<return> return, <split> split)`
+   - Push to remote.
+
+7. Display a confirmation:
 
 | Owner | Result | Return |
 |---|---|---|
