@@ -227,7 +227,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   </p>
                 </div>
                 <a
-                  href="/martingale-tracker"
+                  href="/betting/martingale-tracker"
                   class="flex items-center gap-1 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors mt-1"
                 >
                   Full tracker
@@ -281,7 +281,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   </p>
                 </div>
                 <a
-                  href="/dk-tracker"
+                  href="/betting/dk-tracker"
                   class="flex items-center gap-1 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors mt-1"
                 >
                   Full tracker
@@ -614,14 +614,14 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                   </p>
                   <p class="text-xs text-slate-500">tracked &amp; settled</p>
                   <div class="pt-4 border-t border-slate-800 space-y-2">
-                    <a href="/expert-picks" class="flex items-center gap-3 group py-1">
+                    <a href="/betting/expert-picks" class="flex items-center gap-3 group py-1">
                       <span class="text-xs font-mono text-slate-500 group-hover:text-slate-400 transition-colors w-8">NBA</span>
                       <div class="flex-1 h-1 bg-slate-800">
                         <div class="h-full bg-emerald-600/50 group-hover:bg-emerald-500/70 transition-colors" style={`width: ${nbaWinRate.toFixed(1)}%`}></div>
                       </div>
                       <span class="text-xs font-mono font-bold text-slate-300 group-hover:text-emerald-400 transition-colors tabular-nums">{pct(nbaWinRate)}</span>
                     </a>
-                    <a href="/mlb-expert-picks" class="flex items-center gap-3 group py-1">
+                    <a href="/betting/mlb-expert-picks" class="flex items-center gap-3 group py-1">
                       <span class="text-xs font-mono text-slate-500 group-hover:text-slate-400 transition-colors w-8">MLB</span>
                       <div class="flex-1 h-1 bg-slate-800">
                         {mlbSettled.length > 0 && (

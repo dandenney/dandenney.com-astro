@@ -16,9 +16,9 @@ The vehicle is a martingale system starting with a $500 bankroll. Yes, the math 
 
 Every day I'll recap what happened: what the models said, which experts were right, what the bets were, and whether any of this is actually working. You can follow along with the live data:
 
-- [Martingale Tracker](/martingale-tracker) — the real-money ledger
-- [NBA Expert Picks](/expert-picks) — every CBS SportsLine NBA pick, broken down by bettor
-- [MLB Expert Picks](/mlb-expert-picks) — same thing for baseball
+- [Martingale Tracker](/betting/martingale-tracker) — the real-money ledger
+- [NBA Expert Picks](/betting/expert-picks) — every CBS SportsLine NBA pick, broken down by bettor
+- [MLB Expert Picks](/betting/mlb-expert-picks) — same thing for baseball
 
 The name "Plus EV" is betting shorthand for positive expected value — the condition where a bet is mathematically worth making over time. Whether we're actually finding it is the question.
 
