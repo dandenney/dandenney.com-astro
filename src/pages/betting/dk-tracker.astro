@@ -1,7 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import { SITE_TITLE } from "../consts";
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import { SITE_TITLE } from "@/consts";
 import { ViewTransitions } from "astro:transitions";
 import {
   dkBets,
@@ -11,7 +11,7 @@ import {
   getDKNetImpact,
   getDKNewSeriesStake,
   type DKBet,
-} from "../data/draftKingsBets";
+} from "@/data/draftKingsBets";
 
 const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
