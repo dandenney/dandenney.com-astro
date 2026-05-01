@@ -6,7 +6,7 @@ import OptimizedImage from "../components/OptimizedImage.astro";
 import ReadingTime from "../components/ReadingTime.astro";
 import RSSLink from "../components/RSSLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.js";
-import { getLinks } from "../scripts/notion.js";
+import { getSharedLinks } from "../scripts/stash.ts";
 import toTitleCase from "../helpers/toTitleCase.js";
 
 export const prerender = true;
@@ -25,7 +25,7 @@ const reviews = (await getCollection("reviews"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 4);
 
-const links = await getLinks();
+const links = await getSharedLinks();
 
 const getMonthName = () => {
   const date = new Date();
