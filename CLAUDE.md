@@ -1,39 +1,36 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Project
 
-## Project Overview
+Dan Denney's personal site — blog posts, short notes, restaurant reviews, music reviews, and a martingale bet tracker.
 
-This is a TypeScript/Astro project with CSS styling. Always use TypeScript for new files. The site uses Astro components with `.astro` files.
+## Stack
+
+Astro 5 / TypeScript / Tailwind CSS v4 / Netlify (SSR)
 
 ## Commands
 
-```bash
-yarn dev          # Start dev server (localhost:4321)
-yarn build        # Production build
-yarn preview      # Preview production build
-yarn tina         # Dev server with TinaCMS editing enabled
-npx astro check   # TypeScript type checking (no separate test suite)
-```
+- Dev: `yarn dev` (localhost:4321)
+- Build: `yarn build`
+- Preview: `yarn preview`
+- TinaCMS dev: `yarn tina`
+- Type check: `npx astro check` (no separate test suite — this is the gate)
 
 ## Architecture
 
-This is an Astro 5 personal site with SSR (server output) deployed on Netlify. Tailwind CSS v4 is configured via `@tailwindcss/vite` — not the legacy Astro integration.
+SSR mode on Netlify; most pages use `export const prerender = true` for static generation. Dynamic pages (martingale tracker) run server-side.
 
 **Path alias:** `@/` maps to `src/` (configured in `tsconfig.json`).
 
-**Styling:** Tailwind v4 utility classes plus a single `src/styles/global.css` for theme variables and base overrides. Dark mode uses the `.dark` class variant (`&:is(.dark *)`). Scoped styles in `.astro` files are common for component-specific rules.
+**Styling:** Tailwind v4 utility classes plus `src/styles/global.css` for theme variables and base overrides. Dark mode uses the `.dark` class variant (`&:is(.dark *)`). Scoped styles in `.astro` files are common for component-specific rules.
 
 ### Content Collections (`src/content/config.ts`)
 
-Five collections, each backed by Markdown/MDX files:
 - `posts` — long-form blog posts with tags, thumbnails, optional Cloudinary images
 - `blips` — short-form notes
 - `tinkerings` — side project writeups
-- `reviews` — restaurant/venue reviews ("No Reservaitions"), with city/state/coordinates for map rendering; `aiGenerated` flag tracks AI-assisted entries
+- `reviews` — restaurant/venue reviews ("No Reservaitions"), city/state/coordinates for map rendering; `aiGenerated` flag tracks AI-assisted entries
 - `songs` — music reviews with Spotify metadata; almost all `aiGenerated: true`
-
-Most pages use `export const prerender = true` for static generation, even in SSR mode. Dynamic pages (martingale tracker) run server-side.
 
 ### Layouts
 
@@ -49,7 +46,7 @@ Most pages use `export const prerender = true` for static generation, even in SS
 
 ### Martingale Tracker (`/martingale-tracker`)
 
-Full instructions for adding bets and settling results are in `docs/adding-martingale-bets.md`. Short version:
+Full instructions in `docs/adding-martingale-bets.md`. Short version:
 1. Append to `src/data/martingaleBets.ts` — use the next sequential `id`
 2. Settle by updating `result` and adding `returnAmount`; odd-penny splits go to GardenOf
 
@@ -62,16 +59,26 @@ Full instructions for adding bets and settling results are in `docs/adding-marti
 - `settle-pending-bets.yml` — daily auto-settlement via ESPN APIs; run manually with `--bet-id <id>`
 - `generate-review.yml` / `generate-song-review.yml` — legacy AI content generation (being replaced by agent pipeline)
 
-## CSS / Styling
+## Rules
 
-When working with CSS selectors, always check for unintended side effects on other elements sharing the same selector. Prefer scoped/specific selectors over broad element selectors.
+- Always use TypeScript for new files
+- Always use `@/` path alias, not relative imports
+- CSS: check for unintended side effects on other elements sharing the same selector before applying styles
+- CSS: prefer scoped/specific selectors over broad element selectors
+- Before committing: verify all new/modified assets (images, fonts, etc.) are staged — referenced images are easy to miss
+- When debugging Notion or Spotify integrations: check `.env.local` for required API keys before touching code
+- IMPORTANT: All file edits must use the absolute main repo path — worktree-relative paths break `yarn dev`
 
-When applying styles to specific elements, confirm the exact target element with the user if there's any ambiguity (e.g., `body` vs `main`, `figcaption h3` vs `article h3`).
+## Workflow
 
-## Git Workflow
+- Commit convention: `feat(scope): message` / `fix(scope): message` (match existing git log style)
+- Type checking is the only gate: run `npx astro check` before considering a task done
+- Ask before applying styles when the target element is ambiguous (e.g., `body` vs `main`, `figcaption h3` vs `article h3`)
+- Ask before touching anything in the Out of scope section below
 
-Before committing, verify all new/modified assets (images, fonts, etc.) are staged. It's easy to miss referenced images that aren't yet tracked.
+## Out of scope
 
-## Debugging
-
-When debugging integration issues (Notion, Spotify), check `.env.local` for required API keys before diving into code changes.
+- `.env.local` — manually maintained, never commit
+- `src/data/martingaleBets.ts` IDs — append only, never reorder or reassign IDs
+- `generate-review.yml` / `generate-song-review.yml` — legacy actions being replaced; don't modify
+- Agent content pipeline scripts (`scripts/agent-content/`) — don't modify without understanding the full Leif → Shelby workflow
