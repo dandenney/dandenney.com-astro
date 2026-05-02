@@ -3,29 +3,30 @@ import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import toTitleCase from '../../../helpers/toTitleCase.js'
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+import { getCollection } from 'astro:content';
 
 export const prerender = true;
 
-const allReviews = await Astro.glob('../../../content/reviews/*.md');
+const allReviews = await getCollection('reviews');
 
 // Build state data: name, review count, representative image, and cities
 const stateMap = new Map();
 for (const review of allReviews) {
-	const stateKey = String(review.frontmatter.state).toLowerCase();
-	if (!stateKey || stateKey === '') continue;
+	const stateKey = String(review.data.state).toLowerCase();
+	if (!stateKey || stateKey === 'undefined') continue;
 	if (!stateMap.has(stateKey)) {
 		stateMap.set(stateKey, {
 			name: stateKey,
 			count: 0,
-			image: review.frontmatter.heroImage,
-			imageAlt: review.frontmatter.heroImageAlt,
+			image: review.data.heroImage,
+			imageAlt: review.data.heroImageAlt,
 			cities: new Set(),
 		});
 	}
 	const entry = stateMap.get(stateKey);
 	entry.count++;
-	const city = String(review.frontmatter.city).toLowerCase();
+	const city = String(review.data.city).toLowerCase();
 	if (city) entry.cities.add(city);
 }
 
@@ -35,7 +36,7 @@ const states = [...stateMap.values()].sort((a, b) => b.count - a.count);
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions States | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
+		<ClientRouter />
 		<style>
 			.state-card {
 				transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -66,7 +67,7 @@ const states = [...stateMap.values()].sort((a, b) => b.count - a.count);
 				<div class="mb-8">
 					<h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 xl:text-6xl">States</h2>
 					<p class="mt-2 text-gray-600 dark:text-slate-300">
-						<span class="whitespace-nowrap">[&nbsp;{states.length} states, {allReviews.filter(r => String(r.frontmatter.state).toLowerCase() !== '').length} reviews&nbsp;]</span>
+						<span class="whitespace-nowrap">[&nbsp;{states.length} states, {allReviews.filter(r => r.data.state).length} reviews&nbsp;]</span>
 					</p>
 				</div>
 

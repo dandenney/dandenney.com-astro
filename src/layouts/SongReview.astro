@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 
 const {
   title,
@@ -41,7 +41,7 @@ const formatDate = (dateStr: string) => {
       title={`${title} by ${artist}`}
       description={`A review of ${title} by ${artist}`}
     />
-    <ViewTransitions />
+    <ClientRouter />
     <script
       type="application/ld+json"
       set:html={JSON.stringify({

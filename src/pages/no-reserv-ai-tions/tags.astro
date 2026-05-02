@@ -3,24 +3,25 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import toTitleCase from '../../helpers/toTitleCase.js'
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+import { getCollection } from 'astro:content';
 
 export const prerender = true;
 
-const allReviews = await Astro.glob('../../content/reviews/*.md');
+const allReviews = await getCollection('reviews');
 
 // Build tag data: name, count, and a representative image
 const tagMap = new Map();
 for (const review of allReviews) {
-	const tags = review.frontmatter.tags || [];
+	const tags = review.data.tags || [];
 	for (const tag of tags) {
 		const tagKey = String(tag).toLowerCase();
 		if (!tagMap.has(tagKey)) {
 			tagMap.set(tagKey, {
 				name: tagKey,
 				count: 0,
-				image: review.frontmatter.heroImage,
-				imageAlt: review.frontmatter.heroImageAlt,
+				image: review.data.heroImage,
+				imageAlt: review.data.heroImageAlt,
 			});
 		}
 		tagMap.get(tagKey).count++;
@@ -34,7 +35,7 @@ const maxCount = tags[0]?.count || 1;
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions Tags | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
+		<ClientRouter />
 		<style>
 			.tag-card {
 				transition: transform 0.3s ease, box-shadow 0.3s ease;

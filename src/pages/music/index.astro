@@ -3,7 +3,7 @@ import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
-// import { ViewTransitions } from 'astro:transitions';
+// import { ClientRouter } from 'astro:transitions';
 
 export const prerender = true;
 ---
@@ -15,7 +15,7 @@ export const prerender = true;
       title="Seasons of Dan - Music Listening History | Dan Denney"
       description="A look at my music listening habits across different time periods, powered by Spotify"
     />
-    <!-- <ViewTransitions /> -->
+    <!-- <ClientRouter /> -->
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main

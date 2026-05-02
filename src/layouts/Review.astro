@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import toTitleCase from '../helpers/toTitleCase.js';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title } = Astro.props;
 ---
@@ -11,7 +11,7 @@ const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, h
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} type="restaurant" image={heroImage ? `/no-reserv-ai-tions/${heroImage}.webp` : undefined} />
-		<ViewTransitions />
+		<ClientRouter />
 		<style>
 			.hero-image-wrapper {
 				overflow: hidden;

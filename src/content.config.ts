@@ -1,7 +1,8 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
 const posts = defineCollection({
-  // Type-check frontmatter using a schema
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/posts" }),
   schema: z.object({
     pubDate: z.coerce.date(),
     strapiSeries: z.boolean().optional(),
@@ -16,6 +17,7 @@ const posts = defineCollection({
 });
 
 const blips = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blips" }),
   schema: z.object({
     pubDate: z.coerce.date(),
     summary: z.string().optional(),
@@ -24,6 +26,7 @@ const blips = defineCollection({
 });
 
 const tinkerings = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/tinkerings" }),
   schema: z.object({
     pubDate: z.coerce.date(),
     summary: z.string().optional(),
@@ -33,6 +36,7 @@ const tinkerings = defineCollection({
 });
 
 const reviews = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/reviews" }),
   schema: z.object({
     address: z.string().optional(),
     city: z.string(),
@@ -46,35 +50,36 @@ const reviews = defineCollection({
     state: z.string().optional(),
     title: z.string(),
     description: z.string(),
-    // Transform string to Date object
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()),
-    aiGenerated: z.boolean().default(false), // Flag for AI-generated reviews
+    aiGenerated: z.boolean().default(false),
   }),
 });
 
 const songs = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/songs" }),
   schema: z.object({
-    title: z.string(), // Track name
-    artist: z.string(), // Primary artist
-    artists: z.array(z.string()), // All artists
-    album: z.string(), // Album name
-    releaseDate: z.string(), // YYYY-MM-DD
-    spotifyUrl: z.string().url(), // Track URL
-    spotifyId: z.string(), // Track ID
-    albumArt: z.string().optional(), // Album cover URL
-    duration: z.number(), // Duration in ms
-    genres: z.array(z.string()), // From artist data
-    preview: z.string().url().optional(), // 30s preview URL
-    pubDate: z.coerce.date(), // Review publish date
-    rating: z.number().min(1).max(5).optional(), // Star rating
-    tags: z.array(z.string()), // Custom tags
-    aiGenerated: z.boolean().default(true), // Flag for AI reviews
+    title: z.string(),
+    artist: z.string(),
+    artists: z.array(z.string()),
+    album: z.string(),
+    releaseDate: z.string(),
+    spotifyUrl: z.url(),
+    spotifyId: z.string(),
+    albumArt: z.string().optional(),
+    duration: z.number(),
+    genres: z.array(z.string()),
+    preview: z.url().optional(),
+    pubDate: z.coerce.date(),
+    rating: z.number().min(1).max(5).optional(),
+    tags: z.array(z.string()),
+    aiGenerated: z.boolean().default(true),
   }),
 });
 
 const plusEv = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/plus-ev" }),
   schema: z.object({
     pubDate: z.coerce.date(),
     title: z.string(),
@@ -94,6 +99,7 @@ const plusEv = defineCollection({
 });
 
 const artificiallyIntelligent = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/artificially-intelligent" }),
   schema: z.object({
     pubDate: z.coerce.date(),
     title: z.string(),

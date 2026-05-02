@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const tinkerings = (await getCollection('tinkerings')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -14,7 +14,7 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title="Tinkerings | Dan Denney" description="Projects with some technical bit that I learned in order to create" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
@@ -45,7 +45,7 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 							: null;
 						return (
 							<a
-								href={`/tinkerings/${tinkering.slug}/`}
+								href={`/tinkerings/${tinkering.id.replace(/\.mdx?$/, '')}/`}
 								class:list={[
 									"tinkerings-grid-item group relative flex flex-col no-underline bg-slate-50 dark:bg-slate-800",
 									isWide ? "md:col-span-2" : "",
@@ -55,7 +55,7 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 									<div class="aspect-video overflow-hidden">
 										<img
 											src={thumbUrl}
-											alt={tinkering.data.thumbAlt || tinkering.data.title}
+											alt={tinkering.data.title}
 											class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 											loading="lazy"
 										/>

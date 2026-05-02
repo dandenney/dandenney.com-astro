@@ -2,24 +2,25 @@
 import toTitleCase from '../helpers/toTitleCase.js'
 
 const { review } = Astro.props;
+const slug = review.id.replace(/\.mdx?$/, '');
 ---
 
 <li class="group m-auto max-w-xs mt-8 relative w-full md:max-w-full xl:border-t xl:mt-0 xl:pb-8 xl:pt-8">
   <figure class="md:flex md:gap-4 md:items-center lg:gap-8">
-    <img alt={review.frontmatter.heroImageAlt} class="duration-500 mb-2 transition-opacity md:mb-0 md:w-60 xl:absolute xl:right-0 xl:opacity-0 xl:pointer-events-none xl:w-[400px] xl:rounded-lg xl:shadow-lg	xl:z-10" src={`/no-reserv-ai-tions/${review.frontmatter.heroImage}-thumb.webp`} />
+    <img alt={review.data.heroImageAlt} class="duration-500 mb-2 transition-opacity md:mb-0 md:w-60 xl:absolute xl:right-0 xl:opacity-0 xl:pointer-events-none xl:w-[400px] xl:rounded-lg xl:shadow-lg	xl:z-10" src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} />
     <figcaption class="grow">
       <span class="text-slate-500 text-sm dark:text-slate-100 xl:ml-2 xl:text-base">
-        {toTitleCase(review.frontmatter.city)}, {review.frontmatter.country === 'United States' ? toTitleCase(review.frontmatter.state) : review.frontmatter.country}
+        {toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
       </span>
       <h3 class="font-bold text-2xl text-red-700 uppercase dark:text-red-300 md:text-4xl lg:text-5xl xl:my-2 xl:text-8xl">
-        {review.frontmatter.title}
+        {review.data.title}
       </h3>
       <p class="text-gray-600 text-sm dark:text-slate-100 xl:ml-2 xl:text-base">
-        {review.frontmatter.description}
+        {review.data.description}
       </p>
-      <a class="absolute inset-0" href={`/no-reserv-ai-tions/${review.slug}`}>
+      <a class="absolute inset-0" href={`/no-reserv-ai-tions/${slug}`}>
         <span class="sr-only">
-          {review.frontmatter.title}
+          {review.data.title}
         </span>
       </a>
     </figcaption>

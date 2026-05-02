@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import SongReview from '@/layouts/SongReview.astro';
 
 export const prerender = true;
@@ -7,7 +7,7 @@ export const prerender = true;
 export async function getStaticPaths() {
   const songs = await getCollection('songs');
   return songs.map((song) => ({
-    params: { slug: song.slug },
+    params: { slug: song.id.replace(/\.mdx?$/, '') },
     props: song,
   }));
 }
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'songs'>;
 
 const song = Astro.props;
-const { Content } = await song.render();
+const { Content } = await render(song);
 ---
 
 <SongReview {...song.data}>

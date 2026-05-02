@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import { getLastCommit } from '../lib/github';
 
 const { title, pubDate, summary, githubPath } = Astro.props;
@@ -28,7 +28,7 @@ const repoUrl = `https://github.com/dandenney/artificially-intelligent/tree/main
 <html lang="en">
   <head>
     <BaseHead title={`${title} | Artificially Intelligent`} description={summary ?? title} type="blogpost" datePublished={pubDate} author="Dan Denney" />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-white dark:bg-slate-900">
     <Header />

@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 import toTitleCase from '../../helpers/toTitleCase.js';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 export const prerender = true;
 
@@ -17,7 +17,7 @@ const reviews = (await getCollection('reviews')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
+		<ClientRouter />
 		<style>     
 			@media screen and (min-width: 1024px) {  
 				.review-link {
@@ -131,7 +131,7 @@ const reviews = (await getCollection('reviews')).sort(
 							</li>
 							{reviews.map((review) => (
 								<li class="mt-8 md:flex lg:col-start-1 lg:mt-0 lg:row-start-1">
-									<a class="review-link block duration-300 group relative isolate sm:mt-0" href={`/no-reserv-ai-tions/${review.slug}/`}>
+									<a class="review-link block duration-300 group relative isolate sm:mt-0" href={`/no-reserv-ai-tions/${review.id.replace(/\.mdx?$/, '')}/`}>
 										<div class="max-w-2xl mx-auto sm:gap-8 sm:flex sm:items-start">
 											<img class="mb-4 sm:max-w-[240px] sm:h-auto lg:hidden" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 											<div>
@@ -160,7 +160,7 @@ const reviews = (await getCollection('reviews')).sort(
 						</li>
 						{reviews.map((review) => (
 							<li class="min-h-[80dvh] overflow-hidden relative">
-								<a class="absolute inset-0 block duration-300 group isolate transition-colors sm:mt-0 [@media(hover:hover)]:hover:bg-red-700 dark:[@media(hover:hover)]:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.slug}/`}>
+								<a class="absolute inset-0 block duration-300 group isolate transition-colors sm:mt-0 [@media(hover:hover)]:hover:bg-red-700 dark:[@media(hover:hover)]:hover:bg-slate-800" href={`/no-reserv-ai-tions/${review.id.replace(/\.mdx?$/, '')}/`}>
 									<img class="h-full w-full object-cover" src={`/no-reserv-ai-tions/${review.data.heroImage}.webp`} alt={review.data.heroImageAlt} />
 								</a>
 							</li>

@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const { summary, title } = Astro.props;
 ---
@@ -8,7 +8,7 @@ const { summary, title } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={summary} />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body>
 		<main>

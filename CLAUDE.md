@@ -6,7 +6,9 @@ Dan Denney's personal site — blog posts, short notes, restaurant reviews, musi
 
 ## Stack
 
-Astro 5 / TypeScript / Tailwind CSS v4 / Netlify (SSR)
+Astro 6 / TypeScript / Tailwind CSS v4 / Netlify (SSR)
+
+**Node version manager:** `fnm` (Fast Node Manager). Node version is set in `.nvmrc`. When running commands that require a specific Node version, use `fnm exec --using=<version> <command>` or run `fnm use` first. Astro v6 requires Node 22+.
 
 ## Commands
 
@@ -24,7 +26,7 @@ SSR mode on Netlify; most pages use `export const prerender = true` for static g
 
 **Styling:** Tailwind v4 utility classes plus `src/styles/global.css` for theme variables and base overrides. Dark mode uses the `.dark` class variant (`&:is(.dark *)`). Scoped styles in `.astro` files are common for component-specific rules.
 
-### Content Collections (`src/content/config.ts`)
+### Content Collections (`src/content.config.ts`)
 
 - `posts` — long-form blog posts with tags, thumbnails, optional Cloudinary images
 - `blips` — short-form notes

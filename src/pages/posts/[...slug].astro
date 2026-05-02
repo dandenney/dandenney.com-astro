@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export const prerender = true;
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 		const fileName = pathParts[pathParts.length - 1].replace(/\.(md|mdx)$/, '');
 		
 		return {
-			params: { slug: post.slug },
+			params: { slug: post.id.replace(/\.(md|mdx)$/, '') },
 			props: {
 				...post,
 				identifier: fileName // Use the filename as the identifier
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'posts'> & { identifier: string };
 
 const post = Astro.props;
-const { Content, headings } = await post.render();
+const { Content, headings } = await render(post);
 ---
 
 <BlogPost {...post.data} identifier={post.identifier} rawBody={post.body} headings={headings}>

@@ -2,7 +2,7 @@
 import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/Header.astro";
 import { SITE_TITLE } from "@/consts";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 import {
   dkBets,
   dkStartingBalance,
@@ -196,7 +196,7 @@ const seriesSummariesDesc = [...seriesSummaries].reverse();
       title="DK Bet Tracker | Dan Denney"
       description="A 6-loss-max martingale bet tracker for DraftKings with running balance and series ledger."
     />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden antialiased">
     <main class="relative z-10 bg-slate-950">

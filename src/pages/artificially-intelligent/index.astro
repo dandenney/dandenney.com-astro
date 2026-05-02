@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const experiments = (await getCollection('artificially-intelligent')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -14,7 +14,7 @@ const experiments = (await getCollection('artificially-intelligent')).sort(
 <html lang="en">
   <head>
     <BaseHead title="Artificially Intelligent | Dan Denney" description="Experiments at the intersection of AI and front-end development" />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
@@ -42,7 +42,7 @@ const experiments = (await getCollection('artificially-intelligent')).sort(
             });
             return (
               <a
-                href={`/artificially-intelligent/${experiment.slug}/`}
+                href={`/artificially-intelligent/${experiment.id.replace(/\.mdx?$/, '')}/`}
                 class:list={[
                   "group relative flex items-center justify-between no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-800",
                   isWide ? "md:col-span-2" : "",

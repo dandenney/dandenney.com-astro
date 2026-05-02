@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Blip from '../../layouts/Blip.astro';
 
 export const prerender = true;
@@ -7,14 +7,14 @@ export const prerender = true;
 export async function getStaticPaths() {
 	const blips = await getCollection('blips');
 	return blips.map((blip) => ({
-		params: { slug: blip.slug },
+		params: { slug: blip.id.replace(/\.mdx?$/, '') },
 		props: blip,
 	}));
 }
 type Props = CollectionEntry<'blips'>;
 
 const blip = Astro.props;
-const { Content } = await blip.render();
+const { Content } = await render(blip);
 ---
 
 <Blip {...blip.data}>

@@ -3,7 +3,7 @@ import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 import {
   martingaleBets,
   startingBalance,
@@ -254,7 +254,7 @@ const gardenSeriesSummariesDesc = [...gardenSeriesSummaries].reverse();
       title="Martingale Bet Tracker | Dan Denney"
       description="A clean snapshot of a Martingale betting streak with summary metrics and a bet-by-bet ledger."
     />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen overflow-x-hidden antialiased">
     <main class="relative z-10 bg-slate-950">

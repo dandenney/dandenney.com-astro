@@ -339,7 +339,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
               <div class="h-px flex-1 bg-slate-800"></div>
             </div>
             <a
-              href={`/plus-ev/${featuredPost.slug}/`}
+              href={`/plus-ev/${featuredPost.id.replace(/\.mdx?$/, '')}/`}
               class="group block border border-slate-700/60 bg-slate-900/30 hover:border-emerald-800/50 hover:bg-slate-900/60 transition-all duration-300"
             >
               <!-- Accent bar -->
@@ -680,7 +680,7 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
                         : null;
                 return (
                   <a
-                    href={`/plus-ev/${post.slug}/`}
+                    href={`/plus-ev/${post.id.replace(/\.mdx?$/, '')}/`}
                     class="group flex items-center gap-4 md:gap-6 py-4 px-4 bg-slate-900/0 hover:bg-slate-900/50 border border-transparent hover:border-slate-700/50 transition-all duration-200"
                   >
                     <span class="font-mono text-xs text-slate-700 group-hover:text-slate-600 tabular-nums w-5 flex-shrink-0 transition-colors">{String(i + 1).padStart(2, "0")}</span>

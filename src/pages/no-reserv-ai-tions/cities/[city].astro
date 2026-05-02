@@ -5,26 +5,20 @@ import Footer from '../../../components/Footer.astro';
 import toTitleCase from '../../../helpers/toTitleCase.js'
 import ReviewLinkItem from '../../../components/ReviewLinkItem.astro';
 import ReviewLinkItemJs from '../../../components/ReviewLinkItemJs.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+import { getCollection } from 'astro:content';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const allReviews = await Astro.glob('../../../content/reviews/*.md');
+  const allReviews = await getCollection('reviews');
 
-  // Normalize to lowercase so "Nashville" and "nashville" become one page
-  const uniqueCities = [...new Set(allReviews.map((review) => String(review.frontmatter.city).toLowerCase()))];
+  const uniqueCities = [...new Set(allReviews.map((review) => String(review.data.city).toLowerCase()))];
 
   return uniqueCities.map((city) => {
-    const cityLower = city.toLowerCase();
     const filteredReviews = allReviews.filter((review) =>
-      String(review.frontmatter.city).toLowerCase() === cityLower
-    ).map((review) => {
-      // Extract the slug from the file path
-      // This example assumes file names are suitable for use as slugs
-      const slug = review.file.split('/').pop().replace(/\.md$/, '');
-      return { ...review, slug };
-    });
+      String(review.data.city).toLowerCase() === city
+    );
 
     return {
       params: { city },
@@ -42,7 +36,7 @@ const { reviews } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />

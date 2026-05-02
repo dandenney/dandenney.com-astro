@@ -1,23 +1,24 @@
 ---
-import { getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import type { Page } from 'astro';
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import toTitleCase from '../../helpers/toTitleCase.js';
-import { ViewTransitions } from 'astro:transitions';
-
+import { ClientRouter } from 'astro:transitions';
 import ReviewLinkItemJs from '../../components/ReviewLinkItemJs.astro';
 
 export const prerender = true;
 
-// Paginate same list of { astronaut } objects as the previous example
-export async function getStaticPaths({ paginate }) { 
+type Props = { page: Page<CollectionEntry<'reviews'>> };
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const reviews = (await getCollection('reviews')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
 	return paginate(reviews, { pageSize: 6 })
  }
-const { page }: { page: { currentPage: number, lastPage: number } } = Astro.props;
+const { page } = Astro.props as Props;
 
 console.log(page);
 ---
@@ -26,7 +27,7 @@ console.log(page);
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />
@@ -52,7 +53,7 @@ console.log(page);
                   <p class="text-gray-600 text-sm dark:text-slate-100 xl:ml-2 xl:text-base">
                     {review.data.description}
                   </p>
-                  <a class="absolute inset-0" href={`/no-reserv-ai-tions/${review.slug}`}>
+                  <a class="absolute inset-0" href={`/no-reserv-ai-tions/${review.id.replace(/\.mdx?$/, '')}`}>
                     <span class="sr-only">
                       {review.data.title}
                     </span>

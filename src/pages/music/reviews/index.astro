@@ -4,7 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
 import { getCollection } from "astro:content";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 
 export const prerender = true;
 
@@ -20,7 +20,7 @@ const songs = (await getCollection("songs")).sort((a, b) =>
       title="Music Reviews | Dan Denney"
       description="AI-generated reviews of songs I'm listening to"
     />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main
@@ -54,7 +54,7 @@ const songs = (await getCollection("songs")).sort((a, b) =>
           <div class="reviews-list-grid mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
             {songs.map((song) => (
               <a
-                href={`/music/reviews/${song.slug}/`}
+                href={`/music/reviews/${song.id.replace(/\.mdx?$/, '')}/`}
                 class="reviews-list-grid-item group flex items-center gap-4 p-6 md:p-8 bg-slate-50 no-underline transition-colors dark:bg-slate-800"
               >
                 {song.data.albumArt && (

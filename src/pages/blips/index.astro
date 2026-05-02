@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const blips = (await getCollection('blips')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -14,7 +14,7 @@ const blips = (await getCollection('blips')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title="Blips | Dan Denney" description="Shorter than a blog post, longer than a tweet" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
@@ -42,7 +42,7 @@ const blips = (await getCollection('blips')).sort(
 						});
 						return (
 							<a
-								href={`/blips/${blip.slug}/`}
+								href={`/blips/${blip.id.replace(/\.mdx?$/, '')}/`}
 								class:list={[
 									"blips-grid-item group relative flex items-center justify-between no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-800",
 									isWide ? "md:col-span-2" : "",

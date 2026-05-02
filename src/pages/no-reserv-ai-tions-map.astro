@@ -34,7 +34,7 @@ const reviewsWithCoordinates = allReviews.filter(review => {
 const geoJsonData = {
   type: "FeatureCollection",
   features: reviewsWithCoordinates.map((review, index) => {
-    const [lng, lat] = review.data.coordinates.split(',').map(coord => parseFloat(coord.trim()));
+    const [lng, lat] = review.data.coordinates!.split(',').map((coord: string) => parseFloat(coord.trim()));
 
     return {
       type: "Feature",
@@ -47,7 +47,7 @@ const geoJsonData = {
         address: review.data.address || '',
         description: review.data.description,
         tags: review.data.tags.join(', '),
-        url: `/no-reserv-ai-tions/${review.slug}/`,
+        url: `/no-reserv-ai-tions/${review.id.replace(/\.mdx?$/, '')}/`,
         pubDate: review.data.pubDate.toISOString()
       },
       geometry: {

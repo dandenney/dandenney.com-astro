@@ -11,7 +11,7 @@ import toTitleCase from "../helpers/toTitleCase.js";
 
 export const prerender = true;
 import { getCollection } from "astro:content";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 
 const posts = (await getCollection("posts"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -39,7 +39,7 @@ const monthName = getMonthName();
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} type="person" />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-slate-50 dark:bg-slate-900">
     <main
@@ -390,14 +390,14 @@ const monthName = getMonthName();
             posts.map((post) => (
               <article class="relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 transition-shadow duration-300 hover:shadow-md group">
                 <a
-                  href={`/posts/${post.slug}/`}
+                  href={`/posts/${post.id.replace(/\.mdx?$/, '')}/`}
                   class="absolute inset-0 z-20"
                 >
                   <span class="sr-only">Read {post.data.title}</span>
                 </a>
                 <OptimizedImage
-                  src={post.data.thumb}
-                  alt={post.data.thumbAlt}
+                  src={post.data.thumb ?? ''}
+                  alt={post.data.thumbAlt ?? ''}
                   width={686}
                   height={457}
                   class="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
@@ -406,7 +406,7 @@ const monthName = getMonthName();
                 <div class="absolute inset-0 -z-10 bg-linear-to-t from-gray-900 via-gray-900/40 transition-opacity duration-300 group-hover:opacity-90" />
                 <div class="absolute inset-0 -z-10 ring-1 ring-inset ring-gray-900/10 transition-shadow duration-300 group-hover:ring-gray-900/20" />
                 <div class="flex items-center justify-between mt-3 mb-2">
-                  <ReadingTime content={post.body} class="text-gray-400" />
+                  <ReadingTime content={post.body ?? ''} class="text-gray-400" />
                 </div>
                 <h3 class="text-lg font-semibold leading-6 text-white transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-y-[-2px]">
                   {post.data.title}
@@ -545,7 +545,7 @@ const monthName = getMonthName();
               });
               return (
                 <a
-                  href={`/blips/${blip.slug}/`}
+                  href={`/blips/${blip.id.replace(/\.mdx?$/, '')}/`}
                   class:list={[
                     "blips-grid-item group relative flex items-center justify-between no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-800",
                     isWide ? "md:col-span-2" : "",
@@ -792,7 +792,7 @@ const monthName = getMonthName();
             reviews.map((review) => (
               <a
                 class="reviews-grid-item group flex items-center gap-6 md:gap-8 no-underline p-6 md:p-8 bg-slate-50 dark:bg-slate-900"
-                href={`/no-reserv-ai-tions/${review.slug}`}
+                href={`/no-reserv-ai-tions/${review.id.replace(/\.mdx?$/, '')}`}
               >
                 <figure
                   class="shrink-0 bg-white pb-4 pt-2 px-2 shadow-sm transition-transform duration-300 [@media(hover:hover)]:group-hover:-rotate-3"

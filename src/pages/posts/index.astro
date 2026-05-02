@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 import { getCollection } from 'astro:content';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const posts = (await getCollection('posts')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -33,7 +33,7 @@ const blogroll = [
 <html lang="en">
 	<head>
 		<BaseHead title="Posts, aka Blog Posts | Dan Denney" description="Articles that I really wanted to share or that I felt compelled to write because I didn't find it when I was looking" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-white dark:bg-slate-900">
 		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
@@ -91,7 +91,7 @@ const blogroll = [
 											isWide ? "sm:col-span-2" : "",
 										]}
 									>
-										<a href={`/posts/${post.slug}/`} class="absolute inset-0 z-20">
+										<a href={`/posts/${post.id.replace(/\.mdx?$/, '')}/`} class="absolute inset-0 z-20">
 											<span class="sr-only">Read {post.data.title}</span>
 										</a>
 										{post.data.cloudinaryThumb ? (

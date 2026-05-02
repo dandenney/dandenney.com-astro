@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Tinkering from '../../layouts/Tinkering.astro';
 
 export const prerender = true;
@@ -7,14 +7,14 @@ export const prerender = true;
 export async function getStaticPaths() {
 	const tinkerings = await getCollection('tinkerings');
 	return tinkerings.map((tinkering) => ({
-		params: { slug: tinkering.slug },
+		params: { slug: tinkering.id.replace(/\.mdx?$/, '') },
 		props: tinkering,
 	}));
 }
 type Props = CollectionEntry<'tinkerings'>;
 
 const tinkering = Astro.props;
-const { Content } = await tinkering.render();
+const { Content } = await render(tinkering);
 ---
 
 <Tinkering {...tinkering.data}>

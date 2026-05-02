@@ -7,7 +7,7 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import ReadingTime from '../components/ReadingTime.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import similarities from '../assets/similarities.json';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const {
   title,
@@ -49,7 +49,7 @@ const relatedPosts =
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" />
-		<ViewTransitions />
+		<ClientRouter />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "BreadcrumbList",

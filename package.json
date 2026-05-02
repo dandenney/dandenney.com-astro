@@ -16,13 +16,13 @@
     "netlify:env:sync": "./scripts/sync-netlify-env.sh"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.4",
-    "@astrojs/mdx": "4.3.0",
-    "@astrojs/netlify": "^6.6.1",
-    "@astrojs/rss": "4.0.12",
-    "@astrojs/sitemap": "3.4.1",
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/mdx": "^5.0.4",
+    "@astrojs/netlify": "^7.0.8",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.15.9",
+    "astro": "^6.2.1",
     "tailwindcss": "^4.1.18",
     "tinacms": "^1.6.3"
   },

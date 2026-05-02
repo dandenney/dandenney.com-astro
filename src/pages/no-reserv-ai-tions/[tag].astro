@@ -3,7 +3,8 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import toTitleCase from '../../helpers/toTitleCase.js';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+import { getCollection } from 'astro:content';
 
 import ReviewLinkItem from '../../components/ReviewLinkItem.astro';
 import ReviewLinkItemJs from '../../components/ReviewLinkItemJs.astro';
@@ -11,19 +12,14 @@ import ReviewLinkItemJs from '../../components/ReviewLinkItemJs.astro';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const allReviews = await Astro.glob('../../content/reviews/*.md');
+  const allReviews = await getCollection('reviews');
 
-  const uniqueTags = [...new Set(allReviews.map((review) => review.frontmatter.tags).flat())];
+  const uniqueTags = [...new Set(allReviews.map((review) => review.data.tags).flat())];
 
   return uniqueTags.map((tag) => {
-    const filteredReviews = allReviews.filter((review) => 
-      review.frontmatter.tags.includes(tag)
-    ).map((review) => {
-      // Extract the slug from the file path
-      // This example assumes file names are suitable for use as slugs
-      const slug = review.file.split('/').pop().replace(/\.md$/, '');
-      return { ...review, slug };
-    });
+    const filteredReviews = allReviews.filter((review) =>
+      review.data.tags.includes(tag)
+    );
 
     return {
       params: { tag },
@@ -41,7 +37,7 @@ const { reviews } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-slate-50 dark:bg-slate-900">
 		<Header />

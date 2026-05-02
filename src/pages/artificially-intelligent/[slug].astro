@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import ArtificiallyIntelligent from '../../layouts/ArtificiallyIntelligent.astro';
 
 export const prerender = true;
@@ -7,7 +7,7 @@ export const prerender = true;
 export async function getStaticPaths() {
   const experiments = await getCollection('artificially-intelligent');
   return experiments.map((experiment) => ({
-    params: { slug: experiment.slug },
+    params: { slug: experiment.id.replace(/\.mdx?$/, '') },
     props: experiment,
   }));
 }
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'artificially-intelligent'>;
 
 const experiment = Astro.props;
-const { Content } = await experiment.render();
+const { Content } = await render(experiment);
 ---
 
 <ArtificiallyIntelligent {...experiment.data}>
