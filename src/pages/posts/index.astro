@@ -101,6 +101,7 @@ const blogroll = [
 												src={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb}`}
 												alt={post.data.thumbAlt || post.data.title}
 												srcset={`https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_686,q_auto/v1673896360/${post.data.cloudinaryThumb} 375w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_704,q_auto/v1673896360/${post.data.cloudinaryThumb} 768w, https://res.cloudinary.com/dtlow08pj/image/upload/f_auto,c_limit,w_896,q_auto/v1673896360/${post.data.cloudinaryThumb} 1200w`}
+												sizes="auto"
 											/>
 										) : post.data.thumb ? (
 											<img
