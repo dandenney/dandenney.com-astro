@@ -4647,9 +4647,9 @@ abort-controller@^3.0.0:
   dependencies:
     event-target-shim "^5.0.0"
 
-abstract-level@^1.0.0, abstract-level@^1.0.2, abstract-level@^1.0.3:
+abstract-level@^1.0.0, abstract-level@^1.0.2, abstract-level@^1.0.3, abstract-level@^1.0.4:
   version "1.0.4"
-  resolved "https://registry.npmjs.org/abstract-level/-/abstract-level-1.0.4.tgz"
+  resolved "https://registry.yarnpkg.com/abstract-level/-/abstract-level-1.0.4.tgz#3ad8d684c51cc9cbc9cf9612a7100b716c414b57"
   integrity sha512-eUP/6pbXBkMbXFdx4IH2fVgvB7M0JvR7/lIL33zcs0IBcwjdzSSl31TOJsaCzmKSSDF9h8QYSOJux4Nd4YJqFg==
   dependencies:
     buffer "^6.0.3"
@@ -5098,10 +5098,10 @@ better-ajv-errors@^1.2.0:
     jsonpointer "^5.0.0"
     leven "^3.1.0 < 4"
 
-better-sqlite3@^8.4.0:
-  version "8.7.0"
-  resolved "https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-8.7.0.tgz"
-  integrity sha512-99jZU4le+f3G6aIl6PmmV0cxUIWqKieHxsiF7G34CVFiE+/UabpYqkU0NJIkY/96mQKikHeBjtR27vFfs5JpEw==
+better-sqlite3@^11.8.1:
+  version "11.10.0"
+  resolved "https://registry.yarnpkg.com/better-sqlite3/-/better-sqlite3-11.10.0.tgz#2b1b14c5acd75a43fd84d12cc291ea98cef57d98"
+  integrity sha512-EwhOpyXiOEL/lKzHz9AW1msWFNzGc/z+LzeB3/jnFJpxu+th2yqvzsSWas1v9jgs9+xiXJcD5A8CJxAG2TaghQ==
   dependencies:
     bindings "^1.5.0"
     prebuild-install "^7.1.1"
@@ -12552,13 +12552,13 @@ sprintf-js@~1.0.2:
   resolved "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
   integrity sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==
 
-sqlite-level@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/sqlite-level/-/sqlite-level-1.0.1.tgz"
-  integrity sha512-uPo21L96VADz/PPkkZoPNMH9fURTQLDrSVe8XJUwPjqvTi3xigDvCfoektZdvoEgRAiaHchOgksW7YBoyVyEnw==
+sqlite-level@^1.0.1, sqlite-level@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/sqlite-level/-/sqlite-level-1.2.1.tgz#778024b38bccd28f3fafbbbaac338883b083431b"
+  integrity sha512-MzeGQSp0kvQv/K1WWaLm2Oi4cnr42oelLbZnrveCLP1Up21Ks7+PJYb+3uc+3kC7O6VdrhqJFhFkpUuK0E4pWA==
   dependencies:
-    abstract-level "^1.0.3"
-    better-sqlite3 "^8.4.0"
+    abstract-level "^1.0.4"
+    better-sqlite3 "^11.8.1"
     module-error "^1.0.2"
 
 stack-trace@0.0.x:
