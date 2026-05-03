@@ -1,0 +1,518 @@
+---
+export const prerender = true;
+import BaseHead from "@/components/BaseHead.astro";
+
+const displayDate = "May 2, 2026";
+
+const COLORS: Record<string, string> = {
+  hermes:     "#34d399",
+  chatgpt:    "#2dd4bf",
+  claude:     "#fb923c",
+  gemini:     "#60a5fa",
+  perplexity: "#c084fc",
+};
+
+const candidates = [
+  {
+    id: "arrighetti",
+    color: "#fbbf24",
+    player: "Spencer Arrighetti",
+    matchup: "HOU @ BOS",
+    sport: "MLB",
+    market: "Pitcher Ks",
+    direction: "Under",
+    line: 5.5,
+    odds: -144,
+    rithmm: 61.6,
+    breakEven: 59.0,
+    projection: "4.9 Ks",
+    dtm: 6.4,
+    recent: "L3 1/3",
+    gameTime: "3:10 PM",
+    boardResult: "win" as const,
+  },
+  {
+    id: "tatum",
+    color: "#f472b6",
+    player: "Jayson Tatum",
+    matchup: "BOS vs PHI",
+    sport: "NBA",
+    market: "Pts + Asts",
+    direction: "Under",
+    line: 29.5,
+    odds: -112,
+    rithmm: 62.2,
+    breakEven: 52.8,
+    projection: "24.2 P+A",
+    dtm: 19.7,
+    recent: "L10 4/10",
+    gameTime: "6:30 PM",
+    boardResult: "void" as const,
+  },
+  {
+    id: "bradish",
+    color: "#38bdf8",
+    player: "Kyle Bradish",
+    matchup: "BAL @ NYY",
+    sport: "MLB",
+    market: "Walks",
+    direction: "Over",
+    line: 2.5,
+    odds: -154,
+    rithmm: 62.4,
+    breakEven: 60.6,
+    projection: "3.2 walks",
+    dtm: 4.6,
+    recent: "L6 5/6",
+    gameTime: "12:35 PM",
+    boardResult: "win" as const,
+  },
+  {
+    id: "meyer",
+    color: "#a3e635",
+    player: "Max Meyer",
+    matchup: "MIA vs PHI",
+    sport: "MLB",
+    market: "Pitcher Ks",
+    direction: "Under",
+    line: 5.5,
+    odds: -160,
+    rithmm: 64.0,
+    breakEven: 61.5,
+    projection: "4.7 Ks",
+    dtm: 6.3,
+    recent: "L6 4/6",
+    gameTime: "3:10 PM",
+    boardResult: "loss" as const,
+  },
+];
+
+const harnesses = [
+  {
+    id: "hermes",
+    name: "Hermes",
+    color: COLORS.hermes,
+    pick: "skip",
+    pickLabel: "PASS",
+    confidence: null as number | null,
+    confidenceLabel: null as string | null,
+    result: "correct" as const,
+    resultNote: "Orchestrated PASS; cap-risk leg correctly avoided",
+  },
+  {
+    id: "chatgpt",
+    name: "ChatGPT",
+    color: COLORS.chatgpt,
+    pick: "skip",
+    pickLabel: "SKIP",
+    confidence: 72,
+    confidenceLabel: "skip confidence",
+    result: "correct" as const,
+    resultNote: "Thin edges and fragile prop types correctly penalized",
+  },
+  {
+    id: "claude",
+    name: "Claude",
+    color: COLORS.claude,
+    pick: "meyer",
+    pickLabel: "Meyer U5.5",
+    confidence: 63,
+    confidenceLabel: "win probability",
+    result: "loss" as const,
+    resultNote: "Overpromoted best-of-weak-board into Tier 1",
+  },
+  {
+    id: "gemini",
+    name: "Gemini",
+    color: COLORS.gemini,
+    pick: "meyer",
+    pickLabel: "Meyer U5.5",
+    confidence: 66,
+    confidenceLabel: "Meyer estimate",
+    result: "correct" as const,
+    resultNote: "Correctly caveated: SKIP at loss level 1–2",
+  },
+  {
+    id: "perplexity",
+    name: "Perplexity",
+    color: COLORS.perplexity,
+    pick: "meyer",
+    pickLabel: "Meyer U5.5",
+    confidence: 62,
+    confidenceLabel: "practical band",
+    result: "loss" as const,
+    resultNote: "Too willing to call 60–63% band recovery-eligible",
+  },
+];
+
+const skipHarnesses = harnesses.filter((h) => h.pick === "skip");
+
+// Tier each harness assigned to each candidate (null = orchestrator, no individual tier)
+const candidateTiers: Record<string, Record<string, number | null>> = {
+  arrighetti: { hermes: null, chatgpt: 2, claude: 2, gemini: 2, perplexity: 3 },
+  tatum:      { hermes: null, chatgpt: 2, claude: 3, gemini: 3, perplexity: 2 },
+  bradish:    { hermes: null, chatgpt: 3, claude: 3, gemini: 3, perplexity: 3 },
+  meyer:      { hermes: null, chatgpt: 3, claude: 1, gemini: 1, perplexity: 1 },
+};
+
+function tierColor(t: number | null) {
+  if (t === 1) return "text-emerald-400 bg-emerald-900/40 border-emerald-700/50";
+  if (t === 2) return "text-amber-400 bg-amber-900/40 border-amber-700/50";
+  if (t === 3) return "text-red-400 bg-red-900/40 border-red-700/50";
+  return "text-slate-600 bg-slate-800/40 border-slate-700/30";
+}
+
+const boardResultLabel: Record<string, string> = {
+  win: "Win",
+  loss: "Loss",
+  void: "Void",
+};
+
+const boardResultColor: Record<string, string> = {
+  win: "text-emerald-400",
+  loss: "text-red-400",
+  void: "text-slate-400",
+};
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title={`Bets Log ${displayDate} | Dan Denney`}
+      description={`AI harness pipeline bets log for ${displayDate}`}
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+    <main class="mx-auto max-w-7xl px-4 py-12 space-y-10">
+
+      <header>
+        <p class="text-xs uppercase tracking-widest text-slate-500 mb-1">Daily Bets Log</p>
+        <h1 class="text-2xl font-bold text-white tracking-tight">{displayDate}</h1>
+      </header>
+
+      <!-- ── Pipeline ──────────────────────────────────────────────── -->
+      <div id="pipeline-container" class="relative w-full">
+
+        <!-- SVG line overlay -->
+        <svg
+          id="pipeline-svg"
+          class="absolute inset-0 pointer-events-none overflow-visible"
+          style="z-index:1; width:100%; height:100%;"
+        ></svg>
+
+        <!--
+          5-row × 3-col grid.
+          Row 1 = SKIP slot (left spacer + right SKIP dest)
+          Rows 2-5 = the four candidates
+          Center column spans all 5 rows.
+        -->
+        <div
+          class="relative"
+          style="display:grid; grid-template-columns:220px 1fr 220px; grid-template-rows:auto auto auto auto auto; row-gap:8px; column-gap:0; z-index:2;"
+        >
+
+          <!-- ── Left col: invisible SKIP spacer (row 1) ── -->
+          <div style="grid-column:1; grid-row:1; padding-right:20px; visibility:hidden;" aria-hidden="true">
+            <div class="rounded-lg border border-slate-700 p-3 text-xs" style="min-height:64px;"></div>
+          </div>
+
+          <!-- ── Left col: candidate pick cards (rows 2-5) ── -->
+          {candidates.map((c, i) => (
+            <div style={`grid-column:1; grid-row:${i + 2}; padding-right:20px;`}>
+              <div id={`pick-${c.id}`} class="rounded-lg border border-slate-700 bg-slate-900 p-3 text-xs h-full" style={`border-left-color:${c.color}; border-left-width:3px;`}>
+                <div class="flex items-center gap-1.5 mb-1.5">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-800 px-1.5 py-0.5 rounded">
+                    {c.sport}
+                  </span>
+                  <span class="text-[10px] text-slate-500">{c.gameTime}</span>
+                </div>
+                <div class="font-semibold text-white text-sm leading-tight">{c.player}</div>
+                <div class="text-slate-500 text-[10px]">{c.matchup}</div>
+                <div class="mt-2 flex items-baseline gap-1 text-xs">
+                  <span class={c.direction === "Under" ? "text-blue-400 font-medium" : "text-amber-400 font-medium"}>
+                    {c.direction}
+                  </span>
+                  <span class="text-white font-bold">{c.line}</span>
+                  <span class="text-slate-500">{c.market}</span>
+                  <span class="ml-auto text-slate-400">{c.odds}</span>
+                </div>
+                <div class="mt-1.5 grid grid-cols-3 gap-x-2 text-[10px]">
+                  <div>
+                    <div class="text-slate-600">Rithmm</div>
+                    <div class="text-emerald-400 font-semibold">{c.rithmm}%</div>
+                  </div>
+                  <div>
+                    <div class="text-slate-600">DTM</div>
+                    <div class={`font-semibold ${c.dtm > 10 ? "text-red-400" : "text-slate-300"}`}>{c.dtm}%</div>
+                  </div>
+                  <div>
+                    <div class="text-slate-600">Recent</div>
+                    <div class="text-slate-300">{c.recent}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <!-- ── Center col: harness nodes (spans all 5 rows) ── -->
+          <div
+            style="grid-column:2; grid-row:1/6; display:flex; align-items:center; justify-content:center;"
+          >
+            <div class="flex items-center gap-1">
+              {harnesses.map((h, i) => (
+                <div class="flex flex-col items-center gap-1.5">
+                  <div
+                    id={`hnode-${h.id}`}
+                    class="w-14 h-14 rounded-full border-2 flex items-center justify-center font-bold bg-slate-900"
+                    style={`border-color:${h.color}; box-shadow:0 0 16px ${h.color}33;`}
+                  >
+                    <span class="text-[9px] uppercase tracking-wide" style={`color:${h.color};`}>
+                      {h.name.slice(0, 4)}
+                    </span>
+                  </div>
+                  <span class="text-[10px] text-slate-500 text-center leading-tight w-16">
+                    {h.name}
+                  </span>
+                  {i < harnesses.length - 1 && (
+                    <div style="display:none;" aria-hidden="true"></div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- ── Right col: SKIP/PASS destination (row 1) ── -->
+          <div style="grid-column:3; grid-row:1; padding-left:20px;">
+            <div id="dest-skip" class="rounded-lg border border-dashed border-slate-600 bg-slate-900/60 p-3 text-xs h-full">
+              <div class="text-slate-400 font-semibold text-sm mb-1.5">SKIP / PASS</div>
+              <div class="space-y-1">
+                {skipHarnesses.map((h) => (
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background:${h.color};`}></span>
+                    <span class="font-medium text-[11px]" style={`color:${h.color};`}>{h.name}</span>
+                    <span class="text-slate-500 text-[10px]">— {h.pickLabel}</span>
+                    {h.confidence && (
+                      <span class="ml-auto text-slate-500 text-[10px]">{h.confidence}%</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Right col: per-candidate harness tier breakdown (rows 2-5) ── -->
+          {candidates.map((c, i) => {
+            const tiers = candidateTiers[c.id];
+            return (
+              <div style={`grid-column:3; grid-row:${i + 2}; padding-left:20px;`}>
+                <div
+                  id={`dest-${c.id}`}
+                  class="rounded-lg border border-slate-700 bg-slate-900 p-3 text-xs h-full"
+                  style={`border-left-color:${c.color}; border-left-width:3px;`}
+                >
+                  <div class="mb-2">
+                    <div class="flex items-center justify-between gap-1.5">
+                      <span class="font-semibold text-white text-[11px]">{c.player}</span>
+                      <span class={`text-[10px] font-semibold ${boardResultColor[c.boardResult]}`}>
+                        {boardResultLabel[c.boardResult]}
+                      </span>
+                    </div>
+                    <div class="text-slate-500 text-[10px]">{c.direction} {c.line} {c.market}</div>
+                  </div>
+                  <div class="space-y-1">
+                    {harnesses.map((h) => {
+                      const tier = tiers[h.id];
+                      const isChosen = h.pick === c.id;
+                      const choseOther = !isChosen && h.pick !== "skip";
+                      const choseSkip = !isChosen && h.pick === "skip";
+                      return (
+                        <div class="flex items-center gap-1.5">
+                          <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background:${h.color};`}></span>
+                          <span class="text-[10px]" style={`color:${h.color};`}>{h.name}</span>
+                          {tier !== null ? (
+                            <span class={`ml-1 text-[9px] font-bold px-1 py-0.5 rounded border ${tierColor(tier)}`}>
+                              T{tier}
+                            </span>
+                          ) : (
+                            <span class="ml-1 text-[9px] text-slate-600">—</span>
+                          )}
+                          {isChosen && (
+                            <span class="ml-auto text-[9px] text-emerald-400 font-semibold">✓ pick</span>
+                          )}
+                          {choseSkip && (
+                            <span class="ml-auto text-[9px] text-slate-600">→ SKIP</span>
+                          )}
+                          {choseOther && (
+                            <span class="ml-auto text-[9px] text-slate-600">→ {harnesses.find(x => x.id === h.id)?.pickLabel}</span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+        </div>
+      </div>
+
+      <!-- ── Harness results ─────────────────────────────────────── -->
+      <div class="grid grid-cols-5 gap-3">
+        {harnesses.map((h) => (
+          <div class="rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs space-y-1.5">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full" style={`background:${h.color};`}></span>
+              <span class="font-semibold text-[11px]" style={`color:${h.color};`}>{h.name}</span>
+            </div>
+            <div class="text-white font-medium">{h.pickLabel}</div>
+            {h.confidence && (
+              <div class="text-slate-500 text-[10px]">{h.confidence}% {h.confidenceLabel}</div>
+            )}
+            <div class={`font-semibold text-[11px] ${h.result === "correct" ? "text-emerald-400" : "text-red-400"}`}>
+              {h.result === "correct" ? "✓ Correct" : "✗ Loss"}
+            </div>
+            <div class="text-slate-600 text-[10px] leading-snug">{h.resultNote}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- ── Final decision ─────────────────────────────────────── -->
+      <div class="rounded-xl border border-slate-700 bg-slate-900 p-6">
+        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+          <div>
+            <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Final Decision</p>
+            <h2 class="text-2xl font-bold text-white">PASS</h2>
+            <p class="mt-1 text-slate-400 text-sm max-w-md">
+              Two losses in; cap-risk leg. Best candidate only 60–64% vs 61.5% break-even.
+              Not enough cushion for a recovery spot.
+            </p>
+          </div>
+          <div class="sm:text-right shrink-0">
+            <div class="text-emerald-400 font-bold text-lg">✓ Correct</div>
+            <p class="text-slate-500 text-xs mt-1 max-w-[220px] leading-snug sm:ml-auto">
+              Meyer struck out 7 in 7 IP. Forced bet would have been the 3rd loss.
+              Sequence preserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script>
+      function drawLines() {
+        const svg = document.getElementById("pipeline-svg") as SVGSVGElement | null;
+        const container = document.getElementById("pipeline-container") as HTMLElement | null;
+        if (!svg || !container) return;
+
+        while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+        const cr = container.getBoundingClientRect();
+
+        function rel(id: string) {
+          const el = document.getElementById(id);
+          if (!el) return null;
+          const r = el.getBoundingClientRect();
+          return {
+            cx: r.left - cr.left + r.width / 2,
+            cy: r.top - cr.top + r.height / 2,
+            left: r.left - cr.left,
+            right: r.right - cr.left,
+            top: r.top - cr.top,
+            bottom: r.bottom - cr.top,
+          };
+        }
+
+        function curve(x1: number, y1: number, x2: number, y2: number) {
+          const mx = (x1 + x2) / 2;
+          return `M ${x1},${y1} C ${mx},${y1} ${mx},${y2} ${x2},${y2}`;
+        }
+
+        function path(d: string, stroke: string, dashed: boolean, opacity: number) {
+          const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          p.setAttribute("d", d);
+          p.setAttribute("fill", "none");
+          p.setAttribute("stroke", stroke);
+          p.setAttribute("stroke-width", dashed ? "1.5" : "2");
+          p.setAttribute("stroke-opacity", String(opacity));
+          if (dashed) p.setAttribute("stroke-dasharray", "4 4");
+          svg!.appendChild(p);
+        }
+
+        function dot(x: number, y: number, color: string) {
+          const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          c.setAttribute("cx", String(x));
+          c.setAttribute("cy", String(y));
+          c.setAttribute("r", "3");
+          c.setAttribute("fill", color);
+          svg!.appendChild(c);
+        }
+
+        const harnessConfig = [
+          { id: "hermes",     pick: "skip" },
+          { id: "chatgpt",    pick: "skip" },
+          { id: "claude",     pick: "meyer" },
+          { id: "gemini",     pick: "meyer" },
+          { id: "perplexity", pick: "meyer" },
+        ] as const;
+
+        const pickConfig = [
+          { id: "arrighetti", color: "#fbbf24" },
+          { id: "tatum",      color: "#f472b6" },
+          { id: "bradish",    color: "#38bdf8" },
+          { id: "meyer",      color: "#a3e635" },
+        ] as const;
+
+        const hFirst = rel("hnode-hermes");
+        const hLast  = rel("hnode-perplexity");
+        if (!hFirst || !hLast) return;
+
+        const centerY = hFirst.cy;
+
+        // Gray background track through all harness nodes
+        path(`M ${hFirst.cx},${centerY} L ${hLast.cx},${centerY}`, "#334155", false, 0.5);
+
+        // Which picks were selected by at least one harness
+        const chosenPicks = new Set(
+          harnessConfig.filter((h) => h.pick !== "skip").map((h) => h.pick)
+        );
+
+        // Each pick gets a y-lane offset so lines run parallel through the harnesses
+        const yOffsets = [-15, -5, 5, 15];
+
+        for (let i = 0; i < pickConfig.length; i++) {
+          const pick = pickConfig[i];
+          const pl = rel(`pick-${pick.id}`);
+          const pr = rel(`dest-${pick.id}`);
+          if (!pl || !pr) continue;
+
+          const hy      = centerY + yOffsets[i];
+          const chosen  = chosenPicks.has(pick.id);
+          const lMid    = (hFirst.cx - pl.right) / 2;
+          const rMid    = (pr.left   - hLast.cx) / 2;
+
+          // Curve in → straight through harnesses → curve out
+          const d = [
+            `M ${pl.right},${pl.cy}`,
+            `C ${pl.right + lMid},${pl.cy} ${hFirst.cx - lMid},${hy} ${hFirst.cx},${hy}`,
+            `L ${hLast.cx},${hy}`,
+            `C ${hLast.cx + rMid},${hy} ${pr.left - rMid},${pr.cy} ${pr.left},${pr.cy}`,
+          ].join(" ");
+
+          path(d, pick.color, !chosen, chosen ? 0.9 : 0.5);
+          dot(pl.right, pl.cy, pick.color);
+          dot(pr.left,  pr.cy, pick.color);
+        }
+      }
+
+      if (document.readyState === "complete") {
+        drawLines();
+      } else {
+        window.addEventListener("load", drawLines);
+      }
+      window.addEventListener("resize", drawLines);
+    </script>
+  </body>
+</html>
