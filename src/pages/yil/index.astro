@@ -1,0 +1,66 @@
+---
+export const prerender = true;
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { ClientRouter } from 'astro:transitions';
+
+type YilMeta = { date: string; headline: string; summary: string };
+const pages = import.meta.glob<{ yilMeta: YilMeta }>('./*.astro', { eager: true });
+
+const entries = Object.entries(pages)
+  .filter(([path]) => !path.endsWith('index.astro'))
+  .map(([path, mod]) => ({
+    url: path.replace('./', '/yil/').replace('.astro', ''),
+    ...mod.yilMeta,
+  }))
+  .sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="YIL — Yesterday I Learned | Dan Denney" description="A daily log of things learned, turned into landing pages." />
+    <ClientRouter />
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+      <Header />
+
+      <section class="pt-16 pb-24">
+        <div class="px-8">
+          <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+            <span class="whitespace-nowrap">[&nbsp;{entries.length} entries&nbsp;]</span>
+          </p>
+          <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">
+            Yesterday I Learned
+          </h1>
+          <p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-400">
+            Daily captures from Obsidian turned into landing pages. Each day gets its own visual personality.
+          </p>
+        </div>
+
+        <ul class="mt-12 divide-y divide-gray-100 dark:divide-slate-800 px-8 max-w-3xl">
+          {entries.map((entry) => (
+            <li class="py-6">
+              <a href={entry.url} class="group block">
+                <p class="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-slate-600 group-hover:text-gray-600 dark:group-hover:text-slate-400 transition-colors">
+                  {entry.date}
+                </p>
+                <p class="mt-1 text-xl font-semibold text-gray-900 dark:text-slate-100 group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
+                  {entry.headline}
+                </p>
+                {entry.summary && (
+                  <p class="mt-1 text-sm text-gray-500 dark:text-slate-500 leading-relaxed">
+                    {entry.summary}
+                  </p>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
