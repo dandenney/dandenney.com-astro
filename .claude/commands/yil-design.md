@@ -14,15 +14,21 @@ Analyze the day's TIL notes and produce a DESIGN.md spec. Stop after saving the 
 
 Read `/Users/dandenney/Documents/claw/TIL/Inbox/$ARGUMENTS.md`. If the file doesn't exist, stop and tell the user.
 
-### 2. Analyze the content
+### 2. Check for a reference design file
+
+Check whether `/Users/dandenney/Documents/claw/TIL/Inbox/$ARGUMENTS-design-md.md` exists. If it does, read it. This file contains a detailed visual analysis of an external site (colors, typography, surfaces, components) and is the **primary source for all design decisions** — palette, type, spacing, surface modes, component patterns. You are porting that site's visual language to the YIL page; the TIL content fills the sections, but the aesthetic comes entirely from the reference.
+
+If no reference file exists, derive the design from the tone of the day's notes (see step 3).
+
+### 3. Analyze the content
 
 Identify:
 - 2–4 dominant themes (these become the page's sections)
 - The emotional/intellectual tone of the day (energetic? reflective? technical? playful?)
 - Any standout quote worth featuring
-- Whether the day leans light or dark (light = airy, optimistic, reference-heavy; dark = focused, technical, late-night)
+- Whether the day leans light or dark — **only relevant if no reference file was found**; if a reference exists, its surface mode governs
 
-### 3. Write the DESIGN.md
+### 4. Write the DESIGN.md
 
 Save to `src/pages/yil/_design/$ARGUMENTS.md` using this exact structure:
 
@@ -103,7 +109,7 @@ images:
 
 ## Overview
 
-[2–3 sentences on the visual personality: the mood, what makes this day's design distinct from a generic blog post, why these color choices fit the content.]
+[2–3 sentences on the visual personality: the mood, what makes this day's design distinct from a generic blog post, why these color choices fit the content. If a reference design file was used, name the source and describe how its visual language maps to the day's content.]
 
 ## Do's and Don'ts
 
@@ -114,7 +120,7 @@ images:
 - [3 specific anti-patterns to avoid]
 ```
 
-### 4. Report back
+### 5. Report back
 
 Tell the user:
 - The headline and color direction (light/dark, accent palette)
