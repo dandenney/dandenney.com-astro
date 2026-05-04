@@ -56,7 +56,7 @@ import Footer from '@/components/Footer.astro';
               </p>
             </div>
             <!-- Dark navy code-window card: the artifact the day's insight is about -->
-            <div class="hidden lg:block">
+            <div class="mt-8 lg:mt-0">
               <div
                 class="rounded-xl bg-[#181715] p-6"
                 style="font-family: 'JetBrains Mono', ui-monospace, monospace;"
@@ -143,8 +143,8 @@ import Footer from '@/components/Footer.astro';
               class="text-2xl leading-relaxed text-[#faf9f5] sm:text-3xl sm:leading-relaxed"
               style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-weight: 400;"
             >
-              "Without a file on disk between steps, 'following the spec' is just trying to stay
-              consistent with what was written five minutes earlier."
+              Without a file on disk between steps, 'following the spec' is just trying to stay
+              consistent with what was written five minutes earlier.
             </p>
             <footer class="mt-6 flex items-center gap-3">
               <div class="h-px w-8 bg-[#cc785c]/60"></div>
@@ -155,8 +155,9 @@ import Footer from '@/components/Footer.astro';
       </section>
 
       <!-- 01 Specs as Artifacts: accent-1 coral, steps layout, cream canvas -->
-      <section class="bg-[#faf9f5]">
-        <div class="mx-auto max-w-6xl px-6 py-24">
+      <section class="relative overflow-hidden bg-[#faf9f5]">
+        <div class="pointer-events-none absolute right-6 top-4 select-none text-[11rem] leading-none text-[#cc785c]/[0.07]" style="font-family: 'Cormorant Garamond', Garamond, serif;">01</div>
+        <div class="relative mx-auto max-w-6xl px-6 py-24">
           <div
             class="inline-flex items-center gap-1.5 rounded-full border border-[#cc785c]/20 bg-[#cc785c]/10 px-2.5 py-1"
           >
@@ -173,7 +174,7 @@ import Footer from '@/components/Footer.astro';
           <div class="mt-2 h-0.5 w-10 rounded-full bg-[#cc785c]"></div>
 
           <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="rounded-xl border border-[#cc785c]/20 bg-[#cc785c]/10 p-6">
+            <div class="rounded-xl border border-[#cc785c]/20 bg-[#cc785c]/10 p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
               <p class="font-mono text-2xl font-black leading-none text-[#cc785c]/30">01</p>
               <p class="mt-3 text-sm leading-relaxed text-[#3d3d3a]">
                 <code
@@ -185,7 +186,7 @@ import Footer from '@/components/Footer.astro';
                 > with colors, layout, and section structure fully resolved.
               </p>
             </div>
-            <div class="rounded-xl border border-[#e6dfd8] bg-[#efe9de] p-6">
+            <div class="rounded-xl border border-[#e6dfd8] bg-[#efe9de] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
               <p class="font-mono text-2xl font-black leading-none text-[#e6dfd8]">02</p>
               <p class="mt-3 text-sm leading-relaxed text-[#6c6a64]">
                 Review the artifact. The gap is not a delay — it's the mechanism. Without a file
@@ -193,7 +194,7 @@ import Footer from '@/components/Footer.astro';
                 from five minutes ago.
               </p>
             </div>
-            <div class="rounded-xl border border-[#cc785c]/20 bg-[#cc785c]/10 p-6">
+            <div class="rounded-xl border border-[#cc785c]/20 bg-[#cc785c]/10 p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
               <p class="font-mono text-2xl font-black leading-none text-[#cc785c]/30">03</p>
               <p class="mt-3 text-sm leading-relaxed text-[#3d3d3a]">
                 <code
@@ -226,12 +227,13 @@ import Footer from '@/components/Footer.astro';
       </section>
 
       <!-- 02 Durable Memory: accent-2 teal, cards layout, surface-card band -->
-      <section class="bg-[#efe9de]">
-        <div class="mx-auto max-w-6xl px-6 py-24">
+      <section class="relative overflow-hidden bg-[#efe9de]">
+        <div class="pointer-events-none absolute left-6 top-4 select-none text-[11rem] leading-none text-[#5db8a6]/[0.08]" style="font-family: 'Cormorant Garamond', Garamond, serif;">02</div>
+        <div class="relative mx-auto max-w-6xl px-6 py-24">
           <div
-            class="inline-flex items-center gap-1.5 rounded-full border border-teal-500/20 bg-teal-500/10 px-2.5 py-1"
+            class="inline-flex items-center gap-1.5 rounded-full border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-2.5 py-1"
           >
-            <span class="font-mono text-[10px] uppercase tracking-widest text-teal-600">Memory</span>
+            <span class="font-mono text-[10px] uppercase tracking-widest text-[#5db8a6]">Memory</span>
           </div>
           <h2
             class="mt-3 text-[#141413]"
@@ -239,59 +241,59 @@ import Footer from '@/components/Footer.astro';
           >
             Put It in a File, Not in Your Head
           </h2>
-          <div class="mt-2 h-0.5 w-10 rounded-full bg-teal-500"></div>
+          <div class="mt-2 h-0.5 w-10 rounded-full bg-[#5db8a6]"></div>
 
           <div class="mt-10 grid gap-5 sm:grid-cols-2">
-            <div class="rounded-xl border border-teal-500/20 bg-[#faf9f5] p-6">
-              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">Pattern</p>
+            <div class="rounded-xl border border-[#5db8a6]/20 bg-[#faf9f5] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#5db8a6]">Pattern</p>
               <p class="text-sm leading-relaxed text-[#3d3d3a]">
                 Layout patterns need to be in durable memory — not just in the codebase. The
                 revealing footer (<code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >&lt;Footer /&gt;</code
                 > outside <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >&lt;main&gt;</code
                 >, sticky at the bottom) exists on every page and was still missed twice in one
                 session.
               </p>
             </div>
-            <div class="rounded-xl border border-[#e6dfd8] bg-[#faf9f5] p-6">
-              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">Router</p>
+            <div class="rounded-xl border border-[#e6dfd8] bg-[#faf9f5] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#5db8a6]">Router</p>
               <p class="text-sm leading-relaxed text-[#3d3d3a]">
                 <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >_</code
                 >-prefixed directories are invisible to Astro's router. <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >_design/</code
                 > and <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >_prompts/</code
                 > can live alongside pages without creating routes — artifacts collocated with the
                 pages they describe.
               </p>
             </div>
-            <div class="rounded-xl border border-[#e6dfd8] bg-[#faf9f5] p-6">
-              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">
+            <div class="rounded-xl border border-[#e6dfd8] bg-[#faf9f5] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#5db8a6]">
                 Discovery
               </p>
               <p class="text-sm leading-relaxed text-[#3d3d3a]">
                 <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >import.meta.glob</code
                 > on <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >.astro</code
                 > files can collect named exports. Exporting <code
-                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  class="rounded border border-[#5db8a6]/20 bg-[#5db8a6]/10 px-1 py-0.5 font-mono text-xs text-[#5db8a6]"
                   >yilMeta</code
                 > from each YIL page is enough for the index to discover and list all entries without
                 a content collection.
               </p>
             </div>
-            <div class="rounded-xl border border-teal-500/20 bg-[#faf9f5] p-6">
-              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">Meta</p>
+            <div class="rounded-xl border border-[#5db8a6]/20 bg-[#faf9f5] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-[#5db8a6]">Meta</p>
               <p class="text-sm leading-relaxed text-[#3d3d3a]">
                 The process for making YIL pages trustworthy is the same as the YIL content itself —
                 design the system so reliability is structural, not volitional. You shouldn't have to
@@ -303,8 +305,9 @@ import Footer from '@/components/Footer.astro';
       </section>
 
       <!-- 03 Explicit Beats Implied: accent-3 amber, prose layout, cream canvas -->
-      <section class="bg-[#faf9f5]">
-        <div class="mx-auto max-w-6xl px-6 py-24">
+      <section class="relative overflow-hidden bg-[#faf9f5]">
+        <div class="pointer-events-none absolute right-6 top-4 select-none text-[11rem] leading-none text-[#e8a55a]/[0.08]" style="font-family: 'Cormorant Garamond', Garamond, serif;">03</div>
+        <div class="relative mx-auto max-w-6xl px-6 py-24">
           <div
             class="inline-flex items-center gap-1.5 rounded-full border border-[#e8a55a]/20 bg-[#e8a55a]/10 px-2.5 py-1"
           >
@@ -395,7 +398,7 @@ import Footer from '@/components/Footer.astro';
             <div class="flex items-center gap-1.5">
               <span class="h-3 w-3 rounded-full" style="background: #5db8a6"></span>
               <span class="font-mono text-[10px] text-[#6c6a64]"
-                >accent-2 / text-teal-500 — durable memory</span
+                >accent-2 / text-[#5db8a6] — durable memory</span
               >
             </div>
             <div class="flex items-center gap-1.5">
