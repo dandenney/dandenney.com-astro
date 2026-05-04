@@ -1,0 +1,421 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-03',
+  headline: 'The Gap Is the Feature',
+  summary:
+    "Reliability comes from the system boundary — the artifact between steps — not from trying harder. Today's lessons all traced back to that one idea.",
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="YIL 2026-05-03 — The Gap Is the Feature | Dan Denney"
+      description="Reliability comes from the system boundary — the artifact between steps — not from trying harder. Today's lessons all traced back to that one idea."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#faf9f5]">
+    <main class="relative shadow-xs z-10 bg-[#faf9f5]">
+      <Header />
+
+      <!-- Hero: cream canvas, 6-6 grid, dark navy code-window card right -->
+      <section class="bg-[#faf9f5]">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <div
+                class="inline-flex items-center gap-2 rounded-full border border-[#cc785c]/20 bg-[#cc785c]/10 px-3 py-1"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-[#cc785c]"></span>
+                <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#cc785c]"
+                  >Yesterday I Learned</span
+                >
+              </div>
+              <p class="mt-3 font-mono text-sm text-[#6c6a64]">2026-05-03</p>
+              <h1
+                class="mt-3 leading-[1.05] text-[#141413]"
+                style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(2.25rem, 4vw + 1rem, 4rem); font-weight: 400; letter-spacing: -0.03em;"
+              >
+                The Gap Is<br />the Feature
+              </h1>
+              <p class="mt-6 max-w-lg text-lg leading-relaxed text-[#3d3d3a]">
+                Reliability comes from the system boundary — the artifact between steps — not from
+                trying harder. Today's lessons all traced back to that one idea.
+              </p>
+            </div>
+            <!-- Dark navy code-window card: the artifact the day's insight is about -->
+            <div class="hidden lg:block">
+              <div
+                class="rounded-xl bg-[#181715] p-6"
+                style="font-family: 'JetBrains Mono', ui-monospace, monospace;"
+              >
+                <div class="mb-4 flex items-center gap-2 border-b border-white/10 pb-3">
+                  <span class="h-3 w-3 rounded-full bg-red-500/50"></span>
+                  <span class="h-3 w-3 rounded-full bg-yellow-500/50"></span>
+                  <span class="h-3 w-3 rounded-full bg-green-500/50"></span>
+                  <span class="ml-2 text-[11px] text-[#a09d96]">_design/2026-05-03.md</span>
+                </div>
+                <div class="space-y-0.5 text-[13px] leading-relaxed">
+                  <p class="text-[#6c6a64]">---</p>
+                  <p>
+                    <span class="text-[#cc785c]">name</span><span class="text-[#a09d96]">: </span><span
+                      class="text-[#efe9de]">"YIL 2026-05-03"</span
+                    >
+                  </p>
+                  <p>
+                    <span class="text-[#cc785c]">background</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#5db8a6]">light</span>
+                  </p>
+                  <p>
+                    <span class="text-[#cc785c]">colors</span><span class="text-[#a09d96]">:</span>
+                  </p>
+                  <p class="pl-4">
+                    <span class="text-[#cc785c]">accent-1</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#efe9de]">"#cc785c"</span>
+                  </p>
+                  <p class="pl-4">
+                    <span class="text-[#cc785c]">accent-2</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#efe9de]">"#5db8a6"</span>
+                  </p>
+                  <p class="pl-4">
+                    <span class="text-[#cc785c]">accent-3</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#efe9de]">"#e8a55a"</span>
+                  </p>
+                  <p>
+                    <span class="text-[#cc785c]">tailwind</span><span class="text-[#a09d96]">:</span>
+                  </p>
+                  <p class="pl-4">
+                    <span class="text-[#cc785c]">bg-main</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#efe9de]">"bg-[#faf9f5]"</span>
+                  </p>
+                  <p>
+                    <span class="text-[#cc785c]">sections</span><span class="text-[#a09d96]">:</span>
+                  </p>
+                  <p class="pl-4">
+                    <span class="text-[#a09d96]">- </span><span class="text-[#cc785c]">id</span><span
+                      class="text-[#a09d96]">: </span
+                    ><span class="text-[#5db8a6]">hero</span>
+                  </p>
+                  <p class="pl-6">
+                    <span class="text-[#cc785c]">headline</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#efe9de]">"The Gap Is the Feature"</span>
+                  </p>
+                  <p class="pl-4">
+                    <span class="text-[#a09d96]">- </span><span class="text-[#cc785c]">id</span><span
+                      class="text-[#a09d96]">: </span
+                    ><span class="text-[#5db8a6]">specs-as-artifacts</span>
+                  </p>
+                  <p class="pl-6">
+                    <span class="text-[#cc785c]">layout</span><span class="text-[#a09d96]">: </span
+                    ><span class="text-[#e8a55a]">steps</span>
+                  </p>
+                  <p class="text-[#6c6a64]">---</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote: dark navy full-bleed band -->
+      <section class="bg-[#181715]">
+        <div class="relative mx-auto max-w-6xl overflow-hidden px-6 py-20">
+          <div
+            class="pointer-events-none absolute -left-4 -top-10 select-none leading-none text-[16rem] text-white/5"
+            style="font-family: 'Cormorant Garamond', Garamond, serif; font-weight: 400;"
+          >
+            "
+          </div>
+          <blockquote class="relative max-w-3xl">
+            <p
+              class="text-2xl leading-relaxed text-[#faf9f5] sm:text-3xl sm:leading-relaxed"
+              style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-weight: 400;"
+            >
+              "Without a file on disk between steps, 'following the spec' is just trying to stay
+              consistent with what was written five minutes earlier."
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <div class="h-px w-8 bg-[#cc785c]/60"></div>
+              <cite class="not-italic font-mono text-sm text-[#a09d96]">Session note, 2026-05-03</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- 01 Specs as Artifacts: accent-1 coral, steps layout, cream canvas -->
+      <section class="bg-[#faf9f5]">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <div
+            class="inline-flex items-center gap-1.5 rounded-full border border-[#cc785c]/20 bg-[#cc785c]/10 px-2.5 py-1"
+          >
+            <span class="font-mono text-[10px] uppercase tracking-widest text-[#cc785c]"
+              >Design → Build</span
+            >
+          </div>
+          <h2
+            class="mt-3 text-[#141413]"
+            style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 400; letter-spacing: -0.02em;"
+          >
+            Specs Only Work When They Exist
+          </h2>
+          <div class="mt-2 h-0.5 w-10 rounded-full bg-[#cc785c]"></div>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-xl border border-[#cc785c]/20 bg-[#cc785c]/10 p-6">
+              <p class="font-mono text-2xl font-black leading-none text-[#cc785c]/30">01</p>
+              <p class="mt-3 text-sm leading-relaxed text-[#3d3d3a]">
+                <code
+                  class="rounded border border-[#cc785c]/20 bg-[#cc785c]/10 px-1.5 py-0.5 font-mono text-xs text-[#cc785c]"
+                  >/yil-design</code
+                > writes a real artifact to disk — a <code
+                  class="rounded border border-[#cc785c]/20 bg-[#cc785c]/10 px-1.5 py-0.5 font-mono text-xs text-[#cc785c]"
+                  >DESIGN.md</code
+                > with colors, layout, and section structure fully resolved.
+              </p>
+            </div>
+            <div class="rounded-xl border border-[#e6dfd8] bg-[#efe9de] p-6">
+              <p class="font-mono text-2xl font-black leading-none text-[#e6dfd8]">02</p>
+              <p class="mt-3 text-sm leading-relaxed text-[#6c6a64]">
+                Review the artifact. The gap is not a delay — it's the mechanism. Without a file
+                between steps, "following the spec" is just trying to stay consistent with context
+                from five minutes ago.
+              </p>
+            </div>
+            <div class="rounded-xl border border-[#cc785c]/20 bg-[#cc785c]/10 p-6">
+              <p class="font-mono text-2xl font-black leading-none text-[#cc785c]/30">03</p>
+              <p class="mt-3 text-sm leading-relaxed text-[#3d3d3a]">
+                <code
+                  class="rounded border border-[#cc785c]/20 bg-[#cc785c]/10 px-1.5 py-0.5 font-mono text-xs text-[#cc785c]"
+                  >/yil-build</code
+                > reads from the file on disk — not from memory, not from context. The artifact is
+                the spec.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 rounded-xl border border-[#e6dfd8] bg-[#efe9de] p-5">
+            <p class="font-mono text-[10px] uppercase tracking-widest text-[#6c6a64]">
+              Secondary lesson
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d3d3a]">
+              Hex values in a design spec are a translation step. <code
+                class="rounded border border-[#cc785c]/20 bg-[#cc785c]/10 px-1.5 py-0.5 font-mono text-xs text-[#cc785c]"
+                >#d97706</code
+              > requires knowing it maps to <code
+                class="rounded border border-[#cc785c]/20 bg-[#cc785c]/10 px-1.5 py-0.5 font-mono text-xs text-[#cc785c]"
+                >text-amber-600</code
+              >. Adding Tailwind class names directly to the <code
+                class="rounded border border-[#cc785c]/20 bg-[#cc785c]/10 px-1.5 py-0.5 font-mono text-xs text-[#cc785c]"
+                >tailwind:</code
+              > section of the spec removes that translation from the build step entirely.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 Durable Memory: accent-2 teal, cards layout, surface-card band -->
+      <section class="bg-[#efe9de]">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <div
+            class="inline-flex items-center gap-1.5 rounded-full border border-teal-500/20 bg-teal-500/10 px-2.5 py-1"
+          >
+            <span class="font-mono text-[10px] uppercase tracking-widest text-teal-600">Memory</span>
+          </div>
+          <h2
+            class="mt-3 text-[#141413]"
+            style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 400; letter-spacing: -0.02em;"
+          >
+            Put It in a File, Not in Your Head
+          </h2>
+          <div class="mt-2 h-0.5 w-10 rounded-full bg-teal-500"></div>
+
+          <div class="mt-10 grid gap-5 sm:grid-cols-2">
+            <div class="rounded-xl border border-teal-500/20 bg-[#faf9f5] p-6">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">Pattern</p>
+              <p class="text-sm leading-relaxed text-[#3d3d3a]">
+                Layout patterns need to be in durable memory — not just in the codebase. The
+                revealing footer (<code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >&lt;Footer /&gt;</code
+                > outside <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >&lt;main&gt;</code
+                >, sticky at the bottom) exists on every page and was still missed twice in one
+                session.
+              </p>
+            </div>
+            <div class="rounded-xl border border-[#e6dfd8] bg-[#faf9f5] p-6">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">Router</p>
+              <p class="text-sm leading-relaxed text-[#3d3d3a]">
+                <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >_</code
+                >-prefixed directories are invisible to Astro's router. <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >_design/</code
+                > and <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >_prompts/</code
+                > can live alongside pages without creating routes — artifacts collocated with the
+                pages they describe.
+              </p>
+            </div>
+            <div class="rounded-xl border border-[#e6dfd8] bg-[#faf9f5] p-6">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">
+                Discovery
+              </p>
+              <p class="text-sm leading-relaxed text-[#3d3d3a]">
+                <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >import.meta.glob</code
+                > on <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >.astro</code
+                > files can collect named exports. Exporting <code
+                  class="rounded border border-teal-500/20 bg-teal-500/10 px-1 py-0.5 font-mono text-xs text-teal-600"
+                  >yilMeta</code
+                > from each YIL page is enough for the index to discover and list all entries without
+                a content collection.
+              </p>
+            </div>
+            <div class="rounded-xl border border-teal-500/20 bg-[#faf9f5] p-6">
+              <p class="mb-2 font-mono text-[10px] uppercase tracking-widest text-teal-600">Meta</p>
+              <p class="text-sm leading-relaxed text-[#3d3d3a]">
+                The process for making YIL pages trustworthy is the same as the YIL content itself —
+                design the system so reliability is structural, not volitional. You shouldn't have to
+                try harder; the artifact does it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Explicit Beats Implied: accent-3 amber, prose layout, cream canvas -->
+      <section class="bg-[#faf9f5]">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <div
+            class="inline-flex items-center gap-1.5 rounded-full border border-[#e8a55a]/20 bg-[#e8a55a]/10 px-2.5 py-1"
+          >
+            <span class="font-mono text-[10px] uppercase tracking-widest text-[#e8a55a]">Prompts</span>
+          </div>
+          <h2
+            class="mt-3 text-[#141413]"
+            style="font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 400; letter-spacing: -0.02em;"
+          >
+            Screenshots Show Shape; Words Define Behavior
+          </h2>
+          <div class="mt-2 h-0.5 w-10 rounded-full bg-[#e8a55a]"></div>
+
+          <div class="mt-10 max-w-3xl space-y-5 leading-relaxed text-[#6c6a64]">
+            <p class="text-lg text-[#3d3d3a]">
+              Guiding Claude Code from a screenshot into a complex UI took several rounds to get
+              connector behavior right. The insight: screenshots show <strong
+                class="font-semibold text-[#141413]">shape</strong
+              >, not constraints. When details matter — connector routing, line opacity, parallel lane
+              offsets — they need to be named explicitly in the prompt, not implied by the reference
+              image.
+            </p>
+            <p>
+              "Route the lines from the pick card to Hermes first, then <strong
+                class="font-semibold text-[#e8a55a]">straight through all harness nodes</strong
+              >, then curve out to the right" is a constraint. A screenshot of a data pipeline
+              diagram is a reference. Both are useful; only one is a spec.
+            </p>
+            <div class="rounded-xl border border-[#e8a55a]/20 bg-[#e8a55a]/10 p-5">
+              <p class="font-mono text-[10px] uppercase tracking-widest text-[#e8a55a]/80">
+                Same principle, different domain
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-[#3d3d3a]">
+                The WordPress / DreamHost migration: "easy" tooling still hides environment and
+                browser-cache traps. Clearing cookies and local storage wasn't enough — it took using
+                the browser's site-state reset to get past a cached DreamHost setup page. The tool
+                was easy; the environment was not. Naming that gap explicitly is the work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- References -->
+      <section class="border-t border-[#e6dfd8] bg-[#efe9de]">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+          <h2 class="font-mono text-[10px] uppercase tracking-[0.25em] text-[#6c6a64]">References</h2>
+          <ul class="mt-8 space-y-4">
+            <li>
+              <a
+                href="https://x.com/AnatoliKopadze/status/2049492553133629950"
+                class="group flex items-start gap-3 text-[#6c6a64] transition-colors hover:text-[#141413]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="mt-0.5 shrink-0 rounded-full border border-[#e8a55a]/20 bg-[#e8a55a]/10 px-2 py-0.5 font-mono text-[10px] text-[#e8a55a]"
+                  >evaluation</span
+                >
+                <span class="text-sm leading-relaxed"
+                  >Anatoli Kopadze — <em>evaluation task inspiration</em></span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Design Notes -->
+      <section class="border-t border-[#e6dfd8] bg-[#efe9de]">
+        <div class="mx-auto max-w-6xl px-6 py-12">
+          <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-[#6c6a64]">Design Notes</p>
+          <p class="mt-2 text-sm font-medium text-[#3d3d3a]">
+            YIL 2026-05-03 — The Gap Is the Feature
+          </p>
+          <p class="mt-1 text-sm text-[#6c6a64]">
+            A day of systems thinking — how artifacts, explicit constraints, and durable memory make
+            workflows reliable by construction rather than by effort, told through claude.com's warm
+            editorial visual language.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #cc785c"></span>
+              <span class="font-mono text-[10px] text-[#6c6a64]"
+                >accent-1 / text-[#cc785c] — specs as artifacts</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #5db8a6"></span>
+              <span class="font-mono text-[10px] text-[#6c6a64]"
+                >accent-2 / text-teal-500 — durable memory</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #e8a55a"></span>
+              <span class="font-mono text-[10px] text-[#6c6a64]"
+                >accent-3 / text-[#e8a55a] — explicit beats implied</span
+              >
+            </div>
+          </div>
+          <p class="mt-6 max-w-2xl text-sm leading-relaxed text-[#6c6a64]">
+            This page ports claude.com's warm editorial visual language — cream canvas, slab-serif
+            display, coral + teal + amber accents, cream-to-dark surface rhythm — onto a day of
+            systems thinking about how artifacts and boundaries create reliable workflows. The pairing
+            is intentional: claude.com itself embodies the "reliability by construction" principle
+            with its disciplined design system, so using that language to describe the day's learning
+            creates a resonant visual metaphor.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
