@@ -16,88 +16,106 @@ Check whether `src/data/betsLog/$ARGUMENTS.ts` already exists. If it does, stop 
 
 ## Step 3: Read source data
 
-Read these files in parallel:
-
-- `src/data/rithhmmPicks.ts` — filter to entries where `date === "$ARGUMENTS"`; these become the candidates. If no picks exist for the date, warn the user that candidates will need to be filled in manually, then continue.
-- `src/data/betsLog/index.ts` — understand current imports and the `allLogs` array order.
-
-Then search `src/content/plus-ev/` for a recap file whose frontmatter contains `recapDate` matching `$ARGUMENTS`:
+Check for the Hermes Daily file first — it is the authoritative source and supersedes all others:
 
 ```
-grep -rl 'recapDate.*$ARGUMENTS' src/content/plus-ev/
+/Users/dandenney/Documents/claw/Betting/Agents/Hermes/Daily/$ARGUMENTS.md
 ```
 
-If found, read that file in full. It contains a narrative and a markdown table showing which harness (Final / Claude / Perplexity / Gemini) chose which candidate.
+If it exists, read it in full. It contains:
+- **Normalized candidates** — all candidate fields including rithmm %, breakEven, projection, DTM, recent hit rate, matchup, game time
+- **Harness responses** — ChatGPT / Claude / Gemini / Perplexity individual analysis with tier tables and confidence values
+- **Consensus summary** (`Other` section) — harness votes table summarizing each harness's pick, confidence, main reason, and main risk
+- **Final decision** — Hermes auditor recommendation (PASS or BET), reason, and any user override
+- **Reconciliation** — board results table with actual outcomes for each candidate, and harness result tables
+
+If the Hermes Daily file exists, **skip Rithmm picks and Plus EV recap** — the Hermes file has everything.
+
+If the Hermes Daily file does **not** exist, fall back:
+- Read `src/data/rithhmmPicks.ts` and filter to `date === "$ARGUMENTS"`
+- Search `src/content/plus-ev/` for a file with `recapDate: "$ARGUMENTS"` and read it if found
+
+Also read `src/data/betsLog/index.ts` to understand current imports and `allLogs` order.
 
 ## Step 4: Data completeness audit
 
-Before writing anything, print a short table noting what was found:
+Print a short table before writing anything:
 
 | Field | Source | Status |
 |---|---|---|
-| candidates | `rithhmmPicks.ts` | ✓ / ✗ (count or "none found") |
-| rithmm, dtm, projection, recentForm | `rithhmmPicks.ts` | ✓ / ✗ |
-| boardResult | `rithhmmPicks.ts` (`result` field) | ✓ / ✗ |
-| harness picks | Plus EV recap table | ✓ / partial / ✗ |
-| finalDecision | Plus EV recap narrative | ✓ / ✗ |
-| harness confidence & confidenceLabel | Not captured historically | **null** |
-| candidateTiers | Not captured historically | **null** |
-| gameTime | Not in Rithmm data | **""** |
+| candidates (all fields) | Hermes Daily | ✓ / ✗ |
+| harness picks | Hermes Daily (consensus summary) | ✓ / partial / ✗ |
+| harness confidence & tiers | Hermes Daily (harness responses) | ✓ / null |
+| boardResult per candidate | Hermes Daily (reconciliation) | ✓ / ✗ |
+| finalDecision | Hermes Daily (final decision) | ✓ / ✗ |
 
-If neither source has data for the date, stop and tell the user — there is nothing to build from.
+If the Hermes Daily file was not found, replace rows above with the fallback sources (Rithmm picks / Plus EV recap) and note which fields remain null.
 
-## Step 5: Parse candidates from Rithmm picks
+If no data source has anything for the date, stop and tell the user.
 
-For each Rithmm pick on the date, parse the `pick` string to extract fields. The format is typically:
-`"Player Name Over/Under LINE Market"` (e.g., `"Spencer Arrighetti Under 5.5 Pitcher Ks"`)
+## Step 5: Extract candidates from Hermes Daily
 
-Extract:
-- `player` — everything before the direction word
-- `direction` — `"Over"` or `"Under"`
-- `line` — the number immediately after the direction
-- `market` — everything after the line number
+From the **Normalized candidates** section, extract each candidate:
 
-Map remaining fields directly from the Rithmm pick:
-- `id` — slugify the player's last name (lowercase, no spaces): e.g., `"arrighetti"`
-- `matchup` — from `pick.matchup`
-- `sport` — from `pick.sport`
-- `odds` — parse `pick.odds` string to number (e.g., `"-144"` → `-144`)
-- `rithmm` — from `pick.confidence`
-- `breakEven` — calculate from odds:
-  - If odds < 0: `Math.round(-odds / (-odds + 100) * 100 * 10) / 10`
-  - If odds > 0: `Math.round(100 / (odds + 100) * 100 * 10) / 10`
-- `projection` — from `pick.modelProjection`
-- `dtm` — from `pick.dtm`
-- `recent` — from `pick.recentForm`
-- `gameTime` — `""` (not available in Rithmm data)
-- `boardResult` — map `pick.result`: `"win"` → `"win"`, `"loss"` → `"loss"`, `"push"` → `"push"`, `"pending"` → `"void"`
+- `id` — slugify the player's last name (lowercase, no spaces): e.g., `"arrighetti"`. Use a short distinguishing prefix if two players share a last name (e.g., `"wsmith"`)
+- `player` — full name as written
+- `sport` — `"NBA"` or `"MLB"`
+- `market` — the stat market (e.g., `"Blocks"`, `"Total Bases"`, `"Pitcher Ks"`)
+- `direction` — `"Under"` or `"Over"`
+- `line` — numeric line value
+- `odds` — numeric (e.g., `-139`)
+- `rithmm` — Rithmm win chance as a number (e.g., `66.7`)
+- `breakEven` — implied break-even as a number (e.g., `58.2`)
+- `projection` — model projection string (e.g., `"0.72 blocks"`)
+- `dtm` — DTM as a number (e.g., `20.5`)
+- `recent` — recent hit rate string (e.g., `"L10 6/10"`)
+- `matchup` — matchup string (e.g., `"vs Pistons"`)
+- `gameTime` — game time string (e.g., `"6:00 PM"`)
+- `boardResult` — from the **Reconciliation → Board results** table: `"win"` / `"loss"` / `"push"` / `"void"`
 - `color` — assign from this ordered palette, cycling if needed:
   `["#fbbf24", "#f472b6", "#38bdf8", "#a3e635", "#c084fc"]`
 
-## Step 6: Parse harness picks from Plus EV recap
+If the Hermes Daily file is absent, parse candidates from `rithhmmPicks.ts` per the fallback rules in Step 5F below.
 
-If a Plus EV recap was found, extract harness decisions from the markdown table.
+## Step 5F: Fallback — parse candidates from Rithmm picks
 
-The table has columns like `Final`, `Perplexity`, `Claude`, `Gemini`. A `✓` in a column means that harness picked that row's candidate.
+_(Skip this step if the Hermes Daily file was found.)_
 
-Map column names to harness IDs:
-- `Final` → `hermes` (orchestrator — if Final backed a pick, `hermes.pick = candidateId`; if the final call was PASS/SKIP, `hermes.pick = "skip"`)
-- `Claude` → `claude`
-- `Perplexity` → `perplexity`
-- `Gemini` → `gemini`
-- `ChatGPT` → `chatgpt` (may appear in narrative only)
+For each Rithmm pick on the date, parse the `pick` string (format: `"Player Name Over/Under LINE Market"`):
+- `player` — everything before the direction word
+- `direction` — `"Over"` or `"Under"`
+- `line` — number immediately after the direction
+- `market` — everything after the line number
 
-For any harness **not mentioned** in the recap: default to `pick: "skip"` and note it as unknown in the report.
+Map remaining fields:
+- `id` — slugify last name
+- `matchup` — from `pick.matchup`
+- `sport` — from `pick.sport`
+- `odds` — parse `pick.odds` string to number
+- `rithmm` — from `pick.confidence`
+- `breakEven` — calculate: odds < 0 → `Math.round(-odds / (-odds + 100) * 100 * 10) / 10`; odds > 0 → `Math.round(100 / (odds + 100) * 100 * 10) / 10`
+- `projection` — from `pick.modelProjection`
+- `dtm` — from `pick.dtm`
+- `recent` — from `pick.recentForm`
+- `gameTime` — `""` (not in Rithmm data)
+- `boardResult` — map `pick.result`: `"win"` / `"loss"` / `"push"` / `"pending"` → `"void"`
+- `color` — from the ordered palette
 
-Determine each harness's `result`:
-- `"correct"` if they avoided the loss (picked a winner, or correctly skipped)
-- `"loss"` if they picked a losing candidate
+## Step 6: Extract harnesses from Hermes Daily
 
-Pull `resultNote` from the narrative where possible; otherwise use `""`.
+Use the **Consensus summary → Harness votes** table as the primary source for each harness's pick and confidence. Use the **Harness responses** section for tier classifications. Use the **Reconciliation → Harness results** table for results and result notes.
 
-## Step 7: Harness defaults
+When multiple run variants exist (e.g., "risk-audited Hermes run" vs "alternate canonical note run"), always use the **primary / risk-audited run**.
 
-Use these fixed harness colors and IDs:
+For each harness, extract:
+- `pick` — candidate `id` they recommended, or `"skip"` if they recommended PASS/SKIP
+- `pickLabel` — short label (e.g., `"Carter U1.5 Blocks"`, `"SKIP"`, `"PASS"`)
+- `confidence` — numeric confidence value from the harness response (e.g., `74`), or `null` if not stated
+- `confidenceLabel` — what the confidence refers to (e.g., `"skip confidence"`, `"win probability"`, `"practical win probability"`), or `null`
+- `result` — `"correct"` if the harness avoided a loss (picked a winner or correctly skipped); `"loss"` if they picked a loser
+- `resultNote` — 1–2 sentence summary pulled from the reconciliation table or narrative
+
+Use these fixed harness IDs and colors:
 
 ```ts
 { id: "hermes",     name: "Hermes",     color: "#34d399" }
@@ -107,41 +125,57 @@ Use these fixed harness colors and IDs:
 { id: "perplexity", name: "Perplexity", color: "#c084fc" }
 ```
 
-Set `confidence: null` and `confidenceLabel: null` for every harness — these were not captured for historical entries and the component renders them conditionally.
+For `hermes` specifically: `hermes` is the orchestrator/auditor. Its `pick` is `"skip"` unless the Hermes auditor itself recommended a specific candidate (rare). Its confidence is `null` unless explicitly stated.
 
-## Step 8: candidateTiers
+If a harness is not mentioned in the Hermes Daily file, default to `pick: "skip"`, `confidence: null`, `confidenceLabel: null`, and note it as unknown.
 
-Set **every tier value to `null`** — tier assignments are not recorded in Plus EV recaps:
+If the Hermes Daily file is absent, fall back to the Plus EV recap table (`Final` → hermes, `Claude` → claude, `Perplexity` → perplexity, `Gemini` → gemini, `ChatGPT` → chatgpt). Set all confidence values to `null`.
 
+## Step 7: Build candidateTiers from Hermes Daily
+
+From each **harness response**, find the candidate tier table (columns: Candidate, Tier/Classification, Fragility). Map tier values:
+- `Tier 1` → `1`
+- `Tier 2` → `2`
+- `Tier 3` → `3`
+- `Reject` / not listed → `null`
+
+`hermes` is the orchestrator and always gets `null` for every candidate tier.
+
+Structure:
 ```ts
 candidateTiers: {
-  arrighetti: { hermes: null, chatgpt: null, claude: null, gemini: null, perplexity: null },
-  // one entry per candidate
+  carter:     { hermes: null, chatgpt: 2, claude: 2, gemini: 1, perplexity: 1 },
+  // one entry per candidate id
 }
 ```
 
-## Step 9: finalDecision
+If the Hermes Daily file is absent, set all tier values to `null`.
 
-From the Plus EV recap narrative:
-- `action` — the final call: e.g., `"PASS"`, `"BET: Meyer U5.5 Ks"`
-- `reason` — the core rationale (1–2 sentences from the narrative)
-- `result` — `"correct"` or `"loss"` based on outcome
-- `resultNote` — brief one-sentence outcome note
+## Step 8: Build finalDecision from Hermes Daily
 
-If no recap was found, use placeholder strings and note them in the report.
+From the **Final decision** section:
+- `action` — the auditor's call: `"PASS"` or the bet (e.g., `"Carter U1.5 Blocks"`)
+- `reason` — 1–2 sentence rationale from the final decision narrative
+- `result` — `"correct"` or `"loss"` based on the reconciliation outcome
+- `resultNote` — brief outcome note; if a user override occurred, mention it (e.g., `"User override to Kwan at -132 lost on two singles. PASS was correct."`)
 
-## Step 10: Write the data file
+If the Hermes Daily file is absent, derive from the Plus EV recap narrative.
 
-Save to `src/data/betsLog/$ARGUMENTS.ts` using the absolute repo path:
+## Step 9: Write the data file
+
+Save to `src/data/betsLog/$ARGUMENTS.ts` using the absolute repo path.
+
+Include a source comment at the top:
+- If Hermes Daily was used: `// Source: /Users/dandenney/Documents/claw/Betting/Agents/Hermes/Daily/$ARGUMENTS.md`
+- If fallback sources were used: `// Historical entry — Hermes Daily not found. Candidates from rithhmmPicks.ts; harness picks from Plus EV recap. Confidence, confidenceLabel, and candidateTiers are null.`
 
 ```ts
 import type { DayLog } from "./types";
 
-// Historical entry — harness confidence, confidenceLabel, and candidateTiers are null
-// (not captured at time of decision). gameTime is "" (not in Rithmm source data).
+// Source: ...
 const log: DayLog = {
   date: "$ARGUMENTS",
-  displayDate: "...",   // e.g., "April 21, 2026"
+  displayDate: "...",
   candidates: [ ... ],
   harnesses: [ ... ],
   candidateTiers: { ... },
@@ -151,26 +185,16 @@ const log: DayLog = {
 export default log;
 ```
 
-## Step 11: Update index.ts
+## Step 10: Update index.ts
 
-Read `src/data/betsLog/index.ts`. Add the new import and include the log in `allLogs`, sorted by date ascending:
+Read `src/data/betsLog/index.ts`. Add the new import and include the log in `allLogs`, sorted by date ascending.
 
-```ts
-import log_2026_04_21 from "./2026-04-21";
-// ...
-export const allLogs = [...existingLogs, log_2026_04_21];
-```
-
-## Step 12: Report back
+## Step 11: Report back
 
 Tell the user:
 
 - Date, display date, number of candidates
-- Which harnesses had confirmed picks vs. defaulted to "skip" (unknown)
-- Whether Plus EV recap was found and which harnesses it covered
-- Explicit list of fields that are null/empty and need manual attention:
-  - `gameTime` on all candidates — fill in if you have it
-  - `harness.confidence` and `harness.confidenceLabel` on all harnesses — fill in if you recorded agent outputs
-  - All `candidateTiers` values — fill in if you remember tier assignments
-  - Any harness `resultNote` strings that are empty
+- Primary source used (Hermes Daily or fallbacks)
+- Which harnesses had confirmed picks vs. defaulted to skip
+- Any fields that are still null/empty and need manual attention
 - Remind the user to run `npx astro check` before considering the entry complete
