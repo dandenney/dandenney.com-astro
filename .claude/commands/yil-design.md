@@ -28,6 +28,18 @@ Identify:
 - Any standout quote worth featuring
 - Whether the day leans light or dark — **only relevant if no reference file was found**; if a reference exists, its surface mode governs
 
+### 3.5. Decide the page shape
+
+Before choosing colors or fonts, decide how the PAGE ITSELF should be structured. Different days call for different shapes — a day of scattered discoveries is not the same as a day with one big insight. Ask:
+
+- **Opening**: Does the day have a single strong visual idea (use a 2-col hero with that visual on the right)? Or is it more editorial/text-driven (use a full-width centered opening or an asymmetric large-text layout)? Or is there a code/terminal artifact that IS the story (2-col with code window right)?
+- **Quote placement**: Should the standout quote anchor the whole page as a standalone full-bleed band? Or is it better woven into a specific section? Or is there no real standout quote and it should be skipped?
+- **Section headers**: Do sections feel like categories (pill + h2 + underline bar is right)? Or is the day more of a single narrative arc (numbered large headers or editorial-only labels are better)? Or is it one big insight with sub-points (feature header + inline items)?
+- **Surface rhythm**: Does the page need visual breathing room through alternating dark/light bands? Or does it stay on one canvas with color coming only from accents?
+- **Decorative numbers**: Should sections be numbered visually, or does numbering feel forced when the topics are parallel rather than sequential?
+
+The goal is that the page SHAPE should be legible before a single color is chosen. Two pages with different shapes feel different even if they share a color palette.
+
 ### 4. Write the DESIGN.md
 
 Save to `src/pages/yil/_design/$ARGUMENTS.md` using this exact structure:
@@ -78,6 +90,12 @@ typography:
 spacing:
   container-max: "max-w-[class]"  # e.g. max-w-5xl
   section-py: "py-[class]"        # e.g. py-24
+page-shape:
+  opening: "2col-hero-image | 2col-hero-code | full-width-statement | centered-editorial | asymmetric-large-text"
+  quote-treatment: "standalone-dark-band | standalone-light-band | inline-with-section | hero-integrated | none"
+  section-headers: "pill-h2-bar | large-numbered | editorial-label-only | centered-h2 | full-bleed-label"
+  surface-rhythm: "[describe how backgrounds alternate across the page, e.g. 'cream → dark-navy → cream → surface → cream']"
+  decorative-numbers: true | false
 sections:
   - id: hero
     headline: "[page headline]"
@@ -91,7 +109,15 @@ sections:
     label: "[short category label, e.g. Delivery]"
     headline: "[section headline]"
     accent: accent-1    # which accent color key to use
-    layout: cards | prose | steps  # cards = content cards, prose = paragraphs, steps = numbered process
+    layout: cards | prose | steps | split | feature | full-bleed-callout | code-window | timeline
+    # cards = content in rounded card elements with accent border/bg
+    # prose = flowing paragraphs with a max-width constraint
+    # steps = numbered card grid (use only when the content IS a process)
+    # split = text/content left, visual or callout card right (or vice versa)
+    # feature = large centered statement, minimal chrome — for one big insight
+    # full-bleed-callout = edge-to-edge accent background with centered content
+    # code-window = technical content in a dark terminal-style window
+    # timeline = chronological items with a connecting vertical line
     content: "[brief description of what goes in this section]"
   # repeat for each theme
   - id: references
