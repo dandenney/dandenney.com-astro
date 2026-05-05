@@ -1,0 +1,547 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-04',
+  headline: 'Skills Are Routers, Not Documents',
+  summary:
+    "A good skill doesn't explain what to do — it decides what enters context, at what cost, and when to earn its place. The words matter, but the structure decides everything.",
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="YIL 2026-05-04 — Skills Are Routers, Not Documents | Dan Denney"
+      description="A good skill doesn't explain what to do — it decides what enters context, at what cost, and when to earn its place. The words matter, but the structure decides everything."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black">
+    <main class="relative shadow-xs z-10 bg-black">
+      <Header />
+
+      <!-- M tricolor stripe — brand register mark, full-width 4px -->
+      <div
+        class="h-1 w-full"
+        style="background: linear-gradient(to right, #0066b1 0% 33.33%, #1c69d4 33.33% 66.66%, #e22718 66.66% 100%);"
+      ></div>
+
+      <!-- Hero: full-width-statement — black canvas, UPPERCASE headline, no right visual -->
+      <section class="bg-black">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <p
+            class="font-mono text-xs uppercase tracking-[0.2em] text-neutral-500"
+            style="font-family: 'JetBrains Mono', monospace;"
+          >
+            2026-05-04 — Yesterday I Learned
+          </p>
+          <h1
+            class="mt-4 uppercase text-white"
+            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 700; line-height: 1.0; letter-spacing: -0.02em;"
+          >
+            Skills Are Routers,<br />Not Documents
+          </h1>
+          <p
+            class="mt-8 max-w-2xl text-lg leading-relaxed text-neutral-300"
+            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 300;"
+          >
+            A good skill doesn't explain what to do — it decides what enters context, at what cost,
+            and when to earn its place. The words matter, but the structure decides everything.
+          </p>
+        </div>
+      </section>
+
+      <!-- Quote: standalone-dark-band — bg-neutral-950, large decorative ", quote at 2xl–3xl -->
+      <section class="bg-neutral-950">
+        <div class="relative mx-auto max-w-6xl overflow-hidden px-6 py-20">
+          <div
+            class="pointer-events-none absolute -left-4 -top-10 select-none text-[16rem] leading-none text-white/5"
+            style="font-family: Inter, sans-serif; font-weight: 700;"
+          >
+            "
+          </div>
+          <blockquote class="relative max-w-3xl">
+            <p
+              class="text-2xl leading-relaxed text-white sm:text-3xl sm:leading-relaxed"
+              style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 300;"
+            >
+              Metadata is a routing decision, not a usage decision. If the description is wrong,
+              nothing else matters.
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <div class="h-px w-8 bg-[#0066b1]/60"></div>
+              <cite class="not-italic">
+                <a
+                  href="https://internals.laxmena.com/p/what-youre-actually-writing-when?utm_source=tldrai"
+                  class="font-mono text-sm text-neutral-500 transition-colors hover:text-neutral-300"
+                  style="font-family: 'JetBrains Mono', monospace;"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Laxmena, What You're Actually Writing When You Write a Skill
+                </a>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Skills as Routing: cards layout, accent-1 blue, bg-[#1a1a1a] surface-card -->
+      <section class="bg-[#1a1a1a]">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <!-- pill-h2-bar header (BMW M: rectangular badge, no rounded corners) -->
+          <div
+            class="inline-flex items-center gap-1.5 border border-[#0066b1]/30 bg-[#0066b1]/10 px-2.5 py-1"
+          >
+            <span
+              class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#0066b1]"
+              style="font-family: 'JetBrains Mono', monospace;"
+            >Architecture</span>
+          </div>
+          <h2
+            class="mt-3 uppercase text-white"
+            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700;"
+          >
+            A Skill Is a Budget Contract<br />for Working Memory
+          </h2>
+          <div class="mt-3 h-1 w-12 bg-[#0066b1]"></div>
+
+          <div class="mt-12 grid gap-4 sm:grid-cols-2">
+            <!-- Card 1: Specification -->
+            <div class="border border-[#0066b1]/30 bg-[#0066b1]/10 p-6">
+              <p
+                class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#0066b1]"
+                style="font-family: 'JetBrains Mono', monospace;"
+              >
+                Specification
+              </p>
+              <p
+                class="mt-3 text-base text-white"
+                style="font-family: Inter, sans-serif; font-weight: 700;"
+              >
+                Skills are loader specifications
+              </p>
+              <p
+                class="mt-2 text-sm leading-relaxed text-neutral-300"
+                style="font-family: Inter, sans-serif; font-weight: 300;"
+              >
+                A way to describe what enters context, when, and at what cost. The skill is a
+                routing contract, not an instruction document.
+              </p>
+            </div>
+
+            <!-- Card 2: Routing -->
+            <div class="border border-[#0066b1]/30 bg-[#0066b1]/10 p-6">
+              <p
+                class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#0066b1]"
+                style="font-family: 'JetBrains Mono', monospace;"
+              >
+                Routing
+              </p>
+              <p
+                class="mt-3 text-base text-white"
+                style="font-family: Inter, sans-serif; font-weight: 700;"
+              >
+                Metadata is a routing decision
+              </p>
+              <p
+                class="mt-2 text-sm leading-relaxed text-neutral-300"
+                style="font-family: Inter, sans-serif; font-weight: 300;"
+              >
+                If the description is wrong, nothing else matters. The metadata decides whether the
+                skill enters context at all — get it right first.
+              </p>
+            </div>
+
+            <!-- Card 3: Architecture -->
+            <div class="border border-[#0066b1]/30 bg-[#0066b1]/10 p-6">
+              <p
+                class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#0066b1]"
+                style="font-family: 'JetBrains Mono', monospace;"
+              >
+                Architecture
+              </p>
+              <p
+                class="mt-3 text-base text-white"
+                style="font-family: Inter, sans-serif; font-weight: 700;"
+              >
+                The kitchen at dinner service
+              </p>
+              <p
+                class="mt-2 text-sm leading-relaxed text-neutral-300"
+                style="font-family: Inter, sans-serif; font-weight: 300;"
+              >
+                Get the architecture right and the skill costs almost nothing until it earns its
+                place. Get it wrong and you pay every turn.
+              </p>
+            </div>
+
+            <!-- Card 4: Evaluation -->
+            <div class="border border-[#0066b1]/30 bg-[#0066b1]/10 p-6">
+              <p
+                class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#0066b1]"
+                style="font-family: 'JetBrains Mono', monospace;"
+              >
+                Evaluation
+              </p>
+              <p
+                class="mt-3 text-base text-white"
+                style="font-family: Inter, sans-serif; font-weight: 700;"
+              >
+                Eval methodology: paired runs
+              </p>
+              <p
+                class="mt-2 text-sm leading-relaxed text-neutral-300"
+                style="font-family: Inter, sans-serif; font-weight: 300;"
+              >
+                Once with the skill, once without. The question is not "is it good?" but "is it
+                better than baseline, and by how much?"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tailwind Collision: code-window layout, accent-2 red, bg-black -->
+      <section class="bg-black">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <!-- pill-h2-bar header -->
+          <div
+            class="inline-flex items-center gap-1.5 border border-[#e22718]/30 bg-[#e22718]/10 px-2.5 py-1"
+          >
+            <span
+              class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#e22718]"
+              style="font-family: 'JetBrains Mono', monospace;"
+            >Audit</span>
+          </div>
+          <h2
+            class="mt-3 uppercase text-white"
+            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700;"
+          >
+            Search for Collisions<br />Before You Ship Tailwind
+          </h2>
+          <div class="mt-3 h-1 w-12 bg-[#e22718]"></div>
+
+          <!-- Code window: dark bg, red left-edge border, 0px radius -->
+          <div
+            class="mt-12 border-l-4 border-[#e22718] bg-[#0d0d0d] p-6"
+            style="font-family: 'JetBrains Mono', 'Fira Code', monospace;"
+          >
+            <div class="mb-4 flex items-center gap-2 border-b border-white/10 pb-3">
+              <span class="text-[11px] text-neutral-500">class collision — existing <span class="text-[#e22718]">.invert</span> vs tailwind <span class="text-[#e22718]">invert</span></span>
+            </div>
+            <div class="space-y-4 text-[13px] leading-relaxed">
+              <!-- Existing repo -->
+              <div>
+                <p class="text-neutral-600">{'/* existing repo — pre-theme text flip */'}</p>
+                <p class="mt-1">
+                  <span class="text-[#e22718]">.invert</span>
+                  <span class="text-neutral-400"> {'{'}</span>
+                </p>
+                <p class="pl-6">
+                  <span class="text-neutral-300">color</span>
+                  <span class="text-neutral-600">: </span>
+                  <span class="text-neutral-200">var(--color-text-inverted)</span>
+                  <span class="text-neutral-600">;</span>
+                </p>
+                <p><span class="text-neutral-400">{'}'}</span></p>
+              </div>
+              <!-- Tailwind -->
+              <div class="border-t border-white/10 pt-4">
+                <p class="text-neutral-600">{'/* tailwind utility — CSS filter inversion */'}</p>
+                <p class="mt-1">
+                  <span class="text-[#e22718]">.invert</span>
+                  <span class="text-neutral-400"> {'{'}</span>
+                </p>
+                <p class="pl-6">
+                  <span class="text-neutral-300">filter</span>
+                  <span class="text-neutral-600">: </span>
+                  <span class="text-neutral-200">invert(1)</span>
+                  <span class="text-neutral-600">;</span>
+                </p>
+                <p><span class="text-neutral-400">{'}'}</span></p>
+              </div>
+              <!-- Result -->
+              <div class="border-t border-white/10 pt-4">
+                <p class="text-[#e22718]">
+                  {'/* result: both active → behaviors cancel → mysterious regression */'}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p
+            class="mt-8 max-w-2xl text-sm leading-relaxed text-neutral-300"
+            style="font-family: Inter, sans-serif; font-weight: 300;"
+          >
+            When bringing Tailwind into an existing codebase, audit for utility-name collisions —
+            especially generic words like
+            <code
+              class="font-mono text-[#e22718]"
+              style="font-family: 'JetBrains Mono', monospace;">invert</code
+            >,
+            <code
+              class="font-mono text-[#e22718]"
+              style="font-family: 'JetBrains Mono', monospace;">ring</code
+            >,
+            <code
+              class="font-mono text-[#e22718]"
+              style="font-family: 'JetBrains Mono', monospace;">shadow</code
+            >,
+            <code
+              class="font-mono text-[#e22718]"
+              style="font-family: 'JetBrains Mono', monospace;">hidden</code
+            >.
+          </p>
+        </div>
+      </section>
+
+      <!-- Design Systems + AI: split layout, accent-3 blue-dark, bg-neutral-950 -->
+      <section class="bg-neutral-950">
+        <div class="mx-auto max-w-6xl px-6 py-24">
+          <!-- pill-h2-bar header -->
+          <div
+            class="inline-flex items-center gap-1.5 border border-[#1c69d4]/30 bg-[#1c69d4]/10 px-2.5 py-1"
+          >
+            <span
+              class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#1c69d4]"
+              style="font-family: 'JetBrains Mono', monospace;"
+            >Practice</span>
+          </div>
+          <h2
+            class="mt-3 uppercase text-white"
+            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700;"
+          >
+            Practitioners Are Already Bringing<br />AI Into Design Systems
+          </h2>
+          <div class="mt-3 h-1 w-12 bg-[#1c69d4]"></div>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-2">
+            <!-- Left: prose -->
+            <div
+              class="space-y-4 text-sm leading-relaxed text-neutral-300"
+              style="font-family: Inter, sans-serif; font-weight: 300;"
+            >
+              <p>
+                A YouTube conversation with Chris, Dave, Brad, and Ian surfaced how practitioners
+                are already weaving AI into design-system work — not as a research topic but as
+                something Brad and Ian are actively doing.
+              </p>
+              <p>
+                One emerging angle: using AI to help non-profit sites that are in rough condition
+                reach a defensible baseline quickly. Sites that exist to serve communities but have
+                fallen behind on maintenance — AI as a force-multiplier for civic good.
+              </p>
+              <p>
+                The conversation also touched on Chris and Dave's current thinking: the craft of
+                knowing when AI accelerates versus when it flattens, and what it means to bring
+                these tools into systems that other people depend on.
+              </p>
+            </div>
+
+            <!-- Right: video card (BMW M feature-photo-card adapted for editorial) -->
+            <div class="border border-[#1c69d4]/30 bg-[#1a1a1a] p-6">
+              <p
+                class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#1c69d4]"
+                style="font-family: 'JetBrains Mono', monospace;"
+              >
+                Design Systems
+              </p>
+              <p
+                class="mt-3 text-base text-white"
+                style="font-family: Inter, sans-serif; font-weight: 700;"
+              >
+                Chris, Dave, Brad &amp; Ian — AI and Design Systems
+              </p>
+              <p
+                class="mt-2 text-sm leading-relaxed text-neutral-400"
+                style="font-family: Inter, sans-serif; font-weight: 300;"
+              >
+                How practitioners are integrating AI into design-system workflows, plus the civic
+                angle: AI to help struggling non-profit sites reach a defensible baseline.
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=LWhGChXGjlg"
+                class="mt-5 inline-flex items-center gap-1.5 text-[#1c69d4] transition-colors hover:text-white"
+                style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch on YouTube →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content-Driven Uniqueness: full-bleed-callout, accent-4 electric blue, bg-neutral-950 with 4px blue top border -->
+      <section class="bg-neutral-950" style="border-top: 4px solid #0653b6;">
+        <div class="mx-auto max-w-6xl px-6 py-24 text-center">
+          <div
+            class="inline-flex items-center gap-1.5 border border-[#0653b6]/30 bg-[#0653b6]/10 px-2.5 py-1"
+          >
+            <span
+              class="font-mono text-[10px] uppercase tracking-[0.15em] text-[#0653b6]"
+              style="font-family: 'JetBrains Mono', monospace;"
+            >Meta</span>
+          </div>
+          <h2
+            class="mx-auto mt-6 max-w-3xl uppercase text-white"
+            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700;"
+          >
+            Unique Because of Content,<br />Not Because of Chrome
+          </h2>
+          <p
+            class="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-neutral-300"
+            style="font-family: Inter, sans-serif; font-weight: 300;"
+          >
+            Agent-created skills can silently encode design constraints that masquerade as
+            "uniqueness" — pre-baked layout widgets that exist because the skill said so, not
+            because the content calls for them.
+          </p>
+          <p
+            class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-neutral-300"
+            style="font-family: Inter, sans-serif; font-weight: 300;"
+          >
+            The discipline: always read agent-generated skill files; review for baked-in
+            assumptions. YIL pages should feel different from each other because of what they
+            teach, not because the build skill prescribed different chrome for each one.
+          </p>
+        </div>
+      </section>
+
+      <!-- References: bg-black -->
+      <section class="border-t border-neutral-800 bg-black">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+          <h2
+            class="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500"
+            style="font-family: 'JetBrains Mono', monospace;"
+          >
+            References
+          </h2>
+          <ul class="mt-8 space-y-4">
+            <li>
+              <a
+                href="https://www.youtube.com/watch?v=LWhGChXGjlg"
+                class="group flex items-start gap-3 text-neutral-500 transition-colors hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="mt-0.5 shrink-0 border border-[#1c69d4]/30 bg-[#1c69d4]/10 px-2 py-0.5 font-mono text-[10px] text-[#1c69d4]"
+                  style="font-family: 'JetBrains Mono', monospace;"
+                >DESIGN SYSTEMS</span>
+                <span
+                  class="text-sm leading-relaxed"
+                  style="font-family: Inter, sans-serif; font-weight: 300;"
+                  >YouTube: Chris, Dave, Brad, and Ian on AI and design systems</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://internals.laxmena.com/p/what-youre-actually-writing-when?utm_source=tldrai"
+                class="group flex items-start gap-3 text-neutral-500 transition-colors hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="mt-0.5 shrink-0 border border-[#0066b1]/30 bg-[#0066b1]/10 px-2 py-0.5 font-mono text-[10px] text-[#0066b1]"
+                  style="font-family: 'JetBrains Mono', monospace;"
+                >SKILLS</span>
+                <span
+                  class="text-sm leading-relaxed"
+                  style="font-family: Inter, sans-serif; font-weight: 300;"
+                  >What you're actually writing when you write a skill — Laxmena</span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Design Notes -->
+      <section class="border-t border-neutral-800 bg-neutral-950">
+        <div class="mx-auto max-w-5xl px-6 py-12">
+          <p
+            class="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500"
+            style="font-family: 'JetBrains Mono', monospace;"
+          >
+            Design Notes
+          </p>
+          <p
+            class="mt-2 text-sm font-medium text-neutral-300"
+            style="font-family: Inter, sans-serif;"
+          >
+            YIL 2026-05-04 — Skills Are Routers, Not Documents
+          </p>
+          <p
+            class="mt-1 text-sm text-neutral-500"
+            style="font-family: Inter, sans-serif; font-weight: 300;"
+          >
+            A day of systems thinking about agent skill architecture, Tailwind class collision
+            audits, and the principle that content — not pre-baked UI — is what makes a page
+            distinctive, told through BMW M's engineered black-canvas visual language.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #0066b1"></span>
+              <span
+                class="font-mono text-[10px] text-neutral-500"
+                style="font-family: 'JetBrains Mono', monospace;"
+                >accent-1 / text-[#0066b1] — skills/routing/architecture</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #e22718"></span>
+              <span
+                class="font-mono text-[10px] text-neutral-500"
+                style="font-family: 'JetBrains Mono', monospace;"
+                >accent-2 / text-[#e22718] — tailwind collision/error/audit</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #1c69d4"></span>
+              <span
+                class="font-mono text-[10px] text-neutral-500"
+                style="font-family: 'JetBrains Mono', monospace;"
+                >accent-3 / text-[#1c69d4] — design systems/practitioners</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #0653b6"></span>
+              <span
+                class="font-mono text-[10px] text-neutral-500"
+                style="font-family: 'JetBrains Mono', monospace;"
+                >accent-4 / text-[#0653b6] — meta/content-driven uniqueness</span
+              >
+            </div>
+          </div>
+          <p
+            class="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-500"
+            style="font-family: Inter, sans-serif; font-weight: 300;"
+          >
+            This page ports BMW M's engineered black-canvas visual language onto a day of systems
+            thinking about agent skill architecture, class-name audit discipline, and content-driven
+            design. The pairing is precise: BMW M's aesthetic IS a routing system — every visual
+            decision has a rule, a cost, and a placement, exactly like a well-written skill
+            specification. The M tricolor stripe, used sparingly as a brand-register mark in the
+            original, becomes the page's only decorative element here, echoing how the day's core
+            insight uses constraint to create signal.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
