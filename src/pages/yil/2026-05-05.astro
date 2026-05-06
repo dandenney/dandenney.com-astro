@@ -1,0 +1,218 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-05',
+  headline: 'Did Our Thing',
+  summary:
+    'On low-signal days, the practice is the signal. No breakthroughs, no discoveries — just keeping the thread.',
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="YIL 2026-05-05 — Did Our Thing | Dan Denney"
+      description="On low-signal days, the practice is the signal. No breakthroughs, no discoveries — just keeping the thread."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <main class="relative z-10 bg-white shadow-xs">
+      <Header />
+
+      <!-- Hero: full-width-statement — white canvas, HP blue chevron pair, Manrope 500 -->
+      <section class="relative overflow-hidden bg-white">
+        <!-- Left HP-blue chevron: "/" parallelogram on far-left edge -->
+        <div
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-[#024ad8]"
+          style="clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);"
+        ></div>
+        <!-- Right HP-blue chevron: "/" parallelogram on far-right edge -->
+        <div
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-[#024ad8]"
+          style="clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);"
+        ></div>
+
+        <div class="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+          <p
+            class="text-xs uppercase tracking-[0.2em] text-[#636363]"
+            style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400;"
+          >
+            2026-05-05 — Yesterday I Learned
+          </p>
+          <h1
+            class="mt-4 text-[#1a1a1a]"
+            style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(2.75rem, 6vw, 4.5rem); font-weight: 500; line-height: 1.0;"
+          >
+            Did Our Thing
+          </h1>
+          <p
+            class="mt-6 max-w-xl text-lg leading-relaxed text-[#3d3d3d]"
+            style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400;"
+          >
+            On low-signal days, the practice is the signal. No breakthroughs, no discoveries —
+            just keeping the thread.
+          </p>
+        </div>
+      </section>
+
+      <!-- Quote: standalone-dark-band — bg-[#1a1a1a], large decorative ", white quote text -->
+      <section class="bg-[#1a1a1a]">
+        <div class="relative mx-auto max-w-5xl overflow-hidden px-6 py-20">
+          <div
+            aria-hidden="true"
+            class="pointer-events-none absolute -left-4 -top-10 select-none text-[16rem] leading-none text-white/5"
+            style="font-family: Manrope, sans-serif; font-weight: 700;"
+          >
+            "
+          </div>
+          <blockquote class="relative max-w-3xl">
+            <p
+              class="text-2xl text-white sm:text-3xl"
+              style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400; line-height: 1.0;"
+            >
+              did our thing
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <div class="h-px w-8 bg-[#024ad8]/60"></div>
+              <cite
+                class="not-italic text-sm text-[#636363]"
+                style="font-family: Manrope, sans-serif; font-weight: 400;"
+              >
+                Discord thread, May 5, 2026
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Consistency: pill-h2-bar header, prose layout, cloud-band bg-gray-50 -->
+      <section class="bg-gray-50">
+        <div class="mx-auto max-w-5xl px-6 py-20">
+          <!-- pill-h2-bar: rounded-lg pill (HP badge style), h2, accent underline bar -->
+          <div
+            class="inline-flex items-center gap-1.5 rounded-lg border border-[#024ad8]/30 bg-[#024ad8]/8 px-3 py-1"
+          >
+            <span
+              class="text-[10px] uppercase tracking-[0.15em] text-[#024ad8]"
+              style="font-family: Manrope, sans-serif; font-weight: 600;"
+            >Process</span>
+          </div>
+          <h2
+            class="mt-3 text-[#1a1a1a]"
+            style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 500; line-height: 1.0;"
+          >
+            The Work Is Showing Up
+          </h2>
+          <div class="mt-3 h-0.5 w-12 bg-[#024ad8]"></div>
+
+          <!-- Prose: max-w-2xl, Manrope 400, line-height 1.4 -->
+          <div class="mt-10 max-w-2xl space-y-5">
+            <p
+              class="text-base text-[#1a1a1a]"
+              style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400; line-height: 1.4;"
+            >
+              Every daily thread has two possible outputs: something learned and nothing learned.
+              Both are real data. A log that only runs on days with breakthroughs is not a log —
+              it's a highlight reel. This was a low-signal Tuesday, which means the thread captured
+              exactly what it was built for.
+            </p>
+            <p
+              class="text-base text-[#1a1a1a]"
+              style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400; line-height: 1.4;"
+            >
+              The system stays alive not on the days with insights but on the days without them.
+              Those are the days that separate a practice from a project. Projects end. Practices
+              persist.
+            </p>
+            <p
+              class="text-base text-[#1a1a1a]"
+              style="font-family: Manrope, Inter, -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400; line-height: 1.4;"
+            >
+              "Did our thing" is its own kind of signal — discipline made visible without ceremony.
+              The Discord thread kept the chain unbroken. Sometimes that is the whole day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Notes -->
+      <section class="border-t border-gray-200 bg-gray-50">
+        <div class="mx-auto max-w-5xl px-6 py-12">
+          <p
+            class="text-[10px] uppercase tracking-[0.25em] text-[#636363]"
+            style="font-family: Manrope, sans-serif; font-weight: 400;"
+          >
+            Design Notes
+          </p>
+          <p
+            class="mt-2 text-sm text-[#3d3d3d]"
+            style="font-family: Manrope, sans-serif; font-weight: 600;"
+          >
+            YIL 2026-05-05 — Did Our Thing
+          </p>
+          <p
+            class="mt-1 text-sm text-[#636363]"
+            style="font-family: Manrope, sans-serif; font-weight: 400;"
+          >
+            A deliberately sparse day — the TIL is the act of keeping the thread alive on a
+            low-signal Tuesday, told through HP's commercial-catalog visual language of pure white
+            canvas and reserved electric blue.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #024ad8"></span>
+              <span
+                class="text-[10px] text-[#636363]"
+                style="font-family: Manrope, sans-serif; font-weight: 400;"
+                >accent-1 / text-[#024ad8] — HP Electric Blue / process</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #1a1a1a"></span>
+              <span
+                class="text-[10px] text-[#636363]"
+                style="font-family: Manrope, sans-serif; font-weight: 400;"
+                >accent-2 / bg-[#1a1a1a] — Ink / quote slab</span
+              >
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #0e3191"></span>
+              <span
+                class="text-[10px] text-[#636363]"
+                style="font-family: Manrope, sans-serif; font-weight: 400;"
+                >accent-3 / text-[#0e3191] — Deep Navy / supporting elements</span
+              >
+            </div>
+          </div>
+          <p
+            class="mt-6 max-w-2xl text-sm leading-relaxed text-[#636363]"
+            style="font-family: Manrope, sans-serif; font-weight: 400;"
+          >
+            This page ports HP.com's commercial-catalog visual language onto the quietest possible
+            day — a Discord thread check-in with no links, no code, and no headline insight. The
+            pairing is intentional: HP's system is built for systematic, unhurried catalog
+            navigation, not editorial drama. A sparse entry deserves a clean, open surface. The
+            page follows HP's full surface rhythm (white canvas → ink-slab quote band → cloud
+            alternating band → white), with Electric Blue reserved for the two chevron decorations
+            and the single section pill — at most two blue signal elements per viewport, exactly as
+            the HP system specifies.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
