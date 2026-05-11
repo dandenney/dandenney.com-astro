@@ -189,7 +189,19 @@ export default log;
 
 Read `src/data/betsLog/index.ts`. Add the new import and include the log in `allLogs`, sorted by date ascending.
 
-## Step 11: Report back
+## Step 11: Commit and push
+
+Stage and commit the new data file and the updated index:
+
+```
+git add src/data/betsLog/$ARGUMENTS.ts src/data/betsLog/index.ts
+git commit -m "feat(bets-log): add $ARGUMENTS entry
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+git push
+```
+
+## Step 12: Report back
 
 Tell the user:
 
