@@ -8,309 +8,545 @@ interface Props {
 const { log } = Astro.props;
 const { candidates, harnesses, candidateTiers, finalDecision } = log;
 
-const skipHarnesses = harnesses.filter((h) => h.pick === "skip");
-
-function tierColor(t: number | null): string {
-  if (t === 1) return "text-emerald-400 bg-emerald-900/40 border-emerald-700/50";
-  if (t === 2) return "text-amber-400 bg-amber-900/40 border-amber-700/50";
-  if (t === 3) return "text-red-400 bg-red-900/40 border-red-700/50";
-  return "text-slate-600 bg-slate-800/40 border-slate-700/30";
-}
-
-const boardResultLabel: Record<string, string> = { win: "Win", loss: "Loss", void: "Void", push: "Push" };
-const boardResultColor: Record<string, string> = {
-  win: "text-emerald-400",
-  loss: "text-red-400",
-  void: "text-slate-400",
-  push: "text-slate-400",
+const tierLabel = (t: number | null): string => {
+  if (t === 1) return "T1";
+  if (t === 2) return "T2";
+  if (t === 3) return "T3";
+  return "—";
 };
 
-// Passed to the client script via define:vars
-const pickConfig = candidates.map((c) => ({ id: c.id, color: c.color }));
-const harnessConfig = harnesses.map((h) => ({ id: h.id, pick: h.pick }));
+const tierCls = (t: number | null): string => {
+  if (t === 1) return "t1";
+  if (t === 2) return "t2";
+  if (t === 3) return "t3";
+  return "tn";
+};
+
+const boardLabel: Record<string, string> = { win: "Win", loss: "Loss", void: "Void", push: "Push" };
+const boardCls = (r: string): string => r === "win" ? "win" : r === "loss" ? "loss" : "neut";
+const hCls     = (r: string): string => r === "correct" ? "win" : "loss";
 ---
 
-<!-- ── Pipeline ──────────────────────────────────────────────── -->
-<div id="pipeline-container" class="relative w-full">
+<div class="root">
 
-  <svg
-    id="pipeline-svg"
-    class="absolute inset-0 pointer-events-none overflow-visible"
-    style="z-index:1; width:100%; height:100%;"
-  ></svg>
-
-  <div
-    class="relative"
-    style="display:grid; grid-template-columns:220px 1fr 220px; grid-template-rows:auto auto auto auto auto; row-gap:8px; column-gap:0; z-index:2;"
-  >
-
-    <!-- Left col: invisible SKIP spacer (row 1) -->
-    <div style="grid-column:1; grid-row:1; padding-right:20px; visibility:hidden;" aria-hidden="true">
-      <div class="rounded-lg border border-slate-700 p-3 text-xs" style="min-height:64px;"></div>
-    </div>
-
-    <!-- Left col: candidate pick cards (rows 2–N+1) -->
-    {candidates.map((c, i) => (
-      <div style={`grid-column:1; grid-row:${i + 2}; padding-right:20px;`}>
-        <div
-          id={`pick-${c.id}`}
-          class="rounded-lg border border-slate-700 bg-slate-900 p-3 text-xs h-full"
-          style={`border-left-color:${c.color}; border-left-width:3px;`}
-        >
-          <div class="flex items-center gap-1.5 mb-1.5">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-800 px-1.5 py-0.5 rounded">
-              {c.sport}
-            </span>
-            <span class="text-[10px] text-slate-500">{c.gameTime}</span>
-          </div>
-          <div class="font-semibold text-white text-sm leading-tight">{c.player}</div>
-          <div class="text-slate-500 text-[10px]">{c.matchup}</div>
-          <div class="mt-2 flex items-baseline gap-1 text-xs">
-            <span class={c.direction === "Under" ? "text-blue-400 font-medium" : "text-amber-400 font-medium"}>
-              {c.direction}
-            </span>
-            <span class="text-white font-bold">{c.line}</span>
-            <span class="text-slate-500">{c.market}</span>
-            <span class="ml-auto text-slate-400">{c.odds}</span>
-          </div>
-          <div class="mt-1.5 grid grid-cols-3 gap-x-2 text-[10px]">
-            <div>
-              <div class="text-slate-600">Rithmm</div>
-              <div class="text-emerald-400 font-semibold">{c.rithmm}%</div>
-            </div>
-            <div>
-              <div class="text-slate-600">DTM</div>
-              <div class={`font-semibold ${c.dtm > 10 ? "text-red-400" : "text-slate-300"}`}>{c.dtm}%</div>
-            </div>
-            <div>
-              <div class="text-slate-600">Recent</div>
-              <div class="text-slate-300">{c.recent}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    ))}
-
-    <!-- Center col: harness nodes (spans all rows) -->
-    <div
-      style={`grid-column:2; grid-row:1/${candidates.length + 2}; display:flex; align-items:center; justify-content:center;`}
-    >
-      <div class="flex items-center gap-1">
-        {harnesses.map((h) => (
-          <div class="flex flex-col items-center gap-1.5">
-            <div
-              id={`hnode-${h.id}`}
-              class="w-14 h-14 rounded-full border-2 flex items-center justify-center font-bold bg-slate-900"
-              style={`border-color:${h.color}; box-shadow:0 0 16px ${h.color}33;`}
-            >
-              <span class="text-[9px] uppercase tracking-wide" style={`color:${h.color};`}>
-                {h.name.slice(0, 4)}
-              </span>
-            </div>
-            <span class="text-[10px] text-slate-500 text-center leading-tight w-16">{h.name}</span>
-          </div>
-        ))}
+  <!-- ── Tier Matrix ────────────────────────────────────────── -->
+  <section>
+    <div class="section-head">
+      <h2 class="section-label">Harness Analysis</h2>
+      <div class="legend">
+        <span class="leg t1">T1</span>strongest
+        <span class="leg t2">T2</span>lean
+        <span class="leg t3">T3</span>weak
+        <span class="leg tn">—</span>reject / n/a
       </div>
     </div>
 
-    <!-- Right col: SKIP/PASS destination (row 1) -->
-    <div style="grid-column:3; grid-row:1; padding-left:20px;">
-      <div id="dest-skip" class="rounded-lg border border-dashed border-slate-600 bg-slate-900/60 p-3 text-xs h-full">
-        <div class="text-slate-400 font-semibold text-sm mb-1.5">SKIP / PASS</div>
-        <div class="space-y-1">
-          {skipHarnesses.map((h) => (
-            <div class="flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background:${h.color};`}></span>
-              <span class="font-medium text-[11px]" style={`color:${h.color};`}>{h.name}</span>
-              <span class="text-slate-500 text-[10px]">— {h.pickLabel}</span>
-              {h.confidence && (
-                <span class="ml-auto text-slate-500 text-[10px]">{h.confidence}%</span>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    <!-- Right col: per-candidate harness tier breakdown -->
-    {candidates.map((c, i) => {
-      const tiers = candidateTiers[c.id];
-      return (
-        <div style={`grid-column:3; grid-row:${i + 2}; padding-left:20px;`}>
-          <div
-            id={`dest-${c.id}`}
-            class="rounded-lg border border-slate-700 bg-slate-900 p-3 text-xs h-full"
-            style={`border-left-color:${c.color}; border-left-width:3px;`}
-          >
-            <div class="mb-2">
-              <div class="flex items-center justify-between gap-1.5">
-                <span class="font-semibold text-white text-[11px]">{c.player}</span>
-                <span class={`text-[10px] font-semibold ${boardResultColor[c.boardResult]}`}>
-                  {boardResultLabel[c.boardResult]}
-                </span>
-              </div>
-              <div class="text-slate-500 text-[10px]">{c.direction} {c.line} {c.market}</div>
-            </div>
-            <div class="space-y-1">
-              {harnesses.map((h) => {
-                const tier = tiers[h.id];
-                const isChosen = h.pick === c.id;
-                const choseOther = !isChosen && h.pick !== "skip";
-                const choseSkip = !isChosen && h.pick === "skip";
-                return (
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background:${h.color};`}></span>
-                    <span class="text-[10px]" style={`color:${h.color};`}>{h.name}</span>
-                    {tier !== null ? (
-                      <span class={`ml-1 text-[9px] font-bold px-1 py-0.5 rounded border ${tierColor(tier)}`}>
-                        T{tier}
-                      </span>
-                    ) : (
-                      <span class="ml-1 text-[9px] text-slate-600">—</span>
-                    )}
-                    {isChosen && <span class="ml-auto text-[9px] text-emerald-400 font-semibold">✓ pick</span>}
-                    {choseSkip && <span class="ml-auto text-[9px] text-slate-600">→ SKIP</span>}
-                    {choseOther && <span class="ml-auto text-[9px] text-slate-600">→ {h.pickLabel}</span>}
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th class="th-cand">Candidate</th>
+            {harnesses.map(h => (
+              <th class="th-h" style={`--hc: ${h.color}`}>{h.name}</th>
+            ))}
+            <th class="th-board">Board</th>
+          </tr>
+        </thead>
+        <tbody>
+          {candidates.map(c => {
+            const tiers = candidateTiers[c.id] ?? {};
+            return (
+              <tr>
+                <td class="td-cand">
+                  <div class="td-cand-inner">
+                    <span class="cand-pip" style={`background:${c.color}`}></span>
+                    <div>
+                      <div class="cand-name">{c.player}</div>
+                      <div class="cand-bet">
+                        <span class={c.direction === "Under" ? "dir-u" : "dir-o"}>{c.direction}</span>
+                        {" "}<span class="cand-line">{c.line}</span>
+                        <span class="cand-mkt"> {c.market}</span>
+                      </div>
+                    </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                </td>
+                {harnesses.map(h => {
+                  const t: number | null = tiers[h.id] ?? null;
+                  return (
+                    <td class={`td-h ${tierCls(t)}`}>{tierLabel(t)}</td>
+                  );
+                })}
+                <td class={`td-board ${boardCls(c.boardResult)}`}>
+                  {boardLabel[c.boardResult]}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Final Decision ────────────────────────────────────── -->
+  <section>
+    <h2 class="section-label">Final Decision</h2>
+    <div class="decision">
+      <div class="dec-left">
+        <div class="dec-action">{finalDecision.action}</div>
+        <p class="dec-reason">{finalDecision.reason}</p>
+      </div>
+      <div class="dec-right">
+        <div class={`dec-result ${hCls(finalDecision.result)}`}>
+          {finalDecision.result === "correct" ? "✓ Correct" : "✗ Loss"}
         </div>
-      );
-    })}
+        <p class="dec-note">{finalDecision.resultNote}</p>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- ── Candidates ────────────────────────────────────────── -->
+  <section>
+    <h2 class="section-label">Candidates</h2>
+    <div class="cands">
+      {candidates.map(c => (
+        <div class="cand-card" style={`--c:${c.color}`}>
+          <div class="cc-head">
+            <div>
+              <div class="cc-name">{c.player}</div>
+              <div class="cc-sub">{c.matchup}{c.gameTime ? ` · ${c.gameTime}` : ""}</div>
+            </div>
+            <span class={`cc-board ${boardCls(c.boardResult)}`}>{boardLabel[c.boardResult]}</span>
+          </div>
+
+          <div class="cc-bet">
+            <span class={c.direction === "Under" ? "dir-u" : "dir-o"}>{c.direction}</span>
+            {" "}<strong>{c.line}</strong> {c.market}
+            <span class="cc-odds">{c.odds}</span>
+          </div>
+
+          <dl class="cc-stats">
+            <div class="stat">
+              <dt>Rithmm</dt>
+              <dd class="win">{c.rithmm}%</dd>
+            </div>
+            <div class="stat">
+              <dt>BE</dt>
+              <dd>{c.breakEven}%</dd>
+            </div>
+            <div class="stat">
+              <dt>DTM</dt>
+              <dd class={c.dtm > 10 ? "loss" : ""}>{c.dtm}%</dd>
+            </div>
+            <div class="stat">
+              <dt>Recent</dt>
+              <dd>{c.recent || "—"}</dd>
+            </div>
+          </dl>
+
+          {c.projection && <div class="cc-proj">{c.projection}</div>}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── Harness Notes ─────────────────────────────────────── -->
+  <section>
+    <h2 class="section-label">Harness Notes</h2>
+    <div class="harnesses">
+      {harnesses.map(h => (
+        <div class="h-card" style={`--hc:${h.color}`}>
+          <div class="hc-name">{h.name}</div>
+          <div class="hc-pick">{h.pickLabel}</div>
+          {h.confidence && (
+            <div class="hc-conf">{h.confidence}%<span class="hc-conf-lbl"> {h.confidenceLabel}</span></div>
+          )}
+          <div class={`hc-result ${hCls(h.result)}`}>
+            {h.result === "correct" ? "✓ Correct" : "✗ Loss"}
+          </div>
+          <p class="hc-note">{h.resultNote}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
 </div>
 
-<!-- ── Harness results ─────────────────────────────────────── -->
-<div class="grid grid-cols-5 gap-3">
-  {harnesses.map((h) => (
-    <div class="rounded-lg border border-slate-800 bg-slate-900 p-3 text-xs space-y-1.5">
-      <div class="flex items-center gap-1.5">
-        <span class="w-2 h-2 rounded-full" style={`background:${h.color};`}></span>
-        <span class="font-semibold text-[11px]" style={`color:${h.color};`}>{h.name}</span>
-      </div>
-      <div class="text-white font-medium">{h.pickLabel}</div>
-      {h.confidence && (
-        <div class="text-slate-500 text-[10px]">{h.confidence}% {h.confidenceLabel}</div>
-      )}
-      <div class={`font-semibold text-[11px] ${h.result === "correct" ? "text-emerald-400" : "text-red-400"}`}>
-        {h.result === "correct" ? "✓ Correct" : "✗ Loss"}
-      </div>
-      <div class="text-slate-600 text-[10px] leading-snug">{h.resultNote}</div>
-    </div>
-  ))}
-</div>
+<style>
+  .root {
+    --s1:    oklch(13% 0.009 255);
+    --s2:    oklch(17% 0.009 255);
+    --bdr:   oklch(27% 0.009 255);
+    --t1:    oklch(96% 0.005 255);
+    --t2:    oklch(68% 0.012 255);
+    --t3:    oklch(42% 0.010 255);
+    --win:   oklch(72% 0.17  162);
+    --loss:  oklch(62% 0.20   25);
+    --neut:  oklch(52% 0.01  255);
+    --fd:    'Darker Grotesque', system-ui, sans-serif;
+    --fm:    'Azeret Mono', ui-monospace, monospace;
 
-<!-- ── Final decision ─────────────────────────────────────── -->
-<div class="rounded-xl border border-slate-700 bg-slate-900 p-6">
-  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-    <div>
-      <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Final Decision</p>
-      <h2 class="text-2xl font-bold text-white">{finalDecision.action}</h2>
-      <p class="mt-1 text-slate-400 text-sm max-w-md">{finalDecision.reason}</p>
-    </div>
-    <div class="sm:text-right shrink-0">
-      <div class={`font-bold text-lg ${finalDecision.result === "correct" ? "text-emerald-400" : "text-red-400"}`}>
-        {finalDecision.result === "correct" ? "✓ Correct" : "✗ Loss"}
-      </div>
-      <p class="text-slate-500 text-xs mt-1 max-w-[220px] leading-snug sm:ml-auto">
-        {finalDecision.resultNote}
-      </p>
-    </div>
-  </div>
-</div>
-
-<script define:vars={{ pickConfig, harnessConfig }}>
-  function drawLines() {
-    const svg = document.getElementById("pipeline-svg");
-    const container = document.getElementById("pipeline-container");
-    if (!svg || !container) return;
-
-    while (svg.firstChild) svg.removeChild(svg.firstChild);
-
-    const cr = container.getBoundingClientRect();
-
-    function rel(id) {
-      const el = document.getElementById(id);
-      if (!el) return null;
-      const r = el.getBoundingClientRect();
-      return {
-        cx:     r.left - cr.left + r.width / 2,
-        cy:     r.top  - cr.top  + r.height / 2,
-        left:   r.left - cr.left,
-        right:  r.right - cr.left,
-      };
-    }
-
-    function addPath(d, stroke, dashed, opacity) {
-      const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      p.setAttribute("d", d);
-      p.setAttribute("fill", "none");
-      p.setAttribute("stroke", stroke);
-      p.setAttribute("stroke-width", dashed ? "1.5" : "2");
-      p.setAttribute("stroke-opacity", String(opacity));
-      if (dashed) p.setAttribute("stroke-dasharray", "4 4");
-      svg.appendChild(p);
-    }
-
-    function addDot(x, y, color) {
-      const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      c.setAttribute("cx", String(x));
-      c.setAttribute("cy", String(y));
-      c.setAttribute("r", "3");
-      c.setAttribute("fill", color);
-      svg.appendChild(c);
-    }
-
-    const hFirst = rel("hnode-" + harnessConfig[0].id);
-    const hLast  = rel("hnode-" + harnessConfig[harnessConfig.length - 1].id);
-    if (!hFirst || !hLast) return;
-
-    const centerY = hFirst.cy;
-
-    // Gray background track
-    addPath(`M ${hFirst.cx},${centerY} L ${hLast.cx},${centerY}`, "#334155", false, 0.5);
-
-    const chosenPicks = new Set(
-      harnessConfig.filter((h) => h.pick !== "skip").map((h) => h.pick)
-    );
-
-    const yOffsets = pickConfig.map((_, i) => {
-      const total = pickConfig.length;
-      const step = 10;
-      return (i - (total - 1) / 2) * step;
-    });
-
-    for (let i = 0; i < pickConfig.length; i++) {
-      const pick   = pickConfig[i];
-      const pl     = rel("pick-" + pick.id);
-      const pr     = rel("dest-" + pick.id);
-      if (!pl || !pr) continue;
-
-      const hy     = centerY + yOffsets[i];
-      const chosen = chosenPicks.has(pick.id);
-      const lMid   = (hFirst.cx - pl.right) / 2;
-      const rMid   = (pr.left   - hLast.cx) / 2;
-
-      const d = [
-        `M ${pl.right},${pl.cy}`,
-        `C ${pl.right + lMid},${pl.cy} ${hFirst.cx - lMid},${hy} ${hFirst.cx},${hy}`,
-        `L ${hLast.cx},${hy}`,
-        `C ${hLast.cx + rMid},${hy} ${pr.left - rMid},${pr.cy} ${pr.left},${pr.cy}`,
-      ].join(" ");
-
-      addPath(d, pick.color, !chosen, chosen ? 0.9 : 0.5);
-      addDot(pl.right, pl.cy, pick.color);
-      addDot(pr.left,  pr.cy, pick.color);
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
   }
 
-  if (document.readyState === "complete") {
-    drawLines();
-  } else {
-    window.addEventListener("load", drawLines);
+  /* ── Section headers ── */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
   }
-  window.addEventListener("resize", drawLines);
-</script>
+
+  section > .section-label { margin-bottom: 1rem; }
+
+  .section-label {
+    font-family: var(--fm);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--t3);
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-family: var(--fm);
+    font-size: 0.62rem;
+    color: var(--t3);
+  }
+
+  .leg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.58rem;
+    font-weight: 700;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-family: var(--fm);
+    margin-left: 0.5rem;
+  }
+
+  .leg.t1 { background: oklch(16% 0.06 162); color: oklch(74% 0.16 162); }
+  .leg.t2 { background: oklch(17% 0.05  70); color: oklch(79% 0.15  70); }
+  .leg.t3 { background: oklch(16% 0.05  25); color: oklch(66% 0.15  25); }
+  .leg.tn { color: var(--t3); }
+
+  /* ── Matrix ── */
+  .matrix-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--bdr);
+    border-radius: 8px;
+  }
+
+  .matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--fm);
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Header row */
+  .matrix thead th {
+    background: var(--s1);
+    padding: 0.55rem 0.75rem;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--bdr);
+    white-space: nowrap;
+  }
+
+  .th-cand { text-align: left; color: var(--t3); }
+  .th-h    { text-align: center; min-width: 74px; color: var(--hc, var(--t3)); }
+  .th-board{ text-align: center; min-width: 72px; color: var(--t3); }
+
+  /* Body rows */
+  .matrix tbody tr { border-bottom: 1px solid var(--bdr); }
+  .matrix tbody tr:last-child { border-bottom: none; }
+
+  /* Candidate cell */
+  .td-cand {
+    padding: 0.75rem 1rem;
+    min-width: 200px;
+    background: var(--s2);
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+
+  .td-cand-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .cand-pip {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+  }
+
+  .cand-name {
+    font-family: var(--fd);
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--t1);
+    line-height: 1.2;
+  }
+
+  .cand-bet {
+    font-size: 0.63rem;
+    color: var(--t3);
+    margin-top: 0.15rem;
+  }
+
+  .cand-line { color: var(--t2); font-weight: 600; }
+  .cand-mkt  { color: var(--t3); }
+
+  /* Tier cells */
+  .td-h {
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    vertical-align: middle;
+    letter-spacing: 0.04em;
+  }
+
+  .td-h.t1 { background: oklch(16% 0.06 162); color: oklch(74% 0.16 162); }
+  .td-h.t2 { background: oklch(17% 0.05  70); color: oklch(79% 0.15  70); }
+  .td-h.t3 { background: oklch(16% 0.05  25); color: oklch(66% 0.15  25); }
+  .td-h.tn { color: var(--t3); }
+
+  /* Board column */
+  .td-board {
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    vertical-align: middle;
+    letter-spacing: 0.06em;
+  }
+
+  /* Shared outcome colors */
+  .win  { color: var(--win);  }
+  .loss { color: var(--loss); }
+  .neut { color: var(--neut); }
+
+  /* Direction colors */
+  .dir-u { color: oklch(65% 0.16 245); }
+  .dir-o { color: oklch(79% 0.15  70); }
+
+  /* ── Final Decision ── */
+  .decision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1.75rem 2rem;
+    background: var(--s1);
+    border: 1px solid var(--bdr);
+    border-radius: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .decision { grid-template-columns: 1fr; padding: 1.25rem; gap: 1.25rem; }
+  }
+
+  .dec-action {
+    font-family: var(--fd);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--t1);
+    margin-bottom: 0.75rem;
+  }
+
+  .dec-reason {
+    font-size: 0.8rem;
+    color: var(--t2);
+    line-height: 1.65;
+    max-width: 58ch;
+  }
+
+  .dec-result {
+    font-family: var(--fd);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.625rem;
+  }
+
+  .dec-note {
+    font-family: var(--fm);
+    font-size: 0.68rem;
+    color: var(--t3);
+    line-height: 1.75;
+  }
+
+  /* ── Candidates ── */
+  .cands {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .cand-card {
+    background: var(--s1);
+    border: 1px solid var(--bdr);
+    border-top: 2px solid var(--c);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .cc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .cc-name {
+    font-family: var(--fd);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--t1);
+    line-height: 1.2;
+  }
+
+  .cc-sub {
+    font-family: var(--fm);
+    font-size: 0.62rem;
+    color: var(--t3);
+    margin-top: 0.2rem;
+  }
+
+  .cc-board {
+    font-family: var(--fm);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .cc-bet {
+    font-family: var(--fm);
+    font-size: 0.75rem;
+    color: var(--t2);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cc-bet strong { color: var(--t1); font-weight: 600; }
+  .cc-odds { margin-left: 0.5rem; color: var(--t3); }
+
+  .cc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding-top: 0.625rem;
+    border-top: 1px solid var(--bdr);
+    margin: 0;
+  }
+
+  @media (max-width: 400px) {
+    .cc-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .stat dt {
+    font-family: var(--fm);
+    font-size: 0.55rem;
+    color: var(--t3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.15rem;
+  }
+
+  .stat dd {
+    font-family: var(--fm);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--t2);
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+  }
+
+  .cc-proj {
+    font-family: var(--fm);
+    font-size: 0.63rem;
+    color: var(--t3);
+    font-style: italic;
+    padding-top: 0.125rem;
+  }
+
+  /* ── Harness Notes ── */
+  .harnesses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .h-card {
+    background: var(--s1);
+    border: 1px solid var(--bdr);
+    border-radius: 8px;
+    padding: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .hc-name {
+    font-family: var(--fd);
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--hc);
+    margin-bottom: 0.125rem;
+  }
+
+  .hc-pick {
+    font-family: var(--fm);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--t1);
+    line-height: 1.4;
+  }
+
+  .hc-conf {
+    font-family: var(--fm);
+    font-size: 0.63rem;
+    color: var(--t3);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .hc-conf-lbl { opacity: 0.75; }
+
+  .hc-result {
+    font-family: var(--fm);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-top: 0.125rem;
+  }
+
+  .hc-note {
+    font-size: 0.7rem;
+    color: var(--t3);
+    line-height: 1.65;
+    margin-top: 0.25rem;
+  }
+</style>

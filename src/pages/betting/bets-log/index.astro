@@ -4,6 +4,9 @@ import BaseHead from "@/components/BaseHead.astro";
 import { allLogs } from "@/data/betsLog";
 
 const sorted = [...allLogs].sort((a, b) => b.date.localeCompare(a.date));
+const totalCorrect = sorted.filter((l) => l.finalDecision.result === "correct").length;
+const totalLoss = sorted.filter((l) => l.finalDecision.result === "loss").length;
+const winRate = sorted.length > 0 ? Math.round((totalCorrect / sorted.length) * 100) : 0;
 ---
 
 <!doctype html>
@@ -13,35 +16,215 @@ const sorted = [...allLogs].sort((a, b) => b.date.localeCompare(a.date));
       title="Daily Bets Log | Dan Denney"
       description="AI harness pipeline bets logs — daily pick evaluation and results"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700;800;900&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
-    <main class="mx-auto max-w-2xl px-4 py-12 space-y-6">
+  <body>
+    <div class="page">
 
-      <header>
-        <p class="text-xs uppercase tracking-widest text-slate-500 mb-1">Betting</p>
-        <h1 class="text-2xl font-bold text-white tracking-tight">Daily Bets Log</h1>
-        <p class="mt-1 text-slate-400 text-sm">AI harness pipeline evaluation — one day at a time</p>
+      <nav class="page-nav">
+        <a href="/" class="nav-back">← dandenney.com</a>
+      </nav>
+
+      <header class="page-header">
+        <h1 class="page-title">Bets Log</h1>
+        <p class="page-desc">AI harness pipeline — daily candidate analysis and outcomes</p>
+
+        <div class="stats-row">
+          <div class="stat-block">
+            <div class="stat-value">{sorted.length}</div>
+            <div class="stat-label">Days</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-value correct">{totalCorrect}</div>
+            <div class="stat-label">Correct</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-value loss">{totalLoss}</div>
+            <div class="stat-label">Loss</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-value">{winRate}%</div>
+            <div class="stat-label">Success</div>
+          </div>
+        </div>
       </header>
 
-      <ul class="space-y-2">
-        {sorted.map((log) => (
-          <li>
-            <a
-              href={`/betting/bets-log/${log.date}`}
-              class="flex items-center justify-between rounded-lg border border-slate-800 bg-slate-900 px-4 py-3 hover:border-slate-600 transition-colors group"
-            >
-              <span class="text-white font-medium group-hover:text-slate-100">{log.displayDate}</span>
-              <div class="flex items-center gap-3">
-                <span class="text-slate-500 text-xs">{log.finalDecision.action}</span>
-                <span class={`text-sm font-bold ${log.finalDecision.result === "correct" ? "text-emerald-400" : "text-red-400"}`}>
-                  {log.finalDecision.result === "correct" ? "✓" : "✗"}
-                </span>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <main>
+        <ul class="log-list">
+          {sorted.map((log) => {
+            const sports = [...new Set(log.candidates.map((c) => c.sport))].join("/");
+            return (
+              <li>
+                <a href={`/betting/bets-log/${log.date}`} class="log-entry">
+                  <div class="entry-date">{log.displayDate}</div>
+                  <div class="entry-meta">
+                    <span>{log.candidates.length}c</span>
+                    <span class="meta-sport">{sports}</span>
+                    <span class="meta-action">{log.finalDecision.action}</span>
+                  </div>
+                  <div class={`entry-result ${log.finalDecision.result === "correct" ? "correct" : "loss"}`}>
+                    {log.finalDecision.result === "correct" ? "✓" : "✗"}
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </main>
 
-    </main>
+    </div>
   </body>
 </html>
+
+<style is:global>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: oklch(10% 0.008 255);
+    color: oklch(96% 0.005 255);
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .page-nav {
+    padding: 1.25rem 0 0;
+  }
+
+  .nav-back {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: oklch(42% 0.010 255);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .nav-back:hover { color: oklch(68% 0.012 255); }
+
+  .page-header {
+    padding: 2.5rem 0 2.5rem;
+  }
+
+  .page-title {
+    font-family: 'Darker Grotesque', system-ui, sans-serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    color: oklch(96% 0.005 255);
+    margin: 0 0 0.625rem;
+  }
+
+  .page-desc {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.7rem;
+    color: oklch(42% 0.010 255);
+    margin: 0 0 2.5rem;
+    letter-spacing: 0.06em;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .stat-value {
+    font-family: 'Darker Grotesque', system-ui, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1;
+    color: oklch(96% 0.005 255);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-value.correct { color: oklch(72% 0.17 162); }
+  .stat-value.loss    { color: oklch(62% 0.20  25); }
+
+  .stat-label {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.56rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: oklch(42% 0.010 255);
+  }
+
+  .log-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 5rem;
+  }
+
+  .log-entry {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid oklch(27% 0.009 255);
+    text-decoration: none;
+    transition: opacity 0.1s;
+  }
+
+  .log-list li:first-child .log-entry {
+    border-top: 1px solid oklch(27% 0.009 255);
+  }
+
+  .log-entry:hover { opacity: 0.8; }
+
+  .entry-date {
+    font-family: 'Darker Grotesque', system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: oklch(96% 0.005 255);
+    letter-spacing: -0.01em;
+  }
+
+  .entry-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.6rem;
+    color: oklch(42% 0.010 255);
+    letter-spacing: 0.06em;
+  }
+
+  .meta-sport  { color: oklch(42% 0.010 255); }
+  .meta-action { color: oklch(68% 0.012 255); }
+
+  .entry-result {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    min-width: 1.25rem;
+    text-align: right;
+  }
+
+  .entry-result.correct { color: oklch(72% 0.17 162); }
+  .entry-result.loss    { color: oklch(62% 0.20  25); }
+
+  @media (max-width: 480px) {
+    .entry-meta { display: none; }
+    .log-entry  { grid-template-columns: 1fr auto; }
+  }
+</style>

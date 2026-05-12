@@ -17,6 +17,12 @@ interface Props {
 }
 
 const { log } = Astro.props;
+
+const sorted = [...allLogs].sort((a, b) => a.date.localeCompare(b.date));
+const idx = sorted.findIndex((l) => l.date === log.date);
+const prev = idx > 0 ? sorted[idx - 1] : null;
+const next = idx < sorted.length - 1 ? sorted[idx + 1] : null;
+const sports = [...new Set(log.candidates.map((c) => c.sport))].join(" / ");
 ---
 
 <!doctype html>
@@ -28,19 +34,132 @@ const { log } = Astro.props;
       type="blogpost"
       datePublished={new Date(log.date)}
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700;800;900&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
-    <main class="mx-auto max-w-7xl px-4 py-12 space-y-10">
+  <body>
+    <div class="page">
 
-      <header>
-        <a href="/betting/bets-log" class="text-xs uppercase tracking-widest text-slate-500 hover:text-slate-400 transition-colors mb-1 block">
-          ← Daily Bets Log
-        </a>
-        <h1 class="text-2xl font-bold text-white tracking-tight">{log.displayDate}</h1>
+      <nav class="page-nav">
+        <a href="/betting/bets-log" class="nav-back">← Bets Log</a>
+        <div class="nav-pager">
+          {prev && (
+            <a href={`/betting/bets-log/${prev.date}`} class="nav-arrow">‹ {prev.displayDate}</a>
+          )}
+          {next && (
+            <a href={`/betting/bets-log/${next.date}`} class="nav-arrow">{next.displayDate} ›</a>
+          )}
+        </div>
+      </nav>
+
+      <header class="page-header">
+        <h1 class="page-date">{log.displayDate}</h1>
+        <div class="page-meta">
+          <span>{log.candidates.length} candidate{log.candidates.length !== 1 ? "s" : ""}</span>
+          <span class="meta-sep">·</span>
+          <span>{sports}</span>
+          <span class="meta-sep">·</span>
+          <span class={log.finalDecision.result === "correct" ? "meta-correct" : "meta-loss"}>
+            {log.finalDecision.action}
+          </span>
+        </div>
       </header>
 
-      <BetsLogPipeline log={log} />
+      <main class="page-main">
+        <BetsLogPipeline log={log} />
+      </main>
 
-    </main>
+    </div>
   </body>
 </html>
+
+<style is:global>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: oklch(10% 0.008 255);
+    color: oklch(96% 0.005 255);
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0 0;
+    gap: 1rem;
+  }
+
+  .nav-back {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: oklch(42% 0.010 255);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .nav-back:hover { color: oklch(68% 0.012 255); }
+
+  .nav-pager {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-arrow {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: oklch(42% 0.010 255);
+    text-decoration: none;
+    transition: color 0.15s;
+    white-space: nowrap;
+  }
+
+  .nav-arrow:hover { color: oklch(68% 0.012 255); }
+
+  .page-header {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .page-date {
+    font-family: 'Darker Grotesque', system-ui, sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    color: oklch(96% 0.005 255);
+    margin: 0 0 1rem;
+  }
+
+  .page-meta {
+    font-family: 'Azeret Mono', ui-monospace, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: oklch(42% 0.010 255);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .meta-sep  { opacity: 0.35; }
+  .meta-correct { color: oklch(72% 0.17 162); }
+  .meta-loss    { color: oklch(62% 0.20  25); }
+
+  .page-main {
+    padding-bottom: 5rem;
+  }
+</style>
