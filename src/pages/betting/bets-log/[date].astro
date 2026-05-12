@@ -24,7 +24,9 @@ const { log } = Astro.props;
   <head>
     <BaseHead
       title={`Bets Log ${log.displayDate} | Dan Denney`}
-      description={`AI harness pipeline bets log for ${log.displayDate}`}
+      description={`${log.candidates.length} ${[...new Set(log.candidates.map(c => c.sport))].join('/')} candidates analyzed by AI harnesses on ${log.displayDate}. Decision: ${log.finalDecision.action}. Analyzing: ${log.candidates.map(c => c.player).join(', ')}.`}
+      type="blogpost"
+      datePublished={new Date(log.date)}
     />
   </head>
   <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">

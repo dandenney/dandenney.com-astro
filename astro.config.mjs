@@ -21,7 +21,25 @@ export default defineConfig({
     "/rithmmm-picks": "/betting/rithmmm-picks",
   },
   markdown: { shikiConfig: { theme: "nord" } },
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      serialize(item) {
+        const betsLogDate = item.url.match(/\/betting\/bets-log\/(\d{4}-\d{2}-\d{2})/);
+        if (betsLogDate) {
+          return { ...item, changefreq: "weekly", priority: 0.7, lastmod: new Date(betsLogDate[1]) };
+        }
+        const yilDate = item.url.match(/\/yil\/(\d{4}-\d{2}-\d{2})/);
+        if (yilDate) {
+          return { ...item, changefreq: "monthly", priority: 0.7, lastmod: new Date(yilDate[1]) };
+        }
+        if (item.url.includes("/posts/")) {
+          return { ...item, changefreq: "yearly", priority: 0.5 };
+        }
+        return { ...item, changefreq: "monthly", priority: 0.5 };
+      },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
