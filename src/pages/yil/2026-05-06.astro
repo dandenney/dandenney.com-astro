@@ -5,11 +5,14 @@ export const yilMeta = {
   headline: 'Execution Ends, Judgment Begins',
   summary:
     'Today AI tools got more room to run, information architecture was reaffirmed as the durable human layer, and one framework named the shift already underway in product design.',
+  accent: '#ff385c',
+  designRef: { name: 'Airbnb', url: 'https://www.airbnb.com' },
 };
 
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
 ---
 
 <!doctype html>
@@ -462,74 +465,7 @@ import Footer from '@/components/Footer.astro';
         </div>
       </section>
 
-      <!-- Design Notes -->
-      <section class="border-t border-gray-200 bg-gray-100">
-        <div class="mx-auto max-w-5xl px-6 py-12">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-[#6a6a6a]"
-            style="font-family: Inter, sans-serif; font-weight: 400;"
-          >
-            Design Notes
-          </p>
-          <p
-            class="mt-2 text-sm text-[#3f3f3f]"
-            style="font-family: Inter, sans-serif; font-weight: 600;"
-          >
-            YIL 2026-05-06 — Execution Ends, Judgment Begins
-          </p>
-          <p
-            class="mt-1 text-sm text-[#6a6a6a]"
-            style="font-family: Inter, sans-serif; font-weight: 400;"
-          >
-            A day when AI capacity expanded, IA principles were reaffirmed as the durable human
-            layer, and a sharp framework named the coming shift in interface design from execution
-            to judgment.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #ff385c"></span>
-              <span
-                class="text-[10px] text-[#6a6a6a]"
-                style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace;"
-                >accent-1 / text-[#ff385c] — Rausch / capacity</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #460479"></span>
-              <span
-                class="text-[10px] text-[#6a6a6a]"
-                style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace;"
-                >accent-2 / text-[#460479] — Luxe Purple / foundation</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #92174d"></span>
-              <span
-                class="text-[10px] text-[#6a6a6a]"
-                style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace;"
-                >accent-3 / text-[#92174d] — Plus Magenta / interface</span
-              >
-            </div>
-          </div>
-          <p
-            class="mt-6 max-w-2xl text-sm leading-relaxed text-[#6a6a6a]"
-            style="font-family: Inter, sans-serif; font-weight: 400;"
-          >
-            This design ports Airbnb's visual language — pure white canvas (#ffffff), near-black
-            ink (#222222), and restrained single-accent discipline — to a day centered on
-            conceptual frameworks about information and interface design. The reference's
-            single-accent principle (Rausch #ff385c for primary everything) is adapted into three
-            accent hues that each track one of the day's distinct themes: Rausch for the
-            capacity/energy news, Luxe Purple for IA's intellectual depth, and Plus Magenta for
-            the Execution→Judgment shift. What makes this day distinct from a generic blog post is
-            the structural tension — the AI infrastructure news is context, while the IA and
-            Judgment UI sections are the real payload — and the design makes that hierarchy
-            legible through surface rhythm (news on surface, ideas on white) without spelling it
-            out. Airbnb's typographic restraint (modest 500–700 weights, no display heroics) fits
-            a day where the ideas carry the weight, not the layout.
-          </p>
-        </div>
-      </section>
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
     </main>
     <Footer />
   </body>

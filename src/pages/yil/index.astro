@@ -5,7 +5,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
 
-type YilMeta = { date: string; headline: string; summary: string };
+type YilMeta = { date: string; headline: string; summary: string; accent?: string };
 const pages = import.meta.glob<{ yilMeta: YilMeta }>('./*.astro', { eager: true });
 
 const entries = Object.entries(pages)
@@ -20,45 +20,92 @@ const entries = Object.entries(pages)
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title="Yesterday I Learned | Dan Denney" description="Daily captures turned into landing pages — AI engineering, agents, front-end development, and learning in public. A new entry every weekday." />
+    <BaseHead
+      title="Yesterday I Learned | Dan Denney"
+      description="Daily captures turned into designed pages — AI engineering, agents, front-end development, and learning in public. A new entry every weekday."
+    />
     <ClientRouter />
+    <style>
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      .entry {
+        opacity: 0;
+        animation: fade-up 0.5s ease forwards;
+      }
+    </style>
   </head>
-  <body class="bg-white dark:bg-slate-900">
-    <main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+  <body class="bg-[#090909]">
+    <main class="relative z-10 bg-[#090909] shadow-xs">
       <Header />
 
-      <section class="pt-16 pb-24">
-        <div class="px-8">
-          <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-            <span class="whitespace-nowrap">[&nbsp;{entries.length} entries&nbsp;]</span>
+      <!-- Hero -->
+      <section class="border-b border-[#1a1a1a]">
+        <div class="mx-auto max-w-4xl px-6 pb-16 pt-20">
+          <p
+            class="font-mono text-[10px] uppercase tracking-[0.3em] text-[#444]"
+          >[ YIL ]</p>
+          <h1
+            class="mt-4 text-[2.5rem] font-semibold leading-[1.05] tracking-tight text-white sm:text-[3.5rem]"
+          >Yesterday I Learned</h1>
+          <p class="mt-5 max-w-lg text-[17px] leading-relaxed text-[#666]">
+            Daily captures from Obsidian turned into designed pages. Each day gets its own visual personality — typography, color, layout all chosen for the content.
           </p>
-          <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">
-            Yesterday I Learned
-          </h1>
-          <p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-400">
-            Daily captures from Obsidian turned into landing pages. Each day gets its own visual personality.
-          </p>
+          <div class="mt-8 flex items-center gap-4">
+            <span class="font-mono text-xs text-[#333]">{entries.length} entries</span>
+            <div class="h-px flex-1 bg-[#1a1a1a]"></div>
+          </div>
         </div>
+      </section>
 
-        <ul class="mt-12 divide-y divide-gray-100 dark:divide-slate-800 px-8 max-w-3xl">
-          {entries.map((entry) => (
-            <li class="py-6">
-              <a href={entry.url} class="group block">
-                <p class="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-slate-600 group-hover:text-gray-600 dark:group-hover:text-slate-400 transition-colors">
-                  {entry.date}
-                </p>
-                <p class="mt-1 text-xl font-semibold text-red-700 dark:text-red-400 group-hover:text-red-800 dark:group-hover:text-red-300 transition-colors">
-                  {entry.headline}
-                </p>
-                {entry.summary && (
-                  <p class="mt-1 text-sm text-gray-500 dark:text-slate-500 leading-relaxed">
-                    {entry.summary}
-                  </p>
-                )}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <!-- Entries -->
+      <section class="mx-auto max-w-4xl px-6 pb-24 pt-4">
+        <ol class="mt-4">
+          {entries.map((entry, i) => {
+            const accent = entry.accent ?? '#666666';
+            return (
+              <li
+                class="entry border-b border-[#141414]"
+                style={`animation-delay: ${i * 60}ms;`}
+              >
+                <a
+                  href={entry.url}
+                  class="group relative flex items-start gap-6 py-8 transition-colors hover:bg-[#0f0f0f]"
+                >
+                  <!-- Accent strip -->
+                  <div
+                    class="mt-1.5 h-5 w-1 shrink-0 rounded-full transition-all duration-300 group-hover:h-full group-hover:rounded-none"
+                    style={`background: ${accent};`}
+                  ></div>
+
+                  <!-- Content -->
+                  <div class="min-w-0 flex-1 pr-4">
+                    <p
+                      class="font-mono text-[10px] uppercase tracking-[0.2em] transition-colors"
+                      style={`color: ${accent};`}
+                    >{entry.date}</p>
+                    <h2 class="mt-1.5 text-[1.25rem] font-semibold leading-tight text-white transition-colors group-hover:text-white">
+                      {entry.headline}
+                    </h2>
+                    {entry.summary && (
+                      <p class="mt-2 text-sm leading-relaxed text-[#555] transition-colors group-hover:text-[#666]">
+                        {entry.summary}
+                      </p>
+                    )}
+                  </div>
+
+                  <!-- Arrow -->
+                  <div
+                    class="mt-2 shrink-0 font-mono text-xs opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0 translate-x-[-4px]"
+                    style={`color: ${accent};`}
+                    aria-hidden="true"
+                  >→</div>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
       </section>
     </main>
     <Footer />

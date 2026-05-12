@@ -4,11 +4,13 @@ export const yilMeta = {
   date: '2026-05-02',
   headline: 'Maps, Margins & Making Taste',
   summary: 'Five things learned on May 2nd — where cycle time really lives, what responsive images finally got right, how to build codebases agents can read, and why designed habits beat guilty ones.',
+  accent: '#d97706',
 };
 
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
 ---
 
 <!doctype html>
@@ -246,35 +248,7 @@ import Footer from '@/components/Footer.astro';
         </div>
       </section>
 
-      <!-- Design Notes -->
-      <section class="border-t border-gray-100 bg-gray-50 dark:border-slate-800 dark:bg-slate-800/40">
-        <div class="mx-auto max-w-5xl px-6 py-12">
-          <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-gray-400 dark:text-slate-600">Design Notes</p>
-          <p class="mt-2 text-sm font-medium text-gray-600 dark:text-slate-400">YIL 2026-05-02 — Maps, Margins &amp; Making Taste</p>
-          <p class="mt-1 text-sm text-gray-400 dark:text-slate-600">A day of practical reckoning — where cycle time really hides, what responsive images finally got right, how agents read your room, and why designed habits beat guilty ones.</p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #d97706"></span>
-              <span class="font-mono text-[10px] text-gray-400 dark:text-slate-600">accent-1 / text-amber-600 — delivery</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #0284c7"></span>
-              <span class="font-mono text-[10px] text-gray-400 dark:text-slate-600">accent-2 / text-sky-600 — platform</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #7c3aed"></span>
-              <span class="font-mono text-[10px] text-gray-400 dark:text-slate-600">accent-3 / text-violet-600 — ai craft</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #e11d48"></span>
-              <span class="font-mono text-[10px] text-gray-400 dark:text-slate-600">accent-4 / text-rose-600 — practice</span>
-            </div>
-          </div>
-          <p class="mt-6 max-w-2xl text-sm leading-relaxed text-gray-400 dark:text-slate-600">
-            This is a warm, editorial light page — the visual equivalent of a well-curated morning newsletter. White background with colored section markers that feel like tabbed dividers: each learning cluster gets its own accent that appears in the category pill, section heading underline, code chips, and card borders. The value stream quote gets a full-bleed callout panel in amber-tinted cream, making it the emotional anchor before the content sections begin. Typography is confident — large hero headline, generous spacing, clean gray text hierarchy. The page should feel like opening something curated and intentional, not scrolling a feed.
-          </p>
-        </div>
-      </section>
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} />
     </main>
     <Footer />
   </body>

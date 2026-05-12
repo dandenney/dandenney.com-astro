@@ -5,11 +5,13 @@ export const yilMeta = {
   headline: 'More Than It Seemed',
   summary:
     "A silly Google Slides trick, a framework breaking from its roots, and a school that made me genuinely wish I was five years old again. Today's theme: the second layer is usually the interesting one.",
+  accent: '#059669',
 };
 
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
 ---
 
 <!doctype html>
@@ -477,72 +479,7 @@ import Footer from '@/components/Footer.astro';
         </div>
       </section>
 
-      <!-- Design Notes -->
-      <section class="border-t border-stone-200 bg-stone-100">
-        <div class="mx-auto max-w-5xl px-6 py-12">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-stone-400"
-            style="font-family: ui-monospace, 'Cascadia Code', Menlo, monospace; font-weight: 400;"
-          >
-            Design Notes
-          </p>
-          <p
-            class="mt-2 text-sm font-medium text-stone-600"
-            style="font-family: Georgia, 'Times New Roman', serif;"
-          >
-            YIL 2026-05-07 — More Than It Seemed
-          </p>
-          <p
-            class="mt-1 text-sm text-stone-400"
-            style="font-family: Georgia, 'Times New Roman', serif; font-weight: 400;"
-          >
-            Three discoveries — a silly tool trick, a framework outgrowing its origins, and a school
-            that made me want to be five again — all turned out to have more going on underneath the
-            surface.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #D97706"></span>
-              <span
-                class="text-[10px] text-stone-400"
-                style="font-family: ui-monospace, 'Cascadia Code', Menlo, monospace;"
-                >accent-1 / text-amber-600 — tooling / google slides</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #4F46E5"></span>
-              <span
-                class="text-[10px] text-stone-400"
-                style="font-family: ui-monospace, 'Cascadia Code', Menlo, monospace;"
-                >accent-2 / text-indigo-600 — frameworks / remix</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #059669"></span>
-              <span
-                class="text-[10px] text-stone-400"
-                style="font-family: ui-monospace, 'Cascadia Code', Menlo, monospace;"
-                >accent-3 / text-emerald-600 — education / alpha school</span
-              >
-            </div>
-          </div>
-          <p
-            class="mt-6 max-w-2xl text-sm leading-relaxed text-stone-400"
-            style="font-family: Georgia, 'Times New Roman', serif; font-weight: 400;"
-          >
-            This day's visual personality is warm and editorial — a personal learning journal entry,
-            not a tech blog post. The cream/stone surface and serif headline communicate "someone
-            thinking out loud" rather than "documentation." Three distinct accent colors (amber,
-            indigo, emerald) give each section its own identity without fighting each other, and the
-            dark-slate quote band provides the one moment of genuine contrast, anchoring Joe
-            Liemandt's line as the emotional center of the page. The layout is deliberately
-            unhurried: full-width prose opening, generous whitespace, and a steps layout for the
-            only genuinely step-based content (the Google Slides workflow). The through-line —
-            things with unexpected depth underneath — should feel implicit in the structure, not
-            stated again in every section.
-          </p>
-        </div>
-      </section>
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} />
     </main>
     <Footer />
   </body>

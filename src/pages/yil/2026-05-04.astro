@@ -5,11 +5,14 @@ export const yilMeta = {
   headline: 'Skills Are Routers, Not Documents',
   summary:
     "A good skill doesn't explain what to do — it decides what enters context, at what cost, and when to earn its place. The words matter, but the structure decides everything.",
+  accent: '#0066b1',
+  designRef: { name: 'BMW M', url: 'https://www.bmw.com' },
 };
 
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
 ---
 
 <!doctype html>
@@ -472,77 +475,7 @@ import Footer from '@/components/Footer.astro';
         </div>
       </section>
 
-      <!-- Design Notes -->
-      <section class="border-t border-neutral-800 bg-neutral-950">
-        <div class="mx-auto max-w-6xl px-6 py-12">
-          <p
-            class="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500"
-            style="font-family: 'JetBrains Mono', monospace;"
-          >
-            Design Notes
-          </p>
-          <p
-            class="mt-2 text-sm text-neutral-300"
-            style="font-family: Inter, sans-serif; font-weight: 700;"
-          >
-            YIL 2026-05-04 — Skills Are Routers, Not Documents
-          </p>
-          <p
-            class="mt-1 text-sm text-neutral-500"
-            style="font-family: Inter, sans-serif; font-weight: 300;"
-          >
-            A day of systems thinking about agent skill architecture, Tailwind class collision
-            audits, and the principle that content — not pre-baked UI — is what makes a page
-            distinctive, told through BMW M's engineered black-canvas visual language.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #0066b1"></span>
-              <span
-                class="font-mono text-[10px] text-neutral-500"
-                style="font-family: 'JetBrains Mono', monospace;"
-                >accent-1 / text-[#0066b1] — skills/routing/architecture</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #e22718"></span>
-              <span
-                class="font-mono text-[10px] text-neutral-500"
-                style="font-family: 'JetBrains Mono', monospace;"
-                >accent-2 / text-[#e22718] — tailwind collision/error/audit</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #1c69d4"></span>
-              <span
-                class="font-mono text-[10px] text-neutral-500"
-                style="font-family: 'JetBrains Mono', monospace;"
-                >accent-3 / text-[#1c69d4] — design systems/practitioners</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #0653b6"></span>
-              <span
-                class="font-mono text-[10px] text-neutral-500"
-                style="font-family: 'JetBrains Mono', monospace;"
-                >accent-4 / text-[#0653b6] — meta/content-driven uniqueness</span
-              >
-            </div>
-          </div>
-          <p
-            class="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-500"
-            style="font-family: Inter, sans-serif; font-weight: 300;"
-          >
-            This page ports BMW M's engineered black-canvas visual language onto a day of systems
-            thinking about agent skill architecture, class-name audit discipline, and content-driven
-            design. The pairing is precise: BMW M's aesthetic IS a routing system — every visual
-            decision has a rule, a cost, and a placement, exactly like a well-written skill
-            specification. The M tricolor stripe, used sparingly as a brand-register mark in the
-            original, becomes the page's only decorative element here, echoing how the day's core
-            insight uses constraint to create signal.
-          </p>
-        </div>
-      </section>
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
     </main>
     <Footer />
   </body>

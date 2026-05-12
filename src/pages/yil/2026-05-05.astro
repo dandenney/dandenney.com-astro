@@ -5,11 +5,14 @@ export const yilMeta = {
   headline: "Don't Fight the Role",
   summary:
     "When Discord auto-selects @Hermes the role instead of the bot, the answer isn't a different typing habit — it's eliminating the ambiguity from the setup.",
+  accent: '#024ad8',
+  designRef: { name: 'HP.com', url: 'https://www.hp.com' },
 };
 
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
 ---
 
 <!doctype html>
@@ -155,69 +158,7 @@ import Footer from '@/components/Footer.astro';
         </div>
       </section>
 
-      <!-- Design Notes -->
-      <section class="border-t border-gray-200 bg-gray-50">
-        <div class="mx-auto max-w-5xl px-6 py-12">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-[#636363]"
-            style="font-family: Manrope, sans-serif; font-weight: 400;"
-          >
-            Design Notes
-          </p>
-          <p
-            class="mt-2 text-sm text-[#3d3d3d]"
-            style="font-family: Manrope, sans-serif; font-weight: 600;"
-          >
-            YIL 2026-05-05 — Don't Fight the Role
-          </p>
-          <p
-            class="mt-1 text-sm text-[#636363]"
-            style="font-family: Manrope, sans-serif; font-weight: 400;"
-          >
-            Discord role vs. bot @mention ambiguity in the OpenClaw setup, told through HP's
-            commercial-catalog visual language of pure white canvas and reserved electric blue.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #024ad8"></span>
-              <span
-                class="text-[10px] text-[#636363]"
-                style="font-family: Manrope, sans-serif; font-weight: 400;"
-                >accent-1 / text-[#024ad8] — HP Electric Blue / process</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #1a1a1a"></span>
-              <span
-                class="text-[10px] text-[#636363]"
-                style="font-family: Manrope, sans-serif; font-weight: 400;"
-                >accent-2 / bg-[#1a1a1a] — Ink / quote slab</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #0e3191"></span>
-              <span
-                class="text-[10px] text-[#636363]"
-                style="font-family: Manrope, sans-serif; font-weight: 400;"
-                >accent-3 / text-[#0e3191] — Deep Navy / supporting elements</span
-              >
-            </div>
-          </div>
-          <p
-            class="mt-6 max-w-2xl text-sm leading-relaxed text-[#636363]"
-            style="font-family: Manrope, sans-serif; font-weight: 400;"
-          >
-            This page ports HP.com's commercial-catalog visual language onto the quietest possible
-            day — a Discord thread check-in with no links, no code, and no headline insight. The
-            pairing is intentional: HP's system is built for systematic, unhurried catalog
-            navigation, not editorial drama. A sparse entry deserves a clean, open surface. The
-            page follows HP's full surface rhythm (white canvas → ink-slab quote band → cloud
-            alternating band → white), with Electric Blue reserved for the two chevron decorations
-            and the single section pill — at most two blue signal elements per viewport, exactly as
-            the HP system specifies.
-          </p>
-        </div>
-      </section>
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
     </main>
     <Footer />
   </body>

@@ -1,0 +1,84 @@
+---
+interface Props {
+  currentDate: string;
+  accent?: string;
+  designRef?: { name: string; url: string };
+}
+
+const { currentDate, accent = '#666666', designRef } = Astro.props;
+
+const series = [
+  { date: '2026-05-02', headline: 'Maps, Margins & Making Taste', accent: '#d97706' },
+  { date: '2026-05-03', headline: 'The Gap Is the Feature', accent: '#cc785c' },
+  { date: '2026-05-04', headline: 'Skills Are Routers, Not Documents', accent: '#0066b1' },
+  { date: '2026-05-05', headline: "Don't Fight the Role", accent: '#024ad8' },
+  { date: '2026-05-06', headline: 'Execution Ends, Judgment Begins', accent: '#ff385c' },
+  { date: '2026-05-07', headline: 'More Than It Seemed', accent: '#059669' },
+  { date: '2026-05-10', headline: 'Give It the Destination, Not the Directions', accent: '#0066cc' },
+];
+
+const idx = series.findIndex((e) => e.date === currentDate);
+const prev = idx > 0 ? series[idx - 1] : null;
+const next = idx < series.length - 1 ? series[idx + 1] : null;
+---
+
+<nav aria-label="Series navigation" class="border-t" style={`border-color: ${accent}22;`}>
+  <div class="mx-auto max-w-5xl px-6 py-10">
+    <div class="flex items-center justify-between gap-4">
+      <!-- Prev -->
+      {prev ? (
+        <a
+          href={`/yil/${prev.date}`}
+          class="group flex max-w-xs flex-col gap-1 text-left"
+        >
+          <span
+            class="font-mono text-[10px] uppercase tracking-[0.15em] transition-colors"
+            style={`color: ${prev.accent}88;`}
+          >← Previous</span>
+          <span
+            class="text-sm font-medium leading-snug text-[#1d1d1f] transition-colors group-hover:underline"
+          >{prev.headline}</span>
+          <span class="font-mono text-[10px]" style={`color: ${prev.accent};`}>{prev.date}</span>
+        </a>
+      ) : <div />}
+
+      <!-- Center: all entries + colophon -->
+      <div class="flex flex-col items-center gap-2">
+        <a
+          href="/yil"
+          class="font-mono text-[10px] uppercase tracking-[0.2em] transition-opacity hover:opacity-70"
+          style={`color: ${accent};`}
+        >All Entries</a>
+        {designRef && (
+          <p class="font-mono text-[10px]" style="color: #999;">
+            Visual language:{' '}
+            <a
+              href={designRef.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-colors hover:underline"
+              style={`color: ${accent};`}
+            >{designRef.name}</a>
+          </p>
+        )}
+      </div>
+
+      <!-- Next -->
+      {next ? (
+        <a
+          href={`/yil/${next.date}`}
+          class="group flex max-w-xs flex-col gap-1 text-right"
+        >
+          <span
+            class="font-mono text-[10px] uppercase tracking-[0.15em] transition-colors"
+            style={`color: ${next.accent}88;`}
+          >Next →</span>
+          <span
+            class="text-sm font-medium leading-snug text-[#1d1d1f] transition-colors group-hover:underline"
+          >{next.headline}</span>
+          <span class="font-mono text-[10px]" style={`color: ${next.accent};`}>{next.date}</span>
+        </a>
+      ) : <div />}
+    </div>
+  </div>
+</nav>

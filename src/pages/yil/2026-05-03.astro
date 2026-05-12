@@ -5,11 +5,14 @@ export const yilMeta = {
   headline: 'The Gap Is the Feature',
   summary:
     "Reliability comes from the system boundary — the artifact between steps — not from trying harder. Today's lessons all traced back to that one idea.",
+  accent: '#cc785c',
+  designRef: { name: 'claude.ai', url: 'https://claude.ai' },
 };
 
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
 ---
 
 <!doctype html>
@@ -378,48 +381,7 @@ import Footer from '@/components/Footer.astro';
         </div>
       </section>
 
-      <!-- Design Notes -->
-      <section class="border-t border-[#e6dfd8] bg-[#efe9de]">
-        <div class="mx-auto max-w-6xl px-6 py-12">
-          <p class="font-mono text-[10px] uppercase tracking-[0.25em] text-[#6c6a64]">Design Notes</p>
-          <p class="mt-2 text-sm font-medium text-[#3d3d3a]">
-            YIL 2026-05-03 — The Gap Is the Feature
-          </p>
-          <p class="mt-1 text-sm text-[#6c6a64]">
-            A day of systems thinking — how artifacts, explicit constraints, and durable memory make
-            workflows reliable by construction rather than by effort, told through claude.com's warm
-            editorial visual language.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #cc785c"></span>
-              <span class="font-mono text-[10px] text-[#6c6a64]"
-                >accent-1 / text-[#cc785c] — specs as artifacts</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #5db8a6"></span>
-              <span class="font-mono text-[10px] text-[#6c6a64]"
-                >accent-2 / text-[#5db8a6] — durable memory</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #e8a55a"></span>
-              <span class="font-mono text-[10px] text-[#6c6a64]"
-                >accent-3 / text-[#e8a55a] — explicit beats implied</span
-              >
-            </div>
-          </div>
-          <p class="mt-6 max-w-2xl text-sm leading-relaxed text-[#6c6a64]">
-            This page ports claude.com's warm editorial visual language — cream canvas, slab-serif
-            display, coral + teal + amber accents, cream-to-dark surface rhythm — onto a day of
-            systems thinking about how artifacts and boundaries create reliable workflows. The pairing
-            is intentional: claude.com itself embodies the "reliability by construction" principle
-            with its disciplined design system, so using that language to describe the day's learning
-            creates a resonant visual metaphor.
-          </p>
-        </div>
-      </section>
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
     </main>
     <Footer />
   </body>
