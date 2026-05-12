@@ -34,7 +34,13 @@ const {
 } = Astro.props;
 
 const generateStructuredData = () => {
-  const baseData = {
+  const baseData: {
+    "@context": string;
+    name: string;
+    description: string;
+    url: string;
+    image?: string;
+  } = {
     "@context": "https://schema.org",
     "name": title,
     "description": description,

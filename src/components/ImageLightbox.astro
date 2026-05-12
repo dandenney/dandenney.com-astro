@@ -3,10 +3,10 @@
 ---
 <script>
   document.addEventListener('astro:page-load', () => {
-    const images = document.querySelectorAll('.longform img:not(.no-lightbox)');
+    const images = document.querySelectorAll<HTMLImageElement>('.longform img:not(.no-lightbox)');
     const body = document.body;
-    
-    const createLightbox = (img) => {
+
+    const createLightbox = (img: HTMLImageElement) => {
       const lightbox = document.createElement('div');
       lightbox.className = 'lightbox-overlay';
       

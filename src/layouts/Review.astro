@@ -5,6 +5,18 @@ import Footer from '../components/Footer.astro';
 import toTitleCase from '../helpers/toTitleCase.js';
 import { ClientRouter } from 'astro:transitions';
 
+interface Props {
+  city: string;
+  description: string;
+  state?: string;
+  tags?: string[];
+  heroImageAlt?: string;
+  heroImage?: string;
+  heroImageUrl?: string;
+  heroImageAttribution?: string;
+  title: string;
+}
+
 const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title } = Astro.props;
 ---
 

@@ -35,10 +35,12 @@ const breadcrumbItems = [
 // Get the post identifier (either from identifier prop or slug)
 const postIdentifier = identifier || slug;
 
-// Get related posts if they exist
+type SimilarPost = { draft?: boolean; similarity?: number; url: string; title: string; cloudinaryThumb?: string; thumbAlt?: string; summary?: string };
+const typedSimilarities = similarities as Record<string, SimilarPost[]>;
+
 const relatedPosts =
-  postIdentifier && similarities[postIdentifier]
-    ? similarities[postIdentifier]
+  postIdentifier && typedSimilarities[postIdentifier]
+    ? typedSimilarities[postIdentifier]
         .filter((post) => !post.draft)
         .sort((a, b) => (b.similarity ?? 0) - (a.similarity ?? 0))
         .slice(0, 2)

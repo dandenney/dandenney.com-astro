@@ -14,7 +14,7 @@ interface Props {
 }
 
 const {
-  src,
+  src: rawSrc,
   alt,
   width,
   height,
@@ -26,13 +26,11 @@ const {
   ...rest
 } = Astro.props;
 
-// Handle missing src - use a fallback
-if (!src) {
+if (!rawSrc) {
   console.warn('OptimizedImage: src prop is missing, using fallback');
-  src = "/posts/slackin.png"; // fallback image
 }
+const src = rawSrc || "/posts/slackin.png";
 
-// Check if it's a Cloudinary URL or local image
 const isCloudinary = src.includes('cloudinary.com');
 const isExternal = src.startsWith('http');
 ---
