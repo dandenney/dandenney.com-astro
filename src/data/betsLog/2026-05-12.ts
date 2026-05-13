@@ -22,7 +22,7 @@ const log: DayLog = {
       dtm: 10.5,
       recent: "L10 6/10",
       gameTime: "5:40 PM",
-      boardResult: "void",
+      boardResult: "win",
     },
     {
       id: "royals",
@@ -40,7 +40,7 @@ const log: DayLog = {
       dtm: 17.1,
       recent: "L10 8/10",
       gameTime: "6:40 PM",
-      boardResult: "void",
+      boardResult: "loss",
     },
     {
       id: "brewers",
@@ -58,7 +58,7 @@ const log: DayLog = {
       dtm: 8.4,
       recent: "L10 7/10",
       gameTime: "6:40 PM",
-      boardResult: "void",
+      boardResult: "win",
     },
     {
       id: "orioles",
@@ -76,7 +76,7 @@ const log: DayLog = {
       dtm: 6.2,
       recent: "L10 5/10",
       gameTime: "5:35 PM",
-      boardResult: "void",
+      boardResult: "loss",
     },
     {
       id: "marte",
@@ -94,7 +94,7 @@ const log: DayLog = {
       dtm: 4.6,
       recent: "L10 6/10",
       gameTime: "7:05 PM",
-      boardResult: "void",
+      boardResult: "win",
     },
     {
       id: "gore",
@@ -112,7 +112,7 @@ const log: DayLog = {
       dtm: 6.7,
       recent: "L8 6/8",
       gameTime: "7:05 PM",
-      boardResult: "void",
+      boardResult: "loss",
     },
   ],
 
@@ -126,7 +126,7 @@ const log: DayLog = {
       confidence: null,
       confidenceLabel: null,
       result: "correct",
-      resultNote: "Recommended PASS with C2 as paper Level-0 streak-control trial only. No actual wager placed; Martingale level unchanged.",
+      resultNote: "PASS protected the real bankroll. Paper lean C2 Under 9.5 lost (White Sox 6, Royals 5 — 11 total runs). No stake placed; Martingale level unchanged at 0.",
     },
     {
       id: "chatgpt",
@@ -137,7 +137,7 @@ const log: DayLog = {
       confidence: null,
       confidenceLabel: null,
       result: "correct",
-      resultNote: "Official PASS despite C2 being the best non-pass lean. Flagged board as insufficient for Martingale recovery; ~68–72% threshold not met. Board results pending reconciliation.",
+      resultNote: "Best real-bankroll process call: did not promote a 61–65% MLB under to a survival anchor. Paper lean C2 Under 9.5 lost; PASS avoided the loss.",
     },
     {
       id: "claude",
@@ -147,8 +147,8 @@ const log: DayLog = {
       pickLabel: "C2 Royals/Sox Under 9.5",
       confidence: 64,
       confidenceLabel: "win probability",
-      result: "correct",
-      resultNote: "Conditionally recommended C2 at 63–65% win probability if at Loss 0 or 1; warned against forcing at Loss 3. Board results pending reconciliation.",
+      result: "loss",
+      resultNote: "C2 Under 9.5 lost — White Sox 6, Royals 5; 11 total runs. Consensus T1 failed; useful warning against equating all/mostly-T1 with safety on MLB totals.",
     },
     {
       id: "gemini",
@@ -159,7 +159,7 @@ const log: DayLog = {
       confidence: 8.5,
       confidenceLabel: "Martingale safety score /10",
       result: "correct",
-      resultNote: "Preferred C1 Nationals +1.5 as highest raw win probability (66.2%), rating 8.5/10 for Martingale suitability. Board results pending reconciliation.",
+      resultNote: "C1 Nationals +1.5 won — Nationals beat Reds 10-4. Raw floor / run-line cushion read was right, though it was not independently confirmed by other harnesses.",
     },
     {
       id: "perplexity",
@@ -169,8 +169,8 @@ const log: DayLog = {
       pickLabel: "C2 Royals/Sox Under 9.5",
       confidence: 62,
       confidenceLabel: "practical win probability",
-      result: "correct",
-      resultNote: "Picked C2 as best Martingale leg; flagged C6 Gore walks as secondary T1 but more prop-fragile. Board results pending reconciliation.",
+      result: "loss",
+      resultNote: "C2 Under 9.5 lost — same false consensus as Claude. Gore over 1.5 walks also lost (Gore threw 8.0 IP, 1 BB), reinforcing the outlier-T1 pitcher-walk-prop downgrade.",
     },
   ],
 
@@ -187,7 +187,7 @@ const log: DayLog = {
     action: "PASS",
     reason: "No candidate cleared the Martingale survival threshold; C2 Royals/White Sox Under 9.5 paper-tracked as a Level-0 streak-control trial at -120. Dan explicitly chose not to bet. MLB-only board with best candidate at ~61–65% still exposed to bullpen and full-game total variance.",
     result: "correct",
-    resultNote: "No actual wager placed; Martingale ladder unchanged at Level 0. Paper lean C2 Royals/White Sox Under 9.5 outcome pending reconciliation.",
+    resultNote: "No actual wager placed; Martingale ladder unchanged at Level 0. Paper lean C2 Under 9.5 lost (White Sox 6, Royals 5 — 11 total runs). Board went 3-3: C1 Nationals +1.5, C3 Brewers ML, C5 Marte Under 1.5 TB won; C2, C4 Orioles +1.5, C6 Gore Over 1.5 walks lost.",
   },
 };
 
