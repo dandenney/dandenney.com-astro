@@ -1,0 +1,672 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-14',
+  headline: 'The Discipline Was Designed by a Human',
+  summary:
+    'Nashville AI Week confirmed that the real competitive edge is not smarter models but structured humans — recipes over prompts, decisions over data, domain knowledge over raw confidence.',
+  accent: '#1c69d4',
+  designRef: { name: 'BMW Corporate', url: 'https://www.bmw.com' },
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: The Discipline Was Designed by a Human | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <style>
+      @keyframes reveal {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes reveal {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+      }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible {
+        animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .yil-hero {
+        animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-white">
+    <main class="relative z-10 bg-white shadow-xs">
+      <Header />
+
+      <!-- ─── HERO: full-width-statement, dark navy (#1a2129), centered ─── -->
+      <section class="yil-hero" style="background: #1a2129;">
+        <div class="mx-auto max-w-6xl px-6 pb-24 pt-24">
+          <p
+            class="text-[10px] uppercase tracking-[0.25em]"
+            style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 400; color: #bbbbbb;"
+          >
+            2026-05-14 — Yesterday I Learned
+          </p>
+          <h1
+            class="mt-6 max-w-4xl text-white"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; line-height: 1.05; letter-spacing: 0;"
+          >
+            The Discipline Was Designed by a Human
+          </h1>
+          <p
+            class="mt-6 max-w-2xl"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65; color: #bbbbbb;"
+          >
+            Nashville AI Week wasn't about frontier models. It was a room full of people who get
+            stuff done — and the pattern across every talk was the same: AI succeeds when humans
+            extract tacit knowledge, write down decisions, build feedback loops, and use agents
+            inside clear structures.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─── SKILLS: white canvas, full-bleed-label, cards ─── -->
+      <section class="yil-section bg-white">
+        <!-- Full-bleed label treatment: 2px top border + uppercase label -->
+        <div class="border-t-2 border-blue-600 bg-blue-600/5 py-3">
+          <div class="mx-auto max-w-6xl px-6">
+            <p
+              class="text-[11px] font-bold uppercase text-blue-600"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+            >
+              Skills
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto max-w-6xl px-6 py-20">
+          <h2
+            class="max-w-2xl text-zinc-900"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
+          >
+            Every Team Has Someone Who Just Knows the Recipe
+          </h2>
+          <p
+            class="mt-6 max-w-2xl text-zinc-700"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+          >
+            Chris Thomas put it cleanly at Nashville AI Week: every team has someone who just knows
+            how to do something — the recipe lives in their head, not in a document. Your job is to
+            get it out of there and into a reusable skill. Teams that lose are prompting. Teams that
+            win are using skills.
+          </p>
+
+          <!-- Three rectangular insight cards — 0px border-radius, BMW-spec -->
+          <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1: The Recipe Extraction Method -->
+            <div class="border border-blue-600/30 bg-blue-600/10 p-6">
+              <p
+                class="text-[10px] font-bold uppercase text-blue-600"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+              >
+                Extraction
+              </p>
+              <h3
+                class="mt-2 text-base text-zinc-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; line-height: 1.3;"
+              >
+                Record. Transcribe. Create.
+              </h3>
+              <p
+                class="mt-3 text-sm text-zinc-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; line-height: 1.6;"
+              >
+                One-hour Zoom of someone solving a problem. Give Claude the transcript. Have it
+                create a skill. The recipe goes from one person's head to a reusable AI-operable
+                system.
+              </p>
+            </div>
+
+            <!-- Card 2: How Skills Fail -->
+            <div class="border border-blue-600/30 bg-blue-600/10 p-6">
+              <p
+                class="text-[10px] font-bold uppercase text-blue-600"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+              >
+                Failure Modes
+              </p>
+              <h3
+                class="mt-2 text-base text-zinc-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; line-height: 1.3;"
+              >
+                What Kills a Skill
+              </h3>
+              <p
+                class="mt-3 text-sm text-zinc-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; line-height: 1.6;"
+              >
+                Vague descriptions. Overlapping names. "What" without "why." A skill fails when
+                the context that makes it safe to run is missing from the spec itself.
+              </p>
+            </div>
+
+            <!-- Card 3: The Prototype Pattern -->
+            <div class="border border-blue-600/30 bg-blue-600/10 p-6 sm:col-span-2 lg:col-span-1">
+              <p
+                class="text-[10px] font-bold uppercase text-blue-600"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+              >
+                Prototype
+              </p>
+              <h3
+                class="mt-2 text-base text-zinc-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; line-height: 1.3;"
+              >
+                Unknown Unknowns
+              </h3>
+              <p
+                class="mt-3 text-sm text-zinc-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; line-height: 1.6;"
+              >
+                Matt Pocock's <code class="font-mono text-blue-600">/prototype</code> skill is for moments
+                you can only figure out by building — it generates radically different variations
+                and keeps a human in the loop to apply taste. AI can't see what it's building.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── STRUCTURE: white canvas, soft-grey card, full-bleed-label, split ─── -->
+      <section class="yil-section bg-white">
+        <!-- Full-bleed label treatment -->
+        <div class="border-t-2 border-blue-900 bg-blue-900/5 py-3">
+          <div class="mx-auto max-w-6xl px-6">
+            <p
+              class="text-[11px] font-bold uppercase text-blue-900"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+            >
+              Structure
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto max-w-6xl px-6 py-20">
+          <h2
+            class="max-w-3xl text-zinc-900"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
+          >
+            AI Isn't Fast. It's Disciplined. And That Discipline Was Designed by a Human.
+          </h2>
+
+          <!-- Split: prose left, spec-cell stats card right -->
+          <div class="mt-10 grid gap-10 lg:grid-cols-2">
+
+            <!-- Left: prose -->
+            <div class="space-y-5">
+              <p
+                class="text-zinc-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+              >
+                Brian Moyer spent his lunch slot at Nashville AI Week giving a professional review
+                of building <span class="font-bold text-zinc-900">concurrent.app</span> — a medical
+                family-sharing app — entirely with Claude and Replit. The collaboration loop: spec
+                to implementation, with agents checking each other in cycles.
+              </p>
+              <p
+                class="text-zinc-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+              >
+                <span class="font-bold text-zinc-900">AI is good at:</span> specs, scaffolding,
+                migrations, version logging, using the knowledge base.
+              </p>
+              <p
+                class="text-zinc-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+              >
+                <span class="font-bold text-zinc-900">AI is not good at:</span> column name
+                differences, one registration bug, product-vs-code decisions, quality judgments.
+                Those are human-driven — and they always will be.
+              </p>
+            </div>
+
+            <!-- Right: dark spec-cell card (BMW surface-dark style) -->
+            <div class="border border-blue-900/20 p-8" style="background: #1a2129;">
+
+              <!-- Spec cells: value top (700), label below (uppercase tracking) -->
+              <div class="grid grid-cols-3 gap-6">
+                <div>
+                  <p
+                    class="text-white"
+                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.1;"
+                  >
+                    2,191
+                  </p>
+                  <p
+                    class="mt-1 text-[10px] uppercase"
+                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #bbbbbb;"
+                  >
+                    Active Passing Tests
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="text-white"
+                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.1;"
+                  >
+                    109
+                  </p>
+                  <p
+                    class="mt-1 text-[10px] uppercase"
+                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #bbbbbb;"
+                  >
+                    Releases in 10 Weeks
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="text-white"
+                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.1;"
+                  >
+                    $450
+                  </p>
+                  <p
+                    class="mt-1 text-[10px] uppercase"
+                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #bbbbbb;"
+                  >
+                    Total Cost in 10 Weeks
+                  </p>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="my-6 border-t" style="border-color: rgba(255,255,255,0.08);"></div>
+
+              <!-- Inline quote -->
+              <blockquote>
+                <p
+                  class="text-sm leading-relaxed"
+                  style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; color: #bbbbbb;"
+                >
+                  "Use docs for disciplined memory. Structure helps avoid fatigued decisions."
+                </p>
+                <footer
+                  class="mt-3 text-[10px] uppercase"
+                  style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #6b7280;"
+                >
+                  Brian Moyer — concurrent.app
+                </footer>
+              </blockquote>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── QUOTE: standalone-dark-band, dark navy (#1a2129) ─── -->
+      <section class="yil-section" style="background: #1a2129;">
+        <div class="relative mx-auto max-w-6xl overflow-hidden px-6 py-24">
+          <!-- Large decorative quotation mark -->
+          <div
+            aria-hidden="true"
+            class="pointer-events-none absolute -left-2 -top-8 select-none text-[16rem] leading-none text-white"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; opacity: 0.05;"
+          >
+            "
+          </div>
+          <blockquote class="relative max-w-3xl">
+            <p
+              class="text-white"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 700; line-height: 1.2; letter-spacing: 0;"
+            >
+              Teams that lose are prompting. Teams that win are using skills.
+            </p>
+            <footer class="mt-6 flex items-center gap-3">
+              <div class="h-px w-8" style="background: rgba(28,105,212,0.6);"></div>
+              <cite
+                class="not-italic text-sm"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 400; color: #bbbbbb;"
+              >
+                Chris Thomas — Nashville AI Week 2026
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ─── DECISION SCIENCE: white canvas, full-bleed-label, prose ─── -->
+      <section class="yil-section bg-white">
+        <!-- Full-bleed label treatment -->
+        <div class="border-t-2 border-blue-700 bg-blue-700/5 py-3">
+          <div class="mx-auto max-w-6xl px-6">
+            <p
+              class="text-[11px] font-bold uppercase text-blue-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+            >
+              Decision Science
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto max-w-6xl px-6 py-20">
+          <h2
+            class="max-w-2xl text-zinc-900"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
+          >
+            ADRs, But for Everything
+          </h2>
+
+          <div class="mt-8 max-w-2xl space-y-5">
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              Tod Fetherling opened with a staggering frame: $400 billion lost annually from poor
+              decisions in the US economy. Not from bad data. From decisions made without the right
+              knowledge structure — "guesswork dressed up as analysis."
+            </p>
+
+            <!-- Plato pull-quote (inline, not standalone band) -->
+            <blockquote class="border-l-2 border-blue-700 py-1 pl-5">
+              <p
+                class="text-zinc-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.125rem; font-weight: 700; line-height: 1.5;"
+              >
+                "A good decision is based on knowledge, not on numbers."
+              </p>
+              <footer
+                class="mt-2 text-[11px] uppercase text-zinc-500"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.12em;"
+              >
+                Plato
+              </footer>
+            </blockquote>
+
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              Decision Sciences Research frames effective decision-making around three distinct
+              forms of understanding: <span class="font-bold text-zinc-900">Episteme</span>
+              (knowing that), <span class="font-bold text-zinc-900">Techne</span> (knowing how),
+              and <span class="font-bold text-zinc-900">Phronesis</span> (knowing when and why).
+              Data science covers the first two. The third is the missing layer — and it's the one
+              that keeps breaking.
+            </p>
+
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              The framing that hit hardest: What happened? → What do we do? → <em>Decision record.</em>
+              Architects have ADRs. We need the equivalent for product decisions, marketing calls,
+              AI workflow changes, and cross-functional tradeoffs. Not to slow things down — to make
+              the invisible knowledge visible and reusable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── DOMAIN KNOWLEDGE: white canvas, full-bleed-label, prose ─── -->
+      <section class="yil-section bg-white">
+        <!-- Full-bleed label treatment -->
+        <div class="border-t-2 border-sky-700 bg-sky-700/5 py-3">
+          <div class="mx-auto max-w-6xl px-6">
+            <p
+              class="text-[11px] font-bold uppercase text-sky-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
+            >
+              Domain Knowledge
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto max-w-6xl px-6 py-20">
+          <h2
+            class="max-w-3xl text-zinc-900"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
+          >
+            We're Not Building Frontier Models. We're Applying Technology to Real Problems.
+          </h2>
+
+          <div class="mt-8 max-w-2xl space-y-5">
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              Charlie Apigian set the framing for Nashville's AI identity before the first session
+              started: this is a community of people who <em>get stuff done</em>. Not frontier
+              model builders — people applying technology to real-world problems through people,
+              process, and domain knowledge.
+            </p>
+
+            <!-- Jon Salisbury inline pull-quote -->
+            <blockquote class="border-l-2 border-sky-700 py-1 pl-5">
+              <p
+                class="text-zinc-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.125rem; font-weight: 700; line-height: 1.5;"
+              >
+                "Where there is no room for error, trust will arise."
+              </p>
+              <footer
+                class="mt-2 text-[11px] uppercase text-zinc-500"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.12em;"
+              >
+                Jon Salisbury, CEO — Nexigen
+              </footer>
+            </blockquote>
+
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              Salisbury's caution about agents rang the clearest: they have confidence, not
+              competence. The $40–50M savings Nexigen generated came from replacing a team manually
+              reviewing data at speed with a system that <em>could not move quickly past errors</em>.
+              The constraint was the point.
+            </p>
+
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              Anuj Kapedia at Oak Ridge National Laboratory showed what domain knowledge looks like
+              at its furthest edge: digital twins of humans, built from CT scans, used to test
+              cancer treatments before touching a patient. Moving from reactive to proactive
+              medicine — and bypassing the ethical wall of animal testing.
+            </p>
+
+            <p
+              class="text-zinc-700"
+              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
+            >
+              The Titans AI panel hit a familiar note: fan experience, smart building management,
+              employee productivity. AI applied to a specific place with specific constraints — the
+              Disney parks model, optimizing for presence rather than scale. Brian Moyer's closing
+              line hung in the air: asked how far a solopreneur could take an AI-built product,
+              the answer was "probably farther than you think."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── REFERENCES: soft-grey footer ─── -->
+      <section class="yil-section bg-gray-100">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+          <p
+            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700;"
+          >
+            References
+          </p>
+          <div class="mt-6 space-y-4">
+
+            <!-- concurrent.app -->
+            <div class="flex items-start gap-3">
+              <span
+                class="mt-0.5 inline-flex shrink-0 items-center border border-blue-900/30 bg-blue-900/10 px-2.5 py-0.5 text-[10px] uppercase text-blue-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
+              >
+                Structure
+              </span>
+              <a
+                href="https://concurrent.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-zinc-700 underline decoration-zinc-400 transition-colors hover:decoration-blue-900"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
+              >
+                concurrent.app — Brian Moyer's AI-built medical app
+              </a>
+            </div>
+
+            <!-- Matt Pocock prototype skill -->
+            <div class="flex items-start gap-3">
+              <span
+                class="mt-0.5 inline-flex shrink-0 items-center border border-blue-600/30 bg-blue-600/10 px-2.5 py-0.5 text-[10px] uppercase text-blue-600"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
+              >
+                Skills
+              </span>
+              <span
+                class="text-sm text-zinc-500"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
+              >
+                Matt Pocock / prototype skill — no URL captured
+              </span>
+            </div>
+
+            <!-- Hack Tennessee -->
+            <div class="flex items-start gap-3">
+              <span
+                class="mt-0.5 inline-flex shrink-0 items-center border border-sky-700/30 bg-sky-700/10 px-2.5 py-0.5 text-[10px] uppercase text-sky-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
+              >
+                Community
+              </span>
+              <span
+                class="text-sm text-zinc-500"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
+              >
+                Hack Tennessee / Hackathons International — no URL captured
+              </span>
+            </div>
+
+            <!-- Oracle Academy -->
+            <div class="flex items-start gap-3">
+              <span
+                class="mt-0.5 inline-flex shrink-0 items-center border border-sky-700/30 bg-sky-700/10 px-2.5 py-0.5 text-[10px] uppercase text-sky-700"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
+              >
+                Community
+              </span>
+              <span
+                class="text-sm text-zinc-500"
+                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
+              >
+                Oracle Academy — free education K–12 and beyond — no URL captured
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
+
+      <!-- ─── DESIGN NOTES ─── -->
+      <section class="border-t border-gray-200 bg-gray-100">
+        <div class="mx-auto max-w-6xl px-6 py-12">
+          <p
+            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
+            style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 400;"
+          >
+            Design Notes
+          </p>
+          <p
+            class="mt-2 text-sm font-medium text-zinc-700"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif;"
+          >
+            YIL 2026-05-14 — The Discipline Was Designed by a Human
+          </p>
+          <p
+            class="mt-1 text-sm text-zinc-500"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
+          >
+            Nashville AI Week confirmed that the real competitive edge is not smarter models but
+            structured humans — recipes over prompts, decisions over data, domain knowledge over
+            raw confidence.
+          </p>
+          <!-- Accent swatches -->
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #1c69d4;"></span>
+              <span
+                class="text-[10px] text-zinc-500"
+                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
+              >accent-1 / skills</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #1e3a8a;"></span>
+              <span
+                class="text-[10px] text-zinc-500"
+                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
+              >accent-2 / structure</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #1d4ed8;"></span>
+              <span
+                class="text-[10px] text-zinc-500"
+                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
+              >accent-3 / decision-science</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #0369a1;"></span>
+              <span
+                class="text-[10px] text-zinc-500"
+                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
+              >accent-4 / domain-knowledge</span>
+            </div>
+          </div>
+          <!-- Overview prose from DESIGN.md -->
+          <p
+            class="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500"
+            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
+          >
+            This page ports BMW's corporate site visual language — measured, precision-engineered,
+            editorial — onto a day of conference notes about structured AI work. The fit is
+            intentional: BMW corporate and Nashville AI Week's dominant theme share the same DNA.
+            Both are about engineered precision over raw confidence, documented systems over
+            improvised speed, and humans in the loop to apply judgment that machines cannot supply.
+            White canvas (#ffffff) as the base surface, dark navy (#1a2129) for hero and quote
+            bands only, BMW Blue (#1c69d4) as the single primary accent with a scale of deeper
+            blues across sections, Inter 700/300 as the heavy-display/light-body editorial pair,
+            rectangular 0px corners everywhere, UPPERCASE section labels, and 80px section rhythm.
+            No drop shadows — depth comes entirely from color-block contrast.
+          </p>
+        </div>
+      </section>
+
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
