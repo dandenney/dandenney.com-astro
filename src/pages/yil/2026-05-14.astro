@@ -4,7 +4,7 @@ export const yilMeta = {
   date: '2026-05-14',
   headline: 'The Discipline Was Designed by a Human',
   summary:
-    'Nashville AI Week confirmed that the real competitive edge is not smarter models but structured humans — recipes over prompts, decisions over data, domain knowledge over raw confidence.',
+    'Nashville AI Week confirmed that the real competitive edge is not smarter models but structured humans: recipes over prompts, decisions over data, domain knowledge over raw confidence.',
   accent: '#1c69d4',
   designRef: { name: 'BMW Corporate', url: 'https://www.bmw.com' },
 };
@@ -13,6 +13,57 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const skillCards = [
+  {
+    label: 'Extraction',
+    title: 'Record. Transcribe. Create.',
+    copy:
+      "One-hour Zoom of someone solving a problem. Give Claude the transcript. Have it create a skill. The recipe moves from one person's head into a reusable AI-operable system.",
+  },
+  {
+    label: 'Failure Modes',
+    title: 'What Kills a Skill',
+    copy:
+      'Vague descriptions. Overlapping names. What without why. A skill fails when the context that makes it safe to run is missing from the spec itself.',
+  },
+  {
+    label: 'Prototype',
+    title: 'Unknown Unknowns',
+    copy:
+      "Matt Pocock's /prototype skill is for moments you can only figure out by building. It generates radically different variations and keeps a human in the loop to apply taste.",
+  },
+];
+
+const metrics = [
+  { value: '2,191', label: 'Active Passing Tests' },
+  { value: '109', label: 'Releases in 10 Weeks' },
+  { value: '$450', label: 'Total Cost in 10 Weeks' },
+];
+
+const references = [
+  {
+    label: 'Structure',
+    tone: 'navy',
+    title: "concurrent.app, Brian Moyer's AI-built medical app",
+    url: 'https://concurrent.app',
+  },
+  {
+    label: 'Skills',
+    tone: 'blue',
+    title: 'Matt Pocock / prototype skill, no URL captured',
+  },
+  {
+    label: 'Community',
+    tone: 'sky',
+    title: 'Hack Tennessee / Hackathons International, no URL captured',
+  },
+  {
+    label: 'Community',
+    tone: 'sky',
+    title: 'Oracle Academy, free education K-12 and beyond, no URL captured',
+  },
+];
 ---
 
 <!doctype html>
@@ -25,467 +76,673 @@ import YilSeriesNav from '@/components/YilSeriesNav.astro';
       datePublished={new Date(yilMeta.date)}
     />
     <style>
-      @keyframes reveal {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
+      :root {
+        --yil-white: oklch(0.99 0.003 255);
+        --yil-surface: oklch(0.96 0.004 255);
+        --yil-ink: oklch(0.22 0.018 255);
+        --yil-muted: oklch(0.46 0.018 255);
+        --yil-soft: oklch(0.77 0.012 255);
+        --yil-dark: oklch(0.23 0.03 255);
+        --yil-dark-2: oklch(0.18 0.024 255);
+        --yil-blue: oklch(0.54 0.18 260);
+        --yil-navy: oklch(0.34 0.12 260);
+        --yil-sky: oklch(0.48 0.14 235);
+        --font-display: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
+
+      @keyframes reveal {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes scan {
+        from { transform: translateX(-30%); opacity: 0; }
+        18% { opacity: 1; }
+        to { transform: translateX(108%); opacity: 0; }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         @keyframes reveal {
           from { opacity: 0; }
-          to   { opacity: 1; }
+          to { opacity: 1; }
+        }
+
+        @keyframes scan {
+          from { opacity: 0.35; }
+          to { opacity: 0.35; }
         }
       }
-      .yil-section { opacity: 0; }
+
+      body {
+        background: var(--yil-white);
+      }
+
+      .yil-shell {
+        background: var(--yil-white);
+        color: var(--yil-ink);
+        font-family: var(--font-display);
+      }
+
+      .yil-hero,
+      .yil-section {
+        opacity: 0;
+      }
+
+      .yil-hero {
+        animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        background:
+          linear-gradient(90deg, color-mix(in oklch, var(--yil-dark) 96%, var(--yil-blue)), var(--yil-dark-2)),
+          var(--yil-dark);
+        color: var(--yil-white);
+      }
+
       .yil-section.is-visible {
         animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
-      .yil-hero {
-        animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+      .wrap {
+        margin-inline: auto;
+        max-width: 72rem;
+        padding-inline: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 7vw, 5.5rem);
+        grid-template-columns: minmax(0, 1fr);
+        padding-block: clamp(5rem, 12vw, 8.5rem);
+      }
+
+      @media (min-width: 900px) {
+        .hero-grid {
+          align-items: end;
+          grid-template-columns: minmax(0, 1.08fr) minmax(23rem, 0.72fr);
+        }
+      }
+
+      .eyebrow {
+        color: var(--yil-soft);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .hero-title {
+        font-size: clamp(3rem, 5.6vw, 4.85rem);
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1.02;
+        margin-top: 1.25rem;
+        max-width: 15ch;
+        text-wrap: balance;
+      }
+
+      .lede {
+        color: var(--yil-soft);
+        font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+        font-weight: 300;
+        line-height: 1.68;
+        margin-top: 1.75rem;
+        max-width: 42rem;
+      }
+
+      .hero-visual {
+        border: 1px solid color-mix(in oklch, var(--yil-blue) 45%, transparent);
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-visual::before {
+        animation: scan 4.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+        background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--yil-blue) 38%, transparent), transparent);
+        content: "";
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 34%;
+        z-index: 2;
+      }
+
+      .hero-visual img {
+        aspect-ratio: 16 / 9;
+        display: block;
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .hero-visual figcaption {
+        background: color-mix(in oklch, var(--yil-dark) 84%, transparent);
+        border-top: 1px solid color-mix(in oklch, var(--yil-blue) 38%, transparent);
+        bottom: 0;
+        color: var(--yil-soft);
+        display: grid;
+        gap: 0.55rem;
+        left: 0;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        z-index: 3;
+      }
+
+      .hero-visual figcaption strong {
+        color: var(--yil-white);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+
+      .hero-visual figcaption span {
+        font-size: 0.82rem;
+        font-weight: 300;
+        line-height: 1.45;
+      }
+
+      .label-bar {
+        border-top: 2px solid var(--section-accent);
+        background: color-mix(in oklch, var(--section-accent) 8%, var(--yil-white));
+        padding-block: 0.78rem;
+      }
+
+      .label-bar p,
+      .micro-label {
+        color: var(--section-accent);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .section-body {
+        padding-block: clamp(4.5rem, 8vw, 6rem);
+      }
+
+      .section-title {
+        color: var(--yil-ink);
+        font-size: clamp(1.95rem, 4vw, 3.35rem);
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1.02;
+        max-width: 14ch;
+      }
+
+      .section-title.wide {
+        max-width: 20ch;
+      }
+
+      .prose {
+        display: grid;
+        gap: 1.18rem;
+        max-width: 45rem;
+      }
+
+      .prose p,
+      .body-copy {
+        color: var(--yil-muted);
+        font-size: clamp(1rem, 1.35vw, 1.08rem);
+        font-weight: 300;
+        line-height: 1.68;
+      }
+
+      .prose strong,
+      .body-copy strong {
+        color: var(--yil-ink);
+        font-weight: 800;
+      }
+
+      .insight-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+        margin-top: 2.75rem;
+      }
+
+      .insight-card {
+        background: color-mix(in oklch, var(--section-accent) 9%, var(--yil-white));
+        border: 1px solid color-mix(in oklch, var(--section-accent) 32%, var(--yil-white));
+        padding: clamp(1.35rem, 2.3vw, 1.8rem);
+      }
+
+      .insight-card h3 {
+        color: var(--yil-ink);
+        font-size: 1.08rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin-top: 0.55rem;
+      }
+
+      .insight-card p:last-child {
+        color: var(--yil-muted);
+        font-size: 0.94rem;
+        font-weight: 300;
+        line-height: 1.62;
+        margin-top: 0.9rem;
+      }
+
+      .split {
+        display: grid;
+        gap: clamp(2.2rem, 5vw, 4rem);
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 2.75rem;
+      }
+
+      @media (min-width: 860px) {
+        .split {
+          grid-template-columns: minmax(0, 1fr) minmax(21rem, 0.82fr);
+        }
+      }
+
+      .metric-panel {
+        align-self: start;
+        background: var(--yil-dark);
+        border: 1px solid color-mix(in oklch, var(--section-accent) 28%, transparent);
+        color: var(--yil-white);
+        padding: clamp(1.4rem, 3vw, 2rem);
+      }
+
+      .metric-grid {
+        display: grid;
+        gap: 1.2rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      @media (max-width: 560px) {
+        .metric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .metric-value {
+        font-size: clamp(1.75rem, 4vw, 2.6rem);
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .metric-label {
+        color: var(--yil-soft);
+        font-size: 0.64rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        line-height: 1.35;
+        margin-top: 0.55rem;
+        text-transform: uppercase;
+      }
+
+      .quote-panel {
+        background: color-mix(in oklch, var(--section-accent) 7%, var(--yil-white));
+        border: 1px solid color-mix(in oklch, var(--section-accent) 30%, var(--yil-white));
+        margin-block: 1.45rem;
+        padding: clamp(1.15rem, 2vw, 1.5rem);
+      }
+
+      .quote-panel p {
+        color: var(--yil-ink);
+        font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .quote-panel footer,
+      .metric-panel footer {
+        color: color-mix(in oklch, var(--yil-muted) 78%, var(--yil-white));
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        line-height: 1.35;
+        margin-top: 0.9rem;
+        text-transform: uppercase;
+      }
+
+      .metric-panel .quote-panel {
+        background: transparent;
+        border-color: color-mix(in oklch, var(--yil-white) 14%, transparent);
+        border-width: 1px 0 0;
+        margin-bottom: 0;
+        margin-top: 1.7rem;
+        padding: 1.4rem 0 0;
+      }
+
+      .metric-panel .quote-panel p {
+        color: var(--yil-soft);
+        font-size: 0.95rem;
+        font-weight: 300;
+      }
+
+      .dark-band {
+        background: var(--yil-dark);
+        color: var(--yil-white);
+      }
+
+      .quote-band {
+        overflow: hidden;
+        padding-block: clamp(5rem, 10vw, 7rem);
+        position: relative;
+      }
+
+      .quote-band::before {
+        color: color-mix(in oklch, var(--yil-white) 8%, transparent);
+        content: "01";
+        font-size: clamp(11rem, 25vw, 20rem);
+        font-weight: 800;
+        line-height: 0.75;
+        position: absolute;
+        right: clamp(1rem, 6vw, 5rem);
+        top: 1rem;
+      }
+
+      .quote-band blockquote {
+        max-width: 48rem;
+        position: relative;
+      }
+
+      .quote-band p {
+        color: var(--yil-white);
+        font-size: clamp(2rem, 5vw, 4.35rem);
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1.02;
+      }
+
+      .quote-band footer {
+        align-items: center;
+        color: var(--yil-soft);
+        display: flex;
+        font-size: 0.92rem;
+        font-weight: 300;
+        gap: 0.9rem;
+        margin-top: 1.8rem;
+      }
+
+      .quote-band footer::before {
+        background: var(--yil-blue);
+        content: "";
+        display: block;
+        height: 2px;
+        width: 2.5rem;
+      }
+
+      .refs-section,
+      .notes-section {
+        background: var(--yil-surface);
+      }
+
+      .refs-list {
+        display: grid;
+        gap: 0.85rem;
+        margin-top: 1.5rem;
+      }
+
+      .ref-item {
+        align-items: start;
+        display: flex;
+        gap: 0.9rem;
+      }
+
+      .ref-label {
+        border: 1px solid color-mix(in oklch, var(--ref-accent) 34%, var(--yil-white));
+        color: var(--ref-accent);
+        flex: 0 0 auto;
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        padding: 0.44rem 0.58rem;
+        text-transform: uppercase;
+      }
+
+      .ref-item a,
+      .ref-item span:last-child {
+        color: var(--yil-muted);
+        font-size: 0.92rem;
+        font-weight: 300;
+        line-height: 1.45;
+      }
+
+      .ref-item a {
+        text-decoration: underline;
+        text-decoration-color: color-mix(in oklch, var(--ref-accent) 44%, var(--yil-white));
+        text-underline-offset: 0.18em;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease;
+      }
+
+      .ref-item a:hover {
+        color: var(--yil-ink);
+        text-decoration-color: var(--ref-accent);
+      }
+
+      .notes-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      @media (min-width: 780px) {
+        .notes-grid {
+          grid-template-columns: minmax(0, 0.62fr) minmax(16rem, 0.38fr);
+        }
+      }
+
+      .swatches {
+        display: grid;
+        gap: 0.65rem;
+      }
+
+      .swatch {
+        align-items: center;
+        color: var(--yil-muted);
+        display: flex;
+        font-size: 0.72rem;
+        font-weight: 700;
+        gap: 0.55rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .swatch::before {
+        background: var(--swatch);
+        content: "";
+        display: block;
+        height: 0.7rem;
+        width: 0.7rem;
       }
     </style>
     <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
   </head>
-  <body class="bg-white">
-    <main class="relative z-10 bg-white shadow-xs">
+  <body>
+    <main class="yil-shell relative z-10">
       <Header />
 
-      <!-- ─── HERO: full-width-statement, dark navy (#1a2129), centered ─── -->
-      <section class="yil-hero" style="background: #1a2129;">
-        <div class="mx-auto max-w-6xl px-6 pb-24 pt-24">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em]"
-            style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 400; color: #bbbbbb;"
-          >
-            2026-05-14 — Yesterday I Learned
-          </p>
-          <h1
-            class="mt-6 max-w-4xl text-white"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; line-height: 1.05; letter-spacing: 0;"
-          >
-            The Discipline Was Designed by a Human
-          </h1>
-          <p
-            class="mt-6 max-w-2xl"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65; color: #bbbbbb;"
-          >
-            Nashville AI Week wasn't about frontier models. It was a room full of people who get
-            stuff done — and the pattern across every talk was the same: AI succeeds when humans
-            extract tacit knowledge, write down decisions, build feedback loops, and use agents
-            inside clear structures.
-          </p>
+      <section class="yil-hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">2026-05-14 / Yesterday I Learned</p>
+            <h1 class="hero-title">The Discipline Was Designed by a Human</h1>
+            <p class="lede">
+              Nashville AI Week wasn't about frontier models. It was a room full of people who get
+              stuff done, and the pattern across every talk was the same: AI succeeds when humans
+              extract tacit knowledge, write down decisions, build feedback loops, and use agents
+              inside clear structures.
+            </p>
+          </div>
+
+          <figure class="hero-visual">
+            <img
+              src="/yil/2026-05-14-human-designed-discipline.png"
+              width="1672"
+              height="941"
+              alt="A dark precision-engineered tabletop arrangement of rails, acrylic plates, blue markers, and paper decision cards."
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption>
+              <strong>Human-Designed Discipline</strong>
+              <span>Recipes, records, and constraints arranged before the agent ever starts moving.</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- ─── SKILLS: white canvas, full-bleed-label, cards ─── -->
-      <section class="yil-section bg-white">
-        <!-- Full-bleed label treatment: 2px top border + uppercase label -->
-        <div class="border-t-2 border-blue-600 bg-blue-600/5 py-3">
-          <div class="mx-auto max-w-6xl px-6">
-            <p
-              class="text-[11px] font-bold uppercase text-blue-600"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-            >
-              Skills
-            </p>
-          </div>
+      <section class="yil-section" style="--section-accent: var(--yil-blue);">
+        <div class="label-bar">
+          <div class="wrap"><p>Skills</p></div>
         </div>
-        <div class="mx-auto max-w-6xl px-6 py-20">
-          <h2
-            class="max-w-2xl text-zinc-900"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
-          >
-            Every Team Has Someone Who Just Knows the Recipe
-          </h2>
-          <p
-            class="mt-6 max-w-2xl text-zinc-700"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-          >
+        <div class="wrap section-body">
+          <h2 class="section-title wide">Every Team Has Someone Who Just Knows the Recipe</h2>
+          <p class="body-copy mt-6 max-w-2xl">
             Chris Thomas put it cleanly at Nashville AI Week: every team has someone who just knows
-            how to do something — the recipe lives in their head, not in a document. Your job is to
+            how to do something. The recipe lives in their head, not in a document. Your job is to
             get it out of there and into a reusable skill. Teams that lose are prompting. Teams that
             win are using skills.
           </p>
 
-          <!-- Three rectangular insight cards — 0px border-radius, BMW-spec -->
-          <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-
-            <!-- Card 1: The Recipe Extraction Method -->
-            <div class="border border-blue-600/30 bg-blue-600/10 p-6">
-              <p
-                class="text-[10px] font-bold uppercase text-blue-600"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-              >
-                Extraction
-              </p>
-              <h3
-                class="mt-2 text-base text-zinc-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; line-height: 1.3;"
-              >
-                Record. Transcribe. Create.
-              </h3>
-              <p
-                class="mt-3 text-sm text-zinc-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; line-height: 1.6;"
-              >
-                One-hour Zoom of someone solving a problem. Give Claude the transcript. Have it
-                create a skill. The recipe goes from one person's head to a reusable AI-operable
-                system.
-              </p>
-            </div>
-
-            <!-- Card 2: How Skills Fail -->
-            <div class="border border-blue-600/30 bg-blue-600/10 p-6">
-              <p
-                class="text-[10px] font-bold uppercase text-blue-600"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-              >
-                Failure Modes
-              </p>
-              <h3
-                class="mt-2 text-base text-zinc-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; line-height: 1.3;"
-              >
-                What Kills a Skill
-              </h3>
-              <p
-                class="mt-3 text-sm text-zinc-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; line-height: 1.6;"
-              >
-                Vague descriptions. Overlapping names. "What" without "why." A skill fails when
-                the context that makes it safe to run is missing from the spec itself.
-              </p>
-            </div>
-
-            <!-- Card 3: The Prototype Pattern -->
-            <div class="border border-blue-600/30 bg-blue-600/10 p-6 sm:col-span-2 lg:col-span-1">
-              <p
-                class="text-[10px] font-bold uppercase text-blue-600"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-              >
-                Prototype
-              </p>
-              <h3
-                class="mt-2 text-base text-zinc-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; line-height: 1.3;"
-              >
-                Unknown Unknowns
-              </h3>
-              <p
-                class="mt-3 text-sm text-zinc-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; line-height: 1.6;"
-              >
-                Matt Pocock's <code class="font-mono text-blue-600">/prototype</code> skill is for moments
-                you can only figure out by building — it generates radically different variations
-                and keeps a human in the loop to apply taste. AI can't see what it's building.
-              </p>
-            </div>
-
+          <div class="insight-grid">
+            {skillCards.map((card) => (
+              <article class="insight-card">
+                <p class="micro-label">{card.label}</p>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <!-- ─── STRUCTURE: white canvas, soft-grey card, full-bleed-label, split ─── -->
-      <section class="yil-section bg-white">
-        <!-- Full-bleed label treatment -->
-        <div class="border-t-2 border-blue-900 bg-blue-900/5 py-3">
-          <div class="mx-auto max-w-6xl px-6">
-            <p
-              class="text-[11px] font-bold uppercase text-blue-900"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-            >
-              Structure
-            </p>
-          </div>
+      <section class="yil-section" style="--section-accent: var(--yil-navy);">
+        <div class="label-bar">
+          <div class="wrap"><p>Structure</p></div>
         </div>
-        <div class="mx-auto max-w-6xl px-6 py-20">
-          <h2
-            class="max-w-3xl text-zinc-900"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
-          >
-            AI Isn't Fast. It's Disciplined. And That Discipline Was Designed by a Human.
-          </h2>
+        <div class="wrap section-body">
+          <h2 class="section-title wide">AI Isn't Fast. It's Disciplined. And That Discipline Was Designed by a Human.</h2>
 
-          <!-- Split: prose left, spec-cell stats card right -->
-          <div class="mt-10 grid gap-10 lg:grid-cols-2">
-
-            <!-- Left: prose -->
-            <div class="space-y-5">
-              <p
-                class="text-zinc-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-              >
+          <div class="split">
+            <div class="prose">
+              <p>
                 Brian Moyer spent his lunch slot at Nashville AI Week giving a professional review
-                of building <span class="font-bold text-zinc-900">concurrent.app</span> — a medical
-                family-sharing app — entirely with Claude and Replit. The collaboration loop: spec
-                to implementation, with agents checking each other in cycles.
+                of building <strong>concurrent.app</strong>, a medical family-sharing app, entirely
+                with Claude and Replit. The collaboration loop: spec to implementation, with agents
+                checking each other in cycles.
               </p>
-              <p
-                class="text-zinc-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-              >
-                <span class="font-bold text-zinc-900">AI is good at:</span> specs, scaffolding,
-                migrations, version logging, using the knowledge base.
+              <p>
+                <strong>AI is good at:</strong> specs, scaffolding, migrations, version logging,
+                using the knowledge base.
               </p>
-              <p
-                class="text-zinc-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-              >
-                <span class="font-bold text-zinc-900">AI is not good at:</span> column name
-                differences, one registration bug, product-vs-code decisions, quality judgments.
-                Those are human-driven — and they always will be.
+              <p>
+                <strong>AI is not good at:</strong> column name differences, one registration bug,
+                product-vs-code decisions, quality judgments. Those are human-driven, and they
+                always will be.
               </p>
             </div>
 
-            <!-- Right: dark spec-cell card (BMW surface-dark style) -->
-            <div class="border border-blue-900/20 p-8" style="background: #1a2129;">
-
-              <!-- Spec cells: value top (700), label below (uppercase tracking) -->
-              <div class="grid grid-cols-3 gap-6">
-                <div>
-                  <p
-                    class="text-white"
-                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.1;"
-                  >
-                    2,191
-                  </p>
-                  <p
-                    class="mt-1 text-[10px] uppercase"
-                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #bbbbbb;"
-                  >
-                    Active Passing Tests
-                  </p>
-                </div>
-                <div>
-                  <p
-                    class="text-white"
-                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.1;"
-                  >
-                    109
-                  </p>
-                  <p
-                    class="mt-1 text-[10px] uppercase"
-                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #bbbbbb;"
-                  >
-                    Releases in 10 Weeks
-                  </p>
-                </div>
-                <div>
-                  <p
-                    class="text-white"
-                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.1;"
-                  >
-                    $450
-                  </p>
-                  <p
-                    class="mt-1 text-[10px] uppercase"
-                    style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #bbbbbb;"
-                  >
-                    Total Cost in 10 Weeks
-                  </p>
-                </div>
+            <aside class="metric-panel">
+              <div class="metric-grid">
+                {metrics.map((metric) => (
+                  <div>
+                    <p class="metric-value">{metric.value}</p>
+                    <p class="metric-label">{metric.label}</p>
+                  </div>
+                ))}
               </div>
 
-              <!-- Divider -->
-              <div class="my-6 border-t" style="border-color: rgba(255,255,255,0.08);"></div>
-
-              <!-- Inline quote -->
-              <blockquote>
-                <p
-                  class="text-sm leading-relaxed"
-                  style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300; color: #bbbbbb;"
-                >
-                  "Use docs for disciplined memory. Structure helps avoid fatigued decisions."
-                </p>
-                <footer
-                  class="mt-3 text-[10px] uppercase"
-                  style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.15em; color: #6b7280;"
-                >
-                  Brian Moyer — concurrent.app
-                </footer>
+              <blockquote class="quote-panel">
+                <p>"Use docs for disciplined memory. Structure helps avoid fatigued decisions."</p>
+                <footer>Brian Moyer / concurrent.app</footer>
               </blockquote>
-            </div>
-
+            </aside>
           </div>
         </div>
       </section>
 
-      <!-- ─── QUOTE: standalone-dark-band, dark navy (#1a2129) ─── -->
-      <section class="yil-section" style="background: #1a2129;">
-        <div class="relative mx-auto max-w-6xl overflow-hidden px-6 py-24">
-          <!-- Large decorative quotation mark -->
-          <div
-            aria-hidden="true"
-            class="pointer-events-none absolute -left-2 -top-8 select-none text-[16rem] leading-none text-white"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; opacity: 0.05;"
-          >
-            "
-          </div>
-          <blockquote class="relative max-w-3xl">
-            <p
-              class="text-white"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 700; line-height: 1.2; letter-spacing: 0;"
-            >
-              Teams that lose are prompting. Teams that win are using skills.
-            </p>
-            <footer class="mt-6 flex items-center gap-3">
-              <div class="h-px w-8" style="background: rgba(28,105,212,0.6);"></div>
-              <cite
-                class="not-italic text-sm"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 400; color: #bbbbbb;"
-              >
-                Chris Thomas — Nashville AI Week 2026
-              </cite>
-            </footer>
+      <section class="yil-section dark-band">
+        <div class="wrap quote-band">
+          <blockquote>
+            <p>Teams that lose are prompting. Teams that win are using skills.</p>
+            <footer><cite>Chris Thomas / Nashville AI Week 2026</cite></footer>
           </blockquote>
         </div>
       </section>
 
-      <!-- ─── DECISION SCIENCE: white canvas, full-bleed-label, prose ─── -->
-      <section class="yil-section bg-white">
-        <!-- Full-bleed label treatment -->
-        <div class="border-t-2 border-blue-700 bg-blue-700/5 py-3">
-          <div class="mx-auto max-w-6xl px-6">
-            <p
-              class="text-[11px] font-bold uppercase text-blue-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-            >
-              Decision Science
-            </p>
-          </div>
+      <section class="yil-section" style="--section-accent: oklch(0.48 0.16 260);">
+        <div class="label-bar">
+          <div class="wrap"><p>Decision Science</p></div>
         </div>
-        <div class="mx-auto max-w-6xl px-6 py-20">
-          <h2
-            class="max-w-2xl text-zinc-900"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
-          >
-            ADRs, But for Everything
-          </h2>
+        <div class="wrap section-body">
+          <h2 class="section-title">ADRs, But for Everything</h2>
 
-          <div class="mt-8 max-w-2xl space-y-5">
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
+          <div class="prose mt-8">
+            <p>
               Tod Fetherling opened with a staggering frame: $400 billion lost annually from poor
               decisions in the US economy. Not from bad data. From decisions made without the right
-              knowledge structure — "guesswork dressed up as analysis."
+              knowledge structure, "guesswork dressed up as analysis."
             </p>
 
-            <!-- Plato pull-quote (inline, not standalone band) -->
-            <blockquote class="border-l-2 border-blue-700 py-1 pl-5">
-              <p
-                class="text-zinc-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.125rem; font-weight: 700; line-height: 1.5;"
-              >
-                "A good decision is based on knowledge, not on numbers."
-              </p>
-              <footer
-                class="mt-2 text-[11px] uppercase text-zinc-500"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.12em;"
-              >
-                Plato
-              </footer>
+            <blockquote class="quote-panel">
+              <p>"A good decision is based on knowledge, not on numbers."</p>
+              <footer>Plato</footer>
             </blockquote>
 
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
+            <p>
               Decision Sciences Research frames effective decision-making around three distinct
-              forms of understanding: <span class="font-bold text-zinc-900">Episteme</span>
-              (knowing that), <span class="font-bold text-zinc-900">Techne</span> (knowing how),
-              and <span class="font-bold text-zinc-900">Phronesis</span> (knowing when and why).
-              Data science covers the first two. The third is the missing layer — and it's the one
-              that keeps breaking.
+              forms of understanding: <strong>Episteme</strong> (knowing that), <strong>Techne</strong>
+              (knowing how), and <strong>Phronesis</strong> (knowing when and why). Data science
+              covers the first two. The third is the missing layer, and it's the one that keeps
+              breaking.
             </p>
 
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
-              The framing that hit hardest: What happened? → What do we do? → <em>Decision record.</em>
+            <p>
+              The framing that hit hardest: What happened? What do we do? Decision record.
               Architects have ADRs. We need the equivalent for product decisions, marketing calls,
-              AI workflow changes, and cross-functional tradeoffs. Not to slow things down — to make
+              AI workflow changes, and cross-functional tradeoffs. Not to slow things down, to make
               the invisible knowledge visible and reusable.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- ─── DOMAIN KNOWLEDGE: white canvas, full-bleed-label, prose ─── -->
-      <section class="yil-section bg-white">
-        <!-- Full-bleed label treatment -->
-        <div class="border-t-2 border-sky-700 bg-sky-700/5 py-3">
-          <div class="mx-auto max-w-6xl px-6">
-            <p
-              class="text-[11px] font-bold uppercase text-sky-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; letter-spacing: 0.15em;"
-            >
-              Domain Knowledge
-            </p>
-          </div>
+      <section class="yil-section" style="--section-accent: var(--yil-sky);">
+        <div class="label-bar">
+          <div class="wrap"><p>Domain Knowledge</p></div>
         </div>
-        <div class="mx-auto max-w-6xl px-6 py-20">
-          <h2
-            class="max-w-3xl text-zinc-900"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: 0;"
-          >
-            We're Not Building Frontier Models. We're Applying Technology to Real Problems.
-          </h2>
+        <div class="wrap section-body">
+          <h2 class="section-title wide">We're Not Building Frontier Models. We're Applying Technology to Real Problems.</h2>
 
-          <div class="mt-8 max-w-2xl space-y-5">
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
+          <div class="prose mt-8">
+            <p>
               Charlie Apigian set the framing for Nashville's AI identity before the first session
               started: this is a community of people who <em>get stuff done</em>. Not frontier
-              model builders — people applying technology to real-world problems through people,
+              model builders, people applying technology to real-world problems through people,
               process, and domain knowledge.
             </p>
 
-            <!-- Jon Salisbury inline pull-quote -->
-            <blockquote class="border-l-2 border-sky-700 py-1 pl-5">
-              <p
-                class="text-zinc-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.125rem; font-weight: 700; line-height: 1.5;"
-              >
-                "Where there is no room for error, trust will arise."
-              </p>
-              <footer
-                class="mt-2 text-[11px] uppercase text-zinc-500"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.12em;"
-              >
-                Jon Salisbury, CEO — Nexigen
-              </footer>
+            <blockquote class="quote-panel">
+              <p>"Where there is no room for error, trust will arise."</p>
+              <footer>Jon Salisbury, CEO / Nexigen</footer>
             </blockquote>
 
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
+            <p>
               Salisbury's caution about agents rang the clearest: they have confidence, not
-              competence. The $40–50M savings Nexigen generated came from replacing a team manually
+              competence. The $40-50M savings Nexigen generated came from replacing a team manually
               reviewing data at speed with a system that <em>could not move quickly past errors</em>.
               The constraint was the point.
             </p>
 
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
+            <p>
               Anuj Kapedia at Oak Ridge National Laboratory showed what domain knowledge looks like
               at its furthest edge: digital twins of humans, built from CT scans, used to test
               cancer treatments before touching a patient. Moving from reactive to proactive
-              medicine — and bypassing the ethical wall of animal testing.
+              medicine, and bypassing the ethical wall of animal testing.
             </p>
 
-            <p
-              class="text-zinc-700"
-              style="font-family: Inter, system-ui, -apple-system, sans-serif; font-size: 1.0625rem; font-weight: 300; line-height: 1.65;"
-            >
+            <p>
               The Titans AI panel hit a familiar note: fan experience, smart building management,
-              employee productivity. AI applied to a specific place with specific constraints — the
+              employee productivity. AI applied to a specific place with specific constraints, the
               Disney parks model, optimizing for presence rather than scale. Brian Moyer's closing
               line hung in the air: asked how far a solopreneur could take an AI-built product,
               the answer was "probably farther than you think."
@@ -494,163 +751,60 @@ import YilSeriesNav from '@/components/YilSeriesNav.astro';
         </div>
       </section>
 
-      <!-- ─── REFERENCES: soft-grey footer ─── -->
-      <section class="yil-section bg-gray-100">
-        <div class="mx-auto max-w-6xl px-6 py-16">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700;"
-          >
-            References
-          </p>
-          <div class="mt-6 space-y-4">
-
-            <!-- concurrent.app -->
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center border border-blue-900/30 bg-blue-900/10 px-2.5 py-0.5 text-[10px] uppercase text-blue-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
+      <section class="yil-section refs-section">
+        <div class="wrap section-body">
+          <p class="eyebrow" style="color: var(--yil-muted);">References</p>
+          <div class="refs-list">
+            {references.map((item) => (
+              <div
+                class="ref-item"
+                style={`--ref-accent: ${
+                  item.tone === 'navy'
+                    ? 'var(--yil-navy)'
+                    : item.tone === 'sky'
+                      ? 'var(--yil-sky)'
+                      : 'var(--yil-blue)'
+                };`}
               >
-                Structure
-              </span>
-              <a
-                href="https://concurrent.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm text-zinc-700 underline decoration-zinc-400 transition-colors hover:decoration-blue-900"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
-              >
-                concurrent.app — Brian Moyer's AI-built medical app
-              </a>
-            </div>
-
-            <!-- Matt Pocock prototype skill -->
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center border border-blue-600/30 bg-blue-600/10 px-2.5 py-0.5 text-[10px] uppercase text-blue-600"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
-              >
-                Skills
-              </span>
-              <span
-                class="text-sm text-zinc-500"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
-              >
-                Matt Pocock / prototype skill — no URL captured
-              </span>
-            </div>
-
-            <!-- Hack Tennessee -->
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center border border-sky-700/30 bg-sky-700/10 px-2.5 py-0.5 text-[10px] uppercase text-sky-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
-              >
-                Community
-              </span>
-              <span
-                class="text-sm text-zinc-500"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
-              >
-                Hack Tennessee / Hackathons International — no URL captured
-              </span>
-            </div>
-
-            <!-- Oracle Academy -->
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center border border-sky-700/30 bg-sky-700/10 px-2.5 py-0.5 text-[10px] uppercase text-sky-700"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 700; letter-spacing: 0.1em;"
-              >
-                Community
-              </span>
-              <span
-                class="text-sm text-zinc-500"
-                style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
-              >
-                Oracle Academy — free education K–12 and beyond — no URL captured
-              </span>
-            </div>
-
+                <span class="ref-label">{item.label}</span>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                ) : (
+                  <span>{item.title}</span>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
 
-      <!-- ─── DESIGN NOTES ─── -->
-      <section class="border-t border-gray-200 bg-gray-100">
-        <div class="mx-auto max-w-6xl px-6 py-12">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
-            style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 400;"
-          >
-            Design Notes
-          </p>
-          <p
-            class="mt-2 text-sm font-medium text-zinc-700"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif;"
-          >
-            YIL 2026-05-14 — The Discipline Was Designed by a Human
-          </p>
-          <p
-            class="mt-1 text-sm text-zinc-500"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
-          >
-            Nashville AI Week confirmed that the real competitive edge is not smarter models but
-            structured humans — recipes over prompts, decisions over data, domain knowledge over
-            raw confidence.
-          </p>
-          <!-- Accent swatches -->
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #1c69d4;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
-              >accent-1 / skills</span>
+      <section class="notes-section">
+        <div class="wrap py-12">
+          <div class="notes-grid">
+            <div>
+              <p class="eyebrow" style="color: var(--yil-muted);">Design Notes</p>
+              <p class="mt-2 text-sm font-bold text-zinc-700">
+                YIL 2026-05-14 / The Discipline Was Designed by a Human
+              </p>
+              <p class="mt-2 max-w-2xl text-sm font-light leading-relaxed text-zinc-500">
+                BMW Corporate provides the structural language: white canvas, dark navy statement
+                bands, rectangular edges, precise section labels, spec-cell metrics, and no drop
+                shadows. The page adds a generated technical hero image to make the
+                human-designed discipline theme visible without leaving the BMW Corporate register.
+              </p>
             </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #1e3a8a;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
-              >accent-2 / structure</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #1d4ed8;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
-              >accent-3 / decision-science</span>
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #0369a1;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', ui-monospace, monospace;"
-              >accent-4 / domain-knowledge</span>
+
+            <div class="swatches">
+              <span class="swatch" style="--swatch: var(--yil-blue);">accent-1 / skills</span>
+              <span class="swatch" style="--swatch: var(--yil-navy);">accent-2 / structure</span>
+              <span class="swatch" style="--swatch: oklch(0.48 0.16 260);">accent-3 / decision-science</span>
+              <span class="swatch" style="--swatch: var(--yil-sky);">accent-4 / domain-knowledge</span>
             </div>
           </div>
-          <!-- Overview prose from DESIGN.md -->
-          <p
-            class="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500"
-            style="font-family: Inter, system-ui, -apple-system, sans-serif; font-weight: 300;"
-          >
-            This page ports BMW's corporate site visual language — measured, precision-engineered,
-            editorial — onto a day of conference notes about structured AI work. The fit is
-            intentional: BMW corporate and Nashville AI Week's dominant theme share the same DNA.
-            Both are about engineered precision over raw confidence, documented systems over
-            improvised speed, and humans in the loop to apply judgment that machines cannot supply.
-            White canvas (#ffffff) as the base surface, dark navy (#1a2129) for hero and quote
-            bands only, BMW Blue (#1c69d4) as the single primary accent with a scale of deeper
-            blues across sections, Inter 700/300 as the heavy-display/light-body editorial pair,
-            rectangular 0px corners everywhere, UPPERCASE section labels, and 80px section rhythm.
-            No drop shadows — depth comes entirely from color-block contrast.
-          </p>
         </div>
       </section>
-
     </main>
     <Footer />
 
