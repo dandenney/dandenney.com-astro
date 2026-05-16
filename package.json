@@ -13,7 +13,8 @@
     "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs",
     "agent:packet:validate": "node scripts/agent-content/validate-packet.mjs",
     "agent:content:publish": "node scripts/agent-content/publish-from-packet.mjs",
-    "netlify:env:sync": "./scripts/sync-netlify-env.sh"
+    "netlify:env:sync": "./scripts/sync-netlify-env.sh",
+    "library:sync": "node scripts/sync-obsidian-library.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
