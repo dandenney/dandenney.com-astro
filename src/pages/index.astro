@@ -6,7 +6,7 @@ import OptimizedImage from "../components/OptimizedImage.astro";
 import ReadingTime from "../components/ReadingTime.astro";
 import RSSLink from "../components/RSSLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts.js";
-import { getSharedLinks } from "../scripts/stash.ts";
+import { libraryLinks } from "@/data/libraryLinks";
 import toTitleCase from "../helpers/toTitleCase.js";
 
 export const prerender = true;
@@ -25,14 +25,10 @@ const reviews = (await getCollection("reviews"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 4);
 
-const links = await getSharedLinks();
+const currentYearMonth = new Date().toISOString().slice(0, 7)
+const links = libraryLinks.filter((l) => l.created.startsWith(currentYearMonth))
 
-const getMonthName = () => {
-  const date = new Date();
-  return date.toLocaleString("default", { month: "long" });
-};
-
-const monthName = getMonthName();
+const monthName = new Date().toLocaleString("default", { month: "long" });
 ---
 
 <!doctype html>
@@ -606,7 +602,7 @@ const monthName = getMonthName();
               {links.map((link, i) => {
                 const wideIndices = new Set([0, 5, 11, 18, 24]);
                 const isWide = wideIndices.has(i);
-                const dateStr = link.created.toLocaleDateString("en-US", {
+                const dateStr = new Date(link.created + 'T12:00:00').toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
                   year: "numeric",
@@ -625,9 +621,9 @@ const monthName = getMonthName();
                     <h3 class="mt-3 text-lg font-semibold leading-snug text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
                       {link.title}
                     </h3>
-                    {link.notes && (
+                    {link.description && (
                       <p class="mt-3 text-sm leading-relaxed text-gray-500 dark:text-slate-400">
-                        {link.notes}
+                        {link.description}
                       </p>
                     )}
                   </a>
