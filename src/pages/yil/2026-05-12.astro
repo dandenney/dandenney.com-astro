@@ -13,6 +13,65 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const guardrailStats = [
+  ['Architecture', 'paved roads'],
+  ['Failure mode', 'local chaos'],
+  ['Correction', 'shared constraints'],
+];
+
+const questCards = [
+  {
+    eyebrow: 'The Quest',
+    title: 'Legibility Layer',
+    body: 'Every automation request surfaces risk level, estimated weeks saved, and who benefits. The value of tooling is visible before work begins.',
+    metric: 'Risk: Medium',
+    detail: '~3 wks saved',
+  },
+  {
+    eyebrow: 'The Incentives',
+    title: 'Motivation Layer',
+    body: 'Engineers earn XP for completing quests, redeemable for gift cards, tea with an executive, or a slot presenting at Wednesday standups.',
+    metric: '+250 XP',
+    detail: 'adoption reward',
+  },
+  {
+    eyebrow: 'The Insight',
+    title: 'Product, Not Program',
+    body: 'Successful AI transformations treat internal tooling as a product with visible value, incentives, and user-centered design.',
+    metric: 'Pull model',
+    detail: 'not mandate',
+  },
+];
+
+const agentStates = [
+  ['WAITING', 'needs input'],
+  ['WORKING', 'background task'],
+  ['DONE', 'ready to review'],
+];
+
+const references = [
+  {
+    type: 'architecture',
+    title: "The Organization Is the Bottleneck - O'Reilly Radar",
+    href: 'https://www.oreilly.com/radar/the-organization-is-the-bottleneck/?ref=sidebar',
+  },
+  {
+    type: 'web platform',
+    title: 'From React to native web with nanotags - Evil Martians',
+    href: 'https://evilmartians.com/chronicles/from-react-to-native-web-with-nanotags-a-migration-that-saved-100kb',
+  },
+  {
+    type: 'internal tooling',
+    title: 'John Kim on gamified AI feature requests - YouTube',
+    href: 'https://www.youtube.com/watch?v=uH39OZ-KnkY',
+  },
+  {
+    type: 'ai tooling',
+    title: 'Agent view in Claude Code - Anthropic',
+    href: 'https://claude.com/blog/agent-view-in-claude-code?utm_source=substack&utm_medium=email',
+  },
+];
 ---
 
 <!doctype html>
@@ -25,604 +84,812 @@ import YilSeriesNav from '@/components/YilSeriesNav.astro';
       datePublished={new Date(yilMeta.date)}
     />
     <style>
+      :root {
+        --bnb-bg: #0b0e11;
+        --bnb-surface: #1e2329;
+        --bnb-surface-2: #181c22;
+        --bnb-line: rgba(234, 236, 239, 0.1);
+        --bnb-line-strong: rgba(234, 236, 239, 0.18);
+        --bnb-text: #ffffff;
+        --bnb-text-soft: #eaecef;
+        --bnb-muted: #707a8a;
+        --bnb-yellow: #fcd535;
+        --bnb-green: #0ecb81;
+        --bnb-teal: #2dbdb6;
+        --bnb-red: #f6465d;
+        --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono: "IBM Plex Mono", "JetBrains Mono", monospace;
+      }
+
       @keyframes reveal {
-        from { opacity: 0; transform: translateY(20px); }
-        to   { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
+
       @keyframes pulse-dot {
-        0%, 100% { opacity: 1; }
-        50%       { opacity: 0.35; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        @keyframes reveal {
-          from { opacity: 0; }
-          to   { opacity: 1; }
+        0%,
+        100% {
+          opacity: 1;
         }
-        @keyframes pulse-dot {
-          from { opacity: 1; }
-          to   { opacity: 1; }
+        50% {
+          opacity: 0.35;
         }
       }
-      .yil-section { opacity: 0; }
-      .yil-section.is-visible {
-        animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+      body {
+        background: var(--bnb-bg);
+        color: var(--bnb-text);
+        font-family: var(--font-sans);
       }
+
+      .page-shell {
+        background: var(--bnb-bg);
+      }
+
+      .wrap {
+        margin-inline: auto;
+        max-width: 72rem;
+        padding-inline: clamp(1.25rem, 4vw, 2rem);
+      }
+
+      .yil-hero,
+      .yil-section {
+        opacity: 0;
+      }
+
       .yil-hero {
         animation: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
+
+      .yil-section.is-visible {
+        animation: reveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 7vw, 6rem);
+        grid-template-columns: minmax(0, 1fr);
+        min-height: clamp(34rem, 78vh, 48rem);
+        padding-block: clamp(5rem, 10vw, 8rem) clamp(4rem, 9vw, 7rem);
+      }
+
+      .meta-line,
+      .section-kicker,
+      .metric-label,
+      .tiny-label,
+      .reference-tag,
+      .state-label {
+        font-family: var(--font-mono);
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .meta-line {
+        color: var(--bnb-muted);
+        font-size: 0.68rem;
+      }
+
+      .hero-title {
+        color: var(--bnb-text);
+        font-size: clamp(3.35rem, 10vw, 7.6rem);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 0.9;
+        margin-top: 1.35rem;
+        max-width: 10.5ch;
+      }
+
+      .hero-title span {
+        color: var(--bnb-yellow);
+        display: block;
+      }
+
+      .hero-summary {
+        color: rgba(234, 236, 239, 0.78);
+        font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+        line-height: 1.65;
+        margin-top: 1.65rem;
+        max-width: 44rem;
+      }
+
+      .exchange-panel {
+        align-self: end;
+        background: var(--bnb-surface);
+        border: 1px solid var(--bnb-line);
+        padding: 1rem;
+      }
+
+      .exchange-row {
+        border-bottom: 1px solid var(--bnb-line);
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: 5.5rem 1fr;
+        padding: 0.9rem 0;
+      }
+
+      .exchange-row:first-child {
+        padding-top: 0;
+      }
+
+      .exchange-row:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .exchange-row dt {
+        color: var(--bnb-muted);
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        text-transform: uppercase;
+      }
+
+      .exchange-row dd {
+        color: var(--bnb-text-soft);
+        font-size: 0.92rem;
+        line-height: 1.45;
+        margin: 0;
+      }
+
+      .section {
+        padding-block: clamp(4rem, 8vw, 6rem);
+      }
+
+      .surface-section {
+        background: var(--bnb-surface);
+      }
+
+      .section-border {
+        border-top: 1px solid var(--bnb-line);
+      }
+
+      .section-kicker {
+        border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+        color: var(--accent);
+        display: inline-flex;
+        font-size: 0.68rem;
+        font-weight: 700;
+        padding: 0.42rem 0.6rem;
+      }
+
+      .section-heading {
+        color: var(--bnb-text);
+        font-size: clamp(1.9rem, 3.8vw, 3rem);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.05;
+        margin-top: 1rem;
+        max-width: 15ch;
+      }
+
+      .section-rule {
+        background: var(--accent);
+        height: 3px;
+        margin-top: 1rem;
+        width: 3rem;
+      }
+
+      .prose {
+        color: rgba(234, 236, 239, 0.78);
+        font-size: 1.0625rem;
+        line-height: 1.7;
+      }
+
+      .prose + .prose {
+        margin-top: 1.25rem;
+      }
+
+      .prose strong,
+      .prose code {
+        color: var(--accent);
+      }
+
+      .prose code {
+        background: color-mix(in srgb, var(--accent) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+        font-family: var(--font-mono);
+        font-size: 0.88em;
+        padding: 0.08rem 0.34rem;
+      }
+
+      .guardrail-grid {
+        display: grid;
+        gap: clamp(2rem, 5vw, 4rem);
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 2.75rem;
+      }
+
+      .quote-card {
+        background: var(--bnb-surface);
+        border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+        display: grid;
+        gap: 1.5rem;
+        padding: clamp(1.35rem, 4vw, 2rem);
+      }
+
+      .quote-mark {
+        color: var(--accent);
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 0.75;
+      }
+
+      .quote-card p {
+        color: var(--bnb-text-soft);
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+
+      .quote-card cite {
+        color: var(--bnb-muted);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .stat-grid {
+        border-top: 1px solid var(--bnb-line);
+        display: grid;
+        margin-top: 2rem;
+      }
+
+      .stat-item {
+        border-bottom: 1px solid var(--bnb-line);
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: minmax(6rem, 0.55fr) 1fr;
+        padding-block: 0.85rem;
+      }
+
+      .metric-label {
+        color: var(--bnb-muted);
+        font-size: 0.66rem;
+      }
+
+      .metric-value {
+        color: var(--bnb-text-soft);
+        font-size: 0.95rem;
+      }
+
+      .code-shell {
+        background: var(--bnb-surface);
+        border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
+        margin-top: 2rem;
+      }
+
+      .code-chrome {
+        align-items: center;
+        border-bottom: 1px solid var(--bnb-line);
+        display: flex;
+        gap: 0.65rem;
+        padding: 0.85rem 1rem;
+      }
+
+      .chrome-square {
+        background: rgba(234, 236, 239, 0.14);
+        height: 0.66rem;
+        width: 0.66rem;
+      }
+
+      .code-file {
+        color: var(--bnb-muted);
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+      }
+
+      .code-shell pre {
+        color: var(--bnb-text-soft);
+        font-family: var(--font-mono);
+        font-size: clamp(0.72rem, 1.55vw, 0.84rem);
+        line-height: 1.75;
+        margin: 0;
+        overflow-x: auto;
+        padding: clamp(1rem, 3vw, 1.5rem);
+        white-space: pre-wrap;
+      }
+
+      .code-comment {
+        color: var(--bnb-muted);
+      }
+
+      .code-tag,
+      .code-number {
+        color: var(--bnb-green);
+      }
+
+      .code-attr {
+        color: var(--bnb-text-soft);
+      }
+
+      .pivot-band {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .pivot-band::before {
+        color: rgba(255, 255, 255, 0.045);
+        content: '"';
+        font-size: clamp(12rem, 28vw, 21rem);
+        font-weight: 700;
+        left: clamp(0.5rem, 5vw, 3rem);
+        line-height: 0.8;
+        position: absolute;
+        top: 0.4rem;
+      }
+
+      .pivot-quote {
+        max-width: 52rem;
+        position: relative;
+      }
+
+      .pivot-quote p {
+        color: var(--bnb-text);
+        font-size: clamp(1.75rem, 4vw, 3.35rem);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.08;
+      }
+
+      .pivot-quote footer {
+        align-items: center;
+        color: var(--bnb-muted);
+        display: flex;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+
+      .pivot-quote footer::before {
+        background: var(--bnb-line-strong);
+        content: "";
+        height: 1px;
+        width: 2rem;
+      }
+
+      .quest-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        margin-top: 2.5rem;
+      }
+
+      .quest-card {
+        background: var(--bnb-surface);
+        border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+        display: grid;
+        min-height: 17rem;
+        padding: 1.35rem;
+      }
+
+      .quest-card:hover {
+        border-color: color-mix(in srgb, var(--accent) 48%, transparent);
+      }
+
+      .tiny-label {
+        color: var(--accent);
+        font-size: 0.66rem;
+        font-weight: 700;
+      }
+
+      .quest-card h3 {
+        color: var(--bnb-text);
+        font-size: 1.08rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: 0.7rem;
+      }
+
+      .quest-card p {
+        color: rgba(234, 236, 239, 0.68);
+        font-size: 0.93rem;
+        line-height: 1.6;
+        margin-top: 1rem;
+      }
+
+      .quest-metric {
+        align-self: end;
+        border-top: 1px solid var(--bnb-line);
+        display: flex;
+        gap: 0.75rem;
+        justify-content: space-between;
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+      }
+
+      .quest-metric strong {
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: 1rem;
+      }
+
+      .quest-metric span {
+        color: var(--bnb-muted);
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+      }
+
+      .agent-panel {
+        border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+        margin-top: 2.75rem;
+      }
+
+      .state-row {
+        align-items: center;
+        border-bottom: 1px solid var(--bnb-line);
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: minmax(7rem, 0.45fr) 1fr;
+        padding: 1rem;
+      }
+
+      .state-row:last-child {
+        border-bottom: 0;
+      }
+
+      .state-label {
+        color: var(--accent);
+        font-size: clamp(1.25rem, 4vw, 2.25rem);
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .state-detail {
+        color: rgba(234, 236, 239, 0.72);
+        font-size: 0.95rem;
+      }
+
       .working-dot {
         animation: pulse-dot 1.6s ease-in-out infinite;
+        background: var(--accent);
+        display: inline-block;
+        height: 0.45rem;
+        margin-right: 0.45rem;
+        vertical-align: 0.18rem;
+        width: 0.45rem;
+      }
+
+      .references-list {
+        display: grid;
+        gap: 0;
+        margin-top: 1.75rem;
+      }
+
+      .reference-item {
+        border-top: 1px solid var(--bnb-line);
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: minmax(8rem, 0.34fr) 1fr;
+        padding-block: 1rem;
+      }
+
+      .reference-item:last-child {
+        border-bottom: 1px solid var(--bnb-line);
+      }
+
+      .reference-tag {
+        color: var(--bnb-muted);
+        font-size: 0.66rem;
+      }
+
+      .reference-item a {
+        color: var(--bnb-text-soft);
+        font-size: 0.95rem;
+        line-height: 1.45;
+        text-decoration: underline;
+        text-decoration-color: rgba(234, 236, 239, 0.22);
+        text-underline-offset: 0.22em;
+      }
+
+      .reference-item a:hover {
+        color: var(--bnb-text);
+        text-decoration-color: rgba(234, 236, 239, 0.65);
+      }
+
+      .design-note {
+        background: var(--bnb-surface);
+        border-top: 1px solid var(--bnb-line);
+      }
+
+      .design-note p {
+        color: var(--bnb-muted);
+        font-size: 0.9rem;
+        line-height: 1.65;
+        max-width: 44rem;
+      }
+
+      .design-note strong {
+        color: var(--bnb-text-soft);
+      }
+
+      @media (min-width: 860px) {
+        .hero-grid {
+          align-items: end;
+          grid-template-columns: minmax(0, 1.04fr) minmax(18rem, 0.56fr);
+        }
+
+        .guardrail-grid {
+          grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.78fr);
+        }
+
+        .quest-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-title {
+          font-size: clamp(3rem, 18vw, 4.6rem);
+          max-width: 8.5ch;
+        }
+
+        .exchange-row,
+        .stat-item,
+        .state-row,
+        .reference-item {
+          grid-template-columns: 1fr;
+        }
+
+        .pivot-quote p {
+          font-size: clamp(1.65rem, 9vw, 2.5rem);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .yil-hero,
+        .yil-section,
+        .yil-section.is-visible {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+
+        .working-dot {
+          animation: none;
+        }
       }
     </style>
     <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
   </head>
-  <body class="bg-[#0b0e11]">
-    <main class="relative z-10 bg-[#0b0e11] shadow-xs">
+  <body>
+    <main class="page-shell">
       <Header />
 
-      <!-- Hero: full-width-statement — flat dark canvas, "Autonomy" in Binance Yellow -->
-      <section class="yil-hero bg-[#0b0e11]">
-        <div class="mx-auto max-w-5xl px-6 pb-20 pt-24">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
-            style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 400;"
-          >
-            <span style="color: #FCD535;">▸</span> 2026-05-12 — Yesterday I Learned
-          </p>
-          <h1
-            class="mt-6 text-white"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em;"
-          >
-            Structure Enables <span style="color: #FCD535;">Autonomy</span>
-          </h1>
-          <p
-            class="mt-6 max-w-2xl text-zinc-300"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.125rem; font-weight: 400; line-height: 1.6;"
-          >
-            How guardrails prevent microservices chaos, thin wrappers make native web approachable,
-            gamified quest systems make AI adoption legible, and unified dashboards tame multi-agent
-            complexity.
-          </p>
+      <section class="yil-hero" aria-labelledby="page-title">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="meta-line">2026-05-12 / Yesterday I Learned</p>
+            <h1 id="page-title" class="hero-title">
+              Structure Enables <span>Autonomy</span>
+            </h1>
+            <p class="hero-summary">
+              How guardrails prevent microservices chaos, thin wrappers make native web
+              approachable, gamified quest systems make AI adoption legible, and unified dashboards
+              tame multi-agent complexity.
+            </p>
+          </div>
+
+          <dl class="exchange-panel" aria-label="Day thesis">
+            <div class="exchange-row">
+              <dt>Premise</dt>
+              <dd>Autonomy works when the system carries the constraints.</dd>
+            </div>
+            <div class="exchange-row">
+              <dt>Pattern</dt>
+              <dd>Guardrails, thin wrappers, quests, and agent state all make work legible.</dd>
+            </div>
+            <div class="exchange-row">
+              <dt>Risk</dt>
+              <dd>Without structure, freedom becomes coordination debt.</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <!-- Guardrails: pill-h2-bar, split layout, canvas-dark, accent-1 yellow -->
-      <section class="yil-section bg-[#0b0e11]">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <!-- pill-h2-bar -->
-          <div
-            class="inline-flex items-center rounded-full border border-yellow-400/20 bg-yellow-400/10 px-3 py-1"
-          >
-            <span
-              class="text-[10px] uppercase tracking-[0.15em] text-yellow-400"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-              >Architecture</span
-            >
-          </div>
-          <h2
-            class="mt-3 text-white"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;"
-          >
-            The Organization Is the Bottleneck
-          </h2>
-          <div class="mt-3 h-[3px] w-12 rounded-full bg-yellow-400"></div>
+      <section class="yil-section section" style="--accent: var(--bnb-yellow);" aria-labelledby="guardrails-title">
+        <div class="wrap">
+          <p class="section-kicker">Architecture</p>
+          <h2 id="guardrails-title" class="section-heading">The Organization Is the Bottleneck</h2>
+          <div class="section-rule" aria-hidden="true"></div>
 
-          <!-- Split: prose left, pull-quote card right -->
-          <div class="mt-10 grid gap-10 lg:grid-cols-2">
-            <!-- Left: prose -->
-            <div class="space-y-5">
-              <p
-                class="text-zinc-200"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.65;"
-              >
-                O'Reilly Radar's "The Organization Is the Bottleneck" makes the point cleanly: when
-                teams move to microservices, you can't just tell people to do the right thing and
-                hope for the best. You have to build paved roads and guardrails that help people do
-                the right thing automatically — so autonomy doesn't become chaos.
+          <div class="guardrail-grid">
+            <div>
+              <p class="prose">
+                O'Reilly Radar's "The Organization Is the Bottleneck" makes the point cleanly:
+                when teams move to microservices, you cannot just tell people to do the right thing
+                and hope for the best. You have to build paved roads and guardrails that help people
+                do the right thing automatically, so autonomy does not become chaos.
               </p>
-              <p
-                class="text-zinc-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.65;"
-              >
-                I've worked in a microservices architecture for a while, and we're wanting to go
-                back to a monorepo. The question I keep returning to: would we still want that if
-                we'd had stricter guardrails over the years? The debate between monorepo and
-                microservices might be a proxy for accumulated organizational guardrail debt — a
+              <p class="prose">
+                I have worked in a microservices architecture for a while, and we are wanting to go
+                back to a monorepo. The question I keep returning to: would we still want that if we
+                had stricter guardrails over the years? The debate between monorepo and
+                microservices might be a proxy for accumulated organizational guardrail debt, a
                 social correction more than a technical one.
               </p>
-            </div>
 
-            <!-- Right: pull-quote card on surface-dark -->
-            <div
-              class="flex items-start rounded-xl border border-yellow-400/20 p-6"
-              style="background: #1e2329;"
-            >
-              <div>
-                <p
-                  class="leading-none text-yellow-400"
-                  style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 5rem; font-weight: 700; line-height: 0.8;"
-                >
-                  "
-                </p>
-                <p
-                  class="mt-4 text-zinc-200"
-                  style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.65;"
-                >
-                  Guardrails matter. You have to build paved roads and guardrails that help people
-                  to do the right thing automatically, so that autonomy doesn't become chaos.
-                </p>
-                <p
-                  class="mt-4 text-[11px] uppercase tracking-[0.15em] text-zinc-500"
-                  style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 400;"
-                >
-                  O'Reilly Radar — The Organization Is the Bottleneck
-                </p>
+              <div class="stat-grid" aria-label="Guardrail model">
+                {guardrailStats.map(([label, value]) => (
+                  <div class="stat-item">
+                    <span class="metric-label">{label}</span>
+                    <span class="metric-value">{value}</span>
+                  </div>
+                ))}
               </div>
             </div>
+
+            <blockquote class="quote-card">
+              <span class="quote-mark" aria-hidden="true">"</span>
+              <p>
+                Guardrails matter. You have to build paved roads and guardrails that help people to
+                do the right thing automatically, so that autonomy does not become chaos.
+              </p>
+              <cite>O'Reilly Radar / The Organization Is the Bottleneck</cite>
+            </blockquote>
           </div>
         </div>
       </section>
 
-      <!-- Nanotags: pill-h2-bar, code-window layout, canvas-dark, accent-2 emerald -->
-      <!-- Border-t creates a visual break from the preceding canvas-dark section -->
-      <section class="yil-section border-t border-[#1e2329] bg-[#0b0e11]">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <!-- pill-h2-bar -->
-          <div
-            class="inline-flex items-center rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1"
-          >
-            <span
-              class="text-[10px] uppercase tracking-[0.15em] text-emerald-400"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-              >Web Platform</span
-            >
-          </div>
-          <h2
-            class="mt-3 text-white"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;"
-          >
-            Native Without the Tedium
-          </h2>
-          <div class="mt-3 h-[3px] w-12 rounded-full bg-emerald-400"></div>
+      <section
+        class="yil-section section section-border"
+        style="--accent: var(--bnb-green);"
+        aria-labelledby="nanotags-title"
+      >
+        <div class="wrap">
+          <p class="section-kicker">Web Platform</p>
+          <h2 id="nanotags-title" class="section-heading">Native Without the Tedium</h2>
+          <div class="section-rule" aria-hidden="true"></div>
 
-          <p
-            class="mt-8 max-w-2xl text-zinc-300"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.65;"
-          >
-            Evil Martians introduced <code
-              class="rounded px-1.5 py-0.5 text-emerald-400"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-size: 0.875rem; background: rgba(52,211,153,0.1);"
-              >nanotags</code
-            > — a thin wrapper around Custom Elements that removes the tedious parts of writing Web
-            Components without replacing the platform. The pattern: hydrate existing markup using <code
-              class="rounded px-1.5 py-0.5 text-emerald-400"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-size: 0.875rem; background: rgba(52,211,153,0.1);"
-              >data-ref</code
-            > attributes to connect elements inside a custom element — refs are wired up automatically
-            with no manual query selectors.
+          <p class="prose" style="margin-top: 2rem; max-width: 45rem;">
+            Evil Martians introduced <code>nanotags</code>, a thin wrapper around Custom Elements
+            that removes the tedious parts of writing Web Components without replacing the platform.
+            The pattern: hydrate existing markup using <code>data-ref</code> attributes to connect
+            elements inside a custom element, with no manual query selectors.
           </p>
 
-          <!-- Code window -->
-          <div
-            class="mt-8 overflow-hidden rounded-xl border border-emerald-400/20"
-            style="background: #1e2329;"
-          >
-            <!-- Window chrome -->
-            <div
-              class="flex items-center gap-2 border-b px-4 py-3"
-              style="border-color: rgba(255,255,255,0.06);"
-            >
-              <div class="h-3 w-3 rounded-full" style="background: rgba(255,255,255,0.12);"></div>
-              <div class="h-3 w-3 rounded-full" style="background: rgba(255,255,255,0.12);"></div>
-              <div class="h-3 w-3 rounded-full" style="background: rgba(255,255,255,0.12);"></div>
-              <span
-                class="ml-2 text-[11px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                >nanotag-counter.html</span
-              >
+          <div class="code-shell">
+            <div class="code-chrome">
+              <span class="chrome-square" aria-hidden="true"></span>
+              <span class="chrome-square" aria-hidden="true"></span>
+              <span class="chrome-square" aria-hidden="true"></span>
+              <span class="code-file">nanotag-counter.html</span>
             </div>
-            <!-- Code -->
-            <pre
-              class="overflow-x-auto p-6 text-[13px] leading-[1.75]"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 400;"
-            ><code><span style="color: #707a8a;">&lt;!-- Custom element with nanotag refs --&gt;</span>
-<span style="color: #eaecef;">&lt;</span><span style="color: #0ecb81;">my-counter</span> <span style="color: #2dbdb6;">count</span><span style="color: #eaecef;">="0"&gt;</span>
-  <span style="color: #eaecef;">&lt;</span><span style="color: #0ecb81;">span</span> <span style="color: #2dbdb6;">data-ref</span><span style="color: #eaecef;">="display"&gt;</span><span style="color: #FCD535;">0</span><span style="color: #eaecef;">&lt;/span&gt;</span>
-  <span style="color: #eaecef;">&lt;</span><span style="color: #0ecb81;">button</span> <span style="color: #2dbdb6;">data-ref</span><span style="color: #eaecef;">="button"&gt;</span><span style="color: #eaecef;">+1&lt;/button&gt;</span>
-<span style="color: #eaecef;">&lt;/</span><span style="color: #0ecb81;">my-counter</span><span style="color: #eaecef;">&gt;</span>
+            <pre><code><span class="code-comment">&lt;!-- Custom element with nanotag refs --&gt;</span>
+&lt;<span class="code-tag">my-counter</span> <span class="code-attr">count</span>="<span class="code-number">0</span>"&gt;
+  &lt;<span class="code-tag">span</span> <span class="code-attr">data-ref</span>="display"&gt;<span class="code-number">0</span>&lt;/<span class="code-tag">span</span>&gt;
+  &lt;<span class="code-tag">button</span> <span class="code-attr">data-ref</span>="button"&gt;+1&lt;/<span class="code-tag">button</span>&gt;
+&lt;/<span class="code-tag">my-counter</span>&gt;
 
-<span style="color: #707a8a;">&lt;!-- nanotag wires this.refs.display and this.refs.button --&gt;</span>
-<span style="color: #707a8a;">&lt;!-- no querySelector, no boilerplate, no framework --&gt;</span></code></pre>
+<span class="code-comment">&lt;!-- nanotag wires this.refs.display and this.refs.button --&gt;</span>
+<span class="code-comment">&lt;!-- no querySelector, no boilerplate, no framework --&gt;</span></code></pre>
           </div>
 
-          <p
-            class="mt-6 max-w-2xl text-zinc-400"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.65;"
-          >
-            The platform is the feature; the wrapper is just the paved road. Minimal ergonomics
-            over heavy abstraction — you keep the native web primitive and remove the friction that
+          <p class="prose" style="margin-top: 1.5rem; max-width: 45rem;">
+            The platform is the feature; the wrapper is just the paved road. Minimal ergonomics over
+            heavy abstraction means you keep the native web primitive and remove the friction that
             makes it feel unpleasant to write.
           </p>
         </div>
       </section>
 
-      <!-- Quote: standalone-dark-band, surface-dark — philosophical pivot -->
-      <section class="yil-section" style="background: #1e2329;">
-        <div class="relative mx-auto max-w-5xl overflow-hidden px-6 py-20">
-          <div
-            aria-hidden="true"
-            class="pointer-events-none absolute -left-2 -top-8 select-none text-[16rem] leading-none"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; color: rgba(255,255,255,0.05);"
-          >
-            "
-          </div>
-          <blockquote class="relative max-w-3xl">
-            <p
-              class="text-2xl text-white sm:text-3xl"
-              style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400; line-height: 1.4; letter-spacing: -0.01em;"
-            >
-              Accept imperfect understanding. You don't need to fully understand everything. You
+      <section class="yil-section section surface-section pivot-band" aria-label="Reflection quote">
+        <div class="wrap">
+          <blockquote class="pivot-quote">
+            <p>
+              Accept imperfect understanding. You do not need to fully understand everything. You
               need to understand enough to make progress.
             </p>
-            <footer class="mt-6 flex items-center gap-3">
-              <div class="h-px w-8" style="background: rgba(252,213,53,0.5);"></div>
-              <cite
-                class="not-italic text-sm text-zinc-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 400;"
-                >DailyTips.dev newsletter</cite
-              >
+            <footer>
+              <cite>DailyTips.dev newsletter</cite>
             </footer>
           </blockquote>
         </div>
       </section>
 
-      <!-- Gamification: pill-h2-bar, cards layout, canvas-dark, accent-3 teal -->
-      <section class="yil-section bg-[#0b0e11]">
-        <div class="mx-auto max-w-5xl px-6 py-20">
-          <!-- pill-h2-bar -->
-          <div
-            class="inline-flex items-center rounded-full border border-teal-400/20 bg-teal-400/10 px-3 py-1"
-          >
-            <span
-              class="text-[10px] uppercase tracking-[0.15em] text-teal-400"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-              >Internal Tooling</span
-            >
-          </div>
-          <h2
-            class="mt-3 text-white"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;"
-          >
-            Quests, XP, and the Product-Minded Approach to Adoption
+      <section
+        class="yil-section section"
+        style="--accent: var(--bnb-teal);"
+        aria-labelledby="gamification-title"
+      >
+        <div class="wrap">
+          <p class="section-kicker">Internal Tooling</p>
+          <h2 id="gamification-title" class="section-heading">
+            Quests, XP, and Product-Minded Adoption
           </h2>
-          <div class="mt-3 h-[3px] w-12 rounded-full bg-teal-400"></div>
+          <div class="section-rule" aria-hidden="true"></div>
 
-          <p
-            class="mt-8 max-w-2xl text-zinc-300"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.0625rem; font-weight: 400; line-height: 1.65;"
-          >
+          <p class="prose" style="margin-top: 2rem; max-width: 45rem;">
             John Kim built Automators: a gamified internal marketplace where anyone can create a
             quest for automation or tooling, and engineers or AI agents can pick it up. Each quest
-            shows risk level, estimated weeks saved, and who benefits — making value visible before
-            a line of code is written.
+            shows risk level, estimated weeks saved, and who benefits, making value visible before a
+            line of code is written.
           </p>
 
-          <!-- Three quest-board cards: 1 col mobile → 2 col tablet → 3 col desktop -->
-          <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Card 1: The Quest -->
-            <div
-              class="rounded-xl border border-t-2 border-teal-400/20 p-6 transition-colors duration-200 hover:border-teal-400/40"
-              style="background: #1e2329; border-top-color: rgba(45,211,153,0.3);"
-            >
-              <p
-                class="text-[10px] uppercase tracking-[0.15em] text-teal-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-              >
-                The Quest
-              </p>
-              <h3
-                class="mt-2 text-base text-white"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; line-height: 1.3;"
-              >
-                Legibility Layer
-              </h3>
-              <p
-                class="mt-3 text-sm leading-relaxed text-zinc-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-              >
-                Every automation request surfaces risk level, estimated weeks saved, and who
-                benefits — the value of tooling made visible before work begins.
-              </p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span
-                  class="rounded-full bg-teal-400/10 px-2 py-0.5 text-[11px] text-teal-400"
-                  style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                  >Risk: Medium</span
-                >
-                <span
-                  class="rounded-full bg-teal-400/10 px-2 py-0.5 text-[11px] text-teal-400"
-                  style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                  >~3 wks saved</span
-                >
-              </div>
-            </div>
-
-            <!-- Card 2: The Incentives -->
-            <div
-              class="rounded-xl border border-t-2 border-teal-400/20 p-6 transition-colors duration-200 hover:border-teal-400/40"
-              style="background: #1e2329; border-top-color: rgba(45,211,153,0.3);"
-            >
-              <p
-                class="text-[10px] uppercase tracking-[0.15em] text-teal-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-              >
-                The Incentives
-              </p>
-              <h3
-                class="mt-2 text-base text-white"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; line-height: 1.3;"
-              >
-                Motivation Layer
-              </h3>
-              <p
-                class="mt-3 text-sm leading-relaxed text-zinc-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-              >
-                Engineers earn XP for completing quests — redeemable for gift cards, tea with an
-                executive, or a slot presenting at Wednesday standups.
-              </p>
-              <div class="mt-4">
-                <span
-                  class="text-xl font-bold text-teal-400"
-                  style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 700;"
-                  >+250 XP</span
-                >
-              </div>
-            </div>
-
-            <!-- Card 3: The Insight -->
-            <div
-              class="rounded-xl border border-t-2 border-teal-400/20 p-6 transition-colors duration-200 hover:border-teal-400/40 sm:col-span-2 lg:col-span-1"
-              style="background: #1e2329; border-top-color: rgba(45,211,153,0.3);"
-            >
-              <p
-                class="text-[10px] uppercase tracking-[0.15em] text-teal-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-              >
-                The Insight
-              </p>
-              <h3
-                class="mt-2 text-base text-white"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; line-height: 1.3;"
-              >
-                Product, Not Program
-              </h3>
-              <p
-                class="mt-3 text-sm leading-relaxed text-zinc-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-              >
-                Successful AI transformations treat internal tooling as a product — with visible
-                value, incentives, and user-centered design — rather than a top-down mandate.
-              </p>
-            </div>
+          <div class="quest-grid">
+            {questCards.map((card) => (
+              <article class="quest-card">
+                <p class="tiny-label">{card.eyebrow}</p>
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+                <div class="quest-metric">
+                  <strong>{card.metric}</strong>
+                  <span>{card.detail}</span>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <!-- Agent View: pill-h2-bar, feature layout, surface-dark, accent-4 rose -->
-      <section class="yil-section" style="background: #1e2329;">
-        <div class="mx-auto max-w-5xl px-6 py-20 text-center">
-          <!-- pill-h2-bar (centered) -->
-          <div class="flex justify-center">
-            <div
-              class="inline-flex items-center rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1"
-            >
-              <span
-                class="text-[10px] uppercase tracking-[0.15em] text-rose-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-                >AI Tooling</span
-              >
-            </div>
-          </div>
-          <h2
-            class="mx-auto mt-3 max-w-2xl text-white"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;"
-          >
-            One View to Coordinate Them All
-          </h2>
-          <div class="mx-auto mt-3 h-[3px] w-12 rounded-full bg-rose-500"></div>
+      <section
+        class="yil-section section surface-section"
+        style="--accent: var(--bnb-red);"
+        aria-labelledby="agent-view-title"
+      >
+        <div class="wrap">
+          <p class="section-kicker">AI Tooling</p>
+          <h2 id="agent-view-title" class="section-heading">One View to Coordinate Them All</h2>
+          <div class="section-rule" aria-hidden="true"></div>
 
-          <!-- Status chips: the interrupt model made visible -->
-          <div class="mt-10 flex flex-wrap justify-center gap-3">
-            <span
-              class="rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-2 text-sm text-rose-500"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.06em;"
-              >WAITING</span
-            >
-            <!-- WORKING chip: pulse dot signals active state -->
-            <span
-              class="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-2 text-sm text-rose-500"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.06em;"
-            >
-              <span class="working-dot h-1.5 w-1.5 rounded-full bg-rose-500"></span>
-              WORKING
-            </span>
-            <span
-              class="rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-2 text-sm text-rose-500"
-              style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.06em;"
-              >DONE</span
-            >
+          <div class="agent-panel" aria-label="Agent states">
+            {agentStates.map(([state, detail]) => (
+              <div class="state-row">
+                <span class="state-label">
+                  {state === 'WORKING' && <span class="working-dot" aria-hidden="true"></span>}
+                  {state}
+                </span>
+                <span class="state-detail">{detail}</span>
+              </div>
+            ))}
           </div>
 
-          <p
-            class="mx-auto mt-8 max-w-xl text-zinc-200"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.25rem; font-weight: 400; line-height: 1.5;"
-          >
+          <p class="prose" style="margin-top: 2rem; max-width: 45rem;">
             Claude Code shipped Agent View: one dashboard to kick off agents, send them to the
-            background, see which are waiting, working, or done — and jump in only when input is
+            background, see which are waiting, working, or done, and jump in only when input is
             needed.
           </p>
-          <p
-            class="mx-auto mt-4 max-w-xl text-zinc-400"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.6;"
-          >
-            I'll likely still want multiple session views for some workflows, but I'm going to try
-            the unified orchestration view to see if the "interrupt only when needed" model changes
-            how I work with agents day to day.
+          <p class="prose" style="max-width: 45rem;">
+            I will likely still want multiple session views for some workflows, but I am going to
+            try the unified orchestration view to see if the interrupt-only-when-needed model
+            changes how I work with agents day to day.
           </p>
         </div>
       </section>
 
-      <!-- References: canvas-dark -->
-      <section class="yil-section bg-[#0b0e11]">
-        <div class="mx-auto max-w-5xl px-6 py-16">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
-            style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 400;"
-          >
-            References
-          </p>
-          <div class="mt-6 space-y-4">
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center rounded-full border border-yellow-400/20 bg-yellow-400/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.1em] text-yellow-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-                >architecture</span
-              >
-              <a
-                href="https://www.oreilly.com/radar/the-organization-is-the-bottleneck/?ref=sidebar"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm text-zinc-300 underline decoration-zinc-700 transition-colors hover:decoration-yellow-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-                >The Organization Is the Bottleneck — O'Reilly Radar</a
-              >
-            </div>
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.1em] text-emerald-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-                >web platform</span
-              >
-              <a
-                href="https://evilmartians.com/chronicles/from-react-to-native-web-with-nanotags-a-migration-that-saved-100kb"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm text-zinc-300 underline decoration-zinc-700 transition-colors hover:decoration-emerald-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-                >From React to native web with nanotags — Evil Martians</a
-              >
-            </div>
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center rounded-full border border-teal-400/20 bg-teal-400/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.1em] text-teal-400"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-                >internal tooling</span
-              >
-              <a
-                href="https://www.youtube.com/watch?v=uH39OZ-KnkY"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm text-zinc-300 underline decoration-zinc-700 transition-colors hover:decoration-teal-400"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-                >John Kim on gamified AI feature requests — YouTube</a
-              >
-            </div>
-            <div class="flex items-start gap-3">
-              <span
-                class="mt-0.5 inline-flex shrink-0 items-center rounded-full border border-rose-500/20 bg-rose-500/10 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.1em] text-rose-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 600;"
-                >ai tooling</span
-              >
-              <a
-                href="https://claude.com/blog/agent-view-in-claude-code?utm_source=substack&utm_medium=email"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm text-zinc-300 underline decoration-zinc-700 transition-colors hover:decoration-rose-500"
-                style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400;"
-                >Agent view in Claude Code — Anthropic</a
-              >
-            </div>
+      <section class="yil-section section" aria-labelledby="references-title">
+        <div class="wrap">
+          <p class="section-kicker" style="--accent: var(--bnb-muted);" id="references-title">References</p>
+          <div class="references-list">
+            {references.map((reference) => (
+              <div class="reference-item">
+                <span class="reference-tag">{reference.type}</span>
+                <a href={reference.href} target="_blank" rel="noopener noreferrer">
+                  {reference.title}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
 
-      <!-- Design Notes -->
-      <section class="border-t border-[#1e2329] bg-[#1e2329]">
-        <div class="mx-auto max-w-5xl px-6 py-12">
-          <p
-            class="text-[10px] uppercase tracking-[0.25em] text-zinc-500"
-            style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace; font-weight: 400;"
-          >
-            Design Notes
-          </p>
-          <p
-            class="mt-2 text-sm font-medium text-zinc-200"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;"
-          >
-            YIL 2026-05-12 — Structure Enables Autonomy
-          </p>
-          <p
-            class="mt-1 text-sm text-zinc-500"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;"
-          >
-            From microservices guardrail debt to gamified quest platforms to multi-agent dashboards
-            — a day of lessons about how structure, not chaos, is what makes autonomy possible.
-          </p>
-          <!-- Accent swatches -->
-          <div class="mt-4 flex flex-wrap gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #FCD535;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                >accent-1 / guardrails</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #0ecb81;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                >accent-2 / nanotags</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #2dbdb6;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                >accent-3 / gamification</span
-              >
-            </div>
-            <div class="flex items-center gap-1.5">
-              <span class="h-3 w-3 rounded-full" style="background: #f6465d;"></span>
-              <span
-                class="text-[10px] text-zinc-500"
-                style="font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;"
-                >accent-4 / agent-view</span
-              >
-            </div>
-          </div>
-          <!-- Overview prose from DESIGN.md -->
-          <p
-            class="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500"
-            style="font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;"
-          >
-            This page ports the Binance visual language into YIL editorial format. Binance runs on
-            a deep near-black canvas (#0b0e11) with exactly one high-voltage accent — Binance Yellow
-            (#FCD535) — doing all the brand's authority work. That scarcity is the system: yellow
-            appears rarely so every use lands with force. The day's four themes each get their own
-            accent pulled from Binance's semantic palette: guardrails gets the yellow (most
-            important insight, most authority), nanotags gets the trading-up green (native growth,
-            forward momentum), gamification gets the turquoise (product-minded, human-centered), and
-            agent orchestration gets the trading-down red (interrupt states, active status, urgency).
-            The "imperfect understanding" quote drops into an elevated surface band (#1e2329)
-            mid-page as a philosophical pivot between the technical first half and the
-            systems-thinking second half. Two elevation levels — canvas (#0b0e11) and surface
-            (#1e2329) — provide all the depth; no shadows, no gradients.
+      <section class="design-note">
+        <div class="wrap" style="padding-block: 3rem;">
+          <p class="meta-line">Design Notes</p>
+          <p style="margin-top: 0.85rem;">
+            <strong>YIL 2026-05-12 / Structure Enables Autonomy.</strong> This page ports the
+            Binance visual language into YIL editorial format: a near-black canvas, one elevated
+            surface, scarce yellow for authority, and semantic exchange colors only where a section
+            needs them.
           </p>
         </div>
       </section>
@@ -641,6 +908,7 @@ import YilSeriesNav from '@/components/YilSeriesNav.astro';
         },
         { threshold: 0.06 }
       );
+
       document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
     </script>
   </body>
