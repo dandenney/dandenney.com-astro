@@ -1,0 +1,957 @@
+---
+export const prerender = true;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>impeccable — Production-grade design for Claude Code</title>
+  <meta name="description" content="A Claude Code skill that ships production-grade design with committed aesthetic choices. No generic templates. No AI slop. Real craft, enforced." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: oklch(43% 0.185 25);
+      --red-muted: oklch(55% 0.16 25);
+      --red-faint: oklch(96% 0.01 25);
+      --ink: oklch(14% 0.006 30);
+      --ink-mid: oklch(38% 0.006 30);
+      --ink-quiet: oklch(58% 0.006 30);
+      --paper: oklch(98.5% 0.004 30);
+      --paper-warm: oklch(96.5% 0.007 45);
+      --void: oklch(13% 0.008 255);
+      --void-mid: oklch(22% 0.008 255);
+      --void-border: oklch(28% 0.008 255);
+      --border: oklch(88% 0.005 30);
+      --font: 'Montserrat', sans-serif;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--paper);
+      color: var(--ink);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem clamp(1.5rem, 5vw, 3rem);
+      background: oklch(98.5% 0.004 30 / 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-mark {
+      font-size: 1rem; font-weight: 800; letter-spacing: -0.02em;
+      color: var(--red);
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-link {
+      font-size: 0.8125rem; font-weight: 600; color: var(--ink-mid);
+      text-decoration: none; transition: color 0.15s;
+    }
+    .nav-link:hover { color: var(--ink); }
+    .nav-cta {
+      font-size: 0.8125rem; font-weight: 700;
+      color: white; background: var(--red);
+      text-decoration: none; padding: 0.5rem 1.25rem;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* HERO */
+    .hero {
+      min-height: 100svh;
+      padding: clamp(7rem, 15vw, 10rem) clamp(1.5rem, 5vw, 3rem) clamp(5rem, 10vw, 7rem);
+      display: flex; align-items: flex-end;
+      position: relative; overflow: hidden;
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 1100px; }
+    .hero-kicker {
+      font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .hero-kicker::before {
+      content: '';
+      display: block; width: 28px; height: 2px;
+      background: var(--red);
+    }
+    .hero-headline {
+      font-size: clamp(3.75rem, 11vw, 9.5rem);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--red);
+      display: block;
+    }
+    .hero-body-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+    }
+    .hero-body {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 400; line-height: 1.7;
+      color: var(--ink-mid);
+      max-width: 50ch;
+    }
+    .hero-actions { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+    .btn-primary {
+      font-size: 0.9375rem; font-weight: 700;
+      background: var(--red); color: white;
+      text-decoration: none; padding: 0.9rem 2.25rem;
+      display: inline-block; transition: opacity 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-ghost {
+      font-size: 0.875rem; font-weight: 600; color: var(--ink-mid);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: color 0.15s;
+    }
+    .btn-ghost:hover { color: var(--ink); }
+
+    /* Background text watermark */
+    .hero-watermark {
+      position: absolute; bottom: -0.15em; right: -0.04em;
+      font-size: clamp(10rem, 30vw, 26rem);
+      font-weight: 900; font-style: italic;
+      color: oklch(92% 0.004 30);
+      letter-spacing: -0.06em;
+      line-height: 1; user-select: none; pointer-events: none;
+      z-index: 0;
+    }
+
+    /* STRIP */
+    .strip {
+      background: var(--void);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .strip-item {
+      padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.5rem);
+      border-right: 1px solid var(--void-border);
+    }
+    .strip-item:last-child { border-right: none; }
+    .strip-num {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 900; line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--red-muted);
+      margin-bottom: 0.625rem;
+    }
+    .strip-label {
+      font-size: 0.8125rem; font-weight: 500;
+      color: oklch(62% 0.007 255);
+      line-height: 1.5;
+    }
+
+    /* ANNOTATOR SECTION */
+    .annotator {
+      background: var(--paper-warm);
+      padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 5vw, 3rem);
+    }
+    .annotator-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.55fr;
+      gap: clamp(3rem, 7vw, 6rem); align-items: center;
+    }
+    .annotator-copy {}
+    .section-tag {
+      font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: 0.625rem;
+    }
+    .section-tag::before {
+      content: ''; display: block; width: 20px; height: 2px; background: var(--red);
+    }
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.75rem;
+    }
+    .section-body {
+      font-size: 1rem; line-height: 1.75;
+      color: var(--ink-mid); margin-bottom: 1.25rem;
+      max-width: 52ch;
+    }
+    .section-body:last-of-type { margin-bottom: 2.5rem; }
+
+    /* BROWSER MOCKUP */
+    .browser {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 30px 90px oklch(0% 0 0 / 0.1), 0 2px 12px oklch(0% 0 0 / 0.06);
+      overflow: hidden;
+    }
+    .browser-chrome {
+      background: oklch(93% 0.004 255);
+      border-bottom: 1px solid oklch(87% 0.005 255);
+      padding: 0.75rem 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .chrome-dots { display: flex; gap: 6px; }
+    .chrome-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .chrome-dot:nth-child(1) { background: #ff5f57; }
+    .chrome-dot:nth-child(2) { background: #febc2e; }
+    .chrome-dot:nth-child(3) { background: #28c840; }
+    .chrome-url {
+      flex: 1; background: white;
+      border: 1px solid oklch(84% 0.005 255);
+      border-radius: 4px; padding: 0.3rem 0.75rem;
+      font-size: 0.6875rem; color: oklch(52% 0.005 255);
+      font-family: 'Courier New', monospace;
+    }
+
+    .browser-body {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      min-height: 320px;
+    }
+    .browser-page {
+      padding: 1.25rem;
+      position: relative;
+    }
+    .browser-panel {
+      border-left: 1px solid var(--border);
+      padding: 0.875rem 0.75rem;
+      background: oklch(97.5% 0.003 30);
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .panel-head {
+      font-size: 0.5625rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--ink-quiet); margin-bottom: 0.625rem;
+      padding-bottom: 0.625rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Fake page elements */
+    .fp-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.125rem;
+    }
+    .fp-logo { width: 64px; height: 14px; background: oklch(18% 0.005 255); border-radius: 2px; }
+    .fp-nav-links { display: flex; gap: 10px; }
+    .fp-nav-link { width: 32px; height: 8px; background: oklch(80% 0.004 255); border-radius: 2px; }
+
+    .fp-headline {
+      height: 22px; background: oklch(16% 0.005 255);
+      border-radius: 3px; width: 72%;
+      margin-bottom: 8px;
+    }
+    .fp-sub {
+      height: 10px; background: oklch(78% 0.004 255);
+      border-radius: 2px; margin-bottom: 5px;
+    }
+    .fp-sub:last-of-type { width: 55%; }
+
+    /* Annotated button */
+    .fp-btn-wrapper {
+      margin-top: 12px; display: inline-block;
+      position: relative;
+    }
+    .fp-btn {
+      height: 30px; width: 88px;
+      background: var(--red);
+      border-radius: 3px;
+    }
+    .ann-frame {
+      position: absolute;
+      inset: -4px;
+      border: 2px dashed var(--red);
+      border-radius: 5px;
+      animation: ann-pulse 2.2s ease-in-out infinite;
+    }
+    .ann-badge {
+      position: absolute; top: -20px; left: 0;
+      background: var(--red); color: white;
+      font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.08em; padding: 2px 6px;
+      border-radius: 2px; white-space: nowrap;
+    }
+
+    /* Annotated cards */
+    .fp-cards-wrapper {
+      margin-top: 1rem; position: relative;
+    }
+    .ann-frame-cards {
+      position: absolute; inset: -4px;
+      border: 1.5px dashed oklch(68% 0.008 255);
+      border-radius: 4px; pointer-events: none;
+    }
+    .ann-badge-cards {
+      position: absolute; top: -18px; right: 0;
+      background: oklch(50% 0.008 255); color: white;
+      font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.08em; padding: 2px 6px;
+      border-radius: 2px; white-space: nowrap;
+    }
+    .fp-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .fp-card {
+      background: oklch(95% 0.004 255);
+      border-radius: 3px; padding: 8px;
+    }
+    .fp-card-icon { width: 14px; height: 14px; background: oklch(80% 0.004 255); border-radius: 2px; margin-bottom: 6px; }
+    .fp-card-line { height: 6px; background: oklch(84% 0.004 255); border-radius: 2px; margin-bottom: 4px; }
+    .fp-card-line:last-child { width: 60%; }
+
+    /* Alt items in panel */
+    .alt-item {
+      padding: 0.5rem; border-radius: 3px;
+      margin-bottom: 0.375rem; cursor: default;
+    }
+    .alt-item.is-active { background: var(--red-faint); outline: 1.5px solid var(--red); }
+    .alt-label { font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-quiet); margin-bottom: 4px; }
+    .alt-preview { height: 20px; border-radius: 2px; }
+    .alt-preview.filled { background: var(--red); }
+    .alt-preview.ghost { border: 1.5px solid oklch(18% 0.005 255); }
+    .alt-preview.outline { border: 1.5px solid var(--red); }
+    .alt-preview.text-link {
+      display: flex; align-items: center;
+      padding: 0 4px;
+    }
+    .alt-preview.text-link::before {
+      content: ''; display: block;
+      width: 32px; height: 6px;
+      background: var(--red); border-radius: 1px;
+    }
+    .alt-preview.text-link::after {
+      content: '';  display: block;
+      width: 0; height: 0;
+      border-left: 5px solid var(--red);
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      margin-left: 3px;
+    }
+
+    @keyframes ann-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* COMMANDS */
+    .commands {
+      background: var(--void);
+      padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 5vw, 3rem);
+    }
+    .commands-inner { max-width: 1280px; margin: 0 auto; }
+    .commands-header { margin-bottom: clamp(3rem, 7vw, 5rem); }
+    .commands-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.03em; color: white;
+      max-width: 22ch; margin-top: 1.25rem;
+    }
+    .commands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      border-top: 1px solid var(--void-border);
+    }
+    .cmd-cat {
+      padding: 2rem 2rem 2rem 0;
+      border-bottom: 1px solid var(--void-border);
+    }
+    .cmd-cat-name {
+      font-size: 0.625rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: oklch(50% 0.007 255);
+      margin-bottom: 1.5rem;
+    }
+    .cmd-list { display: flex; flex-direction: column; gap: 1rem; }
+    .cmd-item { display: grid; grid-template-columns: 80px 1fr; gap: 1rem; align-items: baseline; }
+    .cmd-name {
+      font-size: 0.9375rem; font-weight: 800;
+      color: var(--red-muted);
+      font-family: 'Courier New', monospace;
+      letter-spacing: -0.01em;
+    }
+    .cmd-desc {
+      font-size: 0.8125rem; font-weight: 500;
+      color: oklch(62% 0.007 255);
+      line-height: 1.45;
+    }
+
+    /* LAWS */
+    .laws {
+      padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 5vw, 3rem);
+      max-width: calc(1280px + 6rem); margin: 0 auto;
+    }
+    .laws-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 22ch; margin-top: 1.25rem; margin-bottom: 1.5rem;
+    }
+    .laws-intro {
+      font-size: 1rem; line-height: 1.75;
+      color: var(--ink-mid); max-width: 55ch;
+      margin-bottom: clamp(3rem, 7vw, 5rem);
+    }
+    .laws-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .law {
+      padding: 2rem 3rem 2rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .law:nth-child(even) { padding-left: 3rem; padding-right: 0; border-left: 1px solid var(--border); }
+    .law-num {
+      font-size: 4.5rem; font-weight: 900;
+      color: oklch(86% 0.005 30);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .law-title-text {
+      font-size: 1.1875rem; font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.625rem; line-height: 1.2;
+    }
+    .law-body {
+      font-size: 0.9rem; line-height: 1.7;
+      color: var(--ink-mid);
+    }
+
+    /* CONTEXT SECTION */
+    .context-section {
+      background: var(--paper-warm);
+      padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 5vw, 3rem);
+    }
+    .context-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: clamp(3rem, 7vw, 6rem); align-items: center;
+    }
+    .context-visual {
+      display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .context-file {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden;
+    }
+    .context-file-header {
+      background: oklch(95% 0.004 255);
+      border-bottom: 1px solid var(--border);
+      padding: 0.625rem 1rem;
+      display: flex; align-items: center; gap: 0.625rem;
+    }
+    .context-file-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+    .context-file-name {
+      font-size: 0.75rem; font-weight: 700;
+      font-family: 'Courier New', monospace;
+      color: var(--ink-mid);
+    }
+    .context-file-body { padding: 1rem; font-size: 0.75rem; font-family: 'Courier New', monospace; line-height: 1.7; }
+    .cf-key { color: var(--red); font-weight: 700; }
+    .cf-val { color: oklch(42% 0.007 255); }
+    .cf-comment { color: oklch(68% 0.005 255); }
+    .context-arrow {
+      font-size: 1.5rem; color: var(--red);
+      font-weight: 900; text-align: center;
+      letter-spacing: -0.05em;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--red);
+      padding: clamp(6rem, 14vw, 11rem) clamp(1.5rem, 5vw, 3rem);
+      text-align: center;
+    }
+    .cta-headline {
+      font-size: clamp(2.75rem, 7vw, 6rem);
+      font-weight: 900; font-style: italic;
+      letter-spacing: -0.04em; color: white;
+      line-height: 0.95; margin-bottom: 1.5rem;
+    }
+    .cta-body {
+      font-size: 1.0625rem;
+      color: oklch(90% 0.01 25);
+      max-width: 48ch; margin: 0 auto 3rem;
+      line-height: 1.65; font-weight: 500;
+    }
+    .cta-code {
+      display: inline-block;
+      background: oklch(36% 0.17 25);
+      color: oklch(92% 0.01 25);
+      font-family: 'Courier New', monospace;
+      font-size: 1.0625rem; font-weight: 700;
+      padding: 0.9rem 2.25rem;
+      border-radius: 4px; letter-spacing: 0.02em;
+    }
+    .cta-sub {
+      margin-top: 1.5rem;
+      font-size: 0.8125rem; color: oklch(78% 0.01 25);
+      font-weight: 500;
+    }
+
+    /* FOOTER */
+    .page-footer {
+      background: var(--void);
+      padding: 2rem clamp(1.5rem, 5vw, 3rem);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-mark { font-size: 0.9rem; font-weight: 800; color: var(--red-muted); }
+    .footer-back {
+      font-size: 0.8125rem; font-weight: 600;
+      color: oklch(50% 0.007 255); text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-back:hover { color: oklch(70% 0.007 255); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .strip { grid-template-columns: 1fr 1fr; }
+      .strip-item { border-bottom: 1px solid var(--void-border); }
+      .strip-item:nth-child(2) { border-right: none; }
+      .annotator-inner { grid-template-columns: 1fr; }
+      .context-inner { grid-template-columns: 1fr; }
+      .laws-grid { grid-template-columns: 1fr; }
+      .law:nth-child(even) { padding-left: 0; border-left: none; }
+      .hero-body-row { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    @media (max-width: 640px) {
+      .strip { grid-template-columns: 1fr; }
+      .strip-item { border-right: none; }
+      .nav-links { display: none; }
+      .commands-grid { grid-template-columns: 1fr; }
+      .browser-body { grid-template-columns: 1fr; }
+      .browser-panel { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ann-frame { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Site navigation">
+    <span class="nav-mark">/impeccable</span>
+    <div class="nav-links">
+      <a href="#annotator" class="nav-link">Live annotator</a>
+      <a href="#commands" class="nav-link">Commands</a>
+      <a href="#laws" class="nav-link">Design laws</a>
+      <a href="#start" class="nav-cta">Get started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="hero-inner">
+      <p class="hero-kicker">Claude Code · Design skill</p>
+      <h1 class="hero-headline" id="hero-headline">
+        Stop shipping<br>
+        <em>mediocre.</em>
+      </h1>
+      <div class="hero-body-row">
+        <p class="hero-body">
+          A Claude Code skill that enforces production-grade design standards. Committed aesthetic choices. Real craft. AI slop patterns caught before they ship.
+        </p>
+        <div class="hero-actions">
+          <a href="#commands" class="btn-primary">See all 20+ commands</a>
+          <a href="#annotator" class="btn-ghost">Watch the annotator ↓</a>
+        </div>
+      </div>
+    </div>
+    <span class="hero-watermark" aria-hidden="true">imp</span>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip" role="list" aria-label="Key stats">
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">20+</div>
+      <div class="strip-label">Design commands, from first shape to final polish</div>
+    </div>
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">2</div>
+      <div class="strip-label">Registers: brand (landing pages, marketing) and product (apps, dashboards)</div>
+    </div>
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">0</div>
+      <div class="strip-label">Gradient text, glassmorphism, or side-stripe borders. Banned. Enforced.</div>
+    </div>
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">1</div>
+      <div class="strip-label">Standard: exceptional. Not "good for AI." Exceptional, full stop.</div>
+    </div>
+  </div>
+
+  <!-- VISUAL ANNOTATOR -->
+  <section class="annotator" id="annotator" aria-labelledby="annotator-title">
+    <div class="annotator-inner">
+
+      <div class="annotator-copy">
+        <p class="section-tag">Live command</p>
+        <h2 class="section-title" id="annotator-title">The visual annotator</h2>
+        <p class="section-body">
+          Open your browser, point at any element, and impeccable generates design alternatives for it. Three button weights. Two card layouts. A different color strategy. All before touching code.
+        </p>
+        <p class="section-body">
+          Every alternative is calculated against your actual design system: your brand colors, your type scale, your spacing. No generic variations.
+        </p>
+        <a href="#start" class="btn-primary">Try /impeccable live</a>
+      </div>
+
+      <div role="img" aria-label="Browser mockup showing impeccable's visual annotator highlighting a button with three alternative designs in a side panel">
+        <div class="browser">
+          <div class="browser-chrome">
+            <div class="chrome-dots" aria-hidden="true">
+              <div class="chrome-dot"></div>
+              <div class="chrome-dot"></div>
+              <div class="chrome-dot"></div>
+            </div>
+            <div class="chrome-url">localhost:4321/dashboard</div>
+          </div>
+
+          <div class="browser-body">
+            <!-- Fake page being annotated -->
+            <div class="browser-page" aria-hidden="true">
+              <div class="fp-nav">
+                <div class="fp-logo"></div>
+                <div class="fp-nav-links">
+                  <div class="fp-nav-link"></div>
+                  <div class="fp-nav-link"></div>
+                  <div class="fp-nav-link"></div>
+                </div>
+              </div>
+
+              <div class="fp-headline"></div>
+              <div class="fp-sub"></div>
+              <div class="fp-sub"></div>
+
+              <!-- Annotated button (selected) -->
+              <div class="fp-btn-wrapper">
+                <div class="ann-badge">3 alternatives</div>
+                <div class="ann-frame"></div>
+                <div class="fp-btn"></div>
+              </div>
+
+              <!-- Annotated card grid -->
+              <div class="fp-cards-wrapper">
+                <div class="ann-badge-cards">card grid · 2 alternatives</div>
+                <div class="ann-frame-cards"></div>
+                <div class="fp-cards">
+                  <div class="fp-card">
+                    <div class="fp-card-icon"></div>
+                    <div class="fp-card-line"></div>
+                    <div class="fp-card-line"></div>
+                  </div>
+                  <div class="fp-card">
+                    <div class="fp-card-icon"></div>
+                    <div class="fp-card-line"></div>
+                    <div class="fp-card-line"></div>
+                  </div>
+                  <div class="fp-card">
+                    <div class="fp-card-icon"></div>
+                    <div class="fp-card-line"></div>
+                    <div class="fp-card-line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Alternatives panel -->
+            <div class="browser-panel" aria-hidden="true">
+              <div class="panel-head">Alternatives</div>
+
+              <div class="alt-item is-active">
+                <div class="alt-label">Current</div>
+                <div class="alt-preview filled"></div>
+              </div>
+
+              <div class="alt-item">
+                <div class="alt-label">Ghost</div>
+                <div class="alt-preview ghost"></div>
+              </div>
+
+              <div class="alt-item">
+                <div class="alt-label">Outline</div>
+                <div class="alt-preview outline"></div>
+              </div>
+
+              <div class="alt-item">
+                <div class="alt-label">Text link</div>
+                <div class="alt-preview text-link"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMMANDS -->
+  <section class="commands" id="commands" aria-labelledby="commands-title">
+    <div class="commands-inner">
+      <div class="commands-header">
+        <p class="section-tag" style="color: var(--red-muted);">The command system</p>
+        <h2 class="commands-title" id="commands-title">
+          One command for every design moment.
+        </h2>
+      </div>
+
+      <div class="commands-grid">
+        <div class="cmd-cat">
+          <div class="cmd-cat-name">Build</div>
+          <div class="cmd-list">
+            <div class="cmd-item">
+              <span class="cmd-name">craft</span>
+              <span class="cmd-desc">Shape then build a feature end-to-end</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">shape</span>
+              <span class="cmd-desc">Plan UX/UI before writing any code</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">teach</span>
+              <span class="cmd-desc">Set up brand and product design context</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">document</span>
+              <span class="cmd-desc">Generate a design system from existing code</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">extract</span>
+              <span class="cmd-desc">Pull reusable tokens into a design system</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cmd-cat">
+          <div class="cmd-cat-name">Evaluate</div>
+          <div class="cmd-list">
+            <div class="cmd-item">
+              <span class="cmd-name">critique</span>
+              <span class="cmd-desc">UX review with heuristic scoring</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">audit</span>
+              <span class="cmd-desc">Technical checks: a11y, perf, responsive</span>
+            </div>
+          </div>
+          <div class="cmd-cat-name" style="margin-top: 1.75rem;">Refine</div>
+          <div class="cmd-list">
+            <div class="cmd-item">
+              <span class="cmd-name">polish</span>
+              <span class="cmd-desc">Final quality pass before shipping</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">bolder</span>
+              <span class="cmd-desc">Amplify safe or bland designs</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">quieter</span>
+              <span class="cmd-desc">Tone down aggressive designs</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">distill</span>
+              <span class="cmd-desc">Strip to essence, remove complexity</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">harden</span>
+              <span class="cmd-desc">Production-ready: errors, i18n, edge cases</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">onboard</span>
+              <span class="cmd-desc">First-run flows, empty states, activation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cmd-cat">
+          <div class="cmd-cat-name">Enhance</div>
+          <div class="cmd-list">
+            <div class="cmd-item">
+              <span class="cmd-name">animate</span>
+              <span class="cmd-desc">Add purposeful motion and transitions</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">colorize</span>
+              <span class="cmd-desc">Add strategic color to monochromatic UIs</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">typeset</span>
+              <span class="cmd-desc">Improve typography hierarchy and fonts</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">delight</span>
+              <span class="cmd-desc">Add personality and memorable touches</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">overdrive</span>
+              <span class="cmd-desc">Push past conventional limits</span>
+            </div>
+          </div>
+          <div class="cmd-cat-name" style="margin-top: 1.75rem;">Fix + Iterate</div>
+          <div class="cmd-list">
+            <div class="cmd-item">
+              <span class="cmd-name">clarify</span>
+              <span class="cmd-desc">Improve UX copy, labels, error messages</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">adapt</span>
+              <span class="cmd-desc">Responsive: different devices and viewports</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">optimize</span>
+              <span class="cmd-desc">Diagnose and fix UI performance</span>
+            </div>
+            <div class="cmd-item">
+              <span class="cmd-name">live</span>
+              <span class="cmd-desc">Visual annotator: pick, generate, apply</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN LAWS -->
+  <section class="laws" id="laws" aria-labelledby="laws-title">
+    <p class="section-tag">Design laws</p>
+    <h2 class="laws-title" id="laws-title">What impeccable refuses to ship.</h2>
+    <p class="laws-intro">
+      Bad patterns have names. Naming them is the first step to banning them. These are the patterns impeccable catches before they make it to production.
+    </p>
+
+    <div class="laws-grid">
+      <div class="law">
+        <div class="law-num">01</div>
+        <h3 class="law-title-text">Side-stripe borders</h3>
+        <p class="law-body">The colored left-border on cards and callouts as a hierarchy signal. It's shorthand for design thinking. Rewritten with full borders, background tints, leading numbers, or nothing at all.</p>
+      </div>
+      <div class="law">
+        <div class="law-num">02</div>
+        <h3 class="law-title-text">Gradient text</h3>
+        <p class="law-body">Background-clip text with a gradient fill. Decorative without meaning, and a clear AI tell. Replaced with a single solid color. Emphasis comes from weight and scale, not chrome.</p>
+      </div>
+      <div class="law">
+        <div class="law-num">03</div>
+        <h3 class="law-title-text">The hero-metric template</h3>
+        <p class="law-body">Big number, small label, supporting stats, gradient accent. A SaaS landing page pattern so overused it stopped communicating anything years ago. Rewritten from scratch.</p>
+      </div>
+      <div class="law">
+        <div class="law-num">04</div>
+        <h3 class="law-title-text">Identical card grids</h3>
+        <p class="law-body">Icon + heading + text, same card size, repeated until the grid fills. Cards are the lazy answer. There are always better affordances when the content is actually considered.</p>
+      </div>
+      <div class="law">
+        <div class="law-num">05</div>
+        <h3 class="law-title-text">Glassmorphism by reflex</h3>
+        <p class="law-body">Blur and glass used decoratively because it "looks modern." When everything is glass, nothing is. Used sparingly and purposefully, or not at all.</p>
+      </div>
+      <div class="law">
+        <div class="law-num">06</div>
+        <h3 class="law-title-text">Theme chosen by category</h3>
+        <p class="law-body">Dark because "developer tools look cool dark." Light because "safer." Theme is decided by a physical scene sentence: who uses this, where, under what ambient light, in what mood. Not a reflex.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEXT SECTION -->
+  <section class="context-section" aria-labelledby="context-title">
+    <div class="context-inner">
+
+      <div class="context-visual" aria-hidden="true">
+        <div class="context-file">
+          <div class="context-file-header">
+            <div class="context-file-dot"></div>
+            <span class="context-file-name">PRODUCT.md</span>
+          </div>
+          <div class="context-file-body">
+            <div><span class="cf-key">## Brand Personality</span></div>
+            <div><span class="cf-val">Clean, bold, whimsical.</span></div>
+            <div><span class="cf-comment">## Color</span></div>
+            <div><span class="cf-val">Primary: #b91c1c (red-700)</span></div>
+            <div><span class="cf-val">Foundation: white + slate</span></div>
+            <div><span class="cf-comment">## Typography</span></div>
+            <div><span class="cf-val">Montserrat, display-weight</span></div>
+            <div><span class="cf-comment">## Principles</span></div>
+            <div><span class="cf-val">Editorial over component.</span></div>
+            <div><span class="cf-val">Whimsy lives in the details.</span></div>
+          </div>
+        </div>
+
+        <div class="context-arrow">↓</div>
+
+        <div class="context-file">
+          <div class="context-file-header">
+            <div class="context-file-dot"></div>
+            <span class="context-file-name">DESIGN.md (generated)</span>
+          </div>
+          <div class="context-file-body">
+            <div><span class="cf-key">## Tokens</span></div>
+            <div><span class="cf-val">--color-accent: oklch(43% 0.185 25)</span></div>
+            <div><span class="cf-val">--font-display: Montserrat 900</span></div>
+            <div><span class="cf-comment">## Scale</span></div>
+            <div><span class="cf-val">base: 1rem · ratio: 1.333</span></div>
+            <div><span class="cf-val">steps: sm md lg xl 2xl 3xl</span></div>
+            <div><span class="cf-comment">## Elevation</span></div>
+            <div><span class="cf-val">no shadows · border only</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="section-tag">Context-aware design</p>
+        <h2 class="section-title" id="context-title">It learns your brand. Then it builds to it.</h2>
+        <p class="section-body">
+          Run <code style="font-size: 0.875em; font-weight: 700; color: var(--red);">/impeccable teach</code> once. impeccable reads your project, asks the right questions, and writes PRODUCT.md: your brand personality, color strategy, type system, and design principles.
+        </p>
+        <p class="section-body">
+          From then on, every command works from that context. Alternatives generated by the annotator fit your palette. Colors suggested by colorize match your strategy. Nothing generic.
+        </p>
+        <p class="section-body" style="margin-bottom: 2.5rem;">
+          Run <code style="font-size: 0.875em; font-weight: 700; color: var(--red);">/impeccable document</code> to extract DESIGN.md from existing code: tokens, scale, elevation, and component patterns pulled directly from what's already shipping.
+        </p>
+        <a href="#start" class="btn-primary">Set up context</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="start" aria-labelledby="cta-headline">
+    <h2 class="cta-headline" id="cta-headline">
+      Ship impeccable.
+    </h2>
+    <p class="cta-body">
+      Add the skill to your Claude Code project. Run one command. Start designing like it matters.
+    </p>
+    <code class="cta-code">/impeccable teach</code>
+    <p class="cta-sub">Then /impeccable craft, shape, live, or any of 20+ commands.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <span class="footer-mark">/impeccable</span>
+    <a href="/" class="footer-back">← dandenney.com</a>
+  </footer>
+
+</body>
+</html>
