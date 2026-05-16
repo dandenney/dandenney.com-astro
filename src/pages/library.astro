@@ -1,14 +1,28 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
-import { getSharedLinks } from "../scripts/stash.ts";
-const links = await getSharedLinks();
-
-import FormattedDate from "../components/FormattedDate.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import { libraryLinks } from "@/data/libraryLinks";
 
 export const prerender = true;
+
+const grouped = libraryLinks.reduce<Record<string, typeof libraryLinks>>((acc, link) => {
+  const key = link.created.slice(0, 7)
+  if (!acc[key]) acc[key] = []
+  acc[key].push(link)
+  return acc
+}, {})
+const months = Object.keys(grouped).sort().reverse()
+
+function monthLabel(key: string) {
+  const [year, mon] = key.split('-').map(Number)
+  return new Date(Date.UTC(year, mon - 1, 1)).toLocaleDateString('en-US', {
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  })
+}
 ---
 
 <style>
@@ -77,22 +91,27 @@ export const prerender = true;
         </h1>
         <p class="mt-2">Links of things I've read and watched.</p>
       </section>
-      <ul class="library-links has-links">
-        {
-          links.map((link) => (
-            <li>
-              <a class="link" href={link.url}>
-                {link.title}
-              </a>
-              {link.notes && <span class="notes">{link.notes}</span>}
-              <span class="meta">
-                {link.tag}&nbsp;
-                <FormattedDate date={link.created} />
-              </span>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        months.map((month) => (
+          <>
+            <h2 class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">
+              {monthLabel(month)}
+            </h2>
+            <ul class="library-links has-links">
+              {grouped[month].map((link) => (
+                <li>
+                  <a class="link" href={link.url}>{link.title}</a>
+                  {link.description && <span class="notes">{link.description}</span>}
+                  <span class="meta">
+                    Read&nbsp;
+                    <FormattedDate date={new Date(link.created + 'T12:00:00')} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </>
+        ))
+      }
 
       <h2
         class="px-6 lg:px-10 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
