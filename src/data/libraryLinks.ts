@@ -9,6 +9,18 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Frontend isn't Dead. Your Focus Needs to Change.",
+    url: "https://formation.dev/blog/frontend-isnt-dead-but-your-focus-needs-to-change/",
+    description: "Frontend development isn’t dead, but AI is changing the role. Learn where AI helps, where it struggles, and where frontend engineers should focus.",
+    created: "2026-05-15",
+  },
+  {
+    title: "Pilcrow ¶ — make your clanker your editor",
+    url: "https://pilcrow.ink/",
+    description: "Make your clanker your editor. A prose linter plus interpretive lenses anchored in classical style guides. AI-tell detection is one feature among many.",
+    created: "2026-05-15",
+  },
+  {
     title: "The ultimate guide to /goal",
     url: "https://x.com/Saboo_Shubham_/status/2054988166541770782",
     description: "/goal is not a feature. It is a primitive. HTTP is a primitive. JSON is a primitive. /goal is becoming one for coding agents.A few weeks ago...",
@@ -18,6 +30,18 @@ export const libraryLinks: LibraryLink[] = [
     title: "Agent view in Claude Code",
     url: "https://claude.com/blog/agent-view-in-claude-code?utm_source=substack&utm_medium=email",
     description: "Today we're introducing agent view in Claude Code: one place to manage all your Claude Code sessions.",
+    created: "2026-05-12",
+  },
+  {
+    title: "Inside Anthropic’s 2026 Developer Conference",
+    url: "https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference",
+    description: "What it was like in the room, plus what the new Managed Agents features look like in production",
+    created: "2026-05-12",
+  },
+  {
+    title: "Learn AI Layer by Layer",
+    url: "https://learnai.robennals.org/?utm_source=substack&utm_medium=email",
+    description: "An interactive, visual guide to understanding AI from first principles. Learn neural networks, transformers, and modern AI through hands-on experimentation.",
     created: "2026-05-12",
   },
   {
