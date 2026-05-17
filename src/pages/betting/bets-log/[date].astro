@@ -32,7 +32,7 @@ const sports = [...new Set(log.candidates.map((c) => c.sport))].join(" / ");
       title={`Bets Log ${log.displayDate} | Dan Denney`}
       description={`${log.candidates.length} ${[...new Set(log.candidates.map(c => c.sport))].join('/')} candidates analyzed by AI harnesses on ${log.displayDate}. Decision: ${log.finalDecision.action}. Analyzing: ${log.candidates.map(c => c.player).join(', ')}.`}
       type="blogpost"
-      datePublished={new Date(log.date)}
+      datePublished={new globalThis.Date(log.date)}
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
