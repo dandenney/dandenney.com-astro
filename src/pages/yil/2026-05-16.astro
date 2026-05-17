@@ -1,0 +1,517 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-16',
+  headline: 'Convergence by Primitive',
+  summary:
+    'Three AI tools (Codex, Claude Code, Hermes) independently converged on /goal as their delegation interface, revealing a primitive that may define how AI workers are composed.',
+  accent: '#c3d9f3',
+  designRef: { name: 'Bugatti.com', url: 'https://www.bugatti.com' },
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const references = [
+  {
+    label: 'PRIMITIVE',
+    title: 'X thread — Saboo Shubham on /goal convergence',
+    url: 'https://x.com/Saboo_Shubham_/status/2054988166541770782',
+  },
+  {
+    label: 'ORCHESTRATION',
+    title: "Every — Inside Anthropic's 2026 Developer Conference",
+    url: 'https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference',
+  },
+  {
+    label: 'MEMORY',
+    title: 'Anthropic Blog — New in Claude: Managed Agents',
+    url: 'https://claude.com/blog/new-in-claude-managed-agents',
+  },
+  {
+    label: 'MEMORY',
+    title: 'Anthropic Platform Docs — Dreams',
+    url: 'https://platform.claude.com/docs/en/managed-agents/dreams',
+  },
+  {
+    label: 'FRONTEND',
+    title: "Formation — Frontend isn't dead, but your focus needs to change",
+    url: 'https://formation.dev/blog/frontend-isnt-dead-but-your-focus-needs-to-change/',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: Convergence by Primitive | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: "Saira Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-body: "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif;
+        --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+      }
+
+      @keyframes reveal {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes reveal {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+      }
+
+      .yil-hero    { animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible { animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+      .f-display { font-family: var(--font-display); }
+      .f-body    { font-family: var(--font-body); }
+      .f-mono    { font-family: var(--font-mono); }
+
+      /* Override hardcoded dark text in YilSeriesNav for this dark page */
+      .dark-nav a span.leading-snug { color: #cccccc; }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-black">
+    <main class="relative shadow-xs z-10 bg-black">
+      <Header />
+
+      <!-- ── HERO: full-width-statement ─────────────────────────────── -->
+      <section class="yil-hero bg-black">
+        <div class="mx-auto max-w-6xl px-6 py-40 text-center">
+          <p class="f-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500">
+            2026-05-16 / PRIMITIVE CONVERGENCE
+          </p>
+          <h1
+            class="f-display mt-10 font-normal uppercase text-white"
+            style="font-size: clamp(3.5rem, 12vw, 8rem); letter-spacing: 0.04em;"
+          >
+            /GOAL
+          </h1>
+          <p
+            class="f-body mx-auto mt-8 max-w-xl leading-relaxed text-zinc-300"
+            style="font-size: clamp(1.1rem, 2vw, 1.35rem);"
+          >
+            Three teams. Three tools. One primitive — and the convergence that makes AI composition
+            possible.
+          </p>
+          <div class="mt-10">
+            <a
+              href="#convergence"
+              class="f-mono inline-block rounded-full border border-white/50 px-8 py-3.5 text-[11px] uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-white/5"
+            >
+              READ ON
+            </a>
+          </div>
+        </div>
+        <div class="border-t border-white/10"></div>
+      </section>
+
+      <!-- ── QUOTE: standalone-dark-band ───────────────────────────── -->
+      <section class="yil-section relative overflow-hidden bg-zinc-950 py-28">
+        <div class="mx-auto max-w-6xl px-6">
+          <span
+            class="f-body pointer-events-none absolute -left-4 -top-8 select-none leading-none text-white/[0.05]"
+            aria-hidden="true"
+            style="font-size: clamp(8rem, 20vw, 16rem);"
+          >"</span>
+          <blockquote class="relative">
+            <p
+              class="f-body leading-snug text-white"
+              style="font-size: clamp(1.5rem, 3vw, 2.5rem);"
+            >
+              What matters isn't that any one of them shipped /goal; it's that three different teams
+              converged on the same primitive, and that convergence is what makes it possible to
+              compose them.
+            </p>
+            <footer class="mt-8">
+              <p class="f-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500">
+                Dan Denney / TIL 2026-05-16
+              </p>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ── CONVERGENCE: cards ─────────────────────────────────────── -->
+      <section id="convergence" class="yil-section bg-black py-28">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500">PRIMITIVE</p>
+          <h2
+            class="f-display mt-4 font-normal uppercase text-white"
+            style="font-size: clamp(2rem, 5vw, 4rem); letter-spacing: 0.04em;"
+          >
+            THREE TOOLS, ONE INTERFACE
+          </h2>
+
+          <div class="mt-16 grid grid-cols-1 gap-px bg-white/10 md:grid-cols-3">
+            <article class="bg-black p-8 md:p-10">
+              <p class="f-mono text-[10px] uppercase tracking-[0.2em] text-blue-200">/GOAL</p>
+              <h3
+                class="f-display mt-6 font-normal uppercase text-white"
+                style="font-size: 1.5rem; letter-spacing: 0.04em;"
+              >
+                CODEX
+              </h3>
+              <div class="mt-4 border-t border-white/10 pt-5">
+                <p class="f-body leading-relaxed text-zinc-300">
+                  Implementation worker: strong when given a clear spec. /goal is how you give it
+                  that spec — the artifact that moves the task from intention to execution.
+                </p>
+              </div>
+              <p class="f-mono mt-6 text-[10px] uppercase tracking-[0.12em] text-zinc-600">
+                SUBMIT /goal → IMPLEMENT SPEC
+              </p>
+            </article>
+
+            <article class="bg-black p-8 md:p-10">
+              <p class="f-mono text-[10px] uppercase tracking-[0.2em] text-blue-200">/GOAL</p>
+              <h3
+                class="f-display mt-6 font-normal uppercase text-white"
+                style="font-size: 1.5rem; letter-spacing: 0.04em;"
+              >
+                CLAUDE CODE
+              </h3>
+              <div class="mt-4 border-t border-white/10 pt-5">
+                <p class="f-body leading-relaxed text-zinc-300">
+                  The inverse of Codex: finding what's wrong with code that looks right — spec
+                  compliance, safety issues, error states, security holes. /goal points it at the
+                  target.
+                </p>
+              </div>
+              <p class="f-mono mt-6 text-[10px] uppercase tracking-[0.12em] text-zinc-600">
+                SUBMIT /goal → REVIEW CODE
+              </p>
+            </article>
+
+            <article class="bg-black p-8 md:p-10">
+              <p class="f-mono text-[10px] uppercase tracking-[0.2em] text-blue-200">/GOAL</p>
+              <h3
+                class="f-display mt-6 font-normal uppercase text-white"
+                style="font-size: 1.5rem; letter-spacing: 0.04em;"
+              >
+                HERMES
+              </h3>
+              <div class="mt-4 border-t border-white/10 pt-5">
+                <p class="f-body leading-relaxed text-zinc-300">
+                  Not a coding worker but an orchestrator. /goal is how Dan tells Hermes what he
+                  wants, and how Hermes hands off tasks to whichever tool fits the job.
+                </p>
+              </div>
+              <p class="f-mono mt-6 text-[10px] uppercase tracking-[0.12em] text-zinc-600">
+                SUBMIT /goal → ORCHESTRATE WORKERS
+              </p>
+            </article>
+          </div>
+
+          <div class="mt-8 border border-white/10 bg-zinc-950 p-8">
+            <p class="f-body italic leading-relaxed text-zinc-300" style="font-size: 1.1rem;">
+              The real primitive lives inside an interactive worker session: launch the CLI, submit
+              /goal, and walk away.
+            </p>
+            <p class="f-mono mt-4 text-[10px] uppercase tracking-[0.12em] text-zinc-600">
+              NOTE: /goal as a session-level directive is different from writing "goal:" inside a
+              one-shot prompt — the primitive requires an interactive session.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ORCHESTRATION: split, bg-zinc-900 ─────────────────────── -->
+      <section class="yil-section bg-zinc-900 py-28">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500">ORCHESTRATION</p>
+          <h2
+            class="f-display mt-4 font-normal uppercase text-white"
+            style="font-size: clamp(2rem, 5vw, 4rem); letter-spacing: 0.04em;"
+          >
+            WHEN AGENTS EARN THEIR KEEP
+          </h2>
+
+          <div class="mt-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
+            <div class="space-y-6">
+              <p class="f-body leading-relaxed text-zinc-300" style="font-size: 1.05rem;">
+                Multi-agent orchestration helped with multi-draft requests that previously ran
+                serially — each draft adding 20–30 seconds. Running drafts through multiple agents
+                made them faster and cut costs by about a third, because cheaper models could do
+                part of the work.
+              </p>
+              <p class="f-body leading-relaxed text-zinc-300" style="font-size: 1.05rem;">
+                The trade-offs are real:
+              </p>
+              <ul class="mt-2 space-y-4">
+                <li class="flex items-start gap-4">
+                  <span class="f-mono shrink-0 pt-0.5 text-[10px] uppercase tracking-[0.1em] text-zinc-600">01</span>
+                  <p class="f-body leading-relaxed text-zinc-400">
+                    Coordination overhead limits speed gains
+                  </p>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="f-mono shrink-0 pt-0.5 text-[10px] uppercase tracking-[0.1em] text-zinc-600">02</span>
+                  <p class="f-body leading-relaxed text-zinc-400">
+                    Debugging becomes harder — a weak draft may come from the coordinator agent or
+                    the writer agent
+                  </p>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="f-mono shrink-0 pt-0.5 text-[10px] uppercase tracking-[0.1em] text-zinc-600">03</span>
+                  <p class="f-body leading-relaxed text-zinc-400">
+                    Multi-agent does not automatically mean faster or cheaper
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="space-y-8 border border-white/10 p-8">
+              <div>
+                <p class="f-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+                  DECISION RULE
+                </p>
+                <p class="f-body mt-4 leading-relaxed text-zinc-200" style="font-size: 1.15rem;">
+                  Use multi-agent orchestration when the agent benefits from parallel subagents or a
+                  mixture of models; otherwise, a single agent is often enough.
+                </p>
+              </div>
+              <div class="border-t border-white/10 pt-6">
+                <p class="f-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+                  MAINTENANCE
+                </p>
+                <p class="f-body mt-3 leading-relaxed text-zinc-400">
+                  Agents get stale fast — running old models and old prompts with nobody responsible
+                  for updating them. The current solution: assign every agent an owner.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MEMORY: prose, bg-black ───────────────────────────────── -->
+      <section class="yil-section bg-black py-28">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500">MEMORY</p>
+          <h2
+            class="f-display mt-4 font-normal uppercase text-white"
+            style="font-size: clamp(2rem, 5vw, 4rem); letter-spacing: 0.04em;"
+          >
+            DREAMING
+          </h2>
+
+          <div class="mt-12 max-w-2xl space-y-6">
+            <p class="f-body leading-relaxed text-zinc-300" style="font-size: 1.1rem;">
+              Anthropic's "dreaming" feature is a background process that reviews an agent's past
+              sessions and memory stores, finds patterns, and rewrites memory so the agent improves
+              between runs.
+            </p>
+
+            <div class="border border-white/10 bg-zinc-950 p-6">
+              <div class="f-mono space-y-2 text-[11px] uppercase tracking-[0.12em] text-zinc-500">
+                <p>Input → up to 100 past sessions</p>
+                <div class="my-3 border-t border-white/10"></div>
+                <p>Duplicates merged</p>
+                <p>Contradicted entries replaced</p>
+                <p>New insights extracted</p>
+                <div class="my-3 border-t border-white/10"></div>
+                <p class="text-blue-200">Output → reorganized memory store</p>
+              </div>
+            </div>
+
+            <p class="f-body leading-relaxed text-zinc-300" style="font-size: 1.1rem;">
+              OpenClaw introduced a similar feature in April, but Anthropic's version is focused on
+              what <em>teams</em> of agents learn collectively — not just what one agent remembers
+              about individual interactions.
+            </p>
+
+            <p class="f-body italic leading-relaxed text-zinc-500" style="font-size: 1.1rem;">
+              Memory that organizes itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── THICK CLIENTS: feature, bg-zinc-900 ───────────────────── -->
+      <section class="yil-section bg-zinc-900 py-28">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-center text-[10px] uppercase tracking-[0.2em] text-zinc-600">
+            <a
+              href="https://formation.dev/blog/frontend-isnt-dead-but-your-focus-needs-to-change/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-200/50 transition-colors hover:text-blue-200"
+            >FROM FORMATION.DEV</a>
+          </p>
+          <h2
+            class="f-display mx-auto mt-6 max-w-[20ch] text-center font-normal uppercase text-white"
+            style="font-size: clamp(1.75rem, 4vw, 3.5rem); letter-spacing: 0.04em;"
+          >
+            ASYNC CORRECTNESS IS NOT PATTERN MATCHING
+          </h2>
+
+          <div class="mx-auto mt-12 max-w-2xl space-y-6">
+            <p class="f-body text-center leading-relaxed text-zinc-300" style="font-size: 1.1rem;">
+              Thick clients — Figma, Linear, Spotify, Google Docs — deal with significant
+              client-side logic, real-time collaboration, and offline usage. The hard part isn't
+              component assembly.
+            </p>
+            <p class="f-body text-center leading-relaxed text-zinc-300" style="font-size: 1.1rem;">
+              AI leans on pattern matching from training data. But async correctness requires
+              handling all possible orderings, not just the common ones:
+            </p>
+          </div>
+
+          <div class="mx-auto mt-10 max-w-3xl grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2">
+            <div class="bg-zinc-900 p-6">
+              <p class="f-mono text-[10px] uppercase tracking-[0.15em] text-zinc-500">
+                Race Conditions
+              </p>
+              <p class="f-body mt-2 leading-relaxed text-zinc-400">
+                Competing requests resolving in unpredictable order
+              </p>
+            </div>
+            <div class="bg-zinc-900 p-6">
+              <p class="f-mono text-[10px] uppercase tracking-[0.15em] text-zinc-500">
+                Dependent Operations
+              </p>
+              <p class="f-body mt-2 leading-relaxed text-zinc-400">
+                Coordinating dependent and independent operations together
+              </p>
+            </div>
+            <div class="bg-zinc-900 p-6">
+              <p class="f-mono text-[10px] uppercase tracking-[0.15em] text-zinc-500">
+                Partial Failures
+              </p>
+              <p class="f-body mt-2 leading-relaxed text-zinc-400">
+                Operations that fail mid-chain, leaving state partially updated
+              </p>
+            </div>
+            <div class="bg-zinc-900 p-6">
+              <p class="f-mono text-[10px] uppercase tracking-[0.15em] text-zinc-500">
+                Rollback Logic
+              </p>
+              <p class="f-body mt-2 leading-relaxed text-zinc-400">
+                Undoing state changes across multiple concurrent updates
+              </p>
+            </div>
+          </div>
+
+          <p
+            class="f-body mx-auto mt-10 max-w-2xl text-center leading-relaxed text-zinc-300"
+            style="font-size: 1.1rem;"
+          >
+            This is where human-led frontend engineering retains high leverage.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── REFERENCES: bg-black ──────────────────────────────────── -->
+      <section class="yil-section bg-black py-28">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500">References</p>
+          <div class="mt-8 space-y-4">
+            {
+              references.map((item) => (
+                <div class="flex items-start gap-4">
+                  <span class="f-mono shrink-0 border border-blue-200/30 px-2 py-1.5 text-[10px] uppercase leading-none tracking-[0.1em] text-blue-200">
+                    {item.label}
+                  </span>
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="f-body leading-relaxed text-zinc-400 underline decoration-blue-200/30 underline-offset-2 transition-colors hover:text-zinc-200 hover:decoration-blue-200/60"
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <span class="f-body leading-relaxed text-zinc-400">{item.title}</span>
+                  )}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <div class="dark-nav">
+        <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} designRef={yilMeta.designRef} />
+      </div>
+
+      <!-- ── DESIGN NOTES ───────────────────────────────────────────── -->
+      <section class="border-t border-white/10 bg-zinc-900">
+        <div class="mx-auto max-w-6xl px-6 py-12">
+          <p class="f-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500">Design Notes</p>
+          <p class="f-mono mt-2 text-sm text-zinc-300">YIL 2026-05-16 — Convergence by Primitive</p>
+          <p class="f-mono mt-1 text-sm text-zinc-500">
+            Three AI tools independently converged on /goal as their delegation interface, revealing
+            a primitive that may define how AI workers are composed.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #c3d9f3;"></span>
+              <span class="f-mono text-[10px] text-zinc-500">accent-1 / convergence</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #c3d9f3;"></span>
+              <span class="f-mono text-[10px] text-zinc-500">accent-2 / orchestration</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #c3d9f3;"></span>
+              <span class="f-mono text-[10px] text-zinc-500">accent-3 / memory</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #c3d9f3;"></span>
+              <span class="f-mono text-[10px] text-zinc-500">accent-4 / thick-clients</span>
+            </div>
+          </div>
+          <p class="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
+            The Bugatti reference is the most restrained luxury-auto brand surface in the category:
+            pure black canvas, white uppercase display type at weight 400 (never bold), wide
+            letter-spacing as the sole form of emphasis, and no accent color save a single ice-blue
+            (#c3d9f3) reserved for inline links. This visual language maps with unusual precision
+            to a day about convergence in AI tooling — both share a "machined precision" quality:
+            no ornamentation, no color spectacle, just the artifact held in generous dark space.
+            The three-typeface system mirrors the three-tool convergence story. Saira Condensed
+            substitutes for Bugatti Display; Cormorant Garamond for Bugatti Text Regular; JetBrains
+            Mono for Bugatti Monospace. The "photograph" that anchors a Bugatti hero band becomes
+            the /GOAL command rendered at full-bleed scale — the primitive IS the visual.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
