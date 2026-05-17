@@ -101,21 +101,40 @@ Map remaining fields:
 - `boardResult` — map `pick.result`: `"win"` / `"loss"` / `"push"` / `"pending"` → `"void"`
 - `color` — from the ordered palette
 
-## Step 6: Extract harnesses from Hermes Daily
+## Step 6: Detect mode from Hermes Daily
+
+Before extracting harness data, determine whether the Hermes Daily file uses the **avoid-worst** paradigm or the legacy **pick-best** paradigm.
+
+- If the consensus summary / harness votes table asks harnesses to identify the **worst** or **most dangerous** candidate, or if the final decision uses "AVOID" language → set `mode: "avoid-worst"`
+- Otherwise → omit `mode` (defaults to `"pick-best"` in the type)
+
+Record the mode — it affects how `pick`, `result`, and `finalDecision` are interpreted in Steps 7–9.
+
+## Step 7: Extract harnesses from Hermes Daily
 
 Use the **Consensus summary → Harness votes** table as the primary source for each harness's pick and confidence. Use the **Harness responses** section for tier classifications. Use the **Reconciliation → Harness results** table for results and result notes.
 
 When multiple run variants exist (e.g., "risk-audited Hermes run" vs "alternate canonical note run"), always use the **primary / risk-audited run**.
 
 For each harness, extract:
+
+**If `mode` is `"pick-best"` (legacy):**
 - `pick` — candidate `id` they recommended, or `"skip"` if they recommended PASS/SKIP
 - `pickLabel` — short label (e.g., `"Carter U1.5 Blocks"`, `"SKIP"`, `"PASS"`)
-- `confidence` — numeric confidence value from the harness response (e.g., `74`), or `null` if not stated
-- `confidenceLabel` — what the confidence refers to (e.g., `"skip confidence"`, `"win probability"`, `"practical win probability"`), or `null`
-- `result` — `"correct"` if the harness avoided a loss (picked a winner or correctly skipped); `"loss"` if they picked a loser
-- `resultNote` — 1–2 sentence summary pulled from the reconciliation table or narrative
+- `confidence` — numeric confidence value, or `null`
+- `confidenceLabel` — what the confidence refers to, or `null`
+- `result` — `"correct"` if they picked a winner or correctly skipped; `"loss"` if they picked a loser
+- `resultNote` — 1–2 sentence summary from the reconciliation narrative
 
-Use these fixed harness IDs and colors:
+**If `mode` is `"avoid-worst"`:**
+- `pick` — candidate `id` they identified as worst/most dangerous, or `"skip"` if they couldn't identify one
+- `pickLabel` — short label (e.g., `"Carter U1.5 Blocks"`, `"NONE"`, `"NO CLEAR WORST"`)
+- `confidence` — numeric confidence value, or `null`
+- `confidenceLabel` — what the confidence refers to (e.g., `"confidence in worst call"`), or `null`
+- `result` — `"correct"` if their identified worst candidate actually lost (correct identification); `"loss"` if their identified worst candidate won (wrong call)
+- `resultNote` — 1–2 sentence summary from the reconciliation narrative
+
+Use these fixed harness IDs and colors (same in both modes):
 
 ```ts
 { id: "hermes",     name: "Hermes",     color: "#34d399" }
@@ -125,19 +144,25 @@ Use these fixed harness IDs and colors:
 { id: "perplexity", name: "Perplexity", color: "#c084fc" }
 ```
 
-For `hermes` specifically: `hermes` is the orchestrator/auditor. Its `pick` is `"skip"` unless the Hermes auditor itself recommended a specific candidate (rare). Its confidence is `null` unless explicitly stated.
+For `hermes` specifically: `hermes` is the orchestrator/auditor. Its `pick` is `"skip"` (pick-best) or `"skip"` (avoid-worst) unless the Hermes auditor itself flagged a specific candidate. Its confidence is `null` unless explicitly stated.
 
 If a harness is not mentioned in the Hermes Daily file, default to `pick: "skip"`, `confidence: null`, `confidenceLabel: null`, and note it as unknown.
 
-If the Hermes Daily file is absent, fall back to the Plus EV recap table (`Final` → hermes, `Claude` → claude, `Perplexity` → perplexity, `Gemini` → gemini, `ChatGPT` → chatgpt). Set all confidence values to `null`.
+If the Hermes Daily file is absent, fall back to the Plus EV recap table (`Final` → hermes, `Claude` → claude, `Perplexity` → perplexity, `Gemini` → gemini, `ChatGPT` → chatgpt). Set all confidence values to `null`. Mode defaults to `"pick-best"`.
 
-## Step 7: Build candidateTiers from Hermes Daily
+## Step 8: Build candidateTiers from Hermes Daily
 
 From each **harness response**, find the candidate tier table (columns: Candidate, Tier/Classification, Fragility). Map tier values:
 - `Tier 1` → `1`
 - `Tier 2` → `2`
 - `Tier 3` → `3`
 - `Reject` / not listed → `null`
+
+**Tier meaning by mode:**
+- `pick-best`: T1 = strongest candidate to bet, T2 = lean, T3 = weak
+- `avoid-worst`: T1 = worst/most dangerous candidate, T2 = risky, T3 = relatively safer
+
+The numeric values are the same — only the legend interpretation changes in the UI.
 
 `hermes` is the orchestrator and always gets `null` for every candidate tier.
 
@@ -151,23 +176,33 @@ candidateTiers: {
 
 If the Hermes Daily file is absent, set all tier values to `null`.
 
-## Step 8: Build finalDecision from Hermes Daily
+## Step 9: Build finalDecision from Hermes Daily
 
 From the **Final decision** section:
-- `action` — the auditor's call: `"PASS"` or the bet (e.g., `"Carter U1.5 Blocks"`)
-- `reason` — 1–2 sentence rationale from the final decision narrative
-- `result` — `"correct"` or `"loss"` based on the reconciliation outcome
-- `resultNote` — brief outcome note; if a user override occurred, mention it (e.g., `"User override to Kwan at -132 lost on two singles. PASS was correct."`)
+
+**If `mode` is `"pick-best"` (legacy):**
+- `action` — `"PASS"` or the bet (e.g., `"Carter U1.5 Blocks"`)
+- `reason` — 1–2 sentence rationale
+- `result` — `"correct"` or `"loss"` based on reconciliation
+- `resultNote` — brief outcome note; mention user overrides if any
+
+**If `mode` is `"avoid-worst"`:**
+- `action` — `"AVOID [candidate label]"` (e.g., `"AVOID Carter U1.5 Blocks"`) or `"NO CLEAR WORST"` if no consensus
+- `reason` — 1–2 sentence rationale for why this candidate is worst
+- `result` — `"correct"` if the avoided candidate lost (correct call); `"loss"` if the avoided candidate won (wrong call)
+- `resultNote` — brief outcome note explaining what actually happened
 
 If the Hermes Daily file is absent, derive from the Plus EV recap narrative.
 
-## Step 9: Write the data file
+## Step 10: Write the data file
 
 Save to `src/data/betsLog/$ARGUMENTS.ts` using the absolute repo path.
 
 Include a source comment at the top:
 - If Hermes Daily was used: `// Source: /Users/dandenney/Documents/claw/Betting/Agents/Hermes/Daily/$ARGUMENTS.md`
 - If fallback sources were used: `// Historical entry — Hermes Daily not found. Candidates from rithhmmPicks.ts; harness picks from Plus EV recap. Confidence, confidenceLabel, and candidateTiers are null.`
+
+For `avoid-worst` mode, include `mode` after `displayDate`. Omit `mode` entirely for `pick-best` entries (the type defaults to it).
 
 ```ts
 import type { DayLog } from "./types";
@@ -176,6 +211,8 @@ import type { DayLog } from "./types";
 const log: DayLog = {
   date: "$ARGUMENTS",
   displayDate: "...",
+  // include this line only for avoid-worst entries:
+  mode: "avoid-worst",
   candidates: [ ... ],
   harnesses: [ ... ],
   candidateTiers: { ... },
@@ -185,11 +222,11 @@ const log: DayLog = {
 export default log;
 ```
 
-## Step 10: Update index.ts
+## Step 11: Update index.ts
 
 Read `src/data/betsLog/index.ts`. Add the new import and include the log in `allLogs`, sorted by date ascending.
 
-## Step 11: Commit and push
+## Step 12: Commit and push
 
 Stage and commit the new data file and the updated index:
 
@@ -201,11 +238,12 @@ Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
 git push
 ```
 
-## Step 12: Report back
+## Step 13: Report back
 
 Tell the user:
 
 - Date, display date, number of candidates
+- Mode used (`pick-best` or `avoid-worst`)
 - Primary source used (Hermes Daily or fallbacks)
 - Which harnesses had confirmed picks vs. defaulted to skip
 - Any fields that are still null/empty and need manual attention

@@ -1,5 +1,6 @@
 export type BoardResult = "win" | "loss" | "void" | "push";
 export type HarnessResult = "correct" | "loss";
+export type LogMode = "pick-best" | "avoid-worst";
 
 export interface Candidate {
   id: string;
@@ -42,6 +43,8 @@ export interface FinalDecision {
 export interface DayLog {
   date: string;        // ISO "2026-05-02", used as URL slug
   displayDate: string; // "May 2, 2026"
+  // Absent = "pick-best" (historical default). "avoid-worst" = harnesses identify worst candidate.
+  mode?: LogMode;
   candidates: Candidate[];
   harnesses: Harness[];
   // Tier each harness assigned to each candidate; null = orchestrator (no individual tier)

@@ -6,7 +6,8 @@ interface Props {
 }
 
 const { log } = Astro.props;
-const { candidates, harnesses, candidateTiers, finalDecision } = log;
+const { candidates, harnesses, candidateTiers, finalDecision, mode = "pick-best" } = log;
+const isAvoidWorst = mode === "avoid-worst";
 
 const tierLabel = (t: number | null): string => {
   if (t === 1) return "T1";
@@ -32,12 +33,26 @@ const hCls     = (r: string): string => r === "correct" ? "win" : "loss";
   <!-- ── Tier Matrix ────────────────────────────────────────── -->
   <section>
     <div class="section-head">
-      <h2 class="section-label">Harness Analysis</h2>
+      <div class="section-head-left">
+        <h2 class="section-label">Harness Analysis</h2>
+        {isAvoidWorst && <span class="mode-badge">avoid worst</span>}
+      </div>
       <div class="legend">
-        <span class="leg t1">T1</span>strongest
-        <span class="leg t2">T2</span>lean
-        <span class="leg t3">T3</span>weak
-        <span class="leg tn">—</span>reject / n/a
+        {isAvoidWorst ? (
+          <>
+            <span class="leg t1">T1</span>worst
+            <span class="leg t2">T2</span>risky
+            <span class="leg t3">T3</span>safer
+            <span class="leg tn">—</span>n/a
+          </>
+        ) : (
+          <>
+            <span class="leg t1">T1</span>strongest
+            <span class="leg t2">T2</span>lean
+            <span class="leg t3">T3</span>weak
+            <span class="leg tn">—</span>reject / n/a
+          </>
+        )}
       </div>
     </div>
 
@@ -198,6 +213,25 @@ const hCls     = (r: string): string => r === "correct" ? "win" : "loss";
     flex-wrap: wrap;
     gap: 0.5rem 1.5rem;
     margin-bottom: 1rem;
+  }
+
+  .section-head-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  .mode-badge {
+    font-family: var(--fm);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+    background: oklch(16% 0.06 25);
+    color: oklch(66% 0.15 25);
+    border: 1px solid oklch(30% 0.08 25);
   }
 
   section > .section-label { margin-bottom: 1rem; }
