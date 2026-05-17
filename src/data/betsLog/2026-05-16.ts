@@ -22,7 +22,7 @@ const log: DayLog = {
       dtm: 14.2,
       recent: "L10 7/10",
       gameTime: "3:05 PM",
-      boardResult: "void",
+      boardResult: "win",
     },
     {
       id: "simpson",
@@ -40,7 +40,7 @@ const log: DayLog = {
       dtm: 5.0,
       recent: "L10 6/10",
       gameTime: "3:10 PM",
-      boardResult: "void",
+      boardResult: "win",
     },
     {
       id: "degrom",
@@ -58,7 +58,7 @@ const log: DayLog = {
       dtm: 5.5,
       recent: "L8 5/8",
       gameTime: "6:10 PM",
-      boardResult: "void",
+      boardResult: "win",
     },
     {
       id: "martin",
@@ -76,7 +76,7 @@ const log: DayLog = {
       dtm: 6.5,
       recent: "L8 2/8",
       gameTime: "6:10 PM",
-      boardResult: "void",
+      boardResult: "loss",
     },
   ],
   harnesses: [
@@ -88,8 +88,8 @@ const log: DayLog = {
       pickLabel: "NO CLEAR WORST",
       confidence: null,
       confidenceLabel: null,
-      result: "loss",
-      resultNote: "Hermes noted a 2/4 split between B (Simpson) and D (Martin) as riskiest candidates, tracking both as the elimination cluster. Recommended paper-tracking the board with no official recovery action. Board results pending — update result and resultNote.",
+      result: "correct",
+      resultNote: "Orchestrator correctly mapped the board: unanimous least-shaky A won (Nationals 13-3), and the B/D elimination cluster went 1-1 — D lost exactly through pitcher-K-under volatility. No official recovery bet placed; paper-track recommendation was validated.",
     },
     {
       id: "chatgpt",
@@ -99,8 +99,8 @@ const log: DayLog = {
       pickLabel: "Martin U5.5 K",
       confidence: null,
       confidenceLabel: "high (qualitative)",
-      result: "loss",
-      resultNote: "Identified Davis Martin as riskiest: expensive juice at -164 with only 2/8 recent hit rate. Normal loss path is a slightly better-than-expected outing reaching 6 Ks with no unusual events. Board results pending — update result.",
+      result: "correct",
+      resultNote: "Correct removal call: Martin threw 7 K in 6.0 IP, busting the 5.5 under exactly through the predicted path — a slightly better-than-expected outing with no unusual events. Stayed conservative on Level 0 action (paper-only lean on A).",
     },
     {
       id: "claude",
@@ -110,8 +110,8 @@ const log: DayLog = {
       pickLabel: "Martin U5.5 K",
       confidence: null,
       confidenceLabel: "high (qualitative)",
-      result: "loss",
-      resultNote: "Identified Davis Martin as riskiest: thinnest true edge (2.5pp) attached to worst recent form on board (2/8). Tagged pitcher_k_under_volatility + expensive_juice + recent_form_collapse. Board results pending — update result.",
+      result: "correct",
+      resultNote: "Best combined read: correctly identified Martin as riskiest (7 K, under failed) and A as playable at base stake only. pitcher_k_under_volatility + recent_form_collapse tags validated.",
     },
     {
       id: "gemini",
@@ -122,7 +122,7 @@ const log: DayLog = {
       confidence: null,
       confidenceLabel: "high (qualitative)",
       result: "loss",
-      resultNote: "Identified Chandler Simpson as riskiest: thinnest DTM (5.0%), textbook one_event_kill + contact_hitter_tb_under structure. Normal loss path is an early bloop double or late-game base hit against a reliever. Board results pending — update result.",
+      resultNote: "Riskiest-removal call result-wrong: Simpson went 1-for-4, 1 TB — the under cashed easily. Structurally defensible (contact_hitter_tb_under risk is real) but D was the one that actually failed tonight.",
     },
     {
       id: "perplexity",
@@ -133,7 +133,7 @@ const log: DayLog = {
       confidence: null,
       confidenceLabel: "high (qualitative)",
       result: "loss",
-      resultNote: "Identified Chandler Simpson as riskiest: thin edge over break-even (2.1pp), one_event_kill risk, contact_hitter_tb_under archetype. Two singles in four trips or any extra-base hit ends the ticket immediately. Board results pending — update result.",
+      resultNote: "Riskiest-removal call result-wrong: Simpson stayed at 1 TB (under won). Correct least-shaky read on A, but the riskiest-removal pick survived while D was the board's only casualty.",
     },
   ],
   candidateTiers: {
@@ -145,8 +145,8 @@ const log: DayLog = {
   finalDecision: {
     action: "AVOID B/D cluster",
     reason: "Harnesses split 2/4 between B (Simpson U1.5 TB: one_event_kill, contact_hitter_tb_under, thin 2.1pp edge) and D (Martin U5.5 K: expensive_juice, pitcher_k_under_volatility, recent_form_collapse 2/8) as riskiest removal. No official recovery bet placed. Nationals +1.5 is the only defensible Level 0 candidate if choosing to test the recalibrated starter lane; otherwise paper-track.",
-    result: "loss",
-    resultNote: "No official bet placed — paper-track only per Hermes final decision. Board results pending. Update result once outcomes are confirmed: correct if B or D (the identified riskiest cluster) actually lost; loss if both won.",
+    result: "correct",
+    resultNote: "No official bet placed — paper-track only. Board went 3-1: A won (Nationals 13-3), B won (Simpson 1 TB), C won (deGrom 4 K), D lost (Martin 7 K). The B/D elimination cluster went 1-1; D failed exactly through pitcher-K-under volatility. Opportunity-cost signal: A would have won by 10 runs if a Level 0 starter had been placed.",
   },
 };
 
