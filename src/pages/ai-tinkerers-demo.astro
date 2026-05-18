@@ -1,0 +1,357 @@
+---
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+export const prerender = true;
+
+type Accent = 'red' | 'ink' | 'green' | 'emerald';
+
+type Automation = {
+  title: string;
+  status: string;
+  summary: string;
+  input: string[];
+  calls: string[];
+  workflow: string[];
+  source: string[];
+  done: string[];
+  demo: string;
+  accent: Accent;
+};
+
+const automations: Automation[] = [
+  {
+    title: 'No Reserv-ai-tions',
+    status: 'Ported to site workflow',
+    summary:
+      'A full-stack publishing flow for restaurant and venue reviews: casual request plus a photo in, structured review, processed assets, verified build, and production publish out.',
+    input: ['Natural-language request', 'Venue name / context', 'Real photo from the experience'],
+    calls: ['read repo schema + nearby reviews', 'web_search / web_fetch venue metadata', 'write review markdown', 'exec image processing + build + git'],
+    workflow: [
+      'Start in the Astro site repo',
+      'Check whether the venue already exists',
+      'Research address, coordinates, tags, and URL',
+      'Write review markdown in the site schema and voice',
+      'Process the image into site assets',
+      'Run the build, commit, rebase, and push',
+    ],
+    source: ['src/content/reviews/*.md', 'public/no-reserv-ai-tions/'],
+    done: ['Review file exists', 'Hero and thumb generated', 'Build passes', 'Changes pushed'],
+    demo: 'Shows research, writing, asset processing, and deployment in one loop.',
+    accent: 'red',
+  },
+  {
+    title: 'Music reviews',
+    status: 'Ported to site workflow',
+    summary:
+      'A metadata-heavy review generator that starts with a Spotify link or song request and ends with schema-valid editorial content.',
+    input: ['Spotify track URL or song request', 'Optional notes about why the track matters'],
+    calls: ['read schema + existing song entries', 'exec generation script + build', 'write / edit final markdown'],
+    workflow: [
+      'Inspect existing song entries',
+      'Verify the songs collection schema',
+      'Use the Spotify URL as the source input',
+      'Run the generation script or follow its metadata model',
+      'Create or update src/content/songs markdown',
+      'Verify metadata completeness and run the build',
+    ],
+    source: ['src/content/songs/*.md', 'src/content.config.ts', 'scripts/generate-song-review.mjs'],
+    done: ['Song markdown exists', 'Frontmatter matches schema', 'Review body is complete', 'Build passes'],
+    demo: 'Demonstrates structured metadata plus subjective writing in the same task.',
+    accent: 'ink',
+  },
+  {
+    title: 'Stash link capture',
+    status: 'Started in OpenClaw',
+    summary:
+      'A low-friction Discord capture flow: drop a link in the stash channel, extract the URL and notes, POST to the stash API, and reply with a minimal receipt.',
+    input: ['Normal Discord channel message', 'At least one URL', 'Optional trailing notes'],
+    calls: ['channel-specific prompt routing', 'read local stash API key', 'HTTP POST to stash API'],
+    workflow: [
+      'Message arrives in the stash channel',
+      'Agent checks for a URL',
+      'First URL is extracted',
+      'Remaining text becomes notes or null',
+      'Agent reads the API key and posts JSON',
+      'Agent replies with saved or failed status',
+    ],
+    source: ['OpenClaw config', 'Discord channel routing', 'https://stash-ecru.vercel.app/api/links'],
+    done: ['URL saved', 'Notes preserved', 'Success/failure response posted'],
+    demo: 'Shows invisible, useful automation embedded where the capture already happens.',
+    accent: 'green',
+  },
+  {
+    title: 'Betting review + recap pipeline',
+    status: 'Ported and evolving',
+    summary:
+      'A daily lifecycle that starts from screenshot-based pick capture, creates an Obsidian board, ranks recommendations, reconciles outcomes, and can publish a Plus EV recap.',
+    input: ['Screenshots or typed betting picks', 'Optional placed-bet notes', 'Follow-up requests for review, settlement, or recap'],
+    calls: ['image parsing for screenshots', 'write / edit daily Obsidian note', 'web verification of slate context', 'exec for publishing checks + git'],
+    workflow: [
+      'Create or update the daily betting note',
+      'Parse screenshots into structured picks',
+      'Verify the actual slate and dates',
+      'Rank the board into Tier 1 / Tier 2 / Tier 3',
+      'Document placed bets separately',
+      'Reconcile outcomes and publish recap when useful',
+    ],
+    source: ['Obsidian/Claw/Betting/Daily/', 'Prompts/Daily Bet Review.md', 'src/content/plus-ev/'],
+    done: ['Daily note exists', 'Picks are cleaned', 'Recommendation uses the standard tiers', 'Outcomes or recap added when requested'],
+    demo: 'Combines vision, verification, risk judgment, memory, and publishing over multiple turns.',
+    accent: 'emerald',
+  },
+];
+
+const stats = [
+  { value: '4', label: 'demoable automations' },
+  { value: '3', label: 'content pipelines' },
+  { value: '2', label: 'production publishing loops' },
+  { value: '1', label: 'agent operating system' },
+];
+
+const accentClass: Record<Accent, string> = {
+  red: 'border-red-700/35 bg-red-700 text-white',
+  ink: 'border-slate-900/20 bg-slate-900 text-white',
+  green: 'border-emerald-500/35 bg-emerald-500 text-slate-950',
+  emerald: 'border-emerald-700/35 bg-emerald-700 text-white',
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="AI Tinkerers Demo: Agent Automations | Dan Denney"
+      description="A meetup-ready field guide to Dan Denney's agent automations: review publishing, music reviews, stash capture, and betting recaps."
+      type="website"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --demo-red: #b91c1c;
+        --demo-ink: #111827;
+        --demo-paper: #f8fafc;
+        --demo-line: #d8dee7;
+      }
+
+      .demo-page {
+        font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background:
+          radial-gradient(circle at 18% 10%, rgba(185, 28, 28, 0.13), transparent 28rem),
+          linear-gradient(135deg, rgba(17, 24, 39, 0.045) 25%, transparent 25%) 0 0 / 26px 26px,
+          var(--demo-paper);
+        color: var(--demo-ink);
+      }
+
+      .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+      .hero-title {
+        font-size: clamp(4.5rem, 15vw, 13.5rem);
+        letter-spacing: -0.085em;
+        line-height: 0.78;
+        text-wrap: balance;
+      }
+
+      .outline-word {
+        color: transparent;
+        -webkit-text-stroke: clamp(1px, 0.12vw, 2px) var(--demo-red);
+        text-stroke: clamp(1px, 0.12vw, 2px) var(--demo-red);
+      }
+
+      .hatch {
+        background-image: repeating-linear-gradient(
+          -45deg,
+          rgba(185, 28, 28, 0.18) 0,
+          rgba(185, 28, 28, 0.18) 2px,
+          transparent 2px,
+          transparent 9px
+        );
+      }
+
+      .route-line::before {
+        content: '';
+        position: absolute;
+        left: 1.15rem;
+        top: 3rem;
+        bottom: -1.5rem;
+        width: 1px;
+        background: linear-gradient(var(--demo-red), rgba(17, 24, 39, 0.14));
+      }
+
+      .route-line:last-child::before { display: none; }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .float-in { animation: float-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+        @keyframes float-in {
+          from { opacity: 0; transform: translateY(18px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      }
+    </style>
+  </head>
+  <body class="demo-page min-h-screen antialiased">
+    <main class="relative overflow-hidden bg-slate-50/80 shadow-xs">
+      <Header />
+
+      <section class="relative isolate px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+        <div class="absolute right-0 top-0 h-40 w-2/5 hatch opacity-60" aria-hidden="true"></div>
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+            <div class="float-in">
+              <p class="mono mb-8 inline-flex border border-red-700/30 bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-red-700 shadow-sm">
+                AI Tinkerers / local meetup field guide
+              </p>
+              <h1 class="hero-title font-black uppercase">
+                Agent<br />
+                <span class="outline-word">Automations</span>
+              </h1>
+              <p class="mt-9 max-w-2xl text-lg font-semibold leading-relaxed text-slate-700 sm:text-xl">
+                Four practical demos that started as casual requests and became operating loops:
+                capture, research, write, verify, publish, reconcile. Some began in OpenClaw.
+                Some are already ported into the current Hermes/site workflow.
+              </p>
+            </div>
+
+            <div class="float-in border border-slate-900 bg-white p-5 shadow-[12px_12px_0_#111827] sm:p-7" style="animation-delay: 120ms;">
+              <p class="mono text-[11px] font-bold uppercase tracking-[0.22em] text-red-700">Demo thesis</p>
+              <p class="mt-5 text-3xl font-black leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
+                The impressive part is not the prompt. It is the definition of done.
+              </p>
+              <p class="mt-5 leading-relaxed text-slate-600">
+                These automations are useful because they keep working past the generated text:
+                they inspect the repo, touch real files, process assets, run builds, post API payloads,
+                and leave behind verifiable artifacts.
+              </p>
+              <div class="mt-7 grid grid-cols-2 gap-3">
+                {stats.map((stat) => (
+                  <div class="border border-slate-200 bg-slate-50 p-4">
+                    <p class="text-4xl font-black tracking-[-0.06em] text-red-700">{stat.value}</p>
+                    <p class="mono mt-2 text-[10px] font-bold uppercase leading-relaxed tracking-[0.14em] text-slate-500">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-slate-900 bg-slate-950 px-5 py-6 text-white sm:px-8 lg:px-12">
+        <div class="mx-auto grid max-w-7xl gap-4 md:grid-cols-4">
+          {['human request', 'agent workflow', 'tool calls', 'verified artifact'].map((step, index) => (
+            <div class="flex items-center gap-3">
+              <span class="mono flex h-9 w-9 items-center justify-center bg-red-700 text-xs font-bold">{String(index + 1).padStart(2, '0')}</span>
+              <span class="text-sm font-bold uppercase tracking-[-0.01em]">{step}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-12 max-w-3xl">
+            <p class="mono text-[11px] font-bold uppercase tracking-[0.24em] text-red-700">The demo stack</p>
+            <h2 class="mt-4 text-4xl font-black leading-none tracking-[-0.055em] text-slate-950 sm:text-6xl">
+              Four ways agents stop being chatbots.
+            </h2>
+          </div>
+
+          <div class="space-y-8">
+            {automations.map((automation, index) => (
+              <article class="route-line relative grid gap-6 border border-slate-200 bg-white p-5 shadow-sm sm:p-7 lg:grid-cols-[0.8fr_1.2fr] lg:p-8">
+                <div class="relative z-10">
+                  <div class="flex items-start gap-4">
+                    <span class="mono flex h-10 w-10 shrink-0 items-center justify-center bg-slate-950 text-xs font-bold text-white">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <div>
+                      <p class={`mono inline-flex border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] ${accentClass[automation.accent]}`}>
+                        {automation.status}
+                      </p>
+                      <h3 class="mt-4 text-3xl font-black leading-none tracking-[-0.045em] text-slate-950 sm:text-4xl">
+                        {automation.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p class="mt-6 max-w-xl text-base font-semibold leading-relaxed text-slate-700">
+                    {automation.summary}
+                  </p>
+                  <p class="mt-6 border-l-4 border-red-700 pl-4 text-sm font-bold leading-relaxed text-slate-900">
+                    Why demo it: {automation.demo}
+                  </p>
+                </div>
+
+                <div class="grid gap-4 md:grid-cols-2">
+                  <div class="border border-slate-200 bg-slate-50 p-4">
+                    <p class="mono text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">Input</p>
+                    <ul class="mt-3 space-y-2 text-sm font-semibold text-slate-700">
+                      {automation.input.map((item) => <li>• {item}</li>)}
+                    </ul>
+                  </div>
+                  <div class="border border-slate-200 bg-slate-50 p-4">
+                    <p class="mono text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">Core tool calls</p>
+                    <ul class="mt-3 space-y-2 text-sm font-semibold text-slate-700">
+                      {automation.calls.map((item) => <li>• {item}</li>)}
+                    </ul>
+                  </div>
+                  <div class="border border-slate-200 bg-white p-4 md:col-span-2">
+                    <p class="mono text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">Workflow</p>
+                    <ol class="mt-4 grid gap-2 md:grid-cols-2">
+                      {automation.workflow.map((item, stepIndex) => (
+                        <li class="flex gap-3 text-sm font-semibold leading-relaxed text-slate-700">
+                          <span class="mono mt-0.5 text-[10px] font-bold text-red-700">{String(stepIndex + 1).padStart(2, '0')}</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                  <div class="border border-slate-200 bg-slate-950 p-4 text-white">
+                    <p class="mono text-[10px] font-bold uppercase tracking-[0.18em] text-slate-400">Source of truth</p>
+                    <ul class="mt-3 space-y-2 text-sm font-semibold text-slate-200">
+                      {automation.source.map((item) => <li class="break-words">{item}</li>)}
+                    </ul>
+                  </div>
+                  <div class="border border-red-700/25 bg-red-50 p-4">
+                    <p class="mono text-[10px] font-bold uppercase tracking-[0.18em] text-red-700">Definition of done</p>
+                    <ul class="mt-3 space-y-2 text-sm font-semibold text-slate-800">
+                      {automation.done.map((item) => <li>✓ {item}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-950 px-5 py-16 text-white sm:px-8 lg:px-12 lg:py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p class="mono text-[11px] font-bold uppercase tracking-[0.24em] text-red-400">Closing frame</p>
+            <h2 class="mt-4 text-4xl font-black leading-none tracking-[-0.055em] sm:text-6xl">
+              Demo the loop, not the magic trick.
+            </h2>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-3">
+            {[
+              ['Start messy', 'screenshots, Discord messages, Spotify links, casual asks'],
+              ['Make it structured', 'schemas, notes, markdown, JSON payloads, ranked boards'],
+              ['Verify the result', 'builds, readbacks, commits, API receipts, settled outcomes'],
+            ].map(([title, body]) => (
+              <div class="border border-white/10 bg-white/[0.04] p-5">
+                <h3 class="text-xl font-black tracking-[-0.04em]">{title}</h3>
+                <p class="mt-3 text-sm font-semibold leading-relaxed text-slate-300">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
