@@ -101,12 +101,32 @@ const automations: Automation[] = [
     demo: 'Combines vision, verification, risk judgment, memory, and publishing over multiple turns.',
     accent: 'emerald',
   },
+  {
+    title: 'TIL → YIL publishing flow',
+    status: 'Ported to Hermes workflow',
+    summary:
+      'A two-step learning-to-page system: capture raw notes during the day, synthesize a design artifact the next morning, then build a reviewed Astro page from that spec.',
+    input: ['Obsidian TIL inbox for a date', 'Optional design-analysis note', 'Approval to move from draft design to build'],
+    calls: ['read Obsidian TIL inbox', 'write DESIGN.md-style artifact', 'inspect recent YIL page conventions', 'astro check + build + git push'],
+    workflow: [
+      'Capture raw learnings in Obsidian throughout the day',
+      'Run the design step to produce a draft artifact under src/pages/yil/_design',
+      'Review the page shape, theme, Tailwind tokens, and open questions',
+      'Build src/pages/yil/YYYY-MM-DD.astro from the approved design',
+      'Export yilMeta so the YIL index discovers it automatically',
+      'Update series navigation, run Astro checks, commit, and push',
+    ],
+    source: ['Obsidian/Claw/TIL/Inbox/YYYY-MM-DD.md', 'src/pages/yil/_design/YYYY-MM-DD.md', 'src/pages/yil/YYYY-MM-DD.astro'],
+    done: ['Design artifact is draft until reviewed', 'Built page follows the artifact', 'yilMeta is exported', 'Astro check passes and changes are pushed'],
+    demo: 'Shows agents as editorial collaborators: they preserve messy learning, make design decisions explicit, then implement only after review.',
+    accent: 'red',
+  },
 ];
 
 const stats = [
-  { value: '4', label: 'demoable automations' },
-  { value: '3', label: 'content pipelines' },
-  { value: '2', label: 'production publishing loops' },
+  { value: '5', label: 'demoable automations' },
+  { value: '4', label: 'content pipelines' },
+  { value: '3', label: 'production publishing loops' },
   { value: '1', label: 'agent operating system' },
 ];
 
@@ -196,15 +216,15 @@ const accentClass: Record<Accent, string> = {
     </style>
   </head>
   <body class="demo-page min-h-screen antialiased">
-    <main class="relative z-10 overflow-hidden bg-slate-50/80 shadow-xs">
+    <main class="relative z-10 overflow-hidden bg-slate-50 shadow-xs">
       <Header />
 
-      <section class="relative isolate px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section class="relative isolate px-5 py-10 sm:px-8 lg:px-12 lg:py-16">
         <div class="absolute right-0 top-0 h-40 w-2/5 hatch opacity-60" aria-hidden="true"></div>
         <div class="mx-auto max-w-7xl">
           <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div class="float-in">
-              <p class="mono mb-8 inline-flex border border-red-700/30 bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-red-700 shadow-sm">
+              <p class="mono mb-4 inline-flex border border-red-700/30 bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-red-700 shadow-sm">
                 AI Tinkerers / local meetup field guide
               </p>
               <h1 class="hero-title font-black uppercase">
