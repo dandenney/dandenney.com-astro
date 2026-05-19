@@ -1,0 +1,380 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-18',
+  headline: 'Make the Spec Usable',
+  summary:
+    'Markdown made plans easy to write. HTML makes them possible to inspect, edit, render, and hand to agents as a living working surface.',
+  accent: '#1a3a3a',
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const microCards = [
+  {
+    label: '01 / isolate',
+    title: 'Find the dense section',
+    body: 'A rules table, plan subsection, QA matrix, or prompt library that is too important to skim and too awkward to edit as plain text.',
+    className: 'bg-[#ff4d8b] text-white',
+  },
+  {
+    label: '02 / render',
+    title: 'Generate the perfect tiny tool',
+    body: 'Ask the agent to turn that one section into a custom interface with filters, toggles, cards, examples, and visual affordances.',
+    className: 'bg-[#b8a4ed] text-[#0a0a0a]',
+  },
+  {
+    label: '03 / discard',
+    title: 'Use it, then let it go',
+    body: 'The interface does not need to become a product. It only needs to make this one editing pass more legible and more enjoyable.',
+    className: 'bg-[#e8b94a] text-[#0a0a0a]',
+  },
+];
+
+const checklist = [
+  'Export ChatGPT + Claude memories, context, and workflows.',
+  'Generate DESIGN.md, CLAUDE.md, and AGENTS.md for agentic repos.',
+  'Build a model-agnostic skills library that tools can share through adapters or symlinks.',
+  'Version system prompts in git so silent drift gets caught in review.',
+  'Turn the top recurring workflows into /goal templates instead of repeated prompting.',
+];
+
+const references = [
+  {
+    label: 'HTML',
+    title: 'YouTube — Thariq on HTML as a better planning/spec format for AI agents',
+    url: 'https://youtube.com/watch?v=Qrpm7E80wQ0&feature=youtu.be',
+    accent: '#1a3a3a',
+  },
+  {
+    label: 'NOTES',
+    title: 'X / Thariq — running implementation-notes.html during implementation',
+    url: 'https://x.com/trq212/status/2056415973125796184?utm_source=www.gethalfbaked.com&utm_medium=newsletter&utm_campaign=half-baked-612-outfit-drops-idea-validation&_bhlid=af6ab9c543aac223b5aeb3a9af5d8cd3cdc96333',
+    accent: '#b8a4ed',
+  },
+  {
+    label: 'AGENT OS',
+    title: 'X / Kloss — AI operating-system checklist',
+    url: 'https://x.com/kloss_xyz/status/2056498722943664239',
+    accent: '#e8b94a',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: Make the Spec Usable | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-body: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+      }
+
+      @keyframes float-card {
+        0%, 100% { transform: translateY(0) rotate(-1deg); }
+        50% { transform: translateY(-10px) rotate(1deg); }
+      }
+
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes float-card { 0%, 100% { transform: none; } }
+        @keyframes fade-up { from { opacity: 0; } to { opacity: 1; } }
+      }
+
+      .f-display { font-family: var(--font-display); }
+      .f-body { font-family: var(--font-body); }
+      .f-mono { font-family: var(--font-mono); }
+      .yil-hero { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible { animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .workbench-float { animation: float-card 6s ease-in-out infinite; }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-[#faf5e8] text-[#0a0a0a]">
+    <main class="relative z-10 bg-[#fffaf0] shadow-xs">
+      <Header />
+
+      <!-- HERO: 2col-hero-browser-workbench -->
+      <section class="yil-hero relative isolate overflow-hidden bg-[#fffaf0]">
+        <div class="absolute -left-28 top-24 h-72 w-72 rounded-full bg-[#ff4d8b]/20 blur-3xl"></div>
+        <div class="absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-[#b8a4ed]/30 blur-3xl"></div>
+        <div class="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:py-32 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-[#6a6a6a]">
+              2026-05-18 / AGENT-NATIVE WORKING SURFACE
+            </p>
+            <h1
+              class="f-display mt-7 max-w-4xl font-medium leading-[0.95] tracking-[-0.06em] text-[#0a0a0a]"
+              style="font-size: clamp(3.25rem, 9vw, 7rem);"
+            >
+              Make the Spec Usable
+            </h1>
+            <p class="f-body mt-8 max-w-2xl text-lg leading-relaxed text-[#2f2f2f] md:text-xl">
+              Markdown made plans easy to write. HTML makes them possible to inspect, edit, render,
+              and hand to agents as a living working surface.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-3">
+              <span class="rounded-full bg-[#1a3a3a] px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-white">rendered specs</span>
+              <span class="rounded-full bg-[#ff4d8b] px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-white">micro UI</span>
+              <span class="rounded-full bg-[#e8b94a] px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-[#0a0a0a]">agent OS</span>
+            </div>
+          </div>
+
+          <div class="workbench-float rounded-[2rem] bg-[#1a3a3a] p-4 shadow-2xl shadow-[#1a3a3a]/25 md:p-6">
+            <div class="rounded-[1.5rem] bg-[#fffaf0] p-4 md:p-6">
+              <div class="flex flex-wrap items-center gap-2 border-b border-[#0a0a0a]/10 pb-4">
+                <span class="h-3 w-3 rounded-full bg-[#ff4d8b]"></span>
+                <span class="h-3 w-3 rounded-full bg-[#e8b94a]"></span>
+                <span class="h-3 w-3 rounded-full bg-[#a4d4c5]"></span>
+                <span class="ml-2 rounded-full bg-[#f5f0e0] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[#6a6a6a]">plan.md</span>
+                <span class="rounded-full bg-[#0a0a0a] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-white">implementation-plan.html</span>
+              </div>
+
+              <div class="grid gap-4 pt-5 md:grid-cols-[0.8fr_1.2fr]">
+                <aside class="rounded-3xl bg-[#f5f0e0] p-5">
+                  <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-[#6a6a6a]">design-system.html</p>
+                  <div class="mt-5 grid grid-cols-2 gap-2">
+                    <span class="h-16 rounded-2xl bg-[#ff4d8b]"></span>
+                    <span class="h-16 rounded-2xl bg-[#1a3a3a]"></span>
+                    <span class="h-16 rounded-2xl bg-[#b8a4ed]"></span>
+                    <span class="h-16 rounded-2xl bg-[#e8b94a]"></span>
+                  </div>
+                  <p class="f-body mt-5 text-sm leading-relaxed text-[#2f2f2f]">
+                    A living design system can be passed into a project as compressed human + agent context.
+                  </p>
+                </aside>
+
+                <div class="space-y-3">
+                  <div class="rounded-3xl border border-[#0a0a0a]/10 bg-white p-4">
+                    <div class="flex items-center justify-between gap-3">
+                      <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-[#1a3a3a]">editable rules table</p>
+                      <span class="rounded-full bg-[#ff4d8b]/10 px-3 py-1 text-xs font-semibold text-[#ff4d8b]">interactive</span>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                      <div class="h-3 rounded-full bg-[#0a0a0a]/15"></div>
+                      <div class="h-3 w-5/6 rounded-full bg-[#0a0a0a]/10"></div>
+                      <div class="h-3 w-2/3 rounded-full bg-[#0a0a0a]/10"></div>
+                    </div>
+                  </div>
+                  <div class="rounded-3xl bg-[#b8a4ed] p-4 text-[#0a0a0a]">
+                    <p class="f-display text-2xl font-semibold tracking-[-0.04em]">Micro software on top of micro software</p>
+                    <p class="f-body mt-2 text-sm leading-relaxed">The perfect throwaway interface for the one part of the plan that matters now.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTE: cream-browser-window-callout -->
+      <section class="yil-section bg-[#faf5e8] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <blockquote class="rounded-[2rem] border border-[#1a3a3a]/20 bg-[#fffaf0] p-8 shadow-lg shadow-[#1a3a3a]/5 md:p-12">
+            <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-[#ff4d8b]">working artifact</p>
+            <p class="f-display mt-6 max-w-5xl text-3xl font-medium leading-tight tracking-[-0.04em] text-[#0a0a0a] md:text-5xl">
+              “This ‘micro software on top of micro software’ approach means you can have the perfect tool for every specific problem, then discard it when you’re done.”
+            </p>
+            <footer class="f-mono mt-8 text-[11px] uppercase tracking-[0.2em] text-[#6a6a6a]">
+              Dan Denney / TIL 2026-05-18
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- HTML SPECS: split -->
+      <section class="yil-section bg-[#fffaf0] py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p class="f-mono inline-flex rounded-full bg-[#1a3a3a] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white">HTML SPECS</p>
+            <h2 class="f-display mt-6 max-w-xl text-4xl font-medium leading-none tracking-[-0.055em] text-[#0a0a0a] md:text-6xl">
+              Plans Should Be Read, Rendered, and Used
+            </h2>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <article class="rounded-[1.75rem] bg-[#f5f0e0] p-7">
+              <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-[#6a6a6a]">flat plan.md</p>
+              <h3 class="f-display mt-5 text-2xl font-semibold tracking-[-0.04em]">Readable, but hard to inhabit</h3>
+              <p class="f-body mt-4 leading-relaxed text-[#2f2f2f]">
+                Markdown was the useful compromise: human-readable, machine-readable, and quick to write.
+                But long implementation plans can become walls of text that get skimmed instead of used.
+              </p>
+            </article>
+            <article class="rounded-[1.75rem] bg-[#1a3a3a] p-7 text-white">
+              <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-white/60">rendered spec.html</p>
+              <h3 class="f-display mt-5 text-2xl font-semibold tracking-[-0.04em]">Structured enough to work inside</h3>
+              <p class="f-body mt-4 leading-relaxed text-white/80">
+                HTML can hold mockups, tables, scrollable regions, swatches, components, and embedded
+                review affordances without giving up machine readability.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MICRO SOFTWARE: cards -->
+      <section class="yil-section bg-[#faf5e8] py-24">
+        <div class="mx-auto max-w-7xl px-6">
+          <p class="f-mono inline-flex rounded-full bg-[#ff4d8b] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white">MICRO UI</p>
+          <h2 class="f-display mt-6 max-w-4xl text-4xl font-medium leading-none tracking-[-0.055em] text-[#0a0a0a] md:text-6xl">
+            Throwaway Interfaces for the One Section That Matters
+          </h2>
+          <div class="mt-12 grid gap-5 md:grid-cols-3">
+            {microCards.map((card) => (
+              <article class={`rounded-[1.75rem] p-8 ${card.className}`}>
+                <p class="f-mono text-[10px] font-semibold uppercase tracking-[0.18em] opacity-70">{card.label}</p>
+                <h3 class="f-display mt-6 text-3xl font-semibold leading-tight tracking-[-0.045em]">{card.title}</h3>
+                <p class="f-body mt-5 leading-relaxed opacity-80">{card.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPLEMENTATION NOTES: feature -->
+      <section class="yil-section bg-[#fffaf0] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="rounded-[2rem] bg-[#0a0a0a] p-5 text-white md:p-8">
+            <div class="flex items-center gap-2 border-b border-white/10 pb-4">
+              <span class="h-3 w-3 rounded-full bg-[#ff4d8b]"></span>
+              <span class="h-3 w-3 rounded-full bg-[#e8b94a]"></span>
+              <span class="h-3 w-3 rounded-full bg-[#34d399]"></span>
+              <span class="f-mono ml-3 text-[10px] uppercase tracking-[0.18em] text-white/50">implementation-notes.html</span>
+            </div>
+            <div class="grid gap-8 pt-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#b8a4ed]">FEEDBACK LOOP</p>
+                <h2 class="f-display mt-5 text-4xl font-medium leading-none tracking-[-0.05em] md:text-6xl">
+                  Keep Notes While Reality Deviates From the Spec
+                </h2>
+                <p class="f-body mt-6 leading-relaxed text-white/70">
+                  The missing artifact is not a post-hoc summary. It is a running decision log that stays
+                  attached to the work while the agent is still making tradeoffs.
+                </p>
+              </div>
+              <pre class="overflow-x-auto rounded-3xl bg-white/10 p-5 text-sm leading-relaxed text-[#f5f0e0]"><code>implement &lt;SPEC&gt; and while you do,
+keep a running implementation-notes.html file
+(or markdown) with decisions you had to make
+weren't in the spec, things you had to change,
+tradeoffs you had to make or anything else
+I should know</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AGENT OS: checklist -->
+      <section class="yil-section bg-[#faf5e8] py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+          <div>
+            <p class="f-mono inline-flex rounded-full bg-[#e8b94a] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0a0a0a]">AGENT OS</p>
+            <h2 class="f-display mt-6 text-4xl font-medium leading-none tracking-[-0.055em] text-[#0a0a0a] md:text-6xl">
+              Portable Context Is the Layer Under the HTML Layer
+            </h2>
+            <p class="f-body mt-6 leading-relaxed text-[#2f2f2f]">
+              Rich specs help one project. Shared memory, instructions, skills, prompts, and goal templates
+              help every agent that touches the workflow.
+            </p>
+          </div>
+          <div class="rounded-[2rem] bg-[#fffaf0] p-5 shadow-lg shadow-[#1a3a3a]/5 md:p-8">
+            <div class="space-y-3">
+              {checklist.map((item, index) => (
+                <div class="grid gap-4 rounded-3xl border border-[#0a0a0a]/10 bg-white p-5 md:grid-cols-[3rem_1fr] md:items-center">
+                  <span class="f-mono flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1a3a3a] text-sm font-bold text-white">{String(index + 1).padStart(2, '0')}</span>
+                  <p class="f-body leading-relaxed text-[#2f2f2f]">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFERENCES -->
+      <section class="yil-section bg-[#fffaf0] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-[#6a6a6a]">References</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            {references.map((item) => (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group rounded-[1.75rem] border border-[#0a0a0a]/10 bg-[#f5f0e0] p-6 transition-transform hover:-translate-y-1"
+              >
+                <span
+                  class="f-mono inline-block rounded-full border px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em]"
+                  style={`color: ${item.accent}; border-color: ${item.accent}55; background: ${item.accent}11;`}
+                >{item.label}</span>
+                <p class="f-body mt-5 leading-relaxed text-[#2f2f2f] group-hover:underline">{item.title}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} />
+
+      <!-- DESIGN NOTES -->
+      <section class="border-t border-[#1a3a3a]/15 bg-[#faf5e8]">
+        <div class="mx-auto max-w-6xl px-6 py-12">
+          <p class="f-mono text-[10px] uppercase tracking-[0.25em] text-[#6a6a6a]">Design Notes</p>
+          <p class="f-mono mt-2 text-sm text-[#2f2f2f]">YIL 2026-05-18 — HTML as Agent-Native Working Surface</p>
+          <p class="f-mono mt-1 max-w-3xl text-sm leading-relaxed text-[#6a6a6a]">
+            A day about HTML replacing flat Markdown as a high-density working surface for AI collaboration:
+            interactive specs, throwaway editing UIs, living design systems, running implementation notes,
+            and portable agent context.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-[#1a3a3a]"></span><span class="f-mono text-[10px] text-[#6a6a6a]">accent-1 / HTML specs</span></div>
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-[#ff4d8b]"></span><span class="f-mono text-[10px] text-[#6a6a6a]">accent-2 / Micro UI</span></div>
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-[#b8a4ed]"></span><span class="f-mono text-[10px] text-[#6a6a6a]">accent-3 / Implementation notes</span></div>
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-[#e8b94a]"></span><span class="f-mono text-[10px] text-[#6a6a6a]">accent-4 / Agent OS</span></div>
+          </div>
+          <p class="mt-6 max-w-3xl text-sm leading-relaxed text-[#6a6a6a]">
+            The artifact follows the Clay reference analysis with a cream canvas, rounded generous surfaces,
+            saturated feature cards, and product-mockup/browser motifs. The uniqueness comes from the day's
+            content: the spec itself becomes a usable, rendered interface with room for a design system,
+            custom editor, implementation log, and portable context checklist.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
