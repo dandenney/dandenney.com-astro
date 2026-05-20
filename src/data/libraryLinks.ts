@@ -9,6 +9,12 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Hermes just got 10x better...",
+    url: "https://www.youtube.com/watch?v=8iZUyE7SlXo",
+    description: "Here are 8 new Hermes Agent features that makes it SO much more powerful2nd Youtube Channel:  https://youtube.com/@AlexFinnLabsOfficialFULL Hermes Agent bootcamp in the Vibe Coding Academy coming u",
+    created: "2026-05-19",
+  },
+  {
     title: "Frontend isn't Dead. Your Focus Needs to Change.",
     url: "https://formation.dev/blog/frontend-isnt-dead-but-your-focus-needs-to-change/",
     description: "Frontend development isn’t dead, but AI is changing the role. Learn where AI helps, where it struggles, and where frontend engineers should focus.",
