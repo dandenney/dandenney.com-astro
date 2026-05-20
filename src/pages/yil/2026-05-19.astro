@@ -1,0 +1,375 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-19',
+  headline: 'Make Exploration Leave a Trail',
+  summary:
+    'Exploratory AI work gets more valuable when it is configured to emit learning output, stored in memory, and connected to searchable social sources instead of disappearing after the session.',
+  accent: '#2563eb',
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const loopSteps = [
+  {
+    label: '01 / explore',
+    title: 'Try the thing while the context is warm',
+    body: 'Coding spikes, browser QA, betting-board experiments, and TIL capture all start as messy exploration before they become reusable knowledge.',
+    className: 'border-blue-600/30 bg-blue-600/10 text-blue-700',
+  },
+  {
+    label: '02 / output',
+    title: 'Make the tool leave a learning artifact',
+    body: 'Learn mode should emit the useful after-action note automatically instead of relying on memory after the session has cooled off.',
+    className: 'border-violet-600/30 bg-violet-600/10 text-violet-700',
+  },
+  {
+    label: '03 / remember',
+    title: 'Put the durable part where Hermes can use it',
+    body: 'The point of memory is continuity: tomorrow’s prompt should inherit the part of today’s exploration that still matters.',
+    className: 'border-emerald-600/30 bg-emerald-600/10 text-emerald-700',
+  },
+  {
+    label: '04 / query',
+    title: 'Search the source layer for the next question',
+    body: 'Tweet querying and browser connectors become research infrastructure when they help pull the next useful thread back into the loop.',
+    className: 'border-orange-500/30 bg-orange-500/10 text-orange-600',
+  },
+];
+
+const auditTargets = [
+  'Coding spikes that currently end with useful context trapped in a terminal scrollback.',
+  'Browser QA explorations where the discoveries should become checklists or regression notes.',
+  'YIL/TIL capture, especially days where a small link points to a larger workflow shift.',
+  'Betting workflow experiments where the learning question matters more than the one-day result.',
+];
+
+const references = [
+  {
+    label: 'LEARN MODE',
+    title: 'Lydia Hallie X post — learn mode output can be set in config',
+    url: 'https://x.com/lydiahallie/status/2056420694087594283?s=20',
+    accent: '#2563eb',
+  },
+  {
+    label: 'HERMES',
+    title: 'Hermes YouTube video',
+    url: 'https://www.youtube.com/watch?v=8iZUyE7SlXo',
+    accent: '#7c3aed',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: Make Exploration Leave a Trail | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-body: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+      }
+
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes orbit {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes pulse-line {
+        0%, 100% { opacity: 0.35; transform: scaleX(0.9); }
+        50% { opacity: 0.9; transform: scaleX(1); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes fade-up { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes orbit { from { transform: none; } to { transform: none; } }
+        @keyframes pulse-line { 0%, 100% { opacity: 0.6; transform: none; } }
+      }
+
+      .f-display { font-family: var(--font-display); }
+      .f-body { font-family: var(--font-body); }
+      .f-mono { font-family: var(--font-mono); }
+      .yil-hero { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible { animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .loop-orbit { animation: orbit 26s linear infinite; }
+      .pulse-line { transform-origin: center; animation: pulse-line 3.8s ease-in-out infinite; }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-[#f7f3ea] text-gray-900">
+    <main class="relative z-10 bg-[#f7f3ea] shadow-xs">
+      <Header />
+
+      <!-- HERO: research-loop-dashboard -->
+      <section class="yil-hero relative isolate overflow-hidden bg-[#f7f3ea]">
+        <div class="absolute -left-32 top-24 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl"></div>
+        <div class="absolute -right-28 bottom-10 h-96 w-96 rounded-full bg-violet-600/10 blur-3xl"></div>
+
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:py-32 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-gray-500">
+              2026-05-19 / RESEARCH LOOP
+            </p>
+            <h1
+              class="f-display mt-7 max-w-4xl font-semibold leading-[0.94] tracking-[-0.065em] text-gray-900"
+              style="font-size: clamp(3rem, 8vw, 6.5rem);"
+            >
+              Make Exploration Leave a Trail
+            </h1>
+            <p class="f-body mt-8 max-w-2xl text-lg leading-relaxed text-gray-700 md:text-xl">
+              Exploratory AI work gets more valuable when it is configured to emit learning output,
+              stored in memory, and connected to searchable social sources instead of disappearing
+              after the session.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-3">
+              <span class="rounded-full bg-blue-600/10 px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-700">learn output</span>
+              <span class="rounded-full bg-violet-600/10 px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-violet-700">Hermes memory</span>
+              <span class="rounded-full bg-emerald-600/10 px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.15em] text-emerald-700">query layer</span>
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] border border-gray-900/10 bg-[#fffdf7] p-4 shadow-2xl shadow-gray-900/10 md:p-6">
+            <div class="rounded-[1.5rem] border border-gray-900/10 bg-white p-5">
+              <div class="flex flex-wrap items-center gap-2 border-b border-gray-900/10 pb-4">
+                <span class="h-3 w-3 rounded-full bg-blue-600"></span>
+                <span class="h-3 w-3 rounded-full bg-violet-600"></span>
+                <span class="h-3 w-3 rounded-full bg-emerald-600"></span>
+                <span class="ml-2 rounded-full bg-gray-100 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-gray-500">exploration-loop.yml</span>
+              </div>
+
+              <div class="relative mx-auto mt-8 h-[26rem] max-w-md">
+                <div class="loop-orbit absolute inset-8 rounded-full border border-dashed border-blue-600/30"></div>
+                <div class="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-900 p-5 text-center text-white shadow-xl">
+                  <p class="f-mono text-[10px] uppercase tracking-[0.16em] text-white/60">next</p>
+                  <p class="f-display mt-2 text-2xl font-semibold tracking-[-0.04em]">Prompt</p>
+                </div>
+
+                <div class="absolute left-0 top-2 w-48 rounded-3xl border border-blue-600/20 bg-blue-600/10 p-4">
+                  <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-blue-700">learn mode</p>
+                  <p class="f-body mt-2 text-sm leading-relaxed text-gray-700">output a reusable artifact while the work is fresh</p>
+                </div>
+
+                <div class="absolute right-0 top-28 w-48 rounded-3xl border border-violet-600/20 bg-violet-600/10 p-4">
+                  <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-violet-700">memory</p>
+                  <p class="f-body mt-2 text-sm leading-relaxed text-gray-700">keep the durable part available tomorrow</p>
+                </div>
+
+                <div class="absolute bottom-6 left-12 w-52 rounded-3xl border border-emerald-600/20 bg-emerald-600/10 p-4">
+                  <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-emerald-700">social search</p>
+                  <p class="f-body mt-2 text-sm leading-relaxed text-gray-700">query source material for the next thread</p>
+                </div>
+
+                <div class="pulse-line absolute left-40 top-[7.6rem] h-px w-24 rotate-[24deg] bg-blue-600/40"></div>
+                <div class="pulse-line absolute right-28 top-[17.2rem] h-px w-24 rotate-[123deg] bg-violet-600/40"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTE: config-snippet-callout -->
+      <section class="yil-section bg-[#fffdf7] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <blockquote class="grid gap-8 rounded-[2rem] border border-blue-600/20 bg-white p-8 shadow-xl shadow-blue-600/5 md:p-12 lg:grid-cols-[0.75fr_1.25fr]">
+            <div>
+              <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-600">config capture</p>
+              <div class="mt-6 rounded-2xl bg-gray-900 p-5 font-mono text-sm leading-relaxed text-blue-100">
+                <span class="text-emerald-300">learn_mode:</span> output<br />
+                <span class="text-violet-300">artifact:</span> reusable-note<br />
+                <span class="text-orange-300">scope:</span> exploratory-items
+              </div>
+            </div>
+            <div>
+              <p class="f-display text-3xl font-semibold leading-tight tracking-[-0.04em] text-gray-900 md:text-5xl">
+                “You can set learn mode to output in the config. Dan wants to try this on exploratory items.”
+              </p>
+              <footer class="f-mono mt-8 text-[11px] uppercase tracking-[0.2em] text-gray-500">
+                Dan Denney / TIL 2026-05-19
+              </footer>
+            </div>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- LEARN MODE: split -->
+      <section class="yil-section bg-[#f7f3ea] py-24">
+        <div class="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p class="f-mono inline-flex rounded-full bg-blue-600/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-700">LEARN MODE</p>
+            <h2 class="f-display mt-6 max-w-xl text-4xl font-semibold leading-none tracking-[-0.055em] text-gray-900 md:text-6xl">
+              Exploration Should Produce a Usable Artifact
+            </h2>
+          </div>
+          <div class="rounded-[2rem] border border-gray-900/10 bg-[#fffdf7] p-8 shadow-lg shadow-gray-900/5">
+            <p class="f-body text-xl leading-relaxed text-gray-700">
+              The practical capture from Lydia Hallie is small but behavior-changing: configure learn mode
+              so exploratory items output something durable by default. That shifts the burden from Dan
+              remembering what mattered after a spike to the tool producing a reusable learning trail
+              while the context is still fresh.
+            </p>
+            <div class="mt-8 grid gap-4 md:grid-cols-3">
+              <div class="rounded-2xl bg-blue-600/10 p-5"><p class="f-mono text-[10px] uppercase tracking-[0.16em] text-blue-700">before</p><p class="mt-3 text-sm leading-relaxed text-gray-700">session ends, insight decays</p></div>
+              <div class="rounded-2xl bg-violet-600/10 p-5"><p class="f-mono text-[10px] uppercase tracking-[0.16em] text-violet-700">during</p><p class="mt-3 text-sm leading-relaxed text-gray-700">tool captures the lesson</p></div>
+              <div class="rounded-2xl bg-emerald-600/10 p-5"><p class="f-mono text-[10px] uppercase tracking-[0.16em] text-emerald-700">after</p><p class="mt-3 text-sm leading-relaxed text-gray-700">artifact feeds the next run</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH LOOP: cards -->
+      <section class="yil-section bg-[#fffdf7] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-violet-600">MEMORY + QUERY</p>
+          <h2 class="f-display mt-4 max-w-4xl text-4xl font-semibold leading-none tracking-[-0.055em] text-gray-900 md:text-6xl">
+            The Research Loop Gets Continuous
+          </h2>
+          <p class="f-body mt-6 max-w-3xl text-lg leading-relaxed text-gray-700">
+            Hermes memory and tweet-query access point at the same workflow shape: today’s exploration
+            should become tomorrow’s context, and tomorrow’s context should know where to search next.
+          </p>
+
+          <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {loopSteps.map((step) => (
+              <article class={`rounded-[1.75rem] border p-6 ${step.className}`}>
+                <p class="f-mono text-[10px] font-semibold uppercase tracking-[0.18em] opacity-80">{step.label}</p>
+                <h3 class="f-display mt-5 text-2xl font-semibold leading-tight tracking-[-0.04em] text-gray-900">{step.title}</h3>
+                <p class="f-body mt-4 text-sm leading-relaxed text-gray-700">{step.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- SOCIAL SEARCH: feature -->
+      <section class="yil-section bg-[#f7f3ea] py-24">
+        <div class="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
+          <div class="rounded-[2rem] bg-gray-900 p-8 text-white md:p-10">
+            <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-emerald-300">SOCIAL SEARCH</p>
+            <h2 class="f-display mt-6 text-4xl font-semibold leading-none tracking-[-0.055em] md:text-6xl">
+              Tweets Become a Queryable Research Layer
+            </h2>
+            <p class="f-body mt-8 max-w-2xl text-lg leading-relaxed text-gray-300">
+              The Grok question stays open. The useful frame is not “buy another subscription.” It is
+              whether tweet querying materially improves Dan’s capture and research loop compared with
+              current X search or browser connectors.
+            </p>
+          </div>
+          <aside class="rounded-[2rem] border border-emerald-600/20 bg-emerald-600/10 p-8 md:p-10">
+            <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-emerald-700">evaluation question</p>
+            <p class="f-display mt-6 text-3xl font-semibold leading-tight tracking-[-0.04em] text-gray-900">
+              Does source access make the workflow meaningfully more continuous, or just more searchable?
+            </p>
+            <p class="f-body mt-6 leading-relaxed text-gray-700">
+              The page should preserve that uncertainty. The research loop is stronger when it keeps
+              good questions alive instead of pretending the tool choice is already solved.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- AUDIT: checklist -->
+      <section class="yil-section bg-[#fffdf7] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-orange-500">AUDIT</p>
+          <h2 class="f-display mt-4 max-w-3xl text-4xl font-semibold leading-none tracking-[-0.055em] text-gray-900 md:text-6xl">
+            Where Should the Trail Start?
+          </h2>
+          <div class="mt-10 grid gap-4 md:grid-cols-2">
+            {auditTargets.map((target, index) => (
+              <article class="rounded-3xl border border-orange-500/20 bg-orange-500/10 p-6">
+                <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-orange-600">candidate {String(index + 1).padStart(2, '0')}</p>
+                <p class="f-body mt-4 text-lg leading-relaxed text-gray-800">{target}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- REFERENCES -->
+      <section class="yil-section bg-[#f7f3ea] py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-gray-500">References</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-2">
+            {references.map((item) => (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group rounded-3xl border border-gray-900/10 bg-[#fffdf7] p-6 shadow-sm transition-colors hover:border-gray-900/20"
+              >
+                <span
+                  class="f-mono inline-block rounded-full border px-3 py-1.5 text-[10px] uppercase tracking-[0.14em]"
+                  style={`color: ${item.accent}; border-color: ${item.accent}55; background: ${item.accent}11;`}
+                >{item.label}</span>
+                <p class="f-body mt-5 leading-relaxed text-gray-700 group-hover:text-gray-900">{item.title}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <YilSeriesNav currentDate={yilMeta.date} accent={yilMeta.accent} />
+
+      <!-- DESIGN NOTES -->
+      <section class="border-t border-gray-900/10 bg-[#fffdf7]">
+        <div class="mx-auto max-w-6xl px-6 py-12">
+          <p class="f-mono text-[10px] uppercase tracking-[0.25em] text-gray-500">Design Notes</p>
+          <p class="f-mono mt-2 text-sm text-gray-700">YIL 2026-05-19 — Make Exploration Leave a Trail</p>
+          <p class="f-mono mt-1 max-w-3xl text-sm leading-relaxed text-gray-500">
+            A day about configuring exploratory AI work to produce durable learning artifacts: learn-mode
+            output, Hermes memory, and social/tweet search as a more continuous personal research loop.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-blue-600"></span><span class="f-mono text-[10px] text-gray-500">accent-1 / Learn mode</span></div>
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-violet-600"></span><span class="f-mono text-[10px] text-gray-500">accent-2 / Memory</span></div>
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-emerald-600"></span><span class="f-mono text-[10px] text-gray-500">accent-3 / Social search</span></div>
+            <div class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-full bg-orange-500"></span><span class="f-mono text-[10px] text-gray-500">accent-4 / Audit</span></div>
+          </div>
+          <p class="mt-6 max-w-3xl text-sm leading-relaxed text-gray-500">
+            This page uses a warm research-dashboard surface because the captured learning is less about
+            a single command and more about building a loop: explore → learn output → memory → query → next
+            exploration. The visual concept intentionally preserves the Grok/tweet-query question as an
+            evaluation prompt rather than treating it as a purchase recommendation.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
