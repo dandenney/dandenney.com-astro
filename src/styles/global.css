@@ -28,12 +28,14 @@
 /* TOC Colors */
 
 :root {
+  color-scheme: light;
   --toc-active-color: #b91c1c;
   --toc-inactive-color: #6b7280;
   --toc-active-border: #b91c1c;
 }
 
 .dark {
+  color-scheme: dark;
   --toc-active-color: #fca5a5;
   --toc-inactive-color: #9ca3af;
   --toc-active-border: #fca5a5;
@@ -771,4 +773,47 @@ pre .token.variable {
 .cta {
   background-size: 10px 10px;
   background-image: repeating-linear-gradient(45deg, #e2e8f0 0, #e2e8f0 1px, #f9fafc 0, #f9fafc 50%);
+}
+
+/* Skip link */
+
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link:focus-visible {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: #ffffff;
+  color: #b91c1c;
+  outline: 2px solid #b91c1c;
+  outline-offset: 2px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.dark .skip-link:focus-visible {
+  background: #0f172a;
+  color: #f87171;
+  outline-color: #f87171;
 }

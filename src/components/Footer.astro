@@ -62,16 +62,18 @@ const isProd = import.meta.env.PROD;
 </style>
 
 <footer class="site-footer bg-gray-50 grid items-center dark:bg-slate-800">
-  <nav class="flex flex-wrap has-links gap-4">
-    <a class="link" href="/">Home</a>
-    <a class="link" href="/tinkerings">Tinkerings</a>
-    <a class="link" href="/blips">Blips</a>
-    <a class="link" href="/posts">Posts</a>
-    <a class="link" href="/no-reserv-ai-tions">No ReservAItions</a>
-    <RSSLink class="link" />
+  <nav aria-label="Footer">
+    <ul role="list" class="flex flex-wrap has-links gap-4 list-none p-0 m-0">
+      <li><a class="link" href="/">Home</a></li>
+      <li><a class="link" href="/tinkerings">Tinkerings</a></li>
+      <li><a class="link" href="/blips">Blips</a></li>
+      <li><a class="link" href="/posts">Posts</a></li>
+      <li><a class="link" href="/no-reserv-ai-tions">No ReservAItions</a></li>
+      <li><RSSLink class="link" /></li>
+    </ul>
   </nav>
   <div class="dan has-links">
-    <img alt="Illustration of Dan by Ricardo Gimenes" height="150" src="/dan-social-eb.svg" width="150" />
+    <img alt="Illustration of Dan by Ricardo Gimenes" height="150" src="/dan-social-eb.svg" width="150" loading="lazy" />
     <p class="max-w-xs	dark:text-slate-100">I'm hoping to run <a href="https://frontenddesignconference.com">front-end design conference</a> in St. Pete again ASAP!</p>
   </div>
 </footer>
