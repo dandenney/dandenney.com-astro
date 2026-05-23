@@ -1283,6 +1283,30 @@ export const martingaleBets: MartingaleBet[] = [
     stakeOut: 20,
     returnAmount: 0,
   },
+  {
+    id: 102,
+    owner: "Dan",
+    date: "2026-05-23",
+    seriesId: "EE",
+    pick: "Victor Wembanyama R+A Under 17.5 Rebs + Asts",
+    line: "-109",
+    amount: 60,
+    result: "win",
+    stakeOut: 60,
+    returnAmount: 115.04,
+  },
+  {
+    id: 103,
+    owner: "GardenOf",
+    date: "2026-05-23",
+    seriesId: "Z",
+    pick: "Victor Wembanyama R+A Under 17.5 Rebs + Asts",
+    line: "-109",
+    amount: 40,
+    result: "win",
+    stakeOut: 40,
+    returnAmount: 76.70,
+  },
 ];
 
 export const getStakeOut = (bet: MartingaleBet): number =>
