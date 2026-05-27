@@ -10,6 +10,10 @@ export type RithhmmPropType =
 
 export type RithhmmPickResult = "win" | "loss" | "push" | "pending";
 
+export type RithhmmPortfolioAction = "bet" | "watch" | "skip";
+
+export type RithhmmHermesFlag = "watch" | "strong" | "no-flag";
+
 export interface RithhmmPick {
   id: number;
   date: string;
@@ -23,7 +27,21 @@ export interface RithhmmPick {
   matchup: string;
   propType: RithhmmPropType;
   result: RithhmmPickResult;
+  /** What action was taken on this pick */
+  portfolioAction?: RithhmmPortfolioAction;
+  /** Hermes signal flag for this pick */
+  hermesFlag?: RithhmmHermesFlag;
+  /** Total amount wagered by both Dan and GardenOf combined */
+  betAmount?: number;
+  /** Total amount returned to both Dan and GardenOf combined (stake + profit on win; omit on loss) */
+  returnAmount?: number;
 }
+
+/** Starting balances carried over from the martingale tracker (2026-05-27) */
+export const rithhmmStartingBalances = {
+  dan: 573.75,
+  gardenOf: 475.92,
+};
 
 export const rithhmmPicks: RithhmmPick[] = [
   // 2026-04-18
@@ -2283,6 +2301,153 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "5/8",
     matchup: "Giants @ Athletics",
     propType: "combo-over",
+    result: "win",
+  },
+  // 2026-05-24
+  {
+    id: 166,
+    date: "2026-05-24",
+    sport: "NBA",
+    pick: "Jared McCain Under 17.5 PRA",
+    odds: "-114",
+    confidence: 64.2,
+    modelProjection: "9.8 PRA",
+    dtm: 23.6,
+    recentForm: "7/10",
+    matchup: "Thunder at Spurs",
+    propType: "combo-under",
+    result: "win",
+  },
+  {
+    id: 167,
+    date: "2026-05-24",
+    sport: "NBA",
+    pick: "Victor Wembanyama Under 13.5 Rebounds",
+    odds: "-122",
+    confidence: 68.0,
+    modelProjection: "9.5 Rebounds",
+    dtm: 29.1,
+    recentForm: "3/10",
+    matchup: "Spurs vs Thunder",
+    propType: "rebounds-under",
+    result: "win",
+  },
+  // 2026-05-25
+  {
+    id: 168,
+    date: "2026-05-25",
+    sport: "NBA",
+    pick: "Sam Merrill Over 2.5 Rebounds + Assists",
+    odds: "-150",
+    confidence: 63.8,
+    modelProjection: "3.7 Rebounds + Assists",
+    dtm: 9.7,
+    recentForm: "5/10",
+    matchup: "Cavaliers vs Knicks",
+    propType: "combo-over",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,          
+    returnAmount: 0       
+  },
+  {
+    id: 169,
+    date: "2026-05-25",
+    sport: "MLB",
+    pick: "Athletics +1.5",
+    odds: "-161",
+    confidence: 64.9,
+    modelProjection: "Athletics -0.4",
+    dtm: 8.3,
+    recentForm: "3/10",
+    matchup: "Athletics vs Mariners",
+    propType: "combo-over",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0   
+  },
+  {
+    id: 170,
+    date: "2026-05-25",
+    sport: "MLB",
+    pick: "Aaron Civale Under 5.5 Hits Allowed",
+    odds: "-145",
+    confidence: 60.5,
+    modelProjection: "4.8 Hits Allowed",
+    dtm: 3.2,
+    recentForm: "5/10",
+    matchup: "Athletics vs Mariners",
+    propType: "combo-under",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0   
+  },
+  // 2026-05-26
+  {
+    id: 171,
+    date: "2026-05-26",
+    sport: "NBA",
+    pick: "Victor Wembanyama Under 13.5 Rebounds",
+    odds: "-138",
+    confidence: 69.2,
+    modelProjection: "9.6 Rebounds",
+    dtm: 26.3,
+    recentForm: "4/10",
+    matchup: "Spurs at Thunder",
+    propType: "rebounds-under",
+    result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 110.42
+  },
+  {
+    id: 172,
+    date: "2026-05-26",
+    sport: "NBA",
+    pick: "Victor Wembanyama Under 3.5 Blocks",
+    odds: "-128",
+    confidence: 72.2,
+    modelProjection: "2.8 Blocks",
+    dtm: 36.4,
+    recentForm: "7/10",
+    matchup: "Spurs at Thunder",
+    propType: "combo-under",
+    result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 106.87
+  },
+  {
+    id: 173,
+    date: "2026-05-26",
+    sport: "MLB",
+    pick: "Padres Moneyline",
+    odds: "-115",
+    confidence: 60.5,
+    modelProjection: "Padres 5.1, Phillies 3.8",
+    dtm: 15.1,
+    recentForm: "6/10",
+    matchup: "Padres vs Phillies",
+    propType: "moneyline",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0
+  },
+  {
+    id: 174,
+    date: "2026-05-26",
+    sport: "MLB",
+    pick: "Emerson Hancock Under 3.5 Earned Runs",
+    odds: "-163",
+    confidence: 63.5,
+    modelProjection: "2.7 Earned Runs",
+    dtm: 4.0,
+    recentForm: "9/10",
+    matchup: "Mariners at Athletics",
+    propType: "combo-under",
     result: "win",
   },
 ];

@@ -12,15 +12,17 @@ Read both files in parallel:
 
 ## Step 2: Parse the Smart Signal board
 
-Find the `## Smart Signal board` section in the Obsidian note. It is split into `### MLB` and `### NBA` subsections — use those to determine the `sport` field for each pick.
+Find the `## Rithmm` section (also accepted: `## Smart Signal board`) in the Obsidian note. It is split into `### MLB` and `### NBA` subsections — use those to determine the `sport` field for each pick.
 
 Each pick looks like:
 ```
 - [pick text] ([odds]), confidence [X]%
   - Model: [modelProjection]
   - DTM: [X]%
-  - L10: [X/10]
+  - L10: [X/10]          ← also accept "Recent: L10 [X/10]"
   - Matchup: [matchup info, optional time]
+  - Action: bet | watch | skip    ← optional
+  - Bet: $[amount]                ← optional, only present if Action is "bet"
 ```
 
 Extract these fields per pick:
@@ -29,8 +31,10 @@ Extract these fields per pick:
 - `confidence` — numeric, e.g. `61.0`
 - `modelProjection` — the value after `Model:`, e.g. `"1.4 Total Bases"`
 - `dtm` — numeric percentage value after `DTM:`, e.g. `6.4` (drop the `%`)
-- `recentForm` — the value after `L10:`, e.g. `"9/10"`
+- `recentForm` — the value after `L10:` or `Recent: L10`, e.g. `"9/10"`
 - `matchup` — the value after `Matchup:`, **strip any trailing time** (e.g. `"vs Padres, 7:40 PM"` → `"vs Padres"`)
+- `portfolioAction` — the value after `Action:` (`"bet"`, `"watch"`, or `"skip"`); omit field entirely if line is absent
+- `betAmount` — numeric dollar value after `Bet: $` (e.g. `50.00`); this is the **combined total** wagered by both Dan and GardenOf (they always bet the same amount, so multiply the per-person stake by 2 when entering); omit field entirely if line is absent
 
 ## Step 3: Parse results and propTypes
 
@@ -40,17 +44,21 @@ Find the `## Resolution` section. Each resolved line looks like:
 ```
 
 Match each resolution line to its Smart Signal pick by comparing the pick text (fuzzy match — ignore odds in the resolution line). Extract:
-- `propType` from the backtick tag, e.g. `combo-under`
+- `propType` from the backtick tag, e.g. `combo-under` — **use this if present**
 - `result` from the bold label: `"win"`, `"loss"`, or `"push"`
+- `returnAmount` — if `result` is `"win"` and a `Bet: $X` was recorded, this is the **combined total returned** to both Dan and GardenOf (stake + profit for both); calculate from the resolution description if the payout is mentioned, otherwise omit and add manually later. The code divides by 2 for per-person display.
 
-If a pick has **no matching resolution line**, set `result: "pending"` and infer `propType` from the pick text:
+If the resolution line has **no backtick propType tag**, infer `propType` from the pick text:
 - "Over X.X Singles" → `hits-over`
 - "Under X.X Singles" → `hits-under`
 - "Under X.X Rebounds" → `rebounds-under`
 - "Under X.X Points" → `points-under`
 - "Under X.X Pitcher Strikeouts" → `pitcher-ks-under`
+- "Moneyline" (anywhere in pick text) → `moneyline`
 - "Over X.X …" (anything else) → `combo-over`
 - "Under X.X …" (anything else) → `combo-under`
+
+If a pick has **no matching resolution line**, set `result: "pending"` and infer `propType` from the pick text using the same rules above.
 
 ## Step 4: Check for new propTypes
 
@@ -63,7 +71,9 @@ Compare the propTypes found against the `RithhmmPropType` union in `src/data/rit
 
 Determine next `id` = highest existing `id` in `rithhmmPicks` + 1.
 
-Append one entry per pick to the `rithhmmPicks` array in `src/data/rithhmmPicks.ts`, in the order they appear in the Smart Signal board, with a `// YYYY-MM-DD` comment before the first pick of the date:
+Append one entry per pick to the `rithhmmPicks` array in `src/data/rithhmmPicks.ts`, in the order they appear in the Smart Signal board, with a `// YYYY-MM-DD` comment before the first pick of the date.
+
+Include optional fields only when present — never write `portfolioAction: undefined` or similar:
 
 ```ts
   // 2026-04-22
@@ -80,13 +90,16 @@ Append one entry per pick to the `rithhmmPicks` array in `src/data/rithhmmPicks.
     matchup: "<matchup without time>",
     propType: "<propType>",
     result: "win" | "loss" | "push" | "pending",
+    portfolioAction: "bet",        // only if Action was logged
+    betAmount: 50.00,              // only if Bet was logged — combined total (both players)
+    returnAmount: 86.24,           // only on wins where payout is known — combined total (both players)
   },
 ```
 
 ## Step 6: Display confirmation
 
-| # | Sport | Pick | Odds | Conf | PropType | Result |
-|---|---|---|---|---|---|---|
-| 25 | MLB | TJ Rumfield Under 1.5 Total Bases | -140 | 61.0% | combo-under | loss |
+| # | Sport | Pick | Odds | Conf | PropType | Action | Bet | Result |
+|---|---|---|---|---|---|---|---|---|
+| 25 | MLB | TJ Rumfield Under 1.5 Total Bases | -140 | 61.0% | combo-under | bet | $25.00 | loss |
 
-List all added picks. Note any new propTypes that were added to the type definition.
+Use `—` for Action and Bet when not logged. Note any new propTypes added to the type definition.
