@@ -7,7 +7,7 @@ The argument is a date in YYYY-MM-DD format.
 ## Step 1: Read source files
 
 Read both files in parallel:
-- The Obsidian daily note at `/Users/dandenney/Documents/claw/Betting/Daily/$ARGUMENTS.md`
+- The Obsidian daily note at `/Users/dandenney/Documents/claw/Betting/Agents/Hermes/Daily/$ARGUMENTS.md`
 - `src/data/rithhmmPicks.ts` in full
 
 ## Step 2: Parse the Smart Signal board
@@ -34,7 +34,7 @@ Extract these fields per pick:
 - `recentForm` — the value after `L10:` or `Recent: L10`, e.g. `"9/10"`
 - `matchup` — the value after `Matchup:`, **strip any trailing time** (e.g. `"vs Padres, 7:40 PM"` → `"vs Padres"`)
 - `portfolioAction` — the value after `Action:` (`"bet"`, `"watch"`, or `"skip"`); omit field entirely if line is absent
-- `betAmount` — numeric dollar value after `Bet: $` (e.g. `50.00`); this is the **combined total** wagered by both Dan and GardenOf (they always bet the same amount, so multiply the per-person stake by 2 when entering); omit field entirely if line is absent
+- `betAmount` — numeric dollar value after `Bet: $` (e.g. `60.00`); Hermes always writes the **combined total** for both Dan and GardenOf (e.g. `$60` means each person bets $30); use this number **as-is** with no multiplication; omit field entirely if line is absent
 
 ## Step 3: Parse results and propTypes
 
@@ -46,7 +46,7 @@ Find the `## Resolution` section. Each resolved line looks like:
 Match each resolution line to its Smart Signal pick by comparing the pick text (fuzzy match — ignore odds in the resolution line). Extract:
 - `propType` from the backtick tag, e.g. `combo-under` — **use this if present**
 - `result` from the bold label: `"win"`, `"loss"`, or `"push"`
-- `returnAmount` — if `result` is `"win"` and a `Bet: $X` was recorded, this is the **combined total returned** to both Dan and GardenOf (stake + profit for both); calculate from the resolution description if the payout is mentioned, otherwise omit and add manually later. The code divides by 2 for per-person display.
+- `returnAmount` — if `result` is `"win"` and a `Bet: $X` was recorded, this is the **combined total returned** to both Dan and GardenOf (stake + profit for both); Hermes writes the combined figure, use it **as-is**; omit and add manually later if not present.
 
 If the resolution line has **no backtick propType tag**, infer `propType` from the pick text:
 - "Over X.X Singles" → `hits-over`
