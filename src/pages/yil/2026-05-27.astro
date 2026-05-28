@@ -1,0 +1,486 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-05-27',
+  headline: 'AI Made Software Cheaper to Type, Not Cheaper to Think About',
+  summary:
+    'A day examining how AI shifts the economics of software work — reducing implementation cost without removing judgment — while the real competitive moat moves from model strength to harness quality.',
+  accent: '#1863dc',
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const economicsCards = [
+  {
+    label: 'The Hard Parts Remain',
+    heading: "Judgment Cost Doesn't Shrink",
+    body: "AI compresses the implementation cost — diffs get written, refactors run across a whole codebase. But taste, architecture, product understanding, and knowing what to build: those costs don't move. The job is objectively easier in many places and still demands as much thinking.",
+    borderClass: 'border-orange-500/30',
+    bgClass: 'bg-orange-500/10',
+    labelClass: 'text-orange-500',
+  },
+  {
+    label: 'Same Work, Faster',
+    heading: 'Gains Default to Time Saved',
+    body: 'The natural way for engineers to cash out AI tooling gains is time savings — the same tickets, done faster. Converting those gains to higher-leverage output requires deliberately redesigning incentives, not just upgrading prompts.',
+    borderClass: 'border-orange-500/20',
+    bgClass: 'bg-orange-500/5',
+    labelClass: 'text-orange-500',
+  },
+  {
+    label: 'Cleanup Gets Cheap',
+    heading: 'Tech Debt Becomes Maintenance',
+    body: 'Asking an agent to implement a new pattern everywhere across a codebase is cheap now. Tech debt cleanup shifts from a rare capital project requiring a sprint to ongoing maintenance anyone can trigger.',
+    borderClass: 'border-orange-500/30',
+    bgClass: 'bg-orange-500/10',
+    labelClass: 'text-orange-500',
+  },
+  {
+    label: 'Agents Need Guardrails',
+    heading: 'Old Enterprise Patterns Return',
+    body: "Domain-driven design and verbose patterns went out of fashion because they were tedious to type. They're coming back — because agents behave like fast junior engineers who need the same structural constraints those patterns provide.",
+    borderClass: 'border-orange-500/20',
+    bgClass: 'bg-orange-500/5',
+    labelClass: 'text-orange-500',
+  },
+];
+
+const harnessCards = [
+  {
+    label: 'Winning Stack',
+    heading: 'Model + Harness + Eval Loop',
+    body: 'No AI-native coding agent company is crushing competitors by being better with AI alone. The competitive stack is now model plus harness plus evaluation loop — not merely a stronger base model.',
+  },
+  {
+    label: 'The Harness Team',
+    heading: "DeepSeek's Explicit Investment",
+    body: 'DeepSeek is building a dedicated harness team to close the loop between model outputs, runtime feedback, validation, and correction. The harness is becoming a first-class engineering discipline.',
+  },
+  {
+    label: 'Compounding Loops',
+    heading: 'Cheaper Economics Enable More Passes',
+    body: 'A cached-input cost advantage makes tighter interaction and verification loops more economically practical. More correction passes at lower cost compounds into a structural reliability advantage.',
+  },
+];
+
+const references = [
+  {
+    label: 'tooling economics',
+    accent: '#ff7759',
+    title: 'Pragmatic Programmer discussion with Dax Raad (OpenCode)',
+    url: '',
+  },
+  {
+    label: 'communication',
+    accent: '#1863dc',
+    title: 'Leadership update structure — Instagram reel',
+    url: 'https://www.instagram.com/reel/DVtAWlpjU67/?igsh=b3l0dXNzdWtoM2cz',
+  },
+  {
+    label: 'infrastructure',
+    accent: '#003c33',
+    title: 'Zhihu / DeepSeek harness summary',
+    url: '',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: AI Made Software Cheaper to Type, Not Cheaper to Think About | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: 'Space Grotesk', Inter, ui-sans-serif, system-ui;
+        --font-body: 'Space Grotesk', Inter, ui-sans-serif, system-ui;
+        --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+      }
+
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes fade-up { from { opacity: 0; } to { opacity: 1; } }
+      }
+
+      .f-display { font-family: var(--font-display); }
+      .f-body    { font-family: var(--font-body); }
+      .f-mono    { font-family: var(--font-mono); }
+
+      .yil-hero { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible { animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-white text-neutral-950">
+    <main class="relative z-10 bg-white shadow-xs">
+      <Header />
+
+      <!-- HERO: full-width-statement -->
+      <section class="yil-hero bg-white py-24 md:py-32">
+        <div class="mx-auto max-w-5xl px-6 text-center">
+          <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-neutral-400">
+            2026-05-27
+          </p>
+          <h1
+            class="f-display mx-auto mt-8 max-w-4xl font-normal leading-[0.95] tracking-[-0.055em] text-neutral-950"
+            style="font-size: clamp(2.75rem, 6vw, 5.5rem);"
+          >
+            AI Made Software Cheaper to Type, Not Cheaper to Think About
+          </h1>
+          <hr class="mx-auto mt-10 max-w-xs border-neutral-200" />
+          <p class="f-body mx-auto mt-10 max-w-2xl text-lg leading-relaxed text-neutral-800">
+            Three threads from today: the economics of AI gains, the structure of leadership
+            clarity, and why the model is no longer the product.
+          </p>
+          <div class="mt-10 flex flex-wrap justify-center gap-3">
+            <span
+              class="f-mono inline-flex rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-orange-500"
+            >Tooling Economics</span>
+            <span
+              class="f-mono inline-flex rounded-full border border-blue-600/30 bg-blue-600/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-600"
+            >Communication</span>
+            <span
+              class="f-mono inline-flex rounded-full border border-emerald-900/30 bg-emerald-900/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-emerald-900"
+            >Infrastructure</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTE: standalone-dark-band (dark navy) -->
+      <section class="yil-section bg-[#071829] py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono text-[11px] font-semibold uppercase tracking-[0.24em] text-[#93939f]">
+            Dax Raad / OpenCode
+          </p>
+          <blockquote class="mt-4">
+            <span
+              class="f-display block select-none text-[7rem] font-normal leading-none text-white/15"
+              aria-hidden="true"
+            >"</span>
+            <p
+              class="f-display -mt-4 max-w-3xl text-2xl font-normal leading-relaxed text-white md:text-3xl"
+            >
+              A lot of the job has become objectively easier with AI — but why does it feel like
+              I'm still having to think as hard as I ever did?
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- AI ECONOMICS: pill-h2-bar + cards, white bg -->
+      <section class="yil-section bg-white py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p
+            class="f-mono inline-flex rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-500"
+          >Tooling Economics</p>
+          <h2
+            class="f-display mt-6 max-w-3xl text-4xl font-normal leading-none tracking-[-0.055em] text-neutral-950 md:text-5xl"
+          >
+            The Gains Default to Time, Not Output
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-orange-500"></div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            {economicsCards.map((card) => (
+              <article class={`rounded-2xl border p-6 ${card.borderClass} ${card.bgClass}`}>
+                <p class={`f-mono text-[10px] font-semibold uppercase tracking-[0.18em] ${card.labelClass}`}>
+                  {card.label}
+                </p>
+                <h3 class="f-display mt-5 text-xl font-medium leading-tight tracking-[-0.035em] text-neutral-950">
+                  {card.heading}
+                </h3>
+                <p class="f-body mt-4 text-sm leading-relaxed text-neutral-700">
+                  {card.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- LEADERSHIP CLARITY: pill-h2-bar + split, stone bg -->
+      <section class="yil-section bg-stone-100 py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p
+            class="f-mono inline-flex rounded-full border border-blue-600/30 bg-blue-600/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-600"
+          >Communication</p>
+          <h2
+            class="f-display mt-6 max-w-3xl text-4xl font-normal leading-none tracking-[-0.055em] text-neutral-950 md:text-5xl"
+          >
+            Leaders Remember Clarity, Not Data
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-blue-600"></div>
+
+          <div class="mt-12 grid gap-8 lg:grid-cols-2 lg:items-start">
+            <!-- Left: prose -->
+            <div class="space-y-5">
+              <p class="f-body text-lg leading-relaxed text-neutral-800">
+                Most updates fail not because the work is bad but because they lead with activity
+                instead of outcome. Leaders don't remember data — they remember clarity. The fix is
+                structural: start with where you are now, then what informed it, then what happens
+                next.
+              </p>
+              <p class="f-body text-base leading-relaxed text-neutral-700">
+                End every update by naming the role you need leadership to play:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="f-mono mt-0.5 shrink-0 rounded-full border border-blue-600/30 bg-blue-600/10 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-blue-600"
+                  >No action</span>
+                  <span class="f-body text-sm leading-relaxed text-neutral-700">
+                    "Nothing needed from you — just keeping you informed."
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="f-mono mt-0.5 shrink-0 rounded-full border border-blue-600/30 bg-blue-600/10 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-blue-600"
+                  >Decision</span>
+                  <span class="f-body text-sm leading-relaxed text-neutral-700">
+                    "I need a decision on X by Thursday to stay on track."
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="f-mono mt-0.5 shrink-0 rounded-full border border-blue-600/30 bg-blue-600/10 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-blue-600"
+                  >Input</span>
+                  <span class="f-body text-sm leading-relaxed text-neutral-700">
+                    "I see two options — A or B. I'm leaning toward A. Need your input?"
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: agent-console card -->
+            <div class="rounded-2xl bg-[#17171c] p-6 md:p-8">
+              <!-- Image placeholder for leadership-console -->
+              <img
+                alt="A dark near-black card (Cohere agent-console style) showing the three-sentence update formula with a filled-in example. Status chip at top reads 'UPDATE STRUCTURE'. Text renders in white with muted metadata styling."
+                data-needs-image
+                src=""
+                class="hidden"
+              />
+              <div class="flex items-center gap-2 border-b border-white/10 pb-4">
+                <span
+                  class="f-mono rounded-full bg-blue-600/20 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-blue-400"
+                >Update Structure</span>
+              </div>
+              <div class="mt-5 space-y-5">
+                <div>
+                  <p class="f-mono text-[10px] uppercase tracking-[0.16em] text-white/40">
+                    Formula
+                  </p>
+                  <div
+                    class="mt-3 space-y-2 rounded-xl border border-white/10 bg-white/5 p-4"
+                  >
+                    <p class="f-body text-sm leading-relaxed text-white/80">
+                      Here's where we are.
+                    </p>
+                    <p class="f-body text-sm leading-relaxed text-white/80">
+                      Here's what informed that.
+                    </p>
+                    <p class="f-body text-sm leading-relaxed text-white/80">
+                      Here's what happens next.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p class="f-mono text-[10px] uppercase tracking-[0.16em] text-white/40">
+                    Example
+                  </p>
+                  <div
+                    class="mt-3 space-y-1 rounded-xl border border-blue-600/20 bg-blue-600/10 p-4"
+                  >
+                    <p class="f-body text-sm leading-relaxed text-white/75">
+                      "We're moving forward with vendor A.
+                    </p>
+                    <p class="f-body text-sm leading-relaxed text-white/75">
+                      They beat the others on speed and cost by 30%.
+                    </p>
+                    <p class="f-body text-sm leading-relaxed text-white/75">
+                      Contract goes out Friday."
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p class="f-mono text-[10px] uppercase tracking-[0.16em] text-white/40">
+                    Blocker Format
+                  </p>
+                  <div class="mt-3 rounded-xl border border-white/10 bg-white/5 p-4">
+                    <p class="f-body text-sm leading-relaxed text-white/60">
+                      "We've hit a blocker with X. I see two options — A or B. I'm leaning toward A
+                      because of Y. Need your input?"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HARNESS ENGINEERING: full-bleed-callout, deep enterprise green -->
+      <section class="yil-section relative overflow-hidden bg-[#003c33] py-24">
+        <!-- Background illustration placeholder -->
+        <img
+          alt="Thin-line geometric circuit/loop abstract illustration in white at ~10% opacity — suggests feedback loops, eval cycles, and pipeline stages without literal product mockup content."
+          data-needs-image
+          src=""
+          class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 mix-blend-overlay"
+          aria-hidden="true"
+        />
+        <div class="relative mx-auto max-w-5xl px-6">
+          <p
+            class="f-mono inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70"
+          >Infrastructure</p>
+          <h2
+            class="f-display mt-6 max-w-3xl text-4xl font-normal leading-none tracking-[-0.055em] text-white md:text-5xl"
+          >
+            The Model Is Not the Product — The Harness Is the Product Loop
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-white/30"></div>
+          <p class="f-body mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
+            The competitive shift is from "who has the strongest model?" to "who runs the fastest,
+            cheapest, most reliable feedback loop around the model?" The harness team may become as
+            important as the model team.
+          </p>
+          <div class="mt-12 grid gap-5 md:grid-cols-3">
+            {harnessCards.map((card) => (
+              <article class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                <p class="f-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-white/50">
+                  {card.label}
+                </p>
+                <h3 class="f-display mt-5 text-xl font-medium leading-tight tracking-[-0.035em] text-white">
+                  {card.heading}
+                </h3>
+                <p class="f-body mt-4 text-sm leading-relaxed text-white/65">
+                  {card.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- REFERENCES -->
+      <section class="yil-section bg-white py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-neutral-400">References</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            {references.map((item) =>
+              item.url ? (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group rounded-2xl border border-neutral-900/10 bg-white p-6 transition-colors hover:border-neutral-900/20"
+                >
+                  <span
+                    class="f-mono inline-block rounded-full border px-3 py-1.5 text-[10px] uppercase tracking-[0.14em]"
+                    style={`color: ${item.accent}; border-color: ${item.accent}55; background: ${item.accent}11;`}
+                  >{item.label}</span>
+                  <p class="f-body mt-5 text-sm leading-relaxed text-neutral-700 group-hover:text-neutral-900">
+                    {item.title}
+                  </p>
+                </a>
+              ) : (
+                <div class="rounded-2xl border border-neutral-900/10 bg-white p-6">
+                  <span
+                    class="f-mono inline-block rounded-full border px-3 py-1.5 text-[10px] uppercase tracking-[0.14em]"
+                    style={`color: ${item.accent}; border-color: ${item.accent}55; background: ${item.accent}11;`}
+                  >{item.label}</span>
+                  <p class="f-body mt-5 text-sm leading-relaxed text-neutral-400">
+                    {item.title}
+                  </p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      <YilSeriesNav
+        currentDate={yilMeta.date}
+        accent={yilMeta.accent}
+        designRef={{ name: 'Cohere', url: 'https://cohere.com' }}
+      />
+
+      <!-- DESIGN NOTES -->
+      <section class="border-t border-neutral-900/10 bg-stone-100">
+        <div class="mx-auto max-w-5xl px-6 py-12">
+          <p class="f-mono text-[10px] uppercase tracking-[0.25em] text-neutral-400">Design Notes</p>
+          <p class="f-mono mt-2 text-sm font-medium text-neutral-800">
+            YIL 2026-05-27 — AI Made Software Cheaper to Type, Not Cheaper to Think About
+          </p>
+          <p class="f-mono mt-1 text-sm leading-relaxed text-neutral-400">
+            A day examining how AI shifts the economics of software work — reducing implementation
+            cost without removing judgment — while the real competitive moat moves from model
+            strength to harness quality, and leadership clarity turns out to be the same
+            feedback-loop thinking applied to communication.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #ff7759"></span>
+              <span class="f-mono text-[10px] text-neutral-400">accent-1 / Tooling Economics</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #1863dc"></span>
+              <span class="f-mono text-[10px] text-neutral-400">accent-2 / Communication</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #003c33"></span>
+              <span class="f-mono text-[10px] text-neutral-400">accent-3 / Infrastructure</span>
+            </div>
+          </div>
+          <p class="mt-6 max-w-2xl text-sm leading-relaxed text-neutral-400">
+            This page ports Cohere's sober enterprise AI command-center aesthetic — white canvas,
+            monumental tight typography, and deep enterprise-green product bands — to a day about
+            the shifting economics of AI-assisted software work. The palette maps naturally: coral
+            for the editorial/economics discussion (Cohere uses it for blog taxonomy and warm
+            markers), action blue for the clarity-and-communication section (Cohere's editorial
+            link color), and deep enterprise green as a full-bleed product band for the
+            harness-engineering section (Cohere's North/Command product environment color). The
+            page opens with a single oversized typographic declaration on white — no imagery, no
+            decoration — matching Cohere's home-page conviction that size, tracking, and empty
+            space do all the work. The harness section gets the most visual weight: a full-bleed
+            deep-green band styled like Cohere's product capability environments, reinforcing that
+            this isn't a casual observation but an infrastructure-level strategic shift.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
