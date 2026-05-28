@@ -2500,7 +2500,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "combo-under",
     result: "pending",
     portfolioAction: "bet",
-    betAmount: 120,
+    betAmount: 60,
   },
   {
     id: 178,
@@ -2516,6 +2516,6 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "combo-under",
     result: "pending",
     portfolioAction: "bet",
-    betAmount: 120,
+    betAmount: 60,
   },
 ];
