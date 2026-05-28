@@ -2464,6 +2464,9 @@ export const rithhmmPicks: RithhmmPick[] = [
     matchup: "Giants vs Diamondbacks",
     propType: "combo-under",
     result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
   },
   {
     id: 176,
@@ -2478,5 +2481,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     matchup: "Twins at White Sox",
     propType: "combo-over",
     result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 110.42,
   },
 ];
