@@ -9,6 +9,12 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "X posts as clean Markdown for LLMs",
+    url: "https://tweet.md/?ref=producthunt",
+    description: "Get any X post or thread as clean Markdown for LLMs, agents, and research. Swap x.com for tweet.md or use the API.",
+    created: "2026-05-27",
+  },
+  {
     title: "Hermes just got 10x better...",
     url: "https://www.youtube.com/watch?v=8iZUyE7SlXo",
     description: "Here are 8 new Hermes Agent features that makes it SO much more powerful2nd Youtube Channel:  https://youtube.com/@AlexFinnLabsOfficialFULL Hermes Agent bootcamp in the Vibe Coding Academy coming u",
