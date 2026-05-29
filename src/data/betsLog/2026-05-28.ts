@@ -66,12 +66,12 @@ const log: DayLog = {
       name: "Hermes",
       color: "#34d399",
       pick: "skip",
-      pickLabel: "BET ALL portfolio / no removal",
+      pickLabel: "2 placed bets / no removal",
       confidence: null,
       confidenceLabel: "post-Martingale portfolio tracker; no harness outputs logged",
       result: "correct",
       resultNote:
-        "Hermes logged the post-Martingale default as BET all 3 visible Rithmm candidates, with no evidence-backed auditor removals. The settled portfolio finished 2-1, and using the listed Rithmm odds plus logged stakes the practical proxy result was about +$73.48.",
+        "Hermes logged this as a post-Martingale portfolio tracker day with no evidence-backed auditor removals. The corrected placed-bet record is 2 actual Wembanyama wagers: U43.5 PRA for $60, plus U3.5 blocks for $60 total split across $54 and $6 tickets after a typo. The settled placed-bet record finished 2-0 for +$102.06 net on $120 staked.",
     },
     {
       id: "chatgpt",
@@ -124,12 +124,12 @@ const log: DayLog = {
     "wembanyama-blocks": { hermes: null, chatgpt: null, claude: null, gemini: null, perplexity: null },
   },
   finalDecision: {
-    action: "BET ALL portfolio (3 Rithmm picks; proxy +$73.48)",
+    action: "BET 2 placed wagers (Wembanyama PRA $60; Wembanyama blocks $60 split $54+$6; net +$102.06)",
     reason:
-      "This was a post-Martingale Rithmm portfolio tracker day, not a single-pick or PASS slate. Dan's logged action was to bet all 3 visible candidates: Tigers ML for $30, Victor Wembanyama U43.5 PRA for $60, and Victor Wembanyama U3.5 blocks for $60. No harness outputs and no evidence-backed auditor removal were logged before settlement.",
+      "This was a post-Martingale Rithmm portfolio tracker day, not a single-pick or PASS slate. The corrected placed-bet record is just the 2 Wembanyama bets: Victor Wembanyama U43.5 PRA for $60, and Victor Wembanyama U3.5 blocks for $60 total split across $54 and $6 tickets after a typo. Tigers ML remained a visible board candidate, but not one of the actual placed bets. No harness outputs and no evidence-backed auditor removal were logged before settlement.",
     result: "correct",
     resultNote:
-      "The settled portfolio went 2-1: Tigers ML lost, while both Wembanyama unders won. Using the listed Rithmm odds and logged stakes, the practical proxy result was about +$73.48 on $150 staked. Book and ticket IDs were not logged, so this should be treated as an odds-based proxy rather than a verified sportsbook ledger export. No publish/deploy action is implied by this data entry.",
+      "The settled placed bets went 2-0. DraftKings screenshots show the PRA ticket at $60 wager / $115.55 paid and the blocks play split into $54 wager / $95.86 paid plus $6 wager / $10.65 paid, for $222.06 total paid back on $120 total staked (+$102.06 net). Tigers ML still lost as a visible board candidate, but it was not part of the actual ticket ledger for the day. No publish/deploy action is implied by this data entry.",
   },
 };
 
