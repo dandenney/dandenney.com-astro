@@ -234,8 +234,8 @@ const imagePrompts = [
       </section>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" is:inline></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" is:inline></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer is:inline></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer is:inline></script>
     <script is:inline>
       const initDeathTracksScroll = () => {
         if (document.documentElement.dataset.deathTracksScrollReady === 'true') return;
@@ -443,6 +443,11 @@ const imagePrompts = [
     background: #b63a2c;
     box-shadow: 0 0 1.5rem rgba(182, 58, 44, 0.8);
     animation: blink 2.4s steps(2) infinite;
+    animation-play-state: paused;
+  }
+
+  .hero-scene.is-visible .crossing-light {
+    animation-play-state: running;
   }
 
   .light-b {
@@ -1153,6 +1158,33 @@ const imagePrompts = [
     .rail-track {
       position: relative;
       width: 100%;
+      transform: none;
+    }
+
+    .floating-copy,
+    .court-copy,
+    .legacy-copy {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      width: auto;
+      margin: 2rem clamp(1.25rem, 6vw, 6rem);
+    }
+
+    .question-stack {
+      position: relative;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 4rem 1.25rem;
+    }
+
+    .question-stack p {
+      position: relative;
+      opacity: 1;
       transform: none;
     }
   }
