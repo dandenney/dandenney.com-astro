@@ -1,0 +1,1159 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+
+export const prerender = true;
+
+const asset = '/generated-images/death-tracks';
+const imagePrompts = [
+  {
+    file: 'last-ride.webp',
+    prompt:
+      'Abandoned 1970s child bicycle near railroad tracks outside Vinita, Oklahoma at dusk; rural crossing lights in the distance; deep navy shadows, dusty amber sky, steel gray rails, muted green grass; respectful HBO-style documentary still; no people, gore, blood, horror, police tape, readable text, or watermark.'
+  },
+  {
+    file: 'vinita-map.webp',
+    prompt:
+      'Vintage 1970s investigative desk map of Vinita, Oklahoma and railroad routes; faded beige paper, pins, pencil route marks, steel gray rail lines, muted forest green land patches; premium long-form journalism flat lay; no readable labels or watermark.'
+  },
+  {
+    file: 'tracks-panorama.webp',
+    prompt:
+      'Ultra-wide empty Oklahoma railroad tracks with restrained evidence motifs: coins, neutral markers, torn unreadable newspaper fragments; deep navy evening sky and dusty amber horizon; no body, violence, gore, blood, or watermark.'
+  },
+  {
+    file: 'evidence-board.webp',
+    prompt:
+      'Dim archive-room evidence board for a decades-old 1977 unsolved case; redacted reports, newspaper clippings, index cards, string connections, portrait-placeholder silhouettes; respectful documentary style; no readable names, gore, blood, or watermark.'
+  },
+  {
+    file: 'regional-map.webp',
+    prompt:
+      '1970s regional investigative map connecting Oklahoma and Arizona with railroad lines and case-location pins across a desk; aged paper, dusty amber annotations, deep navy shadows; no readable labels, gore, blood, or watermark.'
+  },
+  {
+    file: 'courtroom.webp',
+    prompt:
+      'Empty 1970s courtroom with stacked legal documents and witness chair; dark wood, dusty amber window light, deep navy shadows; uncertainty and conflicting testimony; no people, readable names, gore, blood, or watermark.'
+  },
+  {
+    file: 'sunrise-tracks.webp',
+    prompt:
+      'Railroad tracks stretching toward the horizon at sunrise in rural Oklahoma, small wildflowers along the rails; reflective and elegiac documentary ending frame; no people, crime scene imagery, text, or watermark.'
+  }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Death Tracks | Interactive Documentary"
+      description="A cinematic scrollytelling experience about the unsolved 1977 murder of Michael James Martinez in Vinita, Oklahoma."
+      image={`${asset}/last-ride.webp`}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="story-shell" data-story>
+      <section class="scene hero-scene" data-scene>
+        <div class="hero-media" aria-hidden="true">
+          <img src={`${asset}/last-ride.webp`} alt="" fetchpriority="high" />
+          <div class="cloud cloud-a"></div>
+          <div class="cloud cloud-b"></div>
+          <div class="grass"></div>
+          <div class="crossing-light light-a"></div>
+          <div class="crossing-light light-b"></div>
+        </div>
+        <div class="hero-copy">
+          <p class="kicker">Vinita, Oklahoma · 1977</p>
+          <h1>Death Tracks</h1>
+          <p>A seven-year-old boy rode his new bicycle into the Oklahoma night and never returned home.</p>
+        </div>
+      </section>
+
+      <section class="scene map-scene" data-scene>
+        <div class="sticky-grid">
+          <figure class="map-stage">
+            <img src={`${asset}/vinita-map.webp`} alt="Archival-style map background of Vinita, Oklahoma and nearby railroad lines." loading="lazy" />
+            <svg class="route-layer" viewBox="0 0 1000 700" aria-hidden="true">
+              <path class="route-base" d="M190 515 C280 460 310 390 405 365 C520 332 610 315 690 240 C755 180 815 155 890 120" />
+              <path class="route-live" d="M190 515 C280 460 310 390 405 365 C520 332 610 315 690 240 C755 180 815 155 890 120" />
+            </svg>
+            <span class="map-pin home" style="--x:19%; --y:73%">Michael's home</span>
+            <span class="map-pin sister" style="--x:39%; --y:52%">Sister's house</span>
+            <span class="map-pin store" style="--x:66%; --y:36%">Convenience store</span>
+            <span class="map-pin tracks" style="--x:86%; --y:18%">Railroad tracks</span>
+          </figure>
+          <article class="narrative-panel">
+            <p class="section-label">A small town night</p>
+            <h2>A new bicycle turned an ordinary errand into freedom.</h2>
+            <p>On November 21, 1977, Michael Martinez was staying with his brother at his sister Brenda's house when he rode out toward a convenience store. He was seven, a first-grader, and the new bike mattered.</p>
+            <blockquote>"Bicycle represents freedom, my friends."</blockquote>
+          </article>
+        </div>
+      </section>
+
+      <section class="scene rail-scene" data-scene>
+        <div class="rail-sticky">
+          <div class="rail-track">
+            <img src={`${asset}/tracks-panorama.webp`} alt="Empty railroad tracks stretching across rural Oklahoma." loading="lazy" />
+            <article class="track-card t1">
+              <span>01</span>
+              <h3>New bicycle</h3>
+              <p>Michael had just received the kind of gift that changes a child's radius: a bike, and a dollar to spend.</p>
+            </article>
+            <article class="track-card t2">
+              <span>02</span>
+              <h3>Last known route</h3>
+              <p>Between 9 and 9:30 p.m., he was last seen heading toward the store.</p>
+            </article>
+            <article class="track-card t3">
+              <span>03</span>
+              <h3>Evidence</h3>
+              <p>Investigators noted paint-soaked bags, a spray paint can, a blood-stained soda bottle, coins, and a missing bicycle.</p>
+            </article>
+            <article class="track-card t4">
+              <span>04</span>
+              <h3>Discovery</h3>
+              <p>At 12:58 a.m. on November 22, a train crew found a small body on the tracks.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene board-scene" data-scene>
+        <div class="board-bg">
+          <img src={`${asset}/evidence-board.webp`} alt="Archive-style evidence board with documents, clippings, and string connections." loading="lazy" />
+        </div>
+        <div class="board-doc doc-a">
+          <b>Case file</b>
+          <span>Nov. 21-22, 1977</span>
+        </div>
+        <div class="board-doc doc-b">
+          <b>Gerald Ray White</b>
+          <span>arrested, then ruled out</span>
+        </div>
+        <div class="board-doc doc-c">
+          <b>Gary Whistler</b>
+          <span>confession later disputed</span>
+        </div>
+        <div class="board-doc doc-d">
+          <b>Roy Robinson</b>
+          <span>timeline contested</span>
+        </div>
+        <svg class="string-layer" viewBox="0 0 1000 700" aria-hidden="true">
+          <path d="M250 235 L510 320 L735 210" />
+          <path d="M510 320 L395 510 L710 500" />
+        </svg>
+        <article class="floating-copy">
+          <p class="section-label">The investigation</p>
+          <h2>The first answers did not hold.</h2>
+          <p>Local police, Craig County investigators, and OSBI agents moved quickly. Early theories ranged from accident to hate crime to random violence. A transient suspect was arrested near the tracks, failed repeated polygraphs, and was eventually cleared as a "guilt complex reactor."</p>
+        </article>
+      </section>
+
+      <section class="scene region-scene" data-scene>
+        <div class="sticky-grid reverse">
+          <article class="narrative-panel">
+            <p class="section-label">The pattern</p>
+            <h2>The story widens beyond Oklahoma.</h2>
+            <p>Detectives saw echoes of a 1976 Arizona case involving three Gila Indian boys near Phoenix. They were young Native American victims, killed before being placed on railroad tracks. The similarities did not solve Michael's case, but they changed the scale of the question.</p>
+            <blockquote>Connection is not proof. But the geography is hard to ignore.</blockquote>
+          </article>
+          <figure class="regional-map">
+            <img src={`${asset}/regional-map.webp`} alt="Archival regional investigative map connecting Oklahoma and Arizona by railroad lines." loading="lazy" />
+            <svg viewBox="0 0 1000 640" aria-hidden="true">
+              <path class="regional-line one" d="M290 150 C410 225 545 290 685 430" />
+              <path class="regional-line two" d="M330 190 C470 250 560 330 735 495" />
+            </svg>
+            <span class="region-pin ok">Oklahoma</span>
+            <span class="region-pin az">Arizona</span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="scene court-scene" data-scene>
+        <img src={`${asset}/courtroom.webp`} alt="Empty 1970s courtroom with legal documents and a witness chair." loading="lazy" />
+        <div class="testimony testimony-a">a confession</div>
+        <div class="testimony testimony-b">a psychiatric report</div>
+        <div class="testimony testimony-c">a recantation</div>
+        <div class="testimony testimony-d">a question of reliability</div>
+        <article class="court-copy">
+          <p class="section-label">The confession</p>
+          <h2>The record appears to clarify, then clouds over.</h2>
+          <p>Four months later, Gary Whistler was arrested during a domestic dispute and signed a confession. The statement was hazy and disjointed. He described intoxication, hallucination, fear, a knife, and fragments of memory. The more the confession was examined, the less settled it became.</p>
+        </article>
+      </section>
+
+      <section class="scene trial-scene" data-scene>
+        <div class="trial-stack" aria-hidden="true">
+          <div class="trial-paper p1">Arrest</div>
+          <div class="trial-paper p2">Confession</div>
+          <div class="trial-paper p3">Hung jury</div>
+          <div class="trial-paper p4">Acquittal</div>
+        </div>
+        <article class="trial-copy">
+          <p class="section-label">The trials</p>
+          <h2>The legal record moves, but accountability does not arrive.</h2>
+          <p>The first trial in October 1978 ended with a hung jury. The second, in March 1979, ended with Whistler's acquittal. Conflicting psychiatric testimony, thin physical evidence, disputed timing, and witness memories shaped the defense.</p>
+        </article>
+      </section>
+
+      <section class="scene question-scene" data-scene>
+        <div class="question-stack">
+          <p>Michael was seven years old.</p>
+          <p>He was Native American.</p>
+          <p>He lived in Vinita, Oklahoma.</p>
+          <p>He rode a new bicycle toward a store.</p>
+          <p>No one has been held accountable.</p>
+        </div>
+      </section>
+
+      <section class="scene legacy-scene" data-scene>
+        <img src={`${asset}/sunrise-tracks.webp`} alt="Railroad tracks stretching toward sunrise with wildflowers along the rails." loading="lazy" />
+        <article class="legacy-copy">
+          <p class="section-label">Legacy</p>
+          <h2>Nearly fifty years later, no one has been held accountable for Michael Martinez's murder.</h2>
+          <p>His funeral drew neighbors together, but grief was followed by rumor, suspicion, and decades without an answer. The tracks return at sunrise, not as a spectacle, but as a place where memory keeps moving forward.</p>
+        </article>
+      </section>
+
+      <section class="image-prompts" aria-labelledby="prompt-heading">
+        <h2 id="prompt-heading">Image Prompts</h2>
+        <p>Generated with the built-in image tool, then converted to WebP for production use.</p>
+        <ol>
+          {imagePrompts.map(({ file, prompt }) => (
+            <li>
+              <b>{file}</b>
+              <span>{prompt}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" is:inline></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" is:inline></script>
+    <script is:inline>
+      const initDeathTracksScroll = () => {
+        if (document.documentElement.dataset.deathTracksScrollReady === 'true') return;
+        document.documentElement.dataset.deathTracksScrollReady = 'true';
+
+        const scenes = Array.from(document.querySelectorAll('[data-scene]'));
+        const mapScene = document.querySelector('.map-scene');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => entry.target.classList.toggle('is-visible', entry.isIntersecting));
+          },
+          { threshold: 0.18 }
+        );
+
+        scenes.forEach((scene) => io.observe(scene));
+
+        if (reduceMotion.matches || !window.gsap || !window.ScrollTrigger) {
+          scenes.forEach((scene) => scene.style.setProperty('--progress', '1'));
+          mapScene?.style.setProperty('--route-progress', '1');
+          return;
+        }
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.defaults({ ease: 'none' });
+
+        scenes.forEach((scene) => {
+          const isHero = scene.classList.contains('hero-scene');
+
+          ScrollTrigger.create({
+            trigger: scene,
+            start: isHero ? 'top top' : 'top bottom',
+            end: 'bottom top',
+            scrub: 0.45,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => scene.style.setProperty('--progress', self.progress.toFixed(4)),
+            onRefresh: (self) => scene.style.setProperty('--progress', self.progress.toFixed(4))
+          });
+        });
+
+        if (mapScene) {
+          mapScene.style.setProperty('--route-progress', '0');
+
+          ScrollTrigger.create({
+            trigger: mapScene,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 0.35,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => mapScene.style.setProperty('--route-progress', self.progress.toFixed(4)),
+            onRefresh: (self) => mapScene.style.setProperty('--route-progress', self.progress.toFixed(4))
+          });
+        }
+
+        gsap.utils.toArray('.narrative-panel, .floating-copy, .court-copy, .trial-copy, .legacy-copy').forEach((panel) => {
+          gsap.fromTo(
+            panel,
+            { autoAlpha: 0, y: 28 },
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 0.72,
+              ease: 'power3.out',
+              scrollTrigger: {
+                trigger: panel,
+                start: 'top 76%',
+                toggleActions: 'play none none reverse'
+              }
+            }
+          );
+        });
+
+        ScrollTrigger.refresh();
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDeathTracksScroll, { once: true });
+      } else {
+        initDeathTracksScroll();
+      }
+
+      document.addEventListener('astro:page-load', initDeathTracksScroll);
+    </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --paper: #d8c8a5;
+    --paper-deep: #aa9267;
+    --steel: #7e8585;
+    --amber: #bf7d36;
+    --navy: #07111e;
+    --navy-soft: #111c2b;
+    --green: #4f6447;
+    --ink: #f3ead7;
+    --muted: #c4b798;
+    --serif: 'Libre Baskerville', Georgia, serif;
+    --sans: 'Source Sans 3', Montserrat, system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    background: var(--navy);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--ink);
+    font-family: var(--sans);
+    overflow-x: clip;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .story-shell {
+    background:
+      radial-gradient(circle at 20% 0%, rgba(191, 125, 54, 0.2), transparent 34rem),
+      linear-gradient(180deg, #050a12, var(--navy) 32%, #090f17 100%);
+  }
+
+  .scene {
+    --progress: 0;
+    position: relative;
+    min-height: 140svh;
+    isolation: isolate;
+  }
+
+  .hero-scene {
+    min-height: 180svh;
+  }
+
+  .hero-media {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+    background: #03070c;
+  }
+
+  .hero-media img,
+  .legacy-scene > img,
+  .court-scene > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-media img {
+    opacity: calc(0.3 + (var(--progress) * 0.78));
+    transform: scale(calc(1.13 - (var(--progress) * 0.08)));
+    filter: saturate(0.78) contrast(1.08);
+  }
+
+  .hero-media::after,
+  .legacy-scene::after,
+  .court-scene::after,
+  .board-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(3, 7, 12, 0.86), rgba(3, 7, 12, 0.24) 52%, rgba(3, 7, 12, 0.74)),
+      linear-gradient(180deg, rgba(3, 7, 12, 0.1), rgba(3, 7, 12, 0.86));
+    pointer-events: none;
+  }
+
+  .cloud {
+    position: absolute;
+    top: 10%;
+    width: 34rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: rgba(216, 200, 165, 0.08);
+    filter: blur(18px);
+    transform: translateX(calc(var(--progress) * 8vw));
+  }
+
+  .cloud-a { left: 12%; }
+  .cloud-b { right: 5%; top: 21%; transform: translateX(calc(var(--progress) * -10vw)); }
+
+  .grass {
+    position: absolute;
+    inset: auto 0 0;
+    height: 21vh;
+    background: linear-gradient(90deg, rgba(79, 100, 71, 0.15), rgba(191, 125, 54, 0.16), rgba(79, 100, 71, 0.12));
+    clip-path: polygon(0 53%, 8% 40%, 14% 58%, 22% 38%, 29% 60%, 38% 43%, 44% 62%, 52% 42%, 59% 57%, 68% 37%, 76% 58%, 86% 39%, 100% 55%, 100% 100%, 0 100%);
+    transform: translateY(calc(var(--progress) * -1.8rem));
+  }
+
+  .crossing-light {
+    position: absolute;
+    right: 14%;
+    top: 53%;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: #b63a2c;
+    box-shadow: 0 0 1.5rem rgba(182, 58, 44, 0.8);
+    animation: blink 2.4s steps(2) infinite;
+  }
+
+  .light-b {
+    right: 12.5%;
+    animation-delay: 1.2s;
+  }
+
+  .hero-copy {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    height: 100svh;
+    margin-top: -100svh;
+    padding: 0 clamp(1.25rem, 6vw, 6.5rem) 12svh;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 56rem;
+    opacity: clamp(0.72, calc(1 - (var(--progress) * 0.42)), 1);
+    transform: translateY(calc(var(--progress) * -3rem));
+    pointer-events: none;
+  }
+
+  .kicker,
+  .section-label {
+    margin: 0 0 1.1rem;
+    color: var(--amber);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  blockquote {
+    font-family: var(--serif);
+    letter-spacing: 0;
+  }
+
+  h1 {
+    margin: 0 0 1.2rem;
+    font-size: clamp(4.2rem, 13vw, 13rem);
+    line-height: 0.85;
+    text-wrap: balance;
+  }
+
+  .hero-copy p:last-child {
+    max-width: 42rem;
+    margin: 0;
+    color: #e7dcc4;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+    line-height: 1.35;
+  }
+
+  .sticky-grid {
+    position: sticky;
+    top: 0;
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+    gap: clamp(1.5rem, 4vw, 5rem);
+    align-items: center;
+    padding: clamp(2rem, 5vw, 5rem);
+  }
+
+  .sticky-grid.reverse {
+    grid-template-columns: minmax(20rem, 0.82fr) minmax(0, 1.18fr);
+  }
+
+  .map-scene {
+    min-height: 225svh;
+  }
+
+  .map-stage,
+  .regional-map {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 1.42;
+    overflow: hidden;
+    border: 1px solid rgba(216, 200, 165, 0.22);
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.42);
+    background: #100d08;
+  }
+
+  .map-stage img,
+  .regional-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.14) saturate(0.75) brightness(0.86);
+  }
+
+  .route-layer,
+  .regional-map svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .route-base,
+  .route-live,
+  .regional-line,
+  .string-layer path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .route-base {
+    stroke: rgba(216, 200, 165, 0.2);
+    stroke-width: 5;
+    stroke-dasharray: 12 16;
+    filter: drop-shadow(0 0 8px rgba(7, 17, 30, 0.7));
+  }
+
+  .route-live {
+    stroke: #e1a24c;
+    stroke-width: 8;
+    stroke-dasharray: 1100;
+    stroke-dashoffset: calc(1100 - (1100 * var(--route-progress, 0)));
+    filter: drop-shadow(0 0 14px rgba(191, 125, 54, 0.58));
+  }
+
+  .map-pin,
+  .region-pin {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    translate: -50% -50%;
+    max-width: 11rem;
+    padding: 0.42rem 0.62rem;
+    background: rgba(7, 17, 30, 0.82);
+    border: 1px solid rgba(216, 200, 165, 0.38);
+    color: var(--ink);
+    font-size: clamp(0.7rem, 1.4vw, 0.86rem);
+    font-weight: 700;
+    line-height: 1.1;
+    z-index: 3;
+    transform: translateY(calc((1 - var(--pin-opacity, 0)) * 0.45rem)) scale(calc(0.96 + (var(--pin-opacity, 0) * 0.04)));
+    opacity: var(--pin-opacity, 0);
+  }
+
+  .map-pin.home { --pin-opacity: clamp(0, calc(var(--route-progress, 0) * 7), 1); }
+  .map-pin.sister { --pin-opacity: clamp(0, calc((var(--route-progress, 0) - 0.28) * 7), 1); }
+  .map-pin.store { --pin-opacity: clamp(0, calc((var(--route-progress, 0) - 0.58) * 7), 1); }
+  .map-pin.tracks { --pin-opacity: clamp(0, calc((var(--route-progress, 0) - 0.82) * 7), 1); }
+
+  .map-pin::before,
+  .region-pin::before {
+    content: '';
+    display: inline-block;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-right: 0.36rem;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 0 0.25rem rgba(191, 125, 54, 0.16);
+  }
+
+  .narrative-panel,
+  .floating-copy,
+  .court-copy,
+  .trial-copy,
+  .legacy-copy {
+    max-width: 38rem;
+  }
+
+  .narrative-panel {
+    padding: clamp(1rem, 3vw, 2rem) 0;
+  }
+
+  h2 {
+    margin: 0 0 1.2rem;
+    font-size: clamp(2.1rem, 4.5vw, 5.2rem);
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  h3 {
+    margin: 0 0 0.55rem;
+    font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+    line-height: 1.05;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
+    line-height: 1.65;
+  }
+
+  blockquote {
+    margin: 2rem 0 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--amber);
+    color: #efe2c6;
+    font-size: clamp(1.28rem, 2.1vw, 2rem);
+    line-height: 1.38;
+  }
+
+  .rail-scene {
+    min-height: 330svh;
+  }
+
+  .rail-sticky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+    background: #05080d;
+  }
+
+  .rail-track {
+    position: absolute;
+    inset: 0;
+    width: 220vw;
+    transform: translateX(calc(var(--progress) * -112vw));
+  }
+
+  .rail-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.68) brightness(0.76) contrast(1.12);
+  }
+
+  .rail-track::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7, 17, 30, 0.9), rgba(7, 17, 30, 0.18) 30%, rgba(7, 17, 30, 0.34) 70%, rgba(7, 17, 30, 0.92));
+  }
+
+  .track-card {
+    position: absolute;
+    z-index: 2;
+    top: 18%;
+    width: min(28rem, 80vw);
+    padding: 1.1rem 1.2rem;
+    background: rgba(216, 200, 165, 0.9);
+    color: #14100b;
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.38);
+    transform: rotate(var(--r));
+  }
+
+  .track-card span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #70542c;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+  }
+
+  .track-card p {
+    margin: 0;
+    color: #3d3325;
+  }
+
+  .t1 { left: 18vw; --r: -1.5deg; }
+  .t2 { left: 68vw; top: 58%; --r: 1deg; }
+  .t3 { left: 120vw; top: 24%; --r: -0.8deg; }
+  .t4 { left: 176vw; top: 54%; --r: 1.8deg; }
+
+  .board-scene {
+    min-height: 210svh;
+    overflow: hidden;
+  }
+
+  .board-bg {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .board-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.68) saturate(0.78);
+  }
+
+  .board-doc {
+    position: absolute;
+    z-index: 3;
+    width: clamp(10rem, 20vw, 18rem);
+    min-height: 8rem;
+    padding: 1rem;
+    background: #d9c8a4;
+    color: #15120e;
+    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.38);
+    transform: translateY(calc((1 - var(--progress)) * 9rem)) rotate(var(--r));
+    opacity: calc(var(--progress) * 1.35);
+  }
+
+  .board-doc b,
+  .board-doc span {
+    display: block;
+  }
+
+  .board-doc b {
+    font-family: var(--serif);
+    font-size: clamp(1rem, 1.8vw, 1.55rem);
+  }
+
+  .board-doc span {
+    margin-top: 2.5rem;
+    color: #594c39;
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .doc-a { left: 10%; top: 19%; --r: -4deg; }
+  .doc-b { right: 18%; top: 17%; --r: 3deg; }
+  .doc-c { left: 22%; bottom: 15%; --r: 2deg; }
+  .doc-d { right: 10%; bottom: 17%; --r: -2deg; }
+
+  .string-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: calc(var(--progress) * 1.2);
+  }
+
+  .string-layer path {
+    stroke: rgba(169, 47, 39, 0.72);
+    stroke-width: 3;
+    stroke-dasharray: 900;
+    stroke-dashoffset: calc(900 - (900 * var(--progress)));
+  }
+
+  .floating-copy {
+    position: absolute;
+    z-index: 4;
+    right: clamp(1.25rem, 5vw, 5rem);
+    bottom: 8svh;
+    width: min(38rem, calc(100% - 2rem));
+    padding: 1.4rem 1.5rem;
+    background: linear-gradient(90deg, rgba(7, 17, 30, 0.92), rgba(7, 17, 30, 0.74));
+    border-left: 2px solid rgba(191, 125, 54, 0.76);
+    box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.34);
+  }
+
+  .regional-map .regional-line {
+    stroke: var(--amber);
+    stroke-width: 6;
+    stroke-dasharray: 900;
+    stroke-dashoffset: calc(900 - (900 * var(--progress)));
+    filter: drop-shadow(0 0 8px rgba(191, 125, 54, 0.42));
+  }
+
+  .regional-line.two {
+    stroke: rgba(126, 133, 133, 0.9);
+    stroke-width: 4;
+    transition-delay: 120ms;
+  }
+
+  .region-pin {
+    --x: 30%;
+    --y: 24%;
+  }
+
+  .region-pin.az {
+    --x: 72%;
+    --y: 74%;
+  }
+
+  .court-scene {
+    min-height: 230svh;
+  }
+
+  .court-scene > img {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    filter: brightness(calc(0.72 - (var(--progress) * 0.12))) saturate(0.75);
+  }
+
+  .testimony {
+    position: absolute;
+    z-index: 3;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid rgba(216, 200, 165, 0.28);
+    color: #efe2c6;
+    background: rgba(7, 17, 30, 0.72);
+    font-family: var(--serif);
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    filter: blur(calc(var(--progress) * 2px));
+    opacity: calc(0.35 + (var(--progress) * 0.55));
+    transform: translateY(calc((0.5 - var(--progress)) * 8rem));
+  }
+
+  .testimony-a { top: 24%; left: 9%; }
+  .testimony-b { top: 42%; right: 15%; }
+  .testimony-c { bottom: 31%; left: 24%; }
+  .testimony-d { bottom: 17%; right: 8%; }
+
+  .court-copy {
+    position: absolute;
+    z-index: 4;
+    left: clamp(1.25rem, 6vw, 6rem);
+    top: 116svh;
+  }
+
+  .trial-scene {
+    min-height: 170svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 34rem);
+    gap: clamp(1rem, 4vw, 4rem);
+    align-items: center;
+    padding: clamp(2rem, 6vw, 6rem);
+    background:
+      radial-gradient(circle at 25% 20%, rgba(191, 125, 54, 0.18), transparent 34rem),
+      linear-gradient(180deg, #090e17, #05080d);
+  }
+
+  .trial-stack {
+    position: sticky;
+    top: 12svh;
+    height: 74svh;
+  }
+
+  .trial-paper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(24rem, 78vw);
+    aspect-ratio: 0.78;
+    padding: 1.3rem;
+    background: #d8c8a5;
+    color: #1a150f;
+    border: 1px solid rgba(62, 48, 32, 0.22);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.38);
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 4vw, 3.8rem);
+    transform:
+      translate(-50%, -50%)
+      translateX(calc((var(--progress) - 0.45) * var(--tx)))
+      translateY(calc((var(--progress) - 0.45) * var(--ty)))
+      rotate(var(--r));
+  }
+
+  .p1 { --tx: -18rem; --ty: -8rem; --r: -9deg; }
+  .p2 { --tx: 16rem; --ty: -4rem; --r: 7deg; }
+  .p3 { --tx: -12rem; --ty: 10rem; --r: 4deg; }
+  .p4 { --tx: 20rem; --ty: 12rem; --r: -6deg; }
+
+  .trial-copy {
+    position: sticky;
+    top: 22svh;
+  }
+
+  .question-scene {
+    min-height: 240svh;
+    display: grid;
+    place-items: center;
+    background: #03060a;
+  }
+
+  .question-stack {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    width: min(58rem, calc(100% - 2rem));
+    display: grid;
+    place-items: center;
+  }
+
+  .question-stack p {
+    position: absolute;
+    margin: 0;
+    color: #efe2c6;
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 5vw, 5.4rem);
+    line-height: 1.08;
+    text-align: center;
+    text-wrap: balance;
+    opacity: 0;
+    transform: translateY(calc((1 - var(--item-opacity, 0)) * 1.5rem));
+  }
+
+  .question-stack p:nth-child(1) {
+    --item-opacity: min(clamp(0, calc((var(--progress) - 0.05) * 12), 1), clamp(0, calc((0.24 - var(--progress)) * 12), 1));
+    opacity: var(--item-opacity);
+  }
+
+  .question-stack p:nth-child(2) {
+    --item-opacity: min(clamp(0, calc((var(--progress) - 0.22) * 12), 1), clamp(0, calc((0.41 - var(--progress)) * 12), 1));
+    opacity: var(--item-opacity);
+  }
+
+  .question-stack p:nth-child(3) {
+    --item-opacity: min(clamp(0, calc((var(--progress) - 0.39) * 12), 1), clamp(0, calc((0.58 - var(--progress)) * 12), 1));
+    opacity: var(--item-opacity);
+  }
+
+  .question-stack p:nth-child(4) {
+    --item-opacity: min(clamp(0, calc((var(--progress) - 0.56) * 12), 1), clamp(0, calc((0.75 - var(--progress)) * 12), 1));
+    opacity: var(--item-opacity);
+  }
+
+  .question-stack p:nth-child(5) {
+    --item-opacity: min(clamp(0, calc((var(--progress) - 0.73) * 12), 1), clamp(0, calc((0.96 - var(--progress)) * 10), 1));
+    opacity: var(--item-opacity);
+  }
+
+  .legacy-scene {
+    min-height: 190svh;
+    overflow: hidden;
+  }
+
+  .legacy-scene > img {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    transform: scale(calc(1.18 - (var(--progress) * 0.18)));
+    filter: saturate(0.86) brightness(0.82);
+  }
+
+  .legacy-copy {
+    position: absolute;
+    z-index: 3;
+    left: clamp(1.25rem, 6vw, 6rem);
+    bottom: 16svh;
+  }
+
+  .image-prompts {
+    padding: clamp(3rem, 7vw, 7rem) clamp(1.25rem, 6vw, 6rem);
+    background: #d8c8a5;
+    color: #16120e;
+  }
+
+  .image-prompts h2 {
+    max-width: 54rem;
+    color: #16120e;
+  }
+
+  .image-prompts > p {
+    margin: 0 0 2rem;
+    color: #4f4434;
+  }
+
+  .image-prompts ol {
+    display: grid;
+    gap: 1rem;
+    max-width: 82rem;
+    margin: 0;
+    padding-left: 1.4rem;
+  }
+
+  .image-prompts li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(22, 18, 14, 0.18);
+  }
+
+  .image-prompts b,
+  .image-prompts span {
+    display: block;
+  }
+
+  .image-prompts b {
+    margin-bottom: 0.25rem;
+    font-family: var(--sans);
+  }
+
+  .image-prompts span {
+    color: #4f4434;
+    line-height: 1.5;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0.16; }
+  }
+
+  @media (max-width: 760px) {
+    .scene {
+      min-height: auto;
+    }
+
+    .hero-scene,
+    .map-scene,
+    .rail-scene,
+    .board-scene,
+    .court-scene,
+    .legacy-scene {
+      min-height: 120svh;
+    }
+
+    .hero-copy {
+      padding: 0 1rem 9svh;
+    }
+
+    h1 {
+      font-size: clamp(4rem, 21vw, 7rem);
+    }
+
+    .sticky-grid,
+    .sticky-grid.reverse,
+    .trial-scene {
+      position: relative;
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding: 4rem 1rem;
+    }
+
+    .map-stage,
+    .regional-map {
+      aspect-ratio: 0.82;
+    }
+
+    .rail-track {
+      width: 420vw;
+      transform: translateX(calc(var(--progress) * -310vw));
+    }
+
+    .t1 { left: 24vw; }
+    .t2 { left: 130vw; }
+    .t3 { left: 236vw; }
+    .t4 { left: 338vw; }
+
+    .board-doc {
+      width: 11rem;
+      min-height: 7rem;
+    }
+
+    .doc-a { left: 4%; top: 16%; }
+    .doc-b { right: 4%; top: 26%; }
+    .doc-c { left: 7%; bottom: 21%; }
+    .doc-d { right: 5%; bottom: 12%; }
+
+    .floating-copy,
+    .court-copy,
+    .legacy-copy {
+      left: 1rem;
+      right: 1rem;
+      bottom: 7svh;
+    }
+
+    .floating-copy {
+      width: auto;
+      padding: 1rem;
+    }
+
+    .court-copy {
+      top: auto;
+      bottom: 11svh;
+    }
+
+    .testimony {
+      font-size: 1rem;
+    }
+
+    .trial-stack {
+      position: relative;
+      top: auto;
+      height: 60svh;
+    }
+
+    .trial-copy {
+      position: relative;
+      top: auto;
+    }
+
+    .question-stack p {
+      font-size: clamp(1.75rem, 10vw, 3.4rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+
+    .scene {
+      --progress: 1;
+    }
+
+    .hero-media,
+    .rail-sticky,
+    .board-bg,
+    .court-scene > img,
+    .legacy-scene > img,
+    .question-stack,
+    .trial-stack,
+    .trial-copy,
+    .sticky-grid {
+      position: relative;
+      height: auto;
+      min-height: auto;
+    }
+
+    .rail-track {
+      position: relative;
+      width: 100%;
+      transform: none;
+    }
+  }
+</style>
