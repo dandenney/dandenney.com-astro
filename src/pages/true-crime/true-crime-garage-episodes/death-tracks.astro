@@ -1137,8 +1137,25 @@ const imagePrompts = [
       transition-duration: 0.001ms !important;
     }
 
-    .scene {
+    .scene,
+    .hero-scene,
+    .map-scene,
+    .rail-scene,
+    .board-scene,
+    .court-scene,
+    .legacy-scene,
+    .question-scene,
+    .trial-scene {
       --progress: 1;
+      min-height: auto;
+    }
+
+    .hero-copy {
+      position: relative;
+      height: auto;
+      margin-top: 0;
+      padding-bottom: 4rem;
+      pointer-events: auto;
     }
 
     .hero-media,
