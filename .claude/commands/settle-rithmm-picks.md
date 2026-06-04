@@ -7,7 +7,7 @@ The argument is a date in YYYY-MM-DD format.
 ## Step 1: Read source files
 
 Read both files in parallel:
-- The Obsidian daily note at `/Users/dandenney/Documents/claw/Betting/Agents/Hermes/Daily/$ARGUMENTS.md`
+- The Obsidian daily note at `/Users/clawfather/Obsidian/Claw/Betting/Agents/Hermes/Daily/$ARGUMENTS.md`
 - `src/data/rithhmmPicks.ts` in full
 
 ## Step 2: Find pending picks for this date
@@ -16,11 +16,15 @@ From `rithhmmPicks`, collect all entries where `date === "$ARGUMENTS"` and `resu
 
 ## Step 3: Parse the Resolution section
 
-Find the `## Resolution` section in the Obsidian note. Each resolved line looks like:
+Prefer the top `## Reconciliation — ...` section in the Obsidian note. If that is absent, fall back to `## Reconciliation`, and only then to older `## Resolution` sections.
+
+Older resolved lines look like:
 
 ```
 - [pick text including odds] [`propType`] — **Win/Loss**. [description]
 ```
+
+For current Hermes notes, also accept candidate outcome rows from the top reconciliation summary table or the `## Candidate tier-dispersion table`, where `Outcome` is recorded as `WIN`, `LOSS`, or `PUSH`.
 
 Extract per resolution line:
 - `result` from the bold label: `"win"`, `"loss"`, or `"push"`
