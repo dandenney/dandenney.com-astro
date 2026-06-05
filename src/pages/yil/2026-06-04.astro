@@ -1,0 +1,395 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-06-04',
+  headline: 'The Bottleneck Has Moved',
+  summary:
+    'AI removes the review queue. Production races ahead of design. The scarce resource becomes taste.',
+  accent: '#0052ff',
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const orgDesignCards = [
+  {
+    label: 'Unchanged Workflows',
+    heading: 'Bottlenecks Survive the Upgrade',
+    body: "The common narrative is that AI makes everyone more productive. It doesn't. Many workflows of today, if left unchanged, create bottlenecks in AI systems — even when AI is fully capable of removing them.",
+    borderClass: 'border-blue-600/30',
+    bgClass: 'bg-blue-600/10',
+    labelClass: 'text-blue-600',
+  },
+  {
+    label: 'The Review Loop Shrinks',
+    heading: 'Senior Engineers Review Agents Faster',
+    body: "If your best engineers are spending time reviewing other people's code, that's an inefficient bottleneck. These engineers can review their agent's output much faster than reviewing human code. The loop doesn't disappear — it compresses.",
+    borderClass: 'border-blue-600/20',
+    bgClass: 'bg-blue-600/5',
+    labelClass: 'text-blue-600',
+  },
+  {
+    label: 'New Roles',
+    heading: 'Agent Managers Already Exist',
+    body: "The future is not fewer people — it's different work, new roles, and better rewards for those who embrace it. Entirely new roles like Agent Manager are already emerging. ClickUp is working in the operating model I want.",
+    borderClass: 'border-blue-600/30',
+    bgClass: 'bg-blue-600/10',
+    labelClass: 'text-blue-600',
+  },
+];
+
+const multiAgentCards = [
+  {
+    label: 'Codex + Claude Review',
+    heading: 'Structure the Disagreement',
+    body: "Codex shares its plan; Claude reviews for complexity, duplication, and API design. But Codex is told to defend its reasoning and only update when both models agree — not blindly comply. The reviewer's role is pressure-testing, not authority.",
+    borderClass: 'border-red-600/30',
+    bgClass: 'bg-red-600/10',
+    labelClass: 'text-red-600',
+  },
+  {
+    label: 'Slack-Native Agents',
+    heading: 'Fix It Where the Complaint Happens',
+    body: "Agent @mentions directly in Slack complaint threads make low-risk repo updates without backlog ceremony. No tickets, no handoffs — just fix the obvious paper cut where your teammate reported it.",
+    borderClass: 'border-red-600/20',
+    bgClass: 'bg-red-600/5',
+    labelClass: 'text-red-600',
+  },
+  {
+    label: 'UI Fork',
+    heading: 'Multiple Live Variants, One Winner',
+    body: "Run multiple component versions inside local dev. Toggle between them in-browser with an overlaid UI. When you've landed on something, UI Fork merges just that variation's diff back to the original file.",
+    borderClass: 'border-red-600/30',
+    bgClass: 'bg-red-600/10',
+    labelClass: 'text-red-600',
+  },
+  {
+    label: 'Figma MCP',
+    heading: 'Reliable for Bulk, Hit-or-Miss for Design',
+    body: "Strong for filling design mocks with realistic data and images at scale — population work that was previously tedious and manual. Broader design automation with the Figma MCP remains uneven.",
+    borderClass: 'border-red-600/20',
+    bgClass: 'bg-red-600/5',
+    labelClass: 'text-red-600',
+  },
+];
+
+const references = [
+  {
+    label: 'org design',
+    accent: '#0052ff',
+    title: 'dj_curfew on AI bottlenecks and Agent Manager roles',
+    url: 'https://x.com/dj_curfew/status/2057522382315929802?s=12',
+  },
+  {
+    label: 'judgment',
+    accent: '#f4b000',
+    title: 'Train Your Judgement — Emil Kowal',
+    url: 'https://emilkowal.ski/ui/train-your-judgement',
+  },
+  {
+    label: 'production',
+    accent: '#05b169',
+    title: 'Tools the Vercel Product Design Team Actually Uses — Hannah Hearth',
+    url: 'https://www.hannahhearth.com/posts/tools-the-vercel-product-design-team-actually-uses',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: The Bottleneck Has Moved | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --font-body: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --font-mono: 'JetBrains Mono', 'Geist Mono', monospace;
+      }
+
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes fade-up { from { opacity: 0; } to { opacity: 1; } }
+      }
+
+      .f-display { font-family: var(--font-display); }
+      .f-body    { font-family: var(--font-body); }
+      .f-mono    { font-family: var(--font-mono); }
+
+      .yil-hero { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible { animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-white text-zinc-950 antialiased">
+    <main class="relative isolate z-10 bg-white shadow-xs">
+      <Header />
+
+      <!-- HERO: full-width-statement, left-aligned editorial -->
+      <section class="yil-hero bg-white py-24 md:py-32">
+        <div class="mx-auto max-w-5xl px-6">
+          <div class="flex flex-wrap items-center gap-4">
+            <p class="f-mono text-[0.6875rem] font-semibold uppercase tracking-[0.24em] text-slate-400">2026-06-04</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="f-mono inline-flex rounded-full border border-blue-600/30 bg-blue-600/10 px-3 py-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-blue-600">Org Design</span>
+              <span class="f-mono inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-amber-400">Judgment</span>
+              <span class="f-mono inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-emerald-500">Production</span>
+              <span class="f-mono inline-flex rounded-full border border-red-600/30 bg-red-600/10 px-3 py-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-red-600">Multi-Agent</span>
+            </div>
+          </div>
+          <h1 class="f-display mt-8 max-w-[20ch] text-[clamp(2.25rem,5vw,5rem)] font-normal tracking-[-0.055em] text-zinc-950 text-balance">
+            The Bottleneck Has Moved
+          </h1>
+          <p class="f-body mt-6 ml-auto max-w-lg text-lg leading-7 text-slate-500 text-pretty">
+            AI removes the review queue. Production races ahead of design. The scarce resource becomes <span class="text-blue-600">taste</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- QUOTE: standalone-dark-band -->
+      <section class="bg-zinc-950 py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono text-[0.6875rem] font-semibold uppercase tracking-[0.24em] text-white/40">
+            Hannah Hearth / Tools the Vercel Product Design Team Actually Uses
+          </p>
+          <blockquote class="mt-4">
+            <span
+              class="f-display block select-none text-[7rem] font-normal leading-none text-white/15"
+              aria-hidden="true"
+            >"</span>
+            <p class="f-display -mt-4 max-w-[40ch] text-2xl font-normal leading-7 text-white text-pretty md:text-3xl">
+              In the old world, design files were ahead of production. Teams worked hard to keep them
+              in sync. Now, because implementation cost and time has dramatically dropped, design files
+              are laughably stale and production has a million features that never even started on a canvas.
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- AI-ORG-DESIGN: pill-h2-bar + cards, white bg (unchanged) -->
+      <section class="yil-section bg-white py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono inline-flex rounded-full border border-blue-600/30 bg-blue-600/10 px-4 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-blue-600">
+            Org Design
+          </p>
+          <h2 class="f-display mt-6 max-w-[35ch] text-4xl font-normal tracking-[-0.055em] text-zinc-950 text-balance md:text-5xl">
+            Bottlenecks Don't Disappear. They Move.
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-blue-600"></div>
+          <div class="mt-12 grid gap-5 md:grid-cols-3">
+            {orgDesignCards.map((card) => (
+              <article class={`rounded-2xl border p-6 ${card.borderClass} ${card.bgClass}`}>
+                <p class={`f-mono text-[0.625rem] font-semibold uppercase tracking-[0.18em] ${card.labelClass}`}>
+                  {card.label}
+                </p>
+                <h3 class="f-display mt-5 text-xl font-medium tracking-[-0.035em] text-zinc-950 text-balance">
+                  {card.heading}
+                </h3>
+                <p class="f-body mt-4 text-sm leading-6 text-slate-500 text-pretty">
+                  {card.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- UI-JUDGMENT: pill-h2-bar + prose, soft-gray bg (unchanged) -->
+      <section class="yil-section bg-gray-50 py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono inline-flex rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-amber-400">
+            Judgment
+          </p>
+          <h2 class="f-display mt-6 max-w-[35ch] text-4xl font-normal tracking-[-0.055em] text-zinc-950 text-balance md:text-5xl">
+            Knowing the Right Answer Is Not the Same As Feeling It
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-amber-400"></div>
+          <div class="mt-12 max-w-2xl space-y-6">
+            <p class="f-body text-lg leading-7 text-zinc-950 text-pretty">
+              Emil Kowal's piece on UI animation judgment lands well. The examples are excellent, and
+              I mostly align with what is objectively "right" in motion design. But sometimes I still
+              emotionally prefer the "wrong" choice — and that tension is worth sitting with rather
+              than resolving away.
+            </p>
+            <p class="f-body text-base leading-7 text-slate-500 text-pretty">
+              Training judgment may require more than collecting examples of obviously good motion.
+              The more interesting collection is examples where instinct and best practice diverge —
+              where you know the right call and still feel the pull of the other direction. Taste can
+              coexist with correct judgment without collapsing into it.
+            </p>
+            <p class="f-body text-base leading-7 text-slate-500 text-pretty">
+              That gap isn't a bug to fix. It might be what style actually is: the accumulated
+              history of choices you made when the correct answer wasn't enough.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTION-CANVAS: full-bleed-callout, dark bg #09090b -->
+      <section class="yil-section bg-zinc-950 py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-emerald-500">
+            Production
+          </p>
+          <h2 class="f-display mt-6 max-w-[35ch] text-4xl font-normal tracking-[-0.055em] text-white text-balance md:text-5xl">
+            The Canvas Is Laughably Stale
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-emerald-500"></div>
+          <div class="mt-12 grid gap-px bg-white/5 sm:grid-cols-3">
+            <div class="bg-zinc-950 p-8">
+              <p class="f-mono text-[0.625rem] uppercase tracking-[0.2em] text-white/30">Then</p>
+              <p class="f-display mt-6 text-base font-normal leading-7 text-white/60 text-pretty">
+                Design files ran ahead. Teams spent cycles keeping specs in sync with production.
+              </p>
+            </div>
+            <div class="bg-zinc-950 p-8">
+              <p class="f-mono text-[0.625rem] uppercase tracking-[0.2em] text-emerald-500/80">Now</p>
+              <p class="f-display mt-6 text-base font-normal leading-7 text-white text-pretty">
+                Production has a million features that never started on a canvas. The canvas is laughably stale.
+              </p>
+            </div>
+            <div class="bg-zinc-950 p-8">
+              <p class="f-mono text-[0.625rem] uppercase tracking-[0.2em] text-white/30">What's interesting</p>
+              <p class="f-display mt-6 text-base font-normal leading-7 text-white/60 text-pretty">
+                Tools that reverse-engineer the built product back into a canvas — not pushing specs forward into code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MULTI-AGENT: pill-h2-bar + cards, white bg (unchanged) -->
+      <section class="yil-section bg-white py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono inline-flex rounded-full border border-red-600/30 bg-red-600/10 px-4 py-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-red-600">
+            Multi-Agent
+          </p>
+          <h2 class="f-display mt-6 max-w-[35ch] text-4xl font-normal tracking-[-0.055em] text-zinc-950 text-balance md:text-5xl">
+            Structure the Disagreement
+          </h2>
+          <div class="mt-4 h-1 w-14 rounded-full bg-red-600"></div>
+          <div class="mt-12 grid gap-5 md:grid-cols-2">
+            {multiAgentCards.map((card) => (
+              <article class={`rounded-2xl border p-6 ${card.borderClass} ${card.bgClass}`}>
+                <p class={`f-mono text-[0.625rem] font-semibold uppercase tracking-[0.18em] ${card.labelClass}`}>
+                  {card.label}
+                </p>
+                <h3 class="f-display mt-5 text-xl font-medium tracking-[-0.035em] text-zinc-950 text-balance">
+                  {card.heading}
+                </h3>
+                <p class="f-body mt-4 text-sm leading-6 text-slate-500 text-pretty">
+                  {card.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- REFERENCES: soft-gray bg -->
+      <section class="yil-section bg-gray-50 py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono text-[0.6875rem] uppercase tracking-[0.22em] text-slate-400">References</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            {references.map((item) => (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group rounded-2xl border border-zinc-900/10 bg-white p-6 hover:border-zinc-900/20"
+              >
+                <span
+                  class="f-mono inline-block rounded-full border px-3 py-1.5 text-[0.625rem] uppercase tracking-[0.14em]"
+                  style={`color: ${item.accent}; border-color: ${item.accent}55; background: ${item.accent}11;`}
+                >{item.label}</span>
+                <p class="f-body mt-5 text-sm leading-6 text-slate-500 text-pretty group-hover:text-zinc-900">
+                  {item.title}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <YilSeriesNav
+        currentDate={yilMeta.date}
+        accent={yilMeta.accent}
+        designRef={{ name: 'Coinbase', url: 'https://coinbase.com' }}
+      />
+
+      <!-- DESIGN NOTES -->
+      <section class="border-t border-zinc-900/10 bg-gray-50">
+        <div class="mx-auto max-w-5xl px-6 py-12">
+          <p class="f-mono text-[0.625rem] uppercase tracking-[0.25em] text-slate-400">Design Notes</p>
+          <p class="f-mono mt-2 text-sm font-medium text-slate-500">
+            YIL 2026-06-04 — The Bottleneck Has Moved
+          </p>
+          <p class="f-mono mt-1 text-sm leading-6 text-slate-400 text-pretty">
+            A day of discoveries about AI-native org design, UI animation judgment, and how production has raced ahead of the design canvas.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="size-3 rounded-full" style="background: #0052ff"></span>
+              <span class="f-mono text-[0.625rem] text-slate-400">accent-1 / ai-org-design</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="size-3 rounded-full" style="background: #f4b000"></span>
+              <span class="f-mono text-[0.625rem] text-slate-400">accent-2 / ui-judgment</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="size-3 rounded-full" style="background: #05b169"></span>
+              <span class="f-mono text-[0.625rem] text-slate-400">accent-3 / production-canvas</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="size-3 rounded-full" style="background: #cf202f"></span>
+              <span class="f-mono text-[0.625rem] text-slate-400">accent-4 / multi-agent</span>
+            </div>
+          </div>
+          <p class="mt-6 max-w-2xl text-sm leading-6 text-slate-400 text-pretty">
+            The design ports Coinbase's institutional marketing visual language — near-monochromatic
+            white canvas, single-accent scarcity, editorial weight-400 display type, and dark
+            full-bleed band rotation — to a day of notes that share the same calm confidence: big
+            structural shifts stated without urgency. Coinbase Blue anchors the AI org-design section
+            because it reads as institutional and strategic; the brand's accent yellow fits the
+            judgment/taste section's illustrative, creative character; trading green marks production
+            as "winning"; and trading red frames structured multi-agent disagreement as a designed
+            feature rather than a flaw.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
