@@ -9,16 +9,46 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Post by @DJ_CURFEW on X",
+    url: "https://x.com/dj_curfew/status/2057522382315929802?s=12",
+    description: "Today we reduced headcount by 22%. The business is the strongest it's ever been. So I think it's important to be direct about what I'm seein",
+    created: "2026-06-04",
+  },
+  {
+    title: "Vocabulary",
+    url: "https://animations.dev/vocabulary?ref=sidebar",
+    description: "A glossary of common animation patterns, so you know what to ask for.",
+    created: "2026-06-04",
+  },
+  {
     title: "X posts as clean Markdown for LLMs",
     url: "https://tweet.md/?ref=producthunt",
     description: "Get any X post or thread as clean Markdown for LLMs, agents, and research. Swap x.com for tweet.md or use the API.",
     created: "2026-05-27",
   },
   {
+    title: "Why I Left Product Management to Build More",
+    url: "https://www.noahzender.com/why-i-left-product-management",
+    description: "Why I Left Product Management to Build More — an essay by Noah Zender",
+    created: "2026-05-23",
+  },
+  {
+    title: "Train Your Judgement",
+    url: "https://emilkowal.ski/ui/train-your-judgement",
+    description: "Settling for good enough is not good enough.",
+    created: "2026-05-22",
+  },
+  {
     title: "Hermes just got 10x better...",
     url: "https://www.youtube.com/watch?v=8iZUyE7SlXo",
     description: "Here are 8 new Hermes Agent features that makes it SO much more powerful2nd Youtube Channel:  https://youtube.com/@AlexFinnLabsOfficialFULL Hermes Agent bootcamp in the Vibe Coding Academy coming u",
     created: "2026-05-19",
+  },
+  {
+    title: "When Sites Need to Walk Away",
+    url: "https://chriscoyier.net/2026/04/28/when-sites-need-to-walk-away/?ref=sidebar",
+    description: "The Internet Archive has a new book: VANISHING CULTURE. (Digital copy is free.) According to a Pew Research Center report, 26% of pages from 2013-2023 are no longer accessible. But that’s not the whole story. In a new study published in Internet Archive's book, VANISHING CULTURE, data scientists working with the Wayback Machine have found:…",
+    created: "2026-05-16",
   },
   {
     title: "Frontend isn't Dead. Your Focus Needs to Change.",
