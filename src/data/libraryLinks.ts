@@ -9,6 +9,12 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "How Claude Code’s lead designer builds with AI",
+    url: "https://www.youtube.com/watch?v=hKeDfupbA4U",
+    description: "During Dive Club Live in NYC we got to hear from Claude Code’s lead designer, Meaghan Choi. She shared a demo of how the team at Anthropic uses Claude Code a...",
+    created: "2026-06-05",
+  },
+  {
     title: "Post by @DJ_CURFEW on X",
     url: "https://x.com/dj_curfew/status/2057522382315929802?s=12",
     description: "Today we reduced headcount by 22%. The business is the strongest it's ever been. So I think it's important to be direct about what I'm seein",
