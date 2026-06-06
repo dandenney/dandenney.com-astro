@@ -149,7 +149,7 @@ function dayBets(picks: RithhmmPick[]) {
 
       <!-- Page header -->
       <div class="border-b border-gray-200 dark:border-slate-800">
-        <div class="mx-auto max-w-5xl px-4 py-10 sm:py-12">
+        <div class="mx-auto max-w-7xl px-4 py-10 sm:py-12">
           <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-none">
             Rithmm<br />Tracker
           </h1>
@@ -161,7 +161,7 @@ function dayBets(picks: RithhmmPick[]) {
 
       <!-- Stats strip -->
       <div class="border-b border-gray-200 dark:border-slate-800">
-        <div class="mx-auto max-w-5xl">
+        <div class="mx-auto max-w-7xl">
           <dl class="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-gray-200 dark:divide-slate-800">
 
             <div class="px-4 sm:px-6 py-6">
@@ -207,7 +207,7 @@ function dayBets(picks: RithhmmPick[]) {
           </dl>
 
           {hasBetAmount && (
-            <div class="grid grid-cols-2 divide-x divide-gray-200 dark:divide-slate-800 border-t border-gray-200 dark:border-slate-800">
+            <dl class="grid grid-cols-2 divide-x divide-gray-200 dark:divide-slate-800 border-t border-gray-200 dark:border-slate-800">
               <div class="px-4 sm:px-6 py-4">
                 <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Dan</dt>
                 <dd class={`mt-1 text-2xl font-black tabular-nums font-mono leading-none ${danBalance >= rithhmmStartingBalances.dan ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
@@ -220,19 +220,19 @@ function dayBets(picks: RithhmmPick[]) {
                   ${gardenOfBalance.toFixed(2)}
                 </dd>
               </div>
-            </div>
+            </dl>
           )}
 
           {(allWins + allLosses) > 0 && (
             <div class="flex h-0.5 bg-gray-100 dark:bg-slate-800">
-              <div class="bg-red-700 dark:bg-red-600 transition-all" style={`width: ${allWinRate}%`}></div>
+              <div class="bg-green-600 dark:bg-green-500 transition-all" style={`width: ${allWinRate}%`}></div>
             </div>
           )}
         </div>
       </div>
 
       <!-- Content sections -->
-      <div class="mx-auto max-w-5xl px-4 pt-8 pb-16 space-y-10">
+      <div class="mx-auto max-w-7xl px-4 pt-8 pb-16 space-y-10">
 
         <!-- Pending picks -->
         {pending.length > 0 && (
@@ -347,7 +347,7 @@ function dayBets(picks: RithhmmPick[]) {
                     const { net: dayNet, hasMoney, count: betCount } = dayBets(picks);
                     const dayWins = picks.filter((p) => p.result === "win").length;
                     const dayLosses = picks.filter((p) => p.result === "loss").length;
-                    const colspan = 5 + (hasBetData ? 1 : 0) + (hasHermes ? 1 : 0) + (hasBetAmount ? 2 : 0);
+                    const colspan = 6 + (hasBetData ? 1 : 0) + (hasHermes ? 1 : 0) + (hasBetAmount ? 2 : 0);
                     return (
                       <>
                         <tr class="border-t-2 border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/30 first:border-t-0">
