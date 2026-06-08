@@ -3111,6 +3111,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "run-line",
     result: "loss",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
   },
   {
     id: 218,
@@ -3126,6 +3128,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "assists-under",
     result: "win",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 105.11,
   },
   {
     id: 219,
@@ -3141,6 +3145,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "assists-over",
     result: "win",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 102.55,
   },
   // 2026-06-08
   {
