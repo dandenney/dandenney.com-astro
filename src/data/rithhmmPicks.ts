@@ -2878,7 +2878,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     id: 203,
     date: "2026-06-04",
     sport: "MLB",
-    pick: "Gunnar Henderson Over 1.5 Total Bases",
+    pick: "Gunnar Henderson Under 1.5 Total Bases",
     odds: "-111",
     confidence: 60.8,
     modelProjection: "Prop Model Predicts: 2.6 Total Bases",
@@ -2886,10 +2886,10 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "4/10",
     matchup: "@ Red Sox",
     propType: "hits-over",
-    result: "loss",
+    result: "win",
     portfolioAction: "bet",
     betAmount: 60,
-    returnAmount: 0,
+    returnAmount: 114.04,
   },
   {
     id: 204,
@@ -2940,6 +2940,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "combo-over",
     result: "win",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 116.60,
   },
   {
     id: 207,
@@ -2955,6 +2957,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "run-line",
     result: "loss",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
   },
   {
     id: 208,
@@ -2970,6 +2974,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "run-line",
     result: "win",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 105.80,
   },
   {
     id: 209,
@@ -2985,6 +2991,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "run-line",
     result: "loss",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
   },
   {
     id: 210,
@@ -3030,6 +3038,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "combo-over",
     result: "win",
     portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 98.96,
   },
   // 2026-06-06
   {
@@ -3047,7 +3057,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "win",
     portfolioAction: "bet",
     betAmount: 60,
-    returnAmount: 101.96,
+    returnAmount: 101.95,
   },
   {
     id: 214,
