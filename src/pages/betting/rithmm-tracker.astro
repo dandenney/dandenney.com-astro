@@ -116,9 +116,11 @@ function hermesClasses(flag: RithhmmHermesFlag | undefined): string {
   return "bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/30 dark:text-amber-400 dark:border-amber-800/50";
 }
 
-function sportClasses(sport: "MLB" | "NBA"): string {
+function sportClasses(sport: "MLB" | "NBA" | "WNBA"): string {
   if (sport === "MLB")
     return "bg-sky-50 text-sky-700 dark:bg-sky-950/40 dark:text-sky-400";
+  if (sport === "WNBA")
+    return "bg-pink-50 text-pink-700 dark:bg-pink-950/40 dark:text-pink-400";
   return "bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-400";
 }
 

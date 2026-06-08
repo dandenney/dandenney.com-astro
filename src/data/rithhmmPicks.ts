@@ -2,6 +2,9 @@ export type RithhmmPropType =
   | "hits-over"
   | "hits-under"
   | "run-line"
+  | "assists-over"
+  | "assists-under"
+  | "blocks-under"
   | "rebounds-under"
   | "points-under"
   | "combo-over"
@@ -19,7 +22,7 @@ export type RithhmmHermesFlag = "watch" | "strong" | "no-flag";
 export interface RithhmmPick {
   id: number;
   date: string;
-  sport: "MLB" | "NBA";
+  sport: "MLB" | "NBA" | "WNBA";
   pick: string;
   odds: string;
   confidence: number;
@@ -3027,5 +3030,132 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "combo-over",
     result: "win",
     portfolioAction: "bet",
+  },
+  // 2026-06-06
+  {
+    id: 213,
+    date: "2026-06-06",
+    sport: "WNBA",
+    pick: "Caitlin Clark Over 7.5 Assists",
+    odds: "-143",
+    confidence: 63.9,
+    modelProjection: "Prop Model Predicts: 9.5 Assists",
+    dtm: 8.3,
+    recentForm: "5/8",
+    matchup: "@ Liberty",
+    propType: "assists-over",
+    result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 101.96,
+  },
+  {
+    id: 214,
+    date: "2026-06-06",
+    sport: "MLB",
+    pick: "Tigers +1.5",
+    odds: "-156",
+    confidence: 65.7,
+    modelProjection: "Rithmm MLB Model Predicts: Tigers -0.5",
+    dtm: 13.2,
+    recentForm: "6/10",
+    matchup: "vs Mariners",
+    propType: "run-line",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
+  },
+  {
+    id: 215,
+    date: "2026-06-06",
+    sport: "MLB",
+    pick: "Luinder Avila Over 13.5 Total Outs",
+    odds: "-132",
+    confidence: 61.5,
+    modelProjection: "Prop Model Predicts: 11.6 Total Outs",
+    dtm: 10.7,
+    recentForm: "1/10",
+    matchup: "@ Twins",
+    propType: "combo-over",
+    result: "win",
+    portfolioAction: "skip",
+  },
+  // 2026-06-07
+  {
+    id: 216,
+    date: "2026-06-07",
+    sport: "MLB",
+    pick: "Angels +1.5",
+    odds: "-112",
+    confidence: 66.4,
+    modelProjection: "Rithmm MLB Model Predicts: Angels -0.4",
+    dtm: 28.7,
+    recentForm: "4/10",
+    matchup: "@ Dodgers",
+    propType: "run-line",
+    result: "win",
+    portfolioAction: "watch",
+  },
+  {
+    id: 217,
+    date: "2026-06-07",
+    sport: "MLB",
+    pick: "White Sox +1.5",
+    odds: "-142",
+    confidence: 69.0,
+    modelProjection: "Rithmm MLB Model Predicts: White Sox -0.9",
+    dtm: 23.6,
+    recentForm: "6/10",
+    matchup: "@ Phillies",
+    propType: "run-line",
+    result: "loss",
+    portfolioAction: "bet",
+  },
+  {
+    id: 218,
+    date: "2026-06-07",
+    sport: "WNBA",
+    pick: "Carla Leite Under 5.5 Assists",
+    odds: "-133",
+    confidence: 63.7,
+    modelProjection: "Prop Model Predicts: 3.9 Assists",
+    dtm: 10.6,
+    recentForm: "6/10",
+    matchup: "@ Sparks",
+    propType: "assists-under",
+    result: "win",
+    portfolioAction: "bet",
+  },
+  {
+    id: 219,
+    date: "2026-06-07",
+    sport: "WNBA",
+    pick: "Kelsey Plum Over 5.5 Assists",
+    odds: "-141",
+    confidence: 60.8,
+    modelProjection: "Prop Model Predicts: 7.7 Assists",
+    dtm: 10.7,
+    recentForm: "5/7",
+    matchup: "vs Fire",
+    propType: "assists-over",
+    result: "win",
+    portfolioAction: "bet",
+  },
+  // 2026-06-08
+  {
+    id: 220,
+    date: "2026-06-08",
+    sport: "NBA",
+    pick: "Victor Wembanyama Under 3.5 Blocks",
+    odds: "-132",
+    confidence: 72.2,
+    modelProjection: "Prop Model Predicts: 2.8 Blocks",
+    dtm: 35.7,
+    recentForm: "8/10",
+    matchup: "@ Knicks",
+    propType: "blocks-under",
+    result: "pending",
+    portfolioAction: "watch",
   },
 ];

@@ -52,12 +52,16 @@ for (let i = chronological.length - 1; i >= 0; i--) {
 // Sport breakdown
 const mlbResolved = resolved.filter((p) => p.sport === "MLB");
 const nbaResolved = resolved.filter((p) => p.sport === "NBA");
+const wnbaResolved = resolved.filter((p) => p.sport === "WNBA");
 const mlbWins = mlbResolved.filter((p) => p.result === "win").length;
 const mlbLosses = mlbResolved.filter((p) => p.result === "loss").length;
 const mlbWinPct = mlbWins + mlbLosses > 0 ? Math.round((mlbWins / (mlbWins + mlbLosses)) * 100) : 0;
 const nbaWins = nbaResolved.filter((p) => p.result === "win").length;
 const nbaLosses = nbaResolved.filter((p) => p.result === "loss").length;
 const nbaWinPct = nbaWins + nbaLosses > 0 ? Math.round((nbaWins / (nbaWins + nbaLosses)) * 100) : 0;
+const wnbaWins = wnbaResolved.filter((p) => p.result === "win").length;
+const wnbaLosses = wnbaResolved.filter((p) => p.result === "loss").length;
+const wnbaWinPct = wnbaWins + wnbaLosses > 0 ? Math.round((wnbaWins / (wnbaWins + wnbaLosses)) * 100) : 0;
 
 const STAKE = 30;
 
@@ -78,6 +82,9 @@ function propTypeBadge(type: RithhmmPropType): { label: string; classes: string 
     "hits-over": { label: "Hits Over", classes: "bg-cyan-900/40 text-cyan-400 border-cyan-800/50" },
     "hits-under": { label: "Hits Under", classes: "bg-teal-900/40 text-teal-400 border-teal-800/50" },
     "run-line": { label: "Run Line", classes: "bg-emerald-900/40 text-emerald-400 border-emerald-800/50" },
+    "assists-over": { label: "Ast Over", classes: "bg-fuchsia-900/40 text-fuchsia-400 border-fuchsia-800/50" },
+    "assists-under": { label: "Ast Under", classes: "bg-pink-900/40 text-pink-400 border-pink-800/50" },
+    "blocks-under": { label: "Blk Under", classes: "bg-red-950/40 text-red-300 border-red-900/50" },
     "rebounds-under": { label: "Rebs Under", classes: "bg-purple-900/40 text-purple-400 border-purple-800/50" },
     "points-under": { label: "Pts Under", classes: "bg-orange-900/40 text-orange-400 border-orange-800/50" },
     "combo-over": { label: "Combo Over", classes: "bg-indigo-900/40 text-indigo-400 border-indigo-800/50" },
@@ -182,7 +189,7 @@ function formatDate(d: string): string {
           </div>
 
           <!-- Sport breakdown -->
-          <div class="grid grid-cols-2 divide-x divide-slate-800 bg-slate-900/40 border-t border-slate-800">
+          <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-slate-800 bg-slate-900/40 border-t border-slate-800">
             <div class="px-5 py-3 flex items-center justify-between">
               <div class="flex items-center gap-3">
                 <span class="text-[10px] font-bold text-emerald-400 tracking-[0.15em] uppercase">MLB</span>
@@ -199,6 +206,15 @@ function formatDate(d: string): string {
               </div>
               <span class={`text-sm font-semibold tabular-nums ${nbaWinPct >= 60 ? "text-emerald-400" : nbaWinPct >= 50 ? "text-yellow-400" : "text-red-400"}`}>
                 {nbaWinPct}%
+              </span>
+            </div>
+            <div class="px-5 py-3 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-[10px] font-bold text-pink-400 tracking-[0.15em] uppercase">WNBA</span>
+                <span class="text-sm font-bold text-white tabular-nums">{wnbaWins}–{wnbaLosses}</span>
+              </div>
+              <span class={`text-sm font-semibold tabular-nums ${wnbaWinPct >= 60 ? "text-emerald-400" : wnbaWinPct >= 50 ? "text-yellow-400" : "text-red-400"}`}>
+                {wnbaWinPct}%
               </span>
             </div>
           </div>
