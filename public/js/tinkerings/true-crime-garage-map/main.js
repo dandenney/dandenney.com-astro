@@ -12,6 +12,389 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Hate American Made /// 6 Part Series ",
+      Release: "04/01/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/hate-american-made-6-part-series/hate-american-made-6-part-series",
+      Earliest_Date: "6/30/1984",
+      Earliest_Year: "1984",
+      Notes: "U.S. Highway 71 just south of De Queen, in Sevier County, Arkansas",
+    },
+    geometry: {
+      coordinates: [-94.3479916,34.0316904],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "God’s Misfits /// Episodes : 830-831",
+      Release: "03/25/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/god-s-misfits-episodes-830-831/god-s-misfits-episodes-830-831",
+      Earliest_Date: "3/30/2024",
+      Earliest_Year: "2024",
+      Notes: "OK-95 & Rd L",
+    },
+    geometry: {
+      coordinates: [-101.9061659, 36.8348053],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Erin Taylor ////// 829",
+      Release: "03/18/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/erin-taylor-829/erin-taylor-829",
+      Earliest_Date: "8/11/2000",
+      Earliest_Year: "2000",
+      Notes: "1414 West Fair Avenue, Marquette, MI ",
+    },
+    geometry: {
+      coordinates: [-87.418530, 46.556879],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Idaho Murders 911 Call /// True Crime Garage",
+      Release: "03/15/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/idaho-murders-911-call-true-crime-garage/idaho-murders-911-call-true-crime-garage",
+      Earliest_Date: "11/12/2022",
+      Earliest_Year: "2022",
+      Notes: "1122 King Road, Moscow, Idaho",
+    },
+    geometry: {
+      coordinates: [-117.0132753, 46.7218466],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Under the Bridge //////",
+      Release: "03/11/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/under-the-bridge/under-the-bridge",
+      Earliest_Date: "1/28/1955",
+      Earliest_Year: "1955",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-105.0391826,39.6068564],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Asha Degree /// Updates /// Episodes: 826-827",
+      Release: "03/05/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/asha-degree-updates-episodes-826-827/asha-degree-updates-episodes-826-827",
+      Earliest_Date: "2/14/2000",
+      Earliest_Year: "2000",
+      Notes:
+        "https://www.reddit.com/r/UnresolvedMysteries/comments/abe6bi/the_unresolved_disappearance_of_asha_degree/ 3404 Oakcrest Drive",
+    },
+    geometry: {
+      coordinates: [-81.50827, 35.36288],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Mysterious Death of Ellen Greenberg //////",
+      Release: "02/25/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/mysterious-death-of-ellen-greenberg/mysterious-death-of-ellen-greenberg",
+      Earliest_Date: "1/26/2011",
+      Earliest_Year: "2011",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-75.231715, 40.029307],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Red Walker ////// 822",
+      Release: "02/18/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/red-walker-822/red-walker-822",
+      Earliest_Date: "1/15/1979",
+      Earliest_Year: "1979",
+      Notes: "West Maple Ave, Adrian, MI",
+    },
+    geometry: {
+      coordinates: [-84.0535667, 41.9054472],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Park Bench Murders /// Episodes 820-821",
+      Release: "02/12/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/park-bench-murders-episodes-820-821/park-bench-murders-episodes-820-821",
+      Earliest_Date: "6/4/2019",
+      Earliest_Year: "2019",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-81.8863342, 41.4097578],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Pendleton Quadruple Homicide /// Episodes: 818-819",
+      Release: "02/04/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/pendleton-quadruple-homicide-episodes-818-819/pendleton-quadruple-homicide-episodes-818-819",
+      Earliest_Date: "11/2/2015",
+      Earliest_Year: "2019",
+      Notes: "2217 Refuge Road, Pendleton, SC",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-82.749033, 34.647370],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "David Glenn Lewis /// Episodes: 816-817",
+      Release: "01/29/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/david-glenn-lewis-episodes-816-817/david-glenn-lewis-episodes-816-817",
+      Earliest_Date: "1/30/1993",
+      Earliest_Year: "1993",
+      Notes: "",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-101.846661, 35.188379],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Liz Barraza ////// 815",
+      Release: "01/21/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/liz-barraza-815/liz-barraza-815",
+      Earliest_Date: "1/25/2019",
+      Earliest_Year: "2019",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-95.557972, 30.123703],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Amber Alert /// The Unsolved Case of Amber Hagerman /// 2 Part Series ",
+      Release: "01/14/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/amber-alert-the-unsolved-case-of-amber-hagerman-2-part-series/amber-alert-the-unsolved-case-of-amber-hagerman-2-part-series",
+      Earliest_Date: "1/13/1996",
+      Earliest_Year: "1996",
+      Notes: "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Amber_Alert&params=36_11_55.4_N_97_50_22.5_W_region:US-OK_type:landmark",
+      Notes: "1600 block of East Abram Street, around East Abram Street and Browning Drive in Arlington, Texas.",
+    },
+    geometry: {
+      coordinates: [-97.0877609, 32.7350018],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Charlotte Fimiano //////",
+      Release: "01/13/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/charlotte-fimiano/charlotte-fimiano",
+      Earliest_Date: "9/11/1997",
+      Earliest_Year: "1997",
+      Notes: "2147 Chelsea Ln, Hellertown, PA 18055",
+    },
+    geometry: {
+      coordinates: [-75.330107, 40.591870],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Ted Bundy /// Invisible Man /// John Douglas",
+      Release: "01/06/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/ted-bundy-invisible-man-john-douglas/ted-bundy-invisible-man-john-douglas",
+      Earliest_Date: "1/4/1974",
+      Earliest_Year: "1974",
+      Notes: "4325 8th Avenue NE, Seattle, WA",
+    },
+    geometry: {
+      coordinates: [-122.319848, 47.660827],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Blue Print for Murder //////",
+      Release: "12/31/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/blue-print-for-murder/blue-print-for-murder",
+      Earliest_Date: "11/20/1993",
+      Earliest_Year: "1993",
+      Notes: "Area of Fish Cove Inn wooded area",
+    },
+    geometry: {
+      coordinates: [-72.407586, 40.935861],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Gretchen Fleming ////// 2 Part Series ",
+      Release: "12/17/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/gretchen-fleming-2-part-series/gretchen-fleming-2-part-series",
+      Earliest_Date: "12/3/2022",
+      Earliest_Year: "2022",
+      Notes: "H&M ",
+    },
+    geometry: {
+      coordinates: [-81.5510749, 39.3270041],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Cold Case: Who Killed JonBenet Ramsey",
+      Release: "12/10/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/cold-case-who-killed-jonbenet-ramsey/cold-case-who-killed-jonbenet-ramsey",
+      Earliest_Date: "12/25/1996",
+      Earliest_Year: "1996",
+      Notes: "Home address: 755 15th St. Boulder, Co",
+    },
+    geometry: {
+      coordinates: [-105.273934, 40.001032],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Robert Wone /// 4 Part Series ",
+      Release: "11/27/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/robert-wone-4-part-series/robert-wone-4-part-series",
+      Earliest_Date: "8/2/2006",
+      Earliest_Year: "2006",
+      Notes: "1509 Swann Street NW, Washington, D.C",
+    },
+    geometry: {
+      coordinates: [-77.035382, 38.914952],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Christie Mullins ////// ",
+      Release: "11/19/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/christie-mullins/christie-mullins",
+      Earliest_Date: "8/23/1975",
+      Earliest_Year: "1975",
+      Notes:
+        "Graceland Shopping Center\n182 Graceland Blvd, Columbus, OH 43214",
+    },
+    geometry: {
+      coordinates: [-83.02433, 40.06637],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Delphi Murders Trial  ////// Episodes 800-801",
+      Release: "11/11/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/delphi-murders-trial-episodes-800-801/delphi-murders-trial-episodes-800-801",
+      Earliest_Date: "2/13/2017",
+      Earliest_Year: "2017",
+      Notes:
+        "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Murders_of_Abigail_Williams_and_Liberty_German&params=40_35_20.7_N_86_38_34.2_W_type:landmark",
+    },
+    geometry: {
+      coordinates: [-86.642833, 40.589083],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Angel #333 /// Episodes 798-799",
+      Release: "11/05/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/angel-333-episodes-798-799/angel-333-episodes-798-799",
+      Earliest_Date: "4/17/2023",
+      Earliest_Year: "2023",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-113.310, 33.376],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Dominique Dunne ////// 797",
+      Release: "10/30/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/dominique-dunne-797/dominique-dunne-797",
+      Earliest_Date: "10/30/1982",
+      Earliest_Year: "1982",
+      Notes: "8723 Rangely Avenue, West Hollywood, CA 90048, USA",
+    },
+    geometry: {
+      coordinates: [-118.383548, 34.080652],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Zodiac Killer //////",
+      Release: "10/22/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/zodiac-killer/zodiac-killer",
+      Earliest_Date: "12/20/1968",
+      Earliest_Year: "1968",
+      Notes:
+        "https://www.google.com/maps/place/Lake+Herman+Zodiac+site/@38.0949101,-122.1462693,17z/data=!4m12!1m6!3m5!1s0x80856dc4d01e5df7:0x29e2b46a0f112b87!2sLake+Herman+Zodiac+site!8m2!3d38.0949101!4d-122.1440806!3m4!1s0x80856dc4d01e5df7:0x29e2b46a0f112b87!8m2!3d38.0949101!4d-122.1440806",
+    },
+    geometry: {
+      coordinates: [-122.146269, 38.09491],
+      type: "Point",
+    },
+    id: "8336ea6ba32eb1741d0d304ed88e4e55",
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Delphi Murders Trial ////// 794",
+      Release: "10/16/2024",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/delphi-murders-trial-794/delphi-murders-trial-794",
+      Earliest_Date: "2/13/2017",
+      Earliest_Year: "2017",
+      Notes: "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Murders_of_Abigail_Williams_and_Liberty_German&params=40_35_20.7_N_86_38_34.2_W_type:landmark",
+    },
+    geometry: {
+      coordinates: [-86.642833, 40.589083],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "The “KN” Murder ////// 793",
       Release: "10/15/2024",
       URL: "https://truecrimegarage.com/home/blog/7476034/the-kn-murder-793",

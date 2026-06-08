@@ -432,6 +432,10 @@ While many of the cases have multiple locations, most are focused on a general a
 ### Skipped Episodes
 
 These were skipped, because they cover a range of cases or podcast-specific info.
+- [Best of True Crime Garage 2024 //////](https://truecrimegarage.com/blogs/true-crime-garage/posts/best-of-true-crime-garage-2024/best-of-true-crime-garage-2024)
+- [Blue Print for Murder //////](https://truecrimegarage.com/blogs/true-crime-garage/posts/blue-print-for-murder/blue-print-for-murder)
+- [True Crime /// Best of 2024](https://truecrimegarage.com/blogs/true-crime-garage/posts/true-crime-best-of-2024/true-crime-best-of-2024)
+- [True Crimelines Garage Bullshit](https://truecrimegarage.com/blogs/true-crime-garage/posts/true-crimelines-garage-bullshit/true-crimelines-garage-bullshit)
 - [Obsessed with Serial Killers ////// 790 ](https://truecrimegarage.com/home/blog/7470506/obsessed-with-serial-killers-790)
 - [Off The Record /// 155 /// CrimeCon 2022](https://www.truecrimegarage.com/home/blog/off-the-record-155-crimecon-2022)
 - [Best of 2021 ////// 546](https://www.truecrimegarage.com/home/blog/best-of-2021-546)

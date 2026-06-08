@@ -1,0 +1,922 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+
+export const prerender = true;
+
+const article = (await getCollection('posts')).find((post) =>
+  post.id.replace(/\.(md|mdx)$/, '') === 'true-crime/true-crime-garage-episodes/carnival-of-lies'
+);
+
+if (!article) {
+  throw new Error('Missing source article: src/content/posts/true-crime/true-crime-garage-episodes/carnival-of-lies.md');
+}
+
+const { title, summary } = article.data;
+
+const storyBeats = [
+  {
+    label: 'May 25, 1991',
+    title: 'The story begins under carnival lights',
+    body: 'Michelle Lodzinski said she took five-year-old Timmy Wiltsey to the South Amboy Elks Club Carnival at Kennedy Park in Sayreville, New Jersey. She said she left him in a ride line while she went to buy a soda. When she turned back, he was gone.'
+  },
+  {
+    label: 'The first search',
+    title: 'A public place gives investigators little to hold',
+    body: 'The carnival was shut down. Helicopters, tracking dogs, and volunteers searched the area. But the expected traces did not appear, and accounts from the night did not align cleanly.'
+  },
+  {
+    label: 'Changing accounts',
+    title: 'The missing boy becomes a case about stories',
+    body: 'The disappearance was first tied to the soda stand. Later came two men with a knife. Then came Ellen, a supposed bank customer who offered to watch Timmy. According to the source article, FBI agents found no record that Ellen existed.'
+  },
+  {
+    label: 'October 1991 to April 1992',
+    title: 'The case moves to the marsh',
+    body: 'A Teenage Mutant Ninja Turtle sneaker was found in the Raritan Center area. Investigators later connected Michelle to that industrial complex through past employment. A wider search found another sneaker, a pillowcase, a blue and white blanket, and Timmy\'s partial remains in a nearby creek.'
+  },
+  {
+    label: '1994',
+    title: 'A disappearance inside the disappearance',
+    body: 'Michelle vanished, then reappeared in Detroit claiming fake FBI agents had kidnapped her. Investigators found she had ordered the FBI business cards tied to the story from a local print shop. She received house arrest for the hoax.'
+  },
+  {
+    label: '2014 to 2021',
+    title: 'A conviction, then a reversal',
+    body: 'Michelle was arrested in 2014. A jury convicted her in 2016 after a trial that focused heavily on the blue and white blanket. In October 2021, the New Jersey Supreme Court overturned the conviction, ruling the state had not proved she purposefully or knowingly caused Timmy\'s death.'
+  }
+];
+
+const imagePrompts = [
+  {
+    file: 'carnival-lights.webp',
+    prompt: 'Documentary editorial photograph of a small 1991 New Jersey carnival at night, bright ride bulbs, concession glow, families blurred in motion, one empty gap in a children\'s ride line, restrained red and slate color grade, no readable brand names, no identifiable faces, somber true-crime magazine tone.'
+  },
+  {
+    file: 'search-perimeter.webp',
+    prompt: 'Editorial map illustration of Kennedy Park in Sayreville, New Jersey, at night, search radius lines, helicopter light cone, blocked carnival exits, volunteers represented as small neutral marks, white paper texture, slate ink, controlled red annotations, no gore, no sensational effects.'
+  },
+  {
+    file: 'contradictory-accounts.webp',
+    prompt: 'Still-life investigative desk scene with interview notes, blank witness cards, string lines that do not meet, a soda receipt-shaped blank slip, soft overhead light, red pencil marks, gray paper, no real documents, no readable private information.'
+  },
+  {
+    file: 'raritan-marsh.webp',
+    prompt: 'Cinematic documentary photograph of an industrial marshland in New Jersey, muddy reeds, shallow creek water, distant warehouse forms, small evidence marker near a child\'s sneaker-like shape mostly obscured by mud, respectful distance, overcast light, muted red-gray palette, no body, no graphic content.'
+  },
+  {
+    file: 'hoax-cards.webp',
+    prompt: 'Editorial still life of generic FBI-style business cards without official seals, an idling sedan suggested in background blur, motel-road sodium light, uneasy composition, red accent reflected in wet pavement, no real agency marks, no readable names.'
+  },
+  {
+    file: 'trial-reversal.webp',
+    prompt: 'Courtroom-inspired editorial composition with a folded blue and white blanket on a plain evidence table, blurred wood bench behind it, a translucent vacated judgment stamp motif, serious restrained lighting, no people, no official seals, no readable case documents.'
+  }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`${title} | Interactive Documentary`}
+      description={summary}
+      type="blogpost"
+      datePublished={article.data.pubDate}
+    />
+  </head>
+  <body>
+    <main class="case-page" data-story>
+      <section class="hero scene" data-scene>
+        <div class="carnival-sky" aria-hidden="true">
+          <div class="lights">
+            {Array.from({ length: 18 }).map((_, index) => <i style={`--i:${index}`}></i>)}
+          </div>
+          <svg class="wheel" viewBox="0 0 500 500" aria-hidden="true">
+            <circle cx="250" cy="250" r="206"></circle>
+            <circle cx="250" cy="250" r="22"></circle>
+            <path d="M250 44v412M44 250h412M104 104l292 292M396 104 104 396"></path>
+            <path d="M250 250 160 68M250 250l182 90M250 250 68 340M250 250l90-182"></path>
+          </svg>
+          <div class="ticket ticket-one">ride line</div>
+          <div class="ticket ticket-two">soda stand</div>
+          <div class="ticket ticket-three">missing child report</div>
+        </div>
+        <article class="hero-copy">
+          <p class="kicker">Sayreville, New Jersey / 1991</p>
+          <h1>{title}</h1>
+          <p>{summary}</p>
+          <a href="/posts/true-crime/true-crime-garage-episodes/carnival-of-lies/">Read the source Markdown article</a>
+        </article>
+      </section>
+
+      <section class="timeline-scene scene" data-scene>
+        <div class="timeline-sticky">
+          <aside class="case-map" aria-label="Case movement diagram">
+            <svg viewBox="0 0 900 700" aria-hidden="true">
+              <path class="map-path base" d="M128 148 C280 88 420 124 516 226 C630 348 594 480 772 558"></path>
+              <path class="map-path live" d="M128 148 C280 88 420 124 516 226 C630 348 594 480 772 558"></path>
+            </svg>
+            <span class="map-node n1">Carnival</span>
+            <span class="map-node n2">Search</span>
+            <span class="map-node n3">Interviews</span>
+            <span class="map-node n4">Raritan Center</span>
+            <span class="map-node n5">Court</span>
+          </aside>
+
+          <div class="beat-stack">
+            {storyBeats.map((beat, index) => (
+              <article class="beat-card" style={`--index:${index}`}>
+                <span>{beat.label}</span>
+                <h2>{beat.title}</h2>
+                <p>{beat.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="records-scene scene" data-scene>
+        <div class="records-sticky" aria-hidden="true">
+          <div class="record r1">
+            <b>No ticket stub</b>
+            <span>no clean physical trace at the carnival</span>
+          </div>
+          <div class="record r2">
+            <b>No confirmed Ellen</b>
+            <span>the supposed caretaker could not be found</span>
+          </div>
+          <div class="record r3">
+            <b>Marshland evidence</b>
+            <span>sneakers, pillowcase, blanket, remains</span>
+          </div>
+          <div class="record r4">
+            <b>Unknown cause</b>
+            <span>homicide ruling, cause obscured by decomposition</span>
+          </div>
+        </div>
+        <article class="records-copy">
+          <p class="kicker">Negative space</p>
+          <h2>The case is built from what appears, what disappears, and what cannot be proved.</h2>
+          <p>That is why the story keeps resisting a clean ending. Suspicion gathers around Michelle Lodzinski, but the strongest responsible version of the narrative keeps the line between suspicion and legal proof visible.</p>
+        </article>
+      </section>
+
+      <section class="marsh-scene scene" data-scene>
+        <div class="marsh" aria-hidden="true">
+          <div class="water"></div>
+          <div class="reeds reeds-a"></div>
+          <div class="reeds reeds-b"></div>
+          <div class="warehouse w1"></div>
+          <div class="warehouse w2"></div>
+          <div class="marker">01</div>
+        </div>
+        <article class="marsh-copy">
+          <p class="kicker">Raritan Center</p>
+          <h2>The story leaves the crowd and settles into mud.</h2>
+          <p>The marsh discoveries gave investigators objects with weight: a sneaker, another sneaker, a pillowcase, a blanket, and Timmy's partial remains. They also left a gap that mattered in court: how Timmy died could not be determined.</p>
+        </article>
+      </section>
+
+      <section class="court-scene scene" data-scene>
+        <div class="court-table" aria-hidden="true">
+          <div class="blanket"></div>
+          <div class="card conviction">2016 conviction</div>
+          <div class="card reversal">2021 reversal</div>
+          <div class="stamp">proof standard</div>
+        </div>
+        <article class="court-copy">
+          <p class="kicker">Verdict and reversal</p>
+          <h2>The court record changed the ending without solving the truth.</h2>
+          <p>A jury convicted Michelle in 2016. The New Jersey Supreme Court overturned the conviction in October 2021, ruling that the state had not proved she purposefully or knowingly caused Timmy's death.</p>
+        </article>
+      </section>
+
+      <section class="ending-scene scene" data-scene>
+        <div class="ending-text">
+          <p>A five-year-old boy disappeared.</p>
+          <p>His mother's accounts changed.</p>
+          <p>The marsh gave back evidence, but not a cause.</p>
+          <p>A conviction did not survive review.</p>
+          <p>Timmy Wiltsey still did not come home.</p>
+        </div>
+      </section>
+
+      <section class="prompts" aria-labelledby="prompts-heading">
+        <div>
+          <p class="kicker">Production package</p>
+          <h2 id="prompts-heading">Image prompts from the Markdown outline</h2>
+          <p>These are ready for generated or produced assets. They avoid likenesses, readable private records, gore, and official seals.</p>
+        </div>
+        <ol>
+          {imagePrompts.map(({ file, prompt }) => (
+            <li>
+              <b>{file}</b>
+              <span>{prompt}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </main>
+
+    <script is:inline>
+      const initCarnivalScroll = () => {
+        if (document.documentElement.dataset.carnivalScrollReady === 'true') return;
+        document.documentElement.dataset.carnivalScrollReady = 'true';
+
+        const scenes = Array.from(document.querySelectorAll('[data-scene]'));
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const setProgress = () => {
+          scenes.forEach((scene) => {
+            const rect = scene.getBoundingClientRect();
+            const distance = rect.height + window.innerHeight;
+            const progress = Math.min(1, Math.max(0, (window.innerHeight - rect.top) / distance));
+            scene.style.setProperty('--progress', progress.toFixed(4));
+          });
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => entries.forEach((entry) => entry.target.classList.toggle('is-visible', entry.isIntersecting)),
+          { threshold: 0.16 }
+        );
+
+        scenes.forEach((scene) => observer.observe(scene));
+
+        if (reduceMotion) {
+          scenes.forEach((scene) => scene.style.setProperty('--progress', '1'));
+          return;
+        }
+
+        setProgress();
+        window.addEventListener('scroll', setProgress, { passive: true });
+        window.addEventListener('resize', setProgress);
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarnivalScroll, { once: true });
+      } else {
+        initCarnivalScroll();
+      }
+
+      document.addEventListener('astro:page-load', initCarnivalScroll);
+    </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --red: #b91c1c;
+    --red-deep: #6f1111;
+    --paper: #f4eee6;
+    --paper-dim: #d7c8b7;
+    --ink: #161719;
+    --muted: #5e5c58;
+    --night: #090b10;
+    --night-soft: #151820;
+    --line: rgba(244, 238, 230, 0.24);
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: Montserrat, system-ui, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--night);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--night);
+    color: var(--paper);
+    font-family: var(--sans);
+    overflow-x: clip;
+  }
+
+  .case-page {
+    background:
+      radial-gradient(circle at 80% 4%, rgba(185, 28, 28, 0.2), transparent 32rem),
+      linear-gradient(180deg, #05060a, var(--night) 42%, #0d0f14);
+  }
+
+  .scene {
+    --progress: 0;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero {
+    min-height: 180svh;
+  }
+
+  .carnival-sky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 72% 36%, rgba(185, 28, 28, 0.35), transparent 20rem),
+      linear-gradient(180deg, #07080d, #10131b 62%, #05060a);
+  }
+
+  .carnival-sky::after,
+  .marsh::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(5, 6, 10, 0.84), transparent 48%, rgba(5, 6, 10, 0.74)),
+      linear-gradient(180deg, transparent, rgba(5, 6, 10, 0.86));
+    pointer-events: none;
+  }
+
+  .lights {
+    position: absolute;
+    inset: 7svh 0 auto;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(calc(var(--progress) * -3rem));
+  }
+
+  .lights i {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: var(--paper);
+    box-shadow: 0 0 1.2rem rgba(244, 238, 230, 0.86);
+    opacity: calc(0.3 + (var(--progress) * 0.65));
+    animation: bulb 2.2s steps(2) infinite;
+    animation-delay: calc(var(--i) * -110ms);
+  }
+
+  .wheel {
+    position: absolute;
+    right: max(-8rem, -7vw);
+    bottom: -8rem;
+    width: min(44rem, 82vw);
+    color: rgba(244, 238, 230, 0.42);
+    transform: rotate(calc(var(--progress) * 34deg)) scale(calc(1.02 + (var(--progress) * 0.08)));
+  }
+
+  .wheel circle,
+  .wheel path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 5;
+    stroke-linecap: round;
+  }
+
+  .ticket {
+    position: absolute;
+    z-index: 2;
+    padding: 0.85rem 1rem;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: rotate(var(--r)) translateY(calc(var(--progress) * var(--y)));
+  }
+
+  .ticket-one { left: 9%; top: 24%; --r: -5deg; --y: -2rem; }
+  .ticket-two { left: 31%; bottom: 22%; --r: 4deg; --y: 3rem; }
+  .ticket-three { right: 17%; top: 23%; --r: -2deg; --y: 1rem; }
+
+  .hero-copy {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    display: flex;
+    height: 100svh;
+    max-width: 70rem;
+    margin-top: -100svh;
+    padding: 0 clamp(1.25rem, 6vw, 6.5rem) 11svh;
+    flex-direction: column;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+
+  .kicker {
+    margin: 0 0 1rem;
+    color: #f16f6f;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-family: var(--serif);
+    letter-spacing: 0;
+  }
+
+  h1 {
+    max-width: 8ch;
+    font-size: clamp(4.4rem, 13vw, 14rem);
+    line-height: 0.82;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.25rem, 5vw, 5.8rem);
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  p {
+    color: var(--paper-dim);
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    line-height: 1.66;
+  }
+
+  .hero-copy p:last-of-type {
+    max-width: 43rem;
+    margin: 1.2rem 0 1.4rem;
+    color: #ede4d8;
+    font-size: clamp(1.2rem, 2.2vw, 2rem);
+    line-height: 1.35;
+  }
+
+  .hero-copy a {
+    width: fit-content;
+    color: var(--paper);
+    font-weight: 800;
+    pointer-events: auto;
+    text-decoration-color: rgba(241, 111, 111, 0.8);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
+  }
+
+  .timeline-scene {
+    min-height: 420svh;
+  }
+
+  .timeline-sticky {
+    position: sticky;
+    top: 0;
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(20rem, 0.96fr);
+    gap: clamp(1.25rem, 4vw, 5rem);
+    align-items: center;
+    padding: clamp(1.25rem, 5vw, 5rem);
+  }
+
+  .case-map {
+    position: relative;
+    min-height: min(72svh, 42rem);
+    background:
+      linear-gradient(rgba(185, 28, 28, 0.08), rgba(185, 28, 28, 0.08)),
+      repeating-linear-gradient(135deg, rgba(244, 238, 230, 0.05) 0 1px, transparent 1px 13px);
+    border: 1px solid var(--line);
+    overflow: hidden;
+  }
+
+  .case-map svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .map-path.base {
+    stroke: rgba(244, 238, 230, 0.18);
+    stroke-width: 5;
+    stroke-dasharray: 10 18;
+  }
+
+  .map-path.live {
+    stroke: #f16f6f;
+    stroke-width: 8;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: calc(1050 - (1050 * var(--progress)));
+    filter: drop-shadow(0 0 14px rgba(185, 28, 28, 0.68));
+  }
+
+  .map-node {
+    position: absolute;
+    max-width: 11rem;
+    padding: 0.5rem 0.65rem;
+    background: rgba(9, 11, 16, 0.86);
+    border: 1px solid rgba(244, 238, 230, 0.26);
+    color: var(--paper);
+    font-size: 0.78rem;
+    font-weight: 900;
+    opacity: var(--node-opacity, 0);
+    transform: translate(-50%, -50%) translateY(calc((1 - var(--node-opacity, 0)) * 0.55rem));
+  }
+
+  .map-node::before {
+    content: '';
+    display: inline-block;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-right: 0.35rem;
+    border-radius: 50%;
+    background: var(--red);
+  }
+
+  .n1 { left: 14%; top: 22%; --node-opacity: clamp(0, calc(var(--progress) * 8), 1); }
+  .n2 { left: 36%; top: 16%; --node-opacity: clamp(0, calc((var(--progress) - 0.16) * 8), 1); }
+  .n3 { left: 57%; top: 34%; --node-opacity: clamp(0, calc((var(--progress) - 0.34) * 8), 1); }
+  .n4 { left: 64%; top: 64%; --node-opacity: clamp(0, calc((var(--progress) - 0.58) * 8), 1); }
+  .n5 { left: 86%; top: 80%; --node-opacity: clamp(0, calc((var(--progress) - 0.78) * 8), 1); }
+
+  .beat-stack {
+    position: relative;
+    min-height: 82svh;
+  }
+
+  .beat-card {
+    position: absolute;
+    inset: 50% 0 auto;
+    padding: clamp(1.15rem, 2.4vw, 2rem);
+    background: rgba(244, 238, 230, 0.95);
+    color: var(--ink);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.34);
+    opacity: 1;
+    transform:
+      translateY(calc(-50% + ((var(--index) - (var(--progress) * 5.4)) * 4rem)))
+      rotate(calc((var(--index) - 2.5) * 0.45deg));
+  }
+
+  .beat-card span {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: var(--red);
+    font-size: 0.82rem;
+    font-weight: 900;
+  }
+
+  .beat-card h2 {
+    margin-bottom: 1rem;
+    color: var(--ink);
+    font-size: clamp(1.7rem, 3.5vw, 3.4rem);
+  }
+
+  .beat-card p {
+    margin: 0;
+    color: #4b4540;
+  }
+
+  .records-scene {
+    min-height: 230svh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .records-sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    background:
+      radial-gradient(circle at 50% 42%, rgba(185, 28, 28, 0.24), transparent 24rem),
+      #07080c;
+  }
+
+  .record {
+    position: absolute;
+    width: min(22rem, 72vw);
+    min-height: 10rem;
+    padding: 1.1rem;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 1.8rem 5rem rgba(0, 0, 0, 0.45);
+    transform:
+      translateY(calc((1 - var(--progress)) * 8rem))
+      rotate(var(--r));
+    opacity: calc(var(--progress) * 1.35);
+  }
+
+  .record b,
+  .record span {
+    display: block;
+  }
+
+  .record b {
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 2.3vw, 2rem);
+  }
+
+  .record span {
+    margin-top: 2.2rem;
+    color: #5a5148;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .r1 { left: 9%; top: 17%; --r: -5deg; }
+  .r2 { right: 13%; top: 19%; --r: 3deg; }
+  .r3 { left: 20%; bottom: 15%; --r: 2deg; }
+  .r4 { right: 10%; bottom: 16%; --r: -3deg; }
+
+  .records-copy {
+    position: absolute;
+    z-index: 3;
+    width: min(44rem, calc(100% - 2rem));
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: rgba(9, 11, 16, 0.82);
+    border: 1px solid var(--line);
+  }
+
+  .marsh-scene,
+  .court-scene {
+    min-height: 210svh;
+  }
+
+  .marsh {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+    background:
+      linear-gradient(180deg, #7d8580 0%, #d0c7b8 46%, #33403e 47%, #151b1d 100%);
+  }
+
+  .water {
+    position: absolute;
+    inset: auto 0 0;
+    height: 42%;
+    background:
+      repeating-linear-gradient(0deg, rgba(244, 238, 230, 0.12) 0 1px, transparent 1px 20px),
+      linear-gradient(180deg, rgba(39, 62, 62, 0.84), rgba(6, 12, 13, 0.95));
+    transform: translateY(calc(var(--progress) * -1.8rem));
+  }
+
+  .warehouse {
+    position: absolute;
+    bottom: 44%;
+    height: 7rem;
+    background: rgba(22, 23, 25, 0.76);
+  }
+
+  .w1 { left: 6%; width: 22rem; }
+  .w2 { right: 8%; width: 18rem; height: 5rem; }
+
+  .reeds {
+    position: absolute;
+    inset: auto 0 0;
+    height: 56%;
+    background: repeating-linear-gradient(82deg, transparent 0 16px, rgba(15, 23, 22, 0.78) 17px 20px);
+    transform: translateX(calc((var(--progress) - 0.5) * var(--wind)));
+  }
+
+  .reeds-a { --wind: 3rem; opacity: 0.62; }
+  .reeds-b { --wind: -2rem; opacity: 0.44; }
+
+  .marker {
+    position: absolute;
+    z-index: 2;
+    left: 54%;
+    bottom: 31%;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
+    background: var(--paper);
+    color: var(--red-deep);
+    font-weight: 900;
+    transform: translateY(calc((1 - var(--progress)) * 4rem));
+  }
+
+  .marsh-copy,
+  .court-copy {
+    position: absolute;
+    z-index: 4;
+    left: clamp(1.25rem, 6vw, 6rem);
+    top: 116svh;
+    max-width: 42rem;
+  }
+
+  .court-scene {
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 28% 20%, rgba(185, 28, 28, 0.18), transparent 28rem),
+      linear-gradient(180deg, #111318, #05060a);
+  }
+
+  .court-table {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+  }
+
+  .blanket {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    width: min(34rem, 72vw);
+    aspect-ratio: 1.55;
+    background:
+      repeating-linear-gradient(90deg, #e4edf0 0 2.7rem, #41637a 2.7rem 3.7rem),
+      #e4edf0;
+    box-shadow: 0 2rem 7rem rgba(0, 0, 0, 0.56);
+    transform: translate(-50%, -50%) rotate(calc(-4deg + (var(--progress) * 7deg)));
+  }
+
+  .card,
+  .stamp {
+    position: absolute;
+    padding: 1rem 1.2rem;
+    background: var(--paper);
+    color: var(--ink);
+    font-weight: 900;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.36);
+  }
+
+  .conviction {
+    left: 12%;
+    top: 24%;
+    transform: rotate(-5deg) translateY(calc((1 - var(--progress)) * 6rem));
+  }
+
+  .reversal {
+    right: 14%;
+    bottom: 22%;
+    transform: rotate(4deg) translateY(calc((1 - var(--progress)) * -6rem));
+  }
+
+  .stamp {
+    left: 50%;
+    top: 50%;
+    color: var(--red);
+    border: 4px solid currentColor;
+    background: transparent;
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 4vw, 4.4rem);
+    text-transform: uppercase;
+    opacity: calc(var(--progress) * 0.9);
+    transform: translate(-50%, -50%) rotate(-9deg) scale(calc(0.82 + (var(--progress) * 0.18)));
+  }
+
+  .ending-scene {
+    min-height: 250svh;
+    display: grid;
+    place-items: center;
+    background: #030406;
+  }
+
+  .ending-text {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    width: min(62rem, calc(100% - 2rem));
+    display: grid;
+    place-items: center;
+  }
+
+  .ending-text p {
+    position: absolute;
+    margin: 0;
+    color: var(--paper);
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5.5vw, 6rem);
+    line-height: 1.05;
+    text-align: center;
+    text-wrap: balance;
+    opacity: var(--item-opacity, 0);
+    transform: translateY(calc((1 - var(--item-opacity, 0)) * 1.2rem));
+  }
+
+  .ending-text p:nth-child(1) { --item-opacity: min(clamp(0, calc((var(--progress) - 0.05) * 12), 1), clamp(0, calc((0.24 - var(--progress)) * 12), 1)); }
+  .ending-text p:nth-child(2) { --item-opacity: min(clamp(0, calc((var(--progress) - 0.22) * 12), 1), clamp(0, calc((0.41 - var(--progress)) * 12), 1)); }
+  .ending-text p:nth-child(3) { --item-opacity: min(clamp(0, calc((var(--progress) - 0.39) * 12), 1), clamp(0, calc((0.58 - var(--progress)) * 12), 1)); }
+  .ending-text p:nth-child(4) { --item-opacity: min(clamp(0, calc((var(--progress) - 0.56) * 12), 1), clamp(0, calc((0.75 - var(--progress)) * 12), 1)); }
+  .ending-text p:nth-child(5) { --item-opacity: min(clamp(0, calc((var(--progress) - 0.73) * 12), 1), clamp(0, calc((0.96 - var(--progress)) * 10), 1)); }
+
+  .prompts {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(1.5rem, 4vw, 5rem);
+    padding: clamp(3rem, 7vw, 7rem) clamp(1.25rem, 6vw, 6rem);
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  .prompts h2,
+  .prompts p {
+    color: var(--ink);
+  }
+
+  .prompts .kicker {
+    color: var(--red);
+  }
+
+  .prompts ol {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .prompts li {
+    padding: 1rem;
+    border: 1px solid rgba(22, 23, 25, 0.16);
+    background: rgba(255, 255, 255, 0.44);
+  }
+
+  .prompts b,
+  .prompts span {
+    display: block;
+  }
+
+  .prompts b {
+    margin-bottom: 0.55rem;
+    color: var(--red);
+  }
+
+  .prompts span {
+    color: #4b4540;
+    line-height: 1.55;
+  }
+
+  @keyframes bulb {
+    50% { opacity: 0.28; }
+  }
+
+  @media (max-width: 900px) {
+    .timeline-sticky,
+    .prompts {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-sticky {
+      position: relative;
+    }
+
+    .timeline-scene {
+      min-height: auto;
+    }
+
+    .beat-stack {
+      display: grid;
+      gap: 1rem;
+      min-height: auto;
+    }
+
+    .beat-card {
+      position: relative;
+      inset: auto;
+      opacity: 1;
+      transform: none;
+    }
+
+    .case-map {
+      min-height: 22rem;
+    }
+
+    .record {
+      width: min(18rem, 80vw);
+    }
+
+    .r1 { left: 5%; top: 12%; }
+    .r2 { right: 5%; top: 27%; }
+    .r3 { left: 7%; bottom: 24%; }
+    .r4 { right: 5%; bottom: 9%; }
+
+    .marsh-copy,
+    .court-copy {
+      left: 1.25rem;
+      right: 1.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .lights i {
+      animation: none;
+    }
+
+    .wheel,
+    .ticket,
+    .water,
+    .reeds,
+    .blanket,
+    .record,
+    .marker {
+      transform: none;
+    }
+  }
+</style>

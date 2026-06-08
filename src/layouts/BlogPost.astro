@@ -12,6 +12,7 @@ import { ClientRouter } from 'astro:transitions';
 const {
   title,
   description,
+  summary,
   pubDate,
   strapiSeries,
   cloudinaryThumb,
@@ -24,6 +25,7 @@ const {
   headings = [],
 } = Astro.props;
 
+const metaDescription = description || summary;
 const filteredHeadings = headings.filter((h: { depth: number }) => h.depth === 2 || h.depth === 3);
 
 // Generate breadcrumb items
@@ -50,7 +52,7 @@ const relatedPosts =
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" />
+		<BaseHead title={title} description={metaDescription} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" />
 		<ClientRouter />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
