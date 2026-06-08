@@ -9,6 +9,18 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "A few ways of specifying per-theme colours in only CSS",
+    url: "https://chrismorgan.info/css-themed-colours",
+    description: "They are: ① write it all out; ② use palette variables; ③ the space toggle hack; ④ color-mix(); ⑤ light-dark(); ⑥ if(); ⑦ paused @keyframes animation",
+    created: "2026-06-07",
+  },
+  {
+    title: "Callout UI with CSS Offset & Border",
+    url: "https://frontendmasters.com/blog/callout-ui-with-css-offset-border/",
+    description: "We look at designing callout UI elements using CSS, incorporating leader lines and text boxes. It details setting up the HTML structure, utilizing CSS properties like offset-path and borders.",
+    created: "2026-06-07",
+  },
+  {
     title: "How Claude Code’s lead designer builds with AI",
     url: "https://www.youtube.com/watch?v=hKeDfupbA4U",
     description: "During Dive Club Live in NYC we got to hear from Claude Code’s lead designer, Meaghan Choi. She shared a demo of how the team at Anthropic uses Claude Code a...",
@@ -27,10 +39,22 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-04",
   },
   {
+    title: "A harness for every task: dynamic workflows in Claude Code",
+    url: "https://x.com/trq212/status/2061907337154367865",
+    description: "Last week, we released dynamic workflows in Claude Code. Claude can now write its own harness on the fly, custom-built for the task at hand....",
+    created: "2026-06-03",
+  },
+  {
     title: "X posts as clean Markdown for LLMs",
     url: "https://tweet.md/?ref=producthunt",
     description: "Get any X post or thread as clean Markdown for LLMs, agents, and research. Swap x.com for tweet.md or use the API.",
     created: "2026-05-27",
+  },
+  {
+    title: "After Automation",
+    url: "https://every.to/p/after-automation?utm_source=www.gethalfbaked.com&utm_medium=newsletter&utm_campaign=half-baked-615-social-recruiting-aida-framework&_bhlid=8c31bdd039537dec0f63067c3a0693e285d5cc86",
+    description: "AI progress creates more work for humans, not less",
+    created: "2026-05-23",
   },
   {
     title: "Why I Left Product Management to Build More",
@@ -49,6 +73,12 @@ export const libraryLinks: LibraryLink[] = [
     url: "https://www.youtube.com/watch?v=8iZUyE7SlXo",
     description: "Here are 8 new Hermes Agent features that makes it SO much more powerful2nd Youtube Channel:  https://youtube.com/@AlexFinnLabsOfficialFULL Hermes Agent bootcamp in the Vibe Coding Academy coming u",
     created: "2026-05-19",
+  },
+  {
+    title: "AGENTMEMORY — PERSISTENT MEMORY FOR AI CODING AGENTS",
+    url: "https://www.agent-memory.dev/?utm_source=www.simplifyingcomplexity.tech&utm_medium=newsletter&utm_campaign=ai-weekly-recap-week-21&_bhlid=94c19a84599ec0c1a3df97689a46e167a3130d37",
+    description: "The memory layer your coding agent should have had from day one. 95.2% retrieval R@5. 92% fewer tokens. 0 external databases. Works with every agent.",
+    created: "2026-05-17",
   },
   {
     title: "When Sites Need to Walk Away",
