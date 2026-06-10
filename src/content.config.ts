@@ -35,6 +35,16 @@ const tinkerings = defineCollection({
   }),
 });
 
+const trueCrime = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/true-crime" }),
+  schema: z.object({
+    pubDate: z.coerce.date(),
+    summary: z.string(),
+    tags: z.array(z.string()).optional(),
+    title: z.string(),
+  }),
+});
+
 const reviews = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/reviews" }),
   schema: z.object({
@@ -117,4 +127,5 @@ export const collections = {
   reviews,
   songs,
   tinkerings,
+  "true-crime": trueCrime,
 };

@@ -1,15 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseHead from '../../../components/BaseHead.astro';
+import BaseHead from '../../../../components/BaseHead.astro';
 
 export const prerender = true;
 
-const article = (await getCollection('posts')).find((post) =>
-  post.id.replace(/\.(md|mdx)$/, '') === 'true-crime/true-crime-garage-episodes/carnival-of-lies'
+const article = (await getCollection('true-crime')).find((post) =>
+  post.id.replace(/\.(md|mdx)$/, '') === 'true-crime-garage-episodes/carnival-of-lies'
 );
 
 if (!article) {
-  throw new Error('Missing source article: src/content/posts/true-crime/true-crime-garage-episodes/carnival-of-lies.md');
+  throw new Error('Missing source article: src/content/true-crime/true-crime-garage-episodes/carnival-of-lies.md');
 }
 
 const { title, summary } = article.data;
@@ -106,7 +106,7 @@ const imagePrompts = [
           <p class="kicker">Sayreville, New Jersey / 1991</p>
           <h1>{title}</h1>
           <p>{summary}</p>
-          <a href="/posts/true-crime/true-crime-garage-episodes/carnival-of-lies/">Read the source Markdown article</a>
+          <a href="/true-crime/true-crime-garage-episodes/carnival-of-lies/article/">Read the source Markdown article</a>
         </article>
       </section>
 

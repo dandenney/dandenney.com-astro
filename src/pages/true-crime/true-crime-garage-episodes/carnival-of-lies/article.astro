@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import TrueCrimeArticle from '../../../../layouts/TrueCrimeArticle.astro';
+
+export const prerender = true;
+
+const article = (await getCollection('true-crime')).find((entry) =>
+  entry.id.replace(/\.(md|mdx)$/, '') === 'true-crime-garage-episodes/carnival-of-lies'
+);
+
+if (!article) {
+  throw new Error('Missing source article: src/content/true-crime/true-crime-garage-episodes/carnival-of-lies.md');
+}
+
+const { Content } = await render(article);
+---
+
+<TrueCrimeArticle {...article.data}>
+  <Content />
+</TrueCrimeArticle>
