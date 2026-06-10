@@ -12,6 +12,792 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Carnival of Lies /// 4 Part Series",
+      Release: "05/26/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/carnival-of-lies-4-part-series/carnival-of-lies-4-part-series",
+      Earliest_Date: "5/25/1991",
+      Earliest_Year: "1991",
+      Notes: "601 Washington Avenue, South Amboy, NJ 08879",
+    },
+    geometry: {
+      coordinates: [-74.293643, 40.477400],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Death Tracks ////// Episode: 929",
+      Release: "05/19/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/death-tracks-episode-929/death-tracks-episode-929",
+      Earliest_Date: "11/21/1977",
+      Earliest_Year: "1977",
+      Notes: "Vinita, Oklahoma",
+    },
+    geometry: {
+      coordinates: [-95.1540929, 36.6380452],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Murder at Barberitos ////// Episodes:927-928",
+      Release: "05/12/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/murder-at-barberitos-episodes-927-928/murder-at-barberitos-episodes-927-928",
+      Earliest_Date: "1/13/2018",
+      Earliest_Year: "2018",
+      Notes: "1005 Elberta Rd, Warner Robins, GA 31093",
+    },
+    geometry: {
+      coordinates: [-83.635555, 32.635565],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Drive-Thru Murder ////// Episode: 926",
+      Release: "05/07/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/drive-thru-murder-episode-926/drive-thru-murder-episode-926",
+      Earliest_Date: "12/29/1978",
+      Earliest_Year: "1978",
+      Notes: "Aardvark Drive-In, Columbus, Ohio",
+    },
+    geometry: {
+      coordinates: [-84.417407, 40.544244],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Paige Coffey ////// UPDATE",
+      Release: "05/07/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/paige-coffey-update/paige-coffey-update",
+      Earliest_Date: "5/1/2019",
+      Earliest_Year: "2019",
+      Notes:
+        "Steelyard Commons Shopping plaza 3447 Steelyard Dr, Cleveland, OH 44109",
+    },
+    geometry: {
+      coordinates: [-81.69066, 41.45989],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brian Shaffer ////// Episode: 925",
+      Release: "04/29/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/brian-shaffer-episode-925/brian-shaffer-episode-925",
+      Earliest_Date: "4/1/2006",
+      Earliest_Year: "2006",
+      Notes:
+        "1546 N High St, Columbus, OH 43201, Ugly Tuna Saloon near Ohio State University",
+    },
+    geometry: {
+      coordinates: [-83.00658, 39.9938],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Confessed Killer /// L.I.S.K /// Episode: 924",
+      Release: "04/28/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/confessed-killer-l-i-s-k-episode-924/confessed-killer-l-i-s-k-episode-924",
+      Earliest_Date: "6/25/1997",
+      Earliest_Year: "1997",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-73.64772, 40.67284],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Ashley Okland ////// 917",
+      Release: "03/30/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/ashley-okland-917/ashley-okland-917",
+      Earliest_Date: "9/5/1982",
+      Earliest_Year: "1982",
+      Notes: "Marcourt Ln & 42nd St West Des Moines, IA 50266",
+    },
+    geometry: {
+      coordinates: [-93.763554, 41.586045],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Missing Wix Girls /// Episode: 915-916 ",
+      Release: "03/24/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/missing-wix-girls-episode-915-916/missing-wix-girls-episode-915-916",
+      Earliest_Date: "3/25/2004",
+      Earliest_Year: "2004",
+      Notes: "Owens Chapel Road",
+    },
+    geometry: {
+      coordinates: [-86.7789665, 36.5202974],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Surrounded by Evil /// Episode 913-914",
+      Release: "03/17/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/surrounded-by-evil-episode-913-914/surrounded-by-evil-episode-913-914",
+      Earliest_Date: "5/29/2015",
+      Earliest_Year: "2015",
+      Notes: "EC's Auto Repair",
+    },
+    geometry: {
+      coordinates: [-98.3068616,32.8837624],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Friday the 13th Murders /// Episode: 912",
+      Release: "03/10/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/friday-the-13th-murders-episode-912/friday-the-13th-murders-episode-912",
+      Earliest_Date: "7/13/1990",
+      Earliest_Year: "1990",
+      Notes: "Groom, TX",
+    },
+    geometry: {
+      coordinates: [-101.1136249, 35.2041723],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Tipp City Murder /// Episodes: 910-911",
+      Release: "03/03/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/tipp-city-murder-episodes-910-911/tipp-city-murder-episodes-910-911",
+      Earliest_Date: "2/16/2026",
+      Earliest_Year: "2026",
+      Notes: "Tipp City, Ohio",
+      Notes: "932 Cunningham Court, Tipp City, OH 45371",
+    },
+    geometry: {
+      coordinates: [-84.189305, 39.976619],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Chicken Pot Killer ////// 909",
+      Release: "02/24/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/chicken-pot-killer-909/chicken-pot-killer-909",
+      Earliest_Date: "5/23/2016",
+      Earliest_Year: "2016",
+      Notes: "Ivel Court, on the Jackman’s Estate in Letchworth, Hertfordshire, England",
+    },
+    geometry: {
+      coordinates: [-0.2145381, 51.9711025],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brian Shaffer /// 20 Years Missing /// 6 Part Series ",
+      Release: "02/10/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/brian-shaffer-20-years-missing-6-part-series/brian-shaffer-20-years-missing-6-part-series",
+      Earliest_Date: "4/1/2006",
+      Earliest_Year: "2006",
+      Notes:
+        "1546 N High St, Columbus, OH 43201, Ugly Tuna Saloon near Ohio State University",
+    },
+    geometry: {
+      coordinates: [-83.00658, 39.9938],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Nancy Guthrie Missing ////// 902",
+      Release: "02/06/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/nancy-guthrie-missing-902/nancy-guthrie-missing-902",
+      Earliest_Date: "1/31/2026",
+      Earliest_Year: "2026",
+      Notes: "East Skyline Drive and North Campbell Avenue",
+    },
+    geometry: {
+      coordinates: [-110.9302268, 32.3208992],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brandon Swanson /// Missing /// 3 Part Series ",
+      Release: "02/05/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/brandon-swanson-missing-3-part-series/brandon-swanson-missing-3-part-series",
+      Earliest_Date: "5/14/2008",
+      Earliest_Year: "2008",
+      Notes:
+        "Car location according to https://thetruecrimefiles.com/brandon-swanson-disappearance/",
+    },
+    geometry: {
+      coordinates: [-96.093029, 44.624363],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "April Millsap ////// Episode: 901",
+      Release: "02/03/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/april-millsap-episode-901/april-millsap-episode-901",
+      Earliest_Date: "7/24/2014",
+      Earliest_Year: "2014",
+      Notes: "Macomb Orchard Trail, Clinton Township, MI 48038",
+    },
+    geometry: {
+      coordinates: [-83.0160895, 42.769041],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Tepe Murders ////// Episode: 900 ",
+      Release: "01/27/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/the-tepe-murders-episode-900/the-tepe-murders-episode-900",
+      Earliest_Date: "12/30/2025",
+      Earliest_Year: "2025",
+      Notes: "1400 block of North 4th Street, Columbus, Ohio",
+    },
+    geometry: {
+      coordinates: [-82.999240, 39.991720],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Aaron Spencer /// Episode: 899 ",
+      Release: "01/20/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/aaron-spencer-episode-899/aaron-spencer-episode-899",
+      Earliest_Date: "7/8/2024",
+      Earliest_Year: "2024",
+      Notes: "Lonoke County, Arkansas Highway 38",
+    },
+    geometry: {
+      coordinates: [-91.6218179, 34.9497548],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Lane Bryant Murders 2026 /// Episodes: 897-898",
+      Release: "01/14/2026",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/lane-bryant-murders-2026-episodes-897-898/lane-bryant-murders-2026-episodes-897-898",
+      Earliest_Date: "2/2/2008",
+      Earliest_Year: "2008",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-87.79375, 41.54748],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Brian Walshe ////// 894",
+      Release: "12/30/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/brian-walshe-894/brian-walshe-894",
+      Earliest_Date: "1/1/2023",
+      Earliest_Year: "2023",
+      Notes: "516 Chief Justice Cushing Highway (Route 3A), Cohasset, MA 02025",
+    },
+    geometry: {
+      coordinates: [-70.815392, 42.230802],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Missing Sodder Children /// Episodes: 892-893",
+      Release: "12/23/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/missing-sodder-children-episodes-892-893/missing-sodder-children-episodes-892-893",
+      Earliest_Date: "12/22/1945",
+      Earliest_Year: "1945",
+      Notes: "two-story house north of Fayetteville, West Virginia 2062 Beckwith Rd, Fayetteville, WV 25840.",
+    },
+    geometry: {
+      coordinates: [- 81.110481, 38.086540],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kada Scott ////// Episode: 891",
+      Release: "12/16/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/kada-scott-episode-891/kada-scott-episode-891",
+      Earliest_Date: "10/4/2025",
+      Earliest_Year: "2025",
+      Notes: "Terrace at Chestnut Hill Senior Living Facility, Philadelphia",
+    },
+    geometry: {
+      coordinates: [-75.1996737, 40.0773148],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Death and Questions /// Kevin Davis",
+      Release: "12/10/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/death-and-questions-kevin-davis/death-and-questions-kevin-davis",
+      Earliest_Date: "8/12/2023",
+      Earliest_Year: "2023",
+      Notes: "1728 Douglas Ln, New Haven IN 46774",
+    },
+    geometry: {
+      coordinates: [-85.003415, 41.062001],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kierra Coles /// Missing",
+      Release: "12/01/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/kierra-coles-missing/kierra-coles-missing",
+      Earliest_Date: "10/2/2018",
+      Earliest_Year: "2018",
+      Notes: "8100 block of South Vernon Avenue, Chicago, Illinois",
+    },
+    geometry: {
+      coordinates: [-87.6165527, 41.7472744],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Phantom Killer /// Episodes: 887-888",
+      Release: "11/26/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/the-phantom-killer-episodes-887-888/the-phantom-killer-episodes-887-888",
+      Earliest_Date: "2/22/1946",
+      Earliest_Year: "1946",
+      Notes: "S Robison Rd\nTexarkana, TX 75501",
+    },
+    geometry: {
+      coordinates: [-94.087978, 33.406838],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Ellen Greenberg ////// 886 ",
+      Release: "11/18/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/ellen-greenberg-886/ellen-greenberg-886",
+      Earliest_Date: "1/26/2011",
+      Earliest_Year: "2011",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-75.231715, 40.029307],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Robin Abrams /// Episodes: 884-885",
+      Release: "11/12/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/robin-abrams-episodes-884-885/robin-abrams-episodes-884-885",
+      Earliest_Date: "10/4/1997",
+      Earliest_Year: "1990",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-87.6486467, 41.3820672],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Dark Side of the Mountain /// Episodes: 882-883",
+      Release: "11/06/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/dark-side-of-the-mountain-episodes-882-883/dark-side-of-the-mountain-episodes-882-883",
+      Earliest_Date: "9/7/1987",
+      Earliest_Year: "1987",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-105.725114, 39.697010],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "A Killer Halloween /// Episodes: 880-881",
+      Release: "10/29/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/a-killer-halloween-episodes-880-881/a-killer-halloween-episodes-880-881",
+      Earliest_Date: "6/11/1978",
+      Earliest_Year: "1978",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-105.2561456, 39.4779524],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "John Wayne Gacy //////",
+      Release: "10/22/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/john-wayne-gacy/john-wayne-gacy",
+      Earliest_Date: "1/2/1972",
+      Earliest_Year: "1972",
+      Notes: "8213 W Summerdale Ave\nChicago, IL 60656",
+    },
+    geometry: {
+      coordinates: [-87.834503, 41.976381],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Shadow of the Bridge ////// Episodes: 878-879",
+      Release: "10/14/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/shadow-of-the-bridge-episodes-878-879/shadow-of-the-bridge-episodes-878-879",
+      Earliest_Date: "2/13/2017",
+      Earliest_Year: "2017",
+      Notes:
+        "Coordinates according to https://tools.wmflabs.org/geohack/geohack.php?pagename=Murders_of_Abigail_Williams_and_Liberty_German&params=40_35_20.7_N_86_38_34.2_W_type:landmark",
+    },
+    geometry: {
+      coordinates: [-86.642833, 40.589083],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Peaches /// Episode: 877",
+      Release: "10/08/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/peaches-episode-877/peaches-episode-877",
+      Earliest_Date: "6/25/1997",
+      Earliest_Year: "1997",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-73.64772, 40.67284],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Santa Rosa Murders ////// 4 Part Series",
+      Release: "09/23/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/santa-rosa-murders-4-part-series/santa-rosa-murders-4-part-series",
+      Earliest_Date: "2/4/1972",
+      Earliest_Year: "1972",
+      Notes: "Santa Rosa, California",
+    },
+    geometry: {
+      coordinates: [-122.734375, 38.460888],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Missing /// Tyler Davis",
+      Release: "09/02/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/missing-tyler-davis/missing-tyler-davis",
+      Earliest_Date: "2/24/2019",
+      Earliest_Year: "2019",
+      Notes: "Hilton hotel 3900 Chagrin Dr, Columbus, OH 43219",
+    },
+    geometry: {
+      coordinates: [-82.91237, 40.04952],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "The Yogurt Shop Murders /// Episodes: 866-867",
+      Release: "08/26/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/the-yogurt-shop-murders-episodes-866-867/the-yogurt-shop-murders-episodes-866-867",
+      Earliest_Date: "12/6/1991",
+      Earliest_Year: "1991",
+      Notes: "Hillside strip mall in the 2900 block of West Anderson Lane",
+    },
+    geometry: {
+      coordinates: [-97.73834, 30.359573],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Sydney Loofe //////",
+      Release: "08/20/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/sydney-loofe/sydney-loofe",
+      Earliest_Date: "11/15/2017",
+      Earliest_Year: "2017",
+      Notes: "621 West 7th Street in Wilber, Nebraska",
+    },
+    geometry: {
+      coordinates: [-96.967372, 40.477325],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Amy Bradley is Missing //////",
+      Release: "08/13/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/amy-bradley-is-missing/amy-bradley-is-missing",
+      Earliest_Date: "3/24/1998",
+      Earliest_Year: "1998",
+      Notes: "Curaçao cruise terminal",
+    },
+    geometry: {
+      coordinates: [-68.9445391, 12.1053184],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Jason Landry /// Missing Person",
+      Release: "08/05/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/jason-landry-missing-person/jason-landry-missing-person",
+      Earliest_Date: "12/13/2020",
+      Earliest_Year: "2020",
+      Notes: "2300 block of Salt Flat Road",
+    },
+    geometry: {
+      coordinates: [-97.6132644, 29.742316],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Heaven LaShae Ross ////// Episode: 859",
+      Release: "07/29/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/heaven-lashae-ross-episode-859/heaven-lashae-ross-episode-859",
+      Earliest_Date: "8/19/2003",
+      Earliest_Year: "2003",
+      Notes: "2823 Hunter Creek Rd, Northport, AL 35476",
+    },
+    geometry: {
+      coordinates: [-87.564681, 33.234474],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Kentucky Fried Chicken Murders /// Episodes: 857-858",
+      Release: "07/22/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/kentucky-fried-chicken-murders-episodes-857-858/kentucky-fried-chicken-murders-episodes-857-858",
+      Earliest_Date: "9/23/1983",
+      Earliest_Year: "1983",
+      Notes: "800 U.S. Highway 259, Kilgore, Texas",
+    },
+    geometry: {
+      coordinates: [-94.866801, 32.387934],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Park Bench Murders /// Episode: 856",
+      Release: "07/15/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/park-bench-murders-episode-856/park-bench-murders-episode-856",
+      Earliest_Date: "6/4/2019",
+      Earliest_Year: "2019",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-81.8863342, 41.4097578],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Stolen: The Angie Housman Story /// 3 Part Series ",
+      Release: "07/08/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/stolen-the-angie-housman-story-3-part-series/stolen-the-angie-housman-story-3-part-series",
+      Earliest_Date: "11/18/1993",
+      Earliest_Year: "1993",
+      Notes: "Wright Avenue and St. Gregory Lane in St. Ann, Missouri",
+    },
+    geometry: {
+      coordinates: [-90.3500755, 38.7273413],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Edna Thorne ////// 852",
+      Release: "06/24/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/edna-thorne-852/edna-thorne-852",
+      Earliest_Date: "6/24/1975",
+      Earliest_Year: "1975",
+      Notes: "I Street and Tioga Street in Philadelphia",
+    },
+    geometry: {
+      coordinates: [-75.1129114, 40.0008458],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Travis Decker /// Manhunt",
+      Release: "06/17/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/travis-decker-manhunt/travis-decker-manhunt",
+      Earliest_Date: "5/30/2025",
+      Earliest_Year: "2025",
+      Notes: "Rock Island Campground in Leavenworth, Washington, near Icicle Road",
+    },
+    geometry: {
+      coordinates: [-120.9190858, 47.6077344],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Devil in the Ozarks ////// 848",
+      Release: "06/08/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/devil-in-the-ozarks-848/devil-in-the-ozarks-848",
+      Earliest_Date: "2/23/2017",
+      Earliest_Year: "2017",
+      Notes: "Pin on Gann Ridge Road",
+    },
+    geometry: {
+      coordinates: [-94.0195618, 36.4817066],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Zachariah Juwaun Shorty ////// 847",
+      Release: "06/03/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/zachariah-juwaun-shorty-847/zachariah-juwaun-shorty-847",
+      Earliest_Date: "7/21/2020",
+      Earliest_Year: "2020",
+      Notes: "Journey Inn Motel in Farmington, New Mexico",
+    },
+    geometry: {
+      coordinates: [-108.2233816, 36.732759],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Unsolved Mystery of McCoy ////// 846",
+      Release: "05/27/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/unsolved-mystery-of-mccoy-846/unsolved-mystery-of-mccoy-846",
+      Earliest_Date: "6/18/2020",
+      Earliest_Year: "2020",
+      Notes: "Couldn't find a specific address for the McCoy family, so used a Wheaton pin",
+    },
+    geometry: {
+      coordinates: [-96.5003679, 45.7971807],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Killing was Purposeful /// 4 Part Series",
+      Release: "05/13/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/killing-was-purposeful-4-part-series/killing-was-purposeful-4-part-series",
+      Earliest_Date: "10/25/1985",
+      Earliest_Year: "1985",
+      Notes: "Near the 80/90 turnpike",
+    },
+    geometry: {
+      coordinates: [-83.8873689, 41.5999939],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Killing for Chaos /// Episodes: 839-840",
+      Release: "05/06/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/killing-for-chaos-episodes-839-840/killing-for-chaos-episodes-839-840",
+      Earliest_Date: "2/28/2025",
+      Earliest_Year: "2025",
+      Notes: "",
+    },
+    geometry: {
+      coordinates: [-88.2881029, 42.976195],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "BTK /// Bind, Torture, Kill /// 4 Part Series",
+      Release: "04/30/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/btk-bind-torture-kill-4-part-series/btk-bind-torture-kill-4-part-series",
+      Earliest_Date: "1/15/1974",
+      Earliest_Year: "1974",
+      Notes: "803 N Edgemoor StWichita, KS 67208\n",
+    },
+    geometry: {
+      coordinates: [-97.271687, 37.697602],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      Title: "Jimmy Townsend ////// Episode: 838",
+      Release: "04/22/2025",
+      URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/jimmy-townsend-episode-838/jimmy-townsend-episode-838",
+      Earliest_Date: "9/27/1985",
+      Earliest_Year: "1985",
+      Notes: "501 Mane Street, West Monroe, LA 71292",
+    },
+    geometry: {
+      coordinates: [-92.172738, 32.495662],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Hate American Made /// 6 Part Series ",
       Release: "04/01/2025",
       URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/hate-american-made-6-part-series/hate-american-made-6-part-series",

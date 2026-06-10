@@ -432,6 +432,12 @@ While many of the cases have multiple locations, most are focused on a general a
 ### Skipped Episodes
 
 These were skipped, because they cover a range of cases or podcast-specific info.
+- [The Best of True Crime Garage 2025 /// Episode: 896](https://truecrimegarage.com/blogs/true-crime-garage/posts/the-best-of-true-crime-garage-2025-episode-896/the-best-of-true-crime-garage-2025-episode-896)
+- [Best of True Crime 2025 ////// Episode: 895](https://truecrimegarage.com/blogs/true-crime-garage/posts/best-of-true-crime-2025-episode-895/best-of-true-crime-2025-episode-895)
+- [MindHunter /// Dr. Ann Burgess](https://truecrimegarage.com/blogs/true-crime-garage/posts/mindhunter-dr-ann-burgess/mindhunter-dr-ann-burgess)
+- [MindHunter /// 4 Part Series](https://truecrimegarage.com/blogs/true-crime-garage/posts/mindhunter-4-part-series/mindhunter-4-part-series)
+- [Amber Spradlin, Aliza Sherman, & Amy Hooper ////// Updates](https://truecrimegarage.com/blogs/true-crime-garage/posts/amber-spradlin-aliza-sherman-amy-hooper-updates/amber-spradlin-aliza-sherman-amy-hooper-updates)
+- [Missing Interviews True Crime Garage](https://truecrimegarage.com/blogs/true-crime-garage/posts/missing-interviews-true-crime-garage/missing-interviews-true-crime-garage)
 - [Best of True Crime Garage 2024 //////](https://truecrimegarage.com/blogs/true-crime-garage/posts/best-of-true-crime-garage-2024/best-of-true-crime-garage-2024)
 - [Blue Print for Murder //////](https://truecrimegarage.com/blogs/true-crime-garage/posts/blue-print-for-murder/blue-print-for-murder)
 - [True Crime /// Best of 2024](https://truecrimegarage.com/blogs/true-crime-garage/posts/true-crime-best-of-2024/true-crime-best-of-2024)
