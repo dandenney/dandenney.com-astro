@@ -8,7 +8,7 @@ import strip from "strip-markdown"
 import path from "path"
 
 // --------- Configurations ---------
-const GLOB = "../../src/content/posts/front-end-dev/*.{md,mdx}" // Where to find Markdown content
+const GLOB = "../../src/content/posts/**/*.{md,mdx}" // Where to find Markdown content
 const OUT = "../../src/assets/similarities.json" // Output file for results
 const TOP_N = 5 // Number of similar docs to keep
 const MODEL = "sentence-transformers/all-MiniLM-L6-v2" // Smaller, more efficient model

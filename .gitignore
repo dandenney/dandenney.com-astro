@@ -31,3 +31,6 @@ node_modules
 
 # Agent pipeline transient run artifacts
 docs/agent-content-pipeline/runs/
+
+# graphify knowledge graph (local, regenerate with /graphify .)
+graphify-out/
