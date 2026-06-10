@@ -1,0 +1,339 @@
+---
+import BaseHead from '../../../../components/BaseHead.astro';
+
+export const prerender = true;
+
+const episode = {
+  number: '934',
+  podcast: 'True Crime Garage',
+  title: '3 Billboards',
+  releaseDate: 'June 9, 2026',
+  hosts: 'Nic & The Captain',
+  caseTitle: 'The Murder of Kathy Page',
+  location: 'Vidor, Texas',
+  year: '1991',
+  status: 'No conviction',
+  notoriety: 'Basis for the Oscar-nominated film Three Billboards Outside Ebbing, Missouri',
+};
+
+const hostAvatars: Record<string, string> = {
+  Nick: '/true-crime-garage/nick.webp',
+  Captain: '/true-crime-garage/captain.webp',
+};
+
+const overview = `Nic and the Captain crack open cold brews and dive deep into the notorious unsolved murder of Kathy Page, whose 1991 death in Vidor, Texas, led her father to wage a relentless campaign for justice with highway billboards — ultimately inspiring an Oscar-nominated film. The hosts walk listeners through Kathy's life, the night of her death, the complex investigation, suspicions around her estranged husband Steve Page, alleged police mishandling, and the enduring shadow this case casts over Southeast Texas.`;
+
+const overviewNote = `The tone is casual, methodical, and skeptical — peppered with the hosts' signature banter as they pick apart every theory, timeline, and bit of evidence.`;
+
+const discussionPoints = [
+  {
+    number: '01',
+    timestamp: '03:54',
+    title: 'Kathy Page: Background and Marriage',
+    points: [
+      `Kathy "Lucille Catherine" Page, born 1957, was sociable, fun, and outgoing.`,
+      `She married Steve Page, an insurance salesman, in 1978; the couple had two daughters, Erin and Monica.`,
+      `The marriage was volatile, marked by multiple breakups and reconciliations.`,
+      `By May 1991, the couple had separated and were planning a "friendly divorce" — though the hosts question whether Steve truly accepted that.`,
+    ],
+    quote: {
+      text: `You can ask for a friendly divorce. Doesn't mean you're going to get one.`,
+      attribution: 'Nick',
+      timestamp: '11:17',
+    },
+  },
+  {
+    number: '02',
+    timestamp: '17:27',
+    title: 'The Days Leading Up to the Murder',
+    points: [
+      `May 11–12: Steve officially moves out. The family spends Mother's Day together — possibly their last peaceful day.`,
+      `May 13: Steve helps with the kids; both parents attend their daughters' softball games separately.`,
+      `That night, Kathy tells Steve she'll go out with friends and asks him to stay home with the children.`,
+      `Kathy secretly meets a man called "Tom" at a Beaumont hotel, asking her friend Charlotte Swearingen to cover for her if Steve calls.`,
+      `Last known alive: Kathy leaves the hotel around 2–2:30 a.m. on May 14.`,
+    ],
+    quote: {
+      text: `Charlotte knows what's going on. She knows that Kathy was meeting a particular man. This is the only time that Kathy had ever asked her to cover for her while she was meeting a man.`,
+      attribution: 'Nick',
+      timestamp: '19:09',
+    },
+  },
+  {
+    number: '03',
+    timestamp: '27:09',
+    title: 'Discovery of the Crime (May 14, 1991)',
+    points: [
+      `Around 5:00 a.m., a paperboy discovers Kathy's car in a ditch about 100 yards from her home, her body slumped inside.`,
+      `The early scene suggests a car accident, but investigators quickly suspect staging: the car is unusually clean, with only minor damage, and wasn't facing toward her home.`,
+      `Kathy's body showed signs of beating and strangulation; evidence later suggested her clothes were put on after death.`,
+      `There was no blood in the car, and her jewelry and socks — items Kathy was known to remove before bed — were missing.`,
+    ],
+    quote: {
+      text: `The car was described as half hidden and located only a short distance from Kathy's home... To the untrained eye would suggest vehicle accident. What would be learned... is she was murdered.`,
+      attribution: 'Nick',
+      timestamp: '27:09',
+    },
+  },
+  {
+    number: '04',
+    timestamp: '38:26',
+    title: 'Suspicion Falls on Steve Page',
+    points: [
+      `Steve, in his boxers, answers the door for Detective Mosley — a childhood acquaintance — and looks toward the crash scene before being told Kathy was dead.`,
+      `He displays dramatic emotion, but the officer notes "no tears" and that Steve refused to turn on the lights.`,
+      `Clothing on the living room floor is allegedly from a post-coital episode Steve described.`,
+      `His account of when he called Charlotte shifts between 2:30, 3:30, and 4:30 a.m.`,
+      `There are discrepancies about an early-morning load of laundry — possibly sheets and towels — and Steve's thorough carpet cleaning, which he attributes to a grease spill.`,
+    ],
+    quote: {
+      text: `When Steve stepped outside to talk with them, he looked toward the direction of the crime scene or the crash... before having been told what had happened.`,
+      attribution: 'Nick',
+      timestamp: '41:05',
+    },
+  },
+  {
+    number: '05',
+    timestamp: '58:49',
+    title: `Steve's Behavior and Public Fallout`,
+    points: [
+      `Steve initially refuses a police search and an autopsy, framing it as concern over planted evidence and not wanting Kathy "cut on."`,
+      `He quickly suggests Kathy was drinking and on drugs — toxicology would later refute this.`,
+      `He won't let police search the house: "They've planted stuff on my friends before."`,
+      `After the funeral, he's witnessed burning trash in the backyard and cleaning the carpet.`,
+      `Two grand juries decline to indict Steve; Kathy's family files a wrongful death suit.`,
+      `In 1993, Kathy's father, James Fulton, erects "Three Billboards" to shame police and Steve — eventually inspiring Three Billboards Outside Ebbing, Missouri.`,
+      `A civil court finds Steve financially liable for Kathy's death and awards her family $150,000.`,
+      `Steve is later caught desecrating Kathy's grave, is convicted, and moves to Houston. The Page daughters become estranged from the Fultons.`,
+    ],
+    quote: {
+      text: `He tells [Kathy's dad]: 'The police department's not coming in here because they've planted stuff on some of my friends before and that's not going to happen here.'`,
+      attribution: 'Nick',
+      timestamp: '60:34',
+    },
+  },
+  {
+    number: '06',
+    timestamp: '77:04',
+    title: 'Major Theories & Lingering Questions',
+    points: [
+      `Was this a poorly executed attempt by Steve to stage an accident after killing Kathy at home?`,
+      `Could the scene and timeline instead support an unknown assailant, or even a true accident?`,
+      `Why would Steve refuse an autopsy and a search if he were innocent?`,
+      `Was there police incompetence — or a cover-up tied to the Steve/Detective Mosley relationship? The hosts see no evidence of a cover-up, but criticize the lack of a swift, thorough search and evidence preservation.`,
+      `Forensics: the clothing, jewelry, and lack of damage to the car suggest Kathy made it home, got ready for bed, and was then attacked.`,
+      `The autopsy showed evidence of sex, but Steve had a vasectomy — and the man from the hotel was cleared as a suspect.`,
+    ],
+    quote: {
+      text: `Every bit of his movements seem unnatural to me... If it were an accident, those missing items should have been found with her, and we know it's not an accident.`,
+      attribution: 'Nick',
+      timestamp: '77:04',
+    },
+  },
+];
+
+const memorableQuotes = [
+  {
+    text: `You can ask for a friendly divorce. Doesn't mean you're going to get one.`,
+    attribution: 'Nick',
+    timestamp: '11:17',
+  },
+  {
+    text: `These billboards about his daughter's murder serve as the inspiration for the Oscar-nominated film Three Billboards.`,
+    attribution: 'Nick',
+    timestamp: '72:02',
+  },
+  {
+    text: `The fact that this case, multiple sources kind of imply that there might be a cover up, which is strange to me because Steve makes multiple comments of he's afraid the cops are going to frame him.`,
+    attribution: 'Captain',
+    timestamp: '79:42',
+  },
+];
+
+const quotesByHost = memorableQuotes.reduce<Record<string, typeof memorableQuotes>>((acc, quote) => {
+  acc[quote.attribution] = [...(acc[quote.attribution] ?? []), quote];
+  return acc;
+}, {});
+
+const timestamps = [
+  { time: '03:54', label: `Start of Kathy's story and background` },
+  { time: '11:10', label: 'The state of the marriage and the wind-up to separation' },
+  { time: '17:27', label: 'Parallel accounts and the night of the killing' },
+  { time: '27:09', end: '29:33', label: 'Discovery of the scene and forensic details' },
+  { time: '38:26', label: `Police visit the Page home and Steve's behavior` },
+  { time: '50:20', end: '53:17', label: `Family suspicions and timeline disputes` },
+  { time: '58:49', label: `Steve's refusal of an autopsy and police search` },
+  { time: '71:36', label: 'The billboards campaign and civil case consequences' },
+  { time: '77:04', label: 'Final assessments: what sticks out as suspicious' },
+];
+
+const conclusion = `While Nic and the Captain stop short of outright declaring Steve Page the killer, they express deep suspicions about his behavior, decisions, and the convenient explanations offered after Kathy's death. The episode frames Three Billboards as both a literal real-world campaign for justice and a symbol of the frustration around cases where the full truth is obstructed by controversy, incomplete investigation, and family feuds.`;
+
+const tip = {
+  prompt: 'If you have information:',
+  detail: 'Crime Stoppers — 409-833-TIPS',
+};
+
+const furtherListening = `For further discussion, check out the hosts' recommended "Off the Record" episode with Agent Barry Black.`;
+---
+
+<!doctype html>
+<html lang="en" class="scheme-only-dark">
+  <head>
+    <BaseHead
+      title={`${episode.title} | Episode ${episode.number} Summary`}
+      description={overview}
+      type="blogpost"
+    />
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 antialiased">
+    <main class="isolate">
+      <div class="border-b border-white/10">
+        <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 lg:px-8">
+          <span class="text-sm font-semibold text-zinc-400">{episode.podcast}</span>
+          <span class="text-sm font-semibold tabular-nums text-red-500">Episode {episode.number}</span>
+        </div>
+      </div>
+
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-radial-[at_20%_10%] from-red-600/20 via-transparent to-transparent"></div>
+        <div class="mx-auto max-w-3xl px-6 py-16 sm:py-24 lg:px-8">
+          <h1 class="text-balance text-5xl font-semibold tracking-tight sm:text-7xl">{episode.title}</h1>
+          <p class="mt-4 text-pretty text-xl text-zinc-400 sm:text-2xl">
+            {episode.caseTitle} · {episode.location} · {episode.year}
+          </p>
+          <p class="mt-6 inline-block rounded-md border border-white/10 bg-zinc-900 px-3 py-2 text-sm text-pretty text-zinc-300 inset-ring inset-ring-white/5 sm:text-base">
+            {episode.notoriety}
+          </p>
+
+          <dl class="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-4">
+            <div>
+              <dt class="text-sm font-semibold text-red-500">Hosts</dt>
+              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.hosts}</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold text-red-500">Released</dt>
+              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.releaseDate}</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold text-red-500">Case</dt>
+              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.caseTitle}</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold text-red-500">Status</dt>
+              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.status}</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10">
+        <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+          <p class="text-sm font-semibold text-red-500">Episode overview</p>
+          <p class="mt-4 text-pretty text-lg text-zinc-300 sm:text-xl">{overview}</p>
+          <p class="mt-4 text-pretty text-base text-zinc-400 sm:text-lg">{overviewNote}</p>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 bg-zinc-900/40">
+        <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+          <p class="text-sm font-semibold text-red-500">Key discussion points</p>
+          <h2 class="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">A timeline of the case</h2>
+
+          <ol role="list" class="mt-10 space-y-8">
+            {discussionPoints.map((point) => (
+              <li class="rounded-lg border border-white/10 bg-zinc-900 p-6 inset-ring inset-ring-white/5 sm:p-8">
+                <div class="flex items-center gap-4">
+                  <div class="text-3xl font-semibold tracking-tight tabular-nums text-red-500">{point.number}</div>
+                  <div class="rounded-full border border-white/10 px-2.5 py-0.5 text-xs font-semibold tabular-nums text-zinc-400">
+                    {point.timestamp}
+                  </div>
+                </div>
+                <h3 class="mt-4 text-balance text-xl font-semibold tracking-tight sm:text-2xl">{point.title}</h3>
+                <ul role="list" class="mt-4 space-y-2">
+                  {point.points.map((p) => (
+                    <li class="flex gap-x-3 text-base text-pretty text-zinc-400">
+                      <span class="mt-2.5 size-1.5 flex-none rounded-full bg-red-500/60"></span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+                {point.quote && (
+                  <figure class="mt-6 border-l-2 border-red-500/40 pl-5 sm:pl-6">
+                    <blockquote>
+                      <p class="text-pretty text-xl font-medium text-zinc-100 sm:text-2xl"><span aria-hidden="true" class="text-red-500/50">&ldquo;</span>{point.quote.text}<span aria-hidden="true" class="text-red-500/50">&rdquo;</span></p>
+                    </blockquote>
+                    <figcaption class="mt-3 flex items-center gap-2.5">
+                      <img src={hostAvatars[point.quote.attribution]} alt="" class="size-8 flex-none rounded-full object-cover outline-1 -outline-offset-1 outline-white/10" />
+                      <div class="text-sm text-zinc-400">
+                        <span class="font-semibold text-zinc-300">{point.quote.attribution}</span> · {point.quote.timestamp}
+                      </div>
+                    </figcaption>
+                  </figure>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10">
+        <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+          <p class="text-sm font-semibold text-red-500">Memorable quotes</p>
+          <h2 class="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">Moments worth replaying</h2>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-2">
+            {Object.entries(quotesByHost).map(([host, quotes]) => (
+              <figure class="flex flex-col rounded-lg border border-white/10 bg-zinc-900 p-6 inset-ring inset-ring-white/5 sm:p-8">
+                <figcaption class="flex items-center gap-3">
+                  <img src={hostAvatars[host]} alt="" class="size-12 flex-none rounded-full object-cover outline-1 -outline-offset-1 outline-white/10" />
+                  <div class="text-base font-semibold text-zinc-100 sm:text-lg">{host}</div>
+                </figcaption>
+                <div class="mt-6 space-y-6 border-t border-white/10 pt-6">
+                  {quotes.map((q) => (
+                    <blockquote>
+                      <p class="text-pretty text-lg text-zinc-100"><span aria-hidden="true" class="text-zinc-600">&ldquo;</span>{q.text}<span aria-hidden="true" class="text-zinc-600">&rdquo;</span></p>
+                      <footer class="mt-2 text-sm text-zinc-500">{q.timestamp}</footer>
+                    </blockquote>
+                  ))}
+                </div>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 bg-zinc-900/40">
+        <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+          <p class="text-sm font-semibold text-red-500">Jump to the moment</p>
+          <h2 class="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">Important timestamps</h2>
+
+          <ul role="list" class="mt-8 divide-y divide-white/10 border-y border-white/10">
+            {timestamps.map((t) => (
+              <li class="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:gap-4">
+                <div class="flex-none text-base font-semibold tabular-nums text-red-400 sm:w-28 sm:text-lg">
+                  {t.time}{t.end ? `–${t.end}` : ''}
+                </div>
+                <div class="text-base text-pretty text-zinc-300 sm:text-lg">{t.label}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10">
+        <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+          <p class="text-sm font-semibold text-red-500">Conclusion</p>
+          <p class="mt-4 text-pretty text-lg text-zinc-300 sm:text-xl">{conclusion}</p>
+
+          <div class="mt-10 rounded-lg border border-red-500/30 bg-red-500/5 p-6">
+            <p class="text-base font-semibold text-zinc-100 sm:text-lg">{tip.prompt}</p>
+            <p class="mt-1 text-base tabular-nums text-red-400 sm:text-lg">{tip.detail}</p>
+          </div>
+
+          <p class="mt-8 text-pretty text-base text-zinc-500 sm:text-lg">{furtherListening}</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
