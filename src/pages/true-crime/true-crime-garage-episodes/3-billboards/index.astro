@@ -206,22 +206,20 @@ const furtherListening = `For further discussion, check out the hosts' recommend
             {episode.notoriety}
           </p>
 
-          <dl class="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-8 sm:grid-cols-4">
-            <div>
-              <dt class="text-sm font-semibold text-red-500">Hosts</dt>
-              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.hosts}</dd>
+          <dl class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3 sm:text-base">
+            <div class="flex items-baseline gap-x-2">
+              <dt class="font-semibold text-red-500">Hosts</dt>
+              <dd class="text-zinc-300">{episode.hosts}</dd>
             </div>
-            <div>
-              <dt class="text-sm font-semibold text-red-500">Released</dt>
-              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.releaseDate}</dd>
+            <span aria-hidden="true" class="hidden text-white/20 sm:inline">&middot;</span>
+            <div class="flex items-baseline gap-x-2">
+              <dt class="font-semibold text-red-500">Released</dt>
+              <dd class="text-zinc-300">{episode.releaseDate}</dd>
             </div>
-            <div>
-              <dt class="text-sm font-semibold text-red-500">Case</dt>
-              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.caseTitle}</dd>
-            </div>
-            <div>
-              <dt class="text-sm font-semibold text-red-500">Status</dt>
-              <dd class="mt-1 text-base text-zinc-200 sm:text-lg">{episode.status}</dd>
+            <span aria-hidden="true" class="hidden text-white/20 sm:inline">&middot;</span>
+            <div class="flex items-baseline gap-x-2">
+              <dt class="font-semibold text-red-500">Status</dt>
+              <dd class="text-zinc-300">{episode.status}</dd>
             </div>
           </dl>
         </div>

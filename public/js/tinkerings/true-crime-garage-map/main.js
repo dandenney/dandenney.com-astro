@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "3 Billboards ////// 934",
+      Release: "06/11/2026",
+      URL: "https://truecrimegarage.com/home/blog/7783524/3-billboards-934",
+      Earliest_Date: "5/13/1991",
+      Earliest_Year: "1991",
+      Notes: "I-10 service road and West Bolivar Street",
+    },
+    geometry: {
+      coordinates: [-94.0260829,30.1260496],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Carnival of Lies /// 4 Part Series",
       Release: "05/26/2026",
       URL: "https://truecrimegarage.com/blogs/true-crime-garage/posts/carnival-of-lies-4-part-series/carnival-of-lies-4-part-series",
