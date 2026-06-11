@@ -3245,4 +3245,19 @@ export const rithhmmPicks: RithhmmPick[] = [
     betAmount: 60,
     returnAmount: 105.11,
   },
+  // 2026-06-10
+  {
+    id: 225,
+    date: "2026-06-10",
+    sport: "MLB",
+    pick: "Max Scherzer Over 13.5 Total Outs",
+    odds: "-143",
+    confidence: 63.1,
+    modelProjection: "13.5 Total Outs",
+    dtm: 10.4,
+    recentForm: "2/5",
+    matchup: "vs Phillies",
+    propType: "combo-over",
+    result: "loss",
+  },
 ];
