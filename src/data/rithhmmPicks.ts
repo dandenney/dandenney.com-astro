@@ -3260,4 +3260,22 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "combo-over",
     result: "loss",
   },
+  // 2026-06-11
+  {
+    id: 226,
+    date: "2026-06-11",
+    sport: "WNBA",
+    pick: "Kahleah Copper Under 1.5 3-Pointers",
+    odds: "-118",
+    confidence: 63.7,
+    modelProjection: "0.66 3-Pointers",
+    dtm: 24.4,
+    recentForm: "6/10",
+    matchup: "@ Wings",
+    propType: "combo-under",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
+  },
 ];
