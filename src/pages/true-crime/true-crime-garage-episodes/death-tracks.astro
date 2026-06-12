@@ -1,1215 +1,969 @@
 ---
-import BaseHead from '../../../components/BaseHead.astro';
-
 export const prerender = true;
-
-const asset = '/generated-images/death-tracks';
-const imagePrompts = [
-  {
-    file: 'last-ride.webp',
-    prompt:
-      'Abandoned 1970s child bicycle near railroad tracks outside Vinita, Oklahoma at dusk; rural crossing lights in the distance; deep navy shadows, dusty amber sky, steel gray rails, muted green grass; respectful HBO-style documentary still; no people, gore, blood, horror, police tape, readable text, or watermark.'
-  },
-  {
-    file: 'vinita-map.webp',
-    prompt:
-      'Vintage 1970s investigative desk map of Vinita, Oklahoma and railroad routes; faded beige paper, pins, pencil route marks, steel gray rail lines, muted forest green land patches; premium long-form journalism flat lay; no readable labels or watermark.'
-  },
-  {
-    file: 'tracks-panorama.webp',
-    prompt:
-      'Ultra-wide empty Oklahoma railroad tracks with restrained evidence motifs: coins, neutral markers, torn unreadable newspaper fragments; deep navy evening sky and dusty amber horizon; no body, violence, gore, blood, or watermark.'
-  },
-  {
-    file: 'evidence-board.webp',
-    prompt:
-      'Dim archive-room evidence board for a decades-old 1977 unsolved case; redacted reports, newspaper clippings, index cards, string connections, portrait-placeholder silhouettes; respectful documentary style; no readable names, gore, blood, or watermark.'
-  },
-  {
-    file: 'regional-map.webp',
-    prompt:
-      '1970s regional investigative map connecting Oklahoma and Arizona with railroad lines and case-location pins across a desk; aged paper, dusty amber annotations, deep navy shadows; no readable labels, gore, blood, or watermark.'
-  },
-  {
-    file: 'courtroom.webp',
-    prompt:
-      'Empty 1970s courtroom with stacked legal documents and witness chair; dark wood, dusty amber window light, deep navy shadows; uncertainty and conflicting testimony; no people, readable names, gore, blood, or watermark.'
-  },
-  {
-    file: 'sunrise-tracks.webp',
-    prompt:
-      'Railroad tracks stretching toward the horizon at sunrise in rural Oklahoma, small wildflowers along the rails; reflective and elegiac documentary ending frame; no people, crime scene imagery, text, or watermark.'
-  }
-];
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <BaseHead
-      title="Death Tracks | Interactive Documentary"
-      description="A cinematic scrollytelling experience about the unsolved 1977 murder of Michael James Martinez in Vinita, Oklahoma."
-      image={`${asset}/last-ride.webp`}
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <main class="story-shell" data-story>
-      <section class="scene hero-scene" data-scene>
-        <div class="hero-media" aria-hidden="true">
-          <img src={`${asset}/last-ride.webp`} alt="" fetchpriority="high" />
-          <div class="cloud cloud-a"></div>
-          <div class="cloud cloud-b"></div>
-          <div class="grass"></div>
-          <div class="crossing-light light-a"></div>
-          <div class="crossing-light light-b"></div>
-        </div>
-        <div class="hero-copy">
-          <p class="kicker">Vinita, Oklahoma · 1977</p>
-          <h1>Death Tracks</h1>
-          <p>A seven-year-old boy rode his new bicycle into the Oklahoma night and never returned home.</p>
-        </div>
-      </section>
-
-      <section class="scene map-scene" data-scene>
-        <div class="sticky-grid">
-          <figure class="map-stage">
-            <img src={`${asset}/vinita-map.webp`} alt="Archival-style map background of Vinita, Oklahoma and nearby railroad lines." loading="lazy" />
-            <svg class="route-layer" viewBox="0 0 1000 700" aria-hidden="true">
-              <path class="route-base" d="M190 515 C280 460 310 390 405 365 C520 332 610 315 690 240 C755 180 815 155 890 120" />
-              <path class="route-live" d="M190 515 C280 460 310 390 405 365 C520 332 610 315 690 240 C755 180 815 155 890 120" />
-            </svg>
-            <span class="map-pin home" style="--x:19%; --y:73%">Michael's home</span>
-            <span class="map-pin sister" style="--x:39%; --y:52%">Sister's house</span>
-            <span class="map-pin store" style="--x:66%; --y:36%">Convenience store</span>
-            <span class="map-pin tracks" style="--x:86%; --y:18%">Railroad tracks</span>
-          </figure>
-          <article class="narrative-panel">
-            <p class="section-label">A small town night</p>
-            <h2>A new bicycle turned an ordinary errand into freedom.</h2>
-            <p>On November 21, 1977, Michael Martinez was staying with his brother at his sister Brenda's house when he rode out toward a convenience store. He was seven, a first-grader, and the new bike mattered.</p>
-            <blockquote>"Bicycle represents freedom, my friends."</blockquote>
-          </article>
-        </div>
-      </section>
-
-      <section class="scene rail-scene" data-scene>
-        <div class="rail-sticky">
-          <div class="rail-track">
-            <img src={`${asset}/tracks-panorama.webp`} alt="Empty railroad tracks stretching across rural Oklahoma." loading="lazy" />
-            <article class="track-card t1">
-              <span>01</span>
-              <h3>New bicycle</h3>
-              <p>Michael had just received the kind of gift that changes a child's radius: a bike, and a dollar to spend.</p>
-            </article>
-            <article class="track-card t2">
-              <span>02</span>
-              <h3>Last known route</h3>
-              <p>Between 9 and 9:30 p.m., he was last seen heading toward the store.</p>
-            </article>
-            <article class="track-card t3">
-              <span>03</span>
-              <h3>Evidence</h3>
-              <p>Investigators noted paint-soaked bags, a spray paint can, a blood-stained soda bottle, coins, and a missing bicycle.</p>
-            </article>
-            <article class="track-card t4">
-              <span>04</span>
-              <h3>Discovery</h3>
-              <p>At 12:58 a.m. on November 22, a train crew found a small body on the tracks.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="scene board-scene" data-scene>
-        <div class="board-bg">
-          <img src={`${asset}/evidence-board.webp`} alt="Archive-style evidence board with documents, clippings, and string connections." loading="lazy" />
-        </div>
-        <div class="board-doc doc-a">
-          <b>Case file</b>
-          <span>Nov. 21-22, 1977</span>
-        </div>
-        <div class="board-doc doc-b">
-          <b>Gerald Ray White</b>
-          <span>arrested, then ruled out</span>
-        </div>
-        <div class="board-doc doc-c">
-          <b>Gary Whistler</b>
-          <span>confession later disputed</span>
-        </div>
-        <div class="board-doc doc-d">
-          <b>Roy Robinson</b>
-          <span>timeline contested</span>
-        </div>
-        <svg class="string-layer" viewBox="0 0 1000 700" aria-hidden="true">
-          <path d="M250 235 L510 320 L735 210" />
-          <path d="M510 320 L395 510 L710 500" />
-        </svg>
-        <article class="floating-copy">
-          <p class="section-label">The investigation</p>
-          <h2>The first answers did not hold.</h2>
-          <p>Local police, Craig County investigators, and OSBI agents moved quickly. Early theories ranged from accident to hate crime to random violence. A transient suspect was arrested near the tracks, failed repeated polygraphs, and was eventually cleared as a "guilt complex reactor."</p>
-        </article>
-      </section>
-
-      <section class="scene region-scene" data-scene>
-        <div class="sticky-grid reverse">
-          <article class="narrative-panel">
-            <p class="section-label">The pattern</p>
-            <h2>The story widens beyond Oklahoma.</h2>
-            <p>Detectives saw echoes of a 1976 Arizona case involving three Gila Indian boys near Phoenix. They were young Native American victims, killed before being placed on railroad tracks. The similarities did not solve Michael's case, but they changed the scale of the question.</p>
-            <blockquote>Connection is not proof. But the geography is hard to ignore.</blockquote>
-          </article>
-          <figure class="regional-map">
-            <img src={`${asset}/regional-map.webp`} alt="Archival regional investigative map connecting Oklahoma and Arizona by railroad lines." loading="lazy" />
-            <svg viewBox="0 0 1000 640" aria-hidden="true">
-              <path class="regional-line one" d="M290 150 C410 225 545 290 685 430" />
-              <path class="regional-line two" d="M330 190 C470 250 560 330 735 495" />
-            </svg>
-            <span class="region-pin ok">Oklahoma</span>
-            <span class="region-pin az">Arizona</span>
-          </figure>
-        </div>
-      </section>
-
-      <section class="scene court-scene" data-scene>
-        <img src={`${asset}/courtroom.webp`} alt="Empty 1970s courtroom with legal documents and a witness chair." loading="lazy" />
-        <div class="testimony testimony-a">a confession</div>
-        <div class="testimony testimony-b">a psychiatric report</div>
-        <div class="testimony testimony-c">a recantation</div>
-        <div class="testimony testimony-d">a question of reliability</div>
-        <article class="court-copy">
-          <p class="section-label">The confession</p>
-          <h2>The record appears to clarify, then clouds over.</h2>
-          <p>Four months later, Gary Whistler was arrested during a domestic dispute and signed a confession. The statement was hazy and disjointed. He described intoxication, hallucination, fear, a knife, and fragments of memory. The more the confession was examined, the less settled it became.</p>
-        </article>
-      </section>
-
-      <section class="scene trial-scene" data-scene>
-        <div class="trial-stack" aria-hidden="true">
-          <div class="trial-paper p1">Arrest</div>
-          <div class="trial-paper p2">Confession</div>
-          <div class="trial-paper p3">Hung jury</div>
-          <div class="trial-paper p4">Acquittal</div>
-        </div>
-        <article class="trial-copy">
-          <p class="section-label">The trials</p>
-          <h2>The legal record moves, but accountability does not arrive.</h2>
-          <p>The first trial in October 1978 ended with a hung jury. The second, in March 1979, ended with Whistler's acquittal. Conflicting psychiatric testimony, thin physical evidence, disputed timing, and witness memories shaped the defense.</p>
-        </article>
-      </section>
-
-      <section class="scene question-scene" data-scene>
-        <div class="question-stack">
-          <p>Michael was seven years old.</p>
-          <p>He was Native American.</p>
-          <p>He lived in Vinita, Oklahoma.</p>
-          <p>He rode a new bicycle toward a store.</p>
-          <p>No one has been held accountable.</p>
-        </div>
-      </section>
-
-      <section class="scene legacy-scene" data-scene>
-        <img src={`${asset}/sunrise-tracks.webp`} alt="Railroad tracks stretching toward sunrise with wildflowers along the rails." loading="lazy" />
-        <article class="legacy-copy">
-          <p class="section-label">Legacy</p>
-          <h2>Nearly fifty years later, no one has been held accountable for Michael Martinez's murder.</h2>
-          <p>His funeral drew neighbors together, but grief was followed by rumor, suspicion, and decades without an answer. The tracks return at sunrise, not as a spectacle, but as a place where memory keeps moving forward.</p>
-        </article>
-      </section>
-
-      <section class="image-prompts" aria-labelledby="prompt-heading">
-        <h2 id="prompt-heading">Image Prompts</h2>
-        <p>Generated with the built-in image tool, then converted to WebP for production use.</p>
-        <ol>
-          {imagePrompts.map(({ file, prompt }) => (
-            <li>
-              <b>{file}</b>
-              <span>{prompt}</span>
-            </li>
-          ))}
-        </ol>
-      </section>
-    </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer is:inline></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer is:inline></script>
-    <script is:inline>
-      const initDeathTracksScroll = () => {
-        if (document.documentElement.dataset.deathTracksScrollReady === 'true') return;
-        document.documentElement.dataset.deathTracksScrollReady = 'true';
-
-        const scenes = Array.from(document.querySelectorAll('[data-scene]'));
-        const mapScene = document.querySelector('.map-scene');
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-        const io = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => entry.target.classList.toggle('is-visible', entry.isIntersecting));
-          },
-          { threshold: 0.18 }
-        );
-
-        scenes.forEach((scene) => io.observe(scene));
-
-        if (reduceMotion.matches || !window.gsap || !window.ScrollTrigger) {
-          scenes.forEach((scene) => scene.style.setProperty('--progress', '1'));
-          mapScene?.style.setProperty('--route-progress', '1');
-          return;
-        }
-
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.defaults({ ease: 'none' });
-
-        scenes.forEach((scene) => {
-          const isHero = scene.classList.contains('hero-scene');
-
-          ScrollTrigger.create({
-            trigger: scene,
-            start: isHero ? 'top top' : 'top bottom',
-            end: 'bottom top',
-            scrub: 0.45,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => scene.style.setProperty('--progress', self.progress.toFixed(4)),
-            onRefresh: (self) => scene.style.setProperty('--progress', self.progress.toFixed(4))
-          });
-        });
-
-        if (mapScene) {
-          mapScene.style.setProperty('--route-progress', '0');
-
-          ScrollTrigger.create({
-            trigger: mapScene,
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: 0.35,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => mapScene.style.setProperty('--route-progress', self.progress.toFixed(4)),
-            onRefresh: (self) => mapScene.style.setProperty('--route-progress', self.progress.toFixed(4))
-          });
-        }
-
-        gsap.utils.toArray('.narrative-panel, .floating-copy, .court-copy, .trial-copy, .legacy-copy').forEach((panel) => {
-          gsap.fromTo(
-            panel,
-            { autoAlpha: 0, y: 28 },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.72,
-              ease: 'power3.out',
-              scrollTrigger: {
-                trigger: panel,
-                start: 'top 76%',
-                toggleActions: 'play none none reverse'
-              }
-            }
-          );
-        });
-
-        ScrollTrigger.refresh();
-      };
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initDeathTracksScroll, { once: true });
-      } else {
-        initDeathTracksScroll();
-      }
-
-      document.addEventListener('astro:page-load', initDeathTracksScroll);
-    </script>
-  </body>
-</html>
-
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Boy on the Tracks — Vinita, Oklahoma, 1977</title>
+<meta name="description" content="Michael James Martinez was seven years old when he was murdered in Vinita, Oklahoma, in November 1977. Nearly half a century later, no one has answered for his death. Based on True Crime Garage, Episode 929.">
+<meta property="og:title" content="The Boy on the Tracks">
+<meta property="og:description" content="The unsolved 1977 murder of Michael James Martinez. Vinita, Oklahoma.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/generated-images/death-tracks/hero-tracks.jpg">
+<meta name="theme-color" content="#0e0d0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0d0b'/%3E%3Cpath d='M11 4v24M21 4v24' stroke='%23f6f3ed' stroke-width='2'/%3E%3Cpath d='M8 9h16M8 16h16M8 23h16' stroke='%23f6f3ed' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Boy on the Tracks",
+  "alternativeHeadline": "The unsolved 1977 murder of Michael James Martinez",
+  "datePublished": "2026-06-11",
+  "isBasedOn": {
+    "@type": "PodcastEpisode",
+    "name": "Episode 929: Death Tracks",
+    "datePublished": "2026-05-20",
+    "partOfSeries": { "@type": "PodcastSeries", "name": "True Crime Garage", "url": "https://truecrimegarage.com" }
+  }
+}
+</script>
 <style>
-  :root {
-    --paper: #d8c8a5;
-    --paper-deep: #aa9267;
-    --steel: #7e8585;
-    --amber: #bf7d36;
-    --navy: #07111e;
-    --navy-soft: #111c2b;
-    --green: #4f6447;
-    --ink: #f3ead7;
-    --muted: #c4b798;
-    --serif: 'Libre Baskerville', Georgia, serif;
-    --sans: 'Source Sans 3', Montserrat, system-ui, sans-serif;
-  }
-
-  * { box-sizing: border-box; }
-
-  html {
-    background: var(--navy);
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    background: var(--navy);
-    color: var(--ink);
-    font-family: var(--sans);
-    overflow-x: clip;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  .story-shell {
-    background:
-      radial-gradient(circle at 20% 0%, rgba(191, 125, 54, 0.2), transparent 34rem),
-      linear-gradient(180deg, #050a12, var(--navy) 32%, #090f17 100%);
-  }
-
-  .scene {
-    --progress: 0;
-    position: relative;
-    min-height: 140svh;
-    isolation: isolate;
-  }
-
-  .hero-scene {
-    min-height: 180svh;
-  }
-
-  .hero-media {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    overflow: hidden;
-    background: #03070c;
-  }
-
-  .hero-media img,
-  .legacy-scene > img,
-  .court-scene > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .hero-media img {
-    opacity: calc(0.3 + (var(--progress) * 0.78));
-    transform: scale(calc(1.13 - (var(--progress) * 0.08)));
-    filter: saturate(0.78) contrast(1.08);
-  }
-
-  .hero-media::after,
-  .legacy-scene::after,
-  .court-scene::after,
-  .board-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(90deg, rgba(3, 7, 12, 0.86), rgba(3, 7, 12, 0.24) 52%, rgba(3, 7, 12, 0.74)),
-      linear-gradient(180deg, rgba(3, 7, 12, 0.1), rgba(3, 7, 12, 0.86));
-    pointer-events: none;
-  }
-
-  .cloud {
-    position: absolute;
-    top: 10%;
-    width: 34rem;
-    height: 8rem;
-    border-radius: 50%;
-    background: rgba(216, 200, 165, 0.08);
-    filter: blur(18px);
-    transform: translateX(calc(var(--progress) * 8vw));
-  }
-
-  .cloud-a { left: 12%; }
-  .cloud-b { right: 5%; top: 21%; transform: translateX(calc(var(--progress) * -10vw)); }
-
-  .grass {
-    position: absolute;
-    inset: auto 0 0;
-    height: 21vh;
-    background: linear-gradient(90deg, rgba(79, 100, 71, 0.15), rgba(191, 125, 54, 0.16), rgba(79, 100, 71, 0.12));
-    clip-path: polygon(0 53%, 8% 40%, 14% 58%, 22% 38%, 29% 60%, 38% 43%, 44% 62%, 52% 42%, 59% 57%, 68% 37%, 76% 58%, 86% 39%, 100% 55%, 100% 100%, 0 100%);
-    transform: translateY(calc(var(--progress) * -1.8rem));
-  }
-
-  .crossing-light {
-    position: absolute;
-    right: 14%;
-    top: 53%;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    background: #b63a2c;
-    box-shadow: 0 0 1.5rem rgba(182, 58, 44, 0.8);
-    animation: blink 2.4s steps(2) infinite;
-    animation-play-state: paused;
-  }
-
-  .hero-scene.is-visible .crossing-light {
-    animation-play-state: running;
-  }
-
-  .light-b {
-    right: 12.5%;
-    animation-delay: 1.2s;
-  }
-
-  .hero-copy {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    display: flex;
-    height: 100svh;
-    margin-top: -100svh;
-    padding: 0 clamp(1.25rem, 6vw, 6.5rem) 12svh;
-    flex-direction: column;
-    justify-content: flex-end;
-    max-width: 56rem;
-    opacity: clamp(0.72, calc(1 - (var(--progress) * 0.42)), 1);
-    transform: translateY(calc(var(--progress) * -3rem));
-    pointer-events: none;
-  }
-
-  .kicker,
-  .section-label {
-    margin: 0 0 1.1rem;
-    color: var(--amber);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
-  h1,
-  h2,
-  h3,
-  blockquote {
-    font-family: var(--serif);
-    letter-spacing: 0;
-  }
-
-  h1 {
-    margin: 0 0 1.2rem;
-    font-size: clamp(4.2rem, 13vw, 13rem);
-    line-height: 0.85;
-    text-wrap: balance;
-  }
-
-  .hero-copy p:last-child {
-    max-width: 42rem;
-    margin: 0;
-    color: #e7dcc4;
-    font-size: clamp(1.2rem, 2.4vw, 2rem);
-    line-height: 1.35;
-  }
-
-  .sticky-grid {
-    position: sticky;
-    top: 0;
-    min-height: 100svh;
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
-    gap: clamp(1.5rem, 4vw, 5rem);
-    align-items: center;
-    padding: clamp(2rem, 5vw, 5rem);
-  }
-
-  .sticky-grid.reverse {
-    grid-template-columns: minmax(20rem, 0.82fr) minmax(0, 1.18fr);
-  }
-
-  .map-scene {
-    min-height: 225svh;
-  }
-
-  .map-stage,
-  .regional-map {
-    position: relative;
-    margin: 0;
-    aspect-ratio: 1.42;
-    overflow: hidden;
-    border: 1px solid rgba(216, 200, 165, 0.22);
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.42);
-    background: #100d08;
-  }
-
-  .map-stage img,
-  .regional-map img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: sepia(0.14) saturate(0.75) brightness(0.86);
-  }
-
-  .route-layer,
-  .regional-map svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .route-base,
-  .route-live,
-  .regional-line,
-  .string-layer path {
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .route-base {
-    stroke: rgba(216, 200, 165, 0.2);
-    stroke-width: 5;
-    stroke-dasharray: 12 16;
-    filter: drop-shadow(0 0 8px rgba(7, 17, 30, 0.7));
-  }
-
-  .route-live {
-    stroke: #e1a24c;
-    stroke-width: 8;
-    stroke-dasharray: 1100;
-    stroke-dashoffset: calc(1100 - (1100 * var(--route-progress, 0)));
-    filter: drop-shadow(0 0 14px rgba(191, 125, 54, 0.58));
-  }
-
-  .map-pin,
-  .region-pin {
-    position: absolute;
-    left: var(--x);
-    top: var(--y);
-    translate: -50% -50%;
-    max-width: 11rem;
-    padding: 0.42rem 0.62rem;
-    background: rgba(7, 17, 30, 0.82);
-    border: 1px solid rgba(216, 200, 165, 0.38);
-    color: var(--ink);
-    font-size: clamp(0.7rem, 1.4vw, 0.86rem);
-    font-weight: 700;
-    line-height: 1.1;
-    z-index: 3;
-    transform: translateY(calc((1 - var(--pin-opacity, 0)) * 0.45rem)) scale(calc(0.96 + (var(--pin-opacity, 0) * 0.04)));
-    opacity: var(--pin-opacity, 0);
-  }
-
-  .map-pin.home { --pin-opacity: clamp(0, calc(var(--route-progress, 0) * 7), 1); }
-  .map-pin.sister { --pin-opacity: clamp(0, calc((var(--route-progress, 0) - 0.28) * 7), 1); }
-  .map-pin.store { --pin-opacity: clamp(0, calc((var(--route-progress, 0) - 0.58) * 7), 1); }
-  .map-pin.tracks { --pin-opacity: clamp(0, calc((var(--route-progress, 0) - 0.82) * 7), 1); }
-
-  .map-pin::before,
-  .region-pin::before {
-    content: '';
-    display: inline-block;
-    width: 0.48rem;
-    height: 0.48rem;
-    margin-right: 0.36rem;
-    border-radius: 50%;
-    background: var(--amber);
-    box-shadow: 0 0 0 0.25rem rgba(191, 125, 54, 0.16);
-  }
-
-  .narrative-panel,
-  .floating-copy,
-  .court-copy,
-  .trial-copy,
-  .legacy-copy {
-    max-width: 38rem;
-  }
-
-  .narrative-panel {
-    padding: clamp(1rem, 3vw, 2rem) 0;
-  }
-
-  h2 {
-    margin: 0 0 1.2rem;
-    font-size: clamp(2.1rem, 4.5vw, 5.2rem);
-    line-height: 1.02;
-    text-wrap: balance;
-  }
-
-  h3 {
-    margin: 0 0 0.55rem;
-    font-size: clamp(1.35rem, 2.2vw, 2.1rem);
-    line-height: 1.05;
-  }
-
-  p {
-    color: var(--muted);
-    font-size: clamp(1rem, 1.35vw, 1.2rem);
-    line-height: 1.65;
-  }
-
-  blockquote {
-    margin: 2rem 0 0;
-    padding-left: 1rem;
-    border-left: 2px solid var(--amber);
-    color: #efe2c6;
-    font-size: clamp(1.28rem, 2.1vw, 2rem);
-    line-height: 1.38;
-  }
-
-  .rail-scene {
-    min-height: 330svh;
-  }
-
-  .rail-sticky {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    overflow: hidden;
-    background: #05080d;
-  }
-
-  .rail-track {
-    position: absolute;
-    inset: 0;
-    width: 220vw;
-    transform: translateX(calc(var(--progress) * -112vw));
-  }
-
-  .rail-track img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: saturate(0.68) brightness(0.76) contrast(1.12);
-  }
-
-  .rail-track::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(7, 17, 30, 0.9), rgba(7, 17, 30, 0.18) 30%, rgba(7, 17, 30, 0.34) 70%, rgba(7, 17, 30, 0.92));
-  }
-
-  .track-card {
-    position: absolute;
-    z-index: 2;
-    top: 18%;
-    width: min(28rem, 80vw);
-    padding: 1.1rem 1.2rem;
-    background: rgba(216, 200, 165, 0.9);
-    color: #14100b;
-    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.38);
-    transform: rotate(var(--r));
-  }
-
-  .track-card span {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #70542c;
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-  }
-
-  .track-card p {
-    margin: 0;
-    color: #3d3325;
-  }
-
-  .t1 { left: 18vw; --r: -1.5deg; }
-  .t2 { left: 68vw; top: 58%; --r: 1deg; }
-  .t3 { left: 120vw; top: 24%; --r: -0.8deg; }
-  .t4 { left: 176vw; top: 54%; --r: 1.8deg; }
-
-  .board-scene {
-    min-height: 210svh;
-    overflow: hidden;
-  }
-
-  .board-bg {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    overflow: hidden;
-  }
-
-  .board-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.68) saturate(0.78);
-  }
-
-  .board-doc {
-    position: absolute;
-    z-index: 3;
-    width: clamp(10rem, 20vw, 18rem);
-    min-height: 8rem;
-    padding: 1rem;
-    background: #d9c8a4;
-    color: #15120e;
-    box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.38);
-    transform: translateY(calc((1 - var(--progress)) * 9rem)) rotate(var(--r));
-    opacity: calc(var(--progress) * 1.35);
-  }
-
-  .board-doc b,
-  .board-doc span {
-    display: block;
-  }
-
-  .board-doc b {
-    font-family: var(--serif);
-    font-size: clamp(1rem, 1.8vw, 1.55rem);
-  }
-
-  .board-doc span {
-    margin-top: 2.5rem;
-    color: #594c39;
-    font-size: 0.86rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .doc-a { left: 10%; top: 19%; --r: -4deg; }
-  .doc-b { right: 18%; top: 17%; --r: 3deg; }
-  .doc-c { left: 22%; bottom: 15%; --r: 2deg; }
-  .doc-d { right: 10%; bottom: 17%; --r: -2deg; }
-
-  .string-layer {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    opacity: calc(var(--progress) * 1.2);
-  }
-
-  .string-layer path {
-    stroke: rgba(169, 47, 39, 0.72);
-    stroke-width: 3;
-    stroke-dasharray: 900;
-    stroke-dashoffset: calc(900 - (900 * var(--progress)));
-  }
-
-  .floating-copy {
-    position: absolute;
-    z-index: 4;
-    right: clamp(1.25rem, 5vw, 5rem);
-    bottom: 8svh;
-    width: min(38rem, calc(100% - 2rem));
-    padding: 1.4rem 1.5rem;
-    background: linear-gradient(90deg, rgba(7, 17, 30, 0.92), rgba(7, 17, 30, 0.74));
-    border-left: 2px solid rgba(191, 125, 54, 0.76);
-    box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.34);
-  }
-
-  .regional-map .regional-line {
-    stroke: var(--amber);
-    stroke-width: 6;
-    stroke-dasharray: 900;
-    stroke-dashoffset: calc(900 - (900 * var(--progress)));
-    filter: drop-shadow(0 0 8px rgba(191, 125, 54, 0.42));
-  }
-
-  .regional-line.two {
-    stroke: rgba(126, 133, 133, 0.9);
-    stroke-width: 4;
-    transition-delay: 120ms;
-  }
-
-  .region-pin {
-    --x: 30%;
-    --y: 24%;
-  }
-
-  .region-pin.az {
-    --x: 72%;
-    --y: 74%;
-  }
-
-  .court-scene {
-    min-height: 230svh;
-  }
-
-  .court-scene > img {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    filter: brightness(calc(0.72 - (var(--progress) * 0.12))) saturate(0.75);
-  }
-
-  .testimony {
-    position: absolute;
-    z-index: 3;
-    padding: 0.55rem 0.8rem;
-    border: 1px solid rgba(216, 200, 165, 0.28);
-    color: #efe2c6;
-    background: rgba(7, 17, 30, 0.72);
-    font-family: var(--serif);
-    font-size: clamp(1.1rem, 2vw, 2rem);
-    filter: blur(calc(var(--progress) * 2px));
-    opacity: calc(0.35 + (var(--progress) * 0.55));
-    transform: translateY(calc((0.5 - var(--progress)) * 8rem));
-  }
-
-  .testimony-a { top: 24%; left: 9%; }
-  .testimony-b { top: 42%; right: 15%; }
-  .testimony-c { bottom: 31%; left: 24%; }
-  .testimony-d { bottom: 17%; right: 8%; }
-
-  .court-copy {
-    position: absolute;
-    z-index: 4;
-    left: clamp(1.25rem, 6vw, 6rem);
-    top: 116svh;
-  }
-
-  .trial-scene {
-    min-height: 170svh;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(18rem, 34rem);
-    gap: clamp(1rem, 4vw, 4rem);
-    align-items: center;
-    padding: clamp(2rem, 6vw, 6rem);
-    background:
-      radial-gradient(circle at 25% 20%, rgba(191, 125, 54, 0.18), transparent 34rem),
-      linear-gradient(180deg, #090e17, #05080d);
-  }
-
-  .trial-stack {
-    position: sticky;
-    top: 12svh;
-    height: 74svh;
-  }
-
-  .trial-paper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: min(24rem, 78vw);
-    aspect-ratio: 0.78;
-    padding: 1.3rem;
-    background: #d8c8a5;
-    color: #1a150f;
-    border: 1px solid rgba(62, 48, 32, 0.22);
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.38);
-    font-family: var(--serif);
-    font-size: clamp(1.7rem, 4vw, 3.8rem);
-    transform:
-      translate(-50%, -50%)
-      translateX(calc((var(--progress) - 0.45) * var(--tx)))
-      translateY(calc((var(--progress) - 0.45) * var(--ty)))
-      rotate(var(--r));
-  }
-
-  .p1 { --tx: -18rem; --ty: -8rem; --r: -9deg; }
-  .p2 { --tx: 16rem; --ty: -4rem; --r: 7deg; }
-  .p3 { --tx: -12rem; --ty: 10rem; --r: 4deg; }
-  .p4 { --tx: 20rem; --ty: 12rem; --r: -6deg; }
-
-  .trial-copy {
-    position: sticky;
-    top: 22svh;
-  }
-
-  .question-scene {
-    min-height: 240svh;
-    display: grid;
-    place-items: center;
-    background: #03060a;
-  }
-
-  .question-stack {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    width: min(58rem, calc(100% - 2rem));
-    display: grid;
-    place-items: center;
-  }
-
-  .question-stack p {
-    position: absolute;
-    margin: 0;
-    color: #efe2c6;
-    font-family: var(--serif);
-    font-size: clamp(1.8rem, 5vw, 5.4rem);
-    line-height: 1.08;
-    text-align: center;
-    text-wrap: balance;
-    opacity: 0;
-    transform: translateY(calc((1 - var(--item-opacity, 0)) * 1.5rem));
-  }
-
-  .question-stack p:nth-child(1) {
-    --item-opacity: min(clamp(0, calc((var(--progress) - 0.05) * 12), 1), clamp(0, calc((0.24 - var(--progress)) * 12), 1));
-    opacity: var(--item-opacity);
-  }
-
-  .question-stack p:nth-child(2) {
-    --item-opacity: min(clamp(0, calc((var(--progress) - 0.22) * 12), 1), clamp(0, calc((0.41 - var(--progress)) * 12), 1));
-    opacity: var(--item-opacity);
-  }
-
-  .question-stack p:nth-child(3) {
-    --item-opacity: min(clamp(0, calc((var(--progress) - 0.39) * 12), 1), clamp(0, calc((0.58 - var(--progress)) * 12), 1));
-    opacity: var(--item-opacity);
-  }
-
-  .question-stack p:nth-child(4) {
-    --item-opacity: min(clamp(0, calc((var(--progress) - 0.56) * 12), 1), clamp(0, calc((0.75 - var(--progress)) * 12), 1));
-    opacity: var(--item-opacity);
-  }
-
-  .question-stack p:nth-child(5) {
-    --item-opacity: min(clamp(0, calc((var(--progress) - 0.73) * 12), 1), clamp(0, calc((0.96 - var(--progress)) * 10), 1));
-    opacity: var(--item-opacity);
-  }
-
-  .legacy-scene {
-    min-height: 190svh;
-    overflow: hidden;
-  }
-
-  .legacy-scene > img {
-    position: sticky;
-    top: 0;
-    height: 100svh;
-    transform: scale(calc(1.18 - (var(--progress) * 0.18)));
-    filter: saturate(0.86) brightness(0.82);
-  }
-
-  .legacy-copy {
-    position: absolute;
-    z-index: 3;
-    left: clamp(1.25rem, 6vw, 6rem);
-    bottom: 16svh;
-  }
-
-  .image-prompts {
-    padding: clamp(3rem, 7vw, 7rem) clamp(1.25rem, 6vw, 6rem);
-    background: #d8c8a5;
-    color: #16120e;
-  }
-
-  .image-prompts h2 {
-    max-width: 54rem;
-    color: #16120e;
-  }
-
-  .image-prompts > p {
-    margin: 0 0 2rem;
-    color: #4f4434;
-  }
-
-  .image-prompts ol {
-    display: grid;
-    gap: 1rem;
-    max-width: 82rem;
-    margin: 0;
-    padding-left: 1.4rem;
-  }
-
-  .image-prompts li {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(22, 18, 14, 0.18);
-  }
-
-  .image-prompts b,
-  .image-prompts span {
-    display: block;
-  }
-
-  .image-prompts b {
-    margin-bottom: 0.25rem;
-    font-family: var(--sans);
-  }
-
-  .image-prompts span {
-    color: #4f4434;
-    line-height: 1.5;
-  }
-
-  @keyframes blink {
-    50% { opacity: 0.16; }
-  }
-
-  @media (max-width: 760px) {
-    .scene {
-      min-height: auto;
-    }
-
-    .hero-scene,
-    .map-scene,
-    .rail-scene,
-    .board-scene,
-    .court-scene,
-    .legacy-scene {
-      min-height: 120svh;
-    }
-
-    .hero-copy {
-      padding: 0 1rem 9svh;
-    }
-
-    h1 {
-      font-size: clamp(4rem, 21vw, 7rem);
-    }
-
-    .sticky-grid,
-    .sticky-grid.reverse,
-    .trial-scene {
-      position: relative;
-      grid-template-columns: 1fr;
-      min-height: auto;
-      padding: 4rem 1rem;
-    }
-
-    .map-stage,
-    .regional-map {
-      aspect-ratio: 0.82;
-    }
-
-    .rail-track {
-      width: 420vw;
-      transform: translateX(calc(var(--progress) * -310vw));
-    }
-
-    .t1 { left: 24vw; }
-    .t2 { left: 130vw; }
-    .t3 { left: 236vw; }
-    .t4 { left: 338vw; }
-
-    .board-doc {
-      width: 11rem;
-      min-height: 7rem;
-    }
-
-    .doc-a { left: 4%; top: 16%; }
-    .doc-b { right: 4%; top: 26%; }
-    .doc-c { left: 7%; bottom: 21%; }
-    .doc-d { right: 5%; bottom: 12%; }
-
-    .floating-copy,
-    .court-copy,
-    .legacy-copy {
-      left: 1rem;
-      right: 1rem;
-      bottom: 7svh;
-    }
-
-    .floating-copy {
-      width: auto;
-      padding: 1rem;
-    }
-
-    .court-copy {
-      top: auto;
-      bottom: 11svh;
-    }
-
-    .testimony {
-      font-size: 1rem;
-    }
-
-    .trial-stack {
-      position: relative;
-      top: auto;
-      height: 60svh;
-    }
-
-    .trial-copy {
-      position: relative;
-      top: auto;
-    }
-
-    .question-stack p {
-      font-size: clamp(1.75rem, 10vw, 3.4rem);
+/* ============================================================
+   THE BOY ON THE TRACKS — editorial feature
+   Type: Newsreader (variable, optical) / Archivo (labels)
+   ============================================================ */
+
+:root {
+  --ink:        #1b1714;
+  --ink-soft:   #4a443d;
+  --ink-faint:  #837c71;
+  --paper:      #f5f1e9;
+  --paper-deep: #ebe5d9;
+  --night:      #0e0d0b;
+  --night-soft: #191714;
+  --bone:       #e9e2d4;
+  --bone-dim:   #9a917f;
+  --rust:       #8e3f2c;
+  --rust-soft:  #b0593f;
+  --hairline:   #d4ccbc;
+  --hairline-n: #2e2a25;
+
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans:  "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 64ch;
+  --wide: 70rem;
+
+  --ease-out: cubic-bezier(.19, 1, .22, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem);
+  line-height: 1.62;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--rust); color: var(--paper); }
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); text-underline-offset: .2em; }
+a:hover { text-decoration-color: currentColor; }
+
+.skip-link {
+  position: absolute; left: -200vw; top: 0;
+  background: var(--ink); color: var(--paper);
+  padding: .75rem 1.25rem; z-index: 100;
+  font-family: var(--sans); font-size: .8rem;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- film grain wash ---------- */
+.grain {
+  position: fixed; inset: -50%;
+  width: 200%; height: 200%;
+  pointer-events: none;
+  z-index: 60;
+  opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- reading progress: the rail ---------- */
+.progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 3px; z-index: 90;
+  background: transparent;
+}
+.progress__bar {
+  height: 100%; width: 100%;
+  background: var(--rust);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+@supports (animation-timeline: scroll()) {
+  .progress__bar {
+    animation: progress-grow linear both;
+    animation-timeline: scroll(root);
+  }
+  @keyframes progress-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+
+/* ---------- chapter rail (desktop) ---------- */
+.chapter-rail {
+  position: fixed; left: clamp(.75rem, 2vw, 2rem); top: 50%;
+  translate: 0 -50%;
+  z-index: 80;
+  display: none;
+}
+@media (min-width: 73rem) {
+  .chapter-rail { display: block; }
+}
+.chapter-rail ol { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+.chapter-rail a {
+  display: flex; align-items: center; gap: .6rem;
+  text-decoration: none;
+  font-family: var(--sans); font-size: .62rem;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: .22rem 0;
+  transition: color .3s;
+}
+.chapter-rail a::before {
+  content: "";
+  width: 1.1rem; height: 1px;
+  background: currentColor;
+  transition: width .35s var(--ease-out);
+}
+.chapter-rail a .rail-label {
+  opacity: 0; translate: -4px 0;
+  transition: opacity .3s, translate .35s var(--ease-out);
+}
+.chapter-rail a:hover .rail-label,
+.chapter-rail a:focus-visible .rail-label,
+.chapter-rail a[aria-current="true"] .rail-label { opacity: 1; translate: 0 0; }
+.chapter-rail a[aria-current="true"] { color: var(--rust); }
+.chapter-rail a[aria-current="true"]::before { width: 1.9rem; }
+.on-night .chapter-rail a { color: var(--bone-dim); }
+.on-night .chapter-rail a[aria-current="true"] { color: var(--rust-soft); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: end center;
+  background: var(--night);
+  color: var(--bone);
+  overflow: clip;
+  isolation: isolate;
+}
+.hero__media {
+  position: absolute; inset: 0; z-index: -2;
+}
+.hero__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+  filter: brightness(.86) contrast(1.04);
+  animation: hero-drift 36s var(--ease-out) both;
+}
+@keyframes hero-drift {
+  from { scale: 1.09; }
+  to   { scale: 1; }
+}
+.hero__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(to bottom,
+      rgb(14 13 11 / .55) 0%,
+      rgb(14 13 11 / .12) 34%,
+      rgb(14 13 11 / .28) 62%,
+      rgb(14 13 11 / .94) 100%);
+}
+.hero__inner {
+  width: min(100% - 3rem, var(--wide));
+  padding-bottom: clamp(3.5rem, 9vh, 7rem);
+  text-align: center;
+}
+.kicker {
+  font-family: var(--sans);
+  font-size: clamp(.66rem, .6rem + .25vw, .78rem);
+  font-weight: 500;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+.kicker em { font-style: normal; color: var(--rust-soft); }
+.hero h1 {
+  font-size: clamp(2.9rem, 1.2rem + 9.4vw, 8.25rem);
+  line-height: .98;
+  font-weight: 270;
+  letter-spacing: -.015em;
+  margin: clamp(1.2rem, 3vh, 2rem) 0 0;
+  text-wrap: balance;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 330;
+}
+.hero__dek {
+  margin: clamp(1.4rem, 3.5vh, 2.4rem) auto 0;
+  max-width: 44ch;
+  font-size: clamp(1.05rem, .95rem + .55vw, 1.4rem);
+  line-height: 1.5;
+  font-weight: 330;
+  color: color-mix(in srgb, var(--bone) 88%, transparent);
+  text-wrap: balance;
+}
+.hero__byline {
+  margin-top: clamp(1.6rem, 4vh, 2.6rem);
+  font-family: var(--sans);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+.hero__byline a { text-decoration: none; border-bottom: 1px solid color-mix(in srgb, currentColor 45%, transparent); }
+
+.hero .stagger > * {
+  opacity: 0;
+  translate: 0 26px;
+  animation: rise 1.3s var(--ease-out) both;
+}
+.hero .stagger > :nth-child(1) { animation-delay: .15s; }
+.hero .stagger > :nth-child(2) { animation-delay: .35s; }
+.hero .stagger > :nth-child(3) { animation-delay: .6s; }
+.hero .stagger > :nth-child(4) { animation-delay: .85s; }
+@keyframes rise {
+  to { opacity: 1; translate: 0 0; }
+}
+
+.hero__cue {
+  position: absolute; bottom: 1.1rem; left: 50%; translate: -50% 0;
+  width: 1px; height: 2.4rem;
+  background: linear-gradient(var(--bone-dim), transparent);
+  animation: cue 2.6s ease-in-out 1.8s infinite;
+  opacity: 0;
+}
+@keyframes cue {
+  0% { opacity: 0; transform: scaleY(.2); transform-origin: top; }
+  35% { opacity: .9; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(1); }
+}
+
+/* ============================================================
+   SHARED EDITORIAL LAYOUT
+   ============================================================ */
+.prose-wrap {
+  width: min(100% - 3rem, var(--wide));
+  margin-inline: auto;
+}
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+.prose p { margin-block: 0 1.5em; text-wrap: pretty; }
+.prose p strong { font-weight: 560; }
+
+section[data-chapter] { padding-block: clamp(4rem, 10vh, 7.5rem) clamp(2.5rem, 6vh, 4.5rem); }
+
+/* chapter headings */
+.chapter-head {
+  max-width: var(--measure);
+  margin: 0 auto clamp(2.2rem, 5vh, 3.4rem);
+  text-align: center;
+}
+.chapter-head .numeral {
+  font-family: var(--sans);
+  font-size: .68rem; font-weight: 500;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+}
+.chapter-head h2 {
+  font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.1rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -.01em;
+  margin-top: 1rem;
+  text-wrap: balance;
+}
+.chapter-head h2 em { font-weight: 340; }
+
+/* railroad-tie divider */
+.tie-rule {
+  width: min(11rem, 40%);
+  height: 13px;
+  margin: 0 auto clamp(2.2rem, 5vh, 3.2rem);
+  border-block: 1px solid var(--hairline);
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 14px,
+    var(--hairline) 14px 15px);
+  background-size: 100% 100%;
+}
+.night .tie-rule, .tie-rule.on-dark {
+  border-color: var(--hairline-n);
+  background-image: repeating-linear-gradient(90deg, transparent 0 14px, var(--hairline-n) 14px 15px);
+}
+
+/* drop caps on chapter openers */
+.prose > p.opener::first-letter {
+  font-weight: 420;
+  initial-letter: 3 3;
+  -webkit-initial-letter: 3 3;
+  margin-right: .14em;
+  color: var(--rust);
+}
+@supports not (initial-letter: 3) {
+  @supports not (-webkit-initial-letter: 3) {
+    .prose > p.opener::first-letter {
+      float: left;
+      font-size: 3.3em;
+      line-height: .82;
+      padding-top: .08em;
+      margin-right: .12em;
     }
   }
+}
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
+/* pull quotes */
+.pull {
+  max-width: 36ch;
+  margin: clamp(2.6rem, 6vh, 4rem) auto;
+  text-align: center;
+}
+.pull blockquote {
+  font-size: clamp(1.45rem, 1.1rem + 1.7vw, 2.15rem);
+  font-style: italic;
+  font-weight: 320;
+  line-height: 1.32;
+  letter-spacing: -.005em;
+  text-wrap: balance;
+}
+.pull blockquote::before { content: "\201C"; color: var(--rust); }
+.pull blockquote::after  { content: "\201D"; color: var(--rust); }
+.pull figcaption {
+  margin-top: 1.1rem;
+  font-family: var(--sans);
+  font-size: .66rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.night .pull figcaption { color: var(--bone-dim); }
 
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
-    }
-
-    .scene,
-    .hero-scene,
-    .map-scene,
-    .rail-scene,
-    .board-scene,
-    .court-scene,
-    .legacy-scene,
-    .question-scene,
-    .trial-scene {
-      --progress: 1;
-      min-height: auto;
-    }
-
-    .hero-copy {
-      position: relative;
-      height: auto;
-      margin-top: 0;
-      padding-bottom: 4rem;
-      pointer-events: auto;
-      opacity: 1;
-      transform: none;
-    }
-
-    .hero-media img {
-      opacity: 1;
-      transform: none;
-    }
-
-    .hero-media,
-    .rail-sticky,
-    .board-bg,
-    .court-scene > img,
-    .legacy-scene > img,
-    .question-stack,
-    .trial-stack,
-    .trial-copy,
-    .sticky-grid {
-      position: relative;
-      height: auto;
-      min-height: auto;
-    }
-
-    .rail-track {
-      position: relative;
-      width: 100%;
-      transform: none;
-    }
-
-    .floating-copy,
-    .court-copy,
-    .legacy-copy {
-      position: relative;
-      top: auto;
-      bottom: auto;
-      left: auto;
-      right: auto;
-      width: auto;
-      margin: 2rem clamp(1.25rem, 6vw, 6rem);
-    }
-
-    .question-stack {
-      position: relative;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 4rem 1.25rem;
-    }
-
-    .question-stack p {
-      position: relative;
-      opacity: 1;
-      transform: none;
-    }
+/* figures */
+figure.photo {
+  margin: clamp(2.8rem, 7vh, 4.5rem) auto;
+}
+figure.photo.wide { max-width: min(100%, 58rem); }
+figure.photo.inset { max-width: var(--measure); }
+figure.photo .frame {
+  overflow: clip;
+  background: var(--night-soft);
+}
+figure.photo img {
+  width: 100%;
+  filter: grayscale(1) contrast(1.02);
+}
+@supports (animation-timeline: view()) {
+  figure.photo .frame img {
+    scale: 1.08;
+    animation: settle linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 65%;
   }
+  @keyframes settle { to { scale: 1; } }
+}
+figure.photo figcaption {
+  display: flex; gap: .8rem; align-items: baseline;
+  margin-top: .85rem;
+  font-family: var(--sans);
+  font-size: .72rem;
+  line-height: 1.55;
+  color: var(--ink-faint);
+  max-width: 52ch;
+}
+figure.photo figcaption::before {
+  content: "";
+  flex: 0 0 1.4rem;
+  height: 1px;
+  background: var(--rust);
+  translate: 0 -.25em;
+}
+.night figure.photo figcaption { color: var(--bone-dim); }
+
+/* side-by-side: portrait figure beside prose on wide screens */
+.duet {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3.5rem);
+  align-items: start;
+  max-width: min(100%, 64rem);
+  margin-inline: auto;
+}
+@media (min-width: 56rem) {
+  .duet { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .duet figure.photo { margin-block: .4rem 0; position: sticky; top: 4rem; }
+}
+
+/* ============================================================
+   NIGHT SECTIONS
+   ============================================================ */
+.night {
+  background: var(--night);
+  color: var(--bone);
+}
+.night ::selection { background: var(--bone); color: var(--night); }
+.night .chapter-head .numeral { color: var(--rust-soft); }
+.night .prose > p.opener::first-letter { color: var(--rust-soft); }
+
+/* the discovery — evidence log */
+.evidence {
+  max-width: var(--measure);
+  margin: clamp(2.4rem, 6vh, 3.6rem) auto;
+  list-style: none;
+  border-top: 1px solid var(--hairline-n);
+}
+.evidence li {
+  display: grid;
+  grid-template-columns: 5.4rem 1fr;
+  gap: 1.4rem;
+  align-items: baseline;
+  padding: 1.05rem .25rem;
+  border-bottom: 1px solid var(--hairline-n);
+}
+.evidence .tag {
+  font-family: var(--sans);
+  font-size: .64rem; font-weight: 500;
+  letter-spacing: .26em;
+  color: var(--rust-soft);
+}
+.evidence .item {
+  font-size: clamp(1.05rem, 1rem + .4vw, 1.25rem);
+  font-weight: 320;
+}
+.evidence .item em { color: var(--bone-dim); font-size: .88em; }
+
+.timestamp {
+  font-family: var(--sans);
+  font-size: clamp(.7rem, .64rem + .3vw, .8rem);
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--rust-soft);
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+/* ============================================================
+   TIMELINE — "The Record"
+   ============================================================ */
+.timeline {
+  max-width: 46rem;
+  margin: clamp(2.5rem, 6vh, 4rem) auto 0;
+  list-style: none;
+  position: relative;
+  padding-left: clamp(2rem, 6vw, 3.4rem);
+}
+/* twin rails */
+.timeline::before, .timeline::after {
+  content: "";
+  position: absolute; top: .4rem; bottom: .4rem;
+  width: 1px;
+  background: var(--hairline);
+}
+.timeline::before { left: 0; }
+.timeline::after  { left: 9px; }
+.timeline li {
+  position: relative;
+  padding-block: 1.15rem;
+}
+/* tie across the rails */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * clamp(2rem, 6vw, 3.4rem) - 3px);
+  top: 1.85rem;
+  width: 16px; height: 3px;
+  background: var(--rust);
+}
+.timeline .when {
+  display: block;
+  font-family: var(--sans);
+  font-size: .68rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: .35rem;
+}
+.timeline .what {
+  font-size: clamp(1.02rem, .98rem + .3vw, 1.16rem);
+  line-height: 1.5;
+  font-weight: 360;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.timeline .what em { color: var(--ink-soft); }
+
+/* ============================================================
+   CODA
+   ============================================================ */
+.coda {
+  position: relative;
+  background: var(--night);
+  color: var(--bone);
+  overflow: clip;
+  isolation: isolate;
+  padding-block: clamp(6rem, 16vh, 11rem);
+  text-align: center;
+}
+.coda__media { position: absolute; inset: 0; z-index: -2; }
+.coda__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: .38;
+  filter: grayscale(1);
+}
+.coda__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(rgb(14 13 11 / .96), rgb(14 13 11 / .55) 50%, rgb(14 13 11 / .96));
+}
+.coda .epitaph {
+  font-size: clamp(1.6rem, 1.1rem + 2.6vw, 2.9rem);
+  font-weight: 280;
+  font-style: italic;
+  line-height: 1.3;
+  max-width: 26ch;
+  margin: 0 auto;
+  text-wrap: balance;
+}
+.coda .tip {
+  margin-top: clamp(2.8rem, 7vh, 4.5rem);
+}
+.coda .tip .lead-in {
+  font-family: var(--sans);
+  font-size: .72rem; font-weight: 500;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--bone-dim);
+}
+.coda .tip a.phone {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-size: clamp(1.7rem, 1.2rem + 2.6vw, 3rem);
+  font-weight: 320;
+  letter-spacing: .04em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rust-soft);
+  padding-bottom: .12em;
+  transition: color .3s, border-color .3s;
+}
+.coda .tip a.phone:hover { color: var(--rust-soft); }
+.coda .tip .agency {
+  margin-top: .9rem;
+  font-family: var(--sans);
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+
+/* ============================================================
+   EDITORIAL NOTE + FOOTER
+   ============================================================ */
+.ed-note {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vh, 4rem) 1.5rem;
+  font-size: .92rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+  text-wrap: balance;
+}
+.ed-note .rule { width: 3rem; height: 1px; background: var(--rust); margin: 0 auto 1.4rem; }
+
+footer.colophon {
+  background: var(--night);
+  color: var(--bone-dim);
+  padding: clamp(2.5rem, 6vh, 4rem) 1.5rem clamp(3rem, 7vh, 4.5rem);
+  text-align: center;
+  font-family: var(--sans);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  line-height: 2;
+}
+footer.colophon a { color: var(--bone); }
+
+/* ============================================================
+   SCROLL REVEALS
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  translate: 0 26px;
+  transition: opacity 1s var(--ease-out), translate 1.1s var(--ease-out);
+  transition-delay: var(--d, 0s);
+}
+.reveal.in-view { opacity: 1; translate: 0 0; }
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero__media img, .hero .stagger > *, .hero__cue { animation: none !important; }
+  .hero .stagger > * { opacity: 1; translate: 0 0; }
+  .reveal { opacity: 1; translate: 0 0; transition: none; }
+  figure.photo .frame img { animation: none !important; scale: 1 !important; }
+}
+
+@media (max-width: 40rem) {
+  .evidence li { grid-template-columns: 1fr; gap: .3rem; }
+}
+
+@media print {
+  .grain, .progress, .chapter-rail, .hero__cue { display: none; }
+  .hero, .night, .coda, footer.colophon { background: #fff; color: #000; }
+}
 </style>
+</head>
+<body>
+
+<a class="skip-link" href="#story">Skip to story</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<nav class="chapter-rail" aria-label="Chapters">
+  <ol>
+    <li><a href="#ch-1" data-rail><span class="rail-label">The Pattern</span></a></li>
+    <li><a href="#ch-2" data-rail><span class="rail-label">Michael</span></a></li>
+    <li><a href="#ch-3" data-rail><span class="rail-label">November 21</span></a></li>
+    <li><a href="#ch-4" data-rail><span class="rail-label">12:58 A.M.</span></a></li>
+    <li><a href="#ch-5" data-rail><span class="rail-label">The Investigation</span></a></li>
+    <li><a href="#ch-6" data-rail><span class="rail-label">The Confession</span></a></li>
+    <li><a href="#ch-7" data-rail><span class="rail-label">Two Trials</span></a></li>
+    <li><a href="#ch-8" data-rail><span class="rail-label">What Remains</span></a></li>
+    <li><a href="#record" data-rail><span class="rail-label">The Record</span></a></li>
+  </ol>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero__media">
+    <img src="/generated-images/death-tracks/hero-tracks.jpg" width="1536" height="1024" alt="Railroad tracks receding into darkness and low fog at night, a faint signal light in the far distance." fetchpriority="high">
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__inner stagger">
+    <p class="kicker">An Unsolved Case &middot; Vinita, Oklahoma &middot; <em>1977</em></p>
+    <h1>The Boy <em>on the Tracks</em></h1>
+    <p class="hero__dek">Michael James Martinez was seven years old. He had a new bicycle, a dollar from his father, and a few hundred yards to ride. Nearly fifty years later, no one has answered for his death.</p>
+    <p class="hero__byline">From <a href="https://truecrimegarage.com">True Crime Garage</a> &middot; Episode 929, &ldquo;Death Tracks&rdquo; &middot; May 20, 2026</p>
+  </div>
+  <div class="hero__cue" aria-hidden="true"></div>
+</header>
+
+<main id="story">
+
+  <div class="ed-note reveal">
+    <div class="rule" aria-hidden="true"></div>
+    <p>Editors&rsquo; note: This story concerns violence against a child. It is drawn from the reporting and discussion presented by hosts Nic and the Captain of True Crime Garage, and from the contemporary press accounts they cite. It is told here in the hope that someone, somewhere, still remembers something.</p>
+  </div>
+
+  <!-- ============ I. THE PATTERN ============ -->
+  <section data-chapter id="ch-1" aria-labelledby="h-ch1">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter I</span>
+        <h2 id="h-ch1">The Pattern</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">Before Oklahoma, there was Arizona. In 1976, near Phoenix, three boys from the Gila River Indian Community &mdash; ten and eleven years old &mdash; were found murdered on railroad tracks. They had not been struck by a train and left. The sequence was deliberate, and it was worse: as one newspaper account read, &ldquo;they were stabbed to death before their bodies were laid on railroad tracks to be run over by a freight train.&rdquo;</p>
+        <p class="reveal">No one was ever charged. The community was left to absorb a crime that had no precedent in its memory and no logic anyone could name. Betsy Green, the tribal secretary, could offer the papers only disbelief &mdash; the idea that a member of the community could have done such a thing seemed impossible to her.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>It&rsquo;s part of the madness that seems to be occurring all over the world. We have no feeling of hatred. The boys are just gone.</blockquote>
+        <figcaption>Betsy Green, tribal secretary &middot; 1976</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="reveal">A year later and nine hundred miles east, in a small railroad town in northeastern Oklahoma, the pattern would repeat itself &mdash; younger victim, same method, same silence after.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ II. MICHAEL ============ -->
+  <section data-chapter id="ch-2" aria-labelledby="h-ch2">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter II</span>
+        <h2 id="h-ch2">Michael</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <div class="duet">
+        <div class="prose">
+          <p class="opener reveal">Michael James Martinez was a first-grader in Vinita, Oklahoma &mdash; a bright, shy boy, Native American, living with his mother in modest circumstances. In November 1977 two good things had just happened to him, the kind of things a seven-year-old counts as wealth: his estranged father had given him a dollar, and he had a new bicycle.</p>
+          <p class="reveal">The hosts of True Crime Garage paused on that detail, because anyone who was once a child understands it. &ldquo;One of the best gifts you can get as a child,&rdquo; the Captain said. &ldquo;A new bicycle.&rdquo; Nic put it more simply: a bicycle represents freedom. A few hundred yards of it &mdash; the distance from his sister&rsquo;s house to the convenience store and back.</p>
+          <p class="reveal">On the evening of November 21, 1977, Michael&rsquo;s mother left him and his brother at the home of his sister, Brenda. At some point that evening, Michael got on the new bike, the dollar in his pocket, and rode toward the store alone.</p>
+          <p class="reveal">He was last seen between nine and nine-thirty.</p>
+        </div>
+        <figure class="photo inset reveal">
+          <div class="frame">
+            <img src="/generated-images/death-tracks/bicycle.jpg" width="1024" height="1536" alt="A child's bicycle from the 1970s leaning alone against the clapboard wall of a small house at dusk." loading="lazy">
+          </div>
+          <figcaption>A new bicycle was the last gift Michael received &mdash; freedom measured in a few hundred yards. Photo illustration.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ III. NOVEMBER 21 ============ -->
+  <section data-chapter id="ch-3" aria-labelledby="h-ch3">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter III</span>
+        <h2 id="h-ch3">November 21, 1977</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <figure class="photo wide reveal">
+        <div class="frame">
+          <img src="/generated-images/death-tracks/town.jpg" width="1536" height="1024" alt="A small-town Oklahoma main street on a cold evening in the late 1970s, storefronts dark, one distant sign lit." loading="lazy">
+        </div>
+        <figcaption>Vinita, Oklahoma &mdash; a railroad town in the state&rsquo;s northeast corner, adjacent to Mayes County. Photo illustration.</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="opener reveal">That same afternoon, in a shed near the train tracks, two young men had been drinking and huffing spray paint. Gary Leroy Whistler was an unstable, unemployed teenager who, as Nic described it, &ldquo;had drifted in and out of institutions since he was about nine years old,&rdquo; with a long history of substance abuse. With him was Roy Robinson &mdash; a neighbor of Michael&rsquo;s sister, Brenda. They had spent the day there together, a few hundred feet from where Michael would ride past.</p>
+        <p class="reveal">Between nine and nine-thirty, Michael was last seen heading toward the store. Around ten o&rsquo;clock, Whistler collapsed in Robinson&rsquo;s shed, asking for help.</p>
+        <p class="reveal">What happened in the minutes between has never been established by any court.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IV. 12:58 A.M. — night interlude ============ -->
+  <section data-chapter id="ch-4" class="night" aria-labelledby="h-ch4">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter IV</span>
+        <h2 id="h-ch4">12:58&nbsp;A.M.</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="timestamp reveal">November 22, 1977</p>
+        <p class="opener reveal">In the first hour of the next morning, the crew of a passing train discovered the body of a small child on the tracks. Michael had been stabbed repeatedly before he was placed there; the train had done the rest. What investigators found at the scene read like the inventory of an ordinary, terrible evening:</p>
+      </div>
+      <ol class="evidence">
+        <li class="reveal" style="--d:.05s"><span class="tag">Item 01</span><span class="item">Paper bags, soaked in paint</span></li>
+        <li class="reveal" style="--d:.15s"><span class="tag">Item 02</span><span class="item">A can of spray paint</span></li>
+        <li class="reveal" style="--d:.25s"><span class="tag">Item 03</span><span class="item">A soda bottle, stained with blood</span></li>
+        <li class="reveal" style="--d:.35s"><span class="tag">Item 04</span><span class="item">Coins, scattered across the ballast <em>&mdash; what remained of a dollar</em></span></li>
+        <li class="reveal" style="--d:.45s"><span class="tag">Absent</span><span class="item">Michael&rsquo;s new bicycle</span></li>
+      </ol>
+      <div class="prose">
+        <p class="reveal">The bicycle &mdash; the gift, the freedom &mdash; was gone. It would not be found for months.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ V. THE INVESTIGATION ============ -->
+  <section data-chapter id="ch-5" aria-labelledby="h-ch5">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter V</span>
+        <h2 id="h-ch5">The Investigation</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">The response was immediate and large. Local police, county deputies, and agents of the Oklahoma State Bureau of Investigation converged on Vinita. The first questions were the broadest ones: Was this an accident? A hate crime? A sexual assault? Random violence? Vinita sits beside Mayes County, where the Girl Scout murders had occurred that same summer, and suspicion briefly ran toward the fugitive Gene Leroy Hart before being ruled out. Detectives also flagged the resemblance to Arizona &mdash; young Native American boys, stabbed, placed on train tracks &mdash; but no connection was ever proven.</p>
+        <p class="reveal">The first man arrested was a transient named Gerald Ray White, picked up near the tracks. What followed became its own cautionary tale about the era&rsquo;s investigative tools: White failed more than twenty polygraph examinations. Twenty failures looked, for a time, like guilt. Examiners eventually concluded he was what the field calls a &ldquo;guilt complex reactor&rdquo; &mdash; a person whose anxiety fails the machine no matter what the truth is. As Nic put it: &ldquo;When he continues to fail test after test after test &mdash; well, then, for this guy, we can&rsquo;t take these tests serious.&rdquo; White was cleared.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>The town still has a dead child and no answers to what happened in this horrific case.</blockquote>
+        <figcaption>Nic &middot; True Crime Garage</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ VI. THE CONFESSION ============ -->
+  <section data-chapter id="ch-6" class="night" aria-labelledby="h-ch6">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter VI</span>
+        <h2 id="h-ch6">The Confession</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">Four months after the murder, Gary Whistler was arrested during a domestic dispute &mdash; and while in custody, he signed a confession. It was hazy and disjointed. He said he had been high and hallucinating that night. He believed something was after him, so he grabbed a knife and started stabbing &mdash; in his telling, to defend himself. He remembered, perhaps, throwing a body. Perhaps a bike.</p>
+        <p class="reveal">The toxicology report deepened the horror rather than resolving it: Michael had spray-paint chemicals and alcohol in his system. Had a seven-year-old been coaxed into huffing paint by the older boys he met that night &mdash; or forced? The Captain laid out the unbearable possibilities plainly: a kid with his new dollar and his new bike runs across one teenager, maybe two. They ask him if he wants to try it, or he does it out of fear, or they make him.</p>
+        <p class="reveal">There has never been an answer.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>Extremely susceptible to suggestion and coercion&hellip; easy to get a confession out of this guy, especially one that&rsquo;s kind of vague.</blockquote>
+        <figcaption>Nic, on Whistler&rsquo;s psychiatric profile</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ VII. TWO TRIALS ============ -->
+  <section data-chapter id="ch-7" aria-labelledby="h-ch7">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter VII</span>
+        <h2 id="h-ch7">Two Trials</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <figure class="photo wide reveal">
+        <div class="frame">
+          <img src="/generated-images/death-tracks/courthouse.jpg" width="1536" height="1024" alt="An austere county courthouse in winter, bare trees in front of stone steps under flat, overcast light." loading="lazy">
+        </div>
+        <figcaption>Whistler was tried twice. The first jury hung in October 1978; the second acquitted him in March 1979. Photo illustration.</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="opener reveal">The case against Whistler was, in the end, a confession in search of corroboration. The knife and the bicycle were not recovered until months after the murder. The forensic science of 1977 could wring little from what remained. The time of death was contested. Psychiatrists for each side contradicted one another about whether Whistler&rsquo;s statement &mdash; the vague, hallucinatory account of a man &ldquo;extremely susceptible to suggestion&rdquo; &mdash; could be trusted at all. The defense was, as Nic observed, set up to argue two doors at once: either he&rsquo;s innocent, or he&rsquo;s innocent by reason of insanity.</p>
+        <p class="reveal">The first trial, in October 1978, ended with a hung jury. At the second, in March 1979, the defense leaned on the timeline: Roy Robinson and his mother placed Whistler where the killer could not have been &mdash; testimony recalled months after the fact, with all the unreliability that distance implies, but enough. Whistler was acquitted.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>I think a lot of the problems in this case is simply the time period.</blockquote>
+        <figcaption>The Captain &middot; True Crime Garage</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="reveal">If it happened today, the Captain argued, it would probably be solved quickly &mdash; there would be a mountain of evidence. In 1977, there was a hung jury, an acquittal, and a file that no one has been able to close.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIII. WHAT REMAINS ============ -->
+  <section data-chapter id="ch-8" aria-labelledby="h-ch8">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter VIII</span>
+        <h2 id="h-ch8">What Remains</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">Michael&rsquo;s funeral drew the neighborhood together. But the grief did not stay clean; it curdled into rumor, and some of it was aimed at his mother, as if shaming her could explain what had happened. &ldquo;This was a community that pulled together and had no clue what the hell had happened,&rdquo; Nic said. &ldquo;They didn&rsquo;t know how to deal with this.&rdquo;</p>
+        <p class="reveal">Four months after the acquittal, a friend of the Martinez family attacked Whistler with a knife &mdash; the verdict of a town that the courts had left without one. It settled nothing. Whistler was never retried. No one else has ever been charged.</p>
+        <p class="reveal">Nic&rsquo;s final accounting refuses the easy version: &ldquo;Can you say one hundred percent that it was just Gary Leroy Whistler that did this? I don&rsquo;t think you can &mdash; because I think his buddy Roy looks to be just as guilty.&rdquo; Two men in a shed, a child on a bicycle, and forty-nine years of silence between them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE RECORD — timeline ============ -->
+  <section data-chapter id="record" aria-labelledby="h-record">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">The Record</span>
+        <h2 id="h-record">1976 &ndash; Present</h2>
+      </header>
+      <div class="tie-rule reveal" aria-hidden="true"></div>
+      <ol class="timeline">
+        <li class="reveal"><span class="when">1976 &middot; Near Phoenix, Arizona</span><span class="what">Three boys from the Gila River Indian Community, ages 10&ndash;11, are stabbed and placed on railroad tracks. The case is never solved.</span></li>
+        <li class="reveal"><span class="when">Nov 21, 1977 &middot; 9:00&ndash;9:30 p.m.</span><span class="what">Michael Martinez, 7, is last seen riding his new bicycle toward a Vinita convenience store.</span></li>
+        <li class="reveal"><span class="when">Nov 21, 1977 &middot; ~10:00 p.m.</span><span class="what">Gary Whistler collapses in Roy Robinson&rsquo;s shed near the tracks, asking for help.</span></li>
+        <li class="reveal"><span class="when">Nov 22, 1977 &middot; 12:58 a.m.</span><span class="what">A train crew discovers Michael&rsquo;s body on the tracks. He had been stabbed before being placed there.</span></li>
+        <li class="reveal"><span class="when">Late 1977</span><span class="what">Transient Gerald Ray White is arrested near the tracks; after failing more than twenty polygraphs he is determined to be a &ldquo;guilt complex reactor&rdquo; and cleared.</span></li>
+        <li class="reveal"><span class="when">March 1978</span><span class="what">Whistler, arrested during a domestic dispute, signs a hazy and disjointed confession. <em>The knife and bicycle surface only months later.</em></span></li>
+        <li class="reveal"><span class="when">October 1978</span><span class="what">First trial ends in a hung jury amid conflicting psychiatric testimony and contested time-of-death estimates.</span></li>
+        <li class="reveal"><span class="when">March 1979</span><span class="what">Second trial ends in acquittal; the defense argues the confession was unreliable and the timeline doesn&rsquo;t fit.</span></li>
+        <li class="reveal"><span class="when">Mid-1979</span><span class="what">Four months after the acquittal, Whistler is attacked with a knife by a friend of the Martinez family.</span></li>
+        <li class="reveal"><span class="when">Today</span><span class="what">Michael&rsquo;s murder remains unsolved. No one else has ever been charged.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CODA ============ -->
+  <section class="coda" aria-labelledby="h-coda">
+    <div class="coda__media" aria-hidden="true">
+      <img src="/generated-images/death-tracks/hero-tracks.jpg" width="1536" height="1024" alt="" loading="lazy">
+    </div>
+    <div class="coda__scrim" aria-hidden="true"></div>
+    <div class="prose-wrap">
+      <h2 id="h-coda" class="epitaph reveal">Michael James Martinez was seven years old. Someone still knows what happened to him.</h2>
+      <div class="tip reveal">
+        <p class="lead-in">If you have information about this case</p>
+        <a class="phone" href="tel:+18005228017">800&middot;522&middot;8017</a>
+        <p class="agency">Oklahoma State Bureau of Investigation</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <p>This feature is an editorial retelling of <a href="https://truecrimegarage.com">True Crime Garage</a>, Episode 929: &ldquo;Death Tracks&rdquo; (May 20, 2026), hosted by Nic and the Captain.</p>
+  <p>Quotations are drawn from the episode and from contemporary press accounts cited within it. Photographs are illustrations, not archival images.</p>
+</footer>
+
+<script is:inline>
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- scroll reveals ---- */
+  const reveals = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) {
+    reveals.forEach(el => el.classList.add('in-view'));
+  } else {
+    const io = new IntersectionObserver(entries => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+      }
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    reveals.forEach(el => io.observe(el));
+  }
+
+  /* ---- reading progress fallback (no scroll-timeline support) ---- */
+  if (!CSS.supports('animation-timeline: scroll()')) {
+    const bar = document.getElementById('progressBar');
+    const update = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+    };
+    addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  /* ---- chapter rail: current chapter + light/dark context ---- */
+  const links = [...document.querySelectorAll('[data-rail]')];
+  const sections = links
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  const setCurrent = id => {
+    links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false'));
+  };
+
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          setCurrent(e.target.id);
+          document.body.classList.toggle('on-night', e.target.classList.contains('night'));
+        }
+      }
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => spy.observe(s));
+  }
+})();
+</script>
+
+</body>
+</html>
