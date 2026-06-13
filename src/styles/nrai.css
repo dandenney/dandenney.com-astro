@@ -120,7 +120,8 @@
 	background: var(--nrai-red);
 	color: var(--nrai-ink);
 	font-family: var(--font-type);
-	padding: 0.3rem 0.65rem;
+	line-height: 1;
+	padding: 0.42rem 0.65rem 0.32rem;
 	transform: rotate(-1deg);
 }
 
