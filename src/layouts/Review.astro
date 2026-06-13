@@ -11,6 +11,7 @@ import '@/styles/nrai.css';
 interface Props {
 	id?: string;
 	city: string;
+	country: string;
 	description: string;
 	state?: string;
 	tags?: string[];
@@ -22,7 +23,7 @@ interface Props {
 	pubDate?: Date;
 }
 
-const { id, city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate } = Astro.props;
+const { id, city, country, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate } = Astro.props;
 
 const ep = id ? episodeMap(await getCollection('reviews')).get(id) : undefined;
 const airDate = pubDate
@@ -45,7 +46,9 @@ const airDate = pubDate
 					<p class="rev-meta tw-links">
 						{ep && <span class="ep-tab">Ep. {ep}</span>}
 						<span>
-							<a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></>}
+							<a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state
+								? <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></>
+								: country !== 'United States' && <>, <a href="/no-reserv-ai-tions/international">{country}</a></>}
 						</span>
 						{airDate && <span>Air date: {airDate}</span>}
 					</p>
@@ -82,7 +85,7 @@ const airDate = pubDate
 
 				<nav class="rev-nav tw-links" aria-label="Browse reviews">
 					<a class="cue-btn" href="/no-reserv-ai-tions"><span aria-hidden="true">&larr;</span> The cold open</a>
-					<p>Or by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
+					<p>Or by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, <a href="/no-reserv-ai-tions/tags">tag</a>, or <a href="/no-reserv-ai-tions/international">country</a></p>
 				</nav>
 			</article>
 		</main>

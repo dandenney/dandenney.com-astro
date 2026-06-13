@@ -2,7 +2,7 @@
 address: "Campo Grande 35-b, Lisbon 1700-087 Portugal"
 city: "lisbon"
 coordinates: "-9.150300, 38.750050"
-country: "Lisbon"
+country: "Portugal"
 description: "Rich sandwiches and convivial atmosphere, briefly bridging the cities' distinct culinary realms"
 heroImageAlt: "Photo of a Francesinha before the fries"
 heroImage: "tabernia-londrina"

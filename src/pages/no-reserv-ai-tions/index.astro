@@ -19,6 +19,8 @@ const stateCount = new Set(
 	all.filter((r) => r.data.country === 'United States' && r.data.state).map((r) => r.data.state)
 ).size;
 const tagCount = new Set(all.flatMap((r) => r.data.tags)).size;
+const abroad = all.filter((r) => r.data.country !== 'United States');
+const countryCount = new Set(abroad.map((r) => r.data.country)).size;
 
 const latest = all
 	.slice(-4)
@@ -40,8 +42,9 @@ const latest = all
 const board = [
 	{ href: '/no-reserv-ai-tions/1', label: 'Newest', count: total, note: 'All of them, latest first' },
 	{ href: '/no-reserv-ai-tions/cities', label: 'Cities', count: cityCount, note: 'From dive bars to vineyards' },
-	{ href: '/no-reserv-ai-tions/states', label: 'States', count: stateCount, note: 'Plus a few detours abroad' },
+	{ href: '/no-reserv-ai-tions/states', label: 'States', count: stateCount, note: 'Coast to coast, mostly' },
 	{ href: '/no-reserv-ai-tions/tags', label: 'Tags', count: tagCount, note: 'Every craving, indexed' },
+	{ href: '/no-reserv-ai-tions/international', label: 'International', count: abroad.length, note: `${countryCount} countries, so far` },
 ];
 ---
 
@@ -112,7 +115,7 @@ const board = [
 			<section class="atlas">
 				<h2 class="slate">
 					<span class="slate-mark" aria-hidden="true"></span>The atlas
-					<span class="slate-note">every stop, four ways in</span>
+					<span class="slate-note">every stop, five ways in</span>
 				</h2>
 				<ul class="board" role="list">
 					{board.map((row) => (

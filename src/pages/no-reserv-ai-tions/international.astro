@@ -1,0 +1,117 @@
+---
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import EpisodeRow from '@/components/nrai/EpisodeRow.astro';
+import { episodeMap } from '@/helpers/nrai';
+import { ClientRouter } from 'astro:transitions';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import '@/styles/nrai.css';
+
+export const prerender = true;
+
+const allReviews = await getCollection('reviews');
+const eps = episodeMap(allReviews);
+
+const abroad = allReviews.filter((review) => review.data.country !== 'United States');
+
+const countryMap = new Map<string, CollectionEntry<'reviews'>[]>();
+for (const review of abroad) {
+	const country = review.data.country;
+	if (!countryMap.has(country)) countryMap.set(country, []);
+	countryMap.get(country)!.push(review);
+}
+
+const countries = [...countryMap.entries()]
+	.map(([name, reviews]) => ({
+		name,
+		reviews: reviews.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+	}))
+	.sort((a, b) => b.reviews.length - a.reviews.length);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="No ReservAItions International | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
+		<ClientRouter />
+	</head>
+	<body class="nrai">
+		<main id="main-content" class="relative shadow-xs z-10">
+			<Header />
+			<section class="run">
+				<h2 class="slate">
+					<span class="slate-mark" aria-hidden="true"></span>International
+					<span class="slate-note">{abroad.length} {abroad.length === 1 ? 'episode' : 'episodes'} across {countries.length} countries</span>
+				</h2>
+
+				{countries.map(({ name, reviews }) => (
+					<div class="country-group">
+						<h3 class="country-head">
+							<span class="country-name">{name}</span>
+							<span class="country-note">{reviews.length} {reviews.length === 1 ? 'episode' : 'episodes'}</span>
+						</h3>
+						<ul role="list">
+							{reviews.map((review, i) => (
+								<EpisodeRow review={review} ep={eps.get(review.id) ?? 0} eager={i < 2} />
+							))}
+						</ul>
+					</div>
+				))}
+
+				<nav class="run-nav" aria-label="Browse">
+					<a class="cue-btn" href="/no-reserv-ai-tions"><span aria-hidden="true">&larr;</span> The cold open</a>
+				</nav>
+			</section>
+		</main>
+		<Footer />
+
+		<style>
+			.run {
+				max-width: 80rem;
+				margin-inline: auto;
+				padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+			}
+			.country-group ul {
+				border-bottom: 1px solid var(--nrai-line);
+			}
+			.country-head {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.6rem 1rem;
+				margin-top: clamp(2.5rem, 5vw, 4rem);
+				padding-top: 1.25rem;
+				border-top: 1px solid var(--nrai-line);
+			}
+			.country-group:first-of-type .country-head {
+				margin-top: 0;
+			}
+			.country-name {
+				display: inline-block;
+				background: var(--nrai-red);
+				color: var(--nrai-ink);
+				font-family: var(--font-display);
+				font-weight: 400;
+				font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				padding: 0.3rem 0.75rem;
+				transform: rotate(-1deg);
+			}
+			.country-note {
+				font-family: var(--font-type);
+				font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--nrai-smoke);
+			}
+			.run-nav {
+				display: flex;
+				justify-content: center;
+				padding-top: clamp(2rem, 4vw, 3rem);
+			}
+		</style>
+	</body>
+</html>

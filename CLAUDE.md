@@ -78,6 +78,20 @@ Full instructions in `docs/adding-martingale-bets.md`. Short version:
 - Ask before applying styles when the target element is ambiguous (e.g., `body` vs `main`, `figcaption h3` vs `article h3`)
 - Ask before touching anything in the Out of scope section below
 
+## Agent autonomy
+
+Once a task's scope is agreed, don't pause for confirmation on routine steps within it. Proceed without asking for:
+- Starting/stopping the dev server, `npx astro check`, `graphify update .`
+- Browser-based UI verification (screenshots) for design/UI changes
+- Reading/searching the codebase, writing memory files
+- Small fixes clearly within the agreed scope (e.g. a data typo found while building the agreed feature) — just do it and mention it in the summary
+
+Still check in first for:
+- `git commit` / `push` / opening PRs
+- Anything in "Out of scope" below
+- Destructive or hard-to-reverse git operations
+- Ambiguous styling targets (see above)
+
 ## Out of scope
 
 - `.env.local` — manually maintained, never commit
