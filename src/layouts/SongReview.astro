@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 
 const {
   title,
@@ -15,6 +15,10 @@ const {
   genres,
   tags,
   aiGenerated,
+  slug,
+  trackNumber,
+  totalTracks,
+  next,
 } = Astro.props;
 
 // Format duration from ms to mm:ss
@@ -33,6 +37,10 @@ const formatDate = (dateStr: string) => {
     day: "numeric",
   });
 };
+
+const trackNo = String(trackNumber).padStart(2, "0");
+const nextNo = String((trackNumber % totalTracks) + 1).padStart(2, "0");
+const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[];
 ---
 
 <html lang="en">
@@ -54,116 +62,54 @@ const formatDate = (dateStr: string) => {
         ...(albumArt ? { image: albumArt } : {}),
       })}
     />
-    <style>
-      @media screen and (min-width: 768px) {
-        .longform {
-          font-size: 1.125rem;
-        }
-      }
-
-      /* Drop cap on opening paragraph */
-      .review-body p:first-child::first-letter {
-        float: left;
-        font-size: 3.5em;
-        line-height: 0.82;
-        font-weight: 800;
-        margin-right: 0.08em;
-        margin-top: 0.04em;
-        color: #16a34a;
-      }
-
-      .dark .review-body p:first-child::first-letter {
-        color: #4ade80;
-      }
-    </style>
   </head>
   <body class="bg-white dark:bg-slate-900">
     <Header />
     <main
       id="main-content"
       tabindex="-1"
-      class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
+      class="song-page bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
-      <article
-        class="max-w-(--breakpoint-xl) mx-auto px-4 py-8 lg:py-12 lg:grid lg:grid-cols-[280px_1fr] xl:grid-cols-[320px_1fr] lg:gap-16 lg:items-start"
-      >
-        <!-- Sidebar -->
-        <aside class="lg:sticky lg:top-8">
-          <!-- Album Art -->
-          {
-            albumArt && (
-              <div class="w-56 sm:w-64 lg:w-full mx-auto lg:mx-0 mb-6">
-                <img
-                  class="w-full aspect-square rounded-xl shadow-2xl ring-1 ring-black/10 dark:ring-white/5 object-cover"
-                  src={albumArt}
-                  alt={`Album art for ${album}`}
-                  loading="eager"
-                />
-              </div>
-            )
-          }
-
-          <!-- Title & Artist -->
-          <div
-            class="w-56 sm:w-64 lg:w-full mx-auto lg:mx-0 mb-5 text-center lg:text-left"
-          >
-            <h1 class="text-xl font-bold leading-tight tracking-tight">
-              {title}
-            </h1>
-            <p class="text-sm text-gray-500 dark:text-slate-400 mt-1 font-medium">
-              {artist}
+      <article>
+        <section class="song-hero px-8">
+          <div class="song-hero-text">
+            <p class="hero-fade text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              <span class="whitespace-nowrap">[&nbsp;Heavy Rotation &middot; Track {trackNo} / {totalTracks}&nbsp;]</span>
             </p>
+            <h1 class="song-title text-slate-900 dark:text-slate-100">
+              <span class="song-title-inner">{title}</span>
+            </h1>
+            <p class="song-artist hero-fade">{artist}</p>
           </div>
 
-          <!-- Metadata -->
-          <dl
-            class="w-56 sm:w-64 lg:w-full mx-auto lg:mx-0 mb-5 divide-y divide-gray-100 dark:divide-slate-700/50 text-xs"
-          >
-            <div class="flex justify-between items-baseline gap-2 py-2">
-              <dt class="text-gray-400 dark:text-slate-500 shrink-0">Album</dt>
-              <dd
-                class="font-medium text-right text-gray-700 dark:text-slate-300 truncate"
-              >
-                {album}
-              </dd>
+          <div class="song-record">
+            <div class="record">
+              {albumArt ? (
+                <>
+                  <img class="record-glow" src={albumArt} alt="" aria-hidden="true" />
+                  <span class="record-vinyl" aria-hidden="true"></span>
+                  <img
+                    class="record-cover"
+                    src={albumArt}
+                    alt={`Album art for ${album}`}
+                    loading="eager"
+                    transition:name={`song-art-${slug}`}
+                  />
+                </>
+              ) : (
+                <>
+                  <span class="record-vinyl" aria-hidden="true"></span>
+                  <span class="record-cover record-cover-fallback" aria-hidden="true">
+                    {title.charAt(0)}
+                  </span>
+                </>
+              )}
             </div>
-            {
-              genres && genres.length > 0 && (
-                <div class="flex justify-between items-baseline gap-2 py-2">
-                  <dt class="text-gray-400 dark:text-slate-500 shrink-0">
-                    Genre
-                  </dt>
-                  <dd class="font-medium text-right text-gray-700 dark:text-slate-300">
-                    {genres.join(" · ")}
-                  </dd>
-                </div>
-              )
-            }
-            <div class="flex justify-between items-baseline gap-2 py-2">
-              <dt class="text-gray-400 dark:text-slate-500 shrink-0">
-                Released
-              </dt>
-              <dd class="font-medium text-gray-700 dark:text-slate-300">
-                {formatDate(releaseDate)}
-              </dd>
-            </div>
-            <div class="flex justify-between items-baseline gap-2 py-2">
-              <dt class="text-gray-400 dark:text-slate-500 shrink-0">
-                Duration
-              </dt>
-              <dd class="font-medium text-gray-700 dark:text-slate-300">
-                {formatDuration(duration)}
-              </dd>
-            </div>
-          </dl>
-
-          <!-- Spotify Button -->
-          <div class="w-56 sm:w-64 lg:w-full mx-auto lg:mx-0 mb-5">
             <a
               href={spotifyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center gap-2 w-full bg-[#1DB954] hover:bg-[#1ed760] active:scale-[0.98] text-white font-semibold py-2.5 px-4 rounded-full text-sm transition-all duration-150 shadow-sm hover:shadow-md hover:shadow-green-500/25"
+              class="spotify-btn flex items-center justify-center gap-2 bg-[#1DB954] hover:bg-[#1ed760] active:scale-[0.98] text-white font-semibold py-2.5 px-4 rounded-full text-sm transition-all duration-150 shadow-sm hover:shadow-md hover:shadow-green-500/25"
             >
               <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path
@@ -173,69 +119,511 @@ const formatDate = (dateStr: string) => {
               Listen on Spotify
             </a>
           </div>
+        </section>
 
-          <!-- Tags -->
-          {
-            tags && tags.length > 0 && (
-              <div class="w-56 sm:w-64 lg:w-full mx-auto lg:mx-0">
-                <ul class="flex flex-wrap justify-center lg:justify-start gap-1.5">
-                  {tags.map((tag: string) => (
-                    <li>
-                      <a
-                        href={`/music/reviews/tags/${tag}`}
-                        class="inline-block px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-slate-700/60 text-gray-500 dark:text-slate-400 hover:bg-green-50 hover:text-green-700 dark:hover:bg-green-900/30 dark:hover:text-green-400 transition-colors"
-                      >
-                        {tag}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          }
-        </aside>
+        <div class="hatch-band" aria-hidden="true"></div>
 
-        <!-- Review Content -->
-        <div class="mt-10 lg:mt-0">
-          <div class="review-body longform max-w-2xl pb-8">
+        <dl class="credits px-8">
+          <div class="credit">
+            <dt>Album</dt>
+            <dd>{album}</dd>
+          </div>
+          <div class="credit">
+            <dt>Released</dt>
+            <dd>{formatDate(releaseDate)}</dd>
+          </div>
+          <div class="credit">
+            <dt>Runtime</dt>
+            <dd>{formatDuration(duration)}</dd>
+          </div>
+          {soundsLike.length > 0 && (
+            <div class="credit">
+              <dt>Sounds like</dt>
+              <dd>{soundsLike.join(" · ")}</dd>
+            </div>
+          )}
+        </dl>
+
+        <div class="review-wrap px-8">
+          <div class="review-body longform">
             <slot />
           </div>
+          {aiGenerated && (
+            <p class="ai-note text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              [&nbsp;Written with AI assistance &middot; the taste is all mine&nbsp;]
+            </p>
+          )}
+        </div>
 
-          {
-            aiGenerated && (
-              <p class="flex items-center gap-1.5 mt-6 pt-6 border-t border-gray-100 dark:border-slate-700/50 text-xs text-gray-400 dark:text-slate-500">
-                <svg
-                  class="w-3.5 h-3.5 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-                </svg>
-                Review generated with AI assistance
-              </p>
-            )
-          }
+        <div class="hatch-band" aria-hidden="true"></div>
 
-          <nav class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 pb-12 lg:pb-24 text-sm">
+        <section class="up-next">
+          <p class="up-next-label px-8 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+            [&nbsp;Up next in the rotation&nbsp;]
+          </p>
+          <a href={`/music/reviews/${next.slug}/`} class="next-link">
+            <span class="next-num" aria-hidden="true">{nextNo}</span>
+            {next.albumArt && (
+              <img
+                class="next-thumb"
+                src={next.albumArt}
+                alt=""
+                width="96"
+                height="96"
+                loading="lazy"
+              />
+            )}
+            <span class="next-main">
+              <span class="next-title">{next.title}</span>
+              <span class="next-meta">{next.artist}</span>
+            </span>
+            <span class="next-side">{formatDuration(next.duration)}</span>
+            <span class="next-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <nav class="next-nav px-8">
             <a
-              href="/music/reviews"
-              class="text-gray-500 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"
-              >← Music Reviews</a
+              href="/music/reviews/"
+              class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+              >&larr; All {totalTracks} tracks</a
             >
-            <span class="text-gray-200 dark:text-slate-700 select-none">|</span>
             <a
               href="/music"
-              class="text-gray-500 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"
-              >Listening History</a
+              class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+              >Listening history &rarr;</a
             >
           </nav>
-        </div>
+        </section>
       </article>
     </main>
     <Footer />
+
+    <style>
+      .song-page {
+        --ink: #0f172a;
+        --paper: #ffffff;
+        --accent: #b91c1c;
+        --hatch: #cbd5e1;
+        --rule: #e2e8f0;
+        --groove-a: #0b1120;
+        --groove-b: #1e293b;
+        --record-size: clamp(14rem, 26vw, 20rem);
+        --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      :global(.dark) .song-page {
+        --ink: #f1f5f9;
+        --paper: #0f172a;
+        --accent: #f87171;
+        --hatch: #1e293b;
+        --rule: #334155;
+        --groove-a: #1e293b;
+        --groove-b: #3e4c63;
+      }
+
+      /* ---------- Hero ---------- */
+      .song-hero {
+        display: grid;
+        gap: clamp(2.5rem, 5vw, 4rem);
+        align-items: center;
+        padding-top: clamp(3rem, 7vh, 5.5rem);
+        padding-bottom: clamp(2.5rem, 6vh, 4rem);
+      }
+
+      @media (min-width: 64rem) {
+        .song-hero {
+          grid-template-columns: minmax(0, 1fr) auto;
+        }
+      }
+
+      .song-title {
+        margin-top: 1.25rem;
+        overflow: hidden;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: clamp(2.25rem, 6vw, 5rem);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+        padding-right: 0.05em;
+      }
+
+      .song-title-inner {
+        display: inline-block;
+        will-change: transform;
+      }
+
+      .song-artist {
+        margin-top: clamp(0.75rem, 2vh, 1.25rem);
+        font-size: clamp(1.125rem, 2vw, 1.5rem);
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      /* ---------- Record ---------- */
+      .song-record {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: var(--record-size);
+        margin-inline: auto;
+      }
+
+      @media (min-width: 64rem) {
+        .song-record {
+          margin-inline: 0 clamp(3rem, 6vw, 5.5rem);
+        }
+      }
+
+      .record {
+        position: relative;
+        width: var(--record-size);
+        aspect-ratio: 1;
+      }
+
+      .record-glow {
+        position: absolute;
+        inset: -10%;
+        width: 120%;
+        height: 120%;
+        border-radius: 30%;
+        object-fit: cover;
+        filter: blur(36px) saturate(1.5);
+        opacity: 0.4;
+      }
+
+      .record-vinyl {
+        position: absolute;
+        inset: 4%;
+        border-radius: 50%;
+        transform: translateX(24%);
+        background:
+          radial-gradient(
+            circle,
+            var(--paper) 0 4.5%,
+            #b91c1c 4.5% 33%,
+            transparent 33%
+          ),
+          repeating-radial-gradient(
+            circle,
+            var(--groove-a) 0 1.5%,
+            var(--groove-b) 1.5% 2.6%
+          );
+        box-shadow: 0 8px 24px rgb(2 6 23 / 0.35);
+      }
+
+      .record-vinyl::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 48%;
+        width: 4%;
+        height: 4%;
+        border-radius: 50%;
+        background: rgb(241 245 249 / 0.55);
+      }
+
+      .record-cover {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.375rem;
+        background: var(--ink);
+        box-shadow:
+          0 1px 2px rgb(2 6 23 / 0.2),
+          0 16px 40px rgb(2 6 23 / 0.3);
+      }
+
+      .record-cover-fallback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(var(--record-size) / 2.5);
+        font-weight: 900;
+        color: var(--accent);
+        background-color: var(--paper);
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 4px,
+          var(--hatch) 4px,
+          var(--hatch) 5px
+        );
+        border: 1px solid var(--rule);
+      }
+
+      .spotify-btn {
+        width: 100%;
+      }
+
+      /* ---------- Hatch band ---------- */
+      .hatch-band {
+        height: 0.875rem;
+        border-block: 1px solid var(--rule);
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 4px,
+          var(--hatch) 4px,
+          var(--hatch) 5px
+        );
+      }
+
+      /* ---------- Credits ---------- */
+      .credits {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem clamp(2.5rem, 6vw, 5rem);
+        margin: 0;
+        padding-block: 1.375rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .credit dt {
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #94a3b8;
+      }
+
+      .credit dd {
+        margin: 0.25rem 0 0;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      /* ---------- Review body ---------- */
+      .review-wrap {
+        padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2.5rem, 5vw, 3.5rem);
+      }
+
+      .review-body {
+        max-width: 65ch;
+        font-size: 1.0625rem;
+        line-height: 1.85;
+        color: #334155;
+      }
+
+      :global(.dark) .review-body {
+        color: #cbd5e1;
+      }
+
+      @media (min-width: 48rem) {
+        .review-body {
+          font-size: 1.125rem;
+        }
+      }
+
+      .review-body :global(p + p) {
+        margin-top: 1.5em;
+      }
+
+      .review-body :global(p:first-child)::first-letter {
+        float: left;
+        font-size: 3.6em;
+        line-height: 0.82;
+        font-weight: 900;
+        margin-right: 0.09em;
+        margin-top: 0.04em;
+        color: var(--accent);
+      }
+
+      .ai-note {
+        margin-top: clamp(2rem, 4vw, 3rem);
+      }
+
+      /* ---------- Up next ---------- */
+      .up-next {
+        padding-top: 2.5rem;
+      }
+
+      .up-next-label {
+        margin-bottom: 1rem;
+      }
+
+      .next-link {
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 2.5vw, 2rem);
+        padding: clamp(1rem, 2.2vw, 1.625rem) 2rem;
+        border-block: 1px solid var(--rule);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .next-link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+      }
+
+      .next-num {
+        flex: none;
+        width: 2.25rem;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 0.8125rem;
+        font-variant-numeric: tabular-nums;
+        color: #94a3b8;
+        transition: color 0.2s var(--ease-out-quart);
+      }
+
+      .next-thumb {
+        flex: none;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 0.25rem;
+        object-fit: cover;
+      }
+
+      .next-main {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        transition: transform 0.35s var(--ease-out-quart);
+      }
+
+      .next-title {
+        font-size: clamp(1.25rem, 2.3vw, 2rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        transition: color 0.2s var(--ease-out-quart);
+      }
+
+      .next-meta {
+        font-size: 0.8125rem;
+        color: #64748b;
+      }
+
+      :global(.dark) .next-meta {
+        color: #94a3b8;
+      }
+
+      .next-side {
+        flex: none;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-variant-numeric: tabular-nums;
+        font-size: 0.8125rem;
+        color: #94a3b8;
+      }
+
+      .next-arrow {
+        flex: none;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--accent);
+        opacity: 0;
+        transform: translateX(-0.375rem);
+        transition:
+          opacity 0.25s var(--ease-out-quart),
+          transform 0.25s var(--ease-out-quart);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .next-link:hover .next-title,
+        .next-link:hover .next-num {
+          color: var(--accent);
+        }
+        .next-link:hover .next-main {
+          transform: translateX(0.5rem);
+        }
+        .next-link:hover .next-arrow {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .next-link:focus-visible .next-title,
+      .next-link:focus-visible .next-num {
+        color: var(--accent);
+      }
+      .next-link:focus-visible .next-arrow {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .next-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2.5rem;
+        padding-block: 2rem clamp(3rem, 8vh, 6rem);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .next-main,
+        .next-arrow,
+        .next-num,
+        .next-title {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script>
+      import gsap from "gsap";
+
+      let kill: (() => void) | null = null;
+
+      function init() {
+        const hero = document.querySelector<HTMLElement>(".song-hero");
+        if (!hero) return;
+
+        kill?.();
+
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (reduceMotion) return;
+
+        const titleInner = hero.querySelector(".song-title-inner");
+        const fades = hero.querySelectorAll(".hero-fade");
+        const record = hero.querySelector(".record");
+        const vinyl = hero.querySelector(".record-vinyl");
+
+        const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+        if (titleInner) {
+          gsap.set(titleInner, { yPercent: 110 });
+          tl.to(titleInner, { yPercent: 0, duration: 1 }, 0.1);
+        }
+        gsap.set(fades, { opacity: 0, y: 16 });
+        tl.to(fades, { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, 0.4);
+
+        let spin: gsap.core.Tween | null = null;
+        if (record && vinyl) {
+          // The CSS resting transform (translateX(24%)) is for no-JS/reduced
+          // motion; clear it so GSAP owns the transform from a clean slate.
+          (vinyl as HTMLElement).style.transform = "none";
+          gsap.set(record, { opacity: 0, y: 28, scale: 0.97 });
+          tl.to(record, { opacity: 1, y: 0, scale: 1, duration: 0.9 }, 0.35);
+          tl.fromTo(
+            vinyl,
+            { xPercent: 0 },
+            { xPercent: 24, duration: 0.7, ease: "power3.out" },
+            0.95,
+          );
+          spin = gsap.to(vinyl, {
+            rotation: 360,
+            duration: 3.5,
+            repeat: -1,
+            ease: "none",
+          });
+        }
+
+        kill = () => {
+          tl.kill();
+          spin?.kill();
+        };
+      }
+
+      document.addEventListener("astro:page-load", init);
+      document.addEventListener("astro:before-swap", () => {
+        kill?.();
+        kill = null;
+      });
+    </script>
   </body>
 </html>

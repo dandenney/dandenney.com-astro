@@ -1,23 +1,60 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content';
-import SongReview from '@/layouts/SongReview.astro';
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import SongReview from "@/layouts/SongReview.astro";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const songs = await getCollection('songs');
-  return songs.map((song) => ({
-    params: { slug: song.id.replace(/\.mdx?$/, '') },
-    props: song,
-  }));
+  const songs = (await getCollection("songs")).sort((a, b) =>
+    a.data.title.localeCompare(b.data.title),
+  );
+  const slugFor = (song: CollectionEntry<"songs">) =>
+    song.id.replace(/\.mdx?$/, "");
+  return songs.map((song, i) => {
+    const next = songs[(i + 1) % songs.length];
+    return {
+      params: { slug: slugFor(song) },
+      props: {
+        song,
+        slug: slugFor(song),
+        trackNumber: i + 1,
+        totalTracks: songs.length,
+        next: {
+          slug: slugFor(next),
+          title: next.data.title,
+          artist: next.data.artist,
+          duration: next.data.duration,
+          albumArt: next.data.albumArt,
+        },
+      },
+    };
+  });
 }
 
-type Props = CollectionEntry<'songs'>;
+type Props = {
+  song: CollectionEntry<"songs">;
+  slug: string;
+  trackNumber: number;
+  totalTracks: number;
+  next: {
+    slug: string;
+    title: string;
+    artist: string;
+    duration: number;
+    albumArt?: string;
+  };
+};
 
-const song = Astro.props;
+const { song, slug, trackNumber, totalTracks, next } = Astro.props;
 const { Content } = await render(song);
 ---
 
-<SongReview {...song.data}>
+<SongReview
+  {...song.data}
+  slug={slug}
+  trackNumber={trackNumber}
+  totalTracks={totalTracks}
+  next={next}
+>
   <Content />
 </SongReview>

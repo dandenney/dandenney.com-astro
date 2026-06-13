@@ -4,13 +4,24 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
 import { getCollection } from "astro:content";
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 
 export const prerender = true;
 
 const songs = (await getCollection("songs")).sort((a, b) =>
   a.data.title.localeCompare(b.data.title),
 );
+
+const formatDuration = (ms: number) => {
+  const totalSeconds = Math.round(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+};
+
+const totalMs = songs.reduce((sum, song) => sum + song.data.duration, 0);
+const runtimeHours = Math.floor(totalMs / 3_600_000);
+const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
 ---
 
 <!doctype html>
@@ -18,74 +29,711 @@ const songs = (await getCollection("songs")).sort((a, b) =>
   <head>
     <BaseHead
       title="Music Reviews | Dan Denney"
-      description="AI-generated reviews of songs I'm listening to"
+      description="The songs I keep coming back to, each with a full review"
     />
     <ClientRouter />
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main
-      class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
+      class="rotation-page bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
       <Header title={SITE_TITLE} />
 
-      <section class="pt-16">
-        <div class="px-8">
-          <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-            <span class="whitespace-nowrap">[&nbsp;{songs.length} reviews&nbsp;]</span>
+      <section class="hero px-8">
+        <p class="hero-fade text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+          <span class="whitespace-nowrap">[&nbsp;Music / {songs.length} tracks&nbsp;]</span>
+        </p>
+        <h1 class="hero-title text-slate-900 dark:text-slate-100">
+          <span class="hero-line"><span class="hero-line-inner">Heavy</span></span>
+          <span class="hero-line"><span class="hero-line-inner hero-line-accent">R<span class="hero-o"><span class="sr-only">o</span><span class="hero-disc" aria-hidden="true"></span></span>tation</span></span>
+        </h1>
+        <div class="hero-fade hero-foot">
+          <p class="hero-copy text-gray-600 dark:text-slate-300">
+            The {songs.length} songs I keep coming back to, each with a full
+            review. The write-ups are AI-assisted; the taste is all mine.
           </p>
-          <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">
-            Music Reviews
-          </h1>
-          <p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-100">
-            AI-generated reviews of songs I'm listening to. Each review is automatically created when I share a Spotify link, using ChatGPT to analyze the track.
-          </p>
-          <div class="has-links mt-4">
-            <a href="/music" class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300">View listening history &rarr;</a>
+          <div class="hero-aside">
+            <p class="hero-stat text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              {runtimeHours}&thinsp;hr {runtimeMinutes}&thinsp;min runtime &middot; A&ndash;Z
+            </p>
+            <a
+              href="/music"
+              class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+              >View listening history &rarr;</a
+            >
           </div>
         </div>
-
-        {songs.length === 0 ? (
-          <div class="mt-12 px-8">
-            <p class="text-gray-600 dark:text-slate-400">
-              No song reviews yet. Share a Spotify link in a PR to generate your first review!
-            </p>
-          </div>
-        ) : (
-          <div class="reviews-list-grid mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
-            {songs.map((song) => (
-              <a
-                href={`/music/reviews/${song.id.replace(/\.mdx?$/, '')}/`}
-                class="reviews-list-grid-item group flex items-center gap-4 p-6 md:p-8 bg-slate-50 no-underline transition-colors dark:bg-slate-800"
-              >
-                {song.data.albumArt && (
-                  <div class="h-16 w-16 shrink-0 overflow-hidden rounded-full lg:h-20 lg:w-20">
-                    <img
-                      class="h-full w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-110"
-                      src={song.data.albumArt}
-                      alt={`Album art for ${song.data.album}`}
-                      loading="lazy"
-                    />
-                  </div>
-                )}
-                <div class="min-w-0 flex-1">
-                  <h2 class="text-sm font-semibold text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300 truncate">
-                    {song.data.title}
-                  </h2>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-slate-400 truncate">
-                    {song.data.artist}
-                  </p>
-                  {song.data.album && (
-                    <p class="mt-1 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500 truncate">
-                      {song.data.album}
-                    </p>
-                  )}
-                </div>
-              </a>
-            ))}
-          </div>
-        )}
       </section>
+
+      <div class="hatch-band" aria-hidden="true"></div>
+
+      {songs.length === 0 ? (
+        <div class="px-8 py-16">
+          <p class="text-gray-600 dark:text-slate-400">
+            No song reviews yet. Share a Spotify link in a PR to generate your first review!
+          </p>
+        </div>
+      ) : (
+        <ol class="tracklist">
+          {songs.map((song, i) => {
+            const year = song.data.releaseDate.slice(0, 4);
+            const album =
+              song.data.album && song.data.album !== song.data.title
+                ? song.data.album
+                : null;
+            return (
+              <li class="track">
+                <a
+                  href={`/music/reviews/${song.id.replace(/\.mdx?$/, "")}/`}
+                  class="track-link"
+                  data-art={song.data.albumArt}
+                >
+                  <span class="track-num" aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {song.data.albumArt && (
+                    <img
+                      class="track-thumb"
+                      src={song.data.albumArt}
+                      alt=""
+                      width="96"
+                      height="96"
+                      loading="lazy"
+                      transition:name={`song-art-${song.id.replace(/\.mdx?$/, "")}`}
+                    />
+                  )}
+                  <span class="track-main">
+                    <span class="track-title">{song.data.title}</span>
+                    <span class="track-meta">
+                      {song.data.artist}{album && <span class="track-album"> &middot; {album}</span>}
+                    </span>
+                  </span>
+                  <span class="track-side">
+                    <span class="track-duration">{formatDuration(song.data.duration)}</span>
+                    <span class="track-year">{year}</span>
+                  </span>
+                  <span class="track-arrow" aria-hidden="true">&#8599;</span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      )}
+
+      <div class="hatch-band" aria-hidden="true"></div>
     </main>
     <Footer />
+
+    <div class="preview" aria-hidden="true">
+      <img class="preview-glow" alt="" />
+      <span class="preview-vinyl"></span>
+      <span class="preview-cover">
+        <img class="preview-img" alt="" />
+      </span>
+    </div>
+
+    <style>
+      .rotation-page,
+      .preview {
+        --ink: #0f172a;
+        --paper: #ffffff;
+        --accent: #b91c1c;
+        --hatch: #cbd5e1;
+        --rule: #e2e8f0;
+        --groove-a: #0b1120;
+        --groove-b: #1e293b;
+        --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      :global(.dark) .rotation-page,
+      :global(.dark) .preview {
+        --ink: #f1f5f9;
+        --paper: #0f172a;
+        --accent: #f87171;
+        --hatch: #1e293b;
+        --rule: #334155;
+        --groove-a: #1e293b;
+        --groove-b: #3e4c63;
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        padding-top: clamp(4rem, 9vh, 7rem);
+        padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+      }
+
+      .hero-title {
+        margin-top: 1.25rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: clamp(3.25rem, 11.5vw, 8.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-line {
+        display: block;
+        overflow: hidden;
+        padding-right: 0.05em; /* keep the italic-less overshoot of the N from clipping */
+      }
+
+      .hero-line-inner {
+        display: inline-block;
+        will-change: transform;
+      }
+
+      .hero-line-accent {
+        color: var(--accent);
+      }
+
+      .hero-o {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hero-disc {
+        position: relative;
+        display: inline-block;
+        width: 0.76em;
+        height: 0.76em;
+        margin-inline: 0.015em;
+        border-radius: 50%;
+        transform: translateY(0.055em);
+        background:
+          radial-gradient(
+            circle,
+            var(--paper) 0 11%,
+            var(--accent) 11% 35%,
+            transparent 35%
+          ),
+          repeating-radial-gradient(
+            circle,
+            var(--ink) 0 0.045em,
+            color-mix(in oklab, var(--ink), var(--paper) 22%) 0.045em 0.06em
+          );
+        animation: disc-spin 6s linear infinite;
+      }
+
+      .hero-disc::after {
+        content: "";
+        position: absolute;
+        top: 9%;
+        left: 47%;
+        width: 0.05em;
+        height: 0.05em;
+        border-radius: 50%;
+        background: var(--paper);
+        opacity: 0.7;
+      }
+
+      @keyframes disc-spin {
+        to {
+          transform: translateY(0.055em) rotate(360deg);
+        }
+      }
+
+      .hero-foot {
+        margin-top: clamp(1.75rem, 4vh, 3rem);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.5rem 3rem;
+      }
+
+      .hero-copy {
+        max-width: 44ch;
+        font-size: 1.125rem;
+        line-height: 1.7;
+      }
+
+      .hero-aside {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      /* ---------- Hatch band ---------- */
+      .hatch-band {
+        height: 0.875rem;
+        border-block: 1px solid var(--rule);
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 4px,
+          var(--hatch) 4px,
+          var(--hatch) 5px
+        );
+      }
+
+      /* ---------- Tracklist ---------- */
+      .tracklist {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .track + .track {
+        border-top: 1px solid var(--rule);
+      }
+
+      .track-link {
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 2.5vw, 2rem);
+        padding: clamp(1rem, 2.2vw, 1.625rem) 2rem;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .track-link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: -2px;
+      }
+
+      .track-num {
+        flex: none;
+        width: 2.25rem;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 0.8125rem;
+        font-variant-numeric: tabular-nums;
+        color: #94a3b8;
+        transition: color 0.2s var(--ease-out-quart);
+      }
+
+      .track-thumb {
+        display: none;
+        flex: none;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.25rem;
+        object-fit: cover;
+      }
+
+      .track-main {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        transition: transform 0.35s var(--ease-out-quart);
+      }
+
+      .track-title {
+        font-size: clamp(1.25rem, 2.3vw, 2rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        transition: color 0.2s var(--ease-out-quart);
+      }
+
+      .track-meta {
+        font-size: 0.8125rem;
+        color: #64748b;
+      }
+
+      :global(.dark) .track-meta {
+        color: #94a3b8;
+      }
+
+      .track-side {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.3rem;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-variant-numeric: tabular-nums;
+        font-size: 0.8125rem;
+        color: #94a3b8;
+      }
+
+      .track-year {
+        font-size: 0.6875rem;
+        letter-spacing: 0.1em;
+      }
+
+      .track-arrow {
+        flex: none;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--accent);
+        opacity: 0;
+        transform: translate(-0.375rem, 0.375rem);
+        transition:
+          opacity 0.25s var(--ease-out-quart),
+          transform 0.25s var(--ease-out-quart);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .track-link:hover .track-title,
+        .track-link:hover .track-num {
+          color: var(--accent);
+        }
+        .track-link:hover .track-main {
+          transform: translateX(0.5rem);
+        }
+        .track-link:hover .track-arrow {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+
+      .track-link:focus-visible .track-title,
+      .track-link:focus-visible .track-num {
+        color: var(--accent);
+      }
+      .track-link:focus-visible .track-arrow {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      /* Inline art when there is no hover to summon the floating preview */
+      @media (hover: none), (max-width: 40rem) {
+        .track-thumb {
+          display: block;
+        }
+      }
+
+      /* ---------- Floating preview ---------- */
+      .preview {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 40;
+        width: clamp(13rem, 22vw, 18rem);
+        aspect-ratio: 1;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      @media (hover: none) {
+        .preview {
+          display: none;
+        }
+      }
+
+      .preview-glow {
+        position: absolute;
+        inset: -12%;
+        width: 124%;
+        height: 124%;
+        border-radius: 30%;
+        object-fit: cover;
+        filter: blur(36px) saturate(1.5);
+        opacity: 0.45;
+      }
+
+      .preview-vinyl {
+        position: absolute;
+        inset: 4%;
+        border-radius: 50%;
+        background:
+          radial-gradient(
+            circle,
+            var(--paper) 0 4.5%,
+            #b91c1c 4.5% 33%,
+            transparent 33%
+          ),
+          repeating-radial-gradient(
+            circle,
+            var(--groove-a) 0 1.5%,
+            var(--groove-b) 1.5% 2.6%
+          );
+        box-shadow: 0 8px 24px rgb(2 6 23 / 0.35);
+      }
+
+      .preview-vinyl::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 48%;
+        width: 4%;
+        height: 4%;
+        border-radius: 50%;
+        background: rgb(241 245 249 / 0.55);
+      }
+
+      .preview-cover {
+        position: absolute;
+        inset: 0;
+        display: block;
+        border-radius: 0.375rem;
+        overflow: hidden;
+        background: var(--ink);
+        box-shadow:
+          0 1px 2px rgb(2 6 23 / 0.2),
+          0 16px 40px rgb(2 6 23 / 0.3);
+      }
+
+      .preview-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-disc {
+          animation: none;
+        }
+        .track-main,
+        .track-arrow,
+        .track-num,
+        .track-title {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script>
+      import gsap from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      let cleanup: AbortController | null = null;
+
+      function init() {
+        const list = document.querySelector<HTMLElement>(".tracklist");
+        const preview = document.querySelector<HTMLElement>(".preview");
+        if (!list || !preview) return;
+
+        cleanup?.abort();
+        cleanup = new AbortController();
+        const { signal } = cleanup;
+
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        const hoverable = window.matchMedia(
+          "(hover: hover) and (pointer: fine)",
+        ).matches;
+
+        /* ----- Entrance choreography ----- */
+        if (!reduceMotion) {
+          const lines = document.querySelectorAll(".hero-line-inner");
+          const fades = document.querySelectorAll(".hero-fade");
+          gsap.set(lines, { yPercent: 110 });
+          gsap.set(fades, { opacity: 0, y: 16 });
+          gsap
+            .timeline({ defaults: { ease: "expo.out" } })
+            .to(lines, { yPercent: 0, duration: 1, stagger: 0.12 }, 0.1)
+            .to(fades, { opacity: 1, y: 0, duration: 0.7, stagger: 0.1 }, 0.55);
+
+          const tracks = gsap.utils.toArray<HTMLElement>(".track");
+          gsap.set(tracks, { opacity: 0, y: 28 });
+          ScrollTrigger.batch(tracks, {
+            start: "top 94%",
+            once: true,
+            onEnter: (batch) =>
+              gsap.to(batch, {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                ease: "power3.out",
+                stagger: 0.05,
+              }),
+          });
+        }
+
+        /* ----- Floating album-art preview ----- */
+        if (!hoverable) return;
+
+        const glow = preview.querySelector<HTMLImageElement>(".preview-glow")!;
+        const vinyl = preview.querySelector<HTMLElement>(".preview-vinyl")!;
+        const cover = preview.querySelector<HTMLImageElement>(".preview-img")!;
+
+        const dur = (d: number) => (reduceMotion ? 0 : d);
+        const xTo = gsap.quickTo(preview, "x", {
+          duration: dur(0.45),
+          ease: "power3.out",
+        });
+        const yTo = gsap.quickTo(preview, "y", {
+          duration: dur(0.45),
+          ease: "power3.out",
+        });
+        const tiltTo = gsap.quickTo(preview, "rotation", {
+          duration: dur(0.7),
+          ease: "power2.out",
+        });
+
+        if (!reduceMotion) {
+          gsap.to(vinyl, {
+            rotation: 360,
+            duration: 3.5,
+            repeat: -1,
+            ease: "none",
+          });
+        }
+
+        let visible = false;
+        let currentArt: string | null = null;
+        let lastX: number | null = null;
+        let tiltTimer: ReturnType<typeof setTimeout> | undefined;
+
+        const previewSize = () => preview.offsetWidth;
+
+        function moveTo(clientX: number, clientY: number, immediate = false) {
+          const size = previewSize();
+          const x = Math.min(clientX + 28, window.innerWidth - size - 24);
+          const y = gsap.utils.clamp(
+            12,
+            window.innerHeight - size - 12,
+            clientY - size / 2,
+          );
+          if (immediate) {
+            gsap.set(preview, { x, y });
+          } else {
+            xTo(x);
+            yTo(y);
+          }
+        }
+
+        function show() {
+          if (visible) return;
+          visible = true;
+          gsap.killTweensOf(preview, "opacity,visibility,scale");
+          gsap.fromTo(
+            preview,
+            { autoAlpha: 0, scale: 0.92 },
+            { autoAlpha: 1, scale: 1, duration: dur(0.3), ease: "power3.out" },
+          );
+          gsap.fromTo(
+            vinyl,
+            { xPercent: 0 },
+            { xPercent: 23, duration: dur(0.45), ease: "power3.out", delay: dur(0.08) },
+          );
+        }
+
+        function hide() {
+          if (!visible) return;
+          visible = false;
+          gsap.to(preview, {
+            autoAlpha: 0,
+            scale: 0.94,
+            duration: dur(0.22),
+            ease: "power2.in",
+          });
+          gsap.to(vinyl, { xPercent: 0, duration: dur(0.22), ease: "power2.in" });
+        }
+
+        function setArt(art: string) {
+          if (art === currentArt) return;
+          currentArt = art;
+          cover.src = art;
+          glow.src = art;
+          gsap.fromTo(
+            cover,
+            { opacity: 0.4, scale: 1.07 },
+            {
+              opacity: 1,
+              scale: 1,
+              duration: dur(0.35),
+              ease: "power2.out",
+              overwrite: true,
+            },
+          );
+        }
+
+        function artFor(target: EventTarget | null): string | null {
+          const link =
+            target instanceof Element ? target.closest(".track-link") : null;
+          return link instanceof HTMLElement ? (link.dataset.art ?? null) : null;
+        }
+
+        list.addEventListener(
+          "pointerover",
+          (e) => {
+            const art = artFor(e.target);
+            if (!art) {
+              hide();
+              return;
+            }
+            const wasHidden = !visible;
+            setArt(art);
+            if (wasHidden) moveTo(e.clientX, e.clientY, true);
+            show();
+          },
+          { signal },
+        );
+
+        list.addEventListener(
+          "pointermove",
+          (e) => {
+            if (!visible) return;
+            moveTo(e.clientX, e.clientY);
+            if (lastX !== null && !reduceMotion) {
+              tiltTo(gsap.utils.clamp(-9, 9, (e.clientX - lastX) * 0.6));
+              clearTimeout(tiltTimer);
+              tiltTimer = setTimeout(() => tiltTo(0), 90);
+            }
+            lastX = e.clientX;
+          },
+          { signal },
+        );
+
+        list.addEventListener(
+          "pointerleave",
+          () => {
+            lastX = null;
+            hide();
+          },
+          { signal },
+        );
+
+        /* Keyboard: pin the preview to the right of the focused row */
+        list.addEventListener(
+          "focusin",
+          (e) => {
+            const art = artFor(e.target);
+            if (!art || !(e.target instanceof Element)) return;
+            const rect = e.target.getBoundingClientRect();
+            const size = previewSize();
+            setArt(art);
+            gsap.set(preview, {
+              x: window.innerWidth - size - 32,
+              y: gsap.utils.clamp(
+                12,
+                window.innerHeight - size - 12,
+                rect.top + rect.height / 2 - size / 2,
+              ),
+            });
+            show();
+          },
+          { signal },
+        );
+
+        list.addEventListener(
+          "focusout",
+          (e) => {
+            const next = (e as FocusEvent).relatedTarget;
+            if (!(next instanceof Element) || !list.contains(next)) hide();
+          },
+          { signal },
+        );
+
+        /* Warm the art cache once the page is idle */
+        const warm = () => {
+          for (const link of list.querySelectorAll<HTMLElement>(".track-link")) {
+            const art = link.dataset.art;
+            if (art) new Image().src = art;
+          }
+        };
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(warm, { timeout: 4000 });
+        } else {
+          setTimeout(warm, 2500);
+        }
+      }
+
+      document.addEventListener("astro:page-load", init);
+      document.addEventListener("astro:before-swap", () => {
+        cleanup?.abort();
+        cleanup = null;
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      });
+    </script>
   </body>
 </html>
