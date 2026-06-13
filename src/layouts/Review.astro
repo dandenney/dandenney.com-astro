@@ -1,101 +1,90 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import toTitleCase from '../helpers/toTitleCase.js';
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import toTitleCase from '@/helpers/toTitleCase.js';
+import { episodeMap } from '@/helpers/nrai';
 import { ClientRouter } from 'astro:transitions';
+import { getCollection } from 'astro:content';
+import '@/styles/nrai.css';
 
 interface Props {
-  city: string;
-  description: string;
-  state?: string;
-  tags?: string[];
-  heroImageAlt?: string;
-  heroImage?: string;
-  heroImageUrl?: string;
-  heroImageAttribution?: string;
-  title: string;
+	id?: string;
+	city: string;
+	description: string;
+	state?: string;
+	tags?: string[];
+	heroImageAlt?: string;
+	heroImage?: string;
+	heroImageUrl?: string;
+	heroImageAttribution?: string;
+	title: string;
+	pubDate?: Date;
 }
 
-const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title } = Astro.props;
+const { id, city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate } = Astro.props;
+
+const ep = id ? episodeMap(await getCollection('reviews')).get(id) : undefined;
+const airDate = pubDate
+	? pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase()
+	: undefined;
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} type="restaurant" image={heroImage ? `/no-reserv-ai-tions/${heroImage}.webp` : undefined} />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
-		<style>
-			.hero-image-wrapper {
-				overflow: hidden;
-			}
-			.hero-image-wrapper img {
-				transition: transform 0.6s ease-out;
-			}
-		</style>
 	</head>
-	<body class="bg-slate-100 dark:bg-slate-950">
-		<Header />
-		<main id="main-content" tabindex="-1" class="bg-slate-100 border-b border-slate-200 relative shadow-xs z-10 dark:bg-slate-950 dark:border-slate-800">
+	<body class="nrai">
+		<main id="main-content" tabindex="-1" class="relative shadow-xs z-10">
+			<Header />
 
-			<!-- Title section: centered on gray background -->
-			<div class="bg-slate-100 px-4 pt-8 dark:bg-slate-950 lg:px-8 lg:pt-16">
-				<div class="max-w-(--breakpoint-xl) mx-auto text-center">
-					<p class="has-links text-sm text-gray-500 dark:text-slate-400">
-						<a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></>}
+			<article class="rev">
+				<header class="rev-open">
+					<p class="rev-meta tw-links">
+						{ep && <span class="ep-tab">Ep. {ep}</span>}
+						<span>
+							<a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state && <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></>}
+						</span>
+						{airDate && <span>Air date: {airDate}</span>}
 					</p>
 
-					<h1 class="text-4xl text-balance font-bold leading-tight max-w-3xl mx-auto mt-4 tracking-tight md:text-6xl xl:text-7xl dark:text-white">{title}</h1>
+					<h1 class="rev-title">{title}</h1>
 
-					<p class="mt-4 text-balance max-w-2xl mx-auto text-lg text-gray-600 dark:text-slate-300 lg:text-xl">{description}</p>
+					<p class="rev-log">{description}</p>
+				</header>
 
-					{tags && (
-						<p class="has-links mt-4 text-sm text-gray-400 dark:text-slate-500">
-							{tags.map((tag, index) => (
-								<>
-									{index > 0 ? ' · ' : ''}
-									<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
-								</>
-							))}
-						</p>
-					)}
-				</div>
-			</div>
-
-			<!-- Image + white card: card starts behind the image, image sits on top -->
-			<div class="relative px-4 pt-8 lg:px-8 lg:pt-12">
-				<!-- White card: starts partway up the image area -->
-				<div class="absolute inset-x-4 -bottom-4 top-[40%] bg-white rounded-t-2xl dark:bg-slate-900 lg:inset-x-8"></div>
-
-				<!-- Image: narrower than the card, layered on top -->
-				<div class="hero-image-wrapper relative z-10 max-w-5xl mx-auto rounded-lg" id="hero-wrapper">
-					<img
-						class="w-full rounded-lg"
-						id="photo"
-						src={`/no-reserv-ai-tions/${heroImage}.webp`}
-						alt={heroImageAlt}
-					/>
-				</div>
-				{heroImageAttribution && (
-					<div class="has-links relative z-10 max-w-5xl mx-auto mt-2 text-center">
-						<small class="text-xs text-slate-500">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></small>
-					</div>
+				{heroImage && (
+					<figure class="rev-still filmgrain" id="hero-wrapper">
+						<img id="photo" src={`/no-reserv-ai-tions/${heroImage}.webp`} alt={heroImageAlt} fetchpriority="high" />
+					</figure>
 				)}
-			</div>
+				{heroImageAttribution && (
+					<p class="rev-credit tw-links">Photo credit: <a href={heroImageUrl}>{heroImageAttribution}</a></p>
+				)}
 
-			<!-- White content card: continues seamlessly from the background above -->
-			<div class="px-4 lg:px-8">
-				<article class="bg-white dark:bg-slate-900 mx-auto rounded-b-2xl px-6 pt-4 pb-12 shadow-sm lg:px-16 lg:pt-6 lg:pb-16 xl:px-24">
-					<div class="longform review max-w-3xl mx-auto">
-						<slot />
-					</div>
-				</article>
-			</div>
+				<div class="longform review rev-body">
+					<slot />
+				</div>
 
-			<nav class="has-links flex flex-wrap gap-x-4 justify-end max-w-3xl mx-auto px-4 py-12 text-gray-600 lg:py-16 dark:text-slate-300">
-				<a href="/no-reserv-ai-tions" class="btn-link">← Back to No Reserv-AI-tions</a>
-				<p class="mt-2">Or view by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
-			</nav>
+				{tags && (
+					<p class="rev-tags tw-links">
+						Filed under:
+						{tags.map((tag, index) => (
+							<>
+								{index > 0 ? ' · ' : ' '}
+								<a href={`/no-reserv-ai-tions/${tag}`}>{toTitleCase(tag)}</a>
+							</>
+						))}
+					</p>
+				)}
 
+				<nav class="rev-nav tw-links" aria-label="Browse reviews">
+					<a class="cue-btn" href="/no-reserv-ai-tions"><span aria-hidden="true">&larr;</span> The cold open</a>
+					<p>Or by <a href="/no-reserv-ai-tions/1">newest</a>, <a href="/no-reserv-ai-tions/cities">city</a>, <a href="/no-reserv-ai-tions/states">state</a>, or <a href="/no-reserv-ai-tions/tags">tag</a></p>
+				</nav>
+			</article>
 		</main>
 		<Footer />
 
@@ -104,19 +93,132 @@ const { city, description, state, tags, heroImageAlt, heroImage, heroImageUrl, h
 
 		<script is:inline>
 			document.addEventListener('astro:page-load', () => {
+				if (!document.getElementById('photo')) return;
 				gsap.registerPlugin(ScrollTrigger);
 
-				gsap.to("#photo", {
-					yPercent: -8,
-					ease: "none",
-					scrollTrigger: {
-						trigger: "#hero-wrapper",
-						start: "top bottom",
-						end: "bottom top",
-						scrub: true
-					}
+				gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
+					gsap.to('#photo', {
+						yPercent: -8,
+						ease: 'none',
+						scrollTrigger: {
+							trigger: '#hero-wrapper',
+							start: 'top bottom',
+							end: 'bottom top',
+							scrub: true,
+						},
+					});
 				});
 			});
 		</script>
+
+		<style>
+			.rev {
+				max-width: 64rem;
+				margin-inline: auto;
+				padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 4vw, 2rem) clamp(3rem, 6vw, 5rem);
+			}
+
+			.rev-open {
+				max-width: 48rem;
+				margin-inline: auto;
+			}
+			.rev-meta {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.5rem 1.25rem;
+				font-family: var(--font-type);
+				font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--nrai-smoke);
+			}
+			.rev-title {
+				font-family: var(--font-display);
+				font-weight: 400;
+				font-size: clamp(2.4rem, 6vw, 5.5rem);
+				line-height: 0.95;
+				text-transform: uppercase;
+				letter-spacing: 0.01em;
+				color: var(--nrai-ink);
+				margin-top: 1.25rem;
+				text-wrap: balance;
+			}
+			.rev-log {
+				font-family: var(--font-serif);
+				font-style: italic;
+				font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+				line-height: 1.55;
+				color: var(--nrai-smoke);
+				margin-top: 1rem;
+				max-width: 58ch;
+			}
+
+			.rev-still {
+				overflow: hidden;
+				margin-top: clamp(2rem, 4vw, 3rem);
+				background: var(--nrai-panel);
+			}
+			.rev-still img {
+				display: block;
+				width: 100%;
+				height: auto;
+				filter: saturate(0.85) contrast(1.05) brightness(0.94);
+			}
+			.rev-still::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				pointer-events: none;
+				background: radial-gradient(130% 100% at 50% 40%, transparent 60%, oklch(0% 0 0 / 0.35));
+			}
+			.rev-credit {
+				font-family: var(--font-type);
+				font-size: 0.75rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--nrai-smoke);
+				text-align: right;
+				margin-top: 0.6rem;
+			}
+
+			.rev-body {
+				max-width: 48rem;
+				margin-inline: auto;
+				margin-top: clamp(2rem, 4vw, 3rem);
+			}
+
+			.rev-tags {
+				max-width: 48rem;
+				margin-inline: auto;
+				margin-top: clamp(2rem, 4vw, 3rem);
+				font-family: var(--font-type);
+				font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--nrai-smoke);
+			}
+
+			.rev-nav {
+				max-width: 48rem;
+				margin-inline: auto;
+				margin-top: clamp(2.5rem, 5vw, 4rem);
+				padding-top: clamp(1.5rem, 3vw, 2.5rem);
+				border-top: 1px solid var(--nrai-line);
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 1rem 1.5rem;
+				justify-content: space-between;
+			}
+			.rev-nav p {
+				font-family: var(--font-type);
+				font-size: 0.85rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--nrai-smoke);
+			}
+		</style>
 	</body>
 </html>

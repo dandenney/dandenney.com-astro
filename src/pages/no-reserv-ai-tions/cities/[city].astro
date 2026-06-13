@@ -1,57 +1,81 @@
 ---
-import BaseHead from '../../../components/BaseHead.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import toTitleCase from '../../../helpers/toTitleCase.js'
-import ReviewLinkItem from '../../../components/ReviewLinkItem.astro';
-import ReviewLinkItemJs from '../../../components/ReviewLinkItemJs.astro';
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import toTitleCase from '@/helpers/toTitleCase.js';
+import EpisodeRow from '@/components/nrai/EpisodeRow.astro';
+import { episodeMap } from '@/helpers/nrai';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
+import '@/styles/nrai.css';
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const allReviews = await getCollection('reviews');
+	const allReviews = await getCollection('reviews');
 
-  const uniqueCities = [...new Set(allReviews.map((review) => String(review.data.city).toLowerCase()))];
+	const uniqueCities = [...new Set(allReviews.map((review) => String(review.data.city).toLowerCase()))];
 
-  return uniqueCities.map((city) => {
-    const filteredReviews = allReviews.filter((review) =>
-      String(review.data.city).toLowerCase() === city
-    );
+	return uniqueCities.map((city) => {
+		const filteredReviews = allReviews.filter(
+			(review) => String(review.data.city).toLowerCase() === city
+		);
 
-    return {
-      params: { city },
-      props: { reviews: filteredReviews },
-    };
-  });
+		return {
+			params: { city },
+			props: { reviews: filteredReviews },
+		};
+	});
 }
 
 const { city } = Astro.params;
 const { reviews } = Astro.props;
 
+const eps = episodeMap(await getCollection('reviews'));
+const sorted = [...reviews].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+		<BaseHead title={`No ReservAItions in ${toTitleCase(city)}`} description="Reviews of food, music, and events with the help of AI" />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
 	</head>
-	<body class="bg-slate-50 dark:bg-slate-900">
-		<Header />
-		<main class="bg-slate-50 dark:bg-slate-900 relative shadow-xs z-10 dark:text-slate-200" style="min-height: 90dvh;">
-			<section class="max-w-(--breakpoint-xl) mx-auto pb-24 pt-8 px-4">
-				<h2 class="border-b text-center text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:shrink-0 md:text-left xl:border-0 xl:text-6xl">{toTitleCase(city)}</h2>
-				<ul class="mt-8">
-					{reviews.map((review) => {
-						return(
-						  <ReviewLinkItem review={review} />
-					)})}
+	<body class="nrai">
+		<main id="main-content" class="relative shadow-xs z-10">
+			<Header />
+			<section class="run">
+				<h2 class="slate">
+					<span class="slate-mark" aria-hidden="true"></span>{toTitleCase(city)}
+					<span class="slate-note">on location &middot; {sorted.length} {sorted.length === 1 ? 'episode' : 'episodes'}</span>
+				</h2>
+				<ul role="list">
+					{sorted.map((review, i) => (
+						<EpisodeRow review={review} ep={eps.get(review.id) ?? 0} eager={i < 3} />
+					))}
 				</ul>
-      </section>
+				<nav class="run-nav" aria-label="Browse">
+					<a class="cue-btn" href="/no-reserv-ai-tions/cities"><span aria-hidden="true">&larr;</span> All cities</a>
+				</nav>
+			</section>
 		</main>
 		<Footer />
-    <ReviewLinkItemJs />
+
+		<style>
+			.run {
+				max-width: 80rem;
+				margin-inline: auto;
+				padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+			}
+			.run ul {
+				border-bottom: 1px solid var(--nrai-line);
+			}
+			.run-nav {
+				display: flex;
+				justify-content: center;
+				padding-top: clamp(2rem, 4vw, 3rem);
+			}
+		</style>
 	</body>
 </html>

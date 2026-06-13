@@ -5,6 +5,7 @@ import Footer from '@/components/Footer.astro';
 import { getCollection } from 'astro:content';
 import toTitleCase from '@/helpers/toTitleCase.js';
 import { ClientRouter } from 'astro:transitions';
+import '@/styles/nrai.css';
 
 export const prerender = true;
 
@@ -58,7 +59,7 @@ const board = [
 			<!-- Cold open -->
 			<section class="hero">
 				<div class="hero-copy">
-					<p class="kicker hero-fade" style="--i: 1">
+					<p class="kicker tw-links hero-fade" style="--i: 1">
 						<span class="kicker-dot" aria-hidden="true"></span>
 						Dan Denney presents &middot; an homage to <a href="https://en.wikipedia.org/wiki/Anthony_Bourdain">Anthony Bourdain</a>
 					</p>
@@ -95,7 +96,7 @@ const board = [
 				<h2 class="slate">
 					<span class="slate-mark" aria-hidden="true"></span>The premise
 				</h2>
-				<div class="premise-body">
+				<div class="premise-body tw-links">
 					<p>
 						<a href="https://en.wikipedia.org/wiki/Anthony_Bourdain">Anthony Bourdain</a> had a glorious
 						way of describing the human experience, especially when it revolved around food and drink.
@@ -205,118 +206,7 @@ const board = [
 			});
 		</script>
 
-		<style is:global>
-			.nrai {
-				--nrai-bg: oklch(17% 0.012 55);
-				--nrai-panel: oklch(21% 0.014 55);
-				--nrai-ink: oklch(93% 0.015 85);
-				--nrai-smoke: oklch(70% 0.02 70);
-				--nrai-line: oklch(93% 0.015 85 / 0.16);
-				--nrai-red: #b91c1c;
-				--nrai-red-bright: oklch(66% 0.19 25);
-				--font-display: 'Anton', 'Arial Narrow', sans-serif;
-				--font-type: 'Special Elite', 'Courier New', monospace;
-				--font-serif: Georgia, 'Times New Roman', serif;
-				background: var(--nrai-bg);
-				color: var(--nrai-ink);
-			}
-
-			.nrai main {
-				background: var(--nrai-bg);
-				min-height: 100dvh;
-			}
-
-			/* Page-wide film grain */
-			.nrai main::after {
-				content: '';
-				position: fixed;
-				inset: 0;
-				z-index: 60;
-				pointer-events: none;
-				opacity: 0.05;
-				mix-blend-mode: overlay;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
-			}
-
-			/* Header adjustments for the dark set */
-			.nrai header nav a,
-			.nrai header nav li a,
-			.nrai header ul.has-links a:not(.btn-link) {
-				color: var(--nrai-ink);
-			}
-			.nrai header ul.has-links a:not(.btn-link) {
-				background-image: linear-gradient(to bottom, transparent 90%, var(--nrai-red) 0);
-			}
-			.nrai header .toggle {
-				background: oklch(25% 0.014 55 / 0.9);
-				--tw-ring-color: oklch(93% 0.015 85 / 0.12);
-			}
-			.nrai header .toggle svg:first-of-type {
-				display: none;
-			}
-			.nrai header .toggle svg:last-of-type {
-				display: block;
-			}
-
-			/* Links inside page copy */
-			.nrai .premise a,
-			.nrai .kicker a {
-				color: inherit;
-				text-decoration: underline;
-				text-decoration-color: var(--nrai-red-bright);
-				text-underline-offset: 3px;
-				transition: color 0.2s ease-out;
-			}
-			.nrai .premise a:hover,
-			.nrai .kicker a:hover {
-				color: var(--nrai-red-bright);
-			}
-		</style>
-
 		<style>
-			/* ---------- shared bits ---------- */
-			.filmgrain {
-				position: relative;
-			}
-			.filmgrain::after {
-				content: '';
-				position: absolute;
-				inset: 0;
-				pointer-events: none;
-				opacity: 0.22;
-				mix-blend-mode: overlay;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
-			}
-
-			.slate {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: baseline;
-				gap: 0.75rem 1rem;
-				font-family: var(--font-display);
-				font-weight: 400;
-				font-size: clamp(1.6rem, 3vw, 2.4rem);
-				letter-spacing: 0.02em;
-				text-transform: uppercase;
-				color: var(--nrai-ink);
-				border-top: 1px solid var(--nrai-line);
-				padding-top: 1.25rem;
-				margin-bottom: clamp(2rem, 4vw, 3.5rem);
-			}
-			.slate-mark {
-				width: 0.55em;
-				height: 0.55em;
-				background: var(--nrai-red);
-				align-self: center;
-			}
-			.slate-note {
-				font-family: var(--font-type);
-				font-size: clamp(0.8rem, 1.2vw, 0.95rem);
-				text-transform: uppercase;
-				letter-spacing: 0.08em;
-				color: var(--nrai-smoke);
-			}
-
 			/* ---------- hero ---------- */
 			.hero {
 				display: flex;
@@ -662,12 +552,6 @@ const board = [
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
 				color: var(--nrai-smoke);
-			}
-			.ep-tab {
-				background: var(--nrai-red);
-				color: var(--nrai-ink);
-				padding: 0.3rem 0.65rem;
-				transform: rotate(-1deg);
 			}
 			.lt-title {
 				font-family: var(--font-display);

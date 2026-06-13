@@ -1,10 +1,12 @@
 ---
-import BaseHead from '../../../components/BaseHead.astro';
-import Header from '../../../components/Header.astro';
-import Footer from '../../../components/Footer.astro';
-import toTitleCase from '../../../helpers/toTitleCase.js'
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import toTitleCase from '@/helpers/toTitleCase.js';
+import MapCard from '@/components/nrai/MapCard.astro';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
+import '@/styles/nrai.css';
 
 export const prerender = true;
 
@@ -33,75 +35,42 @@ const cities = [...cityMap.values()].sort((a, b) => b.count - a.count);
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions Cities | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
-		<style>
-			.city-card {
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
-			.city-card:hover {
-				transform: translateY(-4px);
-				box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-			}
-			.city-card:hover img {
-				transform: scale(1.08);
-			}
-			.city-card img {
-				transition: transform 0.6s ease;
-			}
-			.city-card:hover .city-overlay {
-				background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
-			}
-			.city-overlay {
-				background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
-				transition: background 0.3s ease;
-			}
-		</style>
 	</head>
-	<body class="bg-slate-50 dark:bg-slate-900">
-		<Header />
-		<main class="bg-slate-50 relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
-			<section class="mx-auto pb-24 pt-8 px-4 max-w-(--breakpoint-2xl)">
-				<div class="mb-8">
-					<h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 xl:text-6xl">Cities</h2>
-					<p class="mt-2 text-gray-600 dark:text-slate-300">
-						<span class="whitespace-nowrap">[&nbsp;{cities.length} cities, {allReviews.length} reviews — AI-written in the spirit of Anthony Bourdain&nbsp;]</span>
-					</p>
-				</div>
+	<body class="nrai">
+		<main id="main-content" class="relative shadow-xs z-10">
+			<Header />
+			<section class="map">
+				<h2 class="slate">
+					<span class="slate-mark" aria-hidden="true"></span>Cities
+					<span class="slate-note">{cities.length} cities &middot; {allReviews.length} episodes &middot; in the spirit of Bourdain</span>
+				</h2>
 
-				<nav class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:gap-4">
-					{cities.map((city, i) => {
-						const isLarge = i < 3;
-						return (
-							<a
-								href={`/no-reserv-ai-tions/cities/${city.name}`}
-								class:list={[
-									"city-card relative block overflow-hidden rounded-lg",
-									isLarge ? "aspect-[4/5] md:col-span-1 lg:first:col-span-2 lg:first:row-span-2" : "aspect-square",
-								]}
-							>
-								<img
-									src={`/no-reserv-ai-tions/${city.image}.webp`}
-									alt={city.imageAlt}
-									class="absolute inset-0 h-full w-full object-cover"
-									loading={i < 8 ? "eager" : "lazy"}
-								/>
-								<div class="city-overlay absolute inset-0 flex flex-col justify-end p-4 lg:p-6">
-									<h3 class="text-xl font-bold text-white leading-tight lg:text-2xl xl:text-3xl">
-										{toTitleCase(city.name)}
-									</h3>
-									<p class="text-sm text-white/80 mt-1">
-										{city.country === 'United States' && city.state ? toTitleCase(city.state) : city.country}
-										<span class="ml-2 inline-block rounded-full bg-white/20 px-2 py-0.5 text-xs text-white backdrop-blur-sm">
-											{city.count} {city.count === 1 ? 'review' : 'reviews'}
-										</span>
-									</p>
-								</div>
-							</a>
-						);
-					})}
+				<nav class="map-grid grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:gap-4">
+					{cities.map((city, i) => (
+						<MapCard
+							href={`/no-reserv-ai-tions/cities/${city.name}`}
+							image={city.image}
+							imageAlt={city.imageAlt}
+							name={toTitleCase(city.name)}
+							tab={`${city.count} ${city.count === 1 ? 'ep' : 'eps'}`}
+							sub={city.country === 'United States' && city.state ? toTitleCase(city.state) : city.country}
+							class={i < 3 ? 'aspect-[4/5] md:col-span-1 lg:first:col-span-2 lg:first:row-span-2' : 'aspect-square'}
+							eager={i < 8}
+						/>
+					))}
 				</nav>
 			</section>
 		</main>
 		<Footer />
+
+		<style>
+			.map {
+				max-width: 96rem;
+				margin-inline: auto;
+				padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+			}
+		</style>
 	</body>
 </html>

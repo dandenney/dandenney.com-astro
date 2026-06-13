@@ -1,10 +1,12 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import toTitleCase from '../../helpers/toTitleCase.js'
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import toTitleCase from '@/helpers/toTitleCase.js';
+import MapCard from '@/components/nrai/MapCard.astro';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
+import '@/styles/nrai.css';
 
 export const prerender = true;
 
@@ -35,83 +37,44 @@ const maxCount = tags[0]?.count || 1;
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions Tags | Dan Denney" description="Reviews of food, music, and events with the help of AI" />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
-		<style>
-			.tag-card {
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
-			.tag-card:hover {
-				transform: translateY(-4px);
-				box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-			}
-			.tag-card:hover img {
-				transform: scale(1.08);
-			}
-			.tag-card img {
-				transition: transform 0.6s ease;
-			}
-			.tag-card:hover .tag-overlay {
-				background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
-			}
-			.tag-overlay {
-				background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
-				transition: background 0.3s ease;
-			}
-		</style>
 	</head>
-	<body class="bg-slate-50 dark:bg-slate-900">
-		<Header />
-		<main class="bg-slate-50 relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200" style="min-height: 90dvh;">
-			<section class="mx-auto pb-24 pt-8 px-4 max-w-(--breakpoint-2xl)">
-				<div class="mb-8">
-					<h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-100 xl:text-6xl">Tags</h2>
-					<p class="mt-2 text-gray-600 dark:text-slate-300">
-						<span class="whitespace-nowrap">[&nbsp;{tags.length} tags across {allReviews.length} reviews&nbsp;]</span>
-					</p>
-				</div>
+	<body class="nrai">
+		<main id="main-content" class="relative shadow-xs z-10">
+			<Header />
+			<section class="map">
+				<h2 class="slate">
+					<span class="slate-mark" aria-hidden="true"></span>Tags
+					<span class="slate-note">{tags.length} cravings across {allReviews.length} episodes</span>
+				</h2>
 
-				<!-- Top tags as image cards -->
+				<!-- Top tags as film frames -->
 				<div class="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-6 xl:gap-4">
 					{tags.slice(0, 12).map((tag, i) => (
-						<a
+						<MapCard
 							href={`/no-reserv-ai-tions/${tag.name}`}
-							class:list={[
-								"tag-card relative block overflow-hidden rounded-lg aspect-square",
-								i < 2 ? "col-span-2 row-span-2 md:col-span-2 md:row-span-2" : "",
-							]}
-						>
-							<img
-								src={`/no-reserv-ai-tions/${tag.image}.webp`}
-								alt={tag.imageAlt}
-								class="absolute inset-0 h-full w-full object-cover"
-								loading="eager"
-							/>
-							<div class="tag-overlay absolute inset-0 flex flex-col justify-end p-4 lg:p-5">
-								<h3 class="text-lg font-bold text-white leading-tight lg:text-xl">
-									{toTitleCase(tag.name)}
-								</h3>
-								<span class="mt-1 inline-block w-fit rounded-full bg-white/20 px-2 py-0.5 text-xs text-white backdrop-blur-sm">
-									{tag.count}
-								</span>
-							</div>
-						</a>
+							image={tag.image}
+							imageAlt={tag.imageAlt}
+							name={toTitleCase(tag.name)}
+							tab={`${tag.count} ${tag.count === 1 ? 'ep' : 'eps'}`}
+							class={`aspect-square ${i < 2 ? 'col-span-2 row-span-2 md:col-span-2 md:row-span-2' : ''}`}
+							eager
+						/>
 					))}
 				</div>
 
 				<!-- Remaining tags -->
 				{tags.length > 12 && (
-					<div class="mt-12">
-						<h3 class="text-lg font-semibold text-gray-700 dark:text-slate-300 mb-4">All Tags</h3>
-						<nav class="has-links flex flex-wrap gap-x-6 gap-y-3">
+					<div class="ledger">
+						<h3 class="ledger-head">The rest of the manifest</h3>
+						<nav class="ledger-list">
 							{tags.slice(12).map((tag) => {
 								const ratio = tag.count / maxCount;
-								const size = ratio > 0.3 ? 'text-xl' : ratio > 0.15 ? 'text-base' : 'text-sm';
+								const size = ratio > 0.3 ? 'ledger-lg' : ratio > 0.15 ? 'ledger-md' : 'ledger-sm';
 								return (
-									<a
-										href={`/no-reserv-ai-tions/${tag.name}`}
-										class={size}
-									>
-										{toTitleCase(tag.name)} <span class="text-gray-400 dark:text-slate-500 text-xs">[&nbsp;{tag.count}&nbsp;]</span>
+									<a href={`/no-reserv-ai-tions/${tag.name}`} class={size}>
+										{toTitleCase(tag.name)}<sup>({tag.count})</sup>
 									</a>
 								);
 							})}
@@ -121,5 +84,59 @@ const maxCount = tags[0]?.count || 1;
 			</section>
 		</main>
 		<Footer />
+
+		<style>
+			.map {
+				max-width: 96rem;
+				margin-inline: auto;
+				padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+			}
+			.ledger {
+				margin-top: clamp(2.5rem, 5vw, 4rem);
+				border-top: 1px solid var(--nrai-line);
+				padding-top: clamp(1.5rem, 3vw, 2.5rem);
+			}
+			.ledger-head {
+				font-family: var(--font-type);
+				font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--nrai-smoke);
+				margin-bottom: 1.5rem;
+			}
+			.ledger-list {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.9rem 1.75rem;
+			}
+			.ledger-list a {
+				font-family: var(--font-display);
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				color: var(--nrai-ink);
+				text-decoration: none;
+				transition: color 0.2s ease-out;
+			}
+			.ledger-list a:hover {
+				color: var(--nrai-red-bright);
+			}
+			.ledger-list sup {
+				font-family: var(--font-type);
+				font-size: 0.6em;
+				color: var(--nrai-red-bright);
+				margin-left: 0.3rem;
+				letter-spacing: 0.05em;
+			}
+			.ledger-lg {
+				font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+			}
+			.ledger-md {
+				font-size: clamp(1.2rem, 1.9vw, 1.6rem);
+			}
+			.ledger-sm {
+				font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+			}
+		</style>
 	</body>
 </html>

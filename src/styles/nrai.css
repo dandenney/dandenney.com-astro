@@ -1,0 +1,190 @@
+/* No Reserv-AI-tions — shared "cold open" section identity.
+   Dark-only set: explicit colors, never dark: variants (BaseHead's theme
+   script strips .dark for light-theme visitors). */
+
+.nrai {
+	--nrai-bg: oklch(17% 0.012 55);
+	--nrai-panel: oklch(21% 0.014 55);
+	--nrai-ink: oklch(93% 0.015 85);
+	--nrai-smoke: oklch(70% 0.02 70);
+	--nrai-line: oklch(93% 0.015 85 / 0.16);
+	--nrai-red: #b91c1c;
+	--nrai-red-bright: oklch(66% 0.19 25);
+	--font-display: 'Anton', 'Arial Narrow', sans-serif;
+	--font-type: 'Special Elite', 'Courier New', monospace;
+	--font-serif: Georgia, 'Times New Roman', serif;
+	background: var(--nrai-bg);
+	color: var(--nrai-ink);
+}
+
+.nrai main {
+	background: var(--nrai-bg);
+	min-height: 100dvh;
+}
+
+/* Page-wide film grain */
+.nrai main::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 60;
+	pointer-events: none;
+	opacity: 0.05;
+	mix-blend-mode: overlay;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Heavier grain for footage */
+.nrai .filmgrain {
+	position: relative;
+}
+.nrai .filmgrain::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.22;
+	mix-blend-mode: overlay;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Header adjustments for the dark set */
+.nrai header nav a,
+.nrai header nav li a,
+.nrai header ul.has-links a:not(.btn-link) {
+	color: var(--nrai-ink);
+}
+.nrai header ul.has-links a:not(.btn-link) {
+	background-image: linear-gradient(to bottom, transparent 90%, var(--nrai-red) 0);
+}
+.nrai header .toggle {
+	background: oklch(25% 0.014 55 / 0.9);
+	--tw-ring-color: oklch(93% 0.015 85 / 0.12);
+}
+.nrai header .toggle svg:first-of-type {
+	display: none;
+}
+.nrai header .toggle svg:last-of-type {
+	display: block;
+}
+
+/* Typewriter links inside copy */
+.nrai .tw-links a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: var(--nrai-red-bright);
+	text-underline-offset: 3px;
+	transition: color 0.2s ease-out;
+}
+.nrai .tw-links a:hover {
+	color: var(--nrai-red-bright);
+}
+
+.nrai .red-ai {
+	color: var(--nrai-red-bright);
+}
+
+/* Section slate: red square + Anton heading + typewriter note */
+.nrai .slate {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.75rem 1rem;
+	font-family: var(--font-display);
+	font-weight: 400;
+	font-size: clamp(1.6rem, 3vw, 2.4rem);
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: var(--nrai-ink);
+	border-top: 1px solid var(--nrai-line);
+	padding-top: 1.25rem;
+	margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+.nrai .slate-mark {
+	width: 0.55em;
+	height: 0.55em;
+	background: var(--nrai-red);
+	align-self: center;
+}
+.nrai .slate-note {
+	font-family: var(--font-type);
+	font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--nrai-smoke);
+}
+
+/* Episode number tab */
+.nrai .ep-tab {
+	display: inline-block;
+	background: var(--nrai-red);
+	color: var(--nrai-ink);
+	font-family: var(--font-type);
+	padding: 0.3rem 0.65rem;
+	transform: rotate(-1deg);
+}
+
+/* Boxed typewriter cue (buttons, pagination, back links) */
+.nrai .cue-btn {
+	display: inline-block;
+	font-family: var(--font-type);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--nrai-ink);
+	text-decoration: none;
+	border: 1px solid var(--nrai-line);
+	padding: 0.6rem 1.1rem;
+	transition: background-color 0.25s ease-out, border-color 0.25s ease-out;
+}
+.nrai .cue-btn:hover,
+.nrai .cue-btn:focus-visible {
+	background: var(--nrai-red);
+	border-color: var(--nrai-red);
+}
+
+.nrai .cue-btn:focus-visible,
+.nrai a:focus-visible {
+	outline: 2px solid var(--nrai-red-bright);
+	outline-offset: 4px;
+}
+
+/* Review prose (slug pages). .longform.review markdown elements
+   carry no scoped attrs, so this lives here, with enough
+   specificity to beat .dark .longform rules from global.css. */
+.nrai .longform.review {
+	font-family: var(--font-serif);
+	font-size: 1.15rem;
+	line-height: 1.85;
+	color: oklch(88% 0.013 80);
+}
+.nrai .longform.review a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: var(--nrai-red-bright);
+	text-underline-offset: 3px;
+	transition: color 0.2s ease-out;
+}
+.nrai .longform.review a:hover {
+	color: var(--nrai-red-bright);
+}
+.nrai .longform.review h2,
+.nrai .longform.review h3,
+.nrai .longform.review h4 {
+	font-family: var(--font-display);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	color: var(--nrai-ink);
+}
+.nrai .longform.review blockquote {
+	background: var(--nrai-panel);
+	border: 1px solid var(--nrai-line);
+	border-left: 1px solid var(--nrai-line);
+	border-radius: 0;
+	font-style: italic;
+}
+.nrai .longform.review figcaption {
+	font-family: var(--font-type);
+	color: var(--nrai-smoke);
+}

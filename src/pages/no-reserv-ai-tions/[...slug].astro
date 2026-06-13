@@ -17,6 +17,6 @@ const review = Astro.props;
 const { Content } = await render(review);
 ---
 
-<Review {...review.data}>
+<Review {...review.data} id={review.id}>
 	<Content />
 </Review>

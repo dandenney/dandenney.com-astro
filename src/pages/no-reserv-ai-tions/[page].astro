@@ -1,77 +1,79 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import type { Page } from 'astro';
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import toTitleCase from '../../helpers/toTitleCase.js';
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import EpisodeRow from '@/components/nrai/EpisodeRow.astro';
 import { ClientRouter } from 'astro:transitions';
-import ReviewLinkItemJs from '../../components/ReviewLinkItemJs.astro';
+import '@/styles/nrai.css';
 
 export const prerender = true;
 
 type Props = { page: Page<CollectionEntry<'reviews'>> };
 
 export async function getStaticPaths({ paginate }: { paginate: Function }) {
-  const reviews = (await getCollection('reviews')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  );
-	return paginate(reviews, { pageSize: 6 })
- }
-const { page } = Astro.props as Props;
+	const reviews = (await getCollection('reviews')).sort(
+		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	);
+	return paginate(reviews, { pageSize: 6 });
+}
 
-console.log(page);
+const { page } = Astro.props as Props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
 	</head>
-	<body class="bg-slate-50 dark:bg-slate-900">
-		<Header />
-		<main class="bg-slate-50 dark:bg-slate-900 relative shadow-xs z-10 dark:text-slate-200" style="min-height: 90dvh;">
-      <section class="max-w-(--breakpoint-xl) mx-auto pb-24 pt-8 px-4">
-        <h2 class="border-b text-center text-4xl font-bold pb-4 tracking-tight text-gray-900 dark:text-slate-100 md:shrink-0 md:text-left xl:border-0 xl:text-6xl">
-          Most Recent
+	<body class="nrai">
+		<main id="main-content" class="relative shadow-xs z-10">
+			<Header />
+			<section class="run">
+				<h2 class="slate">
+					<span class="slate-mark" aria-hidden="true"></span>The full run
+					<span class="slate-note">page {page.currentPage} of {page.lastPage} &middot; {page.total} episodes</span>
+				</h2>
+				<ul role="list">
+					{page.data.map((review, i) => (
+						<EpisodeRow review={review} ep={page.total - (page.start + i)} eager={i < 3} />
+					))}
+				</ul>
+				<nav class="run-nav" aria-label="Pagination">
+					{page.url.prev && <a class="cue-btn" href={page.url.prev}><span aria-hidden="true">&larr;</span> Prev</a>}
+					<span class="run-nav-where">Reel {page.currentPage} / {page.lastPage}</span>
+					{page.url.next && <a class="cue-btn" href={page.url.next}>Next <span aria-hidden="true">&rarr;</span></a>}
+				</nav>
+			</section>
+		</main>
+		<Footer />
 
-          <span class="font-normal text-slate-500 text-sm tracking-normal	dark:text-slate-100 xl:ml-2 xl:text-base">Page {page.currentPage} of {page.lastPage}</span>
-        </h2>
-        <ul class="md:flex md:flex-wrap gap-y-8 mt-8">
-          {page.data.map((review) => 
-            <li class="group m-auto max-w-xs mt-8 relative w-full md:max-w-full xl:border-t xl:mt-0 xl:pb-8 xl:pt-8">
-              <figure class="md:flex md:gap-4 md:items-center lg:gap-8">
-                <img alt={review.data.heroImageAlt} class="duration-500 mb-2 transition-opacity md:mb-0 md:w-60 xl:absolute xl:right-0 xl:opacity-0 xl:pointer-events-none xl:w-[400px] xl:rounded-lg xl:shadow-lg	xl:z-10" src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`} />
-                <figcaption class="grow">
-                  <span class="text-slate-500 text-sm dark:text-slate-100 xl:ml-2 xl:text-base">
-                    {toTitleCase(review.data.city)}, {review.data.country === 'United States' ? toTitleCase(review.data.state) : review.data.country}
-                  </span>
-                  <h3 class="font-bold text-2xl text-red-700 uppercase dark:text-red-300 md:text-4xl lg:text-5xl xl:my-2 xl:text-8xl">
-                    {review.data.title}
-                  </h3>
-                  <p class="text-gray-600 text-sm dark:text-slate-100 xl:ml-2 xl:text-base">
-                    {review.data.description}
-                  </p>
-                  <a class="absolute inset-0" href={`/no-reserv-ai-tions/${review.id.replace(/\.mdx?$/, '')}`}>
-                    <span class="sr-only">
-                      {review.data.title}
-                    </span>
-                  </a>
-                </figcaption>
-              </figure>
-            </li>
-          )}
-        </ul>
-        <nav class="flex gap-8 justify-center py-8">
-          {page.url.prev ? <a class="btn-link" href={page.url.prev}>Previous</a> : null}
-          {page.url.next ? <a class="btn-link" href={page.url.next}>Next</a> : null}
-        </nav>
-      </section>
-    </main>
-    <Footer />
-    <ReviewLinkItemJs />
-  </body>
+		<style>
+			.run {
+				max-width: 80rem;
+				margin-inline: auto;
+				padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 4rem) clamp(3rem, 6vw, 5rem);
+			}
+			.run ul {
+				border-bottom: 1px solid var(--nrai-line);
+			}
+			.run-nav {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 1.5rem;
+				padding-top: clamp(2rem, 4vw, 3rem);
+			}
+			.run-nav-where {
+				font-family: var(--font-type);
+				font-size: 0.85rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--nrai-smoke);
+			}
+		</style>
+	</body>
 </html>
-
-

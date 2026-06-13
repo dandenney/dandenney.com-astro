@@ -1,0 +1,128 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { airDate, placeLabel, reviewSlug } from '@/helpers/nrai';
+
+interface Props {
+	review: CollectionEntry<'reviews'>;
+	ep: number;
+	eager?: boolean;
+}
+
+const { review, ep, eager = false } = Astro.props;
+---
+
+<li>
+	<a class="ep-row" href={`/no-reserv-ai-tions/${reviewSlug(review)}/`}>
+		<figure class="ep-thumb filmgrain">
+			<img
+				src={`/no-reserv-ai-tions/${review.data.heroImage}-thumb.webp`}
+				alt={review.data.heroImageAlt}
+				loading={eager ? 'eager' : 'lazy'}
+				decoding="async"
+			/>
+		</figure>
+		<div class="ep-copy">
+			<p class="ep-meta">
+				<span class="ep-tab">Ep. {ep}</span>
+				<span>{placeLabel(review)}</span>
+				<span class="ep-date">Air date: {airDate(review)}</span>
+			</p>
+			<h3 class="ep-title">{review.data.title}</h3>
+			<p class="ep-log">{review.data.description}</p>
+		</div>
+		<span class="ep-arrow" aria-hidden="true">&rarr;</span>
+	</a>
+</li>
+
+<style>
+	.ep-row {
+		display: grid;
+		grid-template-columns: minmax(90px, 110px) minmax(0, 1fr);
+		gap: 1rem 1.25rem;
+		align-items: center;
+		padding-block: clamp(1.25rem, 2.5vw, 2rem);
+		border-top: 1px solid var(--nrai-line);
+		text-decoration: none;
+		color: var(--nrai-ink);
+	}
+	.ep-thumb {
+		overflow: hidden;
+		aspect-ratio: 1;
+		background: var(--nrai-panel);
+		align-self: start;
+	}
+	.ep-thumb img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: saturate(0.7) contrast(1.05) brightness(0.88);
+		transition: filter 0.5s ease-out, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.ep-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4rem 1rem;
+		font-family: var(--font-type);
+		font-size: clamp(0.72rem, 1vw, 0.9rem);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--nrai-smoke);
+	}
+	.ep-meta .ep-tab {
+		font-size: 0.95em;
+	}
+	.ep-title {
+		font-family: var(--font-display);
+		font-weight: 400;
+		font-size: clamp(1.5rem, 3.2vw, 2.8rem);
+		line-height: 1;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		margin-top: 0.7rem;
+		transition: color 0.3s ease-out;
+	}
+	.ep-log {
+		font-family: var(--font-serif);
+		font-style: italic;
+		font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+		line-height: 1.55;
+		color: var(--nrai-smoke);
+		margin-top: 0.5rem;
+		max-width: 58ch;
+	}
+	.ep-arrow {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.ep-row {
+			grid-template-columns: minmax(180px, 230px) minmax(0, 1fr) auto;
+			gap: 2rem;
+		}
+		.ep-thumb {
+			aspect-ratio: 16 / 11;
+			align-self: center;
+		}
+		.ep-arrow {
+			display: block;
+			font-family: var(--font-display);
+			font-size: clamp(1.6rem, 3vw, 2.4rem);
+			transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+	}
+
+	@media (hover: hover) {
+		.ep-row:hover .ep-thumb img {
+			filter: saturate(1) contrast(1.02) brightness(1);
+			transform: scale(1.04);
+		}
+		.ep-row:hover .ep-title {
+			color: var(--nrai-red-bright);
+		}
+		.ep-row:hover .ep-arrow {
+			transform: translateX(0.5rem);
+		}
+	}
+</style>
