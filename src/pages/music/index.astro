@@ -3,9 +3,14 @@ import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
-// import { ClientRouter } from 'astro:transitions';
 
 export const prerender = true;
+
+const timeRanges = [
+  { key: "short_term", title: "Right Now", subtitle: "Last 4 weeks" },
+  { key: "medium_term", title: "This Year", subtitle: "Last 6 months" },
+  { key: "long_term", title: "All-Timer Stuff", subtitle: "Several years" },
+];
 ---
 
 <!doctype html>
@@ -15,79 +20,540 @@ export const prerender = true;
       title="Seasons of Dan - Music Listening History | Dan Denney"
       description="A look at my music listening habits across different time periods, powered by Spotify"
     />
-    <!-- <ClientRouter /> -->
   </head>
   <body class="bg-white dark:bg-slate-900">
     <main
-      class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
+      class="seasons-page bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
       <Header title={SITE_TITLE} />
 
-      <section class="pt-16">
-        <div class="px-8">
-          <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-            <span class="whitespace-nowrap">[&nbsp;Spotify Listening History&nbsp;]</span>
+      <section class="hero px-8">
+        <p class="hero-fade text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500" style="--i: 1">
+          <span class="whitespace-nowrap">[&nbsp;Spotify Listening History&nbsp;]</span>
+        </p>
+        <h1 class="hero-title text-slate-900 dark:text-slate-100">
+          <span class="hero-line"><span class="hero-line-inner">Seasons</span></span>
+          <span class="hero-line"><span class="hero-line-inner hero-line-accent"><span class="hero-o"><span class="sr-only">O</span><span class="hero-disc" aria-hidden="true"></span></span>f Dan</span></span>
+        </h1>
+        <div class="hero-foot">
+          <p class="hero-fade hero-copy text-gray-600 dark:text-slate-300" style="--i: 2">
+            What my listening actually looks like over time, straight from
+            Spotify. The charts redraw themselves; no taste was curated for
+            your benefit.
           </p>
-          <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">
-            Seasons of Dan
-          </h1>
-          <p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-100">
-            What my listening actually looks like over time. Top tracks and artists from different time periods, pulled from Spotify.
-          </p>
-          <div class="has-links mt-4">
-            <a href="/music/reviews" class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300">View song reviews &rarr;</a>
+          <div class="hero-fade has-links" style="--i: 3">
+            <a
+              href="/music/reviews"
+              class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+              >View song reviews &rarr;</a
+            >
           </div>
         </div>
+      </section>
 
-        <div
-          id="music-container"
-          class="music-grid mt-12 grid grid-cols-1 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700"
-        >
-          <!-- Skeleton loading state -->
-          {[
-            { title: "Right Now", subtitle: "Last 4 weeks" },
-            { title: "This Year", subtitle: "Last 6 months" },
-            { title: "All-Timer Stuff", subtitle: "Several years" },
-          ].map((range) => (
-            <div class="music-grid-item bg-slate-50 p-6 md:p-8 dark:bg-slate-800">
-              <div class="animate-pulse">
-                <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-                  <span class="whitespace-nowrap">[&nbsp;{range.subtitle}&nbsp;]</span>
-                </p>
-                <div class="h-7 bg-gray-200 dark:bg-slate-700 rounded w-36 mt-3"></div>
-                <div class="mt-8">
-                  <div class="h-4 bg-gray-200 dark:bg-slate-700 rounded w-24 mb-4"></div>
-                  {[...Array(5)].map(() => (
-                    <div class="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-slate-700">
-                      <div class="w-5 h-4 bg-gray-200 dark:bg-slate-700 rounded"></div>
-                      <div class="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded"></div>
-                      <div class="flex-1 space-y-2">
-                        <div class="h-3.5 bg-gray-200 dark:bg-slate-700 rounded w-3/4"></div>
-                        <div class="h-3 bg-gray-200 dark:bg-slate-700 rounded w-1/2"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div class="mt-8">
-                  <div class="h-4 bg-gray-200 dark:bg-slate-700 rounded w-24 mb-4"></div>
-                  {[...Array(5)].map(() => (
-                    <div class="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-slate-700">
-                      <div class="w-5 h-4 bg-gray-200 dark:bg-slate-700 rounded"></div>
-                      <div class="w-10 h-10 bg-gray-200 dark:bg-slate-700 rounded-full"></div>
-                      <div class="flex-1 space-y-2">
-                        <div class="h-3.5 bg-gray-200 dark:bg-slate-700 rounded w-3/4"></div>
-                        <div class="h-3 bg-gray-200 dark:bg-slate-700 rounded w-1/2"></div>
-                      </div>
-                    </div>
-                  ))}
+      <div class="hatch-band" aria-hidden="true"></div>
+
+      <div
+        id="music-container"
+        class="music-grid grid grid-cols-1 lg:grid-cols-3 border-b border-gray-200 dark:border-slate-700"
+      >
+        <!-- Skeleton loading state -->
+        {timeRanges.map((range, col) => (
+          <section class="seasons-chart" style={`--col: ${col}`}>
+            <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+              <span class="whitespace-nowrap">[&nbsp;{range.subtitle}&nbsp;]</span>
+            </p>
+            <h2 class="seasons-chart-title">{range.title}</h2>
+            <div class="animate-pulse" aria-hidden="true">
+              <div class="seasons-skel-topper">
+                <div class="seasons-skel-art bg-gray-200 dark:bg-slate-700"></div>
+                <div class="flex-1 space-y-3">
+                  <div class="h-3 w-10 rounded bg-gray-200 dark:bg-slate-700"></div>
+                  <div class="h-5 w-3/4 rounded bg-gray-200 dark:bg-slate-700"></div>
+                  <div class="h-3 w-1/2 rounded bg-gray-200 dark:bg-slate-700"></div>
                 </div>
               </div>
+              {[...Array(6)].map(() => (
+                <div class="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-slate-700">
+                  <div class="w-5 h-4 rounded bg-gray-200 dark:bg-slate-700"></div>
+                  <div class="w-10 h-10 rounded bg-gray-200 dark:bg-slate-700"></div>
+                  <div class="flex-1 space-y-2">
+                    <div class="h-3.5 w-3/4 rounded bg-gray-200 dark:bg-slate-700"></div>
+                    <div class="h-3 w-1/2 rounded bg-gray-200 dark:bg-slate-700"></div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+        ))}
+      </div>
     </main>
     <Footer />
+
+    <style>
+      /* ---------- Hero (server-rendered, scoped is fine) ---------- */
+      .hero {
+        padding-top: clamp(4rem, 9vh, 7rem);
+        padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+      }
+
+      .hero-title {
+        margin-top: 1.25rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: clamp(3.25rem, 11.5vw, 8.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-line {
+        display: block;
+        overflow: hidden;
+        padding-right: 0.05em;
+      }
+
+      .hero-line-inner {
+        display: inline-block;
+        animation: hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      .hero-line:nth-child(2) .hero-line-inner {
+        animation-delay: 0.12s;
+      }
+
+      @keyframes hero-rise {
+        from {
+          transform: translateY(110%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      .hero-line-accent {
+        color: #b91c1c;
+      }
+
+      :global(.dark) .hero-line-accent {
+        color: #f87171;
+      }
+
+      .hero-o {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hero-disc {
+        position: relative;
+        display: inline-block;
+        width: 0.76em;
+        height: 0.76em;
+        margin-inline: 0.015em;
+        border-radius: 50%;
+        transform: translateY(0.055em);
+        background:
+          radial-gradient(
+            circle,
+            var(--seasons-paper) 0 11%,
+            var(--seasons-accent) 11% 35%,
+            transparent 35%
+          ),
+          repeating-radial-gradient(
+            circle,
+            var(--seasons-ink) 0 0.045em,
+            color-mix(in oklab, var(--seasons-ink), var(--seasons-paper) 22%)
+              0.045em 0.06em
+          );
+        animation: disc-spin 6s linear infinite;
+      }
+
+      .hero-disc::after {
+        content: "";
+        position: absolute;
+        top: 9%;
+        left: 47%;
+        width: 0.05em;
+        height: 0.05em;
+        border-radius: 50%;
+        background: var(--seasons-paper);
+        opacity: 0.7;
+      }
+
+      @keyframes disc-spin {
+        to {
+          transform: translateY(0.055em) rotate(360deg);
+        }
+      }
+
+      .hero-foot {
+        margin-top: clamp(1.75rem, 4vh, 3rem);
+      }
+
+      .hero-copy {
+        max-width: 46ch;
+        font-size: 1.125rem;
+        line-height: 1.7;
+      }
+
+      .hero-foot .has-links {
+        margin-top: 1rem;
+      }
+
+      .hero-fade {
+        animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-delay: calc(0.35s + var(--i, 0) * 0.1s);
+      }
+
+      @keyframes hero-fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-line-inner,
+        .hero-fade,
+        .hero-disc {
+          animation: none;
+        }
+      }
+    </style>
+
+    <style is:global>
+      /* Chart styles are global: chart content is injected via innerHTML
+         after the Spotify fetch, so Astro's scoped selectors can't reach it. */
+      .seasons-page {
+        --seasons-ink: #0f172a;
+        --seasons-paper: #ffffff;
+        --seasons-accent: #b91c1c;
+        --seasons-hatch: #cbd5e1;
+        --seasons-rule: #e2e8f0;
+        --seasons-groove-a: #0b1120;
+        --seasons-groove-b: #1e293b;
+        --seasons-ease: cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .dark .seasons-page {
+        --seasons-ink: #f1f5f9;
+        --seasons-paper: #0f172a;
+        --seasons-accent: #f87171;
+        --seasons-hatch: #1e293b;
+        --seasons-rule: #334155;
+        --seasons-groove-a: #1e293b;
+        --seasons-groove-b: #3e4c63;
+      }
+
+      .seasons-page .hatch-band {
+        height: 0.875rem;
+        border-block: 1px solid var(--seasons-rule);
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 4px,
+          var(--seasons-hatch) 4px,
+          var(--seasons-hatch) 5px
+        );
+      }
+
+      .seasons-chart {
+        padding: clamp(1.5rem, 3vw, 2.5rem) 2rem clamp(2rem, 4vw, 3rem);
+        background: var(--seasons-paper);
+      }
+
+      .seasons-chart-title {
+        margin-top: 0.75rem;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--seasons-ink);
+      }
+
+      .seasons-section-label {
+        margin: 2.25rem 0 0.5rem;
+        font-size: 0.6875rem;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #94a3b8;
+      }
+
+      /* Chart-topper (#1) */
+      .seasons-topper {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding-block: 1rem 1.25rem;
+        border-bottom: 1px solid var(--seasons-rule);
+      }
+
+      .seasons-topper-record {
+        position: relative;
+        flex: none;
+        width: clamp(6rem, 8vw, 7.5rem);
+        aspect-ratio: 1;
+        margin-right: clamp(1.25rem, 2vw, 1.75rem);
+      }
+
+      .seasons-topper-vinyl {
+        position: absolute;
+        inset: 4%;
+        border-radius: 50%;
+        transform: translateX(24%);
+        background:
+          radial-gradient(
+            circle,
+            var(--seasons-paper) 0 4.5%,
+            #b91c1c 4.5% 33%,
+            transparent 33%
+          ),
+          repeating-radial-gradient(
+            circle,
+            var(--seasons-groove-a) 0 1.5%,
+            var(--seasons-groove-b) 1.5% 2.6%
+          );
+        box-shadow: 0 4px 14px rgb(2 6 23 / 0.3);
+        animation: seasons-spin 3.5s linear infinite;
+      }
+
+      @keyframes seasons-spin {
+        to {
+          transform: translateX(24%) rotate(360deg);
+        }
+      }
+
+      .seasons-topper-vinyl::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 48%;
+        width: 4%;
+        height: 4%;
+        border-radius: 50%;
+        background: rgb(241 245 249 / 0.55);
+      }
+
+      .seasons-topper-art {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.25rem;
+        background: var(--seasons-ink);
+        box-shadow:
+          0 1px 2px rgb(2 6 23 / 0.2),
+          0 8px 22px rgb(2 6 23 / 0.25);
+      }
+
+      .seasons-topper-num {
+        display: block;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 0.6875rem;
+        letter-spacing: 0.12em;
+        color: var(--seasons-accent);
+      }
+
+      .seasons-topper-name {
+        display: block;
+        margin-top: 0.375rem;
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+        color: var(--seasons-ink);
+        text-decoration: none;
+        transition: color 0.2s var(--seasons-ease);
+      }
+
+      .seasons-topper-name:hover,
+      .seasons-topper-name:focus-visible {
+        color: var(--seasons-accent);
+      }
+
+      .seasons-topper-sub {
+        margin-top: 0.375rem;
+        font-size: 0.8125rem;
+        color: #64748b;
+      }
+
+      .dark .seasons-topper-sub {
+        color: #94a3b8;
+      }
+
+      /* Chart rows (2–10) */
+      .seasons-rows {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .seasons-row {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        padding-block: 0.75rem;
+        border-bottom: 1px solid var(--seasons-rule);
+      }
+
+      .seasons-rows .seasons-row:last-child {
+        border-bottom: 0;
+      }
+
+      .seasons-row-num {
+        flex: none;
+        width: 1.5rem;
+        text-align: right;
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 0.75rem;
+        font-variant-numeric: tabular-nums;
+        color: #94a3b8;
+      }
+
+      .seasons-row-art {
+        flex: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+        border-radius: 0.25rem;
+        box-shadow: 0 1px 2px rgb(2 6 23 / 0.15);
+      }
+
+      .seasons-row-art-round {
+        border-radius: 50%;
+      }
+
+      .seasons-row-main {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .seasons-row-name {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--seasons-ink);
+        text-decoration: none;
+        transition: color 0.2s var(--seasons-ease);
+      }
+
+      .seasons-row-name:hover,
+      .seasons-row-name:focus-visible {
+        color: var(--seasons-accent);
+      }
+
+      .seasons-row-sub {
+        margin-top: 0.125rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.75rem;
+        color: #64748b;
+      }
+
+      .dark .seasons-row-sub {
+        color: #94a3b8;
+      }
+
+      .seasons-row-arrow {
+        flex: none;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--seasons-accent);
+        opacity: 0;
+        transform: translate(-0.25rem, 0.25rem);
+        transition:
+          opacity 0.2s var(--seasons-ease),
+          transform 0.2s var(--seasons-ease);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .seasons-row:hover .seasons-row-arrow,
+        .seasons-topper:hover .seasons-row-arrow {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+
+      /* Entrance for injected chart content */
+      .seasons-reveal {
+        animation: seasons-reveal 0.55s var(--seasons-ease) both;
+        animation-delay: calc(var(--col, 0) * 0.12s + var(--i, 0) * 0.04s);
+      }
+
+      @keyframes seasons-reveal {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Error state */
+      .seasons-error {
+        grid-column: 1 / -1;
+        padding: clamp(2.5rem, 6vw, 4rem) 2rem;
+        background: var(--seasons-paper);
+      }
+
+      .seasons-error-label {
+        font-family: var(--font-mono, ui-monospace, monospace);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--seasons-accent);
+      }
+
+      .seasons-error-copy {
+        margin-top: 0.75rem;
+        max-width: 50ch;
+        color: #64748b;
+      }
+
+      .dark .seasons-error-copy {
+        color: #94a3b8;
+      }
+
+      .seasons-skel-topper {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding-block: 1rem 1.25rem;
+        border-bottom: 1px solid var(--seasons-rule);
+      }
+
+      .seasons-skel-art {
+        flex: none;
+        width: clamp(6rem, 8vw, 7.5rem);
+        aspect-ratio: 1;
+        border-radius: 0.25rem;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .seasons-topper-vinyl {
+          animation: none;
+        }
+        .seasons-reveal {
+          animation-duration: 0.01ms;
+          animation-delay: 0s;
+        }
+        .seasons-row-arrow,
+        .seasons-row-name,
+        .seasons-topper-name {
+          transition: none;
+        }
+      }
+    </style>
 
     <script>
       interface Track {
@@ -117,22 +583,78 @@ export const prerender = true;
       }
 
       const timeRanges = [
-        {
-          key: "short_term",
-          title: "Right Now",
-          subtitle: "Last 4 weeks",
-        },
-        {
-          key: "medium_term",
-          title: "This Year",
-          subtitle: "Last 6 months",
-        },
-        {
-          key: "long_term",
-          title: "All-Timer Stuff",
-          subtitle: "Several years",
-        },
+        { key: "short_term", title: "Right Now", subtitle: "Last 4 weeks" },
+        { key: "medium_term", title: "This Year", subtitle: "Last 6 months" },
+        { key: "long_term", title: "All-Timer Stuff", subtitle: "Several years" },
       ] as const;
+
+      const esc = (s: string) =>
+        s.replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[c]!,
+        );
+
+      const smallestImage = (images: Array<{ url: string }> | undefined) =>
+        images && images.length > 0 ? images[images.length - 1].url : null;
+
+      const largestImage = (images: Array<{ url: string }> | undefined) =>
+        images && images.length > 0 ? images[0].url : null;
+
+      function topperHtml(track: Track, i: number) {
+        const art = largestImage(track.album.images);
+        return `
+          <div class="seasons-topper seasons-reveal" style="--i: ${i}">
+            <div class="seasons-topper-record">
+              <span class="seasons-topper-vinyl" aria-hidden="true"></span>
+              ${art ? `<img class="seasons-topper-art" src="${esc(art)}" alt="${esc(`Album art for ${track.album.name}`)}" loading="lazy" width="300" height="300" />` : ""}
+            </div>
+            <div class="seasons-row-main">
+              <span class="seasons-topper-num">No. 01</span>
+              <a class="seasons-topper-name" href="${esc(track.external_urls.spotify)}" target="_blank" rel="noopener noreferrer">${esc(track.name)}</a>
+              <p class="seasons-topper-sub">${esc(track.artists.map((a) => a.name).join(", "))}</p>
+            </div>
+            <span class="seasons-row-arrow" aria-hidden="true">&#8599;</span>
+          </div>`;
+      }
+
+      function trackRowHtml(track: Track, index: number, i: number) {
+        const art = smallestImage(track.album.images);
+        return `
+          <li class="seasons-row seasons-reveal" style="--i: ${i}">
+            <span class="seasons-row-num">${String(index + 1).padStart(2, "0")}</span>
+            ${art ? `<img class="seasons-row-art" src="${esc(art)}" alt="" loading="lazy" width="64" height="64" />` : ""}
+            <div class="seasons-row-main">
+              <a class="seasons-row-name" href="${esc(track.external_urls.spotify)}" target="_blank" rel="noopener noreferrer">${esc(track.name)}</a>
+              <p class="seasons-row-sub">${esc(track.artists.map((a) => a.name).join(", "))}</p>
+            </div>
+            <span class="seasons-row-arrow" aria-hidden="true">&#8599;</span>
+          </li>`;
+      }
+
+      function artistRowHtml(artist: Artist, index: number, i: number) {
+        const art = smallestImage(artist.images);
+        const genres =
+          artist.genres && artist.genres.length > 0
+            ? `<p class="seasons-row-sub">${esc(artist.genres.slice(0, 2).join(", "))}</p>`
+            : "";
+        return `
+          <li class="seasons-row seasons-reveal" style="--i: ${i}">
+            <span class="seasons-row-num">${String(index + 1).padStart(2, "0")}</span>
+            ${art ? `<img class="seasons-row-art seasons-row-art-round" src="${esc(art)}" alt="" loading="lazy" width="64" height="64" />` : ""}
+            <div class="seasons-row-main">
+              <a class="seasons-row-name" href="${esc(artist.external_urls.spotify)}" target="_blank" rel="noopener noreferrer">${esc(artist.name)}</a>
+              ${genres}
+            </div>
+            <span class="seasons-row-arrow" aria-hidden="true">&#8599;</span>
+          </li>`;
+      }
 
       async function fetchMusicData() {
         const container = document.getElementById("music-container");
@@ -143,13 +665,14 @@ export const prerender = true;
 
           await Promise.all(
             timeRanges.map(async ({ key }) => {
-              const tracksUrl = `/api/spotify/tracks/${key}`;
-              const artistsUrl = `/api/spotify/artists/${key}`;
-
               const [tracksRes, artistsRes] = await Promise.all([
-                fetch(tracksUrl, { cache: "no-store" }),
-                fetch(artistsUrl, { cache: "no-store" }),
+                fetch(`/api/spotify/tracks/${key}`, { cache: "no-store" }),
+                fetch(`/api/spotify/artists/${key}`, { cache: "no-store" }),
               ]);
+
+              if (!tracksRes.ok || !artistsRes.ok) {
+                throw new Error(`Spotify API responded ${tracksRes.status}/${artistsRes.status}`);
+              }
 
               data[key] = {
                 tracks: await tracksRes.json(),
@@ -159,90 +682,47 @@ export const prerender = true;
           );
 
           container.innerHTML = timeRanges
-            .map(({ key, title, subtitle }) => {
+            .map(({ key, title, subtitle }, col) => {
               const { tracks, artists } = data[key];
+              const topTracks = tracks.items.slice(0, 10);
+              const topArtists = artists.items.slice(0, 10);
+              let i = 0;
 
               return `
-              <div class="music-grid-item bg-slate-50 p-6 md:p-8 dark:bg-slate-800">
+              <section class="seasons-chart" style="--col: ${col}">
                 <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-                  <span style="white-space:nowrap">[&nbsp;${subtitle}&nbsp;]</span>
+                  <span style="white-space:nowrap">[&nbsp;${esc(subtitle)}&nbsp;]</span>
                 </p>
-                <h2 class="mt-3 text-2xl font-bold text-gray-900 dark:text-slate-100">${title}</h2>
+                <h2 class="seasons-chart-title">${esc(title)}</h2>
 
-                <div class="mt-8">
-                  <h3 class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500 mb-4">Top Tracks</h3>
-                  <ol>
-                    ${tracks.items
-                      .slice(0, 10)
-                      .map(
-                        (track, index) => `
-                      <li class="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-slate-700 last:border-0 group">
-                        <span class="text-xs font-mono text-gray-400 dark:text-slate-500 w-5 text-right">${index + 1}</span>
-                        ${
-                          track.album.images && track.album.images.length > 0
-                            ? `<img src="${track.album.images[track.album.images.length - 1].url}" alt="${track.album.name}" class="w-10 h-10 rounded shadow-xs" />`
-                            : ""
-                        }
-                        <div class="flex-1 min-w-0">
-                          <a href="${track.external_urls.spotify}" target="_blank" rel="noopener noreferrer"
-                            class="block text-sm font-semibold text-red-700 dark:text-red-400 truncate no-underline hover:text-red-800 dark:hover:text-red-300 transition-colors">
-                            ${track.name}
-                          </a>
-                          <p class="text-xs text-gray-500 dark:text-slate-400 truncate">
-                            ${track.artists.map((a) => a.name).join(", ")}
-                          </p>
-                        </div>
-                      </li>
-                    `,
-                      )
-                      .join("")}
-                  </ol>
-                </div>
+                <h3 class="seasons-section-label">Top Tracks</h3>
+                ${topTracks.length > 0 ? topperHtml(topTracks[0], i++) : ""}
+                <ol class="seasons-rows" start="2">
+                  ${topTracks
+                    .slice(1)
+                    .map((track, index) => trackRowHtml(track, index + 1, i++))
+                    .join("")}
+                </ol>
 
-                <div class="mt-8">
-                  <h3 class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500 mb-4">Top Artists</h3>
-                  <ol>
-                    ${artists.items
-                      .slice(0, 10)
-                      .map(
-                        (artist, index) => `
-                      <li class="flex items-center gap-3 py-3 border-b border-gray-200 dark:border-slate-700 last:border-0 group">
-                        <span class="text-xs font-mono text-gray-400 dark:text-slate-500 w-5 text-right">${index + 1}</span>
-                        ${
-                          artist.images && artist.images.length > 0
-                            ? `<img src="${artist.images[artist.images.length - 1].url}" alt="${artist.name}" class="w-10 h-10 rounded-full shadow-xs" />`
-                            : ""
-                        }
-                        <div class="flex-1 min-w-0">
-                          <a href="${artist.external_urls.spotify}" target="_blank" rel="noopener noreferrer"
-                            class="block text-sm font-semibold text-red-700 dark:text-red-400 truncate no-underline hover:text-red-800 dark:hover:text-red-300 transition-colors">
-                            ${artist.name}
-                          </a>
-                          ${
-                            artist.genres && artist.genres.length > 0
-                              ? `<p class="text-xs text-gray-500 dark:text-slate-400 truncate">${artist.genres.slice(0, 2).join(", ")}</p>`
-                              : ""
-                          }
-                        </div>
-                      </li>
-                    `,
-                      )
-                      .join("")}
-                  </ol>
-                </div>
-              </div>
-            `;
+                <h3 class="seasons-section-label">Top Artists</h3>
+                <ol class="seasons-rows">
+                  ${topArtists
+                    .map((artist, index) => artistRowHtml(artist, index, i++))
+                    .join("")}
+                </ol>
+              </section>`;
             })
             .join("");
         } catch (error) {
           console.error("Error loading music data:", error);
           container.innerHTML = `
-            <div class="col-span-full bg-slate-50 dark:bg-slate-800 p-8">
-              <p class="text-red-500 dark:text-red-400">
-                Failed to load music data. Please check your Spotify API credentials.
+            <div class="seasons-error">
+              <p class="seasons-error-label">[&nbsp;Needle skipped&nbsp;]</p>
+              <p class="seasons-error-copy">
+                Couldn't reach Spotify for the charts. Give it a refresh; if it
+                keeps happening, the API credentials probably need attention.
               </p>
-            </div>
-          `;
+            </div>`;
         }
       }
 
