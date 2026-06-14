@@ -33,6 +33,12 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-11",
   },
   {
+    title: "Evolving from designers to builders",
+    url: "https://gusto.com/company-news/designers-to-builders",
+    description: "In the Gusto Design org, we just went through one of the biggest shifts that any of us have seen in our careers: we transformed from a traditional design team to an “AI-native” one within a quarter and are now benchmarking ahead of the industry.",
+    created: "2026-06-11",
+  },
+  {
     title: "UI Skills for Design Engineers | Curated Skill Directory",
     url: "https://www.ui-skills.com/?ref=sidebar",
     description: "Discover curated UI Skills for design engineers, including accessibility, motion, frontend craft, and interface quality guides with copy-ready install commands.",
