@@ -9,6 +9,42 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Better fluid sizing with round()",
+    url: "https://ishadeed.com/article/css-round/",
+    description: "Using the round() function to get a more predictable fluid sizing.",
+    created: "2026-06-13",
+  },
+  {
+    title: "Coding is solved? Software is not.",
+    url: "https://arcplane.ai/journal/software-is-not-solved",
+    description: "If coding is becoming solved, why does software still feel hard? A look at what AI agents change, and what they leave behind.",
+    created: "2026-06-13",
+  },
+  {
+    title: "boneyard - skeleton screens for your UI",
+    url: "https://boneyard.vercel.app/overview?ref=sidebar",
+    description: "Pixel-perfect skeleton loading screens auto-extracted from your real DOM. Zero configuration, zero layout shift.",
+    created: "2026-06-13",
+  },
+  {
+    title: "Discovery vs Delivery",
+    url: "https://buzzusborne.com/writing/discovery-delivery/?ref=sidebar",
+    description: "Buzz is a product design leader with over 18 years of experience building products and teams.",
+    created: "2026-06-11",
+  },
+  {
+    title: "UI Skills for Design Engineers | Curated Skill Directory",
+    url: "https://www.ui-skills.com/?ref=sidebar",
+    description: "Discover curated UI Skills for design engineers, including accessibility, motion, frontend craft, and interface quality guides with copy-ready install commands.",
+    created: "2026-06-11",
+  },
+  {
+    title: "What a good website does.",
+    url: "https://specification.website/?ref=sidebar",
+    description: "A platform-agnostic, full specification of the technical features a good website should have. Built in the open under an MIT licence.",
+    created: "2026-06-11",
+  },
+  {
     title: "A few ways of specifying per-theme colours in only CSS",
     url: "https://chrismorgan.info/css-themed-colours",
     description: "They are: ① write it all out; ② use palette variables; ③ the space toggle hack; ④ color-mix(); ⑤ light-dark(); ⑥ if(); ⑦ paused @keyframes animation",
@@ -27,9 +63,33 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-05",
   },
   {
+    title: "Build a brand you're proud of, in minutes",
+    url: "https://branda.co/?via=toools#pricing",
+    description: "Branda turns a one-sentence idea into a full brand — strategy, name, logo, palette, type, and a brand kit. 200 free credits on signup.",
+    created: "2026-06-04",
+  },
+  {
+    title: "Cynicism is a luxury; hope is a necessity.",
+    url: "https://www.chrbutler.com/cynicism-is-a-luxury-hope-is-a-necessity?ref=sidebar",
+    description: "One’s ability to ignore politics is a product of functional system that shares your worldview.",
+    created: "2026-06-04",
+  },
+  {
+    title: "Essential transitions for web apps",
+    url: "https://transitions.dev/?ref=sidebar",
+    description: "Collection of the most essential transitions for web apps that you can just copy and paste into any project.",
+    created: "2026-06-04",
+  },
+  {
     title: "Post by @DJ_CURFEW on X",
     url: "https://x.com/dj_curfew/status/2057522382315929802?s=12",
     description: "Today we reduced headcount by 22%. The business is the strongest it's ever been. So I think it's important to be direct about what I'm seein",
+    created: "2026-06-04",
+  },
+  {
+    title: "Tools the Vercel Product Design Team Actually Uses",
+    url: "https://www.hannahhearth.com/posts/tools-the-vercel-product-design-team-actually-uses",
+    description: "A blog about design leadership",
     created: "2026-06-04",
   },
   {
@@ -57,10 +117,22 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-05-23",
   },
   {
+    title: "Better Experiments with LLM Evals — A funnel, not a fork",
+    url: "https://engineering.atspotify.com/2026/5/better-experiments-with-llm-evals-a-funnel-not-a-fork?utm_source=tldrai",
+    description: "TL;DR  LLM evals, automated judges that assess relevance, coherence, and quality at scale, are a powerful new tool. Paired with online experiments, they raise the hit rate of what we test and create a feedback loop that makes both evals and experiments smarter over time.",
+    created: "2026-05-23",
+  },
+  {
     title: "Why I Left Product Management to Build More",
     url: "https://www.noahzender.com/why-i-left-product-management",
     description: "Why I Left Product Management to Build More — an essay by Noah Zender",
     created: "2026-05-23",
+  },
+  {
+    title: "The Workflow Collision",
+    url: "https://webframp.com/posts/the-workflow-collision/?ref=sidebar",
+    description: "Your team's workflow and your agent's lifecycle want different things",
+    created: "2026-05-22",
   },
   {
     title: "Train Your Judgement",
