@@ -126,6 +126,8 @@ function main() {
       cwd: REPO_ROOT,
       stdio: 'inherit',
     })
+    // Rebase onto the remote first so a moved ref doesn't reject the push.
+    execSync('git pull --rebase --autostash', { cwd: REPO_ROOT, stdio: 'inherit' })
     execSync('git push', { cwd: REPO_ROOT, stdio: 'inherit' })
     console.log('Committed and pushed successfully')
   } catch (err) {
