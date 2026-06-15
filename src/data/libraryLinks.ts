@@ -21,6 +21,12 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-13",
   },
   {
+    title: "Nudges, Biases & Heuristics for the Age of AI",
+    url: "https://www.nudges.fyi/",
+    description: "45 interactive field cards covering nudges, biases, heuristics, and AI phenomena. A practical reference for designers, researchers, and product teams building with AI.",
+    created: "2026-06-13",
+  },
+  {
     title: "boneyard - skeleton screens for your UI",
     url: "https://boneyard.vercel.app/overview?ref=sidebar",
     description: "Pixel-perfect skeleton loading screens auto-extracted from your real DOM. Zero configuration, zero layout shift.",
@@ -93,6 +99,12 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-04",
   },
   {
+    title: "The Speed of Prototyping in the Age of AI",
+    url: "https://darylcecile.net/notes/speed-of-prototyping-age-of-ai?ref=sidebar",
+    description: "How AI has changed the way I prototype, plan, and ship; and what I'm doing to keep my hands dirty.",
+    created: "2026-06-04",
+  },
+  {
     title: "Tools the Vercel Product Design Team Actually Uses",
     url: "https://www.hannahhearth.com/posts/tools-the-vercel-product-design-team-actually-uses",
     description: "A blog about design leadership",
@@ -105,6 +117,12 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-04",
   },
   {
+    title: "heerich.js",
+    url: "https://meodai.github.io/heerich/?ref=sidebar#spheres",
+    description: "A tiny engine for 3D voxel scenes rendered to SVG. Boolean ops, oblique/perspective cameras, zero dependencies. Inspired by the geometric cardboard sculptures of Erwin Heerich.",
+    created: "2026-06-04",
+  },
+  {
     title: "A harness for every task: dynamic workflows in Claude Code",
     url: "https://x.com/trq212/status/2061907337154367865",
     description: "Last week, we released dynamic workflows in Claude Code. Claude can now write its own harness on the fly, custom-built for the task at hand....",
@@ -114,6 +132,12 @@ export const libraryLinks: LibraryLink[] = [
     title: "X posts as clean Markdown for LLMs",
     url: "https://tweet.md/?ref=producthunt",
     description: "Get any X post or thread as clean Markdown for LLMs, agents, and research. Swap x.com for tweet.md or use the API.",
+    created: "2026-05-27",
+  },
+  {
+    title: "obra/superpowers: An agentic skills framework & software development methodology that works.",
+    url: "https://github.com/obra/superpowers",
+    description: "An agentic skills framework & software development methodology that works. - obra/superpowers",
     created: "2026-05-27",
   },
   {
