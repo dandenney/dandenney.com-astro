@@ -73,6 +73,7 @@ Full instructions in `docs/adding-martingale-bets.md`. Short version:
 
 ## Workflow
 
+- IMPORTANT: Commit straight to `main`. This project does not use feature branches or PRs — never branch off `main` or open a PR unless I explicitly ask. (Overrides the default "if on the default branch, branch first" behavior.)
 - Commit convention: `feat(scope): message` / `fix(scope): message` (match existing git log style)
 - Type checking is the only gate: run `npx astro check` before considering a task done
 - Ask before applying styles when the target element is ambiguous (e.g., `body` vs `main`, `figcaption h3` vs `article h3`)
@@ -87,7 +88,7 @@ Once a task's scope is agreed, don't pause for confirmation on routine steps wit
 - Small fixes clearly within the agreed scope (e.g. a data typo found while building the agreed feature) — just do it and mention it in the summary
 
 Still check in first for:
-- `git commit` / `push` / opening PRs
+- `git commit` / `push` (straight to `main` — see Workflow; no branches/PRs)
 - Anything in "Out of scope" below
 - Destructive or hard-to-reverse git operations
 - Ambiguous styling targets (see above)
