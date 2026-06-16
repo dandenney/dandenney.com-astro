@@ -1,0 +1,467 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+export const prerender = true;
+
+const title = "Favicon Checker";
+const description =
+  "Check whether Google can find and use your site's favicon. Replicates Googlebot and Googlebot-Image fetching favicons the way Google Search does.";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <main class="relative shadow-xs z-10">
+      <Header title={title} />
+      <div class="fc">
+        <header class="fc-intro">
+          <h1>Favicon Checker</h1>
+          <p>
+            See your site's favicon the way Google Search does. We crawl the page
+            with <code>Googlebot</code>, read the <code>&lt;link rel="icon"&gt;</code>
+            tags, then fetch each icon (and the <code>/favicon.ico</code> fallback)
+            with <code>Googlebot-Image</code> — checking robots.txt, status, format,
+            and size along the way.
+          </p>
+        </header>
+
+        <form id="fc-form" class="fc-form" autocomplete="off">
+          <label for="fc-url" class="fc-label">Site URL or domain</label>
+          <div class="fc-input-row">
+            <input
+              id="fc-url"
+              name="url"
+              type="text"
+              inputmode="url"
+              placeholder="example.com"
+              required
+            />
+            <button type="submit" id="fc-submit">Check</button>
+          </div>
+          <p class="fc-hint">No <code>https://</code>? We'll add it for you.</p>
+        </form>
+
+        <div id="fc-status" class="fc-status" hidden></div>
+        <div id="fc-results" class="fc-results"></div>
+      </div>
+    </main>
+    <Footer />
+
+    <script>
+      interface Diagnostic {
+        level: "pass" | "warn" | "fail";
+        message: string;
+      }
+      interface Candidate {
+        source: "link" | "fallback";
+        rel: string | null;
+        declaredSizes: string | null;
+        requestedUrl: string;
+        finalUrl: string | null;
+        redirected: boolean;
+        status: number | null;
+        ok: boolean;
+        contentType: string | null;
+        sizeBytes: number | null;
+        dimensions: { width: number; height: number } | null;
+        format: string | null;
+        dataUri: string | null;
+        robotsAllowed: boolean | null;
+        diagnostics: Diagnostic[];
+      }
+      interface CheckResult {
+        error?: string;
+        input: string;
+        normalizedUrl: string;
+        page: { status: number | null; ok: boolean; finalUrl: string | null; error: string | null };
+        rawLinkTags: string[];
+        robotsFound: boolean;
+        candidates: Candidate[];
+        verdict: { level: "pass" | "warn" | "fail"; message: string };
+      }
+
+      const form = document.getElementById("fc-form") as HTMLFormElement;
+      const input = document.getElementById("fc-url") as HTMLInputElement;
+      const submit = document.getElementById("fc-submit") as HTMLButtonElement;
+      const statusEl = document.getElementById("fc-status") as HTMLDivElement;
+      const resultsEl = document.getElementById("fc-results") as HTMLDivElement;
+
+      const esc = (s: string) =>
+        s.replace(/[&<>"']/g, (c) =>
+          ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string),
+        );
+
+      const formatBytes = (n: number | null) => {
+        if (n == null) return "—";
+        if (n < 1024) return `${n} B`;
+        if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+        return `${(n / (1024 * 1024)).toFixed(1)} MB`;
+      };
+
+      const verdictBadge = (level: string) =>
+        ({ pass: "✓ Pass", warn: "▲ Warning", fail: "✕ Fail" }[level] ?? level);
+
+      function setStatus(msg: string, kind: "loading" | "error" | "") {
+        statusEl.hidden = !msg;
+        statusEl.textContent = msg;
+        statusEl.className = `fc-status ${kind ? `fc-status--${kind}` : ""}`.trim();
+      }
+
+      function renderCandidate(c: Candidate): string {
+        const worst = c.diagnostics.some((d) => d.level === "fail")
+          ? "fail"
+          : c.diagnostics.some((d) => d.level === "warn")
+            ? "warn"
+            : "pass";
+
+        const preview = c.dataUri
+          ? `<img src="${esc(c.dataUri)}" alt="favicon preview" />`
+          : `<span class="fc-noimg">no image</span>`;
+
+        const rows: [string, string][] = [
+          ["Source", c.source === "link" ? `<code>&lt;link rel="${esc(c.rel ?? "")}"&gt;</code>` : "/favicon.ico fallback"],
+          ["Requested", `<a href="${esc(c.requestedUrl)}" target="_blank" rel="noopener">${esc(c.requestedUrl)}</a>`],
+          ["Status", c.status != null ? `<strong>${c.status}</strong>${c.redirected ? ` (redirected)` : ""}` : "—"],
+          ["Content-Type", c.contentType ? esc(c.contentType) : "—"],
+          ["Format", c.format ?? "—"],
+          ["Dimensions", c.dimensions ? `${c.dimensions.width}×${c.dimensions.height}` : c.format === "SVG" ? "scalable" : "—"],
+          ["Size", formatBytes(c.sizeBytes)],
+          ["robots.txt", c.robotsAllowed == null ? "—" : c.robotsAllowed ? "allowed" : "blocked"],
+        ];
+        if (c.declaredSizes) rows.push(["Declared sizes", esc(c.declaredSizes)]);
+        if (c.redirected && c.finalUrl) rows.push(["Final URL", `<a href="${esc(c.finalUrl)}" target="_blank" rel="noopener">${esc(c.finalUrl)}</a>`]);
+
+        const diag = c.diagnostics
+          .map((d) => `<li class="fc-diag fc-diag--${d.level}">${esc(d.message)}</li>`)
+          .join("");
+
+        return `
+          <article class="fc-card fc-card--${worst}">
+            <div class="fc-card-head">
+              <div class="fc-preview">${preview}</div>
+              <div class="fc-card-title">
+                <span class="fc-tag fc-tag--${c.source}">${c.source === "link" ? "declared" : "fallback"}</span>
+                <span class="fc-badge fc-badge--${worst}">${verdictBadge(worst)}</span>
+              </div>
+            </div>
+            <dl class="fc-meta">
+              ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
+            </dl>
+            ${diag ? `<ul class="fc-diags">${diag}</ul>` : ""}
+          </article>`;
+      }
+
+      function render(data: CheckResult) {
+        const pageLine = data.page.ok
+          ? `Crawled <code>${esc(data.page.finalUrl ?? data.normalizedUrl)}</code> (HTTP ${data.page.status}) as Googlebot.`
+          : `Page fetch problem: ${esc(data.page.error ?? "unknown")}`;
+
+        const linkTags = data.rawLinkTags.length
+          ? `<details class="fc-raw"><summary>${data.rawLinkTags.length} icon &lt;link&gt; tag${data.rawLinkTags.length > 1 ? "s" : ""} found</summary><pre>${data.rawLinkTags.map(esc).join("\n")}</pre></details>`
+          : `<p class="fc-raw fc-raw--empty">No icon <code>&lt;link&gt;</code> tags in the page head — Google would rely on the <code>/favicon.ico</code> fallback.</p>`;
+
+        resultsEl.innerHTML = `
+          <div class="fc-verdict fc-verdict--${data.verdict.level}">
+            <span class="fc-badge fc-badge--${data.verdict.level}">${verdictBadge(data.verdict.level)}</span>
+            <p>${esc(data.verdict.message)}</p>
+          </div>
+          <div class="fc-summary">
+            <p>${pageLine}</p>
+            <p class="fc-robots">${data.robotsFound ? "robots.txt found and applied." : "No robots.txt found (nothing blocking the crawl)."}</p>
+            ${linkTags}
+          </div>
+          <div class="fc-grid">${data.candidates.map(renderCandidate).join("")}</div>
+        `;
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const value = input.value.trim();
+        if (!value) return;
+
+        submit.disabled = true;
+        resultsEl.innerHTML = "";
+        setStatus("Crawling as Googlebot and fetching favicons…", "loading");
+
+        try {
+          const res = await fetch(`/api/favicon-check?url=${encodeURIComponent(value)}`);
+          const data: CheckResult = await res.json();
+          if (!res.ok || data.error) {
+            setStatus(data.error ?? `Request failed (HTTP ${res.status}).`, "error");
+            return;
+          }
+          setStatus("", "");
+          render(data);
+        } catch (err) {
+          setStatus(`Something went wrong: ${(err as Error).message}`, "error");
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    </script>
+
+    <style>
+      .fc {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 4rem;
+      }
+      .fc-intro h1 {
+        font-size: 2rem;
+        margin: 0 0 0.5rem;
+      }
+      .fc-intro p {
+        color: var(--gray, #535353);
+        line-height: 1.6;
+        max-width: 60ch;
+      }
+      .fc code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.85em;
+        background: rgb(0 0 0 / 0.05);
+        padding: 0.1em 0.35em;
+        border-radius: 4px;
+      }
+      :is(.dark) .fc code {
+        background: rgb(255 255 255 / 0.08);
+      }
+
+      .fc-form {
+        margin: 1.75rem 0 1rem;
+      }
+      .fc-label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+      }
+      .fc-input-row {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .fc-input-row input {
+        flex: 1;
+        padding: 0.7rem 0.85rem;
+        font-size: 1rem;
+        border: 1px solid rgb(0 0 0 / 0.18);
+        border-radius: 8px;
+        background: var(--bg, #fff);
+        color: inherit;
+      }
+      :is(.dark) .fc-input-row input {
+        border-color: rgb(255 255 255 / 0.2);
+        background: rgb(255 255 255 / 0.04);
+      }
+      .fc-input-row input:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 1px;
+      }
+      #fc-submit {
+        padding: 0.7rem 1.4rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background: #2563eb;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.15s ease;
+      }
+      #fc-submit:hover:not(:disabled) {
+        background: #1d4ed8;
+      }
+      #fc-submit:disabled {
+        opacity: 0.6;
+        cursor: progress;
+      }
+      .fc-hint {
+        margin: 0.5rem 0 0;
+        font-size: 0.85rem;
+        color: var(--gray, #777);
+      }
+
+      .fc-status {
+        margin: 1rem 0;
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+      }
+      .fc-status--loading {
+        background: rgb(37 99 235 / 0.08);
+        color: #1d4ed8;
+      }
+      .fc-status--error {
+        background: rgb(220 38 38 / 0.08);
+        color: #b91c1c;
+      }
+
+      .fc-verdict {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 1rem 1.15rem;
+        border-radius: 10px;
+        margin: 1.5rem 0 1rem;
+        border: 1px solid transparent;
+      }
+      .fc-verdict p {
+        margin: 0;
+        font-weight: 500;
+      }
+      .fc-verdict--pass { background: rgb(22 163 74 / 0.08); border-color: rgb(22 163 74 / 0.25); }
+      .fc-verdict--warn { background: rgb(217 119 6 / 0.08); border-color: rgb(217 119 6 / 0.25); }
+      .fc-verdict--fail { background: rgb(220 38 38 / 0.08); border-color: rgb(220 38 38 / 0.25); }
+
+      .fc-badge {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .fc-badge--pass { background: #16a34a; color: #fff; }
+      .fc-badge--warn { background: #d97706; color: #fff; }
+      .fc-badge--fail { background: #dc2626; color: #fff; }
+
+      .fc-summary {
+        font-size: 0.92rem;
+        color: var(--gray, #555);
+        margin-bottom: 1.5rem;
+      }
+      .fc-summary p { margin: 0.35rem 0; }
+      .fc-robots { font-size: 0.85rem; opacity: 0.85; }
+
+      .fc-raw {
+        margin-top: 0.75rem;
+      }
+      .fc-raw summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .fc-raw pre {
+        margin: 0.6rem 0 0;
+        padding: 0.85rem;
+        background: rgb(0 0 0 / 0.04);
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      :is(.dark) .fc-raw pre { background: rgb(255 255 255 / 0.06); }
+      .fc-raw--empty { font-style: italic; }
+
+      .fc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+      }
+      .fc-card {
+        border: 1px solid rgb(0 0 0 / 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        background: var(--bg, #fff);
+      }
+      :is(.dark) .fc-card {
+        border-color: rgb(255 255 255 / 0.12);
+        background: rgb(255 255 255 / 0.03);
+      }
+      .fc-card--fail { border-left: 4px solid #dc2626; }
+      .fc-card--warn { border-left: 4px solid #d97706; }
+      .fc-card--pass { border-left: 4px solid #16a34a; }
+
+      .fc-card-head {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 0.85rem;
+      }
+      .fc-preview {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background:
+          repeating-conic-gradient(rgb(0 0 0 / 0.06) 0% 25%, transparent 0% 50%) 50% / 14px 14px;
+        overflow: hidden;
+      }
+      .fc-preview img {
+        max-width: 100%;
+        max-height: 100%;
+        image-rendering: auto;
+      }
+      .fc-noimg {
+        font-size: 0.65rem;
+        color: #999;
+        text-align: center;
+      }
+      .fc-card-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        align-items: flex-start;
+      }
+      .fc-tag {
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 0.15rem 0.5rem;
+        border-radius: 5px;
+      }
+      .fc-tag--link { background: rgb(37 99 235 / 0.12); color: #2563eb; }
+      .fc-tag--fallback { background: rgb(0 0 0 / 0.08); color: #555; }
+      :is(.dark) .fc-tag--fallback { background: rgb(255 255 255 / 0.1); color: #ccc; }
+
+      .fc-meta {
+        display: grid;
+        gap: 0.3rem;
+        margin: 0 0 0.75rem;
+        font-size: 0.84rem;
+      }
+      .fc-meta > div {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 0.5rem;
+      }
+      .fc-meta dt { color: var(--gray, #888); }
+      .fc-meta dd { margin: 0; word-break: break-word; }
+      .fc-meta a { color: #2563eb; }
+
+      .fc-diags {
+        list-style: none;
+        margin: 0;
+        padding: 0.75rem 0 0;
+        border-top: 1px dashed rgb(0 0 0 / 0.1);
+        display: grid;
+        gap: 0.4rem;
+      }
+      :is(.dark) .fc-diags { border-top-color: rgb(255 255 255 / 0.12); }
+      .fc-diag {
+        font-size: 0.84rem;
+        line-height: 1.4;
+        padding-left: 1.4rem;
+        position: relative;
+      }
+      .fc-diag::before {
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+      }
+      .fc-diag--pass::before { content: "✓"; color: #16a34a; }
+      .fc-diag--warn::before { content: "▲"; color: #d97706; }
+      .fc-diag--fail::before { content: "✕"; color: #dc2626; }
+
+      @media (max-width: 520px) {
+        .fc-input-row { flex-direction: column; }
+        #fc-submit { width: 100%; }
+      }
+    </style>
+  </body>
+</html>
