@@ -124,35 +124,40 @@ const description =
           : `<span class="fc-noimg">no image</span>`;
 
         const rows: [string, string][] = [
-          ["Source", c.source === "link" ? `<code>&lt;link rel="${esc(c.rel ?? "")}"&gt;</code>` : "/favicon.ico fallback"],
-          ["Requested", `<a href="${esc(c.requestedUrl)}" target="_blank" rel="noopener">${esc(c.requestedUrl)}</a>`],
-          ["Status", c.status != null ? `<strong>${c.status}</strong>${c.redirected ? ` (redirected)` : ""}` : "—"],
+          ["Source", c.source === "link" ? `<code>&lt;link rel="${esc(c.rel ?? "")}"&gt;</code>` : `<code>/favicon.ico</code> fallback`],
+          ["Status", c.status != null ? `<strong>${c.status}</strong>${c.redirected ? ` <span class="fc-muted">(redirected)</span>` : ""}` : "—"],
           ["Content-Type", c.contentType ? esc(c.contentType) : "—"],
           ["Format", c.format ?? "—"],
           ["Dimensions", c.dimensions ? `${c.dimensions.width}×${c.dimensions.height}` : c.format === "SVG" ? "scalable" : "—"],
           ["Size", formatBytes(c.sizeBytes)],
-          ["robots.txt", c.robotsAllowed == null ? "—" : c.robotsAllowed ? "allowed" : "blocked"],
+          ["robots.txt", c.robotsAllowed == null ? "—" : c.robotsAllowed ? `<span class="fc-ok">allowed</span>` : `<span class="fc-bad">blocked</span>`],
         ];
         if (c.declaredSizes) rows.push(["Declared sizes", esc(c.declaredSizes)]);
-        if (c.redirected && c.finalUrl) rows.push(["Final URL", `<a href="${esc(c.finalUrl)}" target="_blank" rel="noopener">${esc(c.finalUrl)}</a>`]);
+
+        const urls =
+          `<a class="fc-url" href="${esc(c.requestedUrl)}" target="_blank" rel="noopener" title="${esc(c.requestedUrl)}">${esc(c.requestedUrl)}</a>` +
+          (c.redirected && c.finalUrl
+            ? `<a class="fc-url fc-url--final" href="${esc(c.finalUrl)}" target="_blank" rel="noopener" title="Redirected to ${esc(c.finalUrl)}">→ ${esc(c.finalUrl)}</a>`
+            : "");
 
         const diag = c.diagnostics
           .map((d) => `<li class="fc-diag fc-diag--${d.level}">${esc(d.message)}</li>`)
           .join("");
 
         return `
-          <article class="fc-card fc-card--${worst}">
-            <div class="fc-card-head">
-              <div class="fc-preview">${preview}</div>
-              <div class="fc-card-title">
+          <article class="fc-row fc-row--${worst}">
+            <div class="fc-preview">${preview}</div>
+            <div class="fc-row-body">
+              <div class="fc-row-head">
                 <span class="fc-tag fc-tag--${c.source}">${c.source === "link" ? "declared" : "fallback"}</span>
                 <span class="fc-badge fc-badge--${worst}">${verdictBadge(worst)}</span>
               </div>
+              <div class="fc-urls">${urls}</div>
+              <dl class="fc-meta">
+                ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
+              </dl>
+              ${diag ? `<ul class="fc-diags">${diag}</ul>` : ""}
             </div>
-            <dl class="fc-meta">
-              ${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}
-            </dl>
-            ${diag ? `<ul class="fc-diags">${diag}</ul>` : ""}
           </article>`;
       }
 
@@ -175,7 +180,7 @@ const description =
             <p class="fc-robots">${data.robotsFound ? "robots.txt found and applied." : "No robots.txt found (nothing blocking the crawl)."}</p>
             ${linkTags}
           </div>
-          <div class="fc-grid">${data.candidates.map(renderCandidate).join("")}</div>
+          <div class="fc-list">${data.candidates.map(renderCandidate).join("")}</div>
         `;
       }
 
@@ -355,31 +360,43 @@ const description =
       :is(.dark) .fc-raw pre { background: rgb(255 255 255 / 0.06); }
       .fc-raw--empty { font-style: italic; }
 
-      .fc-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1rem;
-      }
-      .fc-card {
+      /* Results read as a single report: one container, sibling rows separated
+         by dividers (not a scatter of cards), with a status-colored left rule. */
+      .fc-list {
         border: 1px solid rgb(0 0 0 / 0.1);
         border-radius: 12px;
-        padding: 1rem;
         background: var(--bg, #fff);
+        overflow: hidden;
       }
-      :is(.dark) .fc-card {
+      :is(.dark) .fc-list {
         border-color: rgb(255 255 255 / 0.12);
         background: rgb(255 255 255 / 0.03);
       }
-      .fc-card--fail { border-left: 4px solid #dc2626; }
-      .fc-card--warn { border-left: 4px solid #d97706; }
-      .fc-card--pass { border-left: 4px solid #16a34a; }
+      .fc-row {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        gap: 1rem;
+        padding: 1.25rem 1.25rem 1.25rem 1.1rem;
+        border-top: 1px solid rgb(0 0 0 / 0.07);
+        border-left: 3px solid transparent;
+      }
+      .fc-row:first-child { border-top: none; }
+      :is(.dark) .fc-row { border-top-color: rgb(255 255 255 / 0.1); }
+      .fc-row--fail { border-left-color: #dc2626; }
+      .fc-row--warn { border-left-color: #d97706; }
+      .fc-row--pass { border-left-color: #16a34a; }
 
-      .fc-card-head {
+      .fc-row-body {
+        min-width: 0;
+        display: grid;
+        gap: 0.65rem;
+      }
+      .fc-row-head {
         display: flex;
         align-items: center;
-        gap: 0.85rem;
-        margin-bottom: 0.85rem;
+        gap: 0.6rem;
       }
+      .fc-row-head .fc-badge { margin-left: auto; }
       .fc-preview {
         width: 48px;
         height: 48px;
@@ -389,6 +406,7 @@ const description =
         border-radius: 8px;
         background:
           repeating-conic-gradient(rgb(0 0 0 / 0.06) 0% 25%, transparent 0% 50%) 50% / 14px 14px;
+        box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08);
         overflow: hidden;
       }
       .fc-preview img {
@@ -400,12 +418,6 @@ const description =
         font-size: 0.65rem;
         color: #999;
         text-align: center;
-      }
-      .fc-card-title {
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-        align-items: flex-start;
       }
       .fc-tag {
         font-size: 0.72rem;
@@ -419,20 +431,45 @@ const description =
       .fc-tag--fallback { background: rgb(0 0 0 / 0.08); color: #555; }
       :is(.dark) .fc-tag--fallback { background: rgb(255 255 255 / 0.1); color: #ccc; }
 
-      .fc-meta {
+      /* Icon URLs span the full row width, so they wrap gracefully instead of
+         breaking character-by-character in a cramped column. */
+      .fc-urls {
         display: grid;
-        gap: 0.3rem;
-        margin: 0 0 0.75rem;
-        font-size: 0.84rem;
+        gap: 0.25rem;
+      }
+      .fc-url {
+        overflow-wrap: anywhere;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.8rem;
+        line-height: 1.45;
+        color: #2563eb;
+        text-decoration: none;
+      }
+      .fc-url:hover { text-decoration: underline; }
+      .fc-url:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; border-radius: 3px; }
+      .fc-url--final { color: var(--gray, #64748b); }
+
+      /* Fields flow horizontally across the wide row and wrap as needed —
+         easier to scan and compare than a stack of narrow key/value rows. */
+      .fc-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1.5rem;
+        margin: 0;
+        font-size: 0.83rem;
       }
       .fc-meta > div {
-        display: grid;
-        grid-template-columns: 110px 1fr;
-        gap: 0.5rem;
+        display: flex;
+        gap: 0.4rem;
+        align-items: baseline;
       }
-      .fc-meta dt { color: var(--gray, #888); }
-      .fc-meta dd { margin: 0; word-break: break-word; }
-      .fc-meta a { color: #2563eb; }
+      .fc-meta dt { color: #64748b; font-weight: 500; }
+      .fc-meta dd { margin: 0; color: #1f2937; overflow-wrap: anywhere; }
+      :is(.dark) .fc-meta dt { color: #94a3b8; }
+      :is(.dark) .fc-meta dd { color: #e2e8f0; }
+      .fc-ok { color: #16a34a; font-weight: 600; }
+      .fc-bad { color: #dc2626; font-weight: 600; }
+      .fc-muted { color: #94a3b8; font-weight: 400; }
 
       .fc-diags {
         list-style: none;
