@@ -9,6 +9,30 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "How I made a 45-video course without wanting to die",
+    url: "https://whitep4nth3r.com/blog/how-i-made-a-45-video-course/?utm_source=cassidoo&utm_medium=email&utm_campaign=u1f34e-what-we-know-is-a-drop-what-we-dont-know",
+    description: "Producing a curriculum of this size was no easy task. I wanted to share some insights into the process that made this manageable, in case it helps someone else.",
+    created: "2026-06-14",
+  },
+  {
+    title: "Loop Engineering.",
+    url: "https://x.com/addyosmani/status/2064127981161959567?utm_source=tldrnewsletter",
+    description: "Loop engineering is replacing yourself as the person who prompts the agent. You design the system that does it instead. A loop here can be t...",
+    created: "2026-06-14",
+  },
+  {
+    title: "Modern Engineering Values",
+    url: "https://cpojer.net/posts/modern-engineering-values",
+    description: "Modern engineering values.",
+    created: "2026-06-14",
+  },
+  {
+    title: "Say precisely what you mean.",
+    url: "https://index.how/to/articulate?ck_subscriber_id=1665201471",
+    description: "The words designers use when they know what they’re looking at.",
+    created: "2026-06-14",
+  },
+  {
     title: "Better fluid sizing with round()",
     url: "https://ishadeed.com/article/css-round/",
     description: "Using the round() function to get a more predictable fluid sizing.",
@@ -93,9 +117,21 @@ export const libraryLinks: LibraryLink[] = [
     created: "2026-06-04",
   },
   {
+    title: "Karpathy's Autoresearch found a 3-year-old bug in our query engine (and improved performance by 11%)",
+    url: "https://posthog.com/blog/karpathy-autoresearch-query-engine-bug?utm_source=tldrnewsletter",
+    description: "A few weeks ago at a team offsite in Lisbon, we pointed an AI agent at our query engine, fed it slow queries from production, and let it run overnight…",
+    created: "2026-06-04",
+  },
+  {
     title: "Post by @DJ_CURFEW on X",
     url: "https://x.com/dj_curfew/status/2057522382315929802?s=12",
     description: "Today we reduced headcount by 22%. The business is the strongest it's ever been. So I think it's important to be direct about what I'm seein",
+    created: "2026-06-04",
+  },
+  {
+    title: "Self-Fulfilling Projects",
+    url: "https://www.davesresearch.com/self-fulfilling-projects/?ref=sidebar",
+    description: "The projects that defy clarity and specificity.",
     created: "2026-06-04",
   },
   {
@@ -120,6 +156,12 @@ export const libraryLinks: LibraryLink[] = [
     title: "heerich.js",
     url: "https://meodai.github.io/heerich/?ref=sidebar#spheres",
     description: "A tiny engine for 3D voxel scenes rendered to SVG. Boolean ops, oblique/perspective cameras, zero dependencies. Inspired by the geometric cardboard sculptures of Erwin Heerich.",
+    created: "2026-06-04",
+  },
+  {
+    title: "shader magicfor modernfrontends",
+    url: "https://shaders.com/",
+    description: "Component library for creative WebGPU effects in modern frontend frameworks. Compose interactive visuals for Vue, React, Svelte, Solid & JS.",
     created: "2026-06-04",
   },
   {
