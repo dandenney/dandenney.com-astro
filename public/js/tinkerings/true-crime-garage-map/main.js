@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Suspect #1 /// Episodes: 935-936",
+      Release: "06/16/2026",
+      URL: "https://truecrimegarage.com/home/blog/7789973/suspect-1-episodes-935-936",
+      Earliest_Date: "2/26/1992",
+      Earliest_Year: "1992",
+      Notes: "Sandra Roberts Chiropractic Clinic, Kissimmee, FL 22 North John Young Parkway Kissimmee, FL 34741",
+    },
+    geometry: {
+      coordinates: [-81.416577, 28.292340],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "3 Billboards ////// 934",
       Release: "06/11/2026",
       URL: "https://truecrimegarage.com/home/blog/7783524/3-billboards-934",
