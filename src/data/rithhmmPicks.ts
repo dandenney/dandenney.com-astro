@@ -5,6 +5,7 @@ export type RithhmmPropType =
   | "assists-over"
   | "assists-under"
   | "blocks-under"
+  | "rebounds-over"
   | "rebounds-under"
   | "points-under"
   | "combo-over"
@@ -3358,5 +3359,40 @@ export const rithhmmPicks: RithhmmPick[] = [
     portfolioAction: "bet",
     betAmount: 60,
     returnAmount: 0,
+  },
+  // 2026-06-16
+  {
+    id: 232,
+    date: "2026-06-16",
+    sport: "WNBA",
+    pick: "Isabelle Harrison Under 5.5 Rebounds",
+    odds: "-142",
+    confidence: 63.2,
+    modelProjection: "3.8 rebounds",
+    dtm: 9.5,
+    recentForm: "2/4",
+    matchup: "@ Fever",
+    propType: "rebounds-under",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
+  },
+  {
+    id: 233,
+    date: "2026-06-16",
+    sport: "WNBA",
+    pick: "Lexie Hull Over 3.5 Rebounds",
+    odds: "-158",
+    confidence: 64.0,
+    modelProjection: "5.2 rebounds",
+    dtm: 5.7,
+    recentForm: "7/10",
+    matchup: "vs Tempo",
+    propType: "rebounds-over",
+    result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 97.97,
   },
 ];
