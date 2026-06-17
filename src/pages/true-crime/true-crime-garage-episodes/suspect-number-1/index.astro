@@ -1,0 +1,774 @@
+---
+import BaseHead from '../../../../components/BaseHead.astro';
+
+export const prerender = true;
+
+const title = 'Suspect Number 1';
+const summary =
+  'A victim-centered editorial feature on the Florida murders and attacks discussed in True Crime Garage episodes 935 and 936.';
+const pubDate = new Date('2026-06-17');
+
+const victims = [
+  {
+    name: 'Dr. Ruth Howe',
+    date: 'February 26, 1992',
+    place: 'Kissimmee and St. Cloud, Florida',
+    role: 'Chiropractor',
+    crime:
+      'Howe was last known to be working late at a chiropractic clinic for a new-patient appointment under a false name. Her phone line was cut, her vehicle was gone, and her body was found the next morning in an orange grove.',
+    details:
+      'The episode summary describes defensive wounds, a cut throat, 11 stab wounds, black duct tape, a latex glove fragment, shoe impressions, tire impressions, and later ATM activity tied to her card.',
+  },
+  {
+    name: 'Mary Ellen Wise',
+    date: 'November 2, 1992',
+    place: 'Vero Beach and Fort Pierce, Florida',
+    role: 'A woman at home when the day began',
+    crime:
+      'Wise was attacked at or near her garage, apparently forced through banking transactions, and later found in a field near Fort Pierce after days of searching.',
+    details:
+      'Her own car was used and later abandoned. The source notes blood in the garage, a torn bathrobe in the mailbox, a $500 ATM withdrawal, a strange drive-through bank interaction, and blunt-force trauma.',
+  },
+  {
+    name: 'Antonio Zuko',
+    date: 'November 20, 1992',
+    place: 'Osceola County, Florida',
+    role: 'Business robbery victim',
+    crime:
+      'Zuko is discussed as part of the broader November 1992 cluster: a business robbery and killing that raised the question of whether the violence was instrumental or central to the offender.',
+    details:
+      'The source places Zuko with Bonnie Goodson in the segment where the hosts widen the pattern beyond abducted women and into brutal commercial robberies.',
+  },
+  {
+    name: 'Bonnie Goodson',
+    date: 'November 30, 1992',
+    place: 'Osceola County, Florida',
+    role: 'Business robbery victim',
+    crime:
+      'Goodson was killed during a business robbery near the end of a violent month in Osceola County, according to the uploaded episode notes.',
+    details:
+      'The episode returns to a 1992 Orlando Sentinel frame: a county with a historically strong solve rate was suddenly facing a set of cold, violent homicides.',
+  },
+  {
+    name: 'Hamid Jebailey',
+    date: 'January 22, 1993',
+    place: 'Maple Leaf Motel, Kissimmee, Florida',
+    role: 'Motel owner and attack survivor',
+    crime:
+      'Jebailey survived an attempted robbery and killing at the Maple Leaf Motel after being shot at and repeatedly struck with a tire iron.',
+    details:
+      'Curtis Huff Jr. was arrested before he could flee. The attack became the point where investigators looked hard at Huff, his history, and possible links to the unsolved cases.',
+  },
+  {
+    name: 'Helen McPherson',
+    date: '2006',
+    place: 'Vero Beach, Florida',
+    role: 'Later homicide victim',
+    crime:
+      'After Huff was released from prison in 2005, the source says he moved within a mile of McPherson, whose 2006 murder was later examined in relation to the older cases.',
+    details:
+      'The episode notes that Huff remained a suspect, but fingerprints recovered in the McPherson case did not match him. The case remains part of the unresolved shadow around the pattern.',
+  },
+];
+
+const timeline = [
+  ['February 26, 1992', 'Ruth Howe vanishes after a late appointment in Kissimmee.'],
+  ['February 27, 1992', 'Her body is found in an orange grove near St. Cloud.'],
+  ['November 2, 1992', 'Mary Ellen Wise is abducted from her home setting in Vero Beach.'],
+  ['November 20, 1992', 'Antonio Zuko is killed in a business robbery.'],
+  ['November 30, 1992', 'Bonnie Goodson is killed during another violent commercial robbery.'],
+  ['January 22, 1993', 'Hamid Jebailey survives the Maple Leaf Motel attack; Curtis Huff Jr. is arrested.'],
+  ['2005-2006', 'Huff is released, returns to Vero Beach, and Helen McPherson is murdered nearby.'],
+];
+
+const patternItems = [
+  'Strategic isolation: work, garage, motel office, small business counters.',
+  'Forced banking activity: ATM and drive-through withdrawals appear in the Howe and Wise narratives.',
+  'Mobility: victim vehicles, a red pickup account, Vero Beach, Kissimmee, St. Cloud, Fort Pierce.',
+  'Forensic fragments: tape, glove material, tire and shoe impressions, a cassette case, broken glass.',
+  'Violence beyond robbery: the brutality repeatedly exceeds what a simple theft would require.',
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`${title} | True Crime Garage Episodes 935-936`}
+      description={summary}
+      image="/generated-images/suspect-number-1/orlando-night-road.jpg"
+      type="blogpost"
+      datePublished={pubDate}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@82..125,400..800&family=Newsreader:opsz,wght@6..72,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="sn1">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-art">
+          <img
+            src="/generated-images/suspect-number-1/orlando-night-road.jpg"
+            alt="An empty Orlando parking area at night under street lights."
+          />
+          <div class="hero-scrim" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">True Crime Garage episodes 935 and 936</p>
+          <h1 id="page-title">Suspect Number 1</h1>
+          <p class="dek">
+            In 1992, a set of Florida attacks moved through clinics, garages, bank lanes, small businesses,
+            and motel offices. The pattern was never enough to close the cases. It was enough to keep one
+            name returning.
+          </p>
+          <div class="meta">
+            <span>Osceola County</span>
+            <span>Vero Beach</span>
+            <span>1992-2006</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="editor-note" aria-label="Editorial note">
+        <p>
+          This article is adapted from the uploaded notes for True Crime Garage's "Suspect #1" two-part
+          episode. It treats Curtis Huff Jr. as a named suspect in the source, not as the adjudicated killer
+          of the unsolved homicides.
+        </p>
+      </section>
+
+      <section class="lede">
+        <p>
+          The cases do not begin with a monster. They begin with ordinary thresholds: a chiropractic clinic
+          after hours, a garage attached to a home, a store counter, a motel office. Places built around
+          trust, routine, and small transactions.
+        </p>
+        <p>
+          That is what makes the pattern so unnerving. According to the episode notes, the offender did not
+          need a remote hunting ground. He found isolation inside public life. A late appointment. A bank
+          lane. A parking lot. A room where one person was working alone.
+        </p>
+      </section>
+
+      <section class="case-grid" aria-labelledby="victims-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Victims and crimes</p>
+          <h2 id="victims-heading">Six names, one unresolved shadow</h2>
+        </div>
+        <div class="victim-list">
+          {victims.map((victim, index) => (
+            <article class="victim-card" style={`--index:${index}`}>
+              <div>
+                <span>{victim.date}</span>
+                <h3>{victim.name}</h3>
+                <p class="place">{victim.place}</p>
+              </div>
+              <p class="role">{victim.role}</p>
+              <p>{victim.crime}</p>
+              <p class="detail">{victim.details}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="evidence-band" aria-labelledby="pattern-heading">
+        <div class="evidence-visual">
+          <img
+            src="/generated-images/suspect-number-1/neon-motel-sign.jpg"
+            alt="A red neon motel sign glowing at night."
+          />
+        </div>
+        <div class="evidence-copy">
+          <p class="eyebrow">Pattern evidence</p>
+          <h2 id="pattern-heading">The recurring details matter because none of them solves the story alone.</h2>
+          <ul>
+            {patternItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </section>
+
+      <section class="timeline" aria-labelledby="timeline-heading">
+        <div class="section-heading">
+          <p class="eyebrow">Chronology</p>
+          <h2 id="timeline-heading">A violent year, then a later echo</h2>
+        </div>
+        <ol>
+          {timeline.map(([date, event]) => (
+            <li>
+              <time>{date}</time>
+              <p>{event}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="article-body">
+        <h2>The late appointment</h2>
+        <p>
+          Ruth Howe's case has the architecture of planning. A new patient appeared under the name Michael
+          Greenwell, with insurance details and a callback number that led nowhere. The false appointment
+          mattered because it put a professional woman alone in a clinic after normal hours. When her
+          roommate later went looking, the source says the office door was ajar and the phone line had been
+          cut.
+        </p>
+        <p>
+          The violence was intimate and excessive. The body was found the next morning in an orange grove
+          near St. Cloud. The details left behind were small enough to be missed in another kind of case:
+          black duct tape, glove material, a Reebok shoe print, tire impressions, a cassette case, discarded
+          receipts, and ATM footage of a hooded person using her card in Vero Beach.
+        </p>
+
+        <aside class="pull-quote">
+          Forced banking activity is one of the clearest bridges between the Howe and Wise narratives in the
+          uploaded episode notes.
+        </aside>
+
+        <h2>The garage</h2>
+        <p>
+          Mary Ellen Wise's case begins in a different kind of private-public boundary. Her boyfriend left
+          for work. Wise was alone. The house had two Doberman pinschers inside, a detail the hosts treat as
+          important because it could explain why an attacker approached through the garage rather than the
+          home itself.
+        </p>
+        <p>
+          The source describes blood in the garage, a torn bathrobe in the mailbox, her red Honda CRX used
+          during the crime, and banking transactions that look less like ordinary withdrawals than forced
+          compliance. Eight days later, Wise was found in a field near Fort Pierce. The cause was severe
+          blunt-force trauma.
+        </p>
+
+        <h2>The businesses</h2>
+        <figure class="photo-break">
+          <img
+            src="/generated-images/suspect-number-1/roadside-motel.jpg"
+            alt="A quiet roadside motel exterior with cars parked outside."
+          />
+          <figcaption>
+            Roadside businesses are central to the source narrative: motel offices, shop counters, and other
+            places where one person could be isolated while still technically in public.
+          </figcaption>
+        </figure>
+        <p>
+          Antonio Zuko and Bonnie Goodson move the story from abduction and banking coercion into the world
+          of small-business robbery. Their cases are discussed together in the second episode as part of a
+          November 1992 run of violence. The question sharpened there: if money was the goal, why did the
+          attacks carry so much force?
+        </p>
+        <p>
+          That question becomes even harder to avoid after the Maple Leaf Motel attack. Hamid Jebailey
+          survived. Curtis Huff Jr. did not get away. The source says Huff had already accumulated habitual
+          offender status after robberies across the Midwest, and the motel attack gave investigators a
+          living incident to compare against the unsolved dead.
+        </p>
+
+        <h2>The suspect who fit too many rooms</h2>
+        <p>
+          The evidence described against Huff is not a courtroom ending. It is an accumulation: a red GMC
+          Sonoma pickup that resembled witness accounts, tire and shoe comparisons, a cassette connection,
+          statements tying him to places and victims, and a family connection across the street from Mary
+          Ellen Wise.
+        </p>
+        <p>
+          The episode's most responsible tension is also its most frustrating one. Similarity can guide an
+          investigation. It can help families understand why detectives keep returning to a name. But
+          similarity is not a verdict. Huff was not charged with the Florida homicides covered here.
+        </p>
+
+        <h2>The later case</h2>
+        <p>
+          Helen McPherson's 2006 murder gives the story a long tail. The notes say Huff had been released in
+          2005 and moved within a mile of McPherson. Investigators considered him, but fingerprints from the
+          scene did not match. The episode frames that mismatch alongside another possibility: a suspect who
+          was known, in other contexts, for using gloves.
+        </p>
+        <p>
+          That is where the article has to leave the reader: not with an answer, but with a map of
+          unresolved harm. Ruth Howe, Mary Ellen Wise, Antonio Zuko, Bonnie Goodson, Hamid Jebailey, and
+          Helen McPherson deserve more than a suspect board. They deserve the clarity that the cases still
+          have not produced.
+        </p>
+      </section>
+
+      <section class="closing-panel" aria-label="Closing thought">
+        <p>
+          The source's central lesson is not that one detail proves everything. It is that every small detail
+          had to be carried forward because the full answer never arrived.
+        </p>
+      </section>
+
+      <section class="credits" aria-label="Image credits">
+        <p>
+          Images: Orlando night road by Connor Coyne, motel sign by Veronika Jorjobert, and roadside motel
+          by Jarrod Reed via Unsplash.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --ink: #17120e;
+    --ink-soft: #4d443b;
+    --paper: #f3eee4;
+    --paper-deep: #e1d6c4;
+    --night: #10110f;
+    --night-soft: #20241d;
+    --bone: #f5eddc;
+    --red: #8f2f22;
+    --red-bright: #c94a35;
+    --yellow: #d6a24d;
+    --green: #3e5e42;
+    --line: rgb(23 18 14 / 0.18);
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .sn1 {
+    overflow: clip;
+    background:
+      linear-gradient(90deg, rgb(23 18 14 / 0.045) 1px, transparent 1px) 50% 0 / 4rem 4rem,
+      var(--paper);
+  }
+
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    align-items: end;
+    isolation: isolate;
+    background: var(--night);
+    color: var(--bone);
+  }
+
+  .hero-art {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .hero-art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.78) contrast(1.18) brightness(0.72);
+    transform: scale(1.02);
+  }
+
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgb(8 9 7 / 0.94) 0%, rgb(8 9 7 / 0.68) 42%, rgb(8 9 7 / 0.28) 100%),
+      linear-gradient(180deg, rgb(8 9 7 / 0.2) 0%, rgb(8 9 7 / 0.18) 54%, rgb(8 9 7 / 0.88) 100%);
+  }
+
+  .hero-copy {
+    width: min(100% - 2rem, 76rem);
+    margin: 0 auto;
+    padding: clamp(7rem, 16vh, 12rem) 0 clamp(3rem, 9vh, 7rem);
+  }
+
+  .eyebrow,
+  .meta,
+  .victim-card span,
+  .timeline time {
+    font-family: var(--sans);
+    font-weight: 740;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    margin: 0 0 1.1rem;
+    color: var(--red-bright);
+    font-size: 0.74rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  h1 {
+    max-width: 9ch;
+    margin-bottom: 1.25rem;
+    font-size: clamp(4.3rem, 16vw, 14rem);
+    font-weight: 360;
+    letter-spacing: 0;
+    line-height: 0.82;
+  }
+
+  .dek {
+    max-width: 48rem;
+    font-size: clamp(1.2rem, 2.1vw, 1.85rem);
+    line-height: 1.35;
+    color: rgb(245 237 220 / 0.88);
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.2rem;
+    margin-top: clamp(2rem, 5vw, 4rem);
+    color: rgb(245 237 220 / 0.62);
+    font-size: 0.72rem;
+  }
+
+  .meta span {
+    border-top: 1px solid rgb(245 237 220 / 0.3);
+    padding-top: 0.65rem;
+  }
+
+  .editor-note,
+  .lede,
+  .case-grid,
+  .timeline,
+  .article-body,
+  .closing-panel {
+    width: min(100% - 2rem, 76rem);
+    margin-inline: auto;
+  }
+
+  .editor-note {
+    padding: clamp(1rem, 2vw, 1.4rem) 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--sans);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .editor-note p {
+    max-width: 74ch;
+    margin-bottom: 0;
+  }
+
+  .lede {
+    display: grid;
+    gap: clamp(1rem, 4vw, 4rem);
+    grid-template-columns: minmax(0, 1fr);
+    padding: clamp(4rem, 10vw, 9rem) 0;
+  }
+
+  .lede p {
+    font-size: clamp(1.45rem, 3vw, 3rem);
+    line-height: 1.12;
+    font-weight: 360;
+  }
+
+  .lede p:last-child {
+    color: var(--ink-soft);
+  }
+
+  .section-heading {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: end;
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+    border-top: 1px solid var(--line);
+    padding-top: 1.2rem;
+  }
+
+  .section-heading h2,
+  .evidence-copy h2,
+  .article-body h2 {
+    font-size: clamp(2.2rem, 5vw, 5.4rem);
+    line-height: 0.95;
+    font-weight: 390;
+    letter-spacing: 0;
+  }
+
+  .victim-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(18rem, 1fr));
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .victim-card {
+    min-height: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.35rem;
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 0.4), transparent),
+      color-mix(in srgb, var(--paper) 76%, white);
+    border: 1px solid var(--line);
+    scroll-snap-align: start;
+  }
+
+  .victim-card:nth-child(even) {
+    background:
+      linear-gradient(180deg, rgb(143 47 34 / 0.12), transparent),
+      var(--paper-deep);
+  }
+
+  .victim-card span {
+    display: block;
+    color: var(--red);
+    font-size: 0.66rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .victim-card h3 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 0.93;
+    font-weight: 420;
+  }
+
+  .victim-card p {
+    font-size: 1.02rem;
+    line-height: 1.5;
+  }
+
+  .victim-card .place,
+  .victim-card .detail {
+    color: var(--ink-soft);
+  }
+
+  .victim-card .role {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+
+  .evidence-band {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    margin: clamp(5rem, 11vw, 10rem) 0;
+    padding: clamp(3rem, 8vw, 7rem) max(1rem, calc((100vw - 76rem) / 2));
+    background: var(--night);
+    color: var(--bone);
+  }
+
+  .evidence-visual {
+    min-height: 32rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgb(245 237 220 / 0.12);
+    overflow: hidden;
+  }
+
+  .evidence-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.86) contrast(1.12) brightness(0.74);
+  }
+
+  .evidence-copy ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .evidence-copy li {
+    border-top: 1px solid rgb(245 237 220 / 0.17);
+    padding-top: 0.9rem;
+    font-size: clamp(1.04rem, 1.4vw, 1.22rem);
+    line-height: 1.55;
+    color: rgb(245 237 220 / 0.82);
+  }
+
+  .timeline ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .timeline li {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.34fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .timeline time {
+    color: var(--red);
+    font-size: 0.72rem;
+  }
+
+  .timeline p {
+    margin-bottom: 0;
+    font-size: clamp(1.05rem, 1.6vw, 1.34rem);
+    line-height: 1.35;
+  }
+
+  .article-body {
+    max-width: 55rem;
+    padding: clamp(5rem, 12vw, 10rem) 0;
+  }
+
+  .article-body h2 {
+    margin: 4rem 0 1.2rem;
+  }
+
+  .article-body h2:first-child {
+    margin-top: 0;
+  }
+
+  .article-body p {
+    font-size: clamp(1.15rem, 1.4vw, 1.34rem);
+    line-height: 1.68;
+    color: color-mix(in srgb, var(--ink) 86%, var(--ink-soft));
+  }
+
+  .pull-quote {
+    margin: clamp(3rem, 6vw, 5rem) 0;
+    padding: clamp(1.4rem, 4vw, 2.4rem);
+    font-size: clamp(1.55rem, 3vw, 2.6rem);
+    line-height: 1.08;
+    font-weight: 390;
+    color: var(--bone);
+    background: var(--night);
+    border: 1px solid var(--line);
+  }
+
+  .photo-break {
+    margin: 0 0 clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .photo-break img {
+    width: min(100vw - 2rem, 68rem);
+    max-width: none;
+    margin-left: 50%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    transform: translateX(-50%);
+  }
+
+  figcaption {
+    margin-top: 0.8rem;
+    font-family: var(--sans);
+    color: var(--ink-soft);
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .closing-panel {
+    margin-bottom: clamp(4rem, 8vw, 7rem);
+    padding: clamp(2rem, 5vw, 4rem);
+    background: var(--red);
+    color: var(--bone);
+  }
+
+  .closing-panel p {
+    max-width: 20ch;
+    margin-bottom: 0;
+    font-size: clamp(2.2rem, 5vw, 5.2rem);
+    line-height: 0.94;
+    font-weight: 370;
+  }
+
+  .credits {
+    width: min(100% - 2rem, 76rem);
+    margin: -4rem auto clamp(3rem, 7vw, 5rem);
+    font-family: var(--sans);
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 760px) {
+    .lede {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .section-heading {
+      grid-template-columns: 0.32fr minmax(0, 0.68fr);
+    }
+
+    .evidence-band {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      min-height: 82svh;
+    }
+
+    .hero-copy {
+      padding-bottom: 2.2rem;
+    }
+
+    .timeline li {
+      grid-template-columns: 1fr;
+    }
+
+    .victim-list {
+      grid-template-columns: repeat(6, minmax(16rem, 82vw));
+    }
+
+    .victim-card {
+      min-height: 34rem;
+    }
+
+    .evidence-visual {
+      min-height: 24rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-copy > * {
+      animation: rise 900ms cubic-bezier(0.19, 1, 0.22, 1) both;
+    }
+
+    .hero-copy > :nth-child(2) { animation-delay: 120ms; }
+    .hero-copy > :nth-child(3) { animation-delay: 240ms; }
+    .hero-copy > :nth-child(4) { animation-delay: 360ms; }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+</style>
