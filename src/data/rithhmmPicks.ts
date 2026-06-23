@@ -3430,4 +3430,22 @@ export const rithhmmPicks: RithhmmPick[] = [
     betAmount: 60,
     returnAmount: 103.8,
   },
+  // 2026-06-22
+  {
+    id: 236,
+    date: "2026-06-22",
+    sport: "WNBA",
+    pick: "Sky Moneyline",
+    odds: "-155",
+    confidence: 62.1,
+    modelProjection: "Sky 87.0 - 83.7 Sun",
+    dtm: 5.0,
+    recentForm: "1/10",
+    matchup: "Sky @ Sun",
+    propType: "moneyline",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    returnAmount: 0,
+  },
 ];
