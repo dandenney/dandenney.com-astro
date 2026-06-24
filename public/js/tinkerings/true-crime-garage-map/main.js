@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Karina Holmer /// Episodes: 937-938",
+      Release: "06/24/2026",
+      URL: "https://truecrimegarage.com/home/blog/7794536/karina-holmer-episodes-937-938",
+      Earliest_Date: "6/23/1996",
+      Earliest_Year: "1996",
+      Notes: "1091 Boylston Street, Boston, Massachusetts",
+    },
+    geometry: {
+      coordinates: [-71.089187, 42.347213],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Suspect #1 /// Episodes: 935-936",
       Release: "06/16/2026",
       URL: "https://truecrimegarage.com/home/blog/7789973/suspect-1-episodes-935-936",
