@@ -37,6 +37,18 @@ const SECTION: Record<TwinCollectionName, string> = {
   "artificially-intelligent": "Artificially Intelligent",
 };
 
+/** One-line section blurb for /llms.txt — mirrors each section index page's description. */
+const SECTION_DESCRIPTION: Record<TwinCollectionName, string> = {
+  posts:
+    "Articles I really wanted to share, or felt compelled to write because I couldn't find them when I was looking",
+  blips: "Shorter than a blog post, longer than a tweet",
+  reviews: "Reviews of food, music, and events with the help of AI",
+  songs: "The songs I keep coming back to, each with a full review",
+  "plus-ev": "A data-driven sports betting experiment, recapped daily by Gale",
+  "artificially-intelligent":
+    "Experiments at the intersection of AI and front-end development",
+};
+
 /**
  * Relative twin URL for a single entry, e.g. twinUrlForId("posts", "conferences/x.md")
  * → "/posts/conferences/x.md". Used by content routes to pass the twin link to layouts.
@@ -253,6 +265,7 @@ export async function getAllTwins(): Promise<TwinItem[]> {
 
 export interface TwinSection {
   section: string;
+  description: string;
   items: TwinItem[];
 }
 
@@ -261,6 +274,7 @@ export async function getTwinSections(): Promise<TwinSection[]> {
   const twins = await getAllTwins();
   return SECTION_ORDER.map((name) => ({
     section: SECTION[name],
+    description: SECTION_DESCRIPTION[name],
     items: twins.filter((t) => t.collection === name),
   })).filter((s) => s.items.length > 0);
 }
