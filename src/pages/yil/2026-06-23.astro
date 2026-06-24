@@ -1,0 +1,382 @@
+---
+export const prerender = true;
+export const yilMeta = {
+  date: '2026-06-23',
+  headline: 'The Interface Moves Upstream',
+  summary:
+    'A day about leverage moving away from manual clicking and raw execution toward system design, assistant-mediated interfaces, loop engineering, and smarter frontend primitives.',
+  accent: '#0007cd',
+};
+
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import YilSeriesNav from '@/components/YilSeriesNav.astro';
+
+const interfacePoints = [
+  'People stop searching, clicking, and opening ten tabs not because the web vanishes overnight, but because asking the assistant is faster.',
+  'Publishing economics change when the default interaction shifts from browse mode to mediated retrieval.',
+  'The deeper shift is structural: the interface no longer lives at the page layer alone — it lives in whatever sits between the user and the source system.',
+];
+
+const loopCards = [
+  {
+    label: 'When to Loop',
+    heading: 'Only Where a Cheap Check Exists',
+    body: 'Loop engineering pays off when a task repeats and a machine can tell when it is done. Without a cheap verifier, the human is still trapped inside the loop and the automation mostly formalizes churn.',
+    accent: '#00d4ff',
+    borderClass: 'border-cyan-400/25',
+    bgClass: 'bg-cyan-400/10',
+    textClass: 'text-cyan-400',
+  },
+  {
+    label: 'Where Value Appears',
+    heading: 'Generation Is Cheap; Gaps Are Not',
+    body: 'The strongest idea from Life After the Prototype is that AI earns its keep by surfacing missing structure — pagination, weak contracts, fuzzy boundaries, invented UI drift — not just by drafting another screen.',
+    accent: '#00d4ff',
+    borderClass: 'border-cyan-400/18',
+    bgClass: 'bg-cyan-400/5',
+    textClass: 'text-cyan-400',
+  },
+  {
+    label: 'Zero to One',
+    heading: 'Constrain the Agent to the Real System',
+    body: 'Useful refinement comes from staying inside the actual component and token architecture instead of letting the tool sprint from zero to one hundred. The loop gets better when the system’s boundaries are explicit.',
+    accent: '#00d4ff',
+    borderClass: 'border-cyan-400/25',
+    bgClass: 'bg-cyan-400/10',
+    textClass: 'text-cyan-400',
+  },
+];
+
+const primitiveNotes = [
+  {
+    token: 'light-dark()',
+    body: 'A clearer default path for surfaces that need to switch modes without a whole second design system.',
+  },
+  {
+    token: 'contrast-color()',
+    body: 'Readable text selection becomes more native, less manual, and more aligned with the day’s theme of smarter mediation.',
+  },
+  {
+    token: 'style queries',
+    body: 'The interface layer can respond more intelligently to its own conditions instead of relying on piles of workaround logic.',
+  },
+];
+
+const references = [
+  {
+    label: 'WEB',
+    accent: '#0007cd',
+    title: 'The Web We Know Is Going to Disappear',
+    url: 'https://www.minid.net/2026/6/15/the-web-is-going-to-dissapear',
+  },
+  {
+    label: 'AGENTS',
+    accent: '#00d4ff',
+    title: 'From Prompting Agents to Loop Engineering',
+    url: 'https://x.com/omarsar0/status/2068008743153832264/?rw_tt_thread=True',
+  },
+  {
+    label: 'PROTOTYPES',
+    accent: '#00d4ff',
+    title: 'Life After the Prototype',
+    url: 'https://southleft.substack.com/p/life-after-the-prototype?r=32cojn&triedRedirect=true',
+  },
+  {
+    label: 'CSS',
+    accent: '#7b3aed',
+    title: 'Modern CSS theming with light-dark(), contrast-color(), and style queries',
+    url: 'https://una.im/modern-css-theming?ck_subscriber_id=1665201471',
+  },
+  {
+    label: 'REFLECTION',
+    accent: '#7b3aed',
+    title: 'After AI Takes Everything',
+    url: 'https://ursb.me/en/posts/after-ai-takes-everything/?ref=sidebar',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead
+      title="Yesterday I Learned: The Interface Moves Upstream | Dan Denney"
+      description={yilMeta.summary}
+      type="blogpost"
+      datePublished={new Date(yilMeta.date)}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-display: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --font-body: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --font-mono: 'JetBrains Mono', 'Geist Mono', monospace;
+      }
+
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        @keyframes fade-up { from { opacity: 0; } to { opacity: 1; } }
+      }
+
+      .f-display { font-family: var(--font-display); }
+      .f-body { font-family: var(--font-body); }
+      .f-mono { font-family: var(--font-mono); }
+
+      .yil-hero { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .yil-section { opacity: 0; }
+      .yil-section.is-visible { animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
+    <noscript><style>.yil-section { opacity: 1 !important; }</style></noscript>
+  </head>
+  <body class="bg-neutral-950 text-white antialiased">
+    <main class="relative z-10 bg-neutral-950 shadow-xs">
+      <Header />
+
+      <section class="yil-hero overflow-hidden bg-neutral-950 py-24 md:py-32">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="relative overflow-hidden rounded-[2rem] border border-blue-700/20 bg-neutral-900 px-8 py-16 sm:px-12 md:py-20">
+            <div class="pointer-events-none absolute inset-x-[18%] top-8 h-64 rounded-full bg-blue-700/20 blur-3xl"></div>
+            <div class="pointer-events-none absolute right-0 top-0 h-full w-[35%] bg-gradient-to-l from-cyan-400/8 to-transparent"></div>
+            <div class="relative">
+              <p class="f-mono text-[11px] font-medium uppercase tracking-[0.24em] text-blue-700">
+                2026-06-23
+              </p>
+              <h1
+                class="f-display mt-8 max-w-4xl text-balance font-medium tracking-[-0.055em] text-white"
+                style="font-size: clamp(2.8rem, 7vw, 6rem);"
+              >
+                The Interface Moves Upstream
+              </h1>
+              <p class="f-body mt-8 max-w-3xl text-lg leading-8 text-neutral-300 text-pretty">
+                The day's captures all point to the same shift: less value in manually operating the
+                old surface, more value in designing the systems, checks, and adaptive layers that
+                sit above it.
+              </p>
+              <div class="mt-10 flex flex-wrap gap-3">
+                <span class="f-mono inline-flex rounded-full border border-blue-700/30 bg-blue-700/15 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-blue-700">
+                  Interface
+                </span>
+                <span class="f-mono inline-flex rounded-full border border-cyan-400/25 bg-cyan-400/10 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-cyan-400">
+                  Systems
+                </span>
+                <span class="f-mono inline-flex rounded-full border border-violet-500/25 bg-violet-500/10 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-violet-500">
+                  Primitives
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="yil-section border-y border-white/5 bg-[#111111] py-24">
+        <div class="mx-auto max-w-5xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.24em] text-blue-700/70">
+            minid.net / The Web We Know Is Going to Disappear
+          </p>
+          <blockquote class="mt-5 max-w-4xl">
+            <span class="f-display block text-[6rem] leading-none text-white/10" aria-hidden="true">“</span>
+            <p class="f-display -mt-4 text-balance text-2xl leading-relaxed text-white md:text-4xl">
+              The Web was built on a simple habit: click the link. AI breaks that habit.
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="yil-section bg-neutral-950 py-24">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          <div>
+            <p class="f-mono inline-flex rounded-full border border-blue-700/30 bg-blue-700/15 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-blue-700">
+              Interface
+            </p>
+            <h2 class="f-display mt-6 max-w-3xl text-balance text-4xl font-medium tracking-[-0.05em] text-white md:text-5xl">
+              Discovery Stops Looking Like Browse Mode
+            </h2>
+            <div class="mt-4 h-px w-16 bg-blue-700"></div>
+            <div class="mt-10 space-y-6 max-w-2xl">
+              <p class="f-body text-lg leading-8 text-neutral-300 text-pretty">
+                The strongest claim from the day is not that the web suddenly disappears. It is that
+                the default interface to the web changes. Once an assistant is faster than manual
+                traversal, convenience reroutes attention, publishing economics, and even the shape
+                of discovery itself.
+              </p>
+              <p class="f-body text-base leading-7 text-neutral-400 text-pretty">
+                This belongs on a YIL page because it rhymes with the rest of the day: the important
+                shift is not visual polish. It is where the interaction boundary now sits.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-[1.75rem] border border-blue-700/20 bg-neutral-900 p-8">
+            <p class="f-mono text-[11px] uppercase tracking-[0.22em] text-blue-700/80">What changes</p>
+            <ul class="mt-6 space-y-5">
+              {interfacePoints.map((point) => (
+                <li class="flex gap-4 border-t border-white/5 pt-5 first:border-t-0 first:pt-0">
+                  <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-blue-700"></span>
+                  <p class="f-body text-sm leading-7 text-neutral-300 text-pretty">{point}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="yil-section bg-neutral-900 py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono inline-flex rounded-full border border-cyan-400/25 bg-cyan-400/10 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-cyan-400">
+            Systems
+          </p>
+          <h2 class="f-display mt-6 max-w-4xl text-balance text-4xl font-medium tracking-[-0.05em] text-white md:text-5xl">
+            Leverage Moves from Prompting to Designing the Loop
+          </h2>
+          <div class="mt-4 h-px w-16 bg-cyan-400"></div>
+          <p class="f-body mt-8 max-w-3xl text-base leading-8 text-neutral-300 text-pretty">
+            The loop-engineering and prototype notes sharpen the same point from inside software work.
+            Once generation is cheap, the valuable work moves into pass conditions, boundaries,
+            system checks, and the ability to recognize the gap the machine just surfaced.
+          </p>
+          <div class="mt-12 grid gap-5 md:grid-cols-3">
+            {loopCards.map((card) => (
+              <article class={`rounded-[1.5rem] border p-6 ${card.borderClass} ${card.bgClass}`}>
+                <p class={`f-mono text-[10px] uppercase tracking-[0.18em] ${card.textClass}`}>{card.label}</p>
+                <h3 class="f-display mt-5 text-xl font-medium tracking-[-0.035em] text-white text-balance">
+                  {card.heading}
+                </h3>
+                <p class="f-body mt-4 text-sm leading-7 text-neutral-300 text-pretty">{card.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="yil-section bg-neutral-950 py-24">
+        <div class="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="f-mono inline-flex rounded-full border border-violet-500/25 bg-violet-500/10 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-violet-500">
+              Primitives
+            </p>
+            <h2 class="f-display mt-6 max-w-2xl text-balance text-4xl font-medium tracking-[-0.05em] text-white md:text-5xl">
+              The Surface Itself Gets Smarter
+            </h2>
+            <div class="mt-4 h-px w-16 bg-violet-500"></div>
+            <p class="f-body mt-8 max-w-xl text-base leading-8 text-neutral-300 text-pretty">
+              Modern CSS theming belongs here as enabling infrastructure. The frontend layer itself
+              is maturing toward more intelligent defaults — a quieter technical echo of the same
+              mediated-interface pattern showing up everywhere else in the day.
+            </p>
+          </div>
+
+          <div class="grid gap-4">
+            {primitiveNotes.map((item) => (
+              <article class="rounded-[1.5rem] border border-violet-500/20 bg-neutral-900 p-6">
+                <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-violet-500">{item.token}</p>
+                <p class="f-body mt-4 text-sm leading-7 text-neutral-300 text-pretty">{item.body}</p>
+              </article>
+            ))}
+            <article class="rounded-[1.5rem] border border-white/8 bg-[#111111] p-6">
+              <p class="f-mono text-[10px] uppercase tracking-[0.18em] text-white/40">Open question</p>
+              <p class="f-body mt-4 text-sm leading-7 text-neutral-300 text-pretty">
+                If both agent workflows and frontend systems are moving toward smarter defaults, then
+                Dan’s next design problem may be less about making every choice visible and more about
+                deciding which choices deserve to stay manual.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="yil-section bg-neutral-900 py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <p class="f-mono text-[11px] uppercase tracking-[0.24em] text-neutral-500">References</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {references.map((item) => (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group rounded-[1.5rem] border border-white/6 bg-neutral-950 p-6 transition-colors hover:border-white/12"
+              >
+                <span
+                  class="f-mono inline-flex rounded-full border px-3 py-1.5 text-[10px] uppercase tracking-[0.14em]"
+                  style={`color: ${item.accent}; border-color: ${item.accent}55; background: ${item.accent}11;`}
+                >{item.label}</span>
+                <p class="f-body mt-5 text-sm leading-7 text-neutral-300 text-pretty group-hover:text-white">
+                  {item.title}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <YilSeriesNav
+        currentDate={yilMeta.date}
+        accent={yilMeta.accent}
+        designRef={{ name: 'Composio', url: 'https://composio.dev' }}
+      />
+
+      <section class="border-t border-white/6 bg-neutral-900">
+        <div class="mx-auto max-w-6xl px-6 py-12">
+          <p class="f-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">Design Notes</p>
+          <p class="f-mono mt-2 text-sm font-medium text-white">
+            YIL 2026-06-23 — The Interface Moves Upstream
+          </p>
+          <p class="f-mono mt-1 max-w-3xl text-sm leading-7 text-neutral-400">
+            A day about AI changing where leverage lives: away from clicking and raw execution,
+            toward system design, mediated interfaces, and infrastructure that adapts more
+            intelligently by default.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #0007cd"></span>
+              <span class="f-mono text-[10px] text-neutral-500">accent-1 / Interface</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #00d4ff"></span>
+              <span class="f-mono text-[10px] text-neutral-500">accent-2 / Systems</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="h-3 w-3 rounded-full" style="background: #7b3aed"></span>
+              <span class="f-mono text-[10px] text-neutral-500">accent-3 / Primitives</span>
+            </div>
+          </div>
+          <p class="mt-6 max-w-3xl text-sm leading-7 text-neutral-400 text-pretty">
+            This page follows the design artifact's dark developer-infrastructure mood: monolithic
+            near-black surfaces, sparse electric-blue emphasis, and panel-based composition instead
+            of illustrative spectacle. The underlying intent is to make the page feel like a serious
+            product surface because the source notes are about mediated systems replacing older manual
+            interaction habits. The layout moves in the same sequence as the design brief — thesis,
+            interface shift, loop/system design, then smarter primitives — so the visual hierarchy is
+            carrying the argument rather than decorating it.
+          </p>
+        </div>
+      </section>
+    </main>
+    <Footer />
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.yil-section').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
