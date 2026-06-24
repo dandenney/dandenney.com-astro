@@ -3,10 +3,11 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import MarkdownToggle from '../components/MarkdownToggle.astro';
 import { ClientRouter } from 'astro:transitions';
 import { getLastCommit } from '../lib/github';
 
-const { title, pubDate, summary, githubPath } = Astro.props;
+const { title, pubDate, summary, githubPath, markdownTwin } = Astro.props;
 
 const breadcrumbItems = [
   { label: 'Artificially Intelligent', href: '/artificially-intelligent' },
@@ -27,7 +28,7 @@ const repoUrl = `https://github.com/dandenney/artificially-intelligent/tree/main
 
 <html lang="en">
   <head>
-    <BaseHead title={`${title} | Artificially Intelligent`} description={summary ?? title} type="blogpost" datePublished={pubDate} author="Dan Denney" />
+    <BaseHead title={`${title} | Artificially Intelligent`} description={summary ?? title} type="blogpost" datePublished={pubDate} author="Dan Denney" markdownTwin={markdownTwin} />
     <ClientRouter />
   </head>
   <body class="bg-white dark:bg-slate-900">
@@ -40,9 +41,12 @@ const repoUrl = `https://github.com/dandenney/artificially-intelligent/tree/main
 
         <div class="max-w-2xl mx-auto pb-16 px-8 lg:px-0">
           <div class="mb-8 flex items-center justify-between gap-4 flex-wrap">
-            <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-              <span class="whitespace-nowrap">[&nbsp;{pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}&nbsp;]</span>
-            </p>
+            <div class="flex items-center gap-3 text-gray-400 dark:text-slate-500">
+              <p class="text-xs font-mono uppercase tracking-widest">
+                <span class="whitespace-nowrap">[&nbsp;{pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}&nbsp;]</span>
+              </p>
+              {markdownTwin && <MarkdownToggle href={markdownTwin} />}
+            </div>
 
             <a
               href={repoUrl}

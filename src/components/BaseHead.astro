@@ -12,6 +12,8 @@ interface Props {
 	datePublished?: Date;
 	dateModified?: Date;
 	author?: string;
+	/** Relative URL of this page's Markdown twin, e.g. /posts/slug.md */
+	markdownTwin?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -23,7 +25,8 @@ const {
 	type = 'website',
 	datePublished,
 	dateModified,
-	author = 'Dan Denney'
+	author = 'Dan Denney',
+	markdownTwin
 } = Astro.props;
 
 const ogType = type === 'blogpost' ? 'article' : type === 'person' ? 'profile' : 'website';
@@ -45,6 +48,10 @@ const ogType = type === 'blogpost' ? 'article' : type === 'person' ? 'profile' :
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+{markdownTwin && (
+	<link rel="alternate" type="text/markdown" title={`${title} (Markdown)`} href={markdownTwin} />
+)}
 
 <!-- RSS Autodiscovery -->
 <link rel="alternate" type="application/rss+xml" title="Dan Denney - Posts" href="/rss.xml" />

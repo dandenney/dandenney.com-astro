@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import SongReview from "@/layouts/SongReview.astro";
+import { twinUrlForId } from "@/lib/markdownTwin";
 
 export const prerender = true;
 
@@ -55,6 +56,7 @@ const { Content } = await render(song);
   trackNumber={trackNumber}
   totalTracks={totalTracks}
   next={next}
+  markdownTwin={twinUrlForId("songs", song.id)}
 >
   <Content />
 </SongReview>

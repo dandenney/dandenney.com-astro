@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import MarkdownToggle from "../components/MarkdownToggle.astro";
 import { ClientRouter } from "astro:transitions";
 
 const {
@@ -19,6 +20,7 @@ const {
   trackNumber,
   totalTracks,
   next,
+  markdownTwin,
 } = Astro.props;
 
 // Format duration from ms to mm:ss
@@ -48,6 +50,7 @@ const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[
     <BaseHead
       title={`${title} by ${artist}`}
       description={`A review of ${title} by ${artist}`}
+      markdownTwin={markdownTwin}
     />
     <ClientRouter />
     <script
@@ -75,6 +78,7 @@ const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[
           <div class="song-hero-text">
             <p class="hero-fade text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
               <span class="whitespace-nowrap">[&nbsp;Heavy Rotation &middot; Track {trackNo} / {totalTracks}&nbsp;]</span>
+              {markdownTwin && <MarkdownToggle href={markdownTwin} class="song-md" />}
             </p>
             <h1 class="song-title text-slate-900 dark:text-slate-100">
               <span class="song-title-inner">{title}</span>
@@ -232,6 +236,11 @@ const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[
         .song-hero {
           grid-template-columns: minmax(0, 1fr) auto;
         }
+      }
+
+      .song-md {
+        margin-left: 0.75rem;
+        vertical-align: middle;
       }
 
       .song-title {

@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import ImageLightbox from '../components/ImageLightbox.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ReadingTime from '../components/ReadingTime.astro';
+import MarkdownToggle from '../components/MarkdownToggle.astro';
 import similarities from '../assets/similarities.json';
 import { ClientRouter } from 'astro:transitions';
 
@@ -19,6 +20,7 @@ const {
   identifier,
   slug,
   rawBody,
+  markdownTwin,
 } = Astro.props;
 
 // Generate breadcrumb items
@@ -45,7 +47,7 @@ const relatedPosts =
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" />
+		<BaseHead title={title} description={description} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" markdownTwin={markdownTwin} />
 		<ClientRouter />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
@@ -65,11 +67,10 @@ const relatedPosts =
         </h1>
 
 				<div class="longform max-w-2xl mx-auto pb-16 px-8 lg:px-0 blogpost">
-					{rawBody && (
-						<div class="mb-6">
-							<ReadingTime content={rawBody} />
-						</div>
-					)}
+					<div class="mb-6 flex items-center justify-between gap-4">
+						{rawBody ? <ReadingTime content={rawBody} /> : <span></span>}
+						{markdownTwin && <MarkdownToggle href={markdownTwin} />}
+					</div>
 					<slot />
 
 					{strapiSeries && (

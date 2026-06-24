@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Review from '../../layouts/Review.astro';
+import { twinUrlForId } from '@/lib/markdownTwin';
 
 export const prerender = true;
 
@@ -17,6 +18,6 @@ const review = Astro.props;
 const { Content } = await render(review);
 ---
 
-<Review {...review.data} id={review.id}>
+<Review {...review.data} id={review.id} markdownTwin={twinUrlForId('reviews', review.id)}>
 	<Content />
 </Review>

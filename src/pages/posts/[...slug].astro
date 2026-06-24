@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import { twinUrlForId } from '@/lib/markdownTwin';
 
 export const prerender = true;
 
@@ -26,6 +27,6 @@ const post = Astro.props;
 const { Content, headings } = await render(post);
 ---
 
-<BlogPost {...post.data} identifier={post.identifier} rawBody={post.body} headings={headings}>
+<BlogPost {...post.data} identifier={post.identifier} rawBody={post.body} headings={headings} markdownTwin={twinUrlForId('posts', post.id)}>
 	<Content />
 </BlogPost>

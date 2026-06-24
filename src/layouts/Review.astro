@@ -3,6 +3,7 @@ import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import toTitleCase from '@/helpers/toTitleCase.js';
+import MarkdownToggle from '@/components/MarkdownToggle.astro';
 import { episodeMap } from '@/helpers/nrai';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
@@ -21,9 +22,10 @@ interface Props {
 	heroImageAttribution?: string;
 	title: string;
 	pubDate?: Date;
+	markdownTwin?: string;
 }
 
-const { id, city, country, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate } = Astro.props;
+const { id, city, country, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate, markdownTwin } = Astro.props;
 
 const ep = id ? episodeMap(await getCollection('reviews')).get(id) : undefined;
 const airDate = pubDate
@@ -33,7 +35,7 @@ const airDate = pubDate
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} type="restaurant" image={heroImage ? `/no-reserv-ai-tions/${heroImage}.webp` : undefined} />
+		<BaseHead title={title} description={description} type="restaurant" image={heroImage ? `/no-reserv-ai-tions/${heroImage}.webp` : undefined} markdownTwin={markdownTwin} />
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
 	</head>
@@ -51,6 +53,7 @@ const airDate = pubDate
 								: country !== 'United States' && <>, <a href="/no-reserv-ai-tions/international">{country}</a></>}
 						</span>
 						{airDate && <span>Air date: {airDate}</span>}
+						{markdownTwin && <MarkdownToggle href={markdownTwin} class="rev-md" />}
 					</p>
 
 					<h1 class="rev-title">{title}</h1>
@@ -135,6 +138,9 @@ const airDate = pubDate
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
 				color: var(--nrai-smoke);
+			}
+			.rev-md {
+				margin-left: auto;
 			}
 			.rev-title {
 				font-family: var(--font-display);

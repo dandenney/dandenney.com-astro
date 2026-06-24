@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Blip from '../../layouts/Blip.astro';
+import { twinUrlForId } from '@/lib/markdownTwin';
 
 export const prerender = true;
 
@@ -17,6 +18,6 @@ const blip = Astro.props;
 const { Content } = await render(blip);
 ---
 
-<Blip {...blip.data}>
+<Blip {...blip.data} markdownTwin={twinUrlForId('blips', blip.id)}>
 	<Content />
 </Blip>

@@ -6,6 +6,7 @@ import ImageLightbox from '../components/ImageLightbox.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ReadingTime from '../components/ReadingTime.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import MarkdownToggle from '../components/MarkdownToggle.astro';
 import similarities from '../assets/similarities.json';
 import { ClientRouter } from 'astro:transitions';
 
@@ -23,6 +24,7 @@ const {
   slug,
   rawBody,
   headings = [],
+  markdownTwin,
 } = Astro.props;
 
 const metaDescription = description || summary;
@@ -52,7 +54,7 @@ const relatedPosts =
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={metaDescription} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" />
+		<BaseHead title={title} description={metaDescription} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" markdownTwin={markdownTwin} />
 		<ClientRouter />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
@@ -102,11 +104,10 @@ const relatedPosts =
 					)}
 
 			<div class="longform max-w-3xl mx-auto pb-16 pt-8 px-8 lg:px-0 blogpost">
-					{rawBody && (
-						<div class="mb-6">
-							<ReadingTime content={rawBody} />
-						</div>
-					)}
+					<div class="mb-6 flex items-center justify-between gap-4">
+						{rawBody ? <ReadingTime content={rawBody} /> : <span></span>}
+						{markdownTwin && <MarkdownToggle href={markdownTwin} />}
+					</div>
 					<slot />
 
 					{strapiSeries && (

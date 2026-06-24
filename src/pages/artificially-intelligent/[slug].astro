@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import ArtificiallyIntelligent from '../../layouts/ArtificiallyIntelligent.astro';
+import { twinUrlForId } from '@/lib/markdownTwin';
 
 export const prerender = true;
 
@@ -18,6 +19,6 @@ const experiment = Astro.props;
 const { Content } = await render(experiment);
 ---
 
-<ArtificiallyIntelligent {...experiment.data}>
+<ArtificiallyIntelligent {...experiment.data} markdownTwin={twinUrlForId('artificially-intelligent', experiment.id)}>
   <Content />
 </ArtificiallyIntelligent>
