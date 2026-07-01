@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Free Roaming Predator /// Episodes: 939-940",
+      Release: "07/01/2026",
+      URL: "https://truecrimegarage.com/home/blog/7800036/free-roaming-predator-episodes-939-940",
+      Earliest_Date: "4/3/1990",
+      Earliest_Year: "1990",
+      Notes: "15 Villa Road, Unit 227 (Hidden Lakes apartments) in Greenville, South Carolina",
+    },
+    geometry: {
+      coordinates: [-82.353917, 34.862147],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Karina Holmer /// Episodes: 937-938",
       Release: "06/24/2026",
       URL: "https://truecrimegarage.com/home/blog/7794536/karina-holmer-episodes-937-938",
