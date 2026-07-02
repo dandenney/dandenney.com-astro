@@ -324,6 +324,28 @@
   @apply rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white transition-colors transition-transform shadow-xs hover:bg-red-500 focus-visible:scale-105 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-500;
 }
 
+/* Standalone diagonal-hatch panel (offset backing for tipped-in photos) */
+
+.hatch-panel {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    #cbd5e1 4px,
+    #cbd5e1 5px
+  );
+}
+
+.dark .hatch-panel {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    #1e293b 4px,
+    #1e293b 5px
+  );
+}
+
 /* Grid shared — diagonal lines for empty cells, solid borders between items */
 
 .finds-grid,

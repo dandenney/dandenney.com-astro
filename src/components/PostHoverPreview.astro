@@ -1,0 +1,141 @@
+---
+// Cursor-following thumbnail preview for post index rows.
+// Activates on any element with a `data-preview-src` attribute.
+// Hover-capable fine-pointer devices only; rows show inline thumbs elsewhere.
+---
+
+<div
+  id="post-hover-preview"
+  aria-hidden="true"
+  class="pointer-events-none fixed top-0 left-0 z-50"
+>
+  <div class="preview-frame bg-white p-1.5 pb-6 shadow-xl">
+    <img alt="" width="288" height="192" class="h-48 w-72 object-cover" />
+  </div>
+</div>
+
+<style>
+  #post-hover-preview {
+    display: none;
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    #post-hover-preview {
+      display: block;
+    }
+  }
+
+  #post-hover-preview .preview-frame {
+    transform: scale(0.9);
+    transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  #post-hover-preview.is-visible {
+    opacity: 1;
+  }
+
+  #post-hover-preview.is-visible .preview-frame {
+    transform: scale(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #post-hover-preview,
+    #post-hover-preview .preview-frame {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const HOVER_QUERY = "(hover: hover) and (pointer: fine)";
+  const PREVIEW_WIDTH = 300;
+  const PREVIEW_HEIGHT = 222;
+
+  function initPostHoverPreview() {
+    const preview = document.getElementById("post-hover-preview");
+    if (!preview || preview.dataset.bound === "true") return;
+    if (!window.matchMedia(HOVER_QUERY).matches) return;
+
+    const img = preview.querySelector("img");
+    if (!(img instanceof HTMLImageElement)) return;
+
+    const rows = document.querySelectorAll("[data-preview-src]");
+    if (rows.length === 0) return;
+
+    preview.dataset.bound = "true";
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    let targetX = 0;
+    let targetY = 0;
+    let x = 0;
+    let y = 0;
+    let rot = 0;
+    let visible = false;
+    let raf = 0;
+
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
+    const place = (clientX: number, clientY: number) => {
+      let px = clientX + 28;
+      if (px + PREVIEW_WIDTH > window.innerWidth - 16) {
+        px = clientX - PREVIEW_WIDTH - 28;
+      }
+      const py = Math.min(
+        Math.max(16, clientY - PREVIEW_HEIGHT / 2),
+        window.innerHeight - PREVIEW_HEIGHT - 16
+      );
+      targetX = px;
+      targetY = py;
+    };
+
+    const render = () => {
+      const ease = reduced.matches ? 1 : 0.18;
+      x = lerp(x, targetX, ease);
+      y = lerp(y, targetY, ease);
+      const drift = targetX - x;
+      rot = reduced.matches
+        ? 0
+        : lerp(rot, Math.max(-7, Math.min(7, drift * 0.06)), 0.15);
+      preview.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rot}deg)`;
+      if (visible || Math.abs(targetX - x) > 0.3 || Math.abs(targetY - y) > 0.3) {
+        raf = requestAnimationFrame(render);
+      } else {
+        raf = 0;
+      }
+    };
+
+    const start = () => {
+      if (!raf) raf = requestAnimationFrame(render);
+    };
+
+    rows.forEach((row) => {
+      row.addEventListener("pointerenter", (event) => {
+        const src = row.getAttribute("data-preview-src");
+        if (!src || !(event instanceof PointerEvent)) return;
+        if (img.getAttribute("src") !== src) img.setAttribute("src", src);
+        place(event.clientX, event.clientY);
+        x = targetX;
+        y = targetY;
+        rot = 0;
+        visible = true;
+        preview.classList.add("is-visible");
+        start();
+      });
+      row.addEventListener("pointermove", (event) => {
+        if (!(event instanceof PointerEvent)) return;
+        place(event.clientX, event.clientY);
+        start();
+      });
+      row.addEventListener("pointerleave", () => {
+        visible = false;
+        preview.classList.remove("is-visible");
+      });
+    });
+  }
+
+  initPostHoverPreview();
+  document.addEventListener("astro:page-load", initPostHoverPreview);
+</script>

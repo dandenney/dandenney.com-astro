@@ -1,0 +1,88 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ReadingTime from "@/components/ReadingTime.astro";
+import {
+  formatPostDate,
+  postHref,
+  postThumbUrl,
+  tagLabel,
+} from "@/helpers/postDisplay";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+  number: number;
+}
+
+const { post, number } = Astro.props;
+const href = postHref(post.id);
+const imgSrc = postThumbUrl(post.data, 1200);
+const tag = post.data.tags?.[0];
+const kicker = ["Latest", tag ? tagLabel(tag) : null, formatPostDate(post.data.pubDate)]
+  .filter(Boolean)
+  .join(" · ");
+---
+
+<article
+  class="group relative isolate border-y border-gray-200 dark:border-slate-700"
+>
+  <a href={href} class="absolute inset-0 z-20">
+    <span class="sr-only">Read {post.data.title}</span>
+  </a>
+  <div
+    class="mx-auto grid max-w-[1800px] grid-cols-1 gap-y-10 px-8 py-12 sm:py-16 lg:grid-cols-12 lg:items-center lg:gap-x-16"
+  >
+    <div class="lg:col-span-7">
+      <p
+        class="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-slate-500"
+      >
+        <span>[&nbsp;{kicker}&nbsp;]</span>
+      </p>
+      <h3
+        class="mt-6 text-4xl font-black tracking-tight text-balance text-gray-900 transition-colors group-hover:text-red-700 sm:text-6xl xl:text-7xl dark:text-slate-100 dark:group-hover:text-red-400"
+      >
+        {post.data.title}
+      </h3>
+      <p class="mt-6 max-w-xl text-lg leading-8 text-gray-600 dark:text-slate-300">
+        {post.data.summary}
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2">
+        <span class="text-sm font-semibold text-red-700 dark:text-red-400">
+          Read the post
+          <span
+            aria-hidden="true"
+            class="inline-block transition-transform duration-300 [@media(hover:hover)]:group-hover:translate-x-1"
+            >&rarr;</span
+          >
+        </span>
+        <ReadingTime content={post.body ?? ""} />
+        <span
+          aria-hidden="true"
+          class="font-mono text-xs tracking-widest tabular-nums text-gray-400 dark:text-slate-500"
+        >
+          {String(number).padStart(3, "0")}
+        </span>
+      </div>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="relative max-w-xl lg:max-w-none">
+        <div
+          aria-hidden="true"
+          class="hatch-panel absolute inset-0 translate-x-3 translate-y-3"
+        >
+        </div>
+        <figure
+          class="relative bg-white p-3 pb-9 shadow-md transition-transform duration-300 [@media(hover:hover)]:group-hover:-rotate-1"
+        >
+          <img
+            src={imgSrc}
+            alt={post.data.thumbAlt || ""}
+            width="900"
+            height="600"
+            loading="lazy"
+            class="aspect-3/2 w-full object-cover"
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</article>

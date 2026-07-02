@@ -1,0 +1,76 @@
+---
+import type { CollectionEntry } from "astro:content";
+import {
+  formatPostDate,
+  postHref,
+  postThumbUrl,
+  tagLabel,
+} from "@/helpers/postDisplay";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+  number: number;
+  class?: string;
+}
+
+const { post, number, class: className } = Astro.props;
+const href = postHref(post.id);
+const previewSrc = postThumbUrl(post.data, 640);
+const tag = post.data.tags?.[0];
+---
+
+<a
+  href={href}
+  data-preview-src={previewSrc}
+  class:list={[
+    "post-index-row group grid grid-cols-[3ch_1fr] items-baseline gap-x-4 px-8 py-6 no-underline sm:grid-cols-[4ch_1fr] sm:gap-x-6 sm:py-7",
+    className,
+  ]}
+>
+  <span
+    aria-hidden="true"
+    class="font-mono text-xs tracking-widest tabular-nums text-gray-400 transition-colors group-hover:text-red-700 dark:text-slate-500 dark:group-hover:text-red-400"
+  >
+    {String(number).padStart(3, "0")}
+  </span>
+  <span class="min-w-0">
+    <span class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+      <span
+        class="text-xl font-bold tracking-tight text-gray-900 transition-[color,transform] duration-300 group-hover:text-red-700 sm:text-2xl dark:text-slate-100 dark:group-hover:text-red-400 [@media(hover:hover)]:group-hover:translate-x-1"
+      >
+        {post.data.title}
+      </span>
+      <span
+        class="font-mono text-xs uppercase tracking-widest whitespace-nowrap text-gray-400 dark:text-slate-500"
+      >
+        {formatPostDate(post.data.pubDate)}{
+          tag && <span class="hidden md:inline">&nbsp;&middot;&nbsp;{tagLabel(tag)}</span>
+        }
+      </span>
+    </span>
+    <span class="mt-2 flex items-center gap-4">
+      <img
+        src={previewSrc}
+        alt=""
+        width="80"
+        height="56"
+        loading="lazy"
+        class="post-index-thumb h-14 w-20 flex-none object-cover shadow-xs"
+      />
+      <span
+        class="line-clamp-2 block max-w-2xl text-sm leading-relaxed text-gray-500 dark:text-slate-400"
+      >
+        {post.data.summary}
+      </span>
+    </span>
+  </span>
+</a>
+
+<style>
+  /* Hover-capable devices get the floating preview instead of inline thumbs */
+  @media (hover: hover) and (pointer: fine) {
+    .post-index-thumb {
+      display: none;
+    }
+  }
+</style>
