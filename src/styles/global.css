@@ -327,7 +327,6 @@
 /* Grid shared — diagonal lines for empty cells, solid borders between items */
 
 .finds-grid,
-.blips-grid,
 .tinkerings-grid,
 .music-grid,
 .reviews-list-grid,
@@ -347,7 +346,6 @@
 }
 
 .dark .finds-grid,
-.dark .blips-grid,
 .dark .tinkerings-grid,
 .dark .music-grid,
 .dark .reviews-list-grid,
@@ -367,7 +365,6 @@
 
 /* Solid borders between grid items via box-shadow */
 .finds-grid > *,
-.blips-grid > *,
 .tinkerings-grid > *,
 .music-grid > *,
 .reviews-list-grid > *,
@@ -379,7 +376,6 @@
 }
 
 .dark .finds-grid > *,
-.dark .blips-grid > *,
 .dark .tinkerings-grid > *,
 .dark .music-grid > *,
 .dark .reviews-list-grid > *,
@@ -396,7 +392,6 @@
 
 @media (hover: hover) {
   .finds-grid-item:hover,
-  .blips-grid-item:hover,
   .tinkerings-grid-item:hover,
   .music-grid-item:hover,
   .reviews-list-grid-item:hover,
@@ -405,82 +400,11 @@
   }
 
   .dark .finds-grid-item:hover,
-  .dark .blips-grid-item:hover,
   .dark .tinkerings-grid-item:hover,
   .dark .music-grid-item:hover,
   .dark .reviews-list-grid-item:hover,
   .dark .side-projects-grid-item:hover {
     background-color: #0f172a !important;
-  }
-}
-
-/* Blips Grid */
-
-.blips-grid-item {
-  transition: background-color 0.2s ease;
-}
-
-/* Blip Radar SVG */
-
-.blip-radar {
-  color: #d1d5db; /* gray-300 */
-  transition: color 0.3s ease;
-}
-
-.dark .blip-radar {
-  color: #475569; /* slate-600 */
-}
-
-.blips-grid-item:hover .blip-radar {
-  color: #b91c1c; /* red-700 */
-}
-
-.dark .blips-grid-item:hover .blip-radar {
-  color: #f87171; /* red-400 */
-}
-
-.blip-ring {
-  opacity: 0.4;
-  transform-origin: center;
-  transition: opacity 0.3s ease;
-}
-
-.blips-grid-item:hover .blip-ring {
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .blips-grid-item:hover .blip-ring-1 {
-    animation: blip-pulse 1.5s ease-out infinite;
-  }
-
-  .blips-grid-item:hover .blip-ring-2 {
-    animation: blip-pulse 1.5s ease-out 0.3s infinite;
-  }
-
-  .blips-grid-item:hover .blip-ring-3 {
-    animation: blip-pulse 1.5s ease-out 0.6s infinite;
-  }
-}
-
-.blip-core {
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.blips-grid-item:hover .blip-core {
-  opacity: 1;
-}
-
-@keyframes blip-pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

@@ -1,0 +1,113 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	entry: CollectionEntry<'blips'>;
+	showYear?: boolean;
+}
+
+const { entry, showYear = false } = Astro.props;
+
+const slug = entry.id.replace(/\.mdx?$/, '');
+const dateStr = entry.data.pubDate.toLocaleDateString('en-US', {
+	month: 'short',
+	day: 'numeric',
+	...(showYear ? { year: 'numeric' as const } : {}),
+	timeZone: 'UTC',
+});
+---
+
+<a
+	id={`blip-${slug}`}
+	href={`/blips/${slug}/`}
+	data-slug={slug}
+	class="blip-row group flex items-center justify-between gap-6 py-7 no-underline md:py-9"
+>
+	<div class="min-w-0 transition-transform duration-300 ease-out [@media(hover:hover)]:group-hover:translate-x-1.5 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0">
+		<p class="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-slate-500">
+			<span class="whitespace-nowrap">[&nbsp;{dateStr}&nbsp;]</span>
+		</p>
+		<h3 class="mt-2 text-xl font-bold leading-snug tracking-tight text-slate-900 transition-colors group-hover:text-red-700 md:text-2xl dark:text-slate-100 dark:group-hover:text-red-400">
+			{entry.data.title}
+		</h3>
+		{entry.data.summary && (
+			<p class="mt-2 max-w-2xl text-sm leading-relaxed text-gray-500 md:text-base dark:text-slate-400">
+				{entry.data.summary}
+			</p>
+		)}
+	</div>
+	<svg class="blip-radar shrink-0" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+		<circle class="blip-ring blip-ring-3" cx="16" cy="16" r="15" stroke="currentColor" stroke-width="0.75" />
+		<circle class="blip-ring blip-ring-2" cx="16" cy="16" r="10" stroke="currentColor" stroke-width="0.75" />
+		<circle class="blip-ring blip-ring-1" cx="16" cy="16" r="5" stroke="currentColor" stroke-width="0.75" />
+		<circle class="blip-core" cx="16" cy="16" r="2.5" fill="currentColor" />
+	</svg>
+</a>
+
+<style>
+	.blip-row {
+		scroll-margin-top: 5rem;
+	}
+
+	.blip-radar {
+		color: #d1d5db;
+		transition: color 0.3s ease;
+	}
+
+	:global(.dark) .blip-radar {
+		color: #475569;
+	}
+
+	.blip-row:hover .blip-radar {
+		color: #b91c1c;
+	}
+
+	:global(.dark) .blip-row:hover .blip-radar {
+		color: #f87171;
+	}
+
+	.blip-ring {
+		opacity: 0.4;
+		transform-origin: center;
+		transition: opacity 0.3s ease;
+	}
+
+	.blip-row:hover .blip-ring {
+		opacity: 1;
+	}
+
+	.blip-core {
+		opacity: 0.6;
+		transition: opacity 0.3s ease;
+	}
+
+	.blip-row:hover .blip-core {
+		opacity: 1;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.blip-row:hover .blip-ring-1 {
+			animation: blip-row-pulse 1.5s ease-out infinite;
+		}
+
+		.blip-row:hover .blip-ring-2 {
+			animation: blip-row-pulse 1.5s ease-out 0.3s infinite;
+		}
+
+		.blip-row:hover .blip-ring-3 {
+			animation: blip-row-pulse 1.5s ease-out 0.6s infinite;
+		}
+	}
+
+	@keyframes blip-row-pulse {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.2;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+</style>
