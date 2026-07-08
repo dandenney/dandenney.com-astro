@@ -25,6 +25,11 @@ export const longIslandCase: CaseFile = {
       status: "John Bittrolff convicted, 2017",
       summary:
         "Rita was seen hitchhiking in East Patchogue on the evening of November 1, 1993. Her remains were found in a wooded area the next day. The details of the scene later became an important part of identifying her killer, and in 2017 John Bittrolff was convicted of her murder.",
+      facts: [
+        { label: "Last seen", value: "November 1, 1993", tone: "lastSeen" },
+        { label: "Discovered", value: "November 2, 1993", tone: "remains" },
+        { label: "Location", value: "East Patchogue, NY" },
+      ],
     },
     {
       id: "sandra-costilla",
@@ -35,6 +40,10 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged, 2024",
       summary:
         "Sandra was found in a wooded area by a group of hunters on November 20, 1993. She had been strangled, though reports don't state the same level of violence seen with Rita Tangredi. In June 2024, Rex Heuermann was charged with her murder.",
+      facts: [
+        { label: "Discovered", value: "November 20, 1993", tone: "remains" },
+        { label: "Location", value: "North Sea, NY" },
+      ],
     },
     {
       id: "colleen-mcnamee",
@@ -45,6 +54,11 @@ export const longIslandCase: CaseFile = {
       status: "John Bittrolff convicted, 2017",
       summary:
         "Colleen was last seen on January 5, 1994, getting into a small blue car at the Blue Dawn Diner. Her remains were found in the woods on January 30. Like Rita Tangredi, she had been beaten, strangled, and left in the same pose. John Bittrolff was convicted of her murder in 2017.",
+      facts: [
+        { label: "Last seen", value: "January 5, 1994", tone: "lastSeen" },
+        { label: "Discovered", value: "January 30, 1994", tone: "remains" },
+        { label: "Last seen at", value: "Blue Dawn Diner" },
+      ],
     },
     {
       id: "karen-vergata",
@@ -56,6 +70,11 @@ export const longIslandCase: CaseFile = {
       status: "Murder unsolved",
       summary:
         "Partial remains of Karen were found along Blue Point Beach on April 20, 1996, wrapped in plastic. Further remains were found near Ocean Parkway in April 2011. She was known as Jane Doe No. 7 until she was identified.",
+      facts: [
+        { label: "Partial remains", value: "April 20, 1996", tone: "remains" },
+        { label: "Further remains", value: "April 11, 2011", tone: "remains" },
+        { label: "Known as", value: "Jane Doe No. 7" },
+      ],
     },
     {
       id: "peaches",
@@ -67,6 +86,12 @@ export const longIslandCase: CaseFile = {
       status: "Unidentified",
       summary:
         "Her torso was discovered in a green Rubbermaid container at Hempstead Lake State Park on June 28, 1997. Authorities released the image of her peaches tattoo in hopes of identifying her, but there still is not an official match. Further remains were found in April 2011, and she was later found to be the mother of Baby Doe.",
+      facts: [
+        { label: "Discovered", value: "June 28, 1997", tone: "remains" },
+        { label: "Further remains", value: "April 11, 2011", tone: "remains" },
+        { label: "Identifying mark", value: "Peaches tattoo" },
+        { label: "Relation", value: "Mother of Baby Doe" },
+      ],
     },
     {
       id: "valerie-mack",
@@ -78,6 +103,12 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged, 2024",
       summary:
         "Her partial remains were found in Manorville on November 19, 2000, and more were found near Ocean Parkway in April 2011. She was known as Jane Doe No. 6 for two decades. In December 2024, Rex Heuermann was charged with her murder.",
+      facts: [
+        { label: "Partial remains", value: "November 19, 2000", tone: "remains" },
+        { label: "Further remains", value: "April 4, 2011", tone: "remains" },
+        { label: "Identified", value: "2020" },
+        { label: "Known as", value: "Jane Doe No. 6" },
+      ],
     },
     {
       id: "jessica-taylor",
@@ -88,6 +119,11 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged, 2024",
       summary:
         "Partial remains of Jessica were found in Manorville on July 26, 2003, and her skull and forearm were matched near Ocean Parkway in March 2011. In June 2024, Rex Heuermann was charged with her murder.",
+      facts: [
+        { label: "Partial remains", value: "July 26, 2003", tone: "remains" },
+        { label: "Further remains", value: "March 29, 2011", tone: "remains" },
+        { label: "Locations", value: "Manorville · Gilgo" },
+      ],
     },
     {
       id: "maureen-brainard-barnes",
@@ -98,6 +134,12 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged",
       summary:
         "Maureen was last seen by a friend at the Super 8 Midtown in Manhattan on July 9, 2007. Her remains were found along Ocean Parkway on December 13, 2010, one of the group that became known as the Gilgo Four. Rex Heuermann has been charged with her murder.",
+      facts: [
+        { label: "Last seen", value: "July 9, 2007", tone: "lastSeen" },
+        { label: "Discovered", value: "December 13, 2010", tone: "remains" },
+        { label: "Last seen at", value: "Super 8 Midtown, Manhattan" },
+        { label: "Group", value: "The Gilgo Four" },
+      ],
     },
     {
       id: "melissa-barthelemy",
@@ -108,6 +150,11 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged, 2023",
       summary:
         "Melissa was last seen by neighbors on July 10, 2009, on her porch, talking on her phone. On December 11, 2010, a cadaver dog led an officer to her remains along Ocean Parkway, the discovery that began the Gilgo Beach searches. Rex Heuermann has been charged with her murder.",
+      facts: [
+        { label: "Last seen", value: "July 10, 2009", tone: "lastSeen" },
+        { label: "Discovered", value: "December 11, 2010", tone: "remains" },
+        { label: "Group", value: "The Gilgo Four" },
+      ],
     },
     {
       id: "shannan-gilbert",
@@ -118,6 +165,14 @@ export const longIslandCase: CaseFile = {
       status: "Ruling debated",
       summary:
         "Shannan called 911 at 4:51 a.m. on May 1, 2010, after running from a client's house in Oak Beach. Searches for her led to many of the Gilgo Beach discoveries. Her remains were found in a marsh in December 2011, and the original ruling of “death by misadventure” has been debated ever since.",
+      facts: [
+        { label: "Last seen", value: "May 1, 2010", tone: "lastSeen" },
+        { label: "Discovered", value: "December 13, 2011", tone: "remains" },
+        { label: "Date of birth", value: "October 24, 1986" },
+        { label: "Age at the time", value: "23" },
+        { label: "911 call", value: "4:51 a.m." },
+        { label: "Location", value: "Oak Beach, NY" },
+      ],
     },
     {
       id: "megan-waterman",
@@ -128,6 +183,11 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged, 2023",
       summary:
         "Megan was last seen on hotel camera footage on June 6, 2010, walking from her motel toward a gas station. Her remains were found along Ocean Parkway on December 13, 2010, one of the Gilgo Four. Rex Heuermann has been charged with her murder.",
+      facts: [
+        { label: "Last seen", value: "June 6, 2010", tone: "lastSeen" },
+        { label: "Discovered", value: "December 13, 2010", tone: "remains" },
+        { label: "Group", value: "The Gilgo Four" },
+      ],
     },
     {
       id: "amber-costello",
@@ -138,6 +198,12 @@ export const longIslandCase: CaseFile = {
       status: "Rex Heuermann charged, 2023",
       summary:
         "Amber was last seen on September 2, 2010, when a friend walked her toward a client's car down the street from their home in West Babylon. Her remains were found along Ocean Parkway on December 13, 2010, one of the Gilgo Four. Rex Heuermann has been charged with her murder.",
+      facts: [
+        { label: "Last seen", value: "September 2, 2010", tone: "lastSeen" },
+        { label: "Discovered", value: "December 13, 2010", tone: "remains" },
+        { label: "Location", value: "West Babylon, NY" },
+        { label: "Group", value: "The Gilgo Four" },
+      ],
     },
     {
       id: "baby-doe",
@@ -146,6 +212,11 @@ export const longIslandCase: CaseFile = {
       status: "Unidentified",
       summary:
         "Discovered as part of the group found on April 4, 2011. While she was laid close to one of the other victims, she was later found to be the daughter of Jane Doe No. 3, aka “Peaches”. There were no signs of trauma.",
+      facts: [
+        { label: "Discovered", value: "April 4, 2011", tone: "remains" },
+        { label: "Relation", value: "Daughter of “Peaches”" },
+        { label: "Signs of trauma", value: "None" },
+      ],
     },
     {
       id: "john-doe",
@@ -157,6 +228,11 @@ export const longIslandCase: CaseFile = {
       status: "Unidentified",
       summary:
         "The only male victim in the group found on April 4, 2011. He died of blunt-force trauma and was wearing women's clothing.",
+      facts: [
+        { label: "Discovered", value: "April 4, 2011", tone: "remains" },
+        { label: "Sex", value: "Male" },
+        { label: "Cause of death", value: "Blunt-force trauma" },
+      ],
     },
     {
       id: "john-bittrolff",
@@ -167,6 +243,12 @@ export const longIslandCase: CaseFile = {
       status: "Convicted of two murders, 2017",
       summary:
         "A Manorville resident arrested in July 2014, twenty years after the murders of Rita Tangredi and Colleen McNamee, when DNA connected him to both. He was convicted in 2017 and has been named a person of interest in other cases, though the Suffolk County District Attorney has said there is no evidentiary link between his case and Gilgo.",
+      facts: [
+        { label: "Arrested", value: "July 21, 2014" },
+        { label: "Convicted", value: "July 5, 2017", tone: "conviction" },
+        { label: "Residence", value: "Manorville, NY", tone: "residence" },
+        { label: "Evidence", value: "DNA" },
+      ],
     },
     {
       id: "rex-heuermann",
@@ -175,6 +257,12 @@ export const longIslandCase: CaseFile = {
       status: "Charged with seven murders",
       summary:
         "A Massapequa Park resident arrested on July 13, 2023. As of December 17, 2024, he has been charged with the murders of Sandra Costilla, Jessica Taylor, Amber Costello, Megan Waterman, Melissa Barthelemy, Maureen Brainard-Barnes, and Valerie Mack.",
+      facts: [
+        { label: "Arrested", value: "July 13, 2023" },
+        { label: "Charges", value: "Seven murders", tone: "charge" },
+        { label: "Residence", value: "Massapequa Park, NY", tone: "residence" },
+        { label: "As of", value: "December 17, 2024" },
+      ],
     },
   ],
 
@@ -502,6 +590,130 @@ export const longIslandCase: CaseFile = {
       personIds: ["rex-heuermann", "valerie-mack", "maureen-brainard-barnes"],
       markerIds: [],
       lineIds: ["heuermann-valerie", "heuermann-maureen"],
+    },
+  ],
+
+  sources: [
+    {
+      label: "Documents",
+      sources: [
+        {
+          title: "People v. Rex A. Heuermann, bail application",
+          href: "/docs/cases/long-island/people-v-heuermann-bail-application-2023-07-14.pdf",
+          kind: "pdf",
+          outlet: "Suffolk County Court",
+          dateLabel: "July 14, 2023",
+          note: "Extensive detail on the evidence, including the list of searches and viewed articles where the original version of this page appears.",
+        },
+        {
+          title: "Gilgo case filings archive",
+          href: "https://www.suffolkcountyda.org/category/gilgo/",
+          outlet: "Suffolk County District Attorney",
+          note: "The superseding indictments and bail applications from the later charges.",
+        },
+      ],
+    },
+    {
+      label: "Coverage",
+      sources: [
+        {
+          title: "Suspect arrested in Gilgo Beach murders",
+          href: "https://www.cnn.com/2023/07/14/us/gilgo-beach-murders-suspect-arrest/index.html",
+          outlet: "CNN",
+          dateLabel: "July 14, 2023",
+        },
+        {
+          title: "Rex Heuermann indicted in two more killings",
+          href: "https://www.cnn.com/2024/06/06/us/gilgo-beach-killings-rex-heuermann-indictment/index.html",
+          outlet: "CNN",
+          dateLabel: "June 6, 2024",
+        },
+        {
+          title: "Rex Heuermann charged in killing of seventh woman",
+          href: "https://www.cnn.com/2024/12/17/us/gilgo-beach-killings-rex-heuermann-charges/index.html",
+          outlet: "CNN",
+          dateLabel: "December 17, 2024",
+        },
+        {
+          title: "James Burke, ex-Suffolk County police chief, is sentenced",
+          href: "https://www.nytimes.com/2016/11/03/nyregion/james-burke-ex-suffolk-county-police-chief-is-sentenced.html",
+          outlet: "The New York Times",
+          dateLabel: "November 3, 2016",
+          note: "Part of the pattern of lackluster and criminal behavior inside the department during these investigations.",
+        },
+        {
+          title: "“There is no evidentiary or investigative link between this case and Gilgo”",
+          href: "https://pix11.com/2017/09/12/convicted-killer-may-be-tied-to-gilgo-beach-murders-prosecutor",
+          outlet: "PIX11",
+          dateLabel: "September 12, 2017",
+          note: "The Suffolk County District Attorney on John Bittrolff.",
+        },
+      ],
+    },
+    {
+      label: "Watch and listen",
+      sources: [
+        {
+          title: "The Killing Season",
+          href: "https://www.aetv.com/shows/the-killing-season",
+          outlet: "A&E",
+          note: "Where you'll meet family and friends of many of the people on this board.",
+        },
+        {
+          title: "The Long Island Serial Killer",
+          href: "https://truecrimegarage.com/podcast/blog/long-island-serial-killer-04",
+          outlet: "True Crime Garage",
+        },
+        {
+          title: "The Long Island Serial Killer",
+          href: "http://www.thinkingsidewayspodcast.com/the-long-island-serial-killer/",
+          outlet: "Thinking Sideways",
+        },
+        {
+          title: "Voices from Gilgo",
+          href: "https://www.voicesfromgilgo.com",
+        },
+        {
+          title: "BrainScratch: The Long Island Serial Killer",
+          href: "https://www.youtube.com/watch?v=li3jTbkhBuw",
+          outlet: "YouTube",
+        },
+      ],
+    },
+    {
+      label: "Research",
+      sources: [
+        {
+          title: "The Gilgo Four",
+          href: "https://www.truecrimeresearchers.com/cases/the-gilgo-four",
+          outlet: "True Crime Researchers",
+        },
+        {
+          title: "Long Island Victims",
+          href: "https://www.truecrimeresearchers.com/cases/long-island-victims",
+          outlet: "True Crime Researchers",
+        },
+        {
+          title: "Shannan Gilbert",
+          href: "https://www.truecrimeresearchers.com/cases/shannan-gilbert",
+          outlet: "True Crime Researchers",
+        },
+        {
+          title: "Joel Rifkin",
+          href: "https://en.wikipedia.org/wiki/Joel_Rifkin",
+          outlet: "Wikipedia",
+        },
+        {
+          title: "Robert Shulman",
+          href: "https://en.wikipedia.org/wiki/Robert_Shulman_(serial_killer)",
+          outlet: "Wikipedia",
+        },
+        {
+          title: "John Bittrolff",
+          href: "https://en.wikipedia.org/wiki/John_Bittrolff",
+          outlet: "Wikipedia",
+        },
+      ],
     },
   ],
 

@@ -1,6 +1,7 @@
 ---
 import BaseHead from "@/components/BaseHead.astro";
 import CaseBoard from "@/components/case-file/CaseBoard.astro";
+import CaseSources from "@/components/case-file/CaseSources.astro";
 import CaseTimeline from "@/components/case-file/CaseTimeline.astro";
 import { longIslandCase } from "@/data/cases/longIsland";
 import { caseFileToTimeline } from "@/data/cases/utils";
@@ -60,7 +61,7 @@ const record = caseFileToTimeline(longIslandCase, { hrefFor: (event) => `#t:${ev
     <CaseBoard caseFile={longIslandCase} />
 
     <section class="cp-record">
-      <header class="cp-record-head">
+      <header class="cp-section-head">
         <p class="cp-kicker">Chronology</p>
         <h2>The record</h2>
         <p>
@@ -97,9 +98,18 @@ const record = caseFileToTimeline(longIslandCase, { hrefFor: (event) => `#t:${ev
         <p>
           This is a rebuild of an <a href="/posts/true-crime/mapping-the-long-island-murder-victims">article I made in
           2020</a>, which was later listed among the articles viewed in the Rex Heuermann bail documentation. Locations
-          are approximate. Sources and further reading are in the original article.
+          are approximate.
         </p>
       </div>
+    </section>
+
+    <section class="cp-sources">
+      <header class="cp-section-head">
+        <p class="cp-kicker">Citations</p>
+        <h2>Sources</h2>
+        <p>The documents, reporting, and research this case file draws on.</p>
+      </header>
+      <CaseSources groups={longIslandCase.sources ?? []} />
     </section>
 
     <footer class="cp-footer">
@@ -226,10 +236,16 @@ const record = caseFileToTimeline(longIslandCase, { hrefFor: (event) => `#t:${ev
 
   /* ---------- The record ---------- */
 
-  .cp-record {
+  .cp-record,
+  .cp-sources {
     max-width: 62rem;
     margin: 0 auto;
     padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vh, 3rem);
+  }
+
+  .cp-sources {
+    padding-top: 0;
+    padding-bottom: clamp(3.5rem, 9vh, 6.5rem);
   }
 
   .cp-kicker {
@@ -241,11 +257,11 @@ const record = caseFileToTimeline(longIslandCase, { hrefFor: (event) => `#t:${ev
     color: #666e7d;
   }
 
-  .cp-record-head {
+  .cp-section-head {
     margin-bottom: clamp(2.25rem, 5vh, 3.5rem);
   }
 
-  .cp-record-head h2 {
+  .cp-section-head h2 {
     margin: 0 0 0.9rem;
     font-size: clamp(1.9rem, 4vw, 2.6rem);
     font-weight: 820;
@@ -255,7 +271,7 @@ const record = caseFileToTimeline(longIslandCase, { hrefFor: (event) => `#t:${ev
     text-transform: uppercase;
   }
 
-  .cp-record-head p:last-child {
+  .cp-section-head p:last-child {
     margin: 0;
     max-width: 58ch;
     font-size: 0.9375rem;

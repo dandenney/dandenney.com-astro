@@ -1,6 +1,7 @@
 ---
 import type { CaseFile, CaseEvent } from "@/data/cases/types";
 import { caseEventTone } from "@/data/cases/utils";
+import CaseFacts from "@/components/case-file/CaseFacts.astro";
 
 interface Props {
   caseFile: CaseFile;
@@ -164,6 +165,11 @@ const pad = (n: number) => String(n).padStart(2, "0");
               <p class={`cb-status cb-status-${person.role}`}>{person.status}</p>
             </div>
           </div>
+          {person.facts && (
+            <div class="cb-dossier-facts">
+              <CaseFacts facts={person.facts} />
+            </div>
+          )}
           <p class="cb-body">{person.summary}</p>
           <h4 class="cb-group-label">In the timeline</h4>
           <ol class="cb-dossier-events">
@@ -676,6 +682,10 @@ const pad = (n: number) => String(n).padStart(2, "0");
 
   .cb-dossier .cb-body {
     margin-bottom: 1.6rem;
+  }
+
+  .cb-dossier-facts {
+    margin: 0.4rem 0 1.3rem;
   }
 
   .cb-dossier-head {

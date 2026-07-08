@@ -1,0 +1,86 @@
+---
+import type { CaseFact } from "@/data/cases/types";
+
+/**
+ * Vital statistics in the case-file identity: a dossier-card grid rather
+ * than label:value table rows. Tiny mono labels over strong values, hairline
+ * rules, tabular numerals; date facts carry the shared semantic tones
+ * (lastSeen amber, remains red) so they match the map and timeline.
+ * Handles anywhere from three facts to a dozen; `wide` facts span the row.
+ */
+interface Props {
+  facts: CaseFact[];
+}
+
+const { facts } = Astro.props;
+---
+
+{facts.length > 0 && (
+  <dl class="cf">
+    {facts.map((fact) => (
+      <div class:list={["cf-cell", { "cf-wide": fact.wide }]} data-tone={fact.tone ?? "plain"}>
+        <dt>{fact.label}</dt>
+        <dd>{fact.value}</dd>
+      </div>
+    ))}
+  </dl>
+)}
+
+<style>
+  .cf {
+    --cf-ink: #e9ebef;
+    --cf-ink-2: #a3abba;
+    --cf-ink-3: #666e7d;
+    --cf-hairline: rgba(233, 235, 239, 0.14);
+    --cf-remains: #e05252;
+    --cf-lastseen: #e3a94f;
+    --cf-residence: #edf1f7;
+    --cf-charge: #b487e0;
+    --cf-conviction: #58b98a;
+    --cf-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --cf-sans: "Archivo", system-ui, sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+    gap: 0 1.5rem;
+    margin: 0;
+    font-family: var(--cf-sans);
+    color: var(--cf-ink);
+  }
+
+  .cf-cell {
+    padding: 0.7rem 0 0.75rem;
+    border-top: 1px solid var(--cf-hairline);
+  }
+
+  .cf-wide {
+    grid-column: 1 / -1;
+  }
+
+  dt {
+    margin: 0 0 0.3rem;
+    font-family: var(--cf-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cf-ink-3);
+  }
+
+  dd {
+    margin: 0;
+    font-size: 0.9688rem;
+    font-weight: 650;
+    font-variation-settings: "wdth" 106;
+    line-height: 1.35;
+    letter-spacing: 0.005em;
+    font-variant-numeric: tabular-nums;
+    color: var(--cf-ink);
+    text-wrap: balance;
+  }
+
+  .cf-cell[data-tone="remains"] dd { color: var(--cf-remains); }
+  .cf-cell[data-tone="lastSeen"] dd { color: var(--cf-lastseen); }
+  .cf-cell[data-tone="residence"] dd { color: var(--cf-residence); }
+  .cf-cell[data-tone="charge"] dd { color: var(--cf-charge); }
+  .cf-cell[data-tone="conviction"] dd { color: var(--cf-conviction); }
+</style>

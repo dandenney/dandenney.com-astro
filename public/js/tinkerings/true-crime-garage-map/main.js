@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Missing on Campus /// Judy Martins",
+      Release: "07/07/2026",
+      URL: "https://truecrimegarage.com/home/blog/7803364/missing-on-campus-judy-martins",
+      Earliest_Date: "5/24/1978",
+      Earliest_Year: "1978",
+      Notes: "33400 block of York Street in Avon Lake, Ohio",
+    },
+    geometry: {
+      coordinates: [-82.046795, 41.503812],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Free Roaming Predator /// Episodes: 939-940",
       Release: "07/01/2026",
       URL: "https://truecrimegarage.com/home/blog/7800036/free-roaming-predator-episodes-939-940",

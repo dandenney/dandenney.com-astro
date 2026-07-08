@@ -75,6 +75,7 @@ export interface CasePerson {
   /** Short status line, e.g. "Unidentified" or "Murder unsolved" */
   status: string;
   summary: string;
+  facts?: CaseFact[];
 }
 
 /** Semantic tones shared by the case board and case timeline */
@@ -98,6 +99,41 @@ export interface TimelineGroup {
   entries: TimelineEntry[];
 }
 
+/**
+ * One vital-statistics entry ("Last seen: May 1, 2010", "Height: 5'9\"").
+ * Fields vary per person and per case, so facts are an ordered list,
+ * not a fixed schema.
+ */
+export interface CaseFact {
+  label: string;
+  value: string;
+  /** Colors the value with the shared semantic tone (e.g. lastSeen amber) */
+  tone?: CaseTone;
+  /** Spans the full row for long values */
+  wide?: boolean;
+}
+
+export type SourceKind = "link" | "pdf";
+
+export interface CaseSource {
+  title: string;
+  /** Canonical URL; always offered as an external link */
+  href: string;
+  /** "pdf" renders an expandable inline document viewer */
+  kind?: SourceKind;
+  /** Embeddable URL for pdf sources (e.g. a Drive /preview URL). Defaults to href. */
+  embedSrc?: string;
+  /** Publisher or outlet, e.g. "CNN", "Suffolk County Court" */
+  outlet?: string;
+  dateLabel?: string;
+  note?: string;
+}
+
+export interface SourceGroup {
+  label?: string;
+  sources: CaseSource[];
+}
+
 export interface CaseFile {
   id: string;
   title: string;
@@ -108,4 +144,7 @@ export interface CaseFile {
   eras: CaseEra[];
   markers: CaseMarker[];
   lines: CaseLine[];
+  sources?: SourceGroup[];
+  /** Case-level vitals (span, jurisdiction, case numbers, …) */
+  facts?: CaseFact[];
 }

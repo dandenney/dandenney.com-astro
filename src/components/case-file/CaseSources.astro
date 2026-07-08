@@ -1,0 +1,341 @@
+---
+import type { SourceGroup } from "@/data/cases/types";
+
+/**
+ * Case-file source citations in the investigation-room identity.
+ * Two row types: standard external links, and "pdf" sources that expand an
+ * inline document viewer (the iframe only loads on first open; the external
+ * link always works, so nothing is lost without JS). Numbering runs
+ * continuously across groups, like exhibits. Expects Archivo + Fragment Mono.
+ */
+interface Props {
+  groups: SourceGroup[];
+}
+
+const { groups } = Astro.props;
+
+let n = 0;
+const numbered = groups.map((group) => ({
+  ...group,
+  sources: group.sources.map((source) => ({ ...source, no: String(++n).padStart(2, "0") })),
+}));
+---
+
+<div class="cs" data-case-sources>
+  {numbered.map((group) => (
+    <section class="cs-group">
+      {group.label && <h3 class="cs-group-label">{group.label}</h3>}
+      <ol class="cs-list" role="list">
+        {group.sources.map((source) => (
+          <li class="cs-row">
+            <span class="cs-no" aria-hidden="true">{source.no}</span>
+            <div class="cs-main">
+              <p class="cs-title">
+                <a class="cs-link" href={source.href} target="_blank" rel="noopener">
+                  {source.title}
+                  <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M5 3h8v8M13 3 3.5 12.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </p>
+              {(source.outlet || source.dateLabel) && (
+                <p class="cs-meta">
+                  {source.outlet && <span>{source.outlet}</span>}
+                  {source.dateLabel && <span>{source.dateLabel}</span>}
+                </p>
+              )}
+              {source.note && <p class="cs-note">{source.note}</p>}
+              {source.kind === "pdf" && (
+                <div class="cs-doc">
+                  <button class="cs-doc-toggle" type="button" aria-expanded="false">
+                    <svg class="cs-doc-caret" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M2.5 5.5 8 11l5.5-5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span data-label-closed>View document</span>
+                    <span data-label-open hidden>Hide document</span>
+                  </button>
+                  <div class="cs-doc-panel">
+                    <div class="cs-doc-frame">
+                      <p class="cs-doc-bar">
+                        <span>Document · {source.title}</span>
+                        <a href={source.href} target="_blank" rel="noopener">Open externally</a>
+                      </p>
+                      <iframe
+                        data-src={source.embedSrc ?? source.href}
+                        title={source.title}
+                        loading="lazy"
+                        allow="fullscreen"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</div>
+
+<style>
+  .cs {
+    --cs-ink: #e9ebef;
+    --cs-ink-2: #a3abba;
+    --cs-ink-3: #666e7d;
+    --cs-hairline: rgba(233, 235, 239, 0.14);
+    --cs-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --cs-sans: "Archivo", system-ui, sans-serif;
+    --cs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    font-family: var(--cs-sans);
+    color: var(--cs-ink);
+  }
+
+  .cs-group + .cs-group {
+    margin-top: 2.75rem;
+  }
+
+  .cs-group-label {
+    margin: 0 0 0.4rem;
+    font-family: var(--cs-mono);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cs-ink-3);
+  }
+
+  .cs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cs-row {
+    display: grid;
+    grid-template-columns: 2.75rem 1fr;
+    column-gap: 0.75rem;
+    padding: 1.05rem 0;
+    border-top: 1px solid var(--cs-hairline);
+  }
+
+  .cs-no {
+    font-family: var(--cs-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--cs-ink-3);
+    translate: 0 0.2rem;
+  }
+
+  .cs-title {
+    margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    font-variation-settings: "wdth" 106;
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+
+  .cs-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 250ms var(--cs-ease);
+  }
+
+  .cs-link svg {
+    display: inline-block;
+    margin-left: 0.45rem;
+    color: var(--cs-ink-3);
+    transition: translate 250ms var(--cs-ease), color 250ms var(--cs-ease);
+  }
+
+  .cs-link:hover {
+    text-decoration-color: var(--cs-ink-2);
+  }
+
+  .cs-link:hover svg {
+    translate: 1px -1px;
+    color: var(--cs-ink);
+  }
+
+  .cs-link:focus-visible {
+    outline: 2px solid var(--cs-ink);
+    outline-offset: 3px;
+  }
+
+  .cs-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    margin: 0.4rem 0 0;
+    font-family: var(--cs-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cs-ink-3);
+  }
+
+  .cs-meta span + span {
+    position: relative;
+  }
+
+  .cs-meta span + span::before {
+    content: "";
+    position: absolute;
+    left: -0.8rem;
+    top: 50%;
+    width: 3px;
+    height: 3px;
+    border-radius: 999px;
+    translate: 0 -50%;
+    background: var(--cs-ink-3);
+  }
+
+  .cs-note {
+    margin: 0.5rem 0 0;
+    max-width: 58ch;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--cs-ink-2);
+  }
+
+  /* ---------- Embedded document ---------- */
+
+  .cs-doc {
+    margin-top: 0.85rem;
+  }
+
+  .cs-doc-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    appearance: none;
+    border: 1px solid var(--cs-hairline);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--cs-ink);
+    font-family: var(--cs-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.45rem 0.95rem;
+    cursor: pointer;
+    transition: border-color 200ms var(--cs-ease), background-color 200ms var(--cs-ease);
+  }
+
+  .cs-doc-toggle:hover {
+    border-color: var(--cs-ink-2);
+    background: rgba(233, 235, 239, 0.07);
+  }
+
+  .cs-doc-toggle:focus-visible {
+    outline: 2px solid var(--cs-ink);
+    outline-offset: 2px;
+  }
+
+  .cs-doc-caret {
+    transition: rotate 300ms var(--cs-ease);
+  }
+
+  .cs-doc-toggle[aria-expanded="true"] .cs-doc-caret {
+    rotate: 180deg;
+  }
+
+  .cs-doc-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms var(--cs-ease);
+  }
+
+  .cs-doc.is-open .cs-doc-panel {
+    grid-template-rows: 1fr;
+  }
+
+  .cs-doc-frame {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .cs-doc-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 1rem 0 0;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid var(--cs-hairline);
+    border-bottom: 0;
+    font-family: var(--cs-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cs-ink-2);
+  }
+
+  .cs-doc-bar span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cs-doc-bar a {
+    flex: none;
+    color: var(--cs-ink-2);
+    text-underline-offset: 3px;
+  }
+
+  .cs-doc-bar a:hover {
+    color: var(--cs-ink);
+  }
+
+  .cs-doc-bar a:focus-visible {
+    outline: 2px solid var(--cs-ink);
+    outline-offset: 2px;
+  }
+
+  .cs iframe {
+    display: block;
+    width: 100%;
+    height: clamp(420px, 72vh, 820px);
+    border: 1px solid var(--cs-hairline);
+    background: rgba(233, 235, 239, 0.04);
+  }
+
+  @media (max-width: 719px) {
+    .cs-row {
+      grid-template-columns: 2.25rem 1fr;
+    }
+
+    .cs iframe {
+      height: 65vh;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cs-link,
+    .cs-link svg,
+    .cs-doc-toggle,
+    .cs-doc-caret,
+    .cs-doc-panel {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-case-sources] .cs-doc").forEach((doc) => {
+    const toggle = doc.querySelector<HTMLButtonElement>(".cs-doc-toggle")!;
+    const iframe = doc.querySelector<HTMLIFrameElement>("iframe")!;
+    const labelClosed = toggle.querySelector<HTMLElement>("[data-label-closed]")!;
+    const labelOpen = toggle.querySelector<HTMLElement>("[data-label-open]")!;
+
+    toggle.addEventListener("click", () => {
+      const open = doc.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+      labelClosed.hidden = open;
+      labelOpen.hidden = !open;
+      // The document only loads once someone asks for it
+      if (open && !iframe.src) iframe.src = iframe.dataset.src ?? "";
+    });
+  });
+</script>
