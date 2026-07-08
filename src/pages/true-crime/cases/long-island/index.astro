@@ -1,0 +1,324 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import CaseBoard from "@/components/case-file/CaseBoard.astro";
+import CaseTimeline from "@/components/case-file/CaseTimeline.astro";
+import { longIslandCase } from "@/data/cases/longIsland";
+import { caseFileToTimeline } from "@/data/cases/utils";
+
+export const prerender = true;
+
+const title = "The Long Island Murders";
+const summary =
+  "An interactive case board of the Long Island murder victims, from 1993 to the Gilgo Beach discoveries and the charges that came decades later.";
+const pubDate = new Date("2026-07-07");
+const ogImage = "/posts/true-crime/mapping-the-long-island-murder-victims/thumb@2x.jpg";
+
+const victimCount = longIslandCase.people.filter((p) => p.role === "victim").length;
+const record = caseFileToTimeline(longIslandCase, { hrefFor: (event) => `#t:${event.id}` });
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead title={title} description={summary} image={ogImage} type="blogpost" datePublished={pubDate} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Fragment+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  </head>
+  <body class="cp">
+    <header class="cp-nav">
+      <a href="/">dandenney.com</a>
+      <a href="/posts/true-crime/mapping-the-long-island-murder-victims">Read the original 2020 article</a>
+    </header>
+
+    <section class="cp-hero">
+      <p class="cp-meta">
+        <span>Case board</span>
+        <span>Suffolk County, NY</span>
+        <span>1993–2024</span>
+      </p>
+      <h1 class="cp-title">The Long Island<br />Murders</h1>
+      <div class="cp-lede">
+        <p>
+          "The Long Island Serial Killer" is a misnomer. The more you look at Long Island from the early 90s until the
+          2010s, the worse it gets: {victimCount - 1} murder victims and one highly debated death, a convicted killer
+          who went unconnected for twenty years, and an arrest that didn't come until 2023.
+        </p>
+        <p>
+          The board below holds the timeline of events and the people at the center of them. Move through it in order,
+          or select a person to see their story and their places on the map. They are people, like you and me, and
+          their stories deserve to be told.
+        </p>
+      </div>
+      <p class="cp-hint" aria-hidden="true">↓</p>
+    </section>
+
+    <CaseBoard caseFile={longIslandCase} />
+
+    <section class="cp-record">
+      <header class="cp-record-head">
+        <p class="cp-kicker">Chronology</p>
+        <h2>The record</h2>
+        <p>
+          Thirty-one years of the case in one place. Select any entry to open it on the board above.
+        </p>
+      </header>
+      <CaseTimeline groups={record} />
+    </section>
+
+    <section class="cp-outro">
+      <div class="cp-outro-col">
+        <h2>Yet to be solved</h2>
+        <p>
+          The patterns changed over time, which only leads to questions. The early victims were subjected to aggressive
+          violence and left in a specific pose. The next four were dismembered and discovered in multiple locations.
+          The Gilgo Four were found in a single place, laid to rest in a similar way. Was there one killer who
+          escalated and then de-escalated, or multiple killers acting in the same area? Joel Rifkin, Robert Shulman,
+          and John Bittrolff were each killing people on Long Island between 1991 and 1993, so the answer is not
+          obvious. We won't know until the killer of at least one of the remaining victims is apprehended.
+        </p>
+        <p>
+          If you haven't yet heard the stories of the Long Island victims, I strongly recommend
+          <a href="https://www.aetv.com/shows/the-killing-season">The Killing Season</a>, where you'll meet family and
+          friends of many of the people on this board.
+        </p>
+      </div>
+      <div class="cp-outro-col">
+        <h2>If you know something</h2>
+        <p>
+          Some of the victims still have no name, and some of the murders have no answer. If you have any information,
+          please share it on the <a href="https://www.gilgonews.com/SubmitATip">Gilgo News tip site</a>.
+        </p>
+        <h2>About this page</h2>
+        <p>
+          This is a rebuild of an <a href="/posts/true-crime/mapping-the-long-island-murder-victims">article I made in
+          2020</a>, which was later listed among the articles viewed in the Rex Heuermann bail documentation. Locations
+          are approximate. Sources and further reading are in the original article.
+        </p>
+      </div>
+    </section>
+
+    <footer class="cp-footer">
+      <a href="/">dandenney.com</a>
+      <span>Made with care for the victims and their families</span>
+    </footer>
+
+    <script is:inline src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: dark;
+  }
+
+  .cp {
+    margin: 0;
+    background: #0b0d12;
+    color: #e9ebef;
+    font-family: "Archivo", system-ui, sans-serif;
+  }
+
+  .cp a {
+    color: inherit;
+    text-decoration-color: rgba(233, 235, 239, 0.35);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 200ms ease;
+  }
+
+  .cp a:hover {
+    text-decoration-color: #e3a94f;
+  }
+
+  .cp-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem clamp(1rem, 4vw, 3rem);
+    font-family: "Fragment Mono", ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .cp-nav a {
+    text-decoration: none;
+    color: #a3abba;
+  }
+
+  .cp-nav a:hover {
+    color: #e9ebef;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .cp-hero {
+    padding: clamp(3rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem) clamp(2.5rem, 7vh, 5rem);
+    max-width: 78rem;
+    margin: 0 auto;
+  }
+
+  .cp-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    margin: 0 0 1.75rem;
+    font-family: "Fragment Mono", ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #a3abba;
+  }
+
+  .cp-meta span + span {
+    position: relative;
+  }
+
+  .cp-meta span + span::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    width: 3px;
+    height: 3px;
+    border-radius: 999px;
+    translate: 0 -50%;
+    background: #666e7d;
+  }
+
+  .cp-title {
+    margin: 0 0 2.25rem;
+    font-size: clamp(3rem, 11vw, 8.5rem);
+    font-weight: 870;
+    font-variation-settings: "wdth" 118;
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .cp-lede {
+    max-width: 62ch;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .cp-lede p {
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.7;
+    color: #c3c9d4;
+  }
+
+  .cp-hint {
+    margin: 3rem 0 0;
+    font-family: "Fragment Mono", ui-monospace, monospace;
+    color: #666e7d;
+    animation: cp-drift 2.4s ease-in-out infinite;
+  }
+
+  @keyframes cp-drift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ---------- The record ---------- */
+
+  .cp-record {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vh, 3rem);
+  }
+
+  .cp-kicker {
+    margin: 0 0 0.9rem;
+    font-family: "Fragment Mono", ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #666e7d;
+  }
+
+  .cp-record-head {
+    margin-bottom: clamp(2.25rem, 5vh, 3.5rem);
+  }
+
+  .cp-record-head h2 {
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-weight: 820;
+    font-variation-settings: "wdth" 112;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .cp-record-head p:last-child {
+    margin: 0;
+    max-width: 58ch;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #a3abba;
+  }
+
+  /* ---------- Outro ---------- */
+
+  .cp-outro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: clamp(2rem, 5vw, 4.5rem);
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 8vh, 5.5rem) clamp(1rem, 4vw, 3rem);
+  }
+
+  .cp-outro h2 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 780;
+    font-variation-settings: "wdth" 110;
+    letter-spacing: -0.01em;
+  }
+
+  .cp-outro h2 + p + h2 {
+    margin-top: 2.25rem;
+  }
+
+  .cp-outro p {
+    margin: 0 0 1rem;
+    max-width: 58ch;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #a3abba;
+  }
+
+  .cp-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem clamp(1rem, 4vw, 3rem) 2rem;
+    border-top: 1px solid rgba(233, 235, 239, 0.12);
+    font-family: "Fragment Mono", ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    color: #666e7d;
+  }
+
+  .cp-footer a {
+    color: #a3abba;
+    text-decoration: none;
+  }
+
+  .cp-footer a:hover {
+    color: #e9ebef;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cp-hint {
+      animation: none;
+    }
+  }
+</style>

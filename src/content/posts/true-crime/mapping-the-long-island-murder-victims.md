@@ -173,6 +173,12 @@ On December 17, 2024, it was announced that he is charged with the murder of Val
 
 </div>
 
+<div class="update" style="margin-top: 1rem;">
+
+**This article has a new home.** I rebuilt it as an [interactive case board](/true-crime/cases/long-island) where you can move through the timeline or select any person to see their story and their places on the map, without scrolling back and forth.
+
+</div>
+
 "The Long Island Serial Killer," aka "LISK," is a misnomer. The more that you look at Long Island from the early 90s until the 2010s, the worse it gets. [Joel Rifkin](https://en.wikipedia.org/wiki/Joel_Rifkin) lived in the Hempstead area and killed at least nine, but up to seventeen people from 1989 - 1993. [Robert Shulman](<https://en.wikipedia.org/wiki/Robert_Shulman_(serial_killer)>) killed at least five people from 1991 - 1996 while living in the Hicksville area.
 
 There is another person guilty of two murders in the early 90s, [John Bittrolff](https://en.wikipedia.org/wiki/John_Bittrolff). While two murders don't qualify him as a serial killer, he is a suspect in a third. If he were proven guilty of that, he would meet the technical classification of three. More importantly, he wasn't connected and arrested for the two murders until 2014. There are twenty years between the last murder he is convicted of and his arrest.

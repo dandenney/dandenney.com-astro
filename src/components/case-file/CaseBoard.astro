@@ -1,0 +1,1465 @@
+---
+import type { CaseFile, CaseEvent } from "@/data/cases/types";
+import { caseEventTone } from "@/data/cases/utils";
+
+interface Props {
+  caseFile: CaseFile;
+}
+
+const { caseFile } = Astro.props;
+const { people, events, eras, markers, lines } = caseFile;
+
+const personById = new Map(people.map((p) => [p.id, p]));
+const eventIndexById = new Map(events.map((e, i) => [e.id, i]));
+const eraByEventId = new Map(
+  eras.flatMap((era) => era.eventIds.map((id) => [id, era] as const))
+);
+
+// The tick color in the timeline strip reflects what the event puts on the map
+const eventTone = (event: CaseEvent) => caseEventTone(caseFile, event);
+
+function eventsForPerson(personId: string): CaseEvent[] {
+  return events.filter((e) => e.personIds.includes(personId));
+}
+
+const victims = people.filter((p) => p.role === "victim");
+const suspects = people.filter((p) => p.role === "suspect");
+
+const clientData = {
+  defaultCamera: caseFile.defaultCamera,
+  markers,
+  lines,
+  events: events.map((e) => ({
+    id: e.id,
+    markerIds: e.markerIds,
+    lineIds: e.lineIds,
+    personIds: e.personIds,
+    camera: e.camera ?? null,
+  })),
+};
+
+const pad = (n: number) => String(n).padStart(2, "0");
+---
+
+<section class="cb" id="case-board" data-case={caseFile.id}>
+  <div class="cb-map" id="cb-map" aria-hidden="true">
+    <div class="cb-map-fallback" aria-hidden="true"></div>
+  </div>
+  <div class="cb-atmo" aria-hidden="true"></div>
+
+  <header class="cb-top">
+    <p class="cb-kicker">Case board · {events[0].date.slice(0, 4)}–{events[events.length - 1].date.slice(0, 4)}</p>
+    <div class="cb-modes" role="tablist" aria-label="Case board view">
+      <button class="cb-mode" id="cb-tab-timeline" role="tab" aria-selected="true" aria-controls="cb-record" data-mode="timeline">
+        Timeline
+      </button>
+      <button class="cb-mode" id="cb-tab-people" role="tab" aria-selected="false" aria-controls="cb-people" data-mode="people">
+        The people <span class="cb-count">{victims.length + suspects.length}</span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="cb-panel">
+    {/* ------- Timeline record ------- */}
+    <div class="cb-pane" id="cb-record" role="tabpanel" aria-labelledby="cb-tab-timeline" tabindex="0">
+      <p class="cb-readout" aria-live="polite">
+        <span class="cb-readout-no" id="cb-readout-no">No. 01 / {pad(events.length)}</span>
+        <span class="cb-readout-era" id="cb-readout-era">{eras[0].label}</span>
+      </p>
+
+      {events.map((event, i) => {
+        const era = eraByEventId.get(event.id);
+        return (
+          <article class="cb-event" data-event={event.id} data-index={i} data-era={era?.id} data-tone={eventTone(event)}>
+            <p class="cb-date">{event.dateLabel}</p>
+            <h3 class="cb-title">{event.title}</h3>
+            <p class="cb-body">{event.body}</p>
+            {event.personIds.length > 0 && (
+              <div class="cb-chips" aria-label="People in this entry">
+                {event.personIds.map((pid) => {
+                  const person = personById.get(pid);
+                  if (!person) return null;
+                  return (
+                    <button class="cb-chip" data-open-person={pid}>
+                      {person.photo ? (
+                        <img src={person.photo} alt="" width="28" height="28" loading="lazy" />
+                      ) : (
+                        <span class="cb-chip-blank" aria-hidden="true"></span>
+                      )}
+                      <span>{person.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </article>
+        );
+      })}
+
+      <div class="cb-step">
+        <button class="cb-step-btn" id="cb-prev" aria-label="Previous entry">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M10.5 2.5 5 8l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Prev
+        </button>
+        <span class="cb-step-hint" aria-hidden="true">← →</span>
+        <button class="cb-step-btn" id="cb-next" aria-label="Next entry">
+          Next
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5.5 2.5 11 8l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    {/* ------- People index + dossiers ------- */}
+    <div class="cb-pane" id="cb-people" role="tabpanel" aria-labelledby="cb-tab-people" tabindex="0" hidden>
+      <div class="cb-index" data-people-index>
+        <p class="cb-index-note">
+          The most important thing we can do is remember that they are people, like you and me. Select someone to see
+          their story and their places on the map.
+        </p>
+        <h3 class="cb-group-label">The victims</h3>
+        <ol class="cb-portraits">
+          {victims.map((person) => (
+            <li>
+              <button class="cb-portrait" data-select-person={person.id}>
+                {person.photo ? (
+                  <img src={person.photo} alt="" width="88" height="88" loading="lazy" />
+                ) : (
+                  <span class="cb-portrait-blank" aria-hidden="true">?</span>
+                )}
+                <span class="cb-portrait-name">{person.name}</span>
+                <span class="cb-portrait-status">{person.status}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+        <h3 class="cb-group-label">Charged or convicted</h3>
+        <ol class="cb-portraits">
+          {suspects.map((person) => (
+            <li>
+              <button class="cb-portrait" data-select-person={person.id}>
+                {person.photo ? (
+                  <img src={person.photo} alt="" width="88" height="88" loading="lazy" />
+                ) : (
+                  <span class="cb-portrait-blank" aria-hidden="true">?</span>
+                )}
+                <span class="cb-portrait-name">{person.name}</span>
+                <span class="cb-portrait-status">{person.status}</span>
+              </button>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      {people.map((person) => (
+        <article class="cb-dossier" data-dossier={person.id} hidden>
+          <button class="cb-back" data-close-person>
+            <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M10.5 2.5 5 8l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            All people
+          </button>
+          <div class="cb-dossier-head">
+            {person.photo && <img class="cb-dossier-photo" src={person.photo} alt={person.photoAlt ?? person.name} width="112" height="112" loading="lazy" />}
+            <div>
+              <h3 class="cb-dossier-name">{person.name}</h3>
+              {person.aka && <p class="cb-dossier-aka">{person.aka}</p>}
+              <p class={`cb-status cb-status-${person.role}`}>{person.status}</p>
+            </div>
+          </div>
+          <p class="cb-body">{person.summary}</p>
+          <h4 class="cb-group-label">In the timeline</h4>
+          <ol class="cb-dossier-events">
+            {eventsForPerson(person.id).map((event) => (
+              <li>
+                <button class="cb-dossier-event" data-goto-event={event.id}>
+                  <span class="cb-dossier-event-date">{event.dateLabel}</span>
+                  <span>{event.title}</span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </article>
+      ))}
+    </div>
+  </aside>
+
+  <nav class="cb-timeline" aria-label="Case timeline">
+    {eras.map((era) => (
+      <div class="cb-era" data-era={era.id}>
+        <p class="cb-era-label"><span>{era.label}</span> <span class="cb-era-years">{era.years}</span></p>
+        <div class="cb-ticks">
+          {era.eventIds.map((id) => {
+            const event = events[eventIndexById.get(id) ?? 0];
+            return (
+              <button
+                class="cb-tick"
+                data-goto-event={event.id}
+                data-tone={eventTone(event)}
+                aria-label={`${event.dateLabel}: ${event.title}`}
+              ></button>
+            );
+          })}
+        </div>
+      </div>
+    ))}
+  </nav>
+
+  <dl class="cb-legend" aria-label="Map key">
+    <div><dt><span class="cb-dot" data-tone="remains"></span></dt><dd>Remains found</dd></div>
+    <div><dt><span class="cb-dot" data-tone="lastSeen"></span></dt><dd>Last seen</dd></div>
+    <div><dt><span class="cb-dot" data-tone="residence"></span></dt><dd>Suspect's home</dd></div>
+    <div><dt><span class="cb-line" data-tone="charge"></span></dt><dd>Charged</dd></div>
+    <div><dt><span class="cb-line" data-tone="conviction"></span></dt><dd>Convicted</dd></div>
+  </dl>
+
+  <div class="cb-tooltip" id="cb-tooltip" role="presentation" hidden></div>
+
+  <script type="application/json" id="cb-data" set:html={JSON.stringify(clientData)} />
+</section>
+
+<noscript>
+  <style>
+    .cb .cb-event { display: block !important; }
+    .cb .cb-top, .cb .cb-timeline, .cb .cb-legend, .cb .cb-step, .cb .cb-map, .cb .cb-atmo { display: none !important; }
+    .cb, .cb .cb-panel, .cb .cb-pane { position: static !important; height: auto !important; max-height: none !important; width: auto !important; }
+  </style>
+</noscript>
+
+<style>
+  .cb {
+    --cb-bg: #10131a;
+    --cb-panel: rgba(13, 16, 22, 0.86);
+    --cb-ink: #e9ebef;
+    --cb-ink-2: #a3abba;
+    --cb-ink-3: #666e7d;
+    --cb-hairline: rgba(233, 235, 239, 0.14);
+    --cb-remains: #e05252;
+    --cb-lastseen: #e3a94f;
+    --cb-residence: #edf1f7;
+    --cb-charge: #b487e0;
+    --cb-conviction: #58b98a;
+    --cb-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --cb-sans: "Archivo", system-ui, sans-serif;
+    --cb-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    position: relative;
+    height: 100dvh;
+    min-height: 640px;
+    background: var(--cb-bg);
+    color: var(--cb-ink);
+    font-family: var(--cb-sans);
+    overflow: hidden;
+  }
+
+  .cb-map,
+  .cb-map :global(.mapboxgl-canvas-container),
+  .cb-map :global(canvas) {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .cb-map-fallback {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(120% 90% at 70% 40%, rgba(64, 74, 94, 0.35), transparent 60%),
+      var(--cb-bg);
+  }
+
+  /* Vignette keeps the map's edges quiet so the record reads first */
+  .cb-atmo {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background:
+      linear-gradient(to bottom, rgba(9, 11, 16, 0.85), transparent 18%),
+      linear-gradient(to top, rgba(9, 11, 16, 0.92) 0%, transparent 32%),
+      linear-gradient(to right, rgba(9, 11, 16, 0.55), transparent 42%);
+  }
+
+  .cb :global(.mapboxgl-ctrl-bottom-right),
+  .cb :global(.mapboxgl-ctrl-bottom-left) {
+    display: none;
+  }
+
+  /* keep zoom + attribution clear of the mode toggle */
+  .cb :global(.mapboxgl-ctrl-top-right) {
+    top: 3.5rem;
+  }
+
+  /* ---------- Top bar ---------- */
+
+  .cb-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem clamp(1rem, 3vw, 2rem) 0;
+  }
+
+  .cb-kicker {
+    margin: 0;
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cb-ink-2);
+  }
+
+  .cb-modes {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border: 1px solid var(--cb-hairline);
+    border-radius: 999px;
+    background: var(--cb-panel);
+    backdrop-filter: blur(10px);
+  }
+
+  .cb-mode {
+    appearance: none;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--cb-ink-2);
+    font-family: var(--cb-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.45rem 0.95rem;
+    cursor: pointer;
+    transition: color 200ms var(--cb-ease), background-color 200ms var(--cb-ease);
+  }
+
+  .cb-mode[aria-selected="true"] {
+    background: var(--cb-ink);
+    color: #14171e;
+  }
+
+  .cb-mode:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: 2px;
+  }
+
+  .cb-count {
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    opacity: 0.75;
+    margin-left: 0.2rem;
+  }
+
+  /* ---------- Record panel ---------- */
+
+  .cb-panel {
+    position: absolute;
+    z-index: 5;
+    top: 4.25rem;
+    max-height: calc(100dvh - 4.25rem - 8.75rem);
+    left: clamp(1rem, 3vw, 2rem);
+    width: min(420px, calc(100% - 2rem));
+    display: flex;
+  }
+
+  .cb-pane {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 1.4rem 1.5rem 1.6rem;
+    border: 1px solid var(--cb-hairline);
+    background: var(--cb-panel);
+    backdrop-filter: blur(14px);
+    scrollbar-width: thin;
+    scrollbar-color: var(--cb-ink-3) transparent;
+  }
+
+  .cb-pane:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: -2px;
+  }
+
+  .cb-readout {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--cb-hairline);
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cb-ink-2);
+  }
+
+  .cb-event {
+    display: none;
+  }
+
+  .cb-event.is-active {
+    display: block;
+    animation: cb-in 500ms var(--cb-ease) both;
+  }
+
+  @keyframes cb-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* the date carries the same tone as the event's map geometry */
+  .cb-date {
+    margin: 0 0 0.5rem;
+    font-family: var(--cb-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--cb-ink-2);
+  }
+
+  .cb-event[data-tone="remains"] .cb-date { color: var(--cb-remains); }
+  .cb-event[data-tone="lastSeen"] .cb-date { color: var(--cb-lastseen); }
+  .cb-event[data-tone="residence"] .cb-date { color: var(--cb-residence); }
+  .cb-event[data-tone="charge"] .cb-date { color: var(--cb-charge); }
+  .cb-event[data-tone="conviction"] .cb-date { color: var(--cb-conviction); }
+
+  .cb-title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+    font-weight: 750;
+    font-variation-settings: "wdth" 108;
+    line-height: 1.12;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .cb-body {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--cb-ink-2);
+    max-width: 62ch;
+  }
+
+  .cb-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.15rem;
+  }
+
+  .cb-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.25rem 0.7rem 0.25rem 0.25rem;
+    border: 1px solid var(--cb-hairline);
+    border-radius: 999px;
+    background: rgba(233, 235, 239, 0.04);
+    color: var(--cb-ink);
+    font-family: var(--cb-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 200ms var(--cb-ease), background-color 200ms var(--cb-ease);
+  }
+
+  .cb-chip:hover {
+    border-color: var(--cb-ink-2);
+    background: rgba(233, 235, 239, 0.09);
+  }
+
+  .cb-chip:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: 2px;
+  }
+
+  .cb-chip img,
+  .cb-chip-blank {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cb-chip-blank {
+    background: rgba(233, 235, 239, 0.12);
+  }
+
+  .cb-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 1.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cb-hairline);
+  }
+
+  .cb-step-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    appearance: none;
+    border: 1px solid var(--cb-hairline);
+    background: transparent;
+    color: var(--cb-ink);
+    font-family: var(--cb-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 200ms var(--cb-ease), background-color 200ms var(--cb-ease), opacity 200ms var(--cb-ease);
+  }
+
+  .cb-step-btn:hover:not(:disabled) {
+    border-color: var(--cb-ink-2);
+    background: rgba(233, 235, 239, 0.07);
+  }
+
+  .cb-step-btn:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: 2px;
+  }
+
+  .cb-step-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .cb-step-hint {
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    color: var(--cb-ink-3);
+  }
+
+  @media (pointer: coarse) {
+    .cb-step-hint {
+      display: none;
+    }
+  }
+
+  /* ---------- People index ---------- */
+
+  .cb-index-note {
+    margin: 0 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--cb-ink-2);
+  }
+
+  .cb-group-label {
+    margin: 1.4rem 0 0.7rem;
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cb-ink-3);
+  }
+
+  .cb-group-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .cb-portraits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .cb-portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    width: 100%;
+    appearance: none;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--cb-ink);
+    font-family: var(--cb-sans);
+    text-align: left;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 200ms var(--cb-ease), border-color 200ms var(--cb-ease);
+  }
+
+  .cb-portrait:hover {
+    background: rgba(233, 235, 239, 0.06);
+    border-color: var(--cb-hairline);
+  }
+
+  .cb-portrait:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: 2px;
+  }
+
+  .cb-portrait img,
+  .cb-portrait-blank {
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    object-fit: cover;
+    filter: saturate(0.85);
+    display: grid;
+    place-items: center;
+  }
+
+  .cb-portrait-blank {
+    background: rgba(233, 235, 239, 0.08);
+    color: var(--cb-ink-3);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .cb-portrait-name {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .cb-portrait-status {
+    font-family: var(--cb-mono);
+    font-size: 0.625rem;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: var(--cb-ink-3);
+  }
+
+  /* ---------- Dossier ---------- */
+
+  .cb-dossier.is-active {
+    animation: cb-in 500ms var(--cb-ease) both;
+  }
+
+  .cb-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--cb-ink-2);
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0;
+    margin-bottom: 1.1rem;
+    cursor: pointer;
+  }
+
+  .cb-back:hover {
+    color: var(--cb-ink);
+  }
+
+  .cb-back:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: 2px;
+  }
+
+  .cb-dossier .cb-body {
+    margin-bottom: 1.6rem;
+  }
+
+  .cb-dossier-head {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .cb-dossier-photo {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    filter: saturate(0.85);
+    flex: none;
+  }
+
+  .cb-dossier-name {
+    margin: 0.1rem 0 0.3rem;
+    font-size: 1.45rem;
+    font-weight: 780;
+    font-variation-settings: "wdth" 108;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  .cb-dossier-aka {
+    margin: 0 0 0.45rem;
+    font-size: 0.8125rem;
+    color: var(--cb-ink-2);
+  }
+
+  .cb-status {
+    margin: 0;
+    display: inline-block;
+    font-family: var(--cb-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid var(--cb-hairline);
+    color: var(--cb-ink-2);
+  }
+
+  .cb-dossier-events {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cb-dossier-event {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 100%;
+    appearance: none;
+    border: 0;
+    border-top: 1px solid var(--cb-hairline);
+    background: transparent;
+    color: var(--cb-ink);
+    font-family: var(--cb-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: left;
+    padding: 0.7rem 0.2rem;
+    cursor: pointer;
+    transition: background-color 200ms var(--cb-ease);
+  }
+
+  .cb-dossier-event:hover {
+    background: rgba(233, 235, 239, 0.06);
+  }
+
+  .cb-dossier-event:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: -2px;
+  }
+
+  .cb-dossier-event-date {
+    font-family: var(--cb-mono);
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cb-ink-3);
+  }
+
+  /* ---------- Timeline strip ---------- */
+
+  .cb-timeline {
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    align-items: flex-end;
+    padding: 1rem clamp(1rem, 3vw, 2rem) 1.15rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cb-timeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cb-era {
+    flex: none;
+  }
+
+  .cb-era-label {
+    margin: 0 0 0.55rem;
+    font-family: var(--cb-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cb-ink-2);
+    white-space: nowrap;
+  }
+
+  .cb-era-years {
+    color: var(--cb-ink-3);
+    margin-left: 0.4rem;
+  }
+
+  .cb-ticks {
+    display: flex;
+    gap: 6px;
+  }
+
+  .cb-tick {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    width: 16px;
+    height: 26px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* the visible bar; the 16x26 button is the touch target */
+  .cb-tick::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% 0;
+    width: 3px;
+    height: 12px;
+    border-radius: 2px;
+    background: var(--cb-ink-3);
+    opacity: 0.3;
+    transition: height 250ms var(--cb-ease), opacity 250ms var(--cb-ease), background-color 250ms var(--cb-ease);
+  }
+
+  .cb-tick[data-tone="remains"]::after { background: var(--cb-remains); }
+  .cb-tick[data-tone="lastSeen"]::after { background: var(--cb-lastseen); }
+  .cb-tick[data-tone="residence"]::after { background: var(--cb-residence); }
+  .cb-tick[data-tone="charge"]::after { background: var(--cb-charge); }
+  .cb-tick[data-tone="conviction"]::after { background: var(--cb-conviction); }
+
+  .cb-tick:hover::after {
+    opacity: 0.9;
+    height: 18px;
+  }
+
+  .cb-tick:focus-visible {
+    outline: 2px solid var(--cb-ink);
+    outline-offset: 1px;
+  }
+
+  .cb-tick[aria-current="step"]::after {
+    height: 26px;
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(233, 235, 239, 0.25);
+  }
+
+  .cb-tick.is-passed::after {
+    opacity: 0.8;
+  }
+
+  /* ---------- Legend ---------- */
+
+  .cb-legend {
+    position: absolute;
+    z-index: 5;
+    right: clamp(1rem, 3vw, 2rem);
+    bottom: 5.4rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-family: var(--cb-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.06em;
+    color: var(--cb-ink-2);
+  }
+
+  .cb-legend > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cb-legend dt,
+  .cb-legend dd {
+    margin: 0;
+  }
+
+  .cb-dot {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(16, 19, 26, 0.9);
+  }
+
+  .cb-dot[data-tone="remains"] { background: var(--cb-remains); }
+  .cb-dot[data-tone="lastSeen"] { background: var(--cb-lastseen); }
+  .cb-dot[data-tone="residence"] { background: var(--cb-residence); }
+
+  .cb-line {
+    display: block;
+    width: 14px;
+    height: 2px;
+  }
+
+  .cb-line[data-tone="charge"] { background: var(--cb-charge); }
+  .cb-line[data-tone="conviction"] { background: var(--cb-conviction); }
+
+  /* ---------- Map tooltip ---------- */
+
+  .cb-tooltip {
+    position: absolute;
+    z-index: 7;
+    pointer-events: none;
+    max-width: 240px;
+    padding: 0.4rem 0.6rem;
+    background: rgba(9, 11, 16, 0.92);
+    border: 1px solid var(--cb-hairline);
+    color: var(--cb-ink);
+    font-family: var(--cb-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    translate: 12px -50%;
+  }
+
+  /* ---------- Mobile ---------- */
+
+  @media (max-width: 899px) {
+    .cb {
+      min-height: 100dvh;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cb-map,
+    .cb-atmo {
+      position: absolute;
+      height: 46dvh;
+      inset: 0 0 auto 0;
+    }
+
+    .cb-atmo {
+      background:
+        linear-gradient(to bottom, rgba(9, 11, 16, 0.85), transparent 26%),
+        linear-gradient(to top, rgba(16, 19, 26, 1) 0%, transparent 24%);
+    }
+
+    .cb-top {
+      position: relative;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding-top: 0.9rem;
+    }
+
+    .cb-panel {
+      position: relative;
+      inset: auto;
+      width: auto;
+      margin-top: calc(46dvh - 11rem);
+      flex: 1;
+      display: flex;
+      padding: 0 0.75rem;
+    }
+
+    .cb-pane {
+      max-height: none;
+      padding: 1.15rem 1.1rem 1.3rem;
+    }
+
+    .cb-timeline {
+      position: sticky;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(9, 11, 16, 0.96) 65%, transparent);
+      padding-top: 0.85rem;
+    }
+
+    .cb-legend {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cb-event.is-active,
+    .cb-dossier.is-active {
+      animation: none;
+    }
+
+    .cb-tick::after,
+    .cb-mode,
+    .cb-chip,
+    .cb-step-btn {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  type Camera = { center: [number, number]; zoom: number };
+  type ClientMarker = {
+    id: string;
+    kind: string;
+    coords: [number, number];
+    label: string;
+    personId?: string;
+  };
+  type ClientLine = {
+    id: string;
+    kind: string;
+    from: [number, number];
+    to: [number, number];
+    personId?: string;
+  };
+  type ClientEvent = {
+    id: string;
+    markerIds: string[];
+    lineIds: string[];
+    personIds: string[];
+    camera: Camera | null;
+  };
+  type ClientData = {
+    defaultCamera: Camera;
+    markers: ClientMarker[];
+    lines: ClientLine[];
+    events: ClientEvent[];
+  };
+
+  const board = document.getElementById("case-board");
+  const dataEl = document.getElementById("cb-data");
+  if (board && dataEl) initBoard(board, JSON.parse(dataEl.textContent || "{}") as ClientData);
+
+  function initBoard(board: HTMLElement, data: ClientData) {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const events = data.events;
+
+    // Marker/line id -> index of the event that introduces it (for cumulative reveal)
+    const markerIntro = new Map<string, number>();
+    const lineIntro = new Map<string, number>();
+    events.forEach((event, i) => {
+      event.markerIds.forEach((id) => markerIntro.has(id) || markerIntro.set(id, i));
+      event.lineIds.forEach((id) => lineIntro.has(id) || lineIntro.set(id, i));
+    });
+    const markerEvent = new Map<string, string>();
+    events.forEach((event) => {
+      event.markerIds.forEach((id) => markerEvent.has(id) || markerEvent.set(id, event.id));
+    });
+
+    // ---------- DOM ----------
+    const panes = {
+      record: board.querySelector<HTMLElement>("#cb-record")!,
+      people: board.querySelector<HTMLElement>("#cb-people")!,
+    };
+    const tabs = Array.from(board.querySelectorAll<HTMLButtonElement>(".cb-mode"));
+    const articles = Array.from(board.querySelectorAll<HTMLElement>(".cb-event"));
+    const ticks = Array.from(board.querySelectorAll<HTMLButtonElement>(".cb-tick"));
+    const dossiers = Array.from(board.querySelectorAll<HTMLElement>(".cb-dossier"));
+    const peopleIndex = board.querySelector<HTMLElement>("[data-people-index]")!;
+    const readoutNo = board.querySelector<HTMLElement>("#cb-readout-no")!;
+    const readoutEra = board.querySelector<HTMLElement>("#cb-readout-era")!;
+    const prevBtn = board.querySelector<HTMLButtonElement>("#cb-prev")!;
+    const nextBtn = board.querySelector<HTMLButtonElement>("#cb-next")!;
+    const tooltip = board.querySelector<HTMLElement>("#cb-tooltip")!;
+    const eraLabels = new Map(
+      Array.from(board.querySelectorAll<HTMLElement>(".cb-era")).map((el) => [
+        el.dataset.era!,
+        el.querySelector(".cb-era-label span")?.textContent ?? "",
+      ])
+    );
+
+    // ---------- State ----------
+    let mode: "timeline" | "people" = "timeline";
+    let eventIndex = 0;
+    let personId: string | null = null;
+    let map: any = null;
+    let mapReady = false;
+
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const timelineNav = board.querySelector<HTMLElement>(".cb-timeline")!;
+
+    // Horizontal-only centering; scrollIntoView would also scroll the page vertically
+    function centerTick(tick: HTMLButtonElement | undefined) {
+      if (!tick) return;
+      timelineNav.scrollTo({
+        left: tick.offsetLeft - timelineNav.clientWidth / 2,
+        behavior: reduced ? "auto" : "smooth",
+      });
+    }
+
+    function setHash() {
+      const hash = mode === "people" ? (personId ? `#p:${personId}` : "#people") : `#t:${events[eventIndex].id}`;
+      history.replaceState(null, "", hash);
+    }
+
+    function showEvent(i: number, updateHash = true) {
+      eventIndex = Math.max(0, Math.min(events.length - 1, i));
+      articles.forEach((el) => el.classList.toggle("is-active", Number(el.dataset.index) === eventIndex));
+      ticks.forEach((tick, tickIndex) => {
+        if (tickIndex === eventIndex) tick.setAttribute("aria-current", "step");
+        else tick.removeAttribute("aria-current");
+        tick.classList.toggle("is-passed", tickIndex < eventIndex);
+      });
+      const active = articles[eventIndex];
+      readoutNo.textContent = `No. ${pad(eventIndex + 1)} / ${pad(events.length)}`;
+      readoutEra.textContent = eraLabels.get(active?.dataset.era ?? "") ?? "";
+      prevBtn.disabled = eventIndex === 0;
+      nextBtn.disabled = eventIndex === events.length - 1;
+      centerTick(ticks[eventIndex]);
+      panes.record.scrollTop = 0;
+      applyMapState();
+      if (updateHash) setHash();
+    }
+
+    function setMode(next: "timeline" | "people", updateHash = true) {
+      mode = next;
+      tabs.forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.mode === next)));
+      panes.record.hidden = next !== "timeline";
+      panes.people.hidden = next !== "people";
+      if (next === "timeline") {
+        showEvent(eventIndex, updateHash);
+      } else {
+        showPerson(personId, updateHash);
+      }
+    }
+
+    function showPerson(id: string | null, updateHash = true) {
+      personId = id;
+      peopleIndex.hidden = id !== null;
+      let focusTarget: HTMLElement | null = null;
+      dossiers.forEach((dossier) => {
+        const isActive = dossier.dataset.dossier === id;
+        dossier.hidden = !isActive;
+        dossier.classList.toggle("is-active", isActive);
+        if (isActive) focusTarget = dossier;
+      });
+      panes.people.scrollTop = 0;
+      applyMapState();
+      if (updateHash) setHash();
+      return focusTarget;
+    }
+
+    // ---------- Map ----------
+    const mapboxgl = (window as any).mapboxgl;
+    if (mapboxgl) {
+      mapboxgl.accessToken = "pk.eyJ1IjoiZGFuZGVubmV5IiwiYSI6Indwc05iZW8ifQ.X8KMtaHslofn7K0TY8A8Ug";
+      map = new mapboxgl.Map({
+        container: "cb-map",
+        style: "mapbox://styles/mapbox/dark-v11",
+        center: data.defaultCamera.center,
+        zoom: data.defaultCamera.zoom,
+        attributionControl: false,
+      });
+      map.addControl(new mapboxgl.AttributionControl({ compact: true }), "top-right");
+      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "top-right");
+      map.scrollZoom.disable();
+      map.touchZoomRotate.disableRotation();
+
+      map.on("load", () => {
+        map.addSource("cb-points", {
+          type: "geojson",
+          promoteId: "id",
+          data: {
+            type: "FeatureCollection",
+            features: data.markers.map((m) => ({
+              type: "Feature",
+              properties: { id: m.id, kind: m.kind, label: m.label },
+              geometry: { type: "Point", coordinates: m.coords },
+            })),
+          },
+        });
+        map.addSource("cb-lines", {
+          type: "geojson",
+          promoteId: "id",
+          data: {
+            type: "FeatureCollection",
+            features: data.lines.map((l) => ({
+              type: "Feature",
+              properties: { id: l.id, kind: l.kind },
+              geometry: { type: "LineString", coordinates: [l.from, l.to] },
+            })),
+          },
+        });
+
+        const kindColor = [
+          "match",
+          ["get", "kind"],
+          "remains", "#e05252",
+          "lastSeen", "#e3a94f",
+          "residence", "#edf1f7",
+          "trace", "#d97b6c",
+          "charge", "#b487e0",
+          "conviction", "#58b98a",
+          "#9aa3b2",
+        ];
+        const state = (key: string, fallback: number) => ["coalesce", ["feature-state", key], fallback];
+
+        map.addLayer({
+          id: "cb-lines",
+          type: "line",
+          source: "cb-lines",
+          layout: { "line-cap": "round" },
+          paint: {
+            "line-color": kindColor,
+            "line-width": ["*", 2, state("w", 1)] as any,
+            "line-opacity": state("o", 0),
+            "line-opacity-transition": { duration: reduced ? 0 : 700 },
+            "line-width-transition": { duration: reduced ? 0 : 700 },
+          },
+        });
+        map.addLayer({
+          id: "cb-points-halo",
+          type: "circle",
+          source: "cb-points",
+          paint: {
+            "circle-color": kindColor,
+            "circle-radius": state("halo", 0),
+            "circle-opacity": 0.16,
+          },
+        });
+        map.addLayer({
+          id: "cb-points",
+          type: "circle",
+          source: "cb-points",
+          paint: {
+            "circle-color": kindColor,
+            "circle-radius": state("r", 0),
+            "circle-stroke-color": "#0d1016",
+            "circle-stroke-width": ["step", state("r", 0), 0, 1, 1.5] as any,
+            "circle-radius-transition": { duration: reduced ? 0 : 500 },
+            "circle-opacity-transition": { duration: reduced ? 0 : 500 },
+          },
+        });
+
+        // Hover affordances
+        map.on("mousemove", "cb-points", (e: any) => {
+          const feature = e.features?.[0];
+          if (!feature || feature.state?.r === 0) return;
+          map.getCanvas().style.cursor = "pointer";
+          tooltip.hidden = false;
+          tooltip.textContent = feature.properties.label;
+          tooltip.style.left = `${e.point.x}px`;
+          tooltip.style.top = `${e.point.y}px`;
+        });
+        map.on("mouseleave", "cb-points", () => {
+          map.getCanvas().style.cursor = "";
+          tooltip.hidden = true;
+        });
+        map.on("click", "cb-points", (e: any) => {
+          const id = e.features?.[0]?.properties?.id as string | undefined;
+          if (!id) return;
+          const marker = data.markers.find((m) => m.id === id);
+          if (mode === "people" && marker?.personId) {
+            showPerson(marker.personId);
+          } else {
+            const eventId = markerEvent.get(id);
+            const index = events.findIndex((ev) => ev.id === eventId);
+            if (index >= 0) showEvent(index);
+          }
+        });
+
+        mapReady = true;
+        applyMapState();
+        startPulse();
+      });
+    }
+
+    function applyMapState() {
+      if (!mapReady) return;
+      const activeMarkers = new Set<string>();
+      const activeLines = new Set<string>();
+
+      data.markers.forEach((marker) => {
+        let r = 0;
+        let halo = 0;
+        if (mode === "timeline") {
+          const intro = markerIntro.get(marker.id);
+          if (intro !== undefined && intro <= eventIndex) {
+            const isActive = events[eventIndex].markerIds.includes(marker.id);
+            r = isActive ? 8 : 4.5;
+            halo = isActive ? 16 : 0;
+            if (isActive) activeMarkers.add(marker.id);
+          }
+        } else if (personId) {
+          if (marker.personId === personId) {
+            r = 8;
+            halo = 16;
+            activeMarkers.add(marker.id);
+          }
+        } else {
+          r = 4.5; // people index: everything visible, nothing shouting
+        }
+        map.setFeatureState({ source: "cb-points", id: marker.id }, { r, halo });
+      });
+
+      data.lines.forEach((line) => {
+        let o = 0;
+        let w = 1;
+        if (mode === "timeline") {
+          const intro = lineIntro.get(line.id);
+          if (intro !== undefined && intro <= eventIndex) {
+            const isActive = events[eventIndex].lineIds.includes(line.id);
+            o = isActive ? 0.9 : 0.28;
+            w = isActive ? 1.2 : 1;
+            if (isActive) activeLines.add(line.id);
+          }
+        } else if (personId) {
+          if (line.personId === personId) {
+            o = 0.9;
+            w = 1.2;
+            activeLines.add(line.id);
+          }
+        }
+        map.setFeatureState({ source: "cb-lines", id: line.id }, { o, w });
+      });
+
+      moveCamera(activeMarkers, activeLines);
+      pulseIds = Array.from(activeMarkers);
+    }
+
+    function cameraPadding() {
+      const desktop = window.matchMedia("(min-width: 900px)").matches;
+      return desktop
+        ? { top: 110, right: 120, bottom: 170, left: 500 }
+        : { top: 90, right: 46, bottom: 60, left: 46 };
+    }
+
+    function moveCamera(activeMarkers: Set<string>, activeLines: Set<string>) {
+      const coords: [number, number][] = [];
+      if (mode === "timeline") {
+        const event = events[eventIndex];
+        if (event.camera) {
+          map.flyTo({ ...event.camera, duration: reduced ? 0 : 1600, essential: true });
+          return;
+        }
+        event.markerIds.forEach((id) => {
+          const marker = data.markers.find((m) => m.id === id);
+          if (marker) coords.push(marker.coords);
+        });
+        event.lineIds.forEach((id) => {
+          const line = data.lines.find((l) => l.id === id);
+          if (line) coords.push(line.from, line.to);
+        });
+      } else if (personId) {
+        data.markers.forEach((m) => m.personId === personId && coords.push(m.coords));
+        data.lines.forEach((l) => l.personId === personId && coords.push(l.from, l.to));
+      } else {
+        map.flyTo({ ...data.defaultCamera, duration: reduced ? 0 : 1400, essential: true });
+        return;
+      }
+
+      if (coords.length === 0) return;
+      if (coords.length === 1) {
+        map.flyTo({
+          center: coords[0],
+          zoom: Math.max(map.getZoom(), 9.7),
+          duration: reduced ? 0 : 1600,
+          essential: true,
+          padding: cameraPadding(),
+        });
+        return;
+      }
+      const bounds = coords.reduce(
+        (b: any, c) => b.extend(c),
+        new (window as any).mapboxgl.LngLatBounds(coords[0], coords[0])
+      );
+      map.fitBounds(bounds, {
+        padding: cameraPadding(),
+        maxZoom: 11.2,
+        duration: reduced ? 0 : 1600,
+        essential: true,
+      });
+    }
+
+    // Soft heartbeat on the active markers
+    let pulseIds: string[] = [];
+    function startPulse() {
+      if (reduced) return;
+      let start = performance.now();
+      const frame = (now: number) => {
+        const t = (now - start) / 1000;
+        const halo = 13 + Math.sin(t * 2.2) * 5;
+        pulseIds.forEach((id) => {
+          map.setFeatureState({ source: "cb-points", id }, { halo });
+        });
+        requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    }
+
+    // ---------- Wire up ----------
+    tabs.forEach((tab) => tab.addEventListener("click", () => setMode(tab.dataset.mode as "timeline" | "people")));
+    prevBtn.addEventListener("click", () => showEvent(eventIndex - 1));
+    nextBtn.addEventListener("click", () => showEvent(eventIndex + 1));
+
+    board.addEventListener("click", (e) => {
+      const target = (e.target as HTMLElement).closest<HTMLElement>(
+        "[data-goto-event], [data-open-person], [data-select-person], [data-close-person]"
+      );
+      if (!target) return;
+      if (target.dataset.gotoEvent) {
+        const index = events.findIndex((ev) => ev.id === target.dataset.gotoEvent);
+        if (index >= 0) {
+          if (mode !== "timeline") setMode("timeline", false);
+          showEvent(index);
+          panes.record.focus({ preventScroll: true });
+        }
+      } else if (target.dataset.openPerson) {
+        setMode("people", false);
+        showPerson(target.dataset.openPerson);
+        panes.people.focus({ preventScroll: true });
+      } else if (target.dataset.selectPerson) {
+        showPerson(target.dataset.selectPerson);
+      } else if (target.hasAttribute("data-close-person")) {
+        showPerson(null);
+      }
+    });
+
+    board.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight" && mode === "timeline") {
+        e.preventDefault();
+        showEvent(eventIndex + 1);
+      } else if (e.key === "ArrowLeft" && mode === "timeline") {
+        e.preventDefault();
+        showEvent(eventIndex - 1);
+      } else if (e.key === "Escape" && mode === "people" && personId) {
+        showPerson(null);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (mapReady) map.resize();
+    });
+
+    // ---------- Boot from hash ----------
+    function applyHash(scrollToBoard: boolean) {
+      const hash = decodeURIComponent(location.hash);
+      if (hash.startsWith("#p:")) {
+        const id = hash.slice(3);
+        setMode("people", false);
+        showPerson(dossiers.some((d) => d.dataset.dossier === id) ? id : null, false);
+      } else if (hash === "#people") {
+        setMode("people", false);
+        showPerson(null, false);
+      } else if (hash.startsWith("#t:")) {
+        const index = events.findIndex((ev) => ev.id === hash.slice(3));
+        if (mode !== "timeline") setMode("timeline", false);
+        showEvent(index >= 0 ? index : 0, false);
+      } else if (!scrollToBoard) {
+        showEvent(0, false);
+        return;
+      } else {
+        return;
+      }
+      if (scrollToBoard) board.scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    }
+
+    applyHash(false);
+    // In-page links elsewhere (e.g. the record timeline) drive the board too
+    window.addEventListener("hashchange", () => applyHash(true));
+  }
+</script>

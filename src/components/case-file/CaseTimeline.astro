@@ -1,0 +1,391 @@
+---
+import type { TimelineEntry, TimelineGroup } from "@/data/cases/types";
+
+/**
+ * A case-file timeline in the investigation-room identity: mono dates,
+ * tone-coded nodes on a spine that fills as you read, sticky era labels.
+ * Server-renders everything; JS only adds the reveal, the reading cursor,
+ * and the spine fill. Expects Archivo + Fragment Mono on the page.
+ *
+ * Pass `groups` for era-grouped timelines, or `entries` for a flat one.
+ */
+interface Props {
+  groups?: TimelineGroup[];
+  entries?: TimelineEntry[];
+}
+
+const { groups, entries } = Astro.props;
+const resolvedGroups: TimelineGroup[] = groups ?? (entries ? [{ entries }] : []);
+---
+
+<div class="ct" data-case-timeline>
+  <div class="ct-spine" aria-hidden="true">
+    <div class="ct-fill"></div>
+  </div>
+  <ol class="ct-groups" role="list">
+    {resolvedGroups.map((group) => (
+      <li class="ct-group">
+        {group.label && (
+          <p class="ct-group-label">
+            <span>{group.label}</span>
+            {group.years && <span class="ct-group-years">{group.years}</span>}
+          </p>
+        )}
+        <ol class="ct-entries" role="list">
+          {group.entries.map((entry) => (
+            <li class="ct-entry" data-tone={entry.tone ?? "plain"}>
+              <span class="ct-node" aria-hidden="true"></span>
+              <p class="ct-when">
+                {entry.date ? <time datetime={entry.date}>{entry.dateLabel}</time> : entry.dateLabel}
+              </p>
+              <div class="ct-what">
+                <h3 class="ct-title">
+                  {entry.href ? (
+                    <a class="ct-link" href={entry.href}>
+                      {entry.title}
+                      <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M5.5 2.5 11 8l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                  ) : (
+                    entry.title
+                  )}
+                </h3>
+                {entry.body && <p class="ct-body">{entry.body}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .ct {
+    --ct-bg: #0b0d12;
+    --ct-ink: #e9ebef;
+    --ct-ink-2: #a3abba;
+    --ct-ink-3: #666e7d;
+    --ct-hairline: rgba(233, 235, 239, 0.14);
+    --ct-remains: #e05252;
+    --ct-lastseen: #e3a94f;
+    --ct-residence: #edf1f7;
+    --ct-charge: #b487e0;
+    --ct-conviction: #58b98a;
+    --ct-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --ct-sans: "Archivo", system-ui, sans-serif;
+    --ct-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --ct-datecol: 8.75rem;
+    --ct-gap: 1.5rem;
+    --ct-nodecol: 1rem;
+    --ct-progress: 0;
+
+    position: relative;
+    font-family: var(--ct-sans);
+    color: var(--ct-ink);
+  }
+
+  /* ---------- Spine ---------- */
+
+  .ct-spine {
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: calc(var(--ct-datecol) + var(--ct-gap) + (var(--ct-nodecol) / 2));
+    width: 1px;
+    translate: -50% 0;
+    background: var(--ct-hairline);
+  }
+
+  .ct-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--ct-ink-2);
+    transform: scaleY(var(--ct-progress));
+    transform-origin: top;
+    transition: transform 500ms var(--ct-ease);
+  }
+
+  /* ---------- Groups ---------- */
+
+  .ct-groups,
+  .ct-entries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ct-group + .ct-group {
+    margin-top: 2.75rem;
+  }
+
+  .ct-group-label {
+    position: sticky;
+    top: 0.9rem;
+    z-index: 2;
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    width: fit-content;
+    margin: 0 0 1.5rem calc(var(--ct-datecol) + var(--ct-gap) + var(--ct-nodecol) + var(--ct-gap));
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--ct-hairline);
+    background: color-mix(in srgb, var(--ct-bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    font-family: var(--ct-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ct-ink-2);
+  }
+
+  .ct-group-years {
+    color: var(--ct-ink-3);
+    letter-spacing: 0.08em;
+  }
+
+  /* ---------- Entries ---------- */
+
+  .ct-entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--ct-datecol) var(--ct-nodecol) 1fr;
+    grid-template-areas: "when node what";
+    column-gap: var(--ct-gap);
+    align-items: baseline;
+  }
+
+  .ct-node {
+    grid-area: node;
+  }
+
+  .ct-when {
+    grid-area: when;
+  }
+
+  .ct-what {
+    grid-area: what;
+  }
+
+  .ct-entry + .ct-entry {
+    margin-top: 1.6rem;
+  }
+
+  .ct-node {
+    justify-self: center;
+    align-self: start;
+    translate: 0 0.3rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--ct-ink-3);
+    box-shadow: 0 0 0 4px var(--ct-bg);
+    transition: box-shadow 350ms var(--ct-ease), background-color 350ms var(--ct-ease);
+  }
+
+  .ct-entry[data-tone="remains"] .ct-node { background: var(--ct-remains); }
+  .ct-entry[data-tone="lastSeen"] .ct-node { background: var(--ct-lastseen); }
+  .ct-entry[data-tone="residence"] .ct-node { background: var(--ct-residence); }
+  .ct-entry[data-tone="charge"] .ct-node { background: var(--ct-charge); }
+  .ct-entry[data-tone="conviction"] .ct-node { background: var(--ct-conviction); }
+
+  .ct-when {
+    margin: 0;
+    font-family: var(--ct-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-align: right;
+    color: var(--ct-ink-3);
+    transition: color 350ms var(--ct-ease);
+  }
+
+  .ct-title {
+    margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    font-variation-settings: "wdth" 106;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+
+  .ct-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 250ms var(--ct-ease);
+  }
+
+  .ct-link svg {
+    display: inline-block;
+    margin-left: 0.4rem;
+    color: var(--ct-ink-3);
+    transition: translate 250ms var(--ct-ease), color 250ms var(--ct-ease);
+  }
+
+  .ct-link:hover {
+    text-decoration-color: var(--ct-ink-2);
+  }
+
+  .ct-link:hover svg {
+    translate: 2px 0;
+    color: var(--ct-ink);
+  }
+
+  .ct-link:focus-visible {
+    outline: 2px solid var(--ct-ink);
+    outline-offset: 3px;
+  }
+
+  .ct-body {
+    margin: 0.45rem 0 0;
+    max-width: 58ch;
+    font-size: 0.9063rem;
+    line-height: 1.65;
+    color: var(--ct-ink-2);
+  }
+
+  /* ---------- Reading cursor ---------- */
+
+  .ct-entry.is-current .ct-node {
+    box-shadow:
+      0 0 0 4px var(--ct-bg),
+      0 0 14px 2px color-mix(in srgb, var(--ct-ink) 30%, transparent);
+  }
+
+  .ct-entry.is-current .ct-when {
+    color: var(--ct-ink-2);
+  }
+
+  .ct-entry.is-current[data-tone="remains"] .ct-when { color: var(--ct-remains); }
+  .ct-entry.is-current[data-tone="lastSeen"] .ct-when { color: var(--ct-lastseen); }
+  .ct-entry.is-current[data-tone="residence"] .ct-when { color: var(--ct-residence); }
+  .ct-entry.is-current[data-tone="charge"] .ct-when { color: var(--ct-charge); }
+  .ct-entry.is-current[data-tone="conviction"] .ct-when { color: var(--ct-conviction); }
+
+  /* ---------- Reveal (only once JS arrives) ---------- */
+
+  .ct.is-enhanced .ct-entry {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 650ms var(--ct-ease), transform 650ms var(--ct-ease);
+  }
+
+  .ct.is-enhanced .ct-entry.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ---------- Mobile ---------- */
+
+  @media (max-width: 719px) {
+    .ct {
+      --ct-datecol: 0rem;
+      --ct-gap: 0.9rem;
+    }
+
+    .ct-spine {
+      left: calc(var(--ct-nodecol) / 2);
+    }
+
+    .ct-entry {
+      grid-template-columns: var(--ct-nodecol) 1fr;
+      grid-template-areas:
+        "node when"
+        ".    what";
+      row-gap: 0.3rem;
+    }
+
+    .ct-node {
+      grid-area: node;
+      translate: 0 0.15rem;
+    }
+
+    .ct-when {
+      grid-area: when;
+      text-align: left;
+    }
+
+    .ct-what {
+      grid-area: what;
+    }
+
+    .ct-group-label {
+      margin-left: calc(var(--ct-nodecol) + var(--ct-gap));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ct-fill,
+    .ct-node,
+    .ct-when,
+    .ct-link,
+    .ct-link svg {
+      transition: none;
+    }
+
+    .ct.is-enhanced .ct-entry {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-case-timeline]").forEach(enhance);
+
+  function enhance(root: HTMLElement) {
+    const entries = Array.from(root.querySelectorAll<HTMLElement>(".ct-entry"));
+    if (entries.length === 0) return;
+    root.classList.add("is-enhanced");
+
+    const reveal = new IntersectionObserver(
+      (observed) => {
+        observed.forEach((o) => {
+          if (o.isIntersecting) {
+            o.target.classList.add("is-in");
+            reveal.unobserve(o.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -6% 0px" }
+    );
+    entries.forEach((entry) => reveal.observe(entry));
+
+    // The reading cursor: the entry nearest the focus line owns the spine fill
+    let ticking = false;
+    function update() {
+      ticking = false;
+      const rootRect = root.getBoundingClientRect();
+      if (rootRect.bottom < 0 || rootRect.top > window.innerHeight) return;
+      const focusY = window.innerHeight * 0.4;
+      let current: HTMLElement | null = null;
+      let currentY = 0;
+      let best = Infinity;
+      entries.forEach((entry) => {
+        const nodeY = entry.getBoundingClientRect().top + 8;
+        const distance = Math.abs(nodeY - focusY);
+        if (distance < best) {
+          best = distance;
+          current = entry;
+          currentY = nodeY;
+        }
+      });
+      entries.forEach((entry) => entry.classList.toggle("is-current", entry === current));
+      const progress = Math.min(1, Math.max(0, (currentY - rootRect.top) / rootRect.height));
+      root.style.setProperty("--ct-progress", progress.toFixed(4));
+    }
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+  }
+</script>
