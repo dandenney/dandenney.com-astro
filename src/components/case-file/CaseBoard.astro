@@ -1,5 +1,5 @@
 ---
-import type { CaseFile, CaseEvent } from "@/data/cases/types";
+import type { CaseFile, CaseEvent, LineKind, MarkerKind } from "@/data/cases/types";
 import { caseEventTone } from "@/data/cases/utils";
 import CaseFacts from "@/components/case-file/CaseFacts.astro";
 
@@ -23,11 +23,36 @@ function eventsForPerson(personId: string): CaseEvent[] {
   return events.filter((e) => e.personIds.includes(personId));
 }
 
-const victims = people.filter((p) => p.role === "victim");
-const suspects = people.filter((p) => p.role === "suspect");
+const peopleGroups = (
+  caseFile.peopleGroups ?? [
+    { label: "The victims", roles: ["victim"] },
+    { label: "Charged or convicted", roles: ["suspect"] },
+  ]
+)
+  .map((group) => ({ label: group.label, people: people.filter((p) => group.roles.includes(p.role)) }))
+  .filter((group) => group.people.length > 0);
+const peopleCount = peopleGroups.reduce((n, group) => n + group.people.length, 0);
+
+// The legend only shows the kinds this case actually puts on the map
+const MARKER_LEGEND: [MarkerKind, string][] = [
+  ["remains", "Remains found"],
+  ["lastSeen", "Last seen"],
+  ["sighting", "Reported sighting"],
+  ["residence", "Suspect's home"],
+  ["poi", "Place of interest"],
+];
+const LINE_LEGEND: [LineKind, string][] = [
+  ["trace", "Last seen → found"],
+  ["lead", "Possible lead"],
+  ["charge", "Charged"],
+  ["conviction", "Convicted"],
+];
+const markerLegend = MARKER_LEGEND.filter(([kind]) => markers.some((m) => m.kind === kind));
+const lineLegend = LINE_LEGEND.filter(([kind]) => lines.some((l) => l.kind === kind));
 
 const clientData = {
   defaultCamera: caseFile.defaultCamera,
+  boundsMaxZoom: caseFile.boundsMaxZoom ?? null,
   markers,
   lines,
   events: events.map((e) => ({
@@ -55,7 +80,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
         Timeline
       </button>
       <button class="cb-mode" id="cb-tab-people" role="tab" aria-selected="false" aria-controls="cb-people" data-mode="people">
-        The people <span class="cb-count">{victims.length + suspects.length}</span>
+        The people <span class="cb-count">{peopleCount}</span>
       </button>
     </div>
   </header>
@@ -117,38 +142,26 @@ const pad = (n: number) => String(n).padStart(2, "0");
           The most important thing we can do is remember that they are people, like you and me. Select someone to see
           their story and their places on the map.
         </p>
-        <h3 class="cb-group-label">The victims</h3>
-        <ol class="cb-portraits">
-          {victims.map((person) => (
-            <li>
-              <button class="cb-portrait" data-select-person={person.id}>
-                {person.photo ? (
-                  <img src={person.photo} alt="" width="88" height="88" loading="lazy" />
-                ) : (
-                  <span class="cb-portrait-blank" aria-hidden="true">?</span>
-                )}
-                <span class="cb-portrait-name">{person.name}</span>
-                <span class="cb-portrait-status">{person.status}</span>
-              </button>
-            </li>
-          ))}
-        </ol>
-        <h3 class="cb-group-label">Charged or convicted</h3>
-        <ol class="cb-portraits">
-          {suspects.map((person) => (
-            <li>
-              <button class="cb-portrait" data-select-person={person.id}>
-                {person.photo ? (
-                  <img src={person.photo} alt="" width="88" height="88" loading="lazy" />
-                ) : (
-                  <span class="cb-portrait-blank" aria-hidden="true">?</span>
-                )}
-                <span class="cb-portrait-name">{person.name}</span>
-                <span class="cb-portrait-status">{person.status}</span>
-              </button>
-            </li>
-          ))}
-        </ol>
+        {peopleGroups.map((group) => (
+          <>
+            <h3 class="cb-group-label">{group.label}</h3>
+            <ol class="cb-portraits">
+              {group.people.map((person) => (
+                <li>
+                  <button class="cb-portrait" data-select-person={person.id}>
+                    {person.photo ? (
+                      <img src={person.photo} alt="" width="88" height="88" loading="lazy" />
+                    ) : (
+                      <span class="cb-portrait-blank" aria-hidden="true">?</span>
+                    )}
+                    <span class="cb-portrait-name">{person.name}</span>
+                    <span class="cb-portrait-status">{person.status}</span>
+                  </button>
+                </li>
+              ))}
+            </ol>
+          </>
+        ))}
       </div>
 
       {people.map((person) => (
@@ -171,17 +184,21 @@ const pad = (n: number) => String(n).padStart(2, "0");
             </div>
           )}
           <p class="cb-body">{person.summary}</p>
-          <h4 class="cb-group-label">In the timeline</h4>
-          <ol class="cb-dossier-events">
-            {eventsForPerson(person.id).map((event) => (
-              <li>
-                <button class="cb-dossier-event" data-goto-event={event.id}>
-                  <span class="cb-dossier-event-date">{event.dateLabel}</span>
-                  <span>{event.title}</span>
-                </button>
-              </li>
-            ))}
-          </ol>
+          {eventsForPerson(person.id).length > 0 && (
+            <>
+              <h4 class="cb-group-label">In the timeline</h4>
+              <ol class="cb-dossier-events">
+                {eventsForPerson(person.id).map((event) => (
+                  <li>
+                    <button class="cb-dossier-event" data-goto-event={event.id}>
+                      <span class="cb-dossier-event-date">{event.dateLabel}</span>
+                      <span>{event.title}</span>
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            </>
+          )}
         </article>
       ))}
     </div>
@@ -209,11 +226,12 @@ const pad = (n: number) => String(n).padStart(2, "0");
   </nav>
 
   <dl class="cb-legend" aria-label="Map key">
-    <div><dt><span class="cb-dot" data-tone="remains"></span></dt><dd>Remains found</dd></div>
-    <div><dt><span class="cb-dot" data-tone="lastSeen"></span></dt><dd>Last seen</dd></div>
-    <div><dt><span class="cb-dot" data-tone="residence"></span></dt><dd>Suspect's home</dd></div>
-    <div><dt><span class="cb-line" data-tone="charge"></span></dt><dd>Charged</dd></div>
-    <div><dt><span class="cb-line" data-tone="conviction"></span></dt><dd>Convicted</dd></div>
+    {markerLegend.map(([kind, label]) => (
+      <div><dt><span class="cb-dot" data-tone={kind}></span></dt><dd>{label}</dd></div>
+    ))}
+    {lineLegend.map(([kind, label]) => (
+      <div><dt><span class="cb-line" data-tone={kind}></span></dt><dd>{label}</dd></div>
+    ))}
   </dl>
 
   <div class="cb-tooltip" id="cb-tooltip" role="presentation" hidden></div>
@@ -240,6 +258,10 @@ const pad = (n: number) => String(n).padStart(2, "0");
     --cb-remains: #e05252;
     --cb-lastseen: #e3a94f;
     --cb-residence: #edf1f7;
+    --cb-sighting: #62b6cb;
+    --cb-poi: #9aa3b2;
+    --cb-trace: #d97b6c;
+    --cb-lead: #62b6cb;
     --cb-charge: #b487e0;
     --cb-conviction: #58b98a;
     --cb-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -436,6 +458,9 @@ const pad = (n: number) => String(n).padStart(2, "0");
   .cb-event[data-tone="remains"] .cb-date { color: var(--cb-remains); }
   .cb-event[data-tone="lastSeen"] .cb-date { color: var(--cb-lastseen); }
   .cb-event[data-tone="residence"] .cb-date { color: var(--cb-residence); }
+  .cb-event[data-tone="sighting"] .cb-date { color: var(--cb-sighting); }
+  .cb-event[data-tone="poi"] .cb-date { color: var(--cb-poi); }
+  .cb-event[data-tone="lead"] .cb-date { color: var(--cb-lead); }
   .cb-event[data-tone="charge"] .cb-date { color: var(--cb-charge); }
   .cb-event[data-tone="conviction"] .cb-date { color: var(--cb-conviction); }
 
@@ -849,6 +874,9 @@ const pad = (n: number) => String(n).padStart(2, "0");
   .cb-tick[data-tone="remains"]::after { background: var(--cb-remains); }
   .cb-tick[data-tone="lastSeen"]::after { background: var(--cb-lastseen); }
   .cb-tick[data-tone="residence"]::after { background: var(--cb-residence); }
+  .cb-tick[data-tone="sighting"]::after { background: var(--cb-sighting); }
+  .cb-tick[data-tone="poi"]::after { background: var(--cb-poi); }
+  .cb-tick[data-tone="lead"]::after { background: var(--cb-lead); }
   .cb-tick[data-tone="charge"]::after { background: var(--cb-charge); }
   .cb-tick[data-tone="conviction"]::after { background: var(--cb-conviction); }
 
@@ -911,6 +939,8 @@ const pad = (n: number) => String(n).padStart(2, "0");
   .cb-dot[data-tone="remains"] { background: var(--cb-remains); }
   .cb-dot[data-tone="lastSeen"] { background: var(--cb-lastseen); }
   .cb-dot[data-tone="residence"] { background: var(--cb-residence); }
+  .cb-dot[data-tone="sighting"] { background: var(--cb-sighting); }
+  .cb-dot[data-tone="poi"] { background: var(--cb-poi); }
 
   .cb-line {
     display: block;
@@ -918,6 +948,8 @@ const pad = (n: number) => String(n).padStart(2, "0");
     height: 2px;
   }
 
+  .cb-line[data-tone="trace"] { background: var(--cb-trace); }
+  .cb-line[data-tone="lead"] { background: var(--cb-lead); }
   .cb-line[data-tone="charge"] { background: var(--cb-charge); }
   .cb-line[data-tone="conviction"] { background: var(--cb-conviction); }
 
@@ -1035,6 +1067,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
   };
   type ClientData = {
     defaultCamera: Camera;
+    boundsMaxZoom: number | null;
     markers: ClientMarker[];
     lines: ClientLine[];
     events: ClientEvent[];
@@ -1201,7 +1234,10 @@ const pad = (n: number) => String(n).padStart(2, "0");
           "remains", "#e05252",
           "lastSeen", "#e3a94f",
           "residence", "#edf1f7",
+          "sighting", "#62b6cb",
+          "poi", "#9aa3b2",
           "trace", "#d97b6c",
+          "lead", "#62b6cb",
           "charge", "#b487e0",
           "conviction", "#58b98a",
           "#9aa3b2",
@@ -1343,7 +1379,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
       if (mode === "timeline") {
         const event = events[eventIndex];
         if (event.camera) {
-          map.flyTo({ ...event.camera, duration: reduced ? 0 : 1600, essential: true });
+          map.flyTo({ ...event.camera, duration: reduced ? 0 : 1600, essential: true, padding: cameraPadding() });
           return;
         }
         event.markerIds.forEach((id) => {
@@ -1354,6 +1390,11 @@ const pad = (n: number) => String(n).padStart(2, "0");
           const line = data.lines.find((l) => l.id === id);
           if (line) coords.push(line.from, line.to);
         });
+        // Events with no geometry return to the case's default view
+        if (coords.length === 0) {
+          map.flyTo({ ...data.defaultCamera, duration: reduced ? 0 : 1400, essential: true });
+          return;
+        }
       } else if (personId) {
         data.markers.forEach((m) => m.personId === personId && coords.push(m.coords));
         data.lines.forEach((l) => l.personId === personId && coords.push(l.from, l.to));
@@ -1379,7 +1420,7 @@ const pad = (n: number) => String(n).padStart(2, "0");
       );
       map.fitBounds(bounds, {
         padding: cameraPadding(),
-        maxZoom: 11.2,
+        maxZoom: data.boundsMaxZoom ?? 11.2,
         duration: reduced ? 0 : 1600,
         essential: true,
       });

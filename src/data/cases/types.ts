@@ -10,12 +10,14 @@ export type MarkerKind =
   | "lastSeen" // amber: a person's last known location
   | "remains" // red: where remains were found
   | "residence" // slate: a suspect's home
+  | "sighting" // teal: a confirmed sighting or trace of activity
   | "poi"; // neutral point of interest
 
 export type LineKind =
   | "trace" // red: last seen -> remains for one person
   | "charge" // purple: suspect residence -> victims they are charged with
-  | "conviction"; // green: suspect residence -> victims they were convicted of
+  | "conviction" // green: suspect residence -> victims they were convicted of
+  | "lead"; // teal: a possible connection between places, e.g. where an item was found -> where it was used
 
 export interface CaseMarker {
   id: string;
@@ -63,7 +65,16 @@ export interface CaseEra {
   eventIds: string[];
 }
 
-export type PersonRole = "victim" | "suspect";
+export type PersonRole = "victim" | "suspect" | "missing" | "personOfInterest";
+
+/**
+ * How the people index groups its portraits ("The victims", "Persons of
+ * interest", ...). A case without groups gets the murder-case defaults.
+ */
+export interface PeopleGroup {
+  label: string;
+  roles: PersonRole[];
+}
 
 export interface CasePerson {
   id: string;
@@ -139,6 +150,12 @@ export interface CaseFile {
   title: string;
   subtitle: string;
   defaultCamera: { center: LngLat; zoom: number };
+  /**
+   * Zoom cap when the board fits an event's geometry. Defaults to 11.2,
+   * tuned for a region-scale case; single-city cases want ~14-15.
+   */
+  boundsMaxZoom?: number;
+  peopleGroups?: PeopleGroup[];
   people: CasePerson[];
   events: CaseEvent[];
   eras: CaseEra[];

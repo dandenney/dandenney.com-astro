@@ -1,0 +1,142 @@
+---
+import type { CaseFact } from "@/data/cases/types";
+import CaseFacts from "@/components/case-file/CaseFacts.astro";
+
+/**
+ * A person bulletin in the case-file identity: portrait beside the vital
+ * statistics, with the kicker and top rule in a shared semantic tone
+ * (lastSeen amber for missing persons, remains red for deaths). The
+ * default slot renders below the facts, for a tip-line callout with links.
+ * Expects Archivo + Fragment Mono on the page, like the other components.
+ */
+interface Props {
+  kicker: string; // e.g. "Missing person", "Suspicious death"
+  name: string;
+  /** e.g. "Last seen November 28, 2012 · Victoria, British Columbia" */
+  statusLine?: string;
+  photo?: string;
+  photoAlt?: string;
+  facts?: CaseFact[];
+  /** Accent for the kicker and top rule; defaults to lastSeen amber */
+  tone?: "lastSeen" | "remains";
+}
+
+const { kicker, name, statusLine, photo, photoAlt, facts, tone = "lastSeen" } = Astro.props;
+const accent = tone === "remains" ? "#e05252" : "#e3a94f";
+---
+
+<aside class="cpo" style={`--cpo-accent: ${accent}`}>
+  {photo && (
+    <figure class="cpo-photo">
+      <img src={photo} alt={photoAlt ?? name} width="310" height="354" loading="lazy" />
+    </figure>
+  )}
+  <div class="cpo-body">
+    <p class="cpo-kicker">{kicker}</p>
+    <h2 class="cpo-name">{name}</h2>
+    {statusLine && <p class="cpo-status">{statusLine}</p>}
+    {facts && facts.length > 0 && (
+      <div class="cpo-facts">
+        <CaseFacts facts={facts} />
+      </div>
+    )}
+    <div class="cpo-tip">
+      <slot />
+    </div>
+  </div>
+</aside>
+
+<style>
+  .cpo {
+    --cpo-bg: #0b0d12;
+    --cpo-panel: rgba(233, 235, 239, 0.03);
+    --cpo-ink: #e9ebef;
+    --cpo-ink-2: #a3abba;
+    --cpo-ink-3: #666e7d;
+    --cpo-hairline: rgba(233, 235, 239, 0.14);
+    --cpo-accent: #e3a94f;
+    --cpo-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --cpo-sans: "Archivo", system-ui, sans-serif;
+
+    display: grid;
+    grid-template-columns: minmax(200px, 280px) 1fr;
+    gap: clamp(1.5rem, 3.5vw, 2.75rem);
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+    border: 1px solid var(--cpo-hairline);
+    border-top: 2px solid var(--cpo-accent);
+    background: var(--cpo-panel);
+    color: var(--cpo-ink);
+    font-family: var(--cpo-sans);
+  }
+
+  .cpo-photo {
+    margin: 0;
+  }
+
+  .cpo-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: saturate(0.85);
+  }
+
+  .cpo-kicker {
+    margin: 0 0 0.75rem;
+    font-family: var(--cpo-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cpo-accent);
+  }
+
+  .cpo-name {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    font-weight: 820;
+    font-variation-settings: "wdth" 112;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+  }
+
+  .cpo-status {
+    margin: 0 0 1.4rem;
+    font-family: var(--cpo-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--cpo-ink-2);
+  }
+
+  .cpo-facts {
+    margin-bottom: 1.4rem;
+  }
+
+  .cpo-tip :global(p) {
+    margin: 0;
+    max-width: 58ch;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--cpo-ink-2);
+  }
+
+  .cpo-tip :global(a) {
+    color: var(--cpo-ink);
+    text-decoration-color: rgba(233, 235, 239, 0.35);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 200ms ease;
+  }
+
+  .cpo-tip :global(a:hover) {
+    text-decoration-color: var(--cpo-accent);
+  }
+
+  @media (max-width: 719px) {
+    .cpo {
+      grid-template-columns: 1fr;
+    }
+
+    .cpo-photo {
+      max-width: 260px;
+    }
+  }
+</style>

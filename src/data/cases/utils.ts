@@ -9,10 +9,13 @@ export function caseEventTone(caseFile: CaseFile, event: CaseEvent): CaseTone {
   const lineKinds = event.lineIds.map((id) => caseFile.lines.find((l) => l.id === id)?.kind);
   if (lineKinds.includes("charge")) return "charge";
   if (lineKinds.includes("conviction")) return "conviction";
+  if (lineKinds.includes("lead")) return "lead";
   const markerKinds = event.markerIds.map((id) => caseFile.markers.find((m) => m.id === id)?.kind);
   if (markerKinds.includes("remains")) return "remains";
   if (markerKinds.includes("lastSeen")) return "lastSeen";
+  if (markerKinds.includes("sighting")) return "sighting";
   if (markerKinds.includes("residence")) return "residence";
+  if (markerKinds.includes("poi")) return "poi";
   return "plain";
 }
 

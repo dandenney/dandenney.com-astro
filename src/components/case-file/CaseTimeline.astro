@@ -69,6 +69,9 @@ const resolvedGroups: TimelineGroup[] = groups ?? (entries ? [{ entries }] : [])
     --ct-remains: #e05252;
     --ct-lastseen: #e3a94f;
     --ct-residence: #edf1f7;
+    --ct-sighting: #62b6cb;
+    --ct-poi: #9aa3b2;
+    --ct-lead: #62b6cb;
     --ct-charge: #b487e0;
     --ct-conviction: #58b98a;
     --ct-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -186,6 +189,9 @@ const resolvedGroups: TimelineGroup[] = groups ?? (entries ? [{ entries }] : [])
   .ct-entry[data-tone="remains"] .ct-node { background: var(--ct-remains); }
   .ct-entry[data-tone="lastSeen"] .ct-node { background: var(--ct-lastseen); }
   .ct-entry[data-tone="residence"] .ct-node { background: var(--ct-residence); }
+  .ct-entry[data-tone="sighting"] .ct-node { background: var(--ct-sighting); }
+  .ct-entry[data-tone="poi"] .ct-node { background: var(--ct-poi); }
+  .ct-entry[data-tone="lead"] .ct-node { background: var(--ct-lead); }
   .ct-entry[data-tone="charge"] .ct-node { background: var(--ct-charge); }
   .ct-entry[data-tone="conviction"] .ct-node { background: var(--ct-conviction); }
 
@@ -262,6 +268,9 @@ const resolvedGroups: TimelineGroup[] = groups ?? (entries ? [{ entries }] : [])
   .ct-entry.is-current[data-tone="remains"] .ct-when { color: var(--ct-remains); }
   .ct-entry.is-current[data-tone="lastSeen"] .ct-when { color: var(--ct-lastseen); }
   .ct-entry.is-current[data-tone="residence"] .ct-when { color: var(--ct-residence); }
+  .ct-entry.is-current[data-tone="sighting"] .ct-when { color: var(--ct-sighting); }
+  .ct-entry.is-current[data-tone="poi"] .ct-when { color: var(--ct-poi); }
+  .ct-entry.is-current[data-tone="lead"] .ct-when { color: var(--ct-lead); }
   .ct-entry.is-current[data-tone="charge"] .ct-when { color: var(--ct-charge); }
   .ct-entry.is-current[data-tone="conviction"] .ct-when { color: var(--ct-conviction); }
 
