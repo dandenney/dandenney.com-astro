@@ -1,0 +1,788 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import { books } from "@/data/goodreads";
+
+export const prerender = true;
+
+type Book = (typeof books)[number];
+
+const finishedOf = (b: Book): string | null =>
+  b.dateFinished ?? b.dateStarted ?? null;
+const yearOf = (b: Book): number | null => {
+  const d = finishedOf(b);
+  return d ? new Date(d).getFullYear() : null;
+};
+
+// Sort most-recently-finished first (data file order is not guaranteed).
+const sorted = [...books].sort((a, b) => {
+  const da = finishedOf(a);
+  const db = finishedOf(b);
+  return (db ? new Date(db).getTime() : 0) - (da ? new Date(da).getTime() : 0);
+});
+const featured = sorted[0];
+const featuredFinished = finishedOf(featured);
+const shelf = sorted.slice(1);
+
+// ── Stats ──────────────────────────────────────────────────────────────
+const total = books.length;
+const years = books
+  .map(yearOf)
+  .filter((y): y is number => y != null);
+const minYear = Math.min(...years);
+const maxYear = Math.max(...years);
+
+const rated = books.filter((b) => b.rating > 0);
+const avgRating =
+  rated.reduce((sum, b) => sum + b.rating, 0) / rated.length;
+
+const authorCounts = new Map<string, number>();
+for (const b of books) {
+  const a = b.author.replace(/\s+/g, " ").trim();
+  authorCounts.set(a, (authorCounts.get(a) ?? 0) + 1);
+}
+let topAuthor = "";
+let topAuthorCount = 0;
+for (const [a, c] of authorCounts) {
+  if (c > topAuthorCount) {
+    topAuthor = a;
+    topAuthorCount = c;
+  }
+}
+
+// ── Year groups (shelf only, featured is pulled out on top) ────────────
+const groupCounts = new Map<number, number>();
+for (const b of shelf) {
+  const y = yearOf(b);
+  if (y == null) continue;
+  groupCounts.set(y, (groupCounts.get(y) ?? 0) + 1);
+}
+
+// ── Sort ranks for the client-side controls ────────────────────────────
+const ratingRank = new Map<number, number>();
+[...shelf.keys()]
+  .sort((x, y) => shelf[y].rating - shelf[x].rating || x - y)
+  .forEach((idx, rank) => ratingRank.set(idx, rank));
+
+const authorRank = new Map<number, number>();
+[...shelf.keys()]
+  .sort(
+    (x, y) =>
+      shelf[x].author.localeCompare(shelf[y].author) ||
+      shelf[x].title.localeCompare(shelf[y].title),
+  )
+  .forEach((idx, rank) => authorRank.set(idx, rank));
+
+const titleRank = new Map<number, number>();
+[...shelf.keys()]
+  .sort((x, y) =>
+    shelf[x].title
+      .replace(/^(the|a|an)\s+/i, "")
+      .localeCompare(shelf[y].title.replace(/^(the|a|an)\s+/i, "")),
+  )
+  .forEach((idx, rank) => titleRank.set(idx, rank));
+
+const beers = (n: number) => "\u{1F37A}".repeat(n);
+---
+
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Bookshelf | Dan Denney"
+      description="Every book on my archived Goodreads shelf, from 2010 to 2020. Hover a cover to open it. Ratings in beers."
+    />
+  </head>
+  <body class="bg-white dark:bg-slate-900">
+    <main
+      class="relative z-10 bg-white shadow-xs dark:bg-slate-900 dark:text-slate-200"
+    >
+      <Header />
+
+      <div id="main-content" class="mx-auto max-w-(--breakpoint-2xl)">
+        <!-- ── Masthead ─────────────────────────────────────────── -->
+        <section class="px-6 pt-6 lg:px-10">
+          <p
+            class="font-mono text-xs tracking-wide text-red-700 uppercase dark:text-red-300"
+          >
+            The reading log
+          </p>
+          <h1
+            class="mt-2 max-w-[16ch] text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-slate-100"
+          >
+            Bookshelf
+          </h1>
+          <p
+            class="mt-3 max-w-[60ch] text-base text-pretty text-gray-600 dark:text-slate-400"
+          >
+            Every book from my archived Goodreads shelf, kept as a static
+            snapshot since the API shut down. Heavy on true crime, thrillers,
+            and a stubborn philosophy phase. Hover a cover to open it. Ratings
+            in {"\u{1F37A}"}.
+          </p>
+
+          <!-- Stats ribbon -->
+          <dl
+            class="mt-8 grid grid-cols-2 border-y border-gray-950/10 sm:grid-cols-4 dark:border-white/10"
+          >
+            <div class="py-4 pr-6 max-sm:border-b max-sm:border-gray-950/10 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-gray-950/10 sm:[&:not(:first-child)]:pl-6 dark:max-sm:border-white/10 dark:sm:[&:not(:first-child)]:border-white/10">
+              <dt class="font-mono text-xs tracking-wide text-gray-500 uppercase dark:text-slate-500">
+                Books read
+              </dt>
+              <dd class="mt-1 text-3xl font-bold tabular-nums text-gray-900 dark:text-slate-100">
+                {total}
+              </dd>
+            </div>
+            <div class="py-4 pr-6 max-sm:border-b max-sm:border-gray-950/10 max-sm:pl-6 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-gray-950/10 sm:[&:not(:first-child)]:pl-6 dark:max-sm:border-white/10 dark:sm:[&:not(:first-child)]:border-white/10">
+              <dt class="font-mono text-xs tracking-wide text-gray-500 uppercase dark:text-slate-500">
+                Logged
+              </dt>
+              <dd class="mt-1 text-3xl font-bold tabular-nums text-gray-900 dark:text-slate-100">
+                {minYear}<span class="text-gray-400 dark:text-slate-600">–</span>{maxYear}
+              </dd>
+            </div>
+            <div class="py-4 pr-6 max-sm:border-gray-950/10 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-gray-950/10 sm:[&:not(:first-child)]:pl-6 dark:sm:[&:not(:first-child)]:border-white/10">
+              <dt class="font-mono text-xs tracking-wide text-gray-500 uppercase dark:text-slate-500">
+                Avg rating
+              </dt>
+              <dd class="mt-1 text-3xl font-bold tabular-nums text-gray-900 dark:text-slate-100">
+                {avgRating.toFixed(1)}<span class="ml-1 align-middle text-xl">{"\u{1F37A}"}</span>
+              </dd>
+            </div>
+            <div class="py-4 pr-6 border-l border-gray-950/10 pl-6 dark:border-white/10">
+              <dt class="font-mono text-xs tracking-wide text-gray-500 uppercase dark:text-slate-500">
+                Most read
+              </dt>
+              <dd class="mt-1 text-base font-semibold text-gray-900 dark:text-slate-100">
+                {topAuthor}
+                <span class="block font-mono text-xs font-normal text-gray-500 dark:text-slate-500">
+                  {topAuthorCount} books
+                </span>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- ── Featured: last read ──────────────────────────────── -->
+        <section class="px-6 py-10 lg:px-10">
+          <div
+            class="relative overflow-hidden rounded-2xl border border-gray-950/10 bg-gray-50 dark:border-white/10 dark:bg-slate-800/40"
+          >
+            <div
+              class="grid items-center gap-8 p-8 sm:p-10 md:grid-cols-[auto_1fr] md:gap-12"
+            >
+              <div class="book-stage justify-self-center md:justify-self-start">
+                <div class="book-container">
+                  <div class="book book--featured book--intro">
+                    <img
+                      alt={`Cover of ${featured.title} by ${featured.author}`}
+                      src={`/goodreads/${featured.slug}@2x.jpg`}
+                      width="220"
+                      height="330"
+                    />
+                    <span class="book__fallback" aria-hidden="true">
+                      <span class="book__fallback-title">{featured.title}</span>
+                      <span class="book__fallback-author">{featured.author}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="max-w-[46ch]">
+                <p
+                  class="font-mono text-xs tracking-wide text-red-700 uppercase dark:text-red-300"
+                >
+                  Last one I finished
+                </p>
+                <h2
+                  class="mt-2 text-2xl font-bold tracking-tight text-balance text-gray-900 sm:text-3xl dark:text-slate-100"
+                >
+                  <a
+                    class="rounded bg-[length:0%_100%] bg-gradient-to-b from-transparent from-90% to-red-700 to-90% bg-no-repeat no-underline transition-[background-size] duration-200 hover:bg-[length:100%_100%] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 dark:to-red-300 dark:focus-visible:outline-red-300"
+                    href={featured.link}
+                  >
+                    {featured.title}
+                  </a>
+                </h2>
+                <p class="mt-2 text-base text-gray-600 dark:text-slate-400">
+                  by {featured.author}
+                </p>
+
+                <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <span
+                    class="text-2xl leading-none"
+                    role="img"
+                    aria-label={`Rated ${featured.rating} out of 5`}
+                    title={`${featured.rating}/5`}
+                  >
+                    {featured.rating > 0 ? beers(featured.rating) : ""}
+                    {featured.rating === 0 && (
+                      <span class="font-mono text-xs text-gray-400 dark:text-slate-500">
+                        Unrated
+                      </span>
+                    )}
+                  </span>
+                  {featuredFinished && (
+                    <span
+                      class="font-mono text-xs tracking-wide text-gray-500 uppercase dark:text-slate-500"
+                    >
+                      Finished <FormattedDate date={new Date(featuredFinished)} />
+                    </span>
+                  )}
+                </div>
+
+                <p class="mt-6">
+                  <a
+                    class="inline-flex items-center gap-1.5 rounded-md bg-red-700 px-4 py-2.5 text-sm font-semibold text-white shadow-xs transition-transform hover:bg-red-800 focus-visible:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 dark:bg-red-600 dark:hover:bg-red-500 dark:focus-visible:outline-red-500 [@media(hover:hover)]:hover:scale-105"
+                    href={featured.link}
+                  >
+                    View on Goodreads
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Controls ─────────────────────────────────────────── -->
+        <div
+          class="sticky top-0 z-20 border-y border-gray-950/10 bg-white/85 backdrop-blur-md dark:border-white/10 dark:bg-slate-900/85"
+        >
+          <div
+            class="flex flex-wrap items-center gap-x-6 gap-y-3 px-6 py-3 lg:px-10"
+          >
+            <label class="relative flex-1 min-w-[12rem]">
+              <span class="sr-only">Search books</span>
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                class="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400 dark:text-slate-500"
+                aria-hidden="true"
+              >
+                <path d="m17.5 17.5-3.5-3.5m1.5-4.5a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <input
+                type="search"
+                id="book-search"
+                name="q"
+                placeholder="Search title or author"
+                autocomplete="off"
+                class="w-full rounded-md bg-white py-2 pr-3 pl-10 text-sm text-gray-900 ring-1 ring-black/10 placeholder:text-gray-400 focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:outline-none max-sm:text-base/6 dark:bg-slate-800 dark:text-slate-100 dark:ring-white/10 dark:placeholder:text-slate-500 dark:focus-visible:ring-red-400"
+              />
+            </label>
+
+            <div class="flex items-center gap-3">
+              <label
+                for="book-sort"
+                class="font-mono text-xs tracking-wide text-gray-500 uppercase dark:text-slate-500"
+              >
+                Sort
+              </label>
+              <div class="inline-grid grid-cols-[1fr_--spacing(8)] items-center">
+                <select
+                  id="book-sort"
+                  name="sort"
+                  class="col-span-full row-start-1 appearance-none rounded-md bg-white py-2 pr-8 pl-3 text-sm font-medium text-gray-900 ring-1 ring-black/10 focus-visible:ring-2 focus-visible:ring-red-700 focus-visible:outline-none dark:bg-slate-800 dark:text-slate-100 dark:ring-white/10 dark:focus-visible:ring-red-400"
+                >
+                  <option value="recent">Most recent</option>
+                  <option value="rating">Highest rated</option>
+                  <option value="author">Author</option>
+                  <option value="title">Title</option>
+                </select>
+                <svg
+                  viewBox="0 0 8 5"
+                  width="8"
+                  height="5"
+                  fill="none"
+                  class="pointer-events-none col-start-2 row-start-1 place-self-center text-gray-500 dark:text-slate-400"
+                >
+                  <path d="M.5.5 4 4 7.5.5" stroke="currentcolor" />
+                </svg>
+              </div>
+            </div>
+
+            <p
+              class="font-mono text-xs tracking-wide text-gray-500 tabular-nums max-sm:w-full dark:text-slate-500"
+            >
+              <span id="book-count">{shelf.length}</span> of {shelf.length}
+            </p>
+          </div>
+        </div>
+
+        <!-- ── Shelf ────────────────────────────────────────────── -->
+        <section class="px-6 py-10 lg:px-10">
+          <ul id="shelf" class="shelf-grid" role="list">
+            {
+              shelf.map((book, i) => {
+                const y = yearOf(book);
+                const showRail = i === 0 || yearOf(shelf[i - 1]) !== y;
+                return (
+                  <>
+                    {showRail && y != null && (
+                      <li class="year-rail" data-rail={y}>
+                        <span class="year-rail__num">{y}</span>
+                        <span class="year-rail__count">
+                          {groupCounts.get(y)}{" "}
+                          {groupCounts.get(y) === 1 ? "book" : "books"}
+                        </span>
+                      </li>
+                    )}
+                    <li
+                      class="book-card"
+                      data-title={book.title.toLowerCase().trim()}
+                      data-author={book.author.toLowerCase().trim()}
+                      data-ro={ratingRank.get(i)}
+                      data-ao={authorRank.get(i)}
+                      data-to={titleRank.get(i)}
+                    >
+                      <a
+                        class="book-card__link"
+                        href={book.link}
+                        aria-label={`${book.title} by ${book.author}, rated ${book.rating} out of 5`}
+                      >
+                        <div class="book-container">
+                          <div class="book book--grid">
+                            <img
+                              alt=""
+                              loading="lazy"
+                              src={`/goodreads/${book.slug}@2x.jpg`}
+                              width="120"
+                              height="180"
+                            />
+                            <span class="book__fallback" aria-hidden="true">
+                              <span class="book__fallback-title">{book.title}</span>
+                              <span class="book__fallback-author">{book.author}</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="book-card__meta">
+                          <span
+                            class="book-card__rating"
+                            role="img"
+                            aria-label={`Rated ${book.rating} out of 5`}
+                          >
+                            {book.rating > 0 ? beers(book.rating) : "·"}
+                          </span>
+                          <span class="book-card__title">{book.title}</span>
+                          <span class="book-card__author">{book.author}</span>
+                        </div>
+                      </a>
+                    </li>
+                  </>
+                );
+              })
+            }
+          </ul>
+
+          <p
+            id="no-results"
+            hidden
+            class="py-16 text-center text-base text-gray-500 dark:text-slate-400"
+          >
+            No books match that search.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <Footer />
+
+    <style>
+      /* ── 3D book (parametrized so any size keeps the geometry) ─────── */
+      .book-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        perspective: 900px;
+      }
+
+      .book {
+        --w: 120px;
+        --h: 180px;
+        --t: 26px;
+        position: relative;
+        width: var(--w);
+        height: var(--h);
+        transform: rotateY(-28deg);
+        transform-style: preserve-3d;
+        transition: transform 0.9s ease;
+      }
+
+      /* Front cover (the img) */
+      .book > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--w);
+        height: var(--h);
+        border-radius: 0 3px 3px 0;
+        background-color: #01060f;
+        object-fit: cover;
+        box-shadow:
+          5px 6px 22px rgba(0, 0, 0, 0.35),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+        transform: translateZ(calc(var(--t) / 2));
+      }
+
+      /* Fore-edge pages */
+      .book::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: calc(var(--w) - var(--t) / 2);
+        width: var(--t);
+        height: calc(var(--h) - 4px);
+        transform: rotateY(90deg);
+        background: repeating-linear-gradient(
+          90deg,
+          #fff 0,
+          #f2f2f0 1px,
+          #fff 2px,
+          #ececeb 3px
+        );
+      }
+
+      /* Back cover */
+      .book::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--w);
+        height: var(--h);
+        border-radius: 0 3px 3px 0;
+        background-color: #01060f;
+        transform: translateZ(calc(var(--t) / -2));
+        box-shadow: -8px 0 14px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Designed fallback shown when a cover image is missing */
+      .book__fallback {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: var(--w);
+        height: var(--h);
+        padding: 14% 12% 12%;
+        border-radius: 0 3px 3px 0;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 40%),
+          linear-gradient(145deg, #1e2733 0%, #0b0f16 70%);
+        border-left: 4px solid #b91c1c;
+        box-shadow:
+          5px 6px 22px rgba(0, 0, 0, 0.35),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+        transform: translateZ(calc(var(--t) / 2));
+        overflow: hidden;
+      }
+      .book--nocover > img {
+        display: none;
+      }
+      .book--nocover .book__fallback {
+        display: flex;
+      }
+      .book__fallback-title {
+        font-size: 0.72rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #f1f5f9;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .book__fallback-author {
+        margin-top: auto;
+        font-size: 0.62rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #cbd5e1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .book--featured {
+        --w: 220px;
+        --h: 330px;
+        --t: 46px;
+        transform: rotateY(-22deg);
+      }
+      .book--featured .book__fallback-title {
+        font-size: 1.35rem;
+        -webkit-line-clamp: 6;
+      }
+      .book--featured .book__fallback-author {
+        font-size: 0.95rem;
+      }
+
+      /* One-time open flourish for the featured book */
+      @keyframes bookIntro {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(-22deg);
+        }
+      }
+      .book--intro {
+        animation: bookIntro 1.1s ease 0.15s 1 both;
+      }
+
+      /* Open on hover / focus */
+      .book-stage:hover .book,
+      .book-card__link:hover .book,
+      .book-card__link:focus-visible .book {
+        transform: rotateY(0deg);
+      }
+
+      /* ── Shelf grid ────────────────────────────────────────────────── */
+      .shelf-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      @media (min-width: 480px) {
+        .shelf-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 640px) {
+        .shelf-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 768px) {
+        .shelf-grid {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 1024px) {
+        .shelf-grid {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 3rem 1.5rem;
+        }
+      }
+      @media (min-width: 1280px) {
+        .shelf-grid {
+          grid-template-columns: repeat(7, minmax(0, 1fr));
+        }
+      }
+
+      /* Year rail spans the full row */
+      .year-rail {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgb(2 6 23 / 0.1);
+      }
+      .year-rail:first-child {
+        margin-top: 0;
+      }
+      :global(.dark) .year-rail {
+        border-color: rgb(255 255 255 / 0.1);
+      }
+      .year-rail__num {
+        font-size: 1.875rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        font-variant-numeric: tabular-nums;
+        color: #b91c1c;
+      }
+      :global(.dark) .year-rail__num {
+        color: #fca5a5;
+      }
+      .year-rail__count {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #6b7280;
+      }
+      :global(.dark) .year-rail__count {
+        color: #64748b;
+      }
+
+      /* ── Book card ─────────────────────────────────────────────────── */
+      .book-card {
+        display: flex;
+      }
+      .book-card[hidden] {
+        display: none;
+      }
+      .book-card__link {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        outline-offset: 4px;
+      }
+      .book-card__link:focus-visible {
+        outline: 2px solid #b91c1c;
+      }
+      :global(.dark) .book-card__link:focus-visible {
+        outline-color: #fca5a5;
+      }
+
+      .book-card .book-container {
+        height: 180px;
+        width: 100%;
+      }
+
+      .book-card__meta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.125rem;
+        width: 100%;
+        text-align: center;
+      }
+      .book-card__rating {
+        font-size: 1.05rem;
+        line-height: 1;
+        min-height: 1.1rem;
+        letter-spacing: 0.06em;
+      }
+      .book-card__title {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 1.25;
+        color: #111827;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      :global(.dark) .book-card__title {
+        color: #e2e8f0;
+      }
+      .book-card__link:hover .book-card__title {
+        color: #b91c1c;
+      }
+      :global(.dark) .book-card__link:hover .book-card__title {
+        color: #fca5a5;
+      }
+      .book-card__author {
+        font-size: 0.75rem;
+        line-height: 1.2;
+        color: #6b7280;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      :global(.dark) .book-card__author {
+        color: #94a3b8;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .book {
+          transition: none;
+          transform: rotateY(-16deg);
+        }
+        .book--featured {
+          transform: rotateY(-16deg);
+        }
+        .book--intro {
+          animation: none;
+        }
+      }
+    </style>
+
+    <script>
+      // Missing cover -> reveal the styled fallback spine. `error` doesn't
+      // bubble, so listen in the capture phase. Also catch already-failed
+      // images that error before this runs.
+      const flagMissing = (img: HTMLImageElement) =>
+        img.closest(".book")?.classList.add("book--nocover");
+      document.addEventListener(
+        "error",
+        (e) => {
+          const t = e.target;
+          if (t instanceof HTMLImageElement) flagMissing(t);
+        },
+        true,
+      );
+      document
+        .querySelectorAll<HTMLImageElement>(".book > img")
+        .forEach((img) => {
+          if (img.complete && img.naturalWidth === 0) flagMissing(img);
+        });
+
+      const search = document.getElementById(
+        "book-search",
+      ) as HTMLInputElement | null;
+      const sort = document.getElementById(
+        "book-sort",
+      ) as HTMLSelectElement | null;
+      const shelf = document.getElementById("shelf");
+      const countEl = document.getElementById("book-count");
+      const noResults = document.getElementById("no-results");
+
+      if (search && sort && shelf && countEl && noResults) {
+        const cards = Array.from(
+          shelf.querySelectorAll<HTMLElement>(".book-card"),
+        );
+        const rails = Array.from(
+          shelf.querySelectorAll<HTMLElement>(".year-rail"),
+        );
+
+        const orderKey: Record<string, string> = {
+          rating: "ro",
+          author: "ao",
+          title: "to",
+        };
+
+        const apply = () => {
+          const q = search.value.trim().toLowerCase();
+          const s = sort.value;
+          const grouped = s === "recent" && q === "";
+
+          for (const rail of rails) {
+            rail.style.display = grouped ? "" : "none";
+          }
+
+          let visible = 0;
+          for (const card of cards) {
+            const match =
+              q === "" ||
+              (card.dataset.title ?? "").includes(q) ||
+              (card.dataset.author ?? "").includes(q);
+            card.hidden = !match;
+            if (match) visible++;
+
+            if (s === "recent") {
+              card.style.order = "";
+            } else {
+              card.style.order = card.dataset[orderKey[s]] ?? "";
+            }
+          }
+
+          countEl.textContent = String(visible);
+          noResults.hidden = visible !== 0;
+        };
+
+        search.addEventListener("input", apply);
+        sort.addEventListener("change", apply);
+      }
+    </script>
+  </body>
+</html>
