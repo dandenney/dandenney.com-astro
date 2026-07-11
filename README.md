@@ -61,6 +61,41 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🤖 Claude Code commands
+
+This repo ships a set of custom [Claude Code](https://claude.com/claude-code) slash commands in `.claude/commands/`. They encode the repetitive, easy-to-get-wrong workflows (bet entry, settlement, content scaffolding) so they run the same way every time. Type the command in a Claude Code session; anything after the name is the argument.
+
+**Betting**
+
+| Command                    | What it does                                                                 |
+| :------------------------- | :-------------------------------------------------------------------------- |
+| `/add-bet <pick> \| <line>`  | Append a new martingale bet for both Dan and GardenOf (next sequential id).  |
+| `/add-dk <pick> \| <line>`   | Append a new DraftKings bet.                                                 |
+| `/add-rithmm-picks`        | Import Rithmm Smart Signal picks from an Obsidian daily note into `src/data/rithhmmPicks.ts`. |
+| `/add-bets-log`            | Add a Bets Log entry.                                                        |
+| `/settle-martingale`       | Settle pending martingale bets for Dan and GardenOf.                         |
+| `/settle-dk`               | Settle pending DraftKings bets.                                              |
+| `/settle-rithmm-picks <date>` | Settle pending Rithmm picks for a date from the daily note's Resolution section. |
+
+**Content**
+
+| Command                     | What it does                                                                        |
+| :-------------------------- | :--------------------------------------------------------------------------------- |
+| `/new-content <type> <title>` | Scaffold a content entry with correct frontmatter. Types: `post`, `blip`, `review`, `song`, `tinkering`, `plus-ev`, `artificially-intelligent`. |
+| `/yil`                      | Start a "Yesterday I Learned" entry.                                               |
+| `/yil-design <date>`        | Generate the `DESIGN.md` for a YIL date.                                            |
+| `/yil-build`                | Build the YIL page from its `DESIGN.md`.                                            |
+
+**Meta**
+
+| Command   | What it does                                                                 |
+| :-------- | :-------------------------------------------------------------------------- |
+| `/pr`     | Open a PR for the current work. (Rarely used, this project commits straight to `main`.) |
+
+Reach-for-when-needed skills also live in `.claude/skills/`: `graphify` (codebase knowledge graph, see below), `pilcrow` (prose linting and editing), `grill-me` (stress-test a plan), `new-content`, plus a symlinked design-review library (`critique`, `polish`, `audit`, `impeccable`, and friends) sourced from `.agents/skills/`.
+
+Automation runs via a `Stop` hook in `.claude/settings.local.json` (`.claude/hooks/warn-unpushed.sh`) that warns at turn's end whenever the repo has uncommitted or unpushed work, so a session can't quietly leave changes off GitHub.
+
 ## Shipp MVP integration (sports betting tracker first)
 
 Primary scope now lives on `/martingale-tracker` (pending bet signal panel).
