@@ -1,0 +1,773 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import CaseSources from "@/components/case-file/CaseSources.astro";
+import CaseTimeline from "@/components/case-file/CaseTimeline.astro";
+import { afterGroups, beatClockLabels, nightBeats, openQuestions, shannanSources } from "@/data/cases/shannanGilbert";
+
+export const prerender = true;
+
+const title = "The Last Hours of Shannan Gilbert";
+const summary =
+  "A scroll-driven telling of the night of April 30 – May 1, 2010, when Shannan Gilbert disappeared into the Oak Beach marsh — and the search for her uncovered the Gilgo Beach murders.";
+const pubDate = new Date("2026-07-10");
+const ogImage = "/posts/true-crime/mapping-the-long-island-murder-victims/shannan-gilbert.jpg";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <BaseHead title={title} description={summary} image={ogImage} type="blogpost" datePublished={pubDate} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Fragment+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="sg">
+    <header class="sg-nav">
+      <a href="/">dandenney.com</a>
+      <a href="/true-crime/cases/long-island">View the full Long Island case board</a>
+    </header>
+
+    <section class="sg-hero">
+      <p class="sg-meta">
+        <span>Case file</span>
+        <span>Oak Beach, NY</span>
+        <span>April 30 – May 1, 2010</span>
+      </p>
+      <h1 class="sg-title">Shannan<br />Gilbert</h1>
+      <div class="sg-lede">
+        <p>
+          Shannan Gilbert's disappearance is one of the most consequential missing persons cases in recent American
+          history. She is the reason the Gilgo Beach serial killings were uncovered — and yet investigators have never
+          concluded that she was a victim of the same killer. Her death remains the biggest unresolved question in the
+          case.
+        </p>
+        <p>
+          What follows steps through her final confirmed hours, as the public record tells them. The scene below is an
+          evocation of that night, not a reconstruction: a dark marsh, a row of porch lights, and the places we know
+          she was.
+        </p>
+      </div>
+      <p class="sg-hint" aria-hidden="true">↓</p>
+    </section>
+
+    <section class="sg-night" data-night aria-label="The night, told in sequence">
+      <div class="sg-stage">
+        <canvas class="sg-canvas" data-canvas aria-hidden="true"></canvas>
+        <div class="sg-veil" aria-hidden="true"></div>
+        <div class="sg-readout" aria-hidden="true">
+          <p class="sg-readout-date">APR 30 → MAY 1, 2010</p>
+          <p class="sg-readout-clock" data-clock>12:00 AM</p>
+          <p class="sg-readout-caption" data-caption>AROUND MIDNIGHT</p>
+        </div>
+      </div>
+      <ol class="sg-beats" role="list">
+        {nightBeats.map((beat, index) => (
+          <li
+            class="sg-beat"
+            data-beat
+            data-minutes={beat.clockMinutes ?? ""}
+            data-caption={beatClockLabels[beat.id]}
+            data-side={index < 3 ? "l" : "r"}
+            id={`night-${beat.id}`}
+          >
+            <article class="sg-card" data-tone={beat.tone ?? "plain"}>
+              <p class="sg-card-kicker">
+                <span class="sg-card-dot" aria-hidden="true"></span>
+                {beat.kicker}
+                <span class="sg-card-clock">{beatClockLabels[beat.id]}</span>
+              </p>
+              <h2 class="sg-card-title">{beat.title}</h2>
+              {beat.body.map((paragraph) => (
+                <p class="sg-card-body">{paragraph}</p>
+              ))}
+              {beat.quote && (
+                <blockquote class="sg-card-quote">
+                  <p>“{beat.quote.text}”</p>
+                  <cite>{beat.quote.attribution}</cite>
+                </blockquote>
+              )}
+            </article>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="sg-record">
+      <header class="sg-section-head">
+        <p class="sg-kicker">What followed</p>
+        <h2>The search that changed everything</h2>
+        <p>
+          The hunt for one missing woman became one of the largest serial murder investigations in U.S. history.
+          Shannan was the last of them to be found.
+        </p>
+      </header>
+      <CaseTimeline groups={afterGroups} />
+    </section>
+
+    <section class="sg-questions">
+      <header class="sg-section-head">
+        <p class="sg-kicker">Unresolved</p>
+        <h2>Three questions</h2>
+        <p>Sixteen years on, the record still cannot answer the only questions that matter.</p>
+      </header>
+      <ol class="sg-question-list" role="list">
+        {openQuestions.map((q, index) => (
+          <li class="sg-question">
+            <p class="sg-question-index">{String(index + 1).padStart(2, "0")}</p>
+            <div>
+              <h3>{q.question}</h3>
+              <p>{q.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="sg-outro">
+      <div class="sg-outro-col">
+        <h2>Her place in the case</h2>
+        <p>
+          Every discovery at Gilgo Beach traces back to the search for Shannan. When she was finally found in December
+          2011, she was in the marsh itself — not wrapped in burlap, not laid beside Ocean Parkway like the victims her
+          search uncovered. Officially her death is unconnected to the murders. Circumstantially, the debate has never
+          ended.
+        </p>
+        <p>
+          To see where her story sits among the others, visit the
+          <a href="/true-crime/cases/long-island">interactive Long Island case board</a>.
+        </p>
+      </div>
+      <div class="sg-outro-col">
+        <h2>About this page</h2>
+        <p>
+          The scene on this page is an evocation, not a reconstruction. Locations are abstract, times outside the 911
+          call are approximate, and nothing here depicts Shannan herself — only the places the record says she was,
+          and the light she deserves to be remembered by.
+        </p>
+        <p>Made with care for Shannan and her family.</p>
+      </div>
+    </section>
+
+    <section class="sg-sources">
+      <header class="sg-section-head">
+        <p class="sg-kicker">Citations</p>
+        <h2>Sources</h2>
+        <p>The reporting and research this page draws on.</p>
+      </header>
+      <CaseSources groups={shannanSources} />
+    </section>
+
+    <footer class="sg-footer">
+      <a href="/">dandenney.com</a>
+      <span>Made with care for the victims and their families</span>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: dark;
+  }
+
+  .sg {
+    --sg-bg: #0b0d12;
+    --sg-ink: #e9ebef;
+    --sg-ink-2: #a3abba;
+    --sg-ink-3: #666e7d;
+    --sg-hairline: rgba(233, 235, 239, 0.14);
+    --sg-amber: #e3a94f;
+    --sg-red: #e05252;
+    --sg-teal: #62b6cb;
+    --sg-poi: #9aa3b2;
+    --sg-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sg-sans: "Archivo", system-ui, sans-serif;
+    --sg-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    margin: 0;
+    background: var(--sg-bg);
+    color: var(--sg-ink);
+    font-family: var(--sg-sans);
+  }
+
+  .sg a {
+    color: inherit;
+    text-decoration-color: rgba(233, 235, 239, 0.35);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 200ms ease;
+  }
+
+  .sg a:hover {
+    text-decoration-color: var(--sg-amber);
+  }
+
+  .sg-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem clamp(1rem, 4vw, 3rem);
+    font-family: var(--sg-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .sg-nav a {
+    text-decoration: none;
+    color: var(--sg-ink-2);
+  }
+
+  .sg-nav a:hover {
+    color: var(--sg-ink);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .sg-hero {
+    padding: clamp(3rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem) clamp(2.5rem, 7vh, 5rem);
+    max-width: 78rem;
+    margin: 0 auto;
+  }
+
+  .sg-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    margin: 0 0 1.75rem;
+    font-family: var(--sg-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sg-ink-2);
+  }
+
+  .sg-meta span + span {
+    position: relative;
+  }
+
+  .sg-meta span + span::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    width: 3px;
+    height: 3px;
+    border-radius: 999px;
+    translate: 0 -50%;
+    background: var(--sg-ink-3);
+  }
+
+  .sg-title {
+    margin: 0 0 2.25rem;
+    font-size: clamp(3rem, 11vw, 8.5rem);
+    font-weight: 870;
+    font-variation-settings: "wdth" 118;
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .sg-lede {
+    max-width: 62ch;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .sg-lede p {
+    margin: 0;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.7;
+    color: #c3c9d4;
+  }
+
+  .sg-hint {
+    margin: 3rem 0 0;
+    font-family: var(--sg-mono);
+    color: var(--sg-ink-3);
+    animation: sg-drift 2.4s ease-in-out infinite;
+  }
+
+  @keyframes sg-drift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ---------- The night ---------- */
+
+  .sg-night {
+    position: relative;
+  }
+
+  .sg-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #04060c 0%, #101a2c 62%, #070b14 100%);
+  }
+
+  .sg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .sg-veil {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(to bottom, rgba(11, 13, 18, 0.85), transparent 18%, transparent 82%, rgba(11, 13, 18, 0.7)),
+      radial-gradient(120% 90% at 50% 55%, transparent 60%, rgba(4, 6, 12, 0.42));
+  }
+
+  .sg-readout {
+    position: absolute;
+    top: clamp(1rem, 3vh, 2rem);
+    right: clamp(1rem, 4vw, 3rem);
+    text-align: right;
+    font-family: var(--sg-mono);
+    pointer-events: none;
+  }
+
+  .sg-readout-date {
+    margin: 0 0 0.4rem;
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    color: var(--sg-ink-3);
+  }
+
+  .sg-readout-clock {
+    margin: 0;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    letter-spacing: 0.08em;
+    color: var(--sg-ink);
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 2px 18px rgba(4, 6, 12, 0.9);
+  }
+
+  .sg-readout-caption {
+    margin: 0.35rem 0 0;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    color: var(--sg-amber);
+    transition: opacity 400ms var(--sg-ease);
+  }
+
+  .sg-readout-caption.is-swapping {
+    opacity: 0;
+  }
+
+  .sg-beats {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    margin: -100vh 0 0;
+    margin-top: -100svh;
+    padding: 0;
+  }
+
+  .sg-beat {
+    min-height: 135vh;
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(1rem, 5vw, 4.5rem);
+  }
+
+  .sg-beat:first-child {
+    padding-top: 38vh;
+  }
+
+  .sg-beat:last-child {
+    min-height: 145vh;
+    align-items: flex-end;
+    padding-bottom: 16vh;
+  }
+
+  .sg-beat[data-side="r"] {
+    justify-content: flex-end;
+  }
+
+  .sg-card {
+    max-width: 26.5rem;
+    padding: 1.5rem 1.6rem 1.6rem;
+    border: 1px solid var(--sg-hairline);
+    background: color-mix(in srgb, var(--sg-bg) 76%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0.3;
+    transform: translateY(14px);
+    transition: opacity 600ms var(--sg-ease), transform 600ms var(--sg-ease);
+  }
+
+  .sg-card.is-active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .sg-card-kicker {
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    margin: 0 0 0.9rem;
+    font-family: var(--sg-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sg-ink-2);
+  }
+
+  .sg-card-dot {
+    align-self: center;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--sg-poi);
+  }
+
+  .sg-card[data-tone="lastSeen"] .sg-card-dot { background: var(--sg-amber); }
+  .sg-card[data-tone="sighting"] .sg-card-dot { background: var(--sg-teal); }
+  .sg-card[data-tone="remains"] .sg-card-dot { background: var(--sg-red); }
+
+  .sg-card-clock {
+    margin-left: auto;
+    letter-spacing: 0.08em;
+    color: var(--sg-ink-3);
+  }
+
+  .sg-card-title {
+    margin: 0 0 0.8rem;
+    font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+    font-weight: 800;
+    font-variation-settings: "wdth" 110;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+
+  .sg-card-body {
+    margin: 0 0 0.8rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #c3c9d4;
+  }
+
+  .sg-card-body:last-child {
+    margin-bottom: 0;
+  }
+
+  .sg-card-quote {
+    margin: 1.1rem 0 0.2rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--sg-amber);
+  }
+
+  .sg-card-quote p {
+    margin: 0 0 0.35rem;
+    font-size: 1.0625rem;
+    font-weight: 650;
+    line-height: 1.45;
+    color: var(--sg-ink);
+  }
+
+  .sg-card-quote cite {
+    font-family: var(--sg-mono);
+    font-style: normal;
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sg-ink-3);
+  }
+
+  /* ---------- Shared section chrome ---------- */
+
+  .sg-record,
+  .sg-sources {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vh, 3rem);
+  }
+
+  .sg-sources {
+    padding-top: 0;
+    padding-bottom: clamp(3.5rem, 9vh, 6.5rem);
+  }
+
+  .sg-kicker {
+    margin: 0 0 0.9rem;
+    font-family: var(--sg-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sg-ink-3);
+  }
+
+  .sg-section-head {
+    margin-bottom: clamp(2.25rem, 5vh, 3.5rem);
+  }
+
+  .sg-section-head h2 {
+    margin: 0 0 0.9rem;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-weight: 820;
+    font-variation-settings: "wdth" 112;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .sg-section-head p:last-child {
+    margin: 0;
+    max-width: 58ch;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--sg-ink-2);
+  }
+
+  /* ---------- Three questions ---------- */
+
+  .sg-questions {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem);
+  }
+
+  .sg-question-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sg-question {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1.25rem;
+    padding: clamp(1.6rem, 4vh, 2.4rem) 0;
+    border-top: 1px solid var(--sg-hairline);
+  }
+
+  .sg-question:last-child {
+    border-bottom: 1px solid var(--sg-hairline);
+  }
+
+  .sg-question-index {
+    margin: 0;
+    font-family: var(--sg-mono);
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+    color: var(--sg-amber);
+  }
+
+  .sg-question h3 {
+    margin: 0 0 0.7rem;
+    font-size: clamp(1.4rem, 3.2vw, 2rem);
+    font-weight: 800;
+    font-variation-settings: "wdth" 112;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  .sg-question p {
+    margin: 0;
+    max-width: 58ch;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--sg-ink-2);
+  }
+
+  /* ---------- Outro / footer ---------- */
+
+  .sg-outro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: clamp(2rem, 5vw, 4.5rem);
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 8vh, 5.5rem) clamp(1rem, 4vw, 3rem);
+  }
+
+  .sg-outro h2 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 780;
+    font-variation-settings: "wdth" 110;
+    letter-spacing: -0.01em;
+  }
+
+  .sg-outro p {
+    margin: 0 0 1rem;
+    max-width: 58ch;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--sg-ink-2);
+  }
+
+  .sg-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem clamp(1rem, 4vw, 3rem) 2rem;
+    border-top: 1px solid var(--sg-hairline);
+    font-family: var(--sg-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    color: var(--sg-ink-3);
+  }
+
+  .sg-footer a {
+    color: var(--sg-ink-2);
+    text-decoration: none;
+  }
+
+  .sg-footer a:hover {
+    color: var(--sg-ink);
+  }
+
+  /* ---------- Mobile ---------- */
+
+  @media (max-width: 719px) {
+    .sg-beat,
+    .sg-beat[data-side="r"] {
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .sg-beat {
+      min-height: 120vh;
+      padding-bottom: 9vh;
+    }
+
+    .sg-beat:first-child {
+      padding-top: 30vh;
+    }
+
+    .sg-card {
+      max-width: 34rem;
+    }
+
+    .sg-readout {
+      right: 1rem;
+    }
+
+    .sg-question {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sg-hint {
+      animation: none;
+    }
+
+    .sg-card {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .sg-readout-caption {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { createNightScene } from "./_scene";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const night = document.querySelector<HTMLElement>("[data-night]");
+  const canvas = document.querySelector<HTMLCanvasElement>("[data-canvas]");
+  const clockEl = document.querySelector<HTMLElement>("[data-clock]");
+  const captionEl = document.querySelector<HTMLElement>("[data-caption]");
+  const beats = Array.from(document.querySelectorAll<HTMLElement>("[data-beat]"));
+
+  if (night && canvas && clockEl && captionEl && beats.length > 0) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const scene = createNightScene(canvas, { reducedMotion });
+
+    // Clock anchors: minutes since midnight at each beat boundary. Beats
+    // without a time hold the previous reading.
+    const anchors: { p: number; minutes: number }[] = [];
+    beats.forEach((beat, i) => {
+      const raw = beat.dataset.minutes;
+      if (raw !== "") anchors.push({ p: i / beats.length, minutes: Number(raw) });
+    });
+
+    function formatClock(minutes: number) {
+      const h24 = Math.floor(minutes / 60) % 24;
+      const m = Math.floor(minutes % 60);
+      const period = h24 < 12 ? "AM" : "PM";
+      const h = h24 % 12 === 0 ? 12 : h24 % 12;
+      return `${h}:${String(m).padStart(2, "0")} ${period}`;
+    }
+
+    function clockAt(p: number) {
+      if (anchors.length === 0) return 0;
+      if (p <= anchors[0].p) return anchors[0].minutes;
+      for (let i = 0; i < anchors.length - 1; i++) {
+        const a = anchors[i];
+        const b = anchors[i + 1];
+        if (p <= b.p) return a.minutes + ((p - a.p) / (b.p - a.p)) * (b.minutes - a.minutes);
+      }
+      return anchors[anchors.length - 1].minutes;
+    }
+
+    let lastClockText = "";
+    ScrollTrigger.create({
+      trigger: night,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+      onUpdate(self) {
+        scene?.setProgress(self.progress);
+        const text = formatClock(clockAt(self.progress));
+        if (text !== lastClockText) {
+          lastClockText = text;
+          clockEl.textContent = text;
+        }
+      },
+    });
+
+    // One trigger per beat: activate its card and swap the clock caption.
+    let swapTimer = 0;
+    beats.forEach((beat) => {
+      const card = beat.querySelector<HTMLElement>(".sg-card");
+      ScrollTrigger.create({
+        trigger: beat,
+        start: "top 62%",
+        end: "bottom 38%",
+        onToggle(self) {
+          card?.classList.toggle("is-active", self.isActive);
+          if (self.isActive && beat.dataset.caption) {
+            const next = beat.dataset.caption;
+            if (captionEl.textContent === next) return;
+            if (reducedMotion) {
+              captionEl.textContent = next;
+              return;
+            }
+            captionEl.classList.add("is-swapping");
+            window.clearTimeout(swapTimer);
+            swapTimer = window.setTimeout(() => {
+              captionEl.textContent = next;
+              captionEl.classList.remove("is-swapping");
+            }, 220);
+          }
+        },
+      });
+    });
+
+    // Kick the scene once so the first frame isn't empty above the fold.
+    scene?.setProgress(0);
+  }
+</script>

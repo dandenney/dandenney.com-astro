@@ -26,11 +26,13 @@
     "astro": "^6.2.1",
     "gsap": "^3.15.0",
     "tailwindcss": "^4.1.18",
+    "three": "^0.185.1",
     "tinacms": "^1.6.3"
   },
   "devDependencies": {
     "@notionhq/client": "^5.0.0",
-    "@tinacms/cli": "^1.5.45"
+    "@tinacms/cli": "^1.5.45",
+    "@types/three": "^0.185.1"
   },
   "resolutions": {
     "sqlite-level": "^1.2.1",
