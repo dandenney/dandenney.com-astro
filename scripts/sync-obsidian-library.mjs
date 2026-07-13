@@ -1,69 +1,239 @@
 #!/usr/bin/env node
 /**
- * Reads archived items from Obsidian Reading vault and syncs them
- * to src/data/libraryLinks.ts, then commits and pushes if changed.
+ * Syncs archived Readwise Reader items into src/data/libraryLinks.ts.
+ *
+ * Deterministic repo logic only: fetch, normalize, write the generated data file
+ * if it changed. Git/cron orchestration lives outside this script.
  *
  * Usage:
- *   node scripts/sync-obsidian-library.mjs           # sync and push
- *   node scripts/sync-obsidian-library.mjs --dry-run # preview output only
+ *   node scripts/sync-obsidian-library.mjs            # write file when changed
+ *   node scripts/sync-obsidian-library.mjs --dry-run  # print generated output
  */
 
-import { readFileSync, readdirSync, writeFileSync } from 'fs'
+import { existsSync, readFileSync, writeFileSync } from 'fs'
 import { resolve, dirname, join } from 'path'
 import { fileURLToPath } from 'url'
-import { execSync } from 'child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = resolve(__dirname, '..')
-const ARCHIVE_DIR = '/Users/dandenney/Documents/claw/Reading/Archive'
 const OUTPUT_FILE = join(REPO_ROOT, 'src/data/libraryLinks.ts')
+const HERMES_ENV_FILE = '/Users/clawfather/.hermes/.env'
+const LOCAL_ENV_FILE = join(REPO_ROOT, '.env.local')
+const API_BASE = 'https://readwise.io/api/v3/list/'
+const PAGE_SIZE = 100
 const DRY_RUN = process.argv.includes('--dry-run')
 
-function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---/)
-  if (!match) return null
-
-  const yaml = match[1]
-  const result = {}
-
-  for (const line of yaml.split('\n')) {
-    if (line.startsWith(' ') || line.startsWith('\t')) continue // skip list items / continuations
-    const colonIdx = line.indexOf(':')
-    if (colonIdx === -1) continue
-    const key = line.slice(0, colonIdx).trim()
-    const raw = line.slice(colonIdx + 1).trim()
-    result[key] = raw ? raw.replace(/^["']|["']$/g, '') : null
+function loadEnvFile(path) {
+  if (!existsSync(path)) return
+  const content = readFileSync(path, 'utf8')
+  for (const rawLine of content.split('\n')) {
+    const line = rawLine.trim()
+    if (!line || line.startsWith('#')) continue
+    const eq = line.indexOf('=')
+    if (eq === -1) continue
+    const key = line.slice(0, eq).trim()
+    const value = line.slice(eq + 1).trim().replace(/^["']|["']$/g, '')
+    if (!(key in process.env)) {
+      process.env[key] = value
+    }
   }
-
-  return result
 }
 
-function parseLinks() {
-  const files = readdirSync(ARCHIVE_DIR).filter((f) => f.endsWith('.md') && f !== 'README.md')
-  const links = []
+function loadEnv() {
+  loadEnvFile(LOCAL_ENV_FILE)
+  loadEnvFile(HERMES_ENV_FILE)
+}
 
-  for (const file of files) {
-    const content = readFileSync(join(ARCHIVE_DIR, file), 'utf8')
-    const fm = parseFrontmatter(content)
-    if (!fm || !fm.source || !fm.title || !fm.created) continue
+function getToken() {
+  loadEnv()
+  const token =
+    process.env.READWISE_API_TOKEN?.trim() ||
+    process.env.READWISE_TOKEN?.trim() ||
+    ''
 
-    links.push({
-      title: fm.title,
-      url: fm.source,
-      description: fm.description || undefined,
-      created: fm.created,
+  if (!token) {
+    throw new Error('Missing READWISE_API_TOKEN (checked process.env, .env.local, and ~/.hermes/.env)')
+  }
+
+  return token
+}
+
+async function requestJson(params, token) {
+  const url = `${API_BASE}?${new URLSearchParams(params).toString()}`
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Token ${token}`,
+      Accept: 'application/json',
+      'User-Agent': 'dandenney.com library sync/1.0',
+    },
+  })
+
+  if (!response.ok) {
+    const body = await response.text()
+    throw new Error(`Readwise request failed (${response.status}): ${body.slice(0, 300)}`)
+  }
+
+  return response.json()
+}
+
+async function fetchArchivedItems(token) {
+  const items = []
+  let nextPageCursor = null
+
+  while (true) {
+    const params = {
+      location: 'archive',
+      page_size: String(PAGE_SIZE),
+      with_content: 'true',
+    }
+    if (nextPageCursor) params.pageCursor = nextPageCursor
+
+    const data = await requestJson(params, token)
+    items.push(...(data.results ?? []))
+
+    if (!data.nextPageCursor) break
+    nextPageCursor = data.nextPageCursor
+  }
+
+  return items
+}
+
+function parseDate(value) {
+  if (!value) return null
+  const date = new Date(value)
+  return Number.isNaN(date.getTime()) ? null : date
+}
+
+function toPacificDate(value) {
+  const date = parseDate(value)
+  if (!date) return null
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Los_Angeles',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date)
+}
+
+function cleanText(value) {
+  if (!value) return ''
+  return value
+    .replace(/\r/g, '')
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function trimToWordBoundary(value, limit = 220) {
+  const text = cleanText(value)
+  if (!text) return ''
+  if (text.length <= limit) return text
+  const sliced = text.slice(0, limit - 1)
+  const lastSpace = sliced.lastIndexOf(' ')
+  const base = (lastSpace > 40 ? sliced.slice(0, lastSpace) : sliced).replace(/[\s,;:.!-]+$/g, '')
+  return `${base}…`
+}
+
+function toKind(item) {
+  return item.category === 'video' ? 'watched' : 'read'
+}
+
+function normalizeItems(items) {
+  return items
+    .filter((item) => item?.location === 'archive')
+    .map((item) => {
+      const title = cleanText(item.title) || '(untitled)'
+      const url = item.source_url || item.url || ''
+      const created =
+        toPacificDate(item.last_moved_at) ||
+        toPacificDate(item.updated_at) ||
+        toPacificDate(item.saved_at) ||
+        toPacificDate(item.created_at)
+
+      const description =
+        trimToWordBoundary(item.summary) ||
+        trimToWordBoundary(item.notes) ||
+        trimToWordBoundary(item.content)
+
+      return {
+        title,
+        url,
+        description: description || undefined,
+        created,
+        kind: toKind(item),
+        archivedAt: item.last_moved_at || item.updated_at || item.saved_at || item.created_at || '',
+      }
+    })
+    .filter((item) => item.url && item.created)
+}
+
+function readExistingLinks() {
+  if (!existsSync(OUTPUT_FILE)) return []
+
+  const source = readFileSync(OUTPUT_FILE, 'utf8')
+  const transformed = source
+    .replace(/export interface LibraryLink[\s\S]*?}\n\n/, '')
+    .replace(/export const libraryLinks: LibraryLink\[\] = /, 'return ')
+
+  try {
+    const links = Function(transformed)()
+    return Array.isArray(links) ? links : []
+  } catch {
+    return []
+  }
+}
+
+function mergeLinks(existingLinks, freshLinks) {
+  const mergedByUrl = new Map()
+
+  for (const link of existingLinks) {
+    if (!link?.url || !link?.created || !link?.title) continue
+    mergedByUrl.set(link.url, {
+      title: cleanText(link.title),
+      url: link.url,
+      description: cleanText(link.description) || undefined,
+      created: link.created,
+      kind: link.kind === 'watched' ? 'watched' : 'read',
+      archivedAt: `${link.created}T00:00:00-07:00`,
     })
   }
 
-  links.sort((a, b) => b.created.localeCompare(a.created))
-  return links
+  for (const link of freshLinks) {
+    const existing = mergedByUrl.get(link.url)
+    if (!existing) {
+      mergedByUrl.set(link.url, link)
+      continue
+    }
+
+    const existingArchivedAt = existing.archivedAt || `${existing.created}T00:00:00-07:00`
+    if ((link.archivedAt || '') >= existingArchivedAt) {
+      mergedByUrl.set(link.url, {
+        ...existing,
+        ...link,
+        description: link.description || existing.description,
+      })
+    }
+  }
+
+  return [...mergedByUrl.values()]
+    .sort((a, b) => {
+      const byCreated = b.created.localeCompare(a.created)
+      if (byCreated !== 0) return byCreated
+      const byArchivedAt = (b.archivedAt || '').localeCompare(a.archivedAt || '')
+      if (byArchivedAt !== 0) return byArchivedAt
+      return a.title.localeCompare(b.title)
+    })
+    .map(({ archivedAt, ...rest }) => rest)
 }
 
 function generateTypeScript(links) {
   const items = links
     .map((link) => {
       const lines = [
-        `  {`,
+        '  {',
         `    title: ${JSON.stringify(link.title)},`,
         `    url: ${JSON.stringify(link.url)},`,
       ]
@@ -71,18 +241,20 @@ function generateTypeScript(links) {
         lines.push(`    description: ${JSON.stringify(link.description)},`)
       }
       lines.push(`    created: ${JSON.stringify(link.created)},`)
-      lines.push(`  },`)
+      lines.push(`    kind: ${JSON.stringify(link.kind)},`)
+      lines.push('  },')
       return lines.join('\n')
     })
     .join('\n')
 
-  return `// Auto-generated by scripts/sync-obsidian-library.mjs — do not edit manually
+  return `// Auto-generated by scripts/sync-obsidian-library.mjs from the Readwise Reader archive — do not edit manually
 
 export interface LibraryLink {
   title: string
   url: string
   description?: string
   created: string
+  kind?: 'read' | 'watched'
 }
 
 export const libraryLinks: LibraryLink[] = [
@@ -91,10 +263,17 @@ ${items}
 `
 }
 
-function main() {
-  console.log('Reading Obsidian archive...')
-  const links = parseLinks()
-  console.log(`Found ${links.length} link(s)`)
+async function main() {
+  const token = getToken()
+  console.log('Fetching archived Readwise items...')
+  const items = await fetchArchivedItems(token)
+  console.log(`Found ${items.length} archived item(s)`)
+
+  const freshLinks = normalizeItems(items)
+  const existingLinks = readExistingLinks()
+  const links = mergeLinks(existingLinks, freshLinks)
+  console.log(`Normalized ${freshLinks.length} fresh archive link(s)`) 
+  console.log(`Merged to ${links.length} total library link(s)`)
 
   const ts = generateTypeScript(links)
 
@@ -104,13 +283,7 @@ function main() {
     return
   }
 
-  const existing = (() => {
-    try {
-      return readFileSync(OUTPUT_FILE, 'utf8')
-    } catch {
-      return ''
-    }
-  })()
+  const existing = existsSync(OUTPUT_FILE) ? readFileSync(OUTPUT_FILE, 'utf8') : ''
 
   if (existing === ts) {
     console.log('No changes — library is already up to date')
@@ -119,21 +292,9 @@ function main() {
 
   writeFileSync(OUTPUT_FILE, ts, 'utf8')
   console.log(`Wrote ${links.length} links to ${OUTPUT_FILE}`)
-
-  try {
-    execSync('git add src/data/libraryLinks.ts', { cwd: REPO_ROOT, stdio: 'inherit' })
-    execSync('git commit -m "chore(library): sync from Obsidian archive"', {
-      cwd: REPO_ROOT,
-      stdio: 'inherit',
-    })
-    // Rebase onto the remote first so a moved ref doesn't reject the push.
-    execSync('git pull --rebase --autostash', { cwd: REPO_ROOT, stdio: 'inherit' })
-    execSync('git push', { cwd: REPO_ROOT, stdio: 'inherit' })
-    console.log('Committed and pushed successfully')
-  } catch (err) {
-    console.error('Git operation failed:', err.message)
-    process.exit(1)
-  }
 }
 
-main()
+main().catch((error) => {
+  console.error(error instanceof Error ? error.message : String(error))
+  process.exit(1)
+})

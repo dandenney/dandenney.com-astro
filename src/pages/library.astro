@@ -103,7 +103,7 @@ function monthLabel(key: string) {
                   <a class="link" href={link.url}>{link.title}</a>
                   {link.description && <span class="notes">{link.description}</span>}
                   <span class="meta">
-                    Read&nbsp;
+                    {link.kind === 'watched' ? 'Watched' : 'Read'}&nbsp;
                     <FormattedDate date={new Date(link.created + 'T12:00:00')} />
                   </span>
                 </li>
