@@ -10,6 +10,48 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "After Automation | Every",
+    url: "https://every.to/p/after-automation?utm_source=www.gethalfbaked.com&utm_medium=newsletter&utm_campaign=half-baked-615-social-recruiting-aida-framework&_bhlid=8c31bdd039537dec0f63067c3a0693e285d5cc86",
+    description: "AI automation is growing fast, but it creates more work for humans, not less. Humans are needed to guide, manage, and improve AI agents to make their work effective. As AI gets better, human experts focus on new…",
+    created: "2026-07-13",
+    kind: "read",
+  },
+  {
+    title: "Timeless Colors of the Great Masters",
+    url: "https://paletteinspiration.com/",
+    description: "This website showcases timeless artworks by great master painters. It features over 3,000 artists and more than 23,000 paintings. Each painting includes a special 10-color palette from the original artwork.",
+    created: "2026-07-13",
+    kind: "read",
+  },
+  {
+    title: "Every integration, in every format agents speak.",
+    url: "https://integrations.sh/?utm_source=substack&utm_medium=email",
+    description: "Services your agent can reach — official APIs, GraphQL endpoints, and MCP servers, with structured credential facts.",
+    created: "2026-07-13",
+    kind: "read",
+  },
+  {
+    title: "The Anti-Slop Frontend Framework for AI Agents",
+    url: "https://www.tasteskill.dev/?utm_source=substack&utm_medium=email",
+    description: "The Anti-Slop Frontend Framework helps AI agents create clean, professional user interfaces without looking templated. It uses strict design rules and audits to ensure high-quality visuals with good typography…",
+    created: "2026-07-13",
+    kind: "read",
+  },
+  {
+    title: "The Goldilocks customizable select height",
+    url: "https://jakearchibald.com/2026/goldilocks-select-height/",
+    description: "The author explains how to customize the height and position of select dropdowns using CSS for better browser support. They use new CSS features like calc-size() and position-try-fallbacks to handle margins, minimum…",
+    created: "2026-07-13",
+    kind: "read",
+  },
+  {
+    title: "What are git worktrees, and why should I use them?",
+    url: "https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/",
+    description: "Git worktrees let you work on multiple branches at the same time without switching or stashing, keeping your editor and files unchanged. They create separate folders for each branch, making context switching faster and…",
+    created: "2026-07-13",
+    kind: "read",
+  },
+  {
     title: "The Shifting Line Between CSS States and JavaScript Events",
     url: "https://css-tricks.com/css-states-and-javascript-events/",
     description: "CSS uses pseudo-classes to reflect element states that feel like event listeners but are not actual events. A new feature called event-trigger aims to start animations based on real events, though it is not yet…",
@@ -483,13 +525,6 @@ export const libraryLinks: LibraryLink[] = [
     url: "https://tweet.md/?ref=producthunt",
     description: "Get any X post or thread as clean Markdown for LLMs, agents, and research. Swap x.com for tweet.md or use the API.",
     created: "2026-05-27",
-    kind: "read",
-  },
-  {
-    title: "After Automation",
-    url: "https://every.to/p/after-automation?utm_source=www.gethalfbaked.com&utm_medium=newsletter&utm_campaign=half-baked-615-social-recruiting-aida-framework&_bhlid=8c31bdd039537dec0f63067c3a0693e285d5cc86",
-    description: "AI progress creates more work for humans, not less",
-    created: "2026-05-23",
     kind: "read",
   },
   {
