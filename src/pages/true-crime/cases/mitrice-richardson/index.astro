@@ -1,6 +1,7 @@
 ---
 import BaseHead from "@/components/BaseHead.astro";
 import CaseBoard from "@/components/case-file/CaseBoard.astro";
+import CaseGallery from "@/components/case-file/CaseGallery.astro";
 import CasePoster from "@/components/case-file/CasePoster.astro";
 import CaseSources from "@/components/case-file/CaseSources.astro";
 import CaseTimeline from "@/components/case-file/CaseTimeline.astro";
@@ -78,6 +79,20 @@ const record = caseFileToTimeline(mitriceRichardsonCase, { hrefFor: (event) => `
         </p>
       </CasePoster>
     </section>
+
+    {mitriceRichardsonCase.exhibits && (
+      <section class="cp-exhibits">
+        <header class="cp-section-head">
+          <p class="cp-kicker">Evidence</p>
+          <h2>The exhibits</h2>
+          <p>
+            Photographs and documents from the file, kept from the original research. Select any exhibit to view
+            it with its notes.
+          </p>
+        </header>
+        <CaseGallery exhibits={mitriceRichardsonCase.exhibits} />
+      </section>
+    )}
 
     <section class="cp-record">
       <header class="cp-section-head">
@@ -262,6 +277,14 @@ const record = caseFileToTimeline(mitriceRichardsonCase, { hrefFor: (event) => `
     max-width: 62rem;
     margin: 0 auto;
     padding: 0 clamp(1rem, 4vw, 3rem) clamp(3rem, 8vh, 5.5rem);
+  }
+
+  /* ---------- The exhibits ---------- */
+
+  .cp-exhibits {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1rem, 4vw, 3rem) clamp(1.5rem, 4vh, 3rem);
   }
 
   /* ---------- The record ---------- */

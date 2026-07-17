@@ -124,6 +124,30 @@ export interface CaseFact {
   wide?: boolean;
 }
 
+/**
+ * One item in the evidence gallery ("The exhibits"): a photograph, document
+ * scan, or map with a rich caption. `body` is trusted HTML authored in the
+ * case data file (links and emphasis welcome) and is rendered with set:html.
+ */
+export interface CaseExhibit {
+  id: string;
+  src: string;
+  /** Intrinsic pixel size; drives the justified-row layout and CLS-free loading */
+  width: number;
+  height: number;
+  alt: string;
+  /** Mono tag under the index, e.g. "Photograph", "Document", "Aerial" */
+  kindLabel?: string;
+  title: string;
+  dateLabel?: string;
+  /** Rich caption HTML shown in the exhibit viewer */
+  body?: string;
+  /** Attribution line, e.g. "LA County Sheriff's Department records" */
+  credit?: string;
+  /** Colors the index chip with the shared semantic tone */
+  tone?: CaseTone;
+}
+
 export type SourceKind = "link" | "pdf";
 
 export interface CaseSource {
@@ -161,6 +185,8 @@ export interface CaseFile {
   eras: CaseEra[];
   markers: CaseMarker[];
   lines: CaseLine[];
+  /** Evidence gallery items, in exhibit order */
+  exhibits?: CaseExhibit[];
   sources?: SourceGroup[];
   /** Case-level vitals (span, jurisdiction, case numbers, …) */
   facts?: CaseFact[];
