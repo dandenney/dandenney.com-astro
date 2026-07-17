@@ -1,0 +1,1220 @@
+---
+export const prerender = true;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Ordinary Place — The Unsolved Killing of Leif Brittain, Nashville, 2008</title>
+<meta name="description" content="Leif Alexander Brittain was eighteen years old when he was shot at a self-service car wash on Swiss Avenue in Nashville on June 21, 2008. No suspect has ever been publicly identified. The case remains open.">
+<meta property="og:title" content="An Ordinary Place">
+<meta property="og:description" content="The unsolved 2008 killing of Leif Brittain. Nashville, Tennessee.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="/generated-images/leif-brittain/hero-carwash.jpg">
+<meta name="theme-color" content="#0a0e11">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0e11'/%3E%3Crect x='6' y='7' width='20' height='3' rx='1.5' fill='%23d9f5ec'/%3E%3Cpath d='M9 14h14M11 19h10M13 24h6' stroke='%2358b7a4' stroke-width='1.5' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "An Ordinary Place",
+  "alternativeHeadline": "The unsolved 2008 killing of Leif Brittain",
+  "datePublished": "2026-07-17",
+  "about": {
+    "@type": "Event",
+    "name": "Unsolved homicide of Leif Alexander Brittain",
+    "startDate": "2008-06-21",
+    "location": { "@type": "Place", "name": "400 Swiss Avenue, Nashville, Tennessee" }
+  }
+}
+</script>
+<style>
+/* ============================================================
+   AN ORDINARY PLACE — editorial feature
+   Type: Source Serif 4 (variable, optical) / IBM Plex Mono (record)
+   Palette: blue-black night, fluorescent teal, folklore amber
+   ============================================================ */
+
+:root {
+  --ink:        #191d1f;
+  --ink-soft:   #454d50;
+  --ink-faint:  #7d8689;
+  --paper:      #f1f3f0;
+  --paper-deep: #e5e9e4;
+  --night:      #0a0e11;
+  --night-soft: #10161a;
+  --bone:       #dfe8e4;
+  --bone-dim:   #8b9a95;
+  --fluor:      #14766a;   /* accent on paper */
+  --fluor-hi:   #63cab6;   /* accent on night */
+  --amber:      #a8792f;   /* folklore, on paper */
+  --amber-hi:   #d3a256;   /* folklore, on night */
+  --hairline:   #cdd3cc;
+  --hairline-n: #232c30;
+
+  --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono:  "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+  --measure: 64ch;
+  --wide: 70rem;
+
+  --ease-out: cubic-bezier(.19, 1, .22, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem);
+  line-height: 1.62;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--fluor); color: var(--paper); }
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); text-underline-offset: .2em; }
+a:hover { text-decoration-color: currentColor; }
+
+.skip-link {
+  position: absolute; left: -200vw; top: 0;
+  background: var(--ink); color: var(--paper);
+  padding: .75rem 1.25rem; z-index: 100;
+  font-family: var(--mono); font-size: .8rem;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- film grain wash ---------- */
+.grain {
+  position: fixed; inset: -50%;
+  width: 200%; height: 200%;
+  pointer-events: none;
+  z-index: 60;
+  opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- fluorescent flicker on the hero light line ---------- */
+@keyframes tube-flicker {
+  0%, 100% { opacity: 1; }
+  3%  { opacity: .55; }
+  5%  { opacity: 1; }
+  41% { opacity: 1; }
+  42% { opacity: .7; }
+  44% { opacity: 1; }
+  78% { opacity: .92; }
+}
+
+/* ---------- reading progress ---------- */
+.progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 3px; z-index: 90;
+  background: transparent;
+}
+.progress__bar {
+  height: 100%; width: 100%;
+  background: var(--fluor);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+@supports (animation-timeline: scroll()) {
+  .progress__bar {
+    animation: progress-grow linear both;
+    animation-timeline: scroll(root);
+  }
+  @keyframes progress-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+
+/* ---------- chapter rail (desktop) ---------- */
+.chapter-rail {
+  position: fixed; left: clamp(.75rem, 2vw, 2rem); top: 50%;
+  translate: 0 -50%;
+  z-index: 80;
+  display: none;
+}
+@media (min-width: 73rem) {
+  .chapter-rail { display: block; }
+}
+.chapter-rail ol { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+.chapter-rail a {
+  display: flex; align-items: center; gap: .6rem;
+  text-decoration: none;
+  font-family: var(--mono); font-size: .6rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: .22rem 0;
+  transition: color .3s;
+}
+.chapter-rail a::before {
+  content: "";
+  width: 1.1rem; height: 1px;
+  background: currentColor;
+  transition: width .35s var(--ease-out);
+}
+.chapter-rail a .rail-label {
+  opacity: 0; translate: -4px 0;
+  transition: opacity .3s, translate .35s var(--ease-out);
+}
+.chapter-rail a:hover .rail-label,
+.chapter-rail a:focus-visible .rail-label,
+.chapter-rail a[aria-current="true"] .rail-label { opacity: 1; translate: 0 0; }
+.chapter-rail a[aria-current="true"] { color: var(--fluor); }
+.chapter-rail a[aria-current="true"]::before { width: 1.9rem; }
+.on-night .chapter-rail a { color: var(--bone-dim); }
+.on-night .chapter-rail a[aria-current="true"] { color: var(--fluor-hi); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: end center;
+  background: var(--night);
+  color: var(--bone);
+  overflow: clip;
+  isolation: isolate;
+}
+.hero__media {
+  position: absolute; inset: 0; z-index: -2;
+}
+.hero__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+  filter: brightness(.82) contrast(1.05) saturate(.82);
+  animation: hero-drift 36s var(--ease-out) both;
+}
+@keyframes hero-drift {
+  from { scale: 1.09; }
+  to   { scale: 1; }
+}
+.hero__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(to bottom,
+      rgb(10 14 17 / .6) 0%,
+      rgb(10 14 17 / .14) 34%,
+      rgb(10 14 17 / .3) 62%,
+      rgb(10 14 17 / .95) 100%);
+}
+.hero__inner {
+  width: min(100% - 3rem, var(--wide));
+  padding-bottom: clamp(3.5rem, 9vh, 7rem);
+  text-align: center;
+  text-shadow: 0 1px 22px rgb(10 14 17 / .85), 0 1px 6px rgb(10 14 17 / .7);
+}
+.kicker {
+  font-family: var(--mono);
+  font-size: clamp(.64rem, .58rem + .25vw, .76rem);
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+.kicker em { font-style: normal; color: var(--fluor-hi); }
+.hero .kicker {
+  color: var(--bone);
+  text-shadow: 0 1px 8px rgb(10 14 17 / .95), 0 0 22px rgb(10 14 17 / .9), 0 0 44px rgb(10 14 17 / .8);
+}
+.hero h1 {
+  font-size: clamp(2.9rem, 1.2rem + 9.4vw, 8.25rem);
+  line-height: .98;
+  font-weight: 230;
+  letter-spacing: -.015em;
+  margin: clamp(1.2rem, 3vh, 2rem) 0 0;
+  text-wrap: balance;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 300;
+}
+.hero__tube {
+  width: min(16rem, 46%);
+  height: 2px;
+  margin: clamp(1.3rem, 3vh, 2rem) auto 0;
+  background: linear-gradient(90deg, transparent, #d9f5ec 18%, #d9f5ec 82%, transparent);
+  box-shadow: 0 0 14px 2px rgb(120 220 197 / .55);
+  animation: tube-flicker 7s steps(1, end) infinite;
+}
+.hero__dek {
+  margin: clamp(1.4rem, 3.5vh, 2.4rem) auto 0;
+  max-width: 46ch;
+  font-size: clamp(1.05rem, .95rem + .55vw, 1.4rem);
+  line-height: 1.5;
+  font-weight: 320;
+  color: color-mix(in srgb, var(--bone) 90%, transparent);
+  text-wrap: balance;
+}
+.hero__byline {
+  margin-top: clamp(1.6rem, 4vh, 2.6rem);
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+
+.hero .stagger > * {
+  opacity: 0;
+  translate: 0 26px;
+  animation: rise 1.3s var(--ease-out) both;
+}
+.hero .stagger > :nth-child(1) { animation-delay: .15s; }
+.hero .stagger > :nth-child(2) { animation-delay: .35s; }
+.hero .stagger > :nth-child(3) { animation-delay: .55s; }
+.hero .stagger > :nth-child(4) { animation-delay: .8s; }
+.hero .stagger > :nth-child(5) { animation-delay: 1.05s; }
+@keyframes rise {
+  to { opacity: 1; translate: 0 0; }
+}
+
+.hero__cue {
+  position: absolute; bottom: 1.1rem; left: 50%; translate: -50% 0;
+  width: 1px; height: 2.4rem;
+  background: linear-gradient(var(--bone-dim), transparent);
+  animation: cue 2.6s ease-in-out 1.8s infinite;
+  opacity: 0;
+}
+@keyframes cue {
+  0% { opacity: 0; transform: scaleY(.2); transform-origin: top; }
+  35% { opacity: .9; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(1); }
+}
+
+/* ============================================================
+   SHARED EDITORIAL LAYOUT
+   ============================================================ */
+.prose-wrap {
+  width: min(100% - 3rem, var(--wide));
+  margin-inline: auto;
+}
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+.prose p { margin-block: 0 1.5em; text-wrap: pretty; }
+.prose p strong { font-weight: 590; }
+
+section[data-chapter] { padding-block: clamp(4rem, 10vh, 7.5rem) clamp(2.5rem, 6vh, 4.5rem); }
+
+/* chapter headings */
+.chapter-head {
+  max-width: var(--measure);
+  margin: 0 auto clamp(2.2rem, 5vh, 3.4rem);
+  text-align: center;
+}
+.chapter-head .numeral {
+  font-family: var(--mono);
+  font-size: .66rem; font-weight: 500;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--fluor);
+  display: block;
+}
+.chapter-head h2 {
+  font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.1rem);
+  font-weight: 260;
+  line-height: 1.12;
+  letter-spacing: -.01em;
+  margin-top: 1rem;
+  text-wrap: balance;
+}
+.chapter-head h2 em { font-weight: 320; }
+
+/* painted-line divider (asphalt lane marks) */
+.lane-rule {
+  width: min(11rem, 40%);
+  height: 3px;
+  margin: 0 auto clamp(2.2rem, 5vh, 3.2rem);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--hairline) 0 18px,
+    transparent 18px 30px);
+}
+.night .lane-rule, .lane-rule.on-dark {
+  background-image: repeating-linear-gradient(90deg, var(--hairline-n) 0 18px, transparent 18px 30px);
+}
+
+/* drop caps on chapter openers */
+.prose > p.opener::first-letter,
+.duet .prose p.opener::first-letter {
+  font-weight: 430;
+  initial-letter: 3 3;
+  -webkit-initial-letter: 3 3;
+  margin-right: .14em;
+  color: var(--fluor);
+}
+@supports not (initial-letter: 3) {
+  @supports not (-webkit-initial-letter: 3) {
+    .prose > p.opener::first-letter,
+    .duet .prose p.opener::first-letter {
+      float: left;
+      font-size: 3.3em;
+      line-height: .82;
+      padding-top: .08em;
+      margin-right: .12em;
+    }
+  }
+}
+.night .prose > p.opener::first-letter { color: var(--fluor-hi); }
+
+/* staccato beats — short centered lines */
+.beats {
+  max-width: var(--measure);
+  margin: clamp(2.2rem, 5vh, 3.4rem) auto;
+  text-align: center;
+  font-size: clamp(1.15rem, 1.05rem + .6vw, 1.55rem);
+  font-weight: 300;
+  line-height: 1.4;
+}
+.beats p { margin-block: 0 .9em; }
+.beats p:last-child { margin-bottom: 0; }
+.beats em { font-style: italic; }
+
+/* pull quotes */
+.pull {
+  max-width: 36ch;
+  margin: clamp(2.6rem, 6vh, 4rem) auto;
+  text-align: center;
+}
+.pull blockquote {
+  font-size: clamp(1.45rem, 1.1rem + 1.7vw, 2.15rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.32;
+  letter-spacing: -.005em;
+  text-wrap: balance;
+}
+.pull blockquote::before { content: "\201C"; color: var(--fluor); }
+.pull blockquote::after  { content: "\201D"; color: var(--fluor); }
+.night .pull blockquote::before, .night .pull blockquote::after { color: var(--fluor-hi); }
+.pull figcaption {
+  margin-top: 1.1rem;
+  font-family: var(--mono);
+  font-size: .64rem; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.night .pull figcaption { color: var(--bone-dim); }
+
+/* figures */
+figure.photo {
+  margin: clamp(2.8rem, 7vh, 4.5rem) auto;
+}
+figure.photo.wide { max-width: min(100%, 58rem); }
+figure.photo.inset { max-width: var(--measure); }
+figure.photo.narrow { max-width: min(100%, 30rem); }
+figure.photo .frame {
+  overflow: clip;
+  background: var(--night-soft);
+}
+figure.photo img {
+  width: 100%;
+  filter: grayscale(1) contrast(1.02);
+}
+@supports (animation-timeline: view()) {
+  figure.photo .frame img {
+    scale: 1.08;
+    animation: settle linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 65%;
+  }
+  @keyframes settle { to { scale: 1; } }
+}
+figure.photo figcaption {
+  display: flex; gap: .8rem; align-items: baseline;
+  margin-top: .85rem;
+  font-family: var(--mono);
+  font-size: .68rem;
+  line-height: 1.6;
+  color: var(--ink-faint);
+  max-width: 56ch;
+}
+figure.photo figcaption::before {
+  content: "";
+  flex: 0 0 1.4rem;
+  height: 1px;
+  background: var(--fluor);
+  translate: 0 -.25em;
+}
+.night figure.photo figcaption { color: var(--bone-dim); }
+.night figure.photo figcaption::before { background: var(--fluor-hi); }
+
+/* side-by-side duet */
+.duet {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3.5rem);
+  align-items: start;
+  max-width: min(100%, 64rem);
+  margin-inline: auto;
+}
+@media (min-width: 56rem) {
+  .duet { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .duet figure.photo { margin-block: .4rem 0; position: sticky; top: 4rem; }
+}
+
+/* ============================================================
+   NIGHT SECTIONS
+   ============================================================ */
+.night {
+  background: var(--night);
+  color: var(--bone);
+}
+.night ::selection { background: var(--bone); color: var(--night); }
+.night .chapter-head .numeral { color: var(--fluor-hi); }
+
+.timestamp {
+  font-family: var(--mono);
+  font-size: clamp(.68rem, .62rem + .3vw, .78rem);
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--fluor-hi);
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+/* the call — three suspended lines */
+.call {
+  max-width: 30ch;
+  margin: clamp(3rem, 8vh, 5rem) auto;
+  text-align: center;
+  font-size: clamp(1.3rem, 1.05rem + 1.4vw, 2rem);
+  font-weight: 280;
+  line-height: 1.5;
+}
+.call p { margin-block: 0 1.1em; }
+.call p:last-child {
+  margin-bottom: 0;
+  color: var(--bone-dim);
+  font-style: italic;
+}
+
+/* ============================================================
+   THE OFFICIAL RECORD — confirmed facts card
+   ============================================================ */
+.record-card {
+  max-width: var(--measure);
+  margin: clamp(2.4rem, 6vh, 3.6rem) auto;
+  border: 1px solid var(--hairline);
+  background: var(--paper-deep);
+}
+.record-card header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem;
+  padding: .9rem 1.25rem;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--mono);
+  font-size: .64rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+}
+.record-card header .src { font-weight: 400; letter-spacing: .1em; color: var(--ink-faint); }
+.record-card.confirmed header .lead { color: var(--fluor); }
+.record-card ul { list-style: none; }
+.record-card li {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: .9rem;
+  align-items: baseline;
+  padding: 1rem 1.25rem;
+}
+.record-card li + li { border-top: 1px solid var(--hairline); }
+.record-card .mark {
+  font-family: var(--mono);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--fluor);
+}
+.record-card .fact {
+  font-size: clamp(1.02rem, .98rem + .35vw, 1.2rem);
+  font-weight: 340;
+}
+
+/* ============================================================
+   FACT OR FOLKLORE — expandable claim ledger
+   ============================================================ */
+.folklore {
+  max-width: var(--measure);
+  margin: clamp(2.4rem, 6vh, 3.6rem) auto;
+  border-top: 1px solid var(--hairline);
+}
+.folklore details {
+  border-bottom: 1px solid var(--hairline);
+}
+.folklore summary {
+  display: grid;
+  grid-template-columns: 6.4rem 1fr auto;
+  gap: 1.2rem;
+  align-items: baseline;
+  padding: 1.05rem .25rem;
+  cursor: pointer;
+  list-style: none;
+}
+.folklore summary::-webkit-details-marker { display: none; }
+.folklore summary:hover .claim, .folklore summary:focus-visible .claim { color: var(--amber); }
+.folklore .status {
+  font-family: var(--mono);
+  font-size: .6rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--amber);
+}
+.folklore .claim {
+  font-size: clamp(1.05rem, 1rem + .4vw, 1.25rem);
+  font-weight: 330;
+  transition: color .25s;
+}
+.folklore .toggle {
+  font-family: var(--mono);
+  font-size: .85rem;
+  color: var(--ink-faint);
+  transition: rotate .3s var(--ease-out);
+}
+.folklore details[open] .toggle { rotate: 45deg; }
+.folklore .body {
+  padding: 0 .25rem 1.3rem;
+  max-width: 56ch;
+}
+.folklore .body dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .35rem 1.2rem;
+  font-size: .92rem;
+}
+.folklore .body dt {
+  font-family: var(--mono);
+  font-size: .6rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-top: .28em;
+}
+.folklore .body dd { font-weight: 360; }
+@media (max-width: 40rem) {
+  .folklore summary { grid-template-columns: 1fr auto; }
+  .folklore .status { grid-column: 1 / -1; order: -1; }
+  .folklore .body dl { grid-template-columns: 1fr; gap: .1rem; }
+  .folklore .body dd { margin-bottom: .7rem; }
+}
+
+/* ============================================================
+   THE ABSENCE LOG — unanswered questions (night)
+   ============================================================ */
+.absence {
+  max-width: var(--measure);
+  margin: clamp(2.4rem, 6vh, 3.6rem) auto;
+  list-style: none;
+  border-top: 1px solid var(--hairline-n);
+}
+.absence li {
+  display: grid;
+  grid-template-columns: 1fr 8rem;
+  gap: 1.4rem;
+  align-items: baseline;
+  padding: 1.05rem .25rem;
+  border-bottom: 1px solid var(--hairline-n);
+}
+.absence .q {
+  font-size: clamp(1.05rem, 1rem + .4vw, 1.25rem);
+  font-weight: 300;
+  font-style: italic;
+}
+.absence .a {
+  font-family: var(--mono);
+  font-size: .6rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--bone-dim);
+  text-align: right;
+}
+@media (max-width: 40rem) {
+  .absence li { grid-template-columns: 1fr; gap: .3rem; }
+  .absence .a { text-align: left; }
+}
+
+/* ============================================================
+   TIMELINE — "The Record"
+   ============================================================ */
+.timeline {
+  max-width: 46rem;
+  margin: clamp(2.5rem, 6vh, 4rem) auto 0;
+  list-style: none;
+  position: relative;
+  padding-left: clamp(2rem, 6vw, 3.4rem);
+}
+/* single rail: the edge of the light */
+.timeline::before {
+  content: "";
+  position: absolute; top: .4rem; bottom: .4rem;
+  left: 4px;
+  width: 1px;
+  background: linear-gradient(var(--fluor) 0%, var(--hairline) 30%, var(--hairline) 100%);
+}
+.timeline li {
+  position: relative;
+  padding-block: 1.15rem;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * clamp(2rem, 6vw, 3.4rem) + 1px);
+  top: 1.78rem;
+  width: 8px; height: 8px;
+  background: var(--paper);
+  border: 1px solid var(--fluor);
+  rotate: 45deg;
+}
+.timeline .when {
+  display: block;
+  font-family: var(--mono);
+  font-size: .66rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--fluor);
+  margin-bottom: .35rem;
+}
+.timeline .what {
+  font-size: clamp(1.02rem, .98rem + .3vw, 1.16rem);
+  line-height: 1.5;
+  font-weight: 370;
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.timeline .what em { color: var(--ink-soft); }
+
+/* ============================================================
+   CODA
+   ============================================================ */
+.coda {
+  position: relative;
+  background: var(--night);
+  color: var(--bone);
+  overflow: clip;
+  isolation: isolate;
+  padding-block: clamp(6rem, 16vh, 11rem);
+  text-align: center;
+}
+.coda__media { position: absolute; inset: 0; z-index: -2; }
+.coda__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: .35;
+  filter: grayscale(1);
+}
+.coda__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(rgb(10 14 17 / .96), rgb(10 14 17 / .55) 50%, rgb(10 14 17 / .96));
+}
+.coda .epitaph {
+  font-size: clamp(1.6rem, 1.1rem + 2.6vw, 2.9rem);
+  font-weight: 260;
+  font-style: italic;
+  line-height: 1.3;
+  max-width: 26ch;
+  margin: 0 auto;
+  text-wrap: balance;
+}
+.coda .tip {
+  margin-top: clamp(2.8rem, 7vh, 4.5rem);
+}
+.coda .tip .lead-in {
+  font-family: var(--mono);
+  font-size: .7rem; font-weight: 500;
+  letter-spacing: .26em; text-transform: uppercase;
+  color: var(--bone-dim);
+}
+.coda .tip a.phone {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-size: clamp(1.7rem, 1.2rem + 2.6vw, 3rem);
+  font-weight: 300;
+  letter-spacing: .04em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--fluor-hi);
+  padding-bottom: .12em;
+  transition: color .3s, border-color .3s;
+}
+.coda .tip a.phone:hover { color: var(--fluor-hi); }
+.coda .tip .agency {
+  margin-top: .9rem;
+  font-family: var(--mono);
+  font-size: .66rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+}
+
+/* ============================================================
+   EDITORIAL NOTE + FOOTER
+   ============================================================ */
+.ed-note {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vh, 4rem) 1.5rem;
+  font-size: .92rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+  text-wrap: balance;
+}
+.ed-note .rule { width: 3rem; height: 1px; background: var(--fluor); margin: 0 auto 1.4rem; }
+
+footer.colophon {
+  background: var(--night);
+  color: var(--bone-dim);
+  padding: clamp(2.5rem, 6vh, 4rem) 1.5rem clamp(3rem, 7vh, 4.5rem);
+  text-align: center;
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .04em;
+  line-height: 2.1;
+}
+footer.colophon a { color: var(--bone); }
+
+/* ============================================================
+   SCROLL REVEALS
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  translate: 0 26px;
+  transition: opacity 1s var(--ease-out), translate 1.1s var(--ease-out);
+  transition-delay: var(--d, 0s);
+}
+.reveal.in-view { opacity: 1; translate: 0 0; }
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero__media img, .hero .stagger > *, .hero__cue, .hero__tube { animation: none !important; }
+  .hero .stagger > * { opacity: 1; translate: 0 0; }
+  .reveal { opacity: 1; translate: 0 0; transition: none; }
+  figure.photo .frame img { animation: none !important; scale: 1 !important; }
+  .folklore .toggle { transition: none; }
+}
+
+@media print {
+  .grain, .progress, .chapter-rail, .hero__cue { display: none; }
+  .hero, .night, .coda, footer.colophon { background: #fff; color: #000; }
+  .folklore details { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#story">Skip to story</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<nav class="chapter-rail" aria-label="Chapters">
+  <ol>
+    <li><a href="#ch-1" data-rail><span class="rail-label">An Ordinary Place</span></a></li>
+    <li><a href="#ch-2" data-rail><span class="rail-label">Leif</span></a></li>
+    <li><a href="#ch-3" data-rail><span class="rail-label">Eleven Thirty</span></a></li>
+    <li><a href="#ch-4" data-rail><span class="rail-label">The Official Record</span></a></li>
+    <li><a href="#ch-5" data-rail><span class="rail-label">Fact or Folklore</span></a></li>
+    <li><a href="#ch-6" data-rail><span class="rail-label">The Thin File</span></a></li>
+    <li><a href="#ch-7" data-rail><span class="rail-label">Community Memory</span></a></li>
+    <li><a href="#ch-8" data-rail><span class="rail-label">Still Open</span></a></li>
+    <li><a href="#record" data-rail><span class="rail-label">The Record</span></a></li>
+  </ol>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero__media">
+    <img src="/generated-images/leif-brittain/hero-carwash.jpg" width="1536" height="1024" alt="A self-service car wash at night, cold fluorescent light spilling from the open bays onto wet asphalt." fetchpriority="high">
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__inner stagger">
+    <p class="kicker">An Open Cold Case &middot; Nashville, Tennessee &middot; <em>2008</em></p>
+    <h1>An Ordinary <em>Place</em></h1>
+    <div class="hero__tube" aria-hidden="true"></div>
+    <p class="hero__dek">Leif Brittain was eighteen. On a Saturday night in June, he stopped to wash his truck on Swiss Avenue. Nearly two decades later, no one has answered for what happened under those lights.</p>
+    <p class="hero__byline">The unsolved killing of Leif Alexander Brittain &middot; June 21, 2008</p>
+  </div>
+  <div class="hero__cue" aria-hidden="true"></div>
+</header>
+
+<main id="story">
+
+  <div class="ed-note reveal">
+    <div class="rule" aria-hidden="true"></div>
+    <p>Editors&rsquo; note: This story is drawn from the public record &mdash; the Metropolitan Nashville Police Department&rsquo;s cold case summary, Leif Brittain&rsquo;s obituary, and contemporary accounts. Where a detail could not be verified in that record, this story says so. That distinction is the point.</p>
+  </div>
+
+  <!-- ============ I. AN ORDINARY PLACE ============ -->
+  <section data-chapter id="ch-1" aria-labelledby="h-ch1">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter I</span>
+        <h2 id="h-ch1">An Ordinary Place</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">There are crimes that happen in places people instinctively fear. Dark alleys. Abandoned buildings. Remote roads where no one would hear you. This wasn&rsquo;t one of them. Leif Brittain died beneath the fluorescent lights of a self-service car wash &mdash; the kind of place hundreds of people visit every week without giving it a second thought. Pull in. Feed the machine. Wash the mud off the truck. Head home.</p>
+        <p class="reveal">Investigators believe that&rsquo;s exactly what Leif intended to do. He had parked inside a wash bay at 400 Swiss Avenue shortly before 11:30 on a Saturday night, June 21, 2008. Swiss Avenue is not an isolated country road or a forgotten industrial district; the car wash sat in a part of Nashville people passed every day.</p>
+        <p class="reveal">Something happened in that bay. Within minutes, an eighteen-year-old was dying, and a city was left with a question it still has not answered.</p>
+      </div>
+      <figure class="photo narrow reveal">
+        <div class="frame">
+          <img src="/generated-images/leif-brittain/coinbox.jpg" width="1254" height="1254" alt="A worn coin-operated timer box on the concrete wall of a car wash bay, lit by fluorescent light." loading="lazy">
+        </div>
+        <figcaption>A place built for routine: quarters in, water on, a few minutes on the dial. Photo illustration.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ II. LEIF ============ -->
+  <section data-chapter id="ch-2" aria-labelledby="h-ch2">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter II</span>
+        <h2 id="h-ch2">Leif</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">Cold cases often begin with the crime. This one should begin with the victim. Leif Alexander Brittain was eighteen years old. He lived in Nolensville, south of the city, with his family, and was a student at Ravenwood High School, where he was expected to graduate the following year.</p>
+        <p class="reveal">His obituary describes a teenager woven into the life of his town: JROTC at school, Nolensville First United Methodist Church on Sundays, as much time outdoors as he could manage. It also notes, in a phrase that recurs in nearly every recollection from the people who knew him, that he was &ldquo;very well known in the Nolensville community.&rdquo;</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>Very well known in the Nolensville community.</blockquote>
+        <figcaption>From Leif Brittain&rsquo;s obituary &middot; 2008</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="reveal">Years later, Ravenwood High School established the Leif Brittain Memorial Scholarship &mdash; a reminder, renewed with every graduating class, that his absence continued to be felt long after the headlines faded.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ III. ELEVEN THIRTY — night ============ -->
+  <section data-chapter id="ch-3" class="night" aria-labelledby="h-ch3">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter III</span>
+        <h2 id="h-ch3">Eleven Thirty</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="duet">
+        <div class="prose">
+          <p class="timestamp reveal">Saturday, June 21, 2008</p>
+          <p class="opener reveal">Publicly available records reveal remarkably little about Leif&rsquo;s final evening. Investigators have never released a detailed timeline of where he spent the night, who he was with, or why he stopped at the Swiss Avenue car wash. Some retellings describe him cleaning mud from his truck before heading home; others suggest he had been out with friends. Those accounts are woven deep into community memory, but they do not appear in the official summary released by Metro Nashville Police.</p>
+          <p class="reveal">What investigators have confirmed is far simpler. At approximately 11:30 p.m., Leif Brittain was washing his pickup truck. At some point in those next moments, he was shot.</p>
+          <p class="reveal">Everything after that unfolded quickly.</p>
+        </div>
+        <figure class="photo inset reveal">
+          <div class="frame">
+            <img src="/generated-images/leif-brittain/bay.jpg" width="1024" height="1536" alt="The interior of an empty car wash bay at night, a spray wand hanging on the wall beneath a bare fluorescent tube." loading="lazy">
+          </div>
+          <figcaption>A wash bay is a room with one exit and no witnesses. Whatever happened at 400 Swiss Avenue happened in minutes. Photo illustration.</figcaption>
+        </figure>
+      </div>
+      <div class="call">
+        <p class="reveal">He dialed 911.</p>
+        <p class="reveal" style="--d:.15s">The call connected.</p>
+        <p class="reveal" style="--d:.3s">No words came.</p>
+      </div>
+      <div class="prose">
+        <p class="reveal">Whatever injuries he had suffered prevented him from speaking to the dispatcher. Minutes later, a passing motorist noticed him lying inside one of the wash bays and placed a second emergency call. By the time help arrived, it was too late.</p>
+        <p class="reveal">Those few sentences, published years later by the Metropolitan Nashville Police Department, remain the clearest official description of what occurred that night. Almost everything else exists in the space between evidence, memory, and speculation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IV. THE OFFICIAL RECORD ============ -->
+  <section data-chapter id="ch-4" aria-labelledby="h-ch4">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter IV</span>
+        <h2 id="h-ch4">The Official Record</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">One of the biggest surprises in researching this case wasn&rsquo;t discovering new information. It was discovering how little information has ever been released. Many unsolved homicides eventually accumulate hundreds of publicly available pages &mdash; court filings, search warrants, media requests, appeals. Leif Brittain&rsquo;s case has not. The official public record is essentially a brief police summary, his obituary, later memorial references, and scattered news coverage.</p>
+        <p class="reveal">Strip away everything that cannot be traced to a primary source, and this is what remains:</p>
+      </div>
+      <div class="record-card confirmed reveal">
+        <header>
+          <span class="lead">Confirmed</span>
+          <span class="src">Source: Metropolitan Nashville PD</span>
+        </header>
+        <ul>
+          <li><span class="mark">01</span><span class="fact">Leif Brittain was shot while washing his truck at 400 Swiss Avenue, at approximately 11:30 p.m.</span></li>
+          <li><span class="mark">02</span><span class="fact">He attempted to call 911 but was unable to speak.</span></li>
+          <li><span class="mark">03</span><span class="fact">A passing motorist discovered him inside a wash bay and called police.</span></li>
+          <li><span class="mark">04</span><span class="fact">The case remains open. No suspect has ever been publicly identified.</span></li>
+        </ul>
+      </div>
+      <div class="prose">
+        <p class="reveal">Four facts. That is the entire load-bearing structure of the public record &mdash; and the story that has grown around it over eighteen years is considerably longer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ V. FACT OR FOLKLORE ============ -->
+  <section data-chapter id="ch-5" aria-labelledby="h-ch5">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter V</span>
+        <h2 id="h-ch5">Fact or <em>Folklore</em></h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">Every unsolved case develops its own folklore. People remember conversations from funerals. Someone recalls hearing something from a cousin. A friend of a friend claims to know what really happened. Eventually those stories become so familiar that few people remember where they originated.</p>
+        <p class="reveal">Spend enough time in the message boards, archived news discussions, Reddit threads, and Facebook memorial posts, and a consistent narrative emerges: Leif had been cleaning mud from his truck. He was shot during a robbery. His wallet was taken. The wound was to his neck. The problem is not that those claims are impossible &mdash; it&rsquo;s that none of them appear in the official summary available to the public. Each one below can be opened and examined on its own.</p>
+      </div>
+      <div class="folklore reveal">
+        <details>
+          <summary>
+            <span class="status">Unverified</span>
+            <span class="claim">He was shot in the neck</span>
+            <span class="toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="body">
+            <dl>
+              <dt>Appears in</dt><dd>Secondary write-ups and community retellings; repeated widely enough to read as established fact.</dd>
+              <dt>Official status</dt><dd>No wound location appears in any publicly available MNPD record reviewed for this story.</dd>
+              <dt>Why it matters</dt><dd>The injury detail is often used to explain the silent 911 call &mdash; a tidy inference, but an inference all the same.</dd>
+            </dl>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span class="status">Unverified</span>
+            <span class="claim">His wallet was missing</span>
+            <span class="toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="body">
+            <dl>
+              <dt>Appears in</dt><dd>Forum discussion and memorial threads, usually alongside the robbery claim.</dd>
+              <dt>Official status</dt><dd>Police have never publicly stated that any property was taken from the scene.</dd>
+              <dt>Why it matters</dt><dd>A missing wallet is the single detail doing the most work in the popular version of the story &mdash; it supplies the motive.</dd>
+            </dl>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span class="status">Unverified</span>
+            <span class="claim">Robbery was the motive</span>
+            <span class="toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="body">
+            <dl>
+              <dt>Appears in</dt><dd>Nearly every community retelling of the case.</dd>
+              <dt>Official status</dt><dd>MNPD has never publicly named a motive of any kind.</dd>
+              <dt>Why it matters</dt><dd>If robbery is assumed, the case reads as random. Remove the assumption and every question reopens: targeted, chance encounter, or something else entirely.</dd>
+            </dl>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span class="status">Unverified</span>
+            <span class="claim">He was washing mud off after a night out with friends</span>
+            <span class="toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="body">
+            <dl>
+              <dt>Appears in</dt><dd>Recollections from people who knew him, repeated in later coverage.</dd>
+              <dt>Official status</dt><dd>Police have never released a timeline of his evening &mdash; where he was, or who he was with.</dd>
+              <dt>Why it matters</dt><dd>It is the most human detail in the folklore, and it may well be true. But it has never been officially placed on the record.</dd>
+            </dl>
+          </div>
+        </details>
+      </div>
+      <div class="prose">
+        <p class="reveal">In the age of internet true crime, repeated information becomes accepted information. Once an unverified detail has been retold enough times, it becomes nearly impossible to separate collective memory from documented evidence. For anyone trying to understand what happened that night, skepticism isn&rsquo;t cynicism. It&rsquo;s discipline.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>Repetition is not the same thing as verification.</blockquote>
+        <figcaption>The central lesson of this case</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ VI. THE THIN FILE — night ============ -->
+  <section data-chapter id="ch-6" class="night" aria-labelledby="h-ch6">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter VI</span>
+        <h2 id="h-ch6">The Thin File</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">For investigators, the first hours after a homicide are the most valuable. Witnesses remember more. Physical evidence is fresh. Surveillance footage, if it exists, has not yet been erased. Nearly all of it, in Leif Brittain&rsquo;s case, remains outside the public record. Metro Nashville Police have never released the incident report, crime scene photographs, witness interviews, dispatch logs, or detective supplements that usually become the backbone of public understanding in older homicides. Whether those records remain sealed as investigative strategy or were simply never meant for release is unknown.</p>
+        <p class="reveal">Sometimes what investigators don&rsquo;t release can be just as revealing as what they do. There is no publicly identified suspect. No composite sketch. No surveillance image. No vehicle of interest. No firearm description. No named eyewitness beyond the unnamed motorist who found him. Even the basic forensic questions remain open in public:</p>
+      </div>
+      <ol class="absence">
+        <li class="reveal" style="--d:.05s"><span class="q">How many shots were fired?</span><span class="a">No public answer</span></li>
+        <li class="reveal" style="--d:.12s"><span class="q">What caliber weapon was used?</span><span class="a">No public answer</span></li>
+        <li class="reveal" style="--d:.19s"><span class="q">Were shell casings recovered?</span><span class="a">No public answer</span></li>
+        <li class="reveal" style="--d:.26s"><span class="q">Did investigators recover DNA or fingerprints?</span><span class="a">No public answer</span></li>
+        <li class="reveal" style="--d:.33s"><span class="q">Were nearby businesses canvassed for cameras?</span><span class="a">No public answer</span></li>
+        <li class="reveal" style="--d:.4s"><span class="q">Did anyone else call 911 that night?</span><span class="a">No public answer</span></li>
+      </ol>
+      <div class="prose">
+        <p class="reveal">The answers may exist inside the investigative file. They simply are not part of the public one. That silence has created a vacuum &mdash; and vacuums rarely stay empty. Ironically, the internet has made the case feel richer than it actually is: dozens of websites repeat nearly identical descriptions, many tracing back to one another, few tracing back to primary evidence.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>Where did this information originally come from?</blockquote>
+        <figcaption>The question to ask of every repeated detail</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="reveal">In many instances, no one can answer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VII. COMMUNITY MEMORY ============ -->
+  <section data-chapter id="ch-7" aria-labelledby="h-ch7">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter VII</span>
+        <h2 id="h-ch7">Community Memory</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <figure class="photo wide reveal">
+        <div class="frame">
+          <img src="/generated-images/leif-brittain/school.jpg" width="1536" height="1024" alt="A suburban high school campus at dawn, a flagpole on a dewy lawn in thin morning fog." loading="lazy">
+        </div>
+        <figcaption>Ravenwood High School established the Leif Brittain Memorial Scholarship. Many of the seniors who receive it were born after his death. Photo illustration.</figcaption>
+      </figure>
+      <div class="prose">
+        <p class="opener reveal">If the investigative record is sparse, the community record is not. Nearly two decades later, Leif&rsquo;s name still surfaces in anniversary posts, memorial messages, and conversations among former classmates. His obituary paints the picture of a teenager surrounded by family, friends, church, and school &mdash; and the scholarship that bears his name means graduating seniors in Nolensville keep encountering it, year after year.</p>
+        <p class="reveal">That kind of remembrance says something investigators cannot measure.</p>
+      </div>
+      <figure class="pull reveal">
+        <blockquote>People did not forget Leif. They simply ran out of answers.</blockquote>
+        <figcaption>Nolensville, Tennessee</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ VIII. STILL OPEN ============ -->
+  <section data-chapter id="ch-8" aria-labelledby="h-ch8">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">Chapter VIII</span>
+        <h2 id="h-ch8">Still Open</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <div class="prose">
+        <p class="opener reveal">Every cold case has an obstacle. Sometimes it&rsquo;s a missing witness. Sometimes it&rsquo;s degraded DNA. The obstacle in Leif Brittain&rsquo;s case appears to be something much simpler: information. Investigators almost certainly know more than the public. But from the outside looking in, there simply isn&rsquo;t much to analyze &mdash; and that lack of detail has allowed speculation to fill the silence while making meaningful public scrutiny nearly impossible.</p>
+        <p class="reveal">The case, though, never truly went dormant. In October 2024, the Metropolitan Nashville Police Department launched a dedicated Cold Case website highlighting dozens of unsolved homicides stretching back decades. Leif Brittain&rsquo;s case was among them. It was more than a historical archive; it was an acknowledgment that investigators still believed someone might know something worth sharing.</p>
+        <p class="reveal">Cold case investigators know that time changes people. Relationships end. Loyalties fade. Consciences grow heavier. A detail that felt insignificant in 2008 may suddenly become important. A witness who once stayed silent may decide they no longer have a reason to. That possibility is why Leif&rsquo;s photograph still appears on the department&rsquo;s cold case site &mdash; not as a memorial, but as an active investigation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE RECORD — timeline ============ -->
+  <section data-chapter id="record" aria-labelledby="h-record">
+    <div class="prose-wrap">
+      <header class="chapter-head reveal">
+        <span class="numeral">The Record</span>
+        <h2 id="h-record">2008 &ndash; Present</h2>
+      </header>
+      <div class="lane-rule reveal" aria-hidden="true"></div>
+      <ol class="timeline">
+        <li class="reveal"><span class="when">Jun 21, 2008 &middot; ~11:30 p.m.</span><span class="what">Leif Brittain, 18, is washing his pickup truck at a self-service car wash at 400 Swiss Avenue when he is fatally shot.</span></li>
+        <li class="reveal"><span class="when">Jun 21, 2008 &middot; minutes later</span><span class="what">He attempts to call 911 but cannot speak. A passing motorist sees him inside a wash bay and places a second emergency call.</span></li>
+        <li class="reveal"><span class="when">Summer 2008</span><span class="what">Leif is laid to rest. His obituary recalls JROTC, Nolensville First United Methodist Church, and a teenager &ldquo;very well known in the Nolensville community.&rdquo;</span></li>
+        <li class="reveal"><span class="when">2009</span><span class="what">The school year Leif was expected to graduate from Ravenwood High School passes without him.</span></li>
+        <li class="reveal"><span class="when">The years after</span><span class="what">Ravenwood establishes the Leif Brittain Memorial Scholarship. Online, an unofficial narrative of the crime &mdash; robbery, a missing wallet, a neck wound &mdash; hardens into accepted fact without official confirmation.</span></li>
+        <li class="reveal"><span class="when">Oct 2024</span><span class="what">MNPD launches a dedicated Cold Case website. Leif&rsquo;s case is among the unsolved homicides featured &mdash; an open appeal for information, not an archive entry.</span></li>
+        <li class="reveal"><span class="when">Today</span><span class="what">No suspect has ever been publicly identified. The case remains open with the MNPD Cold Case Homicide Unit.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CODA ============ -->
+  <section class="coda" aria-labelledby="h-coda">
+    <div class="coda__media" aria-hidden="true">
+      <img src="/generated-images/leif-brittain/hero-carwash.jpg" width="1536" height="1024" alt="" loading="lazy">
+    </div>
+    <div class="coda__scrim" aria-hidden="true"></div>
+    <div class="prose-wrap">
+      <h2 id="h-coda" class="epitaph reveal">Leif Brittain was eighteen years old. Someone still knows what happened inside that wash bay.</h2>
+      <div class="tip reveal">
+        <p class="lead-in">If you have information about this case</p>
+        <a class="phone" href="tel:+16157427463">615&middot;742&middot;7463</a>
+        <p class="agency">Nashville Crime Stoppers &middot; MNPD Cold Case Homicide Unit</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <p>This feature is an editorial retelling of the unsolved 2008 killing of Leif Alexander Brittain, drawn from the Metropolitan Nashville Police Department&rsquo;s public cold case summary, Leif&rsquo;s obituary, and contemporary accounts.</p>
+  <p>Claims not confirmed in those records are identified as unverified in the text. Photographs are illustrations, not archival images.</p>
+</footer>
+
+<script is:inline>
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- scroll reveals ---- */
+  const reveals = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) {
+    reveals.forEach(el => el.classList.add('in-view'));
+  } else {
+    const io = new IntersectionObserver(entries => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+      }
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    reveals.forEach(el => io.observe(el));
+  }
+
+  /* ---- reading progress fallback (no scroll-timeline support) ---- */
+  if (!CSS.supports('animation-timeline: scroll()')) {
+    const bar = document.getElementById('progressBar');
+    const update = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+    };
+    addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  /* ---- chapter rail: current chapter + light/dark context ---- */
+  const links = [...document.querySelectorAll('[data-rail]')];
+  const sections = links
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  const setCurrent = id => {
+    links.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false'));
+  };
+
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          setCurrent(e.target.id);
+          document.body.classList.toggle('on-night', e.target.classList.contains('night'));
+        }
+      }
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => spy.observe(s));
+  }
+})();
+</script>
+
+</body>
+</html>
