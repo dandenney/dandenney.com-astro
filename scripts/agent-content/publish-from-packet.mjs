@@ -45,6 +45,18 @@ function fail(msg) {
   process.exit(1);
 }
 
+function requireSiblingArtifact(basePath, filename, label) {
+  const sibling = path.join(path.dirname(basePath), filename);
+  if (!fs.existsSync(sibling)) {
+    fail(`${label} missing required sibling artifact: ${filename}`);
+  }
+  const content = fs.readFileSync(sibling, 'utf8').trim();
+  if (!content) {
+    fail(`${label} sibling artifact is empty: ${filename}`);
+  }
+  return sibling;
+}
+
 const packetPath = arg('--packet');
 const bodyPath = arg('--body');
 const imagePath = arg('--image');
@@ -55,6 +67,7 @@ if (!packetPath || !bodyPath) {
 }
 if (!fs.existsSync(packetPath)) fail(`Packet not found: ${packetPath}`);
 if (!fs.existsSync(bodyPath)) fail(`Body not found: ${bodyPath}`);
+const promptPath = requireSiblingArtifact(packetPath, 'prompt.md', 'run');
 
 const packet = JSON.parse(fs.readFileSync(packetPath, 'utf8'));
 const body = fs.readFileSync(bodyPath, 'utf8').trim();
@@ -103,6 +116,7 @@ const content = `${toFrontmatter(packet.frontmatter)}${body}\n`;
 
 if (dryRun) {
   console.log(`🧪 Dry run OK. Would write: ${outPath}`);
+  console.log(`🧪 Found prompt artifact: ${promptPath}`);
   if (packet.type === 'no-reservaitions' && imagePath) {
     console.log(`🧪 Image dry run target dir: ${path.join(repoRoot, 'public', 'no-reserv-ai-tions')}`);
   }

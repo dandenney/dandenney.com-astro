@@ -15,6 +15,18 @@ function ok(msg) {
   console.log(`✅ ${msg}`);
 }
 
+function requireSiblingArtifact(basePath, filename, label) {
+  const sibling = path.join(path.dirname(basePath), filename);
+  if (!fs.existsSync(sibling)) {
+    fail(`${label} missing required sibling artifact: ${filename}`);
+  }
+  const content = fs.readFileSync(sibling, 'utf8').trim();
+  if (!content) {
+    fail(`${label} sibling artifact is empty: ${filename}`);
+  }
+  return sibling;
+}
+
 function required(obj, fields, label) {
   for (const f of fields) {
     if (obj?.[f] === undefined || obj?.[f] === null || obj?.[f] === '') {
@@ -28,6 +40,7 @@ if (!packetPath) fail('Usage: node scripts/agent-content/validate-packet.mjs <pa
 if (!fs.existsSync(packetPath)) fail(`File not found: ${packetPath}`);
 
 const packet = readJson(packetPath);
+const promptPath = requireSiblingArtifact(packetPath, 'prompt.md', 'run');
 required(packet, ['type', 'sourceInput', 'frontmatter', 'bodyBrief', 'sources', 'confidence'], 'packet');
 
 if (!['music-review', 'no-reservaitions'].includes(packet.type)) {
@@ -71,3 +84,4 @@ if (packet.type === 'no-reservaitions') {
 }
 
 ok(`Packet valid: ${path.basename(packetPath)} (${packet.type})`);
+ok(`Found prompt artifact: ${path.basename(promptPath)}`);

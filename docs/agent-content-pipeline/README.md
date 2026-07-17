@@ -17,12 +17,13 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
    - For no-reservaitions: address + coordinates are required for map compatibility
    - Coordinates format must be exactly: `longitude, latitude` (example: `-86.7816, 36.1627`)
    - For music: Leif must run lyrics research (web search + source validation) and populate `lyrics.status|text|source`
-3. Quillan drafts review body from packet + style pack
-4. Watten publishes file and opens PR
+3. Shelby/Quillan materializes a concrete `prompt.md` from the packet + style pack
+4. Quillan drafts review body from `prompt.md`
+5. Watten publishes file and opens PR
    - For no-reservaitions with image, Watten generates:
      - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
      - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
-5. Shelby posts summary + risks/assumptions
+6. Shelby posts summary + risks/assumptions
 
 ## Music lyrics requirement
 - Lyrics are a required research step for music runs.

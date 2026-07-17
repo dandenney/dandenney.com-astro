@@ -11,9 +11,12 @@ Use this contract when asking Shelby to run end-to-end content generation.
 
 ## Required artifacts per run
 1. `packet.json` (Leif output)
-2. `body.md` (Quillan output)
-3. Published markdown file in collection path (Watten output)
-4. PR summary with assumptions, confidence, and source list
+2. `prompt.md` (the concrete Quillan writing prompt assembled from the packet + style pack)
+3. `body.md` (Quillan output)
+4. Published markdown file in collection path (Watten output)
+5. PR summary with assumptions, confidence, and source list
+
+`bodyBrief` inside `packet.json` is only the structured writing brief. It is **not** a substitute for preserving the actual prompt text sent to the writer model.
 
 ### Music-specific requirement (Leif)
 Before Quillan writes, Leif must perform lyrics research and set packet fields:
@@ -31,6 +34,10 @@ If full lyrics are unavailable, workflow pauses before writing.
 
 ## Standard paths
 - Temporary run files: `docs/agent-content-pipeline/runs/<timestamp>/`
+  - `packet.json`
+  - `prompt.md`
+  - `body.md`
+  - optional `notes.md`
 - Final content:
   - No Reservaitions: `src/content/reviews/*.md`
   - Music reviews: `src/content/songs/*.md`
