@@ -10,6 +10,27 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Former GitHub CEO launches competitor designed for the age of vibe coding",
+    url: "https://www.theregister.com/ai-and-ml/2026/07/08/former-github-ceo-launches-competitor-designed-for-the-age-of-vibe-coding/5268694?utm_source=tldrnewsletter",
+    description: "Thomas Dohmke, former GitHub CEO, launched Entire, a new Git hosting network built for AI coding agents. Entire aims to reduce strain on centralized platforms like GitHub by using Git's original decentralized design…",
+    created: "2026-07-19",
+    kind: "read",
+  },
+  {
+    title: "Most AI Work Can Wait",
+    url: "https://tomtunguz.com/ai-execution-routing/?ref=sidebar",
+    description: "Most AI systems should focus on smart routing to decide which model handles each task, not on picking the model first. Using local and async models for most work cuts costs by up to 90% while still meeting needs. This…",
+    created: "2026-07-19",
+    kind: "read",
+  },
+  {
+    title: "You're not ambitious enough with Claude",
+    url: "https://x.com/christinexzhu/status/2074847461588267466/?rw_tt_thread=True",
+    description: "The author improved productivity by using Claude AI for complex and high-impact tasks, not just busywork. Automating updates, planning, and customer insights freed time and reduced stress. Giving Claude full context…",
+    created: "2026-07-19",
+    kind: "read",
+  },
+  {
     title: "After Automation | Every",
     url: "https://every.to/p/after-automation?utm_source=www.gethalfbaked.com&utm_medium=newsletter&utm_campaign=half-baked-615-social-recruiting-aida-framework&_bhlid=8c31bdd039537dec0f63067c3a0693e285d5cc86",
     description: "AI automation is growing fast, but it creates more work for humans, not less. Humans are needed to guide, manage, and improve AI agents to make their work effective. As AI gets better, human experts focus on new…",
