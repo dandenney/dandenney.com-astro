@@ -92,7 +92,7 @@ description: "A sharp East Nashville dinner at Junior with porridge bread, summe
 heroImageAlt: "Roasted Amish chicken at Junior with sauce on the plate, side dishes in the background, and a glass of red wine on the table"
 infoUrl: "https://www.juniornashville.com"
 pubDate: "2026-07-10"
-tags: ["nashville","tennessee","east-nashville","dinner","wine","french"]
+tags: ["french", "dinner", "wine"]
 aiGenerated: true
 heroImage: "junior"
 ---
@@ -225,7 +225,7 @@ If richer internal notes are useful while researching, keep them in `notes.md`, 
     "description": "A sharp East Nashville dinner at Junior with porridge bread, summer vegetables, lamb tartar, Amish chicken, a German pilsner, and a Syrah blend that kept the table lingering.",
     "infoUrl": "https://www.juniornashville.com",
     "pubDate": "2026-07-10",
-    "tags": ["nashville", "tennessee", "east-nashville", "dinner", "wine", "french"],
+    "tags": ["french", "dinner", "wine"],
     "aiGenerated": true,
     "heroImage": "junior",
     "heroImageAlt": "Roasted Amish chicken at Junior with sauce on the plate, side dishes in the background, and a glass of red wine on the table"
@@ -247,7 +247,7 @@ If richer internal notes are useful while researching, keep them in `notes.md`, 
     "description": "Kaleo at The Pinnacle in Nashville with Dawes opening, Chicken Scratch in hand, and PBRs under green lights and a giant suspended diamond.",
     "infoUrl": "https://thepinnaclenashville.com/events/detail/?event_id=1294407",
     "pubDate": "2026-07-19",
-    "tags": ["concert", "nashville", "tennessee", "the-pinnacle", "kaleo", "pbr"],
+    "tags": ["concert", "live-music", "bar"],
     "aiGenerated": true,
     "heroImage": "kaleo",
     "heroImageAlt": "Photo of Kaleo performing beneath green spotlights and a large suspended diamond-shaped set piece at The Pinnacle in Nashville"
