@@ -12,6 +12,21 @@ const generatedFeatures = [
   {
     type: "Feature",
     properties: {
+      Title: "Patricia Ann Veach ////// Episode: 941",
+      Release: "07/14/2026",
+      URL: "https://truecrimegarage.com/home/blog/7808103/patricia-ann-veach-episode-941",
+      Earliest_Date: "",
+      Earliest_Year: "",
+      Notes: "805 Southwest Lay street, Des Moines, Iowa",
+    },
+    geometry: {
+      coordinates: [-93.612936, 41.722156],
+      type: "Point",
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
       Title: "Missing on Campus /// Judy Martins",
       Release: "07/07/2026",
       URL: "https://truecrimegarage.com/home/blog/7803364/missing-on-campus-judy-martins",
