@@ -8,7 +8,7 @@ coordinates: "-86.692261, 36.206818"
 description: "A Grand Ole Opry night with Josiah and the Bonnevilles, Bearded Iris Homestyle, Watermelon Nutrls, and the rare feeling that every piece of the show actually delivered."
 heroImageAlt: "Grand Ole Opry stage with glowing house-shaped set, GRAND OLE OPRY sign, WSM Radio and Opry 100 branding, green spotlights, and multiple performers onstage"
 infoUrl: "https://www.opry.com/plan-your-visit/opry-house/directions-parking-transportation"
-pubDate: "2026-07-08"
+pubDate: "2026-07-11"
 tags: ["concert","live-music","beer"]
 aiGenerated: true
 heroImage: "grand-ole-opry"
