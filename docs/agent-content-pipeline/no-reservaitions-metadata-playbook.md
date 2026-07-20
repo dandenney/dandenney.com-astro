@@ -123,8 +123,17 @@ heroImage: "junior"
   - One sentence.
   - Lead with the actual experience, not generic marketing.
 - `tags`
-  - 4-6 tags is the sweet spot.
-  - Include geography plus cuisine/event type plus one or two specific anchors.
+  - Usually **1-4 tags**.
+  - Use only the most widely known, routing-safe categories for the place or experience.
+  - Good examples:
+    - `["concert", "bar"]`
+    - `["mediterranean", "turkish", "middle-eastern"]`
+    - `["vietnamese", "pho"]`
+    - `["movie-theater"]`
+  - **Never** use the review `title`, venue name, artist name, or slug as a tag.
+  - **Never** use `city`, `state`, neighborhood, or other location names as tags unless Dan explicitly asks for a location taxonomy change.
+  - Prefer cuisine / format / venue-type / experience-type over one-off specifics.
+  - Avoid low-value vanity tags like `"the-pinnacle"`, `"kaleo"`, `"nashville"`, or `"tennessee"`.
 - `pubDate`
   - Always `YYYY-MM-DD`.
 - `heroImage`
@@ -165,6 +174,7 @@ If richer internal notes are useful while researching, keep them in `notes.md`, 
 2. **Kaleo** — event-title override pattern
    - Dan wanted the review titled `Kaleo`, not `The Pinnacle`.
    - Correct move: keep venue metadata public-facing, but let title/slug follow Dan’s event-title request.
+   - Tag lesson: use broad type tags like `concert` or `music`, not `kaleo`, `the-pinnacle`, `nashville`, or `tennessee`.
 
 3. **GEODIS Park** — official venue-info pattern
    - Official matchday page + exact street geocode.
@@ -185,6 +195,7 @@ If richer internal notes are useful while researching, keep them in `notes.md`, 
 7. **Aubrey’s** — Cloudflare-blocked official site pattern
    - Official URL discovered from search results, then corroborated with listing + geocode.
    - Good fallback when direct fetches are blocked from the agent environment.
+   - Tag lesson: `steakhouse` or `american` is better than location tags like `lebanon` or `tennessee`.
 
 8. **Chautauqua Festival 2026** — event-in-a-park pattern
    - Event page anchors the festival; park geocode anchors the map location.

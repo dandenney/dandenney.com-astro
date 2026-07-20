@@ -15,6 +15,8 @@
 - [ ] `city`/`state` normalized (lowercase/hyphen where expected)
 - [ ] `pubDate` format `YYYY-MM-DD`
 - [ ] `tags` non-empty array
+- [ ] `tags` use only broad routing-safe categories (usually 1-4)
+- [ ] `tags` do **not** include the title, venue name, artist name, slug, city, state, or neighborhood
 - [ ] If image provided: generated assets exist
   - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
   - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
