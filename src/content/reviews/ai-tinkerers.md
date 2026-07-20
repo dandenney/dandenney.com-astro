@@ -2,12 +2,7 @@
 title: AI Tinkerers at Vaco
 pubDate: '2026-05-21'
 tags:
-  - ai
   - meetup
-  - tech
-  - brentwood
-  - pizza
-  - office
 description: AI Tinkerers at Vaco in Brentwood with Papa John’s pizza, a Sam Adams Oktoberfest, and excellent shares on AI agents and personal assistants.
 address: '5501 Virginia Way, Suite 120, Brentwood, TN 37027'
 city: brentwood
