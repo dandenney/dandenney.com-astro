@@ -35,7 +35,7 @@ const latest = all
 				: review.data.country
 		}`,
 		airDate: review.data.pubDate
-			.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+			.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 			.toUpperCase(),
 	}));
 

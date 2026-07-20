@@ -26,6 +26,6 @@ export function placeLabel(review: Review): string {
 
 export function airDate(review: Review): string {
 	return review.data.pubDate
-		.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+		.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 		.toUpperCase();
 }
