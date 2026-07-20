@@ -21,6 +21,7 @@ Those older files are useful history, but they are **not** the standard to copy 
 1. **Check for duplicates first**
    - Search `src/content/reviews/*.md` for likely title/slug collisions.
    - If Dan explicitly wants a title override, use that for the final slug but still research the real venue/entity.
+   - Start from the details Dan provided in Discord: venue/event name, location hint, dishes/drinks, title override, and any attached image.
 
 2. **Find the official domain with `web_search`**
    - Query shape:
@@ -65,6 +66,7 @@ Those older files are useful history, but they are **not** the standard to copy 
    - `prompt.md`
    - `body.md`
    - optional `notes.md`
+   - `prompt.md` should explicitly carry the established No Reservaitions review voice: Bourdain-adjacent in sensibility, but still grounded in the repo's existing tone and concrete evidence.
 
 8. **Publish and verify**
    - `yarn agent:packet:validate ...`

@@ -11,13 +11,15 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
 - **Shelby (Orchestrator):** route, enforce contracts, QA gate, summarize run
 
 ## Flow
-1. Intake from Dan
+1. Intake from Dan (usually via Discord)
    - No reservaitions can include a photo attachment
+   - Treat the Discord-provided venue name, city/location hint, dish/drink list, event bill, title override, and image as the starting intake to research against
 2. Leif creates packet JSON
    - For no-reservaitions: address + coordinates are required for map compatibility
    - Coordinates format must be exactly: `longitude, latitude` (example: `-86.7816, 36.1627`)
    - For music: Leif must run lyrics research (web search + source validation) and populate `lyrics.status|text|source`
 3. Shelby/Quillan materializes a concrete `prompt.md` from the packet + style pack
+   - For no-reservaitions, the prompt should carry the repo's established Bourdain-adjacent review voice: worldly, specific, unsentimental, lightly wry, and grounded in concrete observation rather than imitation-by-catchphrase
 4. Quillan drafts review body from `prompt.md`
 5. Watten publishes file and prepares the delivery summary
    - For no-reservaitions with image, Watten generates:

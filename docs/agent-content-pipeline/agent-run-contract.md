@@ -4,7 +4,7 @@ Use this contract when asking Shelby to run end-to-end content generation.
 
 ## Inputs
 - `type`: `no-reservaitions` or `music-review`
-- `sourceInput`: section-specific intake
+- `sourceInput`: section-specific intake, usually originating from Dan's Discord message (venue/event name, location hint, items, notes, optional title override)
 - `notes`: optional personal context
 - `image` (optional, no-reservaitions): raw photo attachment
 - `publishMode`: `dry-run` or `publish`

@@ -6,6 +6,7 @@ Ground everything in observed items, place details, and lived impressions.
 
 ## Voice
 - Conversational, concrete, slightly playful
+- Bourdain-adjacent in sensibility: worldly, observant, unsentimental, and willing to land a sharp sentence when earned
 - Specific > performative
 - No chef-theater prose, no food-snob clichés
 
@@ -24,7 +25,8 @@ Ground everything in observed items, place details, and lived impressions.
 ## Must avoid
 - Invented facts about ownership/history
 - Generic adjective stacks ("amazing, incredible, perfect")
-- Namedropping style references (no Bourdain imitation)
+- Turning the piece into parody, cosplay, or catchphrase-driven imitation
+- Namedropping Anthony Bourdain inside the review itself
 
 ## Output constraints
 - 220-420 words
