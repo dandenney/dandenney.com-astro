@@ -14,7 +14,7 @@ Use this contract when asking Shelby to run end-to-end content generation.
 2. `prompt.md` (the concrete Quillan writing prompt assembled from the packet + style pack)
 3. `body.md` (Quillan output)
 4. Published markdown file in collection path (Watten output)
-5. PR summary with assumptions, confidence, and source list
+5. Delivery summary with assumptions, confidence, and source list
 
 `bodyBrief` inside `packet.json` is only the structured writing brief. It is **not** a substitute for preserving the actual prompt text sent to the writer model.
 
@@ -63,9 +63,20 @@ Publish no-reservaitions file with image processing:
 yarn agent:content:publish --packet docs/agent-content-pipeline/runs/<run>/packet.json --body docs/agent-content-pipeline/runs/<run>/body.md --image /path/to/photo.jpg
 ```
 
+## Publish-mode completion
+
+When `publishMode = publish`, the default expectation for this repo is:
+
+- publish the file
+- run `fnm exec --using=$(cat .nvmrc) npx astro check`
+- usually run `fnm exec --using=$(cat .nvmrc) yarn build`
+- commit to `main`
+- push to `origin/main`
+- verify the live URL separately from local validation
+
 ## Acceptance criteria
 - Packet validates
 - Dry-run succeeds
 - Output file path and slug match conventions
 - No-reservaitions `heroImage` is basename only (`<slug>`, not path)
-- Astro build passes before PR
+- Astro check passes before the run is considered complete

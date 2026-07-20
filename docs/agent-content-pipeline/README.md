@@ -7,7 +7,7 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
 ## Roles
 - **Leif (Research/Data):** produce structured content packet with sources + confidence
 - **Quillan (Writer):** draft markdown body in section-specific style, grounded in packet
-- **Watten (Publisher):** validate frontmatter/path/slug/schema, write file, open PR
+- **Watten (Publisher):** validate frontmatter/path/slug/schema, write file, and prepare the publish summary
 - **Shelby (Orchestrator):** route, enforce contracts, QA gate, summarize run
 
 ## Flow
@@ -19,11 +19,11 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
    - For music: Leif must run lyrics research (web search + source validation) and populate `lyrics.status|text|source`
 3. Shelby/Quillan materializes a concrete `prompt.md` from the packet + style pack
 4. Quillan drafts review body from `prompt.md`
-5. Watten publishes file and opens PR
+5. Watten publishes file and prepares the delivery summary
    - For no-reservaitions with image, Watten generates:
      - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
      - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
-6. Shelby posts summary + risks/assumptions
+6. Shelby posts summary + risks/assumptions and, for publish-mode runs, the git/live-verification result
 
 ## Music lyrics requirement
 - Lyrics are a required research step for music runs.
@@ -48,6 +48,7 @@ Shelby returns a blocker message and waits for Dan to provide lyrics or approve 
 ## Research briefs
 - No Reservaitions (map-ready): `leif-no-reservaitions-research-brief.md`
 - Music (lyrics-first): `leif-music-research-brief.md`
+- No Reservaitions metadata playbook: `no-reservaitions-metadata-playbook.md`
 
 ## Pilot Plan
 - 1 No Reservaitions item
@@ -56,6 +57,6 @@ Shelby returns a blocker message and waits for Dan to provide lyrics or approve 
   - formatting correctness
   - frontmatter validity
   - edit distance after Dan review
-  - time-to-PR
+  - time-to-publish
 
 If both pilots pass, keep this pipeline as default and deprecate old generation workflows.

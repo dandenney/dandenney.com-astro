@@ -41,10 +41,11 @@
 ## 5) Project checks
 - [ ] Run `yarn` install if needed
 - [ ] Run collection/schema check (Astro build or relevant script)
-- [ ] Optional: run `yarn build` before PR for full confidence
+- [ ] Optional: run `yarn build` before publish for full confidence
 
-## 6) PR requirements
+## 6) Delivery / publish requirements
 - [ ] Include source packet summary
 - [ ] Include assumptions + confidence level
 - [ ] Include fallback notes for missing fields
-- [ ] Label PR as `content/ai-assisted`
+- [ ] State whether the run stopped local-only or was committed/pushed
+- [ ] If pushed, include commit hash and live URL verification result
