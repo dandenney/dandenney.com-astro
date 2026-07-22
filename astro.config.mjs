@@ -9,7 +9,6 @@ export default defineConfig({
   site: "https://www.dandenney.com",
   output: "server",
   adapter: netlify(),
-  trailingSlash: "never",
   redirects: {
     "/martingale-tracker": "/betting/martingale-tracker",
     "/dk-tracker": "/betting/dk-tracker",
