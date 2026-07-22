@@ -44,7 +44,7 @@ Every other bit of CSS is only applied if there is something on the page that ca
 
 | Approach  | Gzipped  | File Size | Description                                                                                               |
 | --------- | -------- | --------- | --------------------------------------------------------------------------------------------------------- |
-| CSS-In-JS | **2kb**  | 7kb       | [Personal site heavy page](https://www.dandenney.com/learning-to-cook)                                    |
+| CSS-In-JS | **2kb**  | 7kb       | Personal site heavy page                                                                                   |
 | CSS-In-JS | **2kb**  | 10kb      | [Personal site home](https://www.dandenney.com)                                                           |
 | CSS-In-JS | **895B** | 4kb       | [Side project home](https://www.truecrimeresearchers.com)                                                 |
 | CSS-In-JS | **1kb**  | 5kb       | [Side project "collection"](https://www.truecrimeresearchers.com/cases)                                   |

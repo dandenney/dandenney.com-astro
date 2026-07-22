@@ -10,7 +10,7 @@ thumbAlt: "Playful illustration of a thief, stealing articles from the web and s
 cloudinaryThumb: "posts/read-later-meet-stash.png"
 ---
 
-Back in 2023, I declared ["read later" bankruptcy](blips/read-later/) as Pocket changed its account structure. I moved to Notion and it has been working pretty well, at least for the saving things part. The great thing is that it's very easy to save from iOS because Notion is an app and there are excellent browser extensions for saving links. 
+Back in 2023, I declared ["read later" bankruptcy](/blips/read-later) as Pocket changed its account structure. I moved to Notion and it has been working pretty well, at least for the saving things part. The great thing is that it's very easy to save from iOS because Notion is an app and there are excellent browser extensions for saving links. 
 
 The less than ideal part is that Notion isn't part of my day-to-day. I've tried a few times to start my day in it, but it just doesn't happen. So, while I have read and watched hundreds or probably over a thousand items since the switch, I still have a current "read later" debt of 396 items.
 

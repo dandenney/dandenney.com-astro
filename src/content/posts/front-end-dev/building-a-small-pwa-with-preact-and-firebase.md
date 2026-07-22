@@ -488,7 +488,7 @@ Boom! Data coming from Firebase was now getting pushed directly into state, whic
 
 #### A Learning Curveball
 
-Speaking of rendering, this was where everything fell apart for me. I didn’t know what I didn’t know, so I thought I needed to manually update state. I [asked on SO](https://stackoverflow.com/questions/44912152/how-to-push-child-arrays-into-items-in-an-array-to-local-react-state-via-a-fire/44912797#44912797) and had an expensive first try of [Code Mentor](codementor.io) without resolution. I was stuck for like three days straight, and it made me stop trying to make this a “build with me” video.
+Speaking of rendering, this was where everything fell apart for me. I didn’t know what I didn’t know, so I thought I needed to manually update state. I [asked on SO](https://stackoverflow.com/questions/44912152/how-to-push-child-arrays-into-items-in-an-array-to-local-react-state-via-a-fire/44912797#44912797) and had an expensive first try of [Code Mentor](https://www.codementor.io) without resolution. I was stuck for like three days straight, and it made me stop trying to make this a “build with me” video.
 
 The issue was that I was supposed to just push state and output from it, but I had been trying to build a nested local state. It was Steve Kinney’s explanation of how Firebase stores data (and why to use Lodash) that finally made it click.
 

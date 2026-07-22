@@ -40,7 +40,7 @@ I don't get a lot of traffic, but those of you who made it here will get to see 
 5.  Design the nav.
 6.  Design the basic post style.
 7.  Get recent posts back up in the basic post style. (The ones below have content but you'll need your back button)
-    - [Sass and Compass Pairing with Michael Parenteau](/posts/front-end-dev/sass-compass-pairing-with-michael-parenteau)
+    - [Sass and Compass Pairing with Michael Parenteau](/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau)
     - [A Sass Noob Using Math for Flexible Widths](/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths)
 
 That will get me started and I'll have a MVW (minimum viable website). Getting the recent posts back up are important to me because I had shared how much a few people had helped me recently and I want those back up so others know how awesome they are.
