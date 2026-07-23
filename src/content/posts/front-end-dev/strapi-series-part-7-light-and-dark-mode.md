@@ -9,7 +9,7 @@ pubDate: "2023-04-19"
 gradientTitle: "radial-gradient(#fef9dc, #eb9256, #ee8146)"
 socialImageFilename: "og-strap-series-part-7-light-and-dark-mode.jpg"
 strapiSeries: true
-summary: Setting up dark mode with a curveball
+summary: "Planning dark mode support for the Strapi site, plus a curveball around how much customization to allow in the admin."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-light-and-dark.png"

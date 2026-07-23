@@ -10,7 +10,7 @@ pubDate: "2023-04-10"
 gradientTitle: "linear-gradient(to bottom, #919777, #70765a)"
 socialImageFilename: "og-strapi-series-part-4-a-fake-company.jpg"
 strapiSeries: true
-summary: Creating some details to make the project fun
+summary: "Inventing a fake company, and a music-adjacent name, to make this Strapi project's designs and data feel real."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-series-fake.png"

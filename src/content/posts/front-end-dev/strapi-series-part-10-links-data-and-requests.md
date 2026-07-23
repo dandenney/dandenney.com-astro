@@ -6,7 +6,7 @@ colorText: "#fffffc"
 pubDate: "2023-05-11"
 gradientTitle: "linear-gradient(to bottom, #f9bf65, #e99e4f)"
 strapiSeries: true
-summary: The first collection and another single type
+summary: "Building the first Strapi collection and single type for page links, with a video walkthrough of the setup."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-page-links-data.png"

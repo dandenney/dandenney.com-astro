@@ -9,7 +9,7 @@ gradientTitle: "linear-gradient(to bottom, #a2a7a7, #545d5c)"
 path: "/posts/front-end-dev/mondays-rock"
 socialImageFilename: "og-strapi-series-part-1-project-outline.jpg"
 strapiSeries: true
-summary: An overview of what I hope to create
+summary: "An overview of what I hope to build in this Strapi series — learning to create flexible, well-architected components."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-project-outline.png"

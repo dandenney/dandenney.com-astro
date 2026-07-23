@@ -10,7 +10,7 @@ pubDate: "2023-04-10"
 gradientTitle: "linear-gradient(to bottom, #87d0a5, #51bca2)"
 socialImageFilename: "og-strap-series-part-5-a-coming-soon-component.jpg"
 strapiSeries: true
-summary: Hooking Strapi up to a component for collecting emails
+summary: "Hooking a Strapi-powered coming-soon component up to collect emails before the real site launches."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-email-launch.png"

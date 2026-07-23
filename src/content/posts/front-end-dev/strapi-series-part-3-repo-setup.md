@@ -8,7 +8,7 @@ pubDate: "2023-04-09"
 gradientTitle: "linear-gradient(to top, #955235, #ee763b)"
 socialImageFilename: "og-strapi-series-part-3-repo-setup.jpg"
 strapiSeries: true
-summary: Cloning, yarning, and command lining
+summary: "Cloning, yarning, and command lining my way through setting up the marketing site, admin, and Strapi repos."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-repo-setup.png"

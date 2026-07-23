@@ -7,7 +7,7 @@ colorText: "#f4eae2"
 pubDate: "2023-04-20"
 gradientTitle: "linear-gradient(to bottom, #fe9d4c, #f76d4e, #fd5ebf)"
 strapiSeries: true
-summary: Identifying patterns and planning for implementation
+summary: "Identifying font size and color patterns in the designs and planning how to implement them in Strapi."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-colors-shapes.png"

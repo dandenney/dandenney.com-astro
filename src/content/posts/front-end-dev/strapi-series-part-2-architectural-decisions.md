@@ -8,7 +8,7 @@ pubDate: "2023-04-09"
 gradientTitle: "linear-gradient(45deg, #8299a8, #555b53)"
 socialImageFilename: "og-strapi-series-part-2-architectural-decisions.jpg"
 strapiSeries: true
-summary: Basic decisions around the tech stack
+summary: "Documenting the basic architecture decisions behind this Strapi project, even if it's a stretch to call it a real ADR."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/architectural-decisions.png"

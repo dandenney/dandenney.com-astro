@@ -6,7 +6,7 @@ colorText: "#020e13"
 pubDate: "2023-05-03"
 gradientTitle: "linear-gradient(to bottom, #a95639, #5f2b16)"
 strapiSeries: true
-summary: Learning valuable lessons from initial creation attempts
+summary: "Lessons learned from my first attempts at modeling this Strapi project's content as data instead of pages."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-thinking-in-data.png"

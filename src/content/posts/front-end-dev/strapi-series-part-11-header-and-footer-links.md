@@ -6,7 +6,7 @@ colorText: "#312f2d"
 pubDate: "2023-06-12"
 gradientTitle: "linear-gradient(to bottom, #5a595e, #312f2d)"
 strapiSeries: true
-summary: Refactoring components to use the links data
+summary: "Refactoring Header and Footer components to pull real links data from Strapi, using a compound-components approach."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-link-components.png"

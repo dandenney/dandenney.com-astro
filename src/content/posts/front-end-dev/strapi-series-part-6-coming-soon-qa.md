@@ -9,7 +9,7 @@ pubDate: "2023-04-17"
 gradientTitle: "linear-gradient(45deg, #5adaff, #39b4f0)"
 socialImageFilename: "og-strap-series-part-6-coming-soon-qa.jpg"
 strapiSeries: true
-summary: Adding TypeScript and Storybook to verify and see data
+summary: "Adding TypeScript and Storybook to verify the coming-soon component, plus a neat trick for having ChatGPT document it."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/strapi-coming-soon-qa.png"
