@@ -1,7 +1,7 @@
 ---
 title: "001 - Awesome Design MD"
 pubDate: '2026-04-06'
-summary: Trying out some design.md files for generating UI
+summary: Trying out DESIGN.md files from Meng To and awesome-design-md to generate UI from sites like Cal.com and Stripe
 githubPath: 'https://github.com/dandenney/artificially-intelligent'
 tags: []
 ---
