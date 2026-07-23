@@ -15508,7 +15508,7 @@ Odd
 </section>
 <section class="row post" id="details">
 <div class="cell cell--s well">
-<img class="mbl mtl" width="100%" src="../img/tinkerings/roulettingale/roulette-board.svg">
+<img class="mbl mtl" width="100%" src="../img/tinkerings/roulettingale/roulette-board.svg" alt="An illustrated roulette board">
 <h1>
 Roulettingale
 </h1>
@@ -15773,19 +15773,19 @@ on
 and found a few options that I dig.
 </p><ul>
 <li>
-<img width="400" src="../img/tinkerings/roulettingale/palette-casino-royale.png">
+<img width="400" src="../img/tinkerings/roulettingale/palette-casino-royale.png" alt="Casino Royale color palette from ColourLovers">
 </li>
 <li>
-<img width="400" src="../img/tinkerings/roulettingale/palette-roulette.png">
+<img width="400" src="../img/tinkerings/roulettingale/palette-roulette.png" alt="Roulette color palette from ColourLovers">
 </li>
 <li>
-<img width="400" src="../img/tinkerings/roulettingale/palette-russian-roulette.png">
+<img width="400" src="../img/tinkerings/roulettingale/palette-russian-roulette.png" alt="Russian Roulette color palette from ColourLovers">
 </li>
 <li>
-<img width="400" src="../img/tinkerings/roulettingale/palette-russian-roulette-2.png">
+<img width="400" src="../img/tinkerings/roulettingale/palette-russian-roulette-2.png" alt="A second Russian Roulette color palette from ColourLovers">
 </li>
 <li>
-<img width="400" src="../img/tinkerings/roulettingale/palette-vintage-casino.png">
+<img width="400" src="../img/tinkerings/roulettingale/palette-vintage-casino.png" alt="Vintage Casino color palette from ColourLovers">
 </li>
 </ul>
 <p></p>
@@ -15793,11 +15793,11 @@ and found a few options that I dig.
 <p>
 This is a loose example, but I'm thinking of plotting the rolls like this with the 00 through 36 on the Y axis and the X axis showing spin count and bet amount.
 </p>
-<img width="1200" height="508" src="../img/tinkerings/roulettingale/example-plot-graph.png">
+<img width="1200" height="508" src="../img/tinkerings/roulettingale/example-plot-graph.png" alt="Example plot graph of roulette rolls, with numbers 00 through 36 on the Y axis and spin count on the X axis">
 <p>
 Chartist gets closer to showing it, albeit with the usual range problem which I'll need to solve with d3 instead.
 </p>
-<img width="1200" height="800" src="../img/tinkerings/roulettingale/example-chartist.jpg">
+<img width="1200" height="800" src="../img/tinkerings/roulettingale/example-chartist.jpg" alt="Example chart of roulette rolls rendered with Chartist">
 <h3 class="mtm">
 February 6, 2015
 </h3>

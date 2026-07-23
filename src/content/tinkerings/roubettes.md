@@ -13,7 +13,7 @@ tags:
 <section class='row'>
 <div class='cell well'>
 <h1 class='tac'>Roubettes</h1>
-<img width="100%" src="/tinkerings/roulettingale/roubettes-board.svg" />
+<img width="100%" src="/tinkerings/roulettingale/roubettes-board.svg" alt="A roulette board showing the outcome of specific bets" />
 </div>
 </section>
 <section class='row'>
