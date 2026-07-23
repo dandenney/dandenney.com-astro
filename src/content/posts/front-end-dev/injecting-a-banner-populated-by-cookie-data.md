@@ -7,7 +7,7 @@ gradientTitle: "linear-gradient(135deg, #bda07c, #744c28)"
 path: "/posts/front-end-dev/injecting-a-banner-populated-by-cookie-data"
 title: Injecting a banner populated with cookie data
 cloudinaryThumb: "posts/injecting-cookie-data.png"
-summary: Sharing how I made a banner for a promo
+summary: "Sharing how I built a promo banner that pulls its content from cookie data."
 pubDate: "2019-09-18"
 codeHighlighting: true
 tags:

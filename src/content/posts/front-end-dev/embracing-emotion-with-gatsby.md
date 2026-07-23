@@ -7,7 +7,7 @@ gradientTitle: "radial-gradient(#f0e1c0, #7c614d)"
 path: "/posts/front-end-dev/embracing-emotion-with-gatsby"
 cloudinaryThumb: "posts/emotion-gatsby.png"
 title: Embracing Emotion, with Gatsby
-summary: Crushing on Gatsby and trying to organize my Emotions
+summary: "Crushing on Gatsby and trying to organize my styles with Emotion instead of plain CSS."
 pubDate: "2019-04-17"
 codeHighlighting: true
 tags:

@@ -7,7 +7,7 @@ path: "/posts/front-end-dev/prop-data-preferences"
 cloudinaryThumb: posts/prop-preferences.png
 title: Prop Data Preferences
 gradientTitle: "linear-gradient(to right, #d9a07f, #f5cdaa)"
-summary: What's the "best practice" for passing down data
+summary: "Debating the 'best practice' for passing looped data down through props after a PR discussion at work."
 pubDate: "2020-01-18"
 codeHighlighting: true
 tags:

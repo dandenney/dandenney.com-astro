@@ -8,7 +8,7 @@ path: "/posts/front-end-dev/learning-javascript-problem-solving"
 cloudinaryThumb: "posts/javascript-problems.png"
 thumbAlt: "An illustration of two trains heading towards a crash, with a city skyline in the background, in the style of a comic book, viewed from a dynamic perspective --v 5 --ar 3:2"
 title: "I'm Learning How to Solve Problems with JavaScript"
-summary: Showing the solution to a brain teaser with JS
+summary: "Walking through my solution to a JavaScript brain teaser, warts and all."
 pubDate: "2016-08-08"
 codeHighlighting: true
 tags:

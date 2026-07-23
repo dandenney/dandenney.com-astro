@@ -7,7 +7,7 @@ colorText: "#423231"
 pubDate: "2019-10-20"
 gradientTitle: "linear-gradient(to bottom, #aab670, #485823)"
 path: "/posts/front-end-dev/getting-closer-to-critical-css-by-default"
-summary: How adopting CSS-In-JS tooling is improving performance
+summary: "How adopting CSS-in-JS tooling got me closer to shipping only the critical CSS a page actually needs."
 cloudinaryThumb: "posts/critical-css.png"
 title: Getting Closer To Critical CSS By Default
 tags:
