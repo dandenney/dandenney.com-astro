@@ -1,7 +1,7 @@
 ---
 title: Roubettes
 pubDate: 2015-02-21
-summary: Outputting the results of specific bets
+summary: "Outputting the results of specific roulette bets to see how the numbers actually play out."
 tags:
   - tinkerings
 ---

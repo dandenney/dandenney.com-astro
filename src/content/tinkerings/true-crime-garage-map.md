@@ -3,7 +3,7 @@ title: "Map of True Crime Garage Episodes"
 pubDate: 2020-02-17
 thumb: "v1680746810/tinkerings/tcg-map.png"
 thumbAlt: "Screenshot of a map with a lot of circles in the US"
-summary: A map with a location from each episode of True Crime Garage
+summary: "An interactive map plotting a location from every episode of the True Crime Garage podcast."
 tags:
   - tinkerings
 ---

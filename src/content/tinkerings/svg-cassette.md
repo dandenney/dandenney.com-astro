@@ -1,7 +1,7 @@
 ---
 title: SVG Cassette
 pubDate: 2013-08-13
-summary: Learing about SVG animation by spinning cassette reels
+summary: "Learning about SVG animation by building a spinning cassette reel, purely for the fun of the challenge."
 tags:
   - tinkerings
 ---

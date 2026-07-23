@@ -3,7 +3,7 @@ title: "Disruptive Album: beerbongs and bentleys"
 pubDate: 2020-02-17
 thumb: "v1680747164/tinkerings/beerbongs-and-bentleys.png"
 thumbAlt: "Screenshot of a visualization for Beerbongs and Bentleys"
-summary: A celebration of the impact of the album on the Spotify charts
+summary: "A celebration of just how hard Post Malone's beerbongs and bentleys hit the Spotify charts, visualized."
 tags:
   - tinkerings
 ---

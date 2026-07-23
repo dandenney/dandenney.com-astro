@@ -1,7 +1,7 @@
 ---
 title: Roulettystem
 pubDate: 2015-02-22
-summary: Can a system win enough times to be profitable?
+summary: "Testing whether a specific roulette betting system can win often enough to actually be profitable."
 tags:
   - tinkerings
 ---
