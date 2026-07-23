@@ -6,7 +6,7 @@ colorText: "#f8f4f2"
 pubDate: "2013-08-17"
 gradientTitle: "linear-gradient(25deg, #e6570f, #feae14, #feeda7)"
 path: "/posts/conferences/upcoming-events-in-13"
-summary: A listing of confs to attend in 2013
+summary: "A listing of the front-end conferences worth putting on your radar and attending in 2013."
 tags:
   - conferences
 cloudinaryThumb: "posts/upcoming-events.png"

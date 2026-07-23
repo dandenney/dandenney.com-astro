@@ -1,7 +1,7 @@
 ---
 path: "/posts/general/ricardo-rally-time"
 title: "Ricardo Rally Time"
-summary: "A friend is trying to build an iPad app"
+summary: "A friend's attempt at building an iPad app, and rallying to help however I can."
 pubDate: "2013-02-27"
 tags:
   - general

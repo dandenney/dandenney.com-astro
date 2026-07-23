@@ -2,7 +2,7 @@
 pubDate: "2013-07-18"
 gradientTitle: "linear-gradient(to bottom, #84151a, #b51f24)"
 path: "/posts/conferences/front-end-conf-13"
-summary: A recap of from running the 2013 event
+summary: "Recapping Front-End Conf 13 and the inspiring moments that make running it worth it."
 tags:
   - conferences
 cloudinaryThumb: "posts/front-end-13"

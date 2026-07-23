@@ -7,7 +7,7 @@ pubDate: "2013-04-30"
 gradientTitle: "linear-gradient(120deg, #6d9a81, #c5d496, #406d62)"
 
 path: "/posts/general/the-trouble-with-the-trouble-with-code-school"
-summary: "A reply to a post about online learning"
+summary: "A reply to Zach Wentz's post on the real flaw in online coding education platforms."
 tags:
   - general
 cloudinaryThumb: "posts/trouble-with.png"

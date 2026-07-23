@@ -6,7 +6,7 @@ colorText: "#fbe9c4"
 pubDate: "2013-03-21"
 gradientTitle: "linear-gradient(to bottom, #a48364, #7c543a)"
 path: "/posts/front-end-dev/playing-with-data-uris"
-summary: Sharing some benefits of using data URIs for images
+summary: "Following up on yesterday's post, testing what data URIs can actually do for image performance."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/data-uris.png"

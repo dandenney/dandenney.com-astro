@@ -6,7 +6,7 @@ colorText: "#ffe47a"
 pubDate: "2013-04-07"
 gradientTitle: "linear-gradient(135deg, #60323f, #de6c3a)"
 path: "/posts/front-end-dev/mixture-and-firebase-and-public-apis"
-summary: Playing with a cool tool
+summary: "Playing with Mixture, Firebase, and public APIs while learning to share what I build via video."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/mixture-firebase.png"

@@ -7,7 +7,7 @@ pubDate: "2014-03-03"
 gradientTitle: "linear-gradient(to bottom, #8c0909 0%, #d03d07 20%, #eeb649 40%, #fcfabd 60%, #d03d07 80%, #8c0909 100%)"
 
 path: "/posts/general/a-shift-in-focus"
-summary: "Changing from a split role to a product one"
+summary: "Changing roles from split design/dev work to a focused product role, and what prompted the shift."
 tags:
   - general
 cloudinaryThumb: "posts/shift-in-focus.png"
