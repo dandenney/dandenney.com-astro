@@ -10,6 +10,13 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "The modern, open source SEO platform.",
+    url: "https://openseo.so/?ref=producthunt",
+    description: "OpenSEO is an open-source SEO platform that helps you and your AI work together using real, quality data. It offers tools to research keywords, competitors, backlinks, and Google Search Console performance. Many users…",
+    created: "2026-07-22",
+    kind: "read",
+  },
+  {
     title: "The Tower Keeps Rising",
     url: "https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/?utm_source=tldrnewsletter",
     description: "The article compares AI-assisted software development to the Tower of Babel story, showing how shared understanding is key to teamwork. AI tools let developers make changes without talking, which can break the common…",
