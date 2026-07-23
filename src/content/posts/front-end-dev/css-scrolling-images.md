@@ -1,7 +1,7 @@
 ---
 pubDate: "2025-03-10"
 socialImageFilename: "og-css-scrolling-images.jpg"
-summary: "A line of CSS to make images scroll"
+summary: "A single line of CSS that makes a row of images scroll smoothly, no JavaScript or extra markup required."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/css-scrolling-images.png"

@@ -1,7 +1,7 @@
 ---
 pubDate: "2026-03-08"
 socialImageFilename: "og-datatune-2026.jpg"
-summary: Another awesome experience
+summary: My first DataTune Conf in Nashville — AI adoption struggles, the data science and engineering crossover, and reactions to the newest LLM releases.
 tags:
   - conferences
 cloudinaryThumb: "posts/datatune-2026.png"

@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/mondays-rock"
 title: Mondays Rock
-summary: Mondays are so different at Envy
+summary: Whiteboard coding sessions with Envy's front-end team turned Mondays into the best part of my week.
 pubDate: "2012-07-16"
 tags:
   - front-end-dev

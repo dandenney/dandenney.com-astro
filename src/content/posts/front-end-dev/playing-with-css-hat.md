@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/playing-with-css-hat"
 title: Playing With CSS Hat
-summary: Mondays are so different at Envy
+summary: Testing CSS Hat, a Photoshop plugin that converts layer styles into CSS, and comparing its output against my hand-coded version.
 pubDate: "2012-07-21"
 tags:
   - front-end-dev

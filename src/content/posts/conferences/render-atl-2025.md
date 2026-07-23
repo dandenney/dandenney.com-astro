@@ -5,7 +5,7 @@ colorLink: "#ff80e0"
 colorText: "#ffffff"
 pubDate: "2025-06-14"
 socialImageFilename: "og-render-atl-2025.jpg"
-summary: Another awesome experience
+summary: Recapping Render ATL 2025 — the AI Summit, hands-on workshops, and how much AI took over this year's conference lineup.
 tags:
   - conferences
 cloudinaryThumb: "posts/render-atl-2025.png"

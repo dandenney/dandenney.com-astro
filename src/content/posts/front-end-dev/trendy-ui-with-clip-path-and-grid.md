@@ -1,7 +1,7 @@
 ---
 pubDate: "2025-04-30"
 socialImageFilename: "og-trendy-ui-with-clip-path-and-grid.jpg"
-summary: "A line of CSS to make images scroll"
+summary: "Reverse-engineering mode.com's rounded, overlapping UI to figure out how they pulled off the layout with CSS Grid, clip-path, and flexbox."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/trendy-ui-with-clip-path-and-grid.png"
