@@ -1,4 +1,5 @@
 ---
+summary: Ethan Marcotte on humanity never learning to use blank textareas responsibly
 path: "/blips/ethans-infamous-quote"
 title: Ethan's Infamous Quote
 pubDate: "2018-09-05"

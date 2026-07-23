@@ -1,4 +1,5 @@
 ---
+summary: Kippt has the best UI I've seen for collecting links
 path: "/blips/i-love-kippt"
 title: I love Kippt
 pubDate: "2012-09-15"

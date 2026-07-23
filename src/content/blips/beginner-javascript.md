@@ -1,4 +1,5 @@
 ---
+summary: Notes from Wes Bos' Beginner JavaScript course
 path: "/blips/beginner-javascript"
 title: Beginner JavaScript
 pubDate: "2019-11-29"

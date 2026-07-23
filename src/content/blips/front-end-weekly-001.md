@@ -1,4 +1,5 @@
 ---
+summary: The first issue of a links roundup I never turned into a newsletter
 path: "/blips/front-end-weekly-no-1"
 title: Front-End Weekly - No. 1
 pubDate: "2013-11-01"

@@ -1,4 +1,5 @@
 ---
+summary: Google killed Reader, so I'm rebuilding my RSS habit in Feedly
 path: "/blips/i-missed-rss"
 title: I Missed RSS
 pubDate: "2013-08-09"

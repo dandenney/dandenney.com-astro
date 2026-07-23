@@ -1,4 +1,5 @@
 ---
+summary: Netlify sponsoring reminded me I can edit the CMS from my phone
 path: "/blips/smashing-conf-nyc-2019"
 title: Smashing Conf NYC 2019
 pubDate: "2018-10-23T00:00:00.000Z"

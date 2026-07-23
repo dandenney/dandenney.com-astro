@@ -1,4 +1,5 @@
 ---
+summary: Chasing Svbtle-worthy writing, one opinionated post at a time
 path: "/blips/subtly-seeking-svbtle"
 title: Subtly Seeking Svbtle
 pubDate: "2012-11-12"

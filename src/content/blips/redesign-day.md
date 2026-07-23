@@ -1,4 +1,5 @@
 ---
+summary: Microsoft and Disney going responsive was a bigger deal than agency redesigns
 path: "/blips/redesign-day"
 title: Redesign Day
 pubDate: "2012-10-03"

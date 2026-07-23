@@ -1,4 +1,5 @@
 ---
+summary: The best defense of utility-first CSS I've read
 path: "/blips/utility-first-css-ftw"
 title: "Utility-First CSS, FTW"
 pubDate: "2019-01-15"

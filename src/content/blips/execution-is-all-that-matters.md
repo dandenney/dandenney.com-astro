@@ -1,4 +1,5 @@
 ---
+summary: Ideas are cheap; Brad Frost shipping This Is Responsive is the reminder
 path: "/blips/execution-is-all-that-matters"
 title: Execution is all that matters
 pubDate: "2012-09-15"

@@ -1,4 +1,5 @@
 ---
+summary: "Kolormark sells hex code names, and now I own #b51f24"
 path: "/blips/kolormark"
 title: Kolormark
 pubDate: "2020-01-13"

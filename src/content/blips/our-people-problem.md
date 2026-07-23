@@ -1,4 +1,5 @@
 ---
+summary: Blaming organizers for our industry's drinking culture misses who's responsible
 path: "/blips/our-people-problem"
 title: Our Industry's Drinking Problem?
 pubDate: "2013-10-24"

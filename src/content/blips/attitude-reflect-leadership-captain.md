@@ -1,4 +1,5 @@
 ---
+summary: A Remember the Titans line, and how well it captures leading at Envy Labs
 path: "/blips/attitude"
 title: Attitude Reflect Leadership, Captain
 pubDate: "2012-09-18"

@@ -1,4 +1,5 @@
 ---
+summary: Spotify Wrapped day is my favorite, and Evan Bartels owned my 2019
 path: "/blips/spotify-wrapped-2019"
 title: Spotify Wrapped 2019
 pubDate: "2019-12-05"

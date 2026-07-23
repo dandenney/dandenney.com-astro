@@ -1,4 +1,5 @@
 ---
+summary: Years of consuming web content finally tipped toward producing more
 path: "/blips/production-consumption-balance"
 title: Production-Consumption Balance
 pubDate: "2012-11-14"

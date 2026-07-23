@@ -1,4 +1,5 @@
 ---
+summary: Two great interviews with Jared Erondu worth a listen
 path: "/blips/jared-erondu"
 title: Jared Erondu
 pubDate: "2012-10-02"

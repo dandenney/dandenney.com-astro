@@ -1,4 +1,5 @@
 ---
+summary: Too many ideas, not enough execution — the eternal struggle
 path: "/blips/ideas"
 title: Ideas
 pubDate: "2012-10-01"

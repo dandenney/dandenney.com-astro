@@ -1,4 +1,5 @@
 ---
+summary: All-male conference lineups need better outreach, not affirmative action
 path: "/blips/tech-conference-diversity"
 title: Tech Conference Diversity
 pubDate: "2013-01-06"

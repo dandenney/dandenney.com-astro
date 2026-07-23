@@ -1,4 +1,5 @@
 ---
+summary: Bustle proved me wrong about needing SEO to justify a JS-rendered site
 path: "/blips/bustle"
 title: Bustle
 pubDate: "2013-08-17"

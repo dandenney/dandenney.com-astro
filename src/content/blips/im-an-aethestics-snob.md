@@ -1,4 +1,5 @@
 ---
+summary: Aesthetics drive my enthusiasm as much as usability does
 path: "/blips/im-an-aesthetics-snob"
 title: I'm an Aethestics Snob
 pubDate: "2012-10-04"

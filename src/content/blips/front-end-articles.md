@@ -1,4 +1,5 @@
 ---
+summary: A roundup of the week's best front-end and CSS reads
 path: "/blips/great-week-for-front-end-articles"
 title: Great Week for Front-End Articles
 pubDate: "2013-10-24"

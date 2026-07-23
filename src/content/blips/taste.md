@@ -1,4 +1,5 @@
 ---
+summary: Ira Glass on the gap between taste and skill, still one of my favorites
 path: "/blips/taste"
 title: Taste
 pubDate: "2014-01-29"

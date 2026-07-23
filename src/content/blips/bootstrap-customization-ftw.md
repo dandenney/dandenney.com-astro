@@ -1,4 +1,5 @@
 ---
+summary: Foundation's my framework, but Bootstrap wins for cherry-picking
 path: "/blips/cherry-picking-from-frameworks"
 title: Cherry Picking from Frameworks
 pubDate: "2012-11-27"

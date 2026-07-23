@@ -1,4 +1,5 @@
 ---
+summary: A week of learning Progressive Web Apps and finally getting JS primitives
 path: "/blips/this-week-i-learned-aug-8-14-16"
 title: "This Week I Learned (Aug 8-14)"
 pubDate: "2016-08-14"

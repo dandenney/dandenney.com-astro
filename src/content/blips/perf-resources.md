@@ -1,4 +1,5 @@
 ---
+summary: Andy's web perf resources roundup, so I don't have to build my own
 path: "/blips/perf-resources"
 title: "Web Perf Resources"
 pubDate: "2019-11-24"

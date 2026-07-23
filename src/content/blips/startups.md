@@ -1,4 +1,5 @@
 ---
+summary: Paul Graham's Startup = Growth reset how I think about startups
 path: "/blips/startups"
 title: Startups
 pubDate: "2012-09-24"
