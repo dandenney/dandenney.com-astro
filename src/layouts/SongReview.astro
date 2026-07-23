@@ -21,7 +21,18 @@ const {
   totalTracks,
   next,
   markdownTwin,
+  rawBody,
 } = Astro.props;
+
+const excerpt = (rawBody ?? "")
+  .replace(/^#.*$/gm, "")
+  .replace(/[*_`]/g, "")
+  .replace(/\s+/g, " ")
+  .trim();
+const metaDescription =
+  excerpt.length > 155
+    ? `${excerpt.slice(0, 155).replace(/\s+\S*$/, "")}…`
+    : excerpt || `A review of ${title} by ${artist}`;
 
 // Format duration from ms to mm:ss
 const formatDuration = (ms: number) => {
@@ -49,7 +60,7 @@ const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[
   <head>
     <BaseHead
       title={`${title} by ${artist}`}
-      description={`A review of ${title} by ${artist}`}
+      description={metaDescription}
       markdownTwin={markdownTwin}
     />
     <ClientRouter />

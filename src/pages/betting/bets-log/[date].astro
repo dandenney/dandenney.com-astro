@@ -23,6 +23,11 @@ const idx = sorted.findIndex((l) => l.date === log.date);
 const prev = idx > 0 ? sorted[idx - 1] : null;
 const next = idx < sorted.length - 1 ? sorted[idx + 1] : null;
 const sports = [...new Set(log.candidates.map((c) => c.sport))].join(" / ");
+const shortAction =
+  log.finalDecision.action.length > 60
+    ? `${log.finalDecision.action.slice(0, 60).replace(/\s+\S*$/, "")}…`
+    : `${log.finalDecision.action}.`;
+const metaDescription = `${log.candidates.length} ${sports} candidates analyzed by AI harnesses on ${log.displayDate}. Decision: ${shortAction}`;
 ---
 
 <!doctype html>
@@ -30,7 +35,7 @@ const sports = [...new Set(log.candidates.map((c) => c.sport))].join(" / ");
   <head>
     <BaseHead
       title={`Bets Log ${log.displayDate} | Dan Denney`}
-      description={`${log.candidates.length} ${[...new Set(log.candidates.map(c => c.sport))].join('/')} candidates analyzed by AI harnesses on ${log.displayDate}. Decision: ${log.finalDecision.action}. Analyzing: ${log.candidates.map(c => c.player).join(', ')}.`}
+      description={metaDescription}
       type="blogpost"
       datePublished={new globalThis.Date(log.date)}
     />
