@@ -6,7 +6,7 @@ colorText: "#f6f5ed"
 pubDate: "2014-06-09"
 gradientTitle: "linear-gradient(to right, #111111, #232020)"
 path: "/posts/conferences/front-end-conf-finales"
-summary: Our last two times of running the conf
+summary: "Looking back on the last two times we ran Front-End Conf before calling it."
 cloudinaryThumb: "posts/two-finales.png"
 thumbAlt: "
 An illustration of a dramatic stage performance with a curtain closing, with a lone spotlight shining on the performers and a 'The End' sign displayed in the background, in the style of a dark and moody charcoal drawing, viewed from a side perspective --v 5 --ar 3:2"

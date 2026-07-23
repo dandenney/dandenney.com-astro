@@ -6,7 +6,7 @@ colorText: "#241c47"
 pubDate: "2016-06-26"
 gradientTitle: "linear-gradient(135deg, #612a64, #bf3394)"
 path: "/posts/front-end-dev/pursuing-a-nanodegree"
-summary: Diving into learning JavaScript on Udacity
+summary: "Diving into a Udacity nanodegree to finally learn functional JavaScript, on top of every other resource I'd already stocked up."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/nanodegree.png"

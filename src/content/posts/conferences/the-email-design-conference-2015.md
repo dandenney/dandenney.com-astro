@@ -6,7 +6,7 @@ colorText: "#f8f4f2"
 pubDate: "2015-08-29"
 gradientTitle: "linear-gradient(20deg, #6fbbee, #9e9dd1, #ea9a83)"
 path: "/posts/conferences/the-email-design-conference-2015"
-summary: A recap from attending this awesome event
+summary: "Recapping The Email Design Conference 2015, including the talk I gave on the organized chaos of email creation."
 tags:
   - conferences
 cloudinaryThumb: "posts/email-design-conference.png"

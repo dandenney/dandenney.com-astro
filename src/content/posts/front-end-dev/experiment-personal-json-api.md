@@ -8,7 +8,7 @@ pubDate: "2014-08-30"
 gradientTitle: "linear-gradient(to left, #d36b89, #8a455c)"
 path: "/posts/front-end-dev/experiment-personal-json-api"
 permalink: posts/front-end-dev/{{ title | slug }}/index.html
-summary: Trying out a way to access a personal bio as an API
+summary: "Experimenting with serving my own bio as a personal JSON API, sharing the bumbling process as I go."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/personal-json-api.png"

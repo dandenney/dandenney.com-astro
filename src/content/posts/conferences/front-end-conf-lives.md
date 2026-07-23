@@ -6,7 +6,7 @@ colorText: "#f2f2f2"
 pubDate: "2014-10-23"
 gradientTitle: "linear-gradient(to bottom, #efefef, #bbbbbb)"
 path: "/posts/conferences/front-end-conf-lives"
-summary: The conference goes on, thanks to friends
+summary: "How Front-End Conf kept going, thanks to friends who stepped up to help run it."
 tags:
   - conferences
 cloudinaryThumb: "posts/fedc-lives.jpg"

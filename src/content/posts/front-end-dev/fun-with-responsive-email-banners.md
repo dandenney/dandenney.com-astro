@@ -6,7 +6,7 @@ colorText: "#ffffff"
 pubDate: "2014-03-27"
 gradientTitle: "linear-gradient(to bottom, #edd4b1, #c5a589)"
 path: "/posts/front-end-dev/fun-with-responsive-email-banners"
-summary: Responsive design and HTML Tables, FTW
+summary: "Making responsive HTML email banners work using old-school HTML tables, for the win."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/email-banner.png"

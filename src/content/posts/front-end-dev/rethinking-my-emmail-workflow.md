@@ -6,7 +6,7 @@ colorText: "#ffffff"
 pubDate: "2016-06-30"
 gradientTitle: "linear-gradient(to right, #000002, #000002)"
 path: "/posts/front-end-dev/rethinking-my-emmail-workflow"
-summary: Changing from all local dev to using Builder
+summary: "After talking about my offline email workflow at The Email Design Conference, Litmus showed me why Builder changes everything."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/rethinking.png"

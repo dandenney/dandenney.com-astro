@@ -6,7 +6,7 @@ colorText: "#2b190b"
 pubDate: "2014-08-28"
 gradientTitle: "linear-gradient(45deg, #324d5e, #4e7581)"
 path: "/posts/conferences/thank-you"
-summary: People are amazing, thank you so much
+summary: "Reflecting on just how amazing the people in this community are, and saying thank you."
 cloudinaryThumb: "posts/thank-you.png"
 title: Thank You
 tags:
