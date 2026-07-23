@@ -6,7 +6,7 @@ colorLink: "#257f7b"
 colorText: "#453332"
 pubDate: "2020-12-15"
 gradientTitle: "linear-gradient(to bottom, #817f58, #555646)"
-summary: Sharing some basics of configuration that were new to me
+summary: "Sharing the npm and Netlify configuration basics that were new to me when I got started with Eleventy."
 tags:
   - front-end-dev
 cloudinaryThumb: posts/eleventy-netlify-newb.jpg

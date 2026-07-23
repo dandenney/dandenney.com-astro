@@ -7,7 +7,7 @@ path: "/posts/front-end-dev/you-cant-make-other-love-css"
 cloudinaryThumb: "posts/love-css.png"
 title: "You Can't Make Others Love CSS"
 gradientTitle: "radial-gradient(#e74565, #570505)"
-summary: Sharing my take on the utility CSS wars
+summary: "My take on the endless utility-first CSS wars, and why Tailwind isn't going to convert everyone."
 pubDate: "2022-09-20"
 codeHighlighting: false
 tags:

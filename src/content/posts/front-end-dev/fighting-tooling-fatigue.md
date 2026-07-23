@@ -7,7 +7,7 @@ colorText: "#caeff2"
 pubDate: "2020-12-13"
 gradientTitle: "radial-gradient(#90e3f2, #2b8aa0)"
 path: "/posts/front-end-dev/fighting-tooling-fatigue"
-summary: Failing deploys, build configurations, and plugins oh my
+summary: "Redesigning my site turned into adding Tailwind to Eleventy, which turned into fighting failing deploys and plugin configs."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/tooling-fatigue.png"

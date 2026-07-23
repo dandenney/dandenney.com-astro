@@ -8,7 +8,7 @@ colorText: "#e8fbdb"
 pubDate: "2021-08-17"
 gradientTitle: "linear-gradient(to bottom, #aec8c5, #7b9396)"
 path: "/posts/front-end-dev/fixing-x-robots-nofollow-with-vercel"
-summary: Fixing a an issue when proxying to Vercel
+summary: "How a Vercel proxy misconfiguration quietly nofollowed a project for months, and how I finally fixed it."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/x-robots_nofollow.png"

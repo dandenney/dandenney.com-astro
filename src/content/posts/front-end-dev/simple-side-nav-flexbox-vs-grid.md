@@ -6,7 +6,7 @@ colorText: "#f8f4f2"
 pubDate: "2020-08-16"
 gradientTitle: "linear-gradient(45deg, #bdbec2, #695b53)"
 path: "/posts/front-end-dev/simple-side-nav-flexbox-vs-grid"
-summary: A popular question with a pretty clear answer in this case
+summary: "Building a sidebar nav that shifts layout at tablet sizes, and settling the flexbox-vs-grid question for this case."
 tags:
   - front-end-dev
 cloudinaryThumb: posts/flexbox-vs-grid.png

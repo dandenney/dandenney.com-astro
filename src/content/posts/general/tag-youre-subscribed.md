@@ -1,7 +1,7 @@
 ---
 pubDate: "2025-07-15"
 socialImageFilename: "og-tag-youre-subscribed.jpg"
-summary: "So many newsletters that I love"
+summary: "Why I've leaned hard into email newsletters for industry news, and the ones I love reading most."
 tags:
   - general
 cloudinaryThumb: "posts/tag-youre-subscribed.png"

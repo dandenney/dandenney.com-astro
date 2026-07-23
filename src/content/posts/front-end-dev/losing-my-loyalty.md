@@ -1,6 +1,6 @@
 ---
 title: "Losing My Loyalty"
-summary: Exploration and orchestration are replacing it
+summary: "From CoffeeCup to Photoshop, I've been fiercely loyal to my tools for years — but exploration and orchestration are replacing that loyalty now."
 pubDate: "2026-05-17"
 codeHighlighting: false
 tags:

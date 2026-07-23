@@ -1,7 +1,7 @@
 ---
 pubDate: "2025-11-17"
 socialImageFilename: "og-the-best-thing-since-browser-based-code-challenges.jpg"
-summary: "From interactive learning to adaptive learning"
+summary: "How learning to code shifted from browser-based interactive challenges to adaptive, AI-driven learning."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/the-best-thing-since-browser-based-code-challenges.png"

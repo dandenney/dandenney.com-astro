@@ -8,7 +8,7 @@ path: "/posts/front-end-dev/mapping-on-the-web-is-hard-sorta"
 cloudinaryThumb: posts/map-on-the-web.png
 thumbAlt: "creating a map on the internet --ar 3:2 --v 5"
 title: Mapping On The Web Is Hard, Sorta
-summary: Sharing what I learned trying to build an interactive map
+summary: "What I learned (the hard way) trying to build an interactive map with points and a scrollable timeline."
 pubDate: "2020-03-08"
 tags:
   - front-end-dev

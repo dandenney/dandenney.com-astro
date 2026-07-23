@@ -1,7 +1,7 @@
 ---
 pubDate: "2026-02-25"
 socialImageFilename: "og-trying-openclaw.jpg"
-summary: "Initial setup and some simple automations"
+summary: "Initial setup and some simple automations while trying out OpenClaw for the first time."
 tags:
   - front-end-dev
 thumb: "/posts/front-end-dev/trying-openclaw/trying-openclaw.webp"

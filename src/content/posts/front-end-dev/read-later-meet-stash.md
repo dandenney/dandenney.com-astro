@@ -1,6 +1,6 @@
 ---
 title: "Read Later, Meet Stash"
-summary: "Building my own tool for queuing and saving"
+summary: "After declaring 'read later' bankruptcy on Pocket, I moved to Notion and I'm now building my own tool for queuing and saving links."
 pubDate: "2026-05-02"
 tags:
   - front-end-dev

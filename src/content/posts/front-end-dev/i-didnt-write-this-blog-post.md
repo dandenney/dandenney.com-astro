@@ -5,7 +5,7 @@ colorText: "#314b55"
 pubDate: "2023-04-04"
 gradientTitle: "linear-gradient(35deg, #f68644, #af5a3d)"
 path: "/posts/front-end-dev/mondays-rock"
-summary: The computers have taken over this website
+summary: "An experiment in letting the computers take over this blog post, start to finish."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/didnt-write-this-blog-post.png"
