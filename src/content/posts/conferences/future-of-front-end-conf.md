@@ -1,7 +1,7 @@
 ---
 path: "/posts/conferences/future-of-front-end-conf"
 title: Future of Front-End Conf
-summary: Some changes for future versions of the events
+summary: "Some changes coming to future versions of Front-End Conf, and why we're making them."
 pubDate: "2012-10-05"
 tags:
   - conferences

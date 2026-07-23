@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/production-vs-shipping"
 title: Production vs. Shipping
-summary: The differences it makes when you think about shipping
+summary: "How thinking about shipping instead of just production changes the way you approach your work."
 pubDate: "2012-07-16"
 tags:
   - front-end-dev

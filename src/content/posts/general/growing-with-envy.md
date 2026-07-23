@@ -1,7 +1,7 @@
 ---
 path: "/posts/general/growing-with-envy"
 title: "Growing with Envy"
-summary: "Joining Envy Labs and Code School!"
+summary: "Joining Envy Labs and Code School as a front-end dev, and how big of a change that really is."
 pubDate: "2012-07-12"
 tags:
   - front-end-dev

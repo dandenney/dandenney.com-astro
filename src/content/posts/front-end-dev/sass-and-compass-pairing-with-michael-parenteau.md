@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/sass-and-compass-pairing-with-michael-parenteau"
 title: Sass and Compass Pairing with Michael Parenteau
-summary: Big thank you to Michael for showing me the ropes
+summary: "Michael Parenteau showed me the ropes of getting started with Sass and Compass on a real project."
 pubDate: "2012-06-17"
 codeHighlighting: true
 tags:

@@ -1,7 +1,7 @@
 ---
 path: "/posts/general/rebuilding"
 title: "Rebuilding"
-summary: "Why contemplating our mortality can be a powerful catalyst for change"
+summary: "Rebuilding my personal site after being kind of forced into it, and why contemplating mortality made it feel like an opportunity."
 pubDate: "2012-06-16"
 tags:
   - general

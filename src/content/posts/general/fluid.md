@@ -1,7 +1,7 @@
 ---
 path: "/posts/general/fluid"
 title: "Fluid"
-summary: "Waxing poetic on thinking about responsive design by watching nature"
+summary: "Waxing poetic on how watching nature changed the way I think about responsive design and building for the web."
 pubDate: "2012-03-12"
 
 tags:

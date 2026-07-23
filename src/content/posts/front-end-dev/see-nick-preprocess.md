@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/see-nick-preprocess"
 title: See Nick Preprocess
-summary: The launch of Assembling Sass at Code School
+summary: "Launching Assembling Sass at Code School, Nick's course on preprocessing with style."
 pubDate: "2012-08-15"
 codeHighlighting: true
 tags:

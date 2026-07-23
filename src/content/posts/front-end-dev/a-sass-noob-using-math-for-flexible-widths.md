@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths"
 title: A Sass Noob using Math for Flexible Widths
-summary: Sharing as I learn about mixins
+summary: "Learning Sass and Compass math to finally stop hand-calculating fluid width conversions."
 pubDate: "2012-06-18"
 codeHighlighting: true
 tags:

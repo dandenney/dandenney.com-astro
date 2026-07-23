@@ -1,7 +1,7 @@
 ---
 path: "/posts/front-end-dev/im-down-with-svg"
 title: I'm Down With SVG
-summary: Sharing the benefits of SVG over PNG
+summary: "Why SVG beats PNG for rendering Ricardo Gimenes' illustrations on the Front-End Conf site."
 pubDate: "2012-09-30"
 tags:
   - front-end-dev
