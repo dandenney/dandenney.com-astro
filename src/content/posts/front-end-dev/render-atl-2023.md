@@ -5,7 +5,7 @@ colorLink: "#ff80e0"
 colorText: "#ffffff"
 pubDate: "2023-06-03"
 socialImageFilename: "og-render-atl-2023.jpg"
-summary: Recap of an awesome experience
+summary: "Recapping Render ATL 2023 — the talks, the vibe, and why it's one of my favorite conferences."
 tags:
   - conferences
 cloudinaryThumb: "posts/IMG_7600.heic"

@@ -1,7 +1,7 @@
 ---
 pubDate: "2024-02-09"
 socialImageFilename: "og-webflow-for-web-devs.jpg"
-summary: "A meetup talk for Tampa Web Devs"
+summary: "A recorded Tampa Devs Meetup talk sharing what I've learned building sites in Webflow."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/webflow-for-web-devs.png"

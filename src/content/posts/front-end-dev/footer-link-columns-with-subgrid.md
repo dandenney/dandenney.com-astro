@@ -1,7 +1,7 @@
 ---
 pubDate: "2024-05-15"
 socialImageFilename: "og-footer-link-columns-with-subgrid.jpg"
-summary: "New tech applied to an old problem"
+summary: "Using CSS subgrid to solve the old problem of aligning footer link columns without extra markup."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/footer-link-columns-with-subgrid.png"

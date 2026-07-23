@@ -2,7 +2,7 @@
 codeHighlighting: true
 pubDate: "2023-07-19"
 socialImageFilename: "og-a-short-review-of-my-first-webflow-project.jpg"
-summary: 'A mix "no code" and "yes code"'
+summary: "My first real no-code project: a fast, fun Front-End Conf landing page built in Webflow instead of Framer."
 tags:
   - front-end-dev
 cloudinaryThumb: "posts/a-short-review-webflow-project.png"

@@ -3,7 +3,7 @@ title: Playing With Relume Layouts
 pubDate: '2024-07-08'
 tags:
   - front-end-dev
-summary: Building a layout with Greensock
+summary: "Recreating a Relume release-day layout in Astro with GSAP, since I'm not using React or Webflow anymore."
 socialImageFilename: og-playing-with-relume-layouts.jpg
 cloudinaryThumb: posts/playing-with-relume-layouts.webp
 thumb: "/posts/front-end-dev/playing-with-relume-layouts/playing-with-relume-layouts-thumb.webp"

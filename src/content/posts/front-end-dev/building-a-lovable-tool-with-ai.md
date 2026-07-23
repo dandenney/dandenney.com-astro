@@ -3,7 +3,7 @@ title: Building a Lovable Tool with AI
 pubDate: '2025-01-15'
 tags:
   - front-end-dev
-summary: Using Lovable AI to create a list app
+summary: "Sketching a list app in Excalidraw first, then building the 'minimum lovable product' version with Lovable AI."
 socialImageFilename: og-building-a-lovable-tool-with-ai-thumb.jpg
 cloudinaryThumb: posts/building-a-lovable-tool-with-ai.webp
 thumb: >-

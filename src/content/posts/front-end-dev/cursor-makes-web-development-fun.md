@@ -1,9 +1,7 @@
 ---
 title: Cursor Makes Web Dev Fun
 pubDate: 'January 29, 2025'
-summary: >-
-  Cursor helps you focus on
-  building instead of boilerplate
+summary: "Cursor turns tedious React and TypeScript boilerplate into quick tab-to-accept suggestions, making the actual building fun again."
 socialImageFilename: og-cursor-makes-web-development-fun.jpg
 cloudinaryThumb: posts/cursor-makes-web-development-fun.webp
 tags:

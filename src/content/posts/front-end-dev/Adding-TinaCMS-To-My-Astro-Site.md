@@ -3,7 +3,7 @@ title: Adding TinaCMS To My Astro Site
 pubDate: '2024-05-21'
 tags:
   - front-end-dev
-summary: Quick and easy setup with some learning
+summary: "Adding TinaCMS to my Astro site — quick setup, some learning curve, and why I picked it over Forestry."
 socialImageFilename: og-adding-tina-to-my-astro-site-thumb.jpg
 cloudinaryThumb: posts/adding-tina-to-my-astro-site-thumb.webp
 thumb: >-
