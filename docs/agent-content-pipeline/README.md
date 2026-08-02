@@ -17,10 +17,14 @@ Purpose: replace ad-hoc GitHub Action prompting with a structured, agent-first f
 2. Leif creates packet JSON
    - For no-reservaitions: address + coordinates are required for map compatibility
    - Coordinates format must be exactly: `longitude, latitude` (example: `-86.7816, 36.1627`)
+   - For no-reservaitions: Leif must resolve each user-mentioned dish/drink against the official menu or best corroborated source when possible, capturing canonical item names, key components, and confidence instead of leaving raw nouns uninterpreted
+   - If a dish remains ambiguous after research and that ambiguity would materially weaken the review, pause and ask Dan a follow-up rather than guessing
    - For music: Leif must run lyrics research (web search + source validation) and populate `lyrics.status|text|source`
 3. Shelby/Quillan materializes a concrete `prompt.md` from the packet + style pack
    - For no-reservaitions, the prompt should carry the repo's established Bourdain-adjacent review voice: worldly, specific, unsentimental, lightly wry, and grounded in concrete observation rather than imitation-by-catchphrase
+   - The prompt should explicitly forbid mentioning source artifacts like "the photo" or "the image" inside the published prose; those are for grounding, not for narration
 4. Quillan drafts review body from `prompt.md`
+   - The draft should read like a remembered experience, not an agent summary, and should interpret what the order reveals about the night instead of merely listing dishes and drinks
 5. Watten publishes file and prepares the delivery summary
    - For no-reservaitions with image, Watten generates:
      - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
