@@ -10,6 +10,13 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Connect Agents to the World",
+    url: "https://agentkey.app/?utm_source=www.theneurondaily.com&utm_medium=newsletter&utm_campaign=should-ai-learn-from-you-but-not-vice-versa&_bhlid=99fe1718d5a872e843fecf09cc8dce816088744b",
+    description: "AgentKey helps connect agents to live data from many sources like social media and finance. Users want better desks with stability, quality materials, and easier setup. AgentKey also manages APIs and billing so agents…",
+    created: "2026-08-15",
+    kind: "read",
+  },
+  {
     title: "The modern, open source SEO platform.",
     url: "https://openseo.so/?ref=producthunt",
     description: "OpenSEO is an open-source SEO platform that helps you and your AI work together using real, quality data. It offers tools to research keywords, competitors, backlinks, and Google Search Console performance. Many users…",
