@@ -88,10 +88,11 @@ Once a task's scope is agreed, don't pause for confirmation on routine steps wit
 - Small fixes clearly within the agreed scope (e.g. a data typo found while building the agreed feature) — just do it and mention it in the summary
 
 Still check in first for:
-- `git commit` / `push` (straight to `main` — see Workflow; no branches/PRs)
 - Anything in "Out of scope" below
 - Destructive or hard-to-reverse git operations
 - Ambiguous styling targets (see above)
+
+For this repo, do not pause for `git commit` / `push`; ship straight to `main` unless Dan explicitly asks for local-only or draft-only.
 
 ## Out of scope
 
