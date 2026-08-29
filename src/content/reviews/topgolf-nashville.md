@@ -8,7 +8,7 @@ coordinates: "-86.7779025, 36.1780577"
 description: "A two-hour Topgolf bay with Misty, a couple of Stellas and Miller Lites, and enough game-mode variety to remind you that sometimes the best part is simply getting to hit a real ball hard into the evening air."
 heroImageAlt: "Driver resting beside a golf ball on a Topgolf bay mat with the Nashville outfield targets, tall netting poles, and a soft pink evening sky in the distance."
 infoUrl: "https://topgolf.com/us/nashville/"
-pubDate: "2026-08-29"
+pubDate: "2026-08-25"
 tags: ["golf"]
 aiGenerated: true
 heroImage: "topgolf-nashville"

@@ -8,7 +8,7 @@ coordinates: "-86.888254, 36.134729"
 description: "An initial GOLFTEC game assessment with Misty that turned indoor simulator data, water in hand, and a yearlong lessons-and-practice commitment into the kind of golf nerdiness that actually makes you want to improve."
 heroImageAlt: "Indoor GOLFTEC simulator bay showing a practice screen with a canyon fairway background, 7 iron selected, total distance 39 yards, and swing metrics including launch angle, back spin, club path, and face to target."
 infoUrl: "https://www.golftec.com/golf-lessons/nashville-west"
-pubDate: "2026-08-29"
+pubDate: "2026-08-23"
 tags: ["golf"]
 aiGenerated: true
 heroImage: "golftec-nashville-west"
