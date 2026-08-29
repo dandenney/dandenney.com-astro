@@ -73,6 +73,7 @@ ${stylePack.trim()}
 - Description: \`${frontmatter.description || ''}\`
 - Source items: ${stringifyList(sourceInput.items)}
 - Source notes: ${sourceInput.notes || ''}
+- Golf mode: ${Array.isArray(frontmatter.tags) && frontmatter.tags.length === 1 && frontmatter.tags[0] === 'golf' ? 'yes — center the course/outing experience; food and drinks are optional secondary details' : 'no'}
 - Confidence: \`${confidence}\`
 - Flags: ${stringifyList(flags)}
 
@@ -87,7 +88,8 @@ ${sourceLines(packet.sources)}
 ## Output instructions
 - Write 220-420 words.
 - Markdown body only. No frontmatter.
-- Mention at least 2 specific items from \`sourceInput.items\`.
+- For standard restaurant/venue reviews, mention at least 2 specific items from \`sourceInput.items\`.
+- For golf-tagged reviews, mention at least 2 concrete specifics from the course/facility, the outing, or the source notes; food/drink details are optional supporting context.
 - Tie opinions to concrete details.
 - Include one clear trade-off or caveat.
 - Do not invent facts about ownership, history, or atmosphere beyond the packet.

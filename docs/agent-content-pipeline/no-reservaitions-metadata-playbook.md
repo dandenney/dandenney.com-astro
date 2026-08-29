@@ -50,6 +50,7 @@ Those older files are useful history, but they are **not** the standard to copy 
    - `infoUrl`
    - `description`
    - `tags`
+   - for golf entries, title should default to the course/facility name unless Dan explicitly supplies an override
 
 5. **Geocode only after you have an exact address**
    - Use Nominatim/OpenStreetMap on the exact street address.
@@ -59,6 +60,7 @@ Those older files are useful history, but they are **not** the standard to copy 
 6. **Separate public facts from Dan’s firsthand details**
    - Publicly verified: venue identity, address, city/state, official URL, map coordinates.
    - Dan-only unless corroborated: dish list, drink list, opener, atmosphere, how the night felt.
+   - For golf entries, Dan-only details often include course conditions, pace of play, who was there, and how the round felt; those are valid review texture even when they are not publicly corroborated.
    - Use public sources to anchor the place; use Dan’s input to anchor the review voice.
 
 7. **Normalize into a packet, not ad-hoc notes**
@@ -102,6 +104,7 @@ heroImage: "junior"
 
 - `title`
   - Default: the venue/entity name.
+  - For golf entries: default to the course/facility name.
   - Exception: if Dan explicitly wants an event/artist title override, use that title for frontmatter and slug.
 - `address`
   - Prefer the official site.
@@ -127,6 +130,7 @@ heroImage: "junior"
 - `tags`
   - Usually **1-4 tags**.
   - Use only the most widely known, routing-safe categories for the place or experience.
+  - **Golf override:** if the entry is about golf, tags must be exactly `["golf"]`.
   - Good examples:
     - `["concert", "bar"]`
     - `["mediterranean", "turkish", "middle-eastern"]`
@@ -140,6 +144,13 @@ heroImage: "junior"
   - Always `YYYY-MM-DD`.
 - `heroImage`
   - Basename only, no path, only when an image exists.
+
+## Golf-specific intake and research rules
+
+- Minimum acceptable intake: course/facility name, location hint, and a freeform note from Dan.
+- Food/drink details are optional; include them in the packet only when they mattered to the outing.
+- Research priority is official course/facility metadata: exact address, official URL, and map-ready coordinates.
+- Writing priority is the experience of the round, range session, simulator visit, clubhouse stop, or golf-adjacent outing — not forced meal narration.
 
 ## Canonical packet source shape
 

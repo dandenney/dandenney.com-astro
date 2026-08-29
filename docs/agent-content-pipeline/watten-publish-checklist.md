@@ -17,6 +17,7 @@
 - [ ] `tags` non-empty array
 - [ ] `tags` use only broad routing-safe categories (usually 1-4)
 - [ ] `tags` do **not** include the title, venue name, artist name, slug, city, state, or neighborhood
+- [ ] If the entry is golf-oriented, `tags` are exactly `["golf"]`
 - [ ] If image provided: generated assets exist
   - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
   - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)

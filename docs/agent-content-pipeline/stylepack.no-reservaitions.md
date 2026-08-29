@@ -12,13 +12,14 @@ Ground everything in observed items, place details, and lived impressions.
 
 ## Structure
 1. Quick hook (1-2 lines)
-2. Context (place, setting, what we ordered)
+2. Context (place, setting, what we ordered or what the outing was)
 3. What hit
 4. What missed (if anything)
 5. Verdict + who should go
 
 ## Must include
-- Mention at least 2 specific items from `sourceInput.items`
+- For standard restaurant/venue reviews, mention at least 2 specific items from `sourceInput.items`
+- For golf-tagged reviews, mention at least 2 concrete specifics from the course/facility, conditions, pacing, or source notes; food/drink details are optional supporting context
 - Tie opinions to concrete details (texture, balance, service timing, atmosphere)
 - Include one caveat/trade-off
 

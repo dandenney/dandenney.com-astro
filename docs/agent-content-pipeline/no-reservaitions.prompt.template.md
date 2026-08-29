@@ -11,6 +11,7 @@ Write it as if Anthony Bourdain were narrating Dan's actual experience from memo
 - Write like a sharp human remembering a real night, not an agent summarizing notes.
 - Be specific, judgmental in the useful sense, and willing to say why a choice mattered.
 - Treat food and drink as signals of mood, place, character, appetite, excess, restraint, or local logic.
+- For golf-tagged entries, treat the course/facility and the outing itself as the primary subject; food and drinks are secondary unless they clearly shaped the experience.
 - Prefer concrete interpretation over generic praise.
 - Avoid boilerplate trade-off language and generic recommendation formulas.
 - Do not invent facts.
@@ -28,11 +29,13 @@ Write it as if Anthony Bourdain were narrating Dan's actual experience from memo
 - Resolved dishes/drinks: <RESOLVED_ITEMS>
 - Items that remain ambiguous: <UNRESOLVED_ITEMS>
 - Confidence notes: <ITEM_CONFIDENCE>
+- For golf-tagged entries, this section can be sparse or empty when food/drink details were not central.
 
 ## Firsthand details from Dan
 - Visit date: <YYYY-MM-DD>
 - Items / drinks / bill: <ITEMS>
 - Atmosphere / observed details: <DETAILS>
+- Golf/outing notes when relevant: <GOLF_DETAILS>
 - Visual corroboration notes: <PHOTO_NOTES>
 - Title override notes if any: <TITLE_OVERRIDE>
 
@@ -40,7 +43,9 @@ Write it as if Anthony Bourdain were narrating Dan's actual experience from memo
 - Make the reader feel what actually happened.
 - Mention at least 2 concrete specifics from Dan's details or resolved item research.
 - Explain at least one choice: why a dish, drink, or ordering sequence mattered.
+- For golf-tagged entries, that "choice" can instead be about course selection, playing conditions, pacing, companions, or what made the outing memorable.
 - Find meaning in the order, not just the ingredients.
+- For golf-tagged entries, find meaning in the outing, not just the scorecard or amenities list.
 - Judge the experience, not just the branding.
 - If this is a bar stop / coffee stop / quick hit rather than a full meal, let the form fit the stop.
 

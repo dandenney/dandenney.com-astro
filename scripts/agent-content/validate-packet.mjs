@@ -56,11 +56,29 @@ if (!['high', 'medium', 'low'].includes(packet.confidence)) {
 }
 
 if (packet.type === 'no-reservaitions') {
-  required(packet.sourceInput, ['location', 'city', 'items'], 'sourceInput');
-  if (!Array.isArray(packet.sourceInput.items) || packet.sourceInput.items.length < 1) {
-    fail('sourceInput.items must be an array with at least 1 item');
-  }
+  required(packet.sourceInput, ['location', 'city'], 'sourceInput');
   required(packet.frontmatter, ['title', 'address', 'city', 'state', 'country', 'coordinates', 'description', 'pubDate', 'tags', 'aiGenerated'], 'frontmatter');
+
+  if (!Array.isArray(packet.frontmatter.tags) || packet.frontmatter.tags.length < 1) {
+    fail('frontmatter.tags must be a non-empty array');
+  }
+
+  const tags = packet.frontmatter.tags.map((tag) => String(tag));
+  const isGolf = tags.includes('golf');
+
+  if (isGolf) {
+    if (tags.length !== 1 || tags[0] !== 'golf') {
+      fail('golf no-reservaitions entries must use frontmatter.tags exactly ["golf"]');
+    }
+
+    const hasItems = Array.isArray(packet.sourceInput.items) && packet.sourceInput.items.length > 0;
+    const hasNotes = String(packet.sourceInput.notes || '').trim().length > 0;
+    if (!hasItems && !hasNotes) {
+      fail('golf no-reservaitions entries must include either sourceInput.items or a non-empty sourceInput.notes freeform note');
+    }
+  } else if (!Array.isArray(packet.sourceInput.items) || packet.sourceInput.items.length < 1) {
+    fail('sourceInput.items must be an array with at least 1 item for non-golf no-reservaitions entries');
+  }
 
   if (packet.frontmatter.heroImage) {
     const hero = String(packet.frontmatter.heroImage);
