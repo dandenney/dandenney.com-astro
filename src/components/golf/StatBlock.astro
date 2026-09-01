@@ -1,0 +1,49 @@
+---
+/**
+ * The label/number grid used on venue pages and the index. Hairline
+ * dividers between cells, no boxes.
+ */
+import MetricReadout from '@/components/golf/MetricReadout.astro';
+
+interface Stat {
+	label: string;
+	value: string | number;
+	unit?: string;
+	sub?: string;
+	tone?: 'ink' | 'tracer' | 'dim';
+}
+
+interface Props {
+	stats: Stat[];
+	size?: 'sm' | 'md' | 'lg';
+	class?: string;
+}
+
+const { stats, size = 'md', class: className } = Astro.props;
+---
+
+<dl class:list={['sb', className]}>
+	{stats.map((s) => (
+		<div class="sb-cell">
+			<MetricReadout label={s.label} value={s.value} unit={s.unit} sub={s.sub} size={size} tone={s.tone ?? (typeof s.value === 'string' && s.value.startsWith('—') ? 'dim' : 'ink')} />
+		</div>
+	))}
+</dl>
+
+<style>
+	.sb {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+		gap: 1px;
+		background: var(--gf-line-soft);
+		border-block: 1px solid var(--gf-line);
+		margin: 0;
+	}
+	.sb-cell {
+		background: var(--gf-bay);
+		padding: 1.1rem 1.25rem 1.1rem 0;
+	}
+	.sb-cell + .sb-cell {
+		padding-left: 1.25rem;
+	}
+</style>

@@ -1,0 +1,336 @@
+---
+/**
+ * /golf/venues/[slug], venue detail. Stats, the golf writeup, everything
+ * logged here, and the hand-off to the No Reserv-AI-tions review.
+ */
+import { render } from 'astro:content';
+import Golf from '@/layouts/Golf.astro';
+import StatBlock from '@/components/golf/StatBlock.astro';
+import SessionRow from '@/components/golf/SessionRow.astro';
+import { GOLF_SECTION_NAME } from '@/data/golf/types';
+import { fmtDateFull, fmtToPar, getRounds, getSessionPRFlags, getSessions, getVenueStats } from '@/data/golf/utils';
+import { FORMAT_LABEL, MEMBERSHIP_LABEL, getVenues, venueSlug, type GolfVenue } from '@/helpers/golf';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+	const venues = await getVenues();
+	return venues.map((venue) => ({ params: { slug: venueSlug(venue) }, props: { venue } }));
+}
+
+interface Props {
+	venue: GolfVenue;
+}
+
+const player = 'dan';
+const { venue } = Astro.props as Props;
+const slug = venueSlug(venue);
+const d = venue.data;
+const { Content } = await render(venue);
+const stats = getVenueStats(slug, player);
+const prFlags = getSessionPRFlags(player);
+
+const logged = [...getSessions(player).filter((s) => s.venueSlug === slug), ...getRounds(player).filter((r) => r.venueSlug === slug)]
+	.sort((a, b) => b.date.localeCompare(a.date) || b.id - a.id);
+
+const dash = '—';
+const hasBest = typeof stats.bestScore === 'number' || typeof stats.bestToPar === 'number';
+const statList = [
+	{ label: 'Visits', value: stats.visits },
+	{ label: 'First', value: stats.firstVisit ? fmtDateFull(stats.firstVisit) : dash },
+	{ label: 'Last', value: stats.lastVisit ? fmtDateFull(stats.lastVisit) : dash },
+	{ label: 'Sessions', value: stats.sessions },
+	{ label: 'Rounds', value: stats.rounds + stats.puttingRounds },
+	d.format === 'course' || d.format === 'putting'
+		? {
+				label: d.format === 'putting' ? 'Best card' : 'Best score',
+				value: typeof stats.bestScore === 'number' ? stats.bestScore : typeof stats.bestToPar === 'number' ? fmtToPar(stats.bestToPar) : dash,
+				tone: hasBest ? ('tracer' as const) : undefined,
+			}
+		: {
+				label: 'Longest drive',
+				value: typeof stats.longestDrive === 'number' ? stats.longestDrive : dash,
+				unit: typeof stats.longestDrive === 'number' ? 'yds' : undefined,
+				tone: typeof stats.longestDrive === 'number' ? ('tracer' as const) : undefined,
+			},
+];
+
+const courseFacts = [
+	d.holes ? `${d.holes} holes` : undefined,
+	d.par ? `Par ${d.par}` : undefined,
+	d.yardage ? `${d.yardage.toLocaleString('en-US')} yds` : undefined,
+	d.designer ? d.designer : undefined,
+	d.opened ? `Opened ${d.opened}` : undefined,
+].filter(Boolean) as string[];
+---
+
+<Golf title={`${d.title} · ${GOLF_SECTION_NAME}`} description={d.summary} image={d.heroImage} datePublished={d.pubDate}>
+	<article class="gf-wrap venue">
+		<header class="venue-head">
+			<p class="gf-label venue-crumb">
+				<a href="/golf">{GOLF_SECTION_NAME}</a> &middot; <a href="/golf/venues">Venues</a> &middot; {FORMAT_LABEL[d.format]}
+			</p>
+			<h1 class="gf-display venue-title">{d.title}</h1>
+			<p class="venue-summary">{d.summary}</p>
+			<div class="venue-meta">
+				<span class="gf-tag">{FORMAT_LABEL[d.format]}</span>
+				{d.membership === 'annual' ? <span class="gf-badge">Annual</span> : <span class="gf-tag">{MEMBERSHIP_LABEL[d.membership]}</span>}
+				{d.cadence && <span class="gf-tag venue-cadence">{d.cadence}</span>}
+				{courseFacts.map((f) => <span class="gf-tag">{f}</span>)}
+			</div>
+			<p class="gf-mono venue-addr">
+				{d.address ?? `${d.city}${d.state ? `, ${d.state}` : ''}`}
+				{d.infoUrl && (
+					<>
+						{' '}&middot; <a href={d.infoUrl} rel="noopener">Site &nearr;</a>
+					</>
+				)}
+			</p>
+		</header>
+
+		{d.heroImage && (
+			<figure class="venue-still">
+				<img src={d.heroImage} alt={d.heroImageAlt ?? ''} fetchpriority="high" />
+			</figure>
+		)}
+
+		<StatBlock stats={statList} class="venue-stats" />
+
+		<div class="venue-body">
+			<div class="gf-prose venue-prose">
+				<Content />
+			</div>
+			<aside class="venue-side">
+				{d.aiGenerated && (
+					<p class="gf-mono venue-ai">Writeup drafted with AI from the log. Numbers are real.</p>
+				)}
+			</aside>
+		</div>
+
+		<section class="venue-log" aria-labelledby="logged">
+			<div class="gf-section-head">
+				<h2 class="gf-h2" id="logged"><span class="gf-idx">Log</span> Everything here</h2>
+				<span class="gf-label">{logged.length} {logged.length === 1 ? 'entry' : 'entries'}</span>
+			</div>
+			{logged.length > 0 ? (
+				<div class="venue-rows">
+					{logged.map((item) => (
+						<SessionRow item={item} venue={d.title} prFlags={'clubs' in item ? prFlags.get(item.id) : undefined} />
+					))}
+				</div>
+			) : (
+				<p class="gf-empty venue-none gf-mono">&mdash; nothing logged here yet &mdash;</p>
+			)}
+		</section>
+
+		{d.nraiSlug && (
+			<a class="handoff" href={`/no-reserv-ai-tions/${d.nraiSlug}`}>
+				<span class="handoff-mark" aria-hidden="true"></span>
+				<span class="handoff-body">
+					<span class="gf-label handoff-k">Same room, other voice</span>
+					<span class="handoff-t">Read the No Reserv<span class="handoff-ai">AI</span>tions review</span>
+					<span class="handoff-s">The Bourdain cut: what it was like to be there, not how it went.</span>
+				</span>
+				<span class="handoff-arrow" aria-hidden="true">&rarr;</span>
+			</a>
+		)}
+
+		<nav class="venue-nav" aria-label="Browse">
+			<a class="gf-btn" href="/golf/venues">&larr; All venues</a>
+			<a class="gf-btn" href="/golf">The dashboard</a>
+		</nav>
+	</article>
+</Golf>
+
+<script>
+	function openHash() {
+		const id = location.hash.slice(1);
+		if (!id) return;
+		const d = document.getElementById(id);
+		if (d instanceof HTMLDetailsElement) d.open = true;
+	}
+	document.addEventListener('astro:page-load', openHash);
+	window.addEventListener('hashchange', openHash);
+</script>
+
+<style>
+	.venue {
+		padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+		max-width: 72rem;
+	}
+	.venue-head {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		max-width: 60rem;
+	}
+	.venue-crumb a {
+		color: inherit;
+		text-decoration: none;
+	}
+	.venue-crumb a:hover {
+		color: var(--gf-tracer);
+	}
+	.venue-title {
+		font-size: clamp(2.6rem, 7vw, 5.75rem);
+		margin-left: -0.03em;
+	}
+	.venue-summary {
+		font-family: var(--gf-serif);
+		font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+		line-height: 1.5;
+		color: var(--gf-ink-soft);
+		max-width: 52ch;
+		text-wrap: pretty;
+	}
+	.venue-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.venue-cadence {
+		color: var(--gf-tracer);
+	}
+	.venue-addr {
+		font-size: 0.72rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.venue-addr a {
+		color: var(--gf-ink);
+		text-decoration: none;
+		border-bottom: 1px solid var(--gf-line);
+	}
+	.venue-addr a:hover {
+		border-color: var(--gf-tracer);
+	}
+	.venue-still {
+		position: relative;
+		margin-top: clamp(1.5rem, 3vw, 2.5rem);
+		aspect-ratio: 21 / 9;
+		overflow: hidden;
+		background: var(--gf-panel);
+		border: 1px solid var(--gf-line);
+	}
+	.venue-still img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: saturate(0.7) contrast(1.05) brightness(0.85);
+	}
+	.venue-still::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background: linear-gradient(to top, oklch(14% 0.014 250 / 0.6), transparent 45%);
+	}
+	.venue :global(.venue-stats) {
+		margin-top: clamp(1.5rem, 3vw, 2.5rem);
+	}
+	.venue-body {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 16rem);
+		gap: 2rem 4rem;
+		margin-top: clamp(2rem, 4vw, 3rem);
+	}
+	.venue-prose {
+		font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+	}
+	.venue-side {
+		padding-top: 0.4rem;
+	}
+	.venue-ai {
+		font-size: 0.66rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+		line-height: 1.7;
+		border-left: 1px solid var(--gf-line);
+		padding-left: 0.9rem;
+	}
+	.venue-log {
+		margin-top: clamp(2.5rem, 5vw, 4rem);
+		padding-top: clamp(1.5rem, 3vw, 2rem);
+		border-top: 1px solid var(--gf-line);
+	}
+	.venue-rows {
+		border-top: 1px solid var(--gf-line);
+	}
+	.venue-none {
+		padding: 1.5rem;
+		text-align: center;
+		font-size: 0.78rem;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+	}
+
+	/* The hand-off: the seam between the two voices, styled on purpose */
+	.handoff {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		align-items: center;
+		gap: 1.5rem;
+		margin-top: clamp(2.5rem, 5vw, 4rem);
+		padding: 1.5rem 1.75rem;
+		background: var(--gf-panel);
+		border: 1px solid var(--gf-line);
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+	}
+	.handoff:hover {
+		background: var(--gf-raised);
+		border-color: oklch(66% 0.19 25 / 0.6);
+	}
+	.handoff-mark {
+		width: 0.9rem;
+		height: 0.9rem;
+		background: #b91c1c;
+		transform: rotate(-3deg);
+	}
+	.handoff-body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+	.handoff-k {
+		color: var(--gf-dim);
+	}
+	.handoff-t {
+		font-family: var(--gf-display);
+		font-weight: 500;
+		font-size: clamp(1.1rem, 2vw, 1.4rem);
+		letter-spacing: -0.02em;
+	}
+	.handoff-ai {
+		color: oklch(66% 0.19 25);
+	}
+	.handoff-s {
+		font-family: var(--gf-serif);
+		font-size: 0.95rem;
+		color: var(--gf-dim);
+	}
+	.handoff-arrow {
+		font-family: var(--gf-mono);
+		font-size: 1.4rem;
+		color: var(--gf-dim);
+		transition: transform 0.3s var(--gf-ease), color 0.2s;
+	}
+	.handoff:hover .handoff-arrow {
+		transform: translateX(6px);
+		color: var(--gf-ink);
+	}
+	.venue-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: clamp(2rem, 4vw, 3rem);
+	}
+	@media (max-width: 760px) {
+		.venue-body {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

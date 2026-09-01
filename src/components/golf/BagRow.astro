@@ -1,0 +1,130 @@
+---
+/**
+ * One club in the bag. The carry column is derived from sessions, so the
+ * bag and the metrics visibly talk to each other.
+ */
+import type { BagRowData } from '@/data/golf/utils';
+import { fmtDateShort } from '@/data/golf/utils';
+import { CLUB_SHORT, CLUB_LABEL } from '@/data/golf/types';
+
+interface Props {
+	row: BagRowData;
+	retired?: boolean;
+}
+
+const { row, retired = false } = Astro.props;
+const { item } = row;
+const specs = [item.loft, item.shaft].filter(Boolean).join(' · ');
+---
+
+<div class:list={['bag-row', { 'is-retired': retired }]} id={`bag-${item.id}`}>
+	<span class="gf-mono bag-club">{item.club ? CLUB_SHORT[item.club] : item.category.slice(0, 2).toUpperCase()}</span>
+	<span class="bag-what">
+		<span class="bag-name">{item.brand} {item.model}</span>
+		<span class="gf-mono bag-sub">
+			{item.club ? CLUB_LABEL[item.club] : item.category}{specs && <> · {specs}</>}
+		</span>
+	</span>
+	<span class="gf-mono bag-when">
+		{item.acquired && <span>In {fmtDateShort(item.acquired)} {item.acquired.slice(0, 4)}</span>}
+		{item.retired && <span>Out {fmtDateShort(item.retired)} {item.retired.slice(0, 4)}</span>}
+		{row.replacedBy && <span class="bag-repl">&rarr; {row.replacedBy.brand} {row.replacedBy.model}</span>}
+	</span>
+	<span class="bag-carry">
+		{typeof row.avgCarry === 'number' ? (
+			<>
+				<span class="gf-num bag-carry-num">{row.avgCarry}</span>
+				<span class="gf-mono bag-carry-unit">yd avg · {row.sessionsLogged} sess</span>
+			</>
+		) : (
+			<span class="gf-mono bag-carry-none">no carry data</span>
+		)}
+	</span>
+	<span class="bag-note">
+		{item.verdict ?? item.why}
+	</span>
+</div>
+
+<style>
+	.bag-row {
+		display: grid;
+		grid-template-columns: 3rem minmax(10rem, 1.3fr) minmax(8rem, 0.9fr) minmax(7rem, 0.8fr) minmax(0, 1.6fr);
+		gap: 0 1.25rem;
+		align-items: baseline;
+		padding: 1rem 0;
+		border-bottom: 1px solid var(--gf-line-soft);
+	}
+	.is-retired {
+		opacity: 0.55;
+	}
+	.bag-club {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--gf-tracer);
+	}
+	.is-retired .bag-club {
+		color: var(--gf-dim);
+	}
+	.bag-what {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.bag-name {
+		font-family: var(--gf-display);
+		font-weight: 500;
+		font-size: 1rem;
+		letter-spacing: -0.01em;
+	}
+	.bag-sub,
+	.bag-when {
+		font-size: 0.68rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.bag-when {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+	.bag-repl {
+		color: var(--gf-ink-soft);
+		text-transform: none;
+		letter-spacing: 0;
+	}
+	.bag-carry {
+		display: flex;
+		align-items: baseline;
+		gap: 0.4rem;
+		flex-wrap: wrap;
+	}
+	.bag-carry-num {
+		font-size: 1.5rem;
+		color: var(--gf-ink);
+	}
+	.bag-carry-unit,
+	.bag-carry-none {
+		font-size: 0.62rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.bag-note {
+		font-family: var(--gf-serif);
+		font-size: 0.95rem;
+		line-height: 1.5;
+		color: var(--gf-dim);
+	}
+	@media (max-width: 800px) {
+		.bag-row {
+			grid-template-columns: 3rem 1fr;
+			row-gap: 0.5rem;
+		}
+		.bag-when,
+		.bag-carry,
+		.bag-note {
+			grid-column: 2;
+		}
+	}
+</style>

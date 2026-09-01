@@ -1,0 +1,351 @@
+/* Ball Flight (/golf), shared "the bay" section identity.
+   Dark-only set: explicit colors, never dark: variants (BaseHead's theme
+   script strips .dark for light-theme visitors). Near-black room, one hot
+   tracer accent reserved for the ball and the records, mono telemetry. */
+
+.golf {
+	--gf-bay: oklch(14% 0.014 250);
+	--gf-panel: oklch(18% 0.016 250);
+	--gf-raised: oklch(22% 0.018 250);
+	--gf-line: oklch(95% 0.01 250 / 0.12);
+	--gf-line-soft: oklch(95% 0.01 250 / 0.06);
+	--gf-ink: oklch(96% 0.006 250);
+	--gf-ink-soft: oklch(86% 0.008 250);
+	--gf-dim: oklch(68% 0.012 250);
+	--gf-mute: oklch(50% 0.012 250);
+
+	--gf-tracer: oklch(85% 0.2 130);
+	--gf-tracer-soft: oklch(85% 0.2 130 / 0.35);
+	--gf-tracer-faint: oklch(85% 0.2 130 / 0.1);
+	--gf-miss: oklch(75% 0.16 65);
+	--gf-cool: oklch(78% 0.13 220);
+	--gf-turf: oklch(45% 0.09 150);
+
+	--gf-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	--gf-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+	--gf-serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+
+	--gf-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+	background: var(--gf-bay);
+	color: var(--gf-ink);
+	color-scheme: dark;
+	font-variant-numeric: tabular-nums;
+	-webkit-font-smoothing: antialiased;
+}
+
+.golf main {
+	background: var(--gf-bay);
+	min-height: 100dvh;
+	position: relative;
+	isolation: isolate;
+}
+
+/* Projector glow: the simulator screen is the room's light source */
+.golf main::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	background: radial-gradient(60% 45% at 50% -5%, oklch(85% 0.2 130 / 0.09), transparent 70%);
+}
+
+/* Header on the dark set */
+.golf header nav a,
+.golf header nav li a,
+.golf header ul.has-links a:not(.btn-link) {
+	color: var(--gf-ink);
+}
+.golf header ul.has-links a:not(.btn-link) {
+	background-image: linear-gradient(to bottom, transparent 90%, var(--gf-tracer) 0);
+}
+.golf header .toggle {
+	background: var(--gf-raised);
+	--tw-ring-color: var(--gf-line);
+	box-shadow: none;
+}
+.golf header .toggle svg:first-of-type {
+	display: none;
+}
+.golf header .toggle svg:last-of-type {
+	display: block;
+}
+.golf a:focus-visible,
+.golf button:focus-visible,
+.golf summary:focus-visible {
+	outline: 2px solid var(--gf-tracer);
+	outline-offset: 4px;
+}
+.golf ::selection {
+	background: var(--gf-tracer);
+	color: var(--gf-bay);
+}
+
+/* ---------- type atoms ---------- */
+
+.gf-label {
+	font-family: var(--gf-mono);
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--gf-dim);
+}
+.gf-mono {
+	font-family: var(--gf-mono);
+	font-variant-numeric: tabular-nums;
+}
+.gf-num {
+	font-family: var(--gf-display);
+	font-variant-numeric: tabular-nums;
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	line-height: 1;
+}
+.gf-display {
+	font-family: var(--gf-display);
+	font-weight: 700;
+	letter-spacing: -0.035em;
+	line-height: 0.95;
+	text-wrap: balance;
+}
+.gf-prose {
+	font-family: var(--gf-serif);
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: var(--gf-ink-soft);
+	max-width: 68ch;
+}
+.gf-prose p + p {
+	margin-top: 1.25em;
+}
+.gf-prose a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: var(--gf-tracer-soft);
+	text-underline-offset: 3px;
+	transition: text-decoration-color 0.2s ease-out;
+}
+.gf-prose a:hover {
+	text-decoration-color: var(--gf-tracer);
+}
+
+/* ---------- layout ---------- */
+
+.gf-wrap {
+	width: 100%;
+	max-width: 84rem;
+	margin-inline: auto;
+	padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+.gf-section {
+	padding-block: clamp(3rem, 7vw, 5.5rem);
+	border-top: 1px solid var(--gf-line);
+}
+.gf-section-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 0.75rem 2rem;
+	margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+.gf-h2 {
+	font-family: var(--gf-display);
+	font-weight: 500;
+	font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+	letter-spacing: -0.02em;
+	color: var(--gf-ink);
+	display: flex;
+	align-items: baseline;
+	gap: 0.75rem;
+}
+.gf-h2 .gf-idx {
+	font-family: var(--gf-mono);
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	color: var(--gf-tracer);
+}
+.gf-section-head .gf-label a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid var(--gf-line);
+	padding-bottom: 0.15em;
+	transition: color 0.2s ease-out, border-color 0.2s ease-out;
+}
+.gf-section-head .gf-label a:hover {
+	color: var(--gf-ink);
+	border-color: var(--gf-tracer);
+}
+
+/* Panel: hairline, surface step, target-screen grid */
+.gf-panel {
+	position: relative;
+	background: var(--gf-panel);
+	border: 1px solid var(--gf-line);
+}
+.gf-grid {
+	background-image:
+		linear-gradient(var(--gf-line-soft) 1px, transparent 1px),
+		linear-gradient(90deg, var(--gf-line-soft) 1px, transparent 1px);
+	background-size: 24px 24px;
+	background-position: -1px -1px;
+}
+
+/* ---------- controls ---------- */
+
+.gf-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: var(--gf-mono);
+	font-size: 0.72rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--gf-ink);
+	text-decoration: none;
+	background: transparent;
+	border: 1px solid var(--gf-line);
+	padding: 0.7rem 1.1rem;
+	cursor: pointer;
+	transition: background-color 0.25s ease-out, border-color 0.25s ease-out, color 0.25s ease-out;
+}
+.gf-btn:hover {
+	background: var(--gf-raised);
+	border-color: var(--gf-dim);
+}
+.gf-btn[aria-pressed='true'],
+.gf-btn.is-active {
+	background: var(--gf-tracer);
+	border-color: var(--gf-tracer);
+	color: var(--gf-bay);
+}
+
+.gf-tag {
+	display: inline-block;
+	font-family: var(--gf-mono);
+	font-size: 0.66rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--gf-dim);
+	border: 1px solid var(--gf-line);
+	padding: 0.28rem 0.5rem 0.22rem;
+	line-height: 1;
+}
+.gf-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-family: var(--gf-mono);
+	font-size: 0.66rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--gf-tracer);
+	border: 1px solid var(--gf-tracer-soft);
+	padding: 0.28rem 0.5rem 0.22rem;
+	line-height: 1;
+}
+.gf-badge::before {
+	content: '';
+	width: 0.4em;
+	height: 0.4em;
+	border-radius: 50%;
+	background: var(--gf-tracer);
+	box-shadow: 0 0 8px var(--gf-tracer);
+}
+.gf-new {
+	font-family: var(--gf-mono);
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--gf-bay);
+	background: var(--gf-tracer);
+	padding: 0.2rem 0.4rem 0.15rem;
+	line-height: 1;
+}
+
+/* Ledger glyphs: sessions and rounds differ by mark, not colour */
+.gf-glyph {
+	font-family: var(--gf-mono);
+	color: var(--gf-dim);
+	width: 1.2em;
+	display: inline-block;
+	text-align: center;
+}
+
+/* Empty state: dashed outline, honest copy */
+.gf-empty {
+	border: 1px dashed var(--gf-line);
+	color: var(--gf-mute);
+}
+
+/* PR mark inside tables */
+.gf-pr {
+	color: var(--gf-tracer);
+	font-weight: 600;
+}
+.gf-pr::after {
+	content: '▲';
+	font-size: 0.55em;
+	margin-left: 0.35em;
+	vertical-align: 0.35em;
+}
+
+/* Hairline data table */
+.gf-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: var(--gf-mono);
+	font-size: 0.8rem;
+	font-variant-numeric: tabular-nums;
+}
+.gf-table th {
+	font-size: 0.64rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--gf-dim);
+	text-align: right;
+	padding: 0.55rem 0.75rem;
+	border-bottom: 1px solid var(--gf-line);
+	white-space: nowrap;
+}
+.gf-table th:first-child,
+.gf-table td:first-child {
+	text-align: left;
+	padding-left: 0;
+}
+.gf-table th:last-child,
+.gf-table td:last-child {
+	padding-right: 0;
+}
+.gf-table td {
+	text-align: right;
+	padding: 0.6rem 0.75rem;
+	border-bottom: 1px solid var(--gf-line-soft);
+	color: var(--gf-ink-soft);
+	white-space: nowrap;
+}
+.gf-table td.is-null {
+	color: var(--gf-mute);
+}
+.gf-table .gf-unit {
+	color: var(--gf-mute);
+	font-size: 0.7em;
+	margin-left: 0.25em;
+}
+
+/* ---------- motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+	.golf * {
+		animation-duration: 0.001ms !important;
+		transition-duration: 0.001ms !important;
+	}
+}

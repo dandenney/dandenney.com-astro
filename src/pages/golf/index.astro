@@ -1,0 +1,519 @@
+---
+/**
+ * /golf, the dashboard. Reads top to bottom as: where I am right now,
+ * what I have been doing, where I have been, what I am swinging, how it
+ * started.
+ */
+import Golf from '@/layouts/Golf.astro';
+import Tracer from '@/components/golf/Tracer.astro';
+import MetricReadout from '@/components/golf/MetricReadout.astro';
+import RecordTile from '@/components/golf/RecordTile.astro';
+import ProgressChart from '@/components/golf/ProgressChart.astro';
+import VenueCard from '@/components/golf/VenueCard.astro';
+import BagRow from '@/components/golf/BagRow.astro';
+import { GOLF_EPOCH, GOLF_SECTION_NAME } from '@/data/golf/types';
+import {
+	fmtDateStamp,
+	getActivity,
+	getBagPreview,
+	getClubTrend,
+	getCounters,
+	getMilestones,
+	getPRs,
+	getRounds,
+	getSessions,
+	getStreak,
+	getVenueStats,
+	isCourseRound,
+	roundHref,
+	roundToPar,
+	sessionHref,
+	todayIso,
+} from '@/data/golf/utils';
+import { DAY, toT, type ChartAnnotation, type ChartMarker, type ChartSeries } from '@/data/golf/chart';
+import { getVenueMap, getVenues, venueName, venueShort, venueSlug } from '@/helpers/golf';
+
+export const prerender = true;
+
+const player = 'dan';
+const today = todayIso();
+const counters = getCounters(player, today);
+const streak = getStreak(player, 30, today);
+const prs = [...getPRs(player, today)].sort((a, b) => Number(b.display !== undefined) - Number(a.display !== undefined));
+const activity = getActivity(player, 8);
+const venues = await getVenues();
+const vmap = await getVenueMap();
+const bagPreview = getBagPreview(player);
+const sessions = getSessions(player);
+const rounds = getRounds(player);
+const annualCount = venues.filter((v) => v.data.membership === 'annual').length;
+
+/* ---- progress chart ---- */
+const trendPoints = (club: Parameters<typeof getClubTrend>[1], metric: Parameters<typeof getClubTrend>[2]) =>
+	getClubTrend(player, club, metric).map((p) => ({
+		t: toT(p.date),
+		v: p.value,
+		date: p.date,
+		venue: venueShort(vmap, p.venueSlug),
+		href: sessionHref(p.sessionId),
+	}));
+
+const longestPoints = sessions.flatMap((s) => {
+	const d = s.clubs.find((c) => c.club === 'driver');
+	const v = d?.longest ?? d?.total;
+	return typeof v === 'number'
+		? [{ t: toT(s.date), v, date: s.date, venue: venueShort(vmap, s.venueSlug), href: sessionHref(s.id) }]
+		: [];
+});
+
+const roundPoints = (filter: (r: (typeof rounds)[number]) => boolean) =>
+	rounds.flatMap((r) => {
+		const tp = roundToPar(r);
+		return filter(r) && typeof tp === 'number'
+			? [{ t: toT(r.date), v: tp, date: r.date, venue: venueShort(vmap, r.venueSlug), href: roundHref(r.id) }]
+			: [];
+	});
+
+const series: ChartSeries[] = [
+	{ key: 'carry7i', label: '7-iron carry', unit: 'yds', format: 'int', lowerIsBetter: false, points: trendPoints('7i', 'carry') },
+	{ key: 'clubSpeed', label: 'Driver speed', unit: 'mph', format: 'fixed1', lowerIsBetter: false, points: trendPoints('driver', 'clubSpeed') },
+	{ key: 'longest', label: 'Longest drive', unit: 'yds', format: 'int', lowerIsBetter: false, points: longestPoints },
+	{ key: 'scoreToPar', label: 'Score to par', unit: '', format: 'toPar', lowerIsBetter: true, points: roundPoints(isCourseRound) },
+	{ key: 'putting', label: 'Putting to par', unit: '', format: 'toPar', lowerIsBetter: true, points: roundPoints((r) => !isCourseRound(r)) },
+];
+
+const markers: ChartMarker[] = [
+	...sessions.map((s) => ({ t: toT(s.date), kind: 'session' as const, label: `${s.kind} · ${venueShort(vmap, s.venueSlug)}` })),
+	...rounds.map((r) => ({ t: toT(r.date), kind: 'round' as const, label: `${r.format} · ${venueShort(vmap, r.venueSlug)}` })),
+];
+
+const annotations: ChartAnnotation[] = getMilestones(player)
+	.filter((m) => m.annotate)
+	.map((m) => ({ t: toT(m.date), label: m.title }));
+
+const lastT = Math.max(toT(today), ...sessions.map((s) => toT(s.date)), ...rounds.map((r) => toT(r.date)));
+const tMin = toT(GOLF_EPOCH) - 3 * DAY;
+const tMax = lastT + 6 * DAY;
+---
+
+<Golf
+	title={`${GOLF_SECTION_NAME} · Dan Denney`}
+	description="Learning golf on purpose, with the receipts. Sessions, rounds, personal records, and the bag, tracked from the first swing back."
+>
+	<!-- Hero: the bay -->
+	<section class="hero">
+		<Tracer hero carry={0.88} apex={0.68} shape="fade" duration={1.6} />
+		<div class="gf-wrap hero-inner">
+			<p class="gf-label hero-kicker">
+				<span class="hero-dot" aria-hidden="true"></span>
+				Dan Denney &middot; a golf log
+				<span class="hero-kicker-right">Nashville &middot; 2026</span>
+			</p>
+			<h1 class="gf-display hero-title">{GOLF_SECTION_NAME}</h1>
+			<p class="hero-lede">
+				Two vacation rounds in July. Then a year of lessons, a year of PopStroke, and Topgolf every week.
+				Learning a game on purpose, with the receipts.
+			</p>
+			<div class="hero-counters">
+				<MetricReadout label="Sessions" value={counters.sessions} size="lg" countup />
+				<MetricReadout label="Rounds" value={counters.rounds} size="lg" countup sub={counters.puttingRounds ? `+${counters.puttingRounds} putting` : undefined} />
+				<MetricReadout label="Venues" value={counters.venues} size="lg" countup sub={annualCount ? `${annualCount} annual` : undefined} />
+				<div class="hero-days">
+					<MetricReadout label="Days in" value={counters.daysIn} size="lg" countup />
+					<span class="gf-mono hero-days-from" data-days-from={GOLF_EPOCH}>since {fmtDateStamp(GOLF_EPOCH)}</span>
+				</div>
+			</div>
+			<p class="gf-mono hero-cadence">
+				<span class="hero-cadence-k">Cadence</span> {streak} in the last 30 days
+			</p>
+		</div>
+	</section>
+
+	<!-- 01 Records -->
+	<section class="gf-section" id="records">
+		<div class="gf-wrap">
+			<div class="gf-section-head">
+				<h2 class="gf-h2"><span class="gf-idx">01</span> Personal records</h2>
+				<span class="gf-label">Derived from the log, never typed in</span>
+			</div>
+			<div class="records" data-reveal data-reveal-children>
+				{prs.map((r) => (
+					<RecordTile record={r} venue={r.venueSlug ? venueShort(vmap, r.venueSlug) : undefined} />
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- 02 Progress -->
+	<section class="gf-section" id="progress">
+		<div class="gf-wrap">
+			<div class="gf-section-head">
+				<h2 class="gf-h2"><span class="gf-idx">02</span> Progress</h2>
+				<span class="gf-label">Every session and round on the baseline &middot; hover for the moment</span>
+			</div>
+			<ProgressChart series={series} markers={markers} annotations={annotations} tMin={tMin} tMax={tMax} />
+			<p class="gf-mono chart-foot">
+				<span class="chart-key"><span class="chart-key-session" aria-hidden="true"></span> session</span>
+				<span class="chart-key"><span class="chart-key-round" aria-hidden="true"></span> round</span>
+				<span class="chart-key"><span class="chart-key-ann" aria-hidden="true"></span> the moment it became a story</span>
+			</p>
+		</div>
+	</section>
+
+	<!-- 03 Recent activity -->
+	<section class="gf-section" id="activity">
+		<div class="gf-wrap">
+			<div class="gf-section-head">
+				<h2 class="gf-h2"><span class="gf-idx">03</span> Recent activity</h2>
+				<span class="gf-label"><a href="/golf/sessions">Full log &rarr;</a></span>
+			</div>
+			<ol class="ledger" data-reveal data-reveal-children>
+				{activity.map((a) => (
+					<li>
+						<a class="ledger-row" href={a.href}>
+							<span class="gf-glyph" aria-hidden="true">{a.type === 'round' ? '◆' : '▸'}</span>
+							<span class="gf-mono ledger-date">{fmtDateStamp(a.date)}</span>
+							<span class="ledger-venue">{venueName(vmap, a.venueSlug)}</span>
+							<span class="gf-mono ledger-kind">{a.kind}</span>
+							<span class="ledger-head">
+								{a.headline ? (
+									<>
+										<span class="gf-num ledger-num">{a.headline}</span>
+										{a.headlineUnit && <span class="gf-mono ledger-unit">{a.headlineUnit}</span>}
+									</>
+								) : (
+									<span class="gf-mono ledger-unit">&middot;</span>
+								)}
+							</span>
+							<span class="ledger-note">{a.note}</span>
+						</a>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	<!-- 04 Venues -->
+	<section class="gf-section" id="venues">
+		<div class="gf-wrap">
+			<div class="gf-section-head">
+				<h2 class="gf-h2"><span class="gf-idx">04</span> Where</h2>
+				<span class="gf-label"><a href="/golf/venues">All venues &rarr;</a></span>
+			</div>
+			<div class="venues" data-reveal data-reveal-children>
+				{venues.map((v) => {
+					const slug = venueSlug(v);
+					return <VenueCard venue={v} slug={slug} stats={getVenueStats(slug, player)} compact />;
+				})}
+			</div>
+		</div>
+	</section>
+
+	<!-- 05 The bag -->
+	<section class="gf-section" id="bag">
+		<div class="gf-wrap">
+			<div class="gf-section-head">
+				<h2 class="gf-h2"><span class="gf-idx">05</span> The bag</h2>
+				<span class="gf-label"><a href="/golf/bag">Every club &rarr;</a></span>
+			</div>
+			{bagPreview.length > 0 ? (
+				<div class="bag-preview">
+					{bagPreview.map((row) => <BagRow row={row} />)}
+				</div>
+			) : (
+				<a class="gf-empty bag-empty" href="/golf/bag">
+					<span class="gf-mono bag-empty-k">&mdash; nothing logged yet &mdash;</span>
+					<span class="bag-empty-t">Clubs go in after the first fitting. Each one will show its average carry pulled straight from sessions.</span>
+				</a>
+			)}
+		</div>
+	</section>
+
+	<!-- 06 Origin -->
+	<section class="gf-section origin" id="origin">
+		<div class="gf-wrap">
+			<div class="gf-section-head">
+				<h2 class="gf-h2"><span class="gf-idx">06</span> How it started</h2>
+			</div>
+			<!-- Hand-written. Dan: edit freely, this is the one place on the page with no numbers. -->
+			<div class="gf-prose origin-prose" data-reveal>
+				<p>
+					I had not played a real round in about twenty years. In July, on a family trip to Myrtle Beach, Blaine and
+					Caleb asked if I wanted in. I did, badly, and three days later I wanted the next one. Misty was into it too,
+					which is the part that made it stick.
+				</p>
+				<p>
+					So instead of grinding public courses through a Nashville summer, we bought infrastructure. A year of
+					lessons and practice at GOLFTEC, a year at PopStroke, and Topgolf whenever the week allows. The plan is to
+					learn the swing indoors, with numbers, and take it back outside with proof.
+				</p>
+				<p>This page is the proof. Eventually.</p>
+			</div>
+		</div>
+	</section>
+</Golf>
+
+<script>
+	/* DAYS IN is computed at build; refresh it at runtime so a stale deploy
+	   still reads true. Runs after the count-up has had its moment. */
+	function refreshDays() {
+		document.querySelectorAll<HTMLElement>('[data-days-from]').forEach((el) => {
+			const from = Date.parse(`${el.dataset.daysFrom}T12:00:00Z`);
+			const days = Math.max(0, Math.round((Date.now() - from) / 86_400_000));
+			const num = el.parentElement?.querySelector<HTMLElement>('[data-countup]');
+			if (num) {
+				num.dataset.countup = String(days);
+				const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				if (reduced) num.textContent = days.toLocaleString('en-US');
+			}
+		});
+	}
+	document.addEventListener('astro:page-load', refreshDays);
+</script>
+
+<style>
+	/* ---------- hero ---------- */
+	.hero {
+		position: relative;
+		min-height: min(92dvh, 60rem);
+		display: flex;
+		align-items: flex-end;
+		overflow: hidden;
+		padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 5vw, 4rem);
+	}
+	.hero :global(.tracer.is-hero) {
+		z-index: 0;
+		opacity: 0.95;
+	}
+	.hero-inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: clamp(1.25rem, 2.5vw, 2rem);
+	}
+	.hero-kicker {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		color: var(--gf-ink-soft);
+	}
+	.hero-dot {
+		width: 0.45rem;
+		height: 0.45rem;
+		border-radius: 50%;
+		background: var(--gf-tracer);
+		box-shadow: 0 0 10px var(--gf-tracer);
+	}
+	.hero-kicker-right {
+		margin-left: auto;
+		color: var(--gf-dim);
+	}
+	.hero-title {
+		font-size: clamp(3.6rem, 13vw, 11.5rem);
+		color: var(--gf-ink);
+		margin-left: -0.05em;
+	}
+	.hero-lede {
+		font-family: var(--gf-serif);
+		font-size: clamp(1.1rem, 1.7vw, 1.4rem);
+		line-height: 1.55;
+		color: var(--gf-ink-soft);
+		max-width: 46ch;
+		text-wrap: pretty;
+	}
+	.hero-counters {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(9rem, max-content));
+		gap: 1.5rem clamp(2rem, 5vw, 5rem);
+		padding-top: clamp(1.25rem, 2.5vw, 2rem);
+		border-top: 1px solid var(--gf-line);
+	}
+	.hero-days {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+	.hero-days-from {
+		font-size: 0.66rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.hero-cadence {
+		font-size: 0.72rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.hero-cadence-k {
+		color: var(--gf-tracer);
+		margin-right: 0.5rem;
+	}
+
+	/* ---------- records ---------- */
+	.records {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: minmax(10.5rem, 1fr);
+		gap: 0.75rem;
+		overflow-x: auto;
+		scroll-snap-type: x proximity;
+		padding-bottom: 0.5rem;
+		scrollbar-width: thin;
+		scrollbar-color: var(--gf-line) transparent;
+	}
+
+	/* ---------- chart foot ---------- */
+	.chart-foot {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.75rem;
+		margin-top: 0.9rem;
+		font-size: 0.66rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.chart-key {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	.chart-key-session {
+		width: 1px;
+		height: 0.8rem;
+		background: var(--gf-dim);
+	}
+	.chart-key-round {
+		width: 0.45rem;
+		height: 0.45rem;
+		border: 1.5px solid var(--gf-dim);
+		transform: rotate(45deg);
+	}
+	.chart-key-ann {
+		width: 1rem;
+		height: 0;
+		border-top: 1px dashed var(--gf-cool);
+	}
+
+	/* ---------- ledger ---------- */
+	.ledger {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid var(--gf-line);
+	}
+	.ledger-row {
+		display: grid;
+		grid-template-columns: 1.4rem 6.5rem minmax(9rem, 1.2fr) 6rem minmax(7rem, 0.9fr) minmax(0, 2fr);
+		align-items: baseline;
+		gap: 0 1rem;
+		padding: 0.85rem 0;
+		border-bottom: 1px solid var(--gf-line-soft);
+		text-decoration: none;
+		color: inherit;
+		transition: background-color 0.2s ease-out;
+	}
+	.ledger-row:hover {
+		background: linear-gradient(90deg, var(--gf-panel), transparent 80%);
+	}
+	.ledger-date {
+		font-size: 0.74rem;
+		color: var(--gf-dim);
+	}
+	.ledger-venue {
+		font-family: var(--gf-display);
+		font-weight: 500;
+		font-size: 0.95rem;
+		letter-spacing: -0.01em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.ledger-kind {
+		font-size: 0.66rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.ledger-head {
+		display: flex;
+		align-items: baseline;
+		gap: 0.35rem;
+		white-space: nowrap;
+	}
+	.ledger-num {
+		font-size: 1.15rem;
+	}
+	.ledger-unit {
+		font-size: 0.64rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.ledger-note {
+		font-family: var(--gf-serif);
+		font-size: 0.92rem;
+		color: var(--gf-dim);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-width: 0;
+	}
+	@media (max-width: 860px) {
+		.ledger-row {
+			grid-template-columns: 1.2rem 5.5rem 1fr auto;
+			grid-template-areas:
+				'glyph date venue head'
+				'. kind note note';
+			row-gap: 0.25rem;
+		}
+		.ledger-row > :nth-child(1) { grid-area: glyph; }
+		.ledger-date { grid-area: date; }
+		.ledger-venue { grid-area: venue; }
+		.ledger-kind { grid-area: kind; }
+		.ledger-head { grid-area: head; }
+		.ledger-note { grid-area: note; }
+	}
+
+	/* ---------- venues ---------- */
+	.venues {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+		gap: 0.75rem;
+	}
+
+	/* ---------- bag ---------- */
+	.bag-preview {
+		border-top: 1px solid var(--gf-line);
+	}
+	.bag-empty {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 2rem 1.5rem;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.3s ease-out;
+	}
+	.bag-empty:hover {
+		border-color: var(--gf-dim);
+	}
+	.bag-empty-k {
+		font-size: 0.8rem;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.bag-empty-t {
+		font-family: var(--gf-serif);
+		color: var(--gf-dim);
+		max-width: 52ch;
+	}
+
+	/* ---------- origin ---------- */
+	.origin-prose {
+		font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+	}
+</style>

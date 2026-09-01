@@ -119,9 +119,42 @@ const artificiallyIntelligent = defineCollection({
   }),
 });
 
+const golfVenues = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/golf-venues" }),
+  schema: z.object({
+    title: z.string(),
+    format: z.enum(["course", "range", "simulator", "putting", "coaching"]),
+    city: z.string(),
+    state: z.string().optional(),
+    country: z.string(),
+    // "lng, lat", matches the No Reserv-AI-tions convention
+    coordinates: z.string().optional(),
+    address: z.string().optional(),
+    infoUrl: z.string().optional(),
+    // Site-relative path, e.g. /no-reserv-ai-tions/topgolf-nashville.webp
+    heroImage: z.string().optional(),
+    heroImageAlt: z.string().optional(),
+    summary: z.string(),
+    // course-only
+    par: z.number().optional(),
+    yardage: z.number().optional(),
+    holes: z.number().optional(),
+    designer: z.string().optional(),
+    opened: z.number().optional(),
+    // membership context, the whole point of the section
+    membership: z.enum(["annual", "visit", "one-off"]).default("visit"),
+    cadence: z.string().optional(),
+    // cross-link to the No Reserv-AI-tions review
+    nraiSlug: z.string().optional(),
+    pubDate: z.coerce.date(),
+    aiGenerated: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   "artificially-intelligent": artificiallyIntelligent,
   blips,
+  "golf-venues": golfVenues,
   "plus-ev": plusEv,
   posts,
   reviews,

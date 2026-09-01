@@ -1,0 +1,119 @@
+---
+/**
+ * The SVG ball-flight arc. Side profile: tee at bottom-left, apex, landing,
+ * a short dotted roll, and the ball. Draws via stroke-dashoffset from the
+ * layout script; renders complete without JS or under reduced motion.
+ *
+ * `carry` and `apex` are fractions of the box (0..1). `shape` skews the
+ * arc: a fade climbs early and drops late, a draw the reverse.
+ */
+interface Props {
+	carry?: number;
+	apex?: number;
+	shape?: 'straight' | 'fade' | 'draw';
+	/** seconds */
+	duration?: number;
+	hero?: boolean;
+	class?: string;
+	label?: string;
+}
+
+const { carry = 0.84, apex = 0.72, shape = 'straight', duration = 0.7, hero = false, class: className, label } = Astro.props;
+
+const W = 1000;
+const H = hero ? 620 : 400;
+const ground = H - 28;
+const x0 = 24;
+const y0 = ground;
+const x1 = Math.round(x0 + carry * (W - x0 - 60));
+const h = apex * (ground - 30);
+
+const skew = shape === 'fade' ? 0.08 : shape === 'draw' ? -0.08 : 0;
+const c1x = x0 + (0.32 + skew) * (x1 - x0);
+const c2x = x0 + (0.74 + skew) * (x1 - x0);
+const flight = `M${x0} ${y0} C${c1x.toFixed(0)} ${(y0 - h * 1.55).toFixed(0)}, ${c2x.toFixed(0)} ${(y0 - h * 1.2).toFixed(0)}, ${x1} ${y0}`;
+const roll = `M${x1} ${y0} L${x1 + Math.round((x1 - x0) * 0.07)} ${y0}`;
+---
+
+<svg
+	class:list={['tracer', { 'is-hero': hero }, className]}
+	viewBox={`0 0 ${W} ${H}`}
+	preserveAspectRatio={hero ? 'xMidYMax meet' : 'xMidYMid meet'}
+	data-tracer
+	data-tracer-duration={duration}
+	role={label ? 'img' : undefined}
+	aria-hidden={label ? undefined : 'true'}
+	aria-label={label}
+>
+	<line class="tracer-ground" x1="0" y1={ground} x2={W} y2={ground} />
+	<path class="tracer-glow" d={flight} pathLength="1" data-tracer-path />
+	<path class="tracer-path" d={flight} pathLength="1" data-tracer-path />
+	<path class="tracer-roll" d={roll} pathLength="1" data-tracer-roll />
+	<circle class="tracer-tee" cx={x0} cy={y0} r="3" />
+	<circle class="tracer-ball" cx={x1 + Math.round((x1 - x0) * 0.07)} cy={y0 - 4} r="5" data-tracer-ball />
+</svg>
+
+<style>
+	.tracer {
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow: visible;
+	}
+	.tracer.is-hero {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.tracer-ground {
+		stroke: var(--gf-line);
+		stroke-width: 1;
+	}
+	.tracer-path {
+		fill: none;
+		stroke: var(--gf-tracer);
+		stroke-width: 2;
+		stroke-linecap: round;
+		stroke-dasharray: 1;
+		stroke-dashoffset: 0;
+	}
+	.tracer-glow {
+		fill: none;
+		stroke: var(--gf-tracer);
+		stroke-width: 8;
+		stroke-linecap: round;
+		stroke-dasharray: 1;
+		stroke-dashoffset: 0;
+		opacity: 0.22;
+		filter: blur(6px);
+	}
+	.is-hero .tracer-path {
+		stroke-width: 1.8;
+	}
+	.is-hero .tracer-glow {
+		stroke-width: 10;
+		filter: blur(8px);
+	}
+	.is-hero .tracer-roll {
+		stroke-width: 1.2;
+	}
+	.is-hero .tracer-ball {
+		r: 4.5;
+	}
+	.tracer-roll {
+		fill: none;
+		stroke: var(--gf-tracer);
+		stroke-width: 1.5;
+		stroke-dasharray: 0.12 0.1;
+		stroke-dashoffset: 0;
+		opacity: 0.7;
+	}
+	.tracer-tee {
+		fill: var(--gf-dim);
+	}
+	.tracer-ball {
+		fill: var(--gf-ink);
+		filter: drop-shadow(0 0 6px var(--gf-tracer)) drop-shadow(0 0 14px var(--gf-tracer-soft));
+	}
+</style>

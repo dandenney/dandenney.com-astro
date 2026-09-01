@@ -1,0 +1,289 @@
+---
+/**
+ * One ledger row, expandable. Sessions and rounds share the row shape and
+ * differ by leading glyph. The body is the club table (sessions) or the
+ * scorecard readouts (rounds).
+ */
+import type { Round, Session } from '@/data/golf/types';
+import { SESSION_KIND_LABEL, ROUND_FORMAT_LABEL, fmtDateStamp, fmtToPar, roundToPar, toActivity } from '@/data/golf/utils';
+import ClubTable from '@/components/golf/ClubTable.astro';
+import MetricReadout from '@/components/golf/MetricReadout.astro';
+
+interface Props {
+	item: Session | Round;
+	venue: string;
+	venueHref?: string;
+	prFlags?: Set<string>;
+	open?: boolean;
+}
+
+const { item, venue, venueHref, prFlags, open = false } = Astro.props;
+const isSession = 'clubs' in item;
+const a = toActivity(item);
+const id = isSession ? `s-${item.id}` : `r-${item.id}`;
+const glyph = isSession ? '▸' : '◆';
+
+const chips: string[] = [];
+if (isSession) {
+	const s = item as Session;
+	chips.push(SESSION_KIND_LABEL[s.kind]);
+	if (s.coach) chips.push(`Coach ${s.coach}`);
+	if (s.durationMin) chips.push(`${s.durationMin} min`);
+	if (s.partners?.length) chips.push(`With ${s.partners.join(', ')}`);
+} else {
+	const r = item as Round;
+	chips.push(ROUND_FORMAT_LABEL[r.format], `${r.holesPlayed} holes`);
+	if (r.course) chips.push(`${r.course} course`);
+	if (r.tees) chips.push(`${r.tees} tees`);
+	if (r.partners?.length) chips.push(`With ${r.partners.join(', ')}`);
+	if (r.conditions) chips.push(r.conditions);
+}
+
+const round = !isSession ? (item as Round) : undefined;
+const session = isSession ? (item as Session) : undefined;
+const tp = round ? roundToPar(round) : undefined;
+const kindFilter = isSession ? (item as Session).kind : 'round';
+const clubsFilter = isSession ? (item as Session).clubs.map((c) => c.club).join(' ') : '';
+---
+
+<details
+	class="ses"
+	id={id}
+	open={open}
+	data-session-row
+	data-venue={item.venueSlug}
+	data-kind={kindFilter}
+	data-clubs={clubsFilter}
+	data-date={item.date}
+>
+	<summary class="ses-sum">
+		<span class="gf-glyph ses-glyph" aria-hidden="true">{glyph}</span>
+		<span class="gf-mono ses-date">{fmtDateStamp(item.date)}</span>
+		<span class="ses-venue">{venue}</span>
+		<span class="gf-mono ses-kind">{a.kind}</span>
+		<span class="ses-head">
+			{a.headline ? (
+				<>
+					<span class="gf-num ses-head-num">{a.headline}</span>
+					{a.headlineUnit && <span class="gf-mono ses-head-unit">{a.headlineUnit}</span>}
+				</>
+			) : (
+				<span class="gf-mono ses-head-none">no number</span>
+			)}
+		</span>
+		<span class="ses-note">{a.note}</span>
+		<span class="ses-chev" aria-hidden="true"></span>
+	</summary>
+
+	<div class="ses-body">
+		<div class="ses-meta">
+			{chips.map((c) => <span class="gf-tag">{c}</span>)}
+			{venueHref && <a class="gf-tag ses-venue-link" href={venueHref}>{venue} &rarr;</a>}
+		</div>
+
+		{session && (
+			session.clubs.length > 0 ? (
+				<ClubTable clubs={session.clubs} prFlags={prFlags} />
+			) : (
+				<p class="gf-mono ses-empty">No club numbers logged for this one.</p>
+			)
+		)}
+
+		{round && (
+			<div class="ses-card">
+				{typeof round.score === 'number' && <MetricReadout label="Score" value={round.score} size="md" />}
+				{typeof tp === 'number' && <MetricReadout label="To par" value={fmtToPar(tp)} size="md" tone={tp <= 0 ? 'tracer' : 'ink'} />}
+				{typeof round.par === 'number' && <MetricReadout label="Par" value={round.par} size="md" tone="dim" />}
+				{typeof round.putts === 'number' && <MetricReadout label="Putts" value={round.putts} size="md" />}
+				{round.fairways && <MetricReadout label="Fairways" value={`${round.fairways.hit}/${round.fairways.of}`} size="md" />}
+				{round.gir && <MetricReadout label="GIR" value={`${round.gir.hit}/${round.gir.of}`} size="md" />}
+				{typeof round.score !== 'number' && typeof tp !== 'number' && (
+					<p class="gf-mono ses-empty">Unscored. The round was the point.</p>
+				)}
+			</div>
+		)}
+
+		{round?.holes && (
+			<div class="ses-holes gf-mono">
+				{round.holes.map((h, i) => (
+					<span class="ses-hole"><span class="ses-hole-n">{i + 1}</span>{h}</span>
+				))}
+			</div>
+		)}
+
+		{(session?.takeaway ?? round?.note) && (
+			<p class="gf-prose ses-take">{session?.takeaway ?? round?.note}</p>
+		)}
+	</div>
+</details>
+
+<style>
+	.ses {
+		border-bottom: 1px solid var(--gf-line-soft);
+		interpolate-size: allow-keywords;
+	}
+	.ses::details-content {
+		block-size: 0;
+		overflow: hidden;
+		transition: block-size 0.35s var(--gf-ease), content-visibility 0.35s allow-discrete;
+	}
+	.ses[open]::details-content {
+		block-size: auto;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.ses::details-content {
+			transition: none;
+		}
+	}
+	.ses-sum {
+		display: grid;
+		grid-template-columns: 1.4rem 6.5rem minmax(9rem, 1.2fr) 6rem minmax(7rem, 0.9fr) minmax(0, 2fr) 1.5rem;
+		align-items: baseline;
+		gap: 0 1rem;
+		padding: 0.85rem 0;
+		cursor: pointer;
+		list-style: none;
+		transition: background-color 0.2s ease-out;
+	}
+	.ses-sum::-webkit-details-marker {
+		display: none;
+	}
+	.ses-sum:hover {
+		background: linear-gradient(90deg, var(--gf-panel), transparent 80%);
+	}
+	.ses[open] .ses-sum {
+		background: linear-gradient(90deg, var(--gf-panel), transparent 80%);
+	}
+	.ses-date {
+		font-size: 0.74rem;
+		color: var(--gf-dim);
+		letter-spacing: 0.04em;
+	}
+	.ses-venue {
+		font-family: var(--gf-display);
+		font-weight: 500;
+		font-size: 0.95rem;
+		color: var(--gf-ink);
+		letter-spacing: -0.01em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.ses-kind {
+		font-size: 0.66rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.ses-head {
+		display: flex;
+		align-items: baseline;
+		gap: 0.35rem;
+		white-space: nowrap;
+	}
+	.ses-head-num {
+		font-size: 1.15rem;
+		color: var(--gf-ink);
+	}
+	.ses-head-unit,
+	.ses-head-none {
+		font-size: 0.64rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.ses-note {
+		font-family: var(--gf-serif);
+		font-size: 0.92rem;
+		color: var(--gf-dim);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		min-width: 0;
+	}
+	.ses-chev {
+		justify-self: end;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-right: 1px solid var(--gf-dim);
+		border-bottom: 1px solid var(--gf-dim);
+		transform: rotate(45deg) translateY(-2px);
+		transition: transform 0.3s var(--gf-ease), border-color 0.2s;
+	}
+	.ses[open] .ses-chev {
+		transform: rotate(225deg) translateY(-2px);
+		border-color: var(--gf-tracer);
+	}
+	.ses-body {
+		padding: 0.5rem 0 1.75rem 2.4rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+	}
+	.ses-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.ses-venue-link {
+		color: var(--gf-ink);
+		text-decoration: none;
+		transition: border-color 0.2s;
+	}
+	.ses-venue-link:hover {
+		border-color: var(--gf-tracer);
+	}
+	.ses-empty {
+		font-size: 0.74rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.ses-card {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem 3rem;
+	}
+	.ses-holes {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		font-size: 0.8rem;
+	}
+	.ses-hole {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		min-width: 2rem;
+		padding: 0.3rem 0.2rem;
+		border: 1px solid var(--gf-line-soft);
+	}
+	.ses-hole-n {
+		font-size: 0.58rem;
+		color: var(--gf-mute);
+	}
+	.ses-take {
+		font-size: 1rem;
+		max-width: 60ch;
+	}
+
+	@media (max-width: 860px) {
+		.ses-sum {
+			grid-template-columns: 1.2rem 5.5rem 1fr auto 1rem;
+			grid-template-areas:
+				'glyph date venue head chev'
+				'. kind note note .';
+			row-gap: 0.25rem;
+		}
+		.ses-glyph { grid-area: glyph; }
+		.ses-date { grid-area: date; }
+		.ses-venue { grid-area: venue; }
+		.ses-kind { grid-area: kind; }
+		.ses-head { grid-area: head; }
+		.ses-note { grid-area: note; }
+		.ses-chev { grid-area: chev; }
+		.ses-body {
+			padding-left: 0;
+		}
+	}
+</style>

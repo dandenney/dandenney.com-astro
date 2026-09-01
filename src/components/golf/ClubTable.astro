@@ -1,0 +1,120 @@
+---
+/**
+ * Club-by-club metrics for one session. Only columns with at least one
+ * value render, so a one-number session does not become a wall of dashes.
+ * Values that were a record at the time carry the tracer mark.
+ */
+import { CLUB_ORDER, CLUB_SHORT, CLUB_LABEL, type ClubMetricKey, type ClubMetrics } from '@/data/golf/types';
+
+interface Props {
+	clubs: ClubMetrics[];
+	prFlags?: Set<string>;
+}
+
+const { clubs, prFlags } = Astro.props;
+
+interface Col {
+	key: ClubMetricKey;
+	label: string;
+	unit?: string;
+	decimals?: number;
+	signed?: boolean;
+}
+
+const COLS: Col[] = [
+	{ key: 'shots', label: 'Shots' },
+	{ key: 'carry', label: 'Carry', unit: 'yd' },
+	{ key: 'total', label: 'Total', unit: 'yd' },
+	{ key: 'longest', label: 'Longest', unit: 'yd' },
+	{ key: 'clubSpeed', label: 'Club spd', unit: 'mph', decimals: 1 },
+	{ key: 'ballSpeed', label: 'Ball spd', unit: 'mph', decimals: 1 },
+	{ key: 'smashFactor', label: 'Smash', decimals: 2 },
+	{ key: 'launchAngle', label: 'Launch', unit: '°', decimals: 1 },
+	{ key: 'backSpin', label: 'Spin', unit: 'rpm' },
+	{ key: 'clubPath', label: 'Path', unit: '°', decimals: 1, signed: true },
+	{ key: 'faceToTarget', label: 'Face', unit: '°', decimals: 1, signed: true },
+];
+
+const present = COLS.filter((c) => clubs.some((x) => typeof x[c.key] === 'number'));
+const rows = [...clubs].sort((a, b) => CLUB_ORDER.indexOf(a.club) - CLUB_ORDER.indexOf(b.club));
+
+function fmt(v: number, col: Col): string {
+	const s = v.toLocaleString('en-US', { minimumFractionDigits: col.decimals ?? 0, maximumFractionDigits: col.decimals ?? 0 });
+	return col.signed && v > 0 ? `+${s}` : s;
+}
+---
+
+<div class="ct-scroll">
+	<table class="gf-table ct">
+		<thead>
+			<tr>
+				<th scope="col">Club</th>
+				{present.map((c) => <th scope="col">{c.label}</th>)}
+			</tr>
+		</thead>
+		<tbody>
+			{rows.map((row) => (
+				<>
+					<tr>
+						<th scope="row" class="ct-club">
+							<span class="ct-short">{CLUB_SHORT[row.club]}</span>
+							<span class="ct-name">{CLUB_LABEL[row.club]}</span>
+						</th>
+						{present.map((c) => {
+							const v = row[c.key];
+							const isPr = prFlags?.has(`${row.club}:${c.key}`);
+							return typeof v === 'number' ? (
+								<td class:list={{ 'gf-pr': isPr }}>
+									{fmt(v, c)}
+									{c.unit && <span class="gf-unit">{c.unit}</span>}
+								</td>
+							) : (
+								<td class="is-null">&middot;</td>
+							);
+						})}
+					</tr>
+					{row.note && (
+						<tr class="ct-note-row">
+							<td colspan={present.length + 1} class="ct-note">{row.note}</td>
+						</tr>
+					)}
+				</>
+			))}
+		</tbody>
+	</table>
+</div>
+
+<style>
+	.ct-scroll {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.ct th.ct-club {
+		text-align: left;
+		padding-left: 0;
+		font-size: 0.8rem;
+		letter-spacing: 0;
+		text-transform: none;
+		color: var(--gf-ink);
+		font-weight: 600;
+		border-bottom: 1px solid var(--gf-line-soft);
+	}
+	.ct-short {
+		display: inline-block;
+		min-width: 2.2em;
+		color: var(--gf-tracer);
+	}
+	.ct-name {
+		color: var(--gf-dim);
+		font-weight: 400;
+	}
+	.ct .ct-note {
+		text-align: left;
+		white-space: normal;
+		color: var(--gf-dim);
+		font-size: 0.74rem;
+		padding-top: 0.2rem;
+		padding-left: 2.9em;
+		font-style: italic;
+	}
+</style>

@@ -1,0 +1,348 @@
+---
+/**
+ * The chart that proves the thesis. Hand-built inline SVG: time on X from
+ * the first round, a switchable metric on Y, every session and round as a
+ * marker on the baseline, and the narrative moments annotated in place.
+ * The default series renders at build time; the switcher re-renders on the
+ * client with the same renderSeries() so both match.
+ */
+import { monthTicks, xOf, type ChartAnnotation, type ChartFrame, type ChartMarker, type ChartSeries } from '@/data/golf/chart';
+import { renderSeries } from '@/components/golf/chartRender';
+
+interface Props {
+	series: ChartSeries[];
+	markers: ChartMarker[];
+	annotations: ChartAnnotation[];
+	tMin: number;
+	tMax: number;
+	defaultKey?: string;
+	class?: string;
+}
+
+const { series, markers, annotations, tMin, tMax, defaultKey, class: className } = Astro.props;
+
+const frame: ChartFrame = { width: 960, height: 360, padL: 60, padR: 28, padT: 40, padB: 46, tMin, tMax };
+const baseline = frame.height - frame.padB;
+const initial = series.find((s) => s.key === defaultKey) ?? series.find((s) => s.points.length > 0) ?? series[0];
+const months = monthTicks(tMin, tMax);
+const payload = JSON.stringify({ frame, series });
+const sinceLabel = new Date(tMin).toISOString().slice(0, 10).replaceAll('-', '.');
+---
+
+<div class:list={['pc gf-panel', className]} data-chart>
+	<div class="pc-head">
+		<div class="pc-switch" role="group" aria-label="Metric">
+			{series.map((s) => (
+				<button
+					type="button"
+					class="gf-btn pc-switch-btn"
+					data-metric={s.key}
+					aria-pressed={s.key === initial.key ? 'true' : 'false'}
+				>
+					{s.label}
+					<span class="pc-switch-n">{s.points.length}</span>
+				</button>
+			))}
+		</div>
+		<span class="gf-mono pc-since">T<sub>0</sub> {sinceLabel}</span>
+	</div>
+
+	<div class="pc-body">
+		<div class="pc-inner" data-wipe>
+		<svg class="pc-svg" viewBox={`0 0 ${frame.width} ${frame.height}`} role="img" aria-label={`${initial.label} over time since the first round`}>
+			<g class="pc-static">
+				<line class="pc-baseline" x1={frame.padL} x2={frame.width - frame.padR} y1={baseline} y2={baseline} />
+				{months.map((m) => (
+					<g>
+						<line class="pc-month" x1={xOf(frame, m.t)} x2={xOf(frame, m.t)} y1={frame.padT} y2={baseline + 6} />
+						<text class="pc-xlabel" x={xOf(frame, m.t)} y={baseline + 24} text-anchor="middle">{m.label}</text>
+					</g>
+				))}
+				{markers.map((m) =>
+					m.kind === 'round' ? (
+						<path
+							class="pc-marker is-round"
+							d={`M${xOf(frame, m.t).toFixed(1)} ${baseline - 5} l4 5 l-4 5 l-4 -5 z`}
+							data-date={new Date(m.t).toISOString().slice(0, 10)}
+							data-label={m.label}
+						/>
+					) : (
+						<line
+							class="pc-marker is-session"
+							x1={xOf(frame, m.t).toFixed(1)}
+							x2={xOf(frame, m.t).toFixed(1)}
+							y1={baseline - 7}
+							y2={baseline + 7}
+							data-date={new Date(m.t).toISOString().slice(0, 10)}
+							data-label={m.label}
+						/>
+					),
+				)}
+				{annotations.map((a) => {
+					const x = xOf(frame, a.t);
+					const end = x > frame.width * 0.68;
+					return (
+						<g class="pc-ann">
+							<line x1={x.toFixed(1)} x2={x.toFixed(1)} y1={frame.padT - 14} y2={baseline} />
+							<text x={(x + (end ? -8 : 8)).toFixed(1)} y={frame.padT - 18} text-anchor={end ? 'end' : 'start'}>
+								{a.label.toUpperCase()}
+							</text>
+						</g>
+					);
+				})}
+			</g>
+			<g class="pc-dynamic" set:html={renderSeries(frame, initial)} />
+		</svg>
+		<div class="pc-tip gf-mono" hidden></div>
+		</div>
+	</div>
+
+	<script is:inline type="application/json" data-chart-data set:html={payload} />
+</div>
+
+<style is:global>
+	.golf .pc {
+		overflow: hidden;
+	}
+	.golf .pc-head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem 1.5rem;
+		padding: 1rem 1.25rem;
+		border-bottom: 1px solid var(--gf-line);
+	}
+	.golf .pc-switch {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.golf .pc-switch-btn {
+		padding: 0.5rem 0.75rem;
+		font-size: 0.66rem;
+	}
+	.golf .pc-switch-n {
+		color: var(--gf-mute);
+		font-weight: 400;
+	}
+	.golf .pc-switch-btn[aria-pressed='true'] .pc-switch-n {
+		color: var(--gf-bay);
+		opacity: 0.7;
+	}
+	.golf .pc-since {
+		font-size: 0.68rem;
+		letter-spacing: 0.1em;
+		color: var(--gf-dim);
+	}
+	.golf .pc-since sub {
+		font-size: 0.7em;
+		vertical-align: -0.2em;
+	}
+	.golf .pc-body {
+		overflow-x: auto;
+		scrollbar-width: thin;
+		scrollbar-color: var(--gf-line) transparent;
+		background-image:
+			linear-gradient(var(--gf-line-soft) 1px, transparent 1px),
+			linear-gradient(90deg, var(--gf-line-soft) 1px, transparent 1px);
+		background-size: 24px 24px;
+	}
+	.golf .pc-inner {
+		position: relative;
+		min-width: 44rem;
+		padding: 0.75rem 0.5rem 0.25rem;
+	}
+	.golf .pc-svg {
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow: visible;
+		font-family: var(--gf-mono);
+		font-variant-numeric: tabular-nums;
+	}
+	.golf .pc-baseline {
+		stroke: var(--gf-line);
+		stroke-width: 1;
+	}
+	.golf .pc-grid {
+		stroke: var(--gf-line-soft);
+		stroke-width: 1;
+	}
+	.golf .pc-month {
+		stroke: var(--gf-line-soft);
+		stroke-width: 1;
+		stroke-dasharray: 2 4;
+	}
+	.golf .pc-xlabel,
+	.golf .pc-ylabel {
+		font-size: 10px;
+		letter-spacing: 0.1em;
+		fill: var(--gf-dim);
+	}
+	.golf .pc-marker {
+		stroke: var(--gf-dim);
+		stroke-width: 1.5;
+		cursor: default;
+	}
+	.golf .pc-marker.is-round {
+		fill: var(--gf-bay);
+	}
+	.golf .pc-marker:hover {
+		stroke: var(--gf-ink);
+	}
+	.golf .pc-ann line {
+		stroke: var(--gf-cool);
+		stroke-width: 1;
+		stroke-dasharray: 3 5;
+		opacity: 0.7;
+	}
+	.golf .pc-ann text {
+		font-size: 9.5px;
+		letter-spacing: 0.12em;
+		fill: var(--gf-cool);
+	}
+	.golf .pc-area {
+		fill: var(--gf-tracer);
+		opacity: 0.06;
+	}
+	.golf .pc-line {
+		fill: none;
+		stroke: var(--gf-tracer);
+		stroke-width: 2;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		filter: drop-shadow(0 0 6px var(--gf-tracer-soft));
+	}
+	.golf .pc-pt {
+		cursor: pointer;
+	}
+	.golf .pc-halo {
+		fill: var(--gf-tracer);
+		opacity: 0.12;
+		transition: opacity 0.2s ease-out;
+	}
+	.golf .pc-pt:hover .pc-halo {
+		opacity: 0.3;
+	}
+	.golf .pc-dot {
+		fill: var(--gf-tracer);
+		stroke: var(--gf-bay);
+		stroke-width: 1.5;
+	}
+	.golf .pc-pt.is-last .pc-halo {
+		animation: pc-pulse 2.4s ease-out infinite;
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+	@keyframes pc-pulse {
+		0% {
+			transform: scale(0.6);
+			opacity: 0.35;
+		}
+		100% {
+			transform: scale(1.8);
+			opacity: 0;
+		}
+	}
+	.golf .pc-solo {
+		font-size: 10px;
+		letter-spacing: 0.1em;
+		fill: var(--gf-dim);
+	}
+	.golf .pc-empty {
+		font-size: 12px;
+		letter-spacing: 0.16em;
+		fill: var(--gf-dim);
+	}
+	.golf .pc-empty-sub {
+		font-size: 9.5px;
+		letter-spacing: 0.12em;
+		fill: var(--gf-mute);
+	}
+	.golf .pc-tip {
+		position: absolute;
+		z-index: 2;
+		pointer-events: none;
+		transform: translate(-50%, calc(-100% - 14px));
+		background: var(--gf-raised);
+		border: 1px solid var(--gf-line);
+		padding: 0.45rem 0.6rem;
+		font-size: 0.66rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-ink);
+		white-space: nowrap;
+	}
+	.golf .pc-tip strong {
+		color: var(--gf-tracer);
+		font-weight: 600;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.golf .pc-pt.is-last .pc-halo {
+			animation: none;
+		}
+	}
+</style>
+
+<script>
+	import { renderSeries } from '@/components/golf/chartRender';
+	import type { ChartFrame, ChartSeries } from '@/data/golf/chart';
+
+	function init() {
+		document.querySelectorAll<HTMLElement>('[data-chart]').forEach((root) => {
+			if (root.dataset.ready) return;
+			root.dataset.ready = '1';
+
+			const raw = root.querySelector<HTMLScriptElement>('[data-chart-data]')?.textContent;
+			if (!raw) return;
+			const { frame, series } = JSON.parse(raw) as { frame: ChartFrame; series: ChartSeries[] };
+			const dynamic = root.querySelector<SVGGElement>('.pc-dynamic');
+			const svg = root.querySelector<SVGSVGElement>('.pc-svg');
+			const body = root.querySelector<HTMLElement>('.pc-inner');
+			const tip = root.querySelector<HTMLElement>('.pc-tip');
+			if (!dynamic || !svg || !body || !tip) return;
+
+			root.querySelectorAll<HTMLButtonElement>('[data-metric]').forEach((btn) => {
+				btn.addEventListener('click', () => {
+					const s = series.find((x) => x.key === btn.dataset.metric);
+					if (!s) return;
+					root.querySelectorAll<HTMLButtonElement>('[data-metric]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+					btn.setAttribute('aria-pressed', 'true');
+					dynamic.innerHTML = renderSeries(frame, s);
+					svg.setAttribute('aria-label', `${s.label} over time since the first round`);
+					tip.hidden = true;
+				});
+			});
+
+			const show = (x: number, y: number, html: string) => {
+				tip.innerHTML = html;
+				tip.style.left = `${(x / frame.width) * 100}%`;
+				tip.style.top = `${(y / frame.height) * 100}%`;
+				tip.hidden = false;
+			};
+
+			svg.addEventListener('pointerover', (e) => {
+				const t = e.target as Element;
+				const pt = t.closest<SVGElement>('.pc-pt');
+				if (pt) {
+					const d = pt.dataset;
+					show(Number(d.x), Number(d.y), `${d.date?.replaceAll('-', '.')} · ${d.venue}<br><strong>${d.value}</strong>`);
+					return;
+				}
+				const mk = t.closest<SVGElement>('.pc-marker');
+				if (mk) {
+					const d = mk.dataset;
+					const x = mk.tagName === 'line' ? Number(mk.getAttribute('x1')) : Number(/M([\d.]+)/.exec(mk.getAttribute('d') ?? '')?.[1]);
+					show(x, frame.height - frame.padB - 6, `${d.date?.replaceAll('-', '.')}<br>${d.label}`);
+				}
+			});
+			svg.addEventListener('pointerout', (e) => {
+				const t = e.target as Element;
+				if (t.closest('.pc-pt, .pc-marker')) tip.hidden = true;
+			});
+		});
+	}
+
+	document.addEventListener('astro:page-load', init);
+</script>

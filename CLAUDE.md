@@ -52,6 +52,16 @@ Full instructions in `docs/adding-martingale-bets.md`. Short version:
 1. Append to `src/data/martingaleBets.ts` — use the next sequential `id`
 2. Settle by updating `result` and adding `returnAmount`; odd-penny splits go to GardenOf
 
+### Ball Flight (`/golf`)
+
+Dark-only golf section. Plan and design brief in `docs/golf/PLAN.md`, entry
+workflow in `docs/golf/adding-entries.md`. Data lives in `src/data/golf/`
+(`sessions.ts`, `rounds.ts`, `bag.ts`, `milestones.ts`, all append-only ids);
+derivations (PRs, trends, venue rollups) in `src/data/golf/utils.ts`; venue
+writeups in the `golf-venues` collection. Log entries with `/add-golf-session`
+and `/add-round`. Shared identity in `src/styles/golf.css` plus
+`src/layouts/Golf.astro`; never use `dark:` variants inside `.golf`.
+
 ### Agent Content Pipeline
 
 `docs/agent-content-pipeline/README.md` describes the Leif → Quillan → Watten → Shelby agent workflow for generating No Reservaitions and music reviews. Scripts are in `scripts/agent-content/`. Use `yarn agent:packet:validate` and `yarn agent:content:publish` to drive the pipeline.

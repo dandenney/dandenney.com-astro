@@ -1,0 +1,147 @@
+---
+/**
+ * /golf/venues, the grid. Filterable by format, because "where I play"
+ * means five different things now.
+ */
+import Golf from '@/layouts/Golf.astro';
+import VenueCard from '@/components/golf/VenueCard.astro';
+import { GOLF_SECTION_NAME } from '@/data/golf/types';
+import { getVenueStats } from '@/data/golf/utils';
+import { FORMAT_LABEL, FORMAT_ORDER, getVenues, venueSlug, type VenueFormat } from '@/helpers/golf';
+
+export const prerender = true;
+
+const player = 'dan';
+const venues = await getVenues();
+const present = FORMAT_ORDER.filter((f) => venues.some((v) => v.data.format === f));
+const counts = Object.fromEntries(present.map((f) => [f, venues.filter((v) => v.data.format === f).length])) as Record<VenueFormat, number>;
+const annual = venues.filter((v) => v.data.membership === 'annual').length;
+const weekly = venues.filter((v) => v.data.membership === 'visit' && v.data.cadence).length;
+const oneOff = venues.filter((v) => v.data.membership === 'one-off').length;
+
+const ordered = [...venues].sort(
+	(a, b) => FORMAT_ORDER.indexOf(a.data.format) - FORMAT_ORDER.indexOf(b.data.format) || a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
+---
+
+<Golf title={`Venues · ${GOLF_SECTION_NAME}`} description="Every place the golf happens: the lab, the range, the putting courses, and the two courses that started it.">
+	<section class="gf-wrap page">
+		<header class="page-head">
+			<p class="gf-label"><a class="crumb" href="/golf">{GOLF_SECTION_NAME}</a> &middot; Venues</p>
+			<h1 class="gf-display page-title">Where</h1>
+			<p class="page-lede">
+				Six venues, five formats. Two are annual memberships, one is the weekly range, three were visits that mattered.
+			</p>
+			<p class="gf-mono page-ledger">
+				<span><b>{annual}</b> annual</span>
+				<span><b>{weekly}</b> weekly</span>
+				<span><b>{oneOff}</b> one-off</span>
+			</p>
+		</header>
+
+		<div class="filters" role="group" aria-label="Filter by format" data-filters>
+			<button type="button" class="gf-btn" data-filter="all" aria-pressed="true">All <span class="n">{venues.length}</span></button>
+			{present.map((f) => (
+				<button type="button" class="gf-btn" data-filter={f} aria-pressed="false">
+					{FORMAT_LABEL[f]} <span class="n">{counts[f]}</span>
+				</button>
+			))}
+		</div>
+
+		<div class="grid" data-reveal data-reveal-children data-venue-grid>
+			{ordered.map((v, i) => {
+				const slug = venueSlug(v);
+				return (
+					<div class="cell" data-format={v.data.format}>
+						<VenueCard venue={v} slug={slug} stats={getVenueStats(slug, player)} eager={i < 3} />
+					</div>
+				);
+			})}
+		</div>
+	</section>
+</Golf>
+
+<script>
+	function init() {
+		const root = document.querySelector<HTMLElement>('[data-filters]');
+		const grid = document.querySelector<HTMLElement>('[data-venue-grid]');
+		if (!root || !grid || root.dataset.ready) return;
+		root.dataset.ready = '1';
+		const cells = Array.from(grid.querySelectorAll<HTMLElement>('.cell'));
+		root.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const f = btn.dataset.filter;
+				root.querySelectorAll('[data-filter]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+				btn.setAttribute('aria-pressed', 'true');
+				cells.forEach((c) => {
+					c.hidden = f !== 'all' && c.dataset.format !== f;
+				});
+			});
+		});
+	}
+	document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+	.page {
+		padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+	}
+	.page-head {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+	}
+	.crumb {
+		color: inherit;
+		text-decoration: none;
+	}
+	.crumb:hover {
+		color: var(--gf-tracer);
+	}
+	.page-title {
+		font-size: clamp(3rem, 8vw, 6.5rem);
+		margin-left: -0.04em;
+	}
+	.page-lede {
+		font-family: var(--gf-serif);
+		font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+		color: var(--gf-ink-soft);
+		max-width: 52ch;
+	}
+	.page-ledger {
+		display: flex;
+		gap: 1.5rem;
+		font-size: 0.7rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.page-ledger b {
+		color: var(--gf-tracer);
+		font-weight: 600;
+		margin-right: 0.3rem;
+	}
+	.filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-bottom: 1.25rem;
+	}
+	.filters .n {
+		color: var(--gf-mute);
+		font-weight: 400;
+	}
+	.filters [aria-pressed='true'] .n {
+		color: var(--gf-bay);
+		opacity: 0.7;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+		gap: 0.75rem;
+	}
+	.cell[hidden] {
+		display: none;
+	}
+</style>

@@ -1,0 +1,107 @@
+---
+/**
+ * One personal-record tile. Filled: huge tracer numeral plus where and
+ * when, linking to the moment. Empty: dashed outline and an honest
+ * "not yet", because the absence is part of the story right now.
+ */
+import type { PRRecord } from '@/data/golf/utils';
+import { fmtDateShort } from '@/data/golf/utils';
+
+interface Props {
+	record: PRRecord;
+	venue?: string;
+}
+
+const { record, venue } = Astro.props;
+const filled = record.display !== undefined;
+---
+
+{filled ? (
+	<a class="tile is-filled" href={record.href}>
+		<span class="tile-top">
+			<span class="gf-label">{record.label}</span>
+			{record.isNew && <span class="gf-new">New</span>}
+		</span>
+		<span class="tile-value">
+			<span class="gf-num tile-num">{record.display}</span>
+			{record.unit && <span class="gf-mono tile-unit">{record.unit}</span>}
+		</span>
+		<span class="gf-mono tile-cite">
+			{record.date && fmtDateShort(record.date)}{venue && <> · {venue}</>}
+		</span>
+	</a>
+) : (
+	<div class="tile gf-empty is-empty">
+		<span class="tile-top">
+			<span class="gf-label">{record.label}</span>
+		</span>
+		<span class="tile-value">
+			<span class="gf-mono tile-notyet">&mdash; not yet &mdash;</span>
+		</span>
+		<span class="gf-mono tile-cite">{record.hint}</span>
+	</div>
+)}
+
+<style>
+	.tile {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 1.25rem;
+		min-height: 11.5rem;
+		padding: 1.1rem 1.2rem 1rem;
+		text-decoration: none;
+		color: inherit;
+		scroll-snap-align: start;
+		container-type: inline-size;
+	}
+	.tile.is-filled {
+		background: var(--gf-panel);
+		border: 1px solid var(--gf-line);
+		transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+	}
+	.tile.is-filled:hover {
+		background: var(--gf-raised);
+		border-color: var(--gf-tracer-soft);
+	}
+	.tile-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+	.tile-value {
+		display: flex;
+		align-items: baseline;
+		gap: 0.4rem;
+	}
+	.tile-num {
+		font-size: clamp(2.6rem, 5vw, 3.8rem);
+		color: var(--gf-tracer);
+		text-shadow: 0 0 24px var(--gf-tracer-faint);
+	}
+	.tile-unit {
+		font-size: 0.7rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.tile-notyet {
+		font-size: 0.8rem;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.tile-cite {
+		font-size: 0.68rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+		line-height: 1.5;
+	}
+	.is-empty .tile-cite {
+		color: var(--gf-mute);
+		text-transform: none;
+		letter-spacing: 0.02em;
+	}
+</style>

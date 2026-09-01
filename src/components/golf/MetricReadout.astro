@@ -1,0 +1,115 @@
+---
+/**
+ * Label + value + unit + optional delta. The atom of the section.
+ * `countup` animates hero-scale numerals; leave it off for table-scale.
+ */
+interface Props {
+	label: string;
+	value: string | number;
+	unit?: string;
+	sub?: string;
+	delta?: number;
+	/** true when a positive delta is good (carry), false when negative is good (score) */
+	deltaUp?: boolean;
+	size?: 'sm' | 'md' | 'lg' | 'xl';
+	tone?: 'ink' | 'tracer' | 'dim';
+	countup?: boolean;
+	decimals?: number;
+	class?: string;
+}
+
+const {
+	label,
+	value,
+	unit,
+	sub,
+	delta,
+	deltaUp = true,
+	size = 'md',
+	tone = 'ink',
+	countup = false,
+	decimals = 0,
+	class: className,
+} = Astro.props;
+
+const numeric = typeof value === 'number';
+const good = typeof delta === 'number' ? (deltaUp ? delta > 0 : delta < 0) : undefined;
+const deltaText = typeof delta === 'number' ? `${delta > 0 ? '+' : ''}${delta}` : undefined;
+---
+
+<div class:list={['readout', `is-${size}`, `tone-${tone}`, className]}>
+	<span class="gf-label readout-label">{label}</span>
+	<span class="readout-line">
+		<span class="gf-num readout-value" data-countup={countup && numeric ? value : undefined} data-decimals={decimals}>
+			{numeric ? value.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) : value}
+		</span>
+		{unit && <span class="gf-mono readout-unit">{unit}</span>}
+		{deltaText && (
+			<span class:list={['gf-mono readout-delta', good ? 'is-good' : delta === 0 ? 'is-flat' : 'is-bad']}>{deltaText}</span>
+		)}
+	</span>
+	{sub && <span class="gf-mono readout-sub">{sub}</span>}
+</div>
+
+<style>
+	.readout {
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+		min-width: 0;
+	}
+	.readout-line {
+		display: flex;
+		align-items: baseline;
+		gap: 0.4rem;
+		flex-wrap: wrap;
+	}
+	.readout-value {
+		color: var(--gf-ink);
+	}
+	.tone-tracer .readout-value {
+		color: var(--gf-tracer);
+	}
+	.tone-dim .readout-value {
+		color: var(--gf-dim);
+	}
+	.readout-unit {
+		font-size: 0.72rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.readout-sub {
+		font-size: 0.7rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.readout-delta {
+		font-size: 0.72rem;
+		letter-spacing: 0.06em;
+	}
+	.readout-delta.is-good {
+		color: var(--gf-tracer);
+	}
+	.readout-delta.is-bad {
+		color: var(--gf-miss);
+	}
+	.readout-delta.is-flat {
+		color: var(--gf-dim);
+	}
+
+	.is-sm .readout-value {
+		font-size: 1.25rem;
+	}
+	.is-md .readout-value {
+		font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+	}
+	.is-lg .readout-value {
+		font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+	}
+	.is-xl .readout-value {
+		font-size: clamp(3rem, 7vw, 5.5rem);
+		letter-spacing: -0.04em;
+	}
+</style>

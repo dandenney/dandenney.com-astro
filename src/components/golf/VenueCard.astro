@@ -1,0 +1,135 @@
+---
+/**
+ * Venue grid card: hero still with a dark wash, format, membership badge,
+ * and the venue rollup. Annual memberships get the persistent badge since
+ * that is the unusual part of the approach.
+ */
+import type { GolfVenue } from '@/helpers/golf';
+import { FORMAT_LABEL, venueHref } from '@/helpers/golf';
+import type { VenueStats } from '@/data/golf/utils';
+import { fmtToPar } from '@/data/golf/utils';
+
+interface Props {
+	venue: GolfVenue;
+	slug: string;
+	stats: VenueStats;
+	eager?: boolean;
+	compact?: boolean;
+}
+
+const { venue, slug, stats, eager = false, compact = false } = Astro.props;
+const d = venue.data;
+
+const meta: string[] = [];
+meta.push(`${stats.visits} visit${stats.visits === 1 ? '' : 's'}`);
+if (stats.rounds) meta.push(`${stats.rounds} round${stats.rounds === 1 ? '' : 's'}`);
+if (stats.puttingRounds) meta.push(`${stats.puttingRounds} putting`);
+if (stats.sessions) meta.push(`${stats.sessions} session${stats.sessions === 1 ? '' : 's'}`);
+if (typeof stats.bestScore === 'number') meta.push(`best ${stats.bestScore}`);
+else if (typeof stats.bestToPar === 'number') meta.push(`best ${fmtToPar(stats.bestToPar)}`);
+---
+
+<a class:list={['vc', { 'is-compact': compact }]} href={venueHref(slug)} data-format={d.format}>
+	<span class="vc-still">
+		{d.heroImage && <img src={d.heroImage} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" />}
+		<span class="vc-tags">
+			<span class="gf-tag vc-format">{FORMAT_LABEL[d.format]}</span>
+			{d.membership === 'annual' && <span class="gf-badge">Annual</span>}
+		</span>
+	</span>
+	<span class="vc-body">
+		<span class="vc-name">{d.title}</span>
+		<span class="gf-mono vc-city">{d.city}{d.state ? `, ${d.state}` : ''}</span>
+		<span class="gf-mono vc-meta">{meta.join(' · ')}</span>
+		{d.cadence && !compact && <span class="gf-mono vc-cadence">{d.cadence}</span>}
+	</span>
+</a>
+
+<style>
+	.vc {
+		display: flex;
+		flex-direction: column;
+		background: var(--gf-panel);
+		border: 1px solid var(--gf-line);
+		text-decoration: none;
+		color: var(--gf-ink);
+		overflow: hidden;
+		transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
+	}
+	.vc:hover {
+		border-color: var(--gf-tracer-soft);
+		background: var(--gf-raised);
+	}
+	.vc-still {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		background: var(--gf-raised);
+		overflow: hidden;
+	}
+	.is-compact .vc-still {
+		aspect-ratio: 16 / 7;
+	}
+	.vc-still img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: saturate(0.55) contrast(1.05) brightness(0.7);
+		transition: filter 0.5s ease-out, transform 0.8s var(--gf-ease);
+	}
+	.vc-still::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, oklch(14% 0.014 250 / 0.9), oklch(14% 0.014 250 / 0.2) 50%, transparent);
+		pointer-events: none;
+	}
+	.vc:hover .vc-still img {
+		filter: saturate(0.8) contrast(1.02) brightness(0.85);
+		transform: scale(1.03);
+	}
+	.vc-tags {
+		position: absolute;
+		z-index: 1;
+		top: 0.75rem;
+		left: 0.75rem;
+		display: flex;
+		gap: 0.4rem;
+	}
+	.vc-format {
+		background: oklch(14% 0.014 250 / 0.7);
+		backdrop-filter: blur(6px);
+		color: var(--gf-ink);
+	}
+	.vc-body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		padding: 1rem 1.1rem 1.1rem;
+	}
+	.vc-name {
+		font-family: var(--gf-display);
+		font-weight: 500;
+		font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+		letter-spacing: -0.02em;
+		line-height: 1.15;
+	}
+	.vc-city {
+		font-size: 0.68rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.vc-meta {
+		font-size: 0.72rem;
+		color: var(--gf-ink-soft);
+		margin-top: 0.4rem;
+	}
+	.vc-cadence {
+		font-size: 0.66rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-tracer);
+	}
+</style>
