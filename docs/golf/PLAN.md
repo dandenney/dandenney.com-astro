@@ -1,6 +1,6 @@
 # Golf Section — Plan & Design Brief
 
-Status: approved scope, awaiting name pick. Hand this to Fable for initial designs.
+Status: approved. Hand this to Fable for initial designs.
 Written 2026-09-01.
 
 ---
@@ -47,21 +47,21 @@ That sentence is the design brief.
 | URL | `/golf` |
 | Prose | **Mixed.** AI-generated venue blurbs via the agent pipeline; hand-written progress/milestone notes. `aiGenerated` per entry. |
 
-### Still open: the display name
+### Display name: **Ball Flight**
 
-URL stays `/golf`. The headline needs personality. Shortlist, best first:
+URL stays `/golf`. The section is titled **Ball Flight** — a literal launch-monitor
+term that doubles as the metaphor for the whole arc, and pairs with the tracer motif
+that runs through the design.
 
-1. **Ball Flight** — literal launch-monitor term, works as a section title and as a
-   metaphor for the whole arc. Pairs perfectly with the tracer-arc motif. *Recommended.*
-2. **Provisional** — the ball you hit when the first one might be lost. A second
-   attempt at a game you played twenty years ago. Quiet, a little literary.
-3. **The Bay** — GOLFTEC bay, Topgolf bay, Five Iron bay. Names the actual room
-   where the work happens. Understated.
-4. **Smash Factor** — ball speed ÷ club speed. Funniest real golf term. Loud.
-5. **Face to Target** — the number that "you cannot sweet-talk away."
+Keep the name in a single exported constant so it is trivial to change:
 
-Fable should design against **Ball Flight** as a placeholder; the name lives in one
-constant so swapping is trivial.
+```ts
+// src/data/golf/types.ts (or a small consts file)
+export const GOLF_SECTION_NAME = "Ball Flight";
+```
+
+Names considered and set aside, in case one is wanted later for a sub-page or a
+feed title: *Provisional*, *The Bay*, *Smash Factor*, *Face to Target*.
 
 ---
 
