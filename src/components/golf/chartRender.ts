@@ -80,7 +80,7 @@ export function renderSeries(f: ChartFrame, series: ChartSeries): string {
     const y = yOf(f, domain, p.v).toFixed(1);
     const last = i === s.points.length - 1;
     parts.push(
-      `<a class="pc-pt${last ? " is-last" : ""}" href="${esc(p.href)}" data-x="${x}" data-y="${y}" data-date="${p.date}" data-venue="${esc(p.venue)}" data-value="${esc(formatValue(p.v, s.format))}${s.unit ? " " + esc(s.unit) : ""}">` +
+      `<a class="pc-pt${last ? " is-last" : ""}" href="${esc(p.href)}" data-x="${x}" data-y="${y}" data-date="${p.date}" data-venue="${esc(p.venue)}" data-value="${p.approx ? "≈ " : ""}${esc(formatValue(p.v, s.format))}${s.unit ? " " + esc(s.unit) : ""}">` +
         `<circle class="pc-halo" cx="${x}" cy="${y}" r="10"/>` +
         `<circle class="pc-dot" cx="${x}" cy="${y}" r="4"/>` +
         `</a>`,
@@ -94,7 +94,7 @@ export function renderSeries(f: ChartFrame, series: ChartSeries): string {
     const anchor = x > f.width * 0.7 ? "end" : "start";
     const dx = anchor === "end" ? -14 : 14;
     parts.push(
-      `<text class="pc-solo" x="${x + dx}" y="${y}" dy="0.32em" text-anchor="${anchor}">${esc(formatValue(p.v, s.format))}${s.unit ? " " + esc(s.unit.toUpperCase()) : ""} · ONE POINT, NOT A TREND YET</text>`,
+      `<text class="pc-solo" x="${x + dx}" y="${y}" dy="0.32em" text-anchor="${anchor}">${p.approx ? "≈ " : ""}${esc(formatValue(p.v, s.format))}${s.unit ? " " + esc(s.unit.toUpperCase()) : ""} · ONE POINT, NOT A TREND YET</text>`,
     );
   }
 

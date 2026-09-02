@@ -61,7 +61,8 @@ const trendPoints = (club: Parameters<typeof getClubTrend>[1], metric: Parameter
 		v: p.value,
 		date: p.date,
 		venue: venueShort(vmap, p.venueSlug),
-		href: sessionHref(p.sessionId),
+		href: p.assessmentId ? assessmentHref(p.assessmentId) : sessionHref(p.sessionId ?? 0),
+		approx: p.approx,
 	}));
 
 const longestPoints = sessions.flatMap((s) => {

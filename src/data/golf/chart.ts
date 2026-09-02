@@ -15,6 +15,8 @@ export interface ChartPoint {
   /** Venue name for the tooltip */
   venue: string;
   href: string;
+  /** Read off an app screen; rendered with ≈ */
+  approx?: boolean;
 }
 
 export interface ChartSeries {

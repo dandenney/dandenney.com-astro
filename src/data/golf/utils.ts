@@ -223,6 +223,10 @@ export interface ActivityItem {
 }
 
 function sessionHeadline(s: Session): { value: string; unit: string } | undefined {
+  if (s.assessmentId) {
+    const a = assessments.find((x) => x.id === s.assessmentId);
+    if (a) return { value: fmtNum(Math.round(a.score)), unit: "game score" };
+  }
   const driver = s.clubs.find((c) => c.club === "driver");
   const drive = driver?.longest ?? driver?.total ?? driver?.carry;
   if (drive) return { value: fmtNum(drive), unit: "yd drive" };
@@ -554,10 +558,26 @@ export function isPR(player: Player, club: Club, metric: ClubMetricKey, value: n
 export interface TrendPoint {
   date: string;
   value: number;
-  sessionId: number;
   venueSlug: string;
+  /** Set when the point came from a logged session */
+  sessionId?: number;
+  /** Set when the point came from a Game Evaluation station */
+  assessmentId?: number;
+  /** Read off an app screen rather than exported */
+  approx?: boolean;
 }
 
+/** Every landing for a club across all stations of one evaluation. */
+function assessmentCarries(a: Assessment, club: Club): number[] {
+  return a.stations.filter((st) => st.club === club).flatMap((st) => st.landings.map((l) => l.carry));
+}
+
+/**
+ * Chronological series for charting. Sessions supply whatever was logged;
+ * Game Evaluation stations supply carry (the day's average across every
+ * shot with that club) and longest (the best of them), so the 7-iron at the
+ * 150 and 120 stations counts as 7-iron data without being retyped.
+ */
 export function getClubTrend(player: Player, club: Club, metric: ClubMetricKey): TrendPoint[] {
   const out: TrendPoint[] = [];
   for (const s of getSessions(player)) {
@@ -567,7 +587,18 @@ export function getClubTrend(player: Player, club: Club, metric: ClubMetricKey):
       out.push({ date: s.date, value, sessionId: s.id, venueSlug: s.venueSlug });
     }
   }
-  return out;
+  if (metric === "carry" || metric === "longest") {
+    for (const a of getAssessments(player)) {
+      const carries = assessmentCarries(a, club);
+      if (carries.length === 0) continue;
+      const value =
+        metric === "carry"
+          ? Math.round(carries.reduce((x, y) => x + y, 0) / carries.length)
+          : Math.max(...carries);
+      out.push({ date: a.date, value, assessmentId: a.id, venueSlug: a.venueSlug, approx: a.approximate });
+    }
+  }
+  return out.sort((x, y) => x.date.localeCompare(y.date));
 }
 
 /* ---------- the bag ---------- */
@@ -591,15 +622,26 @@ export function getBag(player: Player): { inBag: BagRowData[]; retired: BagRowDa
   const replacedBy = new Map<string, BagItem>();
   for (const item of bag) if (item.replaced) replacedBy.set(item.replaced, item);
 
+  const evals = getAssessments(player);
   const rowsFor = (item: BagItem): BagRowData => {
     const metrics = item.club ? s.flatMap((x) => x.clubs).filter((c) => c.club === item.club) : [];
     const carries = metrics.map((c) => c.carry).filter((v): v is number => typeof v === "number");
     const longs = metrics.map((c) => c.longest).filter((v): v is number => typeof v === "number");
+    let evalDays = 0;
+    if (item.club) {
+      for (const a of evals) {
+        const ac = assessmentCarries(a, item.club);
+        if (ac.length === 0) continue;
+        evalDays++;
+        carries.push(Math.round(ac.reduce((x, y) => x + y, 0) / ac.length));
+        longs.push(Math.max(...ac));
+      }
+    }
     return {
       item,
       avgCarry: carries.length ? Math.round(carries.reduce((a, b) => a + b, 0) / carries.length) : undefined,
       longest: longs.length ? Math.max(...longs) : undefined,
-      sessionsLogged: metrics.length,
+      sessionsLogged: metrics.length + evalDays,
       replacedBy: replacedBy.get(item.id),
     };
   };
