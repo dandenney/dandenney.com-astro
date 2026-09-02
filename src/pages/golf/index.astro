@@ -11,10 +11,14 @@ import RecordTile from '@/components/golf/RecordTile.astro';
 import ProgressChart from '@/components/golf/ProgressChart.astro';
 import VenueCard from '@/components/golf/VenueCard.astro';
 import BagRow from '@/components/golf/BagRow.astro';
+import AssessmentLadder from '@/components/golf/AssessmentLadder.astro';
 import { GOLF_EPOCH, GOLF_SECTION_NAME } from '@/data/golf/types';
 import {
+	assessmentHref,
 	fmtDateStamp,
 	getActivity,
+	getAssessments,
+	getLatestAssessment,
 	getBagPreview,
 	getClubTrend,
 	getCounters,
@@ -47,6 +51,8 @@ const bagPreview = getBagPreview(player);
 const sessions = getSessions(player);
 const rounds = getRounds(player);
 const annualCount = venues.filter((v) => v.data.membership === 'annual').length;
+const latestEval = getLatestAssessment(player);
+const evals = getAssessments(player);
 
 /* ---- progress chart ---- */
 const trendPoints = (club: Parameters<typeof getClubTrend>[1], metric: Parameters<typeof getClubTrend>[2]) =>
@@ -75,6 +81,15 @@ const roundPoints = (filter: (r: (typeof rounds)[number]) => boolean) =>
 	});
 
 const series: ChartSeries[] = [
+	{
+		key: 'gameScore',
+		label: 'Game score',
+		unit: '',
+		format: 'int',
+		lowerIsBetter: true,
+		points: evals.map((a) => ({ t: toT(a.date), v: Math.round(a.score), date: a.date, venue: venueShort(vmap, a.venueSlug), href: assessmentHref(a.id) })),
+		reference: latestEval ? { v: latestEval.goal, label: 'Goal' } : undefined,
+	},
 	{ key: 'carry7i', label: '7-iron carry', unit: 'yds', format: 'int', lowerIsBetter: false, points: trendPoints('7i', 'carry') },
 	{ key: 'clubSpeed', label: 'Driver speed', unit: 'mph', format: 'fixed1', lowerIsBetter: false, points: trendPoints('driver', 'clubSpeed') },
 	{ key: 'longest', label: 'Longest drive', unit: 'yds', format: 'int', lowerIsBetter: false, points: longestPoints },
@@ -144,11 +159,33 @@ const tMax = lastT + 6 * DAY;
 		</div>
 	</section>
 
-	<!-- 02 Progress -->
+	<!-- 02 The baseline -->
+	{latestEval && (
+		<section class="gf-section" id="baseline">
+			<div class="gf-wrap">
+				<div class="gf-section-head">
+					<h2 class="gf-h2"><span class="gf-idx">02</span> The baseline</h2>
+					<span class="gf-label"><a href={assessmentHref(latestEval.id)}>Full evaluation &rarr;</a></span>
+				</div>
+				<div class="baseline" data-reveal>
+					<div class="baseline-score">
+						<MetricReadout label="Projected score" value={Math.round(latestEval.score)} size="xl" tone="tracer" countup sub={`GOLFTEC · ${fmtDateStamp(latestEval.date)}`} />
+						<MetricReadout label="Goal" value={latestEval.goal} size="lg" tone="dim" delta={Math.round(latestEval.score - latestEval.goal)} deltaUp={false} sub="everyone starts at 125" />
+						<p class="baseline-copy">
+							Five target stations on SkyTrak, projected to an 18-hole score. The goal is already under the number. The driver is not.
+						</p>
+					</div>
+					<AssessmentLadder assessment={latestEval} class="baseline-ladder" />
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- 03 Progress -->
 	<section class="gf-section" id="progress">
 		<div class="gf-wrap">
 			<div class="gf-section-head">
-				<h2 class="gf-h2"><span class="gf-idx">02</span> Progress</h2>
+				<h2 class="gf-h2"><span class="gf-idx">03</span> Progress</h2>
 				<span class="gf-label">Every session and round on the baseline &middot; hover for the moment</span>
 			</div>
 			<ProgressChart series={series} markers={markers} annotations={annotations} tMin={tMin} tMax={tMax} />
@@ -160,11 +197,11 @@ const tMax = lastT + 6 * DAY;
 		</div>
 	</section>
 
-	<!-- 03 Recent activity -->
+	<!-- 04 Recent activity -->
 	<section class="gf-section" id="activity">
 		<div class="gf-wrap">
 			<div class="gf-section-head">
-				<h2 class="gf-h2"><span class="gf-idx">03</span> Recent activity</h2>
+				<h2 class="gf-h2"><span class="gf-idx">04</span> Recent activity</h2>
 				<span class="gf-label"><a href="/golf/sessions">Full log &rarr;</a></span>
 			</div>
 			<ol class="ledger" data-reveal data-reveal-children>
@@ -193,11 +230,11 @@ const tMax = lastT + 6 * DAY;
 		</div>
 	</section>
 
-	<!-- 04 Venues -->
+	<!-- 05 Venues -->
 	<section class="gf-section" id="venues">
 		<div class="gf-wrap">
 			<div class="gf-section-head">
-				<h2 class="gf-h2"><span class="gf-idx">04</span> Where</h2>
+				<h2 class="gf-h2"><span class="gf-idx">05</span> Where</h2>
 				<span class="gf-label"><a href="/golf/venues">All venues &rarr;</a></span>
 			</div>
 			<div class="venues" data-reveal data-reveal-children>
@@ -209,11 +246,11 @@ const tMax = lastT + 6 * DAY;
 		</div>
 	</section>
 
-	<!-- 05 The bag -->
+	<!-- 06 The bag -->
 	<section class="gf-section" id="bag">
 		<div class="gf-wrap">
 			<div class="gf-section-head">
-				<h2 class="gf-h2"><span class="gf-idx">05</span> The bag</h2>
+				<h2 class="gf-h2"><span class="gf-idx">06</span> The bag</h2>
 				<span class="gf-label"><a href="/golf/bag">Every club &rarr;</a></span>
 			</div>
 			{bagPreview.length > 0 ? (
@@ -229,11 +266,11 @@ const tMax = lastT + 6 * DAY;
 		</div>
 	</section>
 
-	<!-- 06 Origin -->
+	<!-- 07 Origin -->
 	<section class="gf-section origin" id="origin">
 		<div class="gf-wrap">
 			<div class="gf-section-head">
-				<h2 class="gf-h2"><span class="gf-idx">06</span> How it started</h2>
+				<h2 class="gf-h2"><span class="gf-idx">07</span> How it started</h2>
 			</div>
 			<!-- Hand-written. Dan: edit freely, this is the one place on the page with no numbers. -->
 			<div class="gf-prose origin-prose" data-reveal>
@@ -362,6 +399,32 @@ const tMax = lastT + 6 * DAY;
 		padding-bottom: 0.5rem;
 		scrollbar-width: thin;
 		scrollbar-color: var(--gf-line) transparent;
+	}
+
+	/* ---------- baseline ---------- */
+	.baseline {
+		display: grid;
+		grid-template-columns: minmax(16rem, 0.9fr) minmax(0, 1.6fr);
+		gap: 2rem clamp(2rem, 5vw, 4rem);
+		align-items: start;
+	}
+	.baseline-score {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.baseline-copy {
+		font-family: var(--gf-serif);
+		font-size: 1.05rem;
+		line-height: 1.6;
+		color: var(--gf-dim);
+		max-width: 34ch;
+		text-wrap: pretty;
+	}
+	@media (max-width: 900px) {
+		.baseline {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	/* ---------- chart foot ---------- */

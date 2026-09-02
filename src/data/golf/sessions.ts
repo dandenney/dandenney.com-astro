@@ -24,6 +24,7 @@ export const sessions: Session[] = [
     kind: "lesson",
     partners: ["Misty"],
     focus: "Initial game assessment",
+    assessmentId: 1,
     clubs: [
       {
         club: "7i",

@@ -1,0 +1,149 @@
+---
+/**
+ * Launch, spin, and descent for one station against SkyTrak's ideal window.
+ * Ideal window in turf green, the actual range as a bar: ink when it
+ * overlaps the window, amber when it misses it entirely.
+ */
+import type { AssessmentStation, Range } from '@/data/golf/types';
+
+interface Props {
+	station: AssessmentStation;
+	class?: string;
+}
+
+const { station: st, class: className } = Astro.props;
+
+interface Row {
+	label: string;
+	unit: string;
+	actual: Range;
+	ideal: Range;
+	point?: boolean;
+}
+
+const rows: Row[] = [
+	{ label: 'Launch', unit: '°', actual: st.launch, ideal: st.ideal.launch },
+	{
+		label: 'Back spin',
+		unit: 'rpm',
+		actual: { min: st.backSpin, max: st.backSpin },
+		ideal: { min: st.ideal.backSpin * 0.9, max: st.ideal.backSpin * 1.1 },
+		point: true,
+	},
+	{ label: 'Descent', unit: '°', actual: st.descent, ideal: st.ideal.descent },
+];
+
+function layout(r: Row) {
+	const lo = Math.min(r.actual.min, r.ideal.min);
+	const hi = Math.max(r.actual.max, r.ideal.max);
+	const pad = (hi - lo) * 0.12 || 1;
+	const d0 = lo - pad;
+	const d1 = hi + pad;
+	const pct = (v: number) => ((v - d0) / (d1 - d0)) * 100;
+	const overlaps = r.actual.max >= r.ideal.min && r.actual.min <= r.ideal.max;
+	return {
+		idealL: pct(r.ideal.min),
+		idealW: pct(r.ideal.max) - pct(r.ideal.min),
+		actL: pct(r.actual.min),
+		actW: Math.max(0.8, pct(r.actual.max) - pct(r.actual.min)),
+		overlaps,
+	};
+}
+
+const fmt = (v: number, unit: string) => (unit === 'rpm' ? Math.round(v).toLocaleString('en-US') : `${Math.round(v)}${unit}`);
+const fmtRange = (r: Range, unit: string) => (r.min === r.max ? fmt(r.min, unit) : `${fmt(r.min, unit === 'rpm' ? 'rpm' : '')} to ${fmt(r.max, unit)}`);
+---
+
+<div class:list={['fg', className]}>
+	{rows.map((r) => {
+		const l = layout(r);
+		return (
+			<div class="fg-row">
+				<span class="gf-label fg-label">{r.label}</span>
+				<span class="fg-track">
+					<span class="fg-ideal" style={`left:${l.idealL.toFixed(2)}%;width:${l.idealW.toFixed(2)}%`}></span>
+					<span class:list={['fg-actual', l.overlaps ? 'is-ok' : 'is-miss', { 'is-point': r.point }]} style={`left:${l.actL.toFixed(2)}%;width:${l.actW.toFixed(2)}%`}></span>
+				</span>
+				<span class="gf-mono fg-nums">
+					<span class:list={['fg-actual-num', l.overlaps ? 'is-ok' : 'is-miss']}>{fmtRange(r.actual, r.unit)}</span>
+					<span class="fg-ideal-num">ideal {r.point ? fmt(st.ideal.backSpin, r.unit) : fmtRange(r.ideal, r.unit)}</span>
+				</span>
+			</div>
+		);
+	})}
+</div>
+
+<style>
+	.fg {
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
+	}
+	.fg-row {
+		display: grid;
+		grid-template-columns: 5rem minmax(0, 1fr);
+		grid-template-rows: auto auto;
+		gap: 0.35rem 1rem;
+		align-items: center;
+	}
+	.fg-label {
+		grid-row: 1 / span 2;
+		align-self: start;
+		padding-top: 0.15rem;
+	}
+	.fg-track {
+		position: relative;
+		height: 12px;
+	}
+	.fg-track::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		height: 1px;
+		background: var(--gf-line);
+	}
+	.fg-ideal {
+		position: absolute;
+		top: 1px;
+		height: 10px;
+		background: var(--gf-turf);
+		opacity: 0.55;
+	}
+	.fg-actual {
+		position: absolute;
+		top: 4px;
+		height: 4px;
+		background: var(--gf-ink);
+	}
+	.fg-actual.is-miss {
+		background: var(--gf-miss);
+		box-shadow: 0 0 8px oklch(75% 0.16 65 / 0.5);
+	}
+	.fg-actual.is-point {
+		top: 2px;
+		height: 8px;
+		width: 3px !important;
+		margin-left: -1.5px;
+	}
+	.fg-nums {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		font-size: 0.68rem;
+		letter-spacing: 0.04em;
+	}
+	.fg-actual-num.is-ok {
+		color: var(--gf-ink);
+	}
+	.fg-actual-num.is-miss {
+		color: var(--gf-miss);
+	}
+	.fg-ideal-num {
+		color: var(--gf-mute);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-size: 0.62rem;
+	}
+</style>

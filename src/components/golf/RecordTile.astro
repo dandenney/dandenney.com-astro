@@ -23,7 +23,7 @@ const filled = record.display !== undefined;
 			{record.isNew && <span class="gf-new">New</span>}
 		</span>
 		<span class="tile-value">
-			<span class="gf-num tile-num">{record.display}</span>
+			<span class="gf-num tile-num">{record.approx && <span class="tile-approx" aria-label="approximately">≈</span>}{record.display}</span>
 			{record.unit && <span class="gf-mono tile-unit">{record.unit}</span>}
 		</span>
 		<span class="gf-mono tile-cite">
@@ -79,6 +79,12 @@ const filled = record.display !== undefined;
 		font-size: clamp(2.6rem, 5vw, 3.8rem);
 		color: var(--gf-tracer);
 		text-shadow: 0 0 24px var(--gf-tracer-faint);
+	}
+	.tile-approx {
+		font-size: 0.5em;
+		vertical-align: 0.45em;
+		margin-right: 0.1em;
+		color: var(--gf-dim);
 	}
 	.tile-unit {
 		font-size: 0.7rem;

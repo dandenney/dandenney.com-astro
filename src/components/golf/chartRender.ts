@@ -39,6 +39,7 @@ function fanSameDay(f: ChartFrame, points: ChartPoint[]): ChartPoint[] {
 export function renderSeries(f: ChartFrame, series: ChartSeries): string {
   const s: ChartSeries = { ...series, points: fanSameDay(f, series.points) };
   const values = s.points.map((p) => p.v);
+  if (s.reference) values.push(s.reference.v);
   const domain = niceDomain(values, s.format);
   const parts: string[] = [];
 
@@ -48,6 +49,14 @@ export function renderSeries(f: ChartFrame, series: ChartSeries): string {
     parts.push(
       `<line class="pc-grid" x1="${f.padL}" x2="${f.width - f.padR}" y1="${y}" y2="${y}"/>`,
       `<text class="pc-ylabel" x="${f.padL - 10}" y="${y}" dy="0.32em" text-anchor="end">${esc(formatValue(v, s.format))}</text>`,
+    );
+  }
+
+  if (s.reference) {
+    const y = yOf(f, domain, s.reference.v).toFixed(1);
+    parts.push(
+      `<line class="pc-ref" x1="${f.padL}" x2="${f.width - f.padR}" y1="${y}" y2="${y}"/>`,
+      `<text class="pc-ref-label" x="${f.width - f.padR}" y="${y}" dy="-6" text-anchor="end">${esc(s.reference.label.toUpperCase())} ${esc(formatValue(s.reference.v, s.format))}</text>`,
     );
   }
 

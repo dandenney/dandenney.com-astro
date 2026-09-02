@@ -24,6 +24,8 @@ export interface ChartSeries {
   format: ValueFormat;
   lowerIsBetter: boolean;
   points: ChartPoint[];
+  /** Dashed horizontal line, e.g. the GOLFTEC goal score */
+  reference?: { v: number; label: string };
 }
 
 export interface ChartMarker {

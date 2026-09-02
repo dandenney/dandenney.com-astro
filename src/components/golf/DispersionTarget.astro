@@ -1,0 +1,116 @@
+---
+/**
+ * Top-down dispersion for one station. Rings at 10% and 20% of the target
+ * distance, the target line dashed, each shot a dot: tracer inside the inner
+ * ring, amber outside. Offline values are read off the app's zone map, so
+ * they are approximate; the caption says so.
+ */
+import type { AssessmentStation } from '@/data/golf/types';
+import { stationSummary } from '@/data/golf/utils';
+
+interface Props {
+	station: AssessmentStation;
+	class?: string;
+}
+
+const { station: st, class: className } = Astro.props;
+const S = 260;
+const cx = S / 2;
+const cy = 108;
+const summary = stationSummary(st);
+const tol = st.target * 0.1;
+const spread = Math.max(
+	tol * 2.4,
+	...st.landings.map((l) => Math.max(Math.abs(l.offline ?? 0), Math.abs(st.target - l.carry))),
+) * 1.12;
+const k = (S / 2 - 16) / spread;
+const dot = (l: { carry: number; offline?: number }) => ({
+	x: cx + (l.offline ?? 0) * k,
+	y: cy + (st.target - l.carry) * k,
+	inside: Math.abs(l.carry - st.target) <= tol && Math.abs(l.offline ?? 0) <= tol,
+});
+---
+
+<svg class:list={['dt', className]} viewBox={`0 0 ${S} ${S}`} role="img" aria-label={`Dispersion at the ${st.target} yard station: ${summary.onTarget} of ${st.shots} inside 10 percent of the target`}>
+	<line class="dt-line" x1={cx} x2={cx} y1={S} y2={cy} />
+	<line class="dt-line" x1={0} x2={S} y1={cy} y2={cy} />
+	<circle class="dt-ring is-outer" cx={cx} cy={cy} r={tol * 2 * k} />
+	<circle class="dt-ring is-inner" cx={cx} cy={cy} r={tol * k} />
+	<text class="dt-ring-label" x={cx + tol * k + 4} y={cy - 4}>{Math.round(tol)}yd</text>
+	<g class="dt-flag" transform={`translate(${cx} ${cy})`}>
+		<circle r="2.2" />
+		<line x1="0" x2="0" y1="0" y2="-11" />
+		<path d="M0 -11 L7 -8.5 L0 -6 Z" />
+	</g>
+	{st.landings.map((l) => {
+		const d = dot(l);
+		return <circle class:list={['dt-dot', d.inside ? 'is-in' : 'is-out']} cx={d.x.toFixed(1)} cy={d.y.toFixed(1)} r="4.5" />;
+	})}
+	<text class="dt-note" x="10" y={S - 10}>{summary.onTarget}/{st.shots} inside</text>
+	<text class="dt-note" x={S - 10} y={S - 10} text-anchor="end">{summary.hasOffline ? '≈ offline' : 'no offline data'}</text>
+</svg>
+
+<style>
+	.dt {
+		display: block;
+		width: 100%;
+		height: auto;
+		font-family: var(--gf-mono);
+		background: var(--gf-panel);
+		background-image:
+			linear-gradient(var(--gf-line-soft) 1px, transparent 1px),
+			linear-gradient(90deg, var(--gf-line-soft) 1px, transparent 1px);
+		background-size: 26px 26px;
+		border: 1px solid var(--gf-line);
+	}
+	.dt-line {
+		stroke: var(--gf-line);
+		stroke-width: 1;
+		stroke-dasharray: 2 5;
+	}
+	.dt-ring {
+		fill: none;
+		stroke: var(--gf-turf);
+		stroke-width: 1;
+	}
+	.dt-ring.is-inner {
+		fill: var(--gf-turf);
+		fill-opacity: 0.18;
+	}
+	.dt-ring.is-outer {
+		stroke-dasharray: 3 4;
+		opacity: 0.7;
+	}
+	.dt-ring-label {
+		font-size: 8.5px;
+		letter-spacing: 0.08em;
+		fill: var(--gf-dim);
+	}
+	.dt-flag circle {
+		fill: var(--gf-ink);
+	}
+	.dt-flag line {
+		stroke: var(--gf-ink);
+		stroke-width: 1;
+	}
+	.dt-flag path {
+		fill: var(--gf-ink);
+	}
+	.dt-dot {
+		stroke: var(--gf-bay);
+		stroke-width: 1.5;
+	}
+	.dt-dot.is-in {
+		fill: var(--gf-tracer);
+		filter: drop-shadow(0 0 5px var(--gf-tracer-soft));
+	}
+	.dt-dot.is-out {
+		fill: var(--gf-miss);
+	}
+	.dt-note {
+		font-size: 9px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		fill: var(--gf-dim);
+	}
+</style>

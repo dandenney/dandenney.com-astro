@@ -8,10 +8,13 @@ import { sessions } from "@/data/golf/sessions";
 import { rounds } from "@/data/golf/rounds";
 import { bag } from "@/data/golf/bag";
 import { milestones } from "@/data/golf/milestones";
+import { assessments } from "@/data/golf/assessments";
 import {
   CLUB_ORDER,
   CLUB_SHORT,
   GOLF_EPOCH,
+  type Assessment,
+  type AssessmentStation,
   type BagItem,
   type Club,
   type ClubMetricKey,
@@ -88,6 +91,53 @@ export function getRounds(player?: Player): Round[] {
 
 export function getMilestones(player?: Player): Milestone[] {
   return milestones.filter((m) => !player || m.player === player).sort(byDate);
+}
+
+export function getAssessments(player?: Player): Assessment[] {
+  return assessments.filter((a) => !player || a.player === player).sort(byDate);
+}
+
+export function getLatestAssessment(player: Player): Assessment | undefined {
+  const all = getAssessments(player);
+  return all[all.length - 1];
+}
+
+export function assessmentHref(id: number): string {
+  return `/golf/assessment#a-${id}`;
+}
+
+export interface StationSummary {
+  minCarry: number;
+  maxCarry: number;
+  avgCarry: number;
+  /** target minus best carry, yards short */
+  gap: number;
+  /** shots inside 10% of the target distance, both axes */
+  onTarget: number;
+  hasOffline: boolean;
+  launchInIdeal: boolean;
+  spinInIdeal: boolean;
+  descentInIdeal: boolean;
+}
+
+export function stationSummary(st: AssessmentStation): StationSummary {
+  const carries = st.landings.map((l) => l.carry);
+  const tol = st.target * 0.1;
+  const within = (r: { min: number; max: number }, ideal: { min: number; max: number }) =>
+    r.min >= ideal.min && r.max <= ideal.max;
+  return {
+    minCarry: Math.min(...carries),
+    maxCarry: Math.max(...carries),
+    avgCarry: Math.round(carries.reduce((a, b) => a + b, 0) / Math.max(1, carries.length)),
+    gap: st.target - Math.max(...carries),
+    onTarget: st.landings.filter(
+      (l) => Math.abs(l.carry - st.target) <= tol && Math.abs(l.offline ?? 0) <= tol,
+    ).length,
+    hasOffline: st.landings.some((l) => typeof l.offline === "number"),
+    launchInIdeal: within(st.launch, st.ideal.launch),
+    spinInIdeal: Math.abs(st.backSpin - st.ideal.backSpin) <= st.ideal.backSpin * 0.15,
+    descentInIdeal: within(st.descent, st.ideal.descent),
+  };
 }
 
 export function isCourseRound(r: Round): boolean {
@@ -279,6 +329,7 @@ export function getVenueStats(slug: string, player?: Player): VenueStats {
 /* ---------- personal records ---------- */
 
 export type PRKey =
+  | "gameScore"
   | "longestDrive"
   | "sevenIronCarry"
   | "smashFactor"
@@ -298,6 +349,8 @@ export interface PRRecord {
   href?: string;
   /** Set within the last 14 days */
   isNew: boolean;
+  /** Read off an app screen rather than exported; shown with ≈ */
+  approx?: boolean;
   /** What would fill the tile, for the empty state */
   hint: string;
 }
@@ -341,6 +394,16 @@ export function getPRs(player: Player, asOf = todayIso()): PRRecord[] {
     driveDistance(x.club),
   );
   const seven = bestOf(sessionClubs.filter((x) => x.club.club === "7i"), (x) => x.club.carry);
+
+  // Assessment stations count too: a 185-yard carry at the driver station
+  // is a real swing, just one read off a chart.
+  const a = getAssessments(player);
+  const stationShots = a.flatMap((as) =>
+    as.stations.flatMap((st) => st.landings.map((l) => ({ as, st, carry: l.carry }))),
+  );
+  const driveA = bestOf(stationShots.filter((x) => x.st.club === "driver"), (x) => x.carry);
+  const sevenA = bestOf(stationShots.filter((x) => x.st.club === "7i"), (x) => x.carry);
+  const gameScore = bestOf(a, (x) => x.score, true);
   const smash = bestOf(sessionClubs, (x) => x.club.smashFactor);
   const low18 = bestOf(
     r.filter((x) => isCourseRound(x) && x.holesPlayed === 18 && x.format === "stroke"),
@@ -393,9 +456,52 @@ export function getPRs(player: Player, asOf = todayIso()): PRRecord[] {
     isNew: isNew(b?.source.date),
   });
 
+  const fromStation = (
+    key: PRKey,
+    label: string,
+    hint: string,
+    b: Best<{ as: Assessment; st: AssessmentStation; carry: number }> | undefined,
+  ): PRRecord => ({
+    key,
+    label,
+    hint,
+    unit: b ? "yds" : undefined,
+    display: b ? fmtNum(b.value) : undefined,
+    date: b?.source.as.date,
+    venueSlug: b?.source.as.venueSlug,
+    href: b ? assessmentHref(b.source.as.id) : undefined,
+    isNew: isNew(b?.source.as.date),
+    approx: b?.source.as.approximate,
+  });
+
+  const pickBest = (sess: PRRecord, station: PRRecord): PRRecord => {
+    const sv = sess.display ? Number(sess.display.replace(/,/g, "")) : -Infinity;
+    const av = station.display ? Number(station.display.replace(/,/g, "")) : -Infinity;
+    return av > sv ? station : sess;
+  };
+
+  const gameScoreRecord: PRRecord = {
+    key: "gameScore",
+    label: "Game score",
+    hint: "Next GOLFTEC evaluation",
+    unit: gameScore ? `goal ${gameScore.source.goal}` : undefined,
+    display: gameScore ? fmtNum(Math.round(gameScore.value)) : undefined,
+    date: gameScore?.source.date,
+    venueSlug: gameScore?.source.venueSlug,
+    href: gameScore ? assessmentHref(gameScore.source.id) : undefined,
+    isNew: isNew(gameScore?.source.date),
+  };
+
   return [
-    fromSession("longestDrive", "Longest drive", "First driver session on a monitor", "yds", drive),
-    fromSession("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", "yds", seven),
+    gameScoreRecord,
+    pickBest(
+      fromSession("longestDrive", "Longest drive", "First driver session on a monitor", "yds", drive),
+      fromStation("longestDrive", "Longest drive", "First driver session on a monitor", driveA),
+    ),
+    pickBest(
+      fromSession("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", "yds", seven),
+      fromStation("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", sevenA),
+    ),
     fromSession("smashFactor", "Smash factor", "Ball speed over club speed", "", smash, (v) => v.toFixed(2)),
     fromRound("lowEighteen", "Low 18", "First scored stroke-play round", "", low18),
     fromRound("lowNine", "Low 9", "First scored nine", "", low9),

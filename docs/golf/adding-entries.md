@@ -28,6 +28,8 @@ derived at build time in `src/data/golf/utils.ts`.
 - `clubPath` positive is in-to-out. `faceToTarget` positive is open.
 - Rounds where only a relative score is known use `toPar`. When `score` and
   `par` are both present, `toPar` is derived and should be omitted.
+- Assessment `score` is a projected 18-hole score, so lower is better. GOLFTEC starts everyone at a goal of 125.
+- Link an assessment to its session with `assessmentId` on the session and `sessionId` on the assessment.
 - `player` is `"dan"` today. Misty is a data change, not a refactor.
 - Hand-written prose (`takeaway`, `note`, `why`, `verdict`) has no em dashes.
 

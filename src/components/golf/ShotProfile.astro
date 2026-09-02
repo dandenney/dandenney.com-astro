@@ -1,0 +1,126 @@
+---
+/**
+ * Side-profile shot traces for one station, drawn in the section's tracer
+ * language over SkyTrak's ideal window. Each shot's arc is built from its
+ * carry and the station's launch and descent ranges, since the app only
+ * reports the ranges, not per-shot angles.
+ */
+import type { AssessmentStation } from '@/data/golf/types';
+import { apexOf, arcPath, bandPath, mid, type ArcSpec } from '@/data/golf/flight';
+
+interface Props {
+	station: AssessmentStation;
+	class?: string;
+}
+
+const { station: st, class: className } = Astro.props;
+
+const W = 640;
+const H = 230;
+const padL = 30;
+const padR = 18;
+const padT = 18;
+const padB = 30;
+
+const maxCarry = Math.max(...st.landings.map((l) => l.carry));
+const xMax = Math.max(st.target, maxCarry) * 1.08;
+
+const idealUpper: ArcSpec = { carry: st.target * 1.03, launch: st.ideal.launch.max, descent: st.ideal.descent.max };
+const idealLower: ArcSpec = { carry: st.target * 0.94, launch: st.ideal.launch.min, descent: st.ideal.descent.min };
+const idealMid: ArcSpec = { carry: st.target, launch: mid(st.ideal.launch), descent: mid(st.ideal.descent) };
+const shots: ArcSpec[] = st.landings.map((l) => ({ carry: l.carry, launch: mid(st.launch), descent: mid(st.descent) }));
+
+const yMax = Math.max(apexOf(idealUpper), ...shots.map(apexOf)) * 1.15;
+const sx = (W - padL - padR) / xMax;
+const sy = (H - padT - padB) / yMax;
+const p = { x: (yd: number) => padL + yd * sx, y: (yd: number) => H - padB - yd * sy };
+const ground = H - padB;
+
+const step = xMax > 220 ? 50 : xMax > 120 ? 20 : 10;
+const ticks: number[] = [];
+for (let t = 0; t <= xMax; t += step) ticks.push(t);
+const longest = Math.max(...shots.map((s) => s.carry));
+---
+
+<svg class:list={['sp', className]} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Shot profile at the ${st.target} yard station: ${st.shots} shots, carries ${Math.min(...st.landings.map((l) => l.carry))} to ${maxCarry} yards`}>
+	{ticks.map((t) => (
+		<g>
+			<line class="sp-grid" x1={p.x(t)} x2={p.x(t)} y1={padT} y2={ground} />
+			<text class="sp-tick" x={p.x(t)} y={ground + 18} text-anchor="middle">{t}</text>
+		</g>
+	))}
+	<path class="sp-ideal" d={bandPath(idealUpper, idealLower, p)} />
+	<path class="sp-ideal-mid" d={arcPath(idealMid, p)} />
+	<line class="sp-ground" x1={padL} x2={W - padR} y1={ground} y2={ground} />
+	<line class="sp-target" x1={p.x(st.target)} x2={p.x(st.target)} y1={padT} y2={ground} />
+	<text class="sp-target-label" x={p.x(st.target)} y={padT - 4} text-anchor="middle">{st.target}</text>
+	{shots.map((s) => (
+		<path class:list={['sp-shot', { 'is-longest': s.carry === longest }]} d={arcPath(s, p)} pathLength="1" data-tracer-path />
+	))}
+	{st.landings.map((l) => (
+		<circle class="sp-land" cx={p.x(l.carry)} cy={ground} r="3" />
+	))}
+</svg>
+
+<style>
+	.sp {
+		display: block;
+		width: 100%;
+		height: auto;
+		font-family: var(--gf-mono);
+		overflow: visible;
+	}
+	.sp-grid {
+		stroke: var(--gf-line-soft);
+		stroke-width: 1;
+	}
+	.sp-tick {
+		font-size: 10px;
+		letter-spacing: 0.08em;
+		fill: var(--gf-mute);
+	}
+	.sp-ground {
+		stroke: var(--gf-line);
+		stroke-width: 1;
+	}
+	.sp-ideal {
+		fill: var(--gf-turf);
+		opacity: 0.28;
+	}
+	.sp-ideal-mid {
+		fill: none;
+		stroke: var(--gf-turf);
+		stroke-width: 1;
+		stroke-dasharray: 3 4;
+	}
+	.sp-target {
+		stroke: var(--gf-ink);
+		stroke-width: 1;
+		stroke-dasharray: 2 5;
+		opacity: 0.6;
+	}
+	.sp-target-label {
+		font-size: 10px;
+		letter-spacing: 0.1em;
+		fill: var(--gf-dim);
+	}
+	.sp-shot {
+		fill: none;
+		stroke: var(--gf-tracer);
+		stroke-width: 1.25;
+		stroke-linecap: round;
+		opacity: 0.75;
+		stroke-dasharray: 1;
+		stroke-dashoffset: 0;
+	}
+	.sp-shot.is-longest {
+		stroke-width: 2;
+		opacity: 1;
+		filter: drop-shadow(0 0 5px var(--gf-tracer-soft));
+	}
+	.sp-land {
+		fill: var(--gf-tracer);
+		stroke: var(--gf-bay);
+		stroke-width: 1;
+	}
+</style>

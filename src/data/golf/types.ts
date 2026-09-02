@@ -145,6 +145,8 @@ export interface Session {
   clubs: ClubMetrics[];
   /** hand-written, 1-3 sentences */
   takeaway?: string;
+  /** -> assessments.ts entry produced during this session */
+  assessmentId?: number;
   aiGenerated?: boolean;
 }
 
@@ -217,4 +219,66 @@ export interface Milestone {
   roundId?: number;
   /** Show on the progress chart as a labelled moment */
   annotate?: boolean;
+}
+
+/* ---------- assessments ---------- */
+
+export interface Range {
+  min: number;
+  max: number;
+}
+
+export interface Landing {
+  /** yards */
+  carry: number;
+  /** yards, positive = right of the target line. Omit when unknown. */
+  offline?: number;
+}
+
+export interface StationIdeal {
+  launch: Range;
+  backSpin: number;
+  descent: Range;
+}
+
+/** One target station in a GOLFTEC Game Evaluation. */
+export interface AssessmentStation {
+  id: string;
+  /** yards to the flag */
+  target: number;
+  club: Club;
+  /** "54° wedge" when the club key is too coarse */
+  clubLabel?: string;
+  shots: number;
+  /** degrees, across all shots at the station */
+  launch: Range;
+  /** rpm, average */
+  backSpin: number;
+  /** degrees, across all shots */
+  descent: Range;
+  /** SkyTrak's ideal window for this club and distance */
+  ideal: StationIdeal;
+  landings: Landing[];
+  /** Site-relative source screenshots, the receipts */
+  images?: { profile?: string; zone?: string };
+}
+
+/**
+ * A GOLFTEC Game Evaluation. `score` is a projected 18-hole score, so lower
+ * is better. GOLFTEC starts everyone with a goal of 125.
+ */
+export interface Assessment {
+  /** sequential, append-only */
+  id: number;
+  player: Player;
+  date: string;
+  venueSlug: string;
+  sessionId?: number;
+  system: string;
+  score: number;
+  goal: number;
+  stations: AssessmentStation[];
+  /** Values read off app screens rather than exported */
+  approximate?: boolean;
+  note?: string;
 }

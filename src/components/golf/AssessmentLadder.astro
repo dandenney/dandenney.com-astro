@@ -1,0 +1,196 @@
+---
+/**
+ * Station ladder: one row per target station, the target as a tick, the
+ * carry spread as a tracer bar, the shortfall in amber. Answers "how far is
+ * each club really going" in one glance.
+ */
+import type { Assessment } from '@/data/golf/types';
+import { CLUB_SHORT } from '@/data/golf/types';
+import { stationSummary } from '@/data/golf/utils';
+
+interface Props {
+	assessment: Assessment;
+	class?: string;
+}
+
+const { assessment, class: className } = Astro.props;
+const maxYd = Math.max(...assessment.stations.map((s) => Math.max(s.target, stationSummary(s).maxCarry))) * 1.04;
+const pct = (yd: number) => `${((yd / maxYd) * 100).toFixed(2)}%`;
+const ticks = [50, 100, 150, 200, 250, 300].filter((t) => t < maxYd);
+---
+
+<div class:list={['ladder', className]}>
+	<div class="ladder-axis" aria-hidden="true">
+		<span class="ladder-axis-label"></span>
+		<span class="ladder-axis-track">
+			{ticks.map((t) => (
+				<span class="ladder-tick gf-mono" style={`left:${pct(t)}`}>{t}</span>
+			))}
+		</span>
+		<span></span>
+	</div>
+	{assessment.stations.map((st) => {
+		const s = stationSummary(st);
+		return (
+			<div class="ladder-row">
+				<span class="ladder-label">
+					<span class="gf-num ladder-target">{st.target}</span>
+					<span class="gf-mono ladder-club">{st.clubLabel ?? CLUB_SHORT[st.club]} · {st.shots} shots</span>
+				</span>
+				<span class="ladder-track">
+					{ticks.map((t) => <span class="ladder-grid" style={`left:${pct(t)}`}></span>)}
+					<span class="ladder-gap" style={`left:${pct(s.maxCarry)};width:${pct(Math.max(0, st.target - s.maxCarry))}`}></span>
+					<span class="ladder-range" style={`left:${pct(s.minCarry)};width:${pct(Math.max(0.5, s.maxCarry - s.minCarry))}`}></span>
+					{st.landings.map((l) => <span class="ladder-dot" style={`left:${pct(l.carry)}`}></span>)}
+					<span class="ladder-flag" style={`left:${pct(st.target)}`}></span>
+				</span>
+				<span class="gf-mono ladder-nums">
+					<span class="ladder-span">{s.minCarry}<span class="ladder-to">to</span>{s.maxCarry}<span class="ladder-unit">yd</span></span>
+					<span class:list={['ladder-gapnum', s.gap > 0 ? 'is-short' : 'is-on']}>{s.gap > 0 ? `${s.gap} short` : 'on target'}</span>
+				</span>
+			</div>
+		);
+	})}
+</div>
+
+<style>
+	.ladder {
+		display: flex;
+		flex-direction: column;
+	}
+	.ladder-axis,
+	.ladder-row {
+		display: grid;
+		grid-template-columns: 7.5rem minmax(0, 1fr) 8.5rem;
+		gap: 0 1.25rem;
+		align-items: center;
+	}
+	.ladder-axis {
+		height: 1.4rem;
+	}
+	.ladder-axis-track {
+		position: relative;
+		height: 100%;
+	}
+	.ladder-tick {
+		position: absolute;
+		bottom: 0;
+		transform: translateX(-50%);
+		font-size: 0.6rem;
+		letter-spacing: 0.08em;
+		color: var(--gf-mute);
+	}
+	.ladder-row {
+		padding: 0.9rem 0;
+		border-top: 1px solid var(--gf-line-soft);
+	}
+	.ladder-label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.ladder-target {
+		font-size: 1.4rem;
+	}
+	.ladder-club {
+		font-size: 0.62rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.ladder-track {
+		position: relative;
+		height: 1.6rem;
+	}
+	.ladder-grid {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background: var(--gf-line-soft);
+	}
+	.ladder-track::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		height: 1px;
+		background: var(--gf-line);
+	}
+	.ladder-gap {
+		position: absolute;
+		top: 50%;
+		height: 0;
+		border-top: 1px dashed var(--gf-miss);
+		opacity: 0.8;
+	}
+	.ladder-range {
+		position: absolute;
+		top: calc(50% - 2px);
+		height: 4px;
+		background: var(--gf-tracer);
+		box-shadow: 0 0 10px var(--gf-tracer-soft);
+	}
+	.ladder-dot {
+		position: absolute;
+		top: 50%;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: var(--gf-bay);
+		border: 1.5px solid var(--gf-tracer);
+		transform: translate(-50%, -50%);
+	}
+	.ladder-flag {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background: var(--gf-ink);
+		transform: translateX(-1px);
+	}
+	.ladder-nums {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		text-align: right;
+		font-size: 0.8rem;
+		color: var(--gf-ink);
+	}
+	.ladder-to,
+	.ladder-unit {
+		font-size: 0.6rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+		margin: 0 0.35em;
+	}
+	.ladder-unit {
+		margin-right: 0;
+	}
+	.ladder-gapnum {
+		font-size: 0.62rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+	.ladder-gapnum.is-short {
+		color: var(--gf-miss);
+	}
+	.ladder-gapnum.is-on {
+		color: var(--gf-tracer);
+	}
+	@media (max-width: 700px) {
+		.ladder-axis,
+		.ladder-row {
+			grid-template-columns: 5.5rem minmax(0, 1fr);
+		}
+		.ladder-nums {
+			grid-column: 2;
+			flex-direction: row;
+			justify-content: space-between;
+			text-align: left;
+			margin-top: 0.3rem;
+		}
+	}
+</style>

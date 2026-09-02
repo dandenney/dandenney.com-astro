@@ -1,0 +1,352 @@
+---
+/**
+ * /golf/assessment, the GOLFTEC Game Evaluations in full. Score against
+ * goal, the station ladder, then per station: shot profile, dispersion,
+ * and flight numbers against SkyTrak's ideal window, with the source
+ * screenshots as receipts.
+ */
+import Golf from '@/layouts/Golf.astro';
+import MetricReadout from '@/components/golf/MetricReadout.astro';
+import AssessmentLadder from '@/components/golf/AssessmentLadder.astro';
+import ShotProfile from '@/components/golf/ShotProfile.astro';
+import DispersionTarget from '@/components/golf/DispersionTarget.astro';
+import FlightGauges from '@/components/golf/FlightGauges.astro';
+import { CLUB_LABEL, GOLF_SECTION_NAME } from '@/data/golf/types';
+import { fmtDateFull, fmtDateStamp, getAssessments, sessionHref, stationSummary } from '@/data/golf/utils';
+import { getVenueMap, venueHref, venueName } from '@/helpers/golf';
+
+export const prerender = true;
+
+const player = 'dan';
+const vmap = await getVenueMap();
+const all = getAssessments(player).reverse();
+const latest = all[0];
+---
+
+<Golf
+	title={`Game evaluation · ${GOLF_SECTION_NAME}`}
+	description="GOLFTEC Game Evaluations in full: projected score against goal, every target station, and each shot against SkyTrak's ideal window."
+>
+	<section class="gf-wrap page">
+		<header class="page-head">
+			<p class="gf-label"><a class="crumb" href="/golf">{GOLF_SECTION_NAME}</a> &middot; Game evaluation</p>
+			<h1 class="gf-display page-title">The baseline</h1>
+			<p class="page-lede">
+				GOLFTEC's Game Evaluation puts you in front of five target stations on SkyTrak and projects an 18-hole score from what it sees.
+				Everyone starts with a goal of 125. This is the record of every one, newest first.
+			</p>
+		</header>
+
+		{all.length === 0 && <p class="gf-empty none gf-mono">&mdash; no evaluations yet &mdash;</p>}
+
+		{all.map((a, idx) => (
+			<article class="eval" id={`a-${a.id}`}>
+				<header class="eval-head">
+					<div class="eval-score">
+						<MetricReadout label="Projected score" value={Math.round(a.score)} size="xl" tone={a.score <= a.goal ? 'tracer' : 'ink'} countup={idx === 0} />
+						<div class="eval-goal">
+							<MetricReadout label="Goal" value={a.goal} size="md" tone="dim" />
+							<MetricReadout label="vs goal" value={`${a.score - a.goal > 0 ? '+' : ''}${Math.round(a.score - a.goal)}`} size="md" tone={a.score <= a.goal ? 'tracer' : 'ink'} />
+						</div>
+					</div>
+					<div class="eval-meta">
+						<span class="gf-mono eval-stamp">{fmtDateStamp(a.date)}</span>
+						<span class="gf-tag"><a href={venueHref(a.venueSlug)}>{venueName(vmap, a.venueSlug)}</a></span>
+						<span class="gf-tag">{a.system}</span>
+						{a.sessionId && <span class="gf-tag"><a href={sessionHref(a.sessionId)}>Session {a.sessionId} &rarr;</a></span>}
+						{a.approximate && <span class="gf-tag is-approx">&asymp; read from the app</span>}
+						{idx === 0 && all.length > 1 && <span class="gf-badge">Latest</span>}
+					</div>
+				</header>
+
+				{a.note && <p class="gf-prose eval-note">{a.note}</p>}
+
+				<div class="eval-block">
+					<div class="gf-section-head">
+						<h2 class="gf-h2"><span class="gf-idx">01</span> Station ladder</h2>
+						<span class="gf-label">Target tick &middot; carry spread in green &middot; shortfall dashed</span>
+					</div>
+					<AssessmentLadder assessment={a} />
+				</div>
+
+				<div class="eval-block">
+					<div class="gf-section-head">
+						<h2 class="gf-h2"><span class="gf-idx">02</span> Station by station</h2>
+						<span class="gf-label">Ideal window from SkyTrak in turf green</span>
+					</div>
+					<div class="stations">
+						{a.stations.map((st) => {
+							const s = stationSummary(st);
+							return (
+								<section class="station gf-panel" id={`a-${a.id}-${st.id}`}>
+									<header class="station-head">
+										<span class="station-title">
+											<span class="gf-num station-target">{st.target}</span>
+											<span class="gf-mono station-unit">yd</span>
+											<span class="station-club">{st.clubLabel ?? CLUB_LABEL[st.club]}</span>
+										</span>
+										<span class="gf-mono station-facts">
+											{st.shots} shots &middot; {s.minCarry} to {s.maxCarry} yd &middot; {s.gap > 0 ? `${s.gap} short` : 'on target'}
+										</span>
+									</header>
+									<div class="station-grid">
+										<div class="station-profile">
+											<ShotProfile station={st} />
+										</div>
+										<div class="station-side">
+											{s.hasOffline ? <DispersionTarget station={st} /> : <div class="gf-empty station-nozone gf-mono">no zone map for this station</div>}
+										</div>
+										<div class="station-gauges">
+											<FlightGauges station={st} />
+										</div>
+									</div>
+									{st.images && (
+										<p class="gf-mono station-src">
+											Receipts:
+											{st.images.profile && <a href={st.images.profile}>shot profile</a>}
+											{st.images.zone && <a href={st.images.zone}>zone map</a>}
+										</p>
+									)}
+								</section>
+							);
+						})}
+					</div>
+				</div>
+
+				<p class="gf-mono eval-foot">
+					Evaluated {fmtDateFull(a.date)}
+					{a.approximate && ' · carries within a few yards, offline rougher, read from the Shot Profile and Zone Profile screens'}
+				</p>
+			</article>
+		))}
+
+		<nav class="page-nav" aria-label="Browse">
+			<a class="gf-btn" href="/golf">&larr; The dashboard</a>
+			<a class="gf-btn" href="/golf/sessions">The log</a>
+		</nav>
+	</section>
+</Golf>
+
+<script>
+	function openHash() {
+		const id = location.hash.slice(1);
+		if (!id) return;
+		document.getElementById(id)?.scrollIntoView({ block: 'start' });
+	}
+	document.addEventListener('astro:page-load', openHash);
+</script>
+
+<style>
+	.page {
+		padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+	}
+	.page-head {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: clamp(2rem, 4vw, 3rem);
+	}
+	.crumb {
+		color: inherit;
+		text-decoration: none;
+	}
+	.crumb:hover {
+		color: var(--gf-tracer);
+	}
+	.page-title {
+		font-size: clamp(3rem, 8vw, 6.5rem);
+		margin-left: -0.04em;
+	}
+	.page-lede {
+		font-family: var(--gf-serif);
+		font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+		color: var(--gf-ink-soft);
+		max-width: 58ch;
+	}
+	.none {
+		padding: 2rem;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		font-size: 0.8rem;
+	}
+	.eval {
+		scroll-margin-top: 2rem;
+		padding-top: clamp(1.5rem, 3vw, 2.5rem);
+		border-top: 1px solid var(--gf-line);
+	}
+	.eval + .eval {
+		margin-top: clamp(3rem, 6vw, 5rem);
+	}
+	.eval-head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-end;
+		gap: 1.5rem 3rem;
+	}
+	.eval-score {
+		display: flex;
+		align-items: flex-end;
+		gap: 2.5rem;
+		flex-wrap: wrap;
+	}
+	.eval-goal {
+		display: flex;
+		gap: 2rem;
+		padding-bottom: 0.4rem;
+	}
+	.eval-meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4rem;
+	}
+	.eval-stamp {
+		font-size: 0.74rem;
+		letter-spacing: 0.06em;
+		color: var(--gf-dim);
+		margin-right: 0.5rem;
+	}
+	.eval-meta .gf-tag a {
+		color: var(--gf-ink);
+		text-decoration: none;
+	}
+	.eval-meta .gf-tag a:hover {
+		color: var(--gf-tracer);
+	}
+	.gf-tag.is-approx {
+		color: var(--gf-miss);
+		border-color: oklch(75% 0.16 65 / 0.4);
+	}
+	.eval-note {
+		margin-top: 1.5rem;
+		font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+	}
+	.eval-block {
+		margin-top: clamp(2rem, 4vw, 3rem);
+	}
+	.stations {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.station {
+		padding: 1.1rem 1.25rem 1rem;
+		scroll-margin-top: 2rem;
+	}
+	.station-head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.5rem 1.5rem;
+		margin-bottom: 0.9rem;
+	}
+	.station-title {
+		display: flex;
+		align-items: baseline;
+		gap: 0.4rem;
+	}
+	.station-target {
+		font-size: 1.9rem;
+	}
+	.station-unit {
+		font-size: 0.66rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.station-club {
+		font-family: var(--gf-display);
+		font-weight: 500;
+		font-size: 1.05rem;
+		letter-spacing: -0.01em;
+		margin-left: 0.6rem;
+	}
+	.station-facts {
+		font-size: 0.68rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.station-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.9fr) minmax(12rem, 0.8fr);
+		grid-template-areas:
+			'profile side'
+			'gauges side';
+		gap: 1.25rem 1.5rem;
+		align-items: start;
+	}
+	.station-profile {
+		grid-area: profile;
+		border-bottom: 1px solid var(--gf-line-soft);
+		padding-bottom: 0.5rem;
+	}
+	.station-side {
+		grid-area: side;
+		max-width: 20rem;
+	}
+	.station-gauges {
+		grid-area: gauges;
+	}
+	.station-nozone {
+		aspect-ratio: 1;
+		display: grid;
+		place-items: center;
+		font-size: 0.66rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 1rem;
+	}
+	.station-src {
+		margin-top: 1rem;
+		font-size: 0.64rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+		display: flex;
+		gap: 1rem;
+	}
+	.station-src a {
+		color: var(--gf-dim);
+		text-decoration: none;
+		border-bottom: 1px solid var(--gf-line);
+	}
+	.station-src a:hover {
+		color: var(--gf-ink);
+		border-color: var(--gf-tracer);
+	}
+	.eval-foot {
+		margin-top: 1.5rem;
+		font-size: 0.66rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+		max-width: 80ch;
+		line-height: 1.7;
+	}
+	.page-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: clamp(2.5rem, 5vw, 4rem);
+	}
+	@media (max-width: 820px) {
+		.station-grid {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'profile'
+				'gauges'
+				'side';
+		}
+		.station-side {
+			max-width: 18rem;
+		}
+		.station-nozone {
+			display: none;
+		}
+	}
+</style>

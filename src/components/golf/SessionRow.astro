@@ -5,7 +5,7 @@
  * scorecard readouts (rounds).
  */
 import type { Round, Session } from '@/data/golf/types';
-import { SESSION_KIND_LABEL, ROUND_FORMAT_LABEL, fmtDateStamp, fmtToPar, roundToPar, toActivity } from '@/data/golf/utils';
+import { SESSION_KIND_LABEL, ROUND_FORMAT_LABEL, assessmentHref, fmtDateStamp, fmtToPar, roundToPar, toActivity } from '@/data/golf/utils';
 import ClubTable from '@/components/golf/ClubTable.astro';
 import MetricReadout from '@/components/golf/MetricReadout.astro';
 
@@ -79,6 +79,7 @@ const clubsFilter = isSession ? (item as Session).clubs.map((c) => c.club).join(
 		<div class="ses-meta">
 			{chips.map((c) => <span class="gf-tag">{c}</span>)}
 			{venueHref && <a class="gf-tag ses-venue-link" href={venueHref}>{venue} &rarr;</a>}
+			{session?.assessmentId && <a class="gf-tag ses-venue-link is-eval" href={assessmentHref(session.assessmentId)}>Game evaluation &rarr;</a>}
 		</div>
 
 		{session && (
@@ -232,6 +233,9 @@ const clubsFilter = isSession ? (item as Session).clubs.map((c) => c.club).join(
 	}
 	.ses-venue-link:hover {
 		border-color: var(--gf-tracer);
+	}
+	.ses-venue-link.is-eval {
+		color: var(--gf-tracer);
 	}
 	.ses-empty {
 		font-size: 0.74rem;
