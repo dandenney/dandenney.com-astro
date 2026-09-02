@@ -92,7 +92,7 @@ const series: ChartSeries[] = [
 		reference: latestEval ? { v: latestEval.goal, label: 'Goal' } : undefined,
 	},
 	{ key: 'carry7i', label: '7-iron carry', unit: 'yds', format: 'int', lowerIsBetter: false, points: trendPoints('7i', 'carry') },
-	{ key: 'clubSpeed', label: 'Driver speed', unit: 'mph', format: 'fixed1', lowerIsBetter: false, points: trendPoints('driver', 'clubSpeed') },
+	{ key: 'driverCarry', label: 'Driver carry', unit: 'yds', format: 'int', lowerIsBetter: false, points: trendPoints('driver', 'carry') },
 	{ key: 'longest', label: 'Longest drive', unit: 'yds', format: 'int', lowerIsBetter: false, points: longestPoints },
 	{ key: 'scoreToPar', label: 'Score to par', unit: '', format: 'toPar', lowerIsBetter: true, points: roundPoints(isCourseRound) },
 	{ key: 'putting', label: 'Putting to par', unit: '', format: 'toPar', lowerIsBetter: true, points: roundPoints((r) => !isCourseRound(r)) },
