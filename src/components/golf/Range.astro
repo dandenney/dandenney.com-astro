@@ -1,0 +1,364 @@
+---
+/**
+ * The range, in 3D. A canvas driven by `range.ts`, a mono HUD that reads
+ * out the shot in flight, and a station switcher when there is more than
+ * one. Three.js loads on demand once the block is near the viewport.
+ *
+ * `hero` mode sits behind page content, full-bleed, and hides the HUD's
+ * chrome. Whatever is passed in the default slot renders as the no-WebGL
+ * and pre-load fallback (the SVG tracer on the dashboard, a note here).
+ */
+import type { RangeStation } from '@/data/golf/flight';
+
+interface Props {
+	stations: RangeStation[];
+	hero?: boolean;
+	class?: string;
+	/** Kicker above the readout, panel mode only */
+	kicker?: string;
+}
+
+const { stations, hero = false, class: className, kicker } = Astro.props;
+const first = stations[0];
+const hasSlot = Astro.slots.has('default');
+---
+
+<div
+	class:list={['range', { 'is-hero': hero, 'gf-panel': !hero }, className]}
+	data-range
+	data-mode={hero ? 'hero' : 'panel'}
+	data-stations={JSON.stringify(stations)}
+>
+	<div class="range-stage">
+		<canvas class="range-canvas" aria-hidden="true" data-range-canvas></canvas>
+		<div class="range-fallback" data-range-fallback>
+			{hasSlot ? <slot /> : <p class="gf-mono range-nogl">&mdash; the range needs WebGL &mdash;</p>}
+		</div>
+	</div>
+
+	<div class="range-hud" data-range-hud>
+		{!hero && kicker && <p class="gf-label range-kicker">{kicker}</p>}
+		{!hero && stations.length > 1 && (
+			<div class="range-tabs" role="tablist" aria-label="Stations">
+				{stations.map((st, i) => (
+					<button
+						class:list={['gf-btn range-tab', { 'is-active': i === 0 }]}
+						type="button"
+						role="tab"
+						aria-selected={i === 0 ? 'true' : 'false'}
+						data-range-tab={st.id}
+					>
+						<span class="gf-num range-tab-yd">{st.target}</span>
+						<span class="range-tab-club">{st.label}</span>
+					</button>
+				))}
+			</div>
+		)}
+		<p class="gf-mono range-read" aria-live="polite">
+			<span class="range-read-k" data-range-read-shot>&mdash;</span>
+			<span data-range-read-club>{first?.label}</span>
+			<span class="range-read-sep" aria-hidden="true">&middot;</span>
+			<span class="range-read-v"><span class="gf-num range-read-num" data-range-read-carry>&mdash;</span> <span class="range-read-unit">yd</span></span>
+			<span class="range-read-sep" aria-hidden="true">&middot;</span>
+			<span class="range-read-v" data-range-read-offline>&mdash;</span>
+		</p>
+		{!hero && (
+			<button class="gf-btn range-replay" type="button" data-range-replay>
+				<span aria-hidden="true">&#8635;</span> Replay
+			</button>
+		)}
+	</div>
+</div>
+
+<script>
+	import type { RangeScene, ShotInfo } from '@/components/golf/range';
+	import type { RangeStation } from '@/data/golf/flight';
+
+	const live = new Map<HTMLElement, RangeScene>();
+
+	function fmtOffline(yd: number) {
+		const r = Math.round(Math.abs(yd));
+		if (r === 0) return 'on line';
+		return `${r} ${yd > 0 ? 'right' : 'left'}`;
+	}
+
+	async function mount(el: HTMLElement) {
+		if (live.has(el)) return;
+		const canvas = el.querySelector<HTMLCanvasElement>('[data-range-canvas]');
+		const stations: RangeStation[] = JSON.parse(el.dataset.stations ?? '[]');
+		if (!canvas || stations.length === 0) return;
+
+		const probe = document.createElement('canvas');
+		const gl = probe.getContext('webgl2') ?? probe.getContext('webgl');
+		if (!gl) return;
+
+		const readShot = el.querySelector<HTMLElement>('[data-range-read-shot]');
+		const readClub = el.querySelector<HTMLElement>('[data-range-read-club]');
+		const readCarry = el.querySelector<HTMLElement>('[data-range-read-carry]');
+		const readOff = el.querySelector<HTMLElement>('[data-range-read-offline]');
+		const hud = el.querySelector<HTMLElement>('[data-range-hud]');
+
+		const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		let current = stations[0];
+
+		const onShot = (info: ShotInfo) => {
+			if (readShot) readShot.textContent = `Shot ${info.index + 1}/${info.total}`;
+			if (readClub) readClub.textContent = current.label;
+			if (readCarry) readCarry.textContent = String(Math.round(info.shot.carry));
+			if (readOff) readOff.textContent = fmtOffline(info.shot.offline);
+			hud?.classList.toggle('is-landed', info.phase === 'landed');
+		};
+		const onIdle = (st: RangeStation) => {
+			const best = st.shots.reduce((a, b) => (b.carry > a.carry ? b : a), st.shots[0]);
+			if (!best) return;
+			if (readShot) readShot.textContent = `${st.shots.length} shots`;
+			if (readClub) readClub.textContent = `${st.label} · best`;
+			if (readCarry) readCarry.textContent = String(Math.round(best.carry));
+			if (readOff) readOff.textContent = fmtOffline(best.offline);
+			hud?.classList.add('is-landed');
+		};
+
+		try {
+			await document.fonts.ready;
+		} catch {
+			/* fonts are a nicety */
+		}
+		const { createRangeScene } = await import('@/components/golf/range');
+		if (live.has(el)) return;
+		const scene = createRangeScene(canvas, {
+			reducedMotion,
+			mode: el.dataset.mode === 'hero' ? 'hero' : 'panel',
+			onShot,
+			onIdle,
+		});
+		if (!scene) return;
+		live.set(el, scene);
+		el.classList.add('is-live');
+		scene.setStation(current);
+
+		const io = new IntersectionObserver(
+			(entries) => entries.forEach((e) => scene.setVisible(e.isIntersecting)),
+			{ threshold: 0.05 },
+		);
+		io.observe(el);
+
+		el.querySelectorAll<HTMLButtonElement>('[data-range-tab]').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				const st = stations.find((s) => s.id === btn.dataset.rangeTab);
+				if (!st || st === current) return;
+				current = st;
+				el.querySelectorAll<HTMLButtonElement>('[data-range-tab]').forEach((b) => {
+					const on = b === btn;
+					b.classList.toggle('is-active', on);
+					b.setAttribute('aria-selected', on ? 'true' : 'false');
+				});
+				scene.setStation(st);
+			});
+		});
+		el.querySelector<HTMLButtonElement>('[data-range-replay]')?.addEventListener('click', () => scene.replay());
+		el.addEventListener('range:dispose', () => io.disconnect(), { once: true });
+	}
+
+	function init() {
+		document.querySelectorAll<HTMLElement>('[data-range]').forEach((el) => {
+			const io = new IntersectionObserver(
+				(entries) => {
+					if (entries.some((e) => e.isIntersecting)) {
+						io.disconnect();
+						void mount(el);
+					}
+				},
+				{ rootMargin: '300px 0px' },
+			);
+			io.observe(el);
+		});
+	}
+
+	function teardown() {
+		live.forEach((scene, el) => {
+			el.dispatchEvent(new Event('range:dispose'));
+			scene.dispose();
+		});
+		live.clear();
+	}
+
+	document.addEventListener('astro:page-load', init);
+	document.addEventListener('astro:before-swap', teardown);
+</script>
+
+<style>
+	.range {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+	.range-stage {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		min-height: 20rem;
+		max-height: 72dvh;
+		background: var(--gf-bay);
+	}
+	.range-canvas {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		opacity: 0;
+		transition: opacity 0.9s var(--gf-ease);
+	}
+	.range.is-live .range-canvas {
+		opacity: 1;
+	}
+	.range-fallback {
+		position: absolute;
+		inset: 0;
+		display: grid;
+		place-items: center;
+		transition: opacity 0.6s ease-out;
+	}
+	.range.is-live .range-fallback {
+		opacity: 0;
+		pointer-events: none;
+	}
+	.range-nogl {
+		font-size: 0.68rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+
+	/* HUD: a strip under the stage in panel mode */
+	.range-hud {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1.5rem;
+		padding: 0.85rem 1.1rem;
+		border-top: 1px solid var(--gf-line);
+		background: var(--gf-panel);
+	}
+	.range-kicker {
+		flex-basis: 100%;
+	}
+	.range-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+	.range-tab {
+		gap: 0.5rem;
+		padding: 0.5rem 0.75rem;
+		text-transform: none;
+		letter-spacing: 0.02em;
+	}
+	.range-tab-yd {
+		font-size: 1.05rem;
+	}
+	.range-tab-club {
+		font-family: var(--gf-mono);
+		font-size: 0.66rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.range-tab.is-active .range-tab-club {
+		color: inherit;
+	}
+	.range-read {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.6rem;
+		margin-left: auto;
+		font-size: 0.72rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.range-read-k {
+		color: var(--gf-ink);
+	}
+	.range-read-sep {
+		color: var(--gf-mute);
+	}
+	.range-read-v {
+		color: var(--gf-ink);
+	}
+	.range-read-num {
+		font-size: 1.25rem;
+		color: var(--gf-tracer);
+		transition: opacity 0.2s ease-out;
+	}
+	.range-hud:not(.is-landed) .range-read-num {
+		opacity: 0.55;
+	}
+	.range-read-unit {
+		font-size: 0.66rem;
+		color: var(--gf-dim);
+	}
+	.range-replay {
+		padding: 0.5rem 0.8rem;
+	}
+
+	/* Hero: full-bleed behind the page content, readout floats top-right */
+	.range.is-hero {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		overflow: visible;
+	}
+	.range.is-hero .range-stage {
+		position: absolute;
+		inset: 0;
+		aspect-ratio: auto;
+		min-height: 0;
+		max-height: none;
+		background: transparent;
+	}
+	/* keep the lede and counters legible over the floor */
+	.range.is-hero .range-stage::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background:
+			linear-gradient(90deg, var(--gf-bay) 0%, oklch(14% 0.014 250 / 0.85) 22%, transparent 58%),
+			linear-gradient(0deg, var(--gf-bay) 0%, transparent 28%);
+	}
+	.range.is-hero .range-hud {
+		position: absolute;
+		top: clamp(4.5rem, 9vw, 7rem);
+		right: clamp(1rem, 4vw, 2.5rem);
+		padding: 0;
+		border: 0;
+		background: transparent;
+		opacity: 0;
+		transition: opacity 0.6s ease-out 0.4s;
+	}
+	.range.is-hero.is-live .range-hud {
+		opacity: 1;
+	}
+	.range.is-hero .range-read {
+		margin-left: 0;
+		justify-content: flex-end;
+	}
+	@media (max-width: 719px) {
+		.range.is-hero .range-hud {
+			top: 4rem;
+			right: 1rem;
+		}
+		.range.is-hero .range-read {
+			font-size: 0.62rem;
+		}
+		.range.is-hero .range-stage::after {
+			background: linear-gradient(0deg, var(--gf-bay) 0%, oklch(14% 0.014 250 / 0.7) 30%, transparent 60%);
+		}
+		.range-stage {
+			min-height: 16rem;
+		}
+	}
+</style>

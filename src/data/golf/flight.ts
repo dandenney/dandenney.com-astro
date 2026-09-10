@@ -61,3 +61,72 @@ export function bandPath(upper: ArcSpec, lower: ArcSpec, p: Projector): string {
 export function mid(r: { min: number; max: number }): number {
   return (r.min + r.max) / 2;
 }
+
+/* ---------- 3D flight, for the range scene ---------- */
+
+/**
+ * A single shot for the 3D range: the side-profile arc plus where it
+ * finished left or right of the line. Positive offline is right of target.
+ */
+export interface RangeShot extends ArcSpec {
+  /** yards, + = right of the target line */
+  offline: number;
+}
+
+export interface RangeStation {
+  id: string;
+  /** "Driver", "7 iron", "54° wedge" */
+  label: string;
+  /** yards to the flag */
+  target: number;
+  shots: RangeShot[];
+  /** SkyTrak's ideal window as an upper and lower arc */
+  ideal: { upper: ArcSpec; lower: ArcSpec };
+}
+
+export interface FlightPoint {
+  /** yards downrange */
+  down: number;
+  /** yards up */
+  up: number;
+  /** yards right of the line */
+  side: number;
+}
+
+/**
+ * Point along a shot at t in 0..1. Downrange and height follow the same
+ * cubic used by `arcPath`; lateral drift accumulates late in the flight,
+ * the way a fade or a slice actually curves.
+ */
+export function flightPoint(shot: RangeShot, t: number, out: FlightPoint = { down: 0, up: 0, side: 0 }): FlightPoint {
+  const c = shot.carry;
+  const { h1, h2 } = controls(shot);
+  const u = 1 - t;
+  out.down = 3 * u * u * t * (0.3 * c) + 3 * u * t * t * (0.7 * c) + t * t * t * c;
+  out.up = 3 * u * u * t * h1 + 3 * u * t * t * h2;
+  out.side = shot.offline * Math.pow(t, 1.7);
+  return out;
+}
+
+/** Shape an assessment station for the range scene. Per-shot angles are not reported, so every shot takes the station's mid launch and descent. */
+export function toRangeStation(st: {
+  id: string;
+  target: number;
+  clubLabel?: string;
+  club: string;
+  launch: { min: number; max: number };
+  descent: { min: number; max: number };
+  ideal: { launch: { min: number; max: number }; descent: { min: number; max: number } };
+  landings: { carry: number; offline?: number }[];
+}, clubLabel: string): RangeStation {
+  return {
+    id: st.id,
+    label: st.clubLabel ?? clubLabel,
+    target: st.target,
+    shots: st.landings.map((l) => ({ carry: l.carry, offline: l.offline ?? 0, launch: mid(st.launch), descent: mid(st.descent) })),
+    ideal: {
+      upper: { carry: st.target * 1.03, launch: st.ideal.launch.max, descent: st.ideal.descent.max },
+      lower: { carry: st.target * 0.94, launch: st.ideal.launch.min, descent: st.ideal.descent.min },
+    },
+  };
+}

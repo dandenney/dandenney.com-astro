@@ -12,7 +12,9 @@ import ProgressChart from '@/components/golf/ProgressChart.astro';
 import VenueCard from '@/components/golf/VenueCard.astro';
 import BagRow from '@/components/golf/BagRow.astro';
 import AssessmentLadder from '@/components/golf/AssessmentLadder.astro';
-import { GOLF_EPOCH, GOLF_SECTION_NAME } from '@/data/golf/types';
+import Range from '@/components/golf/Range.astro';
+import { toRangeStation } from '@/data/golf/flight';
+import { CLUB_LABEL, GOLF_EPOCH, GOLF_SECTION_NAME } from '@/data/golf/types';
 import {
 	assessmentHref,
 	fmtDateStamp,
@@ -53,6 +55,10 @@ const rounds = getRounds(player);
 const annualCount = venues.filter((v) => v.data.membership === 'annual').length;
 const latestEval = getLatestAssessment(player);
 const evals = getAssessments(player);
+
+/* Hero range: the driver station from the latest evaluation, the one that is the story. */
+const heroStation = latestEval?.stations.find((st) => st.club === 'driver') ?? latestEval?.stations[0];
+const heroRange = heroStation ? [toRangeStation(heroStation, CLUB_LABEL[heroStation.club])] : [];
 
 /* ---- progress chart ---- */
 const trendPoints = (club: Parameters<typeof getClubTrend>[1], metric: Parameters<typeof getClubTrend>[2]) =>
@@ -118,7 +124,13 @@ const tMax = lastT + 6 * DAY;
 >
 	<!-- Hero: the bay -->
 	<section class="hero">
-		<Tracer hero carry={0.88} apex={0.68} shape="fade" duration={1.6} />
+		{heroRange.length > 0 ? (
+			<Range hero stations={heroRange}>
+				<Tracer hero carry={0.88} apex={0.68} shape="fade" duration={1.6} />
+			</Range>
+		) : (
+			<Tracer hero carry={0.88} apex={0.68} shape="fade" duration={1.6} />
+		)}
 		<div class="gf-wrap hero-inner">
 			<p class="gf-label hero-kicker">
 				<span class="hero-dot" aria-hidden="true"></span>

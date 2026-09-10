@@ -11,6 +11,8 @@ import AssessmentLadder from '@/components/golf/AssessmentLadder.astro';
 import ShotProfile from '@/components/golf/ShotProfile.astro';
 import DispersionTarget from '@/components/golf/DispersionTarget.astro';
 import FlightGauges from '@/components/golf/FlightGauges.astro';
+import Range from '@/components/golf/Range.astro';
+import { toRangeStation } from '@/data/golf/flight';
 import { CLUB_LABEL, GOLF_SECTION_NAME } from '@/data/golf/types';
 import { fmtDateFull, fmtDateStamp, getAssessments, sessionHref, stationSummary } from '@/data/golf/utils';
 import { getVenueMap, venueHref, venueName } from '@/helpers/golf';
@@ -63,7 +65,15 @@ const latest = all[0];
 
 				<div class="eval-block">
 					<div class="gf-section-head">
-						<h2 class="gf-h2"><span class="gf-idx">01</span> Station ladder</h2>
+						<h2 class="gf-h2"><span class="gf-idx">01</span> The range</h2>
+						<span class="gf-label">Every shot, flown from the numbers &middot; ideal window in turf green &middot; rings at 10% and 20%</span>
+					</div>
+					<Range stations={a.stations.map((st) => toRangeStation(st, CLUB_LABEL[st.club]))} kicker="Pick a station" />
+				</div>
+
+				<div class="eval-block">
+					<div class="gf-section-head">
+						<h2 class="gf-h2"><span class="gf-idx">02</span> Station ladder</h2>
 						<span class="gf-label">Target tick &middot; carry spread in green &middot; shortfall dashed</span>
 					</div>
 					<AssessmentLadder assessment={a} />
@@ -71,7 +81,7 @@ const latest = all[0];
 
 				<div class="eval-block">
 					<div class="gf-section-head">
-						<h2 class="gf-h2"><span class="gf-idx">02</span> Station by station</h2>
+						<h2 class="gf-h2"><span class="gf-idx">03</span> Station by station</h2>
 						<span class="gf-label">Ideal window from SkyTrak in turf green</span>
 					</div>
 					<div class="stations">
