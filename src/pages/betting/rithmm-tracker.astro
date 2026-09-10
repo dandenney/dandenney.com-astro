@@ -26,9 +26,18 @@ const betWinRate =
     : 0;
 
 const hasPnLData = resolvedBets.some((p) => p.betAmount != null);
-// betAmount and returnAmount are combined totals; divide by 2 for per-person P&L
-const totalPnL = resolvedBets.reduce((sum, p) => {
+// Legacy rows split totals equally; Dan-only rows apply entirely to Dan.
+const danPnL = resolvedBets.reduce((sum, p) => {
   if (p.betAmount == null) return sum;
+  const divisor = p.bettors === "dan" ? 1 : 2;
+  if (p.result === "win" && p.returnAmount != null)
+    return sum + (p.returnAmount - p.betAmount) / divisor;
+  if (p.result === "loss") return sum - p.betAmount / divisor;
+  return sum;
+}, 0);
+
+const gardenOfPnL = resolvedBets.reduce((sum, p) => {
+  if (p.betAmount == null || p.bettors === "dan") return sum;
   if (p.result === "win" && p.returnAmount != null)
     return sum + (p.returnAmount - p.betAmount) / 2;
   if (p.result === "loss") return sum - p.betAmount / 2;
@@ -36,8 +45,8 @@ const totalPnL = resolvedBets.reduce((sum, p) => {
 }, 0);
 
 // Per-person running balances
-const danBalance = Number((rithhmmStartingBalances.dan + totalPnL).toFixed(2));
-const gardenOfBalance = Number((rithhmmStartingBalances.gardenOf + totalPnL).toFixed(2));
+const danBalance = Number((rithhmmStartingBalances.dan + danPnL).toFixed(2));
+const gardenOfBalance = Number((rithhmmStartingBalances.gardenOf + gardenOfPnL).toFixed(2));
 
 // Overall signal accuracy (all resolved picks)
 const allWins = resolved.filter((p) => p.result === "win").length;
@@ -89,13 +98,14 @@ function fmtPnL(n: number): string {
   return n >= 0 ? `+$${abs}` : `-$${abs}`;
 }
 
-// betAmount and returnAmount are combined totals; divide by 2 for per-person net
+// Legacy rows split totals equally; Dan-only rows apply entirely to Dan.
 function pickNet(p: RithhmmPick): number | null {
   if (p.portfolioAction !== "bet") return null;
   if (p.result === "pending" || p.betAmount == null) return null;
+  const divisor = p.bettors === "dan" ? 1 : 2;
   if (p.result === "win" && p.returnAmount != null)
-    return (p.returnAmount - p.betAmount) / 2;
-  if (p.result === "loss") return -p.betAmount / 2;
+    return (p.returnAmount - p.betAmount) / divisor;
+  if (p.result === "loss") return -p.betAmount / divisor;
   if (p.result === "push") return 0;
   return null;
 }
@@ -116,11 +126,13 @@ function hermesClasses(flag: RithhmmHermesFlag | undefined): string {
   return "bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/30 dark:text-amber-400 dark:border-amber-800/50";
 }
 
-function sportClasses(sport: "MLB" | "NBA" | "WNBA"): string {
+function sportClasses(sport: "MLB" | "NBA" | "WNBA" | "NFL"): string {
   if (sport === "MLB")
     return "bg-sky-50 text-sky-700 dark:bg-sky-950/40 dark:text-sky-400";
   if (sport === "WNBA")
     return "bg-pink-50 text-pink-700 dark:bg-pink-950/40 dark:text-pink-400";
+  if (sport === "NFL")
+    return "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400";
   return "bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-400";
 }
 
@@ -189,7 +201,7 @@ function dayBets(picks: RithhmmPick[]) {
             {hasPnLData ? (
               <div class="px-4 sm:px-6 py-6">
                 <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">P&amp;L</dt>
-                <dd class={`mt-2 text-4xl font-black tabular-nums font-mono leading-none ${totalPnL >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>{fmtPnL(totalPnL)}</dd>
+                <dd class={`mt-2 text-4xl font-black tabular-nums font-mono leading-none ${danPnL >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>{fmtPnL(danPnL)}</dd>
                 <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">net return</dd>
               </div>
             ) : (

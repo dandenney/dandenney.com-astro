@@ -12,6 +12,8 @@ export type RithhmmPropType =
   | "combo-under"
   | "pitcher-earned-runs-under"
   | "pitcher-ks-under"
+  | "receptions-over"
+  | "rush-attempts-under"
   | "moneyline";
 
 export type RithhmmPickResult = "win" | "loss" | "push" | "pending";
@@ -23,7 +25,7 @@ export type RithhmmHermesFlag = "watch" | "strong" | "no-flag";
 export interface RithhmmPick {
   id: number;
   date: string;
-  sport: "MLB" | "NBA" | "WNBA";
+  sport: "MLB" | "NBA" | "WNBA" | "NFL";
   pick: string;
   odds: string;
   confidence: number;
@@ -37,9 +39,11 @@ export interface RithhmmPick {
   portfolioAction?: RithhmmPortfolioAction;
   /** Hermes signal flag for this pick */
   hermesFlag?: RithhmmHermesFlag;
-  /** Total amount wagered by both Dan and GardenOf combined */
+  /** Total amount wagered for this row; legacy rows combine Dan and GardenOf */
   betAmount?: number;
-  /** Total amount returned to both Dan and GardenOf combined (stake + profit on win; omit on loss) */
+  /** Who funded the recorded stake; legacy rows default to both bettors equally */
+  bettors?: "dan" | "dan-and-gardenOf";
+  /** Total returned on the recorded stake (stake + profit on win; omit while pending) */
   returnAmount?: number;
 }
 
@@ -3447,5 +3451,41 @@ export const rithhmmPicks: RithhmmPick[] = [
     portfolioAction: "bet",
     betAmount: 60,
     returnAmount: 0,
+  },
+  // 2026-09-10
+  {
+    id: 237,
+    date: "2026-09-10",
+    sport: "NFL",
+    pick: "Kyren Williams Over 1.5 Receptions",
+    odds: "-148",
+    confidence: 64.0,
+    modelProjection: "Rithmm predicts Over",
+    dtm: 10.4,
+    recentForm: "7/10",
+    matchup: "Rams vs 49ers",
+    propType: "receptions-over",
+    result: "pending",
+    portfolioAction: "bet",
+    betAmount: 30,
+    bettors: "dan",
+  },
+  // 2026-09-13
+  {
+    id: 238,
+    date: "2026-09-13",
+    sport: "NFL",
+    pick: "Deshaun Watson Under 4.5 Rush Attempts",
+    odds: "-130",
+    confidence: 60.0,
+    modelProjection: "Rithmm predicts Under",
+    dtm: 8.5,
+    recentForm: "not visible",
+    matchup: "Browns @ Jaguars",
+    propType: "rush-attempts-under",
+    result: "pending",
+    portfolioAction: "bet",
+    betAmount: 30,
+    bettors: "dan",
   },
 ];
