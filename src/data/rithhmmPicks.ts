@@ -3484,8 +3484,6 @@ export const rithhmmPicks: RithhmmPick[] = [
     matchup: "Browns @ Jaguars",
     propType: "rush-attempts-under",
     result: "pending",
-    portfolioAction: "bet",
-    betAmount: 30,
-    bettors: "dan",
+    portfolioAction: "watch",
   },
 ];
