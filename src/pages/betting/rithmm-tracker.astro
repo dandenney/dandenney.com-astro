@@ -126,13 +126,15 @@ function hermesClasses(flag: RithhmmHermesFlag | undefined): string {
   return "bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/30 dark:text-amber-400 dark:border-amber-800/50";
 }
 
-function sportClasses(sport: "MLB" | "NBA" | "WNBA" | "NFL"): string {
+function sportClasses(sport: RithhmmPick["sport"]): string {
   if (sport === "MLB")
     return "bg-sky-50 text-sky-700 dark:bg-sky-950/40 dark:text-sky-400";
   if (sport === "WNBA")
     return "bg-pink-50 text-pink-700 dark:bg-pink-950/40 dark:text-pink-400";
   if (sport === "NFL")
     return "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400";
+  if (sport === "NCAAF")
+    return "bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400";
   return "bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-400";
 }
 

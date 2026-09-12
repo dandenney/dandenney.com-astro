@@ -14,6 +14,7 @@ export type RithhmmPropType =
   | "pitcher-ks-under"
   | "receptions-over"
   | "rush-attempts-under"
+  | "game-total-under"
   | "moneyline";
 
 export type RithhmmPickResult = "win" | "loss" | "push" | "pending";
@@ -25,7 +26,7 @@ export type RithhmmHermesFlag = "watch" | "strong" | "no-flag";
 export interface RithhmmPick {
   id: number;
   date: string;
-  sport: "MLB" | "NBA" | "WNBA" | "NFL";
+  sport: "MLB" | "NBA" | "WNBA" | "NFL" | "NCAAF";
   pick: string;
   odds: string;
   confidence: number;
@@ -3486,5 +3487,23 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "rush-attempts-under",
     result: "pending",
     portfolioAction: "watch",
+  },
+  // 2026-09-12
+  {
+    id: 239,
+    date: "2026-09-12",
+    sport: "NCAAF",
+    pick: "Louisiana Tech @ LSU Under 55.5",
+    odds: "-107",
+    confidence: 60.0,
+    modelProjection: "Rithmm predicts Under 55.5",
+    dtm: 17.3,
+    recentForm: "5/10",
+    matchup: "Louisiana Tech @ LSU",
+    propType: "game-total-under",
+    result: "pending",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
   },
 ];
