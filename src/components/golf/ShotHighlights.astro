@@ -1,0 +1,146 @@
+---
+/** Selected launch-monitor shots. These are individual receipts, not averages. */
+import { CLUB_SHORT, type ShotHighlight } from '@/data/golf/types';
+
+interface Props {
+  shots: ShotHighlight[];
+  titleId: string;
+}
+
+const { shots, titleId } = Astro.props;
+const shotCount = `${shots.length} saved ${shots.length === 1 ? 'shot' : 'shots'}`;
+
+function number(value: number | undefined, decimals = 0): string {
+  if (typeof value !== 'number') return '·';
+  return value.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+}
+
+function signed(value: number | undefined, decimals = 1): string {
+  if (typeof value !== 'number') return '·';
+  const formatted = number(value, decimals);
+  return value > 0 ? `+${formatted}` : formatted;
+}
+
+function direction(value: number | undefined): string {
+  if (typeof value !== 'number') return '·';
+  if (value === 0) return '0';
+  return `${number(Math.abs(value))} ${value > 0 ? 'R' : 'L'}`;
+}
+---
+
+<section class="shots" aria-labelledby={titleId}>
+  <header class="shots-head">
+    <h3 id={titleId} class="gf-label">Selected shot highlights</h3>
+    <span class="gf-mono shots-note">{shotCount}, not session averages</span>
+  </header>
+  <div class="shots-scroll">
+    <table class="gf-table shots-table">
+      <thead>
+        <tr>
+          <th scope="col">Shot</th>
+          <th scope="col">Total</th>
+          <th scope="col">Carry</th>
+          <th scope="col">Offline</th>
+          <th scope="col">Ball spd</th>
+          <th scope="col">Club spd</th>
+          <th scope="col">Smash</th>
+          <th scope="col">Launch</th>
+          <th scope="col">Back spin</th>
+          <th scope="col">Descent</th>
+          <th scope="col">Height</th>
+          <th scope="col">Side</th>
+          <th scope="col">Side spin</th>
+          <th scope="col">Path</th>
+          <th scope="col">Face/path</th>
+          <th scope="col">Face/target</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {shots.map((shot) => (
+          <tr>
+            <th scope="row" class="shot-id">
+              <span class="shot-club">{CLUB_SHORT[shot.club]}</span>
+              <span>Shot {shot.shotNumber ?? '·'}{shot.shotSetTotal ? `/${shot.shotSetTotal}` : ''}</span>
+            </th>
+            <td class="shot-distance">{number(shot.total)}{typeof shot.total === 'number' && <span class="gf-unit">yd</span>}</td>
+            <td class="shot-distance">{number(shot.carry)}{typeof shot.carry === 'number' && <span class="gf-unit">yd</span>}</td>
+            <td>{direction(shot.offline)}</td>
+            <td>{number(shot.ballSpeed)}{typeof shot.ballSpeed === 'number' && <span class="gf-unit">mph</span>}</td>
+            <td>{number(shot.clubSpeed)}{typeof shot.clubSpeed === 'number' && <span class="gf-unit">mph</span>}</td>
+            <td>{number(shot.smashFactor, 2)}</td>
+            <td>{number(shot.launchAngle)}{typeof shot.launchAngle === 'number' && <span class="gf-unit">°</span>}</td>
+            <td>{number(shot.backSpin)}{typeof shot.backSpin === 'number' && <span class="gf-unit">rpm</span>}</td>
+            <td>{number(shot.descentAngle)}{typeof shot.descentAngle === 'number' && <span class="gf-unit">°</span>}</td>
+            <td>{number(shot.maxHeight)}{typeof shot.maxHeight === 'number' && <span class="gf-unit">yd</span>}</td>
+            <td>{signed(shot.sideAngle, 0)}{typeof shot.sideAngle === 'number' && <span class="gf-unit">°</span>}</td>
+            <td>{signed(shot.sideSpin, 0)}{typeof shot.sideSpin === 'number' && <span class="gf-unit">rpm</span>}</td>
+            <td>{signed(shot.clubPath)}{typeof shot.clubPath === 'number' && <span class="gf-unit">°</span>}</td>
+            <td>{signed(shot.faceToPath)}{typeof shot.faceToPath === 'number' && <span class="gf-unit">°</span>}</td>
+            <td>{signed(shot.faceToTarget)}{typeof shot.faceToTarget === 'number' && <span class="gf-unit">°</span>}</td>
+            <td>{number(shot.shotScore)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="gf-mono shots-key">Direction: R/L from target · positive path is in-to-out · positive face is open</p>
+</section>
+
+<style>
+  .shots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding-top: 0.25rem;
+  }
+  .shots-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.4rem 1rem;
+  }
+  .shots-note,
+  .shots-key {
+    color: var(--gf-mute);
+    font-size: 0.64rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  .shots-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid var(--gf-line);
+  }
+  .shots-table {
+    min-width: 78rem;
+  }
+  .shots-table th,
+  .shots-table td {
+    white-space: nowrap;
+  }
+  .shots-table th.shot-id {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 7rem;
+    text-align: left;
+    background: var(--gf-bay);
+    color: var(--gf-ink);
+    border-bottom: 1px solid var(--gf-line-soft);
+  }
+  .shot-club {
+    color: var(--gf-tracer);
+    margin-right: 0.45rem;
+  }
+  .shot-distance {
+    color: var(--gf-tracer);
+  }
+  .shots-key {
+    margin: 0;
+  }
+</style>

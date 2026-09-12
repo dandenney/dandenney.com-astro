@@ -8,6 +8,7 @@ import type { Round, Session } from '@/data/golf/types';
 import { SESSION_KIND_LABEL, ROUND_FORMAT_LABEL, assessmentHref, fmtDateStamp, fmtToPar, roundToPar, toActivity } from '@/data/golf/utils';
 import ClubTable from '@/components/golf/ClubTable.astro';
 import MetricReadout from '@/components/golf/MetricReadout.astro';
+import ShotHighlights from '@/components/golf/ShotHighlights.astro';
 
 interface Props {
 	item: Session | Round;
@@ -88,6 +89,10 @@ const clubsFilter = isSession ? (item as Session).clubs.map((c) => c.club).join(
 			) : (
 				<p class="gf-mono ses-empty">No club numbers logged for this one.</p>
 			)
+		)}
+
+		{session?.highlights && session.highlights.length > 0 && (
+			<ShotHighlights shots={session.highlights} titleId={`shot-highlights-title-${item.id}`} />
 		)}
 
 		{round && (

@@ -15,6 +15,7 @@ Read `src/data/golf/sessions.ts` and `src/data/golf/types.ts` in full. Venue slu
 - `kind`: `lesson` | `practice` | `range` | `simulator`. GOLFTEC with a coach is `lesson`, GOLFTEC practice bay is `practice`, Topgolf is `range`.
 - `coach`, `durationMin`, `focus`, `partners`: only when mentioned.
 - `clubs`: one `ClubMetrics` object per club mentioned. Every field is optional. Use summary numbers only (session averages, plus `longest` for the best single shot). Units: yards, mph, degrees, rpm. `clubPath` positive = in-to-out, `faceToTarget` positive = open.
+- `highlights`: use for selected individual launch-monitor shots. Preserve each visible metric, shot counter, and direction. Positive `offline`, `sideAngle`, and `sideSpin` mean right. Do not copy selected-shot values into session-average fields; only the best total may also populate `longest`.
 - `takeaway`: 1-3 sentences if Dan gave one. Hand-written prose, so no em dashes.
 
 Append to the `sessions` array in `src/data/golf/sessions.ts`.

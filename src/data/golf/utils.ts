@@ -232,10 +232,11 @@ function sessionHeadline(s: Session): { value: string; unit: string } | undefine
   if (drive) return { value: fmtNum(drive), unit: "yd drive" };
   const seven = s.clubs.find((c) => c.club === "7i");
   if (seven?.carry) return { value: fmtNum(seven.carry), unit: "yd 7i carry" };
-  const any = s.clubs.find((c) => c.carry ?? c.total);
+  const any = s.clubs.find((c) => c.longest ?? c.carry ?? c.total);
   if (any) {
-    const v = any.carry ?? any.total ?? 0;
-    return { value: fmtNum(v), unit: `yd ${CLUB_SHORT[any.club]}${any.carry ? " carry" : ""}` };
+    const v = any.longest ?? any.carry ?? any.total ?? 0;
+    const suffix = any.longest ? " best" : any.carry ? " carry" : "";
+    return { value: fmtNum(v), unit: `yd ${CLUB_SHORT[any.club]}${suffix}` };
   }
   if (s.durationMin) return { value: fmtNum(s.durationMin), unit: "min" };
   return undefined;
@@ -393,11 +394,18 @@ export function getPRs(player: Player, asOf = todayIso()): PRRecord[] {
   const isNew = (date?: string) => !!date && daysBetween(date, asOf) <= 14;
 
   const sessionClubs = s.flatMap((session) => session.clubs.map((club) => ({ session, club })));
+  const sessionHighlights = s.flatMap((session) =>
+    (session.highlights ?? []).map((shot) => ({ session, shot })),
+  );
 
   const drive = bestOf(sessionClubs.filter((x) => x.club.club === "driver"), (x) =>
     driveDistance(x.club),
   );
   const seven = bestOf(sessionClubs.filter((x) => x.club.club === "7i"), (x) => x.club.carry);
+  const sevenHighlight = bestOf(
+    sessionHighlights.filter((x) => x.shot.club === "7i"),
+    (x) => x.shot.carry,
+  );
 
   // Assessment stations count too: a 185-yard carry at the driver station
   // is a real swing, just one read off a chart.
@@ -409,6 +417,7 @@ export function getPRs(player: Player, asOf = todayIso()): PRRecord[] {
   const sevenA = bestOf(stationShots.filter((x) => x.st.club === "7i"), (x) => x.carry);
   const gameScore = bestOf(a, (x) => x.score, true);
   const smash = bestOf(sessionClubs, (x) => x.club.smashFactor);
+  const smashHighlight = bestOf(sessionHighlights, (x) => x.shot.smashFactor);
   const low18 = bestOf(
     r.filter((x) => isCourseRound(x) && x.holesPlayed === 18 && x.format === "stroke"),
     (x) => x.score,
@@ -478,6 +487,25 @@ export function getPRs(player: Player, asOf = todayIso()): PRRecord[] {
     approx: b?.source.as.approximate,
   });
 
+  const fromHighlight = (
+    key: PRKey,
+    label: string,
+    hint: string,
+    unit: string,
+    b: Best<(typeof sessionHighlights)[number]> | undefined,
+    format: (v: number) => string = (v) => fmtNum(v),
+  ): PRRecord => ({
+    key,
+    label,
+    hint,
+    unit: b ? unit : undefined,
+    display: b ? format(b.value) : undefined,
+    date: b?.source.session.date,
+    venueSlug: b?.source.session.venueSlug,
+    href: b ? sessionHref(b.source.session.id) : undefined,
+    isNew: isNew(b?.source.session.date),
+  });
+
   const pickBest = (sess: PRRecord, station: PRRecord): PRRecord => {
     const sv = sess.display ? Number(sess.display.replace(/,/g, "")) : -Infinity;
     const av = station.display ? Number(station.display.replace(/,/g, "")) : -Infinity;
@@ -503,10 +531,16 @@ export function getPRs(player: Player, asOf = todayIso()): PRRecord[] {
       fromStation("longestDrive", "Longest drive", "First driver session on a monitor", driveA),
     ),
     pickBest(
-      fromSession("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", "yds", seven),
-      fromStation("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", sevenA),
+      pickBest(
+        fromSession("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", "yds", seven),
+        fromStation("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", sevenA),
+      ),
+      fromHighlight("sevenIronCarry", "7-iron carry", "First 7-iron carry number from GOLFTEC", "yds", sevenHighlight),
     ),
-    fromSession("smashFactor", "Smash factor", "Ball speed over club speed", "", smash, (v) => v.toFixed(2)),
+    pickBest(
+      fromSession("smashFactor", "Smash factor", "Ball speed over club speed", "", smash, (v) => v.toFixed(2)),
+      fromHighlight("smashFactor", "Smash factor", "Ball speed over club speed", "", smashHighlight, (v) => v.toFixed(2)),
+    ),
     fromRound("lowEighteen", "Low 18", "First scored stroke-play round", "", low18),
     fromRound("lowNine", "Low 9", "First scored nine", "", low9),
     fromRound("fewestPutts", "Fewest putts", "First round with putts counted", "", putts),

@@ -123,6 +123,45 @@ export interface ClubMetrics {
   note?: string;
 }
 
+/** One selected launch-monitor shot. These are receipts, never session averages. */
+export interface ShotHighlight {
+  club: Club;
+  /** Shot counter shown by the launch monitor. */
+  shotNumber?: number;
+  /** Total shots shown in that counter, e.g. 45 in "45 of 45". */
+  shotSetTotal?: number;
+  /** yards */
+  carry?: number;
+  /** yards */
+  total?: number;
+  /** yards, positive = right of target */
+  offline?: number;
+  /** mph */
+  clubSpeed?: number;
+  /** mph */
+  ballSpeed?: number;
+  smashFactor?: number;
+  /** degrees */
+  launchAngle?: number;
+  /** rpm */
+  backSpin?: number;
+  /** degrees */
+  descentAngle?: number;
+  /** yards */
+  maxHeight?: number;
+  /** degrees, positive = right */
+  sideAngle?: number;
+  /** rpm, positive = right */
+  sideSpin?: number;
+  /** degrees, positive = in-to-out */
+  clubPath?: number;
+  /** degrees, positive = face right of path */
+  faceToPath?: number;
+  /** degrees, positive = open */
+  faceToTarget?: number;
+  shotScore?: number;
+}
+
 /** Numeric ClubMetrics keys. Used for trends, PRs, and table columns. */
 export type ClubMetricKey = Exclude<keyof ClubMetrics, "club" | "note">;
 
@@ -143,6 +182,8 @@ export interface Session {
   focus?: string;
   partners?: string[];
   clubs: ClubMetrics[];
+  /** Individually selected shots. Do not use these as session averages or trend points. */
+  highlights?: ShotHighlight[];
   /** hand-written, 1-3 sentences */
   takeaway?: string;
   /** -> assessments.ts entry produced during this session */

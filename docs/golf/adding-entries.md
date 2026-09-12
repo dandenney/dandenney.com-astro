@@ -24,7 +24,8 @@ derived at build time in `src/data/golf/utils.ts`.
 ## Conventions
 
 - Every metric is optional. Log what GOLFTEC shows, skip the rest.
-- Session numbers are averages, except `longest`, which is the best single shot.
+- Session club numbers are averages, except `longest`, which is the best single shot.
+- Individually selected screenshots belong in `highlights`; they can set personal records but never become session averages or progress-chart points.
 - `clubPath` positive is in-to-out. `faceToTarget` positive is open.
 - Rounds where only a relative score is known use `toPar`. When `score` and
   `par` are both present, `toPar` is derived and should be omitted.

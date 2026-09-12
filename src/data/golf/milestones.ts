@@ -57,4 +57,14 @@ export const milestones: Milestone[] = [
     venueSlug: "popstroke-nashville",
     roundId: 5,
   },
+  {
+    id: 6,
+    player: "dan",
+    date: "2026-09-11",
+    kind: "pr",
+    title: "First 150-yard 7-iron carry",
+    detail: "Two selected SkyTrak shots carried 150 and 151 yards during practice.",
+    venueSlug: "golftec-nashville-west",
+    sessionId: 4,
+  },
 ];
