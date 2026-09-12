@@ -11,6 +11,8 @@ test("the golf log renders selected shot highlights and their records", () => {
   assert.match(sessionsHtml, /4 saved shots, not session averages/);
   assert.match(sessionsHtml, /id="shot-highlights-title-4"/);
   assert.match(sessionsHtml, /aria-labelledby="shot-highlights-title-4"/);
+  assert.match(sessionsHtml, /class="shots-scroll"[^>]*role="region"[^>]*aria-labelledby="shot-highlights-title-4"[^>]*tabindex="0"/);
+  assert.match(sessionsHtml, /<span[^>]*class="sr-only"[^>]*>Not recorded<\/span>/);
   assert.match(sessionsHtml, /151<span class="gf-unit"[^>]*>yd<\/span>/);
   assert.match(sessionsHtml, /1\.34/);
 });

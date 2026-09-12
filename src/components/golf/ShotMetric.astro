@@ -1,0 +1,30 @@
+---
+interface Props {
+  value?: number;
+  unit?: string;
+  decimals?: number;
+  signed?: boolean;
+  direction?: boolean;
+}
+
+const { value, unit, decimals = 0, signed = false, direction = false } = Astro.props;
+
+function formatMetric(metric: number): string {
+  if (direction) {
+    if (metric === 0) return '0';
+    return `${Math.abs(metric).toLocaleString('en-US', { maximumFractionDigits: decimals })} ${metric > 0 ? 'R' : 'L'}`;
+  }
+
+  const formatted = metric.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+  return signed && metric > 0 ? `+${formatted}` : formatted;
+}
+---
+
+{typeof value === 'number' ? (
+  <>{formatMetric(value)}{unit && <span class="gf-unit">{unit}</span>}</>
+) : (
+  <><span aria-hidden="true">—</span><span class="sr-only">Not recorded</span></>
+)}

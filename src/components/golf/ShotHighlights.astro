@@ -1,6 +1,7 @@
 ---
 /** Selected launch-monitor shots. These are individual receipts, not averages. */
 import { CLUB_SHORT, type ShotHighlight } from '@/data/golf/types';
+import ShotMetric from '@/components/golf/ShotMetric.astro';
 
 interface Props {
   shots: ShotHighlight[];
@@ -9,26 +10,6 @@ interface Props {
 
 const { shots, titleId } = Astro.props;
 const shotCount = `${shots.length} saved ${shots.length === 1 ? 'shot' : 'shots'}`;
-
-function number(value: number | undefined, decimals = 0): string {
-  if (typeof value !== 'number') return '·';
-  return value.toLocaleString('en-US', {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
-  });
-}
-
-function signed(value: number | undefined, decimals = 1): string {
-  if (typeof value !== 'number') return '·';
-  const formatted = number(value, decimals);
-  return value > 0 ? `+${formatted}` : formatted;
-}
-
-function direction(value: number | undefined): string {
-  if (typeof value !== 'number') return '·';
-  if (value === 0) return '0';
-  return `${number(Math.abs(value))} ${value > 0 ? 'R' : 'L'}`;
-}
 ---
 
 <section class="shots" aria-labelledby={titleId}>
@@ -36,7 +17,7 @@ function direction(value: number | undefined): string {
     <h3 id={titleId} class="gf-label">Selected shot highlights</h3>
     <span class="gf-mono shots-note">{shotCount}, not session averages</span>
   </header>
-  <div class="shots-scroll">
+  <div class="shots-scroll" role="region" aria-labelledby={titleId} tabindex="0">
     <table class="gf-table shots-table">
       <thead>
         <tr>
@@ -64,24 +45,24 @@ function direction(value: number | undefined): string {
           <tr>
             <th scope="row" class="shot-id">
               <span class="shot-club">{CLUB_SHORT[shot.club]}</span>
-              <span>Shot {shot.shotNumber ?? '·'}{shot.shotSetTotal ? `/${shot.shotSetTotal}` : ''}</span>
+              <span>Shot {shot.shotNumber ?? 'not recorded'}{shot.shotSetTotal ? `/${shot.shotSetTotal}` : ''}</span>
             </th>
-            <td class="shot-distance">{number(shot.total)}{typeof shot.total === 'number' && <span class="gf-unit">yd</span>}</td>
-            <td class="shot-distance">{number(shot.carry)}{typeof shot.carry === 'number' && <span class="gf-unit">yd</span>}</td>
-            <td>{direction(shot.offline)}</td>
-            <td>{number(shot.ballSpeed)}{typeof shot.ballSpeed === 'number' && <span class="gf-unit">mph</span>}</td>
-            <td>{number(shot.clubSpeed)}{typeof shot.clubSpeed === 'number' && <span class="gf-unit">mph</span>}</td>
-            <td>{number(shot.smashFactor, 2)}</td>
-            <td>{number(shot.launchAngle)}{typeof shot.launchAngle === 'number' && <span class="gf-unit">°</span>}</td>
-            <td>{number(shot.backSpin)}{typeof shot.backSpin === 'number' && <span class="gf-unit">rpm</span>}</td>
-            <td>{number(shot.descentAngle)}{typeof shot.descentAngle === 'number' && <span class="gf-unit">°</span>}</td>
-            <td>{number(shot.maxHeight)}{typeof shot.maxHeight === 'number' && <span class="gf-unit">yd</span>}</td>
-            <td>{signed(shot.sideAngle, 0)}{typeof shot.sideAngle === 'number' && <span class="gf-unit">°</span>}</td>
-            <td>{signed(shot.sideSpin, 0)}{typeof shot.sideSpin === 'number' && <span class="gf-unit">rpm</span>}</td>
-            <td>{signed(shot.clubPath)}{typeof shot.clubPath === 'number' && <span class="gf-unit">°</span>}</td>
-            <td>{signed(shot.faceToPath)}{typeof shot.faceToPath === 'number' && <span class="gf-unit">°</span>}</td>
-            <td>{signed(shot.faceToTarget)}{typeof shot.faceToTarget === 'number' && <span class="gf-unit">°</span>}</td>
-            <td>{number(shot.shotScore)}</td>
+            <td class="shot-distance"><ShotMetric value={shot.total} unit="yd" /></td>
+            <td class="shot-distance"><ShotMetric value={shot.carry} unit="yd" /></td>
+            <td><ShotMetric value={shot.offline} direction /></td>
+            <td><ShotMetric value={shot.ballSpeed} unit="mph" /></td>
+            <td><ShotMetric value={shot.clubSpeed} unit="mph" /></td>
+            <td><ShotMetric value={shot.smashFactor} decimals={2} /></td>
+            <td><ShotMetric value={shot.launchAngle} unit="°" /></td>
+            <td><ShotMetric value={shot.backSpin} unit="rpm" /></td>
+            <td><ShotMetric value={shot.descentAngle} unit="°" /></td>
+            <td><ShotMetric value={shot.maxHeight} unit="yd" /></td>
+            <td><ShotMetric value={shot.sideAngle} unit="°" signed /></td>
+            <td><ShotMetric value={shot.sideSpin} unit="rpm" signed /></td>
+            <td><ShotMetric value={shot.clubPath} unit="°" decimals={1} signed /></td>
+            <td><ShotMetric value={shot.faceToPath} unit="°" decimals={1} signed /></td>
+            <td><ShotMetric value={shot.faceToTarget} unit="°" decimals={1} signed /></td>
+            <td><ShotMetric value={shot.shotScore} /></td>
           </tr>
         ))}
       </tbody>
