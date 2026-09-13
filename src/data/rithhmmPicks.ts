@@ -13,6 +13,7 @@ export type RithhmmPropType =
   | "pitcher-earned-runs-under"
   | "pitcher-ks-under"
   | "receptions-over"
+  | "receptions-under"
   | "rush-attempts-under"
   | "game-total-under"
   | "moneyline";
@@ -3501,6 +3502,42 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "5/10",
     matchup: "Louisiana Tech @ LSU",
     propType: "game-total-under",
+    result: "loss",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
+    returnAmount: 0,
+  },
+  // 2026-09-13
+  {
+    id: 240,
+    date: "2026-09-13",
+    sport: "NFL",
+    pick: "Bijan Robinson Under 4.5 Receptions",
+    odds: "-150",
+    confidence: 63.8,
+    modelProjection: "Rithmm predicts Under",
+    dtm: 3.8,
+    recentForm: "5/10",
+    matchup: "Falcons @ Steelers",
+    propType: "receptions-under",
+    result: "pending",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
+  },
+  {
+    id: 241,
+    date: "2026-09-13",
+    sport: "NFL",
+    pick: "Jonathon Brooks Under 7.5 Rush Attempts",
+    odds: "+109",
+    confidence: 60.7,
+    modelProjection: "Rithmm predicts Under",
+    dtm: 12.9,
+    recentForm: "not visible",
+    matchup: "Panthers vs Bears",
+    propType: "rush-attempts-under",
     result: "pending",
     portfolioAction: "bet",
     betAmount: 60,
