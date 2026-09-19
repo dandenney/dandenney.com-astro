@@ -66,6 +66,26 @@ if (packet.type === 'no-reservaitions') {
   const tags = packet.frontmatter.tags.map((tag) => String(tag));
   const isGolf = tags.includes('golf');
 
+  if (tags.length > 4) {
+    fail('frontmatter.tags must contain 1-4 broad routing-safe categories');
+  }
+
+  const normalize = (value) => String(value || '').trim().toLowerCase();
+  const forbiddenTags = new Set([
+    packet.frontmatter.title,
+    packet.frontmatter.slug,
+    packet.sourceInput.location,
+    packet.sourceInput.city,
+    packet.sourceInput.state,
+    packet.sourceInput.neighborhood,
+    packet.frontmatter.city,
+    packet.frontmatter.state,
+  ].map(normalize).filter(Boolean));
+
+  if (tags.some((tag) => forbiddenTags.has(normalize(tag)))) {
+    fail('frontmatter.tags must not repeat the title, venue, city, state, or neighborhood');
+  }
+
   if (isGolf) {
     if (tags.length !== 1 || tags[0] !== 'golf') {
       fail('golf no-reservaitions entries must use frontmatter.tags exactly ["golf"]');

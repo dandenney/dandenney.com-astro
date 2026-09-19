@@ -14,8 +14,10 @@ tags: ["comedy"]
 aiGenerated: true
 heroImage: "mark-normand"
 ---
-By August 22, Zanies had made the phone ritual official: devices were taken and secured early, so there is no fresh photographic evidence from the night. This entry gets the standard Zanies photo instead, which feels appropriate for a room we keep returning to.
+Zanies took the phones early. For about ten seconds it felt like punishment; by the time the first State Park Blonde opened, it felt like mercy. Nothing left to do but sit close to strangers and wait for somebody with a microphone to justify the arrangement.
 
-Mark Normand was there for the last night of a seven-show run. With no phone available to turn the evening into content, the assignment was simple: sit down, pay attention, and let a comedy club be a comedy club.
+Mark Normand works like he is being charged by the pause. Setup, punchline, tag, another tag—then on to the next thought before the room has fully caught up. The speed is part of the trick. A slower comic might invite you into a story; Normand keeps throwing jokes until resistance becomes inefficient.
 
-The table's contribution was a bucket of State Park Blondes from Tennessee Brew Works—light, crisp, and sessionable enough to survive a full set without competing with it. A familiar room, a reliable bucket, and no glowing screen between us and the stage. Sometimes the phone policy is doing everyone a favor.
+The bucket of State Park Blondes handled the other half of the evening. Light, crisp, and uncomplicated, they disappeared at a pace that matched the set without trying to compete with it.
+
+For a room we visit often, this one found its own rhythm: Normand moving fast, the bucket emptying slowly, and an audience temporarily relieved of every responsibility except paying attention.

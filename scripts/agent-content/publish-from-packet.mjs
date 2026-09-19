@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { execFileSync } from 'child_process';
+import { lintNoReservaitionsBody } from './content-quality.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -74,6 +75,13 @@ const body = fs.readFileSync(bodyPath, 'utf8').trim();
 
 if (!packet?.type) fail('packet.type missing');
 if (!packet?.frontmatter) fail('packet.frontmatter missing');
+
+if (packet.type === 'no-reservaitions') {
+  const qualityIssues = lintNoReservaitionsBody(body);
+  if (qualityIssues.length > 0) {
+    fail(`No Reservaitions content quality gate failed:\n- ${qualityIssues.join('\n- ')}`);
+  }
+}
 
 let outputDir;
 let filename;

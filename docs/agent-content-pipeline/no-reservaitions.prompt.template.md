@@ -36,7 +36,8 @@ Write it as if Anthony Bourdain were narrating Dan's actual experience from memo
 - Items / drinks / bill: <ITEMS>
 - Atmosphere / observed details: <DETAILS>
 - Golf/outing notes when relevant: <GOLF_DETAILS>
-- Visual corroboration notes: <PHOTO_NOTES>
+- Visual corroboration notes (facts only): <PHOTO_NOTES>
+- Never mention or imply how any visual fact was obtained; photos and screenshots are evidence, not subjects of the review.
 - Title override notes if any: <TITLE_OVERRIDE>
 
 ## Writing goals
@@ -58,6 +59,14 @@ Write it as if Anthony Bourdain were narrating Dan's actual experience from memo
 - If an item is unresolved, either describe it cautiously or leave it out rather than guessing.
 - No repeated stock openings or stock closings.
 - End with an earned final judgment, not a generic consumer tip.
+
+## Mandatory editorial self-check before returning the body
+Reject and rewrite the draft unless every answer is yes:
+- Does it express a distinct opinion or judgment?
+- Does it sound like a remembered experience rather than a menu or research summary?
+- Is every experiential claim supported by Dan's firsthand details?
+- Does it avoid discussing photos, screenshots, prompts, packets, research, or the publishing process?
+- Does the ending earn a specific judgment?
 ```
 
 ## Why this template exists

@@ -37,9 +37,12 @@
 - [ ] Duplicate slug/file check run before write
 
 ## 4) Content quality gates
-- [ ] Body aligns with section style pack
-- [ ] No unsupported factual claims outside packet/notes
-- [ ] Contains at least one caveat/trade-off sentence
+- [ ] `yarn agent:content:test` passes
+- [ ] Publisher content gate passes against the exact final body
+- [ ] Body contains no source-artifact or publishing-process narration; evidence belongs only in alt text and run notes
+- [ ] Body expresses a specific point of view and does more than paraphrase menu ingredients or supplied details
+- [ ] Body contains no unsupported factual claims outside packet/notes
+- [ ] Ending makes an earned judgment rather than giving generic consumer advice
 
 ## 5) Project checks
 - [ ] Run `yarn` install if needed
