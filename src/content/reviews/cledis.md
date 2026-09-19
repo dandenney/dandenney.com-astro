@@ -14,10 +14,10 @@ tags: ["burgers","beer"]
 aiGenerated: true
 heroImage: "cledis"
 ---
-Cledis in Bellevue gave us two ways to approach a smash burger, both of them committed to excess but headed in different directions.
+Cledis feels like a dare disguised as a neighborhood burger joint. The menu keeps stacking one more good idea onto the pile until restraint gives up and orders a beer.
 
-The Blackberry Smoke layers white American cheese, bacon, grilled jalapeños, smoked blackberry preserves, and whipped mascarpone onto a quarter-pound burger. Sweet, smoky, creamy, and hot already occupy most of the available bandwidth, so the 4 Hands Chocolate Milk Stout does not attempt restraint. Its cacao-nib richness and milk-sugar softness turn the pairing into something close to burger-and-dessert synchronization.
+The Blackberry Smoke should collapse under its own ambition: white American cheese, bacon, grilled jalapeños, smoked blackberry preserves, and whipped mascarpone. Instead, the blackberry pulls everything toward jammy sweetness, the jalapeños drag it back toward heat, and the mascarpone keeps the argument from becoming a fight. Pairing it with a 4 Hands Chocolate Milk Stout is not an attempt to cleanse the palate. It is a conspiracy. The whole thing lands somewhere between dinner and dessert, with no interest in choosing a side.
 
-The Bandito Smash takes the sharper route: grilled onions, white queso, bacon, grilled jalapeños, and Bandito sauce. Tiny Bomb makes the logical counterweight—a crisp 4.5% pilsner with enough clean, herbaceous snap to reset things between bites.
+The Bandito Smash has a less complicated agenda. Grilled onions, white queso, bacon, grilled jalapeños, and Bandito sauce make a glorious mess, while a cold Tiny Bomb resets the tongue before the next round. It is exactly the job a crisp pilsner was born to do.
 
-The photo catches the practical middle ground: two burgers in metal trays, a pile of seasoned fries between them, and no need for the table to agree on whether dinner should lean dark and sweet or bright and spicy.
+Two burgers, two theories: Blackberry Smoke wants dinner and dessert to share a booth; the Bandito wants to leave queso on your shirt. Cledis understands that both are perfectly reasonable ways to spend an evening in Bellevue.
