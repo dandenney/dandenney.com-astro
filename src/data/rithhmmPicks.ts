@@ -3557,10 +3557,11 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "9/10",
     matchup: "Giants vs Cowboys",
     propType: "receptions-over",
-    result: "pending",
+    result: "loss",
     portfolioAction: "bet",
     betAmount: 60,
     bettors: "dan-and-gardenOf",
+    returnAmount: 0,
   },
   // 2026-09-20
   {
