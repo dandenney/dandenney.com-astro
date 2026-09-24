@@ -10,6 +10,41 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "The new rules of context engineering for Claude 5 generation models",
+    url: "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    description: "New Claude models use better judgment, so old strict rules and repeated examples are no longer needed. Instead, design tools clearly, use progressive disclosure, and keep instructions simple and focused. Organize…",
+    created: "2026-09-22",
+    kind: "read",
+  },
+  {
+    title: "#Taste Is All That's Left",
+    url: "https://notashelf.dev/posts/taste-is-all-thats-left?ref=sidebar",
+    description: "Making things used to be hard, so effort showed what was truly valuable. Now, making is easy, so the real skill is choosing what is worth making. Taste and judgment are the rare and important parts machines cannot…",
+    created: "2026-09-22",
+    kind: "read",
+  },
+  {
+    title: "The End of No Code",
+    url: "https://blog.exe.dev/the-end-of-no-code?ck_subscriber_id=1665201471",
+    description: "No Code platforms like Airtable helped many teams organize work, but new AI tools running on Linux offer more power and flexibility. Using open-source tech and coding agents, anyone can build custom business apps that…",
+    created: "2026-09-22",
+    kind: "read",
+  },
+  {
+    title: "Improved CSS Text-Stroke",
+    url: "https://tylersticka.com/journal/improved-css-text-stroke/?ck_subscriber_id=1665201471",
+    description: "Applying an outer stroke to text in CSS has been difficult and often hurt readability. Now, with the paint-order property supported in major browsers, strokes can be placed beneath the text, improving legibility. Some…",
+    created: "2026-09-22",
+    kind: "read",
+  },
+  {
+    title: "We are designing with AI, not for it",
+    url: "https://www.imkylelambert.com/articles/everyone-is-designing-with-ai-not-for-it?ref=sidebar",
+    description: "AI is changing how we design, but not yet what we design. We are moving from fixed, one-size-fits-all designs to flexible, user-customizable ones called malleable design. Designers should rethink products to let users…",
+    created: "2026-09-22",
+    kind: "read",
+  },
+  {
     title: "Connect Agents to the World",
     url: "https://agentkey.app/?utm_source=www.theneurondaily.com&utm_medium=newsletter&utm_campaign=should-ai-learn-from-you-but-not-vice-versa&_bhlid=99fe1718d5a872e843fecf09cc8dce816088744b",
     description: "AgentKey helps connect agents to live data from many sources like social media and finance. Users want better desks with stability, quality materials, and easier setup. AgentKey also manages APIs and billing so agents…",
