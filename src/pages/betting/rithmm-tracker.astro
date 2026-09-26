@@ -26,23 +26,35 @@ const betWinRate =
     : 0;
 
 const hasPnLData = resolvedBets.some((p) => p.betAmount != null);
-// Legacy rows split totals equally; Dan-only rows apply entirely to Dan.
-const danPnL = resolvedBets.reduce((sum, p) => {
-  if (p.betAmount == null) return sum;
-  const divisor = p.bettors === "dan" ? 1 : 2;
-  if (p.result === "win" && p.returnAmount != null)
-    return sum + (p.returnAmount - p.betAmount) / divisor;
-  if (p.result === "loss") return sum - p.betAmount / divisor;
-  return sum;
-}, 0);
 
-const gardenOfPnL = resolvedBets.reduce((sum, p) => {
-  if (p.betAmount == null || p.bettors === "dan") return sum;
-  if (p.result === "win" && p.returnAmount != null)
-    return sum + (p.returnAmount - p.betAmount) / 2;
-  if (p.result === "loss") return sum - p.betAmount / 2;
-  return sum;
-}, 0);
+// Split shared rows in integer cents. Dan receives the lower half and
+// GardenOf receives any odd penny, matching the ledger convention.
+function ownerNet(p: RithhmmPick, owner: "dan" | "gardenOf"): number {
+  if (p.betAmount == null || (p.bettors === "dan" && owner === "gardenOf")) return 0;
+
+  const shared = p.bettors !== "dan";
+  const stakeCents = Math.round(p.betAmount * 100);
+  const ownerStakeCents = shared
+    ? owner === "dan"
+      ? Math.floor(stakeCents / 2)
+      : Math.ceil(stakeCents / 2)
+    : stakeCents;
+
+  if (p.result === "win" && p.returnAmount != null) {
+    const returnCents = Math.round(p.returnAmount * 100);
+    const ownerReturnCents = shared
+      ? owner === "dan"
+        ? Math.floor(returnCents / 2)
+        : Math.ceil(returnCents / 2)
+      : returnCents;
+    return (ownerReturnCents - ownerStakeCents) / 100;
+  }
+  if (p.result === "loss") return -ownerStakeCents / 100;
+  return 0;
+}
+
+const danPnL = resolvedBets.reduce((sum, p) => sum + ownerNet(p, "dan"), 0);
+const gardenOfPnL = resolvedBets.reduce((sum, p) => sum + ownerNet(p, "gardenOf"), 0);
 
 // Per-person running balances
 const danBalance = Number((rithhmmStartingBalances.dan + danPnL).toFixed(2));
@@ -98,14 +110,13 @@ function fmtPnL(n: number): string {
   return n >= 0 ? `+$${abs}` : `-$${abs}`;
 }
 
-// Legacy rows split totals equally; Dan-only rows apply entirely to Dan.
+// The row-level `$30` view uses Dan's half; GardenOf receives any odd penny
+// in the separate running balance above.
 function pickNet(p: RithhmmPick): number | null {
   if (p.portfolioAction !== "bet") return null;
   if (p.result === "pending" || p.betAmount == null) return null;
-  const divisor = p.bettors === "dan" ? 1 : 2;
-  if (p.result === "win" && p.returnAmount != null)
-    return (p.returnAmount - p.betAmount) / divisor;
-  if (p.result === "loss") return -p.betAmount / divisor;
+  if (p.result === "win" && p.returnAmount != null) return ownerNet(p, "dan");
+  if (p.result === "loss") return ownerNet(p, "dan");
   if (p.result === "push") return 0;
   return null;
 }
