@@ -15,6 +15,7 @@ export type RithhmmPropType =
   | "receptions-over"
   | "receptions-under"
   | "rush-attempts-under"
+  | "rushing-yards-under"
   | "game-total-under"
   | "moneyline";
 
@@ -3617,5 +3618,42 @@ export const rithhmmPicks: RithhmmPick[] = [
     betAmount: 60,
     bettors: "dan-and-gardenOf",
     returnAmount: 123.6,
+  },
+  // 2026-09-24
+  {
+    id: 246,
+    date: "2026-09-24",
+    sport: "NFL",
+    pick: "Kaleb Johnson Under 38.5 Rushing Yards",
+    odds: "-111",
+    confidence: 63.4,
+    modelProjection: "Rithmm predicts Under",
+    dtm: 10.8,
+    recentForm: "10/10",
+    matchup: "Packers vs Falcons",
+    propType: "rushing-yards-under",
+    result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
+    returnAmount: 114.05,
+  },
+  {
+    id: 247,
+    date: "2026-09-24",
+    sport: "NFL",
+    pick: "Bijan Robinson Under 4.5 Receptions",
+    odds: "-106",
+    confidence: 60.8,
+    modelProjection: "Rithmm predicts Under",
+    dtm: 9.3,
+    recentForm: "5/10",
+    matchup: "Falcons at Packers",
+    propType: "receptions-under",
+    result: "win",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
+    returnAmount: 116.6,
   },
 ];
