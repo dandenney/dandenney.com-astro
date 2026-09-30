@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { renderNoResPrompt } from './prompt-renderers.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,59 +43,6 @@ function sourceLines(sources = []) {
   return sources
     .map((source) => `- ${source.kind || 'source'}: ${source.url || ''}${source.note ? ` — ${source.note}` : ''}`)
     .join('\n');
-}
-
-function renderNoResPrompt(packet, stylePack) {
-  const sourceInput = packet.sourceInput || {};
-  const frontmatter = packet.frontmatter || {};
-  const location = packet.location || {};
-  const bodyBrief = packet.bodyBrief || {};
-  const confidence = packet.confidence || 'unknown';
-  const flags = packet.flags || [];
-
-  return `# Reconstructed Quillan Prompt
-
-This prompt artifact was backfilled after the original run so the run directory preserves the text-generation input. It is reconstructed from \`packet.json\`, the No Reservaitions style pack, and the published workflow contract.
-
-## Task
-Write the **Markdown body only** for a No Reservaitions review.
-
-## Style pack
-${stylePack.trim()}
-
-## Packet grounding
-- Run type: \`${packet.type}\`
-- Title: \`${frontmatter.title || ''}\`
-- Location label: \`${location.title || frontmatter.title || ''}\`
-- Address: \`${frontmatter.address || ''}\`
-- City/state/country: \`${frontmatter.city || ''}\`, \`${frontmatter.state || ''}\`, \`${frontmatter.country || ''}\`
-- Coordinates: \`${frontmatter.coordinates || ''}\`
-- Info URL: \`${frontmatter.infoUrl || ''}\`
-- Description: \`${frontmatter.description || ''}\`
-- Source items: ${stringifyList(sourceInput.items)}
-- Source notes: ${sourceInput.notes || ''}
-- Golf mode: ${Array.isArray(frontmatter.tags) && frontmatter.tags.length === 1 && frontmatter.tags[0] === 'golf' ? 'yes — center the course/outing experience; food and drinks are optional secondary details' : 'no'}
-- Confidence: \`${confidence}\`
-- Flags: ${stringifyList(flags)}
-
-## Writing brief
-- Angle: ${bodyBrief.angle || ''}
-- Must include: ${stringifyList(bodyBrief.mustInclude)}
-- Must avoid: ${stringifyList(bodyBrief.mustAvoid)}
-
-## Sources to respect
-${sourceLines(packet.sources)}
-
-## Output instructions
-- Write 220-420 words.
-- Markdown body only. No frontmatter.
-- For standard restaurant/venue reviews, mention at least 2 specific items from \`sourceInput.items\`.
-- For golf-tagged reviews, mention at least 2 concrete specifics from the course/facility, the outing, or the source notes; food/drink details are optional supporting context.
-- Tie opinions to concrete details.
-- Include one clear trade-off or caveat.
-- Do not invent facts about ownership, history, or atmosphere beyond the packet.
-- End with one practical takeaway sentence.
-`;
 }
 
 function renderMusicPrompt(packet, stylePack) {

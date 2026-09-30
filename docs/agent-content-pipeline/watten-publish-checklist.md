@@ -1,57 +1,68 @@
 # Watten Publish Checklist (Pre-PR Gate)
 
 ## 1) Packet validation
-- [ ] Packet JSON matches correct schema file
-- [ ] `confidence` + `sources` present
-- [ ] If location was ambiguous, run notes show top candidate + explicit confirmation request before blocking
-- [ ] `flags` surfaced in PR notes
+
+- [ ] Packet JSON matches the correct schema
+- [ ] `confidence` and canonical `sources[]` are present
+- [ ] `narrativeContext` is present with at least two grounded anchors
+- [ ] Every researched narrative anchor has `claim` and `sourceUrl`
+- [ ] `followUpNeeded` is `false`; otherwise drafting stopped for Dan's answer
+- [ ] `prompt.md` contains `## Narrative anchors` and `## Dan-approved calibration`
+- [ ] Flags and missing context are surfaced in run notes
 
 ## 2) Frontmatter validation
 
 ### No Reservaitions (`src/content/reviews/*.md`)
+
 - [ ] Required fields present: `title`, `address`, `city`, `state`, `country`, `coordinates`, `description`, `pubDate`, `tags`, `aiGenerated`
-- [ ] `coordinates` format is `lng, lat` (example: `-86.7816, 36.1627`)
-- [ ] `coordinates` parse to valid numeric ranges (lng -180..180, lat -90..90)
-- [ ] `city`/`state` normalized (lowercase/hyphen where expected)
-- [ ] `pubDate` format `YYYY-MM-DD`
-- [ ] `tags` non-empty array
-- [ ] `tags` use only broad routing-safe categories (usually 1-4)
-- [ ] `tags` do **not** include the title, venue name, artist name, slug, city, state, or neighborhood
-- [ ] If the entry is golf-oriented, `tags` are exactly `["golf"]`
-- [ ] If image provided: generated assets exist
-  - `public/no-reserv-ai-tions/<slug>.webp` (2500x1875)
-  - `public/no-reserv-ai-tions/<slug>-thumb.webp` (320x240)
-- [ ] If image provided: `heroImage` in frontmatter is set to `<slug>` (basename only)
+- [ ] Coordinates are valid `lng, lat`
+- [ ] City/state use project normalization
+- [ ] Country uses a canonical name such as `United States`
+- [ ] `pubDate` uses `YYYY-MM-DD`
+- [ ] Tags are 1-4 broad routing-safe categories
+- [ ] Tags do not repeat title, venue, slug, city, state, or neighborhood
+- [ ] Golf entries use exactly `["golf"]`
+- [ ] If an image was supplied, full and thumbnail WebP assets exist at the expected dimensions
+- [ ] If an image was supplied, `heroImage` is the slug basename only
 
 ### Music (`src/content/songs/*.md`)
-- [ ] Required fields present: `title`, `artist`, `artists`, `album`, `releaseDate`, `spotifyUrl`, `spotifyId`, `albumArt`, `duration`, `genres`, `pubDate`, `tags`, `aiGenerated`
+
+- [ ] Required music frontmatter is present
 - [ ] Packet includes `lyrics.status|text|source`
-- [ ] If `lyrics.status = missing`, `flags` includes `lyrics-missing` and PR notes list lookup attempts
-- [ ] Spotify URL and ID consistent
-- [ ] `duration` is integer milliseconds
-- [ ] `artists` and `genres` arrays non-empty when data exists
+- [ ] Missing lyrics are flagged with lookup attempts
+- [ ] Spotify URL and ID are consistent
+- [ ] Duration is integer milliseconds
+- [ ] Artists and genres are populated when data exists
 
 ## 3) File/path/slug rules
+
 - [ ] Filename slug matches project conventions
 - [ ] Target collection path is correct
-- [ ] Duplicate slug/file check run before write
+- [ ] Duplicate slug/file check ran before write
 
-## 4) Content quality gates
+## 4) No Reservaitions editorial gate
+
 - [ ] `yarn agent:content:test` passes
-- [ ] Publisher content gate passes against the exact final body
-- [ ] Body contains no source-artifact or publishing-process narration; evidence belongs only in alt text and run notes
-- [ ] Body expresses a specific point of view and does more than paraphrase menu ingredients or supplied details
-- [ ] Body contains no unsupported factual claims outside packet/notes
-- [ ] Ending makes an earned judgment rather than giving generic consumer advice
+- [ ] Publisher gate passes against the exact final body
+- [ ] The opening places the reader in a real scene, occasion, or sourced piece of history
+- [ ] The body connects food or drink to people, place, appetite, or occasion
+- [ ] The swap-name test fails: another venue name cannot be substituted without breaking the review
+- [ ] Venue history illuminates this visit instead of reading like an encyclopedia insert
+- [ ] No unsupported sensory, atmospheric, service, dialogue, reaction, ownership, or history claims appear
+- [ ] No source-artifact or publishing-process narration appears
+- [ ] Abstract order-analysis does not substitute for lived experience
+- [ ] The ending is specific to this visit and avoids generic consumer advice
 
 ## 5) Project checks
-- [ ] Run `yarn` install if needed
-- [ ] Run collection/schema check (Astro build or relevant script)
-- [ ] Optional: run `yarn build` before publish for full confidence
 
-## 6) Delivery / publish requirements
-- [ ] Include source packet summary
-- [ ] Include assumptions + confidence level
-- [ ] Include fallback notes for missing fields
-- [ ] State whether the run stopped local-only or was committed/pushed
-- [ ] If pushed, include commit hash and live URL verification result
+- [ ] Install dependencies if the declared packages are missing locally
+- [ ] Run `fnm exec --using=$(cat .nvmrc) npx astro check`
+- [ ] Run `fnm exec --using=$(cat .nvmrc) yarn build`
+
+## 6) Delivery
+
+- [ ] Include packet summary, assumptions, confidence, and fallback notes
+- [ ] State local-only versus committed/pushed
+- [ ] If pushed, include commit hash
+- [ ] Verify the remote ref matches local HEAD
+- [ ] For published content, verify the live URL contains the expected title and distinctive body text

@@ -15,6 +15,32 @@ function ok(msg) {
   console.log(`✅ ${msg}`);
 }
 
+function isHttpUrl(value) {
+  try {
+    const url = new URL(String(value));
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+function isUri(value) {
+  try {
+    return Boolean(new URL(String(value)).protocol);
+  } catch {
+    return false;
+  }
+}
+
+function markdownSectionContent(text, heading) {
+  const marker = `## ${heading}`;
+  const start = text.indexOf(marker);
+  if (start === -1) return '';
+  const afterHeading = text.slice(start + marker.length).replace(/^\s*\n/, '');
+  const nextHeading = afterHeading.search(/^##\s+/m);
+  return (nextHeading === -1 ? afterHeading : afterHeading.slice(0, nextHeading)).trim();
+}
+
 function requireSiblingArtifact(basePath, filename, label) {
   const sibling = path.join(path.dirname(basePath), filename);
   if (!fs.existsSync(sibling)) {
@@ -50,12 +76,91 @@ if (!['music-review', 'no-reservaitions'].includes(packet.type)) {
 if (!Array.isArray(packet.sources) || packet.sources.length === 0) {
   fail('packet.sources must be a non-empty array');
 }
+for (const source of packet.sources) {
+  if (!source || typeof source !== 'object' || !String(source.kind || '').trim() || !isUri(source.url)) {
+    fail('each packet source must include a valid URL and kind');
+  }
+}
+
+if (
+  !packet.bodyBrief
+  || typeof packet.bodyBrief !== 'object'
+  || Array.isArray(packet.bodyBrief)
+  || !String(packet.bodyBrief.angle || '').trim()
+  || !Array.isArray(packet.bodyBrief.mustInclude)
+  || !Array.isArray(packet.bodyBrief.mustAvoid)
+) {
+  fail('packet.bodyBrief must contain angle, mustInclude, and mustAvoid');
+}
 
 if (!['high', 'medium', 'low'].includes(packet.confidence)) {
   fail('packet.confidence must be high|medium|low');
 }
 
 if (packet.type === 'no-reservaitions') {
+  required(packet, ['narrativeContext'], 'packet');
+  required(packet.narrativeContext, ['firsthand', 'researched', 'missing', 'followUpNeeded'], 'narrativeContext');
+  if (typeof packet.narrativeContext.followUpNeeded !== 'boolean') {
+    fail('narrativeContext.followUpNeeded must be a boolean');
+  }
+  if (packet.narrativeContext.followUpNeeded === true) {
+    fail('narrative follow-up is required before drafting');
+  }
+
+  if (!Array.isArray(packet.narrativeContext.researched)) {
+    fail('narrativeContext.researched must be an array');
+  }
+  if (!Array.isArray(packet.narrativeContext.missing)) {
+    fail('narrativeContext.missing must be an array');
+  }
+
+  const firsthand = packet.narrativeContext.firsthand;
+  const firsthandKeys = ['whyThere', 'companionsOrOccasion', 'roomOrSetting', 'strongestSensoryMemory'];
+  const actualFirsthandKeys = firsthand && typeof firsthand === 'object' && !Array.isArray(firsthand)
+    ? Object.keys(firsthand).sort()
+    : [];
+  if (
+    actualFirsthandKeys.length !== firsthandKeys.length
+    || firsthandKeys.some((key) => !Object.hasOwn(firsthand || {}, key))
+    || actualFirsthandKeys.some((key) => !firsthandKeys.includes(key))
+    || firsthandKeys.some((key) => firsthand[key] !== null && typeof firsthand[key] !== 'string')
+  ) {
+    fail(`narrativeContext.firsthand must contain exactly ${firsthandKeys.join(', ')} with string or null values`);
+  }
+
+  for (const anchor of packet.narrativeContext.researched) {
+    if (!String(anchor?.claim || '').trim() || !String(anchor?.sourceUrl || '').trim()) {
+      fail('each researched narrative anchor must include claim and sourceUrl');
+    }
+    if (!isHttpUrl(anchor.sourceUrl)) {
+      fail('each researched narrative anchor sourceUrl must be a valid http(s) URL');
+    }
+  }
+
+  const firsthandAnchors = Object.values(packet.narrativeContext.firsthand || {})
+    .filter((value) => String(value || '').trim().length > 0);
+  const researchedAnchors = packet.narrativeContext.researched
+    .filter((item) => String(item?.claim || '').trim().length > 0);
+  if (firsthandAnchors.length + researchedAnchors.length < 2) {
+    fail('narrativeContext must include at least two grounded narrative anchors across firsthand details and researched claims');
+  }
+
+  const prompt = fs.readFileSync(promptPath, 'utf8');
+  if (!/^## Narrative anchors\s*$/m.test(prompt)) {
+    fail('prompt.md must include a Narrative anchors section');
+  }
+  if (!markdownSectionContent(prompt, 'Narrative anchors')) {
+    fail('prompt.md Narrative anchors section must contain content');
+  }
+  if (!/^## Dan-approved calibration\s*$/m.test(prompt)) {
+    fail('prompt.md must include a Dan-approved calibration section');
+  }
+  if (!markdownSectionContent(prompt, 'Dan-approved calibration')) {
+    fail('prompt.md Dan-approved calibration section must contain content');
+  }
+
+  required(packet, ['location'], 'packet');
+  required(packet.location, ['title', 'address', 'city', 'state', 'country', 'coordinates'], 'location');
   required(packet.sourceInput, ['location', 'city'], 'sourceInput');
   required(packet.frontmatter, ['title', 'address', 'city', 'state', 'country', 'coordinates', 'description', 'pubDate', 'tags', 'aiGenerated'], 'frontmatter');
 

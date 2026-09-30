@@ -4,40 +4,65 @@
     "location": "Example Bistro",
     "city": "nashville",
     "items": ["short rib", "negroni"],
-    "notes": "Busy Saturday, sat at bar"
+    "notes": "Busy Saturday birthday dinner; sat at the bar."
   },
   "location": {
     "title": "Example Bistro",
     "address": "123 Main St",
     "city": "nashville",
     "state": "tennessee",
-    "country": "usa",
+    "country": "United States",
     "coordinates": "-86.7816, 36.1627",
     "infoUrl": "https://example.com"
+  },
+  "narrativeContext": {
+    "firsthand": {
+      "whyThere": "Dinner after a show nearby.",
+      "companionsOrOccasion": "Birthday dinner with Misty.",
+      "roomOrSetting": "Sat at the bar during a busy Saturday service.",
+      "strongestSensoryMemory": "The short rib was tender enough to pull apart with a fork."
+    },
+    "researched": [
+      {
+        "claim": "The restaurant occupies a restored neighborhood pharmacy building.",
+        "sourceUrl": "https://example.com/about"
+      }
+    ],
+    "missing": [],
+    "followUpNeeded": false
   },
   "frontmatter": {
     "title": "Example Bistro",
     "address": "123 Main St",
     "city": "nashville",
     "state": "tennessee",
-    "country": "usa",
+    "country": "United States",
     "coordinates": "-86.7816, 36.1627",
-    "description": "A cozy neighborhood spot with strong cocktails and confident cooking.",
-    "heroImageAlt": "Placeholder image",
-    "heroImage": "placeholder",
+    "description": "A birthday dinner at a neighborhood bistro for short rib and a Negroni.",
+    "heroImageAlt": "Short rib plated beside vegetables at the bar",
+    "heroImage": "example-bistro",
     "infoUrl": "https://example.com",
     "pubDate": "2026-02-21",
     "tags": ["american", "cocktails"],
     "aiGenerated": true
   },
   "bodyBrief": {
-    "angle": "Neighborhood place worth revisiting for one standout dish.",
-    "mustInclude": ["short rib texture", "drink balance", "service pacing"],
-    "mustAvoid": ["celebrity chef name drops"]
+    "angle": "A birthday dinner in a former neighborhood pharmacy where the room's history and the short rib made the stop feel rooted rather than fashionable.",
+    "mustInclude": ["birthday context", "former pharmacy history", "short rib sensory memory", "Negroni"],
+    "mustAvoid": ["unsupported service claims", "generic recommendation ending", "abstract order-as-theory conceit"]
   },
   "sources": [
-    { "url": "https://example.com", "kind": "official-site", "note": "hours/menu" }
+    {
+      "url": "https://example.com",
+      "kind": "official-site",
+      "note": "Address, current menu, and venue identity."
+    },
+    {
+      "url": "https://example.com/about",
+      "kind": "official-history",
+      "note": "Building history."
+    }
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "flags": []
 }

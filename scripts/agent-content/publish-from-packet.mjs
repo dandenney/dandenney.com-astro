@@ -70,6 +70,14 @@ if (!fs.existsSync(packetPath)) fail(`Packet not found: ${packetPath}`);
 if (!fs.existsSync(bodyPath)) fail(`Body not found: ${bodyPath}`);
 const promptPath = requireSiblingArtifact(packetPath, 'prompt.md', 'run');
 
+const validator = path.join(__dirname, 'validate-packet.mjs');
+try {
+  execFileSync(process.execPath, [validator, packetPath], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+} catch (error) {
+  const detail = String(error?.stderr || error?.stdout || error?.message || '').trim();
+  fail(`Packet validation failed before publish${detail ? `:\n${detail}` : ''}`);
+}
+
 const packet = JSON.parse(fs.readFileSync(packetPath, 'utf8'));
 const body = fs.readFileSync(bodyPath, 'utf8').trim();
 

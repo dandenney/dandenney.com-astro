@@ -1,11 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "No Reservaitions Content Packet",
+  "title": "Draft-Ready No Reservaitions Content Packet",
+  "description": "Contract for packets that have completed intake and research and are ready to draft. Paused research state with followUpNeeded=true is intentionally not draft-ready.",
   "type": "object",
   "required": [
     "type",
     "sourceInput",
     "location",
+    "narrativeContext",
     "frontmatter",
     "bodyBrief",
     "sources",
@@ -40,6 +42,140 @@
         "infoUrl": { "type": ["string", "null"], "format": "uri" }
       }
     },
+    "narrativeContext": {
+      "type": "object",
+      "required": ["firsthand", "researched", "missing", "followUpNeeded"],
+      "properties": {
+        "firsthand": {
+          "type": "object",
+          "required": ["whyThere", "companionsOrOccasion", "roomOrSetting", "strongestSensoryMemory"],
+          "properties": {
+            "whyThere": { "type": ["string", "null"] },
+            "companionsOrOccasion": { "type": ["string", "null"] },
+            "roomOrSetting": { "type": ["string", "null"] },
+            "strongestSensoryMemory": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "researched": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["claim", "sourceUrl"],
+            "properties": {
+              "claim": { "type": "string", "minLength": 1 },
+              "sourceUrl": { "type": "string", "format": "uri" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "missing": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "followUpNeeded": { "const": false }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "researched": { "minItems": 2 }
+          }
+        },
+        {
+          "properties": {
+            "researched": { "minItems": 1 },
+            "firsthand": {
+              "properties": { "whyThere": { "type": "string", "minLength": 1 } }
+            }
+          }
+        },
+        {
+          "properties": {
+            "researched": { "minItems": 1 },
+            "firsthand": {
+              "properties": { "companionsOrOccasion": { "type": "string", "minLength": 1 } }
+            }
+          }
+        },
+        {
+          "properties": {
+            "researched": { "minItems": 1 },
+            "firsthand": {
+              "properties": { "roomOrSetting": { "type": "string", "minLength": 1 } }
+            }
+          }
+        },
+        {
+          "properties": {
+            "researched": { "minItems": 1 },
+            "firsthand": {
+              "properties": { "strongestSensoryMemory": { "type": "string", "minLength": 1 } }
+            }
+          }
+        },
+        {
+          "properties": {
+            "firsthand": {
+              "properties": {
+                "whyThere": { "type": "string", "minLength": 1 },
+                "companionsOrOccasion": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "firsthand": {
+              "properties": {
+                "whyThere": { "type": "string", "minLength": 1 },
+                "roomOrSetting": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "firsthand": {
+              "properties": {
+                "whyThere": { "type": "string", "minLength": 1 },
+                "strongestSensoryMemory": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "firsthand": {
+              "properties": {
+                "companionsOrOccasion": { "type": "string", "minLength": 1 },
+                "roomOrSetting": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "firsthand": {
+              "properties": {
+                "companionsOrOccasion": { "type": "string", "minLength": 1 },
+                "strongestSensoryMemory": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "firsthand": {
+              "properties": {
+                "roomOrSetting": { "type": "string", "minLength": 1 },
+                "strongestSensoryMemory": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
     "frontmatter": {
       "type": "object",
       "required": ["title", "address", "city", "state", "country", "coordinates", "description", "tags", "pubDate", "aiGenerated"],
@@ -58,7 +194,8 @@
         "tags": {
           "type": "array",
           "items": { "type": "string" },
-          "minItems": 1
+          "minItems": 1,
+          "maxItems": 4
         },
         "aiGenerated": { "type": "boolean" }
       }
@@ -82,7 +219,8 @@
           "kind": { "type": "string" },
           "note": { "type": "string" }
         }
-      }
+      },
+      "minItems": 1
     },
     "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
     "flags": {

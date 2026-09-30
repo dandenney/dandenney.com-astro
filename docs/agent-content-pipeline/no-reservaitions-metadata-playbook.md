@@ -58,17 +58,22 @@ Those older files are useful history, but they are **not** the standard to copy 
    - Do not infer coordinates from neighborhood-only language.
 
 6. **Separate public facts from Dan’s firsthand details**
-   - Publicly verified: venue identity, address, city/state, official URL, map coordinates.
-   - Dan-only unless corroborated: dish list, drink list, opener, atmosphere, how the night felt.
+   - Publicly verified: venue identity, address, city/state, official URL, map coordinates, and sourced venue/building history.
+   - Dan-only unless corroborated: dish list, drink list, opener, atmosphere, sensory memory, companions, occasion, and how the night felt.
    - For golf entries, Dan-only details often include course conditions, pace of play, who was there, and how the round felt; those are valid review texture even when they are not publicly corroborated.
-   - Use public sources to anchor the place; use Dan’s input to anchor the review voice.
+   - Use public sources to anchor the place; use Dan’s input to anchor the lived experience.
+   - Research narrative material—not just metadata—including building history, owners, neighborhood or regional role, and why the stop makes local sense.
+   - Record at least two grounded anchors in `narrativeContext`; every researched anchor needs `claim` and `sourceUrl`.
+   - If the intake and research still cannot support an embodied review, set `followUpNeeded: true`, ask Dan one compact question, and stop before drafting.
 
 7. **Normalize into a packet, not ad-hoc notes**
    - `packet.json`
    - `prompt.md`
    - `body.md`
    - optional `notes.md`
-   - `prompt.md` should explicitly carry the established No Reservaitions review voice: Bourdain-adjacent in sensibility, but still grounded in the repo's existing tone and concrete evidence.
+   - `prompt.md` must contain `## Narrative anchors` and `## Dan-approved calibration`.
+   - Carry an observant, worldly, appetite-first, lightly wry sensibility without imitating a named writer's exact voice.
+   - Use Dan's approved Dutch Maid Bakery & Cafe and High Point Restaurant revisions as calibration for scene, appetite, humor, sensory specificity, and emotional presence—not as text or cadence to copy.
 
 8. **Publish and verify**
    - `yarn agent:packet:validate ...`
@@ -314,10 +319,14 @@ If richer internal notes are useful while researching, keep them in `notes.md`, 
 
 ## Recommended done definition for metadata
 
-A No Reservaitions run is metadata-complete when:
+A No Reservaitions run is research-complete when:
 
 - the official entity or best fallback source trail is documented
 - `address`, `city`, `state`, `country`, and `coordinates` are filled and normalized
 - `infoUrl` is either present or explicitly missing with a note
+- mentioned dishes and drinks are resolved as far as reliable sources allow
+- `narrativeContext` contains at least two grounded anchors across firsthand memory and sourced public context
+- every researched anchor has a claim and source URL
+- `followUpNeeded` is `false`; otherwise the workflow has paused for Dan's answer
 - `tags` and `description` are specific to the real experience
 - the packet, published file, and final live URL all agree on the entity being reviewed
