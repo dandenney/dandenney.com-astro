@@ -14,10 +14,10 @@ tags: ["american","brewery","scenic"]
 aiGenerated: true
 heroImage: "top-of-the-rock-restaurant-brewery"
 ---
-By the end of a long birthday weekend of hikes, the sensible move would have been to point the car toward home. Instead, there was one more long drive, out to Top of the Rock at Jasper Highlands. The reward was waiting beyond the table: the most beautiful view we have ever had from a restaurant.
+You earn dinner at Top of the Rock. The drive winds on long enough that you start wondering whether you've made an unnecessarily ambitious decision for a meal. Then you arrive, look out over the Tennessee River and the mountains stretching into the distance, and the argument is over. It is, without exaggeration, the most beautiful view we've ever had from a restaurant.
 
-The food did not shrink from the setting. An elk burger arrived with sharp white cheddar, arugula, pickles, and a pile of fries, with a pilsner alongside it. This was not a meal built around restraint, nor should the last stop of a birthday weekend have been.
+After a long birthday weekend spent hiking around the mountains, an elk burger and a cold pilsner felt appropriately hearty. The filet mignon brought the more celebratory side of dinner, paired with an Oktoberfest that suited the season and the setting. Nothing needed to be particularly complicated. We'd spent days climbing trails, chasing waterfalls, and wearing ourselves out. Meat and beer overlooking a ridiculous expanse of Tennessee was exactly where the weekend needed to land.
 
-The filet mignon came with garlic-herb butter, mashed potatoes, asparagus, and roasted tomatoes, while an Oktoberfest took the other beer slot. Then came the cookie cake with ice cream, warm chocolate chip cookie and vanilla bean ice cream turning dessert into the proper final act rather than an afterthought.
+Cookie cake with ice cream finished things off, warm and sweet and excessive in the way a birthday dessert has every right to be. By then, though, the food was sharing top billing with what was happening outside the windows. You keep looking up between bites because it almost feels wasteful not to.
 
-A long drive can feel longer when the destination has been oversold. Top of the Rock had the opposite problem: no description could quite prepare us for that view, especially after a weekend spent on hiking trails. The burger, filet, beers, and warm cookie made a feast of the ending, but the setting made the miles worth it.
+There are easier places to get dinner. That's not the point. Sometimes you drive farther than makes sense, sit on top of a mountain with someone you love, order another beer, and watch the world stretch out beneath you. After a weekend of hikes celebrating Misty's birthday, there couldn't have been a better place to stop moving for a while.
