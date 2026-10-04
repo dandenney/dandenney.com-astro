@@ -10,6 +10,62 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "A side project is the fastest way to upskill in the age of AI",
+    url: "https://www.philmorton.co/a-side-project-is-the-fastest-way-to-upskill-in-the-age-of-ai/?ref=sidebar",
+    description: "Building a side project is the fastest way to learn new skills in the age of AI. You don’t need to be a coder because AI tools can help you create real software step-by-step. Start small, ask questions, and learn by…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "The free gradient background generator.",
+    url: "https://backgrounds.supply/gradient-lab?ref=toools",
+    description: "Gradient Lab is a free online tool for creating animated gradient backgrounds with over 20 styles. You can customize colors, animation, and export high-quality images or videos without watermarks. No signup or…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "Design beyond the surface.",
+    url: "https://layers.jamiemill.com/?ref=sidebar",
+    description: "Layers is a tool that helps you explore seven levels of product design beyond just the screen. It works with AI to find real problems and guide design decisions. You can use it to audit, diagnose, and create clear…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "Increase your conversions immediately.",
+    url: "https://ai-autocomplete.com/",
+    description: "AI Autocomplete helps you get more conversions fast. It adds real-time prompts to any text box. This way, your agent gets all info upfront and can act right away.",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "I stopped destructuring everything",
+    url: "https://allthingssmitty.com/2026/07/13/i-stopped-destructuring-everything/",
+    description: "The author used to destructure many objects automatically but found it made reading code harder later. Now, they keep objects intact to keep context clear and only destructure when it adds meaning. This helps balance…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "The Building Block Economy",
+    url: "https://x.com/mitchellh/status/2041566958681014418/?rw_tt_thread=True",
+    description: "Building software today is about creating small parts, or \"building blocks,\" that others can easily use and combine. This approach leads to faster innovation, more users, and less pressure on developers to make…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "Bitter Lesson Engineering",
+    url: "https://danielmiessler.com/blog/bitter-lesson-engineering",
+    description: "The Bitter Lesson says AI learns best when we give it goals, not detailed instructions. We should focus on what we want, not how the AI should do it. Using the smartest AI with the best tools helps it find the best way…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
+    title: "Against bigness",
+    url: "https://vaughntan.org/bigness?ref=sidebar",
+    description: "Organizations kill innovation because they treat new ideas as big bets that trigger resistance. Instead, innovation should start small and routine to avoid this \"immune system.\" Leaders must support many small…",
+    created: "2026-10-04",
+    kind: "read",
+  },
+  {
     title: "The new rules of context engineering for Claude 5 generation models",
     url: "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
     description: "New Claude models use better judgment, so old strict rules and repeated examples are no longer needed. Instead, design tools clearly, use progressive disclosure, and keep instructions simple and focused. Organize…",
