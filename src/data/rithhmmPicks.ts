@@ -3672,6 +3672,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "win",
     portfolioAction: "bet",
     bettors: "dan",
+    betAmount: 30,
+    returnAmount: 58.04,
   },
   {
     id: 249,
@@ -3688,5 +3690,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "win",
     portfolioAction: "bet",
     bettors: "dan",
+    betAmount: 30,
+    returnAmount: 57.27,
   },
 ];
