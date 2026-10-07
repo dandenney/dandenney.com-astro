@@ -14,10 +14,8 @@ tags: ["mexican"]
 aiGenerated: true
 heroImage: "hill-top-mexican-grill"
 ---
-Sunday in a small town can turn dinner into a search for an unlocked door. Hill Top Mexican Grill was the only place open in the area, which settled where the meal would happen before anyone had to debate it. That kind of necessity can lower the bar. Here, it only got us through the door.
+Sunday in a small mountain town has a way of narrowing your options for you. Doors are locked, kitchens are dark, and suddenly the question isn’t what sounds good, it’s what the hell is actually open. Hill Top Mexican Grill was the answer, apparently the lone survivor feeding hungry people in the area.
 
-Arroz con pollo took one side of the table, carnitas street tacos the other. The first was a full-plate commitment; the tacos came topped with chopped onion and cilantro, with grilled jalapeños and onions alongside. Two different approaches to the same problem, neither pretending Sunday supper required ceremony.
+Fortunately, it wasn’t merely the available option. It was genuinely very good. Arroz con pollo brought the full comfort-food treatment, warm rice, chicken, and enough richness to make the plate disappear faster than intended. Carnitas street tacos kept things simpler, letting the pork do the work. Cold Cokes alongside both, because sometimes that sharp hit of carbonation and sugar is exactly what Mexican food calls for.
 
-Coke with the arroz con pollo, Coke with the tacos. There was something right about the repetition: no pairing strategy, no attempt to turn limited options into an occasion. The drinks kept the order direct and left the plates to make their separate cases.
-
-Being the only open restaurant earned Hill Top the visit, but it did not earn the verdict. The food was very good, which matters more when there was nowhere else competing for the compliment. Altamont gave us one choice that Sunday, and Hill Top made it feel like we had chosen well.
+There’s something especially satisfying about stumbling into a meal like this. Expectations start at “please be open,” and somewhere between the first taco and the last sip of Coke, you realize you would happily come back even if you had twenty other choices.
