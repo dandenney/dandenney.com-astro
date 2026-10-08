@@ -1,8 +1,11 @@
 ---
 pubDate: "2026-10-07"
+socialImageFilename: "og-imagine-if-2026.jpg"
 summary: Two days of Imagine IF 2026 in Nashville, where AI, energy, and Bitcoin converged on freedom tech and a capabilities race.
 tags:
   - conferences
+thumb: "/posts/conferences/imagine-if-2026/imagine-if-2026-thumb.webp"
+thumbAlt: "Rod Roudi of Bitcoin Park on stage at the Fisher Center, in front of a screen reading entertain, inspire, inform"
 title: Imagine IF 2026
 ---
 
