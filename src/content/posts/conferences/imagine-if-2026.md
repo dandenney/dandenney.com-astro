@@ -101,7 +101,7 @@ The median age of an NSS worker is 47. My favorite question for anyone deploying
   <h3>Imagine IF Every Home Ran a Data Center</h3>
   <p class="speaker">Jonathan Kirkwood, Ten31</p>
 
-He talked about how hard it is to prepare an AI talk right now, so he had to plan for "what will still matter in 72 hours." The thing that stuck with me: we are all filled with tacit knowledge that we never write down.
+He talked about how hard it is to prepare an AI talk right now, so he planned for "what will still matter in 72 hours." What stuck with me: we are all filled with tacit knowledge we never write down.
 </article>
 
 <article>
