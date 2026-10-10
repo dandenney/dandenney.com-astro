@@ -73,3 +73,57 @@ test("enters conflict state on external revision or stale save and refuses overw
   other.externalRevision("rev-external");
   assert.equal(other.snapshot().status, "conflict");
 });
+
+test("never overlaps saves; edits made during a save follow from the new revision", async () => {
+  const scheduled = [];
+  const pending = [];
+  const bases = [];
+  const session = createEditorSession({
+    document,
+    storage: memoryStorage(),
+    schedule: (callback) => { scheduled.push(callback); return scheduled.length; },
+    clearSchedule: () => {},
+    save: (payload) => {
+      bases.push(payload.baseRevision);
+      return new Promise((resolve) => pending.push(resolve));
+    },
+  });
+  session.update({ metadata: { ...document.metadata, title: "One" }, regions: document.regions });
+  const first = session.saveNow();
+  session.update({ metadata: { ...document.metadata, title: "Two" }, regions: document.regions });
+  await scheduled.at(-1)();
+  assert.equal(bases.length, 1, "the debounced save waits for the in-flight save");
+  pending[0]({ revision: "rev-2" });
+  await first;
+  assert.equal(session.snapshot().status, "unsaved");
+  const followUp = scheduled.at(-1)();
+  assert.deepEqual(bases, ["rev-1", "rev-2"]);
+  pending[1]({ revision: "rev-3" });
+  await followUp;
+  assert.equal(session.snapshot().status, "saved");
+  assert.equal(session.snapshot().revision, "rev-3");
+});
+
+test("ignores revision polls that overlap a save", async () => {
+  let resolveSave;
+  const session = createEditorSession({
+    document,
+    storage: memoryStorage(),
+    schedule: () => 1,
+    clearSchedule: () => {},
+    save: () => new Promise((resolve) => { resolveSave = resolve; }),
+  });
+  session.update({ metadata: { ...document.metadata, title: "Changed" }, regions: document.regions });
+
+  const beforeSave = session.beginRevisionCheck();
+  const saving = session.saveNow();
+  const duringSave = session.beginRevisionCheck();
+  resolveSave({ revision: "rev-2" });
+  await saving;
+  beforeSave("rev-1");
+  duringSave("rev-2");
+  assert.equal(session.snapshot().status, "saved");
+
+  session.beginRevisionCheck()("rev-external");
+  assert.equal(session.snapshot().status, "conflict");
+});

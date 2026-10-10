@@ -123,7 +123,8 @@ function WritingEditor({ initial, original, titleElement }) {
     };
     window.addEventListener("keydown", keyboardSave);
     const poll = setInterval(async () => {
-      try { session.externalRevision((await request(initial, "GET")).revision); } catch { /* dev restart */ }
+      const check = session.beginRevisionCheck();
+      try { check((await request(initial, "GET")).revision); } catch { /* dev restart */ }
     }, 3000);
     return () => {
       unsubscribe();

@@ -1,4 +1,3 @@
-import YAML from "yaml";
 import { load as loadYaml } from "js-yaml";
 
 const EDITABLE_FIELDS = Object.freeze({
@@ -106,27 +105,40 @@ function scalar(value) {
   return JSON.stringify(value);
 }
 
-function encodedValue(value, newline) {
+/** Edited values are always written on one line: a quoted scalar or a flow sequence of quoted strings. */
+function encodedValue(value) {
   if (Array.isArray(value)) {
     if (!value.every((item) => typeof item === "string")) throw new TypeError("Tags must be strings");
-    return value.length ? value.map((item) => `- ${JSON.stringify(item)}`).join(`${newline}  `) : "[]";
+    return `[${value.map((item) => JSON.stringify(item)).join(", ")}]`;
   }
   return scalar(value);
 }
 
-function rawValueRange(text, key) {
+/**
+ * Range of a top-level key's value, from just after `key:` through its continuation lines
+ * (indented lines or column-zero block sequence items), excluding the final line break.
+ */
+function valueRange(text, key) {
   const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const match = new RegExp(`^${escaped}:[ \\t]*(.*?)(?:\\r?\\n|$)`, "m").exec(text);
+  const match = new RegExp(`^${escaped}:`, "m").exec(text);
   if (!match) return null;
-  const lineWithoutNewline = match[0].replace(/\r?\n$/, "");
-  const lineEnd = match.index + lineWithoutNewline.length;
-  const valueStart = match.index + match[0].indexOf(match[1]);
-  if (match[1].trim()) return [valueStart, lineEnd];
-  const after = match.index + match[0].length;
-  const sequence = /^(\s*-\s+.*(?:\r?\n|$))+/m.exec(text.slice(after));
-  if (!sequence || sequence.index !== 0) return [lineEnd, lineEnd];
-  const leading = sequence[0].match(/^\s*/)?.[0].length ?? 0;
-  return [after + leading, after + sequence[0].replace(/\r?\n$/, "").length];
+  const lineEnd = (from) => {
+    const newline = text.indexOf("\n", from);
+    return newline === -1 ? text.length : newline;
+  };
+  const start = match.index + match[0].length;
+  let end = start + text.slice(start, lineEnd(start)).replace(/\r$/, "").length;
+  let cursor = lineEnd(start) + 1;
+  while (cursor < text.length) {
+    const next = lineEnd(cursor);
+    const line = text.slice(cursor, next).replace(/\r$/, "");
+    if (line.trim()) {
+      if (!/^[ \t]|^-(?:[ \t]|$)/.test(line)) break;
+      end = cursor + line.length;
+    }
+    cursor = next + 1;
+  }
+  return [start, end];
 }
 
 function metadataPatches(document, proposed) {
@@ -136,26 +148,19 @@ function metadataPatches(document, proposed) {
       throw new Error(`Cannot change read-only metadata field ${key}`);
     }
   }
+  const { frontmatter } = document;
   const patches = [];
   for (const key of allowed) {
     if (same(document.metadata[key], proposed[key])) continue;
     if (!(key in proposed)) throw new Error(`Cannot remove editable metadata field ${key}`);
-    const pair = document.yaml?.contents?.items.find((item) => item.key?.value === key);
-    const range = pair?.value?.range ?? rawValueRange(document.frontmatter.text, key);
+    const value = encodedValue(proposed[key]);
+    const range = valueRange(frontmatter.text, key);
     if (!range) {
-      const value = encodedValue(proposed[key], document.frontmatter.newline);
-      const rendered = Array.isArray(proposed[key])
-        ? `${key}:${document.frontmatter.newline}  ${value}${document.frontmatter.newline}`
-        : `${key}: ${value}${document.frontmatter.newline}`;
-      patches.push({ start: document.frontmatter.closingStart, end: document.frontmatter.closingStart, text: rendered });
+      patches.push({ start: frontmatter.closingStart, end: frontmatter.closingStart, text: `${key}: ${value}${frontmatter.newline}` });
       continue;
     }
     const [start, end] = range;
-    patches.push({
-      start: document.frontmatter.innerStart + start,
-      end: document.frontmatter.innerStart + end,
-      text: encodedValue(proposed[key], document.frontmatter.newline),
-    });
+    patches.push({ start: frontmatter.innerStart + start, end: frontmatter.innerStart + end, text: ` ${value}` });
   }
   return patches;
 }
@@ -165,23 +170,25 @@ export function parseSourceDocument(source, collection) {
   if (!editableFields) throw new Error(`Unsupported collection ${collection}`);
   if (typeof source !== "string") throw new TypeError("Document source must be a string");
   const frontmatter = frontmatterRegion(source);
-  const yaml = YAML.parseDocument(frontmatter.text, { keepSourceTokens: true, uniqueKeys: true });
-  let metadata;
-  try {
-    metadata = loadYaml(frontmatter.text);
-  } catch (error) {
-    throw new Error(`Invalid YAML frontmatter: ${error.message}`);
-  }
-  if (!metadata || typeof metadata !== "object" || Array.isArray(metadata)) throw new Error("Frontmatter must be a YAML mapping");
   return {
     source,
     collection,
     editableFields: [...editableFields],
-    metadata,
+    metadata: parseMetadata(frontmatter.text),
     regions: bodyRegions(source.slice(frontmatter.bodyStart)),
     frontmatter,
-    yaml: yaml.errors.length || !YAML.isMap(yaml.contents) ? null : yaml,
   };
+}
+
+function parseMetadata(text) {
+  let metadata;
+  try {
+    metadata = loadYaml(text);
+  } catch (error) {
+    throw new Error(`Invalid YAML frontmatter: ${error.message}`);
+  }
+  if (!metadata || typeof metadata !== "object" || Array.isArray(metadata)) throw new Error("Frontmatter must be a YAML mapping");
+  return metadata;
 }
 
 export function applyDocumentEdits(document, { metadata, regions }) {
@@ -202,6 +209,10 @@ export function applyDocumentEdits(document, { metadata, regions }) {
   let result = document.source;
   for (const patch of patches.sort((a, b) => b.start - a.start)) {
     result = result.slice(0, patch.start) + patch.text + result.slice(patch.end);
+  }
+  const written = parseMetadata(frontmatterRegion(result).text);
+  for (const key of new Set([...Object.keys(document.metadata), ...Object.keys(metadata)])) {
+    if (!same(written[key], metadata[key])) throw new Error(`Metadata field ${key} did not round-trip`);
   }
   return result;
 }

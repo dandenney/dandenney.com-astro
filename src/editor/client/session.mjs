@@ -20,6 +20,8 @@ export function createEditorSession({
   const listeners = new Set();
   let timer;
   let generation = 0;
+  let inFlight = false;
+  let saveStarts = 0;
   let state = {
     status: "saved",
     revision: document.revision,
@@ -50,9 +52,13 @@ export function createEditorSession({
   }
 
   async function saveNow() {
-    if (state.status === "conflict" || state.status === "saving" || state.status === "saved") return;
+    if (state.status === "conflict" || state.status === "saved") return;
     if (timer) clearSchedule(timer);
     timer = undefined;
+    // One save at a time: edits made meanwhile are picked up when this save settles.
+    if (inFlight) return;
+    inFlight = true;
+    saveStarts += 1;
     const savingGeneration = generation;
     state = { ...state, status: "saving", error: null };
     emit();
@@ -75,6 +81,8 @@ export function createEditorSession({
     } catch (error) {
       state = { ...state, status: error?.status === 409 ? "conflict" : "error", error };
       storeRecovery();
+    } finally {
+      inFlight = false;
     }
     emit();
   }
@@ -93,6 +101,18 @@ export function createEditorSession({
       emit();
     },
     saveNow,
+    /**
+     * Start a disk revision poll. The returned callback reports the polled revision, and is
+     * ignored when a save overlapped the poll, since the poll may have read either side of it.
+     */
+    beginRevisionCheck() {
+      const startedDuringSave = inFlight;
+      const startedAt = saveStarts;
+      return (revision) => {
+        if (startedDuringSave || inFlight || saveStarts !== startedAt) return;
+        api.externalRevision(revision);
+      };
+    },
     externalRevision(revision) {
       if (revision && revision !== state.revision) {
         if (timer) clearSchedule(timer);

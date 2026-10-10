@@ -20,15 +20,16 @@ export function localWritingEditor() {
         });
       },
       "astro:server:start"({ address }) {
-        delete process.env.LOCAL_WRITING_EDITOR_ORIGIN;
+        delete process.env.LOCAL_WRITING_EDITOR_ORIGINS;
         delete process.env.LOCAL_WRITING_EDITOR_TOKEN;
         const host = address.address === "::1" ? "[::1]" : address.address === "127.0.0.1" ? "127.0.0.1" : null;
         if (!host) return;
-        process.env.LOCAL_WRITING_EDITOR_ORIGIN = `http://${host}:${address.port}`;
+        // `astro dev` defaults to `localhost`, so accept that alias for the same loopback port.
+        process.env.LOCAL_WRITING_EDITOR_ORIGINS = [`http://${host}:${address.port}`, `http://localhost:${address.port}`].join(" ");
         process.env.LOCAL_WRITING_EDITOR_TOKEN = randomBytes(32).toString("base64url");
       },
       "astro:server:done"() {
-        delete process.env.LOCAL_WRITING_EDITOR_ORIGIN;
+        delete process.env.LOCAL_WRITING_EDITOR_ORIGINS;
         delete process.env.LOCAL_WRITING_EDITOR_TOKEN;
       },
     },

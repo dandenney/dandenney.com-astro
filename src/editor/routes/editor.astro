@@ -4,14 +4,15 @@ import BlogPost from '../../layouts/BlogPost.astro';
 import Blip from '../../layouts/Blip.astro';
 import Review from '../../layouts/Review.astro';
 import { getEditorRuntime } from '../server/runtime.mjs';
+import { isEditorOrigin, parseEditorOrigins } from '../server/request-guards.mjs';
 
 export const prerender = false;
 
 const { collection, id } = Astro.params;
 const documentId = `${collection}:${id}`;
 const token = process.env.LOCAL_WRITING_EDITOR_TOKEN;
-const origin = process.env.LOCAL_WRITING_EDITOR_ORIGIN;
-if (!token || !origin || Astro.url.origin !== origin) {
+const origins = parseEditorOrigins(process.env.LOCAL_WRITING_EDITOR_ORIGINS);
+if (!token || !isEditorOrigin(Astro.url, origins)) {
   return new Response('The local writing editor is available only from its loopback development origin.', { status: 404 });
 }
 const runtime = await getEditorRuntime();

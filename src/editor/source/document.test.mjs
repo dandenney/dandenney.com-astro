@@ -40,7 +40,7 @@ test("patches only collection-allowed metadata and preserves read-only frontmatt
   });
   assert.match(edited, /title: "Changed"/);
   assert.match(edited, /summary: "New summary"/);
-  assert.match(edited, /tags:\r\n  - "alpha"\r\n  - "beta"/);
+  assert.match(edited, /tags: \["alpha", "beta"\]\r\ncustom:/);
   assert.match(edited, /pubDate: 2024-01-02\r\n/);
   assert.match(edited, /custom: \{ keep: "exactly" \} # untouched/);
   assert.throws(
@@ -96,7 +96,7 @@ test("adds an optional editable field without rewriting existing frontmatter", (
     metadata: { ...document.metadata, tags: ["notes", "food: places"] },
     regions: document.regions,
   });
-  assert.equal(edited, "---\ntitle: Hi\npubDate: 2024-01-01\ntags:\n  - \"notes\"\n  - \"food: places\"\n---\nBody\n");
+  assert.equal(edited, "---\ntitle: Hi\npubDate: 2024-01-01\ntags: [\"notes\", \"food: places\"]\n---\nBody\n");
 });
 
 test("uses each collection's metadata allowlist", () => {
@@ -105,4 +105,21 @@ test("uses each collection's metadata allowlist", () => {
   const review = parseSourceDocument("---\ntitle: Place\ndescription: Desc\ntags: [food]\ncity: Here\n---\nBody\n", "reviews");
   assert.deepEqual(review.editableFields, ["title", "tags", "description"]);
   assert.throws(() => parseSourceDocument(source, "songs"), /Unsupported collection/);
+});
+
+test("rewrites flow, block, and column-zero tag lists without breaking the next key", () => {
+  const cases = [
+    "tags: [american]\n",
+    "tags:\n  - one\n  - two\n",
+    "tags:\n- one\n\n- two\n",
+  ];
+  for (const tags of cases) {
+    const source = `---\ntitle: Place\ndescription: Desc\n${tags}city: Here\n---\nBody\n`;
+    const document = parseSourceDocument(source, "reviews");
+    const edited = applyDocumentEdits(document, {
+      metadata: { ...document.metadata, tags: ["one", "new: tag"] },
+      regions: document.regions,
+    });
+    assert.equal(edited, `---\ntitle: Place\ndescription: Desc\ntags: ["one", "new: tag"]\ncity: Here\n---\nBody\n`);
+  }
 });

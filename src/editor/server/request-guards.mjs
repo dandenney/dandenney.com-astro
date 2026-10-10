@@ -8,18 +8,33 @@ function isLoopback(hostname) {
   return hostname === "127.0.0.1" || hostname === "[::1]" || hostname === "localhost";
 }
 
-export async function assertEditorRequest(request, { origin, token, methods = [] }) {
-  let expected;
+export function parseEditorOrigins(value) {
+  return String(value ?? "").split(/\s+/).filter(Boolean);
+}
+
+/** True when the URL's origin is one of the configured loopback editor origins. */
+export function isEditorOrigin(url, origins) {
   let actual;
   try {
-    expected = new URL(origin);
-    actual = new URL(request.url);
+    actual = new URL(url).origin;
   } catch {
-    reject(403, "invalid_editor_origin", "The local editor origin is invalid");
+    return false;
   }
-  if (!isLoopback(expected.hostname) || actual.origin !== expected.origin) {
+  return origins.some((origin) => {
+    try {
+      const expected = new URL(origin);
+      return isLoopback(expected.hostname) && expected.origin === actual;
+    } catch {
+      return false;
+    }
+  });
+}
+
+export async function assertEditorRequest(request, { origins, token, methods = [] }) {
+  if (!isEditorOrigin(request.url, origins ?? [])) {
     reject(403, "forbidden_origin", "This request is outside the local editor origin");
   }
+  const expected = new URL(request.url);
   if (!token || request.headers.get("X-Local-Editor-Token") !== token) {
     reject(403, "invalid_editor_token", "The local editor session has expired");
   }
