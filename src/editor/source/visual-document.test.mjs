@@ -52,3 +52,51 @@ test("visual markdown cannot remove, duplicate, or reorder protected source", ()
     .replace(/regionId="swap"/, 'regionId="body-4"');
   assert.throws(() => regionsFromVisualMarkdown(document, reversed), /protected regions/i);
 });
+
+test("edits after adjacent protected regions stay in place", () => {
+  const source = `---
+title: Adjacent
+summary: S
+tags: []
+---
+Intro.
+
+<article>
+  <h3>One</h3>
+
+First talk.
+</article>
+
+<article>
+  <h3>Two</h3>
+
+Second talk.
+</article>
+`;
+  const document = parseSourceDocument(source, "posts");
+  const markdown = visualMarkdownFor(document).replace("Second talk.", "Second talk, edited.");
+  const edited = applyDocumentEdits(document, { metadata: document.metadata, regions: regionsFromVisualMarkdown(document, markdown) });
+  assert.equal(edited, source.replace("Second talk.", "Second talk, edited."));
+});
+
+test("refuses to map visual text that does not line up with editable regions", () => {
+  const document = { regions: [
+    { id: "body-1", source: "<a>\n\n", protected: true },
+    { id: "body-2", source: "<b>\n", protected: true },
+  ] };
+  assert.throws(() => regionsFromVisualMarkdown(document, visualMarkdownFor(document)), /does not line up/);
+});
+
+test("untouched regions keep their source and edits keep surrounding whitespace", () => {
+  const source = "---\ntitle: T\nsummary: S\ntags: []\n---\n<article>\n\nFirst *one*.\n</article>\n\n<article>\n\nSecond.\n</article>\n";
+  const document = parseSourceDocument(source, "posts");
+  // Simulate the editor's normalized export: blank line after every block, `_` emphasis.
+  const normalize = (markdown) => markdown.replace(/\*one\*/, "_one_").replace(/\.\n(?!\n)/g, ".\n\n");
+  const baseline = normalize(visualMarkdownFor(document));
+  const markdown = baseline.replace("Second.", "Second, edited.");
+  const edited = applyDocumentEdits(document, {
+    metadata: document.metadata,
+    regions: regionsFromVisualMarkdown(document, markdown, baseline),
+  });
+  assert.equal(edited, source.replace("Second.", "Second, edited."));
+});

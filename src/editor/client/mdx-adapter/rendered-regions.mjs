@@ -1,3 +1,8 @@
+/**
+ * Pairs Astro's start/end markers around protected regions. A region whose markers do not share
+ * a parent (raw HTML that opens in one block and closes in another) is left out, and the caller
+ * previews it from source instead.
+ */
 export function createRenderedRegionRegistry(originalRoot) {
   const endings = new Map([...originalRoot.querySelectorAll("[data-editor-end]")]
     .map((element) => [element.dataset.editorEnd, element]));
@@ -5,20 +10,16 @@ export function createRenderedRegionRegistry(originalRoot) {
   for (const start of originalRoot.querySelectorAll("[data-editor-start]")) {
     const key = start.dataset.editorStart;
     const end = endings.get(key);
-    if (!key || !end || start.parentNode !== end.parentNode || regions.has(key)) {
-      throw new Error(`Rendered source markers do not pair for ${key}`);
-    }
+    if (!key || !end || start.parentNode !== end.parentNode || regions.has(key)) continue;
     const nodes = [];
     let cursor = start.nextSibling;
     while (cursor && cursor !== end) {
       nodes.push(cursor);
       cursor = cursor.nextSibling;
     }
-    if (cursor !== end) throw new Error(`Rendered source markers cross for ${key}`);
+    if (cursor !== end) continue;
     regions.set(key, { start, end, nodes, mounted: false });
-    endings.delete(key);
   }
-  if (endings.size) throw new Error("Rendered source contains unmatched end markers");
   return {
     has(key) { return regions.has(key); },
     mount(key, target) {

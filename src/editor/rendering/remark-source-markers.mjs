@@ -1,4 +1,4 @@
-import { protectedKind } from "../source/document.mjs";
+import { protectedNodeKind } from "../source/document.mjs";
 
 function marker(key, edge) {
   return { type: "html", value: `<span hidden data-editor-${edge}="${key}"></span>` };
@@ -11,11 +11,8 @@ export function remarkEditorSourceMarkers() {
     const source = String(file.value ?? file);
     const children = [];
     for (const child of tree.children ?? []) {
-      const start = child.position?.start?.offset;
-      const end = child.position?.end?.offset;
-      if (Number.isInteger(start) && Number.isInteger(end)
-        && protectedKind(source.slice(start, end))) {
-        const key = `${start}:${end}`;
+      if (protectedNodeKind(child, source)) {
+        const key = `${child.position.start.offset}:${child.position.end.offset}`;
         children.push(marker(key, "start"), child, marker(key, "end"));
       } else children.push(child);
     }

@@ -106,6 +106,7 @@ function WritingEditor({ initial, original, titleElement }) {
   }
 
   useEffect(() => {
+    adapter.setBaseline(editorRef.current?.getMarkdown());
     const unsubscribe = session.subscribe((snapshot) => setState({ ...snapshot, previewUrl: initial.previewUrl }));
     const titleChanged = () => metadataChanged("title", titleElement.innerText);
     titleElement.innerText = metadataValue("title", restored.metadata.title);
@@ -122,6 +123,14 @@ function WritingEditor({ initial, original, titleElement }) {
       }
     };
     window.addEventListener("keydown", keyboardSave);
+    // Astro reloads every page when a content file changes, including after our own autosave,
+    // which would drop the caret mid-sentence. Vite skips the reload when the payload names a
+    // different .html page, so retarget the reloads our saves cause. External edits still
+    // surface through the revision poll below.
+    const skipOwnReload = (payload) => {
+      if (session.savedRecently()) payload.path = "/__local-editor-skip-reload.html";
+    };
+    import.meta.hot?.on("vite:beforeFullReload", skipOwnReload);
     const poll = setInterval(async () => {
       const check = session.beginRevisionCheck();
       try { check((await request(initial, "GET")).revision); } catch { /* dev restart */ }
@@ -130,6 +139,7 @@ function WritingEditor({ initial, original, titleElement }) {
       unsubscribe();
       clearInterval(poll);
       window.removeEventListener("keydown", keyboardSave);
+      import.meta.hot?.off?.("vite:beforeFullReload", skipOwnReload);
       titleElement.removeEventListener("keydown", preventEnter);
       titleElement.removeEventListener("input", titleChanged);
     };

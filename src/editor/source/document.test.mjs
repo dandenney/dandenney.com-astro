@@ -75,7 +75,8 @@ test("preserves protected unsupported body regions exactly", () => {
 
 test("protects raw HTML and images even when embedded in prose", () => {
   const document = parseSourceDocument("---\ntitle: Hi\nsummary: Summary\ntags: []\n---\nBefore <span>raw</span> after.\n\nText ![alt](/x.png) after.\n", "posts");
-  assert.deepEqual(document.regions.map((region) => region.protected), [true, true]);
+  assert.deepEqual(document.regions.map((region) => region.protected), [false, true, false, true, false]);
+  assert.ok(document.regions.filter((region) => !region.protected).every((region) => region.source === ""));
 });
 
 test("preserves malformed legacy read-only frontmatter while editing supported fields", () => {

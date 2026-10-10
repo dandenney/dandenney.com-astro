@@ -127,3 +127,26 @@ test("ignores revision polls that overlap a save", async () => {
   session.beginRevisionCheck()("rev-external");
   assert.equal(session.snapshot().status, "conflict");
 });
+
+test("reports a recent save while saving and briefly after", async () => {
+  let clock = 1000;
+  let resolveSave;
+  const session = createEditorSession({
+    document,
+    storage: memoryStorage(),
+    schedule: () => 1,
+    clearSchedule: () => {},
+    now: () => clock,
+    save: () => new Promise((resolve) => { resolveSave = resolve; }),
+  });
+  assert.equal(session.savedRecently(), false);
+  session.update({ metadata: { ...document.metadata, title: "Changed" }, regions: document.regions });
+  const saving = session.saveNow();
+  assert.equal(session.savedRecently(), true);
+  resolveSave({ revision: "rev-2" });
+  await saving;
+  clock += 4000;
+  assert.equal(session.savedRecently(), true);
+  clock += 2000;
+  assert.equal(session.savedRecently(), false);
+});

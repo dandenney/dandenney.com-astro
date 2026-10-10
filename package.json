@@ -34,9 +34,12 @@
     "lexical": "^0.48.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
     "tailwindcss": "^4.1.18",
     "three": "^0.185.1",
-    "tinacms": "^1.6.3"
+    "tinacms": "^1.6.3",
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "@notionhq/client": "^5.0.0",

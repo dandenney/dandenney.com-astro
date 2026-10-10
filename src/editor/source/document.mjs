@@ -1,4 +1,7 @@
 import { load as loadYaml } from "js-yaml";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
 
 const EDITABLE_FIELDS = Object.freeze({
   posts: ["title", "tags", "summary"],
@@ -25,10 +28,6 @@ function frontmatterRegion(source) {
   };
 }
 
-function splitLines(source) {
-  return source.match(/.*?(?:\r\n|\n|$)/g).filter(Boolean);
-}
-
 export function protectedKind(block) {
   const trimmed = block.trim();
   if (/^(```|~~~)/.test(trimmed)) return "fenced-code";
@@ -40,59 +39,71 @@ export function protectedKind(block) {
   return null;
 }
 
+// Node types the visual editor can round-trip; anything else in a block makes it read-only.
+const EDITABLE_NODE_TYPES = new Set([
+  "paragraph", "heading", "list", "listItem", "blockquote",
+  "text", "emphasis", "strong", "link", "inlineCode", "break",
+]);
+
+function editableTree(node) {
+  return EDITABLE_NODE_TYPES.has(node.type) && (node.children ?? []).every(editableTree);
+}
+
+/**
+ * Whether a top-level Markdown node must stay read-only, and why. Shared by the source
+ * splitter and the dev remark plugin so both bracket exactly the same blocks.
+ */
+export function protectedNodeKind(node, source) {
+  const start = node.position?.start?.offset;
+  const end = node.position?.end?.offset;
+  if (!Number.isInteger(start) || !Number.isInteger(end)) return null;
+  if (node.type === "code") return "fenced-code";
+  if (node.type === "table") return "table";
+  if (node.type === "html") return /^<img\b/i.test(source.slice(start, end).trim()) ? "image" : "html";
+  return protectedKind(source.slice(start, end)) ?? (editableTree(node) ? null : "unsupported");
+}
+
+// Same parser and GFM extension Astro uses, so node offsets match the rendered markers.
+const markdownParser = unified().use(remarkParse).use(remarkGfm);
+
 function bodyRegions(body) {
   const renderOffset = body.match(/^(?:\r?\n)*/)?.[0].length ?? 0;
-  const lines = splitLines(body);
-  const blocks = [];
-  let current = "";
-  let currentStart = 0;
-  let offset = 0;
-  let fence = null;
-  function flush() {
-    if (!current) return;
-    blocks.push({ source: current, start: currentStart, end: currentStart + current.length });
-    current = "";
-  }
-  for (const line of lines) {
-    if (!current) currentStart = offset;
-    const plain = line.replace(/\r?\n$/, "");
-    if (fence) {
-      current += line;
-      if (new RegExp(`^\\s*${fence}`).test(plain)) fence = null;
-      offset += line.length;
-      continue;
-    }
-    const opening = plain.match(/^\s*(```|~~~)/);
-    if (opening) {
-      flush();
-      current = line;
-      fence = opening[1];
-      offset += line.length;
-      continue;
-    }
-    current += line;
-    offset += line.length;
-    if (!plain.trim()) flush();
-  }
-  flush();
+  const text = body.slice(renderOffset);
+  const nodes = markdownParser.parse(text).children;
+  if (!nodes.length) return body ? [{ id: "body-1", source: body, start: 0, end: body.length, kind: "markdown", protected: false, renderKey: null }] : [];
   const grouped = [];
-  for (const block of blocks) {
-    const kind = protectedKind(block.source);
+  nodes.forEach((node, index) => {
+    // Each region runs to the next node's start, so regions tile the body exactly.
+    const start = index === 0 ? 0 : renderOffset + node.position.start.offset;
+    const end = index === nodes.length - 1 ? body.length : renderOffset + nodes[index + 1].position.start.offset;
+    const kind = protectedNodeKind(node, text);
     const previous = grouped.at(-1);
     if (!kind && previous && !previous.protected) {
-      previous.source += block.source;
-      previous.end = block.end;
-      continue;
+      previous.source += body.slice(start, end);
+      previous.end = end;
+      return;
     }
-    grouped.push({ ...block, kind: kind ?? "markdown", protected: Boolean(kind) });
-  }
-  return grouped.map((region, index) => {
-    const leading = region.source.length - region.source.trimStart().length;
-    const trailing = region.source.length - region.source.trimEnd().length;
-    return { id: `body-${index + 1}`, ...region,
-      renderKey: region.protected
-        ? `${region.start + leading - renderOffset}:${region.end - trailing - renderOffset}` : null };
+    grouped.push({
+      source: body.slice(start, end), start, end,
+      kind: kind ?? "markdown",
+      protected: Boolean(kind),
+      renderKey: kind ? `${node.position.start.offset}:${node.position.end.offset}` : null,
+    });
   });
+  // The visual editor has a slot before, between, and after protected regions. Give every slot an
+  // editable region (empty when the source has none) so edited text always maps back to its place.
+  const regions = [];
+  for (const region of grouped) {
+    const previous = regions.at(-1);
+    if (region.protected && (!previous || previous.protected)) regions.push(emptyRegion(region.start));
+    regions.push(region);
+  }
+  if (regions.at(-1).protected) regions.push(emptyRegion(body.length));
+  return regions.map((region, index) => ({ id: `body-${index + 1}`, ...region }));
+}
+
+function emptyRegion(offset) {
+  return { source: "", start: offset, end: offset, kind: "markdown", protected: false, renderKey: null };
 }
 
 function same(a, b) {

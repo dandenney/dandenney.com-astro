@@ -28,3 +28,4 @@
 .editor-conflict-actions { display: flex; gap: .5rem; margin-top: .65rem; }
 #local-editor-staging { display: none !important; }
 @media (max-width: 640px) { .editor-dock { right: .5rem; bottom: .5rem; width: calc(100vw - 1rem); } }
+.editor-protected-source { white-space: pre-wrap; font-size: .8em; opacity: .7; }

@@ -32,49 +32,34 @@ function ProtectedRegion({ mdastNode }) {
   }, registry ? null : "Protected content");
 }
 
-export function createMdxEditorAdapter({ document, renderedRoot = null }) {
-  const sourceKeyById = new Map(document.regions
-    .filter((region) => region.protected)
-    .map((region) => [region.id, region.renderKey]));
-  let visualDocument = document;
-  let exportRegions = (markdown) => regionsFromVisualMarkdown(document, markdown);
-  let rawRegistry = null;
-  if (renderedRoot) {
-    try {
-      rawRegistry = createRenderedRegionRegistry(renderedRoot);
-      if ([...sourceKeyById.values()].some((key) => !key || !rawRegistry.has(key))) {
-        throw new Error("Rendered source is missing protected-region markers");
-      }
-    } catch {
-      const fallbackRegion = {
-        id: "document-read-only",
-        source: "",
-        protected: true,
-        kind: "unsupported",
-        renderKey: null,
-      };
-      visualDocument = { ...document, regions: [fallbackRegion] };
-      rawRegistry = {
-        mount(key, target) {
-          if (key !== fallbackRegion.id) throw new Error(`No rendered document fallback for ${key}`);
-          target.replaceChildren(...renderedRoot.childNodes);
-        },
-      };
-      exportRegions = (markdown) => {
-        regionsFromVisualMarkdown(visualDocument, markdown);
-        return document.regions.map((region) => ({ ...region }));
-      };
-      sourceKeyById.clear();
-      sourceKeyById.set(fallbackRegion.id, fallbackRegion.id);
-    }
+/** Preview for a protected region Astro's rendering could not isolate: raw HTML parsed alone, else its source. */
+function mountSourcePreview(region, target) {
+  if (region.kind === "html") {
+    const template = target.ownerDocument.createElement("template");
+    template.innerHTML = region.source;
+    target.replaceChildren(template.content);
+    return;
   }
-  const registry = rawRegistry ? {
+  const pre = target.ownerDocument.createElement("pre");
+  pre.className = "editor-protected-source";
+  pre.textContent = region.source.trim();
+  target.replaceChildren(pre);
+}
+
+export function createMdxEditorAdapter({ document, renderedRoot = null }) {
+  const regionsById = new Map(document.regions
+    .filter((region) => region.protected)
+    .map((region) => [region.id, region]));
+  const rendered = renderedRoot ? createRenderedRegionRegistry(renderedRoot) : null;
+  const registry = rendered ? {
     mount(regionId, target) {
-      const key = sourceKeyById.get(regionId);
-      if (!key) throw new Error(`Unknown protected region ${regionId}`);
-      rawRegistry.mount(key, target);
+      const region = regionsById.get(regionId);
+      if (!region) throw new Error(`Unknown protected region ${regionId}`);
+      if (region.renderKey && rendered.has(region.renderKey)) rendered.mount(region.renderKey, target);
+      else mountSourcePreview(region, target);
     },
   } : null;
+  let baselineMarkdown = null;
   const protectedDescriptor = {
     name: "EditorProtected",
     kind: "flow",
@@ -86,7 +71,7 @@ export function createMdxEditorAdapter({ document, renderedRoot = null }) {
     document,
     registry,
     protectedDescriptor,
-    markdown: visualMarkdownFor(visualDocument),
+    markdown: visualMarkdownFor(document),
     plugins: [
       headingsPlugin(),
       listsPlugin(),
@@ -96,8 +81,12 @@ export function createMdxEditorAdapter({ document, renderedRoot = null }) {
       jsxPlugin({ jsxComponentDescriptors: [protectedDescriptor] }),
       markdownShortcutPlugin(),
     ],
+    /** Record the editor's export of the unedited document, so untouched regions keep their source. */
+    setBaseline(markdown) {
+      baselineMarkdown = markdown;
+    },
     exportRegions(markdown) {
-      return exportRegions(markdown);
+      return regionsFromVisualMarkdown(document, markdown, baselineMarkdown);
     },
   };
 }

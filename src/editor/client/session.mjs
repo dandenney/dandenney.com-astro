@@ -14,6 +14,7 @@ export function createEditorSession({
   debounce = 700,
   schedule = setTimeout,
   clearSchedule = clearTimeout,
+  now = Date.now,
 }) {
   if (!document?.documentId || typeof save !== "function") throw new TypeError("Editor session needs a document and save function");
   const recoveryKey = `local-writing-editor:${document.documentId}`;
@@ -22,6 +23,7 @@ export function createEditorSession({
   let generation = 0;
   let inFlight = false;
   let saveStarts = 0;
+  let lastSaveSettledAt = -Infinity;
   let state = {
     status: "saved",
     revision: document.revision,
@@ -83,6 +85,7 @@ export function createEditorSession({
       storeRecovery();
     } finally {
       inFlight = false;
+      lastSaveSettledAt = now();
     }
     emit();
   }
@@ -112,6 +115,10 @@ export function createEditorSession({
         if (startedDuringSave || inFlight || saveStarts !== startedAt) return;
         api.externalRevision(revision);
       };
+    },
+    /** True while saving and shortly after, when a dev server reload is the echo of our own write. */
+    savedRecently(windowMs = 5000) {
+      return inFlight || now() - lastSaveSettledAt < windowMs;
     },
     externalRevision(revision) {
       if (revision && revision !== state.revision) {
