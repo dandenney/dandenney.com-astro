@@ -1,7 +1,5 @@
 import { load as loadYaml } from "js-yaml";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkGfm from "remark-gfm";
+import { topLevelNodes } from "./markdown-blocks.mjs";
 
 const EDITABLE_FIELDS = Object.freeze({
   posts: ["title", "tags", "summary"],
@@ -63,13 +61,10 @@ export function protectedNodeKind(node, source) {
   return protectedKind(source.slice(start, end)) ?? (editableTree(node) ? null : "unsupported");
 }
 
-// Same parser and GFM extension Astro uses, so node offsets match the rendered markers.
-const markdownParser = unified().use(remarkParse).use(remarkGfm);
-
 function bodyRegions(body) {
   const renderOffset = body.match(/^(?:\r?\n)*/)?.[0].length ?? 0;
   const text = body.slice(renderOffset);
-  const nodes = markdownParser.parse(text).children;
+  const nodes = topLevelNodes(text);
   if (!nodes.length) return body ? [{ id: "body-1", source: body, start: 0, end: body.length, kind: "markdown", protected: false, renderKey: null }] : [];
   const grouped = [];
   nodes.forEach((node, index) => {

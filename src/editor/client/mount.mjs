@@ -106,7 +106,9 @@ function WritingEditor({ initial, original, titleElement }) {
   }
 
   useEffect(() => {
-    adapter.setBaseline(editorRef.current?.getMarkdown());
+    // MDXEditor only reports its normalized starting Markdown when normalizing changed it; otherwise
+    // its export already matches the source it was given.
+    if (!adapter.hasBaseline()) adapter.setBaseline(editorRef.current?.getMarkdown());
     const unsubscribe = session.subscribe((snapshot) => setState({ ...snapshot, previewUrl: initial.previewUrl }));
     const titleChanged = () => metadataChanged("title", titleElement.innerText);
     titleElement.innerText = metadataValue("title", restored.metadata.title);
@@ -160,7 +162,10 @@ function WritingEditor({ initial, original, titleElement }) {
       plugins: adapter.plugins,
       contentEditableClassName: "editor-body",
       onChange(markdown, initialSet) {
-        if (initialSet) return;
+        if (initialSet) {
+          adapter.setBaseline(markdown);
+          return;
+        }
         try { update(metadataRef.current, adapter.exportRegions(markdown)); }
         catch (error) { setState((current) => ({ ...current, status: "error", error })); }
       },

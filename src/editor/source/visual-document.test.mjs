@@ -100,3 +100,16 @@ test("untouched regions keep their source and edits keep surrounding whitespace"
   });
   assert.equal(edited, source.replace("Second.", "Second, edited."));
 });
+
+test("editing one block leaves the editor's reformatting of its neighbours out of the source", () => {
+  const source = "---\ntitle: T\nsummary: S\ntags: []\n---\n* first item\n* second item\n\nA *quiet* paragraph.\n\nEdit me.\n";
+  const document = parseSourceDocument(source, "posts");
+  // Simulate the editor's normalized export: `-` bullets and `_` emphasis.
+  const baseline = visualMarkdownFor(document).replaceAll("* ", "- ").replace("*quiet*", "_quiet_");
+  const markdown = baseline.replace("Edit me.", "Edited.");
+  const edited = applyDocumentEdits(document, {
+    metadata: document.metadata,
+    regions: regionsFromVisualMarkdown(document, markdown, baseline),
+  });
+  assert.equal(edited, source.replace("Edit me.", "Edited."));
+});

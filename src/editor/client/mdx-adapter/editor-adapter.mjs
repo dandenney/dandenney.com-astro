@@ -85,6 +85,9 @@ export function createMdxEditorAdapter({ document, renderedRoot = null }) {
     setBaseline(markdown) {
       baselineMarkdown = markdown;
     },
+    hasBaseline() {
+      return typeof baselineMarkdown === "string";
+    },
     exportRegions(markdown) {
       return regionsFromVisualMarkdown(document, markdown, baselineMarkdown);
     },

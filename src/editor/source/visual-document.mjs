@@ -1,3 +1,5 @@
+import { topLevelNodes } from "./markdown-blocks.mjs";
+
 const PLACEHOLDER = /<EditorProtected\s+regionId=["']([^"']+)["']\s*\/>\s*/g;
 
 function placeholder(region) {
@@ -41,6 +43,34 @@ function withOriginalWhitespace(original, edited) {
   return `${leading}${text}${trailing}`;
 }
 
+function blocks(markdown) {
+  return topLevelNodes(markdown).map((node) => ({ start: node.position.start.offset, end: node.position.end.offset }));
+}
+
+/**
+ * Apply an edited region block by block: blocks whose editor export did not change keep their
+ * original source, so editing one paragraph doesn't let the editor reformat its neighbours.
+ * Falls back to the whole region when blocks were added, removed, or can't be matched.
+ */
+function editedRegionSource(original, baselinePart, part) {
+  if (baselinePart === null) return withOriginalWhitespace(original, part);
+  const originalBlocks = blocks(original);
+  const baselineBlocks = blocks(baselinePart);
+  const editedBlocks = blocks(part);
+  if (originalBlocks.length !== baselineBlocks.length || editedBlocks.length !== baselineBlocks.length) {
+    return withOriginalWhitespace(original, part);
+  }
+  let result = original;
+  for (let index = originalBlocks.length - 1; index >= 0; index -= 1) {
+    const baselineText = baselinePart.slice(baselineBlocks[index].start, baselineBlocks[index].end);
+    const editedText = part.slice(editedBlocks[index].start, editedBlocks[index].end);
+    if (editedText === baselineText) continue;
+    const { start, end } = originalBlocks[index];
+    result = result.slice(0, start) + editedText + result.slice(end);
+  }
+  return result;
+}
+
 /**
  * Rebuild the server's region payload while restoring every protected source byte-for-byte.
  * `baselineMarkdown` is the editor's own export of the unedited document: an editable region whose
@@ -59,6 +89,7 @@ export function regionsFromVisualMarkdown(document, markdown, baselineMarkdown =
     const index = editableIndex++;
     const part = parts[index];
     const unchanged = baseline ? part === baseline[index] : part.trim() === region.source.trim();
-    return { ...region, source: unchanged ? region.source : withOriginalWhitespace(region.source, part) };
+    if (unchanged) return { ...region };
+    return { ...region, source: editedRegionSource(region.source, baseline?.[index] ?? null, part) };
   });
 }
