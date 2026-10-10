@@ -3,6 +3,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import netlify from "@astrojs/netlify";
+import { localWritingEditor } from "./src/editor/integration.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,6 +23,7 @@ export default defineConfig({
   },
   markdown: { shikiConfig: { theme: "nord" } },
   integrations: [
+    localWritingEditor(),
     mdx(),
     sitemap({
       serialize(item) {

@@ -1,0 +1,28 @@
+---
+import { editorUrl } from '../editor/edit-link.mjs';
+
+interface Props {
+  collection: 'posts' | 'blips' | 'reviews';
+  entryId: string;
+  class?: string;
+}
+const { collection, entryId, class: className } = Astro.props;
+const href = editorUrl(collection, entryId);
+---
+
+<a href={href} class:list={["local-editor-link", className]} aria-label="Edit this document locally">Edit</a>
+
+<style>
+  .local-editor-link {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+</style>

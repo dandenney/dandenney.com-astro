@@ -1,0 +1,55 @@
+---
+import { getEntry, render } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+import Blip from '../../layouts/Blip.astro';
+import Review from '../../layouts/Review.astro';
+import { getEditorRuntime } from '../server/runtime.mjs';
+
+export const prerender = false;
+
+const { collection, id } = Astro.params;
+const documentId = `${collection}:${id}`;
+const token = process.env.LOCAL_WRITING_EDITOR_TOKEN;
+const origin = process.env.LOCAL_WRITING_EDITOR_ORIGIN;
+if (!token || !origin || Astro.url.origin !== origin) {
+  return new Response('The local writing editor is available only from its loopback development origin.', { status: 404 });
+}
+const runtime = await getEditorRuntime();
+const record = await runtime.index.resolve(documentId);
+const document = await runtime.read(documentId);
+const entry = await getEntry(record.collection, record.entryId);
+if (!entry) return new Response('The content entry is unavailable.', { status: 404 });
+const { Content, headings = [] } = await render(entry);
+const layoutIdentifier = record.entryId.split('/').at(-1);
+const editorData = JSON.stringify({ ...document, token }).replaceAll('<', '\\u003c');
+Astro.response.headers.set('Cache-Control', 'no-store');
+---
+
+{record.collection === 'posts' ? (
+  <BlogPost {...entry.data} identifier={layoutIdentifier} rawBody={entry.body} headings={headings}>
+    <div id="local-editor-original"><Content /></div>
+    <script id="editor-data" type="application/json" set:html={editorData}></script>
+    <script>
+      import { mountWritingEditor } from '../client/mount.mjs';
+      mountWritingEditor();
+    </script>
+  </BlogPost>
+) : record.collection === 'blips' ? (
+  <Blip {...entry.data} rawBody={entry.body}>
+    <div id="local-editor-original"><Content /></div>
+    <script id="editor-data" type="application/json" set:html={editorData}></script>
+    <script>
+      import { mountWritingEditor } from '../client/mount.mjs';
+      mountWritingEditor();
+    </script>
+  </Blip>
+) : (
+  <Review {...entry.data} id={entry.id}>
+    <div id="local-editor-original"><Content /></div>
+    <script id="editor-data" type="application/json" set:html={editorData}></script>
+    <script>
+      import { mountWritingEditor } from '../client/mount.mjs';
+      mountWritingEditor();
+    </script>
+  </Review>
+)}

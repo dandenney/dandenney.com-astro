@@ -9,6 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test:editor": "node --test src/editor/*.test.mjs src/editor/**/*.test.mjs src/editor/*/**/*.test.mjs",
+    "test:editor:browser": "node src/editor/browser-smoke.mjs && node src/editor/browser-recovery-smoke.mjs",
     "tina": "yarn tinacms dev -c 'astro dev'",
     "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs",
     "agent:packet:validate": "node scripts/agent-content/validate-packet.mjs",
@@ -24,12 +26,18 @@
     "@astrojs/netlify": "^7.0.8",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
+    "@mdxeditor/editor": "^4.2.5",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^6.2.1",
     "gsap": "^3.15.0",
+    "js-yaml": "^4.1.0",
+    "lexical": "^0.48.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tailwindcss": "^4.1.18",
     "three": "^0.185.1",
-    "tinacms": "^1.6.3"
+    "tinacms": "^1.6.3",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
     "@notionhq/client": "^5.0.0",
