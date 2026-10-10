@@ -18,6 +18,6 @@ const blip = Astro.props;
 const { Content } = await render(blip);
 ---
 
-<Blip {...blip.data} markdownTwin={twinUrlForId('blips', blip.id)}>
+<Blip {...blip.data} editorEntryId={blip.id} markdownTwin={twinUrlForId('blips', blip.id)}>
 	<Content />
 </Blip>

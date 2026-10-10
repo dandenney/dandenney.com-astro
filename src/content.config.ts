@@ -21,6 +21,7 @@ const blips = defineCollection({
   schema: z.object({
     pubDate: z.coerce.date(),
     summary: z.string().optional(),
+    tags: z.array(z.string()).optional(),
     title: z.string(),
   }),
 });

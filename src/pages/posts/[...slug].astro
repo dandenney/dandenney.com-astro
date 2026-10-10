@@ -27,6 +27,6 @@ const post = Astro.props;
 const { Content, headings } = await render(post);
 ---
 
-<BlogPost {...post.data} identifier={post.identifier} rawBody={post.body} headings={headings} markdownTwin={twinUrlForId('posts', post.id)}>
+<BlogPost {...post.data} identifier={post.identifier} editorEntryId={post.id} rawBody={post.body} headings={headings} markdownTwin={twinUrlForId('posts', post.id)}>
 	<Content />
 </BlogPost>

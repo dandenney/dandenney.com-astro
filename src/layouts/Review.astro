@@ -4,6 +4,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import toTitleCase from '@/helpers/toTitleCase.js';
 import MarkdownToggle from '@/components/MarkdownToggle.astro';
+import LocalEditLink from '@/components/LocalEditLink.astro';
 import { episodeMap } from '@/helpers/nrai';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
@@ -23,9 +24,10 @@ interface Props {
 	title: string;
 	pubDate?: Date;
 	markdownTwin?: string;
+	editorEntryId?: string;
 }
 
-const { id, city, country, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate, markdownTwin } = Astro.props;
+const { id, city, country, description, state, tags, heroImageAlt, heroImage, heroImageUrl, heroImageAttribution, title, pubDate, markdownTwin, editorEntryId } = Astro.props;
 
 const ep = id ? episodeMap(await getCollection('reviews')).get(id) : undefined;
 const airDate = pubDate
@@ -53,6 +55,7 @@ const airDate = pubDate
 								: country !== 'United States' && <>, <a href="/no-reserv-ai-tions/international">{country}</a></>}
 						</span>
 						{airDate && <span>Air date: {airDate}</span>}
+						{import.meta.env.DEV && editorEntryId && <LocalEditLink collection="reviews" entryId={editorEntryId} />}
 						{markdownTwin && <MarkdownToggle href={markdownTwin} class="rev-md" />}
 					</p>
 
