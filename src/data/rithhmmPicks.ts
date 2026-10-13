@@ -31,10 +31,10 @@ export interface RithhmmPick {
   sport: "MLB" | "NBA" | "WNBA" | "NFL" | "NCAAF";
   pick: string;
   odds: string;
-  confidence: number;
-  modelProjection: string;
-  dtm: number;
-  recentForm: string;
+  confidence?: number;
+  modelProjection?: string;
+  dtm?: number;
+  recentForm?: string;
   matchup: string;
   propType: RithhmmPropType;
   result: RithhmmPickResult;
@@ -3692,5 +3692,62 @@ export const rithhmmPicks: RithhmmPick[] = [
     bettors: "dan",
     betAmount: 30,
     returnAmount: 57.27,
+  },
+  // 2026-10-11
+  {
+    id: 250,
+    date: "2026-10-11",
+    sport: "NFL",
+    pick: "D'Andre Swift Under 19.5 Rushing Attempts",
+    odds: "-114",
+    matchup: "Bears @ Packers",
+    propType: "rush-attempts-under",
+    result: "win",
+    portfolioAction: "bet",
+    bettors: "dan",
+    betAmount: 60,
+    returnAmount: 112.63,
+  },
+  {
+    id: 251,
+    date: "2026-10-11",
+    sport: "NFL",
+    pick: "Quinshon Judkins Under 16.5 Rushing Attempts",
+    odds: "-116",
+    matchup: "Browns @ Jets",
+    propType: "rush-attempts-under",
+    result: "win",
+    portfolioAction: "bet",
+    bettors: "dan",
+    betAmount: 60,
+    returnAmount: 111.72,
+  },
+  {
+    id: 252,
+    date: "2026-10-11",
+    sport: "NFL",
+    pick: "Tre Harris Under 4.5 Receptions",
+    odds: "-143",
+    matchup: "Broncos @ Chargers",
+    propType: "receptions-under",
+    result: "win",
+    portfolioAction: "bet",
+    bettors: "dan",
+    betAmount: 60,
+    returnAmount: 101.95,
+  },
+  {
+    id: 253,
+    date: "2026-10-11",
+    sport: "NFL",
+    pick: "Roschon Johnson Under 21.5 Rushing Yards",
+    odds: "-115",
+    matchup: "Bears @ Packers",
+    propType: "rushing-yards-under",
+    result: "win",
+    portfolioAction: "bet",
+    bettors: "dan",
+    betAmount: 60,
+    returnAmount: 112.17,
   },
 ];

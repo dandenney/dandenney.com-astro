@@ -331,18 +331,18 @@ function formatDate(d: string): string {
                           </td>
                           <td class="px-4 py-3 whitespace-nowrap">
                             <span class={`text-sm font-semibold ${
-                              pick.confidence >= 68 ? "text-emerald-400" :
-                              pick.confidence >= 62 ? "text-yellow-400" :
+                              pick.confidence != null && pick.confidence >= 68 ? "text-emerald-400" :
+                              pick.confidence != null && pick.confidence >= 62 ? "text-yellow-400" :
                               "text-slate-400"
                             }`}>
-                              {pick.confidence}%
+                              {pick.confidence != null ? `${pick.confidence}%` : "—"}
                             </span>
                           </td>
                           <td class="px-4 py-3 whitespace-nowrap text-slate-400 text-xs hidden sm:table-cell">
-                            {pick.modelProjection}
+                            {pick.modelProjection ?? "—"}
                           </td>
                           <td class="px-4 py-3 whitespace-nowrap text-slate-500 text-xs hidden md:table-cell">
-                            {pick.recentForm}
+                            {pick.recentForm ?? "—"}
                           </td>
                           <td class="px-4 py-3 text-center whitespace-nowrap">
                             {pick.result === "win" && (
