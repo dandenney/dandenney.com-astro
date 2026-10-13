@@ -3472,7 +3472,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     portfolioAction: "bet",
     betAmount: 30,
     returnAmount: 50.55,
-    bettors: "dan",
+    bettors: "dan-and-gardenOf",
   },
   // 2026-09-13
   {
@@ -3671,7 +3671,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "rushing-yards-under",
     result: "win",
     portfolioAction: "bet",
-    bettors: "dan",
+    bettors: "dan-and-gardenOf",
     betAmount: 30,
     returnAmount: 58.04,
   },
@@ -3689,7 +3689,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     propType: "rushing-yards-under",
     result: "win",
     portfolioAction: "bet",
-    bettors: "dan",
+    bettors: "dan-and-gardenOf",
     betAmount: 30,
     returnAmount: 57.27,
   },
