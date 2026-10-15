@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import {
@@ -162,15 +162,11 @@ function dayBets(picks: RithhmmPick[]) {
 }
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title="Rithmm Tracker | Dan Denney"
-      description="Rithmm Smart Signal daily picks — bet performance by day, tracked against actual results."
-    />
-  </head>
-  <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+<BaseLayout
+  title="Rithmm Tracker | Dan Denney"
+  description="Rithmm Smart Signal daily picks — bet performance by day, tracked against actual results."
+  bodyClass="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+>
     <main class="relative shadow-xs z-10 bg-white dark:bg-slate-900">
       <Header />
 
@@ -475,5 +471,4 @@ function dayBets(picks: RithhmmPick[]) {
       </div>
     </main>
     <Footer />
-  </body>
-</html>
+</BaseLayout>

@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { expertPicks } from "@/data/expertPicks";
 
 export const prerender = true;
@@ -139,15 +139,12 @@ const colHeaders = sortedDates.map((key) =>
 const maxPossibleStreak = Math.max(...pathsForClient.map((p) => p.maxStreak));
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title="Expert Picks Tree | Dan Denney"
-      description="Interactive decision tree of all possible paths through Mike Barner's picks."
-    />
-  </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<BaseLayout
+  title="Expert Picks Tree | Dan Denney"
+  description="Interactive decision tree of all possible paths through Mike Barner's picks."
+  htmlClass="dark"
+  bodyClass="bg-slate-950 text-slate-100 min-h-screen antialiased"
+>
     <main class="px-4 py-10">
 
       <header class="mb-5 max-w-3xl">
@@ -366,5 +363,4 @@ const maxPossibleStreak = Math.max(...pathsForClient.map((p) => p.maxStreak));
       // Initial count
       applyFilter();
     </script>
-  </body>
-</html>
+</BaseLayout>

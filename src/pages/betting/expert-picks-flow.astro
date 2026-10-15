@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { expertPicks, type ExpertPick } from "@/data/expertPicks";
 
 export const prerender = true;
@@ -171,15 +171,12 @@ function formatDate(key: string) {
 
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title="Expert Picks Flow | Dan Denney"
-      description="Day-by-day betting flow showing possible win/loss paths from CBS SportsLine expert picks."
-    />
-  </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<BaseLayout
+  title="Expert Picks Flow | Dan Denney"
+  description="Day-by-day betting flow showing possible win/loss paths from CBS SportsLine expert picks."
+  htmlClass="dark"
+  bodyClass="bg-slate-950 text-slate-100 min-h-screen antialiased"
+>
     <main class="mx-auto max-w-7xl px-4 py-12 space-y-16">
 
       <header>
@@ -313,5 +310,4 @@ function formatDate(key: string) {
       </section>
 
     </main>
-  </body>
-</html>
+</BaseLayout>

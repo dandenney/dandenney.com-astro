@@ -1,6 +1,6 @@
 ---
 export const prerender = true;
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { allLogs } from "@/data/betsLog";
 
 const sorted = [...allLogs].sort((a, b) => b.date.localeCompare(a.date));
@@ -9,18 +9,16 @@ const totalLoss = sorted.filter((l) => l.finalDecision.result === "loss").length
 const winRate = sorted.length > 0 ? Math.round((totalCorrect / sorted.length) * 100) : 0;
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title="Daily Bets Log | Dan Denney"
-      description="AI harness pipeline bets logs — daily pick evaluation, reasoning, and results tracked over time"
-    />
+<BaseLayout
+  title="Daily Bets Log | Dan Denney"
+  description="AI harness pipeline bets logs — daily pick evaluation, reasoning, and results tracked over time"
+  htmlClass="dark"
+>
+  <Fragment slot="head">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700;800;900&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
+  </Fragment>
     <div class="page">
 
       <nav class="page-nav">
@@ -75,8 +73,7 @@ const winRate = sorted.length > 0 ? Math.round((totalCorrect / sorted.length) * 
       </main>
 
     </div>
-  </body>
-</html>
+</BaseLayout>
 
 <style is:global>
   *, *::before, *::after { box-sizing: border-box; }

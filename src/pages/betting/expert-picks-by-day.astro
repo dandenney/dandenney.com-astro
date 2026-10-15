@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { expertPicks, type ExpertPick } from "@/data/expertPicks";
 
 export const prerender = true;
@@ -85,15 +85,12 @@ function formatDate(dateKey: string): string {
 }
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title="Expert Picks by Day | Dan Denney"
-      description="CBS SportsLine expert picks visualized as a daily grid, showing consensus and disagreement at a glance."
-    />
-  </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<BaseLayout
+  title="Expert Picks by Day | Dan Denney"
+  description="CBS SportsLine expert picks visualized as a daily grid, showing consensus and disagreement at a glance."
+  htmlClass="dark"
+  bodyClass="bg-slate-950 text-slate-100 min-h-screen antialiased"
+>
     <main class="mx-auto max-w-full px-2 py-8">
       <h1 class="text-2xl font-bold text-center mb-6 text-slate-100">Expert Picks by Day</h1>
 
@@ -232,5 +229,4 @@ function formatDate(dateKey: string): string {
         </div>
       </div>
     </main>
-  </body>
-</html>
+</BaseLayout>

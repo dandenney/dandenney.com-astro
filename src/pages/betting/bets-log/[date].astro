@@ -1,6 +1,6 @@
 ---
 export const prerender = true;
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import BetsLogPipeline from "@/components/betting/BetsLogPipeline.astro";
 import { allLogs } from "@/data/betsLog";
 import type { DayLog } from "@/data/betsLog";
@@ -30,20 +30,18 @@ const shortAction =
 const metaDescription = `${log.candidates.length} ${sports} candidates analyzed by AI harnesses on ${log.displayDate}. Decision: ${shortAction}`;
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title={`Bets Log ${log.displayDate} | Dan Denney`}
-      description={metaDescription}
-      type="blogpost"
-      datePublished={new globalThis.Date(log.date)}
-    />
+<BaseLayout
+  title={`Bets Log ${log.displayDate} | Dan Denney`}
+  description={metaDescription}
+  type="blogpost"
+  datePublished={new globalThis.Date(log.date)}
+  htmlClass="dark"
+>
+  <Fragment slot="head">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700;800;900&family=Azeret+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
+  </Fragment>
     <div class="page">
 
       <nav class="page-nav">
@@ -76,8 +74,7 @@ const metaDescription = `${log.candidates.length} ${sports} candidates analyzed 
       </main>
 
     </div>
-  </body>
-</html>
+</BaseLayout>
 
 <style is:global>
   *, *::before, *::after { box-sizing: border-box; }
