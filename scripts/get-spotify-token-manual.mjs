@@ -22,7 +22,7 @@ async function main() {
   const clientId = await question('Enter your Spotify Client ID: ');
   const clientSecret = await question('Enter your Spotify Client Secret: ');
 
-  const redirectUri = 'http://localhost:8888/callback';
+  const redirectUri = 'http://127.0.0.1:8888/callback';
   const scopes = 'user-top-read';
 
   const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}`;
@@ -35,7 +35,7 @@ async function main() {
   console.log('=== STEP 2: Get the Code ===');
   console.log('After authorizing, you\'ll be redirected to a page that doesn\'t load.');
   console.log('Copy the ENTIRE URL from your browser address bar.');
-  console.log('It will look like: http://localhost:8888/callback?code=XXXXXXX');
+  console.log('It will look like: http://127.0.0.1:8888/callback?code=XXXXXXX');
   console.log('\n');
 
   const callbackUrl = await question('Paste the full callback URL here: ');

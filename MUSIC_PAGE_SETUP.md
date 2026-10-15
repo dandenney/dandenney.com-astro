@@ -21,8 +21,7 @@ This guide will help you set up the "Seasons of Dan" music page that displays yo
 ### 2. Configure Your App
 
 1. In your app's dashboard, click "Settings"
-2. Add `http://localhost:8888/callback` to the "Redirect URIs" field
-   - If that doesn't work, try `http://127.0.0.1:8888/callback` instead
+2. Add `http://127.0.0.1:8888/callback` to the "Redirect URIs" field (Spotify no longer accepts `localhost`)
 3. Click "Save"
 4. Note your **Client ID** and **Client Secret** (you'll need these in the next step)
 

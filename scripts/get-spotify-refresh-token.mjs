@@ -4,8 +4,7 @@
  * Follow these steps:
  * 1. Go to https://developer.spotify.com/dashboard
  * 2. Create a new app or use an existing one
- * 3. Add http://localhost:8888/callback to the Redirect URIs in your app settings
- *    (Note: Try http://127.0.0.1:8888/callback if localhost doesn't work)
+ * 3. Add http://127.0.0.1:8888/callback to the Redirect URIs in your app settings
  * 4. Copy your Client ID and Client Secret
  * 5. Run this script: node scripts/get-spotify-refresh-token.mjs
  * 6. Follow the prompts and paste the values into your .env.local file
@@ -30,7 +29,7 @@ async function main() {
   const clientId = await question('Enter your Spotify Client ID: ');
   const clientSecret = await question('Enter your Spotify Client Secret: ');
 
-  const redirectUri = 'http://localhost:8888/callback';
+  const redirectUri = 'http://127.0.0.1:8888/callback';
   const scopes = 'user-top-read';
 
   // Show state for debugging
@@ -42,7 +41,7 @@ async function main() {
 
   console.log('\n1. Open this URL in your browser:\n');
   console.log(authUrl);
-  console.log('\n2. After authorizing, you\'ll be redirected to localhost:8888/callback');
+  console.log('\n2. After authorizing, you\'ll be redirected to 127.0.0.1:8888/callback');
   console.log('3. The authorization code will be extracted automatically\n');
 
   // Create a server to catch the callback
@@ -90,7 +89,7 @@ async function main() {
     }
   });
 
-  server.listen(8888, () => {
+  server.listen(8888, "127.0.0.1", () => {
     console.log('Waiting for authorization...\n');
   });
 }
