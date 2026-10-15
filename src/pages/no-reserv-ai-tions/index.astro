@@ -1,5 +1,5 @@
 ---
-import BaseHead from '@/components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { getCollection } from 'astro:content';
@@ -48,14 +48,15 @@ const board = [
 ];
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+<BaseLayout
+	title="No ReservAItions"
+	description="Reviews of food, music, and events with the help of AI"
+	bodyClass="nrai"
+>
+	<Fragment slot="head">
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
-	</head>
-	<body class="nrai">
+	</Fragment>
 		<main id="main-content" class="relative shadow-xs z-10">
 			<Header />
 
@@ -654,5 +655,4 @@ const board = [
 				}
 			}
 		</style>
-	</body>
-</html>
+</BaseLayout>

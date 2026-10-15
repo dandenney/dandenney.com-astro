@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import type { Page } from 'astro';
-import BaseHead from '@/components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import EpisodeRow from '@/components/nrai/EpisodeRow.astro';
@@ -22,14 +22,15 @@ export async function getStaticPaths({ paginate }: { paginate: Function }) {
 const { page } = Astro.props as Props;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title="No ReservAItions" description="Reviews of food, music, and events with the help of AI" />
+<BaseLayout
+	title="No ReservAItions"
+	description="Reviews of food, music, and events with the help of AI"
+	bodyClass="nrai"
+>
+	<Fragment slot="head">
 		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&display=swap" rel="stylesheet">
 		<ClientRouter />
-	</head>
-	<body class="nrai">
+	</Fragment>
 		<main id="main-content" class="relative shadow-xs z-10">
 			<Header />
 			<section class="run">
@@ -75,5 +76,4 @@ const { page } = Astro.props as Props;
 				color: var(--nrai-smoke);
 			}
 		</style>
-	</body>
-</html>
+</BaseLayout>
