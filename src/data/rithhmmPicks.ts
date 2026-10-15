@@ -3766,7 +3766,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "pending",
     portfolioAction: "bet",
     bettors: "dan-and-gardenOf",
-    betAmount: 60,
+    betAmount: 30,
   },
   {
     id: 255,
@@ -3782,6 +3782,6 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "pending",
     portfolioAction: "bet",
     bettors: "dan-and-gardenOf",
-    betAmount: 60,
+    betAmount: 30,
   },
 ];
