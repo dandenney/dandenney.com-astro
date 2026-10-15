@@ -4,7 +4,7 @@
  * overrides, and the shared GSAP motion primitives (tracer draw, count-up,
  * chart wipe, reveal). Pages compose the rest.
  */
-import BaseHead from '@/components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
@@ -20,17 +20,20 @@ interface Props {
 const { title, description, image, datePublished } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} image={image} datePublished={datePublished} />
+<BaseLayout
+	title={title}
+	description={description}
+	image={image}
+	datePublished={datePublished}
+	bodyClass="golf"
+>
+	<Fragment slot="head">
 		<link
 			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
 			rel="stylesheet"
 		/>
 		<ClientRouter />
-	</head>
-	<body class="golf">
+	</Fragment>
 		<main id="main-content" tabindex="-1" class="relative shadow-xs z-10">
 			<Header />
 			<slot />
@@ -131,5 +134,4 @@ const { title, description, image, datePublished } = Astro.props;
 
 			document.addEventListener('astro:page-load', init);
 		</script>
-	</body>
-</html>
+</BaseLayout>

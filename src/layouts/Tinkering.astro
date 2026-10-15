@@ -1,18 +1,15 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import { ClientRouter } from 'astro:transitions';
 
 const { summary, title } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={summary} />
+<BaseLayout title={title} description={summary}>
+	<Fragment slot="head">
 		<ClientRouter />
-	</head>
-	<body>
+	</Fragment>
 		<main>
     	<slot />
 		</main>
-	</body>
-</html>
+</BaseLayout>

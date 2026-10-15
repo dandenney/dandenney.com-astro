@@ -1,5 +1,5 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import MarkdownToggle from "../components/MarkdownToggle.astro";
 import { SITE_TITLE } from "../consts";
@@ -16,12 +16,13 @@ const dateStr = new Date(pubDate).toLocaleDateString("en-US", {
 const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport === "both" ? "NBA + MLB" : null;
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead title={`${title} | Plus EV`} description={summary} markdownTwin={markdownTwin} />
-  </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<BaseLayout
+  title={`${title} | Plus EV`}
+  description={summary}
+  markdownTwin={markdownTwin}
+  htmlClass="dark"
+  bodyClass="bg-slate-950 text-slate-100 min-h-screen antialiased"
+>
 
     <div class="relative z-10 border-b border-white/5 backdrop-blur-sm">
       <Header title={SITE_TITLE} />
@@ -89,8 +90,7 @@ const sportLabel = sport === "nba" ? "NBA" : sport === "mlb" ? "MLB" : sport ===
       </footer>
     </div>
 
-  </body>
-</html>
+</BaseLayout>
 
 <style>
   /* Constrain prose to readable width, centered */

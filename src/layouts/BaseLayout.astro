@@ -1,0 +1,25 @@
+---
+// Optional page shell: <html>, <head> with BaseHead, and <body>.
+// Pages whose own scoped <style> targets html/body (or their classes) must keep
+// writing their own shell, since Astro only scopes styles to elements in the same file.
+// Add <ClientRouter /> via the "head" slot so pages without transitions don't load it.
+import type { ComponentProps } from "astro/types";
+import BaseHead from "@/components/BaseHead.astro";
+
+type Props = ComponentProps<typeof BaseHead> & {
+  htmlClass?: string;
+  bodyClass?: string;
+};
+
+const { htmlClass, bodyClass, ...head } = Astro.props;
+---
+
+<html lang="en" class={htmlClass}>
+  <head>
+    <BaseHead {...head} />
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <slot />
+  </body>
+</html>

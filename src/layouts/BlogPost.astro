@@ -1,5 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ImageLightbox from '../components/ImageLightbox.astro';
@@ -54,9 +54,17 @@ const relatedPosts =
 
 ---
 
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={metaDescription} image={socialImageFilename} type="blogpost" datePublished={pubDate} author="Dan Denney" markdownTwin={markdownTwin} />
+<BaseLayout
+	title={title}
+	description={metaDescription}
+	image={socialImageFilename}
+	type="blogpost"
+	datePublished={pubDate}
+	author="Dan Denney"
+	markdownTwin={markdownTwin}
+	bodyClass="bg-white dark:bg-slate-900"
+>
+	<Fragment slot="head">
 		<ClientRouter />
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
@@ -72,8 +80,7 @@ const relatedPosts =
 				<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
 			</>
 		)}
-	</head>
-	<body class="bg-white dark:bg-slate-900">
+	</Fragment>
 		<Header />
 		<main id="main-content" tabindex="-1" class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
 			<article class="toc-scope">
@@ -259,5 +266,4 @@ const relatedPosts =
 				}
 			}
 		</style>
-	</body>
-</html>
+</BaseLayout>

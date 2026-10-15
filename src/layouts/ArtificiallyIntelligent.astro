@@ -1,5 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
@@ -26,12 +26,18 @@ const commitMessage = commit?.commit.message.split('\n')[0] ?? null;
 const repoUrl = `https://github.com/dandenney/artificially-intelligent/tree/main/${githubPath}`;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={`${title} | Artificially Intelligent`} description={summary ?? title} type="blogpost" datePublished={pubDate} author="Dan Denney" markdownTwin={markdownTwin} />
+<BaseLayout
+  title={`${title} | Artificially Intelligent`}
+  description={summary ?? title}
+  type="blogpost"
+  datePublished={pubDate}
+  author="Dan Denney"
+  markdownTwin={markdownTwin}
+  bodyClass="bg-white dark:bg-slate-900"
+>
+  <Fragment slot="head">
     <ClientRouter />
-  </head>
-  <body class="bg-white dark:bg-slate-900">
+  </Fragment>
     <Header />
     <main id="main-content" tabindex="-1" class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
       <article>
@@ -98,5 +104,4 @@ const repoUrl = `https://github.com/dandenney/artificially-intelligent/tree/main
         }
       }
     </style>
-  </body>
-</html>
+</BaseLayout>
