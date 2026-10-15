@@ -120,7 +120,6 @@ The Spotify API has rate limits. The page caches responses for 24 hours to minim
 
 The following API endpoints are available:
 
-- `GET /api/spotify/token` - Gets a fresh access token
 - `GET /api/spotify/top-items?type=tracks&time_range=short_term` - Gets top tracks
 - `GET /api/spotify/top-items?type=artists&time_range=medium_term` - Gets top artists
 
