@@ -1,5 +1,5 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
@@ -10,13 +10,14 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title="Tinkerings | Dan Denney" description="Projects with some technical bit that I learned in order to create them — small builds, experiments, and side quests" />
+<BaseLayout
+	title="Tinkerings | Dan Denney"
+	description="Projects with some technical bit that I learned in order to create them — small builds, experiments, and side quests"
+	bodyClass="bg-white dark:bg-slate-900"
+>
+	<Fragment slot="head">
 		<ClientRouter />
-	</head>
-	<body class="bg-white dark:bg-slate-900">
+	</Fragment>
 		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
 			<Header title={SITE_TITLE} />
 
@@ -86,5 +87,4 @@ const tinkerings = (await getCollection('tinkerings')).sort(
 			</section>
 		</main>
 		<Footer />
-	</body>
-</html>
+</BaseLayout>

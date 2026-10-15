@@ -1,6 +1,6 @@
 ---
 export const prerender = true;
-import BaseHead from '@/components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
@@ -17,13 +17,13 @@ const entries = Object.entries(pages)
   .sort((a, b) => b.date.localeCompare(a.date));
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title="Yesterday I Learned | Dan Denney"
-      description="Daily captures turned into designed pages — AI engineering, agents, front-end development, and learning in public. A new entry every weekday."
-    />
+<BaseLayout
+  title="Yesterday I Learned | Dan Denney"
+  description="Daily captures turned into designed pages — AI engineering, agents, front-end development, and learning in public. A new entry every weekday."
+  htmlClass="dark"
+  bodyClass="bg-[#090909]"
+>
+  <Fragment slot="head">
     <ClientRouter />
     <style>
       @keyframes fade-up {
@@ -35,8 +35,7 @@ const entries = Object.entries(pages)
         animation: fade-up 0.5s ease forwards;
       }
     </style>
-  </head>
-  <body class="bg-[#090909]">
+  </Fragment>
     <main class="relative z-10 bg-[#090909] shadow-xs">
       <Header />
 
@@ -109,5 +108,4 @@ const entries = Object.entries(pages)
       </section>
     </main>
     <Footer />
-  </body>
-</html>
+</BaseLayout>

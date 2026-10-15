@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
@@ -87,14 +87,11 @@ const titleRank = new Map<number, number>();
 const beers = (n: number) => "\u{1F37A}".repeat(n);
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title="Bookshelf | Dan Denney"
-      description="Every book on my archived Goodreads shelf, from 2010 to 2020. Hover a cover to open it. Ratings in beers."
-    />
-  </head>
-  <body class="bg-white dark:bg-slate-900">
+<BaseLayout
+  title="Bookshelf | Dan Denney"
+  description="Every book on my archived Goodreads shelf, from 2010 to 2020. Hover a cover to open it. Ratings in beers."
+  bodyClass="bg-white dark:bg-slate-900"
+>
     <main
       class="relative z-10 bg-white shadow-xs dark:bg-slate-900 dark:text-slate-200"
     >
@@ -784,5 +781,4 @@ const beers = (n: number) => "\u{1F37A}".repeat(n);
         sort.addEventListener("change", apply);
       }
     </script>
-  </body>
-</html>
+</BaseLayout>

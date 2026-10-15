@@ -1,5 +1,5 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import { SITE_TITLE } from "../../consts";
 import { getCollection } from "astro:content";
@@ -168,15 +168,12 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
 });
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <BaseHead
-      title="Plus EV | Dan Denney"
-      description="A data-driven sports betting experiment, recapped daily by Gale."
-    />
-  </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen antialiased">
+<BaseLayout
+  title="Plus EV | Dan Denney"
+  description="A data-driven sports betting experiment, recapped daily by Gale."
+  htmlClass="dark"
+  bodyClass="bg-slate-950 text-slate-100 min-h-screen antialiased"
+>
 
     <div class="relative z-10 border-b border-white/5 backdrop-blur-sm">
       <Header title={SITE_TITLE} />
@@ -704,5 +701,4 @@ const startDateStr = firstBetDate.toLocaleDateString("en-US", {
 
       </div>
     </main>
-  </body>
-</html>
+</BaseLayout>

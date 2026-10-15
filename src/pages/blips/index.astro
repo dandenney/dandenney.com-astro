@@ -1,5 +1,5 @@
 ---
-import BaseHead from '@/components/BaseHead.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import BlipSignalBand from '@/components/BlipSignalBand.astro';
@@ -27,13 +27,14 @@ const yearGroups = [...byYear.entries()];
 const firstYear = blips[blips.length - 1].data.pubDate.getUTCFullYear();
 const lastYear = new Date().getUTCFullYear();
 ---
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title="Blips | Dan Denney" description="Shorter than a blog post, longer than a tweet — quick notes, links, and thoughts that don't need a full write-up" />
+<BaseLayout
+	title="Blips | Dan Denney"
+	description="Shorter than a blog post, longer than a tweet — quick notes, links, and thoughts that don't need a full write-up"
+	bodyClass="bg-white dark:bg-slate-900"
+>
+	<Fragment slot="head">
 		<ClientRouter />
-	</head>
-	<body class="bg-white dark:bg-slate-900">
+	</Fragment>
 		<main class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
 			<Header title={SITE_TITLE} />
 
@@ -149,5 +150,4 @@ const lastYear = new Date().getUTCFullYear();
 				line-height: 1;
 			}
 		</style>
-	</body>
-</html>
+</BaseLayout>

@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
@@ -71,14 +71,11 @@ function monthLabel(key: string) {
   }
 </style>
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title="Library | Dan Denney"
-      description="Links of things I've read and watched — articles, videos, and other stuff worth bookmarking"
-    />
-  </head>
-  <body class="bg-white dark:bg-slate-900">
+<BaseLayout
+  title="Library | Dan Denney"
+  description="Links of things I've read and watched — articles, videos, and other stuff worth bookmarking"
+  bodyClass="bg-white dark:bg-slate-900"
+>
     <main
       class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
@@ -6813,5 +6810,4 @@ function monthLabel(key: string) {
       </ul>
     </main>
     <Footer />
-  </body>
-</html>
+</BaseLayout>

@@ -1,5 +1,5 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
@@ -24,16 +24,14 @@ const runtimeHours = Math.floor(totalMs / 3_600_000);
 const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title="Music Reviews | Dan Denney"
-      description="The songs I keep coming back to, each with a full review — mostly AI-assisted takes on tracks I can't stop playing"
-    />
+<BaseLayout
+  title="Music Reviews | Dan Denney"
+  description="The songs I keep coming back to, each with a full review — mostly AI-assisted takes on tracks I can't stop playing"
+  bodyClass="bg-white dark:bg-slate-900"
+>
+  <Fragment slot="head">
     <ClientRouter />
-  </head>
-  <body class="bg-white dark:bg-slate-900">
+  </Fragment>
     <main
       class="rotation-page bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
@@ -735,5 +733,4 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
         ScrollTrigger.getAll().forEach((t) => t.kill());
       });
     </script>
-  </body>
-</html>
+</BaseLayout>

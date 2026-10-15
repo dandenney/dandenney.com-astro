@@ -1,5 +1,5 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import OptimizedImage from "../components/OptimizedImage.astro";
@@ -38,13 +38,15 @@ const links = libraryLinks.filter((l) => l.created.startsWith(currentYearMonth))
 const monthName = new Date().toLocaleString("default", { month: "long" });
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} type="person" />
+<BaseLayout
+  title={SITE_TITLE}
+  description={SITE_DESCRIPTION}
+  type="person"
+  bodyClass="bg-slate-50 dark:bg-slate-900"
+>
+  <Fragment slot="head">
     <ClientRouter />
-  </head>
-  <body class="bg-slate-50 dark:bg-slate-900">
+  </Fragment>
     <main
       class="bg-slate-50 relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200"
     >
@@ -793,8 +795,7 @@ const monthName = new Date().toLocaleString("default", { month: "long" });
       </section>
     </main>
     <Footer />
-  </body>
-</html>
+</BaseLayout>
 
 <style>
   @keyframes svg-fade-up {
