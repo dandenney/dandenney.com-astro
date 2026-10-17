@@ -70,6 +70,8 @@ and `/add-round`. Shared identity in `src/styles/golf.css` plus
 
 `yarn review:generate --location "..." --city "..." --items "a, b" --notes "why we went, who was there, what stuck"` (needs `ANTHROPIC_API_KEY`). Claude researches the venue with web search, drafts using Dan's own rewritten reviews (`CALIBRATION_SLUGS` in `scripts/generate-review.mjs`) as the voice target, runs a sharpening pass, and writes `src/content/reviews/<slug>.md`. Use `--dry-run` to preview; `--hero-image <slug>` once the image is in `public/no-reserv-ai-tions/`.
 
+Preferred flow: Dan writes the review himself and the `add-review` skill (`.claude/skills/add-review/`) publishes it with `--body-file <text> --image <photo>`, which skips drafting and handles venue lookup, hero/thumb images, EXIF date, alt text, and frontmatter.
+
 ### GitHub Actions
 
 - `settle-pending-bets.yml` — daily auto-settlement via ESPN APIs; run manually with `--bet-id <id>`

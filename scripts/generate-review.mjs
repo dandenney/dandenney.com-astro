@@ -8,6 +8,10 @@
  * 3. Sharpen: a second editing pass for wit and specificity (skip with --no-sharpen)
  * 4. Metadata: description + tags, then writes src/content/reviews/<slug>.md
  *
+ * Bring-your-own review: --body-file <path> skips steps 2-3 and publishes that text as written
+ * (--items is then optional). --image <photo> writes public/no-reserv-ai-tions/<slug>.webp + -thumb.webp,
+ * takes the date from EXIF, writes alt text from the photo, and credits Dan.
+ *
  * Usage:
  *   ANTHROPIC_API_KEY=... node scripts/generate-review.mjs \
  *     --location "Top of the Rock" --city "jasper" \
@@ -15,16 +19,19 @@
  *     --notes "End of Misty's birthday weekend of hikes. Long winding drive. Best restaurant view we've ever had."
  *
  * Optional: --state, --country, --title, --slug, --date YYYY-MM-DD, --hero-image <slug>,
- *           --hero-image-alt "...", --no-sharpen, --dry-run (print instead of writing), --force (overwrite)
+ *           --hero-image-alt "...", --body-file <path>, --image <path>, --photo-credit "...",
+ *           --no-sharpen, --dry-run (print instead of writing), --force (overwrite)
  * Models:   REVIEW_MODEL (default claude-opus-5-5), REVIEW_RESEARCH_MODEL (default claude-sonnet-5-5)
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REVIEWS_DIR = path.join(__dirname, '..', 'src', 'content', 'reviews');
+const IMAGES_DIR = path.join(__dirname, '..', 'public', 'no-reserv-ai-tions');
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const WRITER_MODEL = process.env.REVIEW_MODEL || 'claude-opus-5-5';
@@ -66,9 +73,10 @@ function parseArguments(argv) {
       i++;
     }
   }
-  for (const required of ['location', 'city', 'items']) {
-    if (typeof params[required] !== 'string' || !params[required].trim()) {
-      throw new Error(`Missing required parameter: --${required}`);
+  const requiredKeys = params['body-file'] ? ['location', 'city'] : ['location', 'city', 'items'];
+  for (const key of requiredKeys) {
+    if (typeof params[key] !== 'string' || !params[key].trim()) {
+      throw new Error(`Missing required parameter: --${key}`);
     }
   }
   return params;
@@ -174,6 +182,38 @@ function commonTags(limit = 40) {
     .map(([tag]) => tag);
 }
 
+async function processImage(imagePath, slug) {
+  const source = sharp(imagePath).rotate();
+  const hero = path.join(IMAGES_DIR, `${slug}.webp`);
+  const thumb = path.join(IMAGES_DIR, `${slug}-thumb.webp`);
+  await source.clone().resize({ width: 2500, withoutEnlargement: true }).webp({ quality: 80 }).toFile(hero);
+  await source.clone().resize(320, 240, { fit: 'cover' }).webp({ quality: 80 }).toFile(thumb);
+  return [hero, thumb];
+}
+
+// Earliest EXIF timestamp; edited exports often carry a later DateTimeOriginal than the shot itself.
+async function photoDate(imagePath) {
+  const { exif } = await sharp(imagePath).metadata();
+  const stamps = exif?.toString('latin1').match(/\d{4}:\d{2}:\d{2} \d{2}:\d{2}:\d{2}/g);
+  if (!stamps) return null;
+  return stamps.sort()[0].slice(0, 10).replace(/:/g, '-');
+}
+
+async function describePhoto(imagePath, params, review) {
+  const jpeg = await sharp(imagePath).rotate().resize({ width: 1024 }).jpeg({ quality: 80 }).toBuffer();
+  const prompt = [
+    { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: jpeg.toString('base64') } },
+    {
+      type: 'text',
+      text: `Write alt text for this photo, the hero image of a review of ${params.title || params.location} at ${params.location}. One sentence, 15-35 words, describing what is visible (who or what, the setting, notable lighting or staging) and naming the place or performer. No "image of" or "photo of". Return only the alt text.
+
+Review for context:
+${review}`,
+    },
+  ];
+  return (await claude({ model: RESEARCH_MODEL, prompt, maxTokens: 200 })).replace(/^"|"$/g, '');
+}
+
 function reviewBody(file) {
   const raw = fs.readFileSync(file, 'utf8');
   return raw.replace(/^---[\s\S]*?\n---\s*/, '').trim();
@@ -234,7 +274,7 @@ Return only the revised review body.`;
 async function generateMetadata(params, review) {
   const prompt = `From this review of ${params.location}, return only JSON with:
 - "description": one sentence, 15-25 words, plain and specific (what the visit was and what we had), no hype
-- "tags": 2-4 lowercase hyphenated tags for cuisine, venue type, or activity. Prefer these existing tags: ${commonTags().join(', ')}. No city, state, or place names, no occasions, no generic "restaurant"
+- "tags": 2-4 lowercase hyphenated tags for cuisine, venue type, or activity. Prefer these existing tags: ${commonTags().join(', ')}. No city, state, or place names, no occasions, no generic "restaurant". Concerts and live shows get exactly ["concert", "music"]. Only tag food or drink when it is the point of the visit
 
 Review:
 ${review}`;
@@ -284,6 +324,7 @@ function buildMarkdown(params, venue, metadata, review) {
     `description: ${quote(metadata.description || '')}`,
     `heroImage: ${quote(typeof params['hero-image'] === 'string' ? params['hero-image'] : 'placeholder')}`,
     `heroImageAlt: ${quote(typeof params['hero-image-alt'] === 'string' ? params['hero-image-alt'] : 'Placeholder image')}`,
+    params['photo-credit'] ? `heroImageAttribution: ${quote(params['photo-credit'])}` : null,
     venue.infoUrl ? `infoUrl: ${quote(venue.infoUrl)}` : '# infoUrl: ""',
     `pubDate: ${quote(typeof params.date === 'string' ? params.date : new Date().toISOString().split('T')[0])}`,
     `tags: ${JSON.stringify(metadata.tags || [])}`,
@@ -293,7 +334,7 @@ function buildMarkdown(params, venue, metadata, review) {
     review.trim(),
     '',
   ];
-  return lines.join('\n');
+  return lines.filter((line) => line !== null).join('\n');
 }
 
 async function main() {
@@ -312,7 +353,16 @@ async function main() {
     if (fs.existsSync(outputPath) && !params.force && !params['dry-run']) {
       throw new Error(`${path.relative(process.cwd(), outputPath)} already exists (use --force to overwrite)`);
     }
-    if (!params.notes) {
+    const bodyFile = typeof params['body-file'] === 'string' ? params['body-file'] : null;
+    const imagePath = typeof params.image === 'string' ? params.image : null;
+    if (imagePath && !fs.existsSync(imagePath)) throw new Error(`Image not found: ${imagePath}`);
+    if (bodyFile && !fs.existsSync(bodyFile)) throw new Error(`Body file not found: ${bodyFile}`);
+    if (imagePath) {
+      params['hero-image'] = slug;
+      if (typeof params['photo-credit'] !== 'string') params['photo-credit'] = 'Photo by Dan Denney';
+      if (typeof params.date !== 'string') params.date = (await photoDate(imagePath)) || undefined;
+    }
+    if (!bodyFile && !params.notes) {
       console.warn('   ⚠️  No --notes given. Reviews are much better with why you went, who was there, and what stuck.\n');
     }
 
@@ -328,16 +378,26 @@ async function main() {
       console.warn('   ⚠️  No coordinates found; the review will not appear on the map until you add them.\n');
     }
 
-    console.log(`✍️  Drafting (${WRITER_MODEL})...`);
-    let review = await draftReview(params, venue, loadCalibration(slug));
+    let review;
+    if (bodyFile) {
+      console.log(`📄 Using review text from ${bodyFile}`);
+      review = reviewBody(bodyFile);
+    } else {
+      console.log(`✍️  Drafting (${WRITER_MODEL})...`);
+      review = await draftReview(params, venue, loadCalibration(slug));
+    }
 
-    if (!params['no-sharpen']) {
+    if (!bodyFile && !params['no-sharpen']) {
       console.log('🔪 Sharpening...');
       review = await sharpenReview(params, venue, review);
     }
 
     console.log('🏷️  Metadata...\n');
     const metadata = await generateMetadata(params, review);
+    if (imagePath && typeof params['hero-image-alt'] !== 'string') {
+      console.log('🖼️  Alt text...');
+      params['hero-image-alt'] = await describePhoto(imagePath, params, review);
+    }
     const markdown = buildMarkdown(params, venue, metadata, review);
 
     if (params['dry-run']) {
@@ -345,6 +405,10 @@ async function main() {
       return;
     }
 
+    if (imagePath) {
+      const written = await processImage(imagePath, slug);
+      console.log(`🖼️  Wrote ${written.map((file) => path.relative(process.cwd(), file)).join(', ')}`);
+    }
     fs.writeFileSync(outputPath, markdown, 'utf8');
     console.log(`✅ Wrote ${path.relative(process.cwd(), outputPath)}`);
   } catch (error) {
