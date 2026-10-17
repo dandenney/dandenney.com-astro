@@ -13,6 +13,7 @@
     "test:editor:browser": "node src/editor/browser-smoke.mjs && node src/editor/browser-recovery-smoke.mjs",
     "tina": "yarn tinacms dev -c 'astro dev'",
     "notion:resolve-data-source": "node scripts/resolve-notion-data-source-id.mjs",
+    "review:generate": "node scripts/generate-review.mjs",
     "agent:packet:validate": "node scripts/agent-content/validate-packet.mjs",
     "agent:content:publish": "node scripts/agent-content/publish-from-packet.mjs",
     "agent:content:test": "node --test scripts/agent-content/content-quality.test.mjs",

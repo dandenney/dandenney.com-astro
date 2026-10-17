@@ -1,235 +1,253 @@
 #!/usr/bin/env node
 
 /**
- * Restaurant/Activity Review Generator
+ * No ReservAItions review generator (Claude)
  *
- * Generates AI-powered reviews in the style of Anthony Bourdain
- * Uses a two-step process:
- * 1. Generate metadata (tags, description)
- * 2. Generate full review
+ * 1. Research: Claude + web search resolves address, coordinates, info URL, and a few venue facts
+ * 2. Draft: Claude writes the review from Dan's notes, calibrated on Dan's own rewritten reviews
+ * 3. Sharpen: a second editing pass for wit and specificity (skip with --no-sharpen)
+ * 4. Metadata: description + tags, then writes src/content/reviews/<slug>.md
  *
  * Usage:
- *   GitHub Actions: Triggered by workflow dispatch
- *   Local: node scripts/generate-review.mjs --location "Place Name" --city "city" --items "item1, item2, item3"
+ *   ANTHROPIC_API_KEY=... node scripts/generate-review.mjs \
+ *     --location "Top of the Rock" --city "jasper" \
+ *     --items "elk burger, pilsner, filet mignon, Oktoberfest, cookie cake" \
+ *     --notes "End of Misty's birthday weekend of hikes. Long winding drive. Best restaurant view we've ever had."
+ *
+ * Optional: --state, --country, --title, --slug, --date YYYY-MM-DD, --hero-image <slug>,
+ *           --hero-image-alt "...", --no-sharpen, --dry-run (print instead of writing), --force (overwrite)
+ * Models:   REVIEW_MODEL (default claude-opus-5-5), REVIEW_RESEARCH_MODEL (default claude-sonnet-5-5)
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const REVIEWS_DIR = path.join(__dirname, '..', 'src', 'content', 'reviews');
 
-// Environment variables
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const WRITER_MODEL = process.env.REVIEW_MODEL || 'claude-opus-5-5';
+const RESEARCH_MODEL = process.env.REVIEW_RESEARCH_MODEL || 'claude-sonnet-5-5';
 
-// OpenAI API endpoint
-const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
+// Dan's own rewrites: the voice target. Read live so edits to these reviews refine the calibration.
+const CALIBRATION_SLUGS = [
+  'dutch-maid-bakery-cafe',
+  'high-point-restaurant',
+  'top-of-the-rock-restaurant-brewery',
+  'lp',
+  'the-shins',
+];
 
-/**
- * Parse command-line arguments
- */
-function parseArguments() {
-  const args = process.argv.slice(2);
+const VOICE = `You write reviews for "No ReservAItions," the restaurant, bar, venue, and outing section of Dan Denney's personal site. Write as Dan ("we" when Misty or others were there, "I" sparingly), with the wit of Anthony Bourdain.
+
+What that means:
+- Opinionated, worldly, funny, a little profane when it lands. Short declarative sentences that hit. One or two lines per review that someone would want to quote.
+- Appetite and place first. The food, the drinks, the room, the drive, the crowd, and why it mattered that day.
+- Respect for honest, unpretentious places; zero patience for pretension. Find the human truth in an ordinary meal.
+- Judgments, not descriptions. Never a menu recap, never travel-brochure language ("gastronomic", "culinary journey", "nestled", "a feast for the senses", "hidden gem").
+
+Rules:
+- Only state facts that come from Dan's notes, the item list, or the provided venue facts. You may have opinions and jokes about them; you may not invent dishes, dialogue, service, or history.
+- Never mention Anthony Bourdain or any writer, and never mention notes, research, photos, addresses, or AI.
+- 3-5 short paragraphs, roughly 180-400 words. Plain markdown body only: no title, headings, lists, or frontmatter.
+- End on a line with teeth that only this visit could have produced, not a recommendation.`;
+
+function parseArguments(argv) {
   const params = {};
-
-  for (let i = 0; i < args.length; i += 2) {
-    const key = args[i].replace(/^--/, '');
-    params[key] = args[i + 1];
-  }
-
-  // Validate required parameters
-  const required = ['location', 'city', 'items'];
-  for (const param of required) {
-    if (!params[param]) {
-      throw new Error(`Missing required parameter: --${param}`);
+  for (let i = 0; i < argv.length; i++) {
+    const key = argv[i].replace(/^--/, '');
+    const next = argv[i + 1];
+    if (next === undefined || next.startsWith('--')) {
+      params[key] = true;
+    } else {
+      params[key] = next;
+      i++;
     }
   }
-
+  for (const required of ['location', 'city', 'items']) {
+    if (typeof params[required] !== 'string' || !params[required].trim()) {
+      throw new Error(`Missing required parameter: --${required}`);
+    }
+  }
   return params;
 }
 
-/**
- * Search for location information using AI
- */
-async function searchLocationInfo(location, city) {
-  try {
-    const prompt = `Search for "${location}" in ${city}.
-
-This output feeds a Mapbox map, so formatting must be strict.
-Return JSON with these exact fields:
-- infoUrl (string or null)
-- address (string or null)
-- coordinates (string or null) in EXACT format: "<longitude>, <latitude>" using decimal degrees (example: "-86.7816, 36.1627")
-- state (string or null) in lowercase words/hyphen format (example: "new-york")
-- country (string or null) as canonical country name (example: "United States")
-
-Rules:
-- If uncertain, return null for that field.
-- Never wrap numeric coordinates in quotes inside the coordinate string.
-- Never return extra keys.`;
-
-    const response = await fetch(OPENAI_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: [
-          {
-            role: 'system',
-            content: 'You are a location research assistant. Provide accurate information about restaurants and attractions including their geographic details. Return data as JSON.',
-          },
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-        temperature: 0.3,
-        max_tokens: 300,
-        response_format: { type: "json_object" },
-      }),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(`OpenAI API error (location search): ${data.error?.message || 'Unknown error'}`);
-    }
-
-    return JSON.parse(data.choices[0].message.content.trim());
-  } catch (error) {
-    console.warn(`   ⚠️  Location search failed: ${error.message}`);
-    return { infoUrl: null, address: null, coordinates: null, state: null, country: null };
-  }
-}
-
-/**
- * Generate metadata using OpenAI API (Step 1)
- */
-async function generateMetadata(params) {
-  // First, get location info
-  const locationInfo = await searchLocationInfo(params.location, params.city);
-
-  // Use location info to fill in state/country if not provided
-  params.state = normalizeState(params.state || locationInfo.state);
-  params.country = params.country || locationInfo.country || 'United States';
-
-  const prompt = `You are analyzing a location for a food/travel review. Based on the following information, generate metadata:
-
-Location: ${params.location}
-City: ${params.city}
-${params.state ? `State: ${params.state}` : ''}
-${params.country ? `Country: ${params.country}` : ''}
-Items experienced: ${params.items}
-
-Generate the following in JSON format:
-1. "tags": Array of 2-4 relevant tags (cuisine types, activity types, etc.) - lowercase, no spaces, use hyphens
-2. "description": A single compelling sentence (10-15 words) that captures the essence of this place
-
-Return ONLY valid JSON with these fields. Be concise and accurate.`;
-
-  const response = await fetch(OPENAI_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${OPENAI_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are a metadata specialist for food and travel content. You provide accurate, concise metadata in valid JSON format.',
-        },
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ],
-      temperature: 0.7,
-      max_tokens: 300,
-      response_format: { type: "json_object" },
-    }),
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(`OpenAI API error (metadata): ${data.error?.message || 'Unknown error'}`);
-  }
-
-  const aiMetadata = JSON.parse(data.choices[0].message.content.trim());
-
-  // Merge location info with AI-generated metadata
-  return {
-    ...aiMetadata,
-    address: locationInfo.address,
-    coordinates: locationInfo.coordinates,
-    infoUrl: locationInfo.infoUrl,
+async function claude({ model, system, prompt, maxTokens = 1500, tools, temperature }) {
+  const body = {
+    model,
+    max_tokens: maxTokens,
+    messages: [{ role: 'user', content: prompt }],
   };
-}
+  if (system) body.system = system;
+  if (tools) body.tools = tools;
+  if (temperature !== undefined) body.temperature = temperature;
 
-/**
- * Generate review using OpenAI API (Step 2)
- */
-async function generateReview(params, metadata) {
-  const itemsList = params.items.split(',').map(i => i.trim()).join(', ');
-
-  const prompt = `I'm going to give you a place with food and drink for you to review:
-
-Location: ${params.location}
-City: ${params.city}
-${params.state ? `State: ${params.state}` : ''}
-Country: ${params.country}
-Items experienced: ${itemsList}
-
-Write only the review text, no title or metadata.`;
-
-  const response = await fetch(OPENAI_ENDPOINT, {
+  const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${OPENAI_API_KEY}`,
-      'Content-Type': 'application/json',
+      'x-api-key': ANTHROPIC_API_KEY,
+      'anthropic-version': '2023-06-01',
+      'content-type': 'application/json',
     },
-    body: JSON.stringify({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are a writer and you will write as if you are Anthony Bourdain.',
-        },
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ],
-      temperature: 0.9,
-      max_tokens: 800,
-    }),
+    body: JSON.stringify(body),
   });
-
   const data = await response.json();
-
   if (!response.ok) {
-    throw new Error(`OpenAI API error (review): ${data.error?.message || 'Unknown error'}`);
+    throw new Error(`Anthropic API error (${model}): ${data.error?.message || response.status}`);
   }
-
-  return data.choices[0].message.content.trim();
+  return data.content
+    .filter((block) => block.type === 'text')
+    .map((block) => block.text)
+    .join('')
+    .trim();
 }
 
-/**
- * Create slugified string for filenames
- */
+function extractJson(text) {
+  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+  const candidate = fenced ? fenced[1] : text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
+  return JSON.parse(candidate);
+}
+
+async function researchVenue(params) {
+  const where = [params.city, params.state, params.country].filter(Boolean).join(', ');
+  const prompt = `Look up "${params.location}" in ${where}. It may be a restaurant, bar, bakery, venue, concert, golf course, or attraction.
+
+Return only JSON with exactly these keys:
+- "address": full street address, or null
+- "infoUrl": official website or event page, or null
+- "coordinates": "<longitude>, <latitude>" in decimal degrees (example "-86.7816, 36.1627"), taken from a map listing or other source that states them, or null
+- "state": state/province name, or null
+- "country": canonical country name, or null
+- "facts": array of 0-4 short, verified facts that give the place character (history, building, owners, neighborhood role, what it's known for). Not the address or location, no menu listings, no marketing copy.
+
+Use null rather than guessing.`;
+
+  try {
+    const text = await claude({
+      model: RESEARCH_MODEL,
+      prompt,
+      maxTokens: 2000,
+      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 4 }],
+    });
+    return extractJson(text);
+  } catch (error) {
+    console.warn(`   ⚠️  Venue research failed: ${error.message}`);
+    return { address: null, infoUrl: null, coordinates: null, state: null, country: null, facts: [] };
+  }
+}
+
+async function geocode(params, venue) {
+  const region = [params.city, params.state || venue.state].filter(Boolean).join(', ');
+  const queries = [
+    venue.address,
+    venue.address?.replace(/\s+\d{5}(-\d{4})?$/, ''),
+    venue.address?.replace(/^\d+\s+/, '').replace(/\s+\d{5}(-\d{4})?$/, ''),
+    `${params.location}, ${region}`,
+  ].filter(Boolean);
+
+  for (const q of queries) {
+    try {
+      const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;
+      const response = await fetch(url, { headers: { 'User-Agent': 'dandenney.com review generator' } });
+      const [hit] = await response.json();
+      if (hit) return `${hit.lon}, ${hit.lat}`;
+    } catch {
+      // try the next query
+    }
+    await new Promise((resolve) => setTimeout(resolve, 1100));
+  }
+  return null;
+}
+
+function commonTags(limit = 40) {
+  const counts = new Map();
+  for (const file of fs.readdirSync(REVIEWS_DIR).filter((f) => /\.mdx?$/.test(f))) {
+    const line = fs.readFileSync(path.join(REVIEWS_DIR, file), 'utf8').match(/^tags:\s*\[(.*)\]/m);
+    for (const tag of line?.[1].match(/[a-z0-9-]+/g) || []) counts.set(tag, (counts.get(tag) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .filter(([, n]) => n >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([tag]) => tag);
+}
+
+function reviewBody(file) {
+  const raw = fs.readFileSync(file, 'utf8');
+  return raw.replace(/^---[\s\S]*?\n---\s*/, '').trim();
+}
+
+function loadCalibration(excludeSlug) {
+  return CALIBRATION_SLUGS.filter((slug) => slug !== excludeSlug)
+    .map((slug) => path.join(REVIEWS_DIR, `${slug}.md`))
+    .filter((file) => fs.existsSync(file))
+    .map((file) => reviewBody(file));
+}
+
+function briefing(params, venue) {
+  const facts = (venue.facts || []).map((fact) => `- ${fact}`).join('\n') || '- (none found)';
+  return `Place: ${params.title || params.location}
+Location: ${[params.city, params.state, params.country].filter(Boolean).join(', ')}
+What we ate, drank, or did: ${params.items}
+Dan's notes: ${params.notes || '(none provided — lean on the items and venue facts; do not invent a backstory)'}
+Venue facts:
+${facts}`;
+}
+
+async function draftReview(params, venue, examples) {
+  const calibration = examples.map((body, i) => `<example ${i + 1}>\n${body}\n</example ${i + 1}>`).join('\n\n');
+  const prompt = `Here are reviews Dan rewrote himself. They are the voice target. Match their wit, rhythm, and specificity; do not reuse their lines or structure.
+
+${calibration}
+
+Now write the review for this one:
+
+${briefing(params, venue)}
+
+Return only the review body.`;
+  return claude({ model: WRITER_MODEL, system: VOICE, prompt, maxTokens: 1500, temperature: 1 });
+}
+
+async function sharpenReview(params, venue, draft) {
+  const prompt = `Edit this draft review the way a great, ruthless editor would.
+
+- Cut every line that could appear in a review of a different place.
+- Cut filler, hedging, adjective piles, and any menu-recap sentences.
+- Make the funny lines funnier and the judgments sharper. Keep it human, not snide.
+- Keep every fact consistent with the briefing below; add no new facts.
+- Keep 3-5 short paragraphs.
+
+Briefing:
+${briefing(params, venue)}
+
+Draft:
+${draft}
+
+Return only the revised review body.`;
+  return claude({ model: WRITER_MODEL, system: VOICE, prompt, maxTokens: 1500 });
+}
+
+async function generateMetadata(params, review) {
+  const prompt = `From this review of ${params.location}, return only JSON with:
+- "description": one sentence, 15-25 words, plain and specific (what the visit was and what we had), no hype
+- "tags": 2-4 lowercase hyphenated tags for cuisine, venue type, or activity. Prefer these existing tags: ${commonTags().join(', ')}. No city, state, or place names, no occasions, no generic "restaurant"
+
+Review:
+${review}`;
+  const text = await claude({ model: RESEARCH_MODEL, prompt, maxTokens: 400 });
+  return extractJson(text);
+}
+
 function slugify(text) {
   return text
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '') // Remove special chars
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/-+/g, '-') // Replace multiple hyphens with single
-    .trim();
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/[\s_]+/g, '-')
+    .replace(/-+/g, '-');
 }
 
 function normalizeState(value) {
@@ -239,104 +257,95 @@ function normalizeState(value) {
 
 function normalizeCoordinates(value) {
   if (!value) return null;
-  const cleaned = String(value).replace(/["']/g, '').trim();
-  const parts = cleaned.split(',').map((p) => p.trim());
+  const parts = String(value).replace(/["']/g, '').split(',').map((p) => p.trim());
   if (parts.length !== 2) return null;
-  const lng = Number(parts[0]);
-  const lat = Number(parts[1]);
+  const [lng, lat] = parts.map(Number);
   if (Number.isNaN(lng) || Number.isNaN(lat)) return null;
   if (lng < -180 || lng > 180 || lat < -90 || lat > 90) return null;
   return `${lng.toFixed(6)}, ${lat.toFixed(6)}`;
 }
 
-/**
- * Create markdown file with frontmatter and review
- */
-function createMarkdownFile(params, metadata, review) {
-  const slug = slugify(params.location);
-  const filename = `${slug}.md`;
+const quote = (value) => JSON.stringify(String(value));
 
-  const normalizedState = normalizeState(params.state);
-  const normalizedCoordinates = normalizeCoordinates(metadata.coordinates);
-  const normalizedCountry = params.country || 'United States';
-
-  const frontmatter = `---
-${metadata.address ? `address: "${metadata.address.replace(/"/g, '\\"')}"` : '# address: ""'}
-city: "${params.city.toLowerCase()}"
-${normalizedCoordinates ? `coordinates: ${normalizedCoordinates}` : '# coordinates: -86.781600, 36.162700'}
-country: "${normalizedCountry.replace(/"/g, '\\"')}"
-description: "${String(metadata.description || '').replace(/"/g, '\\"')}"
-heroImageAlt: "Placeholder image"
-heroImage: "placeholder"
-${metadata.infoUrl ? `infoUrl: "${metadata.infoUrl}"` : '# infoUrl: ""'}
-pubDate: ${new Date().toISOString().split('T')[0]}
-${normalizedState ? `state: "${normalizedState}"` : '# state: ""'}
-tags: [${metadata.tags.join(', ')}]
-title: "${params.location.replace(/"/g, '\\"')}"
-aiGenerated: true
----
-
-${review}
-`;
-
-  const outputPath = path.join(__dirname, '..', 'src', 'content', 'reviews', filename);
-
-  fs.writeFileSync(outputPath, frontmatter, 'utf8');
-
-  console.log(`✅ Created review: ${filename}`);
-  console.log(`   Location: ${params.location}`);
-  console.log(`   City: ${params.city}`);
-  console.log(`   Tags: ${metadata.tags.join(', ')}`);
-  console.log(`   Path: ${outputPath}`);
-
-  return filename;
+function buildMarkdown(params, venue, metadata, review) {
+  const state = normalizeState(params.state || venue.state);
+  const coordinates = normalizeCoordinates(venue.coordinates);
+  const lines = [
+    '---',
+    `title: ${quote(params.title || params.location)}`,
+    venue.address ? `address: ${quote(venue.address)}` : '# address: ""',
+    `city: ${quote(params.city.toLowerCase())}`,
+    state ? `state: ${quote(state)}` : '# state: ""',
+    `country: ${quote(params.country || venue.country || 'United States')}`,
+    coordinates ? `coordinates: ${quote(coordinates)}` : '# coordinates: "-86.781600, 36.162700"',
+    `description: ${quote(metadata.description || '')}`,
+    `heroImage: ${quote(typeof params['hero-image'] === 'string' ? params['hero-image'] : 'placeholder')}`,
+    `heroImageAlt: ${quote(typeof params['hero-image-alt'] === 'string' ? params['hero-image-alt'] : 'Placeholder image')}`,
+    venue.infoUrl ? `infoUrl: ${quote(venue.infoUrl)}` : '# infoUrl: ""',
+    `pubDate: ${quote(typeof params.date === 'string' ? params.date : new Date().toISOString().split('T')[0])}`,
+    `tags: ${JSON.stringify(metadata.tags || [])}`,
+    'aiGenerated: true',
+    '---',
+    '',
+    review.trim(),
+    '',
+  ];
+  return lines.join('\n');
 }
 
-/**
- * Main execution
- */
 async function main() {
-  console.log('🍽️  Restaurant/Activity Review Generator\n');
+  console.log('🍽️  No ReservAItions review generator\n');
 
-  // Validate environment variables
-  if (!OPENAI_API_KEY) {
-    console.error('❌ Missing OpenAI API key. Set OPENAI_API_KEY.');
+  if (!ANTHROPIC_API_KEY) {
+    console.error('❌ Missing ANTHROPIC_API_KEY.');
     process.exit(1);
   }
 
   try {
-    // Parse command-line arguments
-    console.log('📍 Parsing input parameters...\n');
-    const params = parseArguments();
+    const params = parseArguments(process.argv.slice(2));
+    const slug = typeof params.slug === 'string' ? params.slug : slugify(params.title || params.location);
+    const outputPath = path.join(REVIEWS_DIR, `${slug}.md`);
 
-    console.log('Input:');
-    console.log(`  Location: ${params.location}`);
-    console.log(`  City: ${params.city}`);
-    if (params.state) console.log(`  State: ${params.state}`);
-    console.log(`  Country: ${params.country}`);
-    console.log(`  Items: ${params.items}\n`);
+    if (fs.existsSync(outputPath) && !params.force && !params['dry-run']) {
+      throw new Error(`${path.relative(process.cwd(), outputPath)} already exists (use --force to overwrite)`);
+    }
+    if (!params.notes) {
+      console.warn('   ⚠️  No --notes given. Reviews are much better with why you went, who was there, and what stuck.\n');
+    }
 
-    // Step 1: Generate metadata
-    console.log('🔍 Step 1: Generating metadata...');
-    const metadata = await generateMetadata(params);
-    console.log('   ✓ Metadata generated');
-    console.log(`   Tags: ${metadata.tags.join(', ')}`);
-    console.log(`   Description: ${metadata.description}\n`);
+    console.log(`🔍 Researching ${params.location} (${RESEARCH_MODEL})...`);
+    const venue = await researchVenue(params);
+    if (!normalizeCoordinates(venue.coordinates)) {
+      venue.coordinates = await geocode(params, venue);
+    }
+    console.log(`   Address: ${venue.address || '—'}`);
+    console.log(`   Coordinates: ${venue.coordinates || '—'}`);
+    console.log(`   Facts: ${(venue.facts || []).length}\n`);
+    if (!normalizeCoordinates(venue.coordinates)) {
+      console.warn('   ⚠️  No coordinates found; the review will not appear on the map until you add them.\n');
+    }
 
-    // Step 2: Generate review
-    console.log('✍️  Step 2: Generating review in Bourdain style...');
-    const review = await generateReview(params, metadata);
-    console.log('   ✓ Review generated\n');
+    console.log(`✍️  Drafting (${WRITER_MODEL})...`);
+    let review = await draftReview(params, venue, loadCalibration(slug));
 
-    // Create markdown file
-    console.log('📝 Creating markdown file...');
-    createMarkdownFile(params, metadata, review);
+    if (!params['no-sharpen']) {
+      console.log('🔪 Sharpening...');
+      review = await sharpenReview(params, venue, review);
+    }
 
-    console.log('\n✨ Done!\n');
+    console.log('🏷️  Metadata...\n');
+    const metadata = await generateMetadata(params, review);
+    const markdown = buildMarkdown(params, venue, metadata, review);
 
+    if (params['dry-run']) {
+      console.log(markdown);
+      return;
+    }
+
+    fs.writeFileSync(outputPath, markdown, 'utf8');
+    console.log(`✅ Wrote ${path.relative(process.cwd(), outputPath)}`);
   } catch (error) {
-    console.error(`\n❌ Error:`, error.message);
-    console.error(error.stack);
+    console.error(`\n❌ Error: ${error.message}`);
     process.exit(1);
   }
 }

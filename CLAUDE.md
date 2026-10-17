@@ -66,6 +66,10 @@ and `/add-round`. Shared identity in `src/styles/golf.css` plus
 
 `docs/agent-content-pipeline/README.md` describes the Leif → Quillan → Watten → Shelby agent workflow for generating No Reservaitions and music reviews. Scripts are in `scripts/agent-content/`. Use `yarn agent:packet:validate` and `yarn agent:content:publish` to drive the pipeline.
 
+### No Reservaitions generator
+
+`yarn review:generate --location "..." --city "..." --items "a, b" --notes "why we went, who was there, what stuck"` (needs `ANTHROPIC_API_KEY`). Claude researches the venue with web search, drafts using Dan's own rewritten reviews (`CALIBRATION_SLUGS` in `scripts/generate-review.mjs`) as the voice target, runs a sharpening pass, and writes `src/content/reviews/<slug>.md`. Use `--dry-run` to preview; `--hero-image <slug>` once the image is in `public/no-reserv-ai-tions/`.
+
 ### GitHub Actions
 
 - `settle-pending-bets.yml` — daily auto-settlement via ESPN APIs; run manually with `--bet-id <id>`
