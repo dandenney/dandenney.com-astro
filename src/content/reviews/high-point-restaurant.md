@@ -9,7 +9,7 @@ description: "Misty's birthday dinner at High Point Restaurant with rare ahi tun
 heroImageAlt: "Close-up of deeply browned halved Brussels sprouts on a white plate"
 heroImageAttribution: "Photo by Dan Denney"
 infoUrl: "https://www.highpointrestaurant.net/"
-pubDate: "2026-09-29"
+pubDate: "2026-09-26"
 tags: ["fine-dining","steakhouse"]
 aiGenerated: true
 heroImage: "high-point-restaurant"
