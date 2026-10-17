@@ -3767,7 +3767,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "loss",
     portfolioAction: "bet",
     bettors: "dan-and-gardenOf",
-    betAmount: 30,
+    betAmount: 60,
     returnAmount: 0,
   },
   {
@@ -3784,8 +3784,8 @@ export const rithhmmPicks: RithhmmPick[] = [
     result: "win",
     portfolioAction: "bet",
     bettors: "dan-and-gardenOf",
-    betAmount: 30,
-    returnAmount: 58.3,
+    betAmount: 60,
+    returnAmount: 116.6,
   },
   // 2026-10-17
   {
