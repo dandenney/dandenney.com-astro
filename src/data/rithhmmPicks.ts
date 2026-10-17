@@ -17,6 +17,7 @@ export type RithhmmPropType =
   | "rush-attempts-under"
   | "rushing-yards-under"
   | "game-total-under"
+  | "spread"
   | "moneyline";
 
 export type RithhmmPickResult = "win" | "loss" | "push" | "pending";
@@ -3785,5 +3786,22 @@ export const rithhmmPicks: RithhmmPick[] = [
     bettors: "dan-and-gardenOf",
     betAmount: 30,
     returnAmount: 58.3,
+  },
+  // 2026-10-17
+  {
+    id: 256,
+    date: "2026-10-17",
+    sport: "NCAAF",
+    pick: "Tennessee +7.5",
+    odds: "-108",
+    confidence: 60.0,
+    modelProjection: "Rithmm favors Tennessee +7.5, 60% to 40%",
+    recentForm: "3/6",
+    matchup: "Alabama @ Tennessee",
+    propType: "spread",
+    result: "pending",
+    portfolioAction: "bet",
+    bettors: "dan-and-gardenOf",
+    betAmount: 60,
   },
 ];
