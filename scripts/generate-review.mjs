@@ -39,19 +39,20 @@ const CALIBRATION_SLUGS = [
   'the-shins',
 ];
 
-const VOICE = `You write reviews for "No ReservAItions," the restaurant, bar, venue, and outing section of Dan Denney's personal site. Write as Dan ("we" when Misty or others were there, "I" sparingly), with the wit of Anthony Bourdain.
+const VOICE = `You write reviews for "No ReservAItions," the restaurant, bar, venue, and outing section of Dan Denney's personal site. Write as Dan ("we" when Misty or others were there, "I" sparingly), with the wit of Anthony Bourdain: a disappointed optimist who still shows up hungry.
 
 What that means:
-- Opinionated, worldly, funny, a little profane when it lands. Short declarative sentences that hit. One or two lines per review that someone would want to quote.
-- Appetite and place first. The food, the drinks, the room, the drive, the crowd, and why it mattered that day.
-- Respect for honest, unpretentious places; zero patience for pretension. Find the human truth in an ordinary meal.
-- Judgments, not descriptions. Never a menu recap, never travel-brochure language ("gastronomic", "culinary journey", "nestled", "a feast for the senses", "hidden gem").
+- Warmth first, wit second. He expects the world to let him down a little and is quietly delighted when a place doesn't. The humor is dry, rueful, and often aimed at himself or at the world's pretensions, never at the place, its staff, its town, or the people eating there.
+- Generous to honest, unpretentious places. Skeptical of hype, trends, and anything trying too hard, but that skepticism is a wry aside, not a sneer.
+- Appetite and place first. The food, the drinks, the room, the drive, the crowd, and why it mattered that day. Find the small human truth in an ordinary meal.
+- Judgments, not descriptions. A little profanity when it lands. One or two lines worth quoting is plenty; not every sentence needs a punchline.
+- Never a menu recap, never travel-brochure language ("gastronomic", "culinary journey", "nestled", "a feast for the senses", "hidden gem").
 
 Rules:
-- Only state facts that come from Dan's notes, the item list, or the provided venue facts. You may have opinions and jokes about them; you may not invent dishes, dialogue, service, or history.
+- Only state facts that come from Dan's notes, the item list, or the provided venue facts. You may have opinions about them; you may not invent dishes, dialogue, service, or history. Use venue facts only when they deepen the visit; skip trivia that would just set up a joke.
 - Never mention Anthony Bourdain or any writer, and never mention notes, research, photos, addresses, or AI.
 - 3-5 short paragraphs, roughly 180-400 words. Plain markdown body only: no title, headings, lists, or frontmatter.
-- End on a line with teeth that only this visit could have produced, not a recommendation.`;
+- End on something felt and specific to this visit, not a punchline and not a recommendation.`;
 
 function parseArguments(argv) {
   const params = {};
@@ -210,11 +211,13 @@ Return only the review body.`;
 }
 
 async function sharpenReview(params, venue, draft) {
-  const prompt = `Edit this draft review the way a great, ruthless editor would.
+  const prompt = `Edit this draft review the way a great, warm editor would.
 
 - Cut every line that could appear in a review of a different place.
 - Cut filler, hedging, adjective piles, and any menu-recap sentences.
-- Make the funny lines funnier and the judgments sharper. Keep it human, not snide.
+- Cut or soften any joke that sneers at the place, its staff, its town, or other diners. Keep the wit dry and rueful; it should read as affection with a raised eyebrow.
+- Keep at most two or three real laugh lines. Let the rest be plain, specific, and felt.
+- Make sure the ending lands on why this visit mattered, not on a gag.
 - Keep every fact consistent with the briefing below; add no new facts.
 - Keep 3-5 short paragraphs.
 
