@@ -5,7 +5,7 @@ city: "nashville"
 state: "tennessee"
 country: "United States"
 coordinates: "-86.784710, 36.160198"
-description: "Jesse Welles at The Pinnacle in Nashville Yards, with chicken scratches and PBRs, for the political songs and a look at the rest of his music."
+description: "Jesse Welles at The Pinnacle in Nashville Yards, with Little Harpeth Chicken Scratches and PBRs, for the political songs and a look at the rest of his music."
 heroImage: "jesse-welles"
 heroImageAlt: "Jesse Welles playing acoustic guitar with his band beneath a glowing red power-line tower and looping neon wires against a starry backdrop at The Pinnacle"
 heroImageAttribution: "Photo by Dan Denney"
@@ -18,8 +18,8 @@ We went to see Jesse Welles for the political songs, the ones that sound like a 
 
 The room is new, the anchor of the Nashville Yards development, and it sits in the gap between the Ryman and Bridgestone: about 4,500 people. That's big enough to feel like an event and small enough that a guy with a guitar and a lot on his mind doesn't get swallowed. It matters for this kind of music. A protest song works best when it sounds like it's being sung to you, not broadcast at you from a quarter mile away.
 
-Chicken scratches and PBRs carried the evening, which felt right. Nobody needs a cocktail with a backstory to listen to songs about how the country keeps finding new ways to disappoint itself. Cheap beer has always been the correct beverage for righteous indignation.
+Little Harpeth's Chicken Scratch and PBRs carried the evening, which felt right. A local beer and a working-man's can, and not a cocktail with a backstory in sight. Nobody needs one to listen to songs about how the country keeps finding new ways to disappoint itself. Plain beer has always been the correct beverage for righteous indignation.
 
 The political songs were never going to be the whole story, though. Anybody who writes that sharply about the world has to have something to say about the rest of life, and the rest of the set is where you learn whether the anger is a bit or a person. That was the part we'd come to hear.
 
-We walked in for the songs that make you nod hard and feel a little less alone in being pissed off. We stayed for everything else he had to say, standing in a brand-new room with a few thousand strangers who'd come for the same reasons, cheap beers in hand, listening.
+We walked in for the songs that make you nod hard and feel a little less alone in being pissed off. We stayed for everything else he had to say, standing in a brand-new room with a few thousand strangers who'd come for the same reasons, beers in hand, listening.
