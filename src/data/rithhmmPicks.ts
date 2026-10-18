@@ -3799,9 +3799,10 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "3/6",
     matchup: "Alabama @ Tennessee",
     propType: "spread",
-    result: "pending",
+    result: "win",
     portfolioAction: "bet",
     bettors: "dan-and-gardenOf",
     betAmount: 60,
+    returnAmount: 115.55,
   },
 ];
