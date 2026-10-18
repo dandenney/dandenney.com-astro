@@ -10,6 +10,34 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "The Pulse: new trend of building “internal vibe-coding apps” at tech companies",
+    url: "https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal-aeb?triedRedirect=true",
+    description: "Tech companies like Ramp and Stripe are building AI tools that let non-engineers create internal apps. These tools can safely use company data, follow design rules, and help employees build what they need. They also…",
+    created: "2026-10-17",
+    kind: "read",
+  },
+  {
+    title: "How to Design for Failures",
+    url: "https://blog.bytebytego.com/p/how-to-design-for-failures?triedRedirect=true",
+    description: "No software system can be guaranteed never to fail. Failures can come from hardware and power problems, not just faulty code. Design systems to handle problems, limit their impact, and recover quickly.",
+    created: "2026-10-17",
+    kind: "read",
+  },
+  {
+    title: "117 CSS text effects & animations, free to copy.",
+    url: "https://text-effects.colorion.co/?utm_source=chatgpt.com",
+    description: "This site offers 117 free animated text effects made with pure CSS. Copy the CSS, customize its colors, or use a prompt to recreate an effect with an AI coding tool. The effects support reduced motion and are MIT…",
+    created: "2026-10-17",
+    kind: "read",
+  },
+  {
+    title: "Scrolling is All You Need: Building a Swipeable Sheet",
+    url: "https://react-aria.adobe.com/blog/sheet",
+    description: "React Aria’s new Sheet is an overlay that users can swipe open, close, and between snap points. It uses native CSS scrolling and animations for smooth gestures without JavaScript touch handling. It also supports…",
+    created: "2026-10-17",
+    kind: "read",
+  },
+  {
     title: "scroll-mask",
     url: "https://twilson.net/scroll-mask?via=dailydev",
     description: "scroll-mask is a set of Tailwind utilities that fades the edges of scrollable areas as you scroll. It works without JavaScript, using CSS scroll animations. You can choose the edges to fade and adjust the fade length.",
