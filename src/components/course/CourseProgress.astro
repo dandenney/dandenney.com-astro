@@ -1,0 +1,156 @@
+---
+import "@/styles/course.css";
+
+interface Props {
+  course: string;
+  lessons: { id: string; title: string; anchor: string }[];
+  /** "syllabus" lists every lesson; "finish" is the end-of-course summary. */
+  variant?: "syllabus" | "finish";
+}
+
+const { course, lessons, variant = "syllabus" } = Astro.props;
+---
+
+<course-progress class="course-card course-progress" data-course={course} data-total={lessons.length} data-variant={variant}>
+  <div class="progress-head">
+    <div>
+      <div class="course-label">{variant === "syllabus" ? "Syllabus" : "Course complete?"}</div>
+      <div class="course-title" data-progress-text>0 of {lessons.length} checkpoints passed</div>
+    </div>
+    <button type="button" class="course-btn" data-reset hidden>Reset progress</button>
+  </div>
+  <div class="progress-bar" aria-hidden="true"><span data-progress-fill></span></div>
+  {variant === "syllabus" && (
+    <ol class="progress-lessons">
+      {lessons.map((lesson, index) => (
+        <li data-lesson={lesson.id}>
+          <span class="progress-check course-mono" aria-hidden="true">{index + 1}</span>
+          <a href={`#${lesson.anchor}`}>{lesson.title}</a>
+          <span class="sr-only" data-status>not started</span>
+        </li>
+      ))}
+    </ol>
+  )}
+  {variant === "finish" && (
+    <div class="course-muted progress-finish" data-finish-text>
+      Pass every checkpoint above to finish the course. Progress is saved in this browser only.
+    </div>
+  )}
+</course-progress>
+
+<style>
+  .progress-head {
+    align-items: start;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .progress-bar {
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-radius: 999px;
+    height: 0.6rem;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .progress-bar span {
+    background: var(--course-accent);
+    display: block;
+    height: 100%;
+    transition: width 300ms ease;
+    width: 0;
+  }
+
+  .longform .progress-lessons {
+    display: grid;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .longform .progress-lessons li + li {
+    margin-top: 0;
+  }
+
+  .progress-lessons li {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .progress-check {
+    align-items: center;
+    border: 1px solid var(--course-border);
+    border-radius: 999px;
+    display: inline-flex;
+    flex: none;
+    font-size: 0.75rem;
+    height: 1.6rem;
+    justify-content: center;
+    width: 1.6rem;
+  }
+
+  .progress-lessons li[data-done] .progress-check {
+    background: var(--course-good-soft);
+    border-color: var(--course-good);
+    color: var(--course-good);
+  }
+
+  .progress-finish {
+    margin-top: 0.75rem;
+  }
+</style>
+
+<script>
+  import { getCompleted, onProgress, resetProgress } from "@/lib/course";
+
+  class CourseProgress extends HTMLElement {
+    #cleanup?: () => void;
+
+    connectedCallback() {
+      const course = this.dataset.course ?? "";
+      const total = Number(this.dataset.total);
+      const text = this.querySelector<HTMLElement>("[data-progress-text]")!;
+      const fill = this.querySelector<HTMLElement>("[data-progress-fill]")!;
+      const reset = this.querySelector<HTMLButtonElement>("[data-reset]")!;
+      const finish = this.querySelector<HTMLElement>("[data-finish-text]");
+
+      const render = () => {
+        const completed = getCompleted(course);
+        const done = completed.size;
+        text.textContent = `${done} of ${total} checkpoints passed`;
+        fill.style.width = `${(done / total) * 100}%`;
+        reset.hidden = done === 0;
+        this.querySelectorAll<HTMLElement>("li[data-lesson]").forEach((item) => {
+          const isDone = completed.has(item.dataset.lesson ?? "");
+          item.toggleAttribute("data-done", isDone);
+          item.querySelector(".progress-check")!.textContent = isDone ? "✓" : String([...item.parentElement!.children].indexOf(item) + 1);
+          item.querySelector("[data-status]")!.textContent = isDone ? "passed" : "not started";
+        });
+        if (finish) {
+          finish.textContent =
+            done === total
+              ? "You passed every checkpoint. You now know enough to design your first System One call, and enough to be skeptical of it."
+              : `${total - done} checkpoint${total - done === 1 ? "" : "s"} to go. Progress is saved in this browser only.`;
+        }
+      };
+
+      reset.addEventListener("click", () => {
+        resetProgress(course);
+        window.location.reload();
+      });
+
+      render();
+      this.#cleanup = onProgress(course, render);
+    }
+
+    disconnectedCallback() {
+      this.#cleanup?.();
+    }
+  }
+
+  if (!customElements.get("course-progress")) customElements.define("course-progress", CourseProgress);
+</script>

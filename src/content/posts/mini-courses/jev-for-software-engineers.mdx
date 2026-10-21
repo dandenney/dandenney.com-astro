@@ -1,0 +1,210 @@
+---
+pubDate: "2026-10-21"
+summary: "An interactive mini course on Jev and System One models: what they are, the three question types, thresholds, scores, and where they break, told through ed tech decisions."
+tags:
+  - mini-course
+  - ai
+title: "Mini Course: Jev for Software Engineers"
+---
+
+import CourseProgress from "@/components/course/CourseProgress.astro";
+import Checkpoint from "@/components/course/Checkpoint.astro";
+import PrimitivePicker from "@/components/course/jev/PrimitivePicker.astro";
+import RequestBuilder from "@/components/course/jev/RequestBuilder.astro";
+import ThresholdLab from "@/components/course/jev/ThresholdLab.astro";
+import ScoreMixer from "@/components/course/jev/ScoreMixer.astro";
+
+export const course = "jev-for-software-engineers";
+export const lessons = [
+  { id: "l1", title: "Fast thinking for software", anchor: "lesson-1-fast-thinking-for-software" },
+  { id: "l2", title: "Three primitives, three statements", anchor: "lesson-2-three-primitives-three-statements" },
+  { id: "l3", title: "State in, decisions out", anchor: "lesson-3-state-in-decisions-out" },
+  { id: "l4", title: "Thresholds live in your code", anchor: "lesson-4-thresholds-live-in-your-code" },
+  { id: "l5", title: "Reading a score", anchor: "lesson-5-reading-a-score" },
+  { id: "l6", title: "Where it breaks", anchor: "lesson-6-where-it-breaks" },
+];
+
+I've spent most of my career building places where people learn to code, from Code School to DataCamp. The best thing about learning in the browser was always the same: you try something, you get feedback right away, you try again. So I wanted to try a post that works that way. This is a short course, six lessons, each with something to poke at and a checkpoint at the end. Your progress saves in this browser.
+
+The subject is [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), the first "System One" model from TypeSafe. It's interesting to me because so much of ed tech is small judgment calls made thousands of times a day: is this learner stuck, which hint should they see, does this forum post give away the answer, who should an instructor help first. Those are the examples we'll use.
+
+<CourseProgress course={course} lessons={lessons} />
+
+## Lesson 1: Fast thinking for software
+
+The name comes from Daniel Kahneman's *Thinking, Fast and Slow*. System 1 is the fast, intuitive judgment you make without deliberating. System 2 is the slow, effortful reasoning. Most of the LLM conversation for the last few years has been about System 2: models that write, plan, and reason out loud.
+
+Jev goes the other way. TypeSafe's one-line pitch is **unstructured state in, typed probabilistic decisions out**. You hand it some text or JSON, ask it questions, and get back numbers your code can branch on. It can't write a sentence, generate code, summarize, or chat. [The docs](https://docs.typesafe.ai/concepts/system-one) are blunt about that, and it's the point.
+
+If you've ever wired an LLM into a product to answer "is this a refund request?" you know the routine: write a prompt, ask for JSON, parse it, retry when it isn't JSON, and then wonder what `"confidence": "high"` actually means. A System One model skips straight to the part you wanted. One of the TypeSafe founders described it on Hacker News as a "frontier-intelligence function call," and the docs call the use case "smart if-statements."
+
+The vendor numbers are eye-catching: 70 to 500 ms per request, $0.042 per million input tokens, and output tokens are free. Those are TypeSafe's claims from their launch, comparing against frontier models doing the same decisions. Keep them in mind as a reason to look, not a reason to believe. Lesson 6 is about that.
+
+<Checkpoint
+  course={course}
+  lesson="l1"
+  question="A learner finishes a course. Which of these is a job for Jev?"
+  options={[
+    "Write a personalized congratulations email",
+    "Decide whether their capstone project meets the certificate bar",
+    "Explain which parts of their capstone could be improved",
+  ]}
+  answer={1}
+  explain="That's a decision your code can branch on. The other two need generated prose, which Jev can't produce."
+  hints={["That one needs generated text. Jev doesn't write.", null, "An explanation is generated prose. Jev returns decisions, not reasons."]}
+/>
+
+## Lesson 2: Three primitives, three statements
+
+Every Jev question is one of three types. The trick that made it click for me: each one maps to a control-flow statement you already write every day.
+
+- **Noul** (as in Bernoulli) is a yes/no question. It returns one number between 0 and 1: the probability the answer is yes. It's an `if`.
+- **Choice** picks one option from a set you define. It returns the winner, a probability for every option, and a confidence. It's a `match` or `switch`.
+- **Score** rates something against ordered levels you describe. It returns a scalar position, probabilities per level, and a confidence. It's what you `sort` by.
+
+You define the questions at request time. There's no fine-tuning or training a classifier per task. You change behavior by changing the question, its instructions, and its criteria.
+
+<PrimitivePicker />
+
+<Checkpoint
+  course={course}
+  lesson="l2"
+  question="You want to know whether a learner's code is 'beginner', 'intermediate', or 'advanced'. Which primitive and why?"
+  options={[
+    "Choice, because there are three named options",
+    "Score, because the levels have an order",
+    "Three Nouls, one per level",
+  ]}
+  answer={1}
+  explain="The levels are ordered. A Choice would treat 'beginner' and 'advanced' as just different, and three Nouls would let all three say yes."
+  hints={["Close. Ask yourself whether the options have an order. If they do, a Choice throws that away.", null, "Nouls are independent, so all three could say yes at once. You want one position on a scale."]}
+/>
+
+## Lesson 3: State in, decisions out
+
+A request has two parts. The **state** is the thing being judged: a string, a JSON object, or an array of strings. Text only for now; no images, audio, or video. The **questions** are what you want to know about it. Every question sees the same state, each one is answered independently, and they run in parallel, so asking five questions doesn't cost five round trips.
+
+Keep those two things separate. The state should be facts about the world, not instructions. Put your framing in each question's `instructions` and `criteria`. Criteria are where most of the quality comes from: for a Noul you can describe what counts as true and false, for a Choice you describe each option, and for a Score you describe each level.
+
+The [state docs](https://docs.typesafe.ai/concepts/state) recommend a JSON object for most requests. In ed tech that's natural, because the interesting context is already structured: which course, which exercise, how many attempts, the last error.
+
+<RequestBuilder />
+
+Notice what happens in the code tab. Each answer feeds ordinary code. The model never decides to hand a learner off to support; your `if` does. That's the whole design: Jev provides judgment, your code holds the policy.
+
+One more design rule from the docs: **one condition per question**. "Is the learner stuck and frustrated?" is two questions pretending to be one. Ask them separately and combine them with `&&` where you can see it, test it, and change it.
+
+<Checkpoint
+  course={course}
+  lesson="l3"
+  question="You need to know if a forum post is off-topic AND contains a spoiler. What's the best request?"
+  options={[
+    "One Noul: 'Is this post off-topic and a spoiler?'",
+    "Two Nouls on the same state, combined in your code",
+    "Two separate requests, one per question",
+  ]}
+  answer={1}
+  explain="Atomic questions, one shared state, one round trip. The AND belongs in code where you can test it."
+  hints={["Two conditions in one Noul blurs both. You can't tell which half drove the number.", null, "That works, but it's an extra round trip. Questions in one request already run independently and in parallel."]}
+/>
+
+## Lesson 4: Thresholds live in your code
+
+A Noul gives you a probability, not a verdict. Deciding what counts as "yes" is your job, and the right line depends on what a mistake costs. The [Noul docs](https://docs.typesafe.ai/primitives/noul) put it simply: use 0.5 when both errors cost the same, raise the bar when a false yes is expensive, lower it when missing a yes is expensive, and send the middle to a person.
+
+In a learning product, the two mistakes are not equal. If the bot keeps a learner who asked for a human, you might lose that learner for good. If you escalate someone who didn't need it, a support person spends a minute. So you'd probably lean toward escalating.
+
+The six messages below, and their probabilities, come straight from TypeSafe's docs. The labels for which ones clearly want a human are mine.
+
+<ThresholdLab />
+
+Two things to notice. First, the "ambiguous" messages are ambiguous to people too. "Are you a bot?" might be curiosity or might be the first sign someone wants out. A probability near the middle is the model telling you that, and a review band gives you somewhere to put it. Second, you can't pick good thresholds from six examples. An [independent evaluation](https://arxiv.org/abs/2609.37647) of Jev found Noul probabilities were good at ranking but often badly placed relative to a fixed 0.5 cutoff. Translation: tune your thresholds on your own labeled data, and pin the model version once you have, because the `jev-latest` alias moves.
+
+<Checkpoint
+  course={course}
+  lesson="l4"
+  question="A Noul flags possible academic dishonesty, and a 'yes' suspends the learner's account. Where should the auto-action threshold go?"
+  options={[
+    "0.5, because that's the neutral midpoint",
+    "High, with everything below it going to a human reviewer",
+    "Low, so no cheating slips through",
+  ]}
+  answer={1}
+  explain="A false yes here is very expensive, so only act automatically when the model is nearly certain, and let a person look at the rest."
+  hints={["0.5 assumes both mistakes cost the same. Suspending an honest learner costs a lot more.", null, "A low bar means suspending lots of honest learners. That's the expensive mistake here."]}
+/>
+
+## Lesson 5: Reading a score
+
+A Score returns a `score` that's the probability-weighted average of level positions, which is why you'll see values like 1.43 on a 0 to 2 scale. It also returns the per-level `probabilities`, a `legend` of your level descriptions, and a `confidence`.
+
+The single number hides a lot. Try the first two presets below: they produce the same score for completely different reasons.
+
+<ScoreMixer />
+
+The level descriptions matter more than anything else here. The [Score docs](https://docs.typesafe.ai/primitives/score) show what happens with numbers-only levels like `["0", "1", "2"]`: a cosmetic bug scored 0.55 with 0.33 confidence. With descriptive levels ("Cosmetic; no impact to functionality" and so on), the same bug scored 0.0 with 1.0 confidence. Their rule of thumb is **describe situations, not degrees**. "Handles every case the instructions describe" beats "excellent." If you've ever written a grading rubric, this is the same skill, and it's one ed tech folks are already good at.
+
+Keep each Score to one dimension too. "Correctness and style" is two rubrics. A model that's sure the code is correct and sure the style is bad will give you a muddy middle.
+
+<Checkpoint
+  course={course}
+  lesson="l5"
+  question="An auto-grader Score returns 1.0 on a 0 to 2 scale with probabilities 0.5 / 0.0 / 0.5. What should your code do?"
+  options={[
+    "Award the middle grade; 1.0 is the score",
+    "Send it to a human grader",
+    "Award the top grade; half the probability says it's perfect",
+  ]}
+  answer={1}
+  explain="The model is split between broken and perfect, and nothing supports the middle. Low confidence is a routing signal."
+  hints={["The score is an average. No probability sits on the middle level at all.", null, "Half the probability also says it doesn't run. That's a coin flip, not a grade."]}
+/>
+
+## Lesson 6: Where it breaks
+
+I like Jev. I also think the quickest way to get burned by a new model is to believe its launch post. So here's the skeptical lesson.
+
+**Typed doesn't mean right.** TypeSafe says Jev can't hallucinate, and the output can't be malformed: you always get a valid probability or a valid option. But the [Hacker News discussion](https://news.ycombinator.com/item?id=49717558) pointed out the obvious problem: a well-formed answer can still be the wrong answer. "Billing" is a perfectly valid choice for a learner who's actually stuck on SQL.
+
+**Calibration is about groups.** A calibrated 0.8 means that across many questions scored 0.8, about 80% turn out yes. It says nothing about whether this particular learner wants a human. Confidence is a routing signal, not proof.
+
+**Benchmarks are the vendor's.** The speed and cost comparisons pit a model that returns a few numbers against models generating full responses. That's a fair comparison for decision tasks, but it's not the same as "better." TypeSafe's own launch notes that some of its workflow evals were built by the team that built the model. Independent work so far is mixed: [one evaluation](https://arxiv.org/abs/2609.37647) ran 346,009 requests across 37 datasets for under $10 and found Choice probabilities well calibrated, while [another paper](https://arxiv.org/abs/2610.02267) found zero-shot model routing was no better than chance.
+
+**Know the limits.** Text and JSON only. English works best. Requests top out around 64k tokens unless you opt into a long-context header the docs literally call `TypeSafe-Danger-Zone-Long-Context`. And "none of the above" doesn't work well as a Choice option; the docs suggest a separate Noul instead.
+
+The practical version: label a few hundred real examples from your product, measure, tune thresholds, pin the model version, log every answer with the version that produced it, and always keep a human path for the middle.
+
+<Checkpoint
+  course={course}
+  lesson="l6"
+  question="Your hint router has run on jev-latest for a month with tuned thresholds. What's the most important thing to change?"
+  options={[
+    "Nothing; calibrated models don't drift",
+    "Pin a versioned model ID so the alias can't move under your thresholds",
+    "Raise every threshold to 0.95 to be safe",
+  ]}
+  answer={1}
+  explain="Aliases point at new versions over time. Your thresholds were tuned against one specific model."
+  hints={["The model behind the alias can change. Your thresholds were tuned against the old one.", null, "That trades every mistake for a different one and throws away the tuning you did."]}
+/>
+
+## Cheat sheet
+
+- **Noul** is an `if`: one condition, a probability of yes, thresholds in your code.
+- **Choice** is a `switch`: describe every option, check confidence before acting.
+- **Score** is a `sort`: describe situations, not degrees; read the probabilities, not just the number.
+- **State** is facts; **questions** are framing. Keep them apart.
+- Split compound questions and combine answers with code you can test.
+- Always have a third path for the ambiguous middle, usually a person.
+- Tune on your own data, pin the version, log everything.
+
+<CourseProgress course={course} lessons={lessons} variant="finish" />
+
+## Sources and further watching
+
+- [Introducing System One models and Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), TypeSafe's launch post
+- TypeSafe docs: [System One](https://docs.typesafe.ai/concepts/system-one), [State](https://docs.typesafe.ai/concepts/state), [Noul](https://docs.typesafe.ai/primitives/noul), [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score)
+- [Launch discussion on Hacker News](https://news.ycombinator.com/item?id=49717558)
+- [Evaluating and Benchmarking the System One Model Jev](https://arxiv.org/abs/2609.37647) and [Fast Models, Slow Evidence](https://arxiv.org/abs/2610.02267)
+- [Victor Dibia's Jev explainer](https://victordibia.com/papers/jev.pdf)
+- [I Tested Jev, the AI Model That Makes Decisions Instead of Text](https://www.youtube.com/watch?v=vNnTeuNCPYY) by Tech With Tim

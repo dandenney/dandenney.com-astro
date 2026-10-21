@@ -1,0 +1,199 @@
+---
+import "@/styles/course.css";
+
+const state = {
+  course: "Joining Data in SQL",
+  exercise: "LEFT JOIN countries to languages",
+  attempts: 6,
+  last_error: "column \"code\" is ambiguous",
+  message:
+    "I've tried this six times and it keeps saying code is ambiguous. I literally copied the video. Is there a person I can ask?",
+};
+
+const questions = [
+  {
+    id: "wants_human",
+    type: "noul",
+    instructions: "Is the learner asking to talk to a person?",
+    criteria: {
+      true: "They explicitly ask for a human, an instructor, or support staff",
+      false: "They only ask for help with the exercise itself",
+    },
+    on: true,
+  },
+  {
+    id: "shares_solution",
+    type: "noul",
+    instructions: "Does the message include a complete solution to the graded exercise?",
+    on: false,
+  },
+  {
+    id: "hint_type",
+    type: "choice",
+    instructions: "Which kind of hint would unblock this learner fastest?",
+    criteria: {
+      syntax: "A typo, missing keyword, or ambiguous name; the approach is right",
+      logic: "The query runs but the approach can't produce the asked-for result",
+      concept: "They don't yet understand what the exercise is teaching",
+    },
+    on: true,
+  },
+  {
+    id: "frustration",
+    type: "score",
+    instructions: "How frustrated is the learner?",
+    criteria: [
+      "Calm and curious; happy to keep experimenting",
+      "Annoyed, but still trying on their own",
+      "About to give up on the exercise or the course",
+    ],
+    on: true,
+  },
+];
+---
+
+<request-builder class="course-card" data-state={JSON.stringify(state)} data-questions={JSON.stringify(questions)}>
+  <div class="course-label">Lab · Build a request</div>
+  <div class="course-title">One learner state, many questions</div>
+  <div class="course-muted">
+    This is the state a hint system might have when a learner gets stuck. Toggle which questions you ask about it and watch
+    the request body and the code that consumes it change. Nothing here calls the API; it shows the shapes.
+  </div>
+
+  <div class="builder-toggles" role="group" aria-label="Questions to ask">
+    {questions.map((question) => (
+      <button type="button" class="course-btn" aria-pressed={question.on ? "true" : "false"} data-question={question.id}>
+        <span class="course-mono">{question.id}</span>
+        <span class="course-muted builder-type">{question.type}</span>
+      </button>
+    ))}
+  </div>
+
+  <div class="builder-tabs" role="tablist" aria-label="Output">
+    <button type="button" class="course-btn" role="tab" aria-selected="true" aria-pressed="true" data-tab="request">POST /v1/systemone</button>
+    <button type="button" class="course-btn" role="tab" aria-selected="false" aria-pressed="false" data-tab="code">Your code</button>
+  </div>
+  <div class="course-code" role="tabpanel" tabindex="0" data-output></div>
+  <div class="course-muted builder-note" data-note></div>
+</request-builder>
+
+<style>
+  .builder-toggles,
+  .builder-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .builder-type {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-left: 0.35rem;
+  }
+
+  .builder-note {
+    margin-top: 0.75rem;
+  }
+</style>
+
+<script>
+  type Question = {
+    id: string;
+    type: "noul" | "choice" | "score";
+    instructions: string;
+    criteria?: Record<string, string> | string[];
+    on: boolean;
+  };
+
+  function consumerCode(active: Question[]): string {
+    if (!active.length) return "// Ask at least one question.";
+    const lines = ["const { answers } = await systemOne(request);", ""];
+    for (const q of active) {
+      if (q.id === "wants_human") {
+        lines.push(
+          "// Noul -> if. Thresholds are a product decision, not the model's.",
+          "if (answers.wants_human.noul > 0.7) return handOffToSupport(learner);",
+          "if (answers.wants_human.noul > 0.2) flagForReview(learner);",
+          "",
+        );
+      } else if (q.id === "shares_solution") {
+        lines.push("if (answers.shares_solution.noul > 0.9) hideFromForum(post);", "");
+      } else if (q.id === "hint_type") {
+        lines.push(
+          "// Choice -> match. Low confidence means ask, don't guess.",
+          "const { choice, confidence } = answers.hint_type;",
+          "if (confidence < 0.5) showHintMenu(learner);",
+          "else switch (choice) {",
+          '  case "syntax": showSyntaxHint(exercise); break;',
+          '  case "logic": showLogicHint(exercise); break;',
+          '  case "concept": replayConceptVideo(exercise); break;',
+          "}",
+          "",
+        );
+      } else if (q.id === "frustration") {
+        lines.push(
+          "// Score -> sort. Order the instructor's inbox by how close to quitting.",
+          "queue.upsert(learner, { priority: answers.frustration.score });",
+          "",
+        );
+      }
+    }
+    lines.push("log({ model: response.model, answers }); // aliases move; keep the version");
+    return lines.join("\n");
+  }
+
+  class RequestBuilder extends HTMLElement {
+    connectedCallback() {
+      const state = JSON.parse(this.dataset.state ?? "{}");
+      const questions = JSON.parse(this.dataset.questions ?? "[]") as Question[];
+      const output = this.querySelector<HTMLElement>("[data-output]")!;
+      const note = this.querySelector<HTMLElement>("[data-note]")!;
+      const tabs = [...this.querySelectorAll<HTMLButtonElement>("[data-tab]")];
+      let tab = "request";
+
+      const render = () => {
+        const active = questions.filter((q) => q.on);
+        if (tab === "request") {
+          const body = {
+            model: "jev-latest",
+            state,
+            questions: Object.fromEntries(
+              active.map(({ id, type, instructions, criteria }) => [id, criteria ? { type, instructions, criteria } : { type, instructions }]),
+            ),
+          };
+          output.textContent = JSON.stringify(body, null, 2);
+          note.textContent = `${active.length} question${active.length === 1 ? "" : "s"}, one state, one round trip. Each question sees the same state and is answered independently, in parallel.`;
+        } else {
+          output.textContent = consumerCode(active);
+          note.textContent = "Illustrative TypeScript. The helpers are made up; the shape of the decisions is the point.";
+        }
+      };
+
+      this.querySelectorAll<HTMLButtonElement>("[data-question]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const question = questions.find((q) => q.id === button.dataset.question)!;
+          question.on = !question.on;
+          button.setAttribute("aria-pressed", String(question.on));
+          render();
+        });
+      });
+
+      tabs.forEach((button) => {
+        button.addEventListener("click", () => {
+          tab = button.dataset.tab ?? "request";
+          tabs.forEach((t) => {
+            const selected = t === button;
+            t.setAttribute("aria-selected", String(selected));
+            t.setAttribute("aria-pressed", String(selected));
+          });
+          render();
+        });
+      });
+
+      render();
+    }
+  }
+
+  if (!customElements.get("request-builder")) customElements.define("request-builder", RequestBuilder);
+</script>
