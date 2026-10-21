@@ -1,0 +1,251 @@
+---
+import "@/styles/course.css";
+
+// Noul outputs for `is_human_escalation`, as published in TypeSafe's Noul docs.
+// `wantsHuman` is my own label for each message (null = genuinely unclear).
+const messages = [
+  { text: "Thanks, that fixed it!", p: 0.02, wantsHuman: false },
+  { text: "How do I reset my password?", p: 0.07, wantsHuman: false },
+  { text: "I need this sorted today, whatever it takes.", p: 0.26, wantsHuman: null },
+  { text: "Are you a bot?", p: 0.4, wantsHuman: null },
+  { text: "Is there any way to speak to someone about my invoice?", p: 0.84, wantsHuman: true },
+  { text: "I have asked three times now. Can I please just talk to a real person?", p: 0.99, wantsHuman: true },
+];
+---
+
+<threshold-lab class="course-card" data-messages={JSON.stringify(messages)}>
+  <div class="course-label">Lab · Thresholds are your code</div>
+  <div class="course-title">Route support messages with one Noul</div>
+  <div class="course-muted">
+    Question: <span class="course-mono">is_human_escalation</span>, "Is the user asking to talk to a human?" Drag the two
+    thresholds. Below the low one the bot keeps the conversation, above the high one it hands off, and the band in between
+    goes to a person who skims the queue.
+  </div>
+
+  <div class="lab-controls">
+    <label class="lab-control">
+      <span>Bot keeps it below <strong class="course-mono" data-low-out></strong></span>
+      <input class="course-range" type="range" min="0" max="1" step="0.01" value="0.2" data-low />
+    </label>
+    <label class="lab-control">
+      <span>Hand off above <strong class="course-mono" data-high-out></strong></span>
+      <input class="course-range" type="range" min="0" max="1" step="0.01" value="0.7" data-high />
+    </label>
+  </div>
+
+  <div class="lab-presets" role="group" aria-label="Threshold presets">
+    <button type="button" class="course-btn" data-preset="0.5,0.5">Coin flip (0.5 / 0.5)</button>
+    <button type="button" class="course-btn" data-preset="0.2,0.7">With a review band</button>
+    <button type="button" class="course-btn" data-preset="0.05,0.3">Never strand a customer</button>
+  </div>
+
+  <div class="lab-scale" aria-hidden="true">
+    <div class="lab-zone" data-zone="bot"></div>
+    <div class="lab-zone" data-zone="review"></div>
+    <div class="lab-zone" data-zone="human"></div>
+    {messages.map((message, index) => (
+      <span class="lab-dot" style={`left: ${message.p * 100}%`} title={message.text}>{index + 1}</span>
+    ))}
+  </div>
+
+  <div class="lab-rows" role="table" aria-label="Where each message is routed">
+    {messages.map((message, index) => (
+      <div class="lab-row" role="row" data-row={index}>
+        <span class="course-mono lab-num" role="cell">{index + 1}</span>
+        <span role="cell">"{message.text}"</span>
+        <span class="course-mono" role="cell">{message.p.toFixed(2)}</span>
+        <span class="lab-route" role="cell" data-route></span>
+      </div>
+    ))}
+  </div>
+
+  <div class="course-feedback" aria-live="polite" data-summary></div>
+</threshold-lab>
+
+<style>
+  .lab-controls {
+    display: grid;
+    gap: 0.75rem 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    margin-top: 1rem;
+  }
+
+  .lab-control {
+    display: grid;
+    font-size: 0.9rem;
+    gap: 0.25rem;
+  }
+
+  .lab-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .lab-scale {
+    border-radius: 0.5rem;
+    display: flex;
+    height: 2rem;
+    margin-top: 1.25rem;
+    overflow: visible;
+    position: relative;
+  }
+
+  .lab-zone {
+    height: 100%;
+  }
+
+  .lab-zone[data-zone="bot"] {
+    background: var(--course-good-soft);
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .lab-zone[data-zone="review"] {
+    background: var(--course-warn-soft);
+  }
+
+  .lab-zone[data-zone="human"] {
+    background: var(--course-accent-soft);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .lab-dot {
+    align-items: center;
+    background: var(--course-surface);
+    border: 1px solid var(--course-muted);
+    border-radius: 999px;
+    display: flex;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.7rem;
+    height: 1.4rem;
+    justify-content: center;
+    position: absolute;
+    top: 0.3rem;
+    transform: translateX(-50%);
+    width: 1.4rem;
+  }
+
+  .lab-rows {
+    display: grid;
+    font-size: 0.9rem;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+  }
+
+  .lab-row {
+    align-items: baseline;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1.25rem 1fr 2.75rem 7.5rem;
+  }
+
+  .lab-num {
+    color: var(--course-muted);
+  }
+
+  .lab-route {
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.1rem 0.6rem;
+    text-align: center;
+  }
+
+  .lab-route[data-zone="bot"] {
+    background: var(--course-good-soft);
+    color: var(--course-good);
+  }
+
+  .lab-route[data-zone="review"] {
+    background: var(--course-warn-soft);
+    color: var(--course-warn);
+  }
+
+  .lab-route[data-zone="human"] {
+    background: var(--course-accent-soft);
+    color: var(--course-accent);
+  }
+
+  @media (max-width: 40rem) {
+    .lab-row {
+      grid-template-columns: 1.25rem 1fr 2.75rem;
+    }
+
+    .lab-route {
+      grid-column: 2 / -1;
+      justify-self: start;
+    }
+  }
+</style>
+
+<script>
+  type Message = { text: string; p: number; wantsHuman: boolean | null };
+  type Zone = "bot" | "review" | "human";
+
+  const routeLabel: Record<Zone, string> = { bot: "Bot keeps it", review: "Review queue", human: "Human now" };
+
+  class ThresholdLab extends HTMLElement {
+    connectedCallback() {
+      const messages = JSON.parse(this.dataset.messages ?? "[]") as Message[];
+      const low = this.querySelector<HTMLInputElement>("[data-low]")!;
+      const high = this.querySelector<HTMLInputElement>("[data-high]")!;
+      const lowOut = this.querySelector<HTMLElement>("[data-low-out]")!;
+      const highOut = this.querySelector<HTMLElement>("[data-high-out]")!;
+      const summary = this.querySelector<HTMLElement>("[data-summary]")!;
+      const zones = [...this.querySelectorAll<HTMLElement>(".lab-zone")];
+
+      const zoneFor = (p: number, lo: number, hi: number): Zone => (p < lo ? "bot" : p > hi ? "human" : "review");
+
+      const render = (moved?: HTMLInputElement) => {
+        if (Number(low.value) > Number(high.value)) {
+          if (moved === low) high.value = low.value;
+          else low.value = high.value;
+        }
+        const lo = Number(low.value);
+        const hi = Number(high.value);
+        lowOut.textContent = lo.toFixed(2);
+        highOut.textContent = hi.toFixed(2);
+        zones[0].style.width = `${lo * 100}%`;
+        zones[1].style.width = `${(hi - lo) * 100}%`;
+        zones[2].style.width = `${(1 - hi) * 100}%`;
+
+        let stranded = 0;
+        let needless = 0;
+        let queued = 0;
+        messages.forEach((message, index) => {
+          const zone = zoneFor(message.p, lo, hi);
+          const cell = this.querySelector<HTMLElement>(`[data-row="${index}"] [data-route]`)!;
+          cell.dataset.zone = zone;
+          cell.textContent = routeLabel[zone];
+          if (zone === "review") queued++;
+          if (message.wantsHuman === true && zone === "bot") stranded++;
+          if (message.wantsHuman === false && zone === "human") needless++;
+        });
+
+        const parts = [
+          `${queued} of ${messages.length} message${queued === 1 ? "" : "s"} land in the review queue.`,
+          stranded ? `${stranded} customer${stranded === 1 ? " who asked" : "s who asked"} for a person stay stuck with the bot.` : "Nobody who clearly asked for a person is left with the bot.",
+          needless ? `${needless} clearly-handled conversation${needless === 1 ? " gets" : "s get"} escalated anyway.` : "",
+        ];
+        if (queued === 0) parts.push("No review band means messages 3 and 4, the genuinely ambiguous ones, get decided by a coin flip you wrote.");
+        summary.dataset.state = stranded || needless || queued === 0 ? "wrong" : "correct";
+        summary.textContent = parts.filter(Boolean).join(" ");
+      };
+
+      low.addEventListener("input", () => render(low));
+      high.addEventListener("input", () => render(high));
+      this.querySelectorAll<HTMLButtonElement>("[data-preset]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const [lo, hi] = (button.dataset.preset ?? "0.5,0.5").split(",");
+          low.value = lo;
+          high.value = hi;
+          render();
+        });
+      });
+      render();
+    }
+  }
+
+  if (!customElements.get("threshold-lab")) customElements.define("threshold-lab", ThresholdLab);
+</script>

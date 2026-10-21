@@ -1,0 +1,176 @@
+---
+import "@/styles/course.css";
+
+const levels = [
+  "Cosmetic; no impact to functionality",
+  "Broken or degraded feature, but workaround exists",
+  "Blocking issue; no workaround exists",
+];
+
+// The first two presets are bug reports from TypeSafe's Score docs.
+const presets = [
+  { label: "Safari export crash (docs)", weights: [0, 57, 43] },
+  { label: "PDF export, CSV workaround (docs)", weights: [0, 100, 0] },
+  { label: "Split between cosmetic and blocking", weights: [50, 0, 50] },
+];
+---
+
+<score-mixer class="course-card" data-presets={JSON.stringify(presets)}>
+  <div class="course-label">Lab · Reading a Score</div>
+  <div class="course-title">Triage a bug report against three severity levels</div>
+  <div class="course-muted">
+    A Score returns a probability for each level. The <span class="course-mono">score</span> is the probability-weighted
+    position, which is why it can be fractional. Move the sliders (they're normalized to sum to 1) or try a preset.
+  </div>
+
+  <div class="mixer-presets" role="group" aria-label="Probability presets">
+    {presets.map((preset, index) => (
+      <button type="button" class="course-btn" data-preset={index}>{preset.label}</button>
+    ))}
+  </div>
+
+  <div class="mixer-levels">
+    {levels.map((level, index) => (
+      <label class="mixer-level">
+        <span class="mixer-level-head">
+          <span class="course-mono mixer-index">{index}</span>
+          <span>{level}</span>
+          <strong class="course-mono" data-prob={index}></strong>
+        </span>
+        <input class="course-range" type="range" min="0" max="100" value={presets[0].weights[index]} data-weight={index} />
+      </label>
+    ))}
+  </div>
+
+  <div class="mixer-readout">
+    <div>
+      <div class="course-label">score</div>
+      <div class="mixer-big course-mono" data-score></div>
+    </div>
+    <div class="mixer-meter" aria-hidden="true">
+      <span data-marker></span>
+      <div class="mixer-ticks course-mono"><span>0</span><span>1</span><span>2</span></div>
+    </div>
+  </div>
+  <div class="course-feedback" aria-live="polite" data-read></div>
+</score-mixer>
+
+<style>
+  .mixer-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .mixer-levels {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.25rem;
+  }
+
+  .mixer-level {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .mixer-level-head {
+    align-items: baseline;
+    display: grid;
+    font-size: 0.9rem;
+    gap: 0.75rem;
+    grid-template-columns: 1.25rem 1fr 3.5rem;
+  }
+
+  .mixer-index {
+    color: var(--course-muted);
+  }
+
+  .mixer-readout {
+    align-items: end;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: auto 1fr;
+    margin-top: 1.5rem;
+  }
+
+  .mixer-big {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .mixer-meter {
+    border-bottom: 2px solid var(--course-border);
+    height: 1.5rem;
+    margin-bottom: 1.4rem;
+    position: relative;
+  }
+
+  .mixer-meter > span {
+    background: var(--course-accent);
+    border-radius: 999px;
+    height: 1rem;
+    position: absolute;
+    top: 0.5rem;
+    transform: translateX(-50%);
+    transition: left 200ms ease;
+    width: 1rem;
+  }
+
+  .mixer-ticks {
+    color: var(--course-muted);
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    position: absolute;
+    top: 1.75rem;
+    width: 100%;
+  }
+</style>
+
+<script>
+  class ScoreMixer extends HTMLElement {
+    connectedCallback() {
+      const presets = JSON.parse(this.dataset.presets ?? "[]") as { weights: number[] }[];
+      const sliders = [...this.querySelectorAll<HTMLInputElement>("[data-weight]")];
+      const scoreOut = this.querySelector<HTMLElement>("[data-score]")!;
+      const marker = this.querySelector<HTMLElement>("[data-marker]")!;
+      const read = this.querySelector<HTMLElement>("[data-read]")!;
+      const maxIndex = sliders.length - 1;
+
+      const render = () => {
+        const weights = sliders.map((slider) => Number(slider.value));
+        const total = weights.reduce((sum, w) => sum + w, 0) || 1;
+        const probs = weights.map((w) => w / total);
+        const score = probs.reduce((sum, p, i) => sum + p * i, 0);
+        const top = Math.max(...probs);
+
+        probs.forEach((p, i) => {
+          this.querySelector<HTMLElement>(`[data-prob="${i}"]`)!.textContent = p.toFixed(2);
+        });
+        scoreOut.textContent = score.toFixed(2);
+        marker.style.left = `${(score / maxIndex) * 100}%`;
+
+        const split = probs[0] > 0.25 && probs[maxIndex] > 0.25;
+        read.dataset.state = split || top < 0.6 ? "wrong" : "correct";
+        read.textContent = split
+          ? `The score says ${score.toFixed(2)}, "middle of the road", but no level says that. The model is torn between cosmetic and blocking. Get a human to triage this one instead of auto-assigning a priority.`
+          : top < 0.6
+            ? `No level has a clear majority (top is ${top.toFixed(2)}). Treat ${score.toFixed(2)} as a hint, not a grade.`
+            : `One level dominates at ${top.toFixed(2)}, so ${score.toFixed(2)} is a fair summary you could act on.`;
+      };
+
+      sliders.forEach((slider) => slider.addEventListener("input", render));
+      this.querySelectorAll<HTMLButtonElement>("[data-preset]").forEach((button) => {
+        button.addEventListener("click", () => {
+          presets[Number(button.dataset.preset)].weights.forEach((w, i) => (sliders[i].value = String(w)));
+          render();
+        });
+      });
+      render();
+    }
+  }
+
+  if (!customElements.get("score-mixer")) customElements.define("score-mixer", ScoreMixer);
+</script>

@@ -1,0 +1,133 @@
+---
+import "@/styles/course.css";
+
+type Primitive = "noul" | "choice" | "score";
+
+const scenarios: { prompt: string; answer: Primitive; why: string }[] = [
+  {
+    prompt: "Should this error-rate spike page whoever is on call at 2am?",
+    answer: "noul",
+    why: "It's a gate: page or don't. One probability, and your code decides how sure it needs to be before waking someone up.",
+  },
+  {
+    prompt: "Which team owns this bug: Checkout, Auth, or Content?",
+    answer: "choice",
+    why: "A fixed set of named options where exactly one should win. It's a match statement.",
+  },
+  {
+    prompt: "How severe is this bug: cosmetic, broken with a workaround, or blocking?",
+    answer: "score",
+    why: "Severity has an order. Describe each level and let the score land between them.",
+  },
+  {
+    prompt: "Does this cancellation reason sound like something a discount could fix?",
+    answer: "noul",
+    why: "One proposition. A high probability shows the retention offer; a low one lets them go without the extra screen.",
+  },
+  {
+    prompt: "Which genre shelf does this album go on: indie rock, hip-hop, or country?",
+    answer: "choice",
+    why: "The genres don't have an order. Nothing makes country 'more' than hip-hop, so it isn't a score.",
+  },
+  {
+    prompt: "How much does this review love the record: pan, mixed, or rave?",
+    answer: "score",
+    why: "Pan, mixed, and rave sit on a line. A choice would throw that order away.",
+  },
+  {
+    prompt: "Does this bet note mention an injury to a starter?",
+    answer: "noul",
+    why: "Yes or no about one fact. Your code decides whether that's enough to skip the bet.",
+  },
+];
+
+const labels: Record<Primitive, string> = { noul: "Noul · if", choice: "Choice · match", score: "Score · sort" };
+---
+
+<primitive-picker class="course-card" data-scenarios={JSON.stringify(scenarios)}>
+  <div class="course-label">Exercise · Pick the primitive</div>
+  <div class="course-title">Which question type fits each decision?</div>
+  <div class="picker-list">
+    {scenarios.map((scenario, index) => (
+      <div class="picker-item" data-index={index}>
+        <div class="picker-prompt">{scenario.prompt}</div>
+        <div class="picker-buttons" role="group" aria-label={`Primitive for: ${scenario.prompt}`}>
+          {(Object.keys(labels) as Primitive[]).map((primitive) => (
+            <button type="button" class="course-btn" data-primitive={primitive}>{labels[primitive]}</button>
+          ))}
+        </div>
+        <div class="course-feedback" aria-live="polite" hidden></div>
+      </div>
+    ))}
+  </div>
+  <div class="course-muted picker-tally" aria-live="polite" data-tally>0 of {scenarios.length} sorted</div>
+</primitive-picker>
+
+<style>
+  .picker-list {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .picker-item + .picker-item {
+    border-top: 1px solid var(--course-border);
+    padding-top: 1.25rem;
+  }
+
+  .picker-prompt {
+    font-weight: 500;
+  }
+
+  .picker-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .picker-tally {
+    margin-top: 1.25rem;
+  }
+</style>
+
+<script>
+  type Scenario = { answer: string; why: string };
+
+  class PrimitivePicker extends HTMLElement {
+    connectedCallback() {
+      const scenarios = JSON.parse(this.dataset.scenarios ?? "[]") as Scenario[];
+      const tally = this.querySelector<HTMLElement>("[data-tally]")!;
+      const solved = new Set<number>();
+
+      this.querySelectorAll<HTMLElement>(".picker-item").forEach((item) => {
+        const index = Number(item.dataset.index);
+        const scenario = scenarios[index];
+        const feedback = item.querySelector<HTMLElement>(".course-feedback")!;
+        const buttons = [...item.querySelectorAll<HTMLButtonElement>("button")];
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const isRight = button.dataset.primitive === scenario.answer;
+            button.dataset.state = isRight ? "correct" : "wrong";
+            feedback.hidden = false;
+            feedback.dataset.state = isRight ? "correct" : "wrong";
+            if (isRight) {
+              feedback.textContent = scenario.why;
+              buttons.forEach((b) => (b.disabled = true));
+              solved.add(index);
+              tally.textContent =
+                solved.size === scenarios.length
+                  ? "All sorted. If you can name the control-flow statement, you can name the primitive."
+                  : `${solved.size} of ${scenarios.length} sorted`;
+            } else {
+              feedback.textContent = "Not that one. Ask: is it a gate, a pick from a list, or a position on a scale?";
+            }
+          });
+        });
+      });
+    }
+  }
+
+  if (!customElements.get("primitive-picker")) customElements.define("primitive-picker", PrimitivePicker);
+</script>

@@ -1,0 +1,90 @@
+---
+import "@/styles/course.css";
+
+interface Props {
+  course: string;
+  lesson: string;
+  question: string;
+  options: string[];
+  answer: number;
+  explain: string;
+  /** Optional nudge shown for each wrong option, by index. */
+  hints?: (string | null)[];
+}
+
+const { course, lesson, question, options, answer, explain, hints = [] } = Astro.props;
+---
+
+<course-checkpoint
+  class="course-card course-checkpoint"
+  data-course={course}
+  data-lesson={lesson}
+  data-answer={answer}
+  data-explain={explain}
+  data-hints={JSON.stringify(hints)}
+>
+  <div class="course-label">Checkpoint · {lesson.toUpperCase()}</div>
+  <div class="course-title" id={`${course}-${lesson}-q`}>{question}</div>
+  <div class="checkpoint-options" role="group" aria-labelledby={`${course}-${lesson}-q`}>
+    {options.map((option, index) => (
+      <button type="button" class="course-btn" data-index={index}>
+        {option}
+      </button>
+    ))}
+  </div>
+  <div class="course-feedback" aria-live="polite" hidden></div>
+</course-checkpoint>
+
+<style>
+  .checkpoint-options {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+</style>
+
+<script>
+  import { getCompleted, markComplete } from "@/lib/course";
+
+  class CourseCheckpoint extends HTMLElement {
+    connectedCallback() {
+      const { course = "", lesson = "", answer = "0", explain = "" } = this.dataset;
+      const hints = JSON.parse(this.dataset.hints ?? "[]") as (string | null)[];
+      const correct = Number(answer);
+      const feedback = this.querySelector<HTMLElement>(".course-feedback")!;
+      const buttons = [...this.querySelectorAll<HTMLButtonElement>("button[data-index]")];
+
+      const solve = () => {
+        buttons.forEach((button) => {
+          button.disabled = true;
+          if (Number(button.dataset.index) === correct) button.dataset.state = "correct";
+        });
+        feedback.hidden = false;
+        feedback.dataset.state = "correct";
+        feedback.textContent = `Correct. ${explain}`;
+      };
+
+      if (getCompleted(course).has(lesson)) {
+        solve();
+        return;
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const index = Number(button.dataset.index);
+          if (index === correct) {
+            solve();
+            markComplete(course, lesson);
+            return;
+          }
+          button.dataset.state = "wrong";
+          feedback.hidden = false;
+          feedback.dataset.state = "wrong";
+          feedback.textContent = hints[index] ?? "Not quite. Try another one.";
+        });
+      });
+    }
+  }
+
+  if (!customElements.get("course-checkpoint")) customElements.define("course-checkpoint", CourseCheckpoint);
+</script>
