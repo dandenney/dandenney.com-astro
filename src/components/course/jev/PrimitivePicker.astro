@@ -5,34 +5,39 @@ type Primitive = "noul" | "choice" | "score";
 
 const scenarios: { prompt: string; answer: Primitive; why: string }[] = [
   {
-    prompt: "Does this learner's forum post paste a full solution to a graded exercise?",
+    prompt: "Should this error-rate spike page whoever is on call at 2am?",
     answer: "noul",
-    why: "One proposition, yes or no. Your code decides what probability is high enough to hide the post.",
+    why: "It's a gate: page or don't. One probability, and your code decides how sure it needs to be before waking someone up.",
   },
   {
-    prompt: "Route this support ticket to the Python, SQL, R, or Billing queue.",
+    prompt: "Which team owns this bug: Checkout, Auth, or Content?",
     answer: "choice",
     why: "A fixed set of named options where exactly one should win. It's a match statement.",
   },
   {
-    prompt: "How well does this learner's written explanation show they understand a LEFT JOIN?",
+    prompt: "How severe is this bug: cosmetic, broken with a workaround, or blocking?",
     answer: "score",
-    why: "Understanding comes in ordered degrees. Describe each level and let the score land between them.",
+    why: "Severity has an order. Describe each level and let the score land between them.",
   },
   {
-    prompt: "Is this learner stuck, rather than just poking around the exercise?",
+    prompt: "Does this cancellation reason sound like something a discount could fix?",
     answer: "noul",
-    why: "It's a gate: show the hint or don't. A single yes/no probability is exactly what an if-statement wants.",
+    why: "One proposition. A high probability shows the retention offer; a low one lets them go without the extra screen.",
   },
   {
-    prompt: "Which hint fits this failed attempt best: a syntax nudge, a logic nudge, or re-explain the concept?",
+    prompt: "Which genre shelf does this album go on: indie rock, hip-hop, or country?",
     answer: "choice",
-    why: "Three unordered options. Nothing makes a logic nudge 'more' than a syntax nudge, so it isn't a score.",
+    why: "The genres don't have an order. Nothing makes country 'more' than hip-hop, so it isn't a score.",
   },
   {
-    prompt: "How frustrated does this learner sound in their last three messages?",
+    prompt: "How much does this review love the record: pan, mixed, or rave?",
     answer: "score",
-    why: "Frustration has an order (calm, annoyed, ready to quit). Score levels capture that; a choice would throw the order away.",
+    why: "Pan, mixed, and rave sit on a line. A choice would throw that order away.",
+  },
+  {
+    prompt: "Does this bet note mention an injury to a starter?",
+    answer: "noul",
+    why: "Yes or no about one fact. Your code decides whether that's enough to skip the bet.",
   },
 ];
 
@@ -41,7 +46,7 @@ const labels: Record<Primitive, string> = { noul: "Noul · if", choice: "Choice 
 
 <primitive-picker class="course-card" data-scenarios={JSON.stringify(scenarios)}>
   <div class="course-label">Exercise · Pick the primitive</div>
-  <div class="course-title">Which question type fits each ed tech decision?</div>
+  <div class="course-title">Which question type fits each decision?</div>
   <div class="picker-list">
     {scenarios.map((scenario, index) => (
       <div class="picker-item" data-index={index}>

@@ -15,7 +15,7 @@ const messages = [
 
 <threshold-lab class="course-card" data-messages={JSON.stringify(messages)}>
   <div class="course-label">Lab · Thresholds are your code</div>
-  <div class="course-title">Route learner support messages with one Noul</div>
+  <div class="course-title">Route support messages with one Noul</div>
   <div class="course-muted">
     Question: <span class="course-mono">is_human_escalation</span>, "Is the user asking to talk to a human?" Drag the two
     thresholds. Below the low one the bot keeps the conversation, above the high one it hands off, and the band in between
@@ -36,7 +36,7 @@ const messages = [
   <div class="lab-presets" role="group" aria-label="Threshold presets">
     <button type="button" class="course-btn" data-preset="0.5,0.5">Coin flip (0.5 / 0.5)</button>
     <button type="button" class="course-btn" data-preset="0.2,0.7">With a review band</button>
-    <button type="button" class="course-btn" data-preset="0.05,0.3">Never strand a learner</button>
+    <button type="button" class="course-btn" data-preset="0.05,0.3">Never strand a customer</button>
   </div>
 
   <div class="lab-scale" aria-hidden="true">
@@ -225,7 +225,7 @@ const messages = [
 
         const parts = [
           `${queued} of ${messages.length} message${queued === 1 ? "" : "s"} land in the review queue.`,
-          stranded ? `${stranded} learner${stranded === 1 ? " who asked" : "s who asked"} for a person stay stuck with the bot.` : "Nobody who clearly asked for a person is left with the bot.",
+          stranded ? `${stranded} customer${stranded === 1 ? " who asked" : "s who asked"} for a person stay stuck with the bot.` : "Nobody who clearly asked for a person is left with the bot.",
           needless ? `${needless} clearly-handled conversation${needless === 1 ? " gets" : "s get"} escalated anyway.` : "",
         ];
         if (queued === 0) parts.push("No review band means messages 3 and 4, the genuinely ambiguous ones, get decided by a coin flip you wrote.");

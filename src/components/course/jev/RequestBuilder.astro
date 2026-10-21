@@ -2,50 +2,49 @@
 import "@/styles/course.css";
 
 const state = {
-  course: "Joining Data in SQL",
-  exercise: "LEFT JOIN countries to languages",
-  attempts: 6,
-  last_error: "column \"code\" is ambiguous",
-  message:
-    "I've tried this six times and it keeps saying code is ambiguous. I literally copied the video. Is there a person I can ask?",
+  repo: "web-app",
+  title: "Checkout button does nothing on Safari 17",
+  labels: ["bug", "needs-triage"],
+  body:
+    "Since yesterday's deploy, clicking 'Start subscription' on Safari 17 does nothing. Console shows: TypeError: undefined is not a function (stripe-elements.js:212). Works in Chrome. Customers can still pay through the PayPal button. Happens every time on my machine.",
 };
 
 const questions = [
   {
-    id: "wants_human",
+    id: "is_regression",
     type: "noul",
-    instructions: "Is the learner asking to talk to a person?",
+    instructions: "Did this start after a recent change or deploy?",
     criteria: {
-      true: "They explicitly ask for a human, an instructor, or support staff",
-      false: "They only ask for help with the exercise itself",
+      true: "The report ties the bug to a deploy, release, or a time it used to work",
+      false: "No sign it ever worked, or no timing given",
     },
     on: true,
   },
   {
-    id: "shares_solution",
+    id: "needs_repro",
     type: "noul",
-    instructions: "Does the message include a complete solution to the graded exercise?",
+    instructions: "Is the report missing the steps an engineer needs to reproduce it?",
     on: false,
   },
   {
-    id: "hint_type",
+    id: "owning_team",
     type: "choice",
-    instructions: "Which kind of hint would unblock this learner fastest?",
+    instructions: "Which team owns this bug?",
     criteria: {
-      syntax: "A typo, missing keyword, or ambiguous name; the approach is right",
-      logic: "The query runs but the approach can't produce the asked-for result",
-      concept: "They don't yet understand what the exercise is teaching",
+      checkout: "Pricing pages, payment forms, subscription purchase",
+      auth: "Sign-up, sign-in, password reset, SSO",
+      content: "Pages, copy, and media that aren't part of a flow",
     },
     on: true,
   },
   {
-    id: "frustration",
+    id: "severity",
     type: "score",
-    instructions: "How frustrated is the learner?",
+    instructions: "How severe is this bug?",
     criteria: [
-      "Calm and curious; happy to keep experimenting",
-      "Annoyed, but still trying on their own",
-      "About to give up on the exercise or the course",
+      "Cosmetic; no impact to functionality",
+      "Broken or degraded feature, but workaround exists",
+      "Blocking issue; no workaround exists",
     ],
     on: true,
   },
@@ -54,9 +53,9 @@ const questions = [
 
 <request-builder class="course-card" data-state={JSON.stringify(state)} data-questions={JSON.stringify(questions)}>
   <div class="course-label">Lab · Build a request</div>
-  <div class="course-title">One learner state, many questions</div>
+  <div class="course-title">One bug report, many questions</div>
   <div class="course-muted">
-    This is the state a hint system might have when a learner gets stuck. Toggle which questions you ask about it and watch
+    This is a GitHub issue filed against a signup flow, the kind conversion engineers get the morning after a deploy. Toggle which questions you ask about it and watch
     the request body and the code that consumes it change. Nothing here calls the API; it shows the shapes.
   </div>
 
@@ -110,31 +109,30 @@ const questions = [
     if (!active.length) return "// Ask at least one question.";
     const lines = ["const { answers } = await systemOne(request);", ""];
     for (const q of active) {
-      if (q.id === "wants_human") {
+      if (q.id === "is_regression") {
         lines.push(
           "// Noul -> if. Thresholds are a product decision, not the model's.",
-          "if (answers.wants_human.noul > 0.7) return handOffToSupport(learner);",
-          "if (answers.wants_human.noul > 0.2) flagForReview(learner);",
+          "if (answers.is_regression.noul > 0.7) linkToLastDeploy(issue);",
           "",
         );
-      } else if (q.id === "shares_solution") {
-        lines.push("if (answers.shares_solution.noul > 0.9) hideFromForum(post);", "");
-      } else if (q.id === "hint_type") {
+      } else if (q.id === "needs_repro") {
+        lines.push("if (answers.needs_repro.noul > 0.6) askReporterForSteps(issue);", "");
+      } else if (q.id === "owning_team") {
         lines.push(
           "// Choice -> match. Low confidence means ask, don't guess.",
-          "const { choice, confidence } = answers.hint_type;",
-          "if (confidence < 0.5) showHintMenu(learner);",
+          "const { choice, confidence } = answers.owning_team;",
+          "if (confidence < 0.5) addLabel(issue, \"needs-owner\");",
           "else switch (choice) {",
-          '  case "syntax": showSyntaxHint(exercise); break;',
-          '  case "logic": showLogicHint(exercise); break;',
-          '  case "concept": replayConceptVideo(exercise); break;',
+          '  case "checkout": assign(issue, "team-checkout"); break;',
+          '  case "auth": assign(issue, "team-auth"); break;',
+          '  case "content": assign(issue, "team-content"); break;',
           "}",
           "",
         );
-      } else if (q.id === "frustration") {
+      } else if (q.id === "severity") {
         lines.push(
-          "// Score -> sort. Order the instructor's inbox by how close to quitting.",
-          "queue.upsert(learner, { priority: answers.frustration.score });",
+          "// Score -> sort. Order the triage board by severity.",
+          "board.upsert(issue, { priority: answers.severity.score });",
           "",
         );
       }

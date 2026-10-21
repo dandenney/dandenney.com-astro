@@ -2,21 +2,22 @@
 import "@/styles/course.css";
 
 const levels = [
-  "Doesn't run, or solves a different problem than the exercise asks",
-  "Runs and passes the visible tests, but misses an edge case the instructions call out",
-  "Handles every case the instructions describe",
+  "Cosmetic; no impact to functionality",
+  "Broken or degraded feature, but workaround exists",
+  "Blocking issue; no workaround exists",
 ];
 
+// The first two presets are bug reports from TypeSafe's Score docs.
 const presets = [
-  { label: "Confidently 'mostly there'", weights: [5, 90, 5] },
-  { label: "Split between broken and perfect", weights: [50, 0, 50] },
-  { label: "Leaning great", weights: [0, 30, 70] },
+  { label: "Safari export crash (docs)", weights: [0, 57, 43] },
+  { label: "PDF export, CSV workaround (docs)", weights: [0, 100, 0] },
+  { label: "Split between cosmetic and blocking", weights: [50, 0, 50] },
 ];
 ---
 
 <score-mixer class="course-card" data-presets={JSON.stringify(presets)}>
   <div class="course-label">Lab · Reading a Score</div>
-  <div class="course-title">Grade a learner's SQL submission against three levels</div>
+  <div class="course-title">Triage a bug report against three severity levels</div>
   <div class="course-muted">
     A Score returns a probability for each level. The <span class="course-mono">score</span> is the probability-weighted
     position, which is why it can be fractional. Move the sliders (they're normalized to sum to 1) or try a preset.
@@ -154,7 +155,7 @@ const presets = [
         const split = probs[0] > 0.25 && probs[maxIndex] > 0.25;
         read.dataset.state = split || top < 0.6 ? "wrong" : "correct";
         read.textContent = split
-          ? `The score says ${score.toFixed(2)}, "middle of the road", but no level says that. The model is torn between broken and perfect. Route this one to a human grader instead of auto-grading.`
+          ? `The score says ${score.toFixed(2)}, "middle of the road", but no level says that. The model is torn between cosmetic and blocking. Get a human to triage this one instead of auto-assigning a priority.`
           : top < 0.6
             ? `No level has a clear majority (top is ${top.toFixed(2)}). Treat ${score.toFixed(2)} as a hint, not a grade.`
             : `One level dominates at ${top.toFixed(2)}, so ${score.toFixed(2)} is a fair summary you could act on.`;
