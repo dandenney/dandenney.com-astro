@@ -3860,4 +3860,22 @@ export const rithhmmPicks: RithhmmPick[] = [
     betAmount: 60,
     returnAmount: 0,
   },
+  // 2026-10-24
+  {
+    id: 260,
+    date: "2026-10-24",
+    sport: "NCAAF",
+    pick: "Texas Moneyline",
+    odds: "-155",
+    confidence: 63.0,
+    modelProjection: "Rithmm favors Texas 63% to 37%; Rithmm odds -159",
+    dtm: 4.0,
+    recentForm: "4/6",
+    matchup: "Ole Miss @ Texas",
+    propType: "moneyline",
+    result: "pending",
+    portfolioAction: "bet",
+    bettors: "dan-and-gardenOf",
+    betAmount: 60,
+  },
 ];
