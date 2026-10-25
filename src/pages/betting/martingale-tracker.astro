@@ -12,6 +12,7 @@ import {
   getReturnAmount,
   getNetImpact,
   getNewSeriesStake,
+  getHysaValue,
   type MartingaleBet,
 } from "@/data/martingaleBets";
 const currency = new Intl.NumberFormat("en-US", {
@@ -173,17 +174,7 @@ const formatDate = (dateString: MartingaleBet["date"]) =>
   });
 
 const firstBetDate = orderedBets[0]?.date;
-const benchmarkAsOfDate = hysaBenchmark.asOfDate ?? new Date().toISOString().slice(0, 10);
-
-let hysaCurrentValue = hysaBenchmark.principal;
-if (firstBetDate) {
-  const startDateMs = new Date(`${firstBetDate}T00:00:00`).getTime();
-  const asOfDateMs = new Date(`${benchmarkAsOfDate}T00:00:00`).getTime();
-  const elapsedMs = Math.max(asOfDateMs - startDateMs, 0);
-  const elapsedYears = elapsedMs / (1000 * 60 * 60 * 24 * 365.25);
-  hysaCurrentValue =
-    hysaBenchmark.principal * Math.pow(1 + hysaBenchmark.annualYield, elapsedYears);
-}
+const hysaCurrentValue = firstBetDate ? getHysaValue(firstBetDate) : hysaBenchmark.principal;
 
 const strategyVsHysaDelta = currentBalance - hysaCurrentValue;
 

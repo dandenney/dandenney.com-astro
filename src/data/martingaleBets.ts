@@ -35,6 +35,16 @@ export const hysaBenchmark: HysaBenchmarkConfig = {
   annualYield: 0.042,
 };
 
+/** What `hysaBenchmark.principal` would be worth if parked in the HYSA from `startDate`, compounded annually */
+export const getHysaValue = (startDate: string, asOfDate: string = hysaBenchmark.asOfDate ?? new Date().toISOString().slice(0, 10)): number => {
+  const elapsedMs = Math.max(
+    new Date(`${asOfDate}T00:00:00`).getTime() - new Date(`${startDate}T00:00:00`).getTime(),
+    0,
+  );
+  const elapsedYears = elapsedMs / (1000 * 60 * 60 * 24 * 365.25);
+  return hysaBenchmark.principal * Math.pow(1 + hysaBenchmark.annualYield, elapsedYears);
+};
+
 export const martingaleBets: MartingaleBet[] = [
   {
     id: 1,

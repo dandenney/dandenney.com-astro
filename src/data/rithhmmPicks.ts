@@ -2404,7 +2404,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     date: "2026-05-26",
     sport: "NBA",
     pick: "Victor Wembanyama Under 13.5 Rebounds",
-    odds: "-138",
+    odds: "-119",
     confidence: 69.2,
     modelProjection: "9.6 Rebounds",
     dtm: 26.3,

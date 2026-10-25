@@ -9,6 +9,12 @@ import {
   type RithhmmPortfolioAction,
   type RithhmmHermesFlag,
 } from "@/data/rithhmmPicks";
+import {
+  martingaleBets,
+  hysaBenchmark,
+  startingBalance,
+  getHysaValue,
+} from "@/data/martingaleBets";
 
 export const prerender = true;
 
@@ -25,7 +31,6 @@ const betWinRate =
     ? Math.round((betWins / (betWins + betLosses)) * 100)
     : 0;
 
-const hasPnLData = resolvedBets.some((p) => p.betAmount != null);
 
 // Split shared rows in integer cents. Dan receives the lower half and
 // GardenOf receives any odd penny, matching the ledger convention.
@@ -59,6 +64,23 @@ const gardenOfPnL = resolvedBets.reduce((sum, p) => sum + ownerNet(p, "gardenOf"
 // Per-person running balances
 const danBalance = Number((rithhmmStartingBalances.dan + danPnL).toFixed(2));
 const gardenOfBalance = Number((rithhmmStartingBalances.gardenOf + gardenOfPnL).toFixed(2));
+
+// Each bettor started with $500 at their first martingale bet; the goal is to
+// beat that money sitting in a HYSA over the same stretch.
+function firstBetDate(owner: "Dan" | "GardenOf"): string {
+  return martingaleBets
+    .filter((b) => (b.owner ?? "Dan") === owner)
+    .map((b) => b.date)
+    .sort()[0];
+}
+
+const bettorStandings = [
+  { name: "Dan", balance: danBalance, since: firstBetDate("Dan") },
+  { name: "GardenOf", balance: gardenOfBalance, since: firstBetDate("GardenOf") },
+].map((b) => {
+  const hysaValue = Number(getHysaValue(b.since).toFixed(2));
+  return { ...b, hysaValue, vsHysa: Number((b.balance - hysaValue).toFixed(2)) };
+});
 
 // Overall signal accuracy (all resolved picks)
 const allWins = resolved.filter((p) => p.result === "win").length;
@@ -185,7 +207,7 @@ function dayBets(picks: RithhmmPick[]) {
       <!-- Stats strip -->
       <div class="border-b border-gray-200 dark:border-slate-800">
         <div class="mx-auto max-w-7xl">
-          <dl class="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-gray-200 dark:divide-slate-800">
+          <dl class="grid grid-cols-3 divide-x divide-y sm:divide-y-0 divide-gray-200 dark:divide-slate-800">
 
             <div class="px-4 sm:px-6 py-6">
               <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Signal</dt>
@@ -207,20 +229,6 @@ function dayBets(picks: RithhmmPick[]) {
               </div>
             )}
 
-            {hasPnLData ? (
-              <div class="px-4 sm:px-6 py-6">
-                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">P&amp;L</dt>
-                <dd class={`mt-2 text-4xl font-black tabular-nums font-mono leading-none ${danPnL >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>{fmtPnL(danPnL)}</dd>
-                <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">net return</dd>
-              </div>
-            ) : (
-              <div class="px-4 sm:px-6 py-6">
-                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">P&amp;L</dt>
-                <dd class="mt-2 text-4xl font-black tabular-nums text-slate-200 dark:text-slate-700 leading-none">—</dd>
-                <dd class="mt-1.5 text-xs text-slate-300 dark:text-slate-700">no amounts yet</dd>
-              </div>
-            )}
-
             <div class="px-4 sm:px-6 py-6">
               <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Pending</dt>
               <dd class={`mt-2 text-4xl font-black tabular-nums leading-none ${pending.length > 0 ? "text-amber-600 dark:text-amber-400" : "text-slate-200 dark:text-slate-700"}`}>{pending.length}</dd>
@@ -229,22 +237,22 @@ function dayBets(picks: RithhmmPick[]) {
 
           </dl>
 
-          {hasBetAmount && (
-            <dl class="grid grid-cols-2 divide-x divide-gray-200 dark:divide-slate-800 border-t border-gray-200 dark:border-slate-800">
-              <div class="px-4 sm:px-6 py-4">
-                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Dan</dt>
-                <dd class={`mt-1 text-2xl font-black tabular-nums font-mono leading-none ${danBalance >= rithhmmStartingBalances.dan ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
-                  ${danBalance.toFixed(2)}
+          <dl class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:divide-slate-800 border-t border-gray-200 dark:border-slate-800">
+            {bettorStandings.map((b) => (
+              <div class="px-4 sm:px-6 py-6">
+                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">{b.name} vs HYSA</dt>
+                <dd class={`mt-2 text-4xl font-black tabular-nums font-mono leading-none ${b.vsHysa >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
+                  {fmtPnL(b.vsHysa)}
+                </dd>
+                <dd class="mt-2 text-xs text-slate-500 dark:text-slate-400 tabular-nums font-mono">
+                  ${b.balance.toFixed(2)} balance · ${b.hysaValue.toFixed(2)} in HYSA
+                </dd>
+                <dd class="mt-0.5 text-xs text-slate-400 dark:text-slate-500">
+                  ${startingBalance} at {(hysaBenchmark.annualYield * 100).toFixed(1)}% since {formatDate(b.since)}
                 </dd>
               </div>
-              <div class="px-4 sm:px-6 py-4">
-                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">GardenOf</dt>
-                <dd class={`mt-1 text-2xl font-black tabular-nums font-mono leading-none ${gardenOfBalance >= rithhmmStartingBalances.gardenOf ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
-                  ${gardenOfBalance.toFixed(2)}
-                </dd>
-              </div>
-            </dl>
-          )}
+            ))}
+          </dl>
 
           {(allWins + allLosses) > 0 && (
             <div class="flex h-0.5 bg-gray-100 dark:bg-slate-800">
