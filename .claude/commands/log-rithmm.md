@@ -1,6 +1,6 @@
 Log Rithmm picks from screenshots and score them with Jev before the game. This replaces the Hermes/Obsidian intake for the forward test.
 
-**Usage:** `/log-rithmm` with screenshots attached: the Rithmm card(s) and the sportsbook screen(s) for the same picks. Free text after the command can say bet or pass, the stake, and who funded it, e.g. `/log-rithmm bet $60 both` or `/log-rithmm pass`.
+**Usage:** `/log-rithmm` with screenshots attached: the Rithmm card(s) and the sportsbook screen(s) for the same picks. Free text after the command can say bet or pass, the stake, and who funded it, e.g. `/log-rithmm bet $60 both` or `/log-rithmm pass`. The stake is always the combined total: `$60 both` means $30 from Dan and $30 from GardenOf; `$30 dan` means Dan alone.
 
 ## Step 1: Read the screenshots and the data file
 
@@ -35,7 +35,7 @@ Compare the line number and side in Rithmm's pick and the book's pick (e.g. Over
 
 ## Step 4: Record the decision
 
-- Bet: `portfolioAction: "bet"`, `betAmount` (combined total for both bettors, as-is), and `bettors` (`"dan"` or `"dan-and-gardenOf"`). Ask if the stake or funding isn't clear from the message or the ticket.
+- Bet: `portfolioAction: "bet"`, `betAmount`, and `bettors`. `betAmount` is the combined total, written as-is and never multiplied or split: `bet $60 both` → `betAmount: 60`, `bettors: "dan-and-gardenOf"` ($30 each); `bet $30 dan` → `betAmount: 30`, `bettors: "dan"`. Ask if the stake or funding isn't clear from the message or the ticket.
 - Pass: `portfolioAction: "skip"`, plus `passReason` if one was given.
 - Undecided: `portfolioAction: "watch"`.
 
