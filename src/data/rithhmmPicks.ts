@@ -49,6 +49,24 @@ export interface RithhmmPick {
   bettors?: "dan" | "dan-and-gardenOf";
   /** Total returned on the recorded stake (stake + profit on win; omit while pending) */
   returnAmount?: number;
+  // Forward-test fields, logged by /log-rithmm from a Rithmm card plus a sportsbook screen.
+  // On these picks `odds` is always the sportsbook price; older picks mix Rithmm and book prices.
+  /** Rithmm's own price from the card */
+  rithmmOdds?: string;
+  /** What the sportsbook showed when the pick was logged */
+  book?: RithhmmBookQuote;
+  /** Scheduled start, ISO 8601 with offset. Jev scores only count if made before this. */
+  gameTime?: string;
+  /** When the pick was logged, ISO 8601 with offset */
+  loggedAt?: string;
+  /** Why a pick wasn't bet, e.g. "line-moved" when the book line differs from Rithmm's */
+  passReason?: string;
+}
+
+export interface RithhmmBookQuote {
+  name: string;
+  pick: string;
+  odds: string;
 }
 
 /** Starting balances carried over from the martingale tracker (2026-05-27) */
