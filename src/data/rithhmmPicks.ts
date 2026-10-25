@@ -3903,21 +3903,6 @@ export const rithhmmPicks: RithhmmPick[] = [
   },
   // 2026-10-25
   {
-    id: 261,
-    date: "2026-10-25",
-    sport: "NFL",
-    pick: "49ers Moneyline",
-    odds: "-146",
-    confidence: 60.0,
-    modelProjection: "Rithmm favors 49ers 60% to 40%",
-    dtm: 2.4,
-    recentForm: "6/6",
-    matchup: "49ers @ Falcons",
-    propType: "moneyline",
-    result: "pending",
-    portfolioAction: "watch",
-  },
-  {
     id: 262,
     date: "2026-10-25",
     sport: "NFL",
