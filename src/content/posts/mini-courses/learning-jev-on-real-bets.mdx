@@ -81,7 +81,7 @@ It's also cheap enough that cost barely comes up. My whole run was 504 requests 
 
 ## A pick becomes state
 
-A request has two parts. The **state** is the thing being judged: a string, a JSON object, or an array of strings (text only for now). The **questions** are what you want to know about it. Every question sees the same state, each one is answered on its own, and they run in parallel, so asking four questions doesn't cost four round trips.
+A request has two parts. The **state** is the thing being judged: a string, a JSON object, or an array of strings (text only for now). The **questions** are what you want to know about it. Every question sees the same state, each one is answered on its own, and they all come back in one response, so asking four questions doesn't cost four round trips.
 
 The [state docs](https://docs.typesafe.ai/concepts/state) suggest keeping the state to facts and putting your framing in the questions. For a pick, the facts are easy: the date, sport, matchup, the pick, the odds, and recent form. Nothing about the result or what I bet. Then I asked every pick the same four questions: will it win, does recent form back it, what kind of bet is it, and how strong is the case at these odds.
 
@@ -212,6 +212,10 @@ TypeSafe's own launch post notes its workflow evals were made by its own team, "
 ### Pin the version
 
 I used `jev-1.14.0`, not `jev-latest`. The alias will move, and every number in this post could move with it.
+
+### So, can it help me choose?
+
+On these 248 picks, a plain break-even rule on Jev's facts-only read beat betting everything, and Rithmm's own number couldn't. I'm not betting on that until it holds up on games Jev couldn't have seen.
 
 ### What's next
 
