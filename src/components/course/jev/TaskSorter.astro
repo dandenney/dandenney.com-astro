@@ -1,0 +1,121 @@
+---
+import "@/styles/course.css";
+
+type Answer = "noul" | "choice" | "score" | "none";
+
+const tasks: { prompt: string; answer: Answer; why: string }[] = [
+  {
+    prompt: "Does this pick's recent form back it up?",
+    answer: "noul",
+    why: "One yes/no question about one pick. Jev hands back a single probability and your code decides what counts as yes.",
+  },
+  {
+    prompt: "What kind of bet is this: moneyline, spread, game total, player over, or player under?",
+    answer: "choice",
+    why: "A fixed set of named options and exactly one is right. That's a Choice, and it comes back with a probability for every option.",
+  },
+  {
+    prompt: "How strong is the case at these odds: pass, lean, or play?",
+    answer: "score",
+    why: "Pass, lean, and play sit on a line. A Choice would throw that order away; a Score lands somewhere between them.",
+  },
+  {
+    prompt: "Write a recap of last night's bets for the group chat",
+    answer: "none",
+    why: "Jev can't write a sentence. Anything that needs words back is a job for a regular LLM.",
+  },
+  {
+    prompt: "Work out the break-even hit rate for -150 odds",
+    answer: "none",
+    why: "That's arithmetic: 150 / 250 = 60%. Your code does math. Jev is for judgment calls your code can't make.",
+  },
+];
+
+const labels: Record<Answer, string> = { noul: "Noul", choice: "Choice", score: "Score", none: "Not a Jev job" };
+---
+
+<task-sorter class="course-card" data-tasks={JSON.stringify(tasks)}>
+  <div class="course-label">Exercise · Sort the tasks</div>
+  <div class="course-title">Which betting questions are Jev questions?</div>
+  <div class="sorter-list">
+    {tasks.map((task, index) => (
+      <div class="sorter-item" data-index={index}>
+        <div class="sorter-prompt">{task.prompt}</div>
+        <div class="sorter-buttons" role="group" aria-label={`Answer type for: ${task.prompt}`}>
+          {(Object.keys(labels) as Answer[]).map((answer) => (
+            <button type="button" class="course-btn" data-answer={answer}>{labels[answer]}</button>
+          ))}
+        </div>
+        <div class="course-feedback" aria-live="polite" hidden></div>
+      </div>
+    ))}
+  </div>
+  <div class="course-muted sorter-tally" aria-live="polite" data-tally>0 of {tasks.length} sorted</div>
+</task-sorter>
+
+<style>
+  .sorter-list {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .sorter-item + .sorter-item {
+    border-top: 1px solid var(--course-border);
+    padding-top: 1.25rem;
+  }
+
+  .sorter-prompt {
+    font-weight: 500;
+  }
+
+  .sorter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .sorter-tally {
+    margin-top: 1.25rem;
+  }
+</style>
+
+<script>
+  type Task = { answer: string; why: string };
+
+  class TaskSorter extends HTMLElement {
+    connectedCallback() {
+      const tasks = JSON.parse(this.dataset.tasks ?? "[]") as Task[];
+      const tally = this.querySelector<HTMLElement>("[data-tally]")!;
+      const solved = new Set<number>();
+
+      this.querySelectorAll<HTMLElement>(".sorter-item").forEach((item) => {
+        const index = Number(item.dataset.index);
+        const task = tasks[index];
+        const feedback = item.querySelector<HTMLElement>(".course-feedback")!;
+        const buttons = [...item.querySelectorAll<HTMLButtonElement>("button")];
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const isRight = button.dataset.answer === task.answer;
+            button.dataset.state = isRight ? "correct" : "wrong";
+            feedback.hidden = false;
+            feedback.dataset.state = isRight ? "correct" : "wrong";
+            if (!isRight) {
+              feedback.textContent = "Not that one. Is it one yes/no, a pick from a list, a spot on a scale, or none of those?";
+              return;
+            }
+            feedback.textContent = task.why;
+            buttons.forEach((b) => (b.disabled = true));
+            solved.add(index);
+            tally.textContent =
+              solved.size === tasks.length ? "All sorted." : `${solved.size} of ${tasks.length} sorted`;
+          });
+        });
+      });
+    }
+  }
+
+  if (!customElements.get("task-sorter")) customElements.define("task-sorter", TaskSorter);
+</script>
