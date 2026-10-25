@@ -132,13 +132,14 @@ function fmtPnL(n: number): string {
   return n >= 0 ? `+$${abs}` : `-$${abs}`;
 }
 
-// The row-level `$30` view uses Dan's half; GardenOf receives any odd penny
-// in the separate running balance above.
+// Rows and day totals show the whole ticket so Net lines up with the Bet column;
+// per-person splits live in the HYSA standings above.
 function pickNet(p: RithhmmPick): number | null {
   if (p.portfolioAction !== "bet") return null;
   if (p.result === "pending" || p.betAmount == null) return null;
-  if (p.result === "win" && p.returnAmount != null) return ownerNet(p, "dan");
-  if (p.result === "loss") return ownerNet(p, "dan");
+  if (p.result === "win" && p.returnAmount != null)
+    return Number((p.returnAmount - p.betAmount).toFixed(2));
+  if (p.result === "loss") return -p.betAmount;
   if (p.result === "push") return 0;
   return null;
 }

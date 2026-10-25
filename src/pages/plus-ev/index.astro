@@ -9,6 +9,7 @@ import {
   hysaBenchmark,
   getStakeOut,
   getReturnAmount,
+  getHysaValue,
 } from "../../data/martingaleBets";
 import {
   dkBets,
@@ -103,12 +104,7 @@ const today = new Date();
 const daysActive = Math.floor(
   (today.getTime() - firstBetDate.getTime()) / 86400000
 );
-const hysaValue = Number(
-  (
-    hysaBenchmark.principal *
-    (1 + hysaBenchmark.annualYield * (daysActive / 365))
-  ).toFixed(2)
-);
+const hysaValue = Number(getHysaValue(danBets[0].date).toFixed(2));
 const hysaGain = Number((hysaValue - hysaBenchmark.principal).toFixed(2));
 const vsHysa = Number((mCurrentBalance - hysaValue).toFixed(2));
 
