@@ -3873,9 +3873,10 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "4/6",
     matchup: "Ole Miss @ Texas",
     propType: "moneyline",
-    result: "pending",
+    result: "win",
     portfolioAction: "bet",
     bettors: "dan-and-gardenOf",
     betAmount: 60,
+    returnAmount: 98.7,
   },
 ];
