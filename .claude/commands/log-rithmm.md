@@ -13,13 +13,17 @@ If a Rithmm pick has no sportsbook screen, stop and ask for one. Passes need a r
 From the **Rithmm card**:
 - `pick` — Rithmm's pick text without odds, e.g. `"Gunnar Henderson Over 1.5 Total Bases"`
 - `rithmmOdds` — Rithmm's price, e.g. `"-114"`
-- `confidence`, `modelProjection`, `dtm`, `recentForm` (normalize `"L10 6/10"` to `"6/10"`), `matchup` (no time)
+- `confidence` — the win % for the side Rithmm picks, e.g. `68`
+- `modelProjection` — the card's projection line if it shows one; for win-% cards without a projection, write `"Rithmm favors Under 5.5, 68% to 32%"`
+- `edge` — the card's EDGE %, e.g. `22.7`. Don't write it to `dtm`; we haven't confirmed they're the same measure. Only fill `dtm` if the card literally says DTM.
+- `recentForm` (normalize `"L10 6/10"` to `"6/10"`), `matchup` (no time)
 - `sport`
 - `gameTime` — the scheduled start as ISO 8601 with offset. Cards and tickets show times in Dan's phone's zone, Central (`America/Chicago`): 12:00 PM on 2026-10-25 is `"2026-10-25T12:00:00-05:00"` during daylight time and `-06:00` after early November. Sanity check: the sportsbook receipt's timestamp should be a few minutes before `loggedAt`. If the card shows no time, look up the game start rather than guessing.
 
 From the **sportsbook screen**:
 - `book` — `{ name: "DraftKings", pick: "<the book's wording>", odds: "<the book's price>" }`
 - `odds` — the same value as `book.odds`. On forward picks `odds` is always the sportsbook price; break-even and Jev both use it.
+- `potentialReturn` — the ticket's "Total Payout" (stake + profit, combined, as-is), only on placed bets. Settlement copies it to `returnAmount` on a win.
 
 Set the rest:
 - `date` — the game date, `YYYY-MM-DD`

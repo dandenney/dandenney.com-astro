@@ -53,6 +53,10 @@ export interface RithhmmPick {
   // On these picks `odds` is always the sportsbook price; older picks mix Rithmm and book prices.
   /** Rithmm's own price from the card */
   rithmmOdds?: string;
+  /** The card's "EDGE" percentage, e.g. 22.7. Kept separate from `dtm` until we know they're the same thing. */
+  edge?: number;
+  /** "Total Payout" from the sportsbook ticket (stake + profit, combined for both bettors). Becomes `returnAmount` on a win. */
+  potentialReturn?: number;
   /** What the sportsbook showed when the pick was logged */
   book?: RithhmmBookQuote;
   /** Scheduled start, ISO 8601 with offset. Jev scores only count if made before this. */
