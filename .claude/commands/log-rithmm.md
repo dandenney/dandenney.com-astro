@@ -15,7 +15,7 @@ From the **Rithmm card**:
 - `rithmmOdds` — Rithmm's price, e.g. `"-114"`
 - `confidence`, `modelProjection`, `dtm`, `recentForm` (normalize `"L10 6/10"` to `"6/10"`), `matchup` (no time)
 - `sport`
-- `gameTime` — the scheduled start as ISO 8601 with offset. Cards say things like "Today 7:10 PM"; times are Eastern (`America/New_York`), so 7:10 PM on 2026-10-26 is `"2026-10-26T19:10:00-04:00"` during daylight time and `-05:00` otherwise. If the card shows no time, look up the game start rather than guessing.
+- `gameTime` — the scheduled start as ISO 8601 with offset. Cards and tickets show times in Dan's phone's zone, Central (`America/Chicago`): 12:00 PM on 2026-10-25 is `"2026-10-25T12:00:00-05:00"` during daylight time and `-06:00` after early November. Sanity check: the sportsbook receipt's timestamp should be a few minutes before `loggedAt`. If the card shows no time, look up the game start rather than guessing.
 
 From the **sportsbook screen**:
 - `book` — `{ name: "DraftKings", pick: "<the book's wording>", odds: "<the book's price>" }`
