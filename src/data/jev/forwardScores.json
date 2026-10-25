@@ -1,3 +1,57 @@
 {
-  "picks": {}
+  "picks": {
+    "262": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-25T15:37:19.172Z",
+      "state": {
+        "date": "2026-10-25",
+        "sport": "NFL",
+        "matchup": "@ Texans",
+        "pick": "J.J. McCarthy Under 5.5 Rush Attempts",
+        "odds": "-143",
+        "recentForm": "2/2"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.66
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.52
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.81,
+          "confidence": 0.27,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.34,
+            "1": 0.51,
+            "2": 0.15
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 647,
+        "output_tokens": 109
+      }
+    }
+  }
 }
