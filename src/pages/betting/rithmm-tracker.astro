@@ -240,15 +240,28 @@ function dayBets(picks: RithhmmPick[]) {
 
           <dl class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:divide-slate-800 border-t border-gray-200 dark:border-slate-800">
             {bettorStandings.map((b) => (
-              <div class="px-4 sm:px-6 py-6">
-                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">{b.name} vs HYSA</dt>
-                <dd class={`mt-2 text-4xl font-black tabular-nums font-mono leading-none ${b.vsHysa >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
+              <div class="px-4 sm:px-6 py-6 sm:py-8">
+                <dt class="flex items-baseline justify-between gap-3">
+                  <span class="text-sm font-black uppercase tracking-[0.15em] text-slate-900 dark:text-white">{b.name}</span>
+                  <span class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">vs HYSA</span>
+                </dt>
+                <dd class={`mt-3 text-5xl font-black tabular-nums font-mono leading-none ${b.vsHysa >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
                   {fmtPnL(b.vsHysa)}
                 </dd>
-                <dd class="mt-2 text-xs text-slate-500 dark:text-slate-400 tabular-nums font-mono">
-                  ${b.balance.toFixed(2)} balance · ${b.hysaValue.toFixed(2)} in HYSA
+                <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">
+                  {b.vsHysa >= 0 ? "ahead of" : "behind"} the same ${startingBalance} in savings
                 </dd>
-                <dd class="mt-0.5 text-xs text-slate-400 dark:text-slate-500">
+                <dd class="mt-5 grid grid-cols-2 gap-4 border-t border-gray-200 dark:border-slate-800 pt-4">
+                  <div>
+                    <div class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Balance</div>
+                    <div class="mt-1 text-2xl font-black tabular-nums font-mono leading-none text-slate-900 dark:text-white">${b.balance.toFixed(2)}</div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">HYSA</div>
+                    <div class="mt-1 text-2xl font-bold tabular-nums font-mono leading-none text-slate-400 dark:text-slate-500">${b.hysaValue.toFixed(2)}</div>
+                  </div>
+                </dd>
+                <dd class="mt-3 text-xs text-slate-400 dark:text-slate-500">
                   ${startingBalance} at {(hysaBenchmark.annualYield * 100).toFixed(1)}% since {formatDate(b.since)}
                 </dd>
               </div>
