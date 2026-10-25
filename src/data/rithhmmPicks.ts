@@ -2888,7 +2888,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     id: 203,
     date: "2026-06-04",
     sport: "MLB",
-    pick: "Gunnar Henderson Under 1.5 Total Bases",
+    pick: "Gunnar Henderson Over 1.5 Total Bases",
     odds: "-111",
     confidence: 60.8,
     modelProjection: "Prop Model Predicts: 2.6 Total Bases",

@@ -7,7 +7,7 @@ tags:
   - ai
 thumb: "/posts/mini-courses/learning-jev-on-real-bets/learning-jev-on-real-bets-thumb.webp"
 thumbAlt: "Playful hand-drawn adventure-game illustration of a late-night sports den. A goofy brass sorting machine with a gauge reading 0.58 sorts a stack of bet slips into a crate with a green check, a crate with a red X, and a small crate with a question mark. A pinned chart on the wall shows dots climbing along a dashed line, a baseball game plays on an old TV, and a man in a hoodie leans back with a coffee mug, amused."
-title: "Learning Jev on 252 Real Bets"
+title: "Learning Jev with Personal Data"
 ---
 
 import CourseProgress from "@/components/course/CourseProgress.astro";
@@ -116,7 +116,7 @@ The Choice is where Jev embarrassed me a little. I asked what kind of bet each p
 | Tigers @ Reds Under 9.5 | combo under | game total |
 | Blue Jays Moneyline | combo over | moneyline |
 
-After the fix, Jev matches my labels on 251 of 252. The last one is a total bases pick where the text says Under and Rithmm's projection points Over, so I need to go figure out which one I actually bet.
+It also caught one more: a total bases pick I'd typed as an Under when I actually bet the Over. After fixing both, Jev matches my labels on all 252.
 
 The Score is the probability-weighted average of the level positions, so with pass at 0, lean at 1, and play at 2, a 0.9 means "mostly lean." The [Score docs](https://docs.typesafe.ai/primitives/score) say to describe situations instead of degrees, which is why my levels read like "Lean; some support, but a small stake at most" instead of just "1." The catch is that the average hides how the probability is spread.
 
@@ -148,7 +148,7 @@ if (answers.will_hit.noul > breakEven + margin) placeBet(pick);
 
 <ThresholdLab />
 
-At zero margin, Jev on the facts alone picks 87 of the 248 picks and goes 58–29 for +20.33 units, compared with +6.43 for betting all of them. With Rithmm's projection in the state, it bets 134 and finishes +15.66. Rithmm's own number cleared break-even on every single pick, so its version of the rule is "bet everything."
+At zero margin, Jev on the facts alone picks 86 of the 248 picks and goes 57–29 for +19.42 units, compared with +6.43 for betting all of them. With Rithmm's projection in the state, it bets 135 and finishes +16.57. Rithmm's own number cleared break-even on every single pick, so its version of the rule is "bet everything."
 
 One thing I was careful about: zero margin is just break-even, so I didn't tune it. Dragging the slider until the units peak is exactly the kind of fitting the docs warn about ("avoid fitting thresholds closely to a handful of test cases"). It's fun to look at, but the best margin on these 248 picks won't be the best margin on the next 248.
 
@@ -175,7 +175,7 @@ An [independent evaluation of Jev](https://arxiv.org/abs/2609.37647) found that 
 
 Rithmm's points sit on a flat line around 60% no matter what it said. Its most confident group (67% to 74%) hit 62.5%, about the same as its least confident group. That's a ranking skill of 0.49, a coin flip, and its probabilities were actually a touch less accurate than just using the break-even rates from the odds.
 
-Jev on the facts alone climbs. Its least confident group hit 56% and its most confident group hit 71%. It was too cautious overall (averaging 54% on picks that hit 58%), but it put them in roughly the right order. If you're wondering what "ranking skill" means in practice, this is the easiest way to see it.
+Jev on the facts alone climbs. Its least confident group hit 56% and its most confident group hit 69%. It was too cautious overall (averaging 54% on picks that hit 58%), but it put them in roughly the right order. If you're wondering what "ranking skill" means in practice, this is the easiest way to see it.
 
 <RankingGame />
 
@@ -195,11 +195,11 @@ I like what I saw. I also think the quickest way to get burned by a new model is
 
 ### Jev might have seen the results
 
-Every one of these games happened between April and October, and Jev 1.14 became available on October 14. If any of these results ended up in its training data, the "will it win" numbers would look smart for the wrong reason. The gap is small, though. Jev averaged 54.6% on picks that hit and 52.8% on picks that missed, which doesn't look like a model peeking. And a lot of the signal is sitting right there in the input: the raw recent form number (7/10 as 0.7) ranks winners at 0.56 all by itself, and Jev's "does form back this pick?" Noul ranks at 0.60. I still can't rule it out.
+Every one of these games happened between April and October, and Jev 1.14 became available on October 14. If any of these results ended up in its training data, the "will it win" numbers would look smart for the wrong reason. The gap is small, though. Jev averaged 54.5% on picks that hit and 52.8% on picks that missed, which doesn't look like a model peeking. And a lot of the signal is sitting right there in the input: the raw recent form number (7/10 as 0.7) ranks winners at 0.56 all by itself, and Jev's "does form back this pick?" Noul ranks at 0.59. I still can't rule it out.
 
 ### The sample is small
 
-58–29 sounds great. Fewer than 1 in 200 random 87-bet slices of these picks do that well, so it probably isn't pure luck. But the range on Jev's ranking skill runs from 0.50 to 0.66, and the bottom of that range is a coin flip.
+57–29 sounds great. Fewer than 1 in 200 random 86-bet slices of these picks do that well, so it probably isn't pure luck. But the range on Jev's ranking skill runs from 0.51 to 0.65, and the bottom of that range is barely better than a coin flip.
 
 ### Typed doesn't mean right
 
