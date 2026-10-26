@@ -1,0 +1,12 @@
+{
+  "name": "dandenney-teardown-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build-time dependencies for portable teardown illustrations.",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "jspdf": "^4.2.1",
+    "svg2pdf.js": "^2.6.0"
+  }
+}
