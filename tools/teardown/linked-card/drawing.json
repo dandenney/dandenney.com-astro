@@ -1,0 +1,35 @@
+{
+  "dependencies": "../node_modules",
+  "modelScripts": ["model.js"],
+  "drawings": [
+    {
+      "id": "linked-card",
+      "title": "Linked card with actions",
+      "description": "Illustrative concept of the stacking layers in the modern linked card pattern: a relative card, static content, the title link's stretched ::before overlay, actions lifted to z-index 1 and the :focus-within ring. Layer thickness and spacing are invented to make paint order visible.",
+      "concept": true,
+      "initialView": "exploded",
+      "parts": [
+        {"id": "card", "name": "Card (position: relative)"},
+        {"id": "title", "name": "Title link (position: static)"},
+        {"id": "text", "name": "Supporting text"},
+        {"id": "overlay", "name": "Stretched ::before (inset: 0)"},
+        {"id": "button", "name": "Action button (z-index: 1)"},
+        {"id": "secondary", "name": "Secondary link (z-index: 1)"},
+        {"id": "focus", "name": "Focus ring (:focus-within)"}
+      ],
+      "parameters": [],
+      "colors": {
+        "hues": {
+          "card": 220,
+          "title": 145,
+          "text": 95,
+          "overlay": 200,
+          "button": 25,
+          "secondary": 40,
+          "focus": 285
+        },
+        "fills": ["title", "overlay", "button", "secondary"]
+      }
+    }
+  ]
+}
