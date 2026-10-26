@@ -114,12 +114,13 @@ summary: "An exploded drawing of the linked card pattern, showing the layer stac
 <div class="lct__notes">
 <section>
 <h2>Bottom to top</h2>
+<p>The numbers match the callouts and the parts list in the drawing.</p>
 <ol class="lct__layers">
-<li><strong>Card</strong><code>.clickable-card { position: relative; }</code> makes the card the containing block, so anything absolutely positioned inside it measures against the card.</li>
-<li><strong>Title link and supporting text</strong><code>.card-link { position: static; }</code> keeps the link out of the way. Its pseudo-element skips past it and stretches to the card instead of the link's own box.</li>
-<li><strong>Stretched <code>::before</code></strong><code>content: ""; position: absolute; inset: 0;</code> lays an invisible plate over the whole card. Positioned elements paint above flow content, so a click anywhere on the text or empty space lands on the link.</li>
-<li><strong>Action button and secondary link</strong><code>position: relative; z-index: 1;</code> lifts every other interactive element above that plate, so they keep their own clicks.</li>
-<li><strong>Focus ring</strong><code>.clickable-card:focus-within { outline: 2px solid currentColor; outline-offset: 2px; }</code> belongs to the card itself, so it stays with the card when everything else lifts off.</li>
+<li><strong>1 · Card</strong><code>.clickable-card { position: relative; }</code> makes the card the containing block, so anything absolutely positioned inside it measures against the card.</li>
+<li><strong>2, 3 · Title link and supporting text</strong><code>.card-link { position: static; }</code> keeps the link out of the way. Its pseudo-element skips past it and stretches to the card instead of the link's own box.</li>
+<li><strong>4 · Stretched <code>::before</code></strong><code>content: ""; position: absolute; inset: 0;</code> lays an invisible plate over the whole card. Positioned elements paint above flow content, so a click anywhere on the text or empty space lands on the link.</li>
+<li><strong>5, 6 · Action button and secondary link</strong><code>position: relative; z-index: 1;</code> lifts every other interactive element above that plate, so they keep their own clicks.</li>
+<li><strong>7 · Focus ring</strong><code>.clickable-card:focus-within { outline: 2px solid currentColor; outline-offset: 2px; }</code> belongs to the card itself, so it stays with the card when everything else lifts off.</li>
 </ol>
 </section>
 <section>

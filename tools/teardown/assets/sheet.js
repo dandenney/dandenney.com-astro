@@ -5,6 +5,8 @@
     height: 297,
     margin: 28,
     labelMargin: 78,
+    balloonMargin: 40,
+    legendMargin: 104,
     axisDash: '6 1 1 1',
     linework: {
       technical: {outline: .35, edge: .22, detail: .13, texture: .09, axis: .13},

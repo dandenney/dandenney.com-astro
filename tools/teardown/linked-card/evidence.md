@@ -20,6 +20,7 @@
 - Title and supporting text share one layer because both are non-positioned flow content.
 - The focus ring is an outline the card paints, so it explodes with the card instead of floating as its own layer.
 - Hues only tell layers apart.
+- Callouts are numbered balloons in drawing order, keyed to a parts list in a reserved left column (`callouts: 'balloons'` in `model.js`), so the numbers match the tinkering's bottom-to-top list.
 
 ## Rebuild and proof
 

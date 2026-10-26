@@ -183,7 +183,7 @@
     }
   }
 
-  function fit(scenes, marginX = SHEET.margin) {
+  function fit(scenes, marginX = SHEET.margin, marginLeft = marginX) {
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     const extend = ([x, y]) => {
       minX = Math.min(minX, x);
@@ -199,9 +199,9 @@
       for (const t of trails) [t.a, t.b].forEach(extend);
     }
     if (![minX, minY, maxX, maxY].every(Number.isFinite)) throw Error('Drawing geometry must contain finite vertices');
-    const scale = Math.min((SHEET.width - marginX * 2) / (maxX - minX || 1), (SHEET.height - SHEET.margin * 2) / (maxY - minY || 1));
+    const scale = Math.min((SHEET.width - marginX - marginLeft) / (maxX - minX || 1), (SHEET.height - SHEET.margin * 2) / (maxY - minY || 1));
     const bounds = {width: (maxX - minX) * scale, height: (maxY - minY) * scale};
-    bounds.x = (SHEET.width - bounds.width) / 2;
+    bounds.x = marginLeft + (SHEET.width - marginLeft - marginX - bounds.width) / 2;
     bounds.y = (SHEET.height - bounds.height) / 2;
     return {scale, bounds, offset: [bounds.x - minX * scale, bounds.y - minY * scale]};
   }
@@ -495,8 +495,8 @@
     }).join('');
   }
 
-  function annotator(anchors, bounds, ink) {
-    const GAP = 7, SIZE = 3.2, top = SHEET.margin, bottom = SHEET.height - SHEET.margin, middle = bounds.x + bounds.width / 2;
+  function annotator(anchors, bounds, ink, balloons = false) {
+    const GAP = balloons ? 9 : 7, SIZE = 3.2, RADIUS = 3.2, top = SHEET.margin, bottom = SHEET.height - SHEET.margin, middle = bounds.x + bounds.width / 2;
     const sides = [anchors.filter(a => a.center < middle), anchors.filter(a => a.center >= middle)];
     let markup = '';
     sides.forEach((list, side) => {
@@ -506,15 +506,36 @@
       const overflow = Math.max(0, (ys[ys.length - 1] ?? 0) - bottom);
       for (let i = ys.length - 1; i >= 0; i--) ys[i] = Math.min(ys[i] - overflow, i < ys.length - 1 ? ys[i + 1] - GAP : Infinity);
       const direction = side ? 1 : -1;
-      list.forEach(({point: [x, y], name}, i) => {
+      list.forEach(({point: [x, y], name, number}, i) => {
         const edge = reach(ink, ys[i] - SIZE, ys[i] + SIZE, side, x);
-        const column = edge + direction * 16, elbow = column - direction * 5;
+        const column = edge + direction * (balloons ? 12 : 16), elbow = column - direction * 5;
         markup += `<path data-line-role="detail" fill="none" d="M${round(x)} ${round(y)}L${round(elbow)} ${round(ys[i])}L${round(column)} ${round(ys[i])}"/>`
-          + `<circle data-ink-fill="" cx="${round(x)}" cy="${round(y)}" r=".6"/>`
-          + `<text data-ink-fill="" data-annotation="" x="${round(column + direction * 1.5)}" y="${round(ys[i] + SIZE * .35)}" font-size="${SIZE}" text-anchor="${side ? 'start' : 'end'}">${escape(name.toUpperCase())}</text>`;
+          + `<circle data-ink-fill="" cx="${round(x)}" cy="${round(y)}" r=".6"/>`;
+        if (balloons) {
+          markup += balloon(column + direction * RADIUS, ys[i], RADIUS, number);
+          return;
+        }
+        markup += `<text data-ink-fill="" data-annotation="" x="${round(column + direction * 1.5)}" y="${round(ys[i] + SIZE * .35)}" font-size="${SIZE}" text-anchor="${side ? 'start' : 'end'}">${escape(name.toUpperCase())}</text>`;
       });
     });
+    if (markup && balloons) markup += legend(anchors);
     return markup && `<g data-annotations="">${markup}</g>`;
+  }
+
+  function balloon(cx, cy, r, number) {
+    return `<circle data-line-role="detail" fill="none" cx="${round(cx)}" cy="${round(cy)}" r="${r}"/>`
+      + `<text data-ink-fill="" data-annotation="" x="${round(cx)}" y="${round(cy + r * .34)}" font-size="${round(r * .95)}" text-anchor="middle">${number}</text>`;
+  }
+
+  // Parts list in the left column reserved by SHEET.legendMargin, ordered by item number.
+  function legend(anchors) {
+    const ROW = 7, RADIUS = 2.4, x = 14, top = SHEET.margin + 4;
+    return `<text data-ink-fill="" data-annotation="" x="${x}" y="${top}" font-size="2.6" letter-spacing=".4">PARTS</text>`
+      + [...anchors].sort((p, q) => p.number - q.number).map(({name, number}, i) => {
+        const cy = top + 6 + i * ROW;
+        return balloon(x + RADIUS, cy, RADIUS, number)
+          + `<text data-ink-fill="" data-annotation="" x="${x + RADIUS * 2 + 2.5}" y="${round(cy + 1)}" font-size="2.8">${escape(name)}</text>`;
+      }).join('');
   }
 
   // Ink arrives as segment end pairs, so a long edge passing the label's
@@ -534,7 +555,7 @@
     return far;
   }
 
-  function anchorOf(part, points, middle) {
+  function anchorOf(part, points, middle, number) {
     if (!points.length) return null;
     const within = (axis, low, high) => {
       const sorted = points.map(p => p[axis]).sort((a, b) => a - b), at = q => sorted[Math.floor(q * (sorted.length - 1))];
@@ -544,10 +565,12 @@
     const band = points.filter(p => inX(p) && inY(p));
     const pool = band.length ? band : points, center = pool.reduce((sum, p) => sum + p[0], 0) / pool.length;
     const point = pool.reduce((best, p) => (center < middle ? p[0] < best[0] : p[0] > best[0]) ? p : best);
-    return {name: part.name, point, center};
+    return {name: part.name, number, point, center};
   }
 
-  function render(parts, {explosion = 1, isolated = null, sample = .045, camera, fitExplosion = explosion, trails = [], fill = false, annotate = false, labels = annotate} = {}) {
+  function render(parts, {explosion = 1, isolated = null, sample = .045, camera, fitExplosion = explosion, trails = [], fill = false, annotate = false, labels = annotate, callouts = 'names'} = {}) {
+    if (!['names', 'balloons'].includes(callouts)) throw Error('Callouts must be names or balloons');
+    const balloons = callouts === 'balloons';
     for (const [name, value] of [['Explosion', explosion], ['Fit explosion', fitExplosion]]) {
       if (!Number.isFinite(value) || value < 0 || value > 2) throw Error(name + ' must be 0–2');
     }
@@ -577,7 +600,7 @@
     });
 
     const current = scene(explosion);
-    const {scale, bounds, offset} = fit(fitExplosion === explosion ? [current] : [current, scene(fitExplosion)], annotate ? SHEET.labelMargin : SHEET.margin);
+    const {scale, bounds, offset} = fit(fitExplosion === explosion ? [current] : [current, scene(fitExplosion)], annotate ? (balloons ? SHEET.balloonMargin : SHEET.labelMargin) : SHEET.margin, annotate && balloons ? SHEET.legendMargin : undefined);
     const paper = p => [offset[0] + p[0] * scale, offset[1] + p[1] * scale, p[2]];
     const {visible, front} = occluder(current.meshes, paper, .01 / scale);
     const ink = inker({paper, scale, sample, visible});
@@ -593,7 +616,7 @@
     if (fillInk) groups.unshift(`<g data-fills="">${fillInk}</g>`);
     const trailInk = ink(current.trails.filter(t => !t.collapsed));
     if (trailInk) groups.push(`<g data-trails="">${trailInk}</g>`);
-    if (annotate && labels) groups.push(annotator(inked.map(([part, points]) => anchorOf(part, points, bounds.x + bounds.width / 2)).filter(Boolean), bounds, inked.flatMap(([, points]) => points)));
+    if (annotate && labels) groups.push(annotator(inked.map(([part, points]) => anchorOf(part, points, bounds.x + bounds.width / 2, parts.indexOf(part) + 1)).filter(Boolean), bounds, inked.flatMap(([, points]) => points), balloons));
     return {markup: groups.join(''), bounds, scale, offset};
   }
 

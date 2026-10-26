@@ -90,6 +90,7 @@ self.DrawingModels['linked-card'] = (parameters, options) => {
 
   return TechnicalProjection.render([card, title, text, overlay, button, secondary, focus], {
     ...options,
+    callouts: 'balloons',
     camera: {azimuth, elevation: 36, roll: 0}
   });
 };
