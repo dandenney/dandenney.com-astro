@@ -1,0 +1,270 @@
+---
+pubDate: "2026-10-24"
+summary: "An interactive mini course on Jev and decision models, built on every Rithmm pick I've logged since April: how to ask a System One model questions, thresholds, calibration, and whether any of it holds up."
+socialImageFilename: "og-learning-jev-on-real-bets.jpg"
+tags:
+  - mini-course
+  - ai
+thumb: "/posts/mini-courses/learning-jev-on-real-bets/learning-jev-on-real-bets-thumb.webp"
+thumbAlt: "Playful hand-drawn adventure-game illustration of a late-night sports den. A goofy brass sorting machine with a gauge reading 0.58 sorts a stack of bet slips into a crate with a green check, a crate with a red X, and a small crate with a question mark. A pinned chart on the wall shows dots climbing along a dashed line, a baseball game plays on an old TV, and a man in a hoodie leans back with a coffee mug, amused."
+title: "Learning Jev with Personal Data"
+---
+
+import CourseProgress from "@/components/course/CourseProgress.astro";
+import Checkpoint from "@/components/course/Checkpoint.astro";
+import PickGuesser from "@/components/course/jev/PickGuesser.astro";
+import TaskSorter from "@/components/course/jev/TaskSorter.astro";
+import RequestInspector from "@/components/course/jev/RequestInspector.astro";
+import ScoreSplit from "@/components/course/jev/ScoreSplit.astro";
+import ThresholdLab from "@/components/course/jev/ThresholdLab.astro";
+import CalibrationChart from "@/components/course/jev/CalibrationChart.astro";
+import RankingGame from "@/components/course/jev/RankingGame.astro";
+
+export const course = "learning-jev-on-real-bets";
+export const lessons = [
+  { id: "l1", title: "Start with a guess", anchor: "start-with-a-guess" },
+  { id: "l2", title: "What a decision model is", anchor: "what-a-decision-model-is" },
+  { id: "l3", title: "A pick becomes state", anchor: "a-pick-becomes-state" },
+  { id: "l4", title: "Reading the three answers", anchor: "reading-the-three-answers" },
+  { id: "l5", title: "Thresholds are break-even", anchor: "thresholds-are-break-even" },
+  { id: "l6", title: "Did the numbers mean anything?", anchor: "did-the-numbers-mean-anything" },
+  { id: "l7", title: "Where it breaks", anchor: "where-it-breaks" },
+];
+
+I've been wanting to learn Jev, but there's not much in my day-to-day work that I can use it for yet. So I thought I'd take some bet data I've been collecting and learn it while making a post. Every section has a point where you make a quick decision based on limited information, and your progress saves in the browser.
+
+The subject is [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), the first "System One" model from TypeSafe, and decision models in general. I didn't want to use made-up examples, so everything here runs on my own data.&#x20;
+
+Since April, I've logged [Rithmm's ](/betting/rithmmm-picks)sports bet picks so far, with 252 at by the time I was writing this. My original experiment with this was to see if I could use the Martingale betting theory in limited sets and profit more than I would have with money in a high-yield savings account. The answer is no. However, after reviewing the data, I found that Rithmm hit at a profitable rate on NBA picks with 60% or higher confidence. WNBA was in range as it went on, but MLB was not as successful. Jev leads me to some new experiments. &#x20;
+
+I sent the ones that settled as wins or losses through Jev and saved every answer. The question running through the whole course is pretty simple: can a decision model help me choose which picks to bet?
+
+<CourseProgress course={course} lessons={lessons} />
+
+## Start with a guess
+
+Before any model gets involved, you try it. Here's what I see before a game, minus the result.
+
+<PickGuesser />
+
+What you just did is what Daniel Kahneman calls System 1 thinking in *Thinking, Fast and Slow*: a fast gut call without much deliberating. Rithmm's confidence number is supposed to make that call easier. Across the 248 picks where it gave one, Rithmm averaged 63.8%, and the picks hit 58.1%. It also never went below 56% on anything, so as a filter it says yes to every pick it hands me.
+
+<Checkpoint
+  course={course}
+  lesson="l1"
+  question="Rithmm averaged 63.8% confidence across 248 picks. How often did they actually hit?"
+  options={["About 64%, right on the number", "58.1%", "Under 50%"]}
+  answer={1}
+  explain="That's still above the 57% the odds needed on average, which is why the picks made a little money anyway. Close to break-even and accurate aren't the same thing, though, and we'll come back to that."
+  hints={["Not quite. Rithmm was more confident than the results.", null, "Not that bad. More of them hit than missed."]}
+/>
+
+## What a decision model is
+
+System 2 is the slow, effortful reasoning, and it's what most of the LLM conversation for the last few years has been about: models that write, plan, and reason out loud. Jev goes the other way. You hand it some text or JSON, ask it questions, and get back typed answers with probabilities your code can branch on. It can't write a sentence, summarize, or chat.&#x20;
+
+Every question is one of three types, and each maps to something you already write in code:
+
+- A Noul (as in Bernoulli) is a yes/no question. It returns one number between 0 and 1, the probability the answer is yes. It's an `if`.
+- A Choice picks one option from a set you define. It returns the winner, a probability for every option, and a confidence. It's a `switch`.
+- A Score places something on ordered levels you describe. It returns a position, a probability per level, and a confidence. It's what you `sort` by.
+
+It's also cheap enough that cost barely comes up. My whole run was 504 requests (every pick twice, more on that in a minute) and 330,106 input tokens. At $0.042 per million input tokens, with output tokens free, that's about a penny and a half, and it finished in 8 seconds.
+
+<TaskSorter />
+
+<Checkpoint
+  course={course}
+  lesson="l2"
+  question={'Jev answers "Will this bet win?" with 0.62. What is that?'}
+  options={["A prediction that the bet wins", "A probability your code still has to decide what to do with", "How confident Jev is in its answer"]}
+  answer={1}
+  explain="Jev hands you a number and stops. Whether 0.62 is good enough depends on the odds, which is the whole thresholds section."
+  hints={["Jev doesn't say yes or no. It gives you a number between 0 and 1.", null, "Close, but confidence is a separate field on Choice and Score. For a Noul, the docs say the number is the answer and the certainty in one."]}
+/>
+
+## A pick becomes state
+
+A request has two parts. The **state** is the thing being judged: a string, a JSON object, or an array of strings (text only for now). The **questions** are what you want to know about it. Every question sees the same state, each one is answered on its own, and they all come back in one response, so asking four questions doesn't cost four round trips.
+
+The [state docs](https://docs.typesafe.ai/concepts/state) suggest keeping the state to facts and putting your framing in the questions. For a pick, the facts are easy: the date, sport, matchup, the pick, the odds, and recent form. Nothing about the result or what I bet. Then I asked every pick the same four questions: will it win, does recent form back it, what kind of bet is it, and how strong is the case at these odds.
+
+Here's the twist. I sent every pick twice, once with Rithmm's projection in the state ("Tigers 5.9, Angels 3.2") and once without it.
+
+<RequestInspector />
+
+Rithmm's projection is an opinion about the game, but sitting in the state it reads like a fact. With it, Jev's pass/lean/play Score landed on "play" for 69 picks. Without it, Jev never said "play" once. Look at the Tigers moneyline: recent form 2/10, a lean of 0.07 on the facts alone, and 1.21 once Rithmm's projected runs show up. It lost. Adding the projection also made Jev worse at telling winners from losers overall, which we'll get to in a couple of sections.
+
+If you want to compare Jev against another model, the lesson is to keep the other model out of the request and compare the two numbers in your own code.
+
+<Checkpoint
+  course={course}
+  lesson="l3"
+  question="You want Jev's read and Rithmm's read on the same pick. Where does Rithmm's projection go?"
+  options={["In the state, so Jev has everything", "In the question's instructions", "Nowhere in the request. Compare the two numbers in your code."]}
+  answer={2}
+  explain="Anything in the state, Jev treats as true about the world, including another model's guess. Keep the state to facts and do the comparing yourself."
+  hints={["That's what I tried. It made Jev more eager to say play and worse at ranking.", "Instructions frame the question. A projection is still an opinion about the game wherever you put it."]}
+/>
+
+## Reading the three answers
+
+The Noul is the simplest. "Does recent form support this pick?" came back 0.84 for a receptions over with 9/10 recent form, and 0.10 for a Sky moneyline with 1/10. That one number turns out to be one of the most useful things in the whole run, so keep it in mind.
+
+The Choice is where Jev caught some data issues. I asked what kind of bet each pick was and compared the answer to the labels in my own data. The first time I checked, Jev "missed" 40 of them. It hadn't. My bots had filed 39 run lines, game totals, and a moneyline as "combo" player props. Jev was right, my labels were wrong, and I fixed them. A few of them:
+
+| Pick | My old label | Jev |
+| --- | --- | --- |
+| Blue Jays +1.5 | combo over | spread |
+| Athletics @ Mariners Over 7.5 Total Runs | combo over | game total |
+| Tigers @ Reds Under 9.5 | combo under | game total |
+| Blue Jays Moneyline | combo over | moneyline |
+
+It also caught one more: I typed a total bases pick as an Under when I actually bet the Over. After fixing both, Jev matches my labels on all 252.
+
+The Score is the probability-weighted average of the level positions, so with pass at 0, lean at 1, and play at 2, a 0.9 means "mostly lean." The [Score docs](https://docs.typesafe.ai/primitives/score) say to describe situations instead of degrees, which is why my levels read like "Lean; some support, but a small stake at most" instead of just "1." The catch is that the average hides how the probability is spread.
+
+<ScoreSplit />
+
+That's what `confidence` is for. The [confidence docs](https://docs.typesafe.ai/confidence) put it at 1 when all the probability sits on one level and 0 when it's spread about evenly. Check it before your code acts on the score.
+
+<Checkpoint
+  course={course}
+  lesson="l4"
+  question="A Score comes back 0.9 with confidence 0. What should your code do?"
+  options={["Treat it as a lean, since 0.9 is close to 1", "Skip it or send it to a person. The model doesn't have a read.", "Average it with the Noul"]}
+  answer={1}
+  explain="Confidence 0 means the probability is spread across every level. The 0.9 is the middle of a shrug."
+  hints={["That's what the score alone suggests, and why you can't read it alone.", null, "Mixing answers from different questions doesn't fix a missing read."]}
+/>
+
+## Thresholds are break-even
+
+A Noul gives you a probability and leaves the decision to you. The [Noul docs](https://docs.typesafe.ai/primitives/noul) suggest starting with 0.7 for yes and 0.3 for no, sending the middle to a person, and raising the bar when a false yes is expensive.
+
+Betting hands you the line for free, because the odds already tell you what being wrong costs. At -150 you risk 150 to win 100, so you need to win 150 out of 250, or 60%, just to break even. At +120 it's 100 out of 220, about 45%. Every pick has its own threshold, and your code can work it out:
+
+```ts
+const breakEven = odds < 0 ? -odds / (-odds + 100) : 100 / (odds + 100);
+
+if (answers.will_hit.noul > breakEven + margin) placeBet(pick);
+```
+
+<ThresholdLab />
+
+At zero margin, Jev on the facts alone picks 86 of the 248 picks and goes 57–29 for +19.42 units, compared with +6.43 for betting all of them. With Rithmm's projection in the state, it bets 135 and finishes +16.57. Rithmm's own number cleared break-even on every single pick, so its version of the rule is "bet everything."
+
+One thing I was careful about: zero margin is just break-even, so I didn't tune it. Dragging the slider until the units peak is exactly the kind of fitting the docs warn about ("avoid fitting thresholds closely to a handful of test cases"). It's fun to look at, but the best margin on these 248 picks won't translate to the next 248.
+
+<Checkpoint
+  course={course}
+  lesson="l5"
+  question="A pick is at -150 and Jev says 0.58. Do you bet it?"
+  options={["Yes, 0.58 is better than a coin flip", "No. -150 needs 60% to break even.", "Only if the Score says play"]}
+  answer={1}
+  explain="150 / 250 = 60%. A 0.58 read at that price loses money over time, even though it's above 50%."
+  hints={["A coin flip isn't the bar. The price is.", null, "The Score is a separate read. The math on the price doesn't change."]}
+/>
+
+## Did the numbers mean anything?
+
+There are two different questions you can ask about any set of probabilities, and a model can pass one and fail the other:
+
+- Calibration: when it says 60%, do those picks hit about 60% of the time?
+- Ranking: do the winners get higher numbers than the losers?
+
+An [independent evaluation of Jev](https://arxiv.org/abs/2609.37647) found that its yes/no split probabilities ranked well but were poorly placed against a fixed 0.5 cutoff. Here's how it looks on my picks.
+
+<CalibrationChart />
+
+Rithmm's points sit on a flat line around 60% no matter what it said. Its most confident group (67% to 74%) hit 62.5%, about the same as its least confident group. That's a ranking skill of 0.49, a coin flip, and its probabilities were slightly less accurate than using the break-even rates from the odds.
+
+Jev on the facts alone climbs. Its least confident group hit 56%, and its most confident group hit 69%. It was too cautious overall (averaging 54% on picks that hit 58%), but it put them in roughly the right order. If you're wondering what "ranking skill" means in practice, this is the easiest way to see it.
+
+<RankingGame />
+
+<Checkpoint
+  course={course}
+  lesson="l6"
+  question="Rithmm's ranking skill is 0.49. What does that mean?"
+  options={["Its picks hit 49% of the time", "Given one winner and one loser, it gives the winner the higher number about half the time", "Its probabilities are 49% accurate"]}
+  answer={1}
+  explain="0.5 is what you'd get flipping a coin for every pair. Rithmm's picks still hit 58% of the time; its confidence number just doesn't tell you which ones."
+  hints={["The picks hit 58%. Ranking skill is about the numbers it gave them.", null, "That's closer to calibration, and it's measured differently."]}
+/>
+
+## Where it breaks
+
+I like what I saw. I also think the quickest way to get burned by a new model is to believe the first good chart, so here's what I don't trust yet.
+
+### Jev might have seen the results
+
+Every one of these games happened between April and October, and Jev 1.14 became available on October 14. If any of these results ended up in its training data, the "will it win" numbers would look smart for the wrong reason. The gap is small, though. Jev averaged 54.5% on picks that hit and 52.8% on picks that missed, which doesn't look like a model peeking. And a lot of the signal is sitting right there in the input: the raw recent form number (7/10 as 0.7) ranks winners at 0.56 all by itself, and Jev's "does form back this pick?" Noul ranks at 0.59. I still can't rule it out.
+
+### The sample is small
+
+57–29 sounds great. Fewer than 1 in 200 random 86-bet slices of these picks do that well, so it probably isn't pure luck. But Jev's ranking skill ranges from 0.51 to 0.65, and the bottom of that range is barely better than a coin flip.
+
+### Typed doesn't mean right
+
+The launch post says Jev "can't hallucinate" and "never makes type errors," and both held up here: every answer came back well-formed. But "0.62 that this bet wins" is a valid answer whether or not Jev knows anything about baseball.
+
+### The benchmarks are the vendor's
+
+TypeSafe's own launch post notes its workflow evals were made by its own team, "so some bias could exist." Independent work is mixed so far. [One evaluation](https://arxiv.org/abs/2609.37647) ran 346,009 requests across 37 datasets for under $10 and found Choice probabilities well calibrated, while [another paper](https://arxiv.org/abs/2610.02267) found neither model it tested beat chance at zero-shot model routing.
+
+### Pin the version
+
+I used `jev-1.14.0`, not `jev-latest`. The alias will move, and every number in this post could move with it.
+
+### So, can it help me choose?
+
+On these 248 picks, a plain break-even rule on Jev's facts-only read beat betting everything, and Rithmm's own number couldn't. I'm not betting on that until it holds up on games Jev couldn't have seen.
+
+### What's next
+
+The only clean test is going forward: score each pick before the game, log the answer with the model version, and check back after a few hundred more. That's what I'm building next.
+
+<Checkpoint
+  course={course}
+  lesson="l7"
+  question="What's the only clean way to know if Jev's edge on these picks is real?"
+  options={["Run the same 252 picks through it again", "Score new picks before the games and check the results later", "Raise the margin until the units look better"]}
+  answer={1}
+  explain="New picks can't be in the training data, and a threshold you set before the games can't be fitted to them."
+  hints={["Same picks, same possible leak. You'd get the same answers.", null, "That's fitting the threshold to the results you already have."]}
+/>
+
+<CourseProgress course={course} lessons={lessons} variant="finish" />
+
+## Cheat sheet
+
+- A Noul is an `if`: one condition, one probability, and the threshold lives in your code.
+- A Choice is a `switch`. Describe every option and check confidence before you act.
+- A Score is a `sort`. Describe each level as a situation and read the probabilities along with the number.
+- The state holds facts. Another model's projection is an opinion, so compare it in your code.
+- In betting, the threshold is break-even, and the odds hand it to you.
+- Check calibration and ranking separately, on your own data, with enough of it to mean something.
+- Pin the model version and log it with every answer.
+
+## Baseline by sport
+
+Before Jev becomes part of my daily tracking, here's where things stand without it. This covers all 253 settled Rithmm picks from April 18 through October 18. "All picks" counts everything Rithmm sent me, including picks I only watched or skipped. "Bet" counts only the picks I put money on.
+
+| Sport | All picks (W–L–P) | Win % | Bet (W–L) | Bet win % | Staked | Net | ROI |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| NFL | 15–6 | 71.4% | 15–5 | 75.0% | $1,110 | +$453.39 | +40.8% |
+| NBA | 41–22–1 | 65.1% | 7–2 | 77.8% | $540 | +$228.48 | +42.3% |
+| MLB | 85–70 | 54.8% | 5–14 | 26.3% | $1,140 | −$602.07 | −52.8% |
+| WNBA | 6–5 | 54.5% | 6–5 | 54.5% | $660 | −$9.10 | −1.4% |
+| NCAAF | 1–1 | 50.0% | 1–1 | 50.0% | $120 | −$4.45 | −3.7% |
+| **Total** | **148–104–1** | **58.7%** | **34–27** | **55.7%** | **$3,570** | **+$66.25** | **+1.9%** |
+
+Football and basketball carried it. MLB gave nearly all of it back: Rithmm was barely better than a coin flip on baseball overall, and the baseball picks I actually bet went 5–14. WNBA and college football are too small to say anything about yet. This is the number Jev has to beat going forward, sport by sport.
+
+## Sources
+
+- [Introducing System One models and Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), TypeSafe's launch post
+- TypeSafe docs: [System One](https://docs.typesafe.ai/concepts/system-one), [State](https://docs.typesafe.ai/concepts/state), [Noul](https://docs.typesafe.ai/primitives/noul), [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score), [Confidence](https://docs.typesafe.ai/confidence), [Models](https://docs.typesafe.ai/models)
+- [Evaluating and Benchmarking the System One Model Jev](https://arxiv.org/abs/2609.37647) by Deußer, Sparrenberg, and Sifa
+- [Fast Models, Slow Evidence](https://arxiv.org/abs/2610.02267) by Jiawei Li

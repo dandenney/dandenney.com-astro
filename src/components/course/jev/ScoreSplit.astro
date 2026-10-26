@@ -1,0 +1,137 @@
+---
+import "@/styles/course.css";
+import { coursePicks } from "@/data/jev/coursePicks";
+
+// Two facts-only lean scores that land within 0.01 of each other for very different reasons.
+const pair = [45, 246].map((id) => {
+  const pick = coursePicks.find((entry) => entry.id === id)!;
+  return {
+    id,
+    pick: pick.pick,
+    odds: pick.odds,
+    recentForm: pick.recentForm ?? "n/a",
+    score: pick.facts.lean,
+    confidence: pick.facts.leanConfidence,
+    probabilities: pick.facts.leanProbabilities,
+  };
+});
+
+const levels = ["Pass", "Lean", "Play"];
+const sure = pair.reduce((best, entry) => (entry.confidence > best.confidence ? entry : best)).id;
+---
+
+<score-split class="course-card" data-sure={sure}>
+  <div class="course-label">Exercise · Same score, different answer</div>
+  <div class="course-title">Both of these scored about 0.9. Which one was Jev sure about?</div>
+  <div class="split-grid">
+    {pair.map((entry) => (
+      <div class="split-card" data-id={entry.id}>
+        <div class="split-pick">{entry.pick}</div>
+        <div class="course-muted">{entry.odds} · recent form {entry.recentForm}</div>
+        <div class="split-score course-mono">score {entry.score.toFixed(2)}</div>
+        <button type="button" class="course-btn" data-guess={entry.id}>This one</button>
+        <div class="split-detail" data-detail hidden>
+          {entry.probabilities.map((p, i) => (
+            <div class="split-bar">
+              <span>{levels[i]}</span>
+              <span class="split-track"><span style={`width: ${p * 100}%`}></span></span>
+              <span class="course-mono">{p.toFixed(2)}</span>
+            </div>
+          ))}
+          <div class="course-mono split-confidence">confidence {entry.confidence.toFixed(2)}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="course-feedback" aria-live="polite" data-feedback hidden></div>
+</score-split>
+
+<style>
+  .split-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    margin-top: 1rem;
+  }
+
+  .split-card {
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 0.4rem;
+    padding: 1rem;
+  }
+
+  .split-pick {
+    font-weight: 600;
+  }
+
+  .split-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .split-card .course-btn {
+    justify-self: start;
+  }
+
+  .split-detail {
+    display: grid;
+    font-size: 0.8rem;
+    gap: 0.25rem;
+    margin-top: 0.4rem;
+  }
+
+  .split-bar {
+    align-items: center;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 2.5rem 1fr 2.5rem;
+  }
+
+  .split-track {
+    background: var(--course-border);
+    border-radius: 999px;
+    height: 0.5rem;
+    overflow: hidden;
+  }
+
+  .split-track span {
+    background: var(--course-accent);
+    display: block;
+    height: 100%;
+  }
+
+  .split-confidence {
+    font-weight: 700;
+    margin-top: 0.25rem;
+  }
+</style>
+
+<script>
+  class ScoreSplit extends HTMLElement {
+    connectedCallback() {
+      const sure = this.dataset.sure;
+      const feedback = this.querySelector<HTMLElement>("[data-feedback]")!;
+      const buttons = [...this.querySelectorAll<HTMLButtonElement>("[data-guess]")];
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const right = button.dataset.guess === sure;
+          buttons.forEach((b) => {
+            b.disabled = true;
+            if (b.dataset.guess === sure) b.dataset.state = "correct";
+          });
+          if (!right) button.dataset.state = "wrong";
+          this.querySelectorAll<HTMLElement>("[data-detail]").forEach((detail) => (detail.hidden = false));
+          feedback.hidden = false;
+          feedback.dataset.state = right ? "correct" : "wrong";
+          feedback.textContent = `${right ? "Right." : "Not that one."} One is a clear "lean" with most of the probability on a single level. The other is spread across all three, so its confidence is 0: the 0.9 is an average of a shrug. The score alone can't tell them apart, which is why your code should check confidence before acting on it.`;
+        });
+      });
+    }
+  }
+
+  if (!customElements.get("score-split")) customElements.define("score-split", ScoreSplit);
+</script>

@@ -1,0 +1,158 @@
+---
+import "@/styles/course.css";
+import { calibrationBins, comparablePicks, rankingSkill, sourceLabels, type Source } from "@/data/jev/coursePicks";
+
+const sources = Object.keys(sourceLabels) as Source[];
+const charts = sources.map((source) => ({
+  source,
+  label: sourceLabels[source],
+  bins: calibrationBins(comparablePicks, source),
+  skill: rankingSkill(comparablePicks, source),
+  stated: comparablePicks.reduce((t, p) => t + (source === "rithmm" ? p.rithmm! : p[source].willHit), 0) / comparablePicks.length,
+}));
+const hitRate = comparablePicks.filter((pick) => pick.win).length / comparablePicks.length;
+const breakEven = comparablePicks.reduce((t, p) => t + p.breakEven, 0) / comparablePicks.length;
+
+// Both axes run 30% to 85%.
+const lo = 0.3;
+const hi = 0.85;
+const size = 300;
+const plot = { left: 48, right: 290, top: 10, bottom: 256 };
+const x = (v: number) => plot.left + ((v - lo) / (hi - lo)) * (plot.right - plot.left);
+const y = (v: number) => plot.bottom - ((v - lo) / (hi - lo)) * (plot.bottom - plot.top);
+const ticks = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8];
+const pct = (v: number) => `${Math.round(v * 100)}%`;
+---
+
+<calibration-chart class="course-card">
+  <div class="course-label">Chart · Did the numbers mean anything?</div>
+  <div class="course-title">What each source said vs. how often the picks hit</div>
+  <div class="course-muted">
+    The {comparablePicks.length} picks are split into five groups of about 50, sorted by the probability each source
+    gave them. On the dashed diagonal, a group the model called 60% hits 60% of the time. The bars show how far each
+    group could swing by chance alone.
+  </div>
+
+  <div class="cal-sources" role="group" aria-label="Choose a source">
+    {charts.map((chart, index) => (
+      <button type="button" class="course-btn" data-source={chart.source} aria-pressed={index === 0 ? "true" : "false"}>
+        {chart.label}
+      </button>
+    ))}
+  </div>
+
+  {charts.map((chart, index) => (
+    <figure class="cal-figure" data-chart={chart.source} hidden={index !== 0}>
+      <svg viewBox={`0 0 ${size} ${size}`} role="img" aria-labelledby={`cal-${chart.source}`}>
+        <title id={`cal-${chart.source}`}>
+          {chart.label}: {chart.bins.map((bin) => `said ${pct(bin.stated)}, hit ${pct(bin.hit)}`).join("; ")}
+        </title>
+        {ticks.map((tick) => (
+          <g>
+            <line class="cal-grid" x1={x(lo)} x2={x(hi)} y1={y(tick)} y2={y(tick)} />
+            <text class="cal-tick" x={x(lo) - 6} y={y(tick) + 3} text-anchor="end">{pct(tick)}</text>
+            <text class="cal-tick" x={x(tick)} y={plot.bottom + 16} text-anchor="middle">{pct(tick)}</text>
+          </g>
+        ))}
+        <line class="cal-diagonal" x1={x(lo)} y1={y(lo)} x2={x(hi)} y2={y(hi)} />
+        <line class="cal-breakeven" x1={x(lo)} x2={x(hi)} y1={y(breakEven)} y2={y(breakEven)} />
+        <text class="cal-note" x={x(lo) + 4} y={y(breakEven) - 5}>avg break-even {pct(breakEven)}</text>
+        {chart.bins.map((bin) => (
+          <g>
+            <line class="cal-interval" x1={x(bin.stated)} x2={x(bin.stated)} y1={y(bin.low)} y2={y(bin.high)} />
+            <circle class="cal-point" cx={x(bin.stated)} cy={y(bin.hit)} r="5" />
+          </g>
+        ))}
+        <text class="cal-axis" x={(plot.left + plot.right) / 2} y={size - 6} text-anchor="middle">what it said</text>
+        <text class="cal-axis" x="10" y={(plot.top + plot.bottom) / 2} text-anchor="middle" transform={`rotate(-90 10 ${(plot.top + plot.bottom) / 2})`}>how often they hit</text>
+      </svg>
+      <figcaption class="cal-caption">
+        <span>Average it said: <strong class="course-mono">{pct(chart.stated)}</strong></span>
+        <span>Actually hit: <strong class="course-mono">{pct(hitRate)}</strong></span>
+        <span>Ranking skill: <strong class="course-mono">{chart.skill.toFixed(2)}</strong></span>
+      </figcaption>
+    </figure>
+  ))}
+</calibration-chart>
+
+<style>
+  .cal-sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .cal-figure {
+    margin: 1rem auto 0;
+    max-width: 26rem;
+  }
+
+  .cal-figure svg {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .cal-grid {
+    stroke: var(--course-border);
+  }
+
+  .cal-tick,
+  .cal-axis,
+  .cal-note {
+    fill: var(--course-muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 9px;
+  }
+
+  .cal-axis {
+    font-size: 10px;
+  }
+
+  .cal-diagonal {
+    stroke: var(--course-muted);
+    stroke-dasharray: 4 4;
+  }
+
+  .cal-breakeven {
+    stroke: var(--course-warn);
+    stroke-dasharray: 2 3;
+  }
+
+  .cal-interval {
+    stroke: var(--course-accent);
+    stroke-opacity: 0.45;
+    stroke-width: 3;
+  }
+
+  .cal-point {
+    fill: var(--course-accent);
+  }
+
+  .cal-caption {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    gap: 0.5rem 1.25rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+</style>
+
+<script>
+  class CalibrationChart extends HTMLElement {
+    connectedCallback() {
+      const buttons = [...this.querySelectorAll<HTMLButtonElement>("[data-source]")];
+      const figures = [...this.querySelectorAll<HTMLElement>("[data-chart]")];
+      buttons.forEach((button) =>
+        button.addEventListener("click", () => {
+          buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+          figures.forEach((figure) => (figure.hidden = figure.dataset.chart !== button.dataset.source));
+        }),
+      );
+    }
+  }
+
+  if (!customElements.get("calibration-chart")) customElements.define("calibration-chart", CalibrationChart);
+</script>

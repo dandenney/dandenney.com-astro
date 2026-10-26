@@ -1,0 +1,159 @@
+---
+import "@/styles/course.css";
+import { comparablePicks, rankingSkill, toClientPick } from "@/data/jev/coursePicks";
+
+const picks = comparablePicks.map(toClientPick);
+const exact = { rithmm: rankingSkill(comparablePicks, "rithmm"), facts: rankingSkill(comparablePicks, "facts") };
+---
+
+<ranking-game class="course-card" data-picks={JSON.stringify(picks)} data-exact={JSON.stringify(exact)}>
+  <div class="course-label">Game · Can it tell a winner from a loser?</div>
+  <div class="course-title">Draw one pick that hit and one that missed</div>
+  <div class="course-muted">
+    A model that can rank should give the winner the higher number. Draw pairs and keep score. A coin flip gets about
+    half right.
+  </div>
+
+  <div class="rank-actions">
+    <button type="button" class="course-btn" data-draw="1">Draw a pair</button>
+    <button type="button" class="course-btn" data-draw="100">Draw 100</button>
+    <button type="button" class="course-btn" data-reset>Reset</button>
+  </div>
+
+  <div class="rank-pair" data-pair hidden>
+    <div class="rank-card">
+      <div class="course-label">hit</div>
+      <div class="rank-pick" data-winner></div>
+      <div class="course-mono rank-numbers" data-winner-numbers></div>
+    </div>
+    <div class="rank-card">
+      <div class="course-label">missed</div>
+      <div class="rank-pick" data-loser></div>
+      <div class="course-mono rank-numbers" data-loser-numbers></div>
+    </div>
+  </div>
+
+  <div class="rank-score" aria-live="polite">
+    <div><span class="course-label">pairs</span><strong class="course-mono" data-pairs>0</strong></div>
+    <div><span class="course-label">Rithmm got right</span><strong class="course-mono" data-rithmm>–</strong></div>
+    <div><span class="course-label">Jev, facts only</span><strong class="course-mono" data-facts>–</strong></div>
+  </div>
+  <div class="course-muted rank-exact" data-exact-text hidden>
+    Every possible pair (all {picks.filter((p) => p.win).length * picks.filter((p) => !p.win).length} of them): Rithmm
+    {exact.rithmm.toFixed(2)}, Jev {exact.facts.toFixed(2)}. That's the "ranking skill" number on the chart above.
+  </div>
+</ranking-game>
+
+<style>
+  .rank-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .rank-pair {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    margin-top: 1rem;
+  }
+
+  .rank-pair[hidden] {
+    display: none;
+  }
+
+  .rank-card {
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .rank-pick {
+    font-weight: 600;
+  }
+
+  .rank-numbers {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+
+  .rank-score {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    margin-top: 1rem;
+  }
+
+  .rank-score div {
+    display: grid;
+  }
+
+  .rank-score strong {
+    font-size: 1.1rem;
+  }
+
+  .rank-exact {
+    margin-top: 0.75rem;
+  }
+</style>
+
+<script>
+  import type { ClientPick } from "@/data/jev/coursePicks";
+
+  const pct = (v: number) => `${Math.round(v * 100)}%`;
+
+  class RankingGame extends HTMLElement {
+    connectedCallback() {
+      const picks = JSON.parse(this.dataset.picks ?? "[]") as ClientPick[];
+      const winners = picks.filter((pick) => pick.win);
+      const losers = picks.filter((pick) => !pick.win);
+      const field = (name: string) => this.querySelector<HTMLElement>(`[data-${name}]`)!;
+      const random = <T,>(list: T[]) => list[Math.floor(Math.random() * list.length)];
+      const credit = (a: number, b: number) => (a > b ? 1 : a === b ? 0.5 : 0);
+      let pairs = 0;
+      let rithmm = 0;
+      let facts = 0;
+
+      const render = () => {
+        field("pairs").textContent = String(pairs);
+        field("rithmm").textContent = pairs ? pct(rithmm / pairs) : "–";
+        field("facts").textContent = pairs ? pct(facts / pairs) : "–";
+        field("exact-text").hidden = pairs < 100;
+      };
+
+      const draw = (count: number) => {
+        let winner: ClientPick | undefined;
+        let loser: ClientPick | undefined;
+        for (let i = 0; i < count; i++) {
+          winner = random(winners);
+          loser = random(losers);
+          rithmm += credit(winner.rithmm!, loser.rithmm!);
+          facts += credit(winner.facts, loser.facts);
+          pairs++;
+        }
+        if (winner && loser) {
+          field("pair").hidden = false;
+          field("winner").textContent = winner.pick;
+          field("loser").textContent = loser.pick;
+          field("winner-numbers").textContent = `Rithmm ${pct(winner.rithmm!)} · Jev ${pct(winner.facts)}`;
+          field("loser-numbers").textContent = `Rithmm ${pct(loser.rithmm!)} · Jev ${pct(loser.facts)}`;
+        }
+        render();
+      };
+
+      this.querySelectorAll<HTMLButtonElement>("[data-draw]").forEach((button) =>
+        button.addEventListener("click", () => draw(Number(button.dataset.draw))),
+      );
+      field("reset").addEventListener("click", () => {
+        pairs = rithmm = facts = 0;
+        field("pair").hidden = true;
+        render();
+      });
+      render();
+    }
+  }
+
+  if (!customElements.get("ranking-game")) customElements.define("ranking-game", RankingGame);
+</script>

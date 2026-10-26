@@ -16,6 +16,7 @@ export type RithhmmPropType =
   | "receptions-under"
   | "rush-attempts-under"
   | "rushing-yards-under"
+  | "game-total-over"
   | "game-total-under"
   | "spread"
   | "moneyline";
@@ -446,7 +447,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 13.1,
     recentForm: "7/10",
     matchup: "Athletics @ Mariners",
-    propType: "combo-over",
+    propType: "game-total-over",
     result: "win",
   },
   {
@@ -488,7 +489,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 15.6,
     recentForm: "4/10",
     matchup: "@ Angels",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   // 2026-04-23
@@ -517,7 +518,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 15.5,
     recentForm: "7/10",
     matchup: "vs Phillies",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -531,7 +532,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 15.2,
     recentForm: "3/10",
     matchup: "vs Yankees",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -616,7 +617,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 10.2,
     recentForm: "6/10",
     matchup: "vs Mariners",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -630,7 +631,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 5.5,
     recentForm: "7/10",
     matchup: "vs Tigers",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -701,7 +702,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 16.9,
     recentForm: "5/10",
     matchup: "Tigers @ Reds",
-    propType: "combo-under",
+    propType: "game-total-under",
     result: "loss",
   },
   {
@@ -715,7 +716,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 11.4,
     recentForm: "7/10",
     matchup: "vs Mariners",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -842,7 +843,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 9.4,
     recentForm: "4/10",
     matchup: "vs Guardians",
-    propType: "combo-over",
+    propType: "moneyline",
     result: "win",
   },
   {
@@ -899,7 +900,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 17.5,
     recentForm: "1/10",
     matchup: "Royals @ Athletics",
-    propType: "combo-under",
+    propType: "game-total-under",
     result: "win",
   },
   {
@@ -913,7 +914,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 9.9,
     recentForm: "5/10",
     matchup: "@ Mets",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -1012,7 +1013,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 5.7,
     recentForm: "7/10",
     matchup: "vs Angels",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1055,7 +1056,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 5.7,
     recentForm: "3/10",
     matchup: "vs Blue Jays",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1354,7 +1355,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 13.6,
     recentForm: "2/10",
     matchup: "Red Sox @ Royals",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -1383,7 +1384,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 12.0,
     recentForm: "5/10",
     matchup: "@ Phillies",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1468,7 +1469,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 14.1,
     recentForm: "4/10",
     matchup: "vs Guardians",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1497,7 +1498,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 18.8,
     recentForm: "6/10",
     matchup: "Guardians @ Phillies",
-    propType: "combo-over",
+    propType: "game-total-over",
     result: "loss",
   },
   {
@@ -1511,7 +1512,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 7.6,
     recentForm: "7/10",
     matchup: "Rays @ Yankees",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1525,7 +1526,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 14.9,
     recentForm: "7/10",
     matchup: "Nationals @ Braves",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1554,7 +1555,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 12.9,
     recentForm: "7/10",
     matchup: "Padres vs Athletics",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1568,7 +1569,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 9.2,
     recentForm: "5/10",
     matchup: "Angels vs Rangers",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1796,7 +1797,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 14.2,
     recentForm: "7/10",
     matchup: "vs Yankees",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1810,7 +1811,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 7.0,
     recentForm: "7/10",
     matchup: "@ Dodgers",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1910,7 +1911,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 6.9,
     recentForm: "5/10",
     matchup: "Astros vs Mariners",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -1952,7 +1953,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 11.1,
     recentForm: "5/10",
     matchup: "Angels @ Guardians",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   // 2026-05-12
@@ -1967,7 +1968,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 10.5,
     recentForm: "6/10",
     matchup: "Nationals @ Reds",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -1981,7 +1982,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 17.1,
     recentForm: "8/10",
     matchup: "Royals @ White Sox",
-    propType: "combo-under",
+    propType: "game-total-under",
     result: "loss",
   },
   {
@@ -2009,7 +2010,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 6.2,
     recentForm: "5/10",
     matchup: "Orioles vs Yankees",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -2080,7 +2081,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 13.1,
     recentForm: "6/10",
     matchup: "Nationals @ Reds",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -2094,7 +2095,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 8.9,
     recentForm: "4/10",
     matchup: "Astros vs Mariners",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -2123,7 +2124,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 7.1,
     recentForm: "7/10",
     matchup: "vs Royals",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -2180,7 +2181,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 14.4,
     recentForm: "4/10",
     matchup: "vs Blue Jays",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -2223,7 +2224,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 14.2,
     recentForm: "7/10",
     matchup: "vs Orioles",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -2322,7 +2323,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 12.0,
     recentForm: "4/10",
     matchup: "Astros vs Rangers",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
   },
   {
@@ -2397,7 +2398,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 8.3,
     recentForm: "3/10",
     matchup: "Athletics vs Mariners",
-    propType: "combo-over",
+    propType: "run-line",
     result: "loss",
     portfolioAction: "bet",
     betAmount: 60,
@@ -2515,7 +2516,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 18.3,
     recentForm: "6/10",
     matchup: "Twins at White Sox",
-    propType: "combo-over",
+    propType: "game-total-over",
     result: "win",
     portfolioAction: "bet",
     betAmount: 60,
@@ -2585,7 +2586,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 15.5,
     recentForm: "3/10",
     matchup: "Cubs @ Cardinals",
-    propType: "combo-over",
+    propType: "game-total-over",
     result: "win",
   },
   {
@@ -2599,7 +2600,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 10.8,
     recentForm: "6/10",
     matchup: "@ Pirates",
-    propType: "combo-over",
+    propType: "run-line",
     result: "win",
   },
   {
@@ -2785,7 +2786,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     dtm: 22.1,
     recentForm: "5/10",
     matchup: "Athletics @ Cubs",
-    propType: "combo-over",
+    propType: "game-total-over",
     result: "loss",
   },
   {
@@ -2909,7 +2910,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     id: 203,
     date: "2026-06-04",
     sport: "MLB",
-    pick: "Gunnar Henderson Under 1.5 Total Bases",
+    pick: "Gunnar Henderson Over 1.5 Total Bases",
     odds: "-111",
     confidence: 60.8,
     modelProjection: "Prop Model Predicts: 2.6 Total Bases",

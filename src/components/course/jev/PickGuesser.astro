@@ -1,0 +1,153 @@
+---
+import "@/styles/course.css";
+import { coursePicks, toClientPick } from "@/data/jev/coursePicks";
+
+const picks = coursePicks.filter((pick) => pick.rithmm != null).map(toClientPick);
+const handSize = 5;
+---
+
+<pick-guesser class="course-card" data-picks={JSON.stringify(picks)} data-hand={handSize}>
+  <div class="course-label">Warm-up · You be the model</div>
+  <div class="course-title">Five real picks. Which ones hit?</div>
+  <div class="course-muted">
+    This is what I see before a game: the pick, the odds, recent form, and Rithmm's projection. Call each one, then
+    check it against how the game actually went.
+  </div>
+
+  <ol class="guess-list" data-list></ol>
+
+  <div class="course-feedback" aria-live="polite" data-summary hidden></div>
+  <button type="button" class="course-btn guess-deal" data-deal>Deal five more</button>
+
+  <template data-row>
+    <li class="guess-item">
+      <div class="guess-head">
+        <span class="guess-pick" data-pick></span>
+        <span class="course-mono guess-odds" data-odds></span>
+      </div>
+      <div class="course-muted guess-meta" data-meta></div>
+      <div class="guess-actions" role="group">
+        <button type="button" class="course-btn" data-call="hit">Hits</button>
+        <button type="button" class="course-btn" data-call="miss">Misses</button>
+      </div>
+      <div class="guess-reveal course-muted" data-reveal hidden></div>
+    </li>
+  </template>
+</pick-guesser>
+
+<style>
+  .guess-list {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .guess-item + .guess-item {
+    border-top: 1px solid var(--course-border);
+    padding-top: 1rem;
+  }
+
+  .guess-head {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    justify-content: space-between;
+  }
+
+  .guess-pick {
+    font-weight: 600;
+  }
+
+  .guess-meta {
+    margin-top: 0.15rem;
+  }
+
+  .guess-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .guess-reveal {
+    margin-top: 0.5rem;
+  }
+
+  .guess-reveal strong {
+    color: var(--course-good);
+  }
+
+  .guess-reveal[data-result="miss"] strong {
+    color: var(--course-warn);
+  }
+
+  .guess-deal {
+    margin-top: 1rem;
+  }
+</style>
+
+<script>
+  import type { ClientPick } from "@/data/jev/coursePicks";
+
+  const percent = (value: number) => `${Math.round(value * 100)}%`;
+
+  class PickGuesser extends HTMLElement {
+    connectedCallback() {
+      const picks = JSON.parse(this.dataset.picks ?? "[]") as ClientPick[];
+      const handSize = Number(this.dataset.hand ?? 5);
+      const list = this.querySelector<HTMLOListElement>("[data-list]")!;
+      const template = this.querySelector<HTMLTemplateElement>("template[data-row]")!;
+      const summary = this.querySelector<HTMLElement>("[data-summary]")!;
+
+      const deal = () => {
+        const hand = [...picks].sort(() => Math.random() - 0.5).slice(0, handSize);
+        const calls = new Map<number, boolean>();
+        list.replaceChildren();
+        summary.hidden = true;
+
+        hand.forEach((pick) => {
+          const row = template.content.firstElementChild!.cloneNode(true) as HTMLLIElement;
+          row.querySelector("[data-pick]")!.textContent = pick.pick;
+          row.querySelector("[data-odds]")!.textContent = pick.odds;
+          const meta = [pick.matchup, pick.recentForm && `recent form ${pick.recentForm}`, pick.modelProjection]
+            .filter(Boolean)
+            .join(" · ");
+          row.querySelector("[data-meta]")!.textContent = meta;
+          const reveal = row.querySelector<HTMLElement>("[data-reveal]")!;
+          const buttons = [...row.querySelectorAll<HTMLButtonElement>("[data-call]")];
+          buttons.forEach((button) => {
+            button.setAttribute("aria-label", `${button.textContent}: ${pick.pick}`);
+            button.addEventListener("click", () => {
+              const calledHit = button.dataset.call === "hit";
+              const right = calledHit === pick.win;
+              calls.set(pick.id, right);
+              buttons.forEach((b) => (b.disabled = true));
+              button.dataset.state = right ? "correct" : "wrong";
+              reveal.hidden = false;
+              reveal.dataset.result = pick.win ? "hit" : "miss";
+              reveal.innerHTML = `<strong>${pick.win ? "Hit" : "Missed"}.</strong> Rithmm said ${percent(pick.rithmm!)}. Break-even at ${pick.odds} is ${percent(pick.breakEven)}.`;
+              if (calls.size === hand.length) finish(hand, calls);
+            });
+          });
+          list.append(row);
+        });
+      };
+
+      const finish = (hand: ClientPick[], calls: Map<number, boolean>) => {
+        const right = [...calls.values()].filter(Boolean).length;
+        const hits = hand.filter((pick) => pick.win).length;
+        const avg = hand.reduce((total, pick) => total + pick.rithmm!, 0) / hand.length;
+        summary.hidden = false;
+        summary.dataset.state = right >= 3 ? "correct" : "wrong";
+        summary.textContent = `You called ${right} of ${hand.length}. Rithmm averaged ${percent(avg)} on this hand and ${hits} of ${hand.length} hit. Every pick here looked better than a coin flip to Rithmm, so "it said yes" doesn't help you choose between them.`;
+      };
+
+      this.querySelector("[data-deal]")!.addEventListener("click", deal);
+      deal();
+    }
+  }
+
+  if (!customElements.get("pick-guesser")) customElements.define("pick-guesser", PickGuesser);
+</script>

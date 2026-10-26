@@ -1,0 +1,239 @@
+---
+import "@/styles/course.css";
+import { rithhmmPicks } from "@/data/rithhmmPicks";
+import { coursePicks, jevModel, type JevAnswers } from "@/data/jev/coursePicks";
+import { questions, stateFor } from "@/data/jev/request";
+
+// Picks where Rithmm's projection moved Jev the most, plus one player prop.
+const ids = [179, 134, 162, 24];
+
+const examples = ids.map((id) => {
+  const source = rithhmmPicks.find((pick) => pick.id === id)!;
+  const pick = coursePicks.find((entry) => entry.id === id)!;
+  const view = (answers: JevAnswers) => ({
+    willHit: answers.willHit,
+    formBacksPick: answers.formBacksPick,
+    betType: answers.betType,
+    betTypeConfidence: answers.betTypeConfidence,
+    lean: answers.lean,
+    leanConfidence: answers.leanConfidence,
+    leanProbabilities: answers.leanProbabilities,
+  });
+  return {
+    id,
+    label: pick.pick,
+    win: pick.win,
+    facts: { state: stateFor(source, "withoutRithmm"), answers: view(pick.facts) },
+    withRithmm: { state: stateFor(source, "withRithmm"), answers: view(pick.withRithmm) },
+  };
+});
+
+const questionsJson = JSON.stringify(questions, null, 2);
+---
+
+<request-inspector class="course-card" data-examples={JSON.stringify(examples)}>
+  <div class="course-label">Lab · One request, real answers</div>
+  <div class="course-title">What Jev did with a pick</div>
+  <div class="course-muted">
+    Each of these is a real request to <span class="course-mono">{jevModel}</span>. Flip Rithmm's projection in and out of
+    the state and watch what moves. The questions never change.
+  </div>
+
+  <div class="inspector-picks" role="group" aria-label="Choose a pick">
+    {examples.map((example, index) => (
+      <button type="button" class="course-btn" data-example={index} aria-pressed={index === 0 ? "true" : "false"}>
+        {example.label}
+      </button>
+    ))}
+  </div>
+
+  <label class="inspector-toggle">
+    <input type="checkbox" data-projection />
+    <span>Include Rithmm's projection in the state</span>
+  </label>
+
+  <div class="inspector-grid">
+    <div>
+      <div class="course-label">state</div>
+      <pre class="course-code inspector-state" data-state></pre>
+    </div>
+    <div>
+      <div class="course-label">answers</div>
+      <dl class="inspector-answers" aria-live="polite">
+        <div><dt class="course-mono">will_hit</dt><dd data-will-hit></dd></div>
+        <div><dt class="course-mono">form_backs_pick</dt><dd data-form></dd></div>
+        <div><dt class="course-mono">bet_type</dt><dd data-bet-type></dd></div>
+        <div>
+          <dt class="course-mono">lean</dt>
+          <dd>
+            <span data-lean></span>
+            <span class="inspector-bars" data-lean-bars></span>
+          </dd>
+        </div>
+      </dl>
+      <div class="course-muted inspector-result" data-result></div>
+    </div>
+  </div>
+
+  <details class="inspector-questions">
+    <summary>See the four questions sent with every pick</summary>
+    <pre class="course-code">{questionsJson}</pre>
+  </details>
+</request-inspector>
+
+<style>
+  .inspector-picks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .inspector-toggle {
+    align-items: center;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 600;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .inspector-toggle input {
+    accent-color: var(--course-accent);
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .inspector-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    margin-top: 1rem;
+  }
+
+  .inspector-state {
+    margin-top: 0.4rem;
+    white-space: pre-wrap;
+  }
+
+  .inspector-answers {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0.4rem 0 0;
+  }
+
+  .inspector-answers dt {
+    color: var(--course-muted);
+    font-size: 0.75rem;
+  }
+
+  .inspector-answers dd {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .inspector-bars {
+    display: grid;
+    font-size: 0.75rem;
+    font-weight: 500;
+    gap: 0.2rem;
+    margin-top: 0.3rem;
+  }
+
+  .inspector-result {
+    margin-top: 1rem;
+  }
+
+  .inspector-questions {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .inspector-questions summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+</style>
+
+<style is:global>
+  .inspector-bar {
+    align-items: center;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 2.5rem 1fr 2.5rem;
+  }
+
+  .inspector-bar-track {
+    background: var(--course-surface);
+    border: 1px solid var(--course-border);
+    border-radius: 999px;
+    height: 0.5rem;
+    overflow: hidden;
+  }
+
+  .inspector-bar-track span {
+    background: var(--course-accent);
+    display: block;
+    height: 100%;
+    transition: width 200ms ease;
+  }
+</style>
+
+<script>
+  type Answers = {
+    willHit: number;
+    formBacksPick: number;
+    betType: string;
+    betTypeConfidence: number;
+    lean: number;
+    leanConfidence: number;
+    leanProbabilities: number[];
+  };
+  type Example = {
+    label: string;
+    win: boolean;
+    facts: { state: object; answers: Answers };
+    withRithmm: { state: object; answers: Answers };
+  };
+
+  const levels = ["Pass", "Lean", "Play"];
+
+  class RequestInspector extends HTMLElement {
+    connectedCallback() {
+      const examples = JSON.parse(this.dataset.examples ?? "[]") as Example[];
+      const toggle = this.querySelector<HTMLInputElement>("[data-projection]")!;
+      const buttons = [...this.querySelectorAll<HTMLButtonElement>("[data-example]")];
+      const field = (name: string) => this.querySelector<HTMLElement>(`[data-${name}]`)!;
+      let current = 0;
+
+      const render = () => {
+        const example = examples[current];
+        const { state, answers } = toggle.checked ? example.withRithmm : example.facts;
+        field("state").textContent = JSON.stringify(state, null, 2);
+        field("will-hit").textContent = answers.willHit.toFixed(2);
+        field("form").textContent = answers.formBacksPick.toFixed(2);
+        field("bet-type").textContent = `${answers.betType} (confidence ${answers.betTypeConfidence.toFixed(2)})`;
+        field("lean").textContent = `${answers.lean.toFixed(2)} on a 0 to 2 scale, confidence ${answers.leanConfidence.toFixed(2)}`;
+        field("lean-bars").innerHTML = answers.leanProbabilities
+          .map(
+            (p, i) =>
+              `<span class="inspector-bar"><span>${levels[i]}</span><span class="inspector-bar-track"><span style="width:${p * 100}%"></span></span><span class="course-mono">${p.toFixed(2)}</span></span>`,
+          )
+          .join("");
+        field("result").textContent = `How it went: ${example.win ? "hit" : "missed"}. Jev never saw this, and neither did you until now.`;
+        buttons.forEach((button, index) => button.setAttribute("aria-pressed", String(index === current)));
+      };
+
+      buttons.forEach((button, index) =>
+        button.addEventListener("click", () => {
+          current = index;
+          render();
+        }),
+      );
+      toggle.addEventListener("change", render);
+      render();
+    }
+  }
+
+  if (!customElements.get("request-inspector")) customElements.define("request-inspector", RequestInspector);
+</script>
