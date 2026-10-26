@@ -31,9 +31,13 @@ export const lessons = [
   { id: "l7", title: "Where it breaks", anchor: "where-it-breaks" },
 ];
 
-I've spent most of my career building places where people learn to code, from Code School to DataCamp. The best part of learning in the browser was always the loop: try something, get feedback right away, try again. So this is the first of a new kind of post for me, a mini course. Every section has something to poke at and a checkpoint at the end, and your progress saves in this browser.
+I've been wanting to learn Jev, but there's not much in my day-to-day work that I can use it for yet. So I thought I'd take some bet data I've been collecting and learn it while making a post. Every section has a point where you make a quick decision based on limited information, and your progress saves in the browser.
 
-The subject is [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), the first "System One" model from TypeSafe, and decision models in general. I didn't want to explain it with made-up examples, so everything here runs on my own data. Since April I've logged [Rithmm's picks](/betting/rithmmm-picks), 253 of them so far, each with Rithmm's confidence and how the game actually went. I sent the 252 that settled as a win or a loss through Jev and saved every answer. The question running through the whole course is pretty simple: can a decision model help me choose which picks to bet?
+The subject is [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), the first "System One" model from TypeSafe, and decision models in general. I didn't want to use made-up examples, so everything here runs on my own data.&#x20;
+
+Since April, I've logged [Rithmm's ](/betting/rithmmm-picks)sports bet picks so far, with 252 at by the time I was writing this. My original experiment with this was to see if I could use the Martingale betting theory in limited sets and profit more than I would have with money in a high-yield savings account. The answer is no. However, after reviewing the data, I found that Rithmm hit at a profitable rate on NBA picks with 60% or higher confidence. WNBA was in range as it went on, but MLB was not as successful. Jev leads me to some new experiments. &#x20;
+
+I sent the ones that settled as wins or losses through Jev and saved every answer. The question running through the whole course is pretty simple: can a decision model help me choose which picks to bet?
 
 <CourseProgress course={course} lessons={lessons} />
 
@@ -43,7 +47,7 @@ Before any model gets involved, you try it. Here's what I see before a game, min
 
 <PickGuesser />
 
-What you just did is what Daniel Kahneman calls System 1 thinking in *Thinking, Fast and Slow*: a fast gut call without much deliberating. Rithmm's confidence number is supposed to make that call easier. Across the 248 picks where it gave one, Rithmm averaged 63.8% and the picks hit 58.1%. It also never went below 56% on anything, so as a filter it says yes to every pick it hands me.
+What you just did is what Daniel Kahneman calls System 1 thinking in *Thinking, Fast and Slow*: a fast gut call without much deliberating. Rithmm's confidence number is supposed to make that call easier. Across the 248 picks where it gave one, Rithmm averaged 63.8%, and the picks hit 58.1%. It also never went below 56% on anything, so as a filter it says yes to every pick it hands me.
 
 <Checkpoint
   course={course}
@@ -57,7 +61,7 @@ What you just did is what Daniel Kahneman calls System 1 thinking in *Thinking, 
 
 ## What a decision model is
 
-System 2 is the slow, effortful reasoning, and it's what most of the LLM conversation for the last few years has been about: models that write, plan, and reason out loud. Jev goes the other way. You hand it some text or JSON, ask it questions, and get back typed answers with probabilities your code can branch on. It can't write a sentence, summarize, or chat. The [System One docs](https://docs.typesafe.ai/concepts/system-one) are upfront about that, and it's kind of the point.
+System 2 is the slow, effortful reasoning, and it's what most of the LLM conversation for the last few years has been about: models that write, plan, and reason out loud. Jev goes the other way. You hand it some text or JSON, ask it questions, and get back typed answers with probabilities your code can branch on. It can't write a sentence, summarize, or chat.&#x20;
 
 Every question is one of three types, and each maps to something you already write in code:
 
@@ -65,7 +69,7 @@ Every question is one of three types, and each maps to something you already wri
 - A Choice picks one option from a set you define. It returns the winner, a probability for every option, and a confidence. It's a `switch`.
 - A Score places something on ordered levels you describe. It returns a position, a probability per level, and a confidence. It's what you `sort` by.
 
-It's also cheap enough that cost barely comes up. My whole run was 504 requests (every pick twice, more on that in a minute) and 330,106 input tokens. At $0.042 per million input tokens, with output tokens free, that's about a penny and a half. It finished in 8 seconds.
+It's also cheap enough that cost barely comes up. My whole run was 504 requests (every pick twice, more on that in a minute) and 330,106 input tokens. At $0.042 per million input tokens, with output tokens free, that's about a penny and a half, and it finished in 8 seconds.
 
 <TaskSorter />
 
@@ -107,7 +111,7 @@ If you want to compare Jev against another model, the lesson is to keep the othe
 
 The Noul is the simplest. "Does recent form support this pick?" came back 0.84 for a receptions over with 9/10 recent form, and 0.10 for a Sky moneyline with 1/10. That one number turns out to be one of the most useful things in the whole run, so keep it in mind.
 
-The Choice is where Jev embarrassed me a little. I asked what kind of bet each pick was and compared the answer to the labels in my own data. The first time I checked, Jev "missed" 40 of them. It hadn't. I'd filed 39 run lines, game totals, and a moneyline as "combo" player props. Jev was right, my labels were wrong, and I fixed them. A few of them:
+The Choice is where Jev caught some data issues. I asked what kind of bet each pick was and compared the answer to the labels in my own data. The first time I checked, Jev "missed" 40 of them. It hadn't. My bots had filed 39 run lines, game totals, and a moneyline as "combo" player props. Jev was right, my labels were wrong, and I fixed them. A few of them:
 
 | Pick | My old label | Jev |
 | --- | --- | --- |
@@ -116,7 +120,7 @@ The Choice is where Jev embarrassed me a little. I asked what kind of bet each p
 | Tigers @ Reds Under 9.5 | combo under | game total |
 | Blue Jays Moneyline | combo over | moneyline |
 
-It also caught one more: a total bases pick I'd typed as an Under when I actually bet the Over. After fixing both, Jev matches my labels on all 252.
+It also caught one more: I typed a total bases pick as an Under when I actually bet the Over. After fixing both, Jev matches my labels on all 252.
 
 The Score is the probability-weighted average of the level positions, so with pass at 0, lean at 1, and play at 2, a 0.9 means "mostly lean." The [Score docs](https://docs.typesafe.ai/primitives/score) say to describe situations instead of degrees, which is why my levels read like "Lean; some support, but a small stake at most" instead of just "1." The catch is that the average hides how the probability is spread.
 
@@ -150,7 +154,7 @@ if (answers.will_hit.noul > breakEven + margin) placeBet(pick);
 
 At zero margin, Jev on the facts alone picks 86 of the 248 picks and goes 57–29 for +19.42 units, compared with +6.43 for betting all of them. With Rithmm's projection in the state, it bets 135 and finishes +16.57. Rithmm's own number cleared break-even on every single pick, so its version of the rule is "bet everything."
 
-One thing I was careful about: zero margin is just break-even, so I didn't tune it. Dragging the slider until the units peak is exactly the kind of fitting the docs warn about ("avoid fitting thresholds closely to a handful of test cases"). It's fun to look at, but the best margin on these 248 picks won't be the best margin on the next 248.
+One thing I was careful about: zero margin is just break-even, so I didn't tune it. Dragging the slider until the units peak is exactly the kind of fitting the docs warn about ("avoid fitting thresholds closely to a handful of test cases"). It's fun to look at, but the best margin on these 248 picks won't translate to the next 248.
 
 <Checkpoint
   course={course}
@@ -169,13 +173,13 @@ There are two different questions you can ask about any set of probabilities, an
 - Calibration: when it says 60%, do those picks hit about 60% of the time?
 - Ranking: do the winners get higher numbers than the losers?
 
-An [independent evaluation of Jev](https://arxiv.org/abs/2609.37647) found that split on yes/no questions: its probabilities ranked well but were poorly placed against a fixed 0.5 cutoff. Here's how it looks on my picks.
+An [independent evaluation of Jev](https://arxiv.org/abs/2609.37647) found that its yes/no split probabilities ranked well but were poorly placed against a fixed 0.5 cutoff. Here's how it looks on my picks.
 
 <CalibrationChart />
 
-Rithmm's points sit on a flat line around 60% no matter what it said. Its most confident group (67% to 74%) hit 62.5%, about the same as its least confident group. That's a ranking skill of 0.49, a coin flip, and its probabilities were actually a touch less accurate than just using the break-even rates from the odds.
+Rithmm's points sit on a flat line around 60% no matter what it said. Its most confident group (67% to 74%) hit 62.5%, about the same as its least confident group. That's a ranking skill of 0.49, a coin flip, and its probabilities were slightly less accurate than using the break-even rates from the odds.
 
-Jev on the facts alone climbs. Its least confident group hit 56% and its most confident group hit 69%. It was too cautious overall (averaging 54% on picks that hit 58%), but it put them in roughly the right order. If you're wondering what "ranking skill" means in practice, this is the easiest way to see it.
+Jev on the facts alone climbs. Its least confident group hit 56%, and its most confident group hit 69%. It was too cautious overall (averaging 54% on picks that hit 58%), but it put them in roughly the right order. If you're wondering what "ranking skill" means in practice, this is the easiest way to see it.
 
 <RankingGame />
 
@@ -199,7 +203,7 @@ Every one of these games happened between April and October, and Jev 1.14 became
 
 ### The sample is small
 
-57–29 sounds great. Fewer than 1 in 200 random 86-bet slices of these picks do that well, so it probably isn't pure luck. But the range on Jev's ranking skill runs from 0.51 to 0.65, and the bottom of that range is barely better than a coin flip.
+57–29 sounds great. Fewer than 1 in 200 random 86-bet slices of these picks do that well, so it probably isn't pure luck. But Jev's ranking skill ranges from 0.51 to 0.65, and the bottom of that range is barely better than a coin flip.
 
 ### Typed doesn't mean right
 
