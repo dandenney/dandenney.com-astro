@@ -46,7 +46,7 @@ const initialState = d => ({
   params: defaultParams(d),
   explosion: (d.initialView ?? (d.parts.length === 1 ? 'assembled' : 'exploded')) === 'assembled' ? 0 : 1,
   preset: 'technical',
-  annotate: false,
+  annotate: d.annotate ?? false,
   selectedPart: 'all',
   isolated: null
 });

@@ -8,6 +8,7 @@
       "description": "Illustrative concept of the stacking layers in the modern linked card pattern: a relative card, static content, the title link's stretched ::before overlay, actions lifted to z-index 1 and the :focus-within ring. Layer thickness and spacing are invented to make paint order visible.",
       "concept": true,
       "initialView": "exploded",
+      "annotate": true,
       "parts": [
         {"id": "card", "name": "Card (position: relative)"},
         {"id": "title", "name": "Title link (position: static)"},

@@ -11,6 +11,7 @@ function validate(config) {
     ids.add(d.id);
     if (!d.title || !d.description || !Array.isArray(d.parts) || !d.parts.length) throw Error('Drawing metadata is incomplete');
     if (d.initialView !== undefined && !['assembled', 'exploded'].includes(d.initialView)) throw Error('Initial view must be assembled or exploded');
+    if (d.annotate !== undefined && typeof d.annotate !== 'boolean') throw Error('Annotate must be true or false');
     d.parameters ??= [];
 
     const parts = new Set();

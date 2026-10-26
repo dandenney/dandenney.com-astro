@@ -427,7 +427,7 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 </script>
-<script id="drawing-data" type="application/json">[{"id":"linked-card","title":"Linked card with actions","description":"Illustrative concept of the stacking layers in the modern linked card pattern: a relative card, static content, the title link's stretched ::before overlay, actions lifted to z-index 1 and the :focus-within ring. Layer thickness and spacing are invented to make paint order visible.","concept":true,"initialView":"exploded","parts":[{"id":"card","name":"Card (position: relative)"},{"id":"title","name":"Title link (position: static)"},{"id":"text","name":"Supporting text"},{"id":"overlay","name":"Stretched ::before (inset: 0)"},{"id":"button","name":"Action button (z-index: 1)"},{"id":"secondary","name":"Secondary link (z-index: 1)"},{"id":"focus","name":"Focus ring (:focus-within)"}],"parameters":[],"colors":{"hues":{"card":220,"title":145,"text":95,"overlay":200,"button":25,"secondary":40,"focus":285},"fills":["title","overlay","button","secondary"]}}]</script>
+<script id="drawing-data" type="application/json">[{"id":"linked-card","title":"Linked card with actions","description":"Illustrative concept of the stacking layers in the modern linked card pattern: a relative card, static content, the title link's stretched ::before overlay, actions lifted to z-index 1 and the :focus-within ring. Layer thickness and spacing are invented to make paint order visible.","concept":true,"initialView":"exploded","annotate":true,"parts":[{"id":"card","name":"Card (position: relative)"},{"id":"title","name":"Title link (position: static)"},{"id":"text","name":"Supporting text"},{"id":"overlay","name":"Stretched ::before (inset: 0)"},{"id":"button","name":"Action button (z-index: 1)"},{"id":"secondary","name":"Secondary link (z-index: 1)"},{"id":"focus","name":"Focus ring (:focus-within)"}],"parameters":[],"colors":{"hues":{"card":220,"title":145,"text":95,"overlay":200,"button":25,"secondary":40,"focus":285},"fills":["title","overlay","button","secondary"]}}]</script>
 <script>/** @license
  *
  * jsPDF - PDF Document creation from JavaScript
@@ -1157,7 +1157,7 @@ const initialState = d => ({
   params: defaultParams(d),
   explosion: (d.initialView ?? (d.parts.length === 1 ? 'assembled' : 'exploded')) === 'assembled' ? 0 : 1,
   preset: 'technical',
-  annotate: false,
+  annotate: d.annotate ?? false,
   selectedPart: 'all',
   isolated: null
 });

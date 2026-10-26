@@ -124,7 +124,7 @@ summary: "An exploded drawing of the linked card pattern, showing the layer stac
 </section>
 <section>
 <h2>Try it</h2>
-<p>Switch between Exploded and Assembled, turn on annotations to label each layer, isolate a layer from the parts menu, or fill layers with color. The download button exports the current view as SVG, PNG or PDF.</p>
+<p>Switch between Exploded and Assembled, zoom in on the labels, isolate a layer from the parts menu, or fill layers with color. The download button exports the current view as SVG, PNG or PDF.</p>
 </section>
 <section>
 <h2>How it was made</h2>
