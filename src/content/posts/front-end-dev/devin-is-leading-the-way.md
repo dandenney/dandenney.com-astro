@@ -58,4 +58,4 @@ I want agents that run in the cloud, already know every repo, keep working after
 
 Try it. It's [$20 a month](https://devin.ai/pricing), which is a lot easier to justify than the $500 it used to be.
 
-Or read [Ryan Carson's posts on X](https://x.com/ryancarson). He's been leading amazing work on the web for around 20 years, and he's running his whole company with it.
+Or read what [Ryan Carson](https://x.com/ryancarson) has been [posting about Devin on X](https://x.com/search?q=ryan%20carson%20devin&src=typed_query). He's been leading amazing work on the web for around 20 years, and he's running his whole company with it.
