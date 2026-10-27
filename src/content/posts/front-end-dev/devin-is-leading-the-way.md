@@ -1,0 +1,58 @@
+---
+pubDate: "2026-10-27"
+summary: "Devin has come a long way since the $500-a-month launch. Cloud agents that don't need my machine are the way I want to work, and right now Devin is leading the way."
+tags:
+  - front-end-dev
+  - ai
+title: "Devin Is Leading the Way"
+---
+
+When Devin was [introduced in March 2024](https://cognition.com/blog/introducing-devin), it was billed as "the first AI software engineer" and a game changer. It was also behind a waitlist, and when it became [generally available in December 2024](https://cognition.com/blog/devin-generally-available) it started at $500 a month for engineering teams. That's not something I was going to trial on my own dime for side projects. We did try it at work for automated PR reviews, and it didn't meet the standard we wanted.
+
+It's a whole new product now. [Devin 2.0](https://cognition.com/blog/devin-2) brought a $20 entry point in April 2025, and what I'm using today barely resembles what I remember from those early demos.
+
+## What I've tried
+
+I'm not claiming to have tried everything. I've used Devin, Tembo, and Ona. I read a lot about others who are able to use VM-based systems. My take is about the model of work more than any single product, but Devin is the one that's put it all together for me.
+
+## Two weeks of it
+
+Over the last couple of weeks I've had about 16 sessions at work and 18 on personal projects.
+
+At work that's been 14 PRs across 10 repos. Most of it was CVE fixes across a bunch of services at once, plus a playbook for working through Dependabot updates and a few bigger UI features. I can't share any of that, but it's the kind of work that used to eat entire afternoons.
+
+On the personal side:
+
+- A code review of [this site](https://github.com/dandenney/dandenney.com-astro), which has been through three years and multiple versions of Astro. It fixed what I agreed with and we talked through the rest first.
+- [The Possibility Factory](https://github.com/dandenney/the-possibility-factory), a greenfield idea and software factory, went from "I haven't done this with Devin yet" to deployed in an evening. I didn't touch Netlify or Turso setup beyond pasting secrets into a secure form.
+- The factory's first shipped idea, [diffrails](https://www.npmjs.com/package/diffrails), a CLI for git diff guardrails, the next day.
+- Workflows for my reviews, golf sessions, and betting trackers, which have turned many sessions into one-liners like "settle the Klay Thompson and Hornets bets, both won."
+- A fix for recipe imports in our household app, [side-by-side](https://github.com/dandenney/side-by-side).
+
+## My machine doesn't need to be on
+
+This is the big one. Devin runs on its own VM, so my laptop doesn't need to be open, awake, or even with me.
+
+I've shipped features on my personal stuff while standing in a store. I send a message from my phone, Devin does the work in its own environment, and I check the result when I'm back.
+
+At work, I collaborate with people in the EU, so a lot of PR feedback lands while I'm asleep or before I start my day. Devin picks up that feedback and fixes it while my coworkers are still active. Instead of a full day's round trip on every comment, the loop closes in their working hours. That saves so much time.
+
+## DeepWiki
+
+Other than the VM, the feature I'm most excited about is [DeepWiki](https://deepwiki.com). I had put my personal site on it before, since it's free for public repos, but I couldn't do the same for work repos. Now we have our repos documented, and sometimes I start there for discussions before any code gets written. Asking "how does this flow actually work?" and getting an answer with cited code is a better way to begin a conversation than me spelunking through files.
+
+## It knows all of our repos
+
+The last thing that's super helpful at work is that Devin knows about all of our repos. With opencode and other local tools, I have to have the repos pulled locally and add them before I can reference them. With Devin, I mention a repo and it's there. For cross-repo work like CVE sweeps, that's the difference between a task I'll do and a task I'll keep putting off.
+
+## This is the way to work
+
+Yes, I'm excited about Devin right now because it has all of this in a wonderful UI. But I strongly believe the most important part isn't any one product. It's the way of working.
+
+Agents that run in the cloud, have context on every repo, keep working when I close my laptop, and come back with a PR I can review: that's the future. Other tools will get there too, and the competition will be good for all of us. Right now, Devin is leading the way.
+
+## Don't take my word for it
+
+Try it. It's [$20 a month](https://devin.ai/pricing), which is a lot easier to justify than the $500 it used to be.
+
+Or read [Ryan Carson's posts on X](https://x.com/ryancarson). He's been leading amazing work on the web for around 20 years, and he's running his whole company with it.
