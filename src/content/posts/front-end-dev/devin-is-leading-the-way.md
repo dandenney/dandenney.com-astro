@@ -1,9 +1,12 @@
 ---
 pubDate: "2026-10-27"
+socialImageFilename: "og-devin-is-leading-the-way.jpg"
 summary: "Devin has come a long way since the $500-a-month launch. Cloud agents that don't need my machine are the way I want to work, and right now Devin is leading the way."
 tags:
   - front-end-dev
   - ai
+thumb: "/posts/front-end-dev/devin-is-leading-the-way/devin-is-leading-the-way.webp"
+thumbAlt: "Playful hand-drawn illustration of a man in a green hoodie in a grocery aisle, smiling at his phone with a basket of produce. Above the shelves, a friendly robot types at a desk on a cloud, sending checked-off pull request cards down to his phone like paper airplanes, while an inset shows his laptop closed and asleep on the kitchen table at home."
 title: "Devin Is Leading the Way"
 ---
 
