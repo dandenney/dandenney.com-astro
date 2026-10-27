@@ -10,13 +10,13 @@ thumbAlt: "Playful hand-drawn illustration of a man in a green hoodie in a groce
 title: "Devin Is Leading the Way"
 ---
 
-When Devin was [introduced in March 2024](https://cognition.com/blog/introducing-devin), it was billed as "the first AI software engineer" and a game changer. It was also behind a waitlist, and when it became [generally available in December 2024](https://cognition.com/blog/devin-generally-available) it started at $500 a month for engineering teams. That's not something I was going to trial on my own dime for side projects. We did try it at work for automated PR reviews, and it didn't meet the standard we wanted.
+Devin has come a long way. When it was [introduced in March 2024](https://cognition.com/blog/introducing-devin), it was billed as "the first AI software engineer," and everyone was calling it a game changer. Access was waitlisted, and when it became [generally available in December 2024](https://cognition.com/blog/devin-generally-available) it started at $500 a month for engineering teams. That's not something I was going to trial on my own dime for side projects. We did try it at work for automated PR reviews, and it didn't meet the standard we wanted.
 
 It's a whole new product now. [Devin 2.0](https://cognition.com/blog/devin-2) brought a $20 entry point in April 2025, and what I'm using today barely resembles what I remember from those early demos.
 
 ## What I've tried
 
-I'm not claiming to have tried everything. I've used Devin, Tembo, and Ona. I read a lot about others who are able to use VM-based systems. My take is about the model of work more than any single product, but Devin is the one that's put it all together for me.
+I'm not claiming to have tried everything. I've used Devin, Tembo, and Ona, and I read a lot from people running agents on other VM-based systems. Devin is the one that's put it all together for me.
 
 ## Two weeks of it
 
@@ -42,17 +42,17 @@ At work, I collaborate with people in the EU, so a lot of PR feedback lands whil
 
 ## DeepWiki
 
-Other than the VM, the feature I'm most excited about is [DeepWiki](https://deepwiki.com). I had put my personal site on it before, since it's free for public repos, but I couldn't do the same for work repos. Now we have our repos documented, and sometimes I start there for discussions before any code gets written. Asking "how does this flow actually work?" and getting an answer with cited code is a better way to begin a conversation than me spelunking through files.
+Other than the VM, the feature I'm most excited about is [DeepWiki](https://deepwiki.com). I had put my personal site on it before, since it's free for public repos, but I couldn't do the same for anything at work. Now our work codebases are documented too, and sometimes I start there for discussions before any code gets written. Asking "how does this flow actually work?" and getting an answer with cited code is a better way to begin a conversation than me spelunking through files.
 
 ## It knows all of our repos
 
-The last thing that's super helpful at work is that Devin knows about all of our repos. With opencode and other local tools, I have to have the repos pulled locally and add them before I can reference them. With Devin, I mention a repo and it's there. For cross-repo work like CVE sweeps, that's the difference between a task I'll do and a task I'll keep putting off.
+The last thing that's super helpful at work is that Devin knows about all of our repos. With opencode and other local tools, every repo has to be cloned to my machine and added before I can reference it. With Devin, I mention a repo and it's there. For cross-repo work like CVE sweeps, that's the difference between a task I'll do and a task I'll keep putting off.
 
 ## This is the way to work
 
-Yes, I'm excited about Devin right now because it has all of this in a wonderful UI. But I strongly believe the most important part isn't any one product. It's the way of working.
+Yes, I'm excited about Devin right now because it has all of this in a wonderful UI. But I strongly believe the most important part is the way of working, whichever product gets you there.
 
-Agents that run in the cloud, have context on every repo, keep working when I close my laptop, and come back with a PR I can review: that's the future. Other tools will get there too, and the competition will be good for all of us. Right now, Devin is leading the way.
+I want agents that run in the cloud, already know every repo, keep working after I close my laptop, and come back with a PR I can review. I'm convinced that's how we'll all work. Other tools will get there too, and the competition will be good for all of us. Right now, Devin is leading the way.
 
 ## Don't take my word for it
 
