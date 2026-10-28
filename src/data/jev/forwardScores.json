@@ -211,6 +211,218 @@
         "input_tokens": 643,
         "output_tokens": 109
       }
+    },
+    "266": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-28T18:11:10.020Z",
+      "state": {
+        "date": "2026-10-28",
+        "sport": "NBA",
+        "matchup": "@ Cavaliers",
+        "pick": "Deandre Ayton Over 10.5 Pts + Rebs",
+        "odds": "+100",
+        "recentForm": "2/4"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.51
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.25
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_over",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 1,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.47,
+          "confidence": 0.29,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.54,
+            "1": 0.45,
+            "2": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 649,
+        "output_tokens": 109
+      }
+    },
+    "267": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-28T18:11:10.084Z",
+      "state": {
+        "date": "2026-10-28",
+        "sport": "NBA",
+        "matchup": "@ Raptors",
+        "pick": "Tristan da Silva Under 2.5 3-Pointers",
+        "odds": "-128",
+        "recentForm": "1/3"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.66
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.44
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.74,
+          "confidence": 0.37,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.34,
+            "1": 0.58,
+            "2": 0.08
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 647,
+        "output_tokens": 109
+      }
+    },
+    "268": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-28T18:11:10.145Z",
+      "state": {
+        "date": "2026-10-28",
+        "sport": "NBA",
+        "matchup": "@ Pistons",
+        "pick": "Dennis Schröder Under 3.5 Rebounds",
+        "odds": "-156",
+        "recentForm": "1/4"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.53
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.37
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.57,
+          "confidence": 0.13,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.5,
+            "1": 0.42,
+            "2": 0.08
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 647,
+        "output_tokens": 109
+      }
+    },
+    "269": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-28T18:11:10.197Z",
+      "state": {
+        "date": "2026-10-28",
+        "sport": "NBA",
+        "matchup": "@ Clippers",
+        "pick": "Walker Kessler Under 12.5 Points",
+        "odds": "-114",
+        "recentForm": "1/4"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.6
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.48
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.59,
+          "confidence": 0.3,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.53,
+            "2": 0.03
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 109
+      }
     }
   }
 }
