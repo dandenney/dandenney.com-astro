@@ -357,6 +357,7 @@ function dayBets(picks: RithhmmPick[]) {
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Odds</th>
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Conf</th>
                     {hasJev && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap" title="Jev's will-hit probability vs the book's break-even">Jev</th>}
+                    {hasJev && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap" title="Bet when Jev clears break-even, otherwise pass">Jev call</th>}
                     {hasBetData && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Action</th>}
                     {hasHermes && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Hermes</th>}
                     {hasBetAmount && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap text-right">Bet</th>}
@@ -384,6 +385,7 @@ function dayBets(picks: RithhmmPick[]) {
                         {pick.confidence != null ? `${pick.confidence}%` : "—"}
                       </td>
                       {hasJev && <td class="px-4 py-2.5 whitespace-nowrap"><JevCell entry={jevById.get(pick.id)} /></td>}
+                      {hasJev && <td class="px-4 py-2.5 whitespace-nowrap"><JevCell entry={jevById.get(pick.id)} part="call" /></td>}
                       {hasBetData && (
                         <td class="px-4 py-2.5 whitespace-nowrap">
                           {pick.portfolioAction ? (
@@ -441,6 +443,7 @@ function dayBets(picks: RithhmmPick[]) {
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Conf</th>
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap hidden sm:table-cell">Model</th>
                     {hasJev && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap" title="Jev's will-hit probability vs the book's break-even">Jev</th>}
+                    {hasJev && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap" title="Bet when Jev clears break-even, otherwise pass">Jev call</th>}
                     {hasBetData && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Action</th>}
                     {hasHermes && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Hermes</th>}
                     {hasBetAmount && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap text-right">Bet</th>}
@@ -453,7 +456,7 @@ function dayBets(picks: RithhmmPick[]) {
                     const { net: dayNet, hasMoney, count: betCount } = dayBets(picks);
                     const dayWins = picks.filter((p) => p.result === "win").length;
                     const dayLosses = picks.filter((p) => p.result === "loss").length;
-                    const colspan = 6 + (hasJev ? 1 : 0) + (hasBetData ? 1 : 0) + (hasHermes ? 1 : 0) + (hasBetAmount ? 2 : 0);
+                    const colspan = 6 + (hasJev ? 2 : 0) + (hasBetData ? 1 : 0) + (hasHermes ? 1 : 0) + (hasBetAmount ? 2 : 0);
                     return (
                       <>
                         <tr class="border-t-2 border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/30 first:border-t-0">
@@ -495,6 +498,7 @@ function dayBets(picks: RithhmmPick[]) {
                                 {pick.modelProjection ?? "—"}
                               </td>
                               {hasJev && <td class="px-4 py-2.5 whitespace-nowrap"><JevCell entry={jevById.get(pick.id)} /></td>}
+                      {hasJev && <td class="px-4 py-2.5 whitespace-nowrap"><JevCell entry={jevById.get(pick.id)} part="call" /></td>}
                               {hasBetData && (
                                 <td class="px-4 py-2.5 whitespace-nowrap">
                                   {pick.portfolioAction ? (

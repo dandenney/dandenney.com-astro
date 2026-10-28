@@ -3,35 +3,36 @@ import type { ForwardPick } from "@/data/jev/forward";
 
 interface Props {
   entry?: ForwardPick;
+  /** "score": will-hit vs break-even; "call": the bet/pass rule. */
+  part?: "score" | "call";
 }
 
-const { entry } = Astro.props;
+const { entry, part = "score" } = Astro.props;
 const pct = (n: number) => `${Math.round(n * 1000) / 10}%`;
 const clears = entry ? entry.willHit > entry.breakEven : false;
 ---
 
-{entry ? (
+{!entry ? (
+  <span class="text-slate-300 dark:text-slate-700">—</span>
+) : part === "score" ? (
   <div
-    class="flex items-center gap-2"
+    class="font-mono text-xs tabular-nums leading-tight"
     title={`Jev ${entry.model}: will hit ${pct(entry.willHit)} vs ${pct(entry.breakEven)} break-even at ${entry.pick.odds}${entry.scoredBeforeGame ? "" : " (scored after start, excluded)"}`}
   >
-    <div class="font-mono text-xs tabular-nums leading-tight">
-      <div class={clears ? "font-semibold text-green-700 dark:text-green-400" : "text-slate-500 dark:text-slate-400"}>
-        {pct(entry.willHit)}
-      </div>
-      <div class="text-[10px] text-slate-400 dark:text-slate-500">vs {pct(entry.breakEven)}</div>
+    <div class={clears ? "font-semibold text-green-700 dark:text-green-400" : "text-slate-500 dark:text-slate-400"}>
+      {pct(entry.willHit)}
+      {!entry.scoredBeforeGame && <span class="ml-1 font-normal text-[10px] text-amber-600 dark:text-amber-400">late</span>}
     </div>
-    <span
-      class={`inline-block px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wide ${
-        entry.ruleWouldBet
-          ? "bg-green-50 text-green-700 border border-green-200 dark:bg-green-950/30 dark:text-green-400 dark:border-green-800/50"
-          : "bg-slate-50 text-slate-400 border border-slate-200 dark:bg-slate-900 dark:text-slate-500 dark:border-slate-700"
-      }`}
-    >
-      {entry.ruleWouldBet ? "bet" : "pass"}
-    </span>
-    {!entry.scoredBeforeGame && <span class="text-[10px] text-amber-600 dark:text-amber-400">late</span>}
+    <div class="text-[10px] text-slate-400 dark:text-slate-500">vs {pct(entry.breakEven)}</div>
   </div>
 ) : (
-  <span class="text-slate-300 dark:text-slate-700">—</span>
+  <span
+    class={`inline-block px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wide ${
+      entry.ruleWouldBet
+        ? "bg-green-50 text-green-700 border border-green-200 dark:bg-green-950/30 dark:text-green-400 dark:border-green-800/50"
+        : "bg-slate-50 text-slate-400 border border-slate-200 dark:bg-slate-900 dark:text-slate-500 dark:border-slate-700"
+    }`}
+  >
+    {entry.ruleWouldBet ? "bet" : "pass"}
+  </span>
 )}
