@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import JevCell from "@/components/betting/JevCell.astro";
 import {
   rithhmmPicks,
   rithhmmStartingBalances,
@@ -15,6 +16,7 @@ import {
   startingBalance,
   getHysaValue,
 } from "@/data/martingaleBets";
+import { forwardPicks, forwardSettled, flatUnits, type ForwardPick } from "@/data/jev/forward";
 
 export const prerender = true;
 
@@ -94,6 +96,24 @@ const allWinRate =
 const hasBetData = rithhmmPicks.some((p) => p.portfolioAction != null);
 const hasHermes = rithhmmPicks.some((p) => p.hermesFlag != null);
 const hasBetAmount = rithhmmPicks.some((p) => p.betAmount != null);
+
+// Jev forward test: scores made before each game
+const jevById = new Map(forwardPicks.map((entry) => [entry.pick.id, entry]));
+const hasJev = forwardPicks.length > 0;
+
+function jevRecord(entries: ForwardPick[]) {
+  const wins = entries.filter((e) => e.pick.result === "win").length;
+  return { wins, losses: entries.length - wins, units: flatUnits(entries) };
+}
+
+const jevRule = jevRecord(forwardSettled.filter((e) => e.ruleWouldBet));
+const jevPlaced = jevRecord(forwardSettled.filter((e) => e.placed));
+const jevDisagreements = forwardPicks.filter((e) => e.ruleWouldBet !== e.placed).length;
+const jevLate = forwardPicks.filter((e) => !e.scoredBeforeGame).length;
+
+function fmtUnits(n: number): string {
+  return `${n >= 0 ? "+" : "−"}${Math.abs(n).toFixed(2)}u`;
+}
 
 // Group resolved by date, most recent first
 const dateMap = new Map<string, RithhmmPick[]>();
@@ -279,6 +299,44 @@ function dayBets(picks: RithhmmPick[]) {
       <!-- Content sections -->
       <div class="mx-auto max-w-7xl px-4 pt-8 pb-16 space-y-10">
 
+        <!-- Jev forward test -->
+        {hasJev && (
+          <section>
+            <div class="flex items-center gap-4 mb-4">
+              <h2 class="text-xs font-black uppercase tracking-[0.15em] text-slate-900 dark:text-white whitespace-nowrap">
+                Jev forward test <span class="font-normal text-slate-400 dark:text-slate-500">({forwardPicks.length} scored)</span>
+              </h2>
+              <div class="flex-1 h-px bg-gray-200 dark:bg-slate-800"></div>
+            </div>
+            <dl class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:divide-slate-800 border border-gray-200 dark:border-slate-800 rounded">
+              {[
+                { label: "Jev's rule", note: "bet when Jev clears break-even", record: jevRule },
+                { label: "Your bets", note: "scored picks you placed", record: jevPlaced },
+              ].map(({ label, note, record }) => (
+                <div class="px-4 sm:px-6 py-5">
+                  <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">{label}</dt>
+                  <dd class="mt-2 flex items-baseline gap-3">
+                    <span class="text-3xl font-black tabular-nums text-slate-900 dark:text-white leading-none">{record.wins}–{record.losses}</span>
+                    {record.wins + record.losses > 0 && (
+                      <span class={`font-mono text-sm font-semibold tabular-nums ${record.units >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
+                        {fmtUnits(record.units)}
+                      </span>
+                    )}
+                  </dd>
+                  <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">{note}, 1u flat</dd>
+                </div>
+              ))}
+              <div class="px-4 sm:px-6 py-5">
+                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Disagreements</dt>
+                <dd class="mt-2 text-3xl font-black tabular-nums text-slate-900 dark:text-white leading-none">{jevDisagreements}</dd>
+                <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">
+                  rule and your call differ{jevLate > 0 && `; ${jevLate} scored after start (excluded)`}
+                </dd>
+              </div>
+            </dl>
+          </section>
+        )}
+
         <!-- Pending picks -->
         {pending.length > 0 && (
           <section>
@@ -298,6 +356,7 @@ function dayBets(picks: RithhmmPick[]) {
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400">Pick</th>
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Odds</th>
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Conf</th>
+                    {hasJev && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap" title="Jev's will-hit probability vs the book's break-even">Jev</th>}
                     {hasBetData && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Action</th>}
                     {hasHermes && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Hermes</th>}
                     {hasBetAmount && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap text-right">Bet</th>}
@@ -324,6 +383,7 @@ function dayBets(picks: RithhmmPick[]) {
                       <td class="px-4 py-2.5 whitespace-nowrap font-mono text-xs text-slate-600 dark:text-slate-400 tabular-nums">
                         {pick.confidence != null ? `${pick.confidence}%` : "—"}
                       </td>
+                      {hasJev && <td class="px-4 py-2.5 whitespace-nowrap"><JevCell entry={jevById.get(pick.id)} /></td>}
                       {hasBetData && (
                         <td class="px-4 py-2.5 whitespace-nowrap">
                           {pick.portfolioAction ? (
@@ -380,6 +440,7 @@ function dayBets(picks: RithhmmPick[]) {
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Odds</th>
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Conf</th>
                     <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap hidden sm:table-cell">Model</th>
+                    {hasJev && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap" title="Jev's will-hit probability vs the book's break-even">Jev</th>}
                     {hasBetData && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Action</th>}
                     {hasHermes && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap">Hermes</th>}
                     {hasBetAmount && <th class="px-4 py-2.5 font-mono text-[10px] uppercase tracking-widest text-slate-400 whitespace-nowrap text-right">Bet</th>}
@@ -392,7 +453,7 @@ function dayBets(picks: RithhmmPick[]) {
                     const { net: dayNet, hasMoney, count: betCount } = dayBets(picks);
                     const dayWins = picks.filter((p) => p.result === "win").length;
                     const dayLosses = picks.filter((p) => p.result === "loss").length;
-                    const colspan = 6 + (hasBetData ? 1 : 0) + (hasHermes ? 1 : 0) + (hasBetAmount ? 2 : 0);
+                    const colspan = 6 + (hasJev ? 1 : 0) + (hasBetData ? 1 : 0) + (hasHermes ? 1 : 0) + (hasBetAmount ? 2 : 0);
                     return (
                       <>
                         <tr class="border-t-2 border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/30 first:border-t-0">
@@ -433,6 +494,7 @@ function dayBets(picks: RithhmmPick[]) {
                               <td class="px-4 py-2.5 whitespace-nowrap text-xs text-slate-400 dark:text-slate-500 hidden sm:table-cell">
                                 {pick.modelProjection ?? "—"}
                               </td>
+                              {hasJev && <td class="px-4 py-2.5 whitespace-nowrap"><JevCell entry={jevById.get(pick.id)} /></td>}
                               {hasBetData && (
                                 <td class="px-4 py-2.5 whitespace-nowrap">
                                   {pick.portfolioAction ? (
