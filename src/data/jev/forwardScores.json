@@ -423,6 +423,59 @@
         "input_tokens": 644,
         "output_tokens": 109
       }
+    },
+    "270": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-29T14:29:32.082Z",
+      "state": {
+        "date": "2026-10-29",
+        "sport": "NFL",
+        "matchup": "vs Panthers",
+        "pick": "Tucker Kraft Under 4.5 Receptions",
+        "odds": "-116",
+        "recentForm": "4/7"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.58
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.37
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.61,
+          "confidence": 0.34,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.56,
+            "2": 0.03
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 109
+      }
     }
   }
 }
