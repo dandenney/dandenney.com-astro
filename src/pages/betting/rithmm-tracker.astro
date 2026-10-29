@@ -36,36 +36,40 @@ const betWinRate =
 
 // Split shared rows in integer cents. Dan receives the lower half and
 // GardenOf receives any odd penny, matching the ledger convention.
-function ownerNet(p: RithhmmPick, owner: "dan" | "gardenOf"): number {
-  if (p.betAmount == null || (p.bettors === "dan" && owner === "gardenOf")) return 0;
+type Owner = "dan" | "gardenOf";
 
-  const shared = p.bettors !== "dan";
-  const stakeCents = Math.round(p.betAmount * 100);
-  const ownerStakeCents = shared
-    ? owner === "dan"
-      ? Math.floor(stakeCents / 2)
-      : Math.ceil(stakeCents / 2)
-    : stakeCents;
+function ownerCents(p: RithhmmPick, owner: Owner, amount: number | undefined): number {
+  if (amount == null || (p.bettors === "dan" && owner === "gardenOf")) return 0;
+  const cents = Math.round(amount * 100);
+  if (p.bettors === "dan") return cents;
+  return owner === "dan" ? Math.floor(cents / 2) : Math.ceil(cents / 2);
+}
 
-  if (p.result === "win" && p.returnAmount != null) {
-    const returnCents = Math.round(p.returnAmount * 100);
-    const ownerReturnCents = shared
-      ? owner === "dan"
-        ? Math.floor(returnCents / 2)
-        : Math.ceil(returnCents / 2)
-      : returnCents;
-    return (ownerReturnCents - ownerStakeCents) / 100;
-  }
-  if (p.result === "loss") return -ownerStakeCents / 100;
+function ownerNet(p: RithhmmPick, owner: Owner): number {
+  const stakeCents = ownerCents(p, owner, p.betAmount);
+  if (p.result === "win" && p.returnAmount != null)
+    return (ownerCents(p, owner, p.returnAmount) - stakeCents) / 100;
+  if (p.result === "loss") return -stakeCents / 100;
   return 0;
 }
 
 const danPnL = resolvedBets.reduce((sum, p) => sum + ownerNet(p, "dan"), 0);
 const gardenOfPnL = resolvedBets.reduce((sum, p) => sum + ownerNet(p, "gardenOf"), 0);
 
+// Open bets leave the balance when placed, like a sportsbook balance.
+const openBets = pending.filter((p) => p.portfolioAction === "bet" && p.betAmount != null);
+function inPlay(owner: Owner) {
+  const bets = openBets.filter((p) => ownerCents(p, owner, p.betAmount) > 0);
+  const stakeCents = bets.reduce((sum, p) => sum + ownerCents(p, owner, p.betAmount), 0);
+  const returnCents = bets.reduce((sum, p) => sum + ownerCents(p, owner, p.potentialReturn), 0);
+  return { count: bets.length, stake: stakeCents / 100, potentialReturn: returnCents / 100 };
+}
+const danInPlay = inPlay("dan");
+const gardenOfInPlay = inPlay("gardenOf");
+
 // Per-person running balances
-const danBalance = Number((rithhmmStartingBalances.dan + danPnL).toFixed(2));
-const gardenOfBalance = Number((rithhmmStartingBalances.gardenOf + gardenOfPnL).toFixed(2));
+const danBalance = Number((rithhmmStartingBalances.dan + danPnL - danInPlay.stake).toFixed(2));
+const gardenOfBalance = Number((rithhmmStartingBalances.gardenOf + gardenOfPnL - gardenOfInPlay.stake).toFixed(2));
 
 // Each bettor started with $500 at their first martingale bet; the goal is to
 // beat that money sitting in a HYSA over the same stretch.
@@ -77,8 +81,8 @@ function firstBetDate(owner: "Dan" | "GardenOf"): string {
 }
 
 const bettorStandings = [
-  { name: "Dan", balance: danBalance, since: firstBetDate("Dan") },
-  { name: "GardenOf", balance: gardenOfBalance, since: firstBetDate("GardenOf") },
+  { name: "Dan", balance: danBalance, inPlay: danInPlay, since: firstBetDate("Dan") },
+  { name: "GardenOf", balance: gardenOfBalance, inPlay: gardenOfInPlay, since: firstBetDate("GardenOf") },
 ].map((b) => {
   const hysaValue = Number(getHysaValue(b.since).toFixed(2));
   return { ...b, hysaValue, vsHysa: Number((b.balance - hysaValue).toFixed(2)) };
@@ -281,6 +285,12 @@ function dayBets(picks: RithhmmPick[]) {
                     <div class="mt-1 text-2xl font-bold tabular-nums font-mono leading-none text-slate-400 dark:text-slate-500">${b.hysaValue.toFixed(2)}</div>
                   </div>
                 </dd>
+                {b.inPlay.count > 0 && (
+                  <dd class="mt-3 text-xs text-amber-600 dark:text-amber-400 tabular-nums">
+                    In play: ${b.inPlay.stake.toFixed(2)} on {b.inPlay.count} {b.inPlay.count === 1 ? "bet" : "bets"}
+                    {b.inPlay.potentialReturn > 0 && <> · ${b.inPlay.potentialReturn.toFixed(2)} back if {b.inPlay.count === 1 ? "it wins" : b.inPlay.count === 2 ? "both win" : "all win"}</>}
+                  </dd>
+                )}
                 <dd class="mt-3 text-xs text-slate-400 dark:text-slate-500">
                   ${startingBalance} at {(hysaBenchmark.annualYield * 100).toFixed(1)}% since {formatDate(b.since)}
                 </dd>
