@@ -476,6 +476,112 @@
         "input_tokens": 645,
         "output_tokens": 109
       }
+    },
+    "271": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-30T23:09:17.078Z",
+      "state": {
+        "date": "2026-10-31",
+        "sport": "NCAAF",
+        "matchup": "Wisconsin @ Iowa",
+        "pick": "Iowa Moneyline",
+        "odds": "-135",
+        "recentForm": "5/7"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.5
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.45
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "moneyline",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 1,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.82,
+          "confidence": 0.61,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.74,
+            "2": 0.04
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 110
+      }
+    },
+    "272": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-10-30T23:09:17.139Z",
+      "state": {
+        "date": "2026-10-31",
+        "sport": "NCAAF",
+        "matchup": "Washington @ Nebraska",
+        "pick": "Washington +7.5",
+        "odds": "-115",
+        "recentForm": "2/7"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.39
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.2
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "spread",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 1,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.26,
+          "confidence": 0.62,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.23,
+            "2": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 641,
+        "output_tokens": 108
+      }
     }
   }
 }
