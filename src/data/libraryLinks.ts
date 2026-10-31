@@ -10,6 +10,27 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "The Mythical Man-Month in the age of AI",
+    url: "https://j11g.com/the-mythical-man-month-in-the-age-of-ai?utm_source=chatgpt.com",
+    description: "Brooks’s Law still applies in the age of AI, though the extra help comes from agents. Agents can’t speed up tasks that must happen in order, and people still need to guide and check their work. Without clear…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "Website migration costs are going to zero",
+    url: "https://dri.es/website-migration-costs-are-going-to-zero",
+    description: "AI could make moving a website to a new platform nearly free within three years. This would weaken vendor lock-in and make it easier for buyers to try new CMSs. Vendors will need to win with better services, value, and…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "The most powerful artifact / document layer for coding agents. Understand with greater depth at a faster rate.",
+    url: "https://smalldocs.org/",
+    description: "SmallDocs is a flexible document format designed for AI agents. It lets agents create and share many kinds of documents quickly. You can export them to familiar formats like PDF, Word, and Excel.",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
     title: "The Pulse: new trend of building “internal vibe-coding apps” at tech companies",
     url: "https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal-aeb?triedRedirect=true",
     description: "Tech companies like Ramp and Stripe are building AI tools that let non-engineers create internal apps. These tools can safely use company data, follow design rules, and help employees build what they need. They also…",
