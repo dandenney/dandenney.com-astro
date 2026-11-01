@@ -10,6 +10,48 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Making agents fast - what I've learnt over the last 12 months",
+    url: "https://martinalderson.com/posts/making-agents-fast/",
+    description: "Making agents faster takes more than choosing a faster AI model: prompts, tools, and system delays all matter. Measure where time is spent, then improve slow tools, add parallel work, and use suitable hardware. Small…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "AI Visibility by Location: A City in the Prompt Is Not a Local Test",
+    url: "https://www.linkedin.com/pulse/ai-visibility-location-city-prompt-local-test-uriel-bitton-f7eic?utm_source=chatgpt.com",
+    description: "A city in a prompt does not prove the answer was collected from that city. Reports should separate the place asked about, the collection setup, and the language used. Clearly label what was observed, note unknowns, and…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "The software factory forgot about design",
+    url: "https://atifaz.am/writing/the-software-factory-forgot-about-design?ref=sidebar",
+    description: "The author argues that AI software workflows often overlook design, even though deciding how a product should look and feel is still hard. Their process uses clear tasks, design reviews in Paper, coding agents, and a…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "Why are good developers so wary of agentic development?",
+    url: "https://martinfowler.com/rachels-ramblings/good-devs-wary.html?utm_source=chatgpt.com",
+    description: "Experienced developers are cautious about letting coding agents work alone because producing code is not the same as building safe, reliable software for production. Their judgment is needed to guide agents, set up…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "AI is overwhelming and I’m doing it wrong",
+    url: "https://www.bensbites.com/p/ai-is-overwhelming-and-im-doing-it?utm_source=chatgpt.com&triedRedirect=true",
+    description: "The flood of AI tools and agents leaves the author feeling overwhelmed and scattered. He wants to use AI for projects that feel fun, not to chase productivity or money. For the next month, he’ll avoid unnecessary tools…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
+    title: "You can just ask AI to do things",
+    url: "https://www.seangoedecke.com/you-can-just-ask-ai-to-do-things/?utm_source=chatgpt.com",
+    description: "The author says people should actively look for ways AI agents can help with everyday work. Agents can handle tasks like testing code, monitoring changes, reviewing messages, and organizing sessions. People should…",
+    created: "2026-10-31",
+    kind: "read",
+  },
+  {
     title: "The Mythical Man-Month in the age of AI",
     url: "https://j11g.com/the-mythical-man-month-in-the-age-of-ai?utm_source=chatgpt.com",
     description: "Brooks’s Law still applies in the age of AI, though the extra help comes from agents. Agents can’t speed up tasks that must happen in order, and people still need to guide and check their work. Without clear…",
