@@ -582,6 +582,59 @@
         "input_tokens": 641,
         "output_tokens": 108
       }
+    },
+    "273": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-01T02:39:02.034Z",
+      "state": {
+        "date": "2026-11-01",
+        "sport": "NFL",
+        "matchup": "vs Browns",
+        "pick": "Rico Dowdle Under 2.5 Receptions",
+        "odds": "-123",
+        "recentForm": "2/4"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.6
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.4
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.67,
+          "confidence": 0.36,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.38,
+            "1": 0.57,
+            "2": 0.05
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 646,
+        "output_tokens": 109
+      }
     }
   }
 }
