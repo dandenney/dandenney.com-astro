@@ -1,0 +1,44 @@
+name: Sync Possibility Factory
+
+on:
+  schedule:
+    # Daily, after the factory's own 11:00 UTC run.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: sync-factory
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Pull shipped factory projects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node --experimental-strip-types --no-warnings scripts/sync-factory.ts
+
+      - name: Commit new entries
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/factory public/factory
+          if git diff --staged --quiet; then
+            echo "No new factory projects"
+            exit 0
+          fi
+          git commit -m "feat(factory): sync shipped Possibility Factory projects"
+          git pull --rebase
+          git push

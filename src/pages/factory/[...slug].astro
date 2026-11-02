@@ -1,0 +1,109 @@
+---
+import { type CollectionEntry, getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import FactoryCover from '@/components/FactoryCover.astro';
+import { ClientRouter } from 'astro:transitions';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+	const items = await getCollection('factory');
+	return items.map((item) => ({
+		params: { slug: item.id.replace(/\.mdx?$/, '') },
+		props: item,
+	}));
+}
+type Props = CollectionEntry<'factory'>;
+
+const item = Astro.props;
+const { title, summary, pubDate, ideaId, ideaTitle, pitch, whyNow, kind, url, repoUrl, image, signals, tinkering } = item.data;
+const { Content } = await render(item);
+const hasNotes = Boolean(item.body?.trim());
+const writeup = tinkering ? await getEntry('tinkerings', tinkering) : undefined;
+const dateStr = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const actionLabel = kind === 'package' ? 'View on npm' : 'Play it';
+---
+
+<BaseLayout
+	title={`${title} | From the Possibility Factory`}
+	description={summary}
+	image={image}
+	datePublished={pubDate}
+	bodyClass="bg-white dark:bg-slate-900"
+>
+	<Fragment slot="head">
+		<ClientRouter />
+	</Fragment>
+	<Header />
+	<main id="main-content" tabindex="-1" class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+		<article class="mx-auto max-w-4xl px-8 pt-12 pb-16 lg:px-0">
+			<p class="text-center text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+				<span class="whitespace-nowrap">[&nbsp;Shipped {dateStr}&nbsp;]</span>
+				<span class="ml-2 whitespace-nowrap">Idea #{ideaId}</span>
+			</p>
+			<h1 class="mt-4 text-center text-4xl font-black tracking-tight text-balance text-gray-900 sm:text-6xl dark:text-white">{title}</h1>
+			<p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-slate-300">{summary}</p>
+
+			<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+				<a
+					href={url}
+					class="inline-flex items-center gap-1.5 rounded-full bg-red-700 px-5 py-2 text-sm font-semibold text-white no-underline transition-colors hover:bg-red-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 dark:bg-red-500 dark:hover:bg-red-400 dark:focus-visible:outline-red-400"
+				>
+					{actionLabel} <span aria-hidden="true">↗</span>
+				</a>
+				<a
+					href={repoUrl}
+					class="inline-flex items-center gap-1.5 rounded-full border border-gray-300 px-5 py-2 text-sm font-semibold text-gray-900 no-underline transition-colors hover:border-red-700 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 dark:border-slate-600 dark:text-slate-100 dark:hover:border-red-400 dark:hover:text-red-400"
+				>
+					Source <span aria-hidden="true">↗</span>
+				</a>
+			</div>
+
+			<a href={url} class="factory-hero mt-12 block overflow-hidden rounded-xl border border-gray-200 dark:border-slate-700" tabindex="-1" aria-hidden="true">
+				<FactoryCover {...item.data} class="aspect-[40/21] h-auto w-full object-cover object-top" />
+			</a>
+
+			<div class="longform blogpost mx-auto mt-12 max-w-2xl">
+				{writeup && (
+					<p class="has-links rounded-lg bg-slate-50 p-4 text-base dark:bg-slate-800">
+						I wrote up what I learned building this in <a href={`/tinkerings/${tinkering}/`}>{writeup.data.title}</a>.
+					</p>
+				)}
+
+				{hasNotes && (
+					<>
+						<h2>Notes</h2>
+						<Content />
+					</>
+				)}
+
+				<h2>The pitch</h2>
+				<p>{pitch}</p>
+
+				<h2>Why now</h2>
+				<p>{whyNow}</p>
+
+				{signals.length > 0 && (
+					<>
+						<h2>Sparked by</h2>
+						<ul class="has-links">
+							{signals.map((signal) => (
+								<li><a href={signal.url}>{signal.title}</a></li>
+							))}
+						</ul>
+					</>
+				)}
+
+				<p class="mt-10 text-sm text-gray-500 dark:text-slate-400">
+					The factory pitched this as “{ideaTitle}.” Devin built and shipped it from that spec.
+				</p>
+			</div>
+		</article>
+
+		<Breadcrumb items={[{ label: 'Factory', href: '/factory' }, { label: title }]} class="py-8" />
+	</main>
+	<Footer />
+</BaseLayout>

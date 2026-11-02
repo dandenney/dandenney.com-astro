@@ -10,6 +10,7 @@ import BlipLedgerRow from "@/components/BlipLedgerRow.astro";
 import PostFeature from "@/components/PostFeature.astro";
 import PostIndexRow from "@/components/PostIndexRow.astro";
 import PostHoverPreview from "@/components/PostHoverPreview.astro";
+import FactoryCover from "@/components/FactoryCover.astro";
 import { libraryLinks } from "@/data/libraryLinks";
 import toTitleCase from "../helpers/toTitleCase.js";
 
@@ -31,6 +32,12 @@ const recentBlips = blips.slice(0, 4);
 const reviews = (await getCollection("reviews"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 4);
+
+const allFactoryItems = (await getCollection("factory")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || b.data.ideaId - a.data.ideaId
+);
+const totalFactoryItems = allFactoryItems.length;
+const factoryItems = allFactoryItems.slice(0, 3);
 
 const currentYearMonth = new Date().toISOString().slice(0, 7)
 const links = libraryLinks.filter((l) => l.created.startsWith(currentYearMonth))
@@ -417,101 +424,51 @@ const monthName = new Date().toLocaleString("default", { month: "long" });
 
       <section class="flex flex-col bg-slate-50 dark:bg-slate-800 py-16 sm:py-24">
         <div class="mx-auto max-w-[1800px] w-full p-8">
+          <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+            <span class="whitespace-nowrap">[&nbsp;{totalFactoryItems} shipped&nbsp;]</span>
+          </p>
           <h2
-            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
+            class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100"
           >
-            Side Projects
+            From the Possibility Factory
           </h2>
           <p class="mt-2 max-w-3xl text-lg leading-8 text-gray-600 dark:text-slate-100">
-            Experiments mixing my interests in music, organization, and modern
-            web development
+            Web toys and tools pitched from what's happening online, then built
+            and shipped by Devin
           </p>
         </div>
         <div
           class="side-projects-grid mx-auto max-w-[1800px] w-full grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700"
         >
-          <div class="side-projects-grid-item flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800">
-            <div class="overflow-hidden">
-              <OptimizedImage
-                src="/seasons-of-dan.webp"
-                alt="Seasons of Dan - Spotify listening history"
-                width={1312}
-                height={940}
-                class="w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-              <span class="whitespace-nowrap">[&nbsp;Spotify API + AI Generated&nbsp;]</span>
-            </p>
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400">
-              Music
-            </h3>
-            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
-              Listening habits across time periods and AI-generated reviews
-              analyzing the vibe, production, and emotional impact of songs.
-            </p>
-            <div class="mt-3 flex gap-4">
-              <a href="/music" class="text-sm font-semibold text-red-700 dark:text-red-400 transition-colors hover:text-red-800 dark:hover:text-red-300">
-                Seasons of Dan &rarr;
-              </a>
-              <a href="/music/reviews" class="text-sm font-semibold text-red-700 dark:text-red-400 transition-colors hover:text-red-800 dark:hover:text-red-300">
-                Reviews &rarr;
-              </a>
-            </div>
-          </div>
-
-          <a href="/posts/front-end-dev/read-later-meet-stash/" class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
-            <div class="overflow-hidden">
-              <OptimizedImage
-                src="/screenshot-stash.webp"
-                alt="Stash - personal read-later app"
-                width={1312}
-                height={940}
-                class="w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-              <span class="whitespace-nowrap">[&nbsp;Next.js + Supabase&nbsp;]</span>
-            </p>
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
-              Stash
-            </h3>
-            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
-              My own read-later tool with an AI-powered score to help
-              prioritize what's actually worth reading.
-            </p>
-            <p class="mt-3 text-sm font-semibold text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
-              Read the build post &rarr;
-            </p>
-          </a>
-
-          <a href="https://github.com/dandenney/side-by-side" target="_blank" rel="noopener noreferrer" class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
-            <div class="overflow-hidden">
-              <OptimizedImage
-                src="/side-by-side.webp"
-                alt="Side by Side - life organizer app"
-                width={1312}
-                height={940}
-                class="w-full object-cover transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-              <span class="whitespace-nowrap">[&nbsp;Next.js + Supabase&nbsp;]</span>
-            </p>
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
-              Side by Side
-            </h3>
-            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
-              A web app for organizing life's events, shared links, local
-              places, and shopping lists in one place.
-            </p>
-            <p class="mt-3 text-sm font-semibold text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
-              View on GitHub &rarr;
-            </p>
-          </a>
+          {factoryItems.map((item) => (
+            <a href={`/factory/${item.id.replace(/\.mdx?$/, "")}/`} class="side-projects-grid-item group flex flex-col p-6 md:p-8 bg-slate-50 dark:bg-slate-800 no-underline transition-colors duration-200">
+              <div class="aspect-[40/21] overflow-hidden">
+                <FactoryCover
+                  title={item.data.title}
+                  kind={item.data.kind}
+                  url={item.data.url}
+                  image={item.data.image}
+                  imageAlt={item.data.imageAlt}
+                  class="h-full w-full object-cover object-top transition-transform duration-300 [@media(hover:hover)]:group-hover:scale-105"
+                />
+              </div>
+              <p class="mt-6 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+                <span class="whitespace-nowrap">[&nbsp;Idea #{item.data.ideaId}&nbsp;]</span>
+              </p>
+              <h3 class="mt-3 text-lg font-semibold leading-6 text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
+                {item.data.title}
+              </h3>
+              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 line-clamp-3">
+                {item.data.summary}
+              </p>
+              <p class="mt-3 text-sm font-semibold text-red-700 dark:text-red-400 transition-colors group-hover:text-red-800 dark:group-hover:text-red-300">
+                See how it shipped &rarr;
+              </p>
+            </a>
+          ))}
+        </div>
+        <div class="border-b cta flex justify-end p-8">
+          <a href="/factory" class="btn-link">View All Factory Projects</a>
         </div>
       </section>
 

@@ -74,7 +74,7 @@ Preferred flow: Dan writes the review himself and the `add-review` skill (`.clau
 
 ### GitHub Actions
 
-- `settle-pending-bets.yml` — daily auto-settlement via ESPN APIs; run manually with `--bet-id <id>`
+- `settle-pending-bets.yml` — auto-settlement via ESPN APIs every 30 min: martingale bets (`scripts/settle-pending-bets.mjs`, `--bet-id <id>`) and pending Rithmm picks, including watch/skip (`scripts/settle-rithmm-picks.ts`, `--id <id>`, `--backtest`). Picks it can't grade with certainty stay pending for `/settle-rithmm-picks`
 - `generate-review.yml` / `generate-song-review.yml` — legacy AI content generation (being replaced by agent pipeline)
 
 ## Rules

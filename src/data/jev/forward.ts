@@ -77,3 +77,18 @@ export const forwardSettled = forwardPicks.filter(
 export function flatUnits(entries: ForwardPick[]) {
   return entries.reduce((total, entry) => total + (entry.pick.result === "win" ? payoutFor(entry.pick.odds) : -1), 0);
 }
+
+export type PassOutcome = "dodged" | "missed";
+
+/** How a pass graded: a pass that lost dodged a bad bet; a pass that won missed a winner. */
+export function passOutcome(entry: ForwardPick): PassOutcome | null {
+  if (entry.ruleWouldBet || !entry.scoredBeforeGame) return null;
+  if (entry.pick.result === "loss") return "dodged";
+  if (entry.pick.result === "win") return "missed";
+  return null;
+}
+
+/** Units the passes were worth: +1u per dodged loss, minus the forgone payout per missed win. */
+export function passUnits(entries: ForwardPick[]) {
+  return -flatUnits(entries);
+}

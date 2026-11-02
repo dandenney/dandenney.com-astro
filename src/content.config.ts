@@ -36,6 +36,28 @@ const tinkerings = defineCollection({
   }),
 });
 
+const factory = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/factory" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    pubDate: z.coerce.date(),
+    ideaId: z.number(),
+    ideaTitle: z.string(),
+    pitch: z.string(),
+    whyNow: z.string(),
+    kind: z.enum(["web", "package"]),
+    url: z.url(),
+    repoUrl: z.url(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    signals: z.array(z.object({ title: z.string(), url: z.url() })).default([]),
+    // slug of a tinkering that writes up what Dan learned from this one
+    tinkering: z.string().optional(),
+    aiGenerated: z.boolean().default(true),
+  }),
+});
+
 const trueCrime = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/true-crime" }),
   schema: z.object({
@@ -155,6 +177,7 @@ const golfVenues = defineCollection({
 export const collections = {
   "artificially-intelligent": artificiallyIntelligent,
   blips,
+  factory,
   "golf-venues": golfVenues,
   "plus-ev": plusEv,
   posts,

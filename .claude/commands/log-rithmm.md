@@ -2,6 +2,8 @@ Log Rithmm picks from screenshots and score them with Jev before the game. This 
 
 **Usage:** `/log-rithmm` with screenshots attached: the Rithmm card(s) and the sportsbook screen(s) for the same picks. Free text after the command can say bet or pass, the stake, and who funded it, e.g. `/log-rithmm bet $60 both` or `/log-rithmm pass`. The stake is always the combined total: `$60 both` means $30 from Dan and $30 from GardenOf; `$30 dan` means Dan alone.
 
+**Check before betting (preferred):** send the Rithmm card(s) with DraftKings bet slips that haven't been placed, and either no decision or `check`. Log the picks as `watch`, score them with Jev, and reply with the rule's bet/pass for each so Dan can decide before putting money down. When Dan then sends the placed receipts (or says which ones he passed), follow **Step 9** to record the decisions on the same picks. Don't append them again.
+
 ## Step 1: Read the screenshots and the data file
 
 Read `src/data/rithhmmPicks.ts` in full. From the screenshots, identify which image is the Rithmm card and which is the sportsbook (DraftKings unless the screen shows another book). One message may contain several picks; pair each Rithmm pick with its sportsbook screen by player/team and market.
@@ -41,7 +43,7 @@ Compare the line number and side in Rithmm's pick and the book's pick (e.g. Over
 
 - Bet: `portfolioAction: "bet"`, `betAmount`, and `bettors`. `betAmount` is the combined total, written as-is and never multiplied or split: `bet $60 both` → `betAmount: 60`, `bettors: "dan-and-gardenOf"` ($30 each); `bet $30 dan` → `betAmount: 30`, `bettors: "dan"`. Ask if the stake or funding isn't clear from the message or the ticket.
 - Pass: `portfolioAction: "skip"`, plus `passReason` if one was given.
-- Undecided: `portfolioAction: "watch"`.
+- Undecided, or a pre-bet check: `portfolioAction: "watch"`, with no `betAmount`, `bettors` or `potentialReturn`.
 
 ## Step 5: Append
 
@@ -71,4 +73,16 @@ Push.
 |---|---|---|---|---|---|---|---|
 | 262 | Gunnar Henderson Over 1.5 Total Bases | -114 | -107 | 51.7% | 0.47 | pass | bet $60 |
 
-Rule is `bet` when Jev's `will_hit` is above break-even for the book price, otherwise `pass`. Call out any line mismatch, any pick scored after its start time, and any disagreement between the rule and your call.
+Rule is `bet` when Jev's `will_hit` is above break-even for the book price, otherwise `pass`. Call out any line mismatch, any pick scored after its start time, and any disagreement between the rule and your call. For a pre-bet check, the "Your call" column is `watch`; end with a one-line summary of the rule's picks, e.g. `Jev says bet 266, 267, 269; pass 268.`
+
+## Step 9: Record the decisions after a pre-bet check
+
+When Dan sends the placed receipts for picks that are already logged as `watch` (or says which he bet and which he passed):
+
+1. Match each receipt to its `watch` pick by date, player/team, and market. Never append a duplicate or create a new id.
+2. **Placed:** set `portfolioAction: "bet"`, `betAmount` and `bettors` (same rules as Step 4; use the receipt's Wager if the message doesn't say), and `potentialReturn` from the receipt's Total Payout. If the receipt's price differs from the slip's, update both `odds` and `book.odds` to the receipt price and say so; the break-even and rule then use the price that was actually bet. Don't rescore.
+3. **Passed:** set `portfolioAction: "skip"`, plus `passReason` if one was given (`"jev-pass"` when Dan passed because the rule said pass).
+4. If the receipt's line differs from the logged pick's (e.g. Over 10.5 vs Over 11.5), stop and ask; that's a different bet from the one Jev scored.
+5. Any `watch` pick from the check that has no receipt once its game has started was not bet: set it to `skip` and tell Dan, so the tracker doesn't treat it as undecided.
+
+Run `npx astro check`, commit `src/data/rithhmmPicks.ts` to `main` as `add(rithmm-picks): record <date> bets after Jev check`, push, and confirm with the Step 8 table, with "Your call" now showing each decision.

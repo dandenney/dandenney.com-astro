@@ -1,0 +1,103 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import FactoryCover from '@/components/FactoryCover.astro';
+import { SITE_TITLE } from '@/consts';
+import { getCollection } from 'astro:content';
+import { ClientRouter } from 'astro:transitions';
+
+export const prerender = true;
+
+const items = (await getCollection('factory')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || b.data.ideaId - a.data.ideaId
+);
+---
+<BaseLayout
+	title="From the Possibility Factory | Dan Denney"
+	description="Small toys and tools built from ideas my Possibility Factory generated out of the week's signals, then shipped by Devin."
+	bodyClass="bg-white dark:bg-slate-900"
+>
+	<Fragment slot="head">
+		<ClientRouter />
+	</Fragment>
+	<main id="main-content" tabindex="-1" class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+		<Header title={SITE_TITLE} />
+
+		<section class="pt-16 pb-24">
+			<div class="px-8">
+				<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+					<span class="whitespace-nowrap">[&nbsp;{items.length} shipped&nbsp;]</span>
+				</p>
+				<h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">From the Possibility Factory</h1>
+				<p class="has-links mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-100">
+					<a href="https://github.com/dandenney/the-possibility-factory">The Possibility Factory</a> watches model releases, tooling news and whatever's trending, then pitches me ideas every morning. I shortlist the fun ones and Devin builds and ships them. These are the ones that made it out the door.
+				</p>
+			</div>
+
+			<div class="tinkerings-grid mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+				{items.map((item) => {
+					const slug = item.id.replace(/\.mdx?$/, '');
+					const dateStr = item.data.pubDate.toLocaleDateString('en-US', {
+						month: 'short',
+						day: 'numeric',
+						year: 'numeric',
+						timeZone: 'UTC',
+					});
+					return (
+						<article class="factory-card tinkerings-grid-item group relative flex flex-col bg-slate-50 dark:bg-slate-800">
+							<div class="aspect-[40/21] overflow-hidden">
+								<FactoryCover
+									{...item.data}
+									class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+								/>
+							</div>
+							<div class="flex flex-1 flex-col p-6 md:p-8">
+								<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+									<span class="whitespace-nowrap">[&nbsp;{dateStr}&nbsp;]</span>
+									<span class="ml-2 whitespace-nowrap">Idea #{item.data.ideaId}</span>
+								</p>
+								<h2 class="mt-3 text-lg font-semibold leading-snug text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
+									<a href={`/factory/${slug}/`} class="factory-card__link no-underline">{item.data.title}</a>
+								</h2>
+								<p class="mt-3 flex-1 text-sm leading-relaxed text-gray-500 dark:text-slate-400">
+									{item.data.summary}
+								</p>
+								<a
+									href={item.data.url}
+									class="factory-card__action mt-6 inline-flex w-fit items-center gap-1.5 rounded-full border border-gray-300 px-4 py-1.5 text-sm font-semibold text-gray-900 no-underline transition-colors hover:border-red-700 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700 dark:border-slate-600 dark:text-slate-100 dark:hover:border-red-400 dark:hover:text-red-400"
+								>
+									{item.data.kind === 'package' ? 'View on npm' : 'Play it'}
+									<span aria-hidden="true">↗</span>
+								</a>
+							</div>
+						</article>
+					);
+				})}
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+<style>
+	.factory-card__link::after {
+		content: '';
+		inset: 0;
+		position: absolute;
+	}
+
+	.factory-card__link:focus-visible {
+		outline: none;
+	}
+
+	.factory-card:has(.factory-card__link:focus-visible) {
+		outline: 2px solid #b91c1c;
+		outline-offset: -2px;
+	}
+
+	.factory-card__action {
+		position: relative;
+		z-index: 1;
+	}
+</style>
