@@ -28,14 +28,25 @@ jobs:
       - name: Settle pending bets
         run: APPLY=1 node scripts/settle-pending-bets.mjs
 
+      - name: Settle pending Rithmm picks
+        run: APPLY=1 node --experimental-strip-types --no-warnings scripts/settle-rithmm-picks.ts
+
       - name: Commit updated bets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          stamp="$(date -u '+%Y-%m-%d %H:%M UTC')"
           git add src/data/martingaleBets.ts
-          if git diff --staged --quiet; then
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(martingale): settle pending bets $stamp"
+          fi
+          git add src/data/rithhmmPicks.ts
+          if ! git diff --staged --quiet; then
+            git commit -m "settle(rithmm-picks): auto-settle pending picks $stamp"
+          fi
+          if git diff --quiet origin/main HEAD; then
             echo "No bet settlements to commit"
           else
-            git commit -m "chore(martingale): settle pending bets $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git pull --rebase
             git push
           fi
