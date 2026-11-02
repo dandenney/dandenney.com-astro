@@ -16,7 +16,7 @@ import {
   startingBalance,
   getHysaValue,
 } from "@/data/martingaleBets";
-import { forwardPicks, forwardSettled, flatUnits, type ForwardPick } from "@/data/jev/forward";
+import { forwardPicks, forwardSettled, flatUnits, passUnits, type ForwardPick } from "@/data/jev/forward";
 
 export const prerender = true;
 
@@ -112,6 +112,13 @@ function jevRecord(entries: ForwardPick[]) {
 
 const jevRule = jevRecord(forwardSettled.filter((e) => e.ruleWouldBet));
 const jevPlaced = jevRecord(forwardSettled.filter((e) => e.placed));
+const jevPassEntries = forwardSettled.filter((e) => !e.ruleWouldBet);
+const jevPasses = {
+  dodged: jevPassEntries.filter((e) => e.pick.result === "loss").length,
+  missed: jevPassEntries.filter((e) => e.pick.result === "win").length,
+  units: passUnits(jevPassEntries),
+};
+const jevNetUnits = jevRule.units + jevPasses.units;
 const jevDisagreements = forwardPicks.filter((e) => e.ruleWouldBet !== e.placed).length;
 const jevLate = forwardPicks.filter((e) => !e.scoredBeforeGame).length;
 
@@ -318,7 +325,7 @@ function dayBets(picks: RithhmmPick[]) {
               </h2>
               <div class="flex-1 h-px bg-gray-200 dark:bg-slate-800"></div>
             </div>
-            <dl class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:divide-slate-800 border border-gray-200 dark:border-slate-800 rounded">
+            <dl class="grid grid-cols-1 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 dark:divide-slate-800 border border-gray-200 dark:border-slate-800 rounded">
               {[
                 { label: "Jev's rule", note: "bet when Jev clears break-even", record: jevRule },
                 { label: "Your bets", note: "scored picks you placed", record: jevPlaced },
@@ -336,6 +343,20 @@ function dayBets(picks: RithhmmPick[]) {
                   <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">{note}, 1u flat</dd>
                 </div>
               ))}
+              <div class="px-4 sm:px-6 py-5" title="A pass that lost dodged a bad bet (+1u). A pass that won missed a winner (minus its payout).">
+                <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Jev's passes</dt>
+                <dd class="mt-2 flex items-baseline gap-3">
+                  <span class="text-3xl font-black tabular-nums text-slate-900 dark:text-white leading-none">{jevPasses.dodged}–{jevPasses.missed}</span>
+                  {jevPasses.dodged + jevPasses.missed > 0 && (
+                    <span class={`font-mono text-sm font-semibold tabular-nums ${jevPasses.units >= 0 ? "text-green-700 dark:text-green-400" : "text-red-700 dark:text-red-400"}`}>
+                      {fmtUnits(jevPasses.units)}
+                    </span>
+                  )}
+                </dd>
+                <dd class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">
+                  dodged–missed; net with rule {fmtUnits(jevNetUnits)}
+                </dd>
+              </div>
               <div class="px-4 sm:px-6 py-5">
                 <dt class="font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500">Disagreements</dt>
                 <dd class="mt-2 text-3xl font-black tabular-nums text-slate-900 dark:text-white leading-none">{jevDisagreements}</dd>
