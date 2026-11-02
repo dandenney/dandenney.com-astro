@@ -31,7 +31,11 @@ On the personal side:
 - A code review of [this site](https://github.com/dandenney/dandenney.com-astro), which has been through three years and multiple versions of Astro. It fixed what I agreed with and we talked through the rest first.
 - [The Possibility Factory](https://github.com/dandenney/the-possibility-factory), a greenfield idea and software factory, went from "I haven't done this with Devin yet" to deployed in an evening. I didn't touch Netlify or Turso setup beyond pasting secrets into a secure form.
 - The factory's first shipped idea, [diffrails](https://www.npmjs.com/package/diffrails), a CLI for git diff guardrails, the next day.
-- Four more factory ideas shipped in the last few days: [Soft-Raster Scoreboard](https://soft-raster-scoreboard.netlify.app), college football replays drawn without a GPU; [Pikmin Day Swarm](https://pikmin-day-swarm.netlify.app), a little swarm toy for Pikmin Day; [RAM Guilt Meter](https://ram-guilt-meter.netlify.app), a joke about how much memory your tabs are hoarding; and [Pelican Bench Arena](https://pelican-bench-arena.netlify.app), a blind vote on which model draws the best pelican riding a bicycle. They all show up on [this site's factory page](/factory) now, which syncs daily.
+- Four more factory ideas shipped in the last few days. They all show up on [this site's factory page](/factory) now, which syncs daily.
+  - [Soft-Raster Scoreboard](https://soft-raster-scoreboard.netlify.app), college football replays drawn without a GPU.
+  - [Pikmin Day Swarm](https://pikmin-day-swarm.netlify.app), a little swarm toy for Pikmin Day.
+  - [RAM Guilt Meter](https://ram-guilt-meter.netlify.app), a joke about how much memory your tabs are hoarding.
+  - [Pelican Bench Arena](https://pelican-bench-arena.netlify.app), a blind vote on which model draws the best pelican riding a bicycle.
 - Workflows for my reviews, golf sessions, and betting trackers, which turned many sessions into one-liners like "settle the Klay Thompson and Hornets bets, both won." Now the bets settle themselves from ESPN box scores every 30 minutes, so I don't even send that.
 - A fix for recipe imports in our household app, [side-by-side](https://github.com/dandenney/side-by-side).
 
