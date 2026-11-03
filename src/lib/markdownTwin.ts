@@ -62,6 +62,8 @@ export interface TwinItem {
   section: string;
   title: string;
   summary?: string;
+  /** YYYY-MM-DD publish date */
+  date?: string;
   /** path param for the [...path].md endpoint, e.g. "posts/foo/bar" (no extension) */
   path: string;
   /** absolute canonical HTML url */
@@ -136,6 +138,7 @@ function makeTwin(
     section: SECTION[collection],
     title,
     summary,
+    date: fmtDate(date),
     path,
     sourceUrl,
     twinUrl: `${sourceUrl}.md`,

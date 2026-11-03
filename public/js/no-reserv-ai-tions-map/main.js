@@ -313,3 +313,23 @@ document.getElementById("reset-filters").addEventListener("click", function () {
 
   applyFilters();
 });
+
+// Hooks for the page's WebMCP tools (src/scripts/webmcp/reviewMapTools.ts)
+window.noReservAItionsMap = {
+  all: () => allFeatures,
+  setFilters({ state, city }) {
+    currentFilters.state = state;
+    document.getElementById("state-filter").value = state;
+    updateCityOptions();
+    currentFilters.city = city;
+    document.getElementById("city-filter").value = city;
+    applyFilters();
+    return filteredFeatures;
+  },
+  show(feature) {
+    if (!filteredFeatures.includes(feature)) this.setFilters({ state: "", city: "" });
+    flyToRestaurant(feature);
+    createPopup(feature);
+    setActiveItem(feature.properties.id);
+  },
+};
