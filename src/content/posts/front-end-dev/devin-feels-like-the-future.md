@@ -1,13 +1,13 @@
 ---
 pubDate: "2026-11-02"
 socialImageFilename: "og-devin-feels-like-the-future.jpg"
-summary: "Devin has come a long way since the $500-a-month launch. Cloud agents that don't need my machine are the way I want to work, and right now Devin is leading the way."
+summary: "Devin has come a long way since the $500-a-month launch. Cloud agents that don't need my machine running feel like how we'll all work soon, and right now Devin is the best version of that."
 tags:
   - front-end-dev
   - ai
 thumb: "/posts/front-end-dev/devin-feels-like-the-future/devin-feels-like-the-future.webp"
 thumbAlt: "Playful hand-drawn illustration of a man in a green hoodie in a grocery aisle, smiling at his phone with a basket of produce. Above the shelves, a friendly robot types at a desk on a cloud, sending checked-off pull request cards down to his phone like paper airplanes, while an inset shows his laptop closed and asleep on the kitchen table at home."
-title: "Devin Is Leading the Way"
+title: "Devin Feels Like the Future"
 ---
 
 To avoid burying the lede, Devin's approach to VM-based software engineering feels like how we'll all be working in the near future. While I've only tried a few, Devin is by far the best, based on their focus on UI and automations. My opinion comes from a few weeks of using it both at work and on my personal projects. But, I didn't always feel this way.
