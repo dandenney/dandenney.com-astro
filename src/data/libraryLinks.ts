@@ -10,6 +10,13 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "The era of personal software",
+    url: "https://jakub.kr/writing/the-era-of-personal-software",
+    description: "AI tools make it easy for anyone to build software tailored to their needs. The author created a health app that gathers and displays personal data. Such apps can be simple, useful, and made just for you.",
+    created: "2026-11-02",
+    kind: "read",
+  },
+  {
     title: "Making agents fast - what I've learnt over the last 12 months",
     url: "https://martinalderson.com/posts/making-agents-fast/",
     description: "Making agents faster takes more than choosing a faster AI model: prompts, tools, and system delays all matter. Measure where time is spent, then improve slow tools, add parallel work, and use suitable hardware. Small…",
