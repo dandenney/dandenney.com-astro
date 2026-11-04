@@ -900,6 +900,59 @@
         "input_tokens": 646,
         "output_tokens": 109
       }
+    },
+    "279": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-04T15:12:38.903Z",
+      "state": {
+        "date": "2026-11-04",
+        "sport": "NBA",
+        "matchup": "Hawks @ Wizards",
+        "pick": "Hawks Moneyline",
+        "odds": "-155",
+        "recentForm": "4/8"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.49
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "moneyline",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 1,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.44,
+          "confidence": 0.34,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.57,
+            "1": 0.42,
+            "2": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 640,
+        "output_tokens": 110
+      }
     }
   }
 }
