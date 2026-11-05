@@ -4312,7 +4312,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "4/8",
     matchup: "Hawks @ Wizards",
     propType: "moneyline",
-    result: "pending",
+    result: "win",
     portfolioAction: "watch",
     book: { name: "DraftKings", pick: "ATL Hawks Moneyline", odds: "-155" },
     gameTime: "2026-11-04T18:10:00-06:00",
