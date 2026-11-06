@@ -10,6 +10,20 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Create, direct, and share your own game.",
+    url: "https://wanaka.app/?ref=producthunt",
+    description: "Wanaka is an AI-powered studio for making 3D games, with no coding needed. Describe your idea, then create and customize characters, worlds, and gameplay. Publish your game and share a link so friends can play in their…",
+    created: "2026-11-05",
+    kind: "read",
+  },
+  {
+    title: "Voice is Underutilized",
+    url: "https://benjamincongdon.me/blog/2026/11/03/Voice-is-Underutilized/?utm_source=tldrnewsletter",
+    description: "Voice makes it easier to share thoughts with AI, save useful conversations, and get ideas written down. AI can also turn information into personal audio briefings and lessons. The author encourages using voice during…",
+    created: "2026-11-05",
+    kind: "read",
+  },
+  {
     title: "The era of personal software",
     url: "https://jakub.kr/writing/the-era-of-personal-software",
     description: "AI tools make it easy for anyone to build software tailored to their needs. The author created a health app that gathers and displays personal data. Such apps can be simple, useful, and made just for you.",
