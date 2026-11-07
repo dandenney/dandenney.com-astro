@@ -10,6 +10,55 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "How to Create Your Own Personal AI Benchmark",
+    url: "https://every.to/also-true-for-humans/how-to-create-your-own-personal-ai-benchmark?utm_source=chatgpt.com",
+    description: "To choose the best AI model for your work, build a personal benchmark with tasks you care about. Test models on these tasks, keep track of failures, and create clear rules to judge their work. As models improve, make…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "(1) Analytics has changed. Here's what to do about it",
+    url: "https://newsletter.posthog.com/p/analytics-changed?utm_source=email&redirect=app-store-no-desktop&inbox=true&utm_campaign=email-read-in-app&triedRedirect=true",
+    description: "Analytics now needs AI to spot issues, while humans guide it with clear goals. Teams should connect product data with costs and revenue to make smarter business decisions. They should also track how agents use their…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "CI was 100% green, but how did we know the game was playable?",
+    url: "https://nyc.aitinkerers.org/talks/rsvp_seZBKsSbINg?utm_source=chatgpt.com",
+    description: "The talk describes tools that help AI agents build and test a Snake game using CI checks. Sharing the checks early helped agents avoid pipeline failures. A second agent then played the successful build and recorded…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "Why Agents Are Soon Only Going to Have 1 Tool",
+    url: "https://www.philschmid.de/code-mode?utm_source=chatgpt.com",
+    description: "Agents are moving toward using one code-execution tool instead of many separate tools. With it, a model can combine actions, check results, and handle many calls in one script. This can save context and make complex…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "scenario-labs/skills",
+    url: "https://www.skills.sh/scenario-labs/skills",
+    description: "Scenario Labs offers tools for creating images, video, audio, 3D art, and social content. It helps teams plan projects, keep designs consistent, review assets, and prepare them for different platforms. It also supports…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "Devin Fusion: Frontier Performance at 60% Lower Cost†",
+    url: "https://cognition.com/blog/devin-fusion",
+    description: "Devin Fusion combines a powerful AI model with a cheaper helper model to handle coding tasks. Cognition says it matches leading performance while cutting costs by up to 60%. The system shifts work between models as…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "Any MCP tool your agents need. ‍Zero auth & connectivity plumbing.",
+    url: "https://www.scalekit.com/agentkit?utm_source=theneuron&_bhlid=596e0d229604f21dec3990a77db449ea06324ac4",
+    description: "The service gives agents access to over 30,000 tools across 600+ connectors, with authentication handled for you. Choose only the tools each agent needs to save tokens and improve results. Developers can focus on agent…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
     title: "Create, direct, and share your own game.",
     url: "https://wanaka.app/?ref=producthunt",
     description: "Wanaka is an AI-powered studio for making 3D games, with no coding needed. Describe your idea, then create and customize characters, worlds, and gameplay. Publish your game and share a link so friends can play in their…",
