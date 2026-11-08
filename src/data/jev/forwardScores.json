@@ -1218,6 +1218,112 @@
         "input_tokens": 647,
         "output_tokens": 109
       }
+    },
+    "285": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-08T15:17:33.583Z",
+      "state": {
+        "date": "2026-11-08",
+        "sport": "NFL",
+        "matchup": "@ Patriots",
+        "pick": "Josh Jacobs Under 3.5 Receptions",
+        "odds": "-120",
+        "recentForm": "0/2"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.27,
+          "confidence": 0.6,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.76,
+            "1": 0.21,
+            "2": 0.03
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 109
+      }
+    },
+    "286": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-08T15:17:33.697Z",
+      "state": {
+        "date": "2026-11-08",
+        "sport": "NFL",
+        "matchup": "@ Chargers",
+        "pick": "Woody Marks Under 2.5 Receptions",
+        "odds": "-169",
+        "recentForm": "5/7"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.61
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.43
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.66,
+          "confidence": 0.29,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.4,
+            "1": 0.53,
+            "2": 0.07
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 109
+      }
     }
   }
 }
