@@ -10,6 +10,13 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Reverse engineer how any company grows",
+    url: "https://treg.to/rea-growth",
+    description: "Lovable grew by combining ads, SEO, and social media buzz. It also added affiliate rewards and a “Made with Lovable” badge to apps. The report shows how to trace a company’s growth using data.",
+    created: "2026-11-08",
+    kind: "read",
+  },
+  {
     title: "Worth building",
     url: "https://armstr.ng/writing/worth-building?ref=sidebar",
     description: "AI tools make it quick and cheap to build useful apps for personal needs. The author made a simple domain lookup tool without needing to sell anything. A project can be worth building even if only one person uses it.",
