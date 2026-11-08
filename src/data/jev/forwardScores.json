@@ -1324,6 +1324,112 @@
         "input_tokens": 644,
         "output_tokens": 109
       }
+    },
+    "287": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-08T22:28:23.561Z",
+      "state": {
+        "date": "2026-11-08",
+        "sport": "NFL",
+        "matchup": "vs Buccaneers",
+        "pick": "Luther Burden III Under 2.5 Rushing Yards",
+        "odds": "-101",
+        "recentForm": "5/8"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.66
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.37
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.6,
+          "confidence": 0.26,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.44,
+            "1": 0.51,
+            "2": 0.05
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 652,
+        "output_tokens": 109
+      }
+    },
+    "288": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-08T22:28:23.654Z",
+      "state": {
+        "date": "2026-11-08",
+        "sport": "NFL",
+        "matchup": "vs Buccaneers",
+        "pick": "Colston Loveland Under 5.5 Receptions",
+        "odds": "-123",
+        "recentForm": "4/8"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.58
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.37
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.67,
+          "confidence": 0.32,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.39,
+            "1": 0.55,
+            "2": 0.06
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 648,
+        "output_tokens": 109
+      }
     }
   }
 }
