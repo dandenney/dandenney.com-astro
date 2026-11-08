@@ -84,6 +84,7 @@ export const rounds: Round[] = [
     venueSlug: "harpeth-valley-golf-center",
     format: "stroke",
     holesPlayed: 9,
+    tees: "Red",
     par: 27,
     score: 56,
     holes: [5, 6, 6, 7, 5, 7, 7, 7, 6],
