@@ -10,6 +10,48 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Worth building",
+    url: "https://armstr.ng/writing/worth-building?ref=sidebar",
+    description: "AI tools make it quick and cheap to build useful apps for personal needs. The author made a simple domain lookup tool without needing to sell anything. A project can be worth building even if only one person uses it.",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "How to Reverse Engineer Anything with Opus 5.5",
+    url: "https://www.simplifyingai.co/p/how-to-reverse-engineer-anything-with-opus-5-5",
+    description: "REA helps coding agents trace how software features work and show supporting evidence. The guide demonstrates testing a JavaScript app, checking predictions, and writing a plain-language spec. Inspect only software…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "The October inflection point for vibe game development",
+    url: "https://simonwillison.net/2026/Oct/28/vibe-game-development/?utm_source=chatgpt.com",
+    description: "AI models can now create fun games with little guidance. The author says game development is becoming easier, though good ideas and playtesting still matter. He encourages people to use AI tools to make unusual games…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "Cloudflare Computer now helps agents recover from interruptions and wait for approval",
+    url: "https://developers.cloudflare.com/changelog/post/2026-10-26-computer-durable-javascript/?utm_source=chatgpt.com",
+    description: "Cloudflare Computer can now resume agent code after a crash or deploy. Agents can also pause and wait for approval before taking actions. Once approved, they continue where they left off.",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "A select should tell you something",
+    url: "https://alfy.blog/2026/10/27/a-select-should-tell-you-something.html?utm_source=chatgpt.com",
+    description: "Customizable select menus can show useful details, previews, and warnings inside each option. This helps people compare choices and choose with confidence. They keep standard form behavior, but option text should still…",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
+    title: "A team of AI employees, with you in charge.",
+    url: "https://suparagent.ai/",
+    description: "Suparagent lets you create AI employees for tasks like research, planning, and coding. You choose their tools and instructions, then review their work. Start with your own AI account and sandbox.",
+    created: "2026-11-07",
+    kind: "read",
+  },
+  {
     title: "How to Create Your Own Personal AI Benchmark",
     url: "https://every.to/also-true-for-humans/how-to-create-your-own-personal-ai-benchmark?utm_source=chatgpt.com",
     description: "To choose the best AI model for your work, build a personal benchmark with tasks you care about. Test models on these tasks, keep track of failures, and create clear rules to judge their work. As models improve, make…",
