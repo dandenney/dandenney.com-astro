@@ -18,4 +18,13 @@ import type { BagItem } from "@/data/golf/types";
  *   why: "Fitted at GOLFTEC after the assessment.",
  * }
  */
-export const bag: BagItem[] = [];
+export const bag: BagItem[] = [
+  {
+    id: "ball-vice-royal-gold",
+    category: "ball",
+    brand: "Vice",
+    model: "Royal Gold",
+    why: "Nicknamed Kobe. Purple and gold.",
+    verdict: "Made it through all nine holes at Harpeth Valley without getting lost.",
+  },
+];
