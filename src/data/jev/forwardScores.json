@@ -1642,6 +1642,218 @@
         "input_tokens": 643,
         "output_tokens": 109
       }
+    },
+    "293": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-09T20:48:47.423Z",
+      "state": {
+        "date": "2026-11-09",
+        "sport": "NBA",
+        "matchup": "@ Rockets",
+        "pick": "DeMar DeRozan Under 2.5 Assists",
+        "odds": "-121",
+        "recentForm": "3/7"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.56
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.37
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.58,
+          "confidence": 0.26,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.46,
+            "1": 0.51,
+            "2": 0.03
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 109
+      }
+    },
+    "294": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-09T20:48:47.532Z",
+      "state": {
+        "date": "2026-11-09",
+        "sport": "NBA",
+        "matchup": "vs Cavaliers",
+        "pick": "Coby White Under 3.5 Assists",
+        "odds": "-106",
+        "recentForm": "3/3"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.59
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.73,
+          "confidence": 0.17,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.41,
+            "1": 0.45,
+            "2": 0.14
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 643,
+        "output_tokens": 109
+      }
+    },
+    "295": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-09T20:48:47.673Z",
+      "state": {
+        "date": "2026-11-09",
+        "sport": "NBA",
+        "matchup": "@ Mavericks",
+        "pick": "Kelly Oubre Jr. Over 7.5 Points",
+        "odds": "-124",
+        "recentForm": "5/8"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.59
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.61
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_over",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 1,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.89,
+          "confidence": 0.6,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.19,
+            "1": 0.73,
+            "2": 0.08
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 109
+      }
+    },
+    "296": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-09T20:48:47.784Z",
+      "state": {
+        "date": "2026-11-09",
+        "sport": "NBA",
+        "matchup": "vs Spurs",
+        "pick": "Jalen Green Over 1.5 3-Pointers",
+        "odds": "-114",
+        "recentForm": "2/8"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.42
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_over",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 1,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.2,
+          "confidence": 0.7,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.81,
+            "1": 0.18,
+            "2": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 646,
+        "output_tokens": 109
+      }
     }
   }
 }
