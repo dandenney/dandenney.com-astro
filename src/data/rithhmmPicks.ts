@@ -4463,7 +4463,7 @@ export const rithhmmPicks: RithhmmPick[] = [
     recentForm: "5/7",
     matchup: "@ Chargers",
     propType: "receptions-under",
-    result: "pending",
+    result: "win",
     portfolioAction: "skip",
     passReason: "outside-price-cutoff",
     book: { name: "DraftKings", pick: "Woody Marks Receptions O/U Under 2.5", odds: "-169" },
