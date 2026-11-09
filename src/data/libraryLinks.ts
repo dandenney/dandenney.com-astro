@@ -10,6 +10,13 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Pick three",
+    url: "https://buzzusborne.com/writing/pick-three/?ref=sidebar",
+    description: "AI makes it possible to create good work quickly and cheaply, but it also leads teams to take on more work. Rapid changes can make products confusing and force people to work longer to keep everything connected. Teams…",
+    created: "2026-11-08",
+    kind: "read",
+  },
+  {
     title: "Reverse engineer how any company grows",
     url: "https://treg.to/rea-growth",
     description: "Lovable grew by combining ads, SEO, and social media buzz. It also added affiliate rewards and a “Made with Lovable” badge to apps. The report shows how to trace a company’s growth using data.",
