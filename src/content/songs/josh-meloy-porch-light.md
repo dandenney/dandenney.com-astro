@@ -13,11 +13,11 @@ pubDate: "2026-11-11"
 tags: ["josh-meloy", "red-dirt", "country", "country-rock", "2022"]
 pipeline: "lately"
 sources:
-  - title: "rollingstone.com"
+  - title: "Rolling Stone: Josh Meloy Is a Rising Red Dirt Country Star. He'd Rather Play Basketball"
     url: "https://www.rollingstone.com/music/music-features/josh-meloy-porch-light-red-dirt-basketball-1235278834/"
-  - title: "raisedrowdy.com"
+  - title: "raisedrowdy.com: Get to know Josh Meloy: Songwriter of Washington Street"
     url: "https://www.raisedrowdy.com/2021/03/10/get-to-know-josh-meloy-songwriter-of-washington-street/"
-  - title: "thebluenote.com"
+  - title: "The Blue Note: Josh Meloy"
     url: "https://thebluenote.com/event/josh-meloy/"
 aiGenerated: true
 ---

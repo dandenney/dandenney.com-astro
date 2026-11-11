@@ -15,15 +15,15 @@ pipeline: "lately"
 sources:
   - title: "northerntransmissions.com"
     url: "https://northerntransmissions.com/hey-nothing-announce-new-album-hound-and-new-tour-dates/"
-  - title: "consequence.net"
+  - title: "Consequence: hey, nothing Announce Debut Album Hound, Share Poignant \"Arteries\" and Fall North American Tour Dates"
     url: "https://consequence.net/2026/06/hey-nothing-hound-arteries/"
   - title: "altpress.com"
     url: "https://www.altpress.com/hey-nothing-arteries-video-watch/"
-  - title: "hivemagazine.net"
+  - title: "HIVE: HEY, NOTHING — ‘HOUND’"
     url: "https://www.hivemagazine.net/music-reviews/hey-nothing-hound"
   - title: "qromag.com"
     url: "https://qromag.com/hey-nothing-hound/"
-  - title: "broadwayworld.com"
+  - title: "BroadwayWorld.com: HEY, NOTHING Release Major Label Debut Album HOUND"
     url: "https://www.broadwayworld.com/bwwmusic/article/HEY-NOTHING-Release-Major-Label-Debut-Album-HOUND-20260821"
 aiGenerated: true
 ---

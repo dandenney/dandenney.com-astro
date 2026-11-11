@@ -13,17 +13,15 @@ pubDate: "2025-11-19"
 tags: ["white-reaper", "garage-punk", "power-pop", "indie-rock", "2019"]
 pipeline: "lately"
 sources:
-  - title: "en.wikipedia.org"
+  - title: "Wikipedia: Might Be Right"
     url: "https://en.wikipedia.org/wiki/Might_Be_Right"
-  - title: "exclaim.ca"
+  - title: "Exclaim!: White Reaper Return with New Album 'You Deserve Love'"
     url: "https://exclaim.ca/music/article/white_reaper_return_with_new_album_you_deserve_love"
-  - title: "billboard.com"
+  - title: "Billboard: White Reaper's 'You Deserve Love' Album Breakdown"
     url: "https://billboard.com/articles/columns/rock/8533321/white-reaper-you-deserve-love-album-breakdown"
-  - title: "billboard.com"
-    url: "https://www.billboard.com/music/rock/white-reaper-you-deserve-love-album-breakdown-8533321/"
-  - title: "thecurrent.org"
+  - title: "thecurrent.org: White Reaper bring their unwavering rock sound to The Current"
     url: "https://www.thecurrent.org/feature/2019/10/12/white-reaper-you-deserve-love-might-be-right-studio-session"
-  - title: "en.wikipedia.org"
+  - title: "Wikipedia: White Reaper"
     url: "https://en.wikipedia.org/wiki/White_Reaper"
 aiGenerated: true
 ---
