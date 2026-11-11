@@ -1,9 +1,15 @@
 import type { CollectionEntry } from "astro:content";
+import aliases from "@/data/lately/aliases.json";
 import playlist from "@/data/lately/playlist.json";
 
 export type LatelySong = CollectionEntry<"songs"> & { addedAt: string | null };
 
 const addedAtById = new Map(playlist.tracks.map((track) => [track.id, track.addedAt]));
+// A review keeps its original Spotify ID when Lately holds another release of the same song.
+for (const [playlistId, reviewId] of Object.entries(aliases as Record<string, string>)) {
+  const addedAt = addedAtById.get(playlistId);
+  if (addedAt && !addedAtById.has(reviewId)) addedAtById.set(reviewId, addedAt);
+}
 
 export const latelySyncedAt = playlist.syncedAt;
 

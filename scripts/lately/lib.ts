@@ -5,6 +5,7 @@ export const PLAYLIST_ID = "0bscM0iqnWBVzY9xMCHc4y";
 export const SONGS_DIR = "src/content/songs";
 export const LATELY_FILE = "src/data/lately/playlist.json";
 export const HELD_FILE = "src/data/lately/held.json";
+export const ALIASES_FILE = "src/data/lately/aliases.json";
 export const EVIDENCE_DIR = "src/data/lately/evidence";
 
 export const WRITER_MODEL = process.env.LATELY_WRITER_MODEL || "claude-opus-5-5";
