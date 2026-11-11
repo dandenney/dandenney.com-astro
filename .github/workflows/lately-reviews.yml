@@ -50,6 +50,7 @@ jobs:
             git checkout -B "$BRANCH" "origin/$BRANCH"
           else
             git checkout -B "$BRANCH"
+            echo "FRESH_BRANCH=1" >> "$GITHUB_ENV"
           fi
 
       - name: Setup Node.js
@@ -84,7 +85,8 @@ jobs:
             exit 0
           fi
           git commit -m "feat(songs): lately reviews $(date -u '+%Y-%m-%d')"
-          git push origin "$BRANCH"
+          # A merged PR can leave a stale branch behind; a fresh run replaces it.
+          git push ${FRESH_BRANCH:+--force} origin "$BRANCH"
           summary="$(cat "$LATELY_SUMMARY_FILE" 2>/dev/null || echo 'Playlist sync only.')"
           if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')" ]; then
             gh pr comment "$BRANCH" --body "$summary"
