@@ -1,0 +1,195 @@
+{
+  "spotifyId": "3y5w392OGw6vDo7zAo5sP2",
+  "reviewedAt": "2026-11-11T20:19:39.646Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8524855"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady, arpeggiated pattern with a clean, bright tone. A bass guitar plays a simple, root-note-driven line. Drums provide a consistent, mid-tempo beat with a prominent snare and kick.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and relaxed, with a slight forward momentum.\n\nVocals:\nA male voice sings in a mid-range, with a clear, slightly raspy character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sound is neutral. The texture is clean and well-defined. The production is polished.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt. The acoustic guitar, bass, and drums maintain their consistent patterns throughout. The vocals enter immediately and continue without interruption. No instruments drop out or build within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady, arpeggiated pattern with a clean tone. A bass guitar plays a simple, root-note-driven line. Drums provide a consistent, mid-tempo beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and relaxed, with a slight swing feel.\n\nVocals:\nA male voice sings in a mid-range, with a clear, slightly raspy character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sound is dry. The texture is clean and clear. The production is polished.\n\nArrangement:\nAll instruments are present from the beginning. The vocals enter immediately. No instruments drop out or build within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady, arpeggiated pattern. A bass guitar plays a simple, root-note-driven line. Drums provide a consistent, mid-tempo beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and slightly melancholic, driven by the consistent guitar arpeggios and drum beat.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is straightforward and unadorned, with a slight vibrato at the end of some phrases. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined. The room sound is neutral, suggesting a dry recording environment. The texture is polished, with instruments clearly separated in the mix.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt and remain consistent throughout. There are no notable entries, drop-outs, or builds within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"There's Something Dark\" is track 4 of 10 on Dustin Kensrue's album Carry the Fire.",
+        "source": "https://www.amazon.com/Carry-Fire-Dustin-Kensrue/dp/B00TL6QU1M"
+      },
+      {
+        "claim": "Carry the Fire was released on April 21, 2015 on Staple Records/Vagrant Records.",
+        "source": "https://www.amazon.com/Carry-Fire-Dustin-Kensrue/dp/B00TL6QU1M"
+      },
+      {
+        "claim": "The track runs 3:14.",
+        "source": "https://www.deezer.com/us/track/137284328"
+      },
+      {
+        "claim": "Dustin Kensrue is credited as the writer of the song's lyrics and music.",
+        "source": "https://lyricstranslate.com/en/dustin-kensrue-theres-something-dark-lyrics.html"
+      },
+      {
+        "claim": "Discogs credits Kensrue as producer, engineer, music writer and lyricist of Carry the Fire, with Brian Eichelberger as mixer.",
+        "source": "https://www.discogs.com/release/6956023-Dustin-Kensrue-Carry-The-Fire"
+      },
+      {
+        "claim": "Carry the Fire was self-produced, mixed by Brian Eichelberger and mastered by Howie Weinberg.",
+        "source": "http://diymag.com/2015/01/30/dustin-kensrue-confirms-new-album-carry-the-fire"
+      },
+      {
+        "claim": "Kensrue's website describes the album as a study in contrasts: light and darkness, flame and flood, true love and senseless hatred. It asks what it means to 'carry the fire' when no light or warmth seems to be left.",
+        "source": "http://diymag.com/2015/01/30/dustin-kensrue-confirms-new-album-carry-the-fire"
+      },
+      {
+        "claim": "Carry the Fire is the long-awaited follow-up to Kensrue's 2007 solo debut, Please Come Home.",
+        "source": "https://www.amazon.com/Carry-Fire-Dustin-Kensrue/dp/B00TL6QU1M"
+      },
+      {
+        "claim": "Kensrue is best known as the frontman of the heavy rock band Thrice. One review called this song a cliché acoustic number, praising its lyrics and intent but criticizing the hook.",
+        "source": "https://www.indievisionmusic.com/reviews/carry-the-fire-dustin-kensrue/"
+      },
+      {
+        "claim": "Kensrue told interviewers that songs like \"Carry the Fire\" and \"Gallows\" could work as Thrice songs, so the line between solo and Thrice material is blurrier on this record.",
+        "source": "https://beardedgentlemenmusic.com/2015/04/21/interview-with-dustin-kensrue/"
+      }
+    ],
+    "lineage": "The song sits in Kensrue's solo singer-songwriter work, which grew out of his role as Thrice frontman. It is an acoustic-leaning track about inner darkness on an album that critics and the artist describe as closer to Thrice's aesthetic than his earlier solo records.",
+    "genres": [
+      "rock",
+      "singer-songwriter",
+      "indie rock"
+    ]
+  },
+  "draft": "\"Still I'm gilded and groomed, gliding into the room.\" That line is the hinge of **There's Something Dark**, and it's what lifts the song above a plain confession. Dustin Kensrue isn't only saying he has a darkness. He's admitting he's good at hiding it. The narrator walks in polished, \"saying such bold and beautiful things,\" while the title refrain comes back again and again underneath like a pulse he can't quiet. The feeling is shame mixed with skill: the knowledge that the performance works, and that it working makes things worse.\n\nThe arrangement mirrors that composure. An acoustic guitar picks a steady, clean arpeggio. The bass sits on root notes. The drums hold a mid-tempo beat with kick, snare and hi-hat, never pushing. Kensrue's voice is clear and mid-range with a little rasp at the edges, sung in long, melodic lines with no harmony to lean on. The production is dry and polished, every instrument in its own space. Nothing in the playing sounds frantic, which means the turmoil lives almost entirely in the words. That tension is the point. The song is as well-groomed as its narrator.\n\nThe lyric moves through moods that don't settle. The imagery of a \"ghost in this machine,\" a jagged hole, old roots twisting through the soul, describes something that feels both intimate and alien, part of him and also against him. Then the third verse turns hard: \"I will see you in hell.\" It's the most unsettling line here, a flash of defiance aimed at the person who was \"meant to find\" his secrets. Hurt, threat and exposure sit right next to each other. The final verse drops the bravado for a plain plea: \"Is there anyway you could save someone like me?\" He calls out a name, and the one he calls seems far away. The song never says whether help arrives.\n\nKensrue is best known as the frontman of Thrice, and he self-produced *Carry the Fire*, his long-awaited follow-up to 2007's *Please Come Home*, with Brian Eichelberger mixing and Howie Weinberg mastering. He described the album as a study in contrasts, light against darkness, asking what it means to carry the fire when no warmth seems left. This fourth track is the darkness half of that argument stated plainly. One review at the time called it a clichéd acoustic number, praising the lyrics and intent but not the hook. That's fair: the refrain is blunt. But the bluntness fits a narrator who has run out of clever ways to say it.\n\nThe song lets you sit inside someone who can charm a room while privately asking to be rescued, and it makes that split feel uncomfortably familiar.",
+  "factCheck": [
+    {
+      "claim": "\"Still I'm gilded and groomed, gliding into the room.\" quoted line",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "\"saying such bold and beautiful things\" quote",
+      "verdict": "supported",
+      "note": "Matches the lyrics (capitalization aside)."
+    },
+    {
+      "claim": "The title refrain comes back again and again underneath like a pulse",
+      "verdict": "corrected",
+      "note": "The refrain does recur in the lyrics. \"Underneath\" implied a sound layering the notes don't describe, so it now says it returns."
+    },
+    {
+      "claim": "\"ghost in this machine\", a jagged hole, old roots twisting through the soul",
+      "verdict": "supported",
+      "note": "All images appear in the lyrics."
+    },
+    {
+      "claim": "Acoustic guitar picks a steady, clean arpeggio; bass on root notes; mid-tempo drums with kick, snare and hi-hat",
+      "verdict": "supported",
+      "note": "Agreed by at least two passes."
+    },
+    {
+      "claim": "Drums never pushing",
+      "verdict": "removed",
+      "note": "Pass 1 mentions slight forward momentum, so this is not backed. Replaced with \"steady\"."
+    },
+    {
+      "claim": "Voice is clear, mid-range, with a little rasp, in long melodic lines with no harmony",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on the rasp. All three agree on clear, mid-range, melodic and no harmonies."
+    },
+    {
+      "claim": "Production is dry and polished, every instrument in its own space",
+      "verdict": "supported",
+      "note": "All three passes call it polished. Dry or neutral room sound, and clean, well-separated instruments, are consistent across passes."
+    },
+    {
+      "claim": "\"Then the third verse turns hard: 'I will see you in hell.'\"",
+      "verdict": "corrected",
+      "note": "The quote is exact, but the lyrics don't label verse numbers, so the ordinal was dropped."
+    },
+    {
+      "claim": "\"meant to find\" secrets quote",
+      "verdict": "supported",
+      "note": "Matches \"Secrets that you were meant to find.\""
+    },
+    {
+      "claim": "\"The final verse drops the bravado for a plain plea: 'Is there anyway you could save someone like me?'\"",
+      "verdict": "corrected",
+      "note": "The quote is exact. \"Final verse\" was changed to a position in the lyric's order that the text itself shows."
+    },
+    {
+      "claim": "He calls out a name and the one he calls seems far away",
+      "verdict": "supported",
+      "note": "Lyrics: \"So I call out your name. But you seem so far away.\""
+    },
+    {
+      "claim": "Kensrue is best known as the frontman of Thrice",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Self-produced Carry the Fire, long-awaited follow-up to 2007's Please Come Home, mixed by Brian Eichelberger, mastered by Howie Weinberg",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "He described the album as a study in contrasts, light against darkness, asking what it means to carry the fire",
+      "verdict": "corrected",
+      "note": "The description comes from Kensrue's website, not a personal statement, so the attribution was adjusted."
+    },
+    {
+      "claim": "This is the fourth track",
+      "verdict": "supported",
+      "note": "Track 4 of 10."
+    },
+    {
+      "claim": "One review at the time called it a clichéd acoustic number, praising lyrics and intent but not the hook",
+      "verdict": "corrected",
+      "note": "The review is supported, but \"at the time\" is not, so it was removed."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1755,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014101,
+        "detail": "1102 in / 163 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015101,
+        "detail": "1102 in / 203 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014651,
+        "detail": "1102 in / 185 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.07668,
+        "detail": "20055 in / 1657 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051292,
+        "detail": "3578 in / 1849 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04311,
+        "detail": "4740 in / 3363 out"
+      }
+    ]
+  }
+}

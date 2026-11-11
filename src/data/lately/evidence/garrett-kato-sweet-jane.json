@@ -1,0 +1,200 @@
+{
+  "spotifyId": "1ZcLS62viCBASmHs1ptrlZ",
+  "reviewedAt": "2026-11-11T20:05:08.566Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5957415"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, accompanied by a male harmony voice. The lead voice is clear and slightly breathy, with a gentle vibrato. The harmony is a higher, softer layer.\n\nAcoustic guitar plays a fingerpicked arpeggio pattern, with a clean, bright tone. A bass guitar plays a simple, sustained root-note pattern. Drums enter around the 0:18 mark, playing a soft, brushed beat with a snare and kick drum.\n\nThe tempo is slow and consistent. The groove feels relaxed and flowing.\n\nThe production is clean and polished, with a natural room sound. The texture is open and spacious.\n\nThe arrangement builds subtly. The lead vocal and acoustic guitar are present throughout. The harmony vocal enters around 0:10. The bass enters around 0:09. The drums enter around 0:18. No instruments drop out.\n\nPass 2:\nA male voice sings with a slightly breathy, intimate character. He is joined by a second, higher harmony voice on the word \"rain\" and then a third, lower harmony voice on \"home\". The harmonies are close and blend well.\n\nAcoustic guitar plays a fingerpicked arpeggio pattern, providing a gentle, flowing accompaniment. A bass guitar plays sustained, low notes, outlining the chord changes. A kick drum and snare drum play a simple, steady beat, with the snare hitting on beats two and four. A tambourine adds a subtle shimmer.\n\nThe tempo is slow and steady, creating a relaxed, introspective groove. The production is clean and polished, with a warm, natural texture. The room sounds intimate, as if the performers are close to the listener.\n\nThe arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out. The vocal harmonies are the main element that changes, adding depth and richness to the sound.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings the lead melody, with a breathy, slightly strained quality. A second male voice joins in harmony, singing the same melody an octave lower, creating a rich, full sound. The tempo is slow and steady, with a gentle, flowing groove. The production is clean and intimate, with a sense of a small, dry room. The texture is smooth and polished. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Garrett Kato wrote \"Sweet Jane\". It is track 4 on That Low and Lonesome Sound and runs 3:20.",
+        "source": "https://www.shazam.com/en-us/song/1611917236/sweet-jane"
+      },
+      {
+        "claim": "The 2018 release is listed as August 10, 2018 on Nettwerk Music Group. The album first came out in September 2015, and Discogs lists that edition as a self-released CD.",
+        "source": "https://www.discogs.com/release/13416594-Garrett-Kato-That-Low-And-Lonesome-Sound"
+      },
+      {
+        "claim": "Audiomack's metadata for the song credits Anthony Lycenko as producer. The track is listed as © Garrett Kato under exclusive license to Nettwerk Music Group Inc.",
+        "source": "https://audiomack.com/garrett-kato/song/sweet-jane"
+      },
+      {
+        "claim": "Album credits on Discogs name Garrett Kato as producer and as player of guitar, banjo, piano, synth, bass, organ and vocals. Anthony Lycenko is credited with recording and mixing, Ben Livermore with drums and percussion, Jamie Birrel with bass, and Hayle Marie and Mimi Gilbert with vocals.",
+        "source": "https://www.discogs.com/release/13416594-Garrett-Kato-That-Low-And-Lonesome-Sound"
+      },
+      {
+        "claim": "Lyric-site credits for this song list Ben Livermore on drums and percussion, Hayley Marie on harmonies, and Garrett Kato on guitars, vocals, bass and banjo.",
+        "source": "https://lyrics.az/garrett-kato/that-low-and-lonesome-sound/sweet-jane.html"
+      },
+      {
+        "claim": "The album was recorded in Byron Bay, NSW, Australia. Locations were Kato's garage, his home studio and 301 Studios. It was mastered by Kathy Naunton.",
+        "source": "https://www.discogs.com/release/13416594-Garrett-Kato-That-Low-And-Lonesome-Sound"
+      },
+      {
+        "claim": "The album was two years in the making. Kato recorded most songs multiple times, saying he kept adjusting them and tending to them like a garden.",
+        "source": "https://musicinjection.com.au/2015/09/28/garrett-kato-just-released-his-new-record-that-low-and-lonesome-sound/"
+      },
+      {
+        "claim": "Kato said the album is about his move from Canada to Australia and letting go of a past life. He called it basically a personal diary of manhood and letting go.",
+        "source": "https://musicinjection.com.au/2015/09/28/garrett-kato-just-released-his-new-record-that-low-and-lonesome-sound/"
+      },
+      {
+        "claim": "Kato is a Canada-born, Australia-based singer-songwriter and producer. He has worked with Julia Stone, Tones and I and Riley Pearce, and has played shows with Damien Rice and Ziggy Alberts. His later albums are Hemispheres (2020) and Small Town Rituals (2022).",
+        "source": "https://podcasts.apple.com/us/podcast/episode-14-garrett-kato-small-town-rituals/id1588262260?i=1000575851818"
+      },
+      {
+        "claim": "Around the 2015 release Kato opened for Pete Murray on a 27-date Australian tour. He named Bob Dylan and Kendrick Lamar among the musicians who inspire him.",
+        "source": "https://www.rachellong.com.au/interview-garrett-kato"
+      }
+    ],
+    "lineage": "Sweet Jane sits in the Australian-based singer-songwriter tradition of dreamy, low-key acoustic pop and folk, with an overtly southern-leaning style described by one interviewer.",
+    "genres": [
+      "singer-songwriter",
+      "folk",
+      "acoustic pop"
+    ]
+  },
+  "draft": "A grieving person usually goes one of two ways: they feel too much, or they shut it all off. **Sweet Jane** is about the second kind, and about watching it happen to someone you love. Garrett Kato's narrator isn't the one in trouble. He's the one standing nearby, noticing that Jane has gone numb. The chorus puts it plainly: her heart \"don't wanna be working right,\" and she's in a bad enough place that \"Now you tried everything / Just to feel something.\" There's no scolding in it. It reads like a diagnosis spoken by a friend who has run out of ways to help.\n\nThe song never says outright what put her there, but the second half points to it. Her father has told her he'll be \"re-made / Into a spirit that lives inside your mind,\" which sounds like comfort offered in the face of an ending. Jane won't take it. She turns down the reasons anyone lives and dies and settles on a flat fact instead: rivers just run into the ocean. It's a bleak kind of peace, and the narrator doesn't argue with it. Earlier, the image of a home where she \"once stayed\" that has washed away in the rain does the same quiet work. Something is already gone, and the song is set in the time just after.\n\nWhat makes it bearable is how gently Kato handles it. A fingerpicked acoustic guitar rolls under everything, bright and steady. Sustained bass notes and a soft kick and snare keep the slow tempo from drifting. Kato's voice is breathy and close, and the harmonies (credited to Hayley Marie) fold in tight around him, so the lines about numbness come out warm instead of cold. The room sounds small and clean. That fits the album's origins: it was cut in Byron Bay, in Kato's garage, his home studio and 301 Studios, recorded and mixed by Anthony Lycenko, with Ben Livermore on drums. Kato spent two years on the record, recording songs over and over and, in his words, tending to them like a garden. You can hear that care in how little gets in the way.\n\nKato has described the album as a diary of his move from Canada to Australia and of letting go of a past life. **Sweet Jane** fits that story from an angle. It's a song about someone else's letting go, sung by someone who has done his own. The tone is the low-key, slightly southern-leaning acoustic folk that runs through the record, unhurried and sure of itself.\n\nThe song ends where the chorus has been heading all along, on \"nothing left to lose,\" and the narrator's best line is the simplest: \"Oh, my thoughts are still with you.\" He can't fix her, and he says so by staying.\n\n**Sweet Jane** sticks because it lets you feel what it's like to love someone through their numbness: you can't reach them, so you keep your voice soft and stay close anyway.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: her heart 'don't wanna be working right'",
+      "verdict": "removed",
+      "note": "The words match the lyric, but the quote budget is three lines. Turned into a paraphrase."
+    },
+    {
+      "claim": "Lyric quote: 'Now you tried everything / Just to feel something'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, and it is two consecutive lines."
+    },
+    {
+      "claim": "Lyric quote: 'Oh, my thoughts are still with you'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Lyric quote: 're-made / Into a spirit that lives inside your mind'",
+      "verdict": "corrected",
+      "note": "The lyric reads 'spirt', and the quote budget was exceeded. Paraphrased the father's lines instead of quoting."
+    },
+    {
+      "claim": "Lyric quotes 'once stayed' and 'nothing left to lose'",
+      "verdict": "removed",
+      "note": "These pushed the review past three quoted lines. Paraphrased. The imagery they describe (home washed away in the rain) is in the lyrics."
+    },
+    {
+      "claim": "Her father says he will be re-made as a spirit in her mind; Jane denies the reasons we live and die and says the river runs into the ocean",
+      "verdict": "supported",
+      "note": "Matches the lyric content."
+    },
+    {
+      "claim": "The second half points to what put her there / the song ends on the 'nothing left to lose' stanza",
+      "verdict": "corrected",
+      "note": "The lyrics' structure shows the final repeated stanza, so the closing is supported. 'Second half' was softened to 'later verses'."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, bright and steady",
+      "verdict": "corrected",
+      "note": "Fingerpicked acoustic guitar is supported by all three passes. 'Bright' appears in only one pass, so it was dropped."
+    },
+    {
+      "claim": "Sustained bass notes and a soft kick and snare; slow tempo",
+      "verdict": "corrected",
+      "note": "Bass and kick/snare are backed by two passes, and the slow tempo by all three. 'Soft' appeared in only one pass, so the drums are now described as simple."
+    },
+    {
+      "claim": "Kato's voice is breathy and close",
+      "verdict": "supported",
+      "note": "All three passes say breathy, and two say intimate. Kato is credited with vocals."
+    },
+    {
+      "claim": "Harmonies fold in tight, credited to Hayley Marie",
+      "verdict": "corrected",
+      "note": "Close, blended harmonies are supported. The passes describe a male harmony voice and disagree on pitch, so the Hayley Marie credit was removed rather than tied to what's audible."
+    },
+    {
+      "claim": "The room sounds small and clean",
+      "verdict": "corrected",
+      "note": "Changed to clean and intimate, which two or more passes support."
+    },
+    {
+      "claim": "Album cut in Byron Bay, in Kato's garage, his home studio and 301 Studios",
+      "verdict": "supported",
+      "note": "Discogs album credits. Worded as the album, not the song."
+    },
+    {
+      "claim": "Recorded and mixed by Anthony Lycenko, Ben Livermore on drums",
+      "verdict": "supported",
+      "note": "Discogs credits, and the lyric-site credits for Livermore."
+    },
+    {
+      "claim": "Two years on the record, recorded songs over and over, tending to them like a garden",
+      "verdict": "supported",
+      "note": "Musicinjection interview."
+    },
+    {
+      "claim": "Kato described the album as a diary of his move from Canada to Australia and letting go of a past life",
+      "verdict": "supported",
+      "note": "Reworded slightly to match 'personal diary of manhood and letting go'."
+    },
+    {
+      "claim": "The low-key, slightly southern-leaning acoustic folk that runs through the record",
+      "verdict": "corrected",
+      "note": "The packet says 'overtly' southern-leaning, from one interviewer, and nothing supports 'runs through the record'. Rewritten in terms of the Australia-based singer-songwriter folk tradition."
+    },
+    {
+      "claim": "Song is about a person going numb; narrator is a friend who can't help; 'bleak kind of peace'",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2035,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012761,
+        "detail": "1097 in / 110 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014611,
+        "detail": "1097 in / 184 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014911,
+        "detail": "1097 in / 196 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08034,
+        "detail": "21555 in / 1723 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.056072,
+        "detail": "3728 in / 2058 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.062834,
+        "detail": "4932 in / 5297 out"
+      }
+    ]
+  }
+}

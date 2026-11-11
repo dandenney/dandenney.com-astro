@@ -1,0 +1,195 @@
+{
+  "spotifyId": "7EkB5YHjZaOL9f3Wk3kiRw",
+  "reviewedAt": "2026-11-11T20:25:05.674Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30402228"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic lead line. Bass guitar plays a walking bassline. Drums play a driving beat with snare accents.\n\nTempo and Groove:\nMedium-fast tempo. The groove feels energetic and slightly raw, with a driving, almost punk-rock feel.\n\nVocals:\nA male voice sings with a slightly strained, mid-range character. The delivery is direct and earnest. No harmonies are present.\n\nProduction:\nThe sound is bright and somewhat dry, suggesting a close-miked recording. The texture is full but not overly polished, retaining a raw, live feel.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar lead line is prominent throughout. The vocals enter immediately and continue until the end of the excerpt. No instruments drop out or build significantly within this segment.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic lead line. Bass guitar plays a walking bass line. Drums play a driving beat with snare accents.\n\nTempo and Groove:\nMedium-fast tempo. The groove feels energetic and slightly raw, with a driving, rock-influenced feel.\n\nVocals:\nA male voice sings with a slightly raspy, mid-range character. The delivery is direct and earnest. There are no harmonies.\n\nProduction:\nThe sound feels like a live room recording, with a natural, unpolished texture. It's raw rather than highly produced.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar lead line is prominent throughout. The vocals enter and remain consistent. No instruments drop out or build significantly within this segment.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic lead line with a clean tone. Bass guitar plays a walking line. Drums play a driving beat with snare accents and cymbal crashes.\n\nTempo and Groove:\nMedium-fast tempo. The groove feels energetic and slightly upbeat, with a steady, driving rhythm.\n\nVocals:\nA male voice sings with a slightly raspy, clear character. The delivery is direct and earnest. There are no harmonies.\n\nProduction:\nThe sound is bright and clear, with a moderate amount of reverb giving a sense of space. The texture is full but not overly dense. It sounds polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The lead electric guitar plays a recurring melodic phrase. The vocals enter and remain present throughout. The drums maintain a consistent beat with occasional cymbal crashes. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Quitter\" was released on July 26, 2024 by Canadian singer-songwriter Cameron Whitcomb. It runs 2:41 and is licensed to Atlantic Recording Corporation.",
+        "source": "https://audiomack.com/cameronwhitcomb/song/quitter-4469260"
+      },
+      {
+        "claim": "Whitcomb co-wrote \"Quitter\" with Nolan Sipe, Ben Cottrill and David Schaeman, and Schaeman produced it.",
+        "source": "https://en.wikipedia.org/wiki/Quitter_(song)"
+      },
+      {
+        "claim": "Whitcomb wrote the song on a trip to Los Angeles to write with Sipe, Cottrill and Schaeman. He drew on his own experience overcoming addiction.",
+        "source": "https://en.wikipedia.org/wiki/Quitter_(song)"
+      },
+      {
+        "claim": "Lyrically the song is about addiction and sobriety. It covers the difficulty of making amends, fear that growing up means sobering up, and a person worth getting clean for.",
+        "source": "https://holler.country/lyrics/quitter-by-cameron-whitcomb-lyrics-and-meaning/"
+      },
+      {
+        "claim": "Whitcomb told Melodic Magazine that \"Quitter\" was probably one of the first songs he wrote about sobriety, and the point when sobriety really started to matter to him.",
+        "source": "https://www.melodicmag.com/features/interviews/cameron-whitcomb-on-music-sobriety-and-doing-what-he-loves/"
+      },
+      {
+        "claim": "Whitcomb got clean while living in his manager's cabin on a farm, writing songs in the morning and posting them in the afternoon. This is when labels started taking interest. The Aquarian described \"Quitter\" as an honest country-rock track about his journey to getting sober.",
+        "source": "https://www.theaquarian.com/2025/03/21/cameron-whitcomb-wont-quit/"
+      },
+      {
+        "claim": "\"Quitter\" is the title track of Whitcomb's 2024 debut EP. It has passed 45 million Spotify streams, gave him his first entry on Billboard's Canadian Hot 100, and is certified gold by Music Canada.",
+        "source": "https://www.melodicmag.com/features/interviews/cameron-whitcomb-on-music-sobriety-and-doing-what-he-loves/"
+      },
+      {
+        "claim": "The song was later included on his debut studio album The Hard Way (Sept 26, 2025), where it is credited as written by Whitcomb, Sipe, Cottrill and Schaeman and produced by Schaeman. It sits between songs produced mostly by Jack Riley and Cal Shapiro.",
+        "source": "https://en.wikipedia.org/wiki/The_Hard_Way_(Cameron_Whitcomb_album)"
+      },
+      {
+        "claim": "Whitcomb was born in Peace River, Alberta, and raised in Nanaimo, British Columbia. He left home at 17 to work on a pipeline. He began drinking around age 12–13 and progressed to cocaine and meth. He got clean in a cabin on a Vancouver Island farm. He reached the Top 20 on American Idol season 20 in 2022.",
+        "source": "https://www.songfacts.com/facts/cameron-whitcomb"
+      },
+      {
+        "claim": "Whitcomb signed to Atlantic Records in early 2024. His Atlantic bio names Eminem and Hunter S. Thompson among his inspirations.",
+        "source": "https://press.atlanticrecords.com/sites/g/files/g2000014001/files/2026-03/FINAL_%20Cameron%20Whitcomb%20Bio%20-%20Sept%202025%20_0.pdf"
+      }
+    ],
+    "lineage": "The song sits in modern country and alt-country/folk-pop songwriting, a confessional sobriety narrative in the vein of Johnny Cash, and Whitcomb's lyrics also owe a debt to rap, particularly early Eminem.",
+    "genres": [
+      "country",
+      "alt-country",
+      "folk-pop"
+    ]
+  },
+  "draft": "The question at the center of **Quitter** is a dare turned inward. Cameron Whitcomb asks it again and again, \"Does that make me a quitter?\", and the word carries all the weight a certain kind of upbringing puts on it. Quitting is what weak people do. Except here the thing being quit is drinking and getting stoned, and the narrator is trying to decide whether walking away from a habit that nearly ate his life counts as failure or as the first grown-up thing he's done. The song never settles it. That's why it hurts.\n\nWhitcomb wrote it in Los Angeles with Nolan Sipe, Ben Cottrill and David Schaeman, drawing on his own fight with addiction, and Schaeman produced. Whitcomb has called it one of the first songs he wrote about sobriety, the point where staying clean started to matter. You can hear a man in the middle of that turn, not past it. The opening admits he misses being stoned. Nobody's selling redemption.\n\nThe chorus holds the sharpest writing. \"The hardest part of getting clean are all the damn apologies\" is a plain confession, and then comes the image that makes it stick: \"Paying tolls on bridges that I've burnt.\" Amends as a fee you owe at every crossing, again and again, on roads you wrecked yourself. The verses pack in internal rhymes, \"roses\" against \"lowest,\" \"growing up\" against \"sober up,\" a density that reflects Whitcomb's debt to early Eminem, which he names among his inspirations. The confession itself runs in an older line, the sober reckoning Johnny Cash made into a country tradition.\n\nThe sharpest emotional beat is pride and loneliness sharing one breath. He'd rather she hate him \"For who I am and not the man whose hands were shaky.\" He'd take her contempt if it was for the real him. Then a small, startling joy, a sunrise he finally stays awake for, sober, wishing she could see it. In the last chorus \"apologies\" becomes \"philosophies,\" all the advice about how recovery is supposed to work, and the question repeats five times, as if saying it enough might produce an answer.\n\nThe band plays it like a getaway. A strummed acoustic guitar and a walking bass push a medium-fast, driving beat with hard snare accents, and a clean electric lead line keeps circling a melodic phrase. Whitcomb sings alone, no harmonies, raspy and direct, and the take stays raw instead of buffed smooth. That loneliness in the vocal does half the lyric's work.\n\nYou keep coming back because it lets you feel what giving something up actually costs, the grief and the shame and the stubborn pride, all moving at a tempo that won't let you sit down.",
+  "factCheck": [
+    {
+      "claim": "Whitcomb repeats the line \"Does that make me a quitter?\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The thing being quit is drinking and getting stoned, and the narrator weighs whether quitting counts as failure or growing up",
+      "verdict": "supported",
+      "note": "Rests on the lyrics ('I miss being stoned', 'afraid of growing up 'cause that would mean to sober up'). This is interpretation."
+    },
+    {
+      "claim": "\"Quitting is what weak people do\" and \"the weight a certain kind of upbringing puts on it\"",
+      "verdict": "removed",
+      "note": "Speculation about upbringing with nothing in the packet behind it. Reworded to the word simply carrying weight."
+    },
+    {
+      "claim": "Whitcomb wrote it in Los Angeles with Nolan Sipe, Ben Cottrill and David Schaeman, drawing on his own fight with addiction; Schaeman produced",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Whitcomb has called it one of the first songs he wrote about sobriety, the point where staying clean started to matter",
+      "verdict": "corrected",
+      "note": "The source says 'probably one of the first'. Restored the hedge."
+    },
+    {
+      "claim": "The opening admits he misses being stoned",
+      "verdict": "supported",
+      "note": "'But I miss being stoned' comes in the first verse."
+    },
+    {
+      "claim": "\"The hardest part of getting clean are all the damn apologies\" and \"Paying tolls on bridges that I've burnt\"",
+      "verdict": "supported",
+      "note": "Exact lyric matches."
+    },
+    {
+      "claim": "The verses pack in internal rhymes, 'roses' against 'lowest', 'growing up' against 'sober up'",
+      "verdict": "corrected",
+      "note": "'Roses'/'lowest' are line-end rhymes, and 'growing up'/'sober up' sit in the chorus lines, not the verses. Reworded as rhymes."
+    },
+    {
+      "claim": "The rhyme density reflects Whitcomb's debt to early Eminem, whom he names among his inspirations",
+      "verdict": "corrected",
+      "note": "Eminem is listed among his inspirations, and the lineage note links his lyrics to rap. The causal claim is softened to a comparison, and 'which he names' becomes a plain statement of the inspiration."
+    },
+    {
+      "claim": "The sober reckoning Johnny Cash made into a country tradition",
+      "verdict": "corrected",
+      "note": "Only the lineage note's 'in the vein of Johnny Cash' is supported. The claim that Cash created a tradition is a genre-history claim with no support."
+    },
+    {
+      "claim": "He'd rather she hate him \"For who I am and not the man whose hands were shaky\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "A sunrise he finally stays awake for, sober, wishing she could see it",
+      "verdict": "corrected",
+      "note": "The lyric says he 'finally seen a sunrise' with 'curtains open'. 'Stays awake' and 'sober' are invented, so they were removed."
+    },
+    {
+      "claim": "In the last chorus 'apologies' becomes 'philosophies', and the question repeats five times",
+      "verdict": "supported",
+      "note": "The lyrics show the swap and five closing repeats."
+    },
+    {
+      "claim": "Strummed acoustic guitar and walking bass push a medium-fast, driving beat with snare accents",
+      "verdict": "supported",
+      "note": "All three passes agree. 'Hard' was dropped from 'hard snare accents' because the passes don't say it."
+    },
+    {
+      "claim": "A clean electric lead line keeps circling a melodic phrase",
+      "verdict": "corrected",
+      "note": "All three passes agree on a prominent melodic electric lead. 'Clean' and 'recurring phrase' come from only one pass, so both were removed."
+    },
+    {
+      "claim": "Sings alone, no harmonies, raspy and direct, raw rather than buffed smooth",
+      "verdict": "supported",
+      "note": "No harmonies and direct delivery are agreed by all passes; raspy by two; raw/unpolished by two."
+    },
+    {
+      "claim": "Interpretive lines: 'plays it like a getaway', the loneliness in the vocal, a tempo that won't let you sit down",
+      "verdict": "supported",
+      "note": "Critic's interpretation resting on supported sound details."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2666,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014214,
+        "detail": "1098 in / 168 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014789,
+        "detail": "1098 in / 191 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00061541,
+        "detail": "1098 in / 179 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15095799999999998,
+        "detail": "51894 in / 1717 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053836,
+        "detail": "4169 in / 1858 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.058312,
+        "detail": "5351 in / 4761 out"
+      }
+    ]
+  }
+}

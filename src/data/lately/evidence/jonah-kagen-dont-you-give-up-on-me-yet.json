@@ -1,0 +1,180 @@
+{
+  "spotifyId": "4I3KrxXAmYTWtUsK64sH18",
+  "reviewedAt": "2026-11-11T20:07:21.108Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/29814406"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: strummed, with a consistent rhythm.\nBass guitar: plays a simple, supportive line.\nDrums: kick, snare, and hi-hat, with a steady, driving beat.\n\nTempo and Groove:\nModerate tempo. The groove feels steady and driving, with a slight urgency.\n\nVocals:\nA single male voice, with a clear, slightly raspy character. The delivery is direct and earnest, with a melodic but not overly embellished style. No harmonies are present.\n\nProduction:\nThe sound is clean and well-defined, suggesting a polished studio recording. The texture is full but not dense. There's no obvious room sound.\n\nArrangement:\nThe excerpt begins with all instruments and vocals present. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.\n\nPass 2:\nA male voice sings in a clear, mid-range register, with a slightly raw, unpolished delivery. He sings the main melody, with no harmonies.\n\nAcoustic guitar plays a strummed rhythm, with a clean, bright tone. The strumming is consistent throughout the excerpt. A bass guitar plays a simple, foundational line, providing a low-end anchor. Drums enter with a kick and snare pattern, establishing a steady, mid-tempo groove. The hi-hat plays a consistent eighth-note pattern.\n\nThe tempo is moderate, with a relaxed, steady groove. The overall feel is acoustic and intimate, with a slightly raw production quality. The room sound is dry, with minimal reverb.\n\nThe arrangement is consistent throughout, with all instruments playing continuously. There are no significant changes in dynamics or instrumentation within the excerpt.\n\nPass 3:\nA male voice sings with a slightly raspy, mid-range tone, delivered with a sense of urgency. He is accompanied by a clean electric guitar playing arpeggiated chords, a bass guitar playing a walking line, and a drum kit with a steady beat on the hi-hat and snare. The tempo is moderate, creating a driving but not rushed groove.\n\nThe production is clear and polished, with a dry, intimate room sound. The texture is full but not dense. The arrangement builds slightly in intensity with the addition of a kick drum and more active guitar strumming, then drops back to a sparser arrangement with only the guitar, bass, and vocals. The vocals are mostly single-tracked, with no obvious harmonies.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Don't You Give Up On Me Yet\" is track 2 on Jonah Kagen's six-song Black Dress EP, released November 22, 2024 on Arista Records.",
+        "source": "https://music.amazon.com/albums/B0DLJ32XZY"
+      },
+      {
+        "claim": "Jonah Kagen is the credited composer of the song, and the track runs about 3:17.",
+        "source": "https://www.deezer.com/us/track/3067539311"
+      },
+      {
+        "claim": "Black Dress was recorded and produced by Kagen himself while he travelled in his Airstream trailer.",
+        "source": "https://fabukmagazine.com/jonah-kagen-shares-his-soul-stirring-black-dress-ep/"
+      },
+      {
+        "claim": "Kagen says he wrote the song entirely from a perspective of desperation, and that the title line is someone begging another person not to give up on them.",
+        "source": "https://www.melodicmag.com/interviews/jonah-kagen-describes-black-dress-recording-in-his-airstream-and-his-goals-for-2025/"
+      },
+      {
+        "claim": "Kagen said the lead vocal took about three takes, and he sang it all the way through.",
+        "source": "https://www.melodicmag.com/interviews/jonah-kagen-describes-black-dress-recording-in-his-airstream-and-his-goals-for-2025/"
+      },
+      {
+        "claim": "The song was previously unreleased before the EP. It is described as a slowly building strummer with campfire intimacy that casts Kagen as a man on the edge, alone and running on fumes.",
+        "source": "https://fabukmagazine.com/jonah-kagen-shares-his-soul-stirring-black-dress-ep/"
+      },
+      {
+        "claim": "Kagen described Black Dress as the first part of a project that is a snapshot of his emotional experience at the time, with songs meant to feel present rather than reflective.",
+        "source": "https://fabukmagazine.com/jonah-kagen-shares-his-soul-stirring-black-dress-ep/"
+      },
+      {
+        "claim": "A music video for the song was listed as released on November 29, 2024.",
+        "source": "https://www.shazam.com/en-us/song/1777124629/dont-you-give-up-on-me-yet/music-video"
+      },
+      {
+        "claim": "The EP's lead single \"God Needs The Devil\" went viral and reached number one on Billboard's Alternative Airplay chart.",
+        "source": "https://en.wikipedia.org/wiki/Jonah_Kagen"
+      },
+      {
+        "claim": "Kagen grew up in Savannah, Georgia, and began playing guitar at age six. He later went to Cornell, where he built a TikTok following. His song \"Broken\" went viral and led Arista to sign him in 2021.",
+        "source": "https://tidal.com/video/439014862"
+      }
+    ],
+    "lineage": "Kagen's music sits in acoustic, guitar-driven indie folk with a pop sensibility, and his 2024 Black Dress EP was recorded DIY-style in a converted Airstream.",
+    "genres": [
+      "indie folk",
+      "folk-pop",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "\"They quit on me in Georgia,\" Jonah Kagen sings on **Don't You Give Up On Me Yet**, and the next line is the one that cuts: they quit on him while telling him \"men don't quit.\" It's a small, bitter irony set inside a song about running on empty, and it explains why the plea in the title lands so hard. The narrator has been abandoned by people who preached endurance at him. Now he's asking one last person to practice what they wouldn't.\n\nKagen has said he wrote the song entirely from a place of desperation, with the title line as someone begging another person not to give up on them. The lyrics never dress that up. The opening finds him alive \"somehow,\" four nights without sleep, seeing ghosts in the dew. Then the road takes over: backroads, an emptying tank, tires \"seeing the miles,\" a desert where the road is ending. It's a familiar set of images, but Kagen uses them plainly, as a man narrating his own breakdown in real time.\n\nWhat keeps the song from self-pity is the chorus's honest split. \"God knows I'm the one who made the mess,\" he admits, then immediately: \"But I'm fucked up, and they left me for dead.\" Guilt and grievance sit in the same breath, and neither cancels the other. He knows he got himself burned. He also knows people walked away when he got sick. The song doesn't ask you to decide who's right. It asks you to hold both, the way he has to. And the line about \"some last thread I found in you\" makes the stakes clear. This isn't a love song so much as a rope thrown from a ditch.\n\nThe sound matches that bareness. A strummed acoustic guitar and a simple bass line sit under a steady kit, hi-hat ticking, at a moderate tempo with a quiet push of urgency. The mix is clean and dry, with little reverb, so the voice stays close. Kagen's singing is slightly raspy and mid-range, a single voice with no harmonies to soften it. He has said the lead took about three takes, sung all the way through, and it shows: the delivery is earnest rather than polished, closer to the campfire intimacy the EP was praised for than to radio sheen.\n\nThat fits the record's making. Kagen recorded and produced the Black Dress EP himself, travelling in his Airstream, and called it a snapshot of his emotional state, songs meant to feel present rather than reflective. This one feels present. It's acoustic indie folk with a pop sense of where a hook should fall, and the hook is just the request, repeated until it sounds less like a line and more like breathing.\n\nYou stay with it because it lets you hear what asking for help sounds like from someone who's been told asking is weakness.",
+  "factCheck": [
+    {
+      "claim": "\"They quit on me in Georgia,\" and the next line has them quitting while saying \"men don't quit.\"",
+      "verdict": "supported",
+      "note": "Both quotes match the lyrics and the line order is right."
+    },
+    {
+      "claim": "Kagen has said he wrote the song entirely from desperation, with the title line as someone begging another person not to give up on them.",
+      "verdict": "supported",
+      "note": "Melodic Mag interview."
+    },
+    {
+      "claim": "Lyric details: alive \"somehow,\" four nights without sleep, ghosts in the dew, backroads, an emptying tank, tires \"seeing the miles,\" a desert where the road is ending.",
+      "verdict": "supported",
+      "note": "All match the lyrics."
+    },
+    {
+      "claim": "\"God knows I'm the one who made the mess\" and \"But I'm fucked up, and they left me for dead\"",
+      "verdict": "supported",
+      "note": "Exact lyric matches."
+    },
+    {
+      "claim": "\"some last thread I found in you\"",
+      "verdict": "supported",
+      "note": "Exact lyric match."
+    },
+    {
+      "claim": "He got burned and people walked away when he got sick.",
+      "verdict": "supported",
+      "note": "Lyrics: \"I keep on gettin' myself burned\" and \"they quit when I got sick\"."
+    },
+    {
+      "claim": "Strummed acoustic guitar, simple bass line, steady kit with ticking hi-hat, moderate tempo, slight urgency.",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element."
+    },
+    {
+      "claim": "Clean, dry mix with little reverb; slightly raspy mid-range single voice with no harmonies.",
+      "verdict": "supported",
+      "note": "Agreed across passes."
+    },
+    {
+      "claim": "Delivery is earnest rather than polished, closer to campfire intimacy than radio sheen.",
+      "verdict": "corrected",
+      "note": "The passes disagree on polish and several call the production polished, so \"rather than polished\" and \"radio sheen\" were dropped. \"Earnest\" is kept. The campfire-intimacy description applies to the song, not the EP, and the praise wording was fixed."
+    },
+    {
+      "claim": "Lead vocal took about three takes, sung all the way through.",
+      "verdict": "supported",
+      "note": "Melodic Mag. The \"it shows\" inference was reworded as the critic's reading."
+    },
+    {
+      "claim": "Kagen recorded and produced the Black Dress EP himself while travelling in his Airstream.",
+      "verdict": "supported",
+      "note": "Fab UK Magazine."
+    },
+    {
+      "claim": "He called the EP a snapshot of his emotional state, with songs meant to feel present rather than reflective.",
+      "verdict": "supported",
+      "note": "Fab UK Magazine."
+    },
+    {
+      "claim": "Acoustic indie folk with a pop sense.",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Closing line: asking for help from someone who's been told asking is weakness.",
+      "verdict": "corrected",
+      "note": "The lyrics say \"men don't quit\", not that asking is weakness. Reworded to stay with what the lyrics show."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2355,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001381,
+        "detail": "1105 in / 151 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001436,
+        "detail": "1105 in / 173 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001431,
+        "detail": "1105 in / 171 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.133098,
+        "detail": "44674 in / 1375 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.04786,
+        "detail": "3825 in / 1628 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050272,
+        "detail": "4991 in / 4029 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "spotifyId": "6bUDZiUm1R0AHZUTQyNVoV",
+  "reviewedAt": "2026-11-11T20:21:56.761Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5915368"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady strumming pattern. A banjo plays a melodic line with a quick, rhythmic strum. A bass guitar plays a simple, foundational line. A drum kit plays a straightforward beat with kick, snare, and hi-hat.\n\nTempo and Groove Feel\nThe tempo is moderate. The groove is a relaxed, driving feel, leaning towards a folk or country-rock style.\n\nVocals\nA male voice sings with a clear, slightly raspy character. The delivery is earnest and storytelling. There are no harmonies.\n\nProduction\nThe room sounds moderately sized, with a natural, slightly resonant texture. The production is polished but retains a raw, organic feel.\n\nArrangement\nThe excerpt begins with all instruments playing. The vocals enter immediately. The arrangement remains consistent throughout, with no instruments dropping out or building significantly.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm, with a banjo playing a counter-melody. A bass guitar plays a walking bass line. A drum kit plays a simple beat with brushes.\n\nTempo and Groove Feel\nThe tempo is moderate. The groove is a relaxed, swinging feel.\n\nVocals\nA male voice sings in a clear, slightly raspy tone. He is joined by two male harmony singers, one above and one below the lead.\n\nProduction\nThe sound is dry and intimate, with a natural room sound. The texture is warm and organic. It sounds raw and unpolished.\n\nArrangement\nThe excerpt begins with the full band and vocals. The arrangement remains consistent throughout, with no instruments entering or dropping out. The vocals build slightly in intensity towards the end of the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady strumming rhythm. A banjo plays a melodic line with a fingerpicked style. A bass guitar plays a simple, foundational line. A drum kit plays a straightforward beat with kick, snare, and hi-hat.\n\nTempo and Groove Feel\nThe tempo is moderate. The groove is a relaxed, steady folk-rock feel.\n\nVocals\nA male voice sings with a slightly raspy, clear character. The delivery is earnest and storytelling. Harmonies are present in the chorus, with a second voice joining in a higher register, creating a full, blended sound.\n\nProduction\nThe room sounds moderately sized, with a natural, un-reverberated feel. The texture is warm and organic. The production is polished, but not overly slick, maintaining a raw, authentic edge.\n\nArrangement\nThe excerpt begins with the full band and lead vocal. The harmonies enter during the chorus, adding fullness. No instruments drop out or build significantly within this short excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"This Is the End\" is the closing track (track 11) on The Ghost of Paul Revere's album Believe, which was released January 14, 2014.",
+        "source": "https://www.amazon.com/This-Is-the-End/dp/B09NMX9RM5"
+      },
+      {
+        "claim": "The track runs about 2:50.",
+        "source": "https://www.discogs.com/master/1118912-The-Ghost-Of-Paul-Revere-Believe"
+      },
+      {
+        "claim": "Believe was recorded live, and produced and mixed by Jonathan Wyman at his studio, The Halo. Adam Ayan mastered it at Gateway.",
+        "source": "https://www.pressherald.com/2014/02/20/making_noise__the_ghost_of_paul_revere_shine_with__believe__/"
+      },
+      {
+        "claim": "Discogs credits the band with writing and arranging the album. It lists Max Davis on banjo and vocals and Sean McCarthy on bass and vocals.",
+        "source": "https://www.discogs.com/master/1118912-The-Ghost-Of-Paul-Revere-Believe"
+      },
+      {
+        "claim": "The Press Herald lists the Believe lineup as Griffin Sherry (guitar, vocals, octave mandolin), Max Davis (banjo, vocals), Sean McCarthy (bass, vocals) and Matt Young (harmonica).",
+        "source": "https://www.pressherald.com/2014/02/20/making_noise__the_ghost_of_paul_revere_shine_with__believe__/"
+      },
+      {
+        "claim": "The Americana Vibes shop lists Believe as a CD with (C) and (P) credited to Americana Vibes.",
+        "source": "https://americanavibesshop.com/products/the-ghost-of-paul-revere-believe-cd"
+      },
+      {
+        "claim": "A 10th-anniversary vinyl edition of Believe came out in 2024 on Americana Vibes. It adds an unreleased track called \"Twist\" after \"This Is the End\".",
+        "source": "https://americanavibesshop.com/products/the-ghost-of-paul-revere-believe-vinyl-10-year-anniversary-edition"
+      },
+      {
+        "claim": "The band formed in 2011 in Portland, Maine. Griffin Sherry (guitar, vocals), Max Davis (banjo, vocals) and Sean McCarthy (bass, vocals) were the original trio.",
+        "source": "https://www.amazon.com/This-Is-the-End/dp/B09NMX9RM5"
+      },
+      {
+        "claim": "Believe was the band's first full-length album. It followed the self-released 2012 EP North. \"After Many Miles\" and \"San Antone\" each passed two million streams.",
+        "source": "https://www.amazon.com/This-Is-the-End/dp/B09NMX9RM5"
+      },
+      {
+        "claim": "Apple Music's biography describes the band as a Portland, Maine Americana group rooted in folk with the energy of rock & roll. It says their later 2017 album Monarch brought greater critical and commercial success.",
+        "source": "https://music.apple.com/us/artist/the-ghost-of-paul-revere/645857301"
+      }
+    ],
+    "lineage": "The band is a Portland, Maine group working in acoustic-driven Americana that is rooted in the folk tradition and has the energy of rock & roll.",
+    "genres": [
+      "americana",
+      "folk",
+      "acoustic rock"
+    ]
+  },
+  "draft": "\"Give me my last cigarette\" is a condemned person's request, and on **This Is the End** The Ghost of Paul Revere make it a chorus a whole room could sing. The song belongs to someone at the very end, someone who dug the grave and figures they might as well get in, yet it moves like a front-porch singalong. Acoustic guitar strums steadily, a banjo runs a bright melodic line over the top, and bass and a simple drum beat hold a relaxed, unhurried pace. The song lives in the gap between what it says and how it sounds.\n\nWatch how the chorus changes. Each time it comes around, the narrator sends a different message home. The mother is told not to worry. The father is told it was worth it. The sister is told not to wait. The last one goes to the friends: tell them I love them. It's a goodbye in installments, the way you'd go around a room, and each errand shows someone trying to shape how they'll be remembered. The message to the father stings most. It could be pride, or a plea for absolution, sent to someone who isn't there to answer.\n\nThe verses are where the composure cracks. \"I've always hated all the skin I was in\" is the confession under the bravado, a lifetime of discomfort set down plainly between invitations to pour a glass and talk about old times. The third verse gets darker and funnier at once, with a gift card for getting cancer and an unanswered question about whether everyone is truly alone. Then comes the line that undoes the cheer: \"Just don't ask me if I'm doin' okay,\" followed by the admission in parentheses that they're not. The narrator wants company but not concern, the drink but not the pity. Those wants sit side by side, and the song never picks one.\n\nThe vocal is clear with a little rasp, earnest rather than theatrical. When harmony voices join, the solitary goodbye briefly sounds like a crowd. That fits how it was made. The band formed in Portland, Maine, in 2011 as a trio of guitar, banjo and bass, and they recorded Believe live with Jonathan Wyman producing at his studio, The Halo. The room sounds warm and natural, more gathering than performance. This is Americana built on folk with rock & roll's push, and the song closes the band's first full-length album, a last word that takes its own title literally.\n\nIt lets you raise a glass with someone who isn't okay and mean both the toast and the worry, and that is why the chorus keeps coming back to you.",
+  "factCheck": [
+    {
+      "claim": "\"Give me my last cigarette\" is quoted from the lyrics.",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator dug the grave and figures they might as well get in.",
+      "verdict": "supported",
+      "note": "Paraphrases \"I dug this grave and I might as well get in.\""
+    },
+    {
+      "claim": "Acoustic guitar strums steadily.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A banjo runs a bright melodic line over the top.",
+      "verdict": "corrected",
+      "note": "All three passes describe a melodic or counter-melodic banjo line. None says \"bright\", so that adjective was removed."
+    },
+    {
+      "claim": "Bass and a simple drum beat hold a relaxed, unhurried pace.",
+      "verdict": "supported",
+      "note": "All three passes agree on bass, a simple drum beat, a moderate tempo and a relaxed groove."
+    },
+    {
+      "claim": "The chorus changes each time: mother told not to worry, father told it was worth it, sister told not to wait, friends told \"I love them\".",
+      "verdict": "supported",
+      "note": "Matches the lyric sequence. The line \"Tell my friends that I love them\" is paraphrased accurately."
+    },
+    {
+      "claim": "\"I've always hated all the skin I was in\" is quoted from the lyrics.",
+      "verdict": "supported",
+      "note": "Exact substring of the lyric line."
+    },
+    {
+      "claim": "The verse sits between invitations to pour a glass and talk about old times.",
+      "verdict": "supported",
+      "note": "Paraphrases \"pour yourself a glass / We'll reminisce about the times we had.\""
+    },
+    {
+      "claim": "The third verse mentions a gift card for getting cancer and an unanswered question about whether everyone is truly alone.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. It is the third verse by lyric structure."
+    },
+    {
+      "claim": "\"Just don't ask me if I'm doin' okay\" is followed by a parenthetical admission that they're not.",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, including \"('cause I'm not okay)\"."
+    },
+    {
+      "claim": "The vocal is clear with a little rasp and earnest rather than theatrical.",
+      "verdict": "supported",
+      "note": "All three passes say clear and slightly raspy. Two say earnest."
+    },
+    {
+      "claim": "Harmony voices join.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. Pass 1 heard none, but two passes suffice."
+    },
+    {
+      "claim": "The band formed in Portland, Maine, in 2011 as a trio of guitar, banjo and bass.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "They recorded Believe live with Jonathan Wyman producing at his studio, The Halo.",
+      "verdict": "corrected",
+      "note": "The source says recorded live, and produced and mixed by Wyman at The Halo. The wording was tightened to match."
+    },
+    {
+      "claim": "The room sounds warm and natural.",
+      "verdict": "supported",
+      "note": "All passes agree on a natural room sound. Passes 2 and 3 agree on warm."
+    },
+    {
+      "claim": "This is Americana built on folk with rock & roll's push.",
+      "verdict": "supported",
+      "note": "Matches the Apple Music biography and the lineage note."
+    },
+    {
+      "claim": "The song closes the band's first full-length album.",
+      "verdict": "supported",
+      "note": "It is track 11, the closing track, and Believe was the first full-length."
+    },
+    {
+      "claim": "Interpretive readings: pride or a plea for absolution, wants that sit side by side, a singalong gap, the title taken literally, the chorus staying with you.",
+      "verdict": "supported",
+      "note": "Interpretation resting on supported lyrics and sound."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1956,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014179,
+        "detail": "1103 in / 166 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014354,
+        "detail": "1103 in / 173 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015204,
+        "detail": "1103 in / 207 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.072978,
+        "detail": "19294 in / 1439 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.072312,
+        "detail": "3863 in / 2843 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.045954,
+        "detail": "4952 in / 3605 out"
+      }
+    ]
+  }
+}

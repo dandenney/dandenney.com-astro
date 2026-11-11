@@ -1,0 +1,178 @@
+{
+  "spotifyId": "27yAvwlQjOndQTblbdijVf",
+  "reviewedAt": "2026-11-11T20:22:52.874Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7288406"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady, strummed rhythm. Bass guitar plays a simple, foundational line. Drums provide a consistent, mid-tempo beat with a snare emphasis. Electric guitar plays a clean, arpeggiated line.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and slightly swaying, with a clear emphasis on the downbeat.\n\nVocals:\nThe lead voice is clear and resonant, with a slight country inflection. The delivery is confident and direct. Harmonies are present in the chorus, with a higher voice singing above the lead.\n\nProduction:\nThe room sounds moderately spacious, with a slight reverb. The texture is clean and polished.\n\nArrangement:\nThe song begins with the full band. The lead voice enters immediately, followed by harmonies in the chorus. No instruments drop out or build significantly within this excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar strums a steady rhythm. Electric guitar plays a melodic line with a clean tone. Bass guitar plays a walking line. Drums play a simple beat with a snare backbeat.\n\nTempo and Groove:\nMedium tempo, with a relaxed, slightly swung feel.\n\nVocals:\nA single voice sings with a clear, resonant character. The delivery is confident and expressive. Harmonies join in the chorus, singing in unison and thirds.\n\nProduction:\nThe sound is polished and clean, with a moderate amount of reverb, creating a sense of space. The texture is full and balanced.\n\nArrangement:\nThe song begins with the full band. The vocals enter immediately. Harmonies join the lead vocal in the chorus. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady rhythm. Electric guitar plays a clean, arpeggiated line. Bass plays a simple, foundational line. Drums play a straightforward beat with a snare on beats 2 and 4. A string section provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and slightly swaying.\n\nVocals:\nThe lead voice is clear and strong, with a slight country inflection. It is delivered with a confident, sustained quality. Harmonies are present, singing in unison or parallel to the lead voice, adding fullness.\n\nProduction:\nThe room sounds moderately spacious. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The string section enters and sustains chords. The lead voice is prominent throughout, with harmonies joining at various points. No instruments drop out or build significantly within this short excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Better Than You Left Me\" was written by Mickey Guyton, Jennifer Hanson, Jenn Schott and Nathan Chapman.",
+        "source": "https://en.wikipedia.org/wiki/Better_Than_You_Left_Me"
+      },
+      {
+        "claim": "The song was produced by Nathan Chapman and Dann Huff.",
+        "source": "https://www.shazam.com/en-us/song/1557755213/better-than-you-left-me"
+      },
+      {
+        "claim": "Credited players include Dann Huff on electric guitar, Ilya Toshinskiy on acoustic guitar, Dan Dugmore on steel guitar and Jimmie Lee Sloas on bass. Aaron Sterling is also credited.",
+        "source": "https://www.shazam.com/en-us/song/1557755213/better-than-you-left-me"
+      },
+      {
+        "claim": "Chuck Ainlay engineered the track, Justin Niebank mixed it and Ted Jensen mastered it.",
+        "source": "https://www.shazam.com/en-us/song/1557755213/better-than-you-left-me"
+      },
+      {
+        "claim": "Guyton wrote the song at her first Nashville co-write, after a messy breakup that was weighing on her. Jennifer Hanson's remark that she was 'better than he left you' sparked the title.",
+        "source": "https://www.rollingstone.com/music/music-country/mickey-guyton-shakes-up-a-breakup-in-better-than-you-left-me-video-50882/"
+      },
+      {
+        "claim": "Guyton told Taste of Country Nights that the ex-boyfriend told her 'Don't make me find someone else.' She said she realized she had been 'the prize' all along, and that the song was written in about 30 minutes.",
+        "source": "https://www.songfacts.com/facts/mickey-guyton/better-than-you-left-me"
+      },
+      {
+        "claim": "The song was added at 79 country radio stations in its first week. Country Aircheck history records this as the highest one-week add total for a country artist's debut single.",
+        "source": "https://www.rollingstone.com/music/music-country/mickey-guyton-shakes-up-a-breakup-in-better-than-you-left-me-video-50882/"
+      },
+      {
+        "claim": "It was released to country radio on January 12, 2015 as the lead single from her self-titled EP on Capitol Records Nashville.",
+        "source": "https://en.wikipedia.org/wiki/Mickey_Guyton_(EP)"
+      },
+      {
+        "claim": "Her follow-up single \"Heartbreak Song\" was written as an answer to this song, after she heard the ex-boyfriend was bragging that she had written a song about him.",
+        "source": "https://www.mca.com/mickey-guyton-releases-new-single-heartbreak-song-to-country-radio/"
+      },
+      {
+        "claim": "Guyton re-recorded the song as the closing track of her 2021 debut album Remember Her Name. She called it 'the song that started it all' and said it means something different to her now.",
+        "source": "https://www.grammy.com/news/mickey-guyton-interview-10-year-journey-debut-album-remember-her-name-black-women-country/"
+      },
+      {
+        "claim": "Guyton was born Candace Mycale Guyton in Arlington, Texas. She released \"Black Like Me\" in 2020, which speaks to her experience as a Black woman in country music.",
+        "source": "https://en.wikipedia.org/wiki/Mickey_Guyton"
+      }
+    ],
+    "lineage": "A contemporary Nashville mainstream country-pop breakup anthem; one reviewer noted it was a style of radio record that few artists were making by 2015.",
+    "genres": [
+      "country",
+      "country pop"
+    ]
+  },
+  "draft": "The line that gives **Better Than You Left Me** away isn't the title. It comes in the second verse of the chorus, tucked into a warning: \"So don't you think I'll take you back like every time before.\" Every time before. That phrase admits more than a victory song usually does. This isn't someone who walked away clean. She has been here, more than once, and she let him back in. The pride in the chorus is real, but it was earned against her own habits as much as against him.\n\nMickey Guyton wrote it at her first Nashville co-write with Jennifer Hanson, Jenn Schott and Nathan Chapman, after a messy breakup that was still weighing on her. Hanson's remark that she was \"better than he left you\" sparked the title. Guyton later said the ex had told her \"Don't make me find someone else,\" and that she came to see she had been \"the prize\" all along. The song came together in about 30 minutes, and you can hear that speed in how plainly it talks.\n\nThe writing carries more than a kiss-off needs to. \"I'm better than I should be\" is a strange, honest line: she expected to be wrecked, and she's almost surprised she isn't. The verses keep the wound in view, with goodbye \"cold as ice\" and the shaking and not breathing, before the shrug of \"It's funny what a little time does.\" She still calls him \"baby.\" She is still talking to him. The bridge reaches for lift with \"I love deeper, and I laugh a little bit louder,\" but the chorus keeps circling back to him.\n\nThe record sits in polished mainstream country-pop, the kind of big breakup radio song that few artists were still making by 2015. Acoustic guitar strums under a clean electric line, the bass stays simple, and the snare lands on the backbeat at a steady, slightly swaying mid-tempo. Guyton's voice is clear and resonant with a light country lean, confident rather than pleading, and harmonies stack in on the chorus. Chapman and Dann Huff produced it, with Huff on electric, Ilya Toshinskiy on acoustic, Jimmie Lee Sloas on bass and Dan Dugmore on steel. Country radio took to it: 79 stations added it in its first week, a record for a country artist's debut single.\n\nThe story didn't end there. When Guyton heard the ex was bragging that the song was about him, she answered with \"Heartbreak Song.\" In 2021 she re-recorded this one to close *Remember Her Name*. She called it \"the song that started it all\" and said it means something different to her now.\n\nIt sticks because it lets you sing the triumph at full volume while hearing, underneath, how many times it took to get there.",
+  "factCheck": [
+    {
+      "claim": "The line 'So don't you think I'll take you back like every time before' comes in the second verse of the chorus",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics exactly. 'Second verse of the chorus' is wrong, since the line is in the chorus. Reworded to 'in the chorus'."
+    },
+    {
+      "claim": "Guyton wrote it at her first Nashville co-write with Jennifer Hanson, Jenn Schott and Nathan Chapman, after a messy breakup that was still weighing on her",
+      "verdict": "supported",
+      "note": "Songwriters and the first Nashville co-write/breakup context are both in the packet."
+    },
+    {
+      "claim": "Hanson's remark that she was 'better than he left you' sparked the title",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone fact."
+    },
+    {
+      "claim": "Guyton later said the ex had told her 'Don't make me find someone else,' and that she came to see she had been 'the prize' all along",
+      "verdict": "corrected",
+      "note": "Quotes are supported. 'Later' is not in the packet, so it was removed."
+    },
+    {
+      "claim": "The song came together in about 30 minutes",
+      "verdict": "supported",
+      "note": "Songfacts, via Taste of Country Nights."
+    },
+    {
+      "claim": "Lyric quotes: 'I'm better than I should be', 'cold as ice', 'It's funny what a little time does', 'I love deeper, and I laugh a little bit louder', 'baby'",
+      "verdict": "supported",
+      "note": "All match the lyrics. The section with 'I love deeper' is set apart from the choruses in the lyric structure, so calling it a bridge is supported."
+    },
+    {
+      "claim": "Polished mainstream country-pop breakup radio song that few artists were still making by 2015",
+      "verdict": "supported",
+      "note": "Matches the lineage note, and the passes agree the sound is clean and polished."
+    },
+    {
+      "claim": "Acoustic guitar strums under a clean electric line, simple bass, snare on the backbeat, steady slightly swaying mid-tempo",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Clear, resonant voice with a light country lean, confident delivery, harmonies on the chorus",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element."
+    },
+    {
+      "claim": "Chapman and Dann Huff produced; Huff on electric, Toshinskiy on acoustic, Sloas on bass, Dugmore on steel",
+      "verdict": "supported",
+      "note": "Matches the Shazam credits."
+    },
+    {
+      "claim": "79 stations added it in its first week, a record for a country artist's debut single",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone / Country Aircheck fact (highest one-week add total)."
+    },
+    {
+      "claim": "Guyton heard the ex was bragging that the song was about him and answered with 'Heartbreak Song'",
+      "verdict": "supported",
+      "note": "Matches the MCA fact."
+    },
+    {
+      "claim": "In 2021 she re-recorded it to close Remember Her Name, calling it 'the song that started it all' and saying it means something different to her now",
+      "verdict": "supported",
+      "note": "Matches the Grammy.com fact."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1849,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014148,
+        "detail": "1101 in / 165 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014648,
+        "detail": "1101 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014548,
+        "detail": "1101 in / 181 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083918,
+        "detail": "23389 in / 1714 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05266,
+        "detail": "3885 in / 1856 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.043964,
+        "detail": "5037 in / 3389 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "spotifyId": "6UsmfLq4GHjdNEsL1KUBhe",
+  "reviewedAt": "2026-11-11T20:08:16.162Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/15844454"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. The tempo is slow, with a gentle, flowing groove. A single voice sings with a soft, breathy character, delivered in a straightforward manner with no vibrato. There are no harmonies. The production is dry and intimate, with a raw, unpolished texture. The acoustic guitar and voice are present throughout the excerpt, with no changes in instrumentation or arrangement.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. The tempo is slow, with a gentle, flowing groove. A single voice sings with a soft, breathy character, delivering the melody plainly. There are no harmonies. The production sounds raw and intimate, as if recorded in a small room, with a dry, unpolished texture. The acoustic guitar and voice are present throughout the excerpt, with no instruments entering or dropping out.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. The tempo is slow, with a gentle, flowing groove. A single voice sings with a soft, breathy character, delivering the melody plainly. There are no harmonies. The production sounds raw and intimate, as if recorded in a small, dry room. The acoustic guitar and voice are present throughout the excerpt. No other instruments enter or drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"calico\" is track 4 on Searows' EP flush, released 22 November 2024 on Last Recordings on Earth.",
+        "source": "https://searows.bandcamp.com/album/flush"
+      },
+      {
+        "claim": "On \"calico\", Alec Duckart plays vocals, acoustic guitar, bass guitar and drum programming.",
+        "source": "https://searows.bandcamp.com/track/calico"
+      },
+      {
+        "claim": "On \"calico\", Jonathan Pearce plays wurlitzer, synthesizer, banjo and reed organ.",
+        "source": "https://searows.bandcamp.com/track/calico"
+      },
+      {
+        "claim": "\"calico\" was produced by Alec Duckart and Jonathan Pearce, mixed by Jonathan Pearce, and mastered by Kevin Tuffy.",
+        "source": "https://searows.bandcamp.com/track/calico"
+      },
+      {
+        "claim": "Searows is the moniker of Pacific Northwest singer-songwriter and guitarist Alec Duckart.",
+        "source": "https://readdork.com/news/searows-announce-flush-ep"
+      },
+      {
+        "claim": "Jonathan Pearce, Duckart's co-producer on flush, is the guitarist of the New Zealand indie rock band The Beths.",
+        "source": "https://www.melodicmag.com/news/searows-announces-upcoming-ep-flush-out-nov-22/"
+      },
+      {
+        "claim": "Duckart said the five flush songs were written over about two years. He said he wanted to release songs he still cared about but knew wouldn't fit on his next full album.",
+        "source": "https://www.melodicmag.com/news/searows-announces-upcoming-ep-flush-out-nov-22/"
+      },
+      {
+        "claim": "flush follows the 2023 EP End of the World. That EP was released on Last Recordings On Earth, a label launched by Matt Maltese in association with Communion Records.",
+        "source": "https://www.thelineofbestfit.com/news/searows-announces-forthcoming-ep-flush"
+      },
+      {
+        "claim": "Searows is based in Portland, and his Bandcamp tags flush as folk, indie folk and singer-songwriter. Rate Your Music lists the EP as singer-songwriter and indie folk.",
+        "source": "https://rateyourmusic.com/release/ep/searows/flush.p/"
+      },
+      {
+        "claim": "Atwood Magazine says the sounds of flush and End of the World are echoed on Searows' later album Death in the Business of Whaling. It describes that album as a shift toward abstraction.",
+        "source": "https://atwoodmagazine.com/sdbw-searows-death-in-the-business-of-whaling-album-interview-music-feature/"
+      }
+    ],
+    "lineage": "Searows' music sits in the indie folk and singer-songwriter tradition, centered on confessional acoustic songwriting from the Portland, Pacific Northwest scene.",
+    "genres": [
+      "indie folk",
+      "singer-songwriter",
+      "acoustic folk"
+    ]
+  },
+  "draft": "\"Fit me in your pocket\" is a strange way to open a love song, and a telling one. The narrator of **calico** isn't asking to be held or chosen. The ask is to be made small enough to carry. Alec Duckart, who records as Searows, builds the whole song around that kind of offer: affection that keeps shrinking itself so it won't be too much.\n\nThe chorus makes the bargain plain. \"I'll be anything you turn me into,\" Duckart sings, then promises to be the other person's favorite song. It sounds generous, and it is. It's also a little frightening, a self handed over to be reshaped. The lines next to it are about shelter, a feeling you come home to, a place to rest \"all you've been standing on.\" Care and self-erasure sit in the same breath, and the song never sorts out which one it means more.\n\nThe verses run on maybes. Maybe this was an answer, maybe it's the end of the good part, \"or maybe it's not.\" The hedging is the confession. Someone who has been burned learns to say everything twice, once hopeful and once braced. The second verse drifts into a sunny afternoon, an offer of tea, dancing to an old record, and \"run away with me,\" the boldest line in the song, tucked between small domestic pictures as if it might pass unnoticed. Then comes the regret: \"Maybe I was letting go too quick.\" The narrator wants another chance and isn't sure who gave up first.\n\nThe sound matches the shyness. A fingerpicked acoustic guitar rolls through clean, bright arpeggios at a slow, easy pace, and Duckart's voice is soft and breathy, sung plainly with no harmony to lean on. The recording is dry and close, the kind of small-room intimacy that puts the singer right next to you. Jonathan Pearce, guitarist of The Beths, co-produced and mixed it and is credited with Wurlitzer, synthesizer, banjo and reed organ, but the song's spine is one guitar and one voice. The lyric runs out into wordless humming, as if the narrator has said as much as can be risked.\n\nIt sits squarely in Portland's confessional indie folk. It's one of five songs on the flush EP, which Duckart wrote over about two years and released because he still cared about them, even knowing they wouldn't fit his next album. That fits a song this unwilling to let go.\n\nWhat sticks is the offer at its center, and you feel both halves of it: how sweet it is to be wanted that badly, and how much the narrator is willing to give up to stay.",
+  "factCheck": [
+    {
+      "claim": "\"Fit me in your pocket\" opens the song",
+      "verdict": "supported",
+      "note": "Matches the first lyric line exactly."
+    },
+    {
+      "claim": "Alec Duckart records as Searows",
+      "verdict": "supported",
+      "note": "Searows is the moniker of Alec Duckart."
+    },
+    {
+      "claim": "Duckart sings \"I'll be anything you turn me into\" and promises to be the other person's favorite song",
+      "verdict": "supported",
+      "note": "Lyric quote matches. Duckart is credited with vocals."
+    },
+    {
+      "claim": "\"all you've been standing on\", \"or maybe it's not\", \"Maybe I was letting go too quick\", \"run away with me\"",
+      "verdict": "supported",
+      "note": "All quotes match the lyrics. Only the capitalization of \"or\" differs, which is trivial."
+    },
+    {
+      "claim": "Second verse has a sunny afternoon, an offer of tea, and dancing to an old record",
+      "verdict": "corrected",
+      "note": "The lyric names \"Tombstone Blues\" but nothing says it's an old record. Changed to the lyric's own wording."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, clean bright arpeggios, slow easy pace",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Soft, breathy voice, sung plainly, no harmony",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Dry, close recording with small-room intimacy",
+      "verdict": "supported",
+      "note": "All passes say dry and intimate. Two say small room."
+    },
+    {
+      "claim": "Jonathan Pearce, guitarist of The Beths, co-produced and mixed it and is credited with Wurlitzer, synthesizer, banjo and reed organ",
+      "verdict": "supported",
+      "note": "Matches the credits and the Melodic Mag fact."
+    },
+    {
+      "claim": "The song's spine is one guitar and one voice",
+      "verdict": "removed",
+      "note": "The notes describe only a short excerpt, and the credits list bass, drum programming and other instruments. A claim about the whole arrangement is unsupported. Replaced with Duckart's credited bass and drum programming."
+    },
+    {
+      "claim": "The lyric runs out into wordless humming at the end",
+      "verdict": "corrected",
+      "note": "The lyric structure does show it closing on \"mm\" lines. Reworded to stay with the lyric rather than a sound claim."
+    },
+    {
+      "claim": "It sits in Portland's confessional indie folk",
+      "verdict": "supported",
+      "note": "Matches the lineage note and the Portland base."
+    },
+    {
+      "claim": "One of five songs on the flush EP, written over about two years, released because Duckart still cared about them even though they wouldn't fit his next album",
+      "verdict": "supported",
+      "note": "Matches the Melodic Mag facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1639,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012261,
+        "detail": "1097 in / 90 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012336,
+        "detail": "1097 in / 93 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00040698,
+        "detail": "1097 in / 96 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.07124,
+        "detail": "19080 in / 1308 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.048828,
+        "detail": "3112 in / 1819 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.040998,
+        "detail": "4229 in / 3254 out"
+      }
+    ]
+  }
+}

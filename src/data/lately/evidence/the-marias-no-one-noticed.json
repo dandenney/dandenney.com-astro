@@ -1,0 +1,205 @@
+{
+  "spotifyId": "3siwsiaEoU4Kuuc9WKMUy5",
+  "reviewedAt": "2026-11-11T20:11:34.533Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9054279"
+  },
+  "listening": "Pass 1:\n- **Instruments and how they're played:** A drum machine plays a steady, mid-tempo beat with a prominent kick and snare. A bass guitar plays a simple, sustained line. A clean electric guitar plays arpeggiated chords with a slight shimmer. A synth pad provides sustained chords.\n- **Tempo and groove feel:** Mid-tempo, with a relaxed, steady groove.\n- **Vocals:** A single voice, with a breathy, smooth character, sings a melody with a narrow range. The delivery is gentle and unforced. No harmonies are present.\n- **Production:** The sound is polished and clean, with a clear separation of instruments. The room sound is dry, with no noticeable reverb on the vocals or drums. The texture is smooth and airy.\n- **Arrangement:** The excerpt begins with the full instrumentation. The vocals enter around the 0:11 mark, singing a verse. No instruments drop out or build within this segment.\n\nPass 2:\nA synth pad plays sustained chords. A drum machine provides a steady, mid-tempo beat with a relaxed, slightly swung groove. The kick drum is prominent, and the snare has a tight, dry sound. A bass guitar plays a simple, repeating melodic line. A clean electric guitar plays a sparse, arpeggiated figure.\n\nA single vocalist sings in a breathy, clear voice, with a gentle vibrato. The delivery is smooth and unhurried. There are no harmonies.\n\nThe production sounds polished and clean. The room sounds dry, with minimal reverb. The texture is smooth.\n\nThe excerpt begins with the synth pad, drum machine, bass, and electric guitar already playing. The vocals enter around the 0:11 mark and continue until the end of the excerpt. No instruments drop out or build significantly within this segment.\n\nPass 3:\n- **Instruments and how they're played:** A drum machine plays a steady, mid-tempo beat with a prominent kick and snare. A bass guitar plays a simple, sustained line. A clean electric guitar plays arpeggiated chords. A synth pad provides sustained chords.\n- **Tempo and groove feel:** Mid-tempo, with a relaxed, steady groove.\n- **Vocals:** A single voice, with a breathy, sustained delivery. The pitch is medium-high.\n- **Production:** The sound is polished and clean, with a clear, open room feel. The texture is smooth.\n- **Arrangement:** The excerpt begins with the drum machine, bass, and electric guitar. The synth pad enters shortly after. The voice enters around the 0:11 mark. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"No One Noticed\" was written by María Zardoya, Josh Conway and Gianluca Buccellati, and produced by Conway and Buccellati.",
+        "source": "https://en.wikipedia.org/wiki/No_One_Noticed"
+      },
+      {
+        "claim": "It was released on May 3, 2024, as a double single with \"If Only\", ahead of the album Submarine (May 31, 2024). The label is Atlantic/Nice Life and the length is 3:56.",
+        "source": "https://en.wikipedia.org/wiki/No_One_Noticed"
+      },
+      {
+        "claim": "Zardoya began writing the song in 2020 during the pandemic. She worked on a demo, shelved it for a while, then revisited it as a possible addition to Submarine.",
+        "source": "https://www.billboard.com/music/pop/the-marias-no-one-noticed-february-2025-chartbreaker-interview-1235891484/"
+      },
+      {
+        "claim": "Zardoya said she started writing it when she felt she was competing with technology for attention and affection and felt invisible. She said people forget those in the room because they are on their phones.",
+        "source": "https://www.yahoo.com/entertainment/mar-deliver-somber-performance-no-134632489.html"
+      },
+      {
+        "claim": "In a Genius interview, Zardoya said the label wanted a more up-tempo, radio-friendly song, so this one was put on the back burner. She then leaked it herself about a year later, and fans embraced it.",
+        "source": "https://www.melissakacar.com/2025/02/no-one-noticed-by-marias-song-review-of-the-week.html"
+      },
+      {
+        "claim": "In a Variety \"Behind the Song\" session at Electric Lady Studios, the band said the song, first written by Zardoya and Buccellati, helped bring the group back together in 2020 when its future was uncertain. Variety also notes it has an unusual structure.",
+        "source": "https://variety.com/2025/music/news/the-marias-behind-the-song-no-one-noticed-back-to-me-1236524594/"
+      },
+      {
+        "claim": "Zardoya called the song \"an anti-pop song\". It became the band's first solo Billboard Hot 100 entry and reached the top 10 of the Hot Rock & Alternative Songs chart.",
+        "source": "https://www.billboard.com/music/pop/the-marias-no-one-noticed-february-2025-chartbreaker-interview-1235891484/"
+      },
+      {
+        "claim": "Zardoya and Conway were in a relationship for seven years and ended the romantic part after the first album. Zardoya calls Submarine an album of solitude, exploration and change, and says this song captures what she felt then.",
+        "source": "https://intothegloss.com/2024/09/maria-zardoya-the-marias-submarine-beauty-routine"
+      },
+      {
+        "claim": "The Marías are a Los Angeles band made up of María Zardoya, Josh Conway, Jesse Perlman and Edward James. They released EPs in 2017 and 2018 and their first album in 2021, and were nominated for the Best New Artist Grammy after Submarine.",
+        "source": "https://songexploder.net/the-marias"
+      },
+      {
+        "claim": "Conway is credited on Submarine with bass, guitar, synthesizer, production and engineering across all tracks, so he is the band's main producer and engineer.",
+        "source": "https://en.wikipedia.org/wiki/Submarine_(The_Mar%C3%ADas_album)"
+      }
+    ],
+    "lineage": "The song sits in the Marías' hazy, Latin-flavored electro-lounge, jazz-pop and indie-pop sound, which draws on shoegaze, Latin music and jazz.",
+    "genres": [
+      "indie pop",
+      "alternative pop",
+      "dream pop"
+    ]
+  },
+  "draft": "The most telling words in **No One Noticed** sit in parentheses. While the main line murmurs about losing it, a second thought runs underneath like something typed and deleted: \"I need a virtual connection.\" It's the voice of someone who knows exactly what would help and is half-embarrassed to ask. That split between the stated feeling and the muttered one is the whole song.\n\nMaría Zardoya started writing it in 2020, during the pandemic, when she felt she was competing with technology for attention and affection and felt invisible. She has described how people forget whoever is in the room because they're looking at their phones. The lyric doesn't argue with that. It surrenders to it. The narrator who can't get noticed in person asks to be watched through a screen instead, and the request lands somewhere between a joke and a plea: \"be my video obsession.\" There's also a quieter cut. Only one person ever tried to read this narrator's eyes, and the next line takes it back by wishing that were true.\n\nThen the chorus arrives and won't let go. It repeats four times, and its central move is a contradiction the song never resolves: come to me, comfort me, and then I'm gone. \"Hold me, console me, and then I'll leave without a trace\" is wanting intimacy and fearing it in the same breath, and repetition turns it from a line into a loop, the way a thought circles at 2 a.m. Zardoya has said the song captures what she felt while making *Submarine*, which she calls an album of solitude, after she and bandmate Josh Conway ended the romantic side of their seven-year relationship. The song never names any of that. It just keeps asking to be held by someone it's already halfway gone from.\n\nThe sound keeps its composure while the lyric frays. A drum machine holds a relaxed, mid-tempo pulse with a heavy kick and a dry snare. Bass stays simple, a clean electric guitar picks out arpeggios, and a synth pad lays down a cushion of sustained chords. The vocal is breathy, smooth and unhurried, with no harmonies to keep it company, and the dry, close production leaves it alone in the room. It's the Marías' hazy electro-lounge pop with the lounge light turned way down.\n\nZardoya called it \"an anti-pop song.\" The label wanted something more up-tempo, so it sat on the shelf until she leaked it herself about a year later. Fans took it in, and it became the band's first solo Billboard Hot 100 entry. The band also says the song helped pull the group back together in 2020, when its future was uncertain. That's a fitting history for a song about feeling unseen.\n\nIt sticks because it gives you the exact sound of asking for comfort while already planning your exit, and it doesn't pretend you'll ever choose between the two.",
+  "factCheck": [
+    {
+      "claim": "The parenthetical line quoted, \"I need a virtual connection\", and \"be my video obsession\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly. They appear in parentheses in the lyrics."
+    },
+    {
+      "claim": "Zardoya started writing it in 2020 during the pandemic, feeling she was competing with technology for attention and affection and felt invisible; people forget those in the room because they're on their phones",
+      "verdict": "supported",
+      "note": "Matches the Billboard and Yahoo-sourced facts."
+    },
+    {
+      "claim": "Only one person ever tried to read the narrator's eyes, and the next line takes it back by wishing it were true",
+      "verdict": "supported",
+      "note": "Reading of \"No one tried / To read my eyes / No one but you / Wish it were true\". This is interpretation based on the lyrics."
+    },
+    {
+      "claim": "The refrain repeats four times",
+      "verdict": "supported",
+      "note": "The \"Come on, don't leave me\" block appears four times in the lyrics."
+    },
+    {
+      "claim": "\"Hold me, console me, and then I'll leave without a trace\"",
+      "verdict": "supported",
+      "note": "Exact lyric match."
+    },
+    {
+      "claim": "Zardoya has said the song captures what she felt while making Submarine, which she calls an album of solitude",
+      "verdict": "corrected",
+      "note": "The source says the song captures what she felt then, in the period of solitude, exploration and change. It does not say she felt it 'while making' the album. Reworded to match."
+    },
+    {
+      "claim": "She and Josh Conway ended the romantic side of their seven-year relationship",
+      "verdict": "supported",
+      "note": "Matches the Into the Gloss fact."
+    },
+    {
+      "claim": "Drum machine with a relaxed, mid-tempo pulse",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Heavy kick",
+      "verdict": "corrected",
+      "note": "The passes say 'prominent' kick, not 'heavy'. Changed to prominent kick and snare."
+    },
+    {
+      "claim": "Dry snare",
+      "verdict": "removed",
+      "note": "Only one pass describes the snare as dry. Removed."
+    },
+    {
+      "claim": "Bass stays simple; clean electric guitar picks out arpeggios; synth pad lays down sustained chords",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Vocal is breathy, smooth and unhurried",
+      "verdict": "corrected",
+      "note": "All passes agree on breathy. 'Smooth' has two passes. 'Unhurried' has only one. Kept breathy and smooth, dropped unhurried."
+    },
+    {
+      "claim": "No harmonies to keep it company",
+      "verdict": "removed",
+      "note": "Only two passes mention this. It also conflicts with the parenthetical second voice in the lyrics."
+    },
+    {
+      "claim": "Dry, close production leaves it alone in the room",
+      "verdict": "corrected",
+      "note": "The passes disagree on room sound, and 'close' is unsupported. Replaced with polished, clean production, which all three passes support."
+    },
+    {
+      "claim": "Marías' hazy electro-lounge pop",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Zardoya called it \"an anti-pop song\"",
+      "verdict": "supported",
+      "note": "Matches the Billboard fact."
+    },
+    {
+      "claim": "Label wanted something more up-tempo; it was shelved until she leaked it herself about a year later; fans embraced it",
+      "verdict": "supported",
+      "note": "Matches the Genius interview fact."
+    },
+    {
+      "claim": "First solo Billboard Hot 100 entry for the band",
+      "verdict": "supported",
+      "note": "Matches the Billboard fact."
+    },
+    {
+      "claim": "The band says the song helped bring the group back together in 2020 when its future was uncertain",
+      "verdict": "supported",
+      "note": "Matches the Variety fact."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1929,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014395,
+        "detail": "1100 in / 175 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001502,
+        "detail": "1100 in / 200 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001442,
+        "detail": "1100 in / 176 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.079846,
+        "detail": "21998 in / 1585 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054396,
+        "detail": "4034 in / 1913 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05432,
+        "detail": "5225 in / 4387 out"
+      }
+    ]
+  }
+}
