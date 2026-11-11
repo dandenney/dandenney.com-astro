@@ -36,7 +36,6 @@ jobs:
       SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      LATELY_SUMMARY_FILE: ${{ runner.temp }}/summary.md
 
     steps:
       - name: Checkout
@@ -67,12 +66,15 @@ jobs:
           BACKLOG: ${{ inputs.backlog || '0' }}
           REWRITE_LEGACY: ${{ inputs.rewrite_legacy || '0' }}
           SPOTIFY_IDS: ${{ inputs.spotify_ids }}
+          LATELY_SUMMARY_FILE: ${{ runner.temp }}/summary.md
         run: |
           args=(--added-within "$ADDED_WITHIN" --next "$BACKLOG" --rewrite-legacy "$REWRITE_LEGACY")
           for id in $SPOTIFY_IDS; do args+=(--id "$id"); done
           node --experimental-strip-types --no-warnings scripts/lately/review.ts "${args[@]}"
 
       - name: Commit and open PR
+        env:
+          LATELY_SUMMARY_FILE: ${{ runner.temp }}/summary.md
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
