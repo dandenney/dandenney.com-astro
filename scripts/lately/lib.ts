@@ -67,10 +67,11 @@ export class CostMeter {
   }
 }
 
-let spotifyToken: string | null = null;
+let spotifyToken: { value: string; expiresAt: number } | null = null;
 
+// Client-credentials tokens last an hour; long batch runs outlive them.
 async function getSpotifyToken(): Promise<string> {
-  if (spotifyToken) return spotifyToken;
+  if (spotifyToken && Date.now() < spotifyToken.expiresAt) return spotifyToken.value;
   const basic = Buffer.from(`${requireEnv("SPOTIFY_CLIENT_ID")}:${requireEnv("SPOTIFY_CLIENT_SECRET")}`).toString("base64");
   const res = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
@@ -78,13 +79,18 @@ async function getSpotifyToken(): Promise<string> {
     body: "grant_type=client_credentials",
   });
   if (!res.ok) throw new Error(`Spotify token: ${res.status} ${await res.text()}`);
-  spotifyToken = (await res.json()).access_token as string;
-  return spotifyToken;
+  const data = await res.json();
+  spotifyToken = { value: data.access_token as string, expiresAt: Date.now() + ((data.expires_in ?? 3600) - 300) * 1000 };
+  return spotifyToken.value;
 }
 
-export async function spotify(pathOrUrl: string): Promise<any> {
+export async function spotify(pathOrUrl: string, retried = false): Promise<any> {
   const url = pathOrUrl.startsWith("http") ? pathOrUrl : `https://api.spotify.com/v1${pathOrUrl}`;
   const res = await fetch(url, { headers: { Authorization: `Bearer ${await getSpotifyToken()}` } });
+  if (res.status === 401 && !retried) {
+    spotifyToken = null;
+    return spotify(pathOrUrl, true);
+  }
   if (!res.ok) throw new Error(`Spotify ${url}: ${res.status} ${await res.text()}`);
   return res.json();
 }

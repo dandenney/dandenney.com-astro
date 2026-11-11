@@ -73,7 +73,9 @@ jobs:
           for id in $SPOTIFY_IDS; do args+=(--id "$id"); done
           node --experimental-strip-types --no-warnings scripts/lately/review.ts "${args[@]}"
 
+      # Saves whatever finished even if a later song crashed the review step.
       - name: Commit and open PR
+        if: ${{ !cancelled() }}
         env:
           LATELY_SUMMARY_FILE: ${{ runner.temp }}/summary.md
         run: |

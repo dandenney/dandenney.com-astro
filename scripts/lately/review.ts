@@ -6,7 +6,7 @@
 //   node --experimental-strip-types --no-warnings scripts/lately/review.ts --rewrite-legacy 3
 //   add --dry-run to print the review instead of writing files
 // Needs SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, ANTHROPIC_API_KEY, OPENROUTER_API_KEY.
-import { appendFileSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import {
   CostMeter,
   EVIDENCE_DIR,
@@ -288,17 +288,30 @@ ${draft}
 </draft>
 
 Return <report>JSON array of {"claim": "...", "verdict": "supported|removed|corrected", "note": "..."} for each claim checked</report> then <body>the corrected review markdown</body>.`,
-    maxTokens: 4000,
+    maxTokens: 8000,
     meter,
     step: "fact-check",
   });
+  const rawReport = extractTag(text, "report")?.replace(/^```(?:json)?\s*|\s*```$/g, "");
+  const body = extractTag(text, "body");
   let report: unknown[] = [];
   try {
-    report = JSON.parse(extractTag(text, "report") ?? "[]");
-  } catch {
-    report = [{ note: "unparseable report", raw: extractTag(text, "report") }];
+    report = JSON.parse(rawReport ?? "[]");
+  } catch {}
+  // Without a report and a corrected body, the draft was never checked.
+  if (!Array.isArray(report) || !report.length || !body) {
+    throw new Error(`fact-check returned no usable report/body: ${text.slice(0, 200).replace(/\s+/g, " ")}`);
   }
-  return { body: extractTag(text, "body") ?? draft, report };
+  return { body, report };
+}
+
+async function factCheckWithRetry(packet: string, draft: string, meter: CostMeter) {
+  try {
+    return await factCheck(packet, draft, meter);
+  } catch (error) {
+    console.warn(`   ${(error as Error).message}; retrying`);
+    return factCheck(packet, draft, meter);
+  }
 }
 
 const yaml = (s: string) => JSON.stringify(s);
@@ -336,6 +349,11 @@ function sourceTitle(url: string) {
 }
 
 const summary: string[] = [];
+// Rewritten after every song so a crash mid-batch still leaves a summary for the PR.
+function saveSummary() {
+  if (!summary.length || !process.env.LATELY_SUMMARY_FILE) return;
+  writeFileSync(process.env.LATELY_SUMMARY_FILE, `| Song | Result | Cost |\n| --- | --- | --- |\n${summary.join("\n")}\n`);
+}
 const queue = pickQueue();
 if (!queue.length) console.log("Nothing to review.");
 const reviews = existingReviews();
@@ -363,6 +381,7 @@ for (const id of queue) {
       writeJson(HELD_FILE, held);
     }
     summary.push(`| ${label} | held: ${reason} | $${meter.total.toFixed(3)} |`);
+    saveSummary();
     continue;
   }
 
@@ -377,6 +396,7 @@ for (const id of queue) {
       writeJson(HELD_FILE, held);
     }
     summary.push(`| ${label} | held: ${reason} | $${meter.total.toFixed(3)} |`);
+    saveSummary();
     continue;
   }
   const packet = packetText(track, lyrics, listening, facts);
@@ -384,11 +404,12 @@ for (const id of queue) {
   let checked: Awaited<ReturnType<typeof factCheck>>;
   try {
     draft = await write(packet, meter);
-    checked = await factCheck(packet, draft.body, meter);
+    checked = await factCheckWithRetry(packet, draft.body, meter);
     if (wordCount(checked.body) < MIN_WORDS) throw new Error(`fact-checked body only ${wordCount(checked.body)} words`);
   } catch (error) {
     console.warn(`   failed: ${(error as Error).message}`);
     summary.push(`| ${label} | failed: ${(error as Error).message} | $${meter.total.toFixed(3)} |`);
+    saveSummary();
     continue;
   }
   const removed = (checked.report as any[]).filter((r) => r?.verdict && r.verdict !== "supported").length;
@@ -428,8 +449,7 @@ for (const id of queue) {
   summary.push(
     `| ${label} | ${existing ? "rewrote" : "new"}: lyrics ${lyrics.status}, ${listening ? "listened" : "no audio"}, ${facts.facts.length} facts, ${removed} fact-check fixes${lint.length ? `, lint: ${lint.join("/")}` : ""} | $${meter.total.toFixed(3)} |`,
   );
+  saveSummary();
 }
 
-if (summary.length && process.env.LATELY_SUMMARY_FILE) {
-  appendFileSync(process.env.LATELY_SUMMARY_FILE, `| Song | Result | Cost |\n| --- | --- | --- |\n${summary.join("\n")}\n`);
-}
+
