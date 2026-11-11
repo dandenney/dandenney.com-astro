@@ -1,0 +1,96 @@
+name: Lately Reviews
+
+# Syncs the Lately playlist, reviews new adds, and opens (or extends) a PR.
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      added_within_days:
+        description: "Review unreviewed songs added to Lately in the last N days"
+        default: "30"
+      backlog:
+        description: "Also review this many older unreviewed songs (newest add first)"
+        default: "0"
+      rewrite_legacy:
+        description: "Rewrite this many legacy (pre-Lately pipeline) reviews"
+        default: "0"
+      spotify_ids:
+        description: "Specific Spotify track IDs, space separated"
+        default: ""
+
+concurrency:
+  group: lately-reviews
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      BRANCH: lately/reviews
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+      SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Continue the open review PR, if any
+        run: |
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null && \
+             [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')" ]; then
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout -B "$BRANCH"
+            echo "FRESH_BRANCH=1" >> "$GITHUB_ENV"
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Sync Lately
+        run: node --experimental-strip-types --no-warnings scripts/lately/sync.ts
+
+      - name: Write reviews
+        env:
+          ADDED_WITHIN: ${{ inputs.added_within_days || '30' }}
+          BACKLOG: ${{ inputs.backlog || '0' }}
+          REWRITE_LEGACY: ${{ inputs.rewrite_legacy || '0' }}
+          SPOTIFY_IDS: ${{ inputs.spotify_ids }}
+          LATELY_SUMMARY_FILE: ${{ runner.temp }}/summary.md
+        run: |
+          args=(--added-within "$ADDED_WITHIN" --next "$BACKLOG" --rewrite-legacy "$REWRITE_LEGACY")
+          for id in $SPOTIFY_IDS; do args+=(--id "$id"); done
+          node --experimental-strip-types --no-warnings scripts/lately/review.ts "${args[@]}"
+
+      - name: Commit and open PR
+        env:
+          LATELY_SUMMARY_FILE: ${{ runner.temp }}/summary.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/lately src/content/songs
+          if git diff --staged --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "feat(songs): lately reviews $(date -u '+%Y-%m-%d')"
+          # A merged PR can leave a stale branch behind; a fresh run replaces it.
+          git push ${FRESH_BRANCH:+--force} origin "$BRANCH"
+          summary="$(cat "$LATELY_SUMMARY_FILE" 2>/dev/null || echo 'Playlist sync only.')"
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')" ]; then
+            gh pr comment "$BRANCH" --body "$summary"
+          else
+            gh pr create --head "$BRANCH" --title "feat(songs): Lately reviews" \
+              --body "$(printf 'Reviews generated from the Lately playlist. Evidence and fact-check reports are in `src/data/lately/evidence/`.\n\n%s' "$summary")"
+          fi

@@ -11,6 +11,7 @@ duration: 222000
 genres: ["indie-rock", "indie-pop"]
 pubDate: "2026-06-07"
 tags: ["ray-bull", "indie-rock", "2026"]
+pipeline: "agent"
 aiGenerated: true
 ---
 Ray Bull’s **“Under Your Eyelid”** pulled me in because it sounds, on the page at least, like a song about wanting a softer place to land and knowing you’re looking in the wrong direction. On *Please Stop Laughing*, it reads less like a grand statement than a compact spiral: disappointment, self-medication, shame, then a return to the same fragile wish for relief.

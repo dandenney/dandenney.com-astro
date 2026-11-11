@@ -5,12 +5,11 @@ import Footer from "@/components/Footer.astro";
 import { SITE_TITLE } from "@/consts";
 import { getCollection } from "astro:content";
 import { ClientRouter } from "astro:transitions";
+import { formatAddedAt, orderByLately, songSlug } from "@/lib/lately";
 
 export const prerender = true;
 
-const songs = (await getCollection("songs")).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title),
-);
+const { active: songs, retired } = orderByLately(await getCollection("songs"));
 
 const formatDuration = (ms: number) => {
   const totalSeconds = Math.round(ms / 1000);
@@ -47,12 +46,13 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
         </h1>
         <div class="hero-fade hero-foot">
           <p class="hero-copy text-gray-600 dark:text-slate-300">
-            The {songs.length} songs I keep coming back to, each with a full
-            review. The write-ups are AI-assisted; the taste is all mine.
+            The {songs.length} songs on my Lately playlist that have a full
+            review, newest add first. The write-ups are AI-assisted; the taste
+            is all mine.
           </p>
           <div class="hero-aside">
             <p class="hero-stat text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
-              {runtimeHours}&thinsp;hr {runtimeMinutes}&thinsp;min runtime &middot; A&ndash;Z
+              {runtimeHours}&thinsp;hr {runtimeMinutes}&thinsp;min runtime &middot; Newest first
             </p>
             <a
               href="/music"
@@ -82,7 +82,7 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
             return (
               <li class="track">
                 <a
-                  href={`/music/reviews/${song.id.replace(/\.mdx?$/, "")}/`}
+                  href={`/music/reviews/${songSlug(song)}/`}
                   class="track-link"
                   data-art={song.data.albumArt}
                 >
@@ -97,7 +97,7 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
                       width="96"
                       height="96"
                       loading="lazy"
-                      transition:name={`song-art-${song.id.replace(/\.mdx?$/, "")}`}
+                      transition:name={`song-art-${songSlug(song)}`}
                     />
                   )}
                   <span class="track-main">
@@ -108,7 +108,7 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
                   </span>
                   <span class="track-side">
                     <span class="track-duration">{formatDuration(song.data.duration)}</span>
-                    <span class="track-year">{year}</span>
+                    <span class="track-year">{song.addedAt ? `Added ${formatAddedAt(song.addedAt)}` : year}</span>
                   </span>
                   <span class="track-arrow" aria-hidden="true">&#8599;</span>
                 </a>
@@ -116,6 +116,26 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
             );
           })}
         </ol>
+      )}
+
+      {retired.length > 0 && (
+        <section class="retired px-8">
+          <h2 class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+            [&nbsp;Out of rotation / {retired.length}&nbsp;]
+          </h2>
+          <p class="retired-copy text-sm text-gray-600 dark:text-slate-400">
+            Reviewed once, since dropped from Lately.
+          </p>
+          <ul class="retired-list">
+            {retired.map((song) => (
+              <li>
+                <a href={`/music/reviews/${songSlug(song)}/`} class="retired-link">
+                  {song.data.title} <span class="retired-artist">&middot; {song.data.artist}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       <div class="hatch-band" aria-hidden="true"></div>
@@ -385,6 +405,40 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
       .track-link:focus-visible .track-arrow {
         opacity: 1;
         transform: translate(0, 0);
+      }
+
+      /* ---------- Out of rotation ---------- */
+      .retired {
+        padding-block: 2.5rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      .retired-copy {
+        margin-top: 0.5rem;
+      }
+
+      .retired-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.75rem;
+        margin-top: 1rem;
+      }
+
+      .retired-link {
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .retired-link:hover,
+      .retired-link:focus-visible {
+        color: var(--accent);
+      }
+
+      .retired-artist {
+        font-weight: 400;
+        color: #64748b;
       }
 
       /* Inline art when there is no hover to summon the floating preview */

@@ -12,6 +12,7 @@ genres: ["indie-rock"]
 preview: "https://p.scdn.co/mp3-preview/7d0e6a81a7dbb330467dc1931733a4a158dd600a"
 pubDate: "2026-10-24"
 tags: ["the-gringos","indie-rock","2024"]
+pipeline: "agent"
 aiGenerated: true
 ---
 The Gringos' **"Empty House"** pulled me in because it opens mid-argument, with no throat-clearing: *"We got into another fight, honey what are we gonna do?"* It sounds like a song written the morning after, by somebody who still isn't sure how bad the night was.

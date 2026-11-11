@@ -1,0 +1,170 @@
+{
+  "spotifyId": "5YTDnlr6qzl0XIGCqHP7sx",
+  "reviewedAt": "2026-11-11T03:44:08.915Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/1929922"
+  },
+  "listening": "Pass 1:\nA driving, distorted electric guitar plays a riff with a tight, punchy drum beat. The bass guitar is prominent, playing a walking line. A male voice sings in a clear, mid-range, slightly nasal tone, with a raw, unpolished delivery. He is joined by a second male voice for harmonies, often in unison or a third above. The production is raw and energetic, with a sense of a live room. The texture is full, with all instruments present throughout. The arrangement remains consistent, with no significant changes in instrumentation or dynamics.\n\nPass 2:\nA driving, distorted electric guitar riff repeats, joined by a tight, punchy drum beat with a prominent snare. A male voice sings in a clear, mid-range, with a slight rasp, delivering lyrics in a steady, rhythmic manner. A second male voice provides backing harmonies, often in unison or a close interval. The bass guitar is present but not always distinct. The tempo is upbeat and consistent, creating a driving, rock groove. The production is clean and polished, with a full, bright sound. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nA driving, distorted electric guitar riff opens the excerpt, joined by a tight, punchy drum beat with a prominent snare. A male voice sings in a clear, mid-range, with a slightly raw, unpolished character. The vocals are delivered with a direct, almost conversational tone. A second male voice joins for harmonies, often in unison or a close interval. The bass guitar is present, providing a solid foundation. The tempo is brisk, creating an energetic, driving groove. The production sounds like a live room, with a raw, slightly compressed texture. The arrangement remains consistent throughout, with no major changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Might Be Right\" is a White Reaper single and the lead single from their third studio album, You Deserve Love.",
+        "source": "https://en.wikipedia.org/wiki/Might_Be_Right"
+      },
+      {
+        "claim": "You Deserve Love was recorded with producer Jay Joyce in Nashville, Tennessee, and is White Reaper's Elektra Records debut.",
+        "source": "https://exclaim.ca/music/article/white_reaper_return_with_new_album_you_deserve_love"
+      },
+      {
+        "claim": "Jay Joyce's production credits include Halestorm, Cage the Elephant, The Head and the Heart and Eric Church.",
+        "source": "https://billboard.com/articles/columns/rock/8533321/white-reaper-you-deserve-love-album-breakdown"
+      },
+      {
+        "claim": "The album lineup is Tony Esposito (vocals/guitar), Hunter Thompson (guitar), Ryan Hater (keyboards), Sam Wilkerson (bass) and Nick Wilkerson (drums).",
+        "source": "https://www.billboard.com/music/rock/white-reaper-you-deserve-love-album-breakdown-8533321/"
+      },
+      {
+        "claim": "Tony Esposito said recording was easy because the band already knew the songs and played most of them live, so it felt like a practice.",
+        "source": "https://www.thecurrent.org/feature/2019/10/12/white-reaper-you-deserve-love-might-be-right-studio-session"
+      },
+      {
+        "claim": "The \"Might Be Right\" music video was released May 27, 2019, and was directed by Daniel Ryan and produced by Jonah Mueller.",
+        "source": "https://en.wikipedia.org/wiki/Might_Be_Right"
+      },
+      {
+        "claim": "\"Might Be Right\" was White Reaper's first song to reach a Billboard chart. It peaked at Nos. 12, 16 and 17 on the Adult Alternative Songs, Alternative Songs and Rock Airplay charts dated Oct. 19, 2019.",
+        "source": "https://www.billboard.com/music/rock/white-reaper-you-deserve-love-album-breakdown-8533321/"
+      },
+      {
+        "claim": "The song later reached Number 1 on Billboard's Alternative Airplay chart.",
+        "source": "https://www.deezer.com/en/artist/5945596"
+      },
+      {
+        "claim": "White Reaper played \"Might Be Right\" and \"Real Long Time\" on Jimmy Kimmel Live! in December 2019.",
+        "source": "https://en.wikipedia.org/wiki/White_Reaper"
+      },
+      {
+        "claim": "White Reaper formed in 2012 in Louisville, Kentucky, and signed to Polyvinyl in 2014. They released White Reaper Does It Again in 2015 and The World's Best American Band in 2017, before moving to Elektra for You Deserve Love.",
+        "source": "https://www.deezer.com/en/artist/5945596"
+      }
+    ],
+    "lineage": "White Reaper's sound draws on guitar-driven garage rock and vintage power pop from Louisville, Kentucky, with '80s AOR and glam influences on this album.",
+    "genres": [
+      "garage punk",
+      "power pop",
+      "indie rock"
+    ]
+  },
+  "draft": "<body>The best line in **Might Be Right** is an admission of failure set to music that refuses to sound defeated. \"I always fall / a little short in front of you,\" Tony Esposito sings, and the band loops it, a self-own repeated until it",
+  "factCheck": [
+    {
+      "claim": "The best line in Might Be Right is an admission of failure set to music that refuses to sound defeated.",
+      "verdict": "supported",
+      "note": "Interpretation. It rests on the lyrics and on the driving, brisk, distorted-guitar sound, which all three passes agree on."
+    },
+    {
+      "claim": "Lyric quote: \"I always fall / a little short in front of you\"",
+      "verdict": "corrected",
+      "note": "The lyrics read \"And I always fall / A little short in front of you\" (two consecutive lines). Capitalization is restored to match."
+    },
+    {
+      "claim": "Tony Esposito sings",
+      "verdict": "supported",
+      "note": "He is listed as vocals/guitar in the album lineup. The passes describe a male lead voice."
+    },
+    {
+      "claim": "the band loops it, a self-own repeated",
+      "verdict": "supported",
+      "note": "The refrain repeats in the lyrics, including the stuttered \"a little short in front of, a little short in front of you.\""
+    },
+    {
+      "claim": "Draft ends mid-sentence (\"repeated until it\")",
+      "verdict": "corrected",
+      "note": "The unfinished clause is completed and the review is brought to full length using only supported material."
+    },
+    {
+      "claim": "Lead single from the third album You Deserve Love; Elektra debut; recorded with Jay Joyce in Nashville",
+      "verdict": "supported",
+      "note": "Wikipedia and Exclaim."
+    },
+    {
+      "claim": "Jay Joyce has worked with Cage the Elephant and Eric Church",
+      "verdict": "supported",
+      "note": "Billboard."
+    },
+    {
+      "claim": "Esposito said recording was easy because the band knew the songs and played most of them live, so it felt like practice",
+      "verdict": "supported",
+      "note": "Paraphrased from The Current, no direct quote used."
+    },
+    {
+      "claim": "First White Reaper song to reach a Billboard chart; later hit No. 1 on Alternative Airplay",
+      "verdict": "supported",
+      "note": "Billboard and Deezer."
+    },
+    {
+      "claim": "Sound: distorted driving guitar riff, tight punchy drums with prominent snare, brisk tempo, clear mid-range male lead with a raw edge, second male voice in unison or close harmony, bass present, live-room feel",
+      "verdict": "supported",
+      "note": "At least two passes agree on each. The 'clean and polished' production in Pass 2 conflicts with the other two, so the live-room, raw description is kept and the polish claim is left out."
+    },
+    {
+      "claim": "Garage rock and power pop from Louisville; '80s AOR and glam influences on the album",
+      "verdict": "supported",
+      "note": "Lineage note in the packet."
+    },
+    {
+      "claim": "Lyric quotes \"So I guess you might be right\" and \"Keep the lights down\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly. Three quotes in total."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2424,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013239,
+        "detail": "1098 in / 129 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00046291,
+        "detail": "1098 in / 118 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012814,
+        "detail": "1098 in / 112 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.151302,
+        "detail": "53166 in / 1497 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053048,
+        "detail": "3262 in / 2000 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.034962,
+        "detail": "3651 in / 2766 out"
+      }
+    ]
+  }
+}

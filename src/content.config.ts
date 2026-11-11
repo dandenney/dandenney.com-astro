@@ -107,6 +107,10 @@ const songs = defineCollection({
     pubDate: z.coerce.date(),
     rating: z.number().min(1).max(5).optional(),
     tags: z.array(z.string()),
+    sources: z
+      .array(z.object({ title: z.string(), url: z.url() }))
+      .optional(),
+    pipeline: z.enum(["legacy", "agent", "lately"]).default("legacy"),
     aiGenerated: z.boolean().default(true),
   }),
 });

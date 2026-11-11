@@ -1,0 +1,195 @@
+{
+  "spotifyId": "43SoxERu5UlXAgt4Es1VQU",
+  "reviewedAt": "2026-11-11T03:43:08.949Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3355217"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a slight country twang. A bass guitar plays a simple, walking line. A drum kit provides a steady, driving beat with a prominent snare drum.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, country-rock feel with a slight shuffle.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy voice. The delivery is conversational and melodic. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced. The room sounds natural, with a slight reverb on the vocals and drums. The texture is polished but not overly produced.\n\nArrangement:\nThe excerpt begins with the acoustic guitar, bass, and drums playing together. The lead vocal enters shortly after. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building significantly.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern, with a bass line played on the lower strings. A steel guitar plays sustained notes with a vibrato effect. A drum kit plays a simple, steady beat with brushes, emphasizing the snare drum.\n\nTempo and Groove:\nThe tempo is moderate. The groove is relaxed and laid-back, with a slight shuffle feel.\n\nVocals:\nThe singer has a clear, slightly raspy voice. The delivery is conversational and relaxed. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced. The room sounds natural, with a slight reverb. The texture is warm and inviting. The production is polished but not overly slick.\n\nArrangement:\nThe excerpt begins with the acoustic guitar and steel guitar. The drums enter shortly after the vocals begin. The steel guitar plays fills between vocal phrases. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked melody with a consistent bass line. A steel guitar plays sustained notes, sometimes with a vibrato. A bass guitar plays a simple, walking bass line. Drums play a basic beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is relaxed and steady, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is straightforward and conversational. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced. The texture is smooth, with instruments clearly defined. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The steel guitar enters with a sustained note. The vocals enter, and the steel guitar continues to play fills and sustained notes. The drums maintain a consistent beat throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Porch Light\" was released on November 18, 2022 by Josh Meloy Music as a single.",
+        "source": "https://www.shazam.com/en-us/song/1650458284/porch-light"
+      },
+      {
+        "claim": "The song was written by Joshua Husted Meloy and Hunter Dmarcus Baskett. Meloy is credited as composer.",
+        "source": "https://www.deezer.com/en/album/367627097"
+      },
+      {
+        "claim": "The track runs about 3 minutes and 4–5 seconds.",
+        "source": "https://music.amazon.com/tracks/B0BJMJ4KGT"
+      },
+      {
+        "claim": "The lyrics are about life on the road. They cover driving through the night in a van with a broken generator and A/C, playing a show, sleeping in hotel rooms, and telling someone to leave the porch light on for his return.",
+        "source": "https://www.letras.com/josh-meloy/porch-light/"
+      },
+      {
+        "claim": "Rolling Stone describes \"Porch Light\" as a streaming hit. It says Meloy's streaming numbers soared after the song, and that he had a word-of-mouth hit with growing crowds.",
+        "source": "https://www.rollingstone.com/music/music-features/josh-meloy-porch-light-red-dirt-basketball-1235278834/"
+      },
+      {
+        "claim": "A speaker-bureau bio says \"Porch Light\" has more than 150 million Spotify streams.",
+        "source": "https://www.allamericanspeakers.com/speakers/463221/Josh-Meloy"
+      },
+      {
+        "claim": "Meloy is an Oklahoma singer-songwriter. He began writing and making music around age 19 while living in a camper in Stillwater.",
+        "source": "https://www.raisedrowdy.com/2021/03/10/get-to-know-josh-meloy-songwriter-of-washington-street/"
+      },
+      {
+        "claim": "Meloy came from a family with strong ties to music but chose sports at first. He first picked up a guitar at Oklahoma State University at age 19.",
+        "source": "https://thebluenote.com/event/josh-meloy/"
+      },
+      {
+        "claim": "Meloy names Hank Williams Jr., Chris Stapleton, Waylon Jennings, Whiskey Myers and Evan Felker as influences. His grandfather bought him his first guitar.",
+        "source": "https://www.raisedrowdy.com/2021/03/10/get-to-know-josh-meloy-songwriter-of-washington-street/"
+      },
+      {
+        "claim": "Meloy's catalog includes the albums Washington Street, Oklahoma and Where You Came From. He recorded and produced Oklahoma at home.",
+        "source": "https://www.allamericanspeakers.com/speakers/463221/Josh-Meloy"
+      }
+    ],
+    "lineage": "Meloy's music sits in the Oklahoma Red Dirt country-rock scene, which is rooted in Stillwater and in acts such as Cross Canadian Ragweed, Jason Boland and Stoney LaRue.",
+    "genres": [
+      "red dirt",
+      "country",
+      "country rock"
+    ]
+  },
+  "draft": "<body>The best line in **Porch Light** isn't in the chorus. It's \"We got one more show and it's a shitty door deal,\" the kind of phrase only someone who has counted out a night's take in a parking lot would think to put in a song. Josh Meloy and co-writer Hunter Dmarcus Baskett fill both verses with that kind of grit: a busted generator, a broken A/C, a hotel breakfast that runs seven to nine and gets slept through anyway. The very next line settles the accounts: \"Breakin' my back just to make a couple bones.\" It reads like a ledger more than a lament, and that's why it lands.\n\nThe band plays it easy. A fingerpicked acoustic guitar rolls out arpeggios over a walking bass line. The drums h",
+  "factCheck": [
+    {
+      "claim": "The line \"We got one more show and it's a shitty door deal\" appears in the song",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. It sits in the second verse, not in the repeated chorus."
+    },
+    {
+      "claim": "Only someone who has counted out a night's take in a parking lot would write it",
+      "verdict": "corrected",
+      "note": "The parking lot is invented detail. Kept as interpretation, with the setting removed."
+    },
+    {
+      "claim": "Josh Meloy and co-writer Hunter Dmarcus Baskett wrote the song",
+      "verdict": "supported",
+      "note": "Deezer credits Joshua Husted Meloy and Hunter Dmarcus Baskett."
+    },
+    {
+      "claim": "The verses include a busted generator and a broken A/C",
+      "verdict": "supported",
+      "note": "Lyrics: \"Generator's busted and the A/C's broken\"."
+    },
+    {
+      "claim": "A hotel breakfast runs seven to nine and gets slept through",
+      "verdict": "corrected",
+      "note": "The lyrics say \"Breakfast in the morning from seven to nine\" and that they can't wake up in time. They never say the breakfast is at a hotel, so \"hotel\" was dropped."
+    },
+    {
+      "claim": "\"Breakin' my back just to make a couple bones\" is the very next line after the door-deal line",
+      "verdict": "supported",
+      "note": "Exact quote and correct order. Total quotes stay at three or fewer."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with arpeggios",
+      "verdict": "supported",
+      "note": "All three passes describe fingerpicking, and passes 1 and 2 say arpeggiated."
+    },
+    {
+      "claim": "Walking bass line",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say a walking bass guitar. Pass 2 has a bass line on the guitar's lower strings."
+    },
+    {
+      "claim": "Drums (draft was cut off at \"The drums h\")",
+      "verdict": "corrected",
+      "note": "Completed as a steady, simple beat. Passes disagree on brushes versus a driving snare, so only the steady beat is kept."
+    },
+    {
+      "claim": "Steel guitar with sustained notes, vibrato and fills between vocal phrases",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. Pass 1 doesn't mention it, but two passes is enough."
+    },
+    {
+      "claim": "Clear, slightly raspy, conversational vocal with no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree. No gender is stated."
+    },
+    {
+      "claim": "Relaxed, moderate tempo with a slight shuffle",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Clean, polished production with a natural room",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 mention the natural room and slight reverb. All three call it clean and polished."
+    },
+    {
+      "claim": "Meloy lived in a camper in Stillwater and began writing around age 19",
+      "verdict": "supported",
+      "note": "Raised Rowdy profile."
+    },
+    {
+      "claim": "The song sits in the Oklahoma Red Dirt scene rooted in Stillwater, alongside Cross Canadian Ragweed, Jason Boland and Stoney LaRue",
+      "verdict": "supported",
+      "note": "Lineage line in the packet."
+    },
+    {
+      "claim": "Rolling Stone calls it a word-of-mouth hit with growing crowds",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone summary."
+    },
+    {
+      "claim": "The refrain returns at the end of the song",
+      "verdict": "supported",
+      "note": "The lyrics repeat the same refrain block several times, which shows the structure."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2292,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014667,
+        "detail": "1099 in / 186 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014617,
+        "detail": "1099 in / 184 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014792,
+        "detail": "1099 in / 191 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.129602,
+        "detail": "43121 in / 1336 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054128,
+        "detail": "3532 in / 2000 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.041104,
+        "detail": "4092 in / 3292 out"
+      }
+    ]
+  }
+}
