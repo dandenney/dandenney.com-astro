@@ -6,10 +6,11 @@
 //   node --experimental-strip-types --no-warnings scripts/lately/review.ts --rewrite-legacy 3
 //   add --dry-run to print the review instead of writing files
 // Needs SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, ANTHROPIC_API_KEY, OPENROUTER_API_KEY.
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import {
   CostMeter,
   EVIDENCE_DIR,
+  ALIASES_FILE,
   HELD_FILE,
   LATELY_FILE,
   LISTEN_MODEL,
@@ -64,19 +65,26 @@ const dryRun = flag("--dry-run");
 
 const snapshot = readJson<LatelySnapshot>(LATELY_FILE, { playlistId: "", syncedAt: "", tracks: [] });
 const held = readJson<Record<string, { reason: string; at: string }>>(HELD_FILE, {});
+// Lately track IDs whose song is already reviewed under another Spotify ID (a single vs. album release, say).
+const aliases = readJson<Record<string, string>>(ALIASES_FILE, {});
+
+function readReview(file: string) {
+  const text = readFileSync(`${SONGS_DIR}/${file}`, "utf8");
+  const id = text.match(/^spotifyId:\s*"?(\w+)"?/m)?.[1];
+  if (!id) return null;
+  return {
+    id,
+    file,
+    legacy: !/^pipeline:/m.test(text) || /^pipeline:\s*"?legacy/m.test(text),
+    pubDate: text.match(/^pubDate:\s*"?([\d-]+)"?/m)?.[1] ?? null,
+  };
+}
 
 function existingReviews() {
-  const byId = new Map<string, { file: string; legacy: boolean; pubDate: string | null }>();
+  const byId = new Map<string, NonNullable<ReturnType<typeof readReview>>>();
   for (const file of readdirSync(SONGS_DIR).filter((f) => f.endsWith(".md"))) {
-    const text = readFileSync(`${SONGS_DIR}/${file}`, "utf8");
-    const id = text.match(/^spotifyId:\s*"?(\w+)"?/m)?.[1];
-    if (!id) continue;
-    const slug = file.replace(/\.md$/, "");
-    byId.set(id, {
-      file,
-      legacy: !/^pipeline:/m.test(text) || /^pipeline:\s*"?legacy/m.test(text),
-      pubDate: text.match(/^pubDate:\s*"?([\d-]+)"?/m)?.[1] ?? null,
-    });
+    const review = readReview(file);
+    if (review) byId.set(review.id, review);
   }
   return byId;
 }
@@ -88,18 +96,20 @@ function pickQueue(): string[] {
   const legacy = Number(values("--rewrite-legacy")[0] ?? 0);
   const withinDays = Number(values("--added-within")[0] ?? 0);
   const queue = [...ids];
+  const done = (id: string) => reviews.has(id) || !!aliases[id] || !!held[id];
   if (withinDays) {
     const cutoff = new Date(Date.now() - withinDays * 86_400_000).toISOString();
     queue.push(
       ...snapshot.tracks
-        .filter((t) => t.addedAt >= cutoff && !reviews.has(t.id) && !held[t.id] && !queue.includes(t.id))
+        .filter((t) => t.addedAt >= cutoff && !done(t.id))
         .map((t) => t.id),
     );
   }
   if (next) {
     queue.push(
       ...snapshot.tracks
-        .filter((t) => !reviews.has(t.id) && !held[t.id] && !queue.includes(t.id))
+        .filter((t) => !done(t.id) && !queue.includes(t.id))
+        .filter((t, i, list) => list.findIndex((o) => o.id === t.id) === i)
         .slice(0, next)
         .map((t) => t.id),
     );
@@ -112,7 +122,7 @@ function pickQueue(): string[] {
         .map((t) => t.id),
     );
   }
-  return queue;
+  return [...new Set(queue)];
 }
 
 async function getTrack(id: string): Promise<Track> {
@@ -364,6 +374,23 @@ for (const id of queue) {
   const label = `${track.artist} - ${track.title}`;
   console.log(`\n${label} (${id})`);
 
+  const slugFile = `${slugify(`${track.artist} ${track.title}`)}.md`;
+  let existing = reviews.get(id);
+  if (!existing && existsSync(`${SONGS_DIR}/${slugFile}`)) {
+    const other = readReview(slugFile);
+    if (other && !other.legacy && !values("--id").includes(id)) {
+      console.log(`   skipped: already reviewed as ${other.file} (${other.id})`);
+      if (!dryRun) {
+        aliases[id] = other.id;
+        writeJson(ALIASES_FILE, aliases);
+      }
+      summary.push(`| ${label} | skipped: already reviewed under Spotify ID ${other.id} | $0.000 |`);
+      saveSummary();
+      continue;
+    }
+    if (other) existing = other;
+  }
+
   const [lyrics, listening] = await Promise.all([
     getLyrics(track),
     listen(track, meter).catch((error) => {
@@ -418,8 +445,7 @@ for (const id of queue) {
 
   const drafted = draft.genres.split(",").map((g) => g.trim().toLowerCase()).filter(Boolean);
   const genres = (drafted.length ? drafted : facts.genres.map((g) => g.toLowerCase())).slice(0, 3);
-  const existing = reviews.get(id);
-  const slug = existing ? existing.file.replace(/\.md$/, "") : slugify(`${track.artist} ${track.title}`);
+  const slug = (existing?.file ?? slugFile).replace(/\.md$/, "");
   const pubDate = existing?.pubDate ?? new Date().toISOString().slice(0, 10);
   const sourceUrls = [...new Set(facts.facts.map((f) => f.source))].filter((url) => !STORE_DOMAINS.test(sourceTitle(url)));
   const labeled = await Promise.all(sourceUrls.map(async (url) => ({ title: await sourceLabel(url), url })));
