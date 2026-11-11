@@ -1,0 +1,182 @@
+{
+  "spotifyId": "58XuhoLGFJCqpD5EOPif3f",
+  "reviewedAt": "2026-11-11T21:30:41.293Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/24633413"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Sam Barber is the sole credited writer of \"Run Away High\". His full name is Samuel Robert Barber.",
+        "source": "https://lyricstranslate.com/en/sam-barber-run-away-high-lyrics.html"
+      },
+      {
+        "claim": "\"Run Away High\" was released on September 6, 2021, and runs 3:21.",
+        "source": "https://music.apple.com/us/song/run-away-high/1584802115"
+      },
+      {
+        "claim": "\"Run Away High\" was Barber's first single, released digitally and on streaming platforms.",
+        "source": "https://en.wikipedia.org/wiki/Sam_Barber_(singer)"
+      },
+      {
+        "claim": "Barber released \"Run Away High\" while studying civil engineering at State Technical College in Linn, Missouri.",
+        "source": "https://www.billboard.com/music/country/sam-barber-country-october-rookie-of-the-month-1235440483/"
+      },
+      {
+        "claim": "Barber told Billboard that his earliest releases were just audio from his phone, made with voice memos.",
+        "source": "https://www.billboard.com/music/country/sam-barber-country-october-rookie-of-the-month-1235440483/"
+      },
+      {
+        "claim": "Apple Music's bio describes \"Run Away High\" as an early recording with Barber accompanied only by his guitar. It says he later moved to a fuller full-band sound on the 2023 EP Million Eyes.",
+        "source": "https://music.apple.com/bw/artist/sam-barber/1584802114"
+      },
+      {
+        "claim": "The lyrics are narrated by an outlaw who is on the run from the police after shooting a man. The narrator is indifferent to dying young.",
+        "source": "https://www.songmeaningsandfacts.com/run-away-high-by-sam-barber/"
+      },
+      {
+        "claim": "A live version of \"Run Away High\" appears on Barber's Live EP 001, and Barber is again the sole credited writer. It runs 2:48.",
+        "source": "https://www.deezer.com/us/artist/84776892"
+      },
+      {
+        "claim": "At a Fonda Theatre show in Hollywood, Barber's band performed \"Run Away High\" with a fiddle and deep bass intro and with guitar and fiddle solos. The band was Luisa Marion (keys, fiddle), Luc Nyhus (guitar, banjo), Gregory Garner (bass) and Kevin McGowan (drums).",
+        "source": "https://www.musicconnection.com/live-review-of-sam-barber/"
+      },
+      {
+        "claim": "Barber was born on April 15, 2003, and raised on his family's 400-acre farm in Frohna, Missouri. He started writing songs at 16 on his great-grandfather's old Gibson guitar, which had five strings. His first public exposure came from a YouTube cover of Zach Bryan's \"Revival\".",
+        "source": "https://www.songfacts.com/facts/sam-barber"
+      }
+    ],
+    "lineage": "Barber's stripped-down, emotionally raw songwriting sits in the country, rock and folk tradition, in the outlaw-leaning vein of the current wave of Americana-style singer-songwriters.",
+    "genres": [
+      "country",
+      "folk",
+      "rock"
+    ]
+  },
+  "draft": "The most telling detail in **Run Away High** is a guess about a stranger's age. The narrator's woman has \"met her a good old man down in the sticks,\" and everything we learn about him comes through a jealous squint: sharp-dressed, and \"hell, he's probably 36.\" Then he crosses the narrator's path, and the old six-shot comes out. The song spends one line on the killing and never says the word that drives it. Heartbreak is right there, and the narrator won't say it out loud.\n\nThat refusal is the song. Sam Barber, the sole writer, builds a narrator who keeps insisting he doesn't care: about the cheap cigars burning his lungs, about the cops on his tail, about whether he lives. The first verse gives the pose away with \"All the sins I've made and the time I ought to be dead by now.\" It reads like a boast, but it's also a tally, and someone keeping count of their sins hasn't stopped caring about them. The chorus calls this a comedown, not a high, and that's honest. The recklessness is what happens after the rush, when the only plan left is to keep driving south.\n\nThe hook, \"So, what's one more sin before I reach the Baton bayou?\", is the oldest move in the outlaw songbook: the fugitive turning fatalism into permission. Barber plays it straight. The lyric never builds to a reckoning or a capture. It ends on the chorus sung twice, as if the narrator can only repeat the same rationale. Pride and grief sit side by side, and neither wins.\n\nThe record's backstory fits the story's roughness. This was Barber's first single, released while he was studying civil engineering at State Technical College in Linn, Missouri, and he has said his earliest releases were just phone audio from voice memos. It's an early recording of Barber and a guitar and nothing else. He grew up on a 400-acre family farm in Frohna, Missouri, started writing at 16 on his great-grandfather's five-string Gibson, and first got noticed covering Zach Bryan's \"Revival.\" That puts him squarely in the current wave of raw, outlaw-leaning Americana singer-songwriters. The song has since grown up on stage: at the Fonda Theatre in Hollywood his band opened it with fiddle and deep bass and gave it guitar and fiddle solos. The bones were strong enough to carry the weight.\n\nWhat sticks is the gap between what the narrator says and what he did, and you end up hearing the hurt he won't admit underneath every shrug.",
+  "factCheck": [
+    {
+      "claim": "\"met her a good old man down in the sticks\" (lyric quote)",
+      "verdict": "removed",
+      "note": "The quote matches the lyric. It was cut because the draft quoted four lines and the limit is three. The line is now paraphrased."
+    },
+    {
+      "claim": "\"hell, he's probably 36\" (lyric quote)",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "He is described as 'sharp-dressed'",
+      "verdict": "corrected",
+      "note": "The lyric says 'lookin' sharp as a knife', which says nothing about clothes. Reworded to match."
+    },
+    {
+      "claim": "The narrator's woman has met another man",
+      "verdict": "corrected",
+      "note": "The lyric only says 'she' and never says what she is to the narrator. Reworded to say 'the song's she', with the heartbreak left as a reading."
+    },
+    {
+      "claim": "The old six-shot comes out after he crosses the narrator's path",
+      "verdict": "supported",
+      "note": "Lyric: 'he crossed my path, so I pull out my old six shot'."
+    },
+    {
+      "claim": "The song spends one line on the killing",
+      "verdict": "corrected",
+      "note": "The killing takes two lines, the six shot and the lead through the heart."
+    },
+    {
+      "claim": "\"All the sins I've made and the time I ought to be dead by now\"",
+      "verdict": "supported",
+      "note": "Matches the lyric and is in the first verse."
+    },
+    {
+      "claim": "Sam Barber is the sole writer",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Cheap cigars burning his lungs, cops on his tail, driving south, indifferent to dying",
+      "verdict": "supported",
+      "note": "All in the lyrics and the researched facts."
+    },
+    {
+      "claim": "\"So, what's one more sin before I reach the Baton bayou?\"",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "It is 'the oldest move in the outlaw songbook'",
+      "verdict": "removed",
+      "note": "A claim about genre history with no support in the packet."
+    },
+    {
+      "claim": "The lyric ends on the chorus twice in a row, with no reckoning or capture",
+      "verdict": "supported",
+      "note": "The lyric structure shows the final two choruses back to back and no capture."
+    },
+    {
+      "claim": "First single; released while studying civil engineering at State Technical College in Linn, Missouri; earliest releases were phone voice memos",
+      "verdict": "supported",
+      "note": "Researched facts (Wikipedia, Billboard)."
+    },
+    {
+      "claim": "An early recording of Barber and a guitar and nothing else",
+      "verdict": "supported",
+      "note": "Apple Music bio says he is accompanied only by his guitar."
+    },
+    {
+      "claim": "Grew up on a 400-acre family farm in Frohna, Missouri; started writing at 16 on his great-grandfather's five-string Gibson; first noticed covering Zach Bryan's 'Revival'",
+      "verdict": "supported",
+      "note": "Songfacts."
+    },
+    {
+      "claim": "He belongs in the current wave of raw, outlaw-leaning Americana singer-songwriters",
+      "verdict": "supported",
+      "note": "Matches the lineage note. 'Squarely' was dropped."
+    },
+    {
+      "claim": "The song 'has since grown up on stage'",
+      "verdict": "corrected",
+      "note": "The timing of the live performance is unknown, so 'since' was dropped."
+    },
+    {
+      "claim": "At the Fonda Theatre in Hollywood his band gave it a fiddle and deep bass intro and guitar and fiddle solos",
+      "verdict": "supported",
+      "note": "Music Connection live review."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1657,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.074764,
+        "detail": "20912 in / 1294 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.043608,
+        "detail": "2757 in / 1629 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047304,
+        "detail": "3867 in / 3957 out"
+      }
+    ]
+  }
+}

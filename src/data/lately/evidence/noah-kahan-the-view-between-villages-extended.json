@@ -1,0 +1,192 @@
+{
+  "spotifyId": "5ihBtaVVMqO5VqJA5wnmfy",
+  "reviewedAt": "2026-11-11T21:33:29.948Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30423561"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a arpeggiated chord progression. A bass guitar plays a simple root-note line. Drums play a simple, driving beat with a snare backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA male voice sings with a clear, slightly raw character. The delivery is direct and earnest. There are no harmonies.\n\nProduction:\nThe room sounds open and natural. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The vocals enter immediately. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady, arpeggiated pattern. A bass guitar plays a simple, sustained root note line. Drums enter with a kick, snare, and hi-hat pattern, then add a ride cymbal.\n\nTempo and groove:\nThe tempo is moderate. The groove is steady and driving, with a slight swing feel.\n\nVocals:\nA male voice sings with a clear, slightly raspy character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sounds open and natural. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter, adding rhythmic drive. The vocals are present throughout. No elements drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed chord progression. A bass guitar plays a simple, sustained line. Drums play a simple, driving beat with a snare on beats two and four.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA single voice sings with a clear, direct character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sounds open and natural. The texture is clean and polished.\n\nArrangement:\nAll instruments are present from the beginning. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The extended version of 'The View Between Villages' was written by Noah Kahan and Todd Clark.",
+        "source": "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+      },
+      {
+        "claim": "It was produced by Gabe Simon and Noah Kahan. Both also sing background vocals and play electric guitar on it, and Kahan sings lead.",
+        "source": "https://readdork.com/track/noah-kahan-the-view-between-villages-extended"
+      },
+      {
+        "claim": "The extended version appears on the expanded edition Stick Season (We'll All Be Here Forever), released June 9, 2023. It is track 21 and runs about 4:52, against 3:35 for the original.",
+        "source": "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+      },
+      {
+        "claim": "The extended version adds a spoken bridge with voices of Hazel Lewis and Melvin Coburn, two people from Kahan's hometown community, plus Kahan himself.",
+        "source": "https://readdork.com/track/noah-kahan-the-view-between-villages-extended"
+      },
+      {
+        "claim": "Kahan told Billboard the song is about the drive between South Strafford and Strafford, Vermont. He feels at peace on that road, then feels anxiety returning once he passes his old house.",
+        "source": "https://www.hellorayo.co.uk/absolute-radio-country/entertainment/music/noah-kahan-songs"
+      },
+      {
+        "claim": "Kahan said that by the end of the song he is reversing the car and going back onto the road between the villages.",
+        "source": "https://www.hellorayo.co.uk/absolute-radio-country/entertainment/music/noah-kahan-songs"
+      },
+      {
+        "claim": "The extended version has become a visceral moment in Kahan's live set.",
+        "source": "https://holler.country/news/breaking/the-heartwarming-story-behind-the-voice-recordings-in-noah-kahan-s-the-view-between-the-villages-extended/"
+      },
+      {
+        "claim": "The parent album Stick Season was produced by Gabe Simon and Noah Kahan. It was recorded at Guilford Sound in Guilford, Vermont, and The Study in Nashville.",
+        "source": "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+      },
+      {
+        "claim": "Kahan's 2026 album The Great Divide references 'the last of the bugs', a line from 'The View Between Villages'.",
+        "source": "https://en.wikipedia.org/wiki/The_Great_Divide_(Noah_Kahan_album)"
+      },
+      {
+        "claim": "Kahan was born in Strafford, Vermont. He began writing songs at age 8 and got his first guitar at 10. With Stick Season he moved from pop-heavy earlier projects to a folk-centered sound.",
+        "source": "https://en.wikipedia.org/wiki/Noah_Kahan"
+      }
+    ],
+    "lineage": "The song sits in the contemporary folk and folk-pop tradition of rural New England storytelling, the Vermont-rooted sound that carried Kahan's Stick Season era.",
+    "genres": [
+      "folk",
+      "folk-pop",
+      "indie folk"
+    ]
+  },
+  "draft": "Most songs about going home end at the front door. **The View Between Villages** stops a mile short, then throws the car into reverse. Noah Kahan has said the song tracks the drive between South Strafford and Strafford, Vermont, the town where he was born. He feels at peace on that road, and the anxiety comes back once he passes his old house. The whole song lives in that gap. It's a map of one stretch of asphalt where a person can stand to be himself.\n\nThe first half is pure release, and Kahan writes it like a held breath let go. The bugs are leaving their homes, the road splits down the middle, and for a moment the world seems simple. Then comes the line that gives the joy away: \"I am not scared of death, I've got dreams again.\" The word \"again\" is doing the work. This isn't a happy person on a drive. It's someone surprised to remember what happy felt like, 17 for the length of a valley curve.\n\nThen he crosses the bridge, and the song turns on a single line: \"A minute from home, but I feel so far from it.\" What floods in is ordinary and crushing: a dead dog, skin that's getting older, the people he lost here. Anger arrives before grief can. He doesn't sort any of it out, and the song doesn't make him. The escape is almost funny in how small it is: \"The car's in reverse, I'm grippin' the wheel.\" He doesn't run anywhere. He backs up to the only stretch of road where everything goes still. It's an honest picture of how people actually cope, by finding the narrow place where the hurt can't reach and staying there a while.\n\nThe sound stays out of the way. An arpeggiated acoustic guitar runs steady over a plain root-note bass line, and the drums keep a driving snare backbeat at a moderate clip, like tires on a road you know by heart. Kahan's voice is clear with a little rasp at the edges, and the production is clean, recorded in a room that sounds open. It's the folk-pop of rural New England storytelling that carried his Stick Season era, built on place names like Alger Brook Road and not on metaphor.\n\nThe extended version, written with Todd Clark and produced by Kahan and Gabe Simon, adds a spoken bridge with Hazel Lewis and Melvin Coburn, two people from Kahan's hometown community, alongside Kahan himself. It turns the song's private ache into something communal, the people who surround him for a mile or two given actual voices. The image hasn't left him either. His later album The Great Divide reaches back for \"the last of the bugs.\"\n\nThe song gives you a name for the place between where you came from and who you've become, and makes you want to idle there too.",
+  "factCheck": [
+    {
+      "claim": "Kahan has said the song tracks the drive between South Strafford and Strafford, Vermont.",
+      "verdict": "supported",
+      "note": "Kahan told Billboard this."
+    },
+    {
+      "claim": "Strafford is the town where he was born.",
+      "verdict": "supported",
+      "note": "Kahan was born in Strafford, Vermont."
+    },
+    {
+      "claim": "He feels at peace on that road, and the anxiety comes back once he passes his old house.",
+      "verdict": "supported",
+      "note": "Matches the Billboard remarks."
+    },
+    {
+      "claim": "Bugs leaving their homes, the road splitting down the middle, the world seeming simple for a moment.",
+      "verdict": "supported",
+      "note": "Paraphrases the opening verse."
+    },
+    {
+      "claim": "Quote: \"I am not scared of death, I've got dreams again.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Quote: \"A minute from home, but I feel so far from it.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Quote: \"The car's in reverse, I'm grippin' the wheel.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "What floods in is a dead dog, skin that's getting older, the people he lost here.",
+      "verdict": "corrected",
+      "note": "The lyrics say 'the stretch of my skin' and 'the people I knew'. 'Getting older' and 'people he lost' overreach. Reworded closer to the text."
+    },
+    {
+      "claim": "He backs up to the stretch of road where everything goes still.",
+      "verdict": "supported",
+      "note": "Rests on Kahan's remark about reversing and the lyric 'back between villages, and everything's still'."
+    },
+    {
+      "claim": "Arpeggiated acoustic guitar, plain root-note bass, driving snare backbeat, moderate tempo.",
+      "verdict": "supported",
+      "note": "At least two passes agree on each."
+    },
+    {
+      "claim": "Clear voice with a little rasp; clean production; open-sounding room.",
+      "verdict": "supported",
+      "note": "Passes agree on a clear, slightly raw or raspy voice and an open, clean sound. 'Recorded in a room' reworded to avoid implying a recording location."
+    },
+    {
+      "claim": "It's the folk-pop of rural New England storytelling that carried his Stick Season era.",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Built on place names like Alger Brook Road and not on metaphor.",
+      "verdict": "corrected",
+      "note": "Alger Brook Road is in the lyrics, but 'not on metaphor' is an unsupported blanket claim. Removed."
+    },
+    {
+      "claim": "Extended version written with Todd Clark and produced by Kahan and Gabe Simon.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Spoken bridge with Hazel Lewis and Melvin Coburn, two people from Kahan's hometown community, alongside Kahan.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The Great Divide, a later album, reaches back for 'the last of the bugs.'",
+      "verdict": "supported",
+      "note": "Matches the researched facts and the lyrics."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.1705,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013651,
+        "detail": "1102 in / 145 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013251,
+        "detail": "1102 in / 129 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014026,
+        "detail": "1102 in / 160 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078876,
+        "detail": "22888 in / 1310 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.04322,
+        "detail": "3410 in / 1479 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044276,
+        "detail": "4563 in / 3515 out"
+      }
+    ]
+  }
+}

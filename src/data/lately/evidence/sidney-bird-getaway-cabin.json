@@ -1,0 +1,212 @@
+{
+  "spotifyId": "5mocOe376g4ZYDrhJtVn2T",
+  "reviewedAt": "2026-11-11T21:54:13.263Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings in a clear, mid-range register, with a slightly raw, unpolished quality. The tempo is slow, creating a relaxed, unhurried groove. A second male voice joins for harmonies, mostly in unison or parallel thirds, adding fullness to the vocal texture. The production sounds dry and intimate, as if recorded in a small room, with minimal reverb. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings in a clear, mid-range register, with a slightly raw, unpolished quality. The tempo is slow, creating a relaxed, unhurried groove. A second male voice joins for harmonies, singing in unison or parallel to the lead. The production sounds dry, with minimal reverb, suggesting a close-miked, intimate recording. The texture is sparse, with the two voices and single guitar. No instruments enter or drop out within the excerpt.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings in a clear, mid-range tone, with a slight country inflection. The tempo is slow, with a relaxed, swaying groove. A second male voice joins for harmonies, mostly in unison or parallel thirds. The production is clean and dry, with a sense of intimacy. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Getaway Cabin\" was released on May 3, 2023 by Sidney Bird as part of the album Snowbird, on the label Sidney Bird.",
+        "source": "https://www.shazam.com/song/1687357405/getaway-cabin"
+      },
+      {
+        "claim": "The song is credited to Sidney Hulburd and Fia James as writers of the lyrics.",
+        "source": "https://www.shazam.com/song/1687357405/getaway-cabin"
+      },
+      {
+        "claim": "Jackson Hoffman is credited as the producer.",
+        "source": "https://www.shazam.com/song/1687357405/getaway-cabin"
+      },
+      {
+        "claim": "Sidney Hulburd is credited as composer, and the track runs 3:37.",
+        "source": "https://www.deezer.com/en/track/2278832667"
+      },
+      {
+        "claim": "Snowbird is an 8-track, roughly 24-minute album. \"Getaway Cabin\" is track 4, and it is the only song on the album that credits Fia James as a co-writer.",
+        "source": "https://www.deezer.com/en/album/440095437"
+      },
+      {
+        "claim": "The album's title track, \"Snowbird\", also credits Jackson Hoffman as producer, which points to Hoffman producing the album.",
+        "source": "https://www.youtube.com/watch?v=Kfb90K79ZlU"
+      },
+      {
+        "claim": "Sidney Bird was born and raised in Arizona. She attended boarding school on the East Coast, spent a year of college in Boston, finished school in Los Angeles, and then moved to New York.",
+        "source": "https://www.bringinitbackwards.com/interview-with-sidney-bird/"
+      },
+      {
+        "claim": "Before releasing music she worked in acting, specifically sketch comedy. She describes her music as pop- and folk-inspired.",
+        "source": "https://www.tonguetiedmag.com/features/feature-sidney-bird"
+      },
+      {
+        "claim": "She says \"Sidney Bird\" is not her real name. She cites Kacey Musgraves and Maggie Rogers as influences on her first album, Bad Timing, and says Arizona helped her connect to her desert roots.",
+        "source": "https://club4nocturnals.com/sidney-bird"
+      },
+      {
+        "claim": "A 2023 Phoenix tour review calls her a \"Cactus-Pop\" singer from Arizona who performs with a band.",
+        "source": "https://club4nocturnals.com/sidney-bird"
+      }
+    ],
+    "lineage": "Sources place her in a southwestern, Arizona-rooted \"western pop\" or \"cactus-pop\" scene that blends pop, indie and singer-songwriter styles, with Kacey Musgraves and Maggie Rogers named as influences.",
+    "genres": [
+      "pop",
+      "indie pop",
+      "cactus-pop"
+    ]
+  },
+  "draft": "Two voices move together over a fingerpicked acoustic guitar, sometimes landing on the same note, sometimes splitting into parallel harmony, and almost nothing else is in the room. **Getaway Cabin** keeps that arrangement and doesn't add to it. No drums arrive, no strings swell. The production is dry, with very little reverb, so the voices sit close and the guitar's arpeggios stay crisp. It's a small sound, and it means to be.\n\nThe title carries much of the feeling here, and the sound takes its side. A getaway cabin is a place you go to be out of reach, usually with one other person, and the record works like one. The tempo is slow and unhurried. The lead vocal is clear and mid-range, with a slightly raw, unpolished edge that hasn't been smoothed away. When the second voice comes in, it doesn't decorate. It walks alongside, matching the melody or shadowing it a third away. That's the emotional logic of the song: company without crowding, two people agreeing to want the same quiet. You can hear the wish for escape and the relief of having found it in the same breath, and the song doesn't press you to pick one.\n\nSidney Bird's map makes the title hard to hear as simple scenery. She was born and raised in Arizona, went to boarding school on the East Coast, spent a year of college in Boston, finished school in Los Angeles, and then moved to New York. Before music she worked in sketch comedy, a job that runs on timing and an audience. Next to that, a song this hushed reads as a deliberate turn inward. She describes her music as pop- and folk-inspired, and she has named Kacey Musgraves and Maggie Rogers as influences on her first album, *Bad Timing*. A Phoenix tour review called her a \"Cactus-Pop\" singer, part of a southwestern strain of western pop that blends indie and singer-songwriter craft. \"Getaway Cabin\" leans toward the folk end of that blend. It drops the pop sheen and keeps the songwriter's bones.\n\nIt's track four of *Snowbird*, an eight-song album that runs about twenty-four minutes, and it's the only song on the record that credits a co-writer. Fia James wrote the lyrics with Sidney Hulburd, who is also credited as composer. Jackson Hoffman produced it, as he did the title track. A shared writing credit on a song built around two voices in step is a fitting coincidence.\n\nWhatever is being escaped stays off the page here, and that's part of the pull: the song gives you the cabin and leaves you to carry in whatever you needed to get away from.",
+  "factCheck": [
+    {
+      "claim": "Two voices over a fingerpicked acoustic guitar, sometimes in unison and sometimes in parallel harmony",
+      "verdict": "supported",
+      "note": "All three passes agree on fingerpicked acoustic guitar and a second voice in unison or parallel."
+    },
+    {
+      "claim": "Almost nothing else is in the room / sparse texture",
+      "verdict": "supported",
+      "note": "Pass 2 describes a sparse texture of two voices and a single guitar. The other passes report no other instruments."
+    },
+    {
+      "claim": "The song keeps that arrangement and doesn't add to it; no drums arrive, no strings swell",
+      "verdict": "removed",
+      "note": "This is a claim about the whole song's arrangement and arc. The passes cover only a short excerpt from an unknown point."
+    },
+    {
+      "claim": "Production is dry with very little reverb; voices sit close",
+      "verdict": "supported",
+      "note": "All passes describe dry, intimate production. Passes 1 and 2 also say minimal reverb."
+    },
+    {
+      "claim": "The guitar's arpeggios stay crisp",
+      "verdict": "removed",
+      "note": "'Crisp' is not supported by any pass."
+    },
+    {
+      "claim": "Tempo is slow and unhurried",
+      "verdict": "supported",
+      "note": "All passes agree on a slow, relaxed tempo."
+    },
+    {
+      "claim": "Lead vocal is clear, mid-range, with a slightly raw, unpolished edge",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on raw and unpolished. Pass 3 agrees on clear and mid-range."
+    },
+    {
+      "claim": "When the second voice comes in, it walks alongside, matching the melody or a third away",
+      "verdict": "corrected",
+      "note": "The harmony description is supported. 'Comes in' implies timing within the song, so it was reworded."
+    },
+    {
+      "claim": "Reading of the title and sound as company without crowding / wish for escape and relief",
+      "verdict": "supported",
+      "note": "This is interpretation resting on the title and the heard sound. It was softened so it doesn't claim to read lyrics, which are unavailable."
+    },
+    {
+      "claim": "Whatever is being escaped stays off the page / the song doesn't press you to pick one",
+      "verdict": "removed",
+      "note": "These are claims about the lyrics' content, and no lyrics are available."
+    },
+    {
+      "claim": "Born and raised in Arizona; East Coast boarding school; a year of college in Boston; finished school in Los Angeles; moved to New York",
+      "verdict": "supported",
+      "note": "Matches the Bring It Backwards interview."
+    },
+    {
+      "claim": "Worked in sketch comedy before music",
+      "verdict": "supported",
+      "note": "Matches the Tongue Tied feature. The remark about timing and an audience is interpretation."
+    },
+    {
+      "claim": "Describes her music as pop- and folk-inspired",
+      "verdict": "supported",
+      "note": "Matches the Tongue Tied feature."
+    },
+    {
+      "claim": "Named Kacey Musgraves and Maggie Rogers as influences on her first album Bad Timing",
+      "verdict": "supported",
+      "note": "Matches the club4nocturnals source."
+    },
+    {
+      "claim": "A Phoenix tour review called her a 'Cactus-Pop' singer",
+      "verdict": "supported",
+      "note": "Matches the 2023 Phoenix tour review."
+    },
+    {
+      "claim": "Part of a southwestern strain of western pop that blends indie and singer-songwriter craft",
+      "verdict": "corrected",
+      "note": "The lineage note says the scene blends pop, indie and singer-songwriter styles. The wording was adjusted to include pop."
+    },
+    {
+      "claim": "Track four of Snowbird, an eight-song album of about twenty-four minutes",
+      "verdict": "supported",
+      "note": "Matches the Deezer album page."
+    },
+    {
+      "claim": "It's the only song on the record that credits a co-writer",
+      "verdict": "corrected",
+      "note": "The packet says it is the only song crediting Fia James as co-writer. It does not say it is the only co-written song."
+    },
+    {
+      "claim": "Fia James wrote the lyrics with Sidney Hulburd, who is also credited as composer",
+      "verdict": "supported",
+      "note": "Both are credited as lyric writers on Shazam. Hulburd is credited as composer on Deezer."
+    },
+    {
+      "claim": "Jackson Hoffman produced it, as he did the title track",
+      "verdict": "supported",
+      "note": "Matches the Shazam credit and the 'Snowbird' title-track credit."
+    }
+  ],
+  "lint": [
+    "sources"
+  ],
+  "cost": {
+    "totalUsd": 0.1755,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012264,
+        "detail": "1098 in / 90 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012739,
+        "detail": "1098 in / 109 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012839,
+        "detail": "1098 in / 113 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077106,
+        "detail": "20328 in / 1645 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.047448,
+        "detail": "2812 in / 1810 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047142,
+        "detail": "3966 in / 3921 out"
+      }
+    ]
+  }
+}

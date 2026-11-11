@@ -1,0 +1,182 @@
+{
+  "spotifyId": "1odExI7RdWc4BT515LTAwj",
+  "reviewedAt": "2026-11-11T21:38:53.864Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8234229"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Daylight\" was written by David Kushner with Hayden Robert Hubers, Jeremy Fedryk and Josh Bruce Williams, and produced by Rob Kirwan.",
+        "source": "https://en.wikipedia.org/wiki/Daylight_(David_Kushner_song)"
+      },
+      {
+        "claim": "Credits list Rob Kirwan on programming, drums and synthesizer, Hayden Hubers on piano, Rick Hornby on guitar, and Jacob Morris on mixing and mastering.",
+        "source": "https://en.wikipedia.org/wiki/Daylight_(David_Kushner_song)"
+      },
+      {
+        "claim": "Kushner wrote the chorus in January 2023 at a Los Angeles studio, while taking a break from a different track. He sang the melody first in falsetto, calling it a \"vomit vocal\" in his Billboard interview.",
+        "source": "https://neonmusic.co.uk/david-kushner-daylight-lyrics-the-meaning-and-inspiration-behind-the-song"
+      },
+      {
+        "claim": "Kushner told Paper he went in to write a different song and wrote the chorus melody and lyrics that day. He wrote the pre-chorus a couple of days later and finished the song a week after that, making it one of his fastest songs.",
+        "source": "https://www.songfacts.com/facts/david-kushner/daylight"
+      },
+      {
+        "claim": "Kirwan was captivated by the demo and wanted to produce it. The release date was moved up from May 5 to April 14, 2023.",
+        "source": "https://www.songfacts.com/facts/david-kushner/daylight"
+      },
+      {
+        "claim": "Kushner said the song conveys a paradoxical desire for something that is harmful to oneself, using light and darkness. He pointed to the line about drinking poison from the same vine as encapsulating the concept.",
+        "source": "https://mpmania.com/songs/david-kushner-daylight/"
+      },
+      {
+        "claim": "Kushner said the song came from a broken, dark place in his spirit and soul. He said the \"same vine\" line tells the world we are all walking through darkness together.",
+        "source": "https://www.sweetyhigh.com/read/david-kushner-daylight-lyrics-meaning-interview-060523"
+      },
+      {
+        "claim": "Kushner teased the unreleased song on TikTok and Instagram. It went viral after he tagged Hozier in posts and fans drew comparisons. The single arrived via Virgin Music on April 14, 2023 and debuted at No. 48 on the Billboard Hot 100.",
+        "source": "https://www.billboard.com/music/features/david-kushner-daylight-interview-tiktok-june-2023-chartbreaker-1235344368/"
+      },
+      {
+        "claim": "The music video was directed by Luke Shaw and Landon Juern, with Altar8 Studio credited, and was set in a woodland church.",
+        "source": "https://www.papermag.com/david-kushner"
+      },
+      {
+        "claim": "Kushner was raised in the Chicago suburbs and began writing songs while living in Florida. His January 2022 single \"Miserable Man\" went viral on TikTok. \"Daylight\" later appeared on his debut album The Dichotomy (August 30, 2024, Miserable Music Group).",
+        "source": "https://www.wikiwand.com/en/David_Kushner_(singer-songwriter)"
+      }
+    ],
+    "lineage": "The song is a piano-led, orchestral, gothic-tinged pop ballad with Christian and biblical themes, which critics and fans compared to Hozier and Bon Iver. Kushner has cited Hozier and Lana Del Rey as influences.",
+    "genres": [
+      "gothic pop",
+      "orchestral pop",
+      "alternative"
+    ]
+  },
+  "draft": "The confession in **Daylight** is that confessing doesn't work. David Kushner writes from inside a habit he knows is wrong, and the chorus gives the whole problem away in its first line: \"Oh, I love it and I hate it at the same time.\" It's not a riddle and he isn't trying to solve it. It's just a plain statement of where he stands, sung over and over until the repetition starts to feel like the trap itself.\n\nThat feeling arrived fast. Kushner wrote the chorus in a Los Angeles studio in January 2023 while taking a break from a different song. He sang the melody first in falsetto, a first pass he called a \"vomit vocal.\" The pre-chorus came a couple of days later, and the rest a week after that, one of the fastest songs he's written. Producer Rob Kirwan heard the demo and wanted in. He handled programming, drums and synthesizer, with co-writer Hayden Hubers on piano and Rick Hornby on guitar.\n\nThe lyric never lets the narrator be alone with the guilt. There's a \"we\" in nearly every verse, two people sharing a lust \"that we both share,\" souls tied by pride as much as by guilt. Kushner has said the line \"You and I drink the poison from the same vine\" holds the whole concept, and that it tells the world we're all walking through darkness together. That's the generous reading. The darker one is in the song too: company makes the habit easier to keep.\n\nThe second half turns toward prayer. \"Lord\" shows up, and the narrator is on his knees asking for mercy he isn't sure he's earned. The best image is the simplest: \"Try to follow your light, but it's nighttime.\" It's an excuse and a plea at once, and he means both. Watch the pre-chorus, too. The first time, he can't resist the darkness. The second time, after begging forgiveness, he only might. It's a small word change, and it's as close to hope as the song gets. Then the chorus comes back twice more, and he's running from the daylight again.\n\nThe lineage is easy to hear in the writing: church language put to work on desire, the gothic pop ballad that Hozier made a mainstream form. Kushner cites Hozier and Lana Del Rey as influences, and the song went viral after he tagged Hozier in teaser posts on TikTok and Instagram and fans picked up the comparison. It debuted at No. 48 on the Billboard Hot 100 and later anchored his debut album, The Dichotomy, a title that could have been this chorus.\n\nIt sticks because it doesn't pretend the wanting will stop, and you recognize that honest, stuck place where you know better and go back anyway.",
+  "factCheck": [
+    {
+      "claim": "The chorus's first line is \"Oh, I love it and I hate it at the same time.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Kushner wrote the chorus in a Los Angeles studio in January 2023 while taking a break from a different song.",
+      "verdict": "supported",
+      "note": "Neon Music / Billboard interview."
+    },
+    {
+      "claim": "He sang the melody first in falsetto, a first pass he called a \"vomit vocal.\"",
+      "verdict": "supported",
+      "note": "Billboard interview via Neon Music."
+    },
+    {
+      "claim": "The pre-chorus came a couple of days later and the rest a week after that, one of his fastest songs.",
+      "verdict": "supported",
+      "note": "Songfacts / Paper."
+    },
+    {
+      "claim": "Producer Rob Kirwan heard the demo and wanted in.",
+      "verdict": "corrected",
+      "note": "The packet says he was captivated by the demo and wanted to produce it. Reworded to match."
+    },
+    {
+      "claim": "Kirwan handled programming, drums and synthesizer; Hayden Hubers is co-writer and plays piano; Rick Hornby plays guitar.",
+      "verdict": "supported",
+      "note": "Credits and writing credits."
+    },
+    {
+      "claim": "There's a \"we\" in nearly every verse.",
+      "verdict": "corrected",
+      "note": "Only the first verse and the chorus (\"You and I\") use shared pronouns. The later verses are in the first person singular. Narrowed to what the lyrics show."
+    },
+    {
+      "claim": "\"that we both share\"; souls tied by pride and guilt.",
+      "verdict": "supported",
+      "note": "Matches the lyric lines."
+    },
+    {
+      "claim": "Kushner said the \"same vine\" line holds the whole concept and tells the world we're all walking through darkness together.",
+      "verdict": "supported",
+      "note": "mpmania and sweetyhigh interviews."
+    },
+    {
+      "claim": "The narrator is on his knees asking for mercy; \"Lord\" appears in the second half.",
+      "verdict": "supported",
+      "note": "Lyrics: \"down on my knees again,\" \"Lord, I try.\""
+    },
+    {
+      "claim": "\"Try to follow your light, but it's nighttime\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "In the first pre-chorus he can't resist; in the second, after begging forgiveness, he \"only might.\"",
+      "verdict": "corrected",
+      "note": "The lyrics go from \"I can't resist it\" to \"I might resist it.\" The wording was muddled, so it now says he might resist."
+    },
+    {
+      "claim": "The chorus comes back twice more after the second pre-chorus.",
+      "verdict": "supported",
+      "note": "Lyric structure shows two choruses after it."
+    },
+    {
+      "claim": "The gothic pop ballad is something Hozier made a mainstream form.",
+      "verdict": "removed",
+      "note": "A claim about genre history with no support. Replaced with the sourced comparison to Hozier and Bon Iver."
+    },
+    {
+      "claim": "Kushner cites Hozier and Lana Del Rey as influences.",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "The song went viral after he tagged Hozier in teaser posts on TikTok and Instagram and fans drew comparisons.",
+      "verdict": "supported",
+      "note": "Billboard."
+    },
+    {
+      "claim": "It debuted at No. 48 on the Billboard Hot 100.",
+      "verdict": "supported",
+      "note": "Billboard."
+    },
+    {
+      "claim": "The song \"anchored\" his debut album The Dichotomy.",
+      "verdict": "corrected",
+      "note": "The packet only says it later appeared on the album. Reworded."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2401,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.142452,
+        "detail": "48121 in / 1621 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.047456,
+        "detail": "3159 in / 1741 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050182,
+        "detail": "4316 in / 4155 out"
+      }
+    ]
+  }
+}

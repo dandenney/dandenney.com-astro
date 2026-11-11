@@ -1,0 +1,195 @@
+{
+  "spotifyId": "3MBWR1rqc72QGiFIaOpKv6",
+  "reviewedAt": "2026-11-11T21:45:45.218Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7350605"
+  },
+  "listening": "Pass 1:\nA single acoustic guitar plays a fingerpicked arpeggiated pattern. The tempo is slow. The groove is a gentle, swaying feel. A single voice sings with a breathy, clear character, delivering the melody in a straightforward manner. There are no harmonies. The production sounds like a dry, close-miked recording, with a clean, polished texture. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no build-ups.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line.\n\nTempo and groove feel:\nThe tempo is slow. The groove is gentle and flowing.\n\nVocals:\nA single voice sings with a breathy, intimate character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sounds close and dry. The texture is clean and clear. The production is polished.\n\nArrangement:\nThe acoustic guitar and bass are present throughout. The vocals enter at the beginning and continue through the excerpt. No instruments drop out or build significantly.\n\nPass 3:\nA clean electric guitar plays arpeggiated chords with a reverb tail. A bass guitar plays a simple, sustained line. A female voice sings a lead melody, with a breathy, intimate character. The tempo is slow, with a relaxed, swaying groove. The production is clean and polished, with a sense of a small, natural room.\n\nThe arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out. The vocals are mostly single-tracked, with a brief, subtle harmony appearing on the word \"tonight.\"",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "'Little Life' was released on 20 October 2023 by Tone Death Records as part of Cordelia's Caramel EP.",
+        "source": "https://www.shazam.com/en-us/song/1721010430/little-life"
+      },
+      {
+        "claim": "The Caramel EP has four songs and runs about 16 minutes. 'Little Life' runs 4:30.",
+        "source": "https://www.amazon.com/Little-Life/dp/B0CQ3Y3P1K"
+      },
+      {
+        "claim": "'Little Life' is credited to Cordelia Clyne O'Driscoll as composer.",
+        "source": "https://www.jiosaavn.com/lyrics/little-life-lyrics/CT1cbhZ9Blk"
+      },
+      {
+        "claim": "Cordelia says her friend Fraser Frengley produced the Caramel EP. They recorded it together, mostly in his bedroom in North London, on and off over about a year.",
+        "source": "https://www.onestowatch.com/en/blog/cordelia-little-life-interview"
+      },
+      {
+        "claim": "Cordelia says she writes mostly alone and mostly on guitar, and that is how she wrote all the songs on the Caramel EP.",
+        "source": "https://www.onestowatch.com/en/blog/cordelia-little-life-interview"
+      },
+      {
+        "claim": "Cordelia describes 'Little Life' as being about accepting that life is unpredictable and strange, and finding joy in small everyday moments. She wrote it while working at, and later managing, a busy café in East London.",
+        "source": "https://www.onestowatch.com/en/blog/cordelia-little-life-interview"
+      },
+      {
+        "claim": "NME reports that the song was written during lockdown, when she worked at a café in Victoria Park, east London. She had repeatedly tried to break into the industry, and the song is an ode to focusing on living in the moment instead.",
+        "source": "https://www.nme.com/features/music-interviews/cordelia-artist-interview-caramel-ep-little-life-radar-3596321"
+      },
+      {
+        "claim": "The song went viral on TikTok in late 2023 and charted in Billboard's TikTok Top Ten. Listeners latched onto the line 'I think I like this little life.'",
+        "source": "https://www.allmusic.com/artist/cordelia-mn0004587770"
+      },
+      {
+        "claim": "A radio edit titled 'Little Life (radio edit cos they made me)' was released as a single on 26 January 2024, with Tone Death Records under exclusive license to AWAL.",
+        "source": "https://music.apple.com/bm/album/little-life-radio-edit-cos-they-made-me-single/1727564613"
+      },
+      {
+        "claim": "Cordelia O'Driscoll worked in theatre as a composer and songwriter after university. She began focusing on her own music after the COVID years. She cites Joni Mitchell, D'Angelo and Lauryn Hill as inspirations.",
+        "source": "https://www.nme.com/features/music-interviews/cordelia-artist-interview-caramel-ep-little-life-radar-3596321"
+      }
+    ],
+    "lineage": "Her songs sit in a folk-rooted singer-songwriter tradition of reflecting on life's small moments, with jazz and soul touches, and she cites Joni Mitchell as a key influence.",
+    "genres": [
+      "indie pop",
+      "folk pop",
+      "adult alternative"
+    ]
+  },
+  "draft": "The whole song hangs on a hedge. **Little Life** keeps arriving at its big declaration, \"I think I like this little life,\" and every time, the \"I think\" stays in. Cordelia never upgrades it to love, never drops the qualifier. That small reluctance is the most honest thing here. It's the sound of someone talking themselves into contentment and finding, a little to their surprise, that it's working.\n\nCordelia Clyne O'Driscoll wrote it during lockdown while working at a café in Victoria Park, East London. She had tried again and again to break into the music industry, and NME calls the song an ode to living in the moment instead. You can hear the café in the verses: candles, eyes smiling across the table, chairs that don't match, a room so loud it should be a nuisance and instead lights something up. These are a shift worker's details, noticed between orders.\n\nThe pre-chorus is where the strain shows. It's a ledger of small measurements: more, less, fine, stressed. Then it lands on \"A little bit older than I thought I'd get,\" a line that holds two feelings at once. There's mild shock at time passing, and under it the ache of an unmet plan. The bridge says the quiet part outright, with \"coming up short\" and \"a lost cause,\" before the turn that gives the song its weight: \"But I don't know if that hurts me anymore.\" It doesn't say the hurt is gone. It says the narrator has stopped being able to tell. Grief and relief sit in the same breath and neither one wins.\n\nThe sound matches that hedged warmth. An arpeggiated guitar moves at a slow, swaying pace over a simple bass line that holds its notes. Cordelia's voice is breathy and close, mostly alone, recorded in a dry, clean room that keeps it right at your ear. Nothing swells or builds. It fits the record's origins. Her friend Fraser Frengley produced the Caramel EP, and the two made it mostly in his North London bedroom, on and off over about a year. She writes mostly alone on guitar, and the arrangement keeps that shape.\n\nShe names Joni Mitchell alongside D'Angelo and Lauryn Hill, and the Mitchell line is clearest here. It's the folk singer-songwriter habit of finding a whole philosophy at a kitchen table. In late 2023 the song went viral on TikTok and reached Billboard's TikTok Top Ten, with listeners grabbing that title line. A shortened version followed, cheekily titled \"radio edit cos they made me,\" a wink from someone who got her break by deciding to stop chasing it.\n\nThe song never insists you should be happy with less. It lets you hear someone weigh what they lost against a loud, warm room and choose, tentatively, to stay.",
+  "factCheck": [
+    {
+      "claim": "The lyric 'I think I like this little life' recurs as the song's declaration",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly and repeats throughout."
+    },
+    {
+      "claim": "Cordelia Clyne O'Driscoll wrote the song",
+      "verdict": "supported",
+      "note": "Composer credit in the packet."
+    },
+    {
+      "claim": "Written during lockdown while she worked at a café in Victoria Park, East London",
+      "verdict": "supported",
+      "note": "NME and the Cordelia interview both support this."
+    },
+    {
+      "claim": "She had tried again and again to break into the music industry, and NME calls the song an ode to living in the moment instead",
+      "verdict": "supported",
+      "note": "NME says she repeatedly tried to break into the industry and the song is an ode to living in the moment."
+    },
+    {
+      "claim": "The verses mention candles, eyes smiling, mismatched chairs, and a loud room that makes the heart glow",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The reading that they are café details is interpretation, and 'noticed between orders' was softened."
+    },
+    {
+      "claim": "Quoted fragments 'coming up short' and 'a lost cause'",
+      "verdict": "corrected",
+      "note": "The lyrics support the content, but the quotes pushed the review past the three-quote limit. Turned into paraphrase."
+    },
+    {
+      "claim": "\"A little bit older than I thought I'd get\" and \"But I don't know if that hurts me anymore\"",
+      "verdict": "supported",
+      "note": "Quotes match the lyrics exactly. The emotional readings are interpretation."
+    },
+    {
+      "claim": "Slow, swaying arpeggiated guitar over a simple, sustained bass line",
+      "verdict": "supported",
+      "note": "All passes agree on arpeggiated guitar and slow, swaying feel. Passes 2 and 3 agree on the bass."
+    },
+    {
+      "claim": "Breathy, close voice, mostly alone, in a dry, clean room",
+      "verdict": "supported",
+      "note": "All three passes agree on the breathy single voice. Passes 1 and 2 agree on dry and close, and all agree on clean."
+    },
+    {
+      "claim": "Nothing swells or builds",
+      "verdict": "removed",
+      "note": "This is a claim about the whole song's arc. The passes only describe the excerpt."
+    },
+    {
+      "claim": "Fraser Frengley produced the Caramel EP, recorded mostly in his North London bedroom, on and off over about a year",
+      "verdict": "supported",
+      "note": "Cordelia's interview."
+    },
+    {
+      "claim": "She writes mostly alone on guitar",
+      "verdict": "supported",
+      "note": "Cordelia's interview."
+    },
+    {
+      "claim": "She names Joni Mitchell, D'Angelo and Lauryn Hill; folk singer-songwriter lineage",
+      "verdict": "supported",
+      "note": "NME and the lineage note."
+    },
+    {
+      "claim": "Went viral on TikTok in late 2023 and reached Billboard's TikTok Top Ten",
+      "verdict": "supported",
+      "note": "AllMusic."
+    },
+    {
+      "claim": "Listeners grabbed 'that title line'",
+      "verdict": "corrected",
+      "note": "The line listeners latched onto was 'I think I like this little life', which is not the title. Reworded."
+    },
+    {
+      "claim": "A shortened radio edit followed, titled 'radio edit cos they made me'",
+      "verdict": "corrected",
+      "note": "The radio edit and its title are supported, along with the January 2024 release. 'Shortened' is not stated, so it was dropped."
+    },
+    {
+      "claim": "A wink from someone who got her break by deciding to stop chasing it",
+      "verdict": "removed",
+      "note": "Nothing says she got her break that way. Replaced with an interpretive line tied to the supported NME theme."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1813,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012386,
+        "detail": "1097 in / 95 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012736,
+        "detail": "1097 in / 109 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00049948,
+        "detail": "1097 in / 133 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.073674,
+        "detail": "20147 in / 1338 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051524,
+        "detail": "3451 in / 1886 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053078,
+        "detail": "4644 in / 4379 out"
+      }
+    ]
+  }
+}
