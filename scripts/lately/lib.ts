@@ -165,3 +165,69 @@ export function extractTag(text: string, tag: string): string | null {
   const match = text.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`));
   return match ? match[1].trim() : null;
 }
+
+const decodeOnce = (text: string) =>
+  text
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;|&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&mdash;/g, "—")
+    .replace(/&ndash;/g, "–")
+    .replace(/&rsquo;/g, "’")
+    .replace(/&lsquo;/g, "‘")
+    .replace(/&rdquo;/g, "”")
+    .replace(/&ldquo;/g, "“")
+    .replace(/&amp;/g, "&");
+
+function decodeEntities(text: string) {
+  let decoded = decodeOnce(text);
+  for (let prev = text; decoded !== prev; prev = decoded, decoded = decodeOnce(decoded));
+  return decoded;
+}
+
+function metaContent(html: string, key: string): string | null {
+  const tag = html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${key}["'][^>]*>`, "i"))?.[0];
+  const content = tag?.match(/content=["']([^"']*)["']/i)?.[1];
+  return content ? decodeEntities(content).replace(/\s+/g, " ").trim() : null;
+}
+
+const SUFFIX = /\s+[|│–—-]\s+([^|│–—]{2,30})$/;
+
+/** "Publication: Headline" from the page's metadata, falling back to the bare domain. */
+export async function sourceLabel(url: string, attempts = 2): Promise<string> {
+  let host = url;
+  try {
+    host = new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+  try {
+    const res = await fetch(url, {
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; dandenney.com lately-reviews)" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) return res.status >= 500 && attempts > 1 ? sourceLabel(url, attempts - 1) : host;
+    const html = (await res.text()).slice(0, 300_000);
+    let site = metaContent(html, "og:site_name");
+    let title =
+      metaContent(html, "og:title") ??
+      decodeEntities(html.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1] ?? "").replace(/\s+/g, " ").trim();
+    if (!title) return site ?? host;
+    if (site === title) site = null;
+    const suffix = title.match(SUFFIX);
+    if (suffix && (!site || suffix[1].trim().toLowerCase() === site.toLowerCase())) {
+      site ??= suffix[1].trim();
+      title = title.slice(0, suffix.index).trim();
+    }
+    title = title.slice(0, 140);
+    const publication = site ?? host;
+    return title.toLowerCase().startsWith(publication.toLowerCase()) ? title : `${publication}: ${title}`;
+  } catch {
+    return attempts > 1 ? sourceLabel(url, attempts - 1) : host;
+  }
+}

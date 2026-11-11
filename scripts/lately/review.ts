@@ -22,6 +22,7 @@ import {
   openRouterAudio,
   readJson,
   slugify,
+  sourceLabel,
   spotify,
   writeJson,
   type LatelySnapshot,
@@ -400,7 +401,9 @@ for (const id of queue) {
   const slug = existing ? existing.file.replace(/\.md$/, "") : slugify(`${track.artist} ${track.title}`);
   const pubDate = existing?.pubDate ?? new Date().toISOString().slice(0, 10);
   const sourceUrls = [...new Set(facts.facts.map((f) => f.source))].filter((url) => !STORE_DOMAINS.test(sourceTitle(url)));
-  const markdown = `${frontmatter(track, genres, pubDate, sourceUrls.map((url) => ({ title: sourceTitle(url), url })))}${checked.body.trim()}\n`;
+  const labeled = await Promise.all(sourceUrls.map(async (url) => ({ title: await sourceLabel(url), url })));
+  const sources = labeled.filter((s, i) => labeled.findIndex((o) => o.title === s.title) === i);
+  const markdown = `${frontmatter(track, genres, pubDate, sources)}${checked.body.trim()}\n`;
 
   if (dryRun) {
     console.log(`\n${markdown}`);

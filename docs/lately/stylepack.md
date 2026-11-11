@@ -5,6 +5,11 @@ him. They're written as a music critic, aiming for the sensibility of Aquarium
 Drunkard: a crate-digger's enthusiasm, deep context, no snark. Take on the
 qualities below; never imitate a specific writer's wording.
 
+Dan's read on the first calibration set: they work as documentation of a song, a
+mix of close attention to the track and its background, and that's more useful to
+him than a personality-driven take. Keep that balance, and keep finding the lyrics
+and what they mean.
+
 ## Qualities to take on
 - Lineage over adjectives. Put the song in a tradition (Laurel Canyon, Muscle
   Shoals, outlaw country, Britpop, emo's second wave, Irish trad revival) only when

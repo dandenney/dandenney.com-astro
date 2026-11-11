@@ -15,7 +15,9 @@ Reviewed songs that were removed from it move to "Out of rotation".
      described three times by `google/gemini-2.5-flash` through OpenRouter. Only what
      two passes agree on counts.
    - web research (Claude + web search) that returns sourced facts and an identity
-     check. Facts are dropped unless sources confirm the artist.
+     check. Facts are dropped unless sources confirm the artist. Public source
+     links are labeled from each page's metadata ("Rolling Stone: Headline");
+     `scripts/lately/retitle-sources.ts` re-labels existing Lately reviews.
 3. A song is held (`src/data/lately/held.json`) when it has no lyrics and no audio, or
    no lyrics and fewer than 3 confirmed facts. That avoids writing around missing evidence.
 4. Claude writes the review with `stylepack.md` (Aquarium Drunkard-leaning voice, hard
