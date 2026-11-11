@@ -9,7 +9,7 @@ spotifyId: "3H6xZgwRZx8McVUJzmMxWe"
 albumArt: "https://i.scdn.co/image/ab67616d0000b273089511953028cbfeb095c593"
 duration: 240308
 genres: ["pop", "dance-pop", "trip-hop"]
-pubDate: "2026-11-11"
+pubDate: "2025-12-03"
 tags: ["addison-rae", "pop", "dance-pop", "trip-hop", "2025"]
 pipeline: "lately"
 sources:
