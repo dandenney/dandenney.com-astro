@@ -11,6 +11,7 @@ duration: 199000
 genres: ["alternative-indie"]
 pubDate: "2026-02-22"
 tags: ["sly-jr","alternative-indie","2026"]
+pipeline: "agent"
 aiGenerated: true
 ---
 ## Review

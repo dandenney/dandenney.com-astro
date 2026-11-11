@@ -2,24 +2,24 @@
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import SongReview from "@/layouts/SongReview.astro";
 import { twinUrlForId } from "@/lib/markdownTwin";
+import { orderByLately, songSlug as slugFor } from "@/lib/lately";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const songs = (await getCollection("songs")).sort((a, b) =>
-    a.data.title.localeCompare(b.data.title),
-  );
-  const slugFor = (song: CollectionEntry<"songs">) =>
-    song.id.replace(/\.mdx?$/, "");
+  const { active, retired } = orderByLately(await getCollection("songs"));
+  const songs = [...active, ...retired];
   return songs.map((song, i) => {
-    const next = songs[(i + 1) % songs.length];
+    const inRotation = i < active.length;
+    const next = inRotation ? active[(i + 1) % active.length] : active[0];
     return {
       params: { slug: slugFor(song) },
       props: {
         song,
         slug: slugFor(song),
-        trackNumber: i + 1,
-        totalTracks: songs.length,
+        addedAt: song.addedAt,
+        trackNumber: inRotation ? i + 1 : null,
+        totalTracks: active.length,
         next: {
           slug: slugFor(next),
           title: next.data.title,
@@ -35,7 +35,8 @@ export async function getStaticPaths() {
 type Props = {
   song: CollectionEntry<"songs">;
   slug: string;
-  trackNumber: number;
+  addedAt: string | null;
+  trackNumber: number | null;
   totalTracks: number;
   next: {
     slug: string;
@@ -46,13 +47,14 @@ type Props = {
   };
 };
 
-const { song, slug, trackNumber, totalTracks, next } = Astro.props;
+const { song, slug, addedAt, trackNumber, totalTracks, next } = Astro.props;
 const { Content } = await render(song);
 ---
 
 <SongReview
   {...song.data}
   slug={slug}
+  addedAt={addedAt}
   trackNumber={trackNumber}
   totalTracks={totalTracks}
   next={next}

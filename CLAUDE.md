@@ -32,7 +32,7 @@ SSR mode on Netlify; most pages use `export const prerender = true` for static g
 - `blips` — short-form notes
 - `tinkerings` — side project writeups
 - `reviews` — restaurant/venue reviews ("No Reservaitions"), city/state/coordinates for map rendering; `aiGenerated` flag tracks AI-assisted entries
-- `songs` — music reviews with Spotify metadata; almost all `aiGenerated: true`
+- `songs` — music reviews with Spotify metadata; almost all `aiGenerated: true`. Ordered by the Lately playlist snapshot in `src/data/lately/playlist.json` (`src/lib/lately.ts`)
 
 ### Layouts
 
@@ -75,7 +75,8 @@ Preferred flow: Dan writes the review himself and the `add-review` skill (`.clau
 ### GitHub Actions
 
 - `settle-pending-bets.yml` — auto-settlement via ESPN APIs every 30 min: martingale bets (`scripts/settle-pending-bets.mjs`, `--bet-id <id>`) and pending Rithmm picks, including watch/skip (`scripts/settle-rithmm-picks.ts`, `--id <id>`, `--backtest`). Picks it can't grade with certainty stay pending for `/settle-rithmm-picks`
-- `generate-review.yml` / `generate-song-review.yml` — legacy AI content generation (being replaced by agent pipeline)
+- `lately-reviews.yml` — daily: syncs the public Spotify playlist Lately (`scripts/lately/sync.ts`), writes evidence-grounded reviews for new adds (`scripts/lately/review.ts`), and opens or extends a PR on `lately/reviews`. Details in `docs/lately/README.md`
+- `generate-review.yml` — legacy AI content generation (being replaced by agent pipeline)
 
 ## Rules
 
@@ -114,7 +115,7 @@ For this repo, do not pause for `git commit` / `push`; ship straight to `main` u
 
 - `.env.local` — manually maintained, never commit
 - `src/data/martingaleBets.ts` IDs — append only, never reorder or reassign IDs
-- `generate-review.yml` / `generate-song-review.yml` — legacy actions being replaced; don't modify
+- `generate-review.yml` — legacy action being replaced; don't modify
 - Agent content pipeline scripts (`scripts/agent-content/`) — don't modify without understanding the full Leif → Shelby workflow
 
 ## graphify

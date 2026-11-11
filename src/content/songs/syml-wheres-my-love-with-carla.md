@@ -11,6 +11,7 @@ duration: 232000
 genres: ["indie-folk"]
 pubDate: "2026-02-22"
 tags: ["syml","carla-morrison","indie-folk","2026"]
+pipeline: "agent"
 aiGenerated: true
 ---
 SYML and Carla Morrison take a song that already lived in grief and make it feel more human by sharing the weight. This version of **“Where’s My Love”** doesn’t chase a big reinvention; it leans into the ache that was always there, then widens it through a real duet dynamic. SYML’s voice carries the familiar emptiness—*“Cold bones / Yeah, that’s my love / She hides away like a ghost”*—while Carla answers from a different emotional angle, not as decoration but as a second witness.

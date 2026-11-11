@@ -1,3 +1,5 @@
+> **Superseded.** Song reviews now come from the Lately pipeline in `docs/lately/README.md`. The GitHub workflow below has been removed; this doc covers the legacy `scripts/generate-song-review.mjs` only.
+
 # Music Reviews Automation
 
 Automated generation of AI-powered song reviews from Spotify URLs using GitHub Actions.
