@@ -22,9 +22,14 @@ Reviewed songs that were removed from it move to "Out of rotation".
    no lyrics and fewer than 3 confirmed facts. That avoids writing around missing evidence.
 4. Claude writes the review with `stylepack.md` (Aquarium Drunkard-leaning voice, hard
    grounding rules). A second pass fact-checks every claim against the packet and rewrites.
+   If the check returns no report or body, it retries once, then marks the song failed
+   rather than publishing the unchecked draft.
 5. Output: `src/content/songs/<slug>.md` plus `src/data/lately/evidence/<slug>.json`
    (listening notes, sourced facts, draft, fact-check report, per-step cost). Lyrics
    text isn't stored.
+6. If Lately holds a different Spotify release of a song that already has a non-legacy
+   review, the song is skipped and mapped in `src/data/lately/aliases.json` so the
+   existing review keeps its Lately position.
 
 ## Running
 
@@ -41,4 +46,5 @@ Models can be overridden with `LATELY_WRITER_MODEL`, `LATELY_RESEARCH_MODEL`, `L
 
 `.github/workflows/lately-reviews.yml` runs daily and on demand, and commits to the
 `lately/reviews` branch. If that PR is still open, the run adds to it instead of
-opening another.
+opening another. If a song crashes the run, the finished songs are still committed.
+Keep manual backlog runs to about 25 songs (~30 minutes, ~$6) so the PR stays readable.
