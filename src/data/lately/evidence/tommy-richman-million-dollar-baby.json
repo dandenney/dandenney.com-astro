@@ -1,0 +1,150 @@
+{
+  "spotifyId": "7fzHQizxTqy8wTXwlrgPQQ",
+  "reviewedAt": "2026-11-11T21:13:06.950Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8996186"
+  },
+  "listening": "Pass 1:\nInstruments:\nA synth bass plays a simple, repetitive line. A high-pitched, percussive synth plays a counter-melody. A kick drum and snare provide a steady beat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels laid-back and slightly swung.\n\nVocals:\nThe voice is a mid-range, male-sounding voice. The delivery is a rhythmic, spoken-word style, with some melodic inflections. There are no harmonies.\n\nProduction:\nThe room sounds dry. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the synth bass, percussive synth, and drums already established. The vocals enter shortly after. No elements drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA synth bass plays a simple, repetitive line. A high-pitched, percussive synth plays a counter-melody. A kick drum and snare provide a steady beat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is laid-back and slightly swung.\n\nVocals:\nThe lead vocal is a male voice, delivered in a relaxed, almost conversational rap style. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a clear separation of instruments. The room sounds dry.\n\nArrangement:\nThe excerpt begins with the synth bass and drums already established. The percussive synth enters shortly after, playing a repeating melodic phrase. The lead vocal is present throughout the excerpt. No elements drop out or build significantly within this section.\n\nPass 3:\nInstruments include a synth bass, a synth pad, and a drum machine. The synth bass plays a simple, repetitive line. The synth pad plays sustained chords. The drum machine plays a trap-style beat with a prominent hi-hat pattern.\n\nThe tempo is moderate, with a laid-back, somewhat swaggering groove.\n\nThe vocals are delivered by a single voice, with a somewhat nasal character. The delivery is a rhythmic, spoken-word style, with some melodic inflections. There are no harmonies.\n\nThe production has a clean, polished texture. The room sound is dry, with no noticeable reverb.\n\nThe arrangement is consistent throughout the excerpt. All instruments are present from the beginning and continue without significant changes in volume or texture.",
+  "research": {
+    "identity": "unknown",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The most revealing thing in **MILLION DOLLAR BABY** is the bit in parentheses. \"Cause I wanna make it (so badly),\" Tommy Richman sings, then answers the boast before anyone else can: \"I'm a Million Dollar Baby (don't at me).\" That small aside carries the whole song. It's a big claim with a flinch built into it. The narrator names their own worth and in the same breath expects to be laughed at for it.\n\nEverything around that hook is a case being argued. The chorus opens with a defense nobody asked for: never repped a set, never did wrong, could clean up good for you, knows right from wrong. It reads like someone rehearsing for an interview they're afraid they'll fail. Underneath the swagger is a plea to be seen as safe, decent, worth the bet. Then the grievance comes out plainly. The city has been repped for so long by somebody else, and the narrator still goes unnoticed. \"VA next,\" \"My sound next\" isn't only bragging. It's the voice of someone tired of waiting their turn and claiming home ground out loud so it can't be ignored.\n\nThe love story running through the verse knots the same feelings together. There's a woman, a rival who can't come between them again, a night spent showing her off to friends that didn't lift the mood. Then the line that gives the narrator away: \"What you mean I changed.\" The next words insist they haven't stayed the same, and right after that comes the admission of losing their mind. Pride and unraveling sit side by side, and the song never sorts them out. The song closes on three flat refusals, a door slammed on the accusation of change without ever answering it.\n\nThe music makes all that ambition sound easy, which is part of the trick. A synth bass works a simple, repeating line while a high, percussive synth picks out a counter-melody on top. Kick and snare keep a steady, moderate pace, and the groove sits back with a slight swing, never pushing. Richman's delivery runs between rhythm and melody, half-spoken and loose, with no harmonies stacked behind it. The room is dry and the mix is clean, so every part sits in its own lane and that lone voice stays right up front. There's no crowd behind the narrator, just one person making a case.\n\nThe release came out in 2024 on ISO Supremacy, licensed to PULSE Records, and it moves fast.\n\nIt sticks because the swagger keeps showing its seams, and you end up rooting for someone who wants it so badly they have to tell you not to laugh.",
+  "factCheck": [
+    {
+      "claim": "\"Cause I wanna make it (so badly)\" and \"I'm a Million Dollar Baby (don't at me)\" are quoted lines",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly and are consecutive lines, so they count as the two-line limit."
+    },
+    {
+      "claim": "Tommy Richman sings the song",
+      "verdict": "supported",
+      "note": "Tommy Richman is the credited artist."
+    },
+    {
+      "claim": "Quotes \"VA next,\" and \"My sound next\"",
+      "verdict": "removed",
+      "note": "The draft quoted five separate lyric lines, over the three-line cap. These two were turned into a paraphrase. They also appeared in reverse order from the lyrics."
+    },
+    {
+      "claim": "Quote \"What you mean I changed\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. Kept as the third and last quoted line."
+    },
+    {
+      "claim": "The chorus opens with never repping a set, never doing wrong, cleaning up good, knowing right from wrong",
+      "verdict": "supported",
+      "note": "Matches the repeated opening lines of the lyrics."
+    },
+    {
+      "claim": "The city has been repped for so long by somebody else, and the narrator still goes unnoticed",
+      "verdict": "corrected",
+      "note": "The lyric addresses 'you' who reps the city for so long and still doesn't notice the narrator. Reworded to match."
+    },
+    {
+      "claim": "A rival who can't come between them again",
+      "verdict": "supported",
+      "note": "Based on 'he cannot come between us again'. The reading is interpretive but rests on the lyric."
+    },
+    {
+      "claim": "A night spent showing her off to friends that didn't lift the mood",
+      "verdict": "corrected",
+      "note": "The lyric says she was taken to Queen's Gambit and shown around, but never says it was a night. Changed to 'an outing'."
+    },
+    {
+      "claim": "The next words insist they haven't stayed the same, then the admission of losing their mind",
+      "verdict": "corrected",
+      "note": "Order is right, but 'Haven't stayed the same' is ambiguous. Reworded so it isn't presented as an insistence."
+    },
+    {
+      "claim": "The song closes on three flat refusals",
+      "verdict": "supported",
+      "note": "The lyrics end with three repeats of 'Hell no'. The reading about the accusation of change is kept as interpretation."
+    },
+    {
+      "claim": "Synth bass plays a simple, repeating line",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A high, percussive synth picks out a counter-melody",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Kick and snare keep a steady, moderate pace with a laid-back, slightly swung groove",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on kick, snare, steady beat and slight swing. All three agree on moderate tempo and laid-back feel."
+    },
+    {
+      "claim": "Delivery is half-spoken, loose, between rhythm and melody, with no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree on the rhythmic spoken style with melodic inflections and no harmonies."
+    },
+    {
+      "claim": "The room is dry and the mix is clean",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Every part sits in its own lane and the voice stays right up front",
+      "verdict": "removed",
+      "note": "Only one pass mentions instrument separation, and no pass supports the voice being forward in the mix."
+    },
+    {
+      "claim": "The release came out in 2024 on ISO Supremacy, licensed to PULSE Records, and it moves fast",
+      "verdict": "removed",
+      "note": "Label and date are metadata padding. 'Moves fast' contradicts the moderate, laid-back tempo."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1752,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014048,
+        "detail": "1101 in / 161 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013798,
+        "detail": "1101 in / 151 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013848,
+        "detail": "1101 in / 153 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.069216,
+        "detail": "23728 in / 176 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.045488,
+        "detail": "2712 in / 1732 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056354,
+        "detail": "3822 in / 4871 out"
+      }
+    ]
+  }
+}

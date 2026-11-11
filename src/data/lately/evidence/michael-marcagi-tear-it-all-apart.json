@@ -1,0 +1,195 @@
+{
+  "spotifyId": "2paY84rEBVDm46rdPaQY88",
+  "reviewedAt": "2026-11-11T21:01:34.620Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30734571"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady strumming pattern. Electric guitar plays a clean, arpeggiated melody. Bass guitar plays a simple, foundational line. Drums provide a driving, mid-tempo beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is mid-tempo. The groove feels steady and driving, with a slight push from the drums.\n\nVocals:\nA single voice sings with a clear, slightly raw character. The delivery is earnest and direct. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished. The room sounds open, with a slight reverb on the vocals. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the full band. The drums enter with a snare hit, establishing the beat. The electric guitar plays a consistent arpeggiated melody throughout. The bass and acoustic guitar maintain their patterns. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm, joined by a bass guitar playing a walking line. Drums enter with a steady beat, featuring a prominent snare.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and driving, with a slight urgency.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is earnest and direct. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished. The room sounds open, with a slight reverb on the vocals and drums. The texture is full but not dense.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter shortly after, establishing the main rhythm. The vocals are present throughout. No instruments drop out or build significantly within this segment.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm, joined by a bass guitar playing a walking line. Drums enter with a steady beat, featuring a kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and driving, with a slight push from the drums.\n\nVocals:\nA single voice sings with a clear, slightly raspy character. The delivery is earnest and direct. No harmonies are present.\n\nProduction:\nThe production sounds clean and polished. The room sound is neutral, with no obvious reverb or echo. The texture is full but not overly dense.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter shortly after, establishing the main rhythm. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Michael Marcagi and Andrew Yorio wrote \"Tear It All Apart\".",
+        "source": "https://www.letras.com/michael-marcagi/tear-it-all-apart/"
+      },
+      {
+        "claim": "David Baron produced, mixed and recorded the track. He also played piano, Rhodes guitar and Mini Moog on it, and did the programming.",
+        "source": "https://www.qobuz.com/us-en/album/tear-it-all-apart-michael-marcagi/jlot4avaisqwa"
+      },
+      {
+        "claim": "Credited players include Marcagi (acoustic and electric guitar, percussion, vocals), Kevin Kadish (electric guitar), Jeff Hill (bass), Kyle Emerson (banjo), Renée Hikari (drums, percussion), Andrew Yorio (electric guitar, mandolin, percussion, background vocals) and Steve Voss (percussion, background vocals).",
+        "source": "https://www.qobuz.com/us-en/album/tear-it-all-apart-michael-marcagi/jlot4avaisqwa"
+      },
+      {
+        "claim": "The single was released on 21 June 2024 on Warner Records and runs 3:06.",
+        "source": "https://www.qobuz.com/us-en/album/tear-it-all-apart-michael-marcagi/jlot4avaisqwa"
+      },
+      {
+        "claim": "Marcagi said the song is about growing up and having your sense of home change while it looks the same as when you were a kid. He also said it is about how revisited places can evoke unique, specific memories.",
+        "source": "https://substreammagazine.com/2024/06/michael-marcagi-tear-it-all-apart-news/"
+      },
+      {
+        "claim": "A lyric describes his parents' house still holding his memories even though his parents haven't lived there in four years.",
+        "source": "https://themusicuniverse.com/michael-marcagi-shares-tear-it-all-apart/"
+      },
+      {
+        "claim": "Marcagi called the song a significant departure from his usual writing style and said it was the first time he had written this way. The Music described it as one of his favourite songs he has written, and as offering a peek into his past.",
+        "source": "https://themusic.com.au/features/michael-marcagi-spin-off-festival-tear-it-all-apart-interview/SvbwXF9eQUA/11-07-24"
+      },
+      {
+        "claim": "It was Marcagi's first release after the American Romance EP, which includes the hit \"Scared to Start\".",
+        "source": "https://substreammagazine.com/2024/06/michael-marcagi-tear-it-all-apart-news/"
+      },
+      {
+        "claim": "Marcagi said his earliest solo songs were written alone in his bedroom on acoustic guitar, and that collaborating on later songs like this one was new for him. He later made his Midwest Kid EP in upstate New York with the same producer, David Baron, who he said worked on all his songs.",
+        "source": "https://www.songwriteruniverse.com/michael-marcagi-songs-midwest-kid-tour/"
+      },
+      {
+        "claim": "Marcagi is from Cincinnati, Ohio, and is the former frontman of the alt-rock band the Heavy Hours. He signed to Warner Records in early 2024 after his debut solo single \"The Other Side\".",
+        "source": "https://www.deezer.com/us/artist/102060542"
+      }
+    ],
+    "lineage": "Marcagi's music sits in a Midwestern folk-rock and Americana-leaning indie tradition, with earnest storytelling songwriting that critics compare to Zach Bryan and Noah Kahan.",
+    "genres": [
+      "folk-rock",
+      "indie folk",
+      "americana"
+    ]
+  },
+  "draft": "The house is still there. That's the cruel joke at the start of **Tear It All Apart**: Michael Marcagi keeps driving to the place he grew up, laughing it off in the rearview, and only then gives the detail that turns the scene: \"But my parents haven't lived there in four years.\" He isn't visiting anyone. He's visiting a version of himself that the building still seems to hold, and he can't stop going back.\n\nMarcagi has said the song is about growing up and watching your sense of home change while the place looks exactly as it did when you were a kid. That's the ache in the first verse, but the song soon turns from the house to a person. He admits he's always had trouble letting go, that he loses sleep over dumb things he's said, and then comes the confession, quietly brutal: \"I never really had much room for you.\" He held on to every passing worry, and the one person who mattered got crowded out.\n\nWhat keeps this from turning into a tidy apology is how many feelings he lets stand at once. He wanted more of this person and gave nothing of himself. In the next breath he reaches for a defense: growing up means you can mess things up even when you're trying to help. It's half insight, half excuse, and the song doesn't sort out which. He asks them to leave a light on, then admits there's nothing he can say to make them believe him. The bridge lands on the real subject: \"It's always me that I've been running from.\" The house, the lover, the guilt all point back to the same restless person in the car.\n\nThe sound gives all that a steady floor. Strummed acoustic guitar and a walking bass line set a moderate, driving pace, and the drums push slightly ahead with a firm snare. Marcagi sings clear and a little rough, earnest and direct, with a touch of reverb, and the mix stays clean and full without crowding him. David Baron produced, mixed and recorded it, adding piano, Rhodes and Mini Moog, and the credits list Kyle Emerson on banjo and co-writer Andrew Yorio on mandolin. That's a Midwestern folk-rock palette that puts the Cincinnati songwriter near Noah Kahan and Zach Bryan in spirit.\n\nMarcagi called it a departure, the first time he'd written this way, and the first song he'd made with a collaborator after years of writing alone in his bedroom. Maybe that explains the openness. The song closes on wordless whoa-ohs, as if the words ran out before the feeling did.\n\nIt sticks because it catches you in the act of driving back to somewhere that's gone, and makes you admit who you're really looking for.",
+  "factCheck": [
+    {
+      "claim": "He keeps driving to the place he grew up, laughing it off in the rearview",
+      "verdict": "supported",
+      "note": "Matches the lyrics ('I still drive to my parents' house / Laugh and leave it in the mirror') and Marcagi's comments about home looking the same as in childhood."
+    },
+    {
+      "claim": "Quote: \"But my parents haven't lived there in four years.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "The building still seems to hold a version of himself",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyric 'It still holds all my memories'."
+    },
+    {
+      "claim": "Marcagi has said the song is about growing up and watching your sense of home change while the place looks as it did when you were a kid",
+      "verdict": "supported",
+      "note": "Matches the Substream Magazine quote."
+    },
+    {
+      "claim": "Quote: \"I never really had much room for you.\"",
+      "verdict": "supported",
+      "note": "Exact portion of the lyric line."
+    },
+    {
+      "claim": "He loses sleep over dumb things he's said; wanted more of this person but gave nothing of himself; leave a light on; nothing he can say to make them believe",
+      "verdict": "supported",
+      "note": "Paraphrases of the lyrics."
+    },
+    {
+      "claim": "Quote: \"It's always me that I've been running from.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "The line sits in 'the bridge'",
+      "verdict": "corrected",
+      "note": "Song structure labels aren't established, so the section label was dropped."
+    },
+    {
+      "claim": "The house, the lover, the guilt all point back to the same person",
+      "verdict": "corrected",
+      "note": "The lyrics never say the other person is a lover. Changed to 'the person he let down'."
+    },
+    {
+      "claim": "Strummed acoustic guitar and walking bass line, moderate driving pace, slight push from drums, firm snare",
+      "verdict": "supported",
+      "note": "Walking bass is in passes 2 and 3. Acoustic strum, moderate tempo, driving feel, slight drum push and prominent snare each have at least two passes."
+    },
+    {
+      "claim": "Vocal is clear and a little rough, earnest and direct, with a touch of reverb, clean and full mix",
+      "verdict": "supported",
+      "note": "Raw/raspy in passes 1 and 3, slight reverb in passes 1 and 2, clean/full/earnest across all passes."
+    },
+    {
+      "claim": "David Baron produced, mixed and recorded it, adding piano, Rhodes and Mini Moog",
+      "verdict": "corrected",
+      "note": "Credit is 'Rhodes guitar'. Wording made precise."
+    },
+    {
+      "claim": "Credits list Kyle Emerson on banjo and co-writer Andrew Yorio on mandolin",
+      "verdict": "supported",
+      "note": "Matches the Qobuz credits and the writing credit."
+    },
+    {
+      "claim": "Midwestern folk-rock palette puts the Cincinnati songwriter near Noah Kahan and Zach Bryan in spirit",
+      "verdict": "corrected",
+      "note": "Cincinnati and the Midwestern folk-rock lineage are supported. The comparison is attributed to critics, not stated as the writer's own fact."
+    },
+    {
+      "claim": "Marcagi called it a departure, the first time he'd written this way",
+      "verdict": "supported",
+      "note": "Matches The Music interview."
+    },
+    {
+      "claim": "It was the first song he'd made with a collaborator after years of writing alone in his bedroom",
+      "verdict": "corrected",
+      "note": "Sources say his earliest solo songs were written alone in his bedroom and that collaborating on later songs like this one was new. 'First song with a collaborator' and 'years' are unsupported."
+    },
+    {
+      "claim": "The song closes on wordless whoa-ohs",
+      "verdict": "supported",
+      "note": "The lyric structure ends with the whoa-oh lines."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2485,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014123,
+        "detail": "1101 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014248,
+        "detail": "1101 in / 169 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014898,
+        "detail": "1101 in / 195 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14388600000000001,
+        "detail": "49248 in / 1539 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0499,
+        "detail": "3890 in / 1717 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050362,
+        "detail": "5021 in / 4032 out"
+      }
+    ]
+  }
+}

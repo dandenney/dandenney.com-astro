@@ -1,0 +1,225 @@
+{
+  "spotifyId": "5ONb0fTAqTygOmGfLHqi28",
+  "reviewedAt": "2026-11-11T21:22:24.548Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30509747"
+  },
+  "listening": "Pass 1:\nThis excerpt features a hip-hop groove with a consistent, moderate tempo. The drums provide a steady backbeat with a prominent snare. A bass guitar plays a simple, repetitive line. A keyboard or synthesizer plays a bright, percussive melody, sometimes doubling the bass.\n\nA male voice delivers rap vocals with a clear, slightly nasal tone. The delivery is rhythmic and conversational, with some call-and-response elements. There are layered harmonies on some vocal phrases, creating a fuller sound.\n\nThe production is clean and polished, with a dry, direct sound. The room sound is minimal, suggesting close-mic recording. The texture is crisp and defined.\n\nThe arrangement is consistent throughout, with the main groove established early. The vocals enter and drop out, sometimes with a sustained, harmonized vocal phrase. A saxophone enters later, playing a melodic, improvisational line over the existing groove, adding a new layer of instrumentation.\n\nPass 2:\nThe excerpt features a hip-hop groove with a medium tempo. A drum machine provides a steady kick and snare, with a closed hi-hat playing eighth notes. A synth bass plays a simple, repetitive line. A clean electric guitar plays a short, arpeggiated riff with a wah effect, and a second, distorted electric guitar plays a sustained chord.\n\nA single voice delivers a rhythmic, spoken-word rap, with a slightly nasal character. The delivery is consistent and energetic. There are no harmonies.\n\nThe production is clean and polished, with a dry, close-miked feel. The instruments are well-separated, creating a clear texture.\n\nThe arrangement is consistent throughout the excerpt. The drums, bass, and vocals are present from the beginning. The clean guitar enters early, and the distorted guitar enters later, adding a layer of texture. Nothing drops out or builds significantly within this short segment.\n\nPass 3:\nA drum machine provides a steady, mid-tempo hip-hop groove with a swung feel, featuring a prominent snare on beats two and four. A synth bass plays a simple, repetitive line. A high-pitched synth provides a melodic counterpoint.\n\nA male voice delivers a rap with a clear, slightly nasal tone, using a rhythmic, conversational flow. The delivery is consistent, with some call-and-response elements where the main vocal is echoed by a lower-pitched, slightly distorted vocal. There are also ad-libs, including a sustained vocalization.\n\nThe production is clean and polished, with a dry, intimate room sound. The texture is relatively sparse, allowing each element to be distinct.\n\nThe arrangement is consistent throughout the excerpt. The main vocal and drum machine are present from the start. The synth bass and high synth enter early and remain. The call-and-response vocal and ad-libs are interspersed.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Crabbuckit\" was first released in 2004 as the first single from k-os's second album Joyful Rebellion. It appears on the 2007 compilation Collected as a previously released track, and its original recording is not a new Collected recording.",
+        "source": "https://en.wikipedia.org/wiki/Crabbuckit"
+      },
+      {
+        "claim": "Collected is a compilation released July 17, 2007. It gathers recent tracks from k-os's first three albums, hit singles and remixes, plus three new tracks.",
+        "source": "https://en.wikipedia.org/wiki/Collected_(k-os_album)"
+      },
+      {
+        "claim": "The Canadian CD of Collected was issued by EMI Music Canada (cat. no. 50999 500118 27) and lists \"Crabbuckit\" as track 5.",
+        "source": "https://www.discogs.com/release/3721009-K-OS-Collected"
+      },
+      {
+        "claim": "The song was written by k-os (Kevin Brereton) and published through Universal Songs of PolyGram International.",
+        "source": "https://secondhandsongs.com/work/194241/all"
+      },
+      {
+        "claim": "WhoSampled credits k-os as producer, arranger, composer, lyricist, lead vocalist, pianist and drum programmer. It lists Maury LaFoy on double bass, Christopher Plock on saxophone, and Greg O'Shea as engineer and mixer.",
+        "source": "https://www.whosampled.com/K-OS/Crabbuckit/"
+      },
+      {
+        "claim": "k-os said the song was inspired by Ray Charles's \"Hit the Road, Jack\" and the happy-yet-spooky quality he hears in it. He also said he consciously tried to make a Thriller-type record with Joyful Rebellion.",
+        "source": "https://www.nicholasjennings.com/k-os-and-the-changing-sound-of-hip-hop"
+      },
+      {
+        "claim": "The song re-creates the bassline from The Cure's \"Lovecats\" and Ray Charles's \"Hit the Road Jack\". In 2005 k-os described \"Crabbuckit\" as a man saying he has grown up and these are his beliefs.",
+        "source": "https://www.thecoast.ca/arts-music/understanding-k-os-961802/"
+      },
+      {
+        "claim": "The title draws on the crab-in-a-bucket metaphor, in which crabs pull back any crab that tries to climb out. k-os told Songfacts the song's meaning shifted between Canada and the US, and that Apple wanted to use it in a commercial but he wasn't comfortable with that.",
+        "source": "https://www.songfacts.com/blog/interviews/k-os"
+      },
+      {
+        "claim": "k-os has said that \"Crabbuckit\" is a pop song at the end of the day, and that his biggest success has been as a pop artist. He said this was not his intention when he made Joyful Rebellion.",
+        "source": "https://dinealonerecords.com/artists/k-os/"
+      },
+      {
+        "claim": "The song won Single of the Year at the 2005 Juno Awards, the first hip-hop song to win that category. It was certified platinum by Music Canada in 2022, and Complex ranked it #5 among the best Canadian rap songs of all time.",
+        "source": "https://en.wikipedia.org/wiki/Crabbuckit"
+      }
+    ],
+    "lineage": "The song sits in Toronto's Canadian alternative hip-hop tradition, which uses live instrumentation and pop, jazz, funk and reggae influences; it recalls The Dream Warriors' \"Ludi\" and Feist's \"Mushaboom\".",
+    "genres": [
+      "alternative hip hop",
+      "canadian hip hop",
+      "pop rap"
+    ]
+  },
+  "draft": "Underneath **Crabbuckit** is a borrowed walking bass, a re-creation of the line from Ray Charles's \"Hit the Road Jack\" by way of The Cure's \"Lovecats.\" k-os said what drew him to the Charles record was how it sounds happy and spooky at once, and that doubleness runs through this whole song. It struts. It also keeps glancing over its shoulder.\n\nThe hook does most of the work: \"No time to get down cause I'm moving up,\" three times, then a nod toward the crabs in the bucket. \"Get down\" splits two ways. It means don't dance, and it means don't sink. The crab image finishes the thought: crabs drag back any crab that tries to climb out. So the chorus is buoyant and a little defensive. It's the voice of someone who has decided to leave and can feel the hands on the ankles. k-os described the song as a man saying he has grown up and these are his beliefs, and the verses read that way, plain and local. \"Walkin' down Yonge Street on a Friday\" puts the narrator on a real Toronto street on the night everyone's out. That same narrator refuses to follow the crowd, takes no fast lane, and still stays on the highway.\n\nWhat keeps it human is that the certainty wobbles. In the first verse he says the answer \"seems complicated 'cause it's really so simple.\" In the second he walks it back: \"I know it's not that simple, I know it's not that hard.\" Pride and doubt sit right next to each other, and the song doesn't pick one. The jabs at \"clones\" and \"fools\" carry real contempt. They also sound like a person talking himself into his own path.\n\nThe sound is clean and dry, close to the ear. A drum machine lays a steady groove with a prominent snare. The bass repeats its simple figure, and a bright, high keyboard line plays against it. k-os raps in a slightly nasal, conversational flow, with call-and-response answering his lines. The arrangement leaves air around every piece. k-os produced and arranged it himself and programmed the drums and played piano. The credits list Maury LaFoy on double bass and Christopher Plock on saxophone.\n\nThe song belongs to Toronto's alternative hip-hop line, built on live players and loose with pop, jazz and funk. It's a cousin of Dream Warriors' \"Ludi\" and Feist's \"Mushaboom.\" k-os said he was chasing a Thriller-sized record with Joyful Rebellion, and this was its first single in 2004. It became the first hip-hop song to win Single of the Year at the Junos. He later admitted it's a pop song at the end of the day, which he hadn't planned. When Apple wanted it for a commercial, he wasn't comfortable with that, a fitting refusal for a song about not getting pulled back into the bucket.\n\nYou hum the chorus as a boast, then catch yourself hearing it as a promise you're still trying to keep.",
+  "factCheck": [
+    {
+      "claim": "The bass is a borrowed 'walking bass' that re-creates the line from Ray Charles's 'Hit the Road Jack' by way of The Cure's 'Lovecats.'",
+      "verdict": "corrected",
+      "note": "The packet says the song re-creates the bassline from both 'Lovecats' and 'Hit the Road Jack'. 'Walking' and 'by way of' are not supported, and the listening passes describe a synth bass. Reworded to say the bassline re-creates lines from both songs."
+    },
+    {
+      "claim": "k-os said the Charles record's happy-yet-spooky quality inspired the song.",
+      "verdict": "supported",
+      "note": "Nicholas Jennings interview, per the packet."
+    },
+    {
+      "claim": "Lyric quote: 'No time to get down cause I'm moving up' (three times, then the crabs in the bucket line).",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Crabs drag back any crab that tries to climb out.",
+      "verdict": "supported",
+      "note": "Songfacts, per the packet."
+    },
+    {
+      "claim": "k-os described the song as a man saying he has grown up and these are his beliefs.",
+      "verdict": "supported",
+      "note": "The Coast, 2005."
+    },
+    {
+      "claim": "Quote: 'Walkin' down Yonge Street on a Friday', placing the narrator on a real Toronto street.",
+      "verdict": "corrected",
+      "note": "The draft had four lyric quotes, over the three-quote limit, so this one is now a paraphrase. 'Toronto street' is not stated in the packet, so it now says Yonge Street only."
+    },
+    {
+      "claim": "The narrator refuses to follow the crowd, takes no fast lane, and stays on the highway.",
+      "verdict": "supported",
+      "note": "Rests on the lines 'Can't follow them, gotta do it my way / No fast lane, still on a highway'."
+    },
+    {
+      "claim": "In the first verse he says the answer 'seems complicated 'cause it's really so simple.'",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics, but the thing that seems complicated is 'truth', not 'the answer'. Reworded."
+    },
+    {
+      "claim": "In the second verse: 'I know it's not that simple, I know it's not that hard.'",
+      "verdict": "supported",
+      "note": "Exact quote."
+    },
+    {
+      "claim": "The jabs at 'clones' and 'fools' carry contempt.",
+      "verdict": "supported",
+      "note": "Both words appear in the lyrics. The contempt reading is interpretation."
+    },
+    {
+      "claim": "The sound is clean, dry and close to the ear.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A drum machine lays a steady groove with a prominent snare.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say drum machine; passes 1 and 3 say prominent snare."
+    },
+    {
+      "claim": "The bass repeats a simple figure, and a bright, high keyboard line plays against it.",
+      "verdict": "supported",
+      "note": "All three passes mention the simple, repetitive bass. Passes 1 and 3 mention the bright, high synth or keyboard."
+    },
+    {
+      "claim": "k-os raps in a slightly nasal, conversational flow, with call-and-response answering his lines.",
+      "verdict": "supported",
+      "note": "All three passes say nasal. Passes 1 and 3 say conversational and call-and-response."
+    },
+    {
+      "claim": "The arrangement leaves air around every piece.",
+      "verdict": "supported",
+      "note": "Passes 1, 2 and 3 describe a crisp, well-separated, sparse texture."
+    },
+    {
+      "claim": "k-os produced and arranged it himself, programmed the drums and played piano.",
+      "verdict": "supported",
+      "note": "WhoSampled credits."
+    },
+    {
+      "claim": "The credits list Maury LaFoy on double bass and Christopher Plock on saxophone.",
+      "verdict": "supported",
+      "note": "WhoSampled."
+    },
+    {
+      "claim": "The song sits in Toronto's alternative hip-hop line, built on live players and loose with pop, jazz and funk, and is a cousin of Dream Warriors' 'Ludi' and Feist's 'Mushaboom.'",
+      "verdict": "supported",
+      "note": "Lineage note in the packet. 'Reggae' is also listed there but was not claimed."
+    },
+    {
+      "claim": "k-os said he was chasing a Thriller-sized record with Joyful Rebellion.",
+      "verdict": "corrected",
+      "note": "The source says a 'Thriller-type record', not a Thriller-sized one. Reworded."
+    },
+    {
+      "claim": "It was the first single, in 2004.",
+      "verdict": "supported",
+      "note": "Wikipedia, per the packet."
+    },
+    {
+      "claim": "It became the first hip-hop song to win Single of the Year at the Junos.",
+      "verdict": "supported",
+      "note": "2005 Juno Awards. The year is now added."
+    },
+    {
+      "claim": "He later admitted it's a pop song at the end of the day, which he hadn't planned.",
+      "verdict": "corrected",
+      "note": "The packet gives no timing, so 'later' is removed. He said it was not his intention when making Joyful Rebellion."
+    },
+    {
+      "claim": "When Apple wanted it for a commercial, he wasn't comfortable with that, a fitting refusal.",
+      "verdict": "corrected",
+      "note": "The packet says he wasn't comfortable, not that he refused. 'Refusal' is removed and the discomfort is framed as interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2346,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014695,
+        "detail": "1100 in / 187 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014745,
+        "detail": "1100 in / 189 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014745,
+        "detail": "1100 in / 189 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.106664,
+        "detail": "30572 in / 1552 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.06036,
+        "detail": "4375 in / 2143 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.063198,
+        "detail": "5624 in / 5195 out"
+      }
+    ]
+  }
+}

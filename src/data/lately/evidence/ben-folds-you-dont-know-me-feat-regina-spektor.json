@@ -1,0 +1,202 @@
+{
+  "spotifyId": "5xDJfkWp8ufjxjJ6HDb100",
+  "reviewedAt": "2026-11-11T21:05:16.848Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7588649"
+  },
+  "listening": "Pass 1:\nA piano plays a driving, arpeggiated figure with a slight swing feel. A male voice sings the main melody, joined by a female voice in harmony, often in unison or parallel thirds. The male voice is clear and direct, while the female voice is breathy and slightly higher. The tempo is moderate.\n\nThe production is clean and polished, with a close-miked feel for the vocals. The piano sounds like it's in a medium-sized room. The arrangement is fairly consistent throughout the excerpt, with the piano and two voices as the core. There are no significant changes in instrumentation or dynamics within this segment.\n\nPass 2:\nA piano plays a driving, arpeggiated figure with a strong bass line and a bright, percussive upper register. A male voice sings in a clear, mid-range tenor, with a slightly nasal quality. A female voice joins in harmony, singing a higher, breathy counter-melody. The tempo is moderate, with a steady, propulsive groove. The production is clean and polished, with a sense of a medium-sized room. The arrangement builds with the addition of the female vocal harmony, creating a fuller, richer sound.\n\nPass 3:\nA piano plays a driving, arpeggiated figure with a strong bass line, creating a medium tempo with a steady, slightly swung groove. A male voice sings the main melody, clear and forward in the mix, with a conversational, slightly nasal character. A female voice joins for harmonies, often singing in unison or parallel thirds, with a similar vocal character.\n\nThe production is clean and polished, with a close, intimate room sound. The texture is relatively sparse, focusing on the piano and vocals. The arrangement remains consistent throughout the excerpt, with the piano and two voices present from the beginning, maintaining a steady build in intensity. No instruments drop out or enter.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Ben Folds wrote the song. It was the lead single from his third solo album, Way to Normal (2008), and it features Regina Spektor on duet vocals.",
+        "source": "https://en.wikipedia.org/wiki/You_Don%27t_Know_Me_(Ben_Folds_song)"
+      },
+      {
+        "claim": "Way to Normal was produced by Dennis Herring. It was recorded at Folds' own studio in Nashville, and Herring's earlier credits include Elvis Costello, The Hives and Modest Mouse.",
+        "source": "https://www.nme.com/news/music/ben-folds-7-1330783"
+      },
+      {
+        "claim": "Folds' regular bassist Jared Reynolds and drummer Sam Smith joined him on the album.",
+        "source": "https://www.nme.com/news/music/ben-folds-7-1330783"
+      },
+      {
+        "claim": "Producer Dennis Herring is credited with drums on 'You Don't Know Me' (credited as 'Drumming With Knobs'). Spektor is credited with guest vocals.",
+        "source": "https://www.discogs.com/release/2073406-Ben-Folds-Way-To-Normal"
+      },
+      {
+        "claim": "Spektor's guest vocal was recorded at Avatar Studios in New York. The album was mixed at Quad Studio in New York and mastered at Masterdisk in New York. Spektor appears courtesy of Sire/Warner Bros.",
+        "source": "https://www.discogs.com/release/2073406-Ben-Folds-Way-To-Normal"
+      },
+      {
+        "claim": "Folds told Rolling Stone it was simple: he called Spektor up and they went and did it. He had a part in mind for her, but she added a lot that wasn't planned, which he liked.",
+        "source": "https://en.wikipedia.org/wiki/You_Don%27t_Know_Me_(Ben_Folds_song)"
+      },
+      {
+        "claim": "The video was directed by comedy duo Tim Heidecker and Eric Wareheim, who play an unhappy couple. Folds, Sam Smith and Jared Reynolds play on the lawn outside their house, and Spektor does not appear.",
+        "source": "https://en.wikipedia.org/wiki/You_Don%27t_Know_Me_(Ben_Folds_song)"
+      },
+      {
+        "claim": "PopMatters describes the song as Folds and Spektor trading lines in the chorus while Folds wonders in the verse what is keeping the couple together.",
+        "source": "https://www.popmatters.com/ben-folds-way-to-normal-2496116893.html"
+      },
+      {
+        "claim": "Folds wrote part of the album as he finalized a two-year divorce. He said the songs are not topical and that the record is about being free.",
+        "source": "https://www.ticketnews.com/2008/08/ben-folds-tours-this-fall-with-new-album/"
+      },
+      {
+        "claim": "Before the release, Folds leaked fake versions of six songs, recorded in an eight-hour Dublin session. Friends bundled them with the real singles, including 'You Don't Know Me'.",
+        "source": "https://www.rollingstone.com/music/music-news/why-i-leaked-it-ben-folds-comes-clean-about-his-fake-and-real-new-album-way-to-normal-249549/"
+      }
+    ],
+    "lineage": "A piano-driven, lyric-focused singer-songwriter pop/rock song in the tradition of Folds' Ben Folds Five work, paired with a guest from the indie/anti-folk scene.",
+    "genres": [
+      "indie pop",
+      "piano pop",
+      "alternative rock"
+    ]
+  },
+  "draft": "Two people sing **You Don't Know Me** at each other, and the only thing they agree on is the chorus. Ben Folds and Regina Spektor trade the title line back and forth, often landing in unison or parallel thirds. So the harmony is doing something sly: two voices, perfectly matched, each accusing the other of never having listened. It's the most together this couple gets.\n\nFolds wrote it, and the verse is his slow-dawning question. How can two people share a life \"for so long\" and never know what's going on in each other's heads? The images get sharper as the resentment builds. He pictures himself propped up like a mannequin or a cardboard stand-up, painted with whatever face the other person wanted. Then comes the line where the song stops being a gripe and turns on both of them: \"It was we who were the cliché.\" He doesn't let himself off. They saw the couple in the coma and recognized themselves, and they \"carried on anyway.\"\n\nThe bridge is where the feeling cracks open. Folds runs through the version of himself he thinks his partner holds, a clueless chump, an errant dog who needs a shorter leash, and then blurts the question underneath all of it: \"Why the fuck would you want me back?\" It's anger, but it's also hurt and a little pleading. The answer he offers himself, that maybe it's *because* she doesn't know him, is the bleakest joke in the song. Then the confession stalls. He can't get it out the way he means it, \"'Cause I know you'll only change it,\" and the lyric gives up on words entirely, dissolving into a run of wordless ahs.\n\nThe sound keeps all this moving instead of sinking. A driving, arpeggiated piano figure with a strong bass line and a slight swing carries it at a moderate clip. Folds sings clear and a little nasal, conversational, like he's arguing across a kitchen table. Spektor's voice is breathier and sits higher, and her echoes (\"What?\") land like interruptions. Folds said he called her up with a part in mind, and she added a lot he hadn't planned, which he liked. You can hear it in the way her asides poke holes in his speeches.\n\nThis is classic Folds, the piano-pop of his Ben Folds Five years, smart-mouthed and melodic, pulled toward the anti-folk side by his guest. He made the album, produced by Dennis Herring, while finalizing a two-year divorce, though he insisted the songs weren't topical and that the record was about being free. Fair enough. This one doesn't sound free yet. It sounds like the moment right before.\n\nIt sticks because the bounce lets you sing along to an argument nobody wins, and by the last chorus you're not sure which side you're on.",
+  "factCheck": [
+    {
+      "claim": "Ben Folds and Regina Spektor trade the title line back and forth in the chorus",
+      "verdict": "supported",
+      "note": "PopMatters describes them trading lines in the chorus. The lyrics also show call-and-response parentheticals."
+    },
+    {
+      "claim": "The voices often land in unison or parallel thirds",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree. Pass 2 also describes harmony."
+    },
+    {
+      "claim": "Folds wrote the song",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Lyric quotes: \"for so long\", \"It was we who were the cliché\", \"carried on anyway\", \"Why the fuck would you want me back?\", \"'Cause I know you'll only change it\"",
+      "verdict": "supported",
+      "note": "All match the lyrics exactly."
+    },
+    {
+      "claim": "Mannequin, cardboard stand-up, errant dog, shorter leash, clueless chump imagery",
+      "verdict": "supported",
+      "note": "Present in the lyrics. The readings of them are interpretation."
+    },
+    {
+      "claim": "\"The bridge is where the feeling cracks open\"",
+      "verdict": "corrected",
+      "note": "The structural label 'bridge' isn't shown by the lyrics. Reworded to 'later'."
+    },
+    {
+      "claim": "The lyric dissolves into wordless ahs",
+      "verdict": "supported",
+      "note": "The lyric's structure shows the closing run of ahs."
+    },
+    {
+      "claim": "Partner referred to as 'she'",
+      "verdict": "corrected",
+      "note": "The lyrics don't give the other person's gender. Changed to neutral wording."
+    },
+    {
+      "claim": "Piano is driving and arpeggiated, with a strong bass line and slight swing, at a moderate tempo",
+      "verdict": "supported",
+      "note": "All three passes agree on driving, arpeggiated and moderate. Passes 2 and 3 give the bass line. Passes 1 and 3 give the swing."
+    },
+    {
+      "claim": "Folds sings clear, a little nasal, 'conversational'",
+      "verdict": "corrected",
+      "note": "Clear is agreed by all passes and nasal by passes 2 and 3. 'Conversational' appears in only one pass, so it was dropped as a description and kept only as the kitchen-table simile."
+    },
+    {
+      "claim": "Spektor's voice is breathier and sits higher",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Spektor's echoes ('What?') land like interruptions, and her asides poke holes in his speeches",
+      "verdict": "removed",
+      "note": "The packet doesn't say who sings the parenthetical lines. Replaced with a supported description of the second voice sitting alongside the lead."
+    },
+    {
+      "claim": "Folds called Spektor up with a part in mind, and she added a lot he hadn't planned, which he liked",
+      "verdict": "supported",
+      "note": "Rolling Stone, via the researched facts. Pronoun removed."
+    },
+    {
+      "claim": "Piano-pop of the Ben Folds Five years; pulled toward anti-folk by his guest",
+      "verdict": "corrected",
+      "note": "The lineage note supports Ben Folds Five-style piano pop and an anti-folk guest. 'Pulled toward' was softened to 'paired with'."
+    },
+    {
+      "claim": "He made the album while finalizing a two-year divorce",
+      "verdict": "corrected",
+      "note": "The source says he wrote part of the album as he finalized the divorce."
+    },
+    {
+      "claim": "Album produced by Dennis Herring",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "He 'insisted' the songs weren't topical and the record was about being free",
+      "verdict": "corrected",
+      "note": "The source says 'said'. Wording adjusted."
+    },
+    {
+      "claim": "By the last chorus you're not sure which side you're on",
+      "verdict": "corrected",
+      "note": "Position-in-song claim. Trimmed to an interpretive statement without the 'last chorus' reference."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2573,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012831,
+        "detail": "1112 in / 111 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00051654,
+        "detail": "1112 in / 135 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013281,
+        "detail": "1112 in / 129 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.145982,
+        "detail": "50321 in / 1534 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050892,
+        "detail": "3913 in / 1762 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05734,
+        "detail": "5085 in / 4717 out"
+      }
+    ]
+  }
+}

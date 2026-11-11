@@ -1,0 +1,205 @@
+{
+  "spotifyId": "1vNIWAWIEW4DXrgRhggF1e",
+  "reviewedAt": "2026-11-11T21:15:26.398Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nA plucked upright bass plays a walking bassline. A fiddle plays a melodic line with a vibrato. A banjo plays a rhythmic strumming pattern. A drum kit plays a simple beat with a kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel, with a slight swing.\n\nVocals:\nA single voice sings with a clear, resonant character. The delivery is expressive and sustained. There are no harmonies.\n\nProduction:\nThe room sounds open and natural. The texture is raw and acoustic. The production is unpolished.\n\nArrangement:\nThe upright bass, fiddle, banjo, and drums play throughout the excerpt. The vocals enter at the 0:12 mark. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA plucked upright bass plays a walking bassline. A fiddle plays a melody with a vibrato-heavy tone. A banjo plays a rhythmic accompaniment. A guitar plays chords. A drum kit plays a shuffle beat with brushes.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove feels like a swing or shuffle, with a driving, forward momentum.\n\nVocals:\nA single voice sings with a clear, slightly nasal character. The delivery is melodic and expressive. There are no harmonies.\n\nProduction:\nThe room sounds live and open, with some natural reverb. The texture is raw and acoustic. The production is unpolished, with a natural, uncompressed sound.\n\nArrangement:\nThe upright bass, fiddle, banjo, and drum kit are present from the beginning. The guitar enters at the 0:04 mark. The vocals enter at the 0:12 mark. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nA plucked upright bass plays a walking bassline. A banjo plays a melodic line with a fast tremolo. A fiddle plays a sustained melody. A male voice sings with a clear, resonant tone, in a mid-range. The tempo is moderate, with a driving, swinging feel. The production is raw and unpolished, with a dry, close-miked sound. The arrangement is consistent throughout the excerpt, with all instruments and vocals present from the beginning. There are no obvious changes in dynamics or instrumentation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The single \"Doubt\" by The Bridge City Sinners was released May 10, 2024, with a copyright line to Flail Records. It runs 2:36.",
+        "source": "https://music.apple.com/us/album/doubt-single/1735571549"
+      },
+      {
+        "claim": "\"Doubt\" appears on the album In the Age of Doubt, released July 12, 2024 on Flail Records and SBÄM Records.",
+        "source": "https://ghostcultmag.com/bridge-city-sinners-share-their-single-and-video-doubt-new-album-coming-soon/"
+      },
+      {
+        "claim": "The distributor metadata for the \"Doubt\" single credits Kristofer (Kris) Crummett as producer.",
+        "source": "https://www.youtube.com/watch?v=dW38lV0yud4"
+      },
+      {
+        "claim": "On the parent album, Kris Crummett produced, engineered, mixed and mastered at Interlace Audio in Portland, OR. Joseph Faison IV did additional production, and the horns were engineered by Stephan Hawkes in Los Angeles. The Bandcamp credits say all songs were written by the Bridge City Sinners.",
+        "source": "https://bridgecitysinners.bandcamp.com/album/in-the-age-of-doubt"
+      },
+      {
+        "claim": "The album's band lineup is Libby Lux (lead vocals, banjolele), Michael Sinner (resonator guitar, vocals), Lightnin' Luke (violin, piano, vocals), Clyde McGee (banjo, vocals) and Scott Michaud (upright bass, vocals). Additional musicians include Charles De Castro on trumpet on several tracks.",
+        "source": "https://bridgecitysinners.bandcamp.com/album/in-the-age-of-doubt"
+      },
+      {
+        "claim": "Lead singer Libby Lux said the song speaks to the battle within and how you are your own worst enemy. She called it a reminder not to give in to thoughts of self-harm and self-hatred.",
+        "source": "https://ghostcultmag.com/bridge-city-sinners-share-their-single-and-video-doubt-new-album-coming-soon/"
+      },
+      {
+        "claim": "The band says In the Age of Doubt follows the sonic direction of Unholy Hymns, combining folk instrumentation with heavier, more alternative styles. It is set in the same fictional, hedonistic, post-apocalyptic world as Unholy Hymns.",
+        "source": "https://www.clickrollboom.co.uk/news/bridge-city-sinners-release-new-single-doubt"
+      },
+      {
+        "claim": "Flail Records was started by the Sinners and is run by bassist Scott Michaud.",
+        "source": "https://punkrock-streetlight-diy.tumblr.com/post/653512491770560512/in-interview-king-strang-of-the-bridge-city"
+      },
+      {
+        "claim": "Bridge City Sinners are a Portland, Oregon band. They began as buskers in the Pacific Northwest, and the band describes its range as running from Prohibition-era jazz to Appalachian death folk.",
+        "source": "https://www.unratedmag.com/bridge-city-sinners/"
+      },
+      {
+        "claim": "The band's earlier releases are Bridge City Sinners (2016), Witches' Wrath (2018), Here's to the Devil (2019) and Unholy Hymns (2021). Unholy Hymns entered the Billboard charts at number 70.",
+        "source": "https://www.clickrollboom.co.uk/news/n1ocebpf6i82h6qv94cdbpiru0o9e1"
+      }
+    ],
+    "lineage": "The band sits in a dark folk / dark Americana string-band tradition, with roots in Pacific Northwest busking and a punk-scene DIY ethos, blending Appalachian death folk, prohibition-era jazz and heavier alternative sounds.",
+    "genres": [
+      "dark americana",
+      "folk punk",
+      "alternative folk"
+    ]
+  },
+  "draft": "The upright bass on **Doubt** walks like it has somewhere to be. A plucked line moves under a steady drum kit with a loose swing, a banjo chops out the rhythm, and a fiddle draws a melody heavy with vibrato over the top. It's a band playing at a dancing tempo, not a funeral pace. That matters, because the song is about the voice in your own head that wants you gone.\n\nLibby Lux, the Bridge City Sinners' lead singer, has said the song speaks to the battle within, the sense that you are your own worst enemy. She framed it as a warning against giving in to thoughts of self-harm and self-hatred. That's a heavy thing to carry, and the band doesn't slow down to carry it. The groove keeps pushing forward. That choice reads as its own kind of answer. When the doubt gets loud, you keep your feet moving, keep playing, and stay in the room with the people playing beside you.\n\nThe single voice out front is clear and resonant, sung with real expression and no harmonies to lean on. Alone like that, it sounds exposed in a way that suits a song about fighting yourself, because nobody else can step into that argument. The production lets the room in. It's open and natural, raw and unpolished, and the strings sound played rather than sanded smooth.\n\nThat rawness has a history. The Sinners started out busking in the Pacific Northwest, and they describe their range as running from Prohibition-era jazz to Appalachian death folk. You can hear both ends here, in the swing of the rhythm section and the mountain bite of fiddle and banjo. On record, that's Lightnin' Luke on violin, Clyde McGee on banjo, and Scott Michaud on upright bass. Michaud also runs Flail Records, the label the band started themselves, and that do-it-yourself streak runs through the sound.\n\nTheir 2021 album Unholy Hymns pushed folk instrumentation toward heavier, more alternative styles, and it entered the Billboard charts at number 70. The band says the new album, In the Age of Doubt, follows the same path and returns to the same fictional, hedonistic, post-apocalyptic setting. The record takes its name from this song's single word, and the logic holds. When everything outside has burned down to excess, the enemy that's left is the one inside. Kris Crummett produced in Portland at Interlace Audio, and he keeps the band close and unvarnished. Every song on the album is credited to the group as a whole, which fits a track that sounds like five people holding a line together.\n\n**Doubt** takes the loneliest fight a person has and sets it to a rhythm you can't help moving to, so you come away feeling that the self-hatred is real, and that you don't have to stand still for it.",
+  "factCheck": [
+    {
+      "claim": "Plucked upright bass plays a walking bassline.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Steady drum kit with a loose swing.",
+      "verdict": "supported",
+      "note": "All three passes describe a swing or shuffle feel, and pass 1 describes the groove as steady."
+    },
+    {
+      "claim": "Banjo chops out the rhythm.",
+      "verdict": "corrected",
+      "note": "Passes 1 and 2 say rhythmic strumming or accompaniment. 'Chops' is too specific, so it was changed to keeps the rhythm."
+    },
+    {
+      "claim": "Fiddle draws a melody heavy with vibrato.",
+      "verdict": "corrected",
+      "note": "Passes 1 and 2 agree on vibrato. 'Heavy' comes from pass 2 alone, so it was reduced to 'with vibrato'."
+    },
+    {
+      "claim": "Dancing tempo, not a funeral pace.",
+      "verdict": "supported",
+      "note": "The tempo is moderate to medium-fast with a driving feel. The framing is interpretation."
+    },
+    {
+      "claim": "Libby Lux is the lead singer and said the song speaks to the battle within and being your own worst enemy, and against giving in to self-harm and self-hatred.",
+      "verdict": "supported",
+      "note": "Matches the Ghost Cult quote. The lineup lists Lux on lead vocals."
+    },
+    {
+      "claim": "Single voice, clear and resonant, expressive, no harmonies.",
+      "verdict": "supported",
+      "note": "Clear is in all three passes, resonant in passes 1 and 3, expressive in passes 1 and 2, and no harmonies in passes 1 and 2."
+    },
+    {
+      "claim": "Production is open and natural, raw and unpolished.",
+      "verdict": "supported",
+      "note": "Raw and unpolished is in all three passes. Open and natural is in passes 1 and 2."
+    },
+    {
+      "claim": "The Sinners started out busking in the Pacific Northwest and describe their range as Prohibition-era jazz to Appalachian death folk.",
+      "verdict": "supported",
+      "note": "Matches the Unrated Mag source."
+    },
+    {
+      "claim": "You can hear both ends in the swing and the 'mountain bite' of fiddle and banjo.",
+      "verdict": "corrected",
+      "note": "This is interpretation resting on the swing and the fiddle and banjo. 'Mountain bite' was softened to avoid an unsupported sound claim."
+    },
+    {
+      "claim": "Lightnin' Luke on violin, Clyde McGee on banjo and Scott Michaud on upright bass 'on record'.",
+      "verdict": "corrected",
+      "note": "This is the album lineup, not a track-specific credit, so it was reworded as the band's lineup."
+    },
+    {
+      "claim": "Michaud runs Flail Records, which the band started.",
+      "verdict": "supported",
+      "note": "Matches the Tumblr interview source."
+    },
+    {
+      "claim": "Unholy Hymns is a 2021 album that entered the Billboard charts at number 70.",
+      "verdict": "supported",
+      "note": "Matches the Click Roll Boom source."
+    },
+    {
+      "claim": "Unholy Hymns pushed folk instrumentation toward heavier, more alternative styles.",
+      "verdict": "corrected",
+      "note": "The source says the new album follows the direction of Unholy Hymns. It was reworded to attribute the claim to the band."
+    },
+    {
+      "claim": "The band says the new album follows the same path and the same fictional, hedonistic, post-apocalyptic setting.",
+      "verdict": "supported",
+      "note": "Matches the Click Roll Boom source."
+    },
+    {
+      "claim": "The record takes its name from this song's single word.",
+      "verdict": "removed",
+      "note": "Nothing says the album was named after the song. It was reworded to say the song appears on the album In the Age of Doubt."
+    },
+    {
+      "claim": "Kris Crummett produced in Portland at Interlace Audio.",
+      "verdict": "supported",
+      "note": "He produced the single and the album. The album was made at Interlace Audio in Portland, OR."
+    },
+    {
+      "claim": "Every song on the album is credited to the group.",
+      "verdict": "supported",
+      "note": "Bandcamp credits say all songs were written by the Bridge City Sinners."
+    },
+    {
+      "claim": "Crummett keeps the band close and unvarnished.",
+      "verdict": "supported",
+      "note": "Interpretation backed by the raw, unpolished production heard in the passes."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2712,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012645,
+        "detail": "1100 in / 105 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014295,
+        "detail": "1100 in / 171 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001502,
+        "detail": "1100 in / 200 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.140542,
+        "detail": "46216 in / 1811 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.073052,
+        "detail": "3453 in / 2962 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053454,
+        "detail": "4647 in / 4416 out"
+      }
+    ]
+  }
+}
