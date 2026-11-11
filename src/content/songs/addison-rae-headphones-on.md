@@ -2,21 +2,35 @@
 title: "Headphones On"
 artist: "Addison Rae"
 artists: ["Addison Rae"]
-album: "Headphones On"
-releaseDate: "2025-04-18"
-spotifyUrl: "https://open.spotify.com/track/1efXUbx5gsLd2sqjszBtx1"
-spotifyId: "1efXUbx5gsLd2sqjszBtx1"
-albumArt: "https://i.scdn.co/image/ab67616d0000b273af57b16a39b355cb80008e73"
+album: "Addison"
+releaseDate: "2025-06-06"
+spotifyUrl: "https://open.spotify.com/track/3H6xZgwRZx8McVUJzmMxWe"
+spotifyId: "3H6xZgwRZx8McVUJzmMxWe"
+albumArt: "https://i.scdn.co/image/ab67616d0000b273089511953028cbfeb095c593"
 duration: 240308
-genres: []
-# preview: ""
-pubDate: "2025-12-03"
-tags: []
+genres: ["pop", "dance-pop", "trip-hop"]
+pubDate: "2026-11-11"
+tags: ["addison-rae", "pop", "dance-pop", "trip-hop", "2025"]
+pipeline: "lately"
+sources:
+  - title: "Wikipedia: Headphones On"
+    url: "https://en.wikipedia.org/wiki/Headphones_On"
+  - title: "The Line of Best Fit: Addison Rae releases new track, \"Headphones On\""
+    url: "https://www.thelineofbestfit.com/news/addison-rae-releases-new-track-headphones-on"
+  - title: "Yahoo Entertainment: Addison Rae Releases ‘Headphones On,’ the Fourth Single Off Her Upcoming Debut Album"
+    url: "https://www.yahoo.com/entertainment/articles/addison-rae-releases-headphones-fourth-040000449.html"
+  - title: "Stardust Magazine: Addison Rae Releases Her New Y2K Pop Single \"Headphones On\""
+    url: "https://thestardustmag.com/music/addison-rae-headphones-on"
+  - title: "Wikipedia: Addison (album)"
+    url: "https://en.wikipedia.org/wiki/Addison_(album)"
 aiGenerated: true
 ---
+The saddest line in **Headphones On** comes with a shrug: "Wish my mom and dad could've been in love." Addison Rae doesn't dress it up. The next line just accepts it, guessing some things weren't meant to last, and moves on to comparing her own life to the new it girl's. The song is about her parents' publicized 2022 divorce, the pressure of fame, and the urge to get away from both. It handles all of it the way a lot of people handle a bad week: put the music on, turn it up, and keep going.
 
-In "Headphones On," Addison Rae invites us into a sanctuary of sound, a space defined by both isolation and connection. The first notes unfurl gently, like the unwinding of a tightly coiled spring—the kind of moment when the world fades just enough to allow room for introspection. Rae’s voice, soft yet assured, feels like a warm embrace as it settles over the track, its production shimmering with a polished sophistication that belies its pop origins. There’s a palpable weight to her lyrics, which navigate the intricate dance between self-assertion and vulnerability, suggesting that putting on one’s headphones serves as a metaphor for curating our own realities amid the chaos of external expectations.
+That's the emotional trick here. The chorus is an escape plan, and the verses keep showing what she's escaping from. Pain, a cigarette to feel better, and then the small, stubborn detail that gives the song its spine: "So I still get dolled up." It isn't denial. It's dignity, held in place by getting dressed up anyway. Hurt and vanity sit next to each other without canceling out, and the song doesn't ask you to pick one. Even the life lesson, that you can't fix what's already broken and have to surrender to the moment, sounds less like wisdom than something she keeps repeating until it sticks.
 
-This song resonates deeply in a moment where the very act of listening has become a refuge. It’s easy to draw parallels to the way our lives intertwine with technology—not just as a distraction, but as a means of understanding ourselves and our emotions. Rae’s exploration of solitude feels particularly poignant in a landscape where online personas often become masks that obscure our true selves. The lyrics pulse with yearning, hinting at the loneliness that often accompanies the dialogues we have with ourselves. Each repeated refrain is a reminder of both the power and fragility of the human experience: the joy found in solitude, and the ache of longing for connection even when we’re ensconced in our own thoughts.
+Rae wrote it with her producers, Luka Kloser and Elvira Anderfjärd, the pair behind the whole album, and recorded it in Stockholm at MXM while she was sick. She has called it one of her most emotional songs and said making it was cathartic. The arrangement doesn't pour that out. Sustained synth-pad chords hang in the background while kick, snare, and hi-hat hold a steady, moderate beat. A bass synth loops a simple line, and a separate synth melody weaves around the vocal. The production is polished and clean, with a little reverb opening up the voice. Rae sings smoothly and clearly, stacked with harmonies in thirds, never pushing.
 
-As Rae continues to carve out her artistic identity amidst the multifaceted pop landscape, “Headphones On” stands as a testament to her growth. It captures a moment of clarity, urging listeners to not merely retreat into their own worlds, but to find strength in the echoes of their emotions. In a time when music often serves as mere backdrop to our frenetic lives, Rae’s work invites us to linger—to sit with our feelings, to listen deeply, and perhaps, to discover something true about ourselves in the process.
+Slant heard new jack swing bounce in it. Stardust Magazine pointed to trip-hop and early-2000s pop, naming Britney Spears, Madonna, and Björk. Both make sense. This is the 2020s revival of turn-of-the-millennium pop, but bent toward confession rather than the dance floor. The closing lines give the game away. They keep chanting "Cut the tears, cut the tears 'til the wheels fall off," a mantra for shutting feeling down, repeated until it sounds like an order she's giving herself.
+
+It sticks because it captures something everyone has done: hurting, putting on your favorite song, and letting a steady beat carry you through a feeling you're not ready to look at yet.

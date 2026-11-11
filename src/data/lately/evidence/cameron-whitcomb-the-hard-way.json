@@ -1,0 +1,210 @@
+{
+  "spotifyId": "6jTKmVRVOLrlKrrziwkOal",
+  "reviewedAt": "2026-11-11T19:50:43.640Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/29888787"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic line with a clean tone and some reverb. Bass guitar plays a root-note driven line. Drums play a driving beat with snare, kick, and cymbals.\n\nTempo and Groove Feel\nThe tempo is medium-fast. The groove is a driving, rock feel.\n\nVocals\nThe lead vocal is a male voice, delivered with a clear, slightly raspy character. The delivery is passionate and direct. There are no harmonies in this excerpt.\n\nProduction\nThe room sounds open with some reverb. The texture is full and layered. The production is polished.\n\nArrangement\nThe excerpt begins with the full band playing. The lead vocal enters shortly after. The electric guitar plays a prominent melodic line throughout. The drums maintain a consistent, driving beat. No instruments drop out or build significantly within this excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a distorted, sustained melody. Bass guitar plays a simple, root-note line. Drums play a driving, rock beat with snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is a driving, rock feel.\n\nVocals:\nThe lead vocal is a male voice, delivered with a raw, slightly strained quality. There are no harmonies.\n\nProduction:\nThe production sounds like a medium-sized room, with a slightly raw, unpolished texture.\n\nArrangement:\nThe excerpt begins with the full band. The electric guitar plays a prominent melody. The vocals enter shortly after. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a distorted, sustained melody. Bass guitar plays a simple, root-note line. Drums play a driving, rock beat with snare, kick, and cymbals.\n\nTempo and Groove Feel\nThe tempo is moderate. The groove is a driving, rock feel.\n\nVocals\nThe lead vocal is a male voice, delivered with a raw, slightly strained quality. There are no harmonies.\n\nProduction\nThe room sounds open, with a moderate amount of reverb. The texture is full and slightly gritty. The production is moderately polished, leaning towards a raw, live sound.\n\nArrangement\nThe excerpt begins with the full band. The electric guitar plays a prominent melody. The vocals enter immediately. The drums maintain a consistent beat throughout. The bass provides a steady foundation. The acoustic guitar is present but less prominent than the electric. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The title track 'The Hard Way' was written by Cameron Whitcomb, Jack Riley, Cal Shapiro and Nolan Winfield Sipe.",
+        "source": "https://musicrow.com/2025/09/cameron-whitcomb-readies-debut-record-due-this-month/"
+      },
+      {
+        "claim": "The song is credited to Jack Riley and Cal Shapiro as producers. Nathan Dantzler and Mitch McCarthy are credited on mastering/engineering. Shapiro, Riley and Sipe also sing background vocals.",
+        "source": "https://www.shazam.com/song/1829591943/the-hard-way"
+      },
+      {
+        "claim": "The title track was released as a single on September 5, 2025, three weeks before the album came out on September 26, 2025 via Atlantic.",
+        "source": "https://musicrow.com/2025/09/cameron-whitcomb-readies-debut-record-due-this-month/"
+      },
+      {
+        "claim": "Whitcomb said that getting clean did not solve everything for him. His mental-health ups and downs became more extreme, and that instability has been hard to manage while building a music career.",
+        "source": "https://holler.country/lyrics/the-hard-way-by-cameron-whitcomb-lyrics-and-meaning/"
+      },
+      {
+        "claim": "The album is a debut that follows Whitcomb's struggles with addiction at a young age through recovery and adulthood. He called it 'every piece of who I am'.",
+        "source": "https://www.countrystandardtime.com/news/newsitem.asp?xid=15148"
+      },
+      {
+        "claim": "Jack Riley produced the album. Apple Music's editorial describes it as rootsy country in the vein of Zach Bryan or Sam Barber, with touches of melodic pop, alt-rock and punk, and spoken interludes.",
+        "source": "https://music.apple.com/us/album/the-hard-way/1829591942"
+      },
+      {
+        "claim": "The album includes earlier singles 'Quitter' (2024), 'Medusa' (2024), 'Options' (2025) and 'Hundred Mile High' (2025). The 15-track standard edition runs about 37 minutes, and a 20-track deluxe edition followed on November 14, 2025.",
+        "source": "https://audiomack.com/cameronwhitcomb/album/the-hard-way-deluxe-6098642"
+      },
+      {
+        "claim": "In a BeatRoute cover story on the album, Whitcomb said 'I don't write in genres. I just write songs.'",
+        "source": "https://beatroutemedia.com/cover_stories/cameron-whitcomb/"
+      },
+      {
+        "claim": "Whitcomb was born in Peace River, Alberta, and raised in Nanaimo, British Columbia. He worked as a pipeline laborer. An American Idol casting agent found him through karaoke videos he posted on Reddit, and he reached the Top 20 on season 20.",
+        "source": "https://www.socanmagazine.ca/features/cameron-whitcomb-gets-clean-and-gets-busy/"
+      },
+      {
+        "claim": "The Hard Way won Country Album of the Year at the Juno Awards of 2026. Whitcomb also won Breakthrough Artist or Group of the Year.",
+        "source": "https://en.wikipedia.org/wiki/Cameron_Whitcomb"
+      }
+    ],
+    "lineage": "Whitcomb's confessional, sobriety-themed songwriting sits in the roots-leaning, alt-folk/alt-country side of modern country, in the vein of Zach Bryan and Sam Barber per Apple Music, with pop, rock and punk touches.",
+    "genres": [
+      "country",
+      "alternative country",
+      "folk-pop"
+    ]
+  },
+  "draft": "\"Wakin' up worthless\" is the first thing **The Hard Way** says, and the next line goes further than most country songs will. Cameron Whitcomb sings that he should have worked up the courage to kill himself, with no metaphor to soften it. Then comes a strange, almost funny image: a Mona Lisa sitting on his shelf, and the question of whether he deserved it. That's the bind the song lives in. Something precious is right there in the room, and the narrator can't decide whether he has earned the right to be alive to look at it.\n\nThe chorus doesn't resolve that. It concedes. \"And you were right all along\" is said to someone never named, and what he admits to is odd and exact: \"I was addicted to heartache.\" The craving gets moved from a substance to a feeling, to the lies he was sold and wanted to love anyway. \"I had to do it the hard way\" works as an apology and a quiet boast at once, the pride of someone who survived his own stubbornness next to the grief of what it cost. The song lets both stand. The lines set off in parentheses, \"You were right to say I was wrong,\" read like the people around him saying it back.\n\nThe second verse turns outward, and it's the loneliest part. The friends he admired have grown up into liars, offering \"The over-rehearsed 'I'm doing fine.'\" He's tired of chasing a peace he was promised, and goodbye becomes a hill he has to climb alone. Whitcomb has said getting clean didn't fix everything, and that his mental-health swings got more extreme afterward. The song sounds like that admission. It is a recovery song that refuses to pretend recovery ends anywhere.\n\nThe band pushes hard under it. A strummed acoustic guitar keeps time beneath a distorted electric holding long, sustained notes. The bass sits on root notes while the drums drive a straight rock beat. The voice is raw and slightly strained, and the room is open and a little gritty, closer to a live take than a glossy one. Apple Music places the album beside Zach Bryan and Sam Barber with alt-rock and punk touches, and this track leans toward the rock end. That fits a writer who says, \"I don't write in genres. I just write songs.\"\n\nWhitcomb wrote it with Jack Riley, Cal Shapiro and Nolan Winfield Sipe. Riley and Shapiro produced it. The chorus comes around again and again, and the repetition can feel heavy, but that's the confession: he has to keep saying it.\n\nThe song makes you sit with someone who is grateful to be here and still not sure he wants to be, and it won't let you choose one feeling over the other.",
+  "factCheck": [
+    {
+      "claim": "\"Wakin' up worthless\" is the first line of the song",
+      "verdict": "supported",
+      "note": "Matches the opening lyric exactly."
+    },
+    {
+      "claim": "The next line goes further than most country songs will",
+      "verdict": "removed",
+      "note": "A generalization about country songs that the evidence doesn't support. The line itself stays."
+    },
+    {
+      "claim": "Whitcomb sings that he should have worked up the courage to kill himself",
+      "verdict": "supported",
+      "note": "Matches 'Should've worked up the courage to kill myself'."
+    },
+    {
+      "claim": "A Mona Lisa sitting on his shelf, plus the question of whether he deserved it",
+      "verdict": "supported",
+      "note": "Matches 'And did I deserve this? / The Mona Lisa that sits upon my shelf'. The reading of the image is interpretation."
+    },
+    {
+      "claim": "Quote: \"And you were right all along\"",
+      "verdict": "corrected",
+      "note": "The quote is accurate. It was paraphrased to keep lyric quotes to three lines."
+    },
+    {
+      "claim": "Quote: \"I was addicted to heartache\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Quote: \"I had to do it the hard way\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Parenthetical lines \"You were right to say I was wrong\"",
+      "verdict": "corrected",
+      "note": "The quote is accurate. It was paraphrased to stay within the three-quote limit. The reading that the people around him are saying it back is interpretation."
+    },
+    {
+      "claim": "Second verse: friends have grown up into liars; \"The over-rehearsed 'I'm doing fine.'\"; tired of promised peace; goodbye is a lonely hill",
+      "verdict": "corrected",
+      "note": "The content matches the lyrics. The direct quote was turned into a paraphrase to respect the quote limit. 'Alone' was changed to 'lonely' to track the lyric."
+    },
+    {
+      "claim": "Whitcomb has said getting clean didn't fix everything and his mental-health swings got more extreme afterward",
+      "verdict": "corrected",
+      "note": "The source says getting clean didn't solve everything and his ups and downs became more extreme. 'Afterward' isn't stated, so it was removed."
+    },
+    {
+      "claim": "Strummed acoustic guitar, distorted electric with long sustained notes",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 agree on a distorted, sustained melody, and pass 1 says clean. Reworded to 'distorted, sustained melody'."
+    },
+    {
+      "claim": "Bass on root notes; drums drive a straight rock beat",
+      "verdict": "corrected",
+      "note": "Bass root notes and a driving rock beat are agreed by all passes. 'Straight' isn't stated and was removed."
+    },
+    {
+      "claim": "Voice is raw and slightly strained",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree."
+    },
+    {
+      "claim": "Room is open and a little gritty, closer to a live take than a glossy one",
+      "verdict": "corrected",
+      "note": "'Open' is backed by passes 1 and 3, and a raw texture by passes 2 and 3. 'Live take' rests on pass 3 only, and pass 1 calls the production polished. Reworded to an open room with a raw edge."
+    },
+    {
+      "claim": "Apple Music places the album beside Zach Bryan and Sam Barber with alt-rock and punk touches",
+      "verdict": "supported",
+      "note": "Matches Apple Music's editorial."
+    },
+    {
+      "claim": "This track leans toward the rock end",
+      "verdict": "supported",
+      "note": "All passes describe a driving rock groove. Interpretation."
+    },
+    {
+      "claim": "Whitcomb says 'I don't write in genres. I just write songs.'",
+      "verdict": "supported",
+      "note": "Matches the BeatRoute quote."
+    },
+    {
+      "claim": "Written by Whitcomb, Jack Riley, Cal Shapiro and Nolan Winfield Sipe; produced by Riley and Shapiro",
+      "verdict": "supported",
+      "note": "Matches the MusicRow and Shazam credits."
+    },
+    {
+      "claim": "The chorus repeats and the repetition can feel heavy",
+      "verdict": "supported",
+      "note": "The repetition is visible in the lyric structure. The heaviness is opinion."
+    },
+    {
+      "claim": "Narrator is 'grateful to be here' and unsure he wants to be",
+      "verdict": "corrected",
+      "note": "Gratitude isn't shown in the lyrics. Reworded to someone who is still here and unsure what that's worth."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.3187,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013942,
+        "detail": "1099 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014617,
+        "detail": "1099 in / 184 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015092,
+        "detail": "1099 in / 203 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.18510200000000002,
+        "detail": "64341 in / 1642 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.068744,
+        "detail": "4036 in / 2630 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06049,
+        "detail": "5190 in / 5011 out"
+      }
+    ]
+  }
+}

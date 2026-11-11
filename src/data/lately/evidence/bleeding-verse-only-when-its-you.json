@@ -1,0 +1,205 @@
+{
+  "spotifyId": "7e60oxy9wcgFQfWhDgWZAk",
+  "reviewedAt": "2026-11-11T19:31:38.625Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/31385750"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a clean, mid-range tone, often in a higher register. A second male voice provides harmonies, usually a third above the lead. The vocals are delivered with a strong, sustained quality.\n\nThe tempo is moderate, with a driving, energetic groove. Drums play a consistent rock beat with prominent snare hits. Electric guitars provide a thick, distorted wall of sound, playing sustained power chords. A bass guitar plays a foundational, driving line.\n\nThe production is polished and full, with a wide stereo image. The overall texture is dense and powerful. The room sound is open, suggesting a large space.\n\nThe arrangement is consistent throughout the excerpt. All instruments and vocals are present from the beginning, maintaining a full sound without significant changes in instrumentation or dynamics.\n\nPass 2:\nA driving, mid-tempo rock groove is established by a kick drum on every beat, a snare on beats two and four, and a fast, eighth-note cymbal pattern. A distorted electric guitar plays a sustained chord. A bass guitar plays a root-note pattern. A male voice sings the lead melody, with a slightly raw, powerful delivery. A second male voice sings a harmony above the lead. The production is full and polished, with a wide stereo image. The room sounds dry. The arrangement remains consistent throughout the excerpt, with no major changes in instrumentation or dynamics.\n\nPass 3:\nA male voice sings lead, with a clean, mid-range tone, often using a sustained, slightly strained delivery. Backing vocals provide harmonies, sometimes in unison, sometimes in a higher register.\n\nThe tempo is moderate, with a driving, energetic feel. The groove is propelled by a kick drum and snare, with a consistent, strong beat.\n\nA distorted electric guitar plays power chords, providing a thick, sustained texture. A bass guitar plays a foundational, driving line. Drums provide a solid rock beat with prominent snare hits and cymbal crashes.\n\nThe production is polished and full, with a clear, direct sound. The texture is dense and layered, creating a powerful wall of sound. The room sounds like a studio, with no discernible reverb.\n\nThe excerpt begins with the full band and vocals. The arrangement remains consistent throughout, with no significant drops or builds.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Bleeding Verse is an AI-assisted project. Its YouTube and Instagram bios say it uses \"AI-assisted instrumentation and vocals\", so there is no human band lineup to credit.",
+        "source": "https://www.nme.com/news/music/ai-band-inspired-by-holding-absence-overtakes-them-on-spotify-its-disheartening-its-insulting-its-a-wake-up-call-3896550"
+      },
+      {
+        "claim": "Bleeding Verse's Spotify profile describes its process as human lyrics turned into songs with AI.",
+        "source": "https://musically.com/2025/10/03/holding-absence-frontman-reveals-insulting-ai-competition/"
+      },
+      {
+        "claim": "Shazam's credits for \"Only When It's You\" list Kyle Ward as songwriter, background vocalist and in production and engineering.",
+        "source": "https://www.shazam.com/en-us/song/1844742159/only-when-its-you"
+      },
+      {
+        "claim": "Deezer's credits for the track list Kyle Ward as writer and Bleeding Verse with Kyle Ward as composers.",
+        "source": "https://www.deezer.com/en/artist/338032071"
+      },
+      {
+        "claim": "\"Only When It's You\" is track 1 on The Anatomy of Hurt, a six-track release. It runs 4:14, and the track listing is followed by You Wanted Wanting, I Don't Ache Like I Used To, No Longer Yours To Haunt, Glass Chest and I Left The Light Off. Amazon dates the release 10 August 2025.",
+        "source": "https://music.amazon.in/tracks/B0FLSMM457"
+      },
+      {
+        "claim": "Apple Music files The Anatomy of Hurt as an EP and lists other versions of the song as separate releases: Only When It's You (Alternate) and Only When It's You (Acoustic).",
+        "source": "https://music.apple.com/us/song/only-when-its-you/1844742159"
+      },
+      {
+        "claim": "An acoustic version of \"Only When It's You\" was released on September 26, 2025.",
+        "source": "https://audiomack.com/bleeding-verse/song/only-when-its-you-acoustic"
+      },
+      {
+        "claim": "The lyrics, credited to Kyle Ward, are about feeling safe only with one person and being hurt only by that same person. They include the lines about being \"the silence inside of the storm\" and \"static where you used to be\".",
+        "source": "https://www.letras.com/bleeding-verse/only-when-its-you/"
+      },
+      {
+        "claim": "Bleeding Verse's first album, I Became What You Broke, was uploaded to Spotify on July 25, 2025. It was followed by singles and The Anatomy of Hurt EP.",
+        "source": "https://www.nme.com/news/music/ai-band-inspired-by-holding-absence-overtakes-them-on-spotify-its-disheartening-its-insulting-its-a-wake-up-call-3896550"
+      },
+      {
+        "claim": "The project's YouTube bio says it is inspired by Dayseeker and Holding Absence. In late September 2025, Holding Absence frontman Lucas Woodland criticised the project after it passed his band's Spotify monthly listeners, and the project's creator replied on X that it was a \"loving tribute\".",
+        "source": "https://musically.com/2025/10/03/holding-absence-frontman-reveals-insulting-ai-competition/"
+      }
+    ],
+    "lineage": "The project describes itself as emotional post-hardcore and alt-rock/emo-leaning, modelled on Dayseeker and Holding Absence, with heartbreak-heavy melodies and cinematic soundscapes.",
+    "genres": [
+      "post-hardcore",
+      "alt-rock",
+      "emo"
+    ]
+  },
+  "draft": "The chorus of **Only When It's You** hands one person two jobs at once. They are the only place the narrator feels safe, and the only thing that can actually hurt. Everything else (falling, breaking, losing) gets shrugged off in a single line, as if the rest of life doesn't register at all. That's the feeling the song holds: a love so total it has become the narrator's whole nervous system, and nobody in the song stops to ask whether that's healthy.\n\nThe best image is in the chorus. \"You're the silence inside of the storm\" turns the beloved into the calm eye. But the second verse quietly takes it back. The person who \"pulled me free\" is gone, and what's left is \"static where you used to be.\" Silence was the gift; static is the loss. Across those two lines the narrator moves from shelter to interference without ever saying the word grief.\n\nThe bridge is where the song gets heavier than its hooks. \"I was never whole when I was alone\" arrives right after \"If I disappear, let it be known,\" and the pairing is unsettling. It reads less like a romantic vow than like someone who has staked their sense of self on another person and is now watching it go. The last chorus adds \"You're the ache I'll never show,\" a confession that the steadiness on the surface is a performance.\n\nThe writing isn't always this sharp. \"Every thought just cuts like stone\" is stock, and the second pre-chorus loses its rhyme, landing \"less\" against \"brain\" with a thud.\n\nThe sound is built for size. Distorted guitars hold sustained power chords in a thick wall, bass drives on the roots, and the snare hits hard over a steady mid-tempo beat. The lead voice is clean and mid-range, pushed into long, slightly strained notes, with a harmony stacked above it. The mix is polished, wide and dry. It's the emotional post-hardcore lineage the project names outright, Dayseeker and Holding Absence: big wounded choruses, lots of lift, little grit.\n\nThat lineage got pointed. Bleeding Verse describes itself as using \"AI-assisted instrumentation and vocals\" on human lyrics, with Kyle Ward credited as songwriter, background vocalist, producer and engineer. When it passed Holding Absence in Spotify monthly listeners, frontman Lucas Woodland criticised it, and the creator answered that it was a \"loving tribute.\" The song opens the six-track *The Anatomy of Hurt*, and acoustic and alternate versions followed.\n\nIt sticks because it says the thing people in deep attachment rarely admit, that the person who makes you feel safe is the same one who can wreck you, and it makes you shout that along.",
+  "factCheck": [
+    {
+      "claim": "The chorus makes one person both the only place of safety and the only source of hurt; the 'fall, break, lose' line is shrugged off",
+      "verdict": "supported",
+      "note": "Matches 'I only feel safe when it's you' and 'I can fall, I can break, I can lose / But it only hurts / Only when it's you'. The reading is interpretation."
+    },
+    {
+      "claim": "Quote: \"You're the silence inside of the storm\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Second verse: the person who 'pulled me free' is gone; 'static where you used to be'",
+      "verdict": "supported",
+      "note": "Lyrics: 'You were the voice that pulled me free / Now it's just static where you used to be.' 'Pulled me free' is now paraphrased to stay within the three-quoted-line limit."
+    },
+    {
+      "claim": "Bridge: 'If I disappear, let it be known' directly precedes 'I was never whole when I was alone'",
+      "verdict": "supported",
+      "note": "Consecutive lines in the lyrics. The first is now paraphrased and the second stays quoted. The section label follows the lyric structure."
+    },
+    {
+      "claim": "Last chorus adds 'You're the ache I'll never show'",
+      "verdict": "supported",
+      "note": "Appears in the final chorus. Now paraphrased to reduce the number of quoted lines."
+    },
+    {
+      "claim": "'Every thought just cuts like stone' is stock; second pre-chorus pairs 'less' with 'brain' and loses its rhyme",
+      "verdict": "supported",
+      "note": "Both lines are in the lyrics, and the rhyme observation is accurate. The first is paraphrased for quote economy. This is critic opinion."
+    },
+    {
+      "claim": "Distorted guitars hold sustained power chords in a thick wall",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say power chords; all three say distorted and sustained."
+    },
+    {
+      "claim": "Bass drives on the roots",
+      "verdict": "corrected",
+      "note": "Only pass 2 says root-note pattern. Passes 1 and 3 say a foundational, driving line. Changed to a driving bass line."
+    },
+    {
+      "claim": "Snare hits hard over a steady mid-tempo beat",
+      "verdict": "supported",
+      "note": "All three passes agree on a moderate or mid-tempo driving rock beat with a prominent or strong snare."
+    },
+    {
+      "claim": "Lead voice is clean and mid-range, pushed into long, slightly strained notes",
+      "verdict": "corrected",
+      "note": "Clean and mid-range is backed by passes 1 and 3, and sustained delivery by passes 1 and 3. 'Strained' appears only in pass 3 (pass 2 says raw), so it was dropped."
+    },
+    {
+      "claim": "A harmony stacked above the lead",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 say above or a third above; pass 3 says higher register at times."
+    },
+    {
+      "claim": "The mix is polished, wide and dry",
+      "verdict": "corrected",
+      "note": "Polished is in all three and wide in passes 1 and 2. 'Dry' is contradicted by pass 1 (open, large room), so it was removed."
+    },
+    {
+      "claim": "The project names an emotional post-hardcore lineage with Dayseeker and Holding Absence: big wounded choruses, lots of lift, little grit",
+      "verdict": "corrected",
+      "note": "The project's self-description and YouTube bio support the lineage and the named bands. 'Lots of lift' conflicts with the notes (no builds or dynamic changes), and 'little grit' is shaky given pass 2's 'raw', so both were removed."
+    },
+    {
+      "claim": "Bleeding Verse describes itself as using 'AI-assisted instrumentation and vocals' on human lyrics",
+      "verdict": "supported",
+      "note": "YouTube and Instagram bios, plus the Spotify profile description."
+    },
+    {
+      "claim": "Kyle Ward credited as songwriter, background vocalist, producer and engineer",
+      "verdict": "supported",
+      "note": "Shazam credits."
+    },
+    {
+      "claim": "Passed Holding Absence in monthly listeners; Lucas Woodland criticised it; creator answered 'loving tribute'",
+      "verdict": "supported",
+      "note": "Musically and NME sources."
+    },
+    {
+      "claim": "The song opens the six-track The Anatomy of Hurt",
+      "verdict": "supported",
+      "note": "Track 1 of six."
+    },
+    {
+      "claim": "Acoustic and alternate versions followed",
+      "verdict": "corrected",
+      "note": "The acoustic version came out September 26, 2025. The alternate version has no date, so 'followed' is unsupported for it. Now mentions only the acoustic."
+    },
+    {
+      "claim": "It makes you shout that along",
+      "verdict": "corrected",
+      "note": "'Shout' is not backed by the notes. Changed to 'sing'. The rest is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2245,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014076,
+        "detail": "1102 in / 162 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012976,
+        "detail": "1102 in / 118 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.000616,
+        "detail": "1102 in / 178 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.10022,
+        "detail": "26260 in / 1770 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.057948,
+        "detail": "3767 in / 2144 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.063034,
+        "detail": "4927 in / 5318 out"
+      }
+    ]
+  }
+}
