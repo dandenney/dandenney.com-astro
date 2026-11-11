@@ -448,6 +448,62 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
         }
       }
 
+      /* Phones: art and title get the width; duration and add date tuck under the meta */
+      @media (max-width: 40rem) {
+        .track-link {
+          display: grid;
+          grid-template-columns: auto auto minmax(0, 1fr);
+          grid-template-areas:
+            "num thumb main"
+            "num thumb side";
+          column-gap: 0.875rem;
+          row-gap: 0.375rem;
+          align-items: center;
+          padding: 1rem 1.25rem;
+        }
+        .track-num {
+          grid-area: num;
+          width: 1.25rem;
+          font-size: 0.6875rem;
+        }
+        .track-thumb {
+          grid-area: thumb;
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+        .track-main {
+          grid-area: main;
+          align-self: end;
+          gap: 0.2rem;
+        }
+        .track-title {
+          font-size: 1.125rem;
+          line-height: 1.15;
+          text-wrap: balance;
+        }
+        .track-meta {
+          font-size: 0.75rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .track-side {
+          grid-area: side;
+          align-self: start;
+          flex-direction: row;
+          align-items: baseline;
+          gap: 0.625rem;
+          font-size: 0.6875rem;
+        }
+        .track-year {
+          font-size: 0.625rem;
+          letter-spacing: 0.06em;
+        }
+        .track-arrow {
+          display: none;
+        }
+      }
+
       /* ---------- Floating preview ---------- */
       .preview {
         position: fixed;
