@@ -1,0 +1,184 @@
+{
+  "spotifyId": "0fnbmPZwLDEUcQ1l38EFXz",
+  "reviewedAt": "2026-11-11T21:17:44.021Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a arpeggiated chord progression with a clean, bright tone. A male voice sings the lead vocal, with a clear, slightly raspy character and a relaxed delivery. The tempo is moderate, with a laid-back, country-folk feel. The production is clean and natural, with a sense of a live, intimate performance. The acoustic guitar provides a steady rhythmic and harmonic foundation, while the vocal carries the melody. No other instruments are present. The arrangement remains consistent throughout the excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern, establishing a moderate tempo with a relaxed, slightly swung feel. The bass guitar enters, playing a simple, sustained root-note line, reinforcing the groove. A single voice, clear and with a slight vibrato, sings the melody in a straightforward, unadorned delivery. The production is clean and dry, suggesting a close-miked, intimate sound without much room ambience. The texture is sparse, with the guitar and bass providing a gentle harmonic and rhythmic foundation for the vocal. No other instruments or voices enter or drop out within this excerpt. The overall sound is raw and unpolished, with a natural, live feel.\n\nPass 3:\nAcoustic guitar plays a arpeggiated chord progression with a clean, bright tone. The tempo is slow, with a relaxed, gentle groove. A single voice sings the melody, with a clear, slightly breathy character and a smooth delivery. The production sounds live, with a natural room ambiance and a raw, unpolished texture. The arrangement features the acoustic guitar and voice throughout, with no other instruments entering or dropping out within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Grown (Live from Piomingo)\" is a six-song live EP by Peytan Porter, released May 10, 2024. The Apple Music listing credits the label as Warner Chappell Nashville / Jody Williams Songs / Red Light Management.",
+        "source": "https://music.apple.com/us/album/grown-live-from-piomingo-ep/1740623880"
+      },
+      {
+        "claim": "The live versions were released as a video series, with one live video per song on the studio EP. The final installment was a live video of \"Run the Radio\", and the live versions reached streaming services on May 10, 2024.",
+        "source": "https://guitargirlmag.com/news/music-news/peytan-porter-to-make-grand-ole-opry-debut/"
+      },
+      {
+        "claim": "\"Grown\" was written by Peytan Porter, Steve Moakler and Mark Trussell.",
+        "source": "https://musicrow.com/2024/02/peytan-porter-steps-into-her-own-on-new-ep-grown/"
+      },
+      {
+        "claim": "Porter said she wrote about half of \"Grown\" herself, then brought it to Steve Moakler and Mark Trussell to finish together.",
+        "source": "https://www.billboard.com/music/country/peytan-porter-grown-country-rookie-of-the-month-1235619213/"
+      },
+      {
+        "claim": "The song is about finding peace and pride in the lives we build, even when they aren't what we expected. It also looks for beauty in silver linings.",
+        "source": "https://musicrow.com/2024/02/peytan-porter-steps-into-her-own-on-new-ep-grown/"
+      },
+      {
+        "claim": "The song centers on Porter realizing that some of the hardest parts of her journey came at the right time. It also speaks to how easily she compares her life to friends and family who are in a different phase.",
+        "source": "https://countrynow.com/peytan-porter-readies-grown-a-six-song-testament-to-personal-growth-and-authenticity/"
+      },
+      {
+        "claim": "The studio EP \"Grown\" came out March 1, 2024. Billboard called it her sophomore EP, described it as having gauzy, Laurel Canyon-style vibes, and named her its March Country Rookie of the Month.",
+        "source": "https://www.billboard.com/music/country/peytan-porter-grown-country-rookie-of-the-month-1235619213/"
+      },
+      {
+        "claim": "Porter co-wrote all six tracks on the EP. Press describes an earthy sound that comes from her small-town upbringing in Dawsonville, Georgia.",
+        "source": "https://countrynow.com/peytan-porter-readies-grown-a-six-song-testament-to-personal-growth-and-authenticity/"
+      },
+      {
+        "claim": "Her debut project, \"In My Head\", earned 10 million streams. She had 50 million TikTok views at the time of the EP announcement.",
+        "source": "https://musicrow.com/2024/02/peytan-porter-steps-into-her-own-on-new-ep-grown/"
+      },
+      {
+        "claim": "Porter is a Dawsonville, Georgia native. She signed a publishing deal with Jody Williams Songs and Warner Chappell Music, and her TikTok following helped launch her recording career. Her debut record is \"In My Head\".",
+        "source": "https://celebsecretscountry.com/2023/07/31/peytan-porter-depicts-alternate-image-of-afterlife-in-new-single-gods-hotel-listen/"
+      }
+    ],
+    "lineage": "It sits in the Nashville singer-songwriter country tradition, which Billboard ties to Laurel Canyon-style folk-country, and Porter has said Kacey Musgraves' \"Same Trailer Different Park\" made her feel seen.",
+    "genres": [
+      "country",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "Two things fill **Grown (Live from Piomingo)**: an acoustic guitar picking out arpeggios in a clean, bright tone, and Peytan Porter's voice, clear and unhurried, riding on top. Nothing else crowds in. The tempo leans back instead of pushing, the playing has a raw, unpolished edge, and the whole performance feels like it's happening a few feet away. For a song about making peace with where you've ended up, that bareness makes the case. There's no band to stand behind.\n\nPorter has described the song as being about finding peace and pride in the life you've built, even when it isn't the one you pictured, and about looking for beauty in the silver linings. The more tender detail sits underneath. She's said it came from realizing that some of the hardest stretches of her journey arrived at the right time, and from how easily she measures her own life against friends and family who are in a different phase. Anyone who has quietly kept score against people who seem to be hitting their milestones on schedule knows that feeling. What makes the idea land is that the pride and the comparing don't cancel each other out. You can be settled in your life and still glance sideways at everyone else's. The song's premise leaves room for both.\n\nPorter wrote about half of it on her own, then brought it to Steve Moakler and Mark Trussell to finish together. It's the title track of her sophomore EP, released in March 2024. She co-wrote all six songs on that record, and press has tied its earthy sound to her small-town upbringing in Dawsonville, Georgia. Billboard heard gauzy, Laurel Canyon-style vibes on the studio versions and named her its Country Rookie of the Month. The live take came out of a video series, one performance for each song on the EP, later gathered as a six-song live EP. Whatever haze the studio added is gone here, and the song holds up without it.\n\nThat puts it in the Nashville singer-songwriter tradition with its roots in folk-country. Porter has said Kacey Musgraves' *Same Trailer Different Park* made her feel seen. Musgraves is a useful reference point for a writer who wants hometown plainness and emotional honesty to sit in the same song. Porter built her early audience on TikTok, where her debut project, *In My Head*, found millions of listeners. A guitar-and-voice performance like this one suits that path, since it's meant to reach people one at a time.\n\nIt sticks because it gives you permission to be proud of a life that didn't follow the plan, without asking you to stop wondering about the one that did.",
+  "factCheck": [
+    {
+      "claim": "Acoustic guitar picks arpeggios in a clean, bright tone",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say clean, bright; all three say arpeggiated."
+    },
+    {
+      "claim": "Porter's voice is clear and unhurried",
+      "verdict": "supported",
+      "note": "All three passes say clear; passes 1 and 3 say relaxed or smooth delivery."
+    },
+    {
+      "claim": "Nothing else crowds in / there's no band to stand behind",
+      "verdict": "removed",
+      "note": "Pass 2 hears a bass guitar. Passes 1 and 3 hear none. The absolute claim is not safe, so it was dropped and the description now sticks to guitar and voice."
+    },
+    {
+      "claim": "Tempo leans back; raw, unpolished edge; feels close and intimate",
+      "verdict": "supported",
+      "note": "Moderate-to-slow, relaxed tempo (all passes). Raw and unpolished (passes 2 and 3). Intimate (passes 1 and 2)."
+    },
+    {
+      "claim": "Porter has described the song as being about peace and pride in the life you've built, and about silver linings",
+      "verdict": "corrected",
+      "note": "MusicRow states what the song is about. It does not attribute the description to Porter, so the attribution was removed."
+    },
+    {
+      "claim": "She's said it came from realizing that some of the hardest stretches arrived at the right time, and from comparing her life to friends and family in a different phase",
+      "verdict": "corrected",
+      "note": "CountryNow says the song centers on this. It does not say she said it, so the attribution was removed."
+    },
+    {
+      "claim": "Porter wrote about half on her own, then finished with Steve Moakler and Mark Trussell",
+      "verdict": "supported",
+      "note": "Billboard."
+    },
+    {
+      "claim": "It's the title track of her sophomore EP, released March 2024",
+      "verdict": "corrected",
+      "note": "The packet supports a sophomore EP also called Grown, released March 1, 2024. 'Title track' is not stated, so it was reworded."
+    },
+    {
+      "claim": "She co-wrote all six songs; press ties the earthy sound to her small-town upbringing in Dawsonville, Georgia",
+      "verdict": "supported",
+      "note": "CountryNow."
+    },
+    {
+      "claim": "Billboard heard gauzy, Laurel Canyon-style vibes and named her Country Rookie of the Month",
+      "verdict": "corrected",
+      "note": "Billboard described the EP, not specifically 'the studio versions'. Rookie of the Month was for March. Wording adjusted."
+    },
+    {
+      "claim": "The live take came from a video series, one performance per song, later gathered as a six-song live EP",
+      "verdict": "supported",
+      "note": "Guitar Girl Mag and Apple Music."
+    },
+    {
+      "claim": "Whatever haze the studio added is gone here",
+      "verdict": "removed",
+      "note": "There are no listening notes on the studio versions, so the comparison is unsupported."
+    },
+    {
+      "claim": "Nashville singer-songwriter tradition with roots in folk-country",
+      "verdict": "supported",
+      "note": "Lineage note, tied to Billboard's Laurel Canyon-style folk-country description."
+    },
+    {
+      "claim": "Porter has said Kacey Musgraves' Same Trailer Different Park made her feel seen",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Porter built her early audience on TikTok, where her debut In My Head found millions of listeners",
+      "verdict": "corrected",
+      "note": "The packet says her TikTok following helped launch her recording career and that In My Head earned 10 million streams. It does not say the project found its listeners on TikTok."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2603,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0003027,
+        "detail": "176 in / 91 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0003377,
+        "detail": "176 in / 105 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0004302,
+        "detail": "176 in / 142 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.155386,
+        "detail": "49473 in / 1644 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0597,
+        "detail": "3220 in / 2341 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044096,
+        "detail": "4343 in / 3541 out"
+      }
+    ]
+  }
+}

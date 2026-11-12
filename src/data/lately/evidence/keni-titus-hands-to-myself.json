@@ -1,0 +1,200 @@
+{
+  "spotifyId": "312F4NjnSnTbFI70e435is",
+  "reviewedAt": "2026-11-11T19:43:57.481Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30086648"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed chord progression. Electric guitar plays a sustained, distorted melody. Bass guitar plays a walking line. Drums play a shuffle beat with brushes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and swinging.\n\nVocals:\nThe voice is a male tenor, singing with a smooth, slightly breathy delivery. There are no harmonies.\n\nProduction:\nThe room sounds open with some reverb. The texture is warm and slightly gritty, with a polished feel.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The electric guitar enters around the 0:11 mark, playing a melodic line. The vocals are present throughout. No instruments drop out.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed chord progression. Electric guitar plays a sustained, distorted melody. Bass guitar plays a walking line. Drums play a shuffle beat with a snare backbeat.\n\nTempo and Groove:\nMedium tempo. The groove feels relaxed and slightly swung.\n\nVocals:\nA single voice sings with a smooth, clear tone. The delivery is melodic and sustained. No harmonies are present.\n\nProduction:\nThe room sound is open with some reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The electric guitar enters with a sustained melody. The drums maintain a consistent shuffle beat throughout. No instruments drop out or build significantly within this segment.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed chord progression. Electric bass plays a walking line. Drums play a shuffle beat with brushes. A saxophone plays a melodic line.\n\nTempo and Groove:\nThe tempo is medium. The groove feels like a relaxed shuffle.\n\nVocals:\nThe voice is a male tenor, singing with a clear, slightly breathy tone. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sounds like a medium-sized space. The texture is warm and slightly retro. The production is polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The male vocal enters immediately. The saxophone enters around the halfway point, playing a counter-melody to the vocal. The saxophone continues to play after the vocal drops out towards the end of the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"hands to myself\" was released on 8 January 2026 as a single by Keni Titus. It runs 2:40, and the single is under exclusive license to BannerYeer Recordings LTD.",
+        "source": "https://music.apple.com/ng/album/hands-to-myself-single/1854607291"
+      },
+      {
+        "claim": "The song was co-written by Will Taylor of the indie-pop duo Hovvdy. It is the third single from Titus's debut album AngelPink, which came out on 6 February 2026.",
+        "source": "https://femmusic.com/2026/01/08/keni-titus-hands-to-myself/"
+      },
+      {
+        "claim": "Deezer's composer credits for the song list Will Taylor, Jake Weinberg, Kennie Titus, Jamie McLaughlin and Hudson Pollock.",
+        "source": "https://www.deezer.com/en/artist/212389717"
+      },
+      {
+        "claim": "AngelPink was produced by Jake Weinberg and Hudson Pollock. This is the album the single comes from, and the sources do not credit production of the single separately.",
+        "source": "https://www.bongminesentertainment.com/keni-titus-music-video-hands-to-myself-single/"
+      },
+      {
+        "claim": "Titus said that when she wrote the song she kept coming back to the idea that the grass is greener elsewhere. She described it as an exploration of temptation and wondering whether you took something for granted.",
+        "source": "https://femmusic.com/2026/01/08/keni-titus-hands-to-myself/"
+      },
+      {
+        "claim": "Titus said the first line, about looking at someone the way a dog sees the back screen porch, sums up the song. She described it as being about discovery, longing, and trying to work out what would make you happy.",
+        "source": "https://femmusic.com/2026/01/08/keni-titus-hands-to-myself/"
+      },
+      {
+        "claim": "Titus said she went through a breakup and a friend falling out during the making of AngelPink. She said the project reminded her that making art is supposed to be fun, \"Not perfect — but fun.\"",
+        "source": "https://www.bongminesentertainment.com/keni-titus-music-video-hands-to-myself-single/"
+      },
+      {
+        "claim": "A review of AngelPink groups \"hands to myself\" with \"in love again\" as songs that approach romance with excitement and a gently skeptical self-awareness.",
+        "source": "https://5fingerreview.com/keni-titus-angelpink-review/"
+      },
+      {
+        "claim": "Titus is a Los Angeles singer-songwriter. Her BannerYeer bio describes her debut project mud on my superstars, followed by the EP juliet and the debut album AngelPink.",
+        "source": "https://banneryeer.com/Keni-Titus"
+      },
+      {
+        "claim": "Titus opened all dates of Beabadoobee's US album tour. She headlined sold-out shows at The Echo in Los Angeles (17 Feb 2026) and Baby's All Right in Brooklyn (24 Feb 2026) after the album release.",
+        "source": "https://femmusic.com/2026/01/08/keni-titus-hands-to-myself/"
+      }
+    ],
+    "lineage": "The song sits in LA-based alt-pop and indie-folk-pop songwriting, drawing on West Coast folk and a confessional coming-of-age diary tradition.",
+    "genres": [
+      "alt-pop",
+      "indie pop",
+      "indie folk"
+    ]
+  },
+  "draft": "A dog at the back screen door doesn't hate the house. It just can't stop looking at the yard. That's the image Keni Titus opens **hands to myself** with, \"I look at you like my dog sees the back screen porch,\" and she has said the line sums up the song. It's a funny, tender way to describe wanting: a little ridiculous, a little helpless, nose pressed to the mesh. Titus has described the song as being about temptation and the idea that the grass is greener elsewhere, and about wondering whether you took something for granted. The screen does the work. Whatever's out there is visible, and close, and you're still on the inside.\n\nThe verses are full of half-steps. The narrator wonders whether being the friend who holds you while the weed kicks in could turn into something more, then lays the cards on the table with eyes on the door. The chorus is where it gets slippery. \"I love you, but not 'til I've had someone else\" is a confession with a loophole built in. Then comes the best pun on the record: \"I mean it, I'm mean but it's good for my health.\" The narrator is sincere and knows the sincerity is a little cruel, and justifies it as self-care in the same breath. Those feelings don't settle, and the song doesn't make them.\n\nThe second verse is where the cost shows. The narrator stays up at someone else's place, finally has the nerve, and spends the night missing the heart they broke. By the last chorus the lyric stretches out with extra lines. The fling is \"harmless,\" the narrator insists, then admits \"it's hard to remember his name.\" The other person fades almost as soon as they appear. What lingers is the old feeling the narrator was trying to test. Even keeping your hands to yourself turns into a way of remembering.\n\nThe music never raises its voice about any of this. A strummed acoustic guitar and a walking bass carry a relaxed shuffle, with brushes on the drums and a sustained, slightly distorted electric guitar line drifting over the top. It's warm and polished, with an open room around it. Titus sings alone, with no harmonies, in a clear, slightly breathy voice that keeps its melodies long and even. That calm is the point. Big guilt is delivered at an easy sway.\n\nThe song was co-written with Will Taylor of Hovvdy, and you can hear that band's soft-focus patience in how little it pushes. It sits in Los Angeles indie-folk-pop, leaning on West Coast folk and the confessional diary song. It is the third single from Titus's debut album AngelPink, which Jake Weinberg and Hudson Pollock produced. She made the album through a breakup and a falling-out with a friend, and has said the project reminded her that art is supposed to be fun, \"Not perfect — but fun.\" You can hear that lightness here, even with heartbreak in the room.\n\nIt sticks because it lets you admit the restless, unkind thing you want, then sends you back inside missing what you nearly traded away.",
+  "factCheck": [
+    {
+      "claim": "Opens with the image 'I look at you like my dog sees the back screen porch,' and Titus has said the line sums up the song",
+      "verdict": "supported",
+      "note": "The lyric quote matches exactly. Titus's statement that the line sums up the song is in the researched facts."
+    },
+    {
+      "claim": "A dog at the back screen door",
+      "verdict": "corrected",
+      "note": "The lyric says 'back screen porch.' Changed 'door' to 'porch' so the image matches the lyric."
+    },
+    {
+      "claim": "Titus described the song as about temptation, the grass being greener elsewhere, and wondering whether you took something for granted",
+      "verdict": "supported",
+      "note": "Matches Titus's quoted description in the facts."
+    },
+    {
+      "claim": "Narrator wonders about being the friend holding you while the weed kicks in, then lays cards on the table with eyes on the door",
+      "verdict": "supported",
+      "note": "A reading of verse one's lyrics."
+    },
+    {
+      "claim": "\"I love you, but not 'til I've had someone else\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "\"I mean it, I'm mean but it's good for my health\" is the best pun on the record",
+      "verdict": "corrected",
+      "note": "The lyric quote is exact. 'On the record' implies a comparison with other tracks that isn't backed. Reworded to 'sharpest turn in the song.'"
+    },
+    {
+      "claim": "Second verse: narrator stays up at someone else's place, gets the nerve, misses the heart they broke",
+      "verdict": "supported",
+      "note": "Matches the verse two lyrics."
+    },
+    {
+      "claim": "The last chorus stretches out with extra lines; the fling is 'harmless'; 'it's hard to remember his name'",
+      "verdict": "corrected",
+      "note": "The extra lines in the final chorus are visible in the lyric structure, and 'harmless' is in the lyrics. The 'hard to remember his name' quote would make four quoted lyric lines, over the limit, so it is now a paraphrase."
+    },
+    {
+      "claim": "Strummed acoustic guitar, walking bass, relaxed shuffle",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Brushes on the drums",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree. Pass 2 says snare backbeat, which doesn't contradict a shuffle."
+    },
+    {
+      "claim": "Sustained, slightly distorted electric guitar line over the top",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Warm and polished, with an open room around it",
+      "verdict": "supported",
+      "note": "Warm is in passes 1 and 3, polished in all three, open room in passes 1 and 2."
+    },
+    {
+      "claim": "Sings alone, no harmonies, in a clear, slightly breathy voice with long, even melodies",
+      "verdict": "supported",
+      "note": "No harmonies in all passes. Clear in passes 2 and 3, breathy in passes 1 and 3, melodic and sustained in passes 2 and 3. No gender is stated."
+    },
+    {
+      "claim": "Co-written with Will Taylor of Hovvdy",
+      "verdict": "supported",
+      "note": "Stated in the facts."
+    },
+    {
+      "claim": "You can hear that band's soft-focus patience in how little it pushes",
+      "verdict": "removed",
+      "note": "Nothing in the packet describes Hovvdy's sound or says that it shaped this song."
+    },
+    {
+      "claim": "Sits in Los Angeles indie-folk-pop, leaning on West Coast folk and the confessional diary song",
+      "verdict": "supported",
+      "note": "Matches the lineage note, and Titus is an LA singer-songwriter."
+    },
+    {
+      "claim": "Third single from debut album AngelPink, produced by Jake Weinberg and Hudson Pollock",
+      "verdict": "supported",
+      "note": "Supported for the album. The wording keeps the production credit on the album, not the single."
+    },
+    {
+      "claim": "Album made through a breakup and a friend falling out; project reminded her art is supposed to be fun, 'Not perfect — but fun.'",
+      "verdict": "supported",
+      "note": "Matches the quoted statement in the facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2422,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013892,
+        "detail": "1099 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014367,
+        "detail": "1099 in / 174 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013817,
+        "detail": "1099 in / 152 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.136318,
+        "detail": "45959 in / 1440 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049868,
+        "detail": "3597 in / 1774 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051842,
+        "detail": "4846 in / 4215 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "spotifyId": "1WThEmIxSyaqG6fVsyCmcL",
+  "reviewedAt": "2026-11-11T20:26:19.574Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/373767"
+  },
+  "listening": "Pass 1:\nA clean electric guitar plays a arpeggiated figure with a light, reverbed tone. A drum kit enters with a simple, driving beat, featuring a prominent kick and snare, and a closed hi-hat. The tempo is medium-fast, with a steady, forward-moving groove.\n\nA single voice sings the melody, with a clear, direct delivery. The voice is medium-high in pitch, with a slight breathiness. There are no harmonies.\n\nThe production is clean and polished, with a sense of open space. The instruments are well-defined and balanced.\n\nThe excerpt begins with the electric guitar, then the drums enter. The voice sings throughout. No elements drop out or build significantly within the excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggio pattern. A bass guitar enters, playing a simple root-fifth pattern. Drums enter with a light, brushed snare and kick drum, establishing a medium tempo. The groove feels relaxed and steady.\n\nA single voice sings in a clear, mid-range register. The delivery is conversational and melodic, with a slight breathiness. No harmonies are present.\n\nThe production sounds clean and intimate, with a close-miked feel on the vocals and acoustic guitar. The texture is warm and natural, not overly processed. The room sounds relatively dry.\n\nThe arrangement builds gradually. The acoustic guitar begins alone, then the bass enters, followed by the drums. The voice enters shortly after the drums. No instruments drop out within the excerpt.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. A bass guitar enters, playing a simple, sustained root-note line. A drum kit provides a light, driving beat with brushes on the snare, a consistent kick drum, and occasional open hi-hats. The tempo is moderate, with a relaxed, steady groove.\n\nA single voice sings with a clear, slightly breathy character. The delivery is conversational and melodic. No harmonies are present.\n\nThe production sounds clean and present, with a moderate amount of reverb suggesting a medium-sized room. The texture is open and uncluttered.\n\nThe arrangement builds gradually: acoustic guitar establishes the pattern, then bass enters, followed by drums. The vocals are present throughout. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Pancakes for Dinner\" is on Lizzy McAlpine's debut studio album Give Me a Minute, released independently on August 13, 2020.",
+        "source": "https://en.wikipedia.org/wiki/Give_Me_a_Minute_(album)"
+      },
+      {
+        "claim": "\"Pancakes for Dinner\" was released as a single on June 1, 2020, ahead of the album. It was the fourth single, after \"Apple Pie\", \"To the Mountains\" and \"Means Something\".",
+        "source": "https://en.wikipedia.org/wiki/Give_Me_a_Minute_(album)"
+      },
+      {
+        "claim": "Discogs credits the music and lyrics of the album to Elizabeth McAlpine. It lists Philip Etherington as the producer of \"Pancakes For Dinner\" and as mixer of the album, with Joe LaPorta mastering.",
+        "source": "https://www.discogs.com/release/16709757-Lizzy-McAlpine-Give-Me-A-Minute"
+      },
+      {
+        "claim": "Wikipedia's track listing credits the song to McAlpine and Etherington. The album was produced by Philip Etherington, McAlpine, Dillan Witherow and Ehren Ebbage.",
+        "source": "https://en.wikipedia.org/wiki/Give_Me_a_Minute_(album)"
+      },
+      {
+        "claim": "McAlpine produced the album with Philip Etherington, her Berklee College of Music classmate.",
+        "source": "https://thegatewayonline.ca/2021/03/lizzy-mcalpine-provides-reliability-comfort-and-peace-with-give-me-a-minute-the-gateway/"
+      },
+      {
+        "claim": "McAlpine studied abroad in Spain in fall 2019, where she wrote the album. A fan-written critique says the song was apparently inspired by being in Spain while the person it's about was back in the US.",
+        "source": "https://en.wikipedia.org/wiki/Lizzy_McAlpine"
+      },
+      {
+        "claim": "Thematically the song is about having feelings for someone and being unable to say so. The chorus lists simple wishes, such as eating pancakes for dinner and watching TV together in bed.",
+        "source": "https://www.wearetheguard.com/music/best-new-artists-lizzy-mcalpine"
+      },
+      {
+        "claim": "The Guard called it McAlpine's most-streamed song at the time of writing, with over 20 million Spotify streams. That was before \"Ceilings\" went viral and became the most-streamed song from her second album.",
+        "source": "https://www.wearetheguard.com/music/best-new-artists-lizzy-mcalpine"
+      },
+      {
+        "claim": "Wikipedia describes the album as indie folk and folk-pop, and notes that \"To the Mountains\", \"Means Something\" and \"Pancakes for Dinner\" were highlighted as standouts.",
+        "source": "https://en.wikipedia.org/wiki/Give_Me_a_Minute_(album)"
+      },
+      {
+        "claim": "McAlpine was born in Narberth, Pennsylvania, in 1999 and studied songwriting at Berklee College of Music. She released her debut EP Indigo in 2018.",
+        "source": "https://www.amazon.com/Give-Me-Minute-Lizzy-McAlpine/dp/B08DPZP764"
+      }
+    ],
+    "lineage": "The song sits in the confessional indie-folk and folk-pop singer-songwriter tradition, from a Berklee-trained writer who found early audience through TikTok and bedroom-pop-style intimacy.",
+    "genres": [
+      "indie folk",
+      "folk-pop",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "The whole song hangs on a bargain struck at thirty thousand feet: if this plane goes down tonight, the narrator figures, there's nothing left to lose by telling the truth. **Pancakes for Dinner** uses imagined disaster as a permission slip. It's a confession that can only happen if the stakes get high enough, and Lizzy McAlpine spends four minutes circling it.\n\nThe verses are all hedges. Don't want to be forward, don't want to cross a line, don't want to be weird. Each apology runs straight into the crash fantasy, and you can hear how badly the narrator needs that excuse. When the nerve fails, small talk takes over: \"how was fall semester?\" McAlpine wrote the album while studying abroad in Spain in fall 2019, and the line has the ache of distance in it, someone checking in on a life going on somewhere else.\n\nThen the chorus gives the real thing away, and it's tiny. Breakfast at the wrong hour. Getting stuck in someone's head. A TV show watched together, then watched in bed when you're both sick. These are the wishes of someone who has already pictured the whole ordinary future, down to the cold medicine. A quick wink about getting dressed up for the purpose of getting undressed keeps it from going soft, a flash of want inside all that politeness. The bridge borrows the voice of a flight announcement or a nervous presenter, \"save all your questions for the end,\" as if the feelings were a speech to get through without interruption.\n\nThe second verse holds the hardest feeling in the song. If the other person is still in love with someone else, the narrator will just leave it there, never say a word. Hope and self-protection sit side by side, and the song doesn't choose between them.\n\nThe arrangement stays as unassuming as the wishes. Fingerpicked acoustic guitar sets an arpeggiated pattern, bass slides in underneath, and drums arrive with brushes on the snare and a steady kick, so the groove feels relaxed rather than urgent. The vocal is clear and slightly breathy, conversational even when it climbs into melody, and there are no harmonies to hide behind. It's one voice working up to something. Philip Etherington, McAlpine's Berklee classmate, produced it clean and uncluttered, in the indie folk and folk-pop register of the rest of *Give Me a Minute*. It became McAlpine's most-streamed song before \"Ceilings\" came along, which makes sense. Plenty of people know this exact silence.\n\nThe last lines give up on bravery entirely and hand the job to the other person: \"You'll say it instead.\" It's funny, a little cowardly, and true to how a crush actually feels.\n\nThe song sticks because it lets you live inside the moment just before you say it, when the wanting is specific and the courage keeps not showing up.",
+  "factCheck": [
+    {
+      "claim": "The narrator's bargain is struck 'at thirty thousand feet'",
+      "verdict": "corrected",
+      "note": "The lyrics mention a plane but give no altitude. Reworded to 'on a plane'."
+    },
+    {
+      "claim": "If the plane goes down tonight, there's nothing to lose by telling the truth",
+      "verdict": "supported",
+      "note": "Matches 'if I were to crash in this plane tonight' and 'what the hell do I have to lose'."
+    },
+    {
+      "claim": "McAlpine spends four minutes circling it",
+      "verdict": "corrected",
+      "note": "The song runs 3:55, and runtime is metadata padding. Changed to 'the whole song'."
+    },
+    {
+      "claim": "Verses hedge: don't want to be forward, cross a line, be weird",
+      "verdict": "supported",
+      "note": "Paraphrases the lyrics accurately."
+    },
+    {
+      "claim": "\"how was fall semester?\"",
+      "verdict": "supported",
+      "note": "Matches the lyric 'Like how was fall semester?'."
+    },
+    {
+      "claim": "McAlpine wrote the album while studying abroad in Spain in fall 2019",
+      "verdict": "supported",
+      "note": "Stated in the researched facts. The distance reading is interpretation."
+    },
+    {
+      "claim": "Chorus wishes: getting stuck in someone's head, TV together, watching in bed when sick, dressing up to get undressed",
+      "verdict": "supported",
+      "note": "Matches the lyrics, including 'under the weather'. 'Breakfast at the wrong hour' is a reading of the title line."
+    },
+    {
+      "claim": "'down to the cold medicine'",
+      "verdict": "removed",
+      "note": "Not in the lyrics. Invented detail."
+    },
+    {
+      "claim": "'The bridge' contains \"save all your questions for the end\"",
+      "verdict": "corrected",
+      "note": "The quote is accurate. That section repeats identically after each chorus, so the lyrics don't show it as a bridge. Reworded to 'the lines that follow the chorus'."
+    },
+    {
+      "claim": "Second verse: if the other person is still in love with someone else, the narrator will leave it there and never say a word",
+      "verdict": "supported",
+      "note": "Matches 'if you're still in love with her / I think that I'll leave it there / And I won't ever tell you this'."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with an arpeggiated pattern",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree."
+    },
+    {
+      "claim": "Bass 'slides in' underneath; drums 'arrive'",
+      "verdict": "corrected",
+      "note": "Bass is supported by passes 2 and 3. Entrance order is a claim about arrangement arc in an excerpt of unknown position, so the wording was changed to describe the instruments being present."
+    },
+    {
+      "claim": "Brushes on the snare and steady kick, relaxed rather than urgent groove",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree."
+    },
+    {
+      "claim": "Vocal clear, slightly breathy, conversational, no harmonies",
+      "verdict": "supported",
+      "note": "All passes agree on clear, breathy and no harmonies. Passes 2 and 3 agree on conversational."
+    },
+    {
+      "claim": "Vocal 'climbs into melody'",
+      "verdict": "corrected",
+      "note": "Passes say 'conversational and melodic' but nothing about climbing. Reworded."
+    },
+    {
+      "claim": "Clean, uncluttered production",
+      "verdict": "supported",
+      "note": "All passes say clean. Passes 1 and 3 say open. Changed to 'clean and open'."
+    },
+    {
+      "claim": "Philip Etherington, McAlpine's Berklee classmate, produced it",
+      "verdict": "supported",
+      "note": "Discogs lists Etherington as producer and the Gateway source gives the classmate detail. Reworded to credit McAlpine as co-producer of the album."
+    },
+    {
+      "claim": "Indie folk and folk-pop register of Give Me a Minute",
+      "verdict": "supported",
+      "note": "Wikipedia's description of the album."
+    },
+    {
+      "claim": "It became McAlpine's most-streamed song before 'Ceilings' came along",
+      "verdict": "corrected",
+      "note": "The facts say it had over 20 million Spotify streams and was her most-streamed at the time, before 'Ceilings' went viral. They don't say it was overtaken. Reworded."
+    },
+    {
+      "claim": "Final line \"You'll say it instead.\"",
+      "verdict": "supported",
+      "note": "It is the closing lyric, so its position is shown by the lyrics' structure."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2047,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013758,
+        "detail": "1102 in / 149 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014008,
+        "detail": "1102 in / 159 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014058,
+        "detail": "1102 in / 161 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083348,
+        "detail": "22534 in / 1828 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.061396,
+        "detail": "3924 in / 2285 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05577,
+        "detail": "5140 in / 4549 out"
+      }
+    ]
+  }
+}

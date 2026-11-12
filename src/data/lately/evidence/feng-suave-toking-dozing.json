@@ -1,0 +1,195 @@
+{
+  "spotifyId": "25uVLrUrzXnqjDHoyX3bCY",
+  "reviewedAt": "2026-11-11T19:41:40.928Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3049851"
+  },
+  "listening": "Pass 1:\nThe excerpt features a clean electric guitar playing arpeggiated chords with a slight tremolo, and a bass guitar playing a walking line. A drum kit provides a laid-back, shuffling groove with a prominent snare on beats two and four, and a closed hi-hat. The tempo is medium-slow.\n\nA male-sounding voice sings in a relaxed, slightly breathy tone, with a smooth delivery. The lead vocal is doubled, creating a subtle harmony.\n\nThe production sounds clean and polished, with a sense of a medium-sized room. The texture is smooth and well-balanced.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning. No elements drop out or build significantly within this segment.\n\nPass 2:\nA clean electric guitar plays a arpeggiated chord progression with a light strum. A bass guitar plays a walking line. Drums enter with a relaxed, swung groove, featuring a snare drum on beats two and four, and a closed hi-hat playing eighth notes. \n\nA male voice sings in a clear, mid-range register, with a relaxed, slightly breathy delivery. The vocal melody is largely syllabic.\n\nThe production sounds clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The overall texture is open and spacious.\n\nThe excerpt begins with the electric guitar and bass. The drums enter shortly after, establishing the groove. The vocals then enter, carrying the main melody. No instruments drop out or build significantly within this segment.\n\nPass 3:\nA clean electric guitar plays a arpeggiated chord progression with a light strum. A bass guitar plays a walking line. Drums enter with a relaxed, swung groove, featuring a snare hit on beat two and four, and a closed hi-hat playing eighth notes. The tempo is medium-slow.\n\nA male voice sings in a relaxed, slightly breathy tone, with a narrow vocal range. The delivery is conversational. The lead vocal is doubled in unison at times. A second male voice enters, singing a harmony line above the lead.\n\nThe production is clean and polished, with a dry, intimate room sound. The texture is light and open.\n\nThe excerpt begins with the electric guitar and bass. Drums enter shortly after. The lead vocal enters, followed by the doubled vocal and then the harmony vocal. The drums drop out briefly, then re-enter. The excerpt ends with the full arrangement.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Toking, Dozing\" was released as a single by Feng Suave on 21 February 2020 (℗ 2020 Feng Suave), running 3:46.",
+        "source": "https://music.apple.com/gb/album/toking-dozing-single/1497303262"
+      },
+      {
+        "claim": "The studio version was produced by Ivar Otten and Feng Suave, mixed by Tom Meijer and Feng Suave, and mastered by Wessel Oltheten.",
+        "source": "https://fengsuave.bandcamp.com/track/toking-dozing-2"
+      },
+      {
+        "claim": "The song later appeared as track 2 on the EP Warping Youth, released 26 June 2020.",
+        "source": "https://fengsuave.bandcamp.com/track/toking-dozing-2"
+      },
+      {
+        "claim": "A live version, recorded at Helmbreker Studios in Haarlem in July 2022 and released 1 December 2023, credits the writers as Daniël Schoemaker, Daniël de Jong and Adura Sulaiman.",
+        "source": "https://fengsuave.bandcamp.com/track/toking-dozing-live-from-studio-helmbreker"
+      },
+      {
+        "claim": "That live version was produced and mixed by Feng Suave and Jasper Geluk, engineered by Jasper Geluk, and mastered by Wessel Oltheten. Its performers include Daniël de Jong, Daniël Schoemaker and Kike.",
+        "source": "https://fengsuave.bandcamp.com/track/toking-dozing-live-from-studio-helmbreker"
+      },
+      {
+        "claim": "The band explained the song as being about people who are toking and dozing because they can't find a way to care about problems like dying dolphins, deforestation, war and famine. They described it as a conflict between looking after your own mental and physical health and paying attention to the wider world.",
+        "source": "https://thenewlofi.com/some-chilled-out-sunday-afternoon-vibes-from-the-dutch-duo-feng-suave/"
+      },
+      {
+        "claim": "The New LoFi described the single as a mix of sing-along choruses, relaxed strumming guitars and piano melodies, and called it an anthem of yacht-rock laziness. The post also announced the upcoming Warping Youth EP.",
+        "source": "https://thenewlofi.com/some-chilled-out-sunday-afternoon-vibes-from-the-dutch-duo-feng-suave/"
+      },
+      {
+        "claim": "Feng Suave (\"Wind Smooth\") is the recording project of Dutch songwriters and producers Daniel De Jong and Daniel Elvis Schoemaker, based in Amsterdam.",
+        "source": "https://fengsuave.bandcamp.com/track/toking-dozing-2"
+      },
+      {
+        "claim": "The duo met on a Dutch talent show. Their name came from a bottle of Portuguese 'Ultra Suave' shampoo and was thought up by their synth player and art director Joris as a pun on 'Feng Shui'.",
+        "source": "https://www.thelineofbestfit.com/new-music/discovery/feng-suave-debut-ep"
+      },
+      {
+        "claim": "Within the duo, De Jong handles soundscaping, sound-finding, mixing and singing, while Elvis finds hooks and writes lyrics and basslines. Stereofox noted that the Warping Youth EP takes on darker subjects, including recurring themes of death, set against bright synths and catchy guitar.",
+        "source": "https://www.wonderlandmagazine.com/2020/06/29/feng-suave-new-noise-warping-youth/"
+      }
+    ],
+    "lineage": "The song sits in Amsterdam-based psych-pop and bedroom-pop that blends 1970s soul with modern indie pop.",
+    "genres": [
+      "psych-pop",
+      "indie pop",
+      "bedroom pop"
+    ]
+  },
+  "draft": "**Toking, Dozing** opens on a theological question nobody asked for: if there's an afterlife, who's listening to the whales? \"But what about the dolphins,\" the song wonders, and before the thought can turn heavy it gets shrugged off with a word a teenager would use. That move is the whole song. A real worry shows up, gets named, and gets set down again because holding it is too much.\n\nFeng Suave, the Amsterdam duo of Daniël de Jong and Daniel Elvis Schoemaker, wrote it with Adura Sulaiman. The band has explained it as a song about people who get high and drift off because they can't find a way to care about dying dolphins, deforestation, war and famine. They framed it as a tug between looking after your own head and body and paying attention to everything else. The song doesn't settle that argument. The narrator isn't proud of checking out, and isn't ashamed enough to stop. The chorus is a self-diagnosis delivered in a near-whisper: no emotions, nothing much to think about, \"Just a hollow moment,\" a couple more and then done. It reads as an excuse and a confession at once.\n\nThe second verse sharpens the irony. We were never comfortable in paradise anyway, the lyric says, but the CGI is getting incredible, \"So turn your televisions on again.\" It's sarcasm aimed outward and inward at the same time. The narrator mocks a culture of distraction while lying right in the middle of it.\n\nThe sound sells the sedation. A clean electric guitar picks out arpeggiated chords under a light strum, the bass walks, and the drums sit in a relaxed, swung groove, snare on two and four, closed hi-hat ticking along at a medium-slow pace. The production is clean and polished, open and unhurried. De Jong handles the singing, breathy and easy, the lead doubled so it floats a little. The New LoFi called it an anthem of yacht-rock laziness, and that fits the 1970s soul smoothness the duo folds into Amsterdam psych-pop. Then the chorus dissolves into wordless na-nas, the language giving out exactly where the feeling would have to be spoken.\n\nIt landed on the Warping Youth EP, which keeps returning to death against bright, catchy arrangements. Here that contrast is the point. The prettiness is the numbing agent.\n\nThe song lets you hum along to your own apathy and feel slightly caught doing it, and that small sting is why it keeps coming back.",
+  "factCheck": [
+    {
+      "claim": "Opens on a question about who's listening to the whales",
+      "verdict": "corrected",
+      "note": "The lyric asks about dolphins and 'cetacean prayers', not whales. Changed to dolphins."
+    },
+    {
+      "claim": "\"But what about the dolphins\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Shrugged off with a word a teenager would use",
+      "verdict": "corrected",
+      "note": "The lyric says 'that's a bummer'. The teenager characterization is unsupported, so the word is now named directly."
+    },
+    {
+      "claim": "Feng Suave is the Amsterdam duo of Daniël de Jong and Daniel Elvis Schoemaker",
+      "verdict": "supported",
+      "note": "Packet describes them as Dutch songwriters and producers based in Amsterdam."
+    },
+    {
+      "claim": "Wrote it with Adura Sulaiman",
+      "verdict": "supported",
+      "note": "The live-version credits list de Jong, Schoemaker and Sulaiman as writers."
+    },
+    {
+      "claim": "Band explained the song as being about people who get high and drift off because they can't care about dying dolphins, deforestation, war and famine; a tug between looking after yourself and paying attention to the world",
+      "verdict": "supported",
+      "note": "Matches The New LoFi post."
+    },
+    {
+      "claim": "Chorus delivered in a near-whisper",
+      "verdict": "removed",
+      "note": "The listening passes say 'relaxed, slightly breathy', not near-whisper, and they can't be tied to the chorus."
+    },
+    {
+      "claim": "\"Just a hollow moment\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "\"So turn your televisions on again\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly. The paraphrases of paradise and CGI are fair readings of the lyric."
+    },
+    {
+      "claim": "Clean electric guitar, arpeggiated chords, light strum; walking bass; relaxed swung groove, snare on two and four, closed hi-hat, medium-slow",
+      "verdict": "supported",
+      "note": "Agreed by at least two passes."
+    },
+    {
+      "claim": "Production clean and polished, open",
+      "verdict": "supported",
+      "note": "All passes say clean and polished. Two say open."
+    },
+    {
+      "claim": "De Jong handles the singing, breathy and easy",
+      "verdict": "corrected",
+      "note": "The packet says De Jong sings within the duo but doesn't say who sings on this track. Attributed to the band instead. Breathy and relaxed is supported."
+    },
+    {
+      "claim": "Lead vocal doubled",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree."
+    },
+    {
+      "claim": "The New LoFi called it an anthem of yacht-rock laziness",
+      "verdict": "supported",
+      "note": "Matches the packet."
+    },
+    {
+      "claim": "1970s soul smoothness the duo folds into Amsterdam psych-pop",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "The chorus ends in wordless na-nas",
+      "verdict": "supported",
+      "note": "The lyric structure shows na-na lines following the chorus."
+    },
+    {
+      "claim": "Appeared on the Warping Youth EP, which keeps returning to death against bright, catchy arrangements",
+      "verdict": "supported",
+      "note": "Track 2 on the EP. Stereofox noted death themes against bright synths and catchy guitar."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1777,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013848,
+        "detail": "1101 in / 153 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0005648,
+        "detail": "1101 in / 158 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014623,
+        "detail": "1101 in / 184 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081844,
+        "detail": "22342 in / 1716 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.047348,
+        "detail": "3737 in / 1620 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.045114,
+        "detail": "4842 in / 3543 out"
+      }
+    ]
+  }
+}

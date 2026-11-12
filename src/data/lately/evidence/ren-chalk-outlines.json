@@ -1,0 +1,175 @@
+{
+  "spotifyId": "6rD7CV7dyPBEMHt5MtXgD1",
+  "reviewedAt": "2026-11-11T21:24:34.750Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2763784"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar, bass guitar, drums, and an electric guitar. The acoustic guitar plays a strummed rhythm. The bass plays a simple, sustained line. The drums play a steady, driving beat with a prominent snare. The electric guitar plays a clean, arpeggiated line that occasionally doubles the vocal melody.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving rock feel.\n\nVocals:\nThe lead vocal is a male voice, sung in a clear, mid-range register. The delivery is melodic and slightly melancholic. Harmonies are present in the chorus, with a layered, full sound.\n\nProduction:\nThe production is clean and polished, with a clear separation of instruments. The room sound is neutral, not overly reverberant. The texture is full but not dense.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The lead vocal enters shortly after. Electric guitar enters with arpeggios, then doubles the vocal melody in the chorus. The arrangement builds in intensity with the addition of harmonies in the chorus.\n\nPass 2:\nInstruments:\nAcoustic guitar, bass guitar, drums, and a synth pad. The acoustic guitar plays a strummed chord progression. The bass plays a simple, sustained root note pattern. The drums play a steady, mid-tempo beat with a snare backbeat. The synth pad provides a sustained, airy texture.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and steady, with a slight swing feel in the drums.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy character. The delivery is melodic and conversational. There are layered harmonies, with a group of voices singing in unison or octaves, particularly on the phrase \"Oh my mind.\"\n\nProduction:\nThe production sounds relatively clean and polished. The room sounds open, with a slight reverb on the vocals and drums. The overall texture is smooth.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums already playing. The lead vocal enters immediately. The synth pad enters around the 0:06 mark, adding a sustained layer. The layered harmonies enter around the 0:22 mark, creating a fuller vocal sound. No instruments drop out during the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar, bass guitar, drums, and a male-sounding voice.\n\nTempo and Groove:\nThe tempo is moderate, with a relaxed, slightly swung feel.\n\nVocals:\nThe lead vocal is a clear, mid-range voice with a slightly raspy quality. The delivery is conversational and melodic. There are harmonies in the chorus, with multiple voices singing in unison or close harmony.\n\nProduction:\nThe production is clean and polished, with a natural room sound. The instruments are well-balanced, and the vocals are prominent.\n\nArrangement:\nThe excerpt begins with acoustic guitar and lead vocals. Bass guitar and drums enter shortly after, establishing the groove. The arrangement builds slightly in the chorus with the addition of harmonies.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Chalk Outlines\" by Ren and CHINCHILLA was released on 15 December 2021 as a single and runs 3:53.",
+        "source": "https://music.apple.com/gb/song/chalk-outlines/1829016455"
+      },
+      {
+        "claim": "Discogs credits the writing (music and lyrics) to Chinchilla and Ren.",
+        "source": "https://www.discogs.com/release/21412003-Ren-X-Chinchilla-Chalk-Outlines"
+      },
+      {
+        "claim": "Russell Church is credited as producer. Ren is also credited as producer, and plays guitar, keyboards and bass and sings.",
+        "source": "https://www.discogs.com/release/21412003-Ren-X-Chinchilla-Chalk-Outlines"
+      },
+      {
+        "claim": "Noah Haines plays drums and Georgia Harrington plays cello. Aled Way is credited as engineer and on keyboards, and Chinchilla sings.",
+        "source": "https://www.discogs.com/release/21412003-Ren-X-Chinchilla-Chalk-Outlines"
+      },
+      {
+        "claim": "The song is a duet. A fan wiki timeline says Ren and Chinchilla co-wrote it in 2021, citing Chinchilla's TikTok.",
+        "source": "https://ren.fandom.com/wiki/Ren_Timeline"
+      },
+      {
+        "claim": "An official lyrics video premiered on Ren's channel on 15 December 2021. A live performance video followed on 25 December 2021.",
+        "source": "https://ren.fandom.com/wiki/Ren_Timeline"
+      },
+      {
+        "claim": "The lyrics are built on the image of police chalk outlines. One writer describes it as a song about mending oneself in sobriety.",
+        "source": "https://medium.com/new-choices/ren-chalk-outlines-3f7b771983a0"
+      },
+      {
+        "claim": "A fan-oriented blog reads the song as being about Ren's experience with antidepressants and the emptiness that remains beneath a forced smile. The lyrics mention sertraline, which supports this reading, but this is an interpretation and not a statement from Ren.",
+        "source": "https://rbeatz.com/discover-ren-music-and-storytelling/"
+      },
+      {
+        "claim": "Chinchilla joined Ren to perform \"Chalk Outlines\" at his All Points East set. Chinchilla had also collaborated with Ren on \"How to Be Me\" (2019), and Chalk Outlines was released as a single in 2021 with her.",
+        "source": "https://en.wikipedia.org/wiki/Ren_Gill"
+      },
+      {
+        "claim": "Ren Gill is a Welsh singer-songwriter, rapper and producer born in 1990. He was a member of Trick the Fox and The Big Push, and his solo albums are Freckled Angels (2016) and Sick Boi (2023).",
+        "source": "https://en.wikipedia.org/wiki/Ren_Gill"
+      }
+    ],
+    "lineage": "The song sits in Ren's genre-blending Welsh singer-songwriter/rapper catalog of confessional mental-health writing, here paired with British soul singer Chinchilla in an indie-pop duet.",
+    "genres": [
+      "indie pop",
+      "alternative",
+      "hip-hop"
+    ]
+  },
+  "draft": "A chalk outline is what's left after the worst has happened: the shape of a body with nobody in it. **Chalk Outlines** takes that crime-scene image and makes it something you wear. The first verse opens in a bed the narrator crawled into, then reaches for the saddest kind of hope: \"I hope that I'm someone else in the morning.\" Not better. Someone else. By the end of the verse a pill has gone down, and the narrator is walking around inside a floating outline. Alive and accounted for, and not quite there.\n\nThe second verse drops the metaphor and names sertraline outright. Then comes the line that holds the song's bitter joke: \"Don't cry 'cause there's a pill for everything.\" It sounds like something people say to you, kind and dismissive at once, and now the narrator is saying it to themselves. The chorus answers with a plan that isn't really a plan: push the feeling back down with a new habit, little by little, and bury it under a great big smile. Then \"I\" becomes \"we,\" and the outlines turn into something people trace and erase together. The second time through, the chorus stops short at the word erase, as if the rest of the line got swallowed.\n\nThe bridge says the fear plainly: \"I'm scared of being okay, 'cause all things change.\" Feeling fine is its own threat, because fine never lasts. The medicated calm sits right beside a dread of losing it, and the song doesn't try to untie that knot. It calls the perfect day a beautiful shame and leaves it there.\n\nThe music keeps a steady hand, and that's the trick. Acoustic guitar strums over a simple, sustained bass line, and the drums hold a plain snare backbeat at a moderate, relaxed pace with a slight swing. The lead vocal is clear with a little rasp, conversational more than dramatic. The chorus fills out with layered voices, and the production stays clean and polished. A song about numbness that's this easy to sing along with hands you the great big smile and lets the words underneath do the crying.\n\nRen and Chinchilla wrote it together, continuing a partnership that goes back to \"How to Be Me\" in 2019. Ren co-produced with Russell Church and played guitar, keys and bass. Noah Haines is on drums, Georgia Harrington on cello, and Aled Way handled engineering and keys. The song belongs to Ren's run of confessional mental-health writing, but the duet changes its weight: with two voices, the \"we\" in the chorus stops sounding like a figure of speech.\n\nIt sticks because it gets you humming along to the exact feeling it describes: a calm that's afraid of itself.",
+  "factCheck": [
+    {
+      "claim": "The first verse opens in a bed the narrator crawled into, with the line \"I hope that I'm someone else in the morning.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "By the end of the verse a pill has gone down, and the narrator is walking around inside a floating outline.",
+      "verdict": "corrected",
+      "note": "The lyrics give an instruction ('take this one, wash it down and you'll be fine'), not a completed action. The wording now reflects that. The floating chalk outline is in the lyrics."
+    },
+    {
+      "claim": "The second verse drops the metaphor and names sertraline outright.",
+      "verdict": "corrected",
+      "note": "Sertraline is named in verse two, but the verse still uses the chalk outline ('you draw a chalk outline'). The claim that the metaphor is dropped is removed."
+    },
+    {
+      "claim": "\"Don't cry 'cause there's a pill for everything\"",
+      "verdict": "supported",
+      "note": "Exact lyric. The reading is interpretation."
+    },
+    {
+      "claim": "The chorus pushes the feeling down with a new habit, little by little, and buries it under a great big smile; 'I' becomes 'we' (trace and erase together).",
+      "verdict": "supported",
+      "note": "Matches the chorus lyrics."
+    },
+    {
+      "claim": "The second time through, the chorus stops short at the word erase.",
+      "verdict": "corrected",
+      "note": "The second chorus ends 'Erase ourselves' and drops 'in these chalk outlines'. The wording now says that."
+    },
+    {
+      "claim": "The bridge: \"I'm scared of being okay, 'cause all things change\"; it calls the perfect day a beautiful shame.",
+      "verdict": "supported",
+      "note": "The quote matches the lyrics, and the lyric structure shows a distinct section."
+    },
+    {
+      "claim": "Acoustic guitar strums over a simple, sustained bass line; the drums hold a snare backbeat at a moderate, relaxed pace with a slight swing.",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element."
+    },
+    {
+      "claim": "The lead vocal is clear with a little rasp and conversational; layered voices in the chorus; production clean and polished.",
+      "verdict": "supported",
+      "note": "Agreed by at least two passes."
+    },
+    {
+      "claim": "Ren and Chinchilla wrote it together, continuing a partnership that goes back to \"How to Be Me\" in 2019.",
+      "verdict": "supported",
+      "note": "Discogs and Wikipedia."
+    },
+    {
+      "claim": "Ren co-produced with Russell Church and played guitar, keys and bass.",
+      "verdict": "supported",
+      "note": "Discogs credits."
+    },
+    {
+      "claim": "Noah Haines on drums, Georgia Harrington on cello, Aled Way on engineering and keys.",
+      "verdict": "supported",
+      "note": "Discogs credits."
+    },
+    {
+      "claim": "The song belongs to Ren's run of confessional mental-health writing, and the duet changes its weight.",
+      "verdict": "supported",
+      "note": "The lineage note and the duet fact support this. The reading of the 'we' is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2512,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013954,
+        "detail": "1103 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015754,
+        "detail": "1103 in / 229 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0016179,
+        "detail": "1103 in / 246 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.12184,
+        "detail": "39360 in / 1312 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07984,
+        "detail": "4075 in / 3177 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044968,
+        "detail": "5224 in / 3452 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "spotifyId": "0ivGb5tsAe5wtwIfouzhhU",
+  "reviewedAt": "2026-11-11T19:37:11.207Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nA male voice sings the lead melody. A female voice sings a harmony line. A guitar plays a fingerpicked melody. A bass guitar plays a walking bass line. A drum kit plays a shuffle beat with brushes. A harmonica plays a melodic counterpoint.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a shuffle, with a laid-back, swinging feel.\n\nVocals:\nThe male voice is clear and resonant, with a slight vibrato. The female voice is softer and blends well with the male voice. They sing in unison and in harmony.\n\nProduction:\nThe room sounds like a medium-sized space, with some natural reverb. The texture is warm and organic. The production is polished, but not overly so, retaining a natural sound.\n\nArrangement:\nThe excerpt begins with the male voice, guitar, bass, and drums. The female voice enters shortly after, singing a harmony line. The harmonica enters later, playing a melodic counterpoint to the vocals. The arrangement remains consistent throughout the excerpt.\n\nPass 2:\nInstruments:\nA male voice sings the lead melody. A female voice sings a harmony line. A guitar plays a fingerpicked melody. A bass guitar plays a walking bass line. A drum kit plays a shuffle rhythm with brushes. A harmonica plays a melodic line.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed shuffle.\n\nVocals:\nThe male voice is clear and resonant. The female voice is clear and blends with the male voice. They sing in unison and in harmony.\n\nProduction:\nThe room sounds open. The texture is clean. The production is polished.\n\nArrangement:\nThe excerpt begins with the male voice, guitar, bass, and drums. The female voice enters, singing in harmony with the male voice. The harmonica enters, playing a melodic line. The harmonica then drops out.\n\nPass 3:\nInstruments:\nA male voice sings the lead melody. A female voice sings a harmony line. A guitar plays a fingerpicked melody. A bass guitar plays a walking bass line. A drum kit plays a shuffle rhythm with brushes.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed shuffle.\n\nVocals:\nThe male voice is clear and resonant. The female voice is clear and blends well with the male voice. Both voices are delivered smoothly.\n\nProduction:\nThe room sounds like a medium-sized space. The texture is warm and natural. The production is polished.\n\nArrangement:\nThe excerpt begins with the male voice, guitar, and bass. The female voice enters with a harmony line. The drum kit enters with a shuffle rhythm. All instruments and voices continue throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "'You'll Never Know My Heart' is a 2026 single by Joe Abbott featuring Cat Clyde, released on Baby Horse Records in May 2026. It later appeared on his debut LP Duster.",
+        "source": "https://joeabbott.bandcamp.com/album/duster"
+      },
+      {
+        "claim": "The Duster credits list Cat Clyde on vocals on track 3, which is 'You'll Never Know My Heart'. Joe Abbott plays vocals, acoustic guitar, electric guitar and clarinet on the track.",
+        "source": "https://joeabbott.bandcamp.com/album/duster"
+      },
+      {
+        "claim": "Isaac Story plays upright bass, Paul Townsend plays drums and Liam McIvor Tyner plays steel guitar on the track.",
+        "source": "https://joeabbott.bandcamp.com/album/duster"
+      },
+      {
+        "claim": "All songs on Duster, including this one, were written by William Joseph Abbott (Joe Abbott).",
+        "source": "https://joeabbott.bandcamp.com/album/duster"
+      },
+      {
+        "claim": "A discography listing credits William Poulin as producer of the session that produced this track. It places the session at Flash Recording, Vancouver, BC, with Joe Abbott and The Flying J's plus Cat Clyde. Other musicians listed for that session are Noah Walker, Liam McIvor Tyner, Isaac Story, Paul Townsend, Poulin on percussion, and Frisco Lee on Hammond B3.",
+        "source": "http://countrydiscoghraphy2.blogspot.com/2026/08/joe-abbott.html"
+      },
+      {
+        "claim": "Baby Horse Records announced the single as a collaboration with Cat Clyde. It described the song as blending heartfelt songwriting, folk influences and a roots-driven sound.",
+        "source": "https://www.linkedin.com/in/thomas-viola-82981755/"
+      },
+      {
+        "claim": "'You'll Never Know My Heart' was the last of three singles that came before Duster, which was released on June 12, 2026 on vinyl and digital. 'Dirty Pile Of Snow' was the second single, released April 24, 2026.",
+        "source": "https://babyhorserecords.com/category/announcements/"
+      },
+      {
+        "claim": "Baby Horse Records says Joe Abbott signed a recording contract with the label after years of working together. The label also posted about Abbott touring with Cat Clyde.",
+        "source": "https://babyhorserecords.com/category/announcements/"
+      },
+      {
+        "claim": "Joe Abbott is a songwriter, singer and multi-instrumentalist from Vancouver, B.C. His first single with Baby Horse Records was 'Six More Weeks of Winter' in July 2022. He has worked as a sideman with Petunia and the Vipers and with Harpdog Brown, and has lived in places from New Orleans to Montreal.",
+        "source": "https://babyhorserecords.com/joe-abbots-six-more-weeks-of-winter/"
+      },
+      {
+        "claim": "Cat Clyde is a Canadian singer-songwriter and multi-instrumentalist whose sound draws on blues, soul, folk, jump, jazz and swing. Her 2017 debut was Ivory Castanets.",
+        "source": "https://music.apple.com/us/artist/cat-clyde/1001664473"
+      }
+    ],
+    "lineage": "Abbott's music sits in the folk/trad-country tradition, now often called Americana, within the Canadian alt-country scene and the Montreal indie label Baby Horse Records.",
+    "genres": [
+      "americana",
+      "folk",
+      "country"
+    ]
+  },
+  "draft": "A song called **You'll Never Know My Heart** ought to sound guarded, and this one doesn't. Two voices sing it, sometimes in close harmony and sometimes in unison, over a brushed shuffle that never hurries. The title is a closed door. The sound is two people standing in the same doorway, breathing on the same beat. That gap between the words on the label and the warmth in the room is where the song lives, and it's worth sitting in.\n\nJoe Abbott wrote it and sings lead, with a clear, resonant voice that doesn't push. Cat Clyde comes in on harmony and blends so well that the seams almost disappear. She doesn't decorate his line so much as lean into it. Underneath, a fingerpicked guitar carries the melody, and Isaac Story's upright bass walks steadily from chord to chord. Paul Townsend keeps the shuffle on brushes, loose and swinging, with no snare crack to jolt anyone awake. The room feels medium-sized and warm, polished but still natural. You can hear players listening to each other rather than a track built up in layers.\n\nThe lineage makes sense once you see who's in the room. Abbott is a Vancouver songwriter and multi-instrumentalist who has worked as a sideman for Petunia and the Vipers and for the blues harp player Harpdog Brown, and he has lived everywhere from New Orleans to Montreal. Clyde's own records draw on blues, soul, jump, jazz and swing. Put them together and you get country-folk with a swing-band pulse in its legs, the old duet form where trading verses matters less than the sound of two voices finding one pitch. The session was cut at Flash Recording in Vancouver with Abbott's band, the Flying J's, and William Poulin producing. Abbott also plays electric guitar and clarinet on the track, and Liam McIvor Tyner plays steel guitar. That roster says a lot about how carefully the restraint was chosen.\n\nIt was the last of three singles ahead of Abbott's debut LP, *Duster*, where it sits third. The pair also toured together, and the ease shows. Nobody is trying to win the song.\n\nWhat stays with you is the contradiction. A title that insists on distance gets sung as a duet, so the feeling comes across less as a wall than as a confession whispered to someone already close enough to hear it. The song never settles whether that heart is being hidden or offered, and the two voices don't decide it either.\n\nThe song makes \"you'll never know\" sound like something said softly to the one person who already does, and that tenderness is the hook you keep coming back for.",
+  "factCheck": [
+    {
+      "claim": "Two voices sing it, sometimes in close harmony and sometimes in unison, over a brushed shuffle at a moderate, unhurried tempo",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on unison and harmony. All three passes give a brushes shuffle at a moderate tempo."
+    },
+    {
+      "claim": "Joe Abbott wrote it and sings lead, with a clear, resonant voice",
+      "verdict": "supported",
+      "note": "Writing and vocal credits are in the researched facts. All three passes describe the male lead as clear and resonant."
+    },
+    {
+      "claim": "Cat Clyde sings harmony and blends closely with the lead",
+      "verdict": "supported",
+      "note": "All three passes agree. The credits list Clyde on vocals."
+    },
+    {
+      "claim": "Fingerpicked guitar carries the melody",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Isaac Story's upright bass walks from chord to chord",
+      "verdict": "supported",
+      "note": "Story is credited on upright bass. All passes describe a walking bass line."
+    },
+    {
+      "claim": "Paul Townsend keeps the shuffle on brushes, loose and swinging",
+      "verdict": "corrected",
+      "note": "The drummer credit and the brushes are supported. 'Swinging' appears in only one pass, so it was changed to 'relaxed', which all three passes support."
+    },
+    {
+      "claim": "No snare crack to jolt anyone awake",
+      "verdict": "removed",
+      "note": "Not described in any pass."
+    },
+    {
+      "claim": "Room feels medium-sized and warm, polished but natural",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on medium-sized, warm and natural. All three say polished."
+    },
+    {
+      "claim": "You can hear players listening to each other rather than a track built up in layers",
+      "verdict": "removed",
+      "note": "Claim about how the track was made. The listening notes don't support it."
+    },
+    {
+      "claim": "Abbott is a Vancouver songwriter and multi-instrumentalist who has been a sideman for Petunia and the Vipers and Harpdog Brown, and has lived from New Orleans to Montreal",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Harpdog Brown is a blues harp player",
+      "verdict": "removed",
+      "note": "Not in the packet."
+    },
+    {
+      "claim": "Clyde's records draw on blues, soul, jump, jazz and swing",
+      "verdict": "supported",
+      "note": "Matches the Apple Music description of her sound. Folk is also listed there."
+    },
+    {
+      "claim": "Country-folk with a swing-band pulse; the old duet form",
+      "verdict": "corrected",
+      "note": "Kept as interpretation and tied to the folk/trad-country lineage. 'Old' and the claim about the form's history were dropped because they are unsupported."
+    },
+    {
+      "claim": "Session cut at Flash Recording in Vancouver with Abbott's band, the Flying J's, and William Poulin producing",
+      "verdict": "supported",
+      "note": "From the discography listing. The band name is written 'The Flying J's' there."
+    },
+    {
+      "claim": "Abbott also plays electric guitar and clarinet; Liam McIvor Tyner plays steel guitar",
+      "verdict": "supported",
+      "note": "Matches the Duster credits."
+    },
+    {
+      "claim": "That roster says a lot about how carefully the restraint was chosen",
+      "verdict": "removed",
+      "note": "Speculation about intent. Nothing in the packet supports it."
+    },
+    {
+      "claim": "Last of three singles ahead of the debut LP Duster, where it sits third",
+      "verdict": "supported",
+      "note": "Matches the label announcements and the Bandcamp credits (track 3)."
+    },
+    {
+      "claim": "The pair also toured together",
+      "verdict": "supported",
+      "note": "The label posted about Abbott touring with Cat Clyde."
+    },
+    {
+      "claim": "The song never settles whether that heart is being hidden or offered",
+      "verdict": "removed",
+      "note": "Lyrics are unavailable, so this is a claim about lyric content. Reworked to rest on the title and the sound."
+    },
+    {
+      "claim": "A confession whispered / said softly",
+      "verdict": "corrected",
+      "note": "The passes describe clear, smooth voices, not whispering. Wording changed."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1893,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001431,
+        "detail": "1105 in / 171 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00071289,
+        "detail": "1105 in / 216 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00059039,
+        "detail": "1105 in / 167 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081094,
+        "detail": "21022 in / 1905 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.056068,
+        "detail": "3512 in / 2101 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049402,
+        "detail": "4661 in / 4008 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "spotifyId": "2sCgWRx9DKQEefj9IOmcn7",
+  "reviewedAt": "2026-11-11T20:16:18.483Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2006287"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings in a clear, slightly nasal tone, with a gentle vibrato. The tempo is slow, with a relaxed, slightly melancholic groove. The production is raw, with a close-miked, intimate feel. The room sounds small and dry. The vocals are upfront, with the guitar providing a soft, consistent accompaniment. No other instruments enter or drop out.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. A male voice sings the lead melody, with a slightly nasal character and a gentle vibrato. The delivery is intimate and conversational. A second male voice provides a harmony, mostly in unison or a third above the lead, adding fullness. The tempo is slow, with a relaxed, slightly swaying groove. The production sounds raw and natural, as if recorded in a small, untreated room. The instruments and vocals are dry, with minimal reverb. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings in a high register, with a slightly nasal quality and a gentle vibrato. The tempo is slow, with a relaxed, slightly melancholic groove. The production is raw, with a close-miked, intimate feel. The room sounds small, with a short, natural reverb. The texture is sparse and clear. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Ladder Song\" is track 9 on Bright Eyes' The People's Key, released February 15, 2011, and runs 3:58.",
+        "source": "https://brighteyes.bandcamp.com/album/the-peoples-key"
+      },
+      {
+        "claim": "Streaming metadata lists Dead Oceans as the label for this release.",
+        "source": "https://www.shazam.com/song/1565223255/ladder-song"
+      },
+      {
+        "claim": "All tracks on The People's Key were written by Conor Oberst, except where noted. Wikipedia's track list shows no exception for \"Ladder Song\".",
+        "source": "https://en.wikipedia.org/wiki/The_People's_Key"
+      },
+      {
+        "claim": "The album was recorded at ARC Studios in Omaha, Nebraska, produced by Mike Mogis, and engineered by Mogis and Andy LeMaster.",
+        "source": "https://en.wikipedia.org/wiki/The_People's_Key"
+      },
+      {
+        "claim": "Album personnel: Conor Oberst on vocals, guitars, pianos and keyboards. Mike Mogis on guitars, pedal steel, effects, programming and percussion. Nate Walcott on synthesizers, pianos, organs and Mellotron.",
+        "source": "https://en.wikipedia.org/wiki/The_People%27s_Key"
+      },
+      {
+        "claim": "It was the first Bright Eyes album the core trio of Oberst, Mogis and Walcott recorded entirely at their own ARC Studios. Recording began in January and wrapped up just before Thanksgiving, after 'many, many breaks'.",
+        "source": "https://www.billboard.com/music/music-news/conor-oberst-new-bright-eyes-album-will-be-rocking-949162/"
+      },
+      {
+        "claim": "Oberst said he wanted the album to be equal parts himself, Walcott and Mogis. After the heavily orchestral Cassadaga, they chose to do it themselves with keyboard-based string parts.",
+        "source": "https://music.apple.com/us/album/the-peoples-key/1565222868"
+      },
+      {
+        "claim": "Stereogum says Oberst wrote and performed \"Ladder Song\" on a vintage keyboard he used to compose many of Bright Eyes' earliest works. It describes the song as an elegy to wasted youth and a paean to a friend who committed suicide.",
+        "source": "https://stereogum.com/1327912/the-10-best-bright-eyes-songs/lists"
+      },
+      {
+        "claim": "PopMatters calls \"Ladder Song\" the closest the album gets to Oberst's spare, confessional songwriting style, with Oberst alone at the piano. It also notes the reassuring central line about not being unique in dying.",
+        "source": "https://www.popmatters.com/136881-bright-eyes-the-peoples-key-2496080133.html"
+      },
+      {
+        "claim": "Pitchfork gave The People's Key 5/10 and criticized its 'impersonal' feel, but praised \"Ladder Song\".",
+        "source": "https://en.wikipedia.org/wiki/The_People's_Key"
+      }
+    ],
+    "lineage": "Bright Eyes is an Omaha, Nebraska indie group built around Conor Oberst, Mike Mogis and Nate Walcott, drawing on the city's indie scene. \"Ladder Song\" is a spare piano ballad in the confessional songwriting style Oberst helped popularize, set within an otherwise synth-heavy, sci-fi-inflected album.",
+    "genres": [
+      "indie rock",
+      "indie folk",
+      "indietronica"
+    ]
+  },
+  "draft": "The consolation in **Ladder Song** is blunt enough to sting. Bright Eyes opens with \"You're gonna lose what you love the most,\" then offers comfort that sounds at first like a shrug: \"You're not unique in dying.\" PopMatters heard reassurance in that line, and it is reassuring, but the comfort is cold. Grief here doesn't get to feel special. It gets folded into everyone else's, and that turns out to be the only kindness on hand.\n\nStereogum describes the song as an elegy to wasted youth and a paean to a friend who committed suicide, and the lyric holds both without picking one. There's tenderness (\"Precious friend of mine\") right beside resentment at \"traitors / Always changing sides\" who \"were friends of mine.\" There's a darker pull too. The narrator muses that if they have to go first, it'll be on their own terms, and the line sits in the song unexamined. It reads like someone who understands the friend's choice a little too well and is scared of that understanding.\n\nConor Oberst wrote it, and according to Stereogum he wrote and performed it on a vintage keyboard he had used for many of Bright Eyes' earliest songs. That matters, because the rest of **The People's Key** went elsewhere. Oberst, Mike Mogis and Nate Walcott made it at their own ARC Studios in Omaha, trading the orchestra of *Cassadaga* for synths and keyboard strings and a lot of science-fiction talk. \"Ladder Song\" keeps the vocabulary of that album, the silver ship, the new age, \"Lights from the jungle to the sky\", but strips the sound back to the spare confessional mode Oberst made his name on. Pitchfork found the album impersonal and still singled out this track. It's easy to hear why.\n\nThe recording is close and dry, as if made in a small room with nobody else in it. Oberst's voice is slightly nasal, with a gentle vibrato, and sits right up front. The tempo is slow and the accompaniment rolls in a steady arpeggio that never changes shape. Nothing enters to lift the mood. The restraint makes every cosmic image land smaller and more human, a mind reaching for Jesus, Buddha and spaceships because the plain fact of a death is too much to hold.\n\nThen comes the image that breaks it open: \"Looks just like a blood orange / Don't it just make you want to cry?\" A new star, something beautiful, and the first instinct is to show it to someone who's gone. The last verse brings back the opening refrain and changes it. \"You're not alone in anything\" becomes \"You're not alone in trying to be.\" The sentence stops short at being. Staying alive becomes the shared effort.\n\nThe song gives you permission to grieve without being singular, and that small, chilly comfort ends up feeling like the warmest thing on the record.",
+  "factCheck": [
+    {
+      "claim": "\"You're gonna lose what you love the most\" and \"You're not unique in dying\" are quoted from the lyrics",
+      "verdict": "supported",
+      "note": "Both lines match the lyrics exactly. Because the first is the second line of the first stanza, 'opens with' was changed to 'sings'."
+    },
+    {
+      "claim": "PopMatters heard reassurance in the 'not unique in dying' line",
+      "verdict": "supported",
+      "note": "PopMatters notes the reassuring central line about not being unique in dying. The attribution to PopMatters was dropped from the text and the reading is kept as the critic's own."
+    },
+    {
+      "claim": "Stereogum describes the song as an elegy to wasted youth and a paean to a friend who committed suicide",
+      "verdict": "supported",
+      "note": "Matches the Stereogum entry. The explicit outlet attribution was removed."
+    },
+    {
+      "claim": "Quoted lines \"Precious friend of mine\", \"traitors / Always changing sides\", \"were friends of mine\", and the lyric quotes overall",
+      "verdict": "corrected",
+      "note": "The quotes are accurate, but the draft quoted far more than three lines. Most were paraphrased, leaving three quoted lines."
+    },
+    {
+      "claim": "Narrator says if they have to go first it will be on their own terms",
+      "verdict": "supported",
+      "note": "Paraphrases 'If I got to go first / I'll do it on my terms'. The reading of it is interpretation."
+    },
+    {
+      "claim": "Conor Oberst wrote the song",
+      "verdict": "supported",
+      "note": "All tracks are credited to Oberst with no exception noted for this one."
+    },
+    {
+      "claim": "Oberst wrote and performed it on a vintage keyboard used for many of Bright Eyes' earliest songs",
+      "verdict": "removed",
+      "note": "This is in a researched fact, but it contradicts the listening passes, which all describe fingerpicked acoustic guitar. The sentence and the 'that matters' framing were removed."
+    },
+    {
+      "claim": "Oberst, Mogis and Walcott made the album at their own ARC Studios in Omaha",
+      "verdict": "supported",
+      "note": "Matches the Billboard and Wikipedia facts."
+    },
+    {
+      "claim": "They traded the orchestra of Cassadaga for synths and keyboard strings and a lot of science-fiction talk",
+      "verdict": "supported",
+      "note": "Backed by Oberst's comments on doing the strings themselves with keyboards, Walcott on synthesizers, and the album's sci-fi inflection."
+    },
+    {
+      "claim": "The song keeps the album's vocabulary (silver ship, new age, 'Lights from the jungle to the sky')",
+      "verdict": "supported",
+      "note": "The lyric quote and images match."
+    },
+    {
+      "claim": "The song strips back to the spare confessional mode Oberst 'made his name on'",
+      "verdict": "corrected",
+      "note": "The packet says he helped popularize the confessional style. Reworded."
+    },
+    {
+      "claim": "Pitchfork found the album impersonal and still singled out this track",
+      "verdict": "supported",
+      "note": "Pitchfork gave 5/10, called it impersonal, and praised 'Ladder Song'. Reworded to 'praised'."
+    },
+    {
+      "claim": "Recording is close and dry, as if made in a small room with nobody else in it",
+      "verdict": "corrected",
+      "note": "Close, intimate, small and dry is backed by multiple passes. 'Nobody else in it' is invented, and a second voice appears in one pass, so it was removed."
+    },
+    {
+      "claim": "Voice is slightly nasal with a gentle vibrato and sits right up front",
+      "verdict": "corrected",
+      "note": "Nasal tone and gentle vibrato are agreed by all three passes. 'Right up front' is only in one pass, so it was removed. The singer is described as 'the lead voice' rather than named."
+    },
+    {
+      "claim": "Tempo is slow and the accompaniment is a steady arpeggio that never changes shape",
+      "verdict": "corrected",
+      "note": "Slow tempo and a fingerpicked arpeggiated acoustic guitar are agreed by all passes. 'Never changes shape' is a claim about the whole song, so it was dropped."
+    },
+    {
+      "claim": "Nothing enters to lift the mood",
+      "verdict": "removed",
+      "note": "A claim about the arrangement over the course of the song, which the passes can't support."
+    },
+    {
+      "claim": "Last verse brings back the opening refrain and changes it to 'You're not alone in trying to be'",
+      "verdict": "supported",
+      "note": "The lyric structure shows this, and the quote is accurate."
+    },
+    {
+      "claim": "Blood orange lines describe a new star; 'Jesus, Buddha and spaceships' imagery",
+      "verdict": "supported",
+      "note": "The lyrics match. The readings are interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2697,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012311,
+        "detail": "1097 in / 92 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012461,
+        "detail": "1097 in / 98 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013111,
+        "detail": "1097 in / 124 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.148672,
+        "detail": "50721 in / 1723 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05076,
+        "detail": "3500 in / 1838 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.066472,
+        "detail": "4726 in / 5702 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "spotifyId": "1uVD7mxRrnwnLqh6uBOuSt",
+  "reviewedAt": "2026-11-11T21:41:08.330Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5981787"
+  },
+  "listening": "Pass 1:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a simple, walking line. Drums provide a steady, driving beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, driving feel. The groove is consistent and propulsive.\n\nVocals:\nA single voice, with a clear, slightly nasal character, sings the lead melody. The delivery is direct and unadorned. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, with a clear separation of instruments. The texture is polished, with a slight reverb on the vocals and drums, suggesting a medium-sized room.\n\nArrangement:\nThe excerpt begins with the electric guitar and bass already playing. The drums enter shortly after, establishing the main groove. The vocals enter over the instrumental foundation. All instruments remain present throughout the excerpt, with no significant changes in dynamics or instrumentation.\n\nPass 2:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a simple, walking line. Drums provide a steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly swung, with a gentle forward momentum.\n\nVocals:\nThe voice is a mid-range, clear, and slightly breathy. The delivery is conversational and melodic. Harmonies are present in the chorus, with a higher voice singing above the main melody.\n\nProduction:\nThe room sounds open and natural. The texture is clean and polished, with clear separation between instruments.\n\nArrangement:\nThe excerpt begins with the electric guitar and bass. Drums enter shortly after. The vocals begin with a single voice, then harmonies enter for the chorus. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a walking line. Drums play a simple beat with a kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly melancholic.\n\nVocals:\nThe voice is a female, with a clear, slightly breathy character. The delivery is calm and expressive. There are no harmonies.\n\nProduction:\nThe room sounds open, with a natural reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the electric guitar, bass, and drums. The vocals enter shortly after. All instruments maintain a consistent presence throughout the excerpt, with no significant changes in dynamics or instrumentation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Margaret Glaspy wrote all the songs on Emotions and Math, including the title track, and produced the record herself.",
+        "source": "https://musicfeeds.com.au/features/margaret-glaspy-on-emotions-and-math-inspiration-her-upcoming-tour/"
+      },
+      {
+        "claim": "The title song 'Emotions and Math' is credited as written and produced by Margaret Glaspy.",
+        "source": "https://readdork.com/lyrics/margaret-glaspy-emotions-and-math"
+      },
+      {
+        "claim": "Credits list Chris Morrissey on bass, Tim Kuhl on drums and percussion, Tyler Chester on keyboards, and Glaspy on guitar and vocals. Julian Lage is credited as production manager.",
+        "source": "https://www.discogs.com/release/8683706-Margaret-Glaspy-Emotions-And-Math"
+      },
+      {
+        "claim": "Chris Allen engineered the album, Shawn Everett mixed it, and Emily Lazar mastered it at The Lodge. It was recorded at Sear Sound in New York City.",
+        "source": "https://www.discogs.com/release/8683706-Margaret-Glaspy-Emotions-And-Math"
+      },
+      {
+        "claim": "After the ATO deal was secured, Glaspy re-recorded the entire album at Sear Sound with Morrissey, Kuhl and Chester.",
+        "source": "https://www.qobuz.com/us-en/album/emotions-and-math-margaret-glaspy/qdol6s55g0zcc"
+      },
+      {
+        "claim": "Glaspy said the phrase 'Emotions and Math' was wrapped into a song she was working on and became the album title. She said it fit because she was making something emotive that was also process-driven and analytical.",
+        "source": "https://www.interviewmagazine.com/music/margaret-glaspy"
+      },
+      {
+        "claim": "Glaspy had planned to release the album herself via Bandcamp, but ATO Records picked up her music and released the LP. This followed six years in New York spent babysitting and playing shows.",
+        "source": "https://www.interviewmagazine.com/music/margaret-glaspy"
+      },
+      {
+        "claim": "NPR critic Ken Tucker said the album blends complexity with 'deceptive directness.' He noted that the title song has an angry bite in the vocal that is echoed by a barbed guitar hook.",
+        "source": "https://www.npr.org/2016/06/16/482309000/margaret-glaspy-draws-on-emotions-and-math-for-her-debut-album"
+      },
+      {
+        "claim": "Emotions and Math was Glaspy's first full-length album. It followed two self-released EPs, Homeschool and If & When, and her studies at Berklee College of Music.",
+        "source": "https://performermag.com/new-music-and-video/interviews-and-features/margaret-glaspy-emotions-and-math-interview/"
+      },
+      {
+        "claim": "Glaspy toured behind Emotions and Math for about three years. Her 2020 follow-up Devotion came after a hiatus, and her third album Echo the Diamond (2023) was co-produced with her partner, guitarist Julian Lage.",
+        "source": "https://www.musicmusingsandsuch.com/musicmusingsandsuch/2020/5/14/feature-spotlight-margaret-glaspy"
+      }
+    ],
+    "lineage": "Glaspy sits in the indie rock and folk singer-songwriter tradition, pairing a raw, bluesy guitar-driven rock edge with pop song structures.",
+    "genres": [
+      "indie rock",
+      "singer-songwriter",
+      "blues rock"
+    ]
+  },
+  "draft": "There's a bath in this song, and it isn't relaxing. On **Emotions and Math**, Margaret Glaspy's narrator spends the nights her partner is away awake until 4 a.m. and the mornings hitting snooze, and she sums up the state in one cold, exact image: \"Shiverin' in an ice cold bath / Of emotions and math.\" The longing is there. So is the counting of days, the tally kept because tallying feels like control when nothing else does. Glaspy said the phrase fit the whole record because she was making something emotive that was also process-driven and analytical. Here that tension stops being a working method and becomes the narrator's problem.\n\nWhat makes the song sting is that she won't let herself off the hook. Things are fine together, she sings, and it's a shame, and she's the one to blame. Then comes the line that carries the most weight: \"I'm a woman actin' like a kid.\" It's a confession that is also a scolding. She pictures herself stuck out on a tree limb, a skinny mess left breathless from listing everything she's going to do. Big promises, little follow-through, and she knows it. The sharpest turn is the pride she lets slip. She used to be a rolling stone, out on her own, borrowing an old rock-and-blues picture of the drifter, and now that someone's here she lives in fear of them leaving. Independence and dependence sit in the same verse, and neither one wins.\n\nThe band plays it with almost no fuss. A clean electric guitar picks out arpeggiated chords, the bass walks underneath, and the drums keep a plain kick, snare and hi-hat pattern at a moderate, easy pace. The room sounds open and natural, and each instrument has its own space. Glaspy's voice is clear with a little breath in it, and she sings unadorned and alone. NPR's Ken Tucker heard an angry bite in that vocal, echoed by a barbed guitar hook. That fits a record he described as having a \"deceptive directness\": the surface stays calm while the words cut.\n\nGlaspy wrote and produced the song herself. It was her first full-length album, which ATO picked up after six years of babysitting and playing shows in New York and a plan to put it out on Bandcamp. She re-recorded it at Sear Sound with Chris Morrissey on bass and Tim Kuhl on drums. That history of waiting and stubbornly doing it yourself suits a song about someone who has proved she can stand alone and now hates how badly she wants company.\n\nIt sticks because it admits something most love songs dress up: missing someone can make you feel small, and you can still keep counting the days.",
+  "factCheck": [
+    {
+      "claim": "The narrator stays awake until 4 a.m. and hits snooze on the mornings her partner is away.",
+      "verdict": "supported",
+      "note": "Lyrics: 'i start to snooze the alarm / And i stay up until 4 in the morning' when 'your gone'. Reading the 'you' as a partner is interpretation."
+    },
+    {
+      "claim": "Quote: \"Shiverin' in an ice cold bath / Of emotions and math.\"",
+      "verdict": "corrected",
+      "note": "The lyrics read 'Shiverin in an ice cold bath', with no apostrophe. The quote now matches exactly."
+    },
+    {
+      "claim": "Glaspy said the phrase fit because she was making something emotive that was also process-driven and analytical.",
+      "verdict": "supported",
+      "note": "Interview Magazine."
+    },
+    {
+      "claim": "She sings that things are fine together, it's a shame, and she's to blame.",
+      "verdict": "supported",
+      "note": "Lyrics: 'Oh its a shame and im to blame / Cuz we're alright'."
+    },
+    {
+      "claim": "Quote: \"I'm a woman actin' like a kid.\"",
+      "verdict": "corrected",
+      "note": "The lyrics read 'actin like a kid', with no apostrophe. The quote now matches."
+    },
+    {
+      "claim": "She pictures herself stuck out on a tree limb, a skinny mess left breathless from telling of everything she's going to do.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. 'Little follow-through' was interpretive and has been cut."
+    },
+    {
+      "claim": "'Rolling stone' borrows an old rock-and-blues picture of the drifter.",
+      "verdict": "removed",
+      "note": "The packet gives no support for the history of this image."
+    },
+    {
+      "claim": "She used to be a rolling stone, out on her own, and now lives in fear of the other person leaving.",
+      "verdict": "supported",
+      "note": "Lyrics."
+    },
+    {
+      "claim": "Clean electric guitar with arpeggiated chords, walking bass, and a kick, snare and hi-hat pattern at a moderate, easy pace.",
+      "verdict": "supported",
+      "note": "All three passes agree on guitar, bass and moderate tempo. Two passes agree on kick/snare/hi-hat and a relaxed feel."
+    },
+    {
+      "claim": "The room sounds open and natural, with each instrument having its own space.",
+      "verdict": "supported",
+      "note": "Open and natural are each backed by two passes. Clear separation is backed by passes 1 and 2."
+    },
+    {
+      "claim": "The voice is clear with a little breath in it.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say slightly breathy. All passes say clear."
+    },
+    {
+      "claim": "She sings unadorned and alone.",
+      "verdict": "removed",
+      "note": "The passes disagree on harmonies: pass 2 hears them in the chorus, and passes 1 and 3 do not. 'Unadorned' comes from only one pass."
+    },
+    {
+      "claim": "NPR's Ken Tucker heard an angry bite in the vocal, echoed by a barbed guitar hook, and described the record as having 'deceptive directness'.",
+      "verdict": "supported",
+      "note": "NPR."
+    },
+    {
+      "claim": "Glaspy wrote and produced the song herself.",
+      "verdict": "supported",
+      "note": "Musicfeeds and Dork."
+    },
+    {
+      "claim": "It was her first full-length album, picked up by ATO after six years of babysitting and playing shows in New York and a plan to release it on Bandcamp.",
+      "verdict": "supported",
+      "note": "Interview Magazine and Performer Mag. The wording now makes clear the album is meant, not the song."
+    },
+    {
+      "claim": "She re-recorded it at Sear Sound with Chris Morrissey on bass and Tim Kuhl on drums.",
+      "verdict": "supported",
+      "note": "Qobuz and Discogs. The album was re-recorded, and the wording now says so."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1924,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013845,
+        "detail": "1100 in / 153 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014645,
+        "detail": "1100 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001487,
+        "detail": "1100 in / 194 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081838,
+        "detail": "23694 in / 1445 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053948,
+        "detail": "3777 in / 1942 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052322,
+        "detail": "4926 in / 4247 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "spotifyId": "42MRSqvVCcojkj0NrDwb7l",
+  "reviewedAt": "2026-11-11T21:36:50.590Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13793638"
+  },
+  "listening": "Pass 1:\nInstruments:\nA plucked string instrument, possibly a lute or mandolin, plays a steady, arpeggiated accompaniment. A bowed string instrument, possibly a cello or viola, plays sustained notes. A drum provides a steady, driving beat.\n\nTempo and Groove Feel:\nThe tempo is moderate, with a driving, rhythmic feel. The groove is steady and consistent.\n\nVocals:\nA single voice, with a clear, resonant character, sings in a narrative style. The delivery is strong and confident. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced, with a natural room feel. The texture is clear and polished.\n\nArrangement:\nThe plucked string instrument and drum establish the rhythm and harmony. The bowed string instrument enters with sustained notes, adding depth. The voice enters, carrying the melody. All instruments continue throughout the excerpt.\n\nPass 2:\nInstruments:\nA plucked string instrument, possibly a lute or mandolin, plays a steady, arpeggiated accompaniment. A bowed string instrument, possibly a fiddle, plays a melodic line with sustained notes and occasional trills. A low, sustained drone is present throughout.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and flowing, with a slight lilt from the arpeggiated accompaniment.\n\nVocals:\nA single voice, with a clear, resonant character, sings in a melodic, storytelling style. The delivery is direct and unadorned. No harmonies are present.\n\nProduction:\nThe sound is clean and clear, suggesting a polished production. The room sounds open, with a slight natural reverb. The texture is balanced, allowing each instrument and the vocal to be distinct.\n\nArrangement:\nThe plucked string instrument and drone are present from the beginning. The bowed string instrument enters shortly after, playing a counter-melody. The vocal enters around the 9-second mark, becoming the central focus. All elements continue together until the end of the excerpt.\n\nPass 3:\nInstruments:\nA plucked string instrument, possibly a lute or mandolin, plays a steady, arpeggiated accompaniment. A bowed string instrument, possibly a cello or viola, plays sustained notes. A drum provides a steady, driving beat.\n\nTempo and Groove:\nThe tempo is moderate, with a driving, rhythmic groove.\n\nVocals:\nA single voice sings in a clear, resonant tone. The delivery is strong and declarative. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a natural room acoustic. The texture is full and balanced.\n\nArrangement:\nThe plucked string instrument and bowed string instrument play continuously. The drum enters at the beginning of the excerpt and continues throughout. The vocals enter after a brief instrumental introduction and continue until the end of the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"My Mother Told Me (in Old Norse)\" was released on 23 June 2023 by The Pagan Minstrel on the Viking Anthems EP, and it is the opening track.",
+        "source": "https://thepaganminstrel.bandcamp.com/album/viking-anthems"
+      },
+      {
+        "claim": "The track runs 2:22.",
+        "source": "https://music.apple.com/us/song/my-mother-told-me-in-old-norse/1691255131"
+      },
+      {
+        "claim": "The Bandcamp page credits the original song to Perly i Lotry, so this is an Old Norse cover version.",
+        "source": "https://thepaganminstrel.bandcamp.com/track/my-mother-told-me-in-old-norse"
+      },
+      {
+        "claim": "Deezer lists Perly I Lotry as the writer and composer of the track.",
+        "source": "https://www.deezer.com/en/artist/112523072"
+      },
+      {
+        "claim": "The Old Norse lyrics begin 'Þat mælti mín móðir / At mér skyldi kaupa / Fley ok fagrar árar'.",
+        "source": "https://music.apple.com/us/song/my-mother-told-me-in-old-norse/1691255131"
+      },
+      {
+        "claim": "Bandcamp tags for the track include kravik lyre, tagelharpa, bardcore, neofolk and Old Norse. These suggest the instruments and style, but the page does not list a personnel credit.",
+        "source": "https://thepaganminstrel.bandcamp.com/track/my-mother-told-me-in-old-norse"
+      },
+      {
+        "claim": "The track was distributed via DistroKid, with the ℗ line given to The Pagan Minstrel.",
+        "source": "https://www.youtube.com/watch?v=bWtl8U5ibMY"
+      },
+      {
+        "claim": "The Pagan Minstrel is based in Valparaíso, Chile.",
+        "source": "https://thepaganminstrel.bandcamp.com/"
+      },
+      {
+        "claim": "The artist's Bandcamp bio calls her a self-taught multi-instrumentalist and singer and a self-produced artist. She uses lyre, kultrun and tin whistle, among other instruments.",
+        "source": "https://thepaganminstrel.bandcamp.com/"
+      },
+      {
+        "claim": "Other tracks on Viking Anthems are also covers: Deezer credits Valhalla Calling to Gavin Dunne, Helvegen to Einar Selvik, Trøllabundin to Eivør Pálsdóttir and Twilight of the Thunder God to Mikkonen, Söderberg and Hegg. An Old Norse version of Valhalla Calling followed as a single in January 2024.",
+        "source": "https://www.deezer.com/en/artist/112523072"
+      }
+    ],
+    "lineage": "The track sits in the bardcore and Nordic neofolk/pagan folk scene, drawing on Old Norse-language folk and Viking-themed music in the vein of Heilung, Einar Selvik and Eivør.",
+    "genres": [
+      "neofolk",
+      "pagan folk",
+      "bardcore"
+    ]
+  },
+  "draft": "The line that does the most work in **My Mother Told Me** is the one sung twice: \"Hǫggva mann ok annan.\" Strike down one man, then another. It lands at the end of a verse about standing tall in the prow and steering a costly ship into harbor, and the song gives it the same even weight as everything else. That flatness is the point. This is a child's boast, and in a child's boast the killing and the beautiful oars sit side by side.\n\nThe whole song is that boast, told secondhand. \"Þat mælti mín móðir,\" it opens: my mother said. She said someone should buy me a ship and \"fley ok fagrar árar,\" fine oars, so I could go off with the Vikings. The pride doesn't belong to the speaker alone. It is borrowed from a parent's promise, and that is why the song feels warmer than its violence suggests. Under the swagger is a kid who wants to be seen and has been told, by the person who matters most, that they will be. The lyric never squares that tenderness with the blood, and it doesn't try.\n\nThe structure makes the wish stronger than the deed. The mother's verse comes around three times and the prow-and-axe verse only twice, so the song keeps circling back to the promise and finally rests there, on leaving with the Vikings, not on the killing. Every closing line is sung twice, the way you repeat something you want to be true.\n\nThe Pagan Minstrel, a self-taught, self-produced multi-instrumentalist and singer based in Valparaíso, Chile, keeps the setting spare. Plucked strings roll out a steady arpeggio, a bowed string holds long notes underneath, and a drum keeps a driving, even pulse at a moderate walk. Her voice is clear and resonant, a single line with no harmonies, delivered strong and declarative, more storyteller than balladeer. The room sounds natural and the mix is clean, closer to a recital than to a smoky fire circle.\n\nThe song comes from Perly i Lotry, and it opens the Viking Anthems EP, a set of covers that also takes on Einar Selvik's \"Helvegen\" and Eivør Pálsdóttir's \"Trøllabundin.\" That places it squarely in the bardcore and Nordic neofolk world shaped by Selvik, Eivør and Heilung, where old languages get sung over old instruments as a way of reaching back. What this version brings is restraint. It doesn't pile on drones and war chants. It trusts one voice and a few strings to carry an Old Norse lyric to listeners who mostly can't parse it, and the melody does the translating.\n\nIt sticks because you end up humming a child's promise of glory, carried by a mother's voice, before you notice what the glory was for.",
+  "factCheck": [
+    {
+      "claim": "\"Hǫggva mann ok annan\" is sung twice at the end of a verse about standing in the prow and steering a costly ship to harbor",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The line appears twice at the end of each prow verse, and the quote is exact."
+    },
+    {
+      "claim": "\"Þat mælti mín móðir\" opens the song and means 'my mother said'",
+      "verdict": "supported",
+      "note": "Matches the lyrics and the opening line cited in the researched facts."
+    },
+    {
+      "claim": "Quote \"fley ok fagrar árar\" (lowercase f)",
+      "verdict": "corrected",
+      "note": "The lyric reads \"Fley ok fagrar árar\". Restored the exact capitalization."
+    },
+    {
+      "claim": "The mother's verse comes around three times and the prow-and-axe verse twice; every closing line is sung twice; the song ends on the mother's verse",
+      "verdict": "supported",
+      "note": "The lyric structure is M-P-M-P-M, and each verse ends with a doubled line."
+    },
+    {
+      "claim": "Reading of a child's boast, borrowed pride, and unresolved tenderness and blood",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics. Slightly softened the assertion that the speaker is a child."
+    },
+    {
+      "claim": "The Pagan Minstrel is a self-taught, self-produced multi-instrumentalist and singer based in Valparaíso, Chile",
+      "verdict": "supported",
+      "note": "Bandcamp bio and location facts."
+    },
+    {
+      "claim": "Plucked strings roll out a steady arpeggio",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A bowed string holds long notes underneath",
+      "verdict": "supported",
+      "note": "All three passes mention a bowed string. Passes 1 and 3 agree on sustained notes, and pass 2 includes sustained notes."
+    },
+    {
+      "claim": "A drum keeps a driving, even pulse at a moderate walk",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 agree on the drum, a steady driving beat, and all passes agree on moderate tempo. Dropped 'walk'."
+    },
+    {
+      "claim": "Voice is clear and resonant, a single line, no harmonies, strong and declarative",
+      "verdict": "corrected",
+      "note": "Clear, resonant, single voice, no harmonies and strong delivery are agreed. 'Declarative' appears in only one pass, so replaced it with the agreed storytelling quality."
+    },
+    {
+      "claim": "The room sounds natural and the mix is clean",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "It doesn't pile on drones and war chants",
+      "verdict": "removed",
+      "note": "Pass 2 reports a sustained drone, and the others do not contradict it, so the statement about drones is unsupported. The no-chant half is backed by the single voice with no harmonies, but the line was rewritten around what the arrangement does contain."
+    },
+    {
+      "claim": "One voice and a few strings carry the lyric",
+      "verdict": "corrected",
+      "note": "Added the drum to match the arrangement."
+    },
+    {
+      "claim": "\"The song comes from Perly i Lotry\"",
+      "verdict": "corrected",
+      "note": "Bandcamp credits the original song to Perly i Lotry, and this is an Old Norse cover. Reworded to say so."
+    },
+    {
+      "claim": "It opens the Viking Anthems EP, a set of covers that includes Einar Selvik's \"Helvegen\" and Eivør Pálsdóttir's \"Trøllabundin\"",
+      "verdict": "supported",
+      "note": "Researched facts, including the Deezer credits."
+    },
+    {
+      "claim": "It sits in the bardcore and Nordic neofolk world 'shaped by' Selvik, Eivør and Heilung, where old languages get sung over old instruments",
+      "verdict": "corrected",
+      "note": "The lineage note supports the bardcore/neofolk placement and the 'in the vein of' comparison. 'Shaped by' and the claim about old instruments are unsupported history, so both were reworded."
+    },
+    {
+      "claim": "Listeners mostly can't parse the Old Norse; the melody does the translating",
+      "verdict": "supported",
+      "note": "Critic's opinion based on the Old Norse lyrics."
+    },
+    {
+      "claim": "Closing line: a child's promise of glory 'carried by a mother's voice'",
+      "verdict": "corrected",
+      "note": "The vocalist is not the mother. Reworded so the mother's words, not her voice, carry the promise."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1906,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014135,
+        "detail": "1105 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014485,
+        "detail": "1105 in / 178 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015635,
+        "detail": "1105 in / 224 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.068336,
+        "detail": "17898 in / 1254 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05748,
+        "detail": "3625 in / 2149 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.060376,
+        "detail": "4808 in / 5076 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "spotifyId": "4yhVBHZ8ZECtNYNPE8kve8",
+  "reviewedAt": "2026-11-11T21:14:08.585Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/6060045"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a slightly raspy, mid-range character. His delivery is conversational, with a slight country inflection. A second male voice provides a high harmony, often in unison with the lead, creating a fuller sound.\n\nThe tempo is moderate, with a relaxed, slightly swung groove. A drum kit plays a simple beat with a snare on beats two and four, and a kick drum on one and three. A bass guitar plays a walking bass line. An acoustic guitar strums chords, and an electric guitar plays arpeggiated figures.\n\nThe production is clean and polished. The vocals are upfront and clear, with a slight reverb. The instruments are well-balanced, creating a full, warm sound. The room sounds like a studio.\n\nThe arrangement is consistent throughout the excerpt. All instruments and vocals are present from the beginning and remain until the end. There are no significant changes in dynamics or instrumentation.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady, rhythmic strumming pattern. A bass guitar plays a simple, foundational line. Drums provide a consistent, mid-tempo beat with a snare drum backbeat. An electric guitar plays a clean, arpeggiated melody.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and driving, with a slight country-folk feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and direct. There are no harmonies.\n\nProduction:\nThe room sound is dry and intimate. The texture is clean and well-defined. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band. The acoustic guitar, bass, and drums maintain their parts throughout. The electric guitar enters with its arpeggiated melody around the 0:09 mark and continues. The vocals are present throughout. No instruments drop out.\n\nPass 3:\nA male voice sings lead, with a slightly raspy, mid-range character. His delivery is conversational, with a slight country inflection. A second male voice provides a high harmony, often a third above the lead.\n\nThe tempo is moderate, with a relaxed, slightly swung groove. The instrumentation includes an acoustic guitar, playing a fingerpicked pattern with a clear, bright tone. A bass guitar provides a simple, foundational line. Drums enter with a snare hit and then play a light, brushed pattern, emphasizing the backbeat.\n\nThe production is clean and polished, with a natural room sound. The texture is open and airy.\n\nThe arrangement builds gradually. The excerpt begins with acoustic guitar and lead vocal. The bass enters shortly after, followed by the harmony vocal. The drums enter around the 0:08 mark, adding a gentle rhythmic drive. No instruments drop out within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Grew Apart\" is on Donovan Woods' album Without People, released November 6, 2020 on his own Meant Well label.",
+        "source": "https://www.james-bunton.com/donovan-woods-8"
+      },
+      {
+        "claim": "\"Grew Apart\" was co-written by Donovan Woods, Travis Wood and Logan Wall.",
+        "source": "https://shorefire.com/releases/entry/donovan-woods-without-people-deluxe-album-out-today-3.26"
+      },
+      {
+        "claim": "Without People was produced by James Bunton and vocal producer Todd Clark.",
+        "source": "https://www.killbeatmusic.com/media-releases/2020/11/6/donovan-woods-new-lp-without-people-out-now-shares-new-video-for-we-used-to"
+      },
+      {
+        "claim": "Bunton's credit for the album says he produced everything except \"Clean Slate\", played some synths, guitars, percussion and bass, and recorded some of it.",
+        "source": "https://www.james-bunton.com/donovan-woods-8"
+      },
+      {
+        "claim": "The album was recorded remotely during the pandemic. Woods worked from a makeshift studio in his Toronto home and emailed files to Bunton. Backing musicians and collaborators added their parts online from their own homes.",
+        "source": "https://musictalkers.com/reviews/7580-review-donovan-woods-explores-themes-of-human-connection-with-stunning-new-album-without-people"
+      },
+      {
+        "claim": "Rolling Stone described \"Grew Apart\" as the album's first release, a looser, funkier song about someone struggling to hide his real feelings about a breakup.",
+        "source": "https://www.rollingstone.com/music/music-country/donovan-woods-new-album-without-people-1046717/"
+      },
+      {
+        "claim": "The Line of Best Fit says the chorus of \"Grew Apart\" is made up of the sad platitudes men tell each other after a break-up. The article also describes a video of a London-based dancer, Wing Yue Leung, dancing outdoors to the song.",
+        "source": "https://www.thelineofbestfit.com/features/longread/donovan-woods-gentle-storyteller-interview"
+      },
+      {
+        "claim": "Woods said a listener messaged him that the song nailed the idea that there's no reason for a breakup, you just grew apart.",
+        "source": "https://www.thelineofbestfit.com/features/longread/donovan-woods-gentle-storyteller-interview"
+      },
+      {
+        "claim": "Woods released a piano version of \"Grew Apart\" on the March 26, 2021 deluxe edition. His press release says he recorded the song solo and with country artist Logan Mize, and that the two versions together passed 15 million streams.",
+        "source": "https://shorefire.com/releases/entry/donovan-woods-without-people-deluxe-album-out-today-3.26"
+      },
+      {
+        "claim": "Woods is a Juno Award-winning Canadian singer-songwriter. He won the 2019 Juno for contemporary roots album for Both Ways, and his songs have been recorded by Tim McGraw and Charles Kelley.",
+        "source": "https://parade.com/1114455/laurawhitmore/donovan-woods-without-people-album/"
+      }
+    ],
+    "lineage": "Sources place Woods in Canadian folk and country singer-songwriter tradition, and Without People adds a pop-leaning, sleekly produced sound to that base.",
+    "genres": [
+      "folk",
+      "country",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "The tell is the word \"man.\" Tucked at the end of the last platitude in the chorus, \"It is what it is, man, it's alright,\" it tells you exactly who the narrator of **Grew Apart** is talking to: other guys, probably over a drink, probably asking what happened. And what happened, we learn in the verses, is ugly. There were nights she left, texts he received, a lie told \"with a straight face.\" He has the receipts. He just won't use them.\n\nDonovan Woods wrote the song with Travis Wood and Logan Wall, and the chorus is built entirely from things people say in quotation marks: \"It's for the best,\" \"We had a good run,\" \"We wanted different things.\" Each line is reported speech, a script he recites rather than a feeling he has. The Line of Best Fit called them the sad platitudes men tell each other after a breakup, and the song's real trick is how it hollows them out. By the time he lands on the hook, \"I'll just tell that we grew apart,\" the phrase is no longer an explanation. It's a cover story he's choosing, over and over, in public.\n\nWhy choose it? The second verse is where the song gets honest, and where it hurts most. He admits he doesn't know why he keeps quiet, then guesses that maybe he hopes it isn't really over. Then he turns on himself: \"Am I that weak?\" That question doesn't get an answer. The song holds two readings side by side and leaves both standing. Keeping her secrets is decent. It's also a way of keeping the door open. Loyalty and longing look identical from the outside, and he can't tell them apart from the inside either.\n\nRolling Stone heard it as looser and funkier than Woods' usual fare, and the arrangement plays the same game as the narrator. The groove is relaxed and slightly swung, with a snare on the backbeat, a simple bass line, acoustic guitar, and a clean electric guitar picking out arpeggios. A high harmony shadows Woods' slightly raspy, mid-range voice, and his delivery stays conversational, with a little country in the vowels. Nothing in the sound breaks. It's the musical version of \"I don't break.\"\n\nThat sleek, polished finish is the pop sheen Without People laid over Woods' Canadian folk and country songwriting, made remotely during the pandemic from his Toronto home with producer James Bunton. Here the gloss serves the story. Woods later cut a piano version and one with Logan Mize, and together they passed 15 million streams. Plenty of people, it seems, know this script by heart.\n\nThe song lets you hear a heartbreak through the exact words someone uses to hide it, so every easy \"it's alright\" lands like the worst thing he could say.",
+  "factCheck": [
+    {
+      "claim": "The line \"It is what it is, man, it's alright\" is the last platitude in the chorus, with \"man\" at the end of it",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics, but \"man\" falls in the middle of the line, not at its end. Changed to \"Tucked inside.\""
+    },
+    {
+      "claim": "Verses mention nights she left, texts he received, and a lie told \"with a straight face\"",
+      "verdict": "supported",
+      "note": "Lyrics: \"the nights you left,\" \"these texts I received,\" \"told that lie with a straight face.\" \"She\" is supported by \"She's a good girl.\""
+    },
+    {
+      "claim": "Co-written by Donovan Woods, Travis Wood and Logan Wall",
+      "verdict": "supported",
+      "note": "Shorefire."
+    },
+    {
+      "claim": "Quoted platitudes \"It's for the best,\" \"We had a good run,\" \"We wanted different things\" and the hook \"I'll just tell that we grew apart\"",
+      "verdict": "supported",
+      "note": "All match the lyrics exactly."
+    },
+    {
+      "claim": "The Line of Best Fit called them the sad platitudes men tell each other after a breakup",
+      "verdict": "supported",
+      "note": "The source says the chorus is made up of these platitudes."
+    },
+    {
+      "claim": "He admits he doesn't know why he keeps quiet and hopes it isn't really over; \"Am I that weak?\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics; the reading is interpretation."
+    },
+    {
+      "claim": "Rolling Stone heard it as looser and funkier than Woods' usual fare",
+      "verdict": "corrected",
+      "note": "Rolling Stone called it \"a looser, funkier song\" and made no comparison to his usual work. Removed the comparison."
+    },
+    {
+      "claim": "Relaxed, slightly swung groove, snare on the backbeat, simple bass line, acoustic guitar, clean electric guitar arpeggios",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element."
+    },
+    {
+      "claim": "High harmony shadows Woods' slightly raspy, mid-range voice; conversational delivery",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on the harmony and the rasp; all three agree on the conversational delivery."
+    },
+    {
+      "claim": "A little country in the vowels",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 say \"slight country inflection.\" Nothing supports \"in the vowels.\""
+    },
+    {
+      "claim": "Nothing in the sound breaks",
+      "verdict": "corrected",
+      "note": "This is a claim about the whole arrangement, and the passes disagree on how it develops. Reworded around the clean, polished production, which all three passes agree on."
+    },
+    {
+      "claim": "Without People adds a pop sheen over Woods' Canadian folk and country songwriting",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Made remotely during the pandemic from his Toronto home with producer James Bunton",
+      "verdict": "corrected",
+      "note": "The remote recording describes the album. Reworded to attribute it to the album. Bunton's producer credit is supported."
+    },
+    {
+      "claim": "Woods later cut a piano version and one with Logan Mize; together they passed 15 million streams",
+      "verdict": "corrected",
+      "note": "The press release says the piano version was recorded solo and with Mize, and that the two versions together passed 15 million streams. Reworded to match, and attributed to Woods."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1854,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014564,
+        "detail": "1098 in / 182 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014889,
+        "detail": "1098 in / 195 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014764,
+        "detail": "1098 in / 190 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078424,
+        "detail": "21612 in / 1520 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050472,
+        "detail": "4083 in / 1707 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052122,
+        "detail": "5256 in / 4161 out"
+      }
+    ]
+  }
+}

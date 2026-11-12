@@ -1,0 +1,215 @@
+{
+  "spotifyId": "2Y9uAjuMtEFNVj6hIyvC6B",
+  "reviewedAt": "2026-11-11T20:17:28.943Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8524702"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, with a clear, bright tone.\nBass guitar: plays a simple, foundational line.\nDrums: light, with brushes on the snare, and a kick drum.\n\nTempo and groove feel:\nSlow tempo, with a relaxed, gentle feel.\n\nVocals:\nA male voice, with a clear, slightly raspy character. The delivery is melodic and expressive, with a single vocal line throughout.\n\nProduction:\nThe sound is clean and well-defined, with a natural room feel. The texture is warm and inviting, with a polished, yet organic quality.\n\nArrangement:\nThe excerpt begins with acoustic guitar and vocals. The bass enters shortly after, followed by the drums. All instruments maintain a consistent presence throughout the excerpt, with no significant changes in dynamics or instrumentation.\n\nPass 2:\nInstruments: A male voice sings lead, accompanied by an acoustic guitar playing arpeggiated chords. A bass guitar plays a walking bass line. A second acoustic guitar plays a simple, sustained melody.\n\nThe tempo is slow, with a relaxed, slightly melancholic groove.\n\nThe lead voice is clear and resonant, with a slight rasp. It is delivered with a sustained, almost crooning quality. There are no harmonies.\n\nThe production sounds clean and polished, with a natural room sound. The texture is full but not dense.\n\nThe excerpt begins with the lead vocal and acoustic guitar. The bass guitar enters shortly after, followed by the second acoustic guitar. All instruments continue to play throughout the excerpt.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern, with a bass guitar providing a low-end foundation. A male voice sings the lead melody, with a slightly raspy, mid-range character. The delivery is clear and deliberate. There are no harmonies. The tempo is slow, creating a reflective, unhurried groove. The production sounds dry and intimate, with a clear, present texture. The room sounds small and close. The excerpt begins with the lead vocal and acoustic guitar, joined by the bass guitar. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Western Skies\" is track 5 on Dustin Kensrue's album Desert Dreaming, released April 5, 2024.",
+        "source": "https://www.brooklynvegan.com/thrices-dustin-kensrue-releasing-an-alt-country-album-shares-video-tour-dates/"
+      },
+      {
+        "claim": "Dustin Kensrue is credited as composer and producer on Desert Dreaming. The credits also list Matthew Barnhart (engineer), Scott Evans (mixing), Abe Levy (pedal steel), James McAlister (drums), Seth Richardson (double bass) and Cat Clyde (featured vocals).",
+        "source": "https://www.allmusic.com/album/desert-dreaming-mw0004168288"
+      },
+      {
+        "claim": "The album is self-produced. Kensrue made it with upright bassist Seth Richardson, pedal steel guitarist Abe Levy and drummer James McAlister.",
+        "source": "https://www.brooklynvegan.com/thrices-dustin-kensrue-releasing-an-alt-country-album-shares-video-tour-dates/"
+      },
+      {
+        "claim": "Kensrue wrote the album on acoustic guitar and recorded most of it at home.",
+        "source": "https://www.masqueradeatlanta.com/attraction/dustin-kensrue/"
+      },
+      {
+        "claim": "Kensrue said \"the setting really is the main character of the record.\" The ten songs mix biography, history and fiction and were partly inspired by childhood trips to the desert to see his grandparents.",
+        "source": "https://substreammagazine.com/2024/02/dustin-kensrue-announces-new-alt-country-album-shares-single-death-valley-honeymoon/"
+      },
+      {
+        "claim": "Kensrue described the desert on the record as both a literal place and a metaphor for being present and waking up to what is in front of you.",
+        "source": "https://music.mxdwn.com/2024/06/28/features/mxdwn-interview-dustin-kensrue-on-his-latest-album-touring-and-inspirations-behind-the-music/"
+      },
+      {
+        "claim": "The Scope Of called \"Western Skies\" an ominous ballad of reflection and regret that would make Johnny Cash proud. Sputnikmusic said it and \"The Heart of Sedona\" stand out for their vocal performances.",
+        "source": "https://thescopeof.com/2024/04/12/album-review-dustin-kensrue-desert-dreaming/"
+      },
+      {
+        "claim": "Kensrue performed \"Western Skies\" and \"The Heart of Sedona\" in a video session for The Noise. The session was framed around country legends such as Johnny Cash, Gene Autry and Patsy Cline.",
+        "source": "https://www.onestowatch.com/en/blog/watch-thrices-dustin-kensrue-explores-new-country-western-solo-album-desert-dreaming-exclusive-the-noise"
+      },
+      {
+        "claim": "Desert Dreaming is Kensrue's third solo studio album. Press material says it leans heavily on the country and western music of the 1950s and 60s.",
+        "source": "https://www.masqueradeatlanta.com/attraction/dustin-kensrue/"
+      },
+      {
+        "claim": "Kensrue is best known as the frontman of the post-hardcore band Thrice. He grew up in Southern California as a punk-rock-raised teenager who avoided country music.",
+        "source": "https://bottomofthehill.com/20240517.html"
+      }
+    ],
+    "lineage": "The song sits in the old-school country-western and Southwest alt-country/Americana tradition (Johnny Cash, Gene Autry, Patsy Cline, Bakersfield twang), approached by a Thrice frontman as a solo side project.",
+    "genres": [
+      "alt-country",
+      "country western",
+      "americana"
+    ]
+  },
+  "draft": "The joke in the chorus lands like a punch. **\"Western Skies\"** spends two verses on a familiar cowboy fantasy, freedom and open country and riding until the mountains rise, then lets its narrator name the culprits for how it all went wrong: \"Double-crossed by my blood / And some goddamn country song.\" It's self-pity with a sense of humor, and also a confession. He blames his restless nature, he blames the myth of the lone rider he soaked up from records, and underneath both he knows he chose this.\n\nThe cruelest detail is in the first verse. The love at home didn't fight the leaving. They said they'd \"never been a fan of fences\" and told him to go see what he could see. That generosity is what wrecks him later, when he realizes he never had to choose between the horizon and the person who already let him roam. By the fifth verse he's tossing down empty bottles at Angel's Landing, admitting the view must be lovely but he can't see it through his tears. Kensrue has said the desert on this record is both a real place and a metaphor for waking up to what's in front of you. This narrator wakes up too late, staring at a vista he can't take in.\n\nThe last verse is where the language goes old-fashioned and biblical: \"The band on my Stetson like thorns on my brow.\" The cowboy hat turns into a crown of thorns, and the costume of freedom becomes a penance. In the final chorus the line shrinks, losing the curse and the \"country,\" as if he's run out of the energy to blame the genre and only the bare fact of the song is left.\n\nThe sound stays out of his way. A fingerpicked acoustic guitar rolls through bright arpeggios, a bass holds down the low end, and the tempo is slow and unhurried. Nothing builds or drops out. The room feels close and natural, which fits a record Kensrue wrote on acoustic guitar and mostly cut at home. His voice is clear with a slight rasp, sung alone with no harmonies, deliberate and almost crooning. Sputnikmusic picked this as one of the album's standout vocal turns, and The Scope Of heard a ballad that would make Johnny Cash proud.\n\nThat Cash comparison is earned. Kensrue, the Thrice frontman who grew up a punk kid steering clear of country, built *Desert Dreaming* on the country and western of the 1950s and '60s. He doesn't wink at the form. He takes its lonesome-rider archetype and asks what it costs the people left at home.\n\nThe song gets under your skin by letting a man laugh bitterly at the songs that made leaving look noble, right up until he can't see the view he gave everything up for.",
+  "factCheck": [
+    {
+      "claim": "Chorus quote: \"Double-crossed by my blood / And some goddamn country song.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, and it is two consecutive lines."
+    },
+    {
+      "claim": "The song spends two verses on a cowboy fantasy of freedom and open country.",
+      "verdict": "corrected",
+      "note": "Only the first verse is the fantasy (ride the range, roam until the mountains rise). The second verse brings in the love at home. Reworded to the opening verse."
+    },
+    {
+      "claim": "He blames the myth of the lone rider he soaked up from records.",
+      "verdict": "corrected",
+      "note": "The lyric says \"country song\", not records. Changed to songs."
+    },
+    {
+      "claim": "\"never been a fan of fences\" and told him to go see what he could see.",
+      "verdict": "supported",
+      "note": "The quote is exact. The paraphrase of \"go see what I could see\" is fair."
+    },
+    {
+      "claim": "The cruelest detail is in the first verse (the love at home).",
+      "verdict": "corrected",
+      "note": "It appears in the second verse."
+    },
+    {
+      "claim": "By the fifth verse he's tossing down empty bottles at Angel's Landing.",
+      "verdict": "corrected",
+      "note": "There is no fifth verse. The bottle stanza is the fourth stanza. The lyric has him stumbling beneath western skies and says the view from Angel's Landing must be lovely, so it does not place him there. Reworded."
+    },
+    {
+      "claim": "Admits the view must be lovely but he can't see it through his tears.",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "Kensrue has said the desert on this record is both a real place and a metaphor for waking up to what's in front of you.",
+      "verdict": "supported",
+      "note": "Matches the mxdwn interview fact."
+    },
+    {
+      "claim": "Quote: \"The band on my Stetson like thorns on my brow.\" It sits in the last verse, with old-fashioned, biblical language.",
+      "verdict": "supported",
+      "note": "The quote is exact. The last verse falls before the final chorus by the lyric structure. The biblical reading is interpretation."
+    },
+    {
+      "claim": "In the final chorus the line shrinks to \"a song\", dropping the curse and \"country\".",
+      "verdict": "supported",
+      "note": "The lyrics' structure shows it (\"And a song\")."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with bright arpeggios.",
+      "verdict": "corrected",
+      "note": "Fingerpicked and arpeggiated are backed by multiple passes. \"Bright\" appears in only one pass, so it was removed."
+    },
+    {
+      "claim": "Bass holds down the low end; the tempo is slow and unhurried.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Nothing builds or drops out.",
+      "verdict": "removed",
+      "note": "This describes the arc of the song, which the excerpt cannot establish."
+    },
+    {
+      "claim": "The room feels close and natural.",
+      "verdict": "corrected",
+      "note": "\"Natural room sound\" is backed by two passes. \"Close\" is backed by only one. Kept only natural."
+    },
+    {
+      "claim": "Fits a record Kensrue wrote on acoustic guitar and mostly cut at home.",
+      "verdict": "supported",
+      "note": "Matches the Masquerade source."
+    },
+    {
+      "claim": "Voice is clear with a slight rasp, alone with no harmonies.",
+      "verdict": "supported",
+      "note": "All passes agree on the clear, raspy voice. Two passes say no harmonies, and the third says a single vocal line."
+    },
+    {
+      "claim": "The delivery is deliberate and almost crooning.",
+      "verdict": "removed",
+      "note": "Each descriptor appears in only one pass."
+    },
+    {
+      "claim": "Sputnikmusic picked it as a standout vocal performance; The Scope Of heard a ballad to make Johnny Cash proud.",
+      "verdict": "supported",
+      "note": "Matches the research."
+    },
+    {
+      "claim": "Kensrue is the Thrice frontman who grew up a punk kid steering clear of country.",
+      "verdict": "supported",
+      "note": "Matches the Bottom of the Hill source."
+    },
+    {
+      "claim": "He built Desert Dreaming on the country and western of the 1950s and '60s.",
+      "verdict": "corrected",
+      "note": "The source says the album leans heavily on that music. Softened to match."
+    },
+    {
+      "claim": "Interpretive readings (self-pity with humor, generosity that wrecks him, the crown of thorns, what the song costs the people left at home).",
+      "verdict": "supported",
+      "note": "These are critical readings grounded in the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2592,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012967,
+        "detail": "1099 in / 118 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013617,
+        "detail": "1099 in / 144 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014342,
+        "detail": "1099 in / 173 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.139826,
+        "detail": "47243 in / 1534 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053104,
+        "detail": "3711 in / 1913 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06219,
+        "detail": "4870 in / 5245 out"
+      }
+    ]
+  }
+}

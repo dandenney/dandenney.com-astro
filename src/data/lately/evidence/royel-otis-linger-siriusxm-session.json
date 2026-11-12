@@ -1,0 +1,192 @@
+{
+  "spotifyId": "2dono2Koz7DEvGwxUsmMLq",
+  "reviewedAt": "2026-11-11T21:08:45.703Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30073191"
+  },
+  "listening": "Pass 1:\nA clean electric guitar plays arpeggiated chords with a bright, slightly overdriven tone. A second electric guitar plays a simple, melodic line. The tempo is moderate, with a driving, steady groove. A male voice sings in a clear, slightly nasal tone, with a relaxed, almost conversational delivery. He is joined by a second male voice for harmonies, often singing in unison or a close third. The production is clean and polished, with a sense of a medium-sized room. The texture is full but not dense. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.\n\nPass 2:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a walking line. Drums play a steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, driving rock feel.\n\nVocals:\nA male voice sings with a clear, slightly nasal character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe room sounds open with a slight reverb. The texture is clean and bright. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band. The guitar plays a consistent arpeggiated pattern. The drums maintain a steady beat throughout. No instruments drop out or build significantly within this excerpt.\n\nPass 3:\nA male voice sings with a slightly nasal, mid-range character, delivering a melody with a relaxed, almost conversational feel. He is joined by a second male voice in harmony, singing in a higher register. The tempo is moderate, with a driving, steady groove.\n\nA clean electric guitar plays arpeggiated chords, providing a bright, rhythmic foundation. A bass guitar plays a walking line, adding depth and propulsion. Drums enter with a snare hit and then play a steady beat with a closed hi-hat, kick, and snare.\n\nThe production is clean and polished, with a clear separation of instruments. The room sound is neutral, suggesting a studio recording. The arrangement builds as the drums enter, adding energy and fullness to the sound. The vocals are prominent and well-balanced with the instrumentation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Royel Otis's \"Linger (SiriusXM Session)\" is a cover of The Cranberries' 1992 song \"Linger\".",
+        "source": "https://www.whosampled.com/cover/1228405/Royel-Otis-Linger-(SiriusXM-Session)-The-Cranberries-Linger/"
+      },
+      {
+        "claim": "Deezer credits the track's writing to Dolores O'Riordan and its composing to Dolores O'Riordan and Noel Hogan. Both are Cranberries members.",
+        "source": "https://www.deezer.com/en/track/2816067512"
+      },
+      {
+        "claim": "The duo recorded the cover for SiriusXM's Alt Nation channel at the SiriusXM studios in New York City. They also performed their own song \"Sofa King\" in the same session.",
+        "source": "https://www.siriusxm.com/blog/royel-otis-cranberries-linger-cover"
+      },
+      {
+        "claim": "The cover came soon after the duo's viral version of Sophie Ellis-Bextor's \"Murder on the Dancefloor\".",
+        "source": "https://www.siriusxm.com/blog/royel-otis-cranberries-linger-cover"
+      },
+      {
+        "claim": "The duo chose \"Linger\" in a panic for their April SiriusXM appearance because they weren't prepared. Otis Pavlovic said there was less thought behind it than it might sound.",
+        "source": "https://www.pastemagazine.com/music/royel-otis/royel-otis-linger-in-the-glow-of-stardom"
+      },
+      {
+        "claim": "The \"Linger / Heading For The Door (Sirius XM Session)\" release came out on 31 May 2024 and runs 3:06 for \"Linger\". The label credit is OURNESS PTY LTD.",
+        "source": "https://www.deezer.com/en/track/2816067512"
+      },
+      {
+        "claim": "The band released the live SiriusXM session on 31 May 2024. A June 2024 post from them called \"Heading For The Door\" one of their favourite songs to perform live.",
+        "source": "https://x.com/RoyelOtis/status/1801344561958015420?lang=en"
+      },
+      {
+        "claim": "The cover gave Royel Otis their first Billboard Hot 100 entry, debuting at No. 94 on the chart dated Aug. 10, 2024.",
+        "source": "https://www.billboard.com/music/chart-beat/royel-otis-first-hot-100-cranberries-linger-cover-1235749206/"
+      },
+      {
+        "claim": "Paste reported that the \"Linger\" cover had outpaced their \"Murder on the Dancefloor\" success, with 18 million YouTube views and 72 million streams.",
+        "source": "https://www.pastemagazine.com/music/royel-otis/royel-otis-linger-in-the-glow-of-stardom"
+      },
+      {
+        "claim": "Royel Otis are a Sydney indie pop duo formed in 2019 by Royel Maddell and Otis Pavlovic. Their debut album Pratts & Pain was released on 16 February 2024 and produced by Dan Carey.",
+        "source": "https://en.wikipedia.org/wiki/Royel_Otis"
+      }
+    ],
+    "lineage": "The cover sits in the Australian indie-pop and guitar-pop duo tradition, where viral reinterpretations of earlier hits (Sophie Ellis-Bextor's \"Murder on the Dancefloor\", then The Cranberries' 1990s alt-rock \"Linger\") became a key part of the duo's rise.",
+    "genres": [
+      "indie pop",
+      "indie rock",
+      "guitar pop"
+    ]
+  },
+  "draft": "\"Do you have to let it linger?\" is not really a question. It's a plea from someone who can't leave and wants the other person to do the leaving for them. In **Linger**, Royel Otis keep that plea intact and set it over a clean, bright electric guitar picking out arpeggiated chords. A walking bass line and a steady kick, snare, and hi-hat drive it at a moderate tempo. The sound is easy to like, and the words underneath it are not easy at all.\n\nThe song belongs to The Cranberries, whose 1992 original was written by Dolores O'Riordan, with the music composed by O'Riordan and Noel Hogan. Its narrator holds evidence and still can't act on it. \"So why were you holding her hand?\" lands as a direct hit, and the questions that follow (\"Were you lying all the time?\") show someone circling an answer they already know. The craft is in the self-protection mixed into the hurt. \"I'm sure I might be rude but it's just your attitude\" apologizes and accuses in one breath, as if the narrator has to excuse their own anger before they're allowed to feel it. Then the chorus gives up the fight: \"You've got me wrapped around your finger / Do you have to let it linger?\" The pride and the surrender never settle. By the end the verses fall away and only the chorus is left, \"do you have to\" stacked three times, the plea repeating because nothing has changed.\n\nRoyel Otis, the Sydney duo of Royel Maddell and Otis Pavlovic, sing it in a clear, slightly nasal voice with a relaxed, nearly conversational delivery, and a second voice comes in to harmonize. That ease turns the song into something more resigned and less wounded. It's heartbreak told to a friend after the worst has passed. The harmony helps, making the confession sound shared rather than private. The production is polished and the groove holds one steady gear. If there's a drag, it's that the band never pushes against the lyric's desperation, but the restraint suits a narrator who has stopped expecting anything.\n\nThey recorded it for SiriusXM's Alt Nation in New York, picking the song in a panic because they weren't prepared. Pavlovic said there was less thought behind it than it might sound. It became their first Billboard Hot 100 entry, debuting at No. 94, and Paste reported it had outpaced their \"Murder on the Dancefloor\" cover with 72 million streams. Maybe that lack of planning is why it works. It sounds like a song they already knew by heart.\n\nThe bright, unbothered strum keeps you humming along until you notice you're singing the plea of someone who knows they're being lied to and still can't let go.",
+  "factCheck": [
+    {
+      "claim": "Guitar is a clean electric playing arpeggiated chords, bright tone",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A walking bass line and a steady kick, snare and hi-hat drive it at a moderate tempo",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on bass and drums. All three agree on moderate tempo."
+    },
+    {
+      "claim": "The Cranberries' 1992 original was written by Dolores O'Riordan, with the music composed by O'Riordan and Noel Hogan",
+      "verdict": "supported",
+      "note": "Matches the Deezer credits and the 1992 date in the researched facts. The draft now also names the track as Royel Otis's cover, which the facts support."
+    },
+    {
+      "claim": "Lyric quotes: 'Do you have to let it linger?', 'So why were you holding her hand?', 'I'm sure I might be rude but it's just your attitude'",
+      "verdict": "supported",
+      "note": "Exact matches to the lyrics. 'Were you lying all the time?' and the 'wrapped around your finger' chorus line were dropped as quotes to keep within the three-line limit, but the lyrics still support paraphrasing them."
+    },
+    {
+      "claim": "By the end the verses fall away and only the chorus is left, 'do you have to' stacked three times",
+      "verdict": "supported",
+      "note": "The lyric structure shows the closing stanza is chorus only, with 'do you have to' three times. Reworded as a description of the lyric sheet."
+    },
+    {
+      "claim": "Royel Otis are a Sydney duo of Royel Maddell and Otis Pavlovic",
+      "verdict": "supported",
+      "note": "Wikipedia fact in the packet."
+    },
+    {
+      "claim": "Clear, slightly nasal voice with relaxed, nearly conversational delivery",
+      "verdict": "supported",
+      "note": "All passes agree on clear and slightly nasal. Passes 1 and 3 agree on conversational."
+    },
+    {
+      "claim": "A second voice comes in to harmonize",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 agree on harmony (pass 2 disagrees). 'Comes in' implies timing, so it was changed to 'joins in harmony'."
+    },
+    {
+      "claim": "The production is polished and the groove holds one steady gear",
+      "verdict": "supported",
+      "note": "All passes agree on polished and a steady groove."
+    },
+    {
+      "claim": "The band never pushes against the lyric's desperation",
+      "verdict": "corrected",
+      "note": "'Never' makes a whole-song claim about the arrangement. Reworded as an opinion about how the playing sounds."
+    },
+    {
+      "claim": "Recorded for SiriusXM's Alt Nation in New York",
+      "verdict": "supported",
+      "note": "SiriusXM blog."
+    },
+    {
+      "claim": "Picked the song in a panic because they weren't prepared; Pavlovic said there was less thought behind it than it might sound",
+      "verdict": "supported",
+      "note": "Paste."
+    },
+    {
+      "claim": "First Billboard Hot 100 entry, debuting at No. 94",
+      "verdict": "supported",
+      "note": "Billboard."
+    },
+    {
+      "claim": "Paste reported it outpaced their 'Murder on the Dancefloor' cover with 72 million streams",
+      "verdict": "supported",
+      "note": "Paste."
+    },
+    {
+      "claim": "Closing: singing the plea of someone who knows they're being lied to",
+      "verdict": "corrected",
+      "note": "The lyrics pose lying as a question ('Were you lying all the time?'). Changed to 'suspects'."
+    },
+    {
+      "claim": "Interpretive readings (plea, self-protection, resignation, heartbreak told to a friend)",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics and supported sound details."
+    }
+  ],
+  "lint": [
+    "evidence"
+  ],
+  "cost": {
+    "totalUsd": 0.2367,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013911,
+        "detail": "1103 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014136,
+        "detail": "1103 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013111,
+        "detail": "1103 in / 123 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.122964,
+        "detail": "38932 in / 1510 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052956,
+        "detail": "3674 in / 1913 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056694,
+        "detail": "4842 in / 4701 out"
+      }
+    ]
+  }
+}

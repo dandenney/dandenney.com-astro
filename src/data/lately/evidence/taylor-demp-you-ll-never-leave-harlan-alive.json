@@ -1,0 +1,195 @@
+{
+  "spotifyId": "04j1SzQKhqFPjkCTw4kqSN",
+  "reviewedAt": "2026-11-11T21:04:10.812Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/22972702"
+  },
+  "listening": "Pass 1:\nA male voice sings in a clear, slightly nasal tenor, with a gentle vibrato. He is accompanied by an acoustic guitar, playing a fingerpicked melody with a steady, medium tempo. The groove is relaxed and flowing. The production is clean and polished, with a natural room sound. The texture is sparse, with the guitar and voice prominent. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds.\n\nPass 2:\nA male voice sings with a clear, slightly nasal tone, using a relaxed, conversational delivery. He is accompanied by a single acoustic guitar, strumming a steady, medium tempo with a gentle, flowing groove. The guitar plays a simple chord progression, providing a warm, open texture. The production is clean and intimate, suggesting a close-miked recording in a dry room. The arrangement is sparse, with only the voice and guitar present throughout the excerpt. No other instruments enter or drop out.\n\nPass 3:\nA male voice sings with a clear, slightly nasal character, delivering the melody with a gentle, almost spoken quality. He is accompanied by a female voice in harmony, singing the same melody an octave higher.\n\nThe instruments include an acoustic guitar, playing a fingerpicked accompaniment with a clear, resonant tone. A bass guitar provides a steady, foundational line. A mandolin occasionally adds melodic fills and counter-melodies.\n\nThe tempo is slow, creating a relaxed and reflective groove. The production is clean and polished, with a natural room sound that allows the instruments and voices to blend smoothly. The texture is warm and inviting.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning. There are no significant changes in dynamics or instrumentation within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Taylor Demp's \"You'll Never Leave Harlan Alive\" is a one-song release from October 2023. It runs 4:28 and is credited © and ℗ Taylor Demp.",
+        "source": "https://www.iheart.com/artist/taylor-demp-41299352/albums/youll-never-leave-harlan-alive-236214093/"
+      },
+      {
+        "claim": "Taylor Demp announced the release on TikTok on 2023-10-23 with a banjo-tagged post saying the song was out.",
+        "source": "https://www.tiktok.com/@taylor.demp/video/7293305010761436462?lang=en"
+      },
+      {
+        "claim": "The song was written and first recorded by Darrell Scott, who wrote it in 1997 and put it on his debut album Aloha from Nashville, so Demp's version is a cover.",
+        "source": "https://en.wikipedia.org/wiki/You%27ll_Never_Leave_Harlan_Alive"
+      },
+      {
+        "claim": "Darrell Scott wrote the song after seeing the phrase on a tombstone in a Harlan County cemetery while looking for his great-grandfather's grave. The lyrics are about the hard lives of coal miners.",
+        "source": "https://en.wikipedia.org/wiki/You%27ll_Never_Leave_Harlan_Alive"
+      },
+      {
+        "claim": "Patty Loveless recorded the song on her 2001 album Mountain Soul, with Darrell Scott playing banjo. Demp has also posted a cappella performances credited to Patty Loveless's version.",
+        "source": "https://en.wikipedia.org/wiki/Darrell_Scott"
+      },
+      {
+        "claim": "Demp has posted banjo-driven performances of the song on TikTok. One 2025 post has more than 72,000 likes, and another has more than 122,000.",
+        "source": "https://www.tiktok.com/@taylor.demp/video/7369387297118358830"
+      },
+      {
+        "claim": "Demp played the song at Country Summer Music Festival, according to a TikTok recap.",
+        "source": "https://www.tiktok.com/@taylor.demp/video/7653546860405132557"
+      },
+      {
+        "claim": "A \"Campfire Acoustic\" version of the song is on YouTube under Taylor Demp's name, uploaded in February 2025.",
+        "source": "https://www.youtube.com/watch?v=WoNc7ee8NkA"
+      },
+      {
+        "claim": "Later Taylor Demp singles are Good Mourning (July 2024), Little Spouse (May 2025), a Little Spouse wedding version (July 2025) and Secondhand Insane (December 2025). Deezer credits Demp and Brad Brownfield as writers on all four.",
+        "source": "https://www.deezer.com/us/artist/230204055"
+      },
+      {
+        "claim": "Taylor Demp's Facebook page lists 445k followers on TikTok. The artist is part of the Nashville singer-songwriter scene and is tagged in videos with Megan Moroney and Brad Brownfield, who is credited on the later singles.",
+        "source": "https://www.facebook.com/p/Taylor-Demp-Music-61573601204954/"
+      }
+    ],
+    "lineage": "The song sits in the Appalachian coal-mining ballad and bluegrass tradition that Darrell Scott's 1997 song started, which Patty Loveless, Brad Paisley and Chris Stapleton later took up, and Demp brings it to a TikTok-era banjo country audience.",
+    "genres": [
+      "country",
+      "bluegrass",
+      "appalachian folk"
+    ]
+  },
+  "draft": "The whole song turns on one changed line. The first time the chorus comes around, it ends on a life spent thinking about how to get away. The last time, the same melody lands on a life spent \"digging coal from the bottom of your grave.\" Between those two choruses a family gets out of Harlan County and gets pulled back in, and the daydream of escape becomes work done inside the hole that will hold you.\n\n**You'll Never Leave Harlan Alive** belongs to Darrell Scott. He wrote it in 1997 after seeing the phrase on a tombstone in a Harlan County cemetery while he was searching for his great-grandfather's grave, and he put it on his debut, *Aloha from Nashville*. Patty Loveless took it up on 2001's *Mountain Soul*, with Scott himself on banjo, and Brad Paisley and Chris Stapleton have since carried it further down the line of Appalachian coal ballads. Taylor Demp, a Nashville songwriter with a big TikTok following, has made it something close to a calling card. There are banjo-driven clips, a cappella takes credited to the Loveless version, a campfire acoustic cut, and a festival set that included it.\n\nThe narrator is a descendant reading family history off a hillside stone, and pride and grief share every verse. The tenderest moment comes when Grandma sells cheap and the family moves west of Pineville to a farm on the Big Richland. The narrator wasn't there, so the scene has to be imagined: \"I'll bet\" they danced a jig, and they sang a taunting new song, \"Who said we'd never leave Harlan alive?\" It's a gift to the dead, a grandchild granting them a night of joy, already knowing what the next verse holds. Tobacco stops selling, Granddad goes back to dig and mails the money home, and he never comes out. The song doesn't call it a tragedy. It calls it what he did to survive, and the love in that is as plain as the loss. Even the northeastern buyer waving hundred-dollar bills dies there, a grim evening-up that the song reports without any gloating.\n\nDemp keeps the setting spare: fingerpicked acoustic guitar at an unhurried medium tempo, a clean, warm recording, and a clear, slightly nasal voice delivered in an almost conversational way. That restraint fits. It plays the story as family memory rather than melodrama, and it leaves the darkness to details like a sun that clears the ridge at ten and drops behind it at three. The cost is that the groove stays so relaxed that the final chorus's turn rests entirely on the words. A half-listening ear could sail past the grave.\n\nIt sticks because it gives you the family's one good night of freedom, lets you believe in it, and then sings the same tune over the man who went back underground.",
+  "factCheck": [
+    {
+      "claim": "First refrain ends on 'thinking of how to get away'; last ends on 'digging coal from the bottom of your grave'",
+      "verdict": "supported",
+      "note": "The lyrics repeat the sun/cup stanza with exactly this changed final line. The quote matches."
+    },
+    {
+      "claim": "The same melody lands on both lines",
+      "verdict": "removed",
+      "note": "No listening pass supports a claim about the melody at a particular point in the song."
+    },
+    {
+      "claim": "A family gets out of Harlan County and gets pulled back in",
+      "verdict": "supported",
+      "note": "The lyrics have them moving west of Pineville, then Granddad digging Harlan coal. Interpretive framing."
+    },
+    {
+      "claim": "Darrell Scott wrote it in 1997 after seeing the phrase on a tombstone in a Harlan County cemetery while looking for his great-grandfather's grave; it's on his debut Aloha from Nashville",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Patty Loveless recorded it on 2001's Mountain Soul with Scott on banjo",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Brad Paisley and Chris Stapleton have since carried it further in the Appalachian coal-ballad tradition",
+      "verdict": "supported",
+      "note": "Backed by the lineage note."
+    },
+    {
+      "claim": "Taylor Demp is a Nashville songwriter with a big TikTok following",
+      "verdict": "supported",
+      "note": "Nashville singer-songwriter scene; 445k TikTok followers."
+    },
+    {
+      "claim": "Banjo-driven clips, a cappella takes credited to the Loveless version, a campfire acoustic cut, and a festival set that included it",
+      "verdict": "supported",
+      "note": "All appear in the researched facts."
+    },
+    {
+      "claim": "Lyric quotes: 'I'll bet', 'Who said we'd never leave Harlan alive?', 'digging coal from the bottom of your grave'",
+      "verdict": "supported",
+      "note": "All match the lyrics exactly and stay within the quote limits."
+    },
+    {
+      "claim": "Grandma sells cheap, the family moves west of Pineville to a farm on the Big Richland; tobacco stops selling; Granddad digs coal and sends money home and never leaves alive; the northeastern buyer never left alive either",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The setting is spare",
+      "verdict": "removed",
+      "note": "Only two passes say voice and guitar alone. The third hears bass, mandolin and a harmony voice."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree."
+    },
+    {
+      "claim": "Unhurried medium tempo",
+      "verdict": "corrected",
+      "note": "Passes say medium or slow, all relaxed. Changed to a relaxed tempo."
+    },
+    {
+      "claim": "Clean, warm recording; clear, slightly nasal voice; almost conversational delivery",
+      "verdict": "supported",
+      "note": "All three passes agree on clean and on the clear, slightly nasal voice. Two agree on warm, and two on conversational or spoken delivery."
+    },
+    {
+      "claim": "The groove stays so relaxed that the final chorus's turn rests entirely on the words",
+      "verdict": "corrected",
+      "note": "This described the arrangement at a specific point in the song. Reframed as the critic's opinion about the relaxed delivery and the lyrics."
+    },
+    {
+      "claim": "A sun that clears the ridge at ten and drops behind it at three",
+      "verdict": "corrected",
+      "note": "The lyrics say the sun comes up about ten and goes down about three. 'Ridge' is not in the lyrics and was removed."
+    },
+    {
+      "claim": "Same tune sung over the man who went back underground",
+      "verdict": "corrected",
+      "note": "The melody claim is unsupported. Reworded."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2744,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012551,
+        "detail": "1102 in / 101 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0004035,
+        "detail": "1102 in / 93 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013976,
+        "detail": "1102 in / 158 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.145136,
+        "detail": "48808 in / 1752 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.073336,
+        "detail": "3649 in / 2937 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052878,
+        "detail": "4859 in / 4316 out"
+      }
+    ]
+  }
+}

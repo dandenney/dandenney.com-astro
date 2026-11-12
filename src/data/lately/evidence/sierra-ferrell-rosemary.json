@@ -1,0 +1,205 @@
+{
+  "spotifyId": "2WzbImUwpFZYnl6Zn44API",
+  "reviewedAt": "2026-11-11T21:00:30.858Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8991561"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, then strummed.\nAcoustic bass: plucked.\n\nTempo and groove feel:\nThe tempo is moderate. The groove is a gentle, flowing swing.\n\nVocals:\nA single voice, with a slightly raspy, clear character. The delivery is melodic and conversational. No harmonies are present.\n\nProduction:\nThe room sounds open, with a natural, unpolished texture. The production is raw, with the instruments sounding close-miked.\n\nArrangement:\nThe excerpt begins with fingerpicked acoustic guitar and plucked acoustic bass. The guitar transitions to strumming as the voice enters. The bass continues its plucked line throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar, played with a fingerpicking style, and a banjo, also fingerpicked.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a gentle, rolling folk rhythm.\n\nVocals:\nA single voice, with a clear, slightly nasal character. The delivery is unadorned and direct. No harmonies are present.\n\nProduction:\nThe room sounds open, with a natural, unpolished texture. The production is raw, allowing the instruments and voice to sound present and unmanipulated.\n\nArrangement:\nThe excerpt begins with acoustic guitar and banjo playing together. The banjo drops out briefly around the 0:10 mark, then re-enters. The voice enters around 0:24, singing over the guitar and banjo.\n\nPass 3:\nInstruments:\nAn acoustic guitar is fingerpicked, playing a bass line and arpeggiated chords. A second acoustic guitar strums chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a gentle, flowing feel, with a slight swing.\n\nVocals:\nA single voice sings with a clear, slightly nasal character. The delivery is relaxed and conversational. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, suggesting a small room. The texture is clean and unadorned. The production is raw rather than polished.\n\nArrangement:\nThe excerpt begins with the two guitars playing together. The voice enters at 0:24, singing the melody over the existing guitar parts. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Rosemary\" is track 9 on Sierra Ferrell's Trail of Flowers, released March 22, 2024 on Rounder Records and distributed by Concord.",
+        "source": "https://en.wikipedia.org/wiki/Trail_of_Flowers"
+      },
+      {
+        "claim": "Ferrell is the sole credited writer of \"Rosemary\". Only \"American Dreaming\", \"Dollar Bill Bar\", \"Wish You Well\", \"Money Train\" and \"Lighthouse\" carry co-writers.",
+        "source": "https://www.discogs.com/release/30228794-Sierra-Ferrell-Trail-Of-Flowers"
+      },
+      {
+        "claim": "Trail of Flowers was produced, recorded and mixed by Eddie Spear and mastered by Paul Blakemore. Gary Paczosa produced, recorded and mixed only \"Lighthouse\".",
+        "source": "https://americanahighways.org/2024/03/28/review-sierra-ferrell-trail-of-flowers/"
+      },
+      {
+        "claim": "The album was primarily recorded at Sound Emporium Studios in Nashville, with additional production by Gary Paczosa.",
+        "source": "https://shorefire.com/releases/entry/sierra-ferrell-trail-of-flowers-eagerly-awaited-album-out-march-22-via-rounder-records"
+      },
+      {
+        "claim": "Ferrell is credited with acoustic guitar and vocals on \"Rosemary\".",
+        "source": "https://en.wikipedia.org/wiki/Trail_of_Flowers"
+      },
+      {
+        "claim": "Rolling Stone says \"Rosemary\" has been floating around Ferrell's catalog for years, so it predates the album.",
+        "source": "https://www.rollingstone.com/music/music-features/sierra-ferrell-announces-trail-of-flowers-album-1234948512/"
+      },
+      {
+        "claim": "Saving Country Music describes \"Rosemary\" as a playful tale that turns into a murder ballad, and one long-time Ferrell fans will already know.",
+        "source": "https://savingcountrymusic.com/album-review-sierra-ferrells-trail-of-flowers/"
+      },
+      {
+        "claim": "Paste says \"Rosemary\" uses a surrealist touch recalling One Hundred Years of Solitude. Never-ending rain gives way to a love rivalry that ends in a murder fantasy.",
+        "source": "https://www.pastemagazine.com/music/sierra-ferrell/trail-of-flowers-finds-sierra-ferrells-songwriting-more-vibrant-than-ever"
+      },
+      {
+        "claim": "Ferrell's label bio calls \"Rosemary\" the album's most haunting moment: a stark story-song with a few bars of soulful yodeling, rooted in old-time music.",
+        "source": "https://www.showboxpresents.com/events/detail/1320646"
+      },
+      {
+        "claim": "Ferrell said of Trail of Flowers that she wanted a fuller sound with bigger drums while staying true to the stripped-down feel of old-time music.",
+        "source": "https://jambands.com/news/2024/01/18/sierra-ferrell-details-new-lp-trail-of-flowers-shares-dollar-bill-bar/"
+      }
+    ],
+    "lineage": "\"Rosemary\" is an old-time, Appalachian-rooted murder ballad from a West Virginia-born, Nashville-based singer-songwriter who works in bluegrass, mid-century country and jazz traditions.",
+    "genres": [
+      "americana",
+      "old-time",
+      "country"
+    ]
+  },
+  "draft": "The line that turns **Rosemary** inside out is one it repeats until it changes meaning. \"Rosemary waits for you\" first sounds like a rival up on the hillside, patient and inviting, the place a husband slips off to. By the last verse the same words mark a grave under a flower bush. Sierra Ferrell, the song's sole writer, never announces the turn. The narrator just says they made a garden and dug it in the morning, and the old phrase comes back carrying a body.\n\nSaving Country Music called it a playful tale that becomes a murder ballad, and that slide is the song's real trick. It opens on a wedding \"way back on the mountain,\" then sours into talk of evil and a witch riding the narrator's back, a way of naming a rival that also lets the narrator off the hook. Then comes the rain, which Paste compared to the surreal weather of *One Hundred Years of Solitude*. It never stops. \"That dam, it couldn't hold one more drop\" is grief described as a flood, and the narrator expects the river to finish the job. It doesn't. The worst moment of the song is survival. Waking up alive, the narrator walks back up the mountain with a different plan.\n\nWhat makes it unsettling is that the feelings never sort themselves out. Heartbreak sits right beside self-justification. The closing lines don't confess or repent. They exhale: \"Now I feel like I can relax,\" sung over and over until the calm itself becomes the scariest thing in the song. You understand the narrator completely, and that's the problem.\n\nThe arrangement stays out of the way. Ferrell is credited with acoustic guitar and vocals, and the sound is fingerpicked guitar alongside strummed chords at a moderate, gently swinging pace. The room is open and unpolished, close enough to hear the strings. There are no harmonies to soften anything. The voice is clear with a slight nasal edge, delivered like someone telling you a story over a fence, conversational even while describing a killing. The label's own description notes a few bars of soulful yodeling, and the lyric drops a yodel right where the narrator expects to die, a bit of mountain play at the darkest point.\n\nFerrell said she wanted *Trail of Flowers*, recorded largely at Sound Emporium in Nashville with Eddie Spear producing, to sound fuller, with bigger drums, while staying true to old-time music's stripped-down feel. Rosemary sits firmly at the stripped-down end. It's an older song, floating around Ferrell's catalog for years before the album, and long-time fans knew it already. It belongs to the murder ballad, where heartbreak and violence are told in a friendly tune, and it keeps that form's coldest habit: the singer never raises the voice.\n\nIt sticks because it walks you, one reasonable step at a time, from a wedding vow to a fresh grave, then hands you the narrator's relief and dares you to share it.",
+  "factCheck": [
+    {
+      "claim": "\"Rosemary waits for you\" repeats and shifts meaning; by the last verse it marks something under a flower bush",
+      "verdict": "supported",
+      "note": "The lyrics repeat the line, and the final instance follows 'underneath that flower bush'. The grave reading is interpretation."
+    },
+    {
+      "claim": "The place a husband slips off to",
+      "verdict": "corrected",
+      "note": "The lyrics ('you went back to Rosemary') don't say the departed partner is a husband. Changed to 'lover'."
+    },
+    {
+      "claim": "Sierra Ferrell is the song's sole writer",
+      "verdict": "supported",
+      "note": "Discogs credits."
+    },
+    {
+      "claim": "The narrator says they made a garden and dug it in the morning",
+      "verdict": "supported",
+      "note": "Matches 'So I made me a garden / I dug it in the morning'."
+    },
+    {
+      "claim": "Saving Country Music called it a playful tale that becomes a murder ballad",
+      "verdict": "supported",
+      "note": "Matches the researched fact."
+    },
+    {
+      "claim": "Opens on a wedding 'way back on the mountain'; talk of evil and a witch on the narrator's back",
+      "verdict": "supported",
+      "note": "The quote matches the lyrics; the opening position is shown by the lyric structure. The witch reading is interpretation."
+    },
+    {
+      "claim": "Paste compared the rain to the surreal weather of One Hundred Years of Solitude",
+      "verdict": "corrected",
+      "note": "Paste cited a surrealist touch recalling the novel and separately mentions the never-ending rain. Reworded to match without tying the comparison specifically to weather."
+    },
+    {
+      "claim": "\"That dam, it couldn't hold one more drop\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Narrator expects the river to finish the job, survives, and goes back up the mountain",
+      "verdict": "supported",
+      "note": "Lyrics: 'when that river came / It would carry me away'; 'I'm alive, so I went back in the mountain'."
+    },
+    {
+      "claim": "\"Now I feel like I can relax,\" sung over and over",
+      "verdict": "corrected",
+      "note": "The full line appears once; 'Like I can relax' repeats after it. Reworded to say the closing line circles back."
+    },
+    {
+      "claim": "Ferrell is credited with acoustic guitar and vocals",
+      "verdict": "supported",
+      "note": "Wikipedia credit."
+    },
+    {
+      "claim": "Fingerpicked guitar alongside strummed chords, moderate gently swinging pace",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on fingerpicked and strummed guitar; all agree on moderate tempo; passes 1 and 3 say swing, pass 2 says a gentle rolling feel."
+    },
+    {
+      "claim": "Room open and unpolished; close enough to hear the strings",
+      "verdict": "corrected",
+      "note": "Open, unpolished and raw are backed by all passes. 'Hear the strings' is not. Replaced with 'raw and close'."
+    },
+    {
+      "claim": "No harmonies; clear voice with a slight nasal edge; conversational",
+      "verdict": "supported",
+      "note": "All three passes agree on no harmonies and a clear voice. Passes 2 and 3 say nasal. Passes 1 and 3 say conversational."
+    },
+    {
+      "claim": "Conversational even while describing a killing",
+      "verdict": "removed",
+      "note": "The excerpt's position in the song is unknown, so what the voice is singing at that moment can't be claimed."
+    },
+    {
+      "claim": "Label description notes a few bars of soulful yodeling; the lyric has a yodel where the narrator expects to die",
+      "verdict": "supported",
+      "note": "The label bio says so, and the lyric 'That would be my last day, yodelay-oo' confirms it."
+    },
+    {
+      "claim": "Ferrell wanted a fuller sound with bigger drums while staying true to stripped-down old-time feel; recorded largely at Sound Emporium in Nashville with Eddie Spear producing",
+      "verdict": "supported",
+      "note": "Jambands and Shorefire facts; Spear's production credit confirmed."
+    },
+    {
+      "claim": "Older song, floating around Ferrell's catalog for years; long-time fans knew it",
+      "verdict": "supported",
+      "note": "Rolling Stone and Saving Country Music."
+    },
+    {
+      "claim": "Murder ballad form tells heartbreak and violence in a friendly tune and its coldest habit is that the singer never raises the voice",
+      "verdict": "removed",
+      "note": "An unsupported generalization about the genre, and an unsupported claim about the whole vocal performance. Replaced with the supported old-time, Appalachian-rooted murder ballad lineage."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2538,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014036,
+        "detail": "1097 in / 161 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014111,
+        "detail": "1097 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00055198,
+        "detail": "1097 in / 154 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13806000000000002,
+        "detail": "45975 in / 1611 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052704,
+        "detail": "3766 in / 1882 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05967,
+        "detail": "5015 in / 4964 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "spotifyId": "7221xIgOnuakPdLqT0F3nP",
+  "reviewedAt": "2026-11-11T21:16:31.451Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9148266"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic line with a clean tone. Bass guitar plays a foundational line. Drums provide a steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and steady, with a slight country-rock feel.\n\nVocals:\nA male voice sings with a clear, slightly raspy character. The delivery is conversational and melodic. Harmonies are present, with a second male voice joining in unison or in a higher register.\n\nProduction:\nThe sound is polished and clean. The texture is full but not overly dense. There's a sense of a moderately sized room, with some reverb on the vocals.\n\nArrangement:\nThe excerpt begins with the full band and lead vocal. Harmonies enter and drop out, particularly during the chorus-like sections. The instrumentation remains consistent throughout, with no major additions or subtractions.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic line with a clean tone. Bass guitar plays a foundational line. Drums provide a steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and steady, with a slight country-rock feel.\n\nVocals:\nA male voice sings with a clear, slightly raspy character. The delivery is conversational and melodic. Harmonies are present, with a second male voice joining in unison or in a higher register.\n\nProduction:\nThe sound is polished and clean. There's a sense of a moderately sized room. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the full band and lead vocals. Harmonies enter during the chorus-like sections. The electric guitar plays a prominent melodic line between vocal phrases. The arrangement remains consistent throughout, with no major drops or builds.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a melodic line with a clean tone. Bass guitar plays a foundational line. Drums provide a steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, driving feel.\n\nVocals:\nA male voice sings with a slightly raspy, clear character. The delivery is conversational and melodic. Harmonies are present, with a second male voice joining in unison and in a higher register.\n\nProduction:\nThe sound is clean and polished. The room sounds like a medium-sized space with a slight reverb. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the full band and lead vocal. Harmonies enter during the chorus-like sections. The electric guitar plays a prominent melodic line throughout. The arrangement remains consistent, with no significant drops or builds within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I Had Some Help\" was written by Post Malone, Morgan Wallen, Louis Bell, Ryan Vojtesak, Ashley Gorley, Ernest Keith Smith, Chandler Paul Walters and Hoskins.",
+        "source": "https://morganwallen.com/home/post-malone-morgan-wallen-release-i-had-some-help/"
+      },
+      {
+        "claim": "Louis Bell, Charlie Handsome (Ryan Vojtesak) and co-producer Hoskins produced the track.",
+        "source": "https://musicrow.com/2024/05/morgan-wallen-post-malone-satisfy-fans-hunger-with-i-had-some-help-release/"
+      },
+      {
+        "claim": "The single was released May 10, 2024 via Mercury Records/Republic in partnership with Big Loud Records.",
+        "source": "https://www.countrystandardtime.com/news/newsitem.asp?xid=13791"
+      },
+      {
+        "claim": "Post Malone and Wallen premiered the song live during Wallen's Stagecoach Festival set in Indio, California, in April 2024. The single was billed as coming from Post's first full-length country album.",
+        "source": "https://musicrow.com/2024/05/morgan-wallen-post-malone-satisfy-fans-hunger-with-i-had-some-help-release/"
+      },
+      {
+        "claim": "Co-writer Chandler Walters says the song grew out of his steel guitar. He says it was written on the studio day they wanted a Morgan song for Post, and the working phrase \"We're going to need some help\" became the title.",
+        "source": "https://holler.country/feature/interview/who-the-heck-is-chandler-walters-the-grammy-nominated-songwriter-behind-post-malone-and-morgan-wallen-s-i-had-some-help/"
+      },
+      {
+        "claim": "Co-writer ERNEST said the song was written in 24 minutes. Post and Wallen recorded a demo that same evening before heading out to a bar.",
+        "source": "https://93qcountry.com/1685861/ernest-claims-i-had-some-help-was-written-in-24-minutes/"
+      },
+      {
+        "claim": "Morgan Wallen said he told Post that if Post didn't put the song on his album, Wallen would put it on his own. Post kept it as the more obvious hit.",
+        "source": "https://americansongwriter.com/morgan-wallen-shares-the-story-behind-i-aint-coming-back-and-how-i-had-some-help-landed-on-post-malones-f-1-trillion/"
+      },
+      {
+        "claim": "Post Malone told Theo Von that he and Wallen wrote the song together and cut another song too.",
+        "source": "https://holler.country/news/breaking/post-malone-says-hes-recorded-another-collaboration-with-morgan-wallen-that-song-s-awesome-too/"
+      },
+      {
+        "claim": "The song is told from the viewpoint of someone spiraling after a breakup who wants his ex to admit she helped cause the mess.",
+        "source": "https://www.nbc.com/nbc-insider/post-malone-morgan-wallen-i-had-some-help-lyrics-meaning-explained"
+      },
+      {
+        "claim": "The song debuted at No. 1 on the Billboard Hot 100 (chart dated May 25, 2024), giving Post Malone his sixth No. 1. It is on his country album F-1 Trillion (Aug 16, 2024), and was nominated for Grammys for Best Country Song and Best Country Duo/Group Performance.",
+        "source": "https://en.wikipedia.org/wiki/F-1_Trillion"
+      }
+    ],
+    "lineage": "The song is a pop-leaning country crossover duet, billed as Post Malone's move into country, that pairs a pop and hip-hop star with a mainstream country star on a synth-driven track built around steel guitar.",
+    "genres": [
+      "country pop",
+      "country",
+      "pop"
+    ]
+  },
+  "draft": "The joke lands before the hurt does. **I Had Some Help** takes a line people say at office meetings, \"teamwork makes the dream work\", and turns it into a way to hand half the blame for a wrecked relationship back to the other person. The narrator has been drinking hard, and the song admits that up front: \"been deep in every weekend.\" It just won't let him carry it alone. \"Don't act like you ain't help me pull that bottle off the shelf\" is the line that holds the whole song. It's an accusation, and it's also a confession said as fast as possible so it can be turned around.\n\nThe emotional honesty is in how the defense keeps slipping. The verses are full of counterattack: she's telling her friends he's crazy, she's throwing stones from a big glass house. Then a smaller admission gets through. \"I ain't an angel, you ain't heaven-sent\" concedes as much as it accuses, and the bridge gives up the fight for a second with the oldest truth in breakup songs, that it takes two to break a heart in two. Pride and shame sit right next to each other here and never settle. Listen to how the word \"help\" keeps coming back on its own, echoed again and again after each chorus. On paper it's a punchline. Repeated that many times, it starts to sound like the thing he actually needs and can't ask for.\n\nThe band keeps all of this easy. Strummed acoustic guitar and a steady kick, snare and hi-hat set a relaxed, moderate country-rock groove. A clean electric guitar threads a melody between the vocal phrases. The lead voice is clear with a little rasp, conversational more than showy, and a second voice joins in unison or climbs above it on the choruses, so the shared blame comes out as close harmony. The production is polished and the arrangement holds steady rather than building, which fits a narrator who wants to sound unbothered.\n\nThat looseness fits how the song was made. Co-writer Chandler Walters says it grew out of his steel guitar on a day they wanted \"a Morgan song for Post,\" and the working phrase \"We're going to need some help\" became the title. ERNEST, another of its eight writers, says it took 24 minutes, and that Post Malone and Morgan Wallen cut a demo that evening before heading to a bar. Wallen told Post that if he didn't use it, Wallen would take it himself. Post kept it. As the opening shot of a pop and hip-hop star's move into country, paired with one of the format's biggest names, it debuted at No. 1 on the Hot 100 and anchored *F-1 Trillion*.\n\nIt sticks because it gives you the relief of a shrug and a shared laugh about a mess you made, while letting you hear the plea for help underneath the punchline.",
+  "factCheck": [
+    {
+      "claim": "\"Teamwork makes the dream work\" is a line people say at office meetings",
+      "verdict": "corrected",
+      "note": "The lyric quote is accurate, but where people say the phrase is unsourced. Changed to 'a stock phrase'."
+    },
+    {
+      "claim": "\"been deep in every weekend\" and \"Don't act like you ain't help me pull that bottle off the shelf\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics. The reading of heavy drinking rests on the bottle and weekend lines."
+    },
+    {
+      "claim": "The song admits the drinking 'up front'",
+      "verdict": "corrected",
+      "note": "The 'been deep in every weekend' line comes in the chorus, not at the start. Removed the placement claim."
+    },
+    {
+      "claim": "She tells friends he's crazy; she throws stones from a big glass house",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"I ain't an angel, you ain't heaven-sent\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The bridge gives up the fight with the oldest truth in breakup songs, that it takes two to break a heart in two",
+      "verdict": "corrected",
+      "note": "The lyric is accurate. Calling it a 'bridge' is a structural claim, and 'oldest truth in breakup songs' is an unsupported history claim. Reworded."
+    },
+    {
+      "claim": "'Help' keeps returning on its own after each chorus",
+      "verdict": "supported",
+      "note": "The lyric structure shows the repeated (Help) lines after the chorus."
+    },
+    {
+      "claim": "Strummed acoustic guitar, steady kick, snare and hi-hat, relaxed moderate country-rock groove",
+      "verdict": "supported",
+      "note": "All three passes agree on the instruments and the relaxed moderate tempo. Two passes say country-rock."
+    },
+    {
+      "claim": "A clean electric guitar threads a melody between the vocal phrases",
+      "verdict": "corrected",
+      "note": "All passes agree on a clean melodic electric guitar line. Only one pass places it between vocal phrases, so that detail was removed."
+    },
+    {
+      "claim": "Lead voice is clear with a little rasp and conversational; a second voice joins in unison or higher on the choruses",
+      "verdict": "supported",
+      "note": "Agreed by all three passes."
+    },
+    {
+      "claim": "Production is polished and the arrangement holds steady rather than building",
+      "verdict": "corrected",
+      "note": "Polished and full is supported. 'Rather than building' is a claim about the arc, so it was removed."
+    },
+    {
+      "claim": "Chandler Walters says it grew out of his steel guitar on a day they wanted \"a Morgan song for Post\"",
+      "verdict": "corrected",
+      "note": "The packet paraphrases this, so the quotation marks were removed. The steel guitar origin is supported."
+    },
+    {
+      "claim": "Working phrase \"We're going to need some help\" became the title",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "ERNEST, one of eight writers, says it took 24 minutes; Post and Wallen cut a demo that evening before going to a bar",
+      "verdict": "supported",
+      "note": "Eight credited writers are listed, and the 24-minute and demo details match."
+    },
+    {
+      "claim": "Wallen told Post that if he didn't use it, Wallen would take it himself. Post kept it.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Opening shot of a pop and hip-hop star's move into country, paired with one of the format's biggest names",
+      "verdict": "corrected",
+      "note": "The country move and the pairing with a mainstream country star are supported. 'One of the format's biggest names' is unsupported and was removed."
+    },
+    {
+      "claim": "Debuted at No. 1 on the Hot 100 and anchored F-1 Trillion",
+      "verdict": "corrected",
+      "note": "The No. 1 debut and album inclusion are supported. 'Anchored' is not, so it now says the song is on the album."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.199,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001485,
+        "detail": "1110 in / 192 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015025,
+        "detail": "1110 in / 199 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00066691,
+        "detail": "1110 in / 196 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.082478,
+        "detail": "23569 in / 1534 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.059208,
+        "detail": "4227 in / 2115 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053682,
+        "detail": "5411 in / 4286 out"
+      }
+    ]
+  }
+}

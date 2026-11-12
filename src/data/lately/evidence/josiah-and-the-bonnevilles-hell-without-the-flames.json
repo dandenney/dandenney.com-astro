@@ -1,0 +1,205 @@
+{
+  "spotifyId": "72GVljzrfY9QON2StU9onh",
+  "reviewedAt": "2026-11-11T19:40:43.554Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/32828914"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm, with a clean electric guitar playing a melodic line. A bass guitar plays a walking bassline. Drums provide a steady beat with snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed, driving rock or folk-rock feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is melodic and conversational. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the full band. The electric guitar plays a consistent melodic counterpoint to the vocals. The drums maintain a steady beat throughout. No instruments drop out or build significantly within this segment.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm with a consistent downbeat. An electric guitar plays a melodic lead line with a clean tone. A bass guitar plays a simple, foundational line. Drums provide a steady, driving beat with snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is moderately fast. The groove feels like a driving, upbeat rock song.\n\nVocals:\nThe singer has a clear, slightly raspy voice. The delivery is energetic and melodic. There are no harmonies in this excerpt.\n\nProduction:\nThe production sounds clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar lead line is prominent throughout. No instruments drop out or build significantly within this short excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm, with a clean electric guitar playing a melodic line. Bass guitar plays a walking line. Drums play a driving beat with snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is a steady, driving rock feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is earnest and slightly melancholic. There are no harmonies.\n\nProduction:\nThe sound is relatively dry with some reverb on the vocals and drums. The texture is clean and clear, with a polished feel.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar plays a consistent melodic counterpoint to the vocals. The drums maintain a steady beat throughout. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Hell Without the Flames\" was released as a single on February 13, 2026, and the copyright line says it is under exclusive license to Rounder Records, a Concord Label Group release.",
+        "source": "https://open.spotify.com/track/72GVljzrfY9QON2StU9onh"
+      },
+      {
+        "claim": "The song is credited to Josiah Leming and Joel Little as writers.",
+        "source": "https://www.allmusic.com/album/as-is-mw0004767672"
+      },
+      {
+        "claim": "The song was produced by Josiah Leming and Konrad Snyder.",
+        "source": "https://www.discogs.com/release/37359684-Josiah-and-the-Bonnevilles-As-Is"
+      },
+      {
+        "claim": "Discogs credits Josiah Leming with acoustic guitar, banjo, classical guitar, harmonica, slide guitar, bass and vocals on the track. Ryan Levine plays drums and tambourine, and Brian Stanley is also credited on bass. Konrad Snyder recorded and mixed the album, and Adam Grover mastered it.",
+        "source": "https://www.discogs.com/release/37359684-Josiah-and-the-Bonnevilles-As-Is"
+      },
+      {
+        "claim": "The song was the lead single from the album As Is, released May 8, 2026 on Rounder. It was announced with an official video and with Leming's signing to Rounder.",
+        "source": "https://www.noise11.com/news/josiah-and-the-bonnevilles-as-is-album-20260216"
+      },
+      {
+        "claim": "As Is has ten songs, whittled down from nearly 100 written over about a year. It is Leming's first full-length since 2023's Endurance, and he deliberately went more electric after Endurance rather than make another acoustic record.",
+        "source": "https://www.countrystandardtime.com/news/newsitem.asp?xid=15683"
+      },
+      {
+        "claim": "Leming said he needed to work quietly away from the internet and pull back for a year to understand what was on his heart. He also said his only goal is to make something real and honest that can get people through the day.",
+        "source": "https://www.noise11.com/news/josiah-and-the-bonnevilles-mountain-girl-as-is-album-20260315"
+      },
+      {
+        "claim": "In a Bluegrass Situation interview, Leming said the video for the song was shot in Colombia, because that is where jobs like the ones in the song have moved, and workers there are paid even less.",
+        "source": "https://thebluegrasssituation.com/read/unplugging-made-josiah-and-the-bonnevilles-as-is-possible/"
+      },
+      {
+        "claim": "Americana UK's review of As Is calls the song a portrait of everyday working-class life and says Leming's gravelly delivery conveys the bone-weariness in the lyrics.",
+        "source": "https://americana-uk.com/josiah-and-the-bonnevilles-as-is"
+      },
+      {
+        "claim": "Josiah and the Bonnevilles is the stage name of Josiah Leming, a Morristown, Tennessee native now based in Nashville. He left high school at 17 to tour while living in his car, signed to Warner Bros. at 19, and has released music independently since. He completed his first sold-out headlining tour in 2024.",
+        "source": "https://en.wikipedia.org/wiki/Josiah_Leming"
+      }
+    ],
+    "lineage": "The song sits in the modern folk and Americana singer-songwriter tradition, with a more electric, rootsy sound that critics compare to Bob Dylan.",
+    "genres": [
+      "folk",
+      "americana",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "\"She didn't slam the door.\" That's the line in **Hell Without the Flames** that tells you what kind of hell this is. Nobody screams. Someone leaves on a Monday, quietly, and the narrator explains why in one more line: \"But it was always one day more.\" A better life was promised for a date that kept sliding, and she got tired of waiting. The song never lets the narrator off that hook. It never lets the narrator fully own it, either.\n\nThe title names a damnation without spectacle: a long night shift, a drive home half-dead, cracks in the pavement that turn into cracks in a heart the narrator insists is stone. Josiah Leming, who records as Josiah and the Bonnevilles and wrote the song with Joel Little, keeps the misery ordinary on purpose. When friends ask how it's going, the answer is a shrug about waiting for the world to end. It's the joke people tell so they don't have to say the true thing. Then the chorus says it anyway: \"Rat inside a cage holding back the rage.\" Exhaustion and anger share one body, and the anger has nowhere to go but inward. The last chorus makes it worse. Another hill to climb, another grudge to nurse, and it's night again.\n\nThe band doesn't play it as a dirge. A strummed acoustic guitar sets the pulse, the bass walks underneath, and Ryan Levine's drums keep a steady, driving beat. A clean electric guitar traces a melody that answers the vocal line for line. Leming's voice is clear with a little rasp at the edges, and the delivery is closer to talking than pleading. The production, by Leming and Konrad Snyder, is clean and a bit roomy. That brightness is the trick. It moves like a song for the drive home, which is exactly where its narrator is stuck.\n\nIt was the lead single from *As Is*, Leming's first full-length since 2023's *Endurance*. This time he deliberately went more electric instead of making another acoustic record, and critics hear Dylan in the plugged-in, rootsy turn. The ten songs were whittled from nearly a hundred, written after he stepped away from the internet for a year. He shot the video in Colombia, he told The Bluegrass Situation, because that's where jobs like the narrator's have gone, for even less pay. That widens the song's sympathy. The cage isn't one person's, and the rage being held back belongs to a lot of people punching the same clock.\n\nLeming has said all he wants is to make something real and honest that can get people through the day. This one does it by refusing to pretend the day is better than it is. It sticks because it hands you a chorus bright enough to sing on the way home, and every time you sing it, you're admitting how tired you are.",
+  "factCheck": [
+    {
+      "claim": "\"She didn't slam the door.\" and \"But it was always one day more\" are lyric quotes",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "Someone leaves on a Monday, quietly",
+      "verdict": "supported",
+      "note": "Lyrics: \"She left on Monday / She didn't slam the door.\""
+    },
+    {
+      "claim": "A better life was promised for a date that kept sliding, and she got tired of waiting",
+      "verdict": "supported",
+      "note": "Interpretation resting on \"I promised one day / But it was always one day more.\""
+    },
+    {
+      "claim": "Long night shift, drive home half-dead, cracks in the pavement and in a heart of stone",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Josiah Leming records as Josiah and the Bonnevilles and wrote the song with Joel Little",
+      "verdict": "supported",
+      "note": "Writer credits and stage-name fact are both in the packet."
+    },
+    {
+      "claim": "\"Rat inside a cage holding back the rage\"",
+      "verdict": "supported",
+      "note": "Exact quote."
+    },
+    {
+      "claim": "The last chorus makes it worse. Another hill to climb, another grudge to nurse, and it's night again.",
+      "verdict": "corrected",
+      "note": "The closing lines are a new section, not a repeat of the chorus, so the wording now says 'closing lines'. 'Axe to grind' is now quoted as the lyric instead of a loose paraphrase."
+    },
+    {
+      "claim": "Strummed acoustic guitar sets the pulse; bass walks underneath; steady, driving drums",
+      "verdict": "supported",
+      "note": "All three passes agree on the strummed acoustic and the driving drums. Two passes agree on the walking bass."
+    },
+    {
+      "claim": "Ryan Levine's drums",
+      "verdict": "supported",
+      "note": "Discogs credit."
+    },
+    {
+      "claim": "A clean electric guitar traces a melody that answers the vocal line for line",
+      "verdict": "corrected",
+      "note": "The passes say melodic counterpoint to the vocals. 'Line for line' overstates that and was removed."
+    },
+    {
+      "claim": "Voice is clear with a little rasp; delivery closer to talking than pleading",
+      "verdict": "corrected",
+      "note": "Clear and slightly raspy is backed by two passes. The 'conversational' reading rests on one pass only and was dropped."
+    },
+    {
+      "claim": "Production by Leming and Konrad Snyder, clean and a bit roomy",
+      "verdict": "supported",
+      "note": "Credit is in the packet. All passes say clean and polished, and all mention some reverb."
+    },
+    {
+      "claim": "That brightness is the trick",
+      "verdict": "corrected",
+      "note": "'Brightness' is not in the listening notes. Changed to 'polish', which they do support."
+    },
+    {
+      "claim": "Lead single from As Is; first full-length since 2023's Endurance; deliberately went more electric instead of another acoustic record",
+      "verdict": "supported",
+      "note": "Matches the packet."
+    },
+    {
+      "claim": "Critics hear Dylan in the plugged-in, rootsy turn",
+      "verdict": "supported",
+      "note": "Matches the lineage line, which says critics compare the electric, rootsy sound to Bob Dylan."
+    },
+    {
+      "claim": "Ten songs whittled from nearly a hundred, written after he stepped away from the internet for a year",
+      "verdict": "corrected",
+      "note": "The packet says the songs were written over about a year, during which he worked away from the internet. They were not written 'after' it."
+    },
+    {
+      "claim": "Video shot in Colombia, per The Bluegrass Situation, because jobs like the narrator's moved there for even less pay",
+      "verdict": "supported",
+      "note": "Matches the interview."
+    },
+    {
+      "claim": "Leming has said all he wants is to make something real and honest that can get people through the day",
+      "verdict": "supported",
+      "note": "Matches the quote about his only goal."
+    },
+    {
+      "claim": "A chorus bright enough to sing on the way home",
+      "verdict": "corrected",
+      "note": "'Bright' is not backed by the listening notes. Reworded to a chorus built to sing on the way home."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2607,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014404,
+        "detail": "1103 in / 175 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014454,
+        "detail": "1103 in / 177 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014504,
+        "detail": "1103 in / 179 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.131064,
+        "detail": "42592 in / 1588 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.076948,
+        "detail": "3787 in / 3090 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.048308,
+        "detail": "4969 in / 3837 out"
+      }
+    ]
+  }
+}

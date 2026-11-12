@@ -1,0 +1,190 @@
+{
+  "spotifyId": "59Ss6VuU0ML2mbb2Px70rt",
+  "reviewedAt": "2026-11-11T21:49:12.135Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3208779"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed chord progression. A bass guitar plays a walking bass line. A drum kit plays a steady, driving beat with a closed hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is melodic and sustained. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb. The room sounds open.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter around the 0:24 mark. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A bass guitar plays a walking bass line. A drum kit plays a shuffle groove with brushes. A violin plays sustained notes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and swinging.\n\nVocals:\nA male voice sings in a mid-range, with a smooth, clear delivery. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is smooth.\n\nArrangement:\nThe acoustic guitar, bass, and drums are present throughout. The violin enters around the 0:00 mark and plays sustained notes. The vocals enter around the 0:24 mark. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed chord progression. A bass guitar plays a walking bass line. Drums play a simple, steady beat with a closed hi-hat. A male voice sings.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb, suggesting a medium-sized room. The texture is smooth.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter around the 0:24 mark. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The album How It Ends was released October 5, 2004 on DeVotchKa's own label, Cicero Recordings, Ltd. The title track runs 6:59.",
+        "source": "https://devotchkamusic.bandcamp.com/album/how-it-ends"
+      },
+      {
+        "claim": "Discogs lists all songs as copyright 2004 DeVotchKa. The album was recorded and mixed by Craig Schumacher at Wavelab Studios in Arizona and mastered by JJ Golden.",
+        "source": "https://www.discogs.com/release/2301438-Devotchka-How-It-Ends"
+      },
+      {
+        "claim": "The album was made over multiple road trips to Wavelab Studio in Tucson, AZ. A press page says it was co-produced and engineered by Craig Schumacher together with band members Nick Urata, Tom Hagerman, Jeanie Schroder and Shawn King.",
+        "source": "https://piratepirate.com/devotchka-3/"
+      },
+      {
+        "claim": "Album personnel: Nick Urata (vocals, guitar, bouzouki, theremin, percussion, piano), Tom Hagerman (violin, accordion, piano), Jeanie Schroder (tuba, bass, vocals) and Shawn King (drums, trumpet, vibraphone, glockenspiel, organ, piano). Lindsay Emmet added violin on the title track and tracks 1 and 6. Guests included Sarah Thorpe, Nick Luca, Paul Niehaus and Naim Amor.",
+        "source": "https://devotchkamusic.bandcamp.com/album/how-it-ends"
+      },
+      {
+        "claim": "Nick Urata says the title song 'wrote itself' for him. He avoids taking personal credit and describes it as borrowed from the universe and the collective consciousness.",
+        "source": "https://colomusic.org/profile/devotchka/"
+      },
+      {
+        "claim": "Urata told the Christian Science Monitor that the title 'How It Ends' reflects an optimistic fatalism: since everyone knows how it will end, people should enjoy the present.",
+        "source": "https://www.csmonitor.com/2006/0728/p13s01-almp.html"
+      },
+      {
+        "claim": "The title song introduced DeVotchKa to a wider audience after it was used in the trailer for Everything Is Illuminated. It was also used in a 2008 Gears of War 2 trailer and in an episode of Everwood. It reached No. 101 on the UK Singles Chart.",
+        "source": "https://en.wikipedia.org/wiki/DeVotchKa"
+      },
+      {
+        "claim": "Directors Jonathan Dayton and Valerie Faris heard the album's opening track 'You Love Me' on KCRW and then hired the band to score Little Miss Sunshine (2006). The film's DeVotchKa music was mostly reconfigured or pared-down songs from How It Ends.",
+        "source": "https://www.csmonitor.com/2006/0728/p13s01-almp.html"
+      },
+      {
+        "claim": "Urata has said he was not comfortable with his vocals on the first album. He treated How It Ends as the album the band needed, and said the band might have dissolved if it failed, a statement he later called possibly overly melodramatic.",
+        "source": "https://www.adn.com/music/article/devotchka-front-man-reflects-breakout-album-how-it-ends/2012/12/28/"
+      },
+      {
+        "claim": "Urata formed DeVotchKa in the Denver-Boulder area in 1997 after his Chicago alt-country band failed to gain a following. The band began by playing background music for burlesque dancers in Denver. The name comes from the Nadsat slang in A Clockwork Orange, meaning 'young woman'.",
+        "source": "https://colomusic.org/podcast/nick-urata/"
+      }
+    ],
+    "lineage": "DeVotchKa blends Eastern European folk, Southwestern/mariachi touches and indie rock with a cinematic, spaghetti-Western soundtrack feel. Sources link the album's sound to the Tucson scene around Calexico and Giant Sand.",
+    "genres": [
+      "indie rock",
+      "gypsy punk",
+      "cinematic folk"
+    ]
+  },
+  "draft": "**How It Ends** opens with an object and an instruction: \"Hold your grandmother's Bible to your breast.\" It's a strange way to begin a song about fate. It isn't a prayer, and it isn't a doubt. It's a test, and the person holding the book wants it to pass. Nick Urata sings the whole thing in the second person, so the burden lands on whoever's listening. Somebody has to be strong here. Everyone depends on you, the lyric says, and you already know what you have to do.\n\nThe second verse is where the hurt shows through. The line about the \"slave-catcher's songs\" makes the past something you can't outrun, and then comes the confession buried in a compliment: they poked a million holes in your soul, \"But you never let 'em show.\" That's the feeling at the center of the song. It's someone holding steady for others while quietly coming apart, and taking a kind of grim pride in keeping it hidden. The song never says whether that's admirable or sad. It lets both sit there.\n\nThe third verse turns toward reward: a place in the sun, children provided for, wishes granted beyond your wildest dreams. It could be consolation or it could be a sales pitch. One line gives the game away: \"You always wanted to believe.\" The wanting is the true part. The refrain keeps coming back, insisting the ending is already known, and by the close it's repeated until it sounds less like a threat than a calm acceptance. Urata told the Christian Science Monitor the title reflects an optimistic fatalism: everyone knows how it ends, so enjoy the present. He has also said the song \"wrote itself,\" that it was borrowed rather than authored.\n\nThe sound carries that steadiness. Acoustic guitar strums under a walking bass line, and the drums keep a plain, driving beat at a moderate pace. Urata's voice is clear and sustained, mid-range, with no harmonies to share the weight. Lindsay Emmet added violin on this track. The production is clean, with enough reverb to feel like a real room.\n\nDeVotchKa recorded the album with Craig Schumacher at Wavelab in Tucson over several road trips, and you can hear the kinship with Calexico and Giant Sand: Eastern European folk and Southwestern dust, framed like a Western soundtrack. Urata said the band might have folded if the record failed. Instead this song found its way into the trailer for Everything Is Illuminated, and the album led to the Little Miss Sunshine score.\n\nWhat sticks is the permission it gives: you can know the worst is coming and still keep your shoulders square for the people leaning on you.",
+  "factCheck": [
+    {
+      "claim": "Opens with \"Hold your grandmother's Bible to your breast.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Nick Urata sings the whole thing in the second person",
+      "verdict": "corrected",
+      "note": "Urata is credited with vocals, but Jeanie Schroder is also credited with vocals and the lyric has parenthetical echoes. Changed to say Urata sings it in the second person, without 'the whole thing'."
+    },
+    {
+      "claim": "Everyone depends on you, the lyric says, and you already know what you have to do",
+      "verdict": "supported",
+      "note": "Paraphrases 'They all depend on you' and 'You know what you gotta do'."
+    },
+    {
+      "claim": "Slave-catcher's songs; 'But you never let 'em show'; a million holes in your soul",
+      "verdict": "supported",
+      "note": "The quote matches. The 'slave-catcher's songs' fragment is now a paraphrase so the draft stays within three short quoted lines."
+    },
+    {
+      "claim": "Third verse: a place in the sun, children provided for, wishes granted beyond your wildest dreams; 'You always wanted to believe'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The 'sales pitch' reading is interpretation."
+    },
+    {
+      "claim": "The refrain keeps coming back and is repeated at the close",
+      "verdict": "supported",
+      "note": "The lyric structure shows the repeated 'You already know' at the end. The 'calm acceptance' reading is interpretation."
+    },
+    {
+      "claim": "Urata told the Christian Science Monitor the title reflects optimistic fatalism: everyone knows how it ends, so enjoy the present",
+      "verdict": "supported",
+      "note": "Matches the CSM source."
+    },
+    {
+      "claim": "Urata said the song 'wrote itself' and was borrowed rather than authored",
+      "verdict": "supported",
+      "note": "Matches the colomusic.org profile."
+    },
+    {
+      "claim": "Acoustic guitar strums under a walking bass line; drums keep a plain, driving beat at a moderate pace",
+      "verdict": "supported",
+      "note": "All three passes agree on guitar and bass. Passes 1 and 3 agree on the steady, driving drums and moderate tempo. Pass 2 differs on the drums (shuffle, brushes), so the drum description keeps only the agreed points."
+    },
+    {
+      "claim": "Voice is clear, sustained, mid-range, with no harmonies to share the weight",
+      "verdict": "corrected",
+      "note": "Clear and mid-range is backed by all three passes, and sustained by two. 'No harmonies' only describes a short excerpt, and the lyric shows echoed lines, so it was removed."
+    },
+    {
+      "claim": "Lindsay Emmet added violin on this track",
+      "verdict": "supported",
+      "note": "Credited on the title track in the album personnel."
+    },
+    {
+      "claim": "Production is clean, with enough reverb to feel like a real room",
+      "verdict": "corrected",
+      "note": "All three passes say clean and moderate reverb, and two say medium-sized room. Reworded to match."
+    },
+    {
+      "claim": "Recorded with Craig Schumacher at Wavelab in Tucson over several road trips",
+      "verdict": "supported",
+      "note": "Matches Discogs and the Pirate Pirate press page."
+    },
+    {
+      "claim": "You can hear the kinship with Calexico and Giant Sand: Eastern European folk and Southwestern dust, framed like a Western soundtrack",
+      "verdict": "corrected",
+      "note": "Sources only link the album's sound to the Tucson scene around those bands. The folk/Southwestern/cinematic blend is a description of the band, not something the listening passes heard. Reworded as lineage."
+    },
+    {
+      "claim": "Urata said the band might have folded if the record failed",
+      "verdict": "supported",
+      "note": "Matches the ADN source."
+    },
+    {
+      "claim": "The song was in the trailer for Everything Is Illuminated, and the album led to the Little Miss Sunshine score",
+      "verdict": "supported",
+      "note": "Matches the Wikipedia and CSM sources."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.269,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013717,
+        "detail": "1099 in / 148 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014192,
+        "detail": "1099 in / 167 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013967,
+        "detail": "1099 in / 158 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.154922,
+        "detail": "53436 in / 1805 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05724,
+        "detail": "3785 in / 2105 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052686,
+        "detail": "4923 in / 4284 out"
+      }
+    ]
+  }
+}

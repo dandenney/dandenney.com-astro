@@ -1,0 +1,189 @@
+{
+  "spotifyId": "0PovhSOJwhW402UvcCXtXY",
+  "reviewedAt": "2026-11-11T20:20:48.875Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8236781"
+  },
+  "listening": "Pass 1:\nA male voice sings with a clear, slightly nasal tone, delivered in a relaxed, almost conversational manner. He is accompanied by an acoustic guitar, playing a simple, strummed chord progression. The tempo is moderate, with a gentle, swaying groove. The production sounds clean and fairly dry, with a natural room acoustic.\n\nAt the start, the solo voice and guitar are present. Around the 0:11 mark, a second, higher male voice enters, harmonizing above the lead vocal. This harmony continues until approximately 0:17, where it drops out. The lead vocal and guitar continue, with the lead vocal becoming slightly more prominent. The excerpt ends with the lead vocal and guitar still playing.\n\nPass 2:\nAcoustic guitar plays a steady, strummed rhythm. A male voice sings the lead melody, with a clear, slightly nasal quality and a relaxed delivery. A second male voice provides a harmony, often a third above the lead, creating a gentle, blended sound. The tempo is moderate, with a laid-back, easygoing groove. The production sounds clean and polished, with a natural room acoustic. The texture is light and airy. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds.\n\nPass 3:\nAcoustic guitar plays a simple, strummed accompaniment. A male voice sings the lead melody, with a clear, slightly nasal tone and a relaxed delivery. The tempo is moderate, creating a gentle, flowing groove. There are no harmonies. The production sounds clean and dry, with a close-miked feel, suggesting an intimate setting. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Happy Little Things\" is track 5 on Holly Kluge's self-titled 10-track album, released March 6, 2012. It runs 5:08.",
+        "source": "https://hollykluge.bandcamp.com/album/holly-kluge"
+      },
+      {
+        "claim": "Holly Kluge wrote the song. A live video credits it as written by her.",
+        "source": "https://www.youtube.com/watch?v=x8hHd4MXDGM"
+      },
+      {
+        "claim": "A 2009 YouTube upload of the song carries a copyright notice dated 2009 and says it was written and performed by Holly Kluge. That suggests it predates the 2012 album release.",
+        "source": "https://www.youtube.com/watch?v=JsVOkL7fVGw"
+      },
+      {
+        "claim": "The 2012 release was distributed through CD Baby, with the copyright line ℗ 2012 Holly Kluge.",
+        "source": "https://www.youtube.com/watch?v=Y6nWQgIBkbk"
+      },
+      {
+        "claim": "Bandcamp lists the song's ISRC as QMS4G1200005.",
+        "source": "https://hollykluge.bandcamp.com/track/happy-little-things"
+      },
+      {
+        "claim": "The lyrics list everyday pleasures: clouds, yellow flowers, homemade pie, a hot cup of coffee, green lights on the drive to work, a walk with a cool breeze, and holding hands with the one she loves.",
+        "source": "https://www.letras.com/holly-kluge/happy-little-things/"
+      },
+      {
+        "claim": "The song went viral on social media. Her official bio says it has been used in over 1 million Instagram reels/photos and has over 5 million Spotify plays.",
+        "source": "https://www.hollykluge.com/about"
+      },
+      {
+        "claim": "Holly Kluge recorded an acoustic version of the song live at Tones Studios in Rochester, after her work began trending on social media.",
+        "source": "https://www.youtube.com/watch?v=SR1vXMN--cw/"
+      },
+      {
+        "claim": "Kluge is a singer-songwriter, worship leader and craft maker based in Rochester, NY. She pronounces her name \"kloog\".",
+        "source": "https://www.hollykluge.com/about"
+      },
+      {
+        "claim": "Her music has appeared in the faith-based films Marriage Retreat and This Is Our Time and in the comedy Christian TV show \"The Church\". Her song \"Be Still\", from the same self-titled album, was included on the 2013 SongDISCovery CD from Worship Leader magazine.",
+        "source": "https://www.hollykluge.com/about"
+      },
+      {
+        "claim": "Her Bandcamp discography lists three releases: Same Story Live (May 2008), Holly Kluge (March 2012) and O Holy Night (December 2015).",
+        "source": "https://hollykluge.bandcamp.com/album/holly-kluge"
+      }
+    ],
+    "lineage": "Bandcamp places it in the acoustic Christian folk-pop and singer-songwriter tradition, shaped by Kluge's work as a worship leader in Rochester, NY.",
+    "genres": [
+      "folk pop",
+      "acoustic",
+      "christian"
+    ]
+  },
+  "draft": "The best image in **Happy Little Things** is a traffic light. \"Drivin' to work and gettin' green lights all the way\" is a small mercy, the kind you forget by lunch. Holly Kluge built a whole song around catching moments like that before they slip away. The chorus asks you, over and over, not to forget. That repeated plea tells you forgetting is the real danger here. The song is cheerful, but it is cheerful on purpose, the way you are when you've decided to be.\n\nKluge wrote it, and a 2009 upload, credited to her as writer and performer, shows the song was around a few years before it landed as track five on her self-titled 2012 album. She is a singer-songwriter, worship leader and craft maker in Rochester, New York, and the song comes out of acoustic Christian folk-pop. It wears that background lightly. There's no sermon, just a phrase anyone raised around church will hear an echo in: \"Cast your cares aside.\" The line doesn't pretend the cares aren't there. It admits them, then asks you to set them down for a minute and look up.\n\nWhat you look up at is plain on purpose. Puffy clouds, yellow flowers, a homemade pie, coffee, autumn leaves, your song coming on the radio. The list could feel too sweet. What saves it is the warmth of the delivery and one quiet shift. For most of the song the pleasures belong to \"you,\" a general listener. Then the last verse turns personal: \"Holdin' hands with the one I love and he says he loves me.\" It's the only place the narrator steps forward. The small joy at the center turns out to be hearing it said out loud, not quite the love itself. That's a tender thing to admit wanting.\n\nThe sound keeps it close. A strummed acoustic guitar holds a simple progression at a moderate, swaying tempo. The voice is clear and a little nasal, relaxed enough to feel like talk set to a tune. The recording is clean and dry, with a natural room around it, so it sounds less like a production than like someone singing to you from a kitchen chair. In the last pass through the chorus the line breaks off at \"think about the things,\" as if the thought trails away, before the refrain doubles back and finishes itself.\n\nThat plainness is why it caught on. Her bio says the song has been used in over a million Instagram reels and photos and has passed five million Spotify plays, and after it took off she cut an acoustic version live at Tones Studios in Rochester. It makes sense as a soundtrack for a snapshot of clouds or a cup of coffee. The song is already a camera roll of ordinary good days.\n\nIt sticks because it doesn't promise your life is happy, only that you can look for the bits that are, and it makes that small effort feel like enough.",
+  "factCheck": [
+    {
+      "claim": "\"Drivin' to work and gettin' green lights all the way\" (lyric quote)",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The chorus asks you, over and over, not to forget.",
+      "verdict": "supported",
+      "note": "\"Don't forget the little things...\" repeats throughout."
+    },
+    {
+      "claim": "Kluge wrote it; a 2009 upload credited to her as writer and performer shows the song predates the album.",
+      "verdict": "corrected",
+      "note": "The 2009 upload only suggests it predates the 2012 release. Changed \"shows\" to \"suggests\"."
+    },
+    {
+      "claim": "Track five on her self-titled 2012 album.",
+      "verdict": "supported",
+      "note": "Track 5 of the 10-track album, released March 6, 2012."
+    },
+    {
+      "claim": "Singer-songwriter, worship leader and craft maker in Rochester, New York; the song comes out of acoustic Christian folk-pop.",
+      "verdict": "supported",
+      "note": "Matches her bio and the lineage note."
+    },
+    {
+      "claim": "\"Cast your cares aside\" is a phrase anyone raised around church will hear an echo in.",
+      "verdict": "removed",
+      "note": "Claim about church language and tradition is not supported. The lyric quote itself is accurate and is kept."
+    },
+    {
+      "claim": "Lyric quote: \"Holdin' hands with the one I love and he says he loves me.\"",
+      "verdict": "supported",
+      "note": "Exact. It is the only verse in the first person, and it is the last verse."
+    },
+    {
+      "claim": "Puffy clouds, yellow flowers, homemade pie, coffee, autumn leaves, song on the radio.",
+      "verdict": "supported",
+      "note": "All are in the lyrics."
+    },
+    {
+      "claim": "Strummed acoustic guitar, simple progression, moderate, swaying tempo.",
+      "verdict": "corrected",
+      "note": "\"Swaying\" appears in only one pass. Changed to \"moderate, gentle groove\", which two passes support."
+    },
+    {
+      "claim": "Voice is clear and a little nasal, relaxed enough to feel like talk set to a tune.",
+      "verdict": "corrected",
+      "note": "Clear, slightly nasal and relaxed are agreed across passes. \"Conversational\" appeared once, so the comparison was reworded as a light interpretation of the relaxed delivery."
+    },
+    {
+      "claim": "Recording is clean and dry, with a natural room; sounds like someone singing from a kitchen chair; keeps it close.",
+      "verdict": "corrected",
+      "note": "Clean and natural room are supported. \"Close-miked\" and \"intimate\" came from one pass only, and another pass called it polished. Removed the kitchen-chair and closeness claims."
+    },
+    {
+      "claim": "In the last pass through the chorus the line breaks off at \"think about the things\" before the refrain doubles back.",
+      "verdict": "corrected",
+      "note": "It is the third chorus, not the last, that breaks off, and a full chorus follows. The quote is dropped to stay within three lyric quotes, and the structure is described without it."
+    },
+    {
+      "claim": "Bio says over a million Instagram reels/photos and over five million Spotify plays.",
+      "verdict": "supported",
+      "note": "Matches the bio."
+    },
+    {
+      "claim": "After it took off she cut an acoustic version live at Tones Studios in Rochester.",
+      "verdict": "supported",
+      "note": "Recorded live there after her work began trending. Wording adjusted to match."
+    },
+    {
+      "claim": "That plainness is why it caught on.",
+      "verdict": "corrected",
+      "note": "Stated as fact, and no source gives a cause. Reworded as the critic's opinion."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2359,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012292,
+        "detail": "1099 in / 91 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012767,
+        "detail": "1099 in / 110 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013667,
+        "detail": "1099 in / 146 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.12267,
+        "detail": "39580 in / 1351 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05592,
+        "detail": "3395 in / 2117 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053394,
+        "detail": "4582 in / 4423 out"
+      }
+    ]
+  }
+}

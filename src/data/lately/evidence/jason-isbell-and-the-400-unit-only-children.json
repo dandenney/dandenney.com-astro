@@ -1,0 +1,210 @@
+{
+  "spotifyId": "6BzU6BMqMd4qelkWTjLwKy",
+  "reviewedAt": "2026-11-11T21:40:03.457Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9212"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a slightly raspy, clear tone. His delivery is conversational, with a slight country inflection. A second male voice provides harmony, singing a third above the lead.\n\nThe instrumentation includes an acoustic guitar, strumming a steady rhythm, and an electric guitar, playing a clean, arpeggiated melody. A bass guitar provides a walking bass line, and drums play a simple, consistent beat with brushes, emphasizing the snare.\n\nThe tempo is moderate, with a relaxed, easygoing groove. The production is clean and polished, with a natural room sound. The texture is full but not dense.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning and no significant changes in dynamics or instrumentation.\n\nPass 2:\nA male voice sings lead, with a slightly raspy, mid-range character. He sings in a conversational, melodic style. A second male voice provides a harmony, mostly in unison, but occasionally diverging.\n\nThe instruments include an acoustic guitar, playing a fingerpicked arpeggiated pattern, and a bass guitar, playing a walking line. A drum kit provides a steady, mid-tempo beat with a light shuffle feel. The tempo is moderate, creating a relaxed, easygoing groove.\n\nThe production sounds clean and polished, with a natural room sound. The texture is full but not dense, allowing each instrument to be heard clearly.\n\nThe arrangement remains consistent throughout the excerpt. All instruments and vocals are present from the beginning and continue without significant changes in dynamics or instrumentation.\n\nPass 3:\nA male voice sings lead, with a slightly raspy, mid-range character. He sings in a conversational, melodic style. A second male voice provides harmony, mostly in unison or a third above.\n\nAcoustic guitar plays a fingerpicked arpeggiated pattern, providing the main rhythmic and harmonic foundation. Electric guitar plays sustained, clean notes, adding texture. Bass guitar plays a walking bass line, outlining the chords. Drums play a simple, steady beat with brushes, emphasizing the snare drum on beats two and four.\n\nThe tempo is moderate. The groove feels relaxed and slightly melancholic.\n\nThe production is clean and polished, with a warm, natural texture. The room sound is present but not overly reverberant, suggesting a well-treated studio space.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning. There are no significant changes in instrumentation, dynamics, or density within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Only Children\" is track 3 on Reunions, Jason Isbell and the 400 Unit's 2020 album, and runs 3:57.",
+        "source": "https://en.wikipedia.org/wiki/Reunions_(album)"
+      },
+      {
+        "claim": "Isbell wrote all 10 songs on Reunions. Dave Cobb produced the album, and it was recorded at Nashville's RCA Studio A.",
+        "source": "https://www.roughtrade.com/en-us/product/jason-isbell-and-the-400-unit/reunions"
+      },
+      {
+        "claim": "Reunions was released on Southeastern Records and marketed and distributed by Thirty Tigers. Dave Cobb mixed it, Gena Johnson engineered it, and Pete Lyman mastered it.",
+        "source": "https://www.shugarecords.com/products/jasonisbellandthe400unitreunions-newlprecord2020southeasternblackvinyl-countryrock"
+      },
+      {
+        "claim": "The album's band is Derry deBorja (keys), Chad Gamble (drums), Jimbo Hart (bass), Amanda Shires (fiddle) and Sadler Vaden (guitars), with Isbell on vocals and guitar. David Crosby and Jay Buchanan sing guest background vocals.",
+        "source": "https://royalpotatofamily.com/product/jason-isbell-the-400-unit-reunions/"
+      },
+      {
+        "claim": "Isbell says \"Only Children\" was the first song he wrote for the album. He wrote it on vacation in Greece with his wife Amanda Shires and two close friends.",
+        "source": "https://www.npr.org/2020/05/15/856319176/jason-isbell-on-the-past-lives-that-inspired-his-new-album-reunions"
+      },
+      {
+        "claim": "The song grew from a trip to the Greek island of Hydra, and Isbell says it began as a love song to writing and playing music with friends when he was young. People from his formative years then emerged in it.",
+        "source": "https://www.songfacts.com/facts/jason-isbell/only-children"
+      },
+      {
+        "claim": "The characters are composites, but the main one is based on a childhood friend who died. Isbell told Apple Music he only realized he was writing about her after the song was finished and others had heard it.",
+        "source": "https://www.songfacts.com/facts/jason-isbell/only-children"
+      },
+      {
+        "claim": "Isbell was unsure the song would make the album. Nashville Scene calls it a dreamlike rendering of young artists who still see dreams as plans not yet realized.",
+        "source": "https://www.nashvillescene.com/music/features/jason-isbell-and-the-400-unit-get-deep-beneath-the-skin-on-i-reunions-i/article_1d4bc79a-2fb1-5e58-855f-fd43315f2aed.html"
+      },
+      {
+        "claim": "Isbell said Reunions is full of ghosts, meaning both people who are gone and the ghost of who he used to be. He called the album a reunion with his younger self.",
+        "source": "https://www.roughtrade.com/en-us/product/jason-isbell-and-the-400-unit/reunions"
+      },
+      {
+        "claim": "Rolling Stone describes the song, which recalls a friend who died young, as a classic Isbell tearjerker in the vein of \"Elephant\" and \"If We Were Vampires.\" Kurt Simpson directed its video.",
+        "source": "https://au.rollingstone.com/music/music-news/jason-isbell-only-children-video-17860"
+      }
+    ],
+    "lineage": "The song sits in the Americana and country-folk singer-songwriter tradition of confessional, narrative songwriting, and Isbell's catalog shows it in his recurring themes of addiction, recovery, the past and parent–child dynamics.",
+    "genres": [
+      "americana",
+      "country rock",
+      "folk"
+    ]
+  },
+  "draft": "Somewhere in the middle of **Only Children**, a mother stands at a funeral with the hearse idling in the parking lot and says, \"Heaven's wasted on the dead.\" Jason Isbell doesn't dress that line up. He sets it down and moves on, the way people do when grief comes out sideways as a joke.\n\nThe song is addressed to a friend, and its central question keeps coming back in the present tense: are you still taking notes? Will you read me what you wrote? Isbell has said the main character is drawn from a childhood friend who died, and that he only realized he was writing about her after the song was finished and other people had heard it. That shows in the writing. The narrator talks to her as if she might answer. He sees her in every kid in cut-offs on a night walk. He remembers cold coffee on a fire escape, a demo tape they bet everything on, and the time he accused her of stealing a song from Dylan. It is the kind of teasing that only happens between people who take each other's work seriously. The song started, by Isbell's account, as a love song to writing and playing music with friends when he was young, and that warmth never leaves it, even after the hydrocodone turns up in her backpack.\n\nThe hardest moment is the mother's message at the funeral. Her child thought the world of him, she says, and was glad \"they finally let me be an astronaut.\" The success is real, and so is the childhood daydream it's measured against, and the person who would have cheered loudest is in the hearse. Pride and loss sit in the same line, and Isbell leaves them there. The refrain names both of them: \"over-encouraged only children,\" kids told they could do anything, who believed it in different amounts and paid for it in different ways.\n\nThe music stays out of the way. A fingerpicked acoustic guitar carries the song. A clean electric guitar adds color around it, a walking bass line moves underneath, and brushes keep the snare soft. The tempo is unhurried. Isbell's voice is mid-range, a little raspy and conversational, with a second voice in close harmony beside him like a friend singing along. The production, by Dave Cobb at Nashville's RCA Studio A, has a natural room sound that leaves each part clear.\n\nIt was the first song Isbell wrote for *Reunions*, an album he described as full of ghosts, both people who are gone and the person he used to be. Rolling Stone puts it alongside \"Elephant\" and \"If We Were Vampires,\" in the Americana tradition of confessional storytelling. The last refrain turns its question around and asks whether the dead believe in ghosts.\n\nThe song works because it never admits she's gone, and so you end up asking her, along with Isbell, whether she's still writing.",
+  "factCheck": [
+    {
+      "claim": "Opening: a mother at a funeral with the hearse idling in the parking lot says \"Heaven's wasted on the dead.\"",
+      "verdict": "supported",
+      "note": "Lyrics: \"Heaven's wasted on the dead / That's what your mama said / When the hearse was idling in the parking lot.\" The quote matches exactly."
+    },
+    {
+      "claim": "The line comes \"somewhere in the middle\" of the song.",
+      "verdict": "removed",
+      "note": "This is a claim about position in the song. The lyrics' structure doesn't support 'middle', since it is a late stanza."
+    },
+    {
+      "claim": "Narrator asks \"are you still taking notes?\" and \"will you read me what you wrote?\" as recurring present-tense questions.",
+      "verdict": "supported",
+      "note": "Both lines recur in the lyrics."
+    },
+    {
+      "claim": "Isbell has said the main character is drawn from a childhood friend who died, and he only realized he was writing about her after the song was finished and others had heard it.",
+      "verdict": "supported",
+      "note": "Songfacts, citing Apple Music."
+    },
+    {
+      "claim": "He sees her in every kid in cut-offs on a night walk; cold coffee on a fire escape; a demo tape they bet everything on.",
+      "verdict": "supported",
+      "note": "Matches the lyrics: \"Walking around at night,\" \"Every kid in cut-offs could be you,\" \"Cold coffee on the fire escape,\" \"We bet it all on a demo tape.\""
+    },
+    {
+      "claim": "The narrator accused her of stealing a song from Dylan.",
+      "verdict": "corrected",
+      "note": "The lyric says \"The one I said you stole from Dylan\", referring to \"what you wrote\". It does not say 'song', so this is changed to 'something she wrote'."
+    },
+    {
+      "claim": "The song started as a love song to writing and playing music with friends when he was young.",
+      "verdict": "supported",
+      "note": "Songfacts."
+    },
+    {
+      "claim": "\"even after the hydrocodone turns up in her backpack\"",
+      "verdict": "corrected",
+      "note": "The lyric \"Hydrocodone in your backpack\" is supported. The 'even after' sequencing is softened to 'with hydrocodone in her backpack'."
+    },
+    {
+      "claim": "The mother says her child thought the world of him and was glad \"they finally let me be an astronaut.\"",
+      "verdict": "supported",
+      "note": "The lyrics support this, and the partial quote matches the wording."
+    },
+    {
+      "claim": "The refrain is \"over-encouraged only children.\"",
+      "verdict": "supported",
+      "note": "The line recurs in the lyrics. The reading of kids told they could do anything is interpretation."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar carries the song.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on fingerpicked arpeggios."
+    },
+    {
+      "claim": "Clean electric guitar adds color.",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 both describe clean electric guitar."
+    },
+    {
+      "claim": "Walking bass line.",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Brushes keep the snare soft.",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 agree on brushes, but they say the snare is emphasized, not soft. Changed to brushes on the snare."
+    },
+    {
+      "claim": "Unhurried tempo; mid-range, slightly raspy, conversational voice; second voice in close harmony.",
+      "verdict": "supported",
+      "note": "All passes agree on moderate tempo, a slightly raspy conversational voice and a second harmony voice, mostly in unison or a third above."
+    },
+    {
+      "claim": "Production by Dave Cobb at Nashville's RCA Studio A, with a natural room sound that leaves each part clear.",
+      "verdict": "supported",
+      "note": "Researched facts name Cobb and RCA Studio A. The passes agree on the natural room sound and the clarity."
+    },
+    {
+      "claim": "It was the first song Isbell wrote for Reunions; he called the album full of ghosts, both people who are gone and who he used to be.",
+      "verdict": "supported",
+      "note": "NPR and Rough Trade."
+    },
+    {
+      "claim": "Rolling Stone puts it alongside \"Elephant\" and \"If We Were Vampires,\" in the Americana tradition of confessional storytelling.",
+      "verdict": "corrected",
+      "note": "Rolling Stone's comparison to those two songs is supported. The Americana-tradition framing comes from the lineage note, not Rolling Stone, so the sentence is separated to avoid misattribution."
+    },
+    {
+      "claim": "The last refrain turns its question around and asks whether the dead believe in ghosts.",
+      "verdict": "corrected",
+      "note": "The final stanza does ask \"do the dead believe in ghosts?\". It is now called the final verse, since it isn't a refrain."
+    },
+    {
+      "claim": "The song \"never admits she's gone.\"",
+      "verdict": "corrected",
+      "note": "This conflicts with the hearse and \"the dead\" imagery in the lyrics. Reworded to say the narrator keeps talking to her anyway."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2074,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013922,
+        "detail": "1109 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014822,
+        "detail": "1109 in / 191 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013997,
+        "detail": "1109 in / 158 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08366,
+        "detail": "23770 in / 1612 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.06058,
+        "detail": "3895 in / 2250 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.058862,
+        "detail": "5061 in / 4874 out"
+      }
+    ]
+  }
+}

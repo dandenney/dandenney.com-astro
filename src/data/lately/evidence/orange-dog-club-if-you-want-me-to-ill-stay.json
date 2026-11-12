@@ -1,0 +1,195 @@
+{
+  "spotifyId": "6mTrZfsl3NUK3de1zgfz9M",
+  "reviewedAt": "2026-11-11T19:42:55.429Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/26265145"
+  },
+  "listening": "Pass 1:\nInstruments:\nA distorted electric guitar plays a fast, driving riff with palm-muted chugging. A bass guitar plays a syncopated line. Drums play a driving rock beat with a prominent snare and kick. A clean electric guitar plays arpeggiated chords.\n\nTempo and Groove:\nThe tempo is fast. The groove is driving and energetic.\n\nVocals:\nA single voice sings with a slightly strained, mid-range character. The delivery is urgent and direct. There are no harmonies.\n\nProduction:\nThe sound is raw and unpolished, with a slightly distant, open room feel. The texture is gritty and overdriven.\n\nArrangement:\nThe excerpt begins with the full band playing a driving rock section. The distorted guitar plays a prominent riff. At approximately 0:06, the distorted guitar drops out, leaving the bass, drums, and a clean electric guitar playing arpeggiated chords. The vocals also drop out. The clean guitar builds in intensity with a more active arpeggiated pattern towards the end of the excerpt.\n\nPass 2:\nInstruments:\nA distorted electric guitar plays a fast, driving riff with palm-muted notes. A bass guitar plays a walking line. Drums play a driving rock beat with a prominent snare and cymbal crashes.\n\nTempo and Groove:\nThe tempo is fast. The groove is driving and energetic.\n\nVocals:\nA single voice sings with a slightly strained, mid-range character. The delivery is urgent. There are no harmonies.\n\nProduction:\nThe sound is raw and unpolished, with a live room feel. The texture is gritty.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter shortly after. The electric guitar plays a brief, melodic solo before the vocals re-enter. The drums feature prominent cymbal crashes throughout.\n\nPass 3:\nInstruments:\nA distorted electric guitar plays a fast, arpeggiated riff. A drum kit plays a driving beat with a prominent snare. A bass guitar plays a walking line.\n\nTempo and groove:\nThe tempo is fast. The groove is driving and energetic.\n\nVocals:\nA single voice sings with a slightly strained, raw character. The delivery is urgent. There are no harmonies.\n\nProduction:\nThe sound is raw and unpolished, with a slightly distant, live room feel. The texture is gritty.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter shortly after. The electric guitar plays a sustained chord before returning to the arpeggiated riff. The drums maintain a consistent beat throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The single 'if you want me to i'll stay' was released 5 December 2025 by Orange Dog Club on the label Timothy Turner Orange Dog Club Records, and runs 4:11.",
+        "source": "https://www.deezer.com/en/artist/176870127"
+      },
+      {
+        "claim": "Deezer credits Timothy Nicholas Turner as writer and composer of the song.",
+        "source": "https://www.deezer.com/en/artist/176870127"
+      },
+      {
+        "claim": "The song was later included on the band's debut album 'little white house (on a hill)', released 21 August 2026. Amazon Music lists it as track 9, and Bandcamp lists the album's lyrics for it.",
+        "source": "https://music.amazon.com/artists/B0B6T7NGGN/orange-dog-club"
+      },
+      {
+        "claim": "Bandcamp credits for the parent album 'little white house (on a hill)' list music and lyrics by Tim Turner, drumming by Matt Reesor, and mixing/mastering by Matias Soto Allende.",
+        "source": "https://orangedogclub.bandcamp.com/album/little-white-house-on-a-hill"
+      },
+      {
+        "claim": "Shazam credits for another track from the same album, 'dorm girl', list Turner on bass, trumpet, guitar, harmony vocals and keyboards, Matthew Reesor on drums, and Matias Soto Allende as producer and mixing engineer.",
+        "source": "https://www.shazam.com/song/6765790860/dorm-girl"
+      },
+      {
+        "claim": "Buffablog's review of the album says the song uses dynamics that swing up and down in intensity. It builds to a glistening guitar solo, followed by a throat-shredding scream.",
+        "source": "https://buffablog.com/orange-dog-club-little-white-house-on-a-hill/"
+      },
+      {
+        "claim": "The same review says Orange Dog Club keeps a central garage-rock approach across the album and branches into small creative detours.",
+        "source": "https://buffablog.com/orange-dog-club-little-white-house-on-a-hill/"
+      },
+      {
+        "claim": "Orange Dog Club is Tim Turner's personal project. The band is an indie rock group from the Buffalo and Rochester areas, formed in 2021. Turner grew up outside Rochester and attended the University at Buffalo. The lineup is Matt Reesor (drums), Salvatore Constantin (guitar), Joe Butler (bass) and Bernie Bazzett (guitar).",
+        "source": "https://www.thedrakeamherst.org/events/orange-dog-club"
+      },
+      {
+        "claim": "Turner began playing music around age 10, starting on piano and then learning guitar. He told The Buffalo Hive he prefers a human drummer to 'robot drums'.",
+        "source": "https://thebuffalohive.com/rising-local-band-orange-dog-club-brings-jams-to-local-and-national-venues/"
+      },
+      {
+        "claim": "In a 2023 radio interview, Turner cited The Strokes, Arctic Monkeys and Car Seat Headrest as inspirations.",
+        "source": "https://wrtcfm.com/2023/orange-dog-club-feature-friday"
+      }
+    ],
+    "lineage": "The song sits in Buffalo, New York's indie and garage-rock scene. Press describes the band as guitar-driven, with Weezer-style power-pop touches, and Turner names The Strokes, Arctic Monkeys and Car Seat Headrest as influences.",
+    "genres": [
+      "indie rock",
+      "garage rock",
+      "power pop"
+    ]
+  },
+  "draft": "Three times in **if you want me to i'll stay**, the narrator stops mid-thought with a two-word order: \"Cut it.\" It sounds like someone calling off a take, or a person who has heard themselves say too much. Either way, it's the most honest line in the song. Tim Turner, who wrote it, has built a breakup song around a speaker who keeps catching himself just before he begs.\n\nThe setup is small-town and plain: dead grass, a sunset over a lonely town, and a run-in with a first love who \"left her eyes on the ground.\" That image does a lot. She won't look at him, so he answers with an offer that puts all the weight on her: he's leaving, unless she wants him to stay. It reads as generous until you notice how little it risks. He never asks. He makes her say it. And he admits it won't be the same, which is either honesty or a hedge. The song leaves it open.\n\nThe second verse breaks the calm. Everyone tells him the past is finished, and he calls them liars with a schoolyard taunt about pants on fire. It's childish on purpose, the sound of someone too tired to argue properly. His counterpoint is the real thesis: the things that keep you up at night \"Are the only things that truly last.\" Then the chorus comes back changed. \"I'm going away\" becomes \"would you give me a break,\" and the offer to stay now sounds worn out rather than brave. Pride and need sit side by side here, and neither one wins.\n\nThe band plays all this fast and loud. A distorted guitar drives a palm-muted riff, the bass walks underneath, and the drums push hard with a heavy snare. The recording is raw and gritty, with a live, slightly distant room sound. Turner has said he prefers a human drummer to \"robot drums,\" and Matt Reesor's playing keeps that loose, physical push. The vocal is a single, slightly strained voice with no harmonies, urgent rather than pretty. Buffablog's review of the album hears the song swinging up and down in intensity before a glistening guitar solo and a throat-shredding scream.\n\nTurner has named The Strokes, Arctic Monkeys and Car Seat Headrest as influences, and the debt to Car Seat Headrest shows in the lyric's habit of arguing with itself out loud. The garage-rock attack keeps that self-doubt from going soft.\n\nThe song makes you hear an ultimatum disguised as a favor, and then lets you feel how exhausting it is to keep offering it.",
+  "factCheck": [
+    {
+      "claim": "The narrator says \"Cut it\" three times in the song.",
+      "verdict": "supported",
+      "note": "The lyrics show \"Cut it\" ending the first verse, following \"And I'm tired, oh, I am,\" and closing the lyric."
+    },
+    {
+      "claim": "Tim Turner wrote the song.",
+      "verdict": "supported",
+      "note": "Deezer credits Timothy Nicholas Turner as writer and composer, and Bandcamp credits music and lyrics to Tim Turner."
+    },
+    {
+      "claim": "The narrator is \"he\" / \"himself\" (gender of narrator).",
+      "verdict": "corrected",
+      "note": "Nothing in the lyrics gives the narrator's gender. Pronouns were removed or neutralized."
+    },
+    {
+      "claim": "Setting of dead grass, a sunset over a lonely town, and a run-in with a first love who \"left her eyes on the ground.\"",
+      "verdict": "corrected",
+      "note": "The lyric quote is exact. \"Dead grass\" was changed to \"dying brown grass\" to match \"rusted brown / Dying too slowly.\""
+    },
+    {
+      "claim": "The narrator says they're going away but will stay if asked, and admits it won't be the same.",
+      "verdict": "supported",
+      "note": "Matches the chorus lyrics."
+    },
+    {
+      "claim": "Everyone says the past is finished; the narrator calls them liars with a pants-on-fire taunt; \"Are the only things that truly last.\"",
+      "verdict": "supported",
+      "note": "The lyric quote is exact and the paraphrases match the second verse."
+    },
+    {
+      "claim": "The chorus returns with \"I'm going away\" becoming \"would you give me a break.\"",
+      "verdict": "corrected",
+      "note": "The reading stays, but the two quoted lyric lines were turned into paraphrase to stay within the three-short-quote limit. Quoted lyrics are now \"Cut it,\" \"left her eyes on the ground,\" and \"Are the only things that truly last.\""
+    },
+    {
+      "claim": "The band plays fast and loud.",
+      "verdict": "corrected",
+      "note": "All three passes agree on a fast tempo. \"Loud\" isn't stated, so it was removed."
+    },
+    {
+      "claim": "Distorted guitar drives a palm-muted riff, the bass walks underneath, and the drums push hard with a heavy snare.",
+      "verdict": "corrected",
+      "note": "Distorted guitar is in all three passes, palm-muting in two, walking bass in two, and a prominent snare in all three. \"Heavy\" was changed to \"prominent.\""
+    },
+    {
+      "claim": "The recording is raw and gritty with a live, slightly distant room sound.",
+      "verdict": "supported",
+      "note": "Raw/unpolished and gritty are in all three passes. Live room feel is in two and slightly distant in two."
+    },
+    {
+      "claim": "Turner has said he prefers a human drummer to \"robot drums.\"",
+      "verdict": "supported",
+      "note": "Quoted from The Buffalo Hive interview."
+    },
+    {
+      "claim": "Matt Reesor's playing keeps that loose, physical push.",
+      "verdict": "corrected",
+      "note": "Reesor is credited with drumming on the parent album, but \"loose, physical\" is not supported. The line now states only the credit."
+    },
+    {
+      "claim": "A single, slightly strained voice with no harmonies, urgent rather than pretty.",
+      "verdict": "supported",
+      "note": "All three passes agree on single voice, strained, urgent, and no harmonies. \"Rather than pretty\" is the critic's interpretation."
+    },
+    {
+      "claim": "Buffablog's review hears the song swinging in intensity before a glistening guitar solo and a throat-shredding scream.",
+      "verdict": "supported",
+      "note": "Matches the review as summarized. The wording was tightened to \"building to\" to follow the review."
+    },
+    {
+      "claim": "Turner has named The Strokes, Arctic Monkeys and Car Seat Headrest as influences.",
+      "verdict": "supported",
+      "note": "From the 2023 radio interview."
+    },
+    {
+      "claim": "The debt to Car Seat Headrest shows in the lyric's habit of arguing with itself.",
+      "verdict": "corrected",
+      "note": "A direct debt is not established. It was reframed as the critic's comparison."
+    },
+    {
+      "claim": "The garage-rock attack keeps the self-doubt from going soft.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the press description of the band's garage-rock approach."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2466,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001391,
+        "detail": "1105 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00056539,
+        "detail": "1105 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015485,
+        "detail": "1105 in / 218 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.124988,
+        "detail": "39369 in / 1625 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.056488,
+        "detail": "3752 in / 2074 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.061664,
+        "detail": "4852 in / 5196 out"
+      }
+    ]
+  }
+}

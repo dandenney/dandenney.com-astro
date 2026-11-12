@@ -1,0 +1,210 @@
+{
+  "spotifyId": "1foAf70WtudzFw0fjKe89b",
+  "reviewedAt": "2026-11-11T21:42:13.958Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/15312884"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a strummed chord progression. Electric guitar plays a melodic, sustained line with some vibrato. Bass guitar plays a root-note-heavy line. Drums play a driving beat with kick, snare, and hi-hat.\n\nThe tempo is moderate. The groove feels steady and propulsive.\n\nA single voice sings with a clear, slightly breathy character. The delivery is melodic and sustained. Harmonies enter later, with two additional voices singing sustained \"ooh\" sounds, creating a layered, open vocal texture.\n\nThe production sounds clean and polished. The room sound is not prominent, suggesting a close-miked or dry recording. The texture is full and balanced.\n\nThe excerpt begins with the full band and lead vocal. The two harmony voices enter later, adding to the vocal texture. No instruments drop out within the excerpt.\n\nPass 2:\nAcoustic guitar plays a strummed chord progression. Electric guitar plays a melodic line with a clean tone. Bass guitar plays a walking line. Drums provide a steady beat with kick, snare, and hi-hat.\n\nThe tempo is moderate, with a driving, slightly swung groove.\n\nA single voice sings with a clear, mid-range character. The delivery is melodic and sustained. Harmonies enter, with two additional voices singing in unison or parallel motion with the lead, creating a full, layered sound.\n\nThe production sounds clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is full and balanced.\n\nThe excerpt begins with the full band and vocals. The lead vocal is prominent, with harmonies entering and dropping out to emphasize certain phrases. The electric guitar plays a consistent melodic counterpoint.\n\nPass 3:\nAcoustic guitar plays a strummed chord progression. A bass guitar plays a simple, plucked line. Drums enter with a driving, mid-tempo beat, featuring a prominent snare. The lead vocal is a clear, mid-range voice, delivered with a direct, slightly raw quality. Harmonies enter, singing in unison with the lead, creating a fuller sound. The production feels somewhat dry and intimate, with a natural room sound. The texture is relatively clean, not overly processed. The arrangement builds with the addition of drums and harmonies, then maintains a consistent texture.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Nobody\" is the first of three tracks on the digital single 'Live from Dogtown Studio' by The Crane Wives, released April 3, 2023. The other two tracks are \"Queen of Nothing\" and \"The Wolf\".",
+        "source": "https://open.spotify.com/album/1ZpMxko0RyU1SwNg8UVYjQ"
+      },
+      {
+        "claim": "Streaming credits list all four band members as composers of \"Nobody\": Katherine Rose Pillsbury, Emilee Jade Petersmark, Daniel Bryan Rickabus and Benjamin Allen Zito.",
+        "source": "https://www.deezer.com/us/track/2887311052"
+      },
+      {
+        "claim": "The band shared a Patreon post titled 'Nobody - The Crane Wives (Live from Dogtown Studios)' on Feb 16, 2023. It said they had a great time recording at Dogtown Studios and wanted patrons to see the videos before they reached streaming services.",
+        "source": "https://www.patreon.com/posts/nobody-crane-wives-78022893"
+      },
+      {
+        "claim": "The band's own announcement said new Dogtown Session videos of \"Queen of Nothing\", \"Nobody\" and \"The Wolf\" were out.",
+        "source": "https://www.google.com/search?client=firefox-b-d&q=the+crane+wives"
+      },
+      {
+        "claim": "The song was already in the band's live set. A live version (4:19) appears on the live album 'Here I Am', recorded at the Listening Room in Grand Rapids on Feb 28, 2020 and released Oct 14, 2020.",
+        "source": "https://thecranewives.bandcamp.com/album/here-i-am"
+      },
+      {
+        "claim": "Credits for 'Here I Am' list Petersmark (vocals, guitar), Pillsbury (vocals, guitar), Zito (bass) and Rickabus (drums, vocals). The album was produced by the Crane Wives, with live mixing and engineering by Nicholas Connor Jones.",
+        "source": "https://thecranewives.bandcamp.com/album/here-i-am"
+      },
+      {
+        "claim": "A Washington Square News concert review says the band opened a 2023 New York show with \"Nobody\", with Petersmark carrying the vocals. The review describes the song as depicting a toxic relationship with another woman.",
+        "source": "https://nyunews.com/arts/music/2023/10/19/the-crane-wives-nyc-elsewhere-concert/"
+      },
+      {
+        "claim": "A Medium piece on queer folk artists describes \"Nobody\" as a toxic queer love anthem. It says Petersmark is openly queer and that her experience is embedded in the band's songs.",
+        "source": "https://medium.com/matthews-place/6-queer-folk-artists-to-add-to-your-playlist-9e79f2c714f1"
+      },
+      {
+        "claim": "The Crane Wives formed in Grand Rapids, Michigan in 2010. Petersmark and Pillsbury started out working at a Chinese restaurant in Grandville, and the name nods to The Decemberists' album The Crane Wife.",
+        "source": "https://michiganmusic.fandom.com/wiki/Crane_Wives,_The"
+      },
+      {
+        "claim": "The band is Emilee Petersmark, Kate Pillsbury, Dan Rickabus and Ben Zito. They use three-part vocal harmonies and eclectic instrumentation. Their studio albums are Safe Ship, Harbored, The Fool in Her Wedding Gown, Coyote Stories, Foxlore and Beyond Beyond Beyond (2024).",
+        "source": "https://en.wikipedia.org/wiki/The_Crane_Wives"
+      }
+    ],
+    "lineage": "The band is a Grand Rapids, Michigan indie rock and folk act whose three-part harmonies and folk influence set them apart in a scene dominated by indie rock.",
+    "genres": [
+      "indie rock",
+      "indie folk",
+      "folk rock"
+    ]
+  },
+  "draft": "The whole song turns on four words at the end of the chorus. **Nobody** keeps circling one claim, that no one has ever loved the narrator the way this woman does, and then it lands on the catch: \"Like she tells me she does.\" The love is real enough to name. Whether it's love or just her word for it, the narrator can't say. On the second pass the line slips to \"So she tells me,\" and near the end it tries \"Like she loves me\" before falling back to the hedge. You can hear someone trying out the sentence they want to believe, and failing to hold it.\n\nThe verses build the woman out of opposites. She's soft-spoken as a spider, her voice swings like a hatchet through the trees, and she lights cigarettes like lanterns against the dark in the narrator's head. Then comes the line that holds the whole relationship: \"Tender as a bruise, sharper than a razor.\" A bruise is tender because something hurt it. The comfort and the injury come from the same place, and the narrator can't pull them apart. Her storm is the only one the narrator has ever known, which is the saddest admission here. There's nothing to compare it to.\n\nThen the bridge, where the song stops describing and starts arguing with itself. Something is better than nothing, isn't it, isn't it, isn't it. The repetition is a person talking themselves into staying. \"What does it hurt, a little bit?\" gets asked and half-answered, and the answer trails off into the same words said again and again. Gratitude and fear sit in the same breath, and the song won't choose between them.\n\nThe Crane Wives, a Grand Rapids band whose folk leanings and three-part harmonies set them apart in a mostly indie-rock scene, all share writing credit on the song. It isn't new to them. A version appears on their 2020 live album *Here I Am*, and they opened a 2023 New York show with it, Emilee Petersmark carrying the vocal. Critics have heard it as a toxic love song between two women, and Petersmark is openly queer. This Dogtown Studio take was shared with the band's patrons as a video before it went to streaming services.\n\nThe arrangement keeps a steady hand under all that unease. Strummed acoustic guitar and bass hold a driving, mid-tempo groove, the drums push on the snare, and an electric guitar threads a melodic line through the middle. The lead voice is clear and direct. When the harmony voices come in, the sound fills out, and the claim at the center starts to sound like more than one person repeating it.\n\nIt sticks because the hook is a lie the narrator almost believes, and singing along makes you almost believe it too.",
+  "factCheck": [
+    {
+      "claim": "The whole song turns on four words at the end of the chorus; the line is 'Like she tells me she does.'",
+      "verdict": "corrected",
+      "note": "The quoted line matches the lyrics, but it is six words, not four. Reworded to 'one line'."
+    },
+    {
+      "claim": "The chorus claims no one has ever loved the narrator the way this woman does.",
+      "verdict": "supported",
+      "note": "Reading of 'Nobody ever loved me... like she tells me she does.'"
+    },
+    {
+      "claim": "On the second chorus the line slips to 'So she tells me.'",
+      "verdict": "corrected",
+      "note": "The lyrics support this. The direct quote was turned into a paraphrase to stay within the three-quote limit."
+    },
+    {
+      "claim": "Near the end it tries 'Like she loves me' before falling back to the hedge.",
+      "verdict": "corrected",
+      "note": "Supported by the final chorus in the lyrics. Turned into a paraphrase to stay within the three-quote limit."
+    },
+    {
+      "claim": "She's soft-spoken as a spider, her voice swings like a hatchet through the trees, and she lights cigarettes like lanterns against the dark in the narrator's head.",
+      "verdict": "supported",
+      "note": "Matches verse 1 and the pre-chorus."
+    },
+    {
+      "claim": "'Tender as a bruise, sharper than a razor.'",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Her storm is the only one the narrator has ever known.",
+      "verdict": "supported",
+      "note": "Lyric: 'the only storm I've ever known'."
+    },
+    {
+      "claim": "The bridge repeats 'Something is better than nothing, isn't it, isn't it, isn't it.'",
+      "verdict": "corrected",
+      "note": "Supported by the lyrics. Rewritten as a paraphrase to stay within the three-quote limit."
+    },
+    {
+      "claim": "'What does it hurt, a little bit?' is asked and trails into the same words repeated.",
+      "verdict": "supported",
+      "note": "Matches the lyrics ('A little bit / A little bit')."
+    },
+    {
+      "claim": "All four band members share writing credit.",
+      "verdict": "supported",
+      "note": "Streaming credits list all four as composers."
+    },
+    {
+      "claim": "The Crane Wives are a Grand Rapids band whose folk leanings and three-part harmonies set them apart in a mostly indie-rock scene.",
+      "verdict": "supported",
+      "note": "Matches the lineage note and the researched facts."
+    },
+    {
+      "claim": "A version appears on their 2020 live album Here I Am.",
+      "verdict": "supported",
+      "note": "Released Oct 14, 2020, recorded Feb 28, 2020."
+    },
+    {
+      "claim": "They opened a 2023 New York show with it, Emilee Petersmark carrying the vocal.",
+      "verdict": "supported",
+      "note": "Washington Square News concert review."
+    },
+    {
+      "claim": "Critics have heard it as a toxic love song between two women, and Petersmark is openly queer.",
+      "verdict": "corrected",
+      "note": "Supported by a concert review and a Medium piece. 'Critics' softened to 'Writers'."
+    },
+    {
+      "claim": "This Dogtown Studio take was shared with patrons as a video before it went to streaming.",
+      "verdict": "supported",
+      "note": "Patreon post of Feb 16, 2023."
+    },
+    {
+      "claim": "Strummed acoustic guitar and bass hold a driving, mid-tempo groove.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The drums push on the snare.",
+      "verdict": "removed",
+      "note": "Only one pass mentions a prominent snare."
+    },
+    {
+      "claim": "An electric guitar threads a melodic line through the middle.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a melodic electric line. 'Through the middle' was loosened."
+    },
+    {
+      "claim": "The lead voice is clear and direct.",
+      "verdict": "corrected",
+      "note": "'Clear' and 'mid-range' are backed by two or more passes. 'Direct' appears in only one, so it was dropped."
+    },
+    {
+      "claim": "When the harmony voices come in, the sound fills out.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.3161,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012889,
+        "detail": "1098 in / 115 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014264,
+        "detail": "1098 in / 170 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014389,
+        "detail": "1098 in / 175 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.211598,
+        "detail": "76404 in / 1879 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049912,
+        "detail": "3918 in / 1712 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050392,
+        "detail": "5061 in / 4027 out"
+      }
+    ]
+  }
+}

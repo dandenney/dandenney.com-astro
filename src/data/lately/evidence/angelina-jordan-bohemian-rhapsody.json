@@ -1,0 +1,221 @@
+{
+  "spotifyId": "7FqcieTH1cYXETddibpCgF",
+  "reviewedAt": "2026-11-11T21:09:59.632Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4908834"
+  },
+  "listening": "Pass 1:\nInstruments:\nA piano plays arpeggiated chords. A bass guitar plays a sustained, low-register line.\n\nTempo and Groove:\nThe tempo is slow. The groove is a ballad feel, with a sense of rubato.\n\nVocals:\nThe voice is a female-sounding, clear, and resonant. The delivery is expressive, with some vibrato. There are no harmonies.\n\nProduction:\nThe room sounds like a medium-sized space with some natural reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the piano and bass already playing. The vocals enter shortly after the beginning. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\n- Piano: playing sustained chords with a soft attack.\n- Bass: playing a sustained low note.\n\nTempo and groove:\n- Slow tempo.\n- No discernible groove, as the instruments are playing sustained notes.\n\nVocals:\n- Voice character: A clear, resonant voice with a wide vibrato.\n- Delivery: The singer delivers the melody with a sustained, almost operatic quality.\n- Harmonies: Unsure.\n\nProduction:\n- Room: Unsure.\n- Texture: Clean and clear.\n- Polished/Raw: Polished.\n\nArrangement:\n- The excerpt begins with the piano and bass already playing.\n- The vocals enter shortly after the excerpt begins.\n- No instruments drop out or build within the excerpt.\n\nPass 3:\nInstruments:\nA piano plays arpeggiated chords, with a sustained bass note.\n\nTempo and Groove:\nThe tempo is slow, with a rubato feel.\n\nVocals:\nA single voice sings with a clear, resonant tone. The delivery is expressive, with some vibrato. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a sense of space around the voice and piano, suggesting a medium-sized room.\n\nArrangement:\nThe excerpt begins with the piano and voice already present. The piano provides a consistent accompaniment throughout. The voice is the primary focus, with no other elements entering or dropping out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Angelina Jordan's 'Bohemian Rhapsody' was released as a single on January 24, 2020 by Duetti.",
+        "source": "https://www.shazam.com/en-us/song/1702307951/bohemian-rhapsody"
+      },
+      {
+        "claim": "The single has one track, running 2:28. Freddie Mercury is credited as songwriter and composer.",
+        "source": "https://www.qobuz.com/us-en/album/bohemian-rhapsody-angelina-jordan/ahdhjxy8s2tzb"
+      },
+      {
+        "claim": "Jordan performed the song on the premiere of America's Got Talent: The Champions on January 6, 2020, a few weeks before the single came out. She was 13.",
+        "source": "https://www.billboard.com/music/pop/angelina-jordan-performs-bohemian-rhapsody-agt-champions-8547458/"
+      },
+      {
+        "claim": "Billboard described her version as a lilting ballad that reinvented the bombastic rock classic, with added riffs, runs and trills.",
+        "source": "https://www.billboard.com/music/pop/angelina-jordan-performs-bohemian-rhapsody-agt-champions-8547458/"
+      },
+      {
+        "claim": "Ultimate Classic Rock described her version as an understated, abridged take on the song. Heidi Klum pressed the Golden Buzzer, sending Jordan to the next round.",
+        "source": "https://ultimateclassicrock.com/queen-bohemian-rhapsody-angelina-jordan/"
+      },
+      {
+        "claim": "Judge Howie Mandel told her the performance would change her life and career forever.",
+        "source": "https://ultimateclassicrock.com/queen-bohemian-rhapsody-angelina-jordan/"
+      },
+      {
+        "claim": "Jordan was born on January 10, 2006, in Oslo, Norway. She became known as a child performer after auditioning for Norway's Got Talent in 2014 at age seven with 'Gloomy Sunday'. She won the show with 'Summertime'.",
+        "source": "https://www.qobuz.com/us-en/interpreter/angelina-jordan/2076897"
+      },
+      {
+        "claim": "Jordan signed with Republic Records in August 2020 and released the single 'Million Miles' in November 2020.",
+        "source": "https://www.qobuz.com/us-en/interpreter/angelina-jordan/2076897"
+      },
+      {
+        "claim": "Jordan has kept performing her own arrangement of the song. One example is a live performance at age 16.",
+        "source": "https://www.youtube.com/watch?v=nUBbOtIfnTg"
+      }
+    ],
+    "lineage": "A cover of Queen's Freddie Mercury–written rock epic, reworked by a young Norwegian singer as a stripped-down, jazz-inflected vocal ballad that grew out of a TV talent-show performance.",
+    "genres": [
+      "pop",
+      "vocal jazz",
+      "pop rock"
+    ]
+  },
+  "draft": "Angelina Jordan's **Bohemian Rhapsody** starts where most people think the song ends: \"Anywhere the wind blows.\" It's the shrug that usually closes the intro, and here it comes first, before anything has happened. That reordering is the whole idea. This is an understated, abridged take on Freddie Mercury's rock epic, and what's been cut tells you as much as what stayed. There's no crime in this telling, no operatic trial, no guitar solo. What's left is someone who has run out of time, saying goodbye.\n\nThe arrangement is about as bare as it gets. A piano rolls out arpeggiated chords over a sustained low bass note, and the tempo is slow and loose, stretching and pulling back in rubato rather than locking to a beat. The room has some air in it, enough space around the voice and piano to feel like a real hall, and the sound is clean and polished. There are no harmonies, none of the stacked choir that made the original famous. One voice carries everything, clear and resonant, with a vibrato that widens on the held notes.\n\nThat voice belonged to a 13-year-old. Jordan sang this on the premiere of *America's Got Talent: The Champions* in January 2020, and Heidi Klum hit the Golden Buzzer. Howie Mandel told her it would change her life and career forever. The single followed a few weeks later. She'd been at this since age seven in Oslo, auditioning for Norway's Got Talent with \"Gloomy Sunday\" and winning with \"Summertime,\" and that jazz-inflected grounding shows in how she takes the melody. Billboard heard a lilting ballad that reinvented a bombastic classic, with added riffs, runs and trills.\n\nThe emotional trick is the gap between the frame and the middle. The narrator opens claiming indifference, then cracks almost at once: \"I don't wanna die.\" The following line is worse, the wish to never have been born. Then comes the panicked \"Just gotta get out,\" pulled from the song's heaviest stretch and sung here with nothing behind it but piano. And then the narrator retreats to \"Nothing really matters to me,\" the same pose as the opening, now plainly a pose. The fear and the calm never settle the argument. They just take turns.\n\nJordan has kept singing her own arrangement for years since, and it's easy to hear why it held. Stripping the spectacle out leaves a frightened person trying to sound brave, and the arrangement gives nowhere to hide either one. Here the original's cosmic joke turns into something closer to a lullaby for someone afraid of the dark.\n\nWhat sticks is the moment the shrug stops working, when the narrator's insistence that nothing matters starts to sound like the most desperate line in the song.",
+  "factCheck": [
+    {
+      "claim": "The song starts where most people think the song ends, with 'Anywhere the wind blows'; it's the shrug that usually closes the intro; this reorders the original",
+      "verdict": "removed",
+      "note": "Claims about the original's structure and where this line falls in it aren't in the packet. The lyrics do open with 'Anywhere the wind blows', so I kept that as the opening and cut the reordering claim."
+    },
+    {
+      "claim": "Quote: 'Anywhere the wind blows'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "An understated, abridged take on Freddie Mercury's rock epic",
+      "verdict": "supported",
+      "note": "Ultimate Classic Rock's description; Mercury is credited as songwriter."
+    },
+    {
+      "claim": "No crime, no operatic trial, no guitar solo",
+      "verdict": "removed",
+      "note": "These describe the original's content and the full arrangement, and the packet supports neither. The listening notes cover only a short excerpt, so 'no guitar solo' can't be claimed."
+    },
+    {
+      "claim": "The narrator is someone who has run out of time, saying goodbye",
+      "verdict": "supported",
+      "note": "Interpretation resting on 'My time has come' and 'Goodbye, everybody'."
+    },
+    {
+      "claim": "Piano plays arpeggiated chords over a sustained low bass note; slow tempo",
+      "verdict": "supported",
+      "note": "Piano arpeggios: passes 1 and 3. Sustained bass: all three. Slow tempo: all three."
+    },
+    {
+      "claim": "Loose, rubato tempo rather than locking to a beat",
+      "verdict": "supported",
+      "note": "Rubato appears in passes 1 and 3, and pass 2 found no discernible groove."
+    },
+    {
+      "claim": "The room has air in it, enough space to feel like a real hall",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 say medium-sized room, and pass 2 is unsure. Changed to a medium-sized room."
+    },
+    {
+      "claim": "Clean and polished sound",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "No harmonies, none of the stacked choir that made the original famous",
+      "verdict": "corrected",
+      "note": "No harmonies is backed by passes 1 and 3. The claim about the original's choir is unsupported and was removed."
+    },
+    {
+      "claim": "One voice, clear and resonant, with vibrato that widens on the held notes",
+      "verdict": "corrected",
+      "note": "Clear, resonant voice and vibrato are supported. Where the vibrato widens is a positional claim and was removed."
+    },
+    {
+      "claim": "A 13-year-old sang this on the premiere of America's Got Talent: The Champions in January 2020",
+      "verdict": "supported",
+      "note": "Billboard: January 6, 2020, age 13."
+    },
+    {
+      "claim": "Heidi Klum hit the Golden Buzzer; Howie Mandel said it would change her life and career forever",
+      "verdict": "supported",
+      "note": "Ultimate Classic Rock."
+    },
+    {
+      "claim": "The single followed a few weeks later",
+      "verdict": "supported",
+      "note": "Released January 24, 2020."
+    },
+    {
+      "claim": "At age seven in Oslo, she auditioned for Norway's Got Talent with 'Gloomy Sunday' and won with 'Summertime'",
+      "verdict": "corrected",
+      "note": "She was born in Oslo, but the audition location isn't stated. Reworded."
+    },
+    {
+      "claim": "Her jazz-inflected grounding shows in how she takes the melody",
+      "verdict": "supported",
+      "note": "Interpretation, backed by the lineage note calling this a jazz-inflected vocal ballad."
+    },
+    {
+      "claim": "Billboard heard a lilting ballad that reinvented a bombastic classic, with riffs, runs and trills",
+      "verdict": "supported",
+      "note": "Matches Billboard's description."
+    },
+    {
+      "claim": "Quote: 'I don't wanna die'; the next line wishes never to have been born",
+      "verdict": "supported",
+      "note": "Matches the lyrics and their order."
+    },
+    {
+      "claim": "Opens claiming indifference, then cracks almost at once",
+      "verdict": "corrected",
+      "note": "Several lines separate the opening from 'I don't wanna die', so 'almost at once' was removed."
+    },
+    {
+      "claim": "Quote: 'Just gotta get out', pulled from the song's heaviest stretch and sung with nothing behind it but piano",
+      "verdict": "removed",
+      "note": "The quote is accurate, but the 'heaviest stretch' claim is unsupported, and 'nothing but piano' ignores the bass and makes a positional claim. The quote was cut to stay within three lyric quotes."
+    },
+    {
+      "claim": "Quote: 'Nothing really matters to me', the same pose as the opening",
+      "verdict": "supported",
+      "note": "Matches the lyrics; the reading is interpretation."
+    },
+    {
+      "claim": "Jordan has kept singing her own arrangement for years",
+      "verdict": "supported",
+      "note": "She has kept performing her own arrangement, including a live performance at 16."
+    },
+    {
+      "claim": "The original's cosmic joke turns into something closer to a lullaby",
+      "verdict": "corrected",
+      "note": "Reworded to point at the bombast, which Billboard supports, instead of an unsourced reading of the original."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.191,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013592,
+        "detail": "1099 in / 143 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014067,
+        "detail": "1099 in / 162 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013342,
+        "detail": "1099 in / 133 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06736,
+        "detail": "17645 in / 1207 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.059612,
+        "detail": "3233 in / 2334 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.059948,
+        "detail": "4424 in / 5110 out"
+      }
+    ]
+  }
+}

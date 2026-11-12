@@ -1,0 +1,210 @@
+{
+  "spotifyId": "4N8idxy0W2GDaEosAwPOMg",
+  "reviewedAt": "2026-11-11T20:14:00.099Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2582445"
+  },
+  "listening": "Pass 1:\nA male voice sings with a slightly hoarse, mid-range character, delivered in a melodic, almost spoken style. The vocals are mostly single-tracked, with a brief, layered harmony on \"I need.\"\n\nThe tempo is moderate, with a driving, steady groove. A drum kit plays a consistent beat with a prominent snare on beats two and four, and a closed hi-hat. A bass guitar provides a walking, melodic line. Two electric guitars are present: one plays a clean, arpeggiated figure, while the other plays sustained, slightly distorted chords.\n\nThe production has a raw, live feel. The room sound is present but not overly reverberant. The overall texture is full but not dense.\n\nThe arrangement begins with the full band and vocals. The vocals drop out briefly, then return. The excerpt ends with the full band and vocals.\n\nPass 2:\nA male voice sings in a mid-range, with a slightly raw, almost spoken delivery. The vocals are mostly single-tracked, with some layered harmonies on sustained notes. The tempo is moderate, with a driving, steady groove.\n\nA drum kit provides a consistent beat with a prominent snare and kick drum. A bass guitar plays a simple, repetitive line, anchoring the rhythm. An electric guitar plays clean, arpeggiated chords with a slight shimmer, then transitions to a more distorted, sustained melody with a wah effect.\n\nThe production is clean but not overly polished, with a sense of a medium-sized room. The texture is full, with all instruments clearly audible. The arrangement builds slightly as the distorted guitar enters, adding a layer of intensity.\n\nPass 3:\nA male voice sings in a mid-range, with a slightly raw, almost spoken delivery. He is accompanied by a clean electric guitar playing arpeggiated chords, a bass guitar playing a walking line, and a drum kit with a steady, driving beat. The tempo is moderate, with a relaxed but forward-moving groove. The production is clean and clear, with a natural room sound. The arrangement is consistent throughout the excerpt, with all instruments playing continuously. There are no harmonies.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I Love You\" was released on 17 February 2022 as the second single from Skinty Fia. The album came out on 22 April 2022 and Dan Carey produced it.",
+        "source": "https://en.wikipedia.org/wiki/Skinty_Fia"
+      },
+      {
+        "claim": "Skinty Fia was released through Partisan Records. Dan Carey is credited as producer and mixer, and he also played synths and the Swarmatron and did sonic manipulation. The album was recorded at Angelic Studios and mastered at Abbey Road Studios.",
+        "source": "https://www.discogs.com/release/22968419-Fontaines-DC-Skinty-Fia"
+      },
+      {
+        "claim": "The album's band lineup is Conor Deegan III on bass, Tom Coll on drums and percussion, and Carlos O'Connell and Conor Curley on guitars. Grian Chatten is credited with the words on most tracks.",
+        "source": "https://www.discogs.com/release/22968419-Fontaines-DC-Skinty-Fia"
+      },
+      {
+        "claim": "Skinty Fia was recorded in 2021 in London with Dan Carey, who also produced the band's first two albums, Dogrel and A Hero's Death.",
+        "source": "https://en.wikipedia.org/wiki/Skinty_Fia"
+      },
+      {
+        "claim": "Chatten called \"I Love You\" the first overtly political song the band had written. He said he wanted to take an ostensibly cliché title and topic and make it his own, and it turned out to be another song about Ireland.",
+        "source": "https://au.rollingstone.com/music/music-news/fontaines-d-c-new-song-i-love-you-37230"
+      },
+      {
+        "claim": "Chatten said he had moved away from Ireland, now lives in a country responsible for much of Ireland's chaos, and feels guilty for having left.",
+        "source": "https://au.rollingstone.com/music/music-news/fontaines-d-c-new-song-i-love-you-37230"
+      },
+      {
+        "claim": "The song refers to the 2017 discovery of the remains of 800 children at a former mother and baby home in Ireland.",
+        "source": "https://www.rollingstone.co.uk/music/news/fontaines-d-c-release-brooding-new-single-i-love-you-11526/"
+      },
+      {
+        "claim": "Songfacts reports that the song came out of a jam session. Drummer Tom Coll stopped playing to collect a Deliveroo order, the three guitars kept going, and Chatten began his rant with no drums behind him.",
+        "source": "https://www.songfacts.com/facts/fontaines-dc/i-love-you"
+      },
+      {
+        "claim": "The video was directed by Sam Taylor. In it, Chatten walks through a candle-lit church, calmly for the first half of the song and with more anger in the second half.",
+        "source": "https://uproxx.com/indie/fontaines-dc-i-love-you-video/"
+      },
+      {
+        "claim": "A year after the album's release, the band still closed every show with \"I Love You\", which Chatten sees as a grounding finale of hope.",
+        "source": "https://www.pastemagazine.com/music/fontaines-d-c/fontaines-dc-skinty-fia-interview"
+      }
+    ],
+    "lineage": "Fontaines D.C. are a Dublin-formed Irish post-punk band whose third album, Skinty Fia, explores Irish identity and the experience of Irishness in England.",
+    "genres": [
+      "post-punk",
+      "gothic rock",
+      "alternative rock"
+    ]
+  },
+  "draft": "The trick of **I Love You** is that it keeps its title honest for longer than you expect. For two verses it plays as a straight devotional, the kind of pledge that reaches past the grave, and only when the language curdles do you realise who it's addressed to. Grian Chatten has said he wanted to take a cliché title and topic and make it his own, and that it turned out to be another song about Ireland. He also called it the first overtly political song Fontaines D.C. had written.\n\nThe love is real, and that's what makes the rest hurt. Chatten has said he left Ireland, now lives in a country responsible for much of its chaos, and feels guilty for going. You can hear that guilt in the shape of the lyric. The narrator who swears devotion is the same one who admits he clambered up, did what was demanded, and kept the spoils for himself. Pride and shame share a verse and never settle. Then comes the line that drops the mask: \"this island's run by sharks with children's bones stuck in their jaws.\" It points at the 2017 discovery of the remains of 800 children at a former mother and baby home, and it lands with no metaphor to soften it. Later, the love song comes back sour and funny at once: \"I loved you like a penny loves the pocket of a priest.\" Affection and accusation fused into one simile.\n\nThe music holds steady while the words get louder. A clean electric guitar picks arpeggios over a walking bass line and a drum kit with a firm snare, and the groove sits at a moderate, driving pace. A second, distorted guitar holds long notes behind it. The room sound is natural and close, and the voice is mostly single-tracked: mid-range, a little raw, half sung and half spoken, closer to a man talking at you than performing. That restraint is the point. The band doesn't swell to meet the anger; it lets the anger carry itself.\n\nThe song grew out of a jam. Drummer Tom Coll stepped away to collect a Deliveroo order, the three guitars kept going, and Chatten started his rant with no drums behind him. That accident shows in the finished track, where the rant sections feel like something spilling over rather than something composed. Dan Carey, who produced the band's first two records too, made Skinty Fia with them in London in 2021, at Angelic Studios. It's Irish post-punk, still angry, but turned toward grief for a home you can't stop loving and can't stand to live in.\n\nThe band still closes every show with it, and Chatten calls it a finale of hope, which tells you how he hears the anger. It's a love song that won't let love off the hook. By the last \"the bastard walks by,\" you understand you can rage at a place precisely because you can't let it go.",
+  "factCheck": [
+    {
+      "claim": "Chatten said he wanted to take a cliché title and topic and make it his own, and it turned out to be another song about Ireland.",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone Australia quote."
+    },
+    {
+      "claim": "Chatten called it the first overtly political song the band had written.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "For two verses it plays as a straight devotional, and only when the language curdles do you realise who it's addressed to.",
+      "verdict": "corrected",
+      "note": "'Two verses' is too exact, and the second section already carries edgier lines ('you only open the window, never open up the door'). Reworded as an opening devotional that turns. The reading is kept as interpretation."
+    },
+    {
+      "claim": "Chatten left Ireland, lives in a country responsible for much of its chaos, and feels guilty for going.",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone Australia piece."
+    },
+    {
+      "claim": "The narrator clambered up, did what was demanded, and kept the spoils for himself.",
+      "verdict": "supported",
+      "note": "Based on 'a clamber of the life', 'met with their demands' and 'I kept the spoilings for myself'."
+    },
+    {
+      "claim": "\"this island's run by sharks with children's bones stuck in their jaws\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly (one line)."
+    },
+    {
+      "claim": "It points at the 2017 discovery of the remains of 800 children at a former mother and baby home.",
+      "verdict": "supported",
+      "note": "Rolling Stone UK says the song refers to this."
+    },
+    {
+      "claim": "It lands with no metaphor to soften it.",
+      "verdict": "corrected",
+      "note": "The line itself uses a metaphor (sharks). Changed to a plain statement that it lands hard."
+    },
+    {
+      "claim": "\"I loved you like a penny loves the pocket of a priest.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Clean electric guitar arpeggios, walking bass, drum kit with firm snare, moderate driving groove.",
+      "verdict": "supported",
+      "note": "All three passes agree on the guitar, drums and tempo. Passes 1 and 3 say the bass walks."
+    },
+    {
+      "claim": "A second, distorted guitar holds long notes behind it.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 describe a sustained, distorted guitar."
+    },
+    {
+      "claim": "The room sound is natural and close.",
+      "verdict": "corrected",
+      "note": "The passes support a natural room sound, not 'close'. Dropped 'close'."
+    },
+    {
+      "claim": "Voice is mostly single-tracked, mid-range, a little raw, half sung and half spoken, 'a man talking at you'.",
+      "verdict": "corrected",
+      "note": "The vocal description is supported. 'A man' infers gender from the sound, so it was changed to 'someone'."
+    },
+    {
+      "claim": "The music holds steady while the words get louder; the band doesn't swell to meet the anger.",
+      "verdict": "removed",
+      "note": "Claims about how the song builds over time are unsupported, and the passes disagree on any build."
+    },
+    {
+      "claim": "The song grew out of a jam; Tom Coll stepped away to collect a Deliveroo order, the guitars kept going, and Chatten started his rant with no drums.",
+      "verdict": "supported",
+      "note": "Matches Songfacts."
+    },
+    {
+      "claim": "That accident shows in the finished track, where the rant sections feel like something spilling over.",
+      "verdict": "removed",
+      "note": "Presented as audible, but the listening passes describe a steady drum beat. Not backed by the sound notes."
+    },
+    {
+      "claim": "Dan Carey, who produced the first two records, made Skinty Fia with them in London in 2021, at Angelic Studios.",
+      "verdict": "supported",
+      "note": "Matches Wikipedia and Discogs."
+    },
+    {
+      "claim": "It's Irish post-punk.",
+      "verdict": "supported",
+      "note": "Matches the lineage line for the band."
+    },
+    {
+      "claim": "The band still closes every show with it, and Chatten calls it a finale of hope.",
+      "verdict": "corrected",
+      "note": "The source says this held a year after the album's release, and that Chatten sees it as a grounding finale of hope. Wording adjusted to match."
+    },
+    {
+      "claim": "\"the bastard walks by\"",
+      "verdict": "supported",
+      "note": "Appears in the lyrics. Quoted as a short fragment."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1947,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012498,
+        "detail": "1101 in / 99 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014498,
+        "detail": "1101 in / 179 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013873,
+        "detail": "1101 in / 154 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081942,
+        "detail": "22861 in / 1622 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0548,
+        "detail": "4140 in / 1912 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053826,
+        "detail": "5303 in / 4322 out"
+      }
+    ]
+  }
+}

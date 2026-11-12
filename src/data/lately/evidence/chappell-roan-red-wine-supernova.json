@@ -1,0 +1,190 @@
+{
+  "spotifyId": "7FOgcfdz9Nx5V9lCNXdBYv",
+  "reviewedAt": "2026-11-11T21:21:11.644Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3590187"
+  },
+  "listening": "Pass 1:\nA synth-pop track with a driving, mid-tempo groove. The tempo is steady, with a four-on-the-floor kick drum and a prominent snare on beats two and four. A synth bass provides a pulsing, arpeggiated line. A bright, sustained synth pad plays chords, and a higher-pitched synth plays a melodic counterpoint.\n\nThe lead vocal is clean and clear, with a bright, slightly breathy character. It is delivered with a consistent, mid-range pitch. Harmonies are present, often in a higher register, creating a layered, full sound.\n\nThe production is polished and clean, with a bright, open texture. There is a sense of a medium-sized room, but no overt reverb tails. The sound is well-mixed, with all elements clearly audible.\n\nThe arrangement builds subtly. The initial section features the core instrumentation and lead vocal. As the excerpt progresses, the harmonies become more prominent, and the synth melodies become more active, adding to the overall energy. No instruments drop out.\n\nPass 2:\nA driving, mid-tempo drum beat with a prominent snare backbeat and closed hi-hats establishes a steady groove. A bass guitar plays a simple, rhythmic line. A synth pad provides a sustained, bright chordal texture. A clean electric guitar plays arpeggiated chords.\n\nA single voice sings the lead melody, characterized by a clear, slightly breathy tone. The delivery is mostly legato, with some sustained notes. Harmonies, consisting of stacked voices, enter and exit, often on sustained vowel sounds.\n\nThe production sounds polished and clean, with a moderate amount of reverb suggesting a medium-sized room. The overall texture is bright and full.\n\nThe arrangement builds gradually. The initial instrumentation is relatively sparse. The lead voice enters, followed by the introduction of harmonies. The drum beat becomes more prominent and active as the excerpt progresses, particularly with the addition of open hi-hats. The synth pad and electric guitar maintain their roles throughout.\n\nPass 3:\nA drum machine provides a steady, four-on-the-floor beat with a clap on beats two and four. A bass guitar plays a simple, repeating line. A synth pad provides sustained chords. A clean electric guitar plays arpeggiated chords. The tempo is moderate. The groove feels like a dance-pop track.\n\nThe lead vocal is a clear, high-pitched voice, delivered with a smooth, sustained quality. There are layered harmonies, often in thirds, supporting the lead.\n\nThe production is clean and polished. The room sounds like a medium-sized, dry space. The texture is bright and airy.\n\nThe arrangement builds slightly. The first half features the core instrumentation. In the second half, the drum machine becomes more prominent with a busier hi-hat pattern, and the synth pad swells slightly.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Red Wine Supernova\" was written by Chappell Roan, Lisa Hickox, Amy Kuney, Dan Nigro and Annie Schindel, and produced by Dan Nigro.",
+        "source": "https://neonmusic.co.uk/red-wine-supernova-meaning"
+      },
+      {
+        "claim": "WhoSampled credits Noah Conrad and Lixa as producers alongside Dan Nigro.",
+        "source": "https://www.whosampled.com/Chappell-Roan/Red-Wine-Supernova/"
+      },
+      {
+        "claim": "It was released as a single on 19 May 2023, ahead of the album The Rise and Fall of a Midwest Princess.",
+        "source": "https://neonmusic.co.uk/red-wine-supernova-meaning"
+      },
+      {
+        "claim": "Roan told Zane Lowe she needed a campy gay girl song that captured the magic of having feelings for another girl. She said she packed it with fun raunchy lyrics that feel like a night out flirting with the girl across the bar.",
+        "source": "https://www.udiscovermusic.com/news/chappell-roan-red-wine-supernova/"
+      },
+      {
+        "claim": "The song took about three years to finish. It began in 2019 as a melancholic ballad, and Dan Nigro helped turn it into a silly, celebratory anthem.",
+        "source": "https://www.songfacts.com/facts/chappell-roan/red-wine-supernova"
+      },
+      {
+        "claim": "Roan shared the original demo on TikTok and said it came from her \"straight\" era. The original cut was a ballad with no explicit references to girls.",
+        "source": "https://www.capitalfm.com/news/music/chappell-roan-red-wine-supernova-lyrics-meaning-gay/"
+      },
+      {
+        "claim": "Roan described the song as the gay girl version of Oasis's \"Champagne Supernova\".",
+        "source": "https://neonmusic.co.uk/red-wine-supernova-meaning"
+      },
+      {
+        "claim": "Nigro and Roan added the bridge and expanded the instrumentals. Roan has said the song was written with live performance in mind, especially the audience-interaction bridge.",
+        "source": "https://songsense.io/chappell-roan/red-wine-supernova"
+      },
+      {
+        "claim": "Chappell Roan was born Kayleigh Rose Amstutz in Willard, Missouri. She began writing songs at 12, signed with Atlantic Records at 17, and released her debut EP School Nights in 2017.",
+        "source": "https://www.gigwise.com/understanding-red-wine-supernova-lyrics-by-chappell-roan/"
+      },
+      {
+        "claim": "The album was released on September 22, 2023 by Amusement Records in partnership with Island Records. It was developed mainly with producer Dan Nigro.",
+        "source": "https://en.wikipedia.org/wiki/The_Rise_and_Fall_of_a_Midwest_Princess"
+      }
+    ],
+    "lineage": "A campy, queer, synth-driven dance-pop anthem that reframes Oasis's Britpop-era \"Champagne Supernova\" through a sapphic lens.",
+    "genres": [
+      "dance-pop",
+      "synth-pop",
+      "queer pop"
+    ]
+  },
+  "draft": "Halfway through its come-on, **Red Wine Supernova** stops to correct itself. The narrator brags about a California king at home, then backs down: \"Okay, maybe it's a twin bed.\" There are roommates too. The lie lasts about one breath before honesty wins, and that small climbdown is the song's whole personality. This is flirting as a performance that keeps cracking, and the cracks are where the feeling gets in.\n\nChappell Roan told Zane Lowe she wanted a campy gay girl song about the magic of having feelings for another girl, packed with raunchy lines that play like a night out flirting with someone across the bar. She has called it the gay girl version of Oasis's \"Champagne Supernova.\" The swap of champagne for red wine says a lot. The cosmic Britpop title comes down to bar-stool scale, and the borrowed grandeur turns into a wink.\n\nThe song wasn't always a wink. It started in 2019 as a melancholic ballad from what Roan called her \"straight\" era, with no explicit mention of girls. It took about three years and producer Dan Nigro's help to become a celebration. You can still hear the ballad in the chorus's lead-in: \"Fell in love with the thought of you / Now I'm choked up, face down, burnt out.\" That's a heartbreak line, and it sits right before the narrator asks the girl to come over. Longing and nerve share the same breath, and the song never decides which one is winning. The bravado (the go-go boots, the Bardot fantasy, the shrug at her being a stoner) reads as a way to survive wanting someone this much.\n\nThe arrangement gives that nerve a floor to stand on. A four-on-the-floor kick and a backbeat clap keep things steady and mid-tempo. A bright synth pad holds the chords while a clean electric guitar picks out arpeggios, and the bass stays simple. Roan's voice is clear and a little breathy, held long on the sustained notes, with stacked harmonies swelling around it. The hi-hats get busier as the song builds, and the whole thing is polished and bright, more dance floor than dive bar.\n\nRoan has said the song was written with live performance in mind, especially the bridge, the twin-bed confession and the bawdy magic-trick joke that Nigro helped add. It is built for a crowd to shout back. That turns a private crush into a room full of people saying the embarrassing part out loud together.\n\nThe song lets you be brave and mortified at once, and it makes the mortified part the most fun to sing.",
+  "factCheck": [
+    {
+      "claim": "Halfway through its come-on, the song stops to correct itself (the California king / twin bed turn).",
+      "verdict": "corrected",
+      "note": "'Halfway' is a claim about where the moment falls in the song, and the lyrics' structure puts it late, after the second chorus. Reworded to 'Mid-pitch', which makes no positional claim."
+    },
+    {
+      "claim": "\"Okay, maybe it's a twin bed.\" The narrator first brags about a California king, and there are roommates too.",
+      "verdict": "supported",
+      "note": "Quote matches the lyrics exactly. The California king and roommates are in the lyrics."
+    },
+    {
+      "claim": "Roan told Zane Lowe she wanted a campy gay girl song about the magic of having feelings for another girl, packed with raunchy lines that play like a night out flirting across the bar.",
+      "verdict": "supported",
+      "note": "Matches the udiscovermusic summary of the Zane Lowe interview."
+    },
+    {
+      "claim": "Roan has called it the gay girl version of Oasis's \"Champagne Supernova.\"",
+      "verdict": "supported",
+      "note": "Neon Music source."
+    },
+    {
+      "claim": "The swap of champagne for red wine brings the cosmic Britpop title down to bar-stool scale, and the borrowed grandeur turns into a wink.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the supported Oasis comparison and the Britpop-era lineage."
+    },
+    {
+      "claim": "It started in 2019 as a melancholic ballad from what Roan called her 'straight' era, with no explicit mention of girls.",
+      "verdict": "supported",
+      "note": "Songfacts and Capital FM."
+    },
+    {
+      "claim": "It took about three years and Dan Nigro's help to become a celebration.",
+      "verdict": "supported",
+      "note": "Songfacts."
+    },
+    {
+      "claim": "\"Fell in love with the thought of you / Now I'm choked up, face down, burnt out.\" It sits right before the narrator asks the girl to come over.",
+      "verdict": "supported",
+      "note": "Quote is exact and is two consecutive lines. 'Baby, why don't you come over?' follows. Changed 'chorus's lead-in' to 'the run-up to the chorus' for accuracy."
+    },
+    {
+      "claim": "The go-go boots, the Bardot fantasy and the shrug at her being a stoner.",
+      "verdict": "supported",
+      "note": "All in the lyrics."
+    },
+    {
+      "claim": "A four-on-the-floor kick and a backbeat clap keep things steady and mid-tempo.",
+      "verdict": "corrected",
+      "note": "Four-on-the-floor kick and mid-tempo are agreed on by multiple passes. The backbeat is agreed on, but the passes split between snare and clap, so it is now just 'backbeat'."
+    },
+    {
+      "claim": "A bright synth pad holds the chords while a clean electric guitar picks out arpeggios, and the bass stays simple.",
+      "verdict": "supported",
+      "note": "Pad in all three passes. Clean electric guitar arpeggios in passes 2 and 3. Simple bass in passes 2 and 3."
+    },
+    {
+      "claim": "Roan's voice is clear and a little breathy, held long on the sustained notes, with stacked harmonies swelling around it.",
+      "verdict": "corrected",
+      "note": "Clear and slightly breathy, sustained notes and layered harmonies are supported. 'Swelling' was dropped because it implies a change over time."
+    },
+    {
+      "claim": "The hi-hats get busier as the song builds.",
+      "verdict": "removed",
+      "note": "This is an arc claim about the excerpt's progression. The excerpt's position in the song is unknown."
+    },
+    {
+      "claim": "The whole thing is polished and bright, more dance floor than dive bar.",
+      "verdict": "supported",
+      "note": "All passes say polished and bright, and pass 3 calls it dance-pop. 'Dive bar' is the critic's comparison."
+    },
+    {
+      "claim": "Roan has said the song was written with live performance in mind, especially the bridge, which she and Nigro added.",
+      "verdict": "corrected",
+      "note": "Source says Nigro and Roan added the bridge and that it was written with live performance in mind, especially the audience-interaction bridge. The original tied the twin-bed and magic-wand lines to that bridge and credited Nigro alone with adding them, and neither link is supported."
+    },
+    {
+      "claim": "It is built for a crowd to shout back, turning a private crush into a room full of people saying the embarrassing part out loud.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the live-performance fact and the call-out lyric '(okay, y'all, let's pick it up now)'."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1908,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014195,
+        "detail": "1100 in / 167 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014895,
+        "detail": "1100 in / 195 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015395,
+        "detail": "1100 in / 215 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.082586,
+        "detail": "22278 in / 1803 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050736,
+        "detail": "3949 in / 1747 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053008,
+        "detail": "5074 in / 4286 out"
+      }
+    ]
+  }
+}

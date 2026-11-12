@@ -1,0 +1,190 @@
+{
+  "spotifyId": "2W5dSuM7DDdWymjzZsICBn",
+  "reviewedAt": "2026-11-11T21:06:26.995Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7805988"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a slightly raspy, soulful character, delivering the melody with a bluesy inflection. A second male voice provides harmonies, often in a higher register, creating a rich, layered sound.\n\nThe instruments include a clean electric guitar playing arpeggiated chords and melodic fills, and a bass guitar providing a walking bass line. Drums lay down a steady, medium-slow tempo with a shuffle feel, emphasizing the backbeat.\n\nThe production sounds warm and natural, with a sense of a live room. The texture is organic and raw, not overly polished.\n\nThe arrangement features the lead vocal and guitar prominent throughout. The harmony vocal enters and drops out, adding emphasis to certain phrases. The bass and drums maintain a consistent groove.\n\nPass 2:\nA male voice sings lead, with a slightly raspy, soulful character, using a mix of sustained notes and short, bluesy phrases. A second male voice provides harmonies, often in a higher register.\n\nThe instruments include a clean electric guitar playing arpeggiated chords and melodic fills, a bass guitar laying down a walking bass line, and drums providing a steady, medium-slow tempo. The drums feature a prominent snare backbeat and occasional cymbal washes.\n\nThe groove feels like a relaxed, blues-infused shuffle. The production sounds warm and slightly raw, with a sense of a live room. The texture is full but not overly dense.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning. There are no significant entries, drop-outs, or builds within this segment.\n\nPass 3:\nA male voice sings lead, with a slightly raspy, soulful character, using a mix of sustained notes and short, bluesy phrases. A second male voice provides harmonies, often in a higher register.\n\nThe tempo is slow, with a relaxed, bluesy groove. A clean electric guitar plays arpeggiated chords and fills, with a slight tremolo effect. A bass guitar plays a walking line, providing a solid rhythmic foundation. Drums play a simple, laid-back beat with brushes or light sticks, emphasizing the snare on beats two and four.\n\nThe production sounds warm and natural, with a sense of a live room. The texture is organic and unpolished.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning. There are no significant entries, drop-outs, or builds within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Deezer credits \"Pain and Misery\" to Brendon Love, Joshua Teskey, Liam Gough and Samuel Teskey as writers and composers.",
+        "source": "https://www.deezer.com/en/track/571875392"
+      },
+      {
+        "claim": "The Teskey Brothers formed in 2008. The members are brothers Josh Teskey (vocals) and Sam Teskey (guitar), with Brendon Love (bass) and Liam Gough (drums).",
+        "source": "https://en.wikipedia.org/wiki/The_Teskey_Brothers"
+      },
+      {
+        "claim": "\"Pain and Misery\" was the first single from the album Half Mile Harvest. The band released it in 2016, before the album came out on 12 January 2017.",
+        "source": "https://www.youtube.com/watch?v=lBFZNVxG86o"
+      },
+      {
+        "claim": "Half Mile Harvest was recorded at the band's home studio, Half Mile Harvest Studios, in Warrandyte. Josh Teskey says his brother Sam was the main engineer.",
+        "source": "https://happymag.tv/chatting-soul-blues-and-an-american-future-with-the-teskey-brothers/"
+      },
+      {
+        "claim": "Sam Teskey built the analogue studio himself. His Studer A800 tape machine is at the core of the studio and the album, and the band chose to record to it deliberately.",
+        "source": "https://themusicnetwork.com/news/the-teskey-brothers-a-diy-success-story"
+      },
+      {
+        "claim": "The band released the album with no management and no label. Josh said they recorded music they loved in the way they loved to record it.",
+        "source": "https://happymag.tv/chatting-soul-blues-and-an-american-future-with-the-teskey-brothers/"
+      },
+      {
+        "claim": "A 2016 CD EP titled \"Pain And Misery\" was released on Half Mile Harvest Recordings and recorded at Half Mile Harvest Studios. It also contains \"Love Her With A Feeling\", \"Rats In My Kitchen\" and \"Sweet Sixteen\".",
+        "source": "https://www.discogs.com/release/13758442-The-Teskey-Brothers-Pain-And-Misery"
+      },
+      {
+        "claim": "Beat magazine reports that after the band released \"Pain and Misery\" as a single, the local record store sold out. The band then restocked its shelves with copies of Half Mile Harvest.",
+        "source": "https://beat.com.au/the-teskey-brothers-go-back-to-their-roots-for-melbourne-international-jazz-festival/"
+      },
+      {
+        "claim": "Atwood Magazine says the song is a heartbreak track with a 1960s American soul-inspired sound. It says the band was re-releasing the album in a deluxe edition on 26 October 2018 through Glassnote/Decca.",
+        "source": "https://atwoodmagazine.com/the-teskey-brothers-explore-heartaches-destructive-depths-with-pain-and-misery/"
+      },
+      {
+        "claim": "Half Mile Harvest is the band's debut album. It reached number 18 on the ARIA chart and topped the ARIA Independent Album chart. Their later albums are Run Home Slow (2019) and The Winding Way (2023).",
+        "source": "https://en.wikipedia.org/wiki/The_Teskey_Brothers"
+      }
+    ],
+    "lineage": "The song sits in the 1960s American soul and blues tradition, with critics comparing the band to Stax Records acts and Otis Redding, and it comes from the Warrandyte/Melbourne scene.",
+    "genres": [
+      "soul",
+      "blues",
+      "blues rock"
+    ]
+  },
+  "draft": "The chorus of **Pain and Misery** begs someone to stay who has already gone. That's the whole knot of the song: a plea for presence wrapped around a plain report of absence. The narrator isn't building a case or trying to win anyone back with reasons. They're still asking after the answer has been given.\n\nJosh Teskey sings it in a slightly raspy voice, holding long notes and then breaking into short, bluesy phrases, the way someone talks when they've rehearsed what to say and can't get through it. A second voice sits above him in a higher register, and that harmony makes the begging sound a little less alone than the words claim to be. Underneath, the band keeps a relaxed shuffle at a medium-slow pace. A walking bass line moves under a snare that lands on the backbeat, while a clean electric guitar rolls out arpeggiated chords and small fills between the lines. Nobody hurries, and the groove holds steady so the singer can come apart on top of it.\n\nThe lyric is built from old soul stock: honey, baby, love as a crazy game. Some of it is familiar to the point of being worn. But the second verse turns. \"Sometimes I curse that day of when you came along,\" he sings, then: \"I was happy.\" It's not clear whether he means happy before her or happy with her, and the song doesn't need to choose. Resentment and longing sit in the same breath, and neither cancels the other. Then comes the line that shows how big the loss really is: \"Now that I've lost the best friend that I ever had.\" It isn't only a lover who's gone. By the last lines the reasoning drops away entirely, leaving bare want and need, repeated.\n\nCritics have compared the band to Stax acts and Otis Redding, and the debt to 1960s American soul is open. All four members share the writing credit: brothers Josh and Sam Teskey with bassist Brendon Love and drummer Liam Gough. They cut it at Half Mile Harvest Studios, the analogue room Sam built himself in Warrandyte, outside Melbourne. He engineered the sessions and chose to record to a Studer A800 tape machine. The band had no label and no management. When they put the song out as the first single from their debut, Half Mile Harvest, the local record store sold out, and the band restocked the shelves with the album. You can hear that home-built warmth in the room sound, live and slightly raw.\n\nThe song sticks because it lets you sit inside the moment after someone leaves, when you're still pleading with an empty doorway and a steady band is the only thing holding you up.",
+  "factCheck": [
+    {
+      "claim": "The chorus begs someone to stay who has already gone.",
+      "verdict": "supported",
+      "note": "Matches the lyrics: \"Won't you stay with me? 'Cause since you gone.\""
+    },
+    {
+      "claim": "Josh Teskey sings lead.",
+      "verdict": "supported",
+      "note": "Josh Teskey is listed as the band's vocalist, and the listening passes agree on a male lead voice."
+    },
+    {
+      "claim": "Slightly raspy voice, holding long notes and then breaking into short bluesy phrases.",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 agree on a mix of sustained notes and short bluesy phrases. The 'then breaking into' sequence implies an order that isn't supported, so it now reads as a mix."
+    },
+    {
+      "claim": "A second voice sits above him in a higher register.",
+      "verdict": "corrected",
+      "note": "All passes say the harmony is 'often' in a higher register. Softened to 'often'."
+    },
+    {
+      "claim": "Relaxed shuffle at a medium-slow pace.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on shuffle and medium-slow tempo; pass 3 agrees on a slow, relaxed groove."
+    },
+    {
+      "claim": "Walking bass line, snare on the backbeat, clean electric guitar with arpeggiated chords and small fills.",
+      "verdict": "supported",
+      "note": "All three passes agree on these elements."
+    },
+    {
+      "claim": "Quoted lines \"Sometimes I curse that day of when you came along,\" \"I was happy,\" and \"Now that I've lost the best friend that I ever had.\"",
+      "verdict": "supported",
+      "note": "All three quotes match the lyrics exactly, and none runs past two consecutive lines."
+    },
+    {
+      "claim": "Lyric uses honey, baby, and love as a crazy game; the second verse turns; the last lines drop the reasoning and repeat want and need.",
+      "verdict": "supported",
+      "note": "The lyrics and their structure show all of this. The readings are interpretation."
+    },
+    {
+      "claim": "Critics have compared the band to Stax acts and Otis Redding; the song has a debt to 1960s American soul.",
+      "verdict": "supported",
+      "note": "Backed by the lineage note and Atwood's description of a 1960s American soul-inspired sound."
+    },
+    {
+      "claim": "All four members share the writing credit: Josh and Sam Teskey, Brendon Love, Liam Gough.",
+      "verdict": "supported",
+      "note": "Deezer credits all four as writers and composers; the band roles come from the band profile."
+    },
+    {
+      "claim": "Recorded at Half Mile Harvest Studios, the analogue room Sam built himself, in Warrandyte.",
+      "verdict": "supported",
+      "note": "The studio, its location, and Sam building it are sourced. The 2016 EP with this title track was recorded there."
+    },
+    {
+      "claim": "Warrandyte is 'outside Melbourne.'",
+      "verdict": "removed",
+      "note": "The packet places the band in the Warrandyte/Melbourne scene but never says Warrandyte is outside Melbourne."
+    },
+    {
+      "claim": "Sam engineered the sessions and chose to record to a Studer A800.",
+      "verdict": "corrected",
+      "note": "Josh says Sam was the main engineer, and the band (not Sam alone) chose to record to the Studer deliberately."
+    },
+    {
+      "claim": "The band had no label and no management.",
+      "verdict": "corrected",
+      "note": "The sources say this about the album release. Reworded to say they put out the album without either."
+    },
+    {
+      "claim": "First single from their debut Half Mile Harvest; the local record store sold out and the band restocked with the album.",
+      "verdict": "supported",
+      "note": "Covered by the first-single and debut facts and by the Beat magazine report."
+    },
+    {
+      "claim": "Warmth in the room sound, live and slightly raw.",
+      "verdict": "supported",
+      "note": "All three passes describe a warm, natural, live-room, raw or unpolished production."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2019,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014233,
+        "detail": "1102 in / 168 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013908,
+        "detail": "1102 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00060897,
+        "detail": "1102 in / 173 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.079702,
+        "detail": "22546 in / 1461 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.069492,
+        "detail": "3763 in / 2722 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049258,
+        "detail": "4889 in / 3948 out"
+      }
+    ]
+  }
+}

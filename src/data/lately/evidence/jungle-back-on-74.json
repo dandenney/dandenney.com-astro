@@ -1,0 +1,195 @@
+{
+  "spotifyId": "19kHhX6f6EfLU7rcO3RqjO",
+  "reviewedAt": "2026-11-11T21:19:02.160Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3283232"
+  },
+  "listening": "Pass 1:\nInstruments:\nA clean electric guitar plays a rhythmic, arpeggiated figure. A bass guitar plays a simple, driving line. Drums provide a steady, four-on-the-floor beat with a prominent snare. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and danceable, with a slight swing.\n\nVocals:\nA lead vocalist sings with a clear, mid-range voice. The delivery is smooth and melodic. Harmonies are present, with multiple voices singing in unison or close harmony with the lead.\n\nProduction:\nThe sound is polished and clean. The texture is full but not overly dense. The room sound is neutral, not particularly wet or dry.\n\nArrangement:\nThe excerpt begins with the full instrumentation. The lead vocal and harmonies are present throughout. No instruments drop out or build significantly within this short segment.\n\nPass 2:\nInstruments:\nA clean electric guitar plays a rhythmic, arpeggiated figure. A bass guitar plays a simple, driving line. Drums provide a steady, four-on-the-floor beat with a prominent snare. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is steady and driving, with a slight swing feel.\n\nVocals:\nThe lead vocal is a clear, mid-range voice. It is delivered with a relaxed, slightly breathy quality. Harmonies are present, with multiple voices singing in unison or close harmony, creating a full, stacked sound.\n\nProduction:\nThe production is polished and clean. The room sound is relatively dry, with a clear separation of instruments. The texture is smooth and layered.\n\nArrangement:\nThe excerpt begins with all instruments playing. The lead vocal enters immediately, followed by harmonies. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nA clean electric guitar plays a rhythmic, arpeggiated figure. A bass guitar plays a simple, driving line. Drums provide a steady beat with kick, snare, and hi-hat. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and driving, with a slight swing.\n\nVocals:\nThe lead vocal is a clear, mid-range voice, delivered with a smooth, confident tone. Harmonies are present, with multiple voices singing in unison or close harmony with the lead.\n\nProduction:\nThe production sounds polished and clean. The room sounds dry, with no noticeable reverb on the vocals or instruments. The texture is full and layered.\n\nArrangement:\nThe excerpt begins with the full band and vocals. The bass and drums maintain a consistent pattern throughout. The synth pad provides a continuous bed of sound. The lead vocal and harmonies are present for most of the excerpt, with a slight build in intensity towards the end as the harmonies become more prominent.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Back on 74\" is a song by the British band Jungle. It was the fourth and final single from the album Volcano, released on 28 July 2023 through Caiola and AWAL.",
+        "source": "https://en.wikipedia.org/wiki/Back_on_74"
+      },
+      {
+        "claim": "It was written by Josh Lloyd (Lloyd-Watson), Tom McFarland and Lydia Kitto. Lloyd produced it, with additional production by McFarland.",
+        "source": "https://en.wikipedia.org/wiki/Back_on_74"
+      },
+      {
+        "claim": "Josh Lloyd said the '74' in the title is a fictitious place, like a street you played on as a kid. Going back to it gives a nostalgic feeling, but everything is not quite the same.",
+        "source": "https://sonichits.com/video/Jungle/Back_On_74"
+      },
+      {
+        "claim": "Tom McFarland described the song as one of the rawest things the band has made. He compared its verses to Curtis Mayfield.",
+        "source": "https://www.kalw.org/2023-09-08/jungle-is-two-dudes-a-groove-and-a-feeling"
+      },
+      {
+        "claim": "Volcano was recorded at Studio B, Metropolis in London. It was produced by Josh Lloyd, with Mood Talk producing one track, and mastered by Matt Colton.",
+        "source": "https://en.wikipedia.org/wiki/Volcano_(Jungle_album)"
+      },
+      {
+        "claim": "A music video for the song was directed by Josh Lloyd and Charlie Di Placido. An interactive version came out in July 2023, and a standard YouTube release followed the next month.",
+        "source": "https://en.wikipedia.org/wiki/Back_on_74"
+      },
+      {
+        "claim": "The track and its video went viral on TikTok in late 2023 and early 2024. A performance at the 2024 Brit Awards also helped. It was nominated for the Best Contemporary Song Ivor Novello Award.",
+        "source": "https://en.wikipedia.org/wiki/Back_on_74"
+      },
+      {
+        "claim": "Tom McFarland called the viral success of the song a surprise, not necessarily overwhelming. He said the band had just been trying to keep things light and make something fun.",
+        "source": "https://diymag.com/interview/jungle-sunshine-august-2026"
+      },
+      {
+        "claim": "Volcano is Jungle's fourth album. It was written and recorded alongside singer-producer Lydia Kitto, who became a full member of the band in late 2023.",
+        "source": "https://en.wikipedia.org/wiki/Jungle_(band)"
+      },
+      {
+        "claim": "Jungle formed in 2013 as a London production duo of childhood friends Josh Lloyd-Watson and Tom McFarland. They were first known only as J and T, and their 2014 debut album was shortlisted for the Mercury Prize.",
+        "source": "https://www.allmusic.com/album/release/volcano-mr0005977269"
+      }
+    ],
+    "lineage": "Jungle's groove-led music draws on 1970s soul, funk and disco and is danced to in the band's one-shot dance videos. Volcano was described as having old-school dance party vibes, and Back on 74's verses were compared to Curtis Mayfield.",
+    "genres": [
+      "nu-disco",
+      "funk",
+      "soul"
+    ]
+  },
+  "draft": "The question in **Back On 74** never gets finished. \"Where did it all\" hangs at the end of every chorus, and the word that would complete it gets pushed into the start of the next section, so the answer and the question keep running into each other. On the lyric sheet, the song's last line is that same broken phrase. For a track that ended up filling dance floors and phone screens, it's built around a sentence nobody manages to close.\n\nJosh Lloyd has said the 74 is made up, something like a street you played on as a kid. Going back brings the nostalgic rush, but things aren't quite the same. That's the feeling the song carries: homesickness for a place that only half exists, and the small jolt of finding it changed. The verses lean hard on sameness. The word \"same\" turns up again and again: the same line, the same town, the same crime. It sounds like someone trying to prove nothing has moved. Then come the claims of being fine. \"No, it don't hurt when it rains now.\" \"Never gonna cry anymore.\" Those are the words of someone talking themselves through it, and the song lets you hear the resolve and what it's covering for at once. A bracketed aside about first noticing someone slips a person into the memory, tucked behind the main vocal as if it's too much to say up front.\n\nThe music refuses to sulk. A clean electric guitar picks a tight, arpeggiated figure, the bass holds a simple driving line, and the drums lock into four-on-the-floor with a snare that cuts through. A synth pad lays sustained chords underneath. The tempo is moderate and the groove carries a slight swing, more strut than sprint. The lead vocal is clear and mid-range, smooth, wrapped in stacked harmonies that move in unison or close behind it. The mix is polished and dry, every part in its own space.\n\nTom McFarland called it one of the rawest things Jungle has made and compared the verses to Curtis Mayfield. That fits. Written by Lloyd, McFarland and Lydia Kitto, the song draws on the '70s soul, funk and disco the band has always mined, and it takes up that tradition's oldest bargain: lay the hurt over a groove so easy you could miss the hurt. The repeated chant to let it go works the same way. It's advice sung so many times it stops being a decision and becomes a rhythm to hide inside.\n\nIt went viral, landed on the 2024 Brit Awards stage, and earned an Ivor Novello nomination. None of that explains it as well as that unfinished line.\n\nThe song sticks because it lets you dance right in the spot where you're still asking where it all went.",
+  "factCheck": [
+    {
+      "claim": "\"Where did it all\" ends each chorus, and the completing word \"Go?\" begins the next section",
+      "verdict": "supported",
+      "note": "The lyrics show \"Where did it all-\" followed by \"Go?\" throughout."
+    },
+    {
+      "claim": "The song's last line is the same broken phrase",
+      "verdict": "supported",
+      "note": "The lyrics end on \"Where did it all-\". The phrase \"On the lyric sheet\" was cut because it points to the source."
+    },
+    {
+      "claim": "The track ended up filling dance floors and phone screens",
+      "verdict": "corrected",
+      "note": "TikTok virality is supported. Filling dance floors is not. Reworded to cite the viral spread and the band's dance videos."
+    },
+    {
+      "claim": "Josh Lloyd said the 74 is made up, like a street you played on as a kid; going back feels nostalgic but not quite the same",
+      "verdict": "supported",
+      "note": "Matches the sonichits quote in the researched facts."
+    },
+    {
+      "claim": "The lyrics repeat \"same\": same line, same town, same crime",
+      "verdict": "supported",
+      "note": "All three phrases appear in the lyrics."
+    },
+    {
+      "claim": "Quotes: \"No, it don't hurt when it rains now.\" and \"Never gonna cry anymore.\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "A bracketed aside about first noticing someone, tucked behind the main vocal",
+      "verdict": "corrected",
+      "note": "\"(when I noticed you)\" is a parenthetical in the lyrics, but \"first\" is not in the line and no listening pass says it is sung behind the lead. Reworded to the lyric as written."
+    },
+    {
+      "claim": "Clean electric guitar with an arpeggiated figure; bass with a simple driving line; synth pad with sustained chords",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Drums lock into four-on-the-floor with a snare that cuts through",
+      "verdict": "corrected",
+      "note": "Two passes say four-on-the-floor and a prominent snare. \"Cuts through\" overstated this, so it now reads \"prominent snare\"."
+    },
+    {
+      "claim": "Moderate tempo with a slight swing",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Lead vocal clear, mid-range, smooth, with stacked harmonies in unison or close harmony",
+      "verdict": "supported",
+      "note": "All passes agree on the clear mid-range voice and the harmonies. Two passes say smooth."
+    },
+    {
+      "claim": "The mix is polished and dry, every part in its own space",
+      "verdict": "corrected",
+      "note": "Polished (all passes) and dry (two passes) are supported. Clear separation of instruments appears in only one pass, so it was removed."
+    },
+    {
+      "claim": "Tom McFarland called it one of the rawest things Jungle has made and compared the verses to Curtis Mayfield",
+      "verdict": "supported",
+      "note": "Matches the KALW source."
+    },
+    {
+      "claim": "Written by Lloyd, McFarland and Lydia Kitto",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The song draws on the '70s soul, funk and disco the band has always mined",
+      "verdict": "corrected",
+      "note": "The lineage note supports 1970s soul, funk and disco influence. \"Always\" went beyond it and was removed."
+    },
+    {
+      "claim": "The song went viral, landed on the 2024 Brit Awards stage, and earned an Ivor Novello nomination",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Interpretive readings (resolve and what it covers for; the let-it-go chant becoming a rhythm to hide inside; the groove as a bargain)",
+      "verdict": "supported",
+      "note": "These are the critic's readings and rest on the lyrics and the supported sound details."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2792,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014592,
+        "detail": "1099 in / 183 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015292,
+        "detail": "1099 in / 211 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014967,
+        "detail": "1099 in / 198 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14903,
+        "detail": "51835 in / 1536 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0789,
+        "detail": "4060 in / 3133 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046834,
+        "detail": "5202 in / 3643 out"
+      }
+    ]
+  }
+}

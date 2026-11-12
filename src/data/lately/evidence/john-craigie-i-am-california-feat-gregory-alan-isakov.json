@@ -1,0 +1,205 @@
+{
+  "spotifyId": "27ytYULTu6QSZBhGaOKq9i",
+  "reviewedAt": "2026-11-11T21:46:52.121Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9064489"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a gentle, flowing feel. A male voice sings in a clear, slightly breathy tone, with a relaxed delivery. The tempo is slow. The production is clean and intimate, with a sense of a small room. The texture is sparse.\n\nThe acoustic guitar continues throughout. The voice enters at the beginning, singing a melodic line. A second male voice joins in harmony, singing the same melodic line, creating a fuller vocal sound. The harmony is present for the remainder of the excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked pattern with a consistent bass note on the downbeat. A second acoustic guitar strums chords, often on the off-beats. The tempo is slow, with a relaxed, slightly swaying feel.\n\nA male voice sings in a low-mid range, with a smooth, slightly breathy delivery. The lead vocal is joined by a second male voice singing a harmony above it, often in unison rhythm.\n\nThe production sounds dry and intimate, as if recorded in a small room. The texture is clean and unadorned.\n\nThe excerpt begins with the two acoustic guitars and the lead vocal. The harmony vocal enters shortly after the lead vocal begins. All elements remain consistent throughout the excerpt.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. A male voice sings lead with a clear, slightly breathy character. The tempo is slow, with a gentle, flowing groove. A second male voice joins for harmonies, mostly singing in unison or parallel to the lead. The production is clean and polished, with a sense of a medium-sized room. The texture is sparse, with the guitar and vocals prominent. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I Am California (feat. Gregory Alan Isakov)\" is a 5:13 track by John Craigie, released January 27, 2017, on the album No Rain, No Rose.",
+        "source": "https://music.apple.com/us/song/i-am-california-feat-gregory-alan-isakov/1187658761"
+      },
+      {
+        "claim": "The song is credited as composed by John Harrold Craigie.",
+        "source": "https://www.jiosaavn.com/song/i-am-california-feat.-gregory-alan-isakov/ET47HDgIeks"
+      },
+      {
+        "claim": "On No Rain, No Rose, Craigie is credited with acoustic guitar, vocals, harmonica, percussion and production. Gregory Alan Isakov and the Shook Twins sing, and John Nuhn plays upright bass.",
+        "source": "https://en.wikipedia.org/wiki/No_Rain,_No_Rose"
+      },
+      {
+        "claim": "Craigie recorded No Rain, No Rose in the living room of his Portland home over three days. Guests included Isakov, the Shook Twins, and Tyler Thompson and Jay Cobb Anderson of Fruition.",
+        "source": "https://glidemagazine.com/178837/john-craigie/"
+      },
+      {
+        "claim": "Craigie said he was born and raised in California and loves much about the state. He also said people leave, criticize it, then drink its wine, smoke its weed and vacation there.",
+        "source": "https://imposemagazine.com/bytes/new-music/john-craigie-i-am-california"
+      },
+      {
+        "claim": "Impose Magazine described the track as a homage to the Golden State, with violins in the bridge and harmonica, and with Isakov assisting.",
+        "source": "https://imposemagazine.com/bytes/new-music/john-craigie-i-am-california"
+      },
+      {
+        "claim": "A 2025 B-Side Guys article reports the song has nearly 27 million Spotify streams. It describes Isakov's backing vocals as adding melancholy and the song as a portrait of California as both paradise and cautionary tale.",
+        "source": "https://bsideguys.com/2025/01/04/ghost-stories-from-the-golden-state-a-folk-meditation-endures/"
+      },
+      {
+        "claim": "Craigie said the album's loose, collaborative feel with studio chatter left between tracks was inspired by the Nitty Gritty Dirt Band's guest-filled records. His engineer left the tape running.",
+        "source": "https://siskiyou.sou.edu/2019/12/06/empathetic-and-hilarious-an-interview-with-singer-songwriter-john-craigie/"
+      },
+      {
+        "claim": "No Rain, No Rose is a tribute to Portland, where Craigie moved from California about two years before. Its title riffs on the Buddhist saying \"no mud, no lotus\".",
+        "source": "https://www.wweek.com/music/2017/12/05/john-craigie-isnt-afraid-of-intimacy/"
+      },
+      {
+        "claim": "Craigie was born and raised in Los Angeles. He studied mathematics at UC Santa Cruz before taking to the road, and No Rain, No Rose is his fifth studio album. Songs written for it that missed the cut ended up on the 2018 vinyl-only album Scarecrow.",
+        "source": "https://folkalley.com/a-q-a-with-john-craigie/"
+      }
+    ],
+    "lineage": "Craigie's humorous, storytelling folk-Americana is compared by critics to John Prine and Todd Snider, and the album's loose, guest-filled sessions are modeled on the Nitty Gritty Dirt Band's collaborative records.",
+    "genres": [
+      "folk",
+      "indie folk",
+      "americana"
+    ]
+  },
+  "draft": "A state doesn't usually get to talk back, but in **I Am California** it does, and it sounds like an ex who knows you'll call. The chorus hands everything over: drink the wine, cut the trees, make love on the beaches, smoke the weed. It reads like generosity until you hear the shrug under it. Take what you want. You'll be back.\n\nJohn Craigie wrote it, and he has said where it comes from. He was born and raised in Los Angeles and loves much about the place. He has also watched people leave California, criticize it, and then keep drinking its wine, smoking its weed, and vacationing there. The song gives the state the last word on that. There's pride in it and a wounded streak too, and neither cancels the other. When the list stretches to digging the gold and conquering the mountains, there's a sting: the state lets itself be used up \"if that's what you need,\" like a lover too proud to beg and too hurt to pretend it doesn't care.\n\nThe verses belong to someone else, a person stuck in a cold, lonely place. Craigie's opening is the kind of joke that lands as a bruise: \"You tried to drown your sorrows / You shouldn't have taught them how to swim.\" It's a Prine-style turn, funny for a half second and then just true. A later verse about lovers says the new ones end up paying for the old ones' sins, and that's the whole song in small. Whatever you ran from comes with you, and whatever you left keeps a light on.\n\nThe sound stays out of the way of all that. A fingerpicked acoustic guitar rolls under a slow, easy tempo, and Craigie sings clear and a little breathy, never pushing. Gregory Alan Isakov comes in on harmony, tracking close to the lead, and the second voice thickens the line without adding drama. It all sounds like a small room, which it was. Craigie cut No Rain, No Rose in the living room of his Portland home over three days, modeling the loose, guest-filled sessions on the Nitty Gritty Dirt Band's records. There's an irony folded in: the album is a tribute to Portland, the city he moved to from California a couple of years before. So the song is a native son's goodbye that gives the place he left the final say.\n\nBy the end, the line \"You'll always want me\" repeats nine times, less a boast than a calm statement of fact. The song lets you feel both sides of leaving a home at once: the relief of going, and the quiet certainty, said back to you in a friend's voice, that part of you never did.",
+  "factCheck": [
+    {
+      "claim": "The chorus lists drinking the wine, cutting the trees, making love on the beaches and smoking the weed.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "John Craigie wrote it.",
+      "verdict": "supported",
+      "note": "Composer credit: John Harrold Craigie."
+    },
+    {
+      "claim": "He was born and raised in Los Angeles and loves much about the place.",
+      "verdict": "supported",
+      "note": "Folk Alley says born and raised in Los Angeles. Impose says he loves much about California."
+    },
+    {
+      "claim": "He has watched people leave California, criticize it, and then keep drinking its wine, smoking its weed and vacationing there.",
+      "verdict": "corrected",
+      "note": "Craigie's quote says people leave, criticize it, then drink its wine, smoke its weed and vacation there. 'Keep' was removed."
+    },
+    {
+      "claim": "Lyric quote about the state letting itself be used up 'if that's what you need'.",
+      "verdict": "corrected",
+      "note": "The line matches the lyrics. It was paraphrased to keep the review within the three-line quote limit."
+    },
+    {
+      "claim": "Quote: 'You tried to drown your sorrows / You shouldn't have taught them how to swim.'",
+      "verdict": "supported",
+      "note": "Exact match, two consecutive lines."
+    },
+    {
+      "claim": "It's a Prine-style turn.",
+      "verdict": "supported",
+      "note": "Critics compare Craigie's storytelling to John Prine. This is interpretive comparison."
+    },
+    {
+      "claim": "A later verse says the new lovers pay for the old ones' sins.",
+      "verdict": "supported",
+      "note": "Lyric: 'the new ones pay for the old ones sins'."
+    },
+    {
+      "claim": "A fingerpicked acoustic guitar rolls under a slow, easy tempo.",
+      "verdict": "supported",
+      "note": "All three passes agree on fingerpicked acoustic guitar and a slow tempo."
+    },
+    {
+      "claim": "Craigie sings clear and a little breathy, never pushing.",
+      "verdict": "supported",
+      "note": "All passes describe a slightly breathy male lead. Passes 1 and 2 call the delivery relaxed."
+    },
+    {
+      "claim": "Gregory Alan Isakov comes in on harmony, tracking close to the lead.",
+      "verdict": "corrected",
+      "note": "Passes agree on a second male voice in unison or parallel harmony, and Isakov's backing vocals are sourced. 'Comes in' implied a point in the song, so it now says he sings harmony."
+    },
+    {
+      "claim": "The second voice thickens the line without adding drama.",
+      "verdict": "supported",
+      "note": "Pass 1 says fuller vocal sound, and Pass 3 says there are no significant dynamic changes."
+    },
+    {
+      "claim": "It sounds like a small room, which it was.",
+      "verdict": "corrected",
+      "note": "Passes 1 and 2 say small room. The album was cut in a living room, so the claim now says living room."
+    },
+    {
+      "claim": "Craigie cut No Rain, No Rose in the living room of his Portland home over three days.",
+      "verdict": "supported",
+      "note": "Glide Magazine."
+    },
+    {
+      "claim": "The sessions were modeled on the Nitty Gritty Dirt Band's loose, guest-filled records.",
+      "verdict": "supported",
+      "note": "Siskiyou interview and the lineage note."
+    },
+    {
+      "claim": "The album is a tribute to Portland, which he moved to from California a couple of years before.",
+      "verdict": "supported",
+      "note": "Willamette Week says about two years."
+    },
+    {
+      "claim": "The line 'You'll always want me' repeats nine times by the end.",
+      "verdict": "supported",
+      "note": "Nine repeats in the closing lyrics."
+    },
+    {
+      "claim": "The final line is said back 'in a friend's voice'.",
+      "verdict": "corrected",
+      "note": "Nothing supports a friend's voice, so the phrase now refers to two close voices."
+    },
+    {
+      "claim": "Interpretive readings (ex who knows you'll call, wounded pride, native son's goodbye).",
+      "verdict": "supported",
+      "note": "Interpretation grounded in the lyrics and Craigie's stated motives."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1916,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012803,
+        "detail": "1111 in / 110 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013778,
+        "detail": "1111 in / 149 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012878,
+        "detail": "1111 in / 113 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083054,
+        "detail": "23842 in / 1537 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051216,
+        "detail": "3679 in / 1825 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053434,
+        "detail": "4782 in / 4387 out"
+      }
+    ]
+  }
+}

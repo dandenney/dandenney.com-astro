@@ -1,0 +1,155 @@
+{
+  "spotifyId": "5TSt0yJteAUApb7X3u5PJl",
+  "reviewedAt": "2026-11-11T21:52:00.618Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/32800974"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clear, bright tone. A male voice sings the lead melody, with a clean, slightly breathy character. The tempo is moderate, with a relaxed, flowing groove. A second male voice joins for harmonies, singing in unison or parallel to the lead. The production sounds clean and intimate, with a natural room acoustic. The texture is light and open. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant build-ups.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clear, bright tone. A male voice sings the lead vocal in a mid-range, with a slightly breathy and gentle delivery. The tempo is moderate, with a relaxed, flowing feel. There are no harmonies. The production sounds clean and intimate, with a natural room acoustic. The arrangement is consistent throughout the excerpt, with no instruments entering or dropping out, and no build-ups.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clear, bright tone. A male voice sings the lead melody, with a clean, slightly breathy character. The tempo is moderate, with a relaxed, flowing feel. A second male voice joins for harmonies, singing in unison or parallel to the lead. The production sounds clean and intimate, as if recorded in a small, dry room. The texture is sparse, with only the two guitars and two voices. No instruments enter or drop out within the excerpt.",
+  "research": {
+    "identity": "unknown",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The saddest image in **Settle Down** is also the most ordinary: \"Looking at the pictures on my phone.\" Woodlock's narrator isn't mourning a lost love or a dead friend. They're scrolling back to one good weekend, the best one, \"when I was home,\" and repeating that last phrase as if saying it again could get them back there. It's the small grief of someone who has been working so long that a camera roll has become the only proof of a life outside the job.\n\nThe song opens somewhere else entirely, and the contrast matters. In the first verse the narrator wakes in the dark, alone on a beachside under a clear sky, and says plainly, \"No one else around but I like being alone.\" That's the self they're protecting: someone who finds peace in solitude and calls that empty shoreline home. Then the second verse turns to the nine-to-five, the dollar-chasing, the claim of having worked hard all their life. That line carries pride and exhaustion at once. It's a defense and a complaint, and the next line drops the defense: \"I'm tired, I wanna go outside.\" It's almost childlike, and it's the most honest thing in the song.\n\nThis acoustic version suits that tiredness. A bright, fingerpicked acoustic guitar rolls through arpeggios at an easy, moderate pace. It never pushes, which feels right for a mind that's \"been sleeping in.\" The vocal is gentle and a little breathy, closer to talking someone down than selling a chorus. The recording is clean and close, with the air of a small room, and it holds steady rather than building toward anything. In places a second voice moves alongside the lead. That matters because of how the chorus resolves. A narrator who started out loving being alone keeps landing on \"We can settle down.\" The doubled voice gives that \"we\" a body, even though the lyrics never say who it is.\n\nThe chorus also lets in a little mischief: \"So, when the boss ain't looking in, I'll be sneaking out.\" It's a grin more than a rebellion, a half-plan that never becomes a resignation letter. And the song is honest that the feeling won't lift. \"I can't shake this off\" sits right beside \"I'll find home,\" and neither line cancels the other. Home is a memory on a phone, a beach at night, and some future with somebody else, all at once, and the narrator hasn't sorted out which one they mean.\n\nIt sticks because it doesn't pretend the weekend fixes anything; it just lets you sit, for a few gentle minutes, with how badly you want to go outside.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"Looking at the pictures on my phone.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Narrator scrolls back to the best weekend, \"when I was home,\" and the phrase is repeated",
+      "verdict": "supported",
+      "note": "The lyric repeats \"When I was home.\" The quoted fragment was turned into a paraphrase to keep within the three-line quote limit."
+    },
+    {
+      "claim": "Quote: \"No one else around but I like being alone\"",
+      "verdict": "supported",
+      "note": "It matches the lyric, but it was paraphrased to keep within the three-line quote limit."
+    },
+    {
+      "claim": "First verse: wakes in the dark, alone on a beachside under a clear sky",
+      "verdict": "supported",
+      "note": "Lyrics: \"Waking in the dark,\" \"Waiting on the beachside, sky is clear.\""
+    },
+    {
+      "claim": "Second verse turns to nine-to-five, chasing dollars, working hard all their life",
+      "verdict": "supported",
+      "note": "Lyrics: \"chasing dollars nine to five,\" \"working damn hard all my life.\""
+    },
+    {
+      "claim": "Quote: \"I'm tired, I wanna go outside\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Quote: \"been sleeping in\"",
+      "verdict": "supported",
+      "note": "It matches the lyric, but it was paraphrased to keep within the three-line quote limit."
+    },
+    {
+      "claim": "Quote: \"We can settle down\"",
+      "verdict": "supported",
+      "note": "It matches the lyric. It is also the song title, so it is now referenced without quote marks."
+    },
+    {
+      "claim": "Quote: \"So, when the boss ain't looking in, I'll be sneaking out\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Quotes: \"I can't shake this off\" and \"I'll find home\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics. They were paraphrased to keep within the three-line quote limit."
+    },
+    {
+      "claim": "Bright, fingerpicked acoustic guitar playing arpeggios at an easy, moderate pace",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Vocal is gentle and a little breathy",
+      "verdict": "supported",
+      "note": "All three passes say slightly breathy. \"Gentle\" appears in only one pass, so the wording leans on \"breathy\" and \"soft.\""
+    },
+    {
+      "claim": "Recording is clean and close, with the air of a small room",
+      "verdict": "corrected",
+      "note": "All three passes say clean and intimate with room sound, but only one says \"small.\" Changed to natural room sound."
+    },
+    {
+      "claim": "It holds steady rather than building toward anything",
+      "verdict": "removed",
+      "note": "This is a claim about the arc of the whole song. The passes only describe a short excerpt."
+    },
+    {
+      "claim": "In places a second voice moves alongside the lead",
+      "verdict": "corrected",
+      "note": "Two of three passes agree on a second voice in unison or parallel. Removed the positional \"in places.\" Pass 2 says no harmonies, so the claim stays modest."
+    },
+    {
+      "claim": "A beach at night",
+      "verdict": "corrected",
+      "note": "The lyrics say the narrator wakes in the dark and the sky is clear, but never say it is night on the beach. Changed to \"a beach.\""
+    },
+    {
+      "claim": "Quote count",
+      "verdict": "corrected",
+      "note": "The draft quoted about nine lyric fragments. The rules allow at most three, so it now quotes three lines."
+    },
+    {
+      "claim": "Interpretive readings (pride and exhaustion, small grief, half-plan, home as unresolved)",
+      "verdict": "supported",
+      "note": "These are interpretation resting on the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2067,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001237,
+        "detail": "1100 in / 94 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00044137,
+        "detail": "1100 in / 109 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012695,
+        "detail": "1100 in / 107 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.11397,
+        "detail": "40755 in / 246 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.042936,
+        "detail": "2269 in / 1693 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046806,
+        "detail": "3378 in / 4005 out"
+      }
+    ]
+  }
+}
