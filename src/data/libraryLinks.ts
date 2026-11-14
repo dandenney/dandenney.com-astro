@@ -10,6 +10,41 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "FrontierCode 2.0",
+    url: "https://cognition.com/blog/frontier-code-2.0?utm_source=chatgpt.com",
+    description: "FrontierCode 2.0 is a tougher coding benchmark designed to better reflect real software work. It uses more varied tasks, larger code changes, and stricter checks, especially for thoroughness. Its results show that…",
+    created: "2026-11-14",
+    kind: "read",
+  },
+  {
+    title: "If X, then Y",
+    url: "https://cdevroe.com/2026/11/05/if-x-then-y/?ref=sidebar",
+    description: "Technology is changing faster than ever, making the future harder to predict. As AI agents become common, software may need more features behind the scenes, even if its interface stays simple. The author is rethinking…",
+    created: "2026-11-14",
+    kind: "read",
+  },
+  {
+    title: "The Website Specification",
+    url: "https://specification.website/",
+    description: "The guide explains how to build a good website, from basic HTML to security and accessibility. It offers 185 topics and a checklist to help people find and fix problems. It is open to everyone, including AI agents.",
+    created: "2026-11-14",
+    kind: "read",
+  },
+  {
+    title: ", {}] ]",
+    url: "https://heroshot.dev/",
+    description: "Heroshot is a free tool that automatically creates documentation screenshots from one setup. It can capture different screen sizes and light or dark themes. Run it yourself or use CI to keep screenshots updated as your…",
+    created: "2026-11-14",
+    kind: "read",
+  },
+  {
+    title: "A preview of Exact",
+    url: "https://ccheever.expo.app/?ck_subscriber_id=1665201471",
+    description: "Exact is a new Rust-based framework for building fast, dynamic apps across web and native platforms. Its strongly typed Contract language is designed to help both developers and AI agents build, test, and update apps…",
+    created: "2026-11-14",
+    kind: "read",
+  },
+  {
     title: "Pick three",
     url: "https://buzzusborne.com/writing/pick-three/?ref=sidebar",
     description: "AI makes it possible to create good work quickly and cheaply, but it also leads teams to take on more work. Rapid changes can make products confusing and force people to work longer to keep everything connected. Teams…",
