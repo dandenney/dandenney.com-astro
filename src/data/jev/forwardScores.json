@@ -2012,6 +2012,218 @@
         "input_tokens": 646,
         "output_tokens": 109
       }
+    },
+    "300": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-16T16:09:34.360Z",
+      "state": {
+        "date": "2026-11-16",
+        "sport": "NBA",
+        "matchup": "vs Grizzlies",
+        "pick": "Anthony Davis Under 34.5 Pts + Rebs",
+        "odds": "-119",
+        "recentForm": "4/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.41
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.62,
+          "confidence": 0.35,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.4,
+            "1": 0.57,
+            "2": 0.03
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 649,
+        "output_tokens": 109
+      }
+    },
+    "301": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-16T16:09:34.502Z",
+      "state": {
+        "date": "2026-11-16",
+        "sport": "NBA",
+        "matchup": "vs Warriors",
+        "pick": "Zion Williamson Under 28.5 Pts + Rebs",
+        "odds": "-106",
+        "recentForm": "5/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.55
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.49,
+          "confidence": 0.26,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.52,
+            "1": 0.47,
+            "2": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 648,
+        "output_tokens": 109
+      }
+    },
+    "302": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-16T16:09:34.631Z",
+      "state": {
+        "date": "2026-11-16",
+        "sport": "NBA",
+        "matchup": "vs Rockets",
+        "pick": "Davion Mitchell Under 7.5 Assists",
+        "odds": "-108",
+        "recentForm": "2/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.67
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.52
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.7,
+          "confidence": 0.25,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.4,
+            "1": 0.5,
+            "2": 0.1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 109
+      }
+    },
+    "303": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-16T16:09:34.770Z",
+      "state": {
+        "date": "2026-11-16",
+        "sport": "NBA",
+        "matchup": "@ Cavaliers",
+        "pick": "Norman Powell Over 1.5 Assists",
+        "odds": "-140",
+        "recentForm": "6/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.56
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.5
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_over",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 1,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.73,
+          "confidence": 0.44,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.63,
+            "2": 0.05
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 644,
+        "output_tokens": 109
+      }
     }
   }
 }
