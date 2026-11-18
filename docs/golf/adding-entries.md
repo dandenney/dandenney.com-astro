@@ -41,3 +41,15 @@ derived at build time in `src/data/golf/utils.ts`.
 2. Set `membership` (`annual` | `visit` | `one-off`) and `cadence` when
    there is a rhythm worth showing.
 3. Sessions and rounds reference the venue by slug, so add the venue first.
+
+## Stock yardages
+
+The yardage card on `/golf` and `/golf/bag` comes from the Stock Yardage app
+(https://stock-yardage.netlify.app). In the app, Export → Download file, then:
+
+```
+yarn golf:yardages ~/Downloads/stock-yardage-YYYY-MM-DD.json
+```
+
+That rewrites `src/data/golf/yardages.json` (each player's last-5-good card, no raw
+shots). Clubs mapped to a site club key also show a "stock" carry on their bag row.
