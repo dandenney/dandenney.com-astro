@@ -8,12 +8,19 @@ import Golf from '@/layouts/Golf.astro';
 import BagRow from '@/components/golf/BagRow.astro';
 import { GOLF_SECTION_NAME } from '@/data/golf/types';
 import { getBag } from '@/data/golf/utils';
+import YardageCard from '@/components/golf/YardageCard.astro';
+import { YARDAGE_APP_URL, getYardagePlayers, yardageGoodShots, yardagesExportedAt } from '@/data/golf/yardages';
 
 export const prerender = true;
 
 const player = 'dan';
 const { inBag, retired, other } = getBag(player);
 const total = inBag.length + retired.length + other.length;
+const yardagePlayers = [...getYardagePlayers()].sort((a, b) => Number(b.id === player) - Number(a.id === player));
+const exportedAt = yardagesExportedAt();
+const exportedOn = exportedAt
+	? new Date(exportedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Chicago' })
+	: undefined;
 ---
 
 <Golf title={`The bag · ${GOLF_SECTION_NAME}`} description="What is in the bag, what it carries, and what it replaced.">
@@ -25,6 +32,26 @@ const total = inBag.length + retired.length + other.length;
 				Longest club at the top, the way it is organised in the head. Carry numbers come from sessions, so the bag and the metrics talk to each other.
 			</p>
 		</header>
+
+		{yardagePlayers.length > 0 && (
+			<section class="group" id="stock-yardages">
+				<div class="gf-section-head">
+					<h2 class="gf-h2"><span class="gf-idx">Yd</span> Stock yardages</h2>
+					<span class="gf-label">
+						Last {yardageGoodShots()} good shots{exportedOn && <> &middot; {exportedOn}</>} &middot; <a href={YARDAGE_APP_URL}>Stock Yardage &rarr;</a>
+					</span>
+				</div>
+				<p class="gf-mono yd-key">
+					<span class="yd-key-tee"></span>Tee <span class="yd-key-ground"></span>No tee <span class="yd-key-note">Carry. Bar is low to high, tick is typical.</span>
+				</p>
+				{yardagePlayers.map((p) => (
+					<div class="yd-player" data-reveal>
+						{yardagePlayers.length > 1 && <h3 class="gf-label yd-name">{p.name}</h3>}
+						<YardageCard clubs={p.card} />
+					</div>
+				))}
+			</section>
+		)}
 
 		{total === 0 ? (
 			<div class="gf-empty empty" data-reveal>
@@ -128,6 +155,44 @@ const total = inBag.length + retired.length + other.length;
 		padding-top: 0.75rem;
 		border-top: 1px dashed var(--gf-line);
 		color: var(--gf-mute);
+	}
+	.yd-key {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4rem;
+		margin-bottom: 1rem;
+		font-size: 0.68rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--gf-dim);
+	}
+	.yd-key-tee,
+	.yd-key-ground {
+		display: inline-block;
+		width: 1.1rem;
+		height: 4px;
+		border-radius: 2px;
+		background: var(--gf-tracer);
+	}
+	.yd-key-ground {
+		margin-left: 0.75rem;
+		background: var(--gf-cool);
+	}
+	.yd-key-note {
+		margin-left: 0.75rem;
+		text-transform: none;
+		letter-spacing: 0;
+		color: var(--gf-mute);
+	}
+	.yd-player + .yd-player {
+		margin-top: 2rem;
+	}
+	.yd-name {
+		margin-bottom: 0.5rem;
+	}
+	#stock-yardages {
+		margin-bottom: clamp(2.5rem, 5vw, 4rem);
 	}
 	.group + .group {
 		margin-top: clamp(2.5rem, 5vw, 4rem);

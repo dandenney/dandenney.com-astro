@@ -11,6 +11,8 @@ import RecordTile from '@/components/golf/RecordTile.astro';
 import ProgressChart from '@/components/golf/ProgressChart.astro';
 import VenueCard from '@/components/golf/VenueCard.astro';
 import BagRow from '@/components/golf/BagRow.astro';
+import YardageCard from '@/components/golf/YardageCard.astro';
+import { getYardages } from '@/data/golf/yardages';
 import AssessmentLadder from '@/components/golf/AssessmentLadder.astro';
 import Range from '@/components/golf/Range.astro';
 import { toRangeStation } from '@/data/golf/flight';
@@ -50,6 +52,7 @@ const activity = getActivity(player, 8);
 const venues = await getVenues();
 const vmap = await getVenueMap();
 const bagPreview = getBagPreview(player);
+const yardages = getYardages(player);
 const sessions = getSessions(player);
 const rounds = getRounds(player);
 const annualCount = venues.filter((v) => v.data.membership === 'annual').length;
@@ -266,11 +269,20 @@ const tMax = lastT + 6 * DAY;
 				<h2 class="gf-h2"><span class="gf-idx">06</span> The bag</h2>
 				<span class="gf-label"><a href="/golf/bag">Every club &rarr;</a></span>
 			</div>
-			{bagPreview.length > 0 ? (
+			{bagPreview.length > 0 && (
 				<div class="bag-preview">
 					{bagPreview.map((row) => <BagRow row={row} />)}
 				</div>
-			) : (
+			)}
+			{yardages.length > 0 && (
+				<div class="bag-yardages" data-reveal>
+					<p class="gf-label bag-yardages-k">
+						Stock yardages &middot; carry, last 5 good &middot; <span class="bag-k-tee">tee</span> / <span class="bag-k-ground">no tee</span>
+					</p>
+					<YardageCard clubs={yardages} compact />
+				</div>
+			)}
+			{bagPreview.length === 0 && yardages.length === 0 && (
 				<a class="gf-empty bag-empty" href="/golf/bag">
 					<span class="gf-mono bag-empty-k">&mdash; nothing logged yet &mdash;</span>
 					<span class="bag-empty-t">Clubs go in after the first fitting. Each one will show its average carry pulled straight from sessions.</span>
@@ -563,6 +575,18 @@ const tMax = lastT + 6 * DAY;
 	/* ---------- bag ---------- */
 	.bag-preview {
 		border-top: 1px solid var(--gf-line);
+	}
+	.bag-preview + .bag-yardages {
+		margin-top: clamp(2rem, 4vw, 3rem);
+	}
+	.bag-yardages-k {
+		margin-bottom: 0.75rem;
+	}
+	.bag-k-tee {
+		color: var(--gf-tracer);
+	}
+	.bag-k-ground {
+		color: var(--gf-cool);
 	}
 	.bag-empty {
 		display: flex;

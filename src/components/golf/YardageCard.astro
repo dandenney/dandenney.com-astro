@@ -1,0 +1,207 @@
+---
+/**
+ * Stock yardage card: every club with good shots in the Stock Yardage app,
+ * a low-to-high bar of the last five good ones, the typical (median) as a
+ * white tick, tee in tracer and no tee in cool. Venue gaps vs the course
+ * sit under the club when there's a course number to compare against.
+ */
+import { YARDAGE_VENUE_LABEL, yardageAxis, type YardageClub, type YardageSpread, type YardageVenue } from '@/data/golf/yardages';
+
+interface Props {
+	clubs: YardageClub[];
+	/** Hide per-venue gaps */
+	compact?: boolean;
+}
+
+const { clubs, compact = false } = Astro.props;
+const axis = yardageAxis(clubs);
+const pct = (v: number) => `${(((v - axis.min) / (axis.max - axis.min)) * 100).toFixed(2)}%`;
+const bar = (s: YardageSpread) => `left:${pct(s.low)};width:calc(${pct(s.high)} - ${pct(s.low)})`;
+const gaps = (c: YardageClub) => {
+	const course = c.venues.course;
+	if (!course) return [];
+	return (Object.keys(c.venues) as YardageVenue[])
+		.filter((v) => v !== 'course')
+		.map((v) => ({ v, d: c.venues[v]!.typical - course.typical }))
+		.filter((g) => g.d !== 0);
+};
+---
+
+<div class="yd">
+	<div class="yd-axis" aria-hidden="true">
+		<span></span>
+		<span class="yd-track">
+			{axis.ticks.map((t, i) => <span class:list={['gf-mono', { 'is-odd': i % 2 }]} style={`left:${pct(t)}`}>{t}</span>)}
+		</span>
+		<span></span>
+	</div>
+	<ul class="yd-rows">
+		{clubs.map((c) => {
+			const g = compact ? [] : gaps(c);
+			return (
+				<li class="yd-row">
+					<span class="yd-club">
+						<span class="gf-mono yd-short">{c.short}</span>
+						<span class="yd-label">{c.label}</span>
+					</span>
+					<span class="yd-bars" style={`background-size:${(25 / (axis.max - axis.min)) * 100}% 100%;background-position:0 0`}>
+						{(['tee', 'ground'] as const).map((k) => {
+							const s = c.carry[k];
+							return (
+								<span class:list={['yd-bar', `yd-${k}`]}>
+									{s && (
+										<>
+											<span class="yd-range" style={bar(s)}></span>
+											<span class="yd-typ" style={`left:${pct(s.typical)}`}></span>
+										</>
+									)}
+								</span>
+							);
+						})}
+					</span>
+					<span class="gf-mono yd-nums">
+						<span class="yd-n yd-n-tee" title="Tee, typical carry">{c.carry.tee?.typical ?? '·'}</span>
+						<span class="yd-n yd-n-ground" title="No tee, typical carry">{c.carry.ground?.typical ?? '·'}</span>
+					</span>
+					{g.length > 0 && (
+						<span class="gf-mono yd-gaps">
+							{g.map(({ v, d }) => (
+								<span class:list={{ 'is-long': d > 0 }}>{YARDAGE_VENUE_LABEL[v]} {d > 0 ? '+' : ''}{d}</span>
+							))}
+							<span class="yd-gaps-k">vs course</span>
+						</span>
+					)}
+				</li>
+			);
+		})}
+	</ul>
+</div>
+
+<style>
+	.yd {
+		--yd-cols: 4.5rem minmax(0, 1fr) 3.25rem;
+		border-top: 1px solid var(--gf-line);
+	}
+	.yd-axis,
+	.yd-row {
+		display: grid;
+		grid-template-columns: var(--yd-cols);
+		gap: 0 1rem;
+		align-items: center;
+	}
+	.yd-axis {
+		padding: 0.6rem 0 0.4rem;
+	}
+	.yd-track {
+		position: relative;
+		height: 0.9rem;
+	}
+	.yd-track span {
+		position: absolute;
+		transform: translateX(-50%);
+		font-size: 0.62rem;
+		color: var(--gf-mute);
+	}
+	.yd-rows {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.yd-row {
+		padding: 0.7rem 0;
+		border-bottom: 1px solid var(--gf-line-soft);
+		row-gap: 0.35rem;
+	}
+	.yd-club {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.15;
+		min-width: 0;
+	}
+	.yd-short {
+		font-size: 1.05rem;
+		font-weight: 600;
+		color: var(--gf-ink);
+	}
+	.yd-label {
+		font-size: 0.72rem;
+		color: var(--gf-dim);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.yd-bars {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		padding: 3px 0;
+		background-image: linear-gradient(to right, var(--gf-line-soft) 1px, transparent 1px);
+	}
+	.yd-bar {
+		position: relative;
+		height: 8px;
+	}
+	.yd-range {
+		position: absolute;
+		top: 2px;
+		height: 4px;
+		min-width: 4px;
+		border-radius: 2px;
+	}
+	.yd-tee .yd-range {
+		background: var(--gf-tracer);
+		opacity: 0.55;
+	}
+	.yd-ground .yd-range {
+		background: var(--gf-cool);
+		opacity: 0.55;
+	}
+	.yd-typ {
+		position: absolute;
+		top: -3px;
+		width: 2px;
+		height: 14px;
+		margin-left: -1px;
+		border-radius: 1px;
+		background: var(--gf-ink);
+	}
+	.yd-nums {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		line-height: 1.2;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+	.yd-n-tee {
+		color: var(--gf-tracer);
+	}
+	.yd-n-ground {
+		color: var(--gf-cool);
+	}
+	.yd-gaps {
+		grid-column: 2 / -1;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2rem 0.9rem;
+		font-size: 0.66rem;
+		letter-spacing: 0.04em;
+		color: var(--gf-cool);
+	}
+	.yd-gaps .is-long {
+		color: var(--gf-miss);
+	}
+	.yd-gaps-k {
+		color: var(--gf-mute);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+	@media (max-width: 560px) {
+		.yd {
+			--yd-cols: 3.25rem minmax(0, 1fr) 2.75rem;
+		}
+		.yd-track .is-odd {
+			display: none;
+		}
+	}
+</style>

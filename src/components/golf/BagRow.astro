@@ -6,6 +6,7 @@
 import type { BagRowData } from '@/data/golf/utils';
 import { fmtDateShort } from '@/data/golf/utils';
 import { CLUB_SHORT, CLUB_LABEL } from '@/data/golf/types';
+import { getStockCarry } from '@/data/golf/yardages';
 
 interface Props {
 	row: BagRowData;
@@ -15,6 +16,7 @@ interface Props {
 const { row, retired = false } = Astro.props;
 const { item } = row;
 const specs = [item.loft, item.shaft].filter(Boolean).join(' · ');
+const stock = item.club && !retired ? getStockCarry('dan', item.club) : undefined;
 ---
 
 <div class:list={['bag-row', { 'is-retired': retired }]} id={`bag-${item.id}`}>
@@ -38,6 +40,11 @@ const specs = [item.loft, item.shaft].filter(Boolean).join(' · ');
 			</>
 		) : (
 			<span class="gf-mono bag-carry-none">no carry data</span>
+		)}
+		{stock && (
+			<span class="gf-mono bag-stock" title={`Last 5 good${stock.tee ? ', off a tee' : ''}: ${stock.low}–${stock.high}`}>
+				stock {stock.typical} <span class="bag-stock-r">{stock.low}–{stock.high}</span>
+			</span>
 		)}
 	</span>
 	<span class="bag-note">
@@ -108,6 +115,14 @@ const specs = [item.loft, item.shaft].filter(Boolean).join(' · ');
 		font-size: 0.62rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
+		color: var(--gf-mute);
+	}
+	.bag-stock {
+		flex-basis: 100%;
+		font-size: 0.7rem;
+		color: var(--gf-tracer);
+	}
+	.bag-stock-r {
 		color: var(--gf-mute);
 	}
 	.bag-note {

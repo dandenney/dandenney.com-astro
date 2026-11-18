@@ -21,6 +21,7 @@
     "netlify:env:sync": "./scripts/sync-netlify-env.sh",
     "library:sync": "node scripts/sync-obsidian-library.mjs",
     "lately:sync": "node --experimental-strip-types --no-warnings scripts/lately/sync.ts",
+    "golf:yardages": "node --experimental-strip-types --no-warnings scripts/golf/import-yardages.ts",
     "lately:review": "node --experimental-strip-types --no-warnings scripts/lately/review.ts"
   },
   "dependencies": {
