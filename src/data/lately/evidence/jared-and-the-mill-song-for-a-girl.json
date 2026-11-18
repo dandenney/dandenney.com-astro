@@ -1,0 +1,204 @@
+{
+  "spotifyId": "6ewlMqeK1LuFOmNG9x7tma",
+  "reviewedAt": "2026-11-18T19:57:03.452Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/32265855"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, then strummed.\nBass guitar: enters with the strummed acoustic.\nDrums: kick, snare, and hi-hat, playing a simple, driving beat.\n\nTempo and Groove:\nModerate tempo. The groove feels steady and slightly propulsive, with a folk-rock feel.\n\nVocals:\nVoice character: A male voice, clear and slightly raspy.\nDelivery: Melodic, with a conversational quality.\nHarmonies: Unsure.\n\nProduction:\nRoom: A medium-sized, dry room.\nTexture: Clean and clear.\nPolished/Raw: Polished, but with a natural feel.\n\nArrangement:\nThe excerpt begins with fingerpicked acoustic guitar and a single male vocal. Bass guitar and drums enter, and the acoustic guitar switches to strumming. The vocal delivery becomes more emphatic as the full band enters.\n\nPass 2:\nInstruments:\nAn acoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a walking line. A drum kit plays a simple beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly melancholic.\n\nVocals:\nA male voice sings in a clear, slightly raspy tenor. The delivery is earnest and conversational. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished. The room sounds natural, not overly reverberant. The texture is smooth.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums already playing. The vocals enter immediately. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds.\n\nPass 3:\nInstruments:\nAcoustic guitar: fingerpicked, then strummed.\nBass guitar: enters with the strummed acoustic.\nDrums: kick, snare, and hi-hat, playing a simple, driving beat.\n\nTempo and groove:\nModerate tempo. The groove is initially relaxed with the fingerpicked guitar, then becomes more driving and energetic with the introduction of drums and strummed guitar.\n\nVocals:\nVoice character: A male voice, clear and slightly raspy.\nDelivery: Initially conversational, then becomes more emphatic and belted.\nHarmonies: Unsure.\n\nProduction:\nRoom: Sounds like a medium-sized room, with some natural reverb.\nTexture: Clean and clear, with good separation between instruments.\nPolished/raw: Polished, but not overly processed.\n\nArrangement:\nThe excerpt begins with a single fingerpicked acoustic guitar and a male vocal. A bass guitar enters, followed by drums and a strummed acoustic guitar, building the energy. The vocal delivery becomes more powerful as the arrangement thickens.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Song for a Girl\" was released on September 9, 2016 as the fifth and final track on the Orme Dugas EP by Jared & The Mill.",
+        "source": "https://www.shazam.com/song/1786892107/song-for-a-girl"
+      },
+      {
+        "claim": "The song was written by Jared Kolesar, the band's lead singer.",
+        "source": "https://www.shazam.com/song/1786892107/song-for-a-girl"
+      },
+      {
+        "claim": "Orme Dugas was recorded in Nashville and produced by Ryan Hewitt, whose clients include the Avett Brothers, the Lumineers and Brandi Carlile.",
+        "source": "https://www.phoenixnewtimes.com/music/jared-and-the-mill-authenticity-and-the-bands-new-album-orme-dugas-8640770"
+      },
+      {
+        "claim": "Orme Dugas was recorded and produced by Ryan Hewitt in Nashville, Tennessee.",
+        "source": "https://www.heymanchester.com/jared-the-mill"
+      },
+      {
+        "claim": "The band at the time was Jared Kolesar (vocals, acoustic guitar), Michael Carter (banjo, electric guitar), Larry Gast III (electric guitar), Chuck Morriss III (bass) and Josh Morin (drums).",
+        "source": "https://en.wikipedia.org/wiki/Jared_%26_The_Mill"
+      },
+      {
+        "claim": "Glide Magazine describes the song as one of the EP's heartfelt breakup tunes. It contrasts it with Western barnstormers such as \"Lost, Scared & Tired\".",
+        "source": "https://glidemagazine.com/173766/jared-mill-share-track-track/"
+      },
+      {
+        "claim": "Phoenix New Times called the song vulnerable to the point of self-flagellation and said it distills what makes the band beloved into a single song.",
+        "source": "https://www.phoenixnewtimes.com/music/jared-and-the-mill-authenticity-and-the-bands-new-album-orme-dugas-8640770"
+      },
+      {
+        "claim": "The EP is named after an exit near the band's hometown of Phoenix. Kolesar called it the truest representation of the band as individuals and as a group.",
+        "source": "https://motherchurchpew.com/2016/08/30/interview-with-jared-the-mill/"
+      },
+      {
+        "claim": "The band formed in Phoenix, Arizona in 2011. Its members met through mutual friends at Arizona State University.",
+        "source": "https://en.wikipedia.org/wiki/Jared_%26_The_Mill"
+      },
+      {
+        "claim": "Earlier releases were the 2013 debut album Western Expansion and the 2015 EP Life We Chose. The band toured with acts including Zac Brown Band and the Killers.",
+        "source": "https://www.amazon.com/Lost-Scared-Tired/dp/B01HHZPYOC"
+      },
+      {
+        "claim": "The band split on February 17, 2021, and Kolesar moved to a solo project called Wheelwright.",
+        "source": "https://en.wikipedia.org/wiki/Jared_%26_The_Mill"
+      }
+    ],
+    "lineage": "The band blends indie folk-rock with Western and Americana influences from its native Arizona Southwest, and sources compare its sound to Lumineers-style folk-rock.",
+    "genres": [
+      "indie rock",
+      "folk rock",
+      "americana"
+    ]
+  },
+  "draft": "Late in **Song for a Girl**, Jared Kolesar hands a woman's confession back to her. Early on she tells him how she wishes she were \"as interesting / As half the things you read,\" a small, self-deprecating admission across a table. By the last verse it's his line: \"I swear I'm not as interesting as half the things you read.\" The words barely change. The meaning flips. What was her insecurity becomes his excuse, and the song lives in the gap between the two.\n\nGlide Magazine filed it among the heartfelt breakup tunes on the Orme Dugas EP, set apart from the band's Western barnstormers like \"Lost, Scared & Tired.\" Phoenix New Times went further and called it vulnerable to the point of self-flagellation. That's the right word. Kolesar, who wrote the song, sketches a narrator who knows he's being loved and can't stand it. He calls himself a wanderer, always undone, his soul under shadows, the kind of self-portrait that sounds romantic until you notice it's doing a job. It lets him leave before she can find out anything ordinary about him. The chorus drops the poetry. He admits he's colder than he should be, worn out from running from everyone he's been through, and then he just repeats how tired he is until the phrase sags.\n\nThe feelings don't line up, and the song doesn't try to make them. He tells her he's never been higher, then tells her he's nothing she wants. He faults her for never letting go, for living in the past, while he can't stay in the present. He thinks he's protecting her. He might also be protecting himself. Kolesar lets both stand.\n\nThe sound keeps that tension from turning into a wallow. A fingerpicked acoustic guitar opens things up, close and quiet, and Kolesar's voice is clear with a slight rasp, conversational, like he's still at that table. Then the guitar moves to strumming, bass and a plain kick-snare-hat beat come in, and the singing turns more emphatic as the band fills out. The tempo stays moderate and steady. It's the folk-rock lift the Lumineers made familiar, and fittingly the EP was cut in Nashville with Ryan Hewitt, who has produced the Lumineers, the Avett Brothers and Brandi Carlile. The room is clean and natural, nothing slicked over, so the voice stays the center of it.\n\nIt closes the EP, the last word on a record Kolesar called the truest picture of the band. That suits a song about someone deciding he's not worth keeping.\n\nThe hook is that borrowed line: you hear a person take someone else's tenderest doubt and wear it as armor, and you recognize how often that's what leaving sounds like.",
+  "factCheck": [
+    {
+      "claim": "Late in the song, the last verse returns to the 'half the things you read' line.",
+      "verdict": "corrected",
+      "note": "The lyrics' structure supports the line coming back in the last verse. 'Late in' was loosened to a plain opening."
+    },
+    {
+      "claim": "Quote: 'as interesting / As half the things you read' and 'I swear I'm not as interesting as half the things you read.'",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "The admission is made 'across a table.'",
+      "verdict": "removed",
+      "note": "The setting is not in the lyrics or facts. The later 'still at that table' echo was also removed."
+    },
+    {
+      "claim": "Glide Magazine filed it among the heartfelt breakup tunes on Orme Dugas, set apart from Western barnstormers like 'Lost, Scared & Tired.'",
+      "verdict": "supported",
+      "note": "Matches the Glide fact."
+    },
+    {
+      "claim": "Phoenix New Times called it vulnerable to the point of self-flagellation.",
+      "verdict": "supported",
+      "note": "Matches the Phoenix New Times fact."
+    },
+    {
+      "claim": "Kolesar wrote the song.",
+      "verdict": "supported",
+      "note": "Shazam credit."
+    },
+    {
+      "claim": "Narrator calls himself a wanderer, always undone, soul under shadows; he's colder than he should be, tired, running from everyone he's been through.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The reading is interpretation."
+    },
+    {
+      "claim": "He tells her he's never been higher / he's nothing she wants.",
+      "verdict": "supported",
+      "note": "Lyrics: 'I've not been higher' and 'I'm not anything you want.'"
+    },
+    {
+      "claim": "He faults her for never letting go and living in the past.",
+      "verdict": "corrected",
+      "note": "In the lyrics she tells him she never lets go and that it keeps her in the past. He does not fault her, so this was reworded."
+    },
+    {
+      "claim": "A fingerpicked acoustic guitar opens things up, close and quiet.",
+      "verdict": "corrected",
+      "note": "The passes disagree on whether the excerpt starts with the guitar alone, and 'close and quiet' is unsupported. Kept only fingerpicked and strummed acoustic guitar."
+    },
+    {
+      "claim": "Then the guitar moves to strumming, bass and a kick-snare-hat beat come in, and the singing turns more emphatic as the band fills out.",
+      "verdict": "corrected",
+      "note": "Pass 2 contradicts the sequence and the arrangement arc is not supportable. Kept the instruments (acoustic, bass, kick/snare/hi-hat) without the order."
+    },
+    {
+      "claim": "Voice is clear with a slight rasp, conversational.",
+      "verdict": "supported",
+      "note": "All three passes agree. Kolesar is the lead singer."
+    },
+    {
+      "claim": "Tempo stays moderate and steady.",
+      "verdict": "corrected",
+      "note": "All passes agree on moderate. 'Steady' is not agreed, so it was dropped."
+    },
+    {
+      "claim": "It's the folk-rock lift the Lumineers made familiar.",
+      "verdict": "corrected",
+      "note": "Sources compare the band's sound to Lumineers-style folk-rock, but the claim about what the Lumineers made familiar is unsupported. Reworded as a comparison."
+    },
+    {
+      "claim": "The EP was cut in Nashville with Ryan Hewitt, who has produced the Lumineers, the Avett Brothers and Brandi Carlile.",
+      "verdict": "corrected",
+      "note": "Nashville and Hewitt are supported. The packet says those acts are his clients, not that he produced them."
+    },
+    {
+      "claim": "The room is clean and natural, nothing slicked over.",
+      "verdict": "corrected",
+      "note": "The passes agree on clean, natural and polished. 'Nothing slicked over' contradicts 'polished', so the wording was adjusted."
+    },
+    {
+      "claim": "It closes the EP.",
+      "verdict": "supported",
+      "note": "Fifth and final track."
+    },
+    {
+      "claim": "Kolesar called the EP the truest picture of the band.",
+      "verdict": "supported",
+      "note": "Matches the interview fact."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2549,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014073,
+        "detail": "1101 in / 162 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015448,
+        "detail": "1101 in / 217 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0006423,
+        "detail": "1101 in / 189 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14155600000000002,
+        "detail": "47943 in / 1567 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.058132,
+        "detail": "4023 in / 2102 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051618,
+        "detail": "5194 in / 4123 out"
+      }
+    ]
+  }
+}

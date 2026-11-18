@@ -1,0 +1,205 @@
+{
+  "spotifyId": "10Zrdd4zvBaUASoNzFAPGz",
+  "reviewedAt": "2026-11-18T19:59:25.563Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7361178"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed chord progression. Electric bass plays a walking bass line. Drums play a simple, steady beat with brushes, featuring snare, kick, and hi-hat. A clean electric guitar plays a melodic, arpeggiated line.\n\nTempo and Groove:\nModerate tempo. The groove feels relaxed and steady.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and unadorned. There are no harmonies.\n\nProduction:\nThe sound is dry with minimal discernible room reverb. The texture is clean and polished.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt. No instruments drop out or build within this section.\n\nPass 2:\nInstruments:\n- Acoustic guitar: strummed, with a clean, bright tone.\n- Bass guitar: playing a walking bass line, providing a steady rhythmic and harmonic foundation.\n- Drums: playing a simple, steady beat with brushes, featuring a light snare drum and cymbal work.\n\nTempo and groove feel:\n- The tempo is moderate.\n- The groove is relaxed and laid-back, with a gentle swing feel.\n\nVocals:\n- Voice character: A male voice, with a slightly raspy, mid-range tone.\n- Delivery: Melodic, with a conversational, unhurried feel.\n- Harmonies: Unison vocals on some phrases, creating a slightly fuller sound.\n\nProduction:\n- Room: Sounds like a medium-sized room, with a natural, uncolored reverb.\n- Texture: Clean and clear, with good separation between instruments.\n- Polished/raw: Leans towards a polished, but not overly processed, sound.\n\nArrangement:\n- The excerpt begins with all instruments playing.\n- The bass and drums maintain a consistent pattern throughout.\n- The acoustic guitar provides a steady strumming accompaniment.\n- The vocals are present throughout, delivering the main melody.\n- No significant changes in instrumentation or dynamics occur within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed chord progression. Electric bass plays a walking bassline. Drums play a simple, steady beat with kick, snare, and hi-hat. A clean electric guitar plays a melodic counterpoint with sustained notes.\n\nTempo and Groove:\nMedium tempo. The groove feels relaxed and steady, with a slight shuffle feel from the drums.\n\nVocals:\nA male voice sings in a mid-range, with a slightly raspy, conversational delivery. There are no harmonies.\n\nProduction:\nThe sound is clear and well-defined, with a natural room sound. The texture is clean and polished, with good separation between instruments.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar enters with its melodic line after the first vocal phrase. All instruments maintain their roles throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I Like the Way This Is Going\" is written by Mark Oliver Everett (E) and credited to Eels. It is 2:35 long.",
+        "source": "https://www.shazam.com/song/671959946/i-like-the-way-this-is-going"
+      },
+      {
+        "claim": "Mark Oliver Everett produced the track, and Ryan Boesch is credited as mixer on the Shazam credits.",
+        "source": "https://www.shazam.com/song/671959946/i-like-the-way-this-is-going"
+      },
+      {
+        "claim": "It is track 13 of 14 on the standard Tomorrow Morning album. It sits between \"That's Not Her Way\" and \"Mystery of Life\".",
+        "source": "https://eelstheband.com/tomorrowmorning/"
+      },
+      {
+        "claim": "Tomorrow Morning (Deluxe) came out on August 24, 2010 on E Works Records. It has 19 songs, adding a bonus EP of four non-album tracks to the 14 on the standard album.",
+        "source": "https://music.apple.com/us/album/tomorrow-morning-deluxe/705063832"
+      },
+      {
+        "claim": "Tomorrow Morning was recorded August–December 2009 at OneHitsville, U.S.A., in Los Feliz, California.",
+        "source": "https://en.wikipedia.org/wiki/Tomorrow_Morning_(album)"
+      },
+      {
+        "claim": "Credits on the deluxe edition include Koool G Murder and Ryan Boesch (programming), Wally Gagel (mixing), Dan Pinder (recording) and Dan Hersch (mastering). Robert Carranza (programming) and the Amy Davies Choir are also credited.",
+        "source": "https://www.amoeba.com/tomorrow-morning-deluxe-edition-cd-eels/albums/923763/"
+      },
+      {
+        "claim": "The lyrics are a simple love song, with the narrator listing things he likes about a partner. They include a toothy smile, hair color and watching TV together. The refrain is that he likes the way things are going.",
+        "source": "https://www.lyricsmania.com/i_like_the_way_this_is_going_lyrics_eels.html"
+      },
+      {
+        "claim": "The official Eels site calls Tomorrow Morning the brightest and most overtly uplifting work of Eels' fourteen-year career. It is the final part of a trilogy with Hombre Lobo and End Times, and Everett calls it \"The redemption\".",
+        "source": "https://eelstheband.com/tomorrowmorning/"
+      },
+      {
+        "claim": "Tomorrow Morning departs from the garage rock of Hombre Lobo and the acoustic starkness of End Times. It uses electronic keyboards, drum machines, tape loops and found sounds.",
+        "source": "https://eelstheband.com/tomorrowmorning/"
+      },
+      {
+        "claim": "Everett told Drowned in Sound that after End Times he felt there was only one direction to go, which was up. He said he did not want to go any further down.",
+        "source": "https://kevinegperry.com/2010/08/03/eels-interview/"
+      }
+    ],
+    "lineage": "Eels is Mark Oliver Everett's project, mixing off-kilter pop influences with deeply personal lyrics. This song sits in the electronic, keyboard-based uplift of the closing album of his Hombre Lobo / End Times / Tomorrow Morning trilogy.",
+    "genres": [
+      "alternative rock",
+      "indie rock",
+      "electronic pop"
+    ]
+  },
+  "draft": "Most love songs promise forever. **I Like The Way This Is Going** won't go that far. Eels hang the whole song on a phrase about direction, not arrival, and that small hedge is where the feeling lives. The narrator doesn't swear devotion. The narrator notices that things are trending well and says so, again and again, like someone afraid to jinx it.\n\nThe verses are a list, and the list is plain on purpose: a toothy smile, the color of someone's hair, the way their pants fit, how they stand and how they sit. Nothing grand. The best stretch is the most domestic one, watching TV together and then going to bed, so that you can \"Get up and do it all again.\" That line carries the song's quiet thrill. Repetition, which sinks so many relationships, is the reward here. Even the weather hedges in \"whichever way the wind is blowing,\" as if the narrator knows conditions change and is choosing to be glad anyway.\n\nThen the past shows up, briefly. The narrator says they don't care about it, and adds that \"None of it was made to last.\" It's a shrug, but it costs something. You don't wave off old wreckage that casually unless there was wreckage. The contentment and the old damage sit in the same verse, and the song never asks which one is truer. The answer it lands on is to look at \"who you're knowing,\" the person in the room right now.\n\nThat fits where the song sits. Mark Oliver Everett wrote and produced it for *Tomorrow Morning*, recorded in 2009 at OneHitsville, U.S.A., in Los Feliz. The album is the last of a trilogy after *Hombre Lobo* and *End Times*. Everett called it \"The redemption,\" and he said that after *End Times* he didn't want to go any further down. The only way left was up. This song is what up sounds like when it's still a little wary.\n\nThe arrangement keeps things easy. Acoustic guitar strums at a relaxed, moderate pace. A walking bass line strolls underneath, brushed drums give it a slight swing, and a clean electric guitar threads a melody around the vocal. The voice is slightly raspy and conversational, sung as if across a couch rather than from a stage. The sound is clean, polished and uncluttered, with room for every part to be heard. The album's mixer credit goes to Ryan Boesch. On a record that reaches for drum machines and tape loops, this one leans on older, warmer tools, and they suit a song about small comforts.\n\nIt runs short and never pushes, and that restraint is the point: it lets you feel how hopeful it is to say \"so far, so good\" out loud after a long time of not being able to.",
+  "factCheck": [
+    {
+      "claim": "Verse list: a toothy smile, hair color, the way pants fit, how they stand and sit; TV together, then bed",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: \"Get up and do it all again.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Quote: \"whichever way the wind is blowing\"",
+      "verdict": "corrected",
+      "note": "The lyric is exact, but the draft had four quoted lyric snippets and the limit is three. Paraphrased it instead."
+    },
+    {
+      "claim": "Quote: \"None of it was made to last\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Quote: \"who you're knowing\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Quoted phrase \"so far, so good\"",
+      "verdict": "corrected",
+      "note": "It is not a lyric and appeared as a quotation. Removed the quote marks and reworded."
+    },
+    {
+      "claim": "Mark Oliver Everett wrote and produced the song",
+      "verdict": "supported",
+      "note": "Shazam credits."
+    },
+    {
+      "claim": "Recorded in 2009 at OneHitsville, U.S.A., in Los Feliz, for Tomorrow Morning",
+      "verdict": "corrected",
+      "note": "This is supported for the album sessions (Aug–Dec 2009), not specifically for the song. Reworded to attribute it to the album."
+    },
+    {
+      "claim": "Album is the last of a trilogy after Hombre Lobo and End Times; Everett called it \"The redemption\"",
+      "verdict": "supported",
+      "note": "Official Eels site."
+    },
+    {
+      "claim": "After End Times Everett didn't want to go further down; the only way was up",
+      "verdict": "supported",
+      "note": "Drowned in Sound interview."
+    },
+    {
+      "claim": "The album's mixer credit goes to Ryan Boesch",
+      "verdict": "removed",
+      "note": "Shazam lists Boesch as mixer on the track, but the deluxe-edition credits list Wally Gagel as mixing and Boesch as programming. The sources conflict, so the claim was cut."
+    },
+    {
+      "claim": "Record reaches for drum machines and tape loops",
+      "verdict": "supported",
+      "note": "Official site describes the album's use of drum machines and tape loops."
+    },
+    {
+      "claim": "This track leans on older, warmer tools",
+      "verdict": "corrected",
+      "note": "This was an unsupported generalization. Reworded to describe the instruments the listening passes agree on."
+    },
+    {
+      "claim": "Strummed acoustic guitar, moderate relaxed tempo, walking bass",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Brushed drums with a slight swing",
+      "verdict": "supported",
+      "note": "Brushes in passes 1 and 2. Swing or shuffle in passes 2 and 3."
+    },
+    {
+      "claim": "Clean electric guitar threads a melody around the vocal",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree."
+    },
+    {
+      "claim": "Slightly raspy, conversational voice",
+      "verdict": "supported",
+      "note": "Raspy in passes 2 and 3. Conversational in all three."
+    },
+    {
+      "claim": "Clean, polished sound with every part audible",
+      "verdict": "supported",
+      "note": "All passes say clean and polished. Passes 2 and 3 say good separation."
+    },
+    {
+      "claim": "Song is short",
+      "verdict": "supported",
+      "note": "Runs 2:35."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2657,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013826,
+        "detail": "1102 in / 152 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014401,
+        "detail": "1102 in / 175 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0016751,
+        "detail": "1102 in / 269 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.148428,
+        "detail": "52239 in / 1395 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.06326,
+        "detail": "3700 in / 2423 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04951,
+        "detail": "4850 in / 3981 out"
+      }
+    ]
+  }
+}

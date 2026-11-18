@@ -1,0 +1,227 @@
+{
+  "spotifyId": "0p1hBWPaSxUDTSa32PyhnU",
+  "reviewedAt": "2026-11-18T20:03:53.587Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5632037"
+  },
+  "listening": "Pass 1:\n- Instruments: Acoustic guitar plays a strummed rhythm, joined by a bass guitar playing a walking line. Drums enter with a steady beat, featuring a prominent snare.\n- Tempo and groove: Moderate tempo with a driving, slightly melancholic feel.\n- Vocals: A male voice sings the lead, with a clear, slightly raspy character. A female voice joins for harmonies, often singing in unison or a close interval below the lead.\n- Production: The sound is clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is full but not overly dense.\n- Arrangement: The excerpt begins with acoustic guitar and bass, then drums enter. Vocals are present throughout, with harmonies appearing and disappearing. The arrangement builds slightly in intensity towards the end of the excerpt.\n\nPass 2:\n- Instruments: Acoustic guitar plays a driving, strummed rhythm. A bass guitar plays a simple, melodic line. Drums provide a steady, mid-tempo beat with a prominent snare.\n- Tempo and groove: Mid-tempo, with a driving, slightly urgent feel.\n- Vocals: A male voice sings the lead, with a slightly raw, earnest character. A female voice joins for harmonies, often singing in unison or a close interval below the lead.\n- Production: The sound is clear and well-defined, with a slightly raw, live-band texture. There's a sense of a moderately sized room.\n- Arrangement: The excerpt begins with the full band and vocals. The arrangement remains consistent throughout, with no major changes in instrumentation or dynamics.\n\nPass 3:\n- Instruments: Acoustic guitar plays a driving rhythm with a strummed chord progression. Bass guitar plays a simple, consistent root-note line. Drums provide a steady beat with kick, snare, and hi-hat.\n- Tempo and groove: Moderate tempo. The groove is a steady, driving folk-rock feel.\n- Vocals: A male voice sings the lead melody, with a slightly raw, earnest character. A female voice provides a harmony, often a third above the lead, adding a smooth, blended texture.\n- Production: The sound is clear and well-defined, with a natural room feel. The texture is full but not overly dense. It sounds polished but retains a raw, authentic edge.\n- Arrangement: The full band (acoustic guitar, bass, drums, lead and harmony vocals) is present throughout the excerpt, maintaining a consistent energy and texture. No significant changes in instrumentation or dynamics occur within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Noah Kahan wrote 'She Calls Me Back' alone, and both the solo and duet versions credit him as the only songwriter.",
+        "source": "https://khak.com/ixp/204/p/noah-kahan-kacey-musgraves-she-calls-me-back-lyrics/"
+      },
+      {
+        "claim": "The song was produced by Kahan together with Gabe Simon, who co-produced the whole Stick Season album.",
+        "source": "https://en.wikipedia.org/wiki/She_Calls_Me_Back"
+      },
+      {
+        "claim": "Songfacts says Gabe Simon played all the instruments on the track (percussion, drums, organ, bass, and electric, baritone and acoustic guitars), with Kahan also on guitar.",
+        "source": "https://www.songfacts.com/facts/noah-kahan/she-calls-me-back"
+      },
+      {
+        "claim": "Stick Season was recorded at Guilford Sound in Guilford, Vermont, and The Study in Nashville.",
+        "source": "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+      },
+      {
+        "claim": "The Musgraves duet was released October 6, 2023, as a reworked version of a song from Stick Season. It adds a new second verse sung by Musgraves from the partner's perspective, and the two sing the final chorus together.",
+        "source": "https://en.wikipedia.org/wiki/She_Calls_Me_Back"
+      },
+      {
+        "claim": "Kahan told Rolling Stone that after finishing the album he wondered about hearing Kacey Musgraves on several songs. He said getting her on this one was as simple as asking, and that she picked this song herself.",
+        "source": "https://www.rollingstone.com/music/music-country/kacey-musgraves-noah-kahan-she-calls-me-back-nashville-1234989217/"
+      },
+      {
+        "claim": "Musgraves recorded her part while Kahan was on tour. He said her verse lets the song move toward resolve instead of the bitter tension of the original.",
+        "source": "https://www.rollingstone.com/music/music-features/noah-kahan-kacey-musgraves-she-calls-me-back-duet-1234841364/"
+      },
+      {
+        "claim": "Kahan and Musgraves first performed the song together live at Nashville's Ryman Auditorium during Musgraves' Deeper Well release show, about six months after the duet came out.",
+        "source": "https://www.rollingstone.com/music/music-country/kacey-musgraves-noah-kahan-she-calls-me-back-nashville-1234989217/"
+      },
+      {
+        "claim": "The duet followed Kahan's other 2023 collaborations 'Dial Drunk' with Post Malone and 'Call Your Mom' with Lizzy McAlpine.",
+        "source": "https://www.thefader.com/2023/10/06/kacey-musgraves-noah-kahan-she-calls-me-back"
+      },
+      {
+        "claim": "Kahan, a Vermont native, signed with Republic Records in 2017. Stick Season (2022) was his commercial breakthrough after earlier cult-favorite albums.",
+        "source": "https://www.whiskeyriff.com/2023/10/06/noah-kahan-and-kacey-musgraves-release-duet-version-of-his-song-she-calls-me-back/"
+      }
+    ],
+    "lineage": "The song sits in the folk-pop and indie-folk singer-songwriter tradition, with Americana and country crossover through Musgraves and faint touches of 1980s heartland rock and power pop.",
+    "genres": [
+      "folk-pop",
+      "indie folk",
+      "americana"
+    ]
+  },
+  "draft": "\"This town's the same as you left it, your page was blank, but I read it.\" That line holds the whole problem of **She Calls Me Back (with Kacey Musgraves)**. One person left. One stayed. The one who stayed is still reading meaning into silence, still dialing a number from memory, still treating a callback as the only proof that everything's alright. Noah Kahan wrote the song alone, and it sounds like a private ledger. The repeated chorus sets heaven in someone's eyes against a narrator who \"was not baptized,\" someone close to grace but never let in.\n\nWhat makes the original sting is how clearly the narrator sees the obsession and can't stop it. \"Why am I so obsessive?\" isn't rhetorical. It sits in a rush of questions, one sentence tumbling into the next, the way thoughts go at 2 a.m. The verses swing between self-sacrifice and self-pity: he could be her sacrifice, an old tattoo, someone who lives \"to die while saving you.\" It's grand and a little ridiculous, and the song knows it. The pain is real, and so is the self-justification. Neither cancels the other.\n\nThen comes the confession that reframes everything: \"I was too afraid of livin' life in your footsteps.\" He didn't follow. That fits *Stick Season*, Kahan's breakthrough album and a record about staying put in small-town Vermont, cut between Guilford Sound in Vermont and The Study in Nashville. Much of his writing comes from the person who didn't leave, and here he admits that staying was fear, not loyalty.\n\nThe duet changes the angle. Musgraves chose this song herself when Kahan asked, and she sings a new second verse from the partner's side. She answers the restless questions in kind, with no sleep, every song in a minor key, and the other person showing up in every dream. Then she offers promises about oceans drying and rivers freezing. Kahan said her verse moves the song toward resolve and away from the bitter tension of the solo version. Both voices take the last chorus together, and the one-sided call becomes a two-way line.\n\nThe sound stays plain and urgent. A strummed acoustic guitar drives it at a moderate clip, over a simple bass line and steady drums with a snare that pushes hard. Gabe Simon, Kahan's co-producer, played nearly everything, and the room feels natural and clean. Kahan's voice is raw and earnest, and Musgraves' harmony sits close against it and smooths the edges. It's folk-pop with a faint heartland-rock spine, built to be shouted in a car.\n\nThe song lets you feel both ends of a stalled phone line at once: the shame of still dialing, and the quiet relief of finding out the other person never stopped either.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"This town's the same as you left it, your page was blank, but I read it.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator is still dialing a number from memory",
+      "verdict": "corrected",
+      "note": "The lyric says \"I still dial 822-993-167.\" \"From memory\" is not in the lyrics, so it was reduced to dialing the number."
+    },
+    {
+      "claim": "Noah Kahan wrote the song alone",
+      "verdict": "supported",
+      "note": "Researched facts credit him as sole songwriter."
+    },
+    {
+      "claim": "Chorus quote \"was not baptized\" and heaven in someone's eyes",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: \"Why am I so obsessive?\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Lines about being a sacrifice, an old tattoo, and \"to die while saving you\"",
+      "verdict": "supported",
+      "note": "Fragment of the lyric \"but live to die while saving you.\""
+    },
+    {
+      "claim": "Quote: \"I was too afraid of livin' life in your footsteps.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Stick Season is Kahan's breakthrough album",
+      "verdict": "supported",
+      "note": "Whiskey Riff source in the packet."
+    },
+    {
+      "claim": "Stick Season is a record about staying put in small-town Vermont",
+      "verdict": "removed",
+      "note": "The album's themes are not in the packet."
+    },
+    {
+      "claim": "Recorded at Guilford Sound in Vermont and The Study in Nashville",
+      "verdict": "supported",
+      "note": "Packet says the album was recorded at both."
+    },
+    {
+      "claim": "Much of Kahan's writing comes from the person who didn't leave",
+      "verdict": "removed",
+      "note": "Unsupported generalization about his catalog."
+    },
+    {
+      "claim": "Musgraves chose this song herself when Kahan asked",
+      "verdict": "supported",
+      "note": "Rolling Stone, per the packet."
+    },
+    {
+      "claim": "Musgraves sings a new second verse from the partner's side",
+      "verdict": "supported",
+      "note": "Wikipedia, per the packet."
+    },
+    {
+      "claim": "Musgraves' verse contains the no-sleep, minor-key, dream lines and the oceans-drying and rivers-freezing promises",
+      "verdict": "removed",
+      "note": "The packet doesn't say which lyrics are her verse."
+    },
+    {
+      "claim": "Kahan said her verse moves the song toward resolve rather than the original's bitter tension",
+      "verdict": "supported",
+      "note": "Rolling Stone, per the packet."
+    },
+    {
+      "claim": "The two sing the last chorus together",
+      "verdict": "supported",
+      "note": "Wikipedia, per the packet."
+    },
+    {
+      "claim": "Acoustic guitar strummed, driving, moderate tempo",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Simple bass line, steady drums, snare that pushes hard",
+      "verdict": "corrected",
+      "note": "Bass and steady drums are backed. Prominent snare is backed by passes 1 and 2, but \"pushes hard\" overstates it."
+    },
+    {
+      "claim": "Clean sound, natural room",
+      "verdict": "supported",
+      "note": "All passes describe a clear, clean sound in a moderately sized or natural room."
+    },
+    {
+      "claim": "Gabe Simon, co-producer, played nearly everything",
+      "verdict": "supported",
+      "note": "Songfacts says he played all the instruments, with Kahan also on guitar. Wording kept close to that."
+    },
+    {
+      "claim": "Kahan's voice is raw and earnest",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say raw and earnest; pass 1 says slightly raspy."
+    },
+    {
+      "claim": "Musgraves' harmony sits close against the lead and smooths the edges",
+      "verdict": "corrected",
+      "note": "All passes agree on a female harmony in unison or a close interval. \"Smooths the edges\" rests on one pass, so it was dropped."
+    },
+    {
+      "claim": "Folk-pop with a faint heartland-rock spine",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.1952,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013984,
+        "detail": "1113 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014809,
+        "detail": "1113 in / 190 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014184,
+        "detail": "1113 in / 165 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080254,
+        "detail": "22932 in / 1439 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.057552,
+        "detail": "4113 in / 2055 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053118,
+        "detail": "5304 in / 4251 out"
+      }
+    ]
+  }
+}

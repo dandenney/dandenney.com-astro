@@ -1,0 +1,185 @@
+{
+  "spotifyId": "69BWKQ0qeTnPHdk4lxuLcD",
+  "reviewedAt": "2026-11-18T19:53:34.987Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4105501"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a consistent, medium tempo. A male voice sings in a clear, slightly raspy character, with a relaxed, conversational delivery. The production is dry and intimate, with a raw, unpolished texture. The arrangement is sparse, with only the guitar and vocals present. The vocals are mostly single-tracked, with a brief, subtle harmony entering on the word \"kiss her.\" The guitar maintains its pattern throughout, providing a steady rhythmic and harmonic foundation.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggio pattern with a consistent, medium tempo. A male voice sings in a clear, slightly raspy tone, with a relaxed delivery. The vocals are dry, with no noticeable reverb. The guitar has a natural, unpolished sound, as if recorded in a small, untreated room. The arrangement is sparse, with only the guitar and vocals present throughout the excerpt. There are no changes in instrumentation or dynamics.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. A male voice sings in a mid-range, with a slightly raspy, intimate delivery. The tempo is slow, with a gentle, swaying groove. The production is raw and dry, with a close-miked feel, suggesting a small room. The vocals are upfront, with the guitar providing a consistent, understated accompaniment. There are no harmonies. The arrangement remains consistent throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Snowshoes\" is track 11 on Caamp's album Lavender Days, released June 24, 2022, and runs 3:24.",
+        "source": "https://www.albumoftheyear.org/song/160351-snowshoes/"
+      },
+      {
+        "claim": "The track credit reads 2022 By and By Records, under exclusive license to Mom+Pop.",
+        "source": "https://caamptheband.bandcamp.com/track/snowshoes"
+      },
+      {
+        "claim": "\"Snowshoes\" is credited to Evan Westfall, Joe Kavalec, Matt Vinson and Taylor Meier, who are the band members.",
+        "source": "https://www.shazam.com/song/1610646311/snowshoes"
+      },
+      {
+        "claim": "Lavender Days was produced by Caamp and Beatriz Artola, with additional production by Brad Cook.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Caamp-Announces-New-Album-Shares-New-Single-20220311"
+      },
+      {
+        "claim": "Album credits list Matt Vinson on bass, baritone guitar and harmony vocals, and Joe Kavalec on piano, Rhodes, organ and keyboards. Beatriz Artola mixed the album, Bob Ludwig mastered it, and Brandon MacLean and Jon Ashley recorded it. These are album-level credits, not specific to this track.",
+        "source": "https://www.thequietone.net/post/caamp-lavender-days"
+      },
+      {
+        "claim": "Initial recording for Lavender Days began in February 2021 at Sylvan Esso's studio outside Durham, NC. Friends including Nathaniel Rateliff and Waxahatchee's Katie Crutchfield contributed vocals to the album, and the band finished it in their home studio in Columbus, Ohio.",
+        "source": "https://momandpopmusicdemo.squarespace.com/blog/caamp-release-song-video-lavender-girl"
+      },
+      {
+        "claim": "Lavender Days was written after a period of loss and heartache for Taylor Meier, which included losing a relationship, a dog, his livelihood and his sanity during the pandemic.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Caamp-Announces-New-Album-Shares-New-Single-20220311"
+      },
+      {
+        "claim": "Taylor Meier called Lavender Days the band's deepest and most sincere work to date. He said the band was no longer overthinking: grab a tone, put it to tape and rock.",
+        "source": "http://www.momandpopmusic.com/blog/caamp-releases-lavender-days"
+      },
+      {
+        "claim": "Caamp was founded by childhood friends Taylor Meier and Evan Westfall, who met at summer camp and grew up in Upper Arlington, Ohio. They formed the band at Ohio University in Athens, Ohio.",
+        "source": "https://en.wikipedia.org/wiki/Caamp"
+      },
+      {
+        "claim": "Lavender Days is Caamp's fourth studio album by Wikipedia's count, after the 2016 self-titled debut, 2018's Boys and 2019's By and By. The lead single \"Believe\" reached No. 1 on the AAA and Americana radio charts.",
+        "source": "http://www.momandpopmusic.com/blog/caamp-releases-lavender-days"
+      }
+    ],
+    "lineage": "Caamp's sound sits in American folk and Americana, which Mom+Pop describes as a mix of West Coast folk, Midwestern Americana and cathartic indie rock.",
+    "genres": [
+      "folk",
+      "americana",
+      "indie rock"
+    ]
+  },
+  "draft": "\"You'll bring your snowshoes and I'll bring the beer.\" That line holds the whole plan of **Snowshoes**: a cold place, a split of supplies, two people who already know who carries what. Caamp builds the song on that kind of easy division of labor, then spends most of its length nudging someone to do the one thing they keep putting off.\n\nThe song opens on devotion stated almost as a warning. If the narrator goes \"there,\" it's for you, and they won't be back soon. Then the perspective slides. The verses list everything a pair could do together (laugh, shout, whisper, dance), but the two of them just keep staring at each other's mouths, and the voice cuts in with the plainest instruction in the song: \"Boy, go on kiss her.\" You can hear it as a friend losing patience on the sidelines, or as someone talking to themselves in the second person because the first person is too exposed. The lyric never settles it, and that's part of the charm. Fondness and exasperation sit in the same breath.\n\nThe chorus is where the writing gets tongue-tied on purpose. \"It's all the things she do\" flips to \"everything she does\" and back again, grammar bending the way speech bends when somebody can't explain why they love a person and gives up trying. The last pass widens it: \"The things that make us, us.\" The circling stops being about her and becomes about a shared history, a word for the bond rather than a list of reasons.\n\nThe sound stays out of the way. A fingerpicked acoustic guitar rolls through arpeggios at a steady, unhurried tempo. The voice on top is clear with a little rasp, relaxed, close to conversation. The recording is dry and plain, like a small room with nothing between the player and the mic. That fits what Taylor Meier said about the album: the band had stopped overthinking, and the plan was to grab a tone, put it to tape and go.\n\nLavender Days came out of a hard stretch for Meier, a lost relationship and a pandemic that took a lot with it. \"Snowshoes\" doesn't carry that weight on its face. It sounds more like the band Evan Westfall and Meier started as summer-camp friends from Upper Arlington. The song comes from Midwestern Americana by way of the campfire, and its stakes are just as small and just as real: a trip, a crush, a friend saying go on.\n\nThe song sticks because it puts you in the friend's seat, watching two people almost happen, and makes you want them to so much you start saying it out loud too.",
+  "factCheck": [
+    {
+      "claim": "\"You'll bring your snowshoes and I'll bring the beer.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "The song's setting is a cold place with a split of supplies.",
+      "verdict": "supported",
+      "note": "Interpretation resting on 'I think there might be snow there' and the snowshoes/beer line."
+    },
+    {
+      "claim": "The narrator says that if they go 'there,' it's for you, and they won't be home soon.",
+      "verdict": "supported",
+      "note": "Matches the opening lines."
+    },
+    {
+      "claim": "The verses list laugh, shout, whisper, dance, while the two keep staring at each other's mouths.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"Boy, go on kiss her.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "The chorus quotes \"It's all the things she do\" and \"everything she does\" and the shift between them.",
+      "verdict": "corrected",
+      "note": "The lyric shifts between 'she do' and 'she does', so the point is kept. The direct quotes were cut to stay within three quoted lines."
+    },
+    {
+      "claim": "\"The last pass widens it: 'The things that make us, us.'\"",
+      "verdict": "corrected",
+      "note": "The quote is exact. 'Last pass' was reworded to 'late in the song', which the lyric order supports, and it no longer reads like the listening passes."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with arpeggios at a steady, unhurried tempo.",
+      "verdict": "supported",
+      "note": "All three passes agree on fingerpicked arpeggios. Medium or slow tempo, steady and consistent."
+    },
+    {
+      "claim": "The voice is clear with a little rasp, relaxed, close to conversation.",
+      "verdict": "corrected",
+      "note": "Clear, slightly raspy and relaxed are backed by multiple passes. 'Conversational' appears in only one pass, so it was removed."
+    },
+    {
+      "claim": "The recording is dry and plain, like a small room with nothing between the player and the mic.",
+      "verdict": "corrected",
+      "note": "Dry and small-room are backed by multiple passes. 'Nothing between the player and the mic' was an embellishment and was cut."
+    },
+    {
+      "claim": "Taylor Meier said the band had stopped overthinking and would grab a tone, put it to tape and go.",
+      "verdict": "corrected",
+      "note": "The source says 'grab a tone, put it to tape and rock', and it is about the album. Wording adjusted and attributed to the album."
+    },
+    {
+      "claim": "Lavender Days came out of a hard stretch for Meier, a lost relationship and a pandemic that took a lot with it.",
+      "verdict": "supported",
+      "note": "Loss of a relationship, a dog, livelihood and sanity during the pandemic."
+    },
+    {
+      "claim": "The band was started by Evan Westfall and Meier as summer-camp friends from Upper Arlington.",
+      "verdict": "corrected",
+      "note": "They met at summer camp, grew up in Upper Arlington, and formed the band at Ohio University in Athens, Ohio. Rewritten to say so."
+    },
+    {
+      "claim": "The song comes from Midwestern Americana by way of the campfire.",
+      "verdict": "corrected",
+      "note": "Mom+Pop describes the band's sound as West Coast folk, Midwestern Americana and cathartic indie rock. Reworded to rest on that, with 'campfire' left as figurative."
+    },
+    {
+      "claim": "Quote count.",
+      "verdict": "corrected",
+      "note": "The draft quoted more than three lyric lines. Cut to three."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2397,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012311,
+        "detail": "1097 in / 92 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00041448,
+        "detail": "1097 in / 99 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012636,
+        "detail": "1097 in / 105 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.142138,
+        "detail": "47269 in / 1760 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.046516,
+        "detail": "3344 in / 1657 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.048134,
+        "detail": "4442 in / 3925 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "spotifyId": "08dtFS80qE37EvWufccmoK",
+  "reviewedAt": "2026-11-18T20:01:34.544Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/6400219"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The title track 'I Love You' is track 4 on the debut album I Love You by Teen Jesus and the Jean Teasers. Domestic La La released the album on 6 October 2023.",
+        "source": "https://en.wikipedia.org/wiki/I_Love_You_(Teen_Jesus_and_the_Jean_Teasers_album)"
+      },
+      {
+        "claim": "Oscar Dawson of Holy Holy produced the album. Discogs also credits him with mixing it, and Leon Zervos with mastering it.",
+        "source": "https://www.discogs.com/release/28550065-Teen-Jesus-And-The-Jean-Teasers-I-Love-You"
+      },
+      {
+        "claim": "The band moved into Dawson's home in the seaside town of Rye to make the album. They worked collaboratively over a few months.",
+        "source": "https://beat.com.au/inspired-dynamically-varied-teen-jesus-the-jean-teasers-release-their-debut-album-i-love-you/"
+      },
+      {
+        "claim": "Scarlett McKahey said the title is ironic. The repeated 'I love you' represents trying to convince yourself you love somebody when you might not.",
+        "source": "https://musicfeeds.com.au/features/track-by-track-teen-jesus-and-the-jean-teasers-i-love-you/"
+      },
+      {
+        "claim": "McKahey said the song is about knowing you will leave a relationship even though you don't want to admit it to yourself. She said the 'I love yous' drown out the couple's problems.",
+        "source": "https://musicfeeds.com.au/features/track-by-track-teen-jesus-and-the-jean-teasers-i-love-you/"
+      },
+      {
+        "claim": "Apple Music's editorial describes the title track as optimistic, with lead vocals from Anna Ryan flanked by group vocals.",
+        "source": "https://music.apple.com/nz/album/i-love-you/1689977311"
+      },
+      {
+        "claim": "Guitar.com says McKahey played cello throughout the album, as well as writing and playing guitar parts.",
+        "source": "https://guitar.com/features/interviews/teen-jesus-and-the-jean-teasers-scarlett-mckahey-interview/"
+      },
+      {
+        "claim": "The album was the band's first full-length record. Its singles were 'Lights Out', 'Never Saw It Coming', 'I Used to Be Fun' and 'Salt'. It peaked at number 6 on the ARIA Albums Chart, and an expanded edition, I Love You Too, followed in September 2024.",
+        "source": "https://en.wikipedia.org/wiki/Teen_Jesus_and_the_Jean_Teasers"
+      },
+      {
+        "claim": "The band is Anna Ryan (vocals/guitar), Scarlett McKahey (guitar/vocals), Jaida Stephenson (bass) and Neve van Boxsel (drums). They formed in high school in Canberra in 2015.",
+        "source": "https://musomuso.com/news/aussie-pop-punks-teen-jesus-and-the-jean-teasers-release-debut-album-i-love-you"
+      },
+      {
+        "claim": "Their 2022 debut EP, Pretty Good for a Girl Band, came out on Domestic La La and won Best Independent Punk Album or EP at the 2023 AIR Awards.",
+        "source": "https://en.wikipedia.org/wiki/Teen_Jesus_and_the_Jean_Teasers"
+      }
+    ],
+    "lineage": "The band is an Australian act that critics place in a riot grrrl-inspired punk and pop-punk tradition, moving toward melodic alt-rock and early-2000s-style rock on this album.",
+    "genres": [
+      "punk rock",
+      "pop punk",
+      "alt-rock"
+    ]
+  },
+  "draft": "The phrase arrives so often in **I Love You** that it stops sounding like a declaration and starts sounding like a hand pressed over a mouth. By the last stretch of the lyric it's stacked line after line, \"I love you\" three to a row for a dozen rows, and the effect isn't romance. It's someone talking over a thought they don't want to finish.\n\nScarlett McKahey has said as much. She calls the title ironic: the repetition is somebody trying to convince themselves they love a person when they might not, and the song is about knowing you'll leave a relationship before you'll admit it to yourself. The \"I love yous,\" in her words, drown out the problems. That's the whole design, and the verses do the quiet work underneath it.\n\nLook at the domestic details. \"Leave my socks on when we go to bed\" is a small, odd, slightly guarded habit, and the partner \"never seem[s] to ask why.\" Crying first thing in the morning gets the same easy shrug: it doesn't worry them. On paper that's a patient partner. In the song it reads as a kind of loneliness, being let off the hook so completely that nobody's really looking. The narrator's own boast, \"anything but boring,\" gets undercut right away with \"But is that good?\"\n\nThen the chorus turns the confession into a dare: \"But do you mind if I ruin it? / Blow it up like I always do.\" It's polite on the surface, asking permission, and self-sabotaging underneath, with \"like I always do\" admitting a pattern the narrator already knows by heart. The second verse brings the exit closer. Shoes come off at the door \"as it hits me on the way out,\" and then the question that has been circling all along: \"Is this what you signed up for.\" The answer is \"I'm sure,\" said three times, which is how you say something when you aren't.\n\nAnna Ryan takes lead vocals here, flanked by group vocals. Apple Music's editors heard the track as optimistic, and that reading isn't wrong so much as half the picture. There's real hope in \"cross my heart and hope for me and you now,\" and real dread sitting right beside it. The song doesn't choose between them.\n\nIt's the title track of the Canberra band's debut album, which they made over a few months living in producer Oscar Dawson's house in the seaside town of Rye. The band came up through a riot grrrl-inspired punk and pop-punk tradition, and this song keeps that tradition's bluntness. Here the bluntness points inward, though, at the narrator's own heart rather than at anyone outside it.\n\nYou keep coming back because the song says \"I love you\" more times than anyone could mean it, and you recognize the exact moment the words stopped being for the other person.",
+  "factCheck": [
+    {
+      "claim": "The phrase 'I love you' is repeated heavily, stacked line after line in the final stretch, 'three to a row for a dozen rows'",
+      "verdict": "corrected",
+      "note": "The lyrics show the final block as 11 rows of three, plus a last row of two. Reworded to avoid the wrong count."
+    },
+    {
+      "claim": "Scarlett McKahey calls the title ironic; the repetition is someone trying to convince themselves they love a person they might not",
+      "verdict": "supported",
+      "note": "Matches the Music Feeds track-by-track."
+    },
+    {
+      "claim": "McKahey says the song is about knowing you'll leave a relationship before you'll admit it to yourself",
+      "verdict": "supported",
+      "note": "Matches the Music Feeds track-by-track."
+    },
+    {
+      "claim": "The 'I love yous' drown out the problems, in her words",
+      "verdict": "supported",
+      "note": "She said they drown out the couple's problems. Quotation marks on 'I love yous' removed, since the phrasing is a paraphrase."
+    },
+    {
+      "claim": "Quote: 'Leave my socks on when we go to bed'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Quote: partner 'never seem[s] to ask why'",
+      "verdict": "corrected",
+      "note": "The bracketed alteration doesn't match the lyric ('You never seem to ask why'). Turned into a paraphrase to stay within the three-line quote limit."
+    },
+    {
+      "claim": "Crying first thing in the morning; the partner says it doesn't worry them",
+      "verdict": "supported",
+      "note": "Matches the lyric's situation."
+    },
+    {
+      "claim": "Quotes: 'anything but boring' and 'But is that good?'",
+      "verdict": "supported",
+      "note": "Both match the lyrics. Paraphrased to stay within the three-line quote limit."
+    },
+    {
+      "claim": "Quote: 'But do you mind if I ruin it? / Blow it up like I always do'",
+      "verdict": "supported",
+      "note": "Exact and consecutive. Trimmed to the second line to stay within the quote limit."
+    },
+    {
+      "claim": "Quote: 'as it hits me on the way out' and shoes off at the door in the second verse",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Quote paraphrased to stay within the quote limit."
+    },
+    {
+      "claim": "Quote: 'Is this what you signed up for'; answered by 'I'm sure' three times",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: 'cross my heart and hope for me and you now'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Paraphrased to stay within the quote limit."
+    },
+    {
+      "claim": "Anna Ryan takes lead vocals, flanked by group vocals; Apple Music's editors call the track optimistic",
+      "verdict": "supported",
+      "note": "Matches the Apple Music editorial."
+    },
+    {
+      "claim": "It's the title track of the Canberra band's debut album",
+      "verdict": "supported",
+      "note": "Title track, debut album, and Canberra formation are all in the facts."
+    },
+    {
+      "claim": "The album was made over a few months living in producer Oscar Dawson's house in the seaside town of Rye",
+      "verdict": "supported",
+      "note": "Matches the Beat and Discogs facts."
+    },
+    {
+      "claim": "The band came up through a riot grrrl-inspired punk and pop-punk tradition",
+      "verdict": "supported",
+      "note": "Matches the lineage note. The claim that the song 'keeps' that bluntness is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2372,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.151538,
+        "detail": "52434 in / 1667 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.041964,
+        "detail": "3026 in / 1493 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.043652,
+        "detail": "4186 in / 3528 out"
+      }
+    ]
+  }
+}

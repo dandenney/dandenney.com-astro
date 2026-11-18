@@ -1,0 +1,200 @@
+{
+  "spotifyId": "0ZVUxuPLkIswDAxiACZPxM",
+  "reviewedAt": "2026-11-18T20:13:21.097Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3735651"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic drums play a driving, four-on-the-floor beat with a prominent snare on beats two and four. A bass guitar plays a simple, root-note-focused line. An electric guitar plays sustained chords with a clean tone. A synth pad provides a warm, sustained background.\n\nTempo and Groove Feel:\nThe tempo is moderately fast. The groove is energetic and steady, with a clear forward momentum.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is direct and slightly urgent. There are no harmonies.\n\nProduction:\nThe sound is polished and clean, with a clear separation of instruments. The texture is full but not overly dense. The room sound is neutral, suggesting a studio recording.\n\nArrangement:\nThe excerpt begins with the full band playing. The drums, bass, electric guitar, and synth pad maintain a consistent presence throughout. The vocals enter immediately and continue without interruption. No instruments drop out or build significantly within this short excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed chord progression. Electric guitar plays a clean, arpeggiated melody. Drums play a driving beat with a prominent snare. Bass plays a foundational, rhythmic line. Synthesizer provides a sustained pad.\n\nTempo and Groove:\nMedium-fast tempo. The groove is driving and energetic.\n\nVocals:\nA single voice sings with a clear, mid-range character. The delivery is direct and slightly urgent. No harmonies are present.\n\nProduction:\nThe sound is polished and clean. The room sounds open, with a slight reverb on the vocals and drums. The texture is full and layered.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter immediately. The drums and bass maintain a consistent rhythm throughout. The electric guitar plays a repeating melodic figure. The synthesizer sustains a pad. No instruments drop out or build significantly within this excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar strums a chord progression. A bass guitar plays a root-note line. Drums play a driving beat with a prominent snare and kick, and a cymbal crash at the start of the chorus. A synth pad provides sustained chords.\n\nTempo and groove feel:\nMedium-fast tempo. The groove is driving and energetic, with a clear four-on-the-floor feel.\n\nVocals:\nA single voice, with a slightly nasal quality, sings in a mid-range. The delivery is clear and direct. Harmonies enter in the chorus, with a higher voice singing above the lead.\n\nProduction:\nThe sound is polished and clean, with a clear separation of instruments. The texture is full but not overly dense. There is a sense of a moderately sized room, with some reverb on the vocals and drums.\n\nArrangement:\nThe excerpt begins with the full band. The verse features the acoustic guitar, bass, drums, and lead vocal. The chorus introduces the synth pad and vocal harmonies, building in intensity. The arrangement remains consistent throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Del Water Gap's 'Quilt of Steam' is a collaboration with Arlo Parks. It is a single from his album 'I Miss You Already + I Haven't Left Yet', which was set for release on 29 September 2023 via Mom + Pop.",
+        "source": "https://readdork.com/news/del-water-gap-single-quilt-of-steam/"
+      },
+      {
+        "claim": "Songwriting credits for 'Quilt of Steam' go to Samuel Holden Jaffe, Anais Marinho (Arlo Parks) and Ethan Gruska.",
+        "source": "https://www.shazam.com/en-us/song/1691752214/quilt-of-steam"
+      },
+      {
+        "claim": "Production credits go to Samuel Holden Jaffe and Ethan Gruska. Michael Freeman mixed the song and Joe LaPorta mastered it.",
+        "source": "https://www.shazam.com/en-us/song/1691752214/quilt-of-steam"
+      },
+      {
+        "claim": "Performer credits list Jaffe on vocals, Arlo Parks on vocals and Ethan Gruska on background vocals.",
+        "source": "https://www.shazam.com/en-us/song/1691752214/quilt-of-steam"
+      },
+      {
+        "claim": "Jaffe says he and Arlo Parks toured together on her first album and became friends over a shared love of poetry and instrumental music. Both were burned out. When they got time off they spent two days with Ethan Gruska, and 'Quilt of Steam' is the phrase that stuck.",
+        "source": "https://readdork.com/news/del-water-gap-single-quilt-of-steam/"
+      },
+      {
+        "claim": "Jaffe says the song is about coming off tour feeling scrambled and looking for balance and stillness. It describes waking in his own bed after months away and watching steam rise off the radiator. He also calls it a song about finding beauty in the mundane and about the 'treason' of not acknowledging conflict.",
+        "source": "https://readdork.com/news/del-water-gap-single-quilt-of-steam/"
+      },
+      {
+        "claim": "W Magazine describes the song, written with and featuring Arlo Parks, as one that processes returning from tour. It sits on a 12-song album whose title comes from a grandfather's inscription to his grandmother in a book of William Carlos Williams poetry.",
+        "source": "https://www.wmagazine.com/culture/del-water-gap-new-album-interview"
+      },
+      {
+        "claim": "Del Water Gap is the solo project of Brooklyn-based songwriter and producer S. Holden Jaffe. He was born in New Haven, CT, and attended NYU's Clive Davis Institute of Recorded Music.",
+        "source": "https://www.allmusic.com/artist/del-water-gap-mn0003409917"
+      },
+      {
+        "claim": "Earlier in his catalog, Jaffe had the streaming hit 'High Tops' (2017). His major-label debut, 'Don't Get Dark', came in 2019, and a self-titled second LP followed in 2021.",
+        "source": "https://www.allmusic.com/artist/del-water-gap-mn0003409917"
+      },
+      {
+        "claim": "Jaffe says he took the name Del Water Gap from a Sharpie scrawl on the back of a box truck. He wrote it on a list of band names while in a noise-rock band in high school, and later learned it was a national park.",
+        "source": "https://wqhs.upenn.edu/interview-with-holden-jaffe-of-del-water-gap/"
+      }
+    ],
+    "lineage": "It sits in the intimate, poetry-minded bedroom-pop and indie folk-pop tradition of Brooklyn songwriter-producers, and it is built on an indie collaboration with Arlo Parks.",
+    "genres": [
+      "indie pop",
+      "indie folk",
+      "bedroom pop"
+    ]
+  },
+  "draft": "The steam comes first. **Quilt of Steam** opens on someone coming to in their own bedroom after a month of not knowing where they were, finally noticing the heat lifting off the radiator. Del Water Gap's S. Holden Jaffe has said that's the literal scene: waking in his own bed after months on tour, scrambled, hunting for some stillness. The line \"saw the quilt of steam rise off the radiator\" turns a clanking apartment fixture into bedding, something soft and handmade. Then the verse makes the quilt the narrator's own work, layers stitched by hand that they're now sweating through, stretching on for acres. Comfort and smothering live in the same image.\n\nThe phrase came out of two days Jaffe spent with Arlo Parks and producer Ethan Gruska. Jaffe and Parks had toured together on her first album and bonded over poetry and instrumental music, and both were burned out. All three share the writing credit, and Parks and Gruska both sing on the track. That image-first instinct puts the song with the poetry-minded bedroom-pop and indie folk-pop of Brooklyn songwriter-producers. Fittingly, the album it leads into takes its title from a grandfather's inscription in a book of William Carlos Williams poems.\n\nWhat makes it hurt is how honest the narrator is about their own silence. The verses ask for so little: that the other person stop for a second and sit, that they bring up the thing while the narrator waits in the car. But the narrator never brings it up either. They keep \"folding clothes alone as if it wasn't treason,\" and Jaffe has named that treason plainly as not acknowledging conflict. Resentment and self-indictment sit side by side. The narrator plays the stoic captain with no compass and begs to be held until it passes, and the song never decides which one is true. The chorus admits what the scene couldn't: \"I couldn't admit I was crushed by the weight of being strangers.\" The confession only happens inside the song.\n\nThe sound refuses to mope. Drums drive a four-on-the-floor beat with a prominent snare, the bass holds to root notes, acoustic guitar strums under a clean electric, and a synth pad warms the back of the mix. It's polished, each part in its own space, with reverb opening up the vocal and drums. The lead voice is clear and direct, a little urgent, as if the words have to get out before the nerve goes. And the lyric closes by running that crushed chorus twice more, saying it until it finally lands.\n\nIt puts you in that parked car, each person waiting for the other to speak, and makes you feel how lonely that kind of politeness gets.",
+  "factCheck": [
+    {
+      "claim": "The song opens on someone coming to after a month of not knowing where they were, noticing the heat lifting off the radiator.",
+      "verdict": "supported",
+      "note": "Matches the opening lyric and Jaffe's account of waking in his own bed."
+    },
+    {
+      "claim": "Jaffe has said it's the literal scene: waking in his own bed after months on tour, scrambled, hunting for stillness.",
+      "verdict": "supported",
+      "note": "Matches Jaffe's comments on coming off tour, looking for balance and stillness, and watching steam rise off the radiator."
+    },
+    {
+      "claim": "Quote: \"saw the quilt of steam rise off the radiator\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The radiator is a 'clanking apartment fixture'.",
+      "verdict": "corrected",
+      "note": "Nothing in the evidence says the radiator clanks or that the setting is an apartment. Now described simply as a radiator."
+    },
+    {
+      "claim": "The verse makes the quilt the narrator's own work, layers stitched by hand, sweating through them, on for acres.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The phrase came out of two days Jaffe spent with Arlo Parks and Ethan Gruska; Jaffe and Parks toured together on her first album, bonded over poetry and instrumental music, and were both burned out.",
+      "verdict": "supported",
+      "note": "Matches Jaffe's account."
+    },
+    {
+      "claim": "All three share the writing credit, and Parks and Gruska both sing on the track.",
+      "verdict": "supported",
+      "note": "Writing credits go to Jaffe, Marinho (Arlo Parks) and Gruska. Parks sings and Gruska is on background vocals."
+    },
+    {
+      "claim": "The song sits with the poetry-minded bedroom-pop and indie folk-pop of Brooklyn songwriter-producers.",
+      "verdict": "supported",
+      "note": "Matches the lineage note. Jaffe is Brooklyn-based."
+    },
+    {
+      "claim": "The album takes its title from a grandfather's inscription in a book of William Carlos Williams poems.",
+      "verdict": "supported",
+      "note": "Matches the W Magazine description."
+    },
+    {
+      "claim": "Quote: \"folding clothes alone as if it wasn't treason\"; Jaffe names the treason as not acknowledging conflict.",
+      "verdict": "supported",
+      "note": "Exact lyric. Jaffe's comment is sourced."
+    },
+    {
+      "claim": "Narrator waits in the car for the other person to address it; plays the stoic captain with no compass and asks to be held until it passes.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The reading is interpretation."
+    },
+    {
+      "claim": "Quote: \"I couldn't admit I was crushed by the weight of being strangers\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Drums drive a four-on-the-floor beat with a prominent snare; bass holds to root notes; acoustic guitar strums under a clean electric.",
+      "verdict": "supported",
+      "note": "Each is backed by at least two passes."
+    },
+    {
+      "claim": "A synth pad warms the back of the mix.",
+      "verdict": "corrected",
+      "note": "All passes agree on a sustained synth pad, but only one calls it warm. Reworded to a sustained pad."
+    },
+    {
+      "claim": "Polished, each part in its own space, with reverb on the vocal and drums.",
+      "verdict": "supported",
+      "note": "Passes agree on polished and clean. Two passes agree on clear separation, and two on reverb on vocals and drums."
+    },
+    {
+      "claim": "Lead voice is clear, direct, a little urgent.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on urgent, and all three on clear and direct."
+    },
+    {
+      "claim": "The lyric closes by running the chorus twice more.",
+      "verdict": "supported",
+      "note": "The lyric structure ends with the chorus repeated twice in a row."
+    },
+    {
+      "claim": "Puts you in 'that parked car'.",
+      "verdict": "corrected",
+      "note": "The lyric says only 'waitin' in the car'. 'Parked' removed."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2166,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014695,
+        "detail": "1100 in / 187 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00069637,
+        "detail": "1100 in / 211 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015695,
+        "detail": "1100 in / 227 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.076902,
+        "detail": "20436 in / 1603 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.080824,
+        "detail": "4131 in / 3215 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.055098,
+        "detail": "5289 in / 4452 out"
+      }
+    ]
+  }
+}

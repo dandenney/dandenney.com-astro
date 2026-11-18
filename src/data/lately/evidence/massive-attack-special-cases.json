@@ -1,0 +1,190 @@
+{
+  "spotifyId": "0l1eE11aDKxc8ZOYUSXWP9",
+  "reviewedAt": "2026-11-18T20:15:25.658Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/76541"
+  },
+  "listening": "Pass 1:\nInstruments:\nA drum machine plays a slow, steady beat with a prominent kick drum and a sparse, open hi-hat pattern. A bass guitar plays a simple, repetitive, low-register line. A clean electric guitar plays a sustained, high-register chord.\n\nTempo and Groove:\nThe tempo is slow. The groove feels laid-back and somewhat melancholic.\n\nVocals:\nA single voice, with a breathy, slightly raspy character, sings in a low-to-mid register. The delivery is calm and understated. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, with a close-miked feel. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar enters at around 0:06, playing a sustained chord. The vocal delivery remains consistent throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA drum machine plays a slow, steady beat with a prominent kick drum and a sparse, open hi-hat pattern. A bass guitar plays a simple, repetitive line. A clean electric guitar plays arpeggiated chords with a slight tremolo effect.\n\nTempo and groove:\nThe tempo is slow. The groove feels laid-back and slightly melancholic.\n\nVocals:\nA female voice sings in a low register with a breathy, intimate character. The delivery is unhurried and expressive. There are no harmonies.\n\nProduction:\nThe production feels spacious and somewhat raw, with a natural room sound. The texture is clean but not overly polished.\n\nArrangement:\nThe excerpt begins with the drum machine, bass, and electric guitar already playing. The vocals enter shortly after. All elements remain consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nA drum machine plays a slow, steady beat with a prominent kick drum and a sparse, open hi-hat pattern. A bass guitar plays a simple, repetitive line. A synth pad provides a sustained, atmospheric background.\n\nTempo and Groove:\nThe tempo is slow. The groove feels laid-back and somewhat melancholic.\n\nVocals:\nA single voice, with a breathy, slightly raspy character, delivers the lyrics in a low register. The delivery is calm and deliberate. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished. The room sounds open, with a noticeable reverb on the vocals and synth pad. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the drum machine, bass, and synth pad already playing. The voice enters shortly after. All elements remain consistent throughout the excerpt, with no significant changes in dynamics or instrumentation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Special Cases\" is a Massive Attack song with vocals by Irish singer-songwriter Sinéad O'Connor, who also co-wrote it. It appears on the album 100th Window.",
+        "source": "https://en.wikipedia.org/wiki/Special_Cases"
+      },
+      {
+        "claim": "The song was written by Robert Del Naja, Neil Davidge and Sinéad O'Connor.",
+        "source": "https://www.allmusic.com/album/mw0000019142"
+      },
+      {
+        "claim": "100th Window was released on 10 February 2003 by Virgin Records and produced by Robert Del Naja and Neil Davidge.",
+        "source": "https://en.wikipedia.org/wiki/100th_Window"
+      },
+      {
+        "claim": "O'Connor co-wrote three tracks on 100th Window: 'What Your Soul Sings', 'Special Cases' and 'A Prayer for England'. Del Naja and Davidge wrote the rest.",
+        "source": "https://en.wikipedia.org/wiki/100th_Window"
+      },
+      {
+        "claim": "'Special Cases' was the first single from 100th Window, released 24 February 2003, and the recording studio is listed as Sony in London. It reached #15 on the UK Singles Chart.",
+        "source": "https://en.wikipedia.org/wiki/Special_Cases"
+      },
+      {
+        "claim": "Album credits list Lee Shephard for recording and engineering and Mike Ross for recording. Del Naja and Davidge are credited with string arrangements.",
+        "source": "https://gorillaz.fandom.com/wiki/100th_Window"
+      },
+      {
+        "claim": "Engineer Lee Shephard said the album sessions used one multitrack Pro Tools rig to record everything and a second to play the loops. Davidge said they recorded every note played.",
+        "source": "https://www.soundonsound.com/people/neil-davidge-recording-100th-window"
+      },
+      {
+        "claim": "In a July 2002 forum post, Del Naja said the band was unhappy with the album's direction and had discarded most of the earlier material. The September 11 attacks also pushed him away from the original tone, and the album used no existing samples.",
+        "source": "https://gorillaz.fandom.com/wiki/100th_Window"
+      },
+      {
+        "claim": "Single formats included a radio edit (3:46), an Akufen remix (9:56) and Luomo's 'Casing' remix.",
+        "source": "https://en.wikipedia.org/wiki/Special_Cases"
+      },
+      {
+        "claim": "Massive Attack formed in 1988 as a spin-off quartet. Bristol duo Smith & Mighty co-produced their early work, which featured singer Carlton McCarthy.",
+        "source": "https://en.wikipedia.org/wiki/Massive_Attack"
+      }
+    ],
+    "lineage": "The song sits in the Bristol trip hop tradition of Massive Attack, whose later albums moved toward post-rock, downtempo and ambient dub.",
+    "genres": [
+      "trip hop",
+      "electronica",
+      "downtempo"
+    ]
+  },
+  "draft": "The sharpest word in **Special Cases** is a curse, and Sinéad O'Connor barely raises her voice to say it. \"But check yourself for your own shit\" arrives in the same hushed, breathy delivery as everything around it, low and slightly raspy, with no harmonies to cushion it. It sounds like a friend leaning across a table, keeping her voice down so only you hear the part that stings.\n\nThe song is advice, and not the comfortable kind. It speaks to a woman about her man, and it opens with what not to do: don't list his failures, don't hand him every reason you cry. Then it turns the mirror around. \"The deadliest of sin is pride,\" she sings, and that line explains the whole lecture. Pride is what makes you sure you're right. The song asks for a harder feeling, the humility of admitting a fight has two authors. Even its gentlest idea, that it takes two to make love and two to make a life, still carries the scold inside it.\n\nWhat lifts it past a sermon is the chorus, which changes between its two appearances. The first time, the world is full of bad things and there are plenty of good men, so the question is whether he's one of them. The second time, the world has gone mad and the good men have thinned to a few. The question becomes gratitude: \"Thank your lucky stars that he's one of them.\" Doubt turns into thanks, but only because the dark outside got darker. The relationship becomes shelter, and the song never says whether holding on is wisdom or fear. Both stay in the room.\n\nMassive Attack build the track out of patience. A drum machine keeps a slow, steady beat, a heavy kick with sparse open hi-hats. A bass guitar repeats a simple line, and a clean electric guitar rings above it. The groove is laid back and melancholy, and nothing hurries. It's Bristol trip hop leaning toward the cooler downtempo the band was moving into, with the tension handed to the voice.\n\nRobert Del Naja and Neil Davidge, who produced 100th Window, wrote the song with O'Connor. It was one of three tracks she co-wrote for the album. Del Naja had said the band threw out most of the earlier material, that September 11 pushed him away from the record's original tone, and that the album used no existing samples. Davidge said they recorded every note played. The song was cut at Sony in London, became the album's first single, and reached #15 in the UK.\n\nIt offers a hard kind of kindness: it tells you to set down your pride, then shows you how cold the world is, and you come away holding on a little tighter.",
+  "factCheck": [
+    {
+      "claim": "Sinéad O'Connor sings the track; delivery is hushed, breathy, low, slightly raspy, with no harmonies",
+      "verdict": "supported",
+      "note": "The packet credits O'Connor with the vocals. All three passes agree on breathy, low, calm or understated, and no harmonies. Two passes (1 and 3) say slightly raspy."
+    },
+    {
+      "claim": "Lyric quote: \"But check yourself for your own shit\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The song speaks to a woman about her man",
+      "verdict": "corrected",
+      "note": "The lyrics say \"your man\" but never say who is being addressed. Changed to a gender-neutral addressee."
+    },
+    {
+      "claim": "Lyric quote: \"The deadliest of sin is pride\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "It takes two to make love and two to make a life",
+      "verdict": "supported",
+      "note": "Paraphrases the lyric \"It takes two to make love, two to make a life\"."
+    },
+    {
+      "claim": "The refrain changes between its two appearances (bad things and many good men, then mad things and few good men)",
+      "verdict": "supported",
+      "note": "Matches the two \"Take a look around the world\" stanzas."
+    },
+    {
+      "claim": "Lyric quote: \"Thank your lucky stars that he's one of them\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Drum machine plays a slow, steady beat with a heavy kick and sparse open hi-hats",
+      "verdict": "corrected",
+      "note": "All three passes say prominent kick, sparse open hi-hat, slow and steady. \"Heavy\" changed to \"prominent\"."
+    },
+    {
+      "claim": "A bass guitar repeats a simple line",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A clean electric guitar rings above it",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a clean electric guitar. Softened \"rings above\" to \"sits above\"."
+    },
+    {
+      "claim": "The groove is laid back and melancholy",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "It's Bristol trip hop leaning toward the cooler downtempo the band was moving into",
+      "verdict": "corrected",
+      "note": "The lineage note supports the Bristol trip hop tradition and the later move toward downtempo. It doesn't support a claim about this song leaning that way, so the sentence was reframed."
+    },
+    {
+      "claim": "Del Naja and Davidge produced 100th Window and wrote the song with O'Connor; it was one of three tracks she co-wrote",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Del Naja said the band threw out most earlier material, Sept 11 pushed him from the original tone, and the album used no existing samples",
+      "verdict": "supported",
+      "note": "From the July 2002 forum post."
+    },
+    {
+      "claim": "Davidge said they recorded every note played",
+      "verdict": "supported",
+      "note": "Sound On Sound source."
+    },
+    {
+      "claim": "Cut at Sony in London, first single, reached #15 in the UK",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2031,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014582,
+        "detail": "1104 in / 182 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014607,
+        "detail": "1104 in / 183 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014782,
+        "detail": "1104 in / 190 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.076194,
+        "detail": "21402 in / 1339 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.076824,
+        "detail": "3446 in / 3152 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.045642,
+        "detail": "4571 in / 3650 out"
+      }
+    ]
+  }
+}
