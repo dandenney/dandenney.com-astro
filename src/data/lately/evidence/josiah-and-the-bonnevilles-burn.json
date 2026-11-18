@@ -1,0 +1,205 @@
+{
+  "spotifyId": "2m2tE9Extv1FJ4tWq6frPg",
+  "reviewedAt": "2026-11-18T19:55:54.656Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9196711"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter at 0:07 with a kick, snare, and hi-hat pattern.\n\nTempo and Groove:\nThe tempo is slow, with a relaxed, slightly melancholic feel. The groove is gentle and flowing.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is smooth and sustained, with a slight vibrato. No harmonies are present.\n\nProduction:\nThe production sounds clean and polished. The instruments are well-balanced, and the vocals are prominent. There is a sense of space, but not a large room sound.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter at 0:07, adding rhythmic drive. The vocals are present throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter at 0:07, playing a simple beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is slow, with a relaxed, slightly melancholic feel. The groove is gentle and flowing.\n\nVocals:\nA single voice sings in a mid-range, with a slightly raw, unpolished character. The delivery is earnest and direct. No harmonies are present.\n\nProduction:\nThe production sounds dry, with a close-miked feel, suggesting a small room. The texture is clean and clear, with a raw, unpolished quality.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter at 0:07. The vocals are present throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter at 0:07, playing a simple beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is slow, with a relaxed, slightly melancholic feel. The groove is gentle and flowing.\n\nVocals:\nA single voice sings in a mid-range, with a slightly raw, unpolished character. The delivery is earnest and direct. No harmonies are present.\n\nProduction:\nThe production sounds dry and intimate, as if recorded in a small room. The texture is clean and clear, with a natural, unadorned quality.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter at 0:07, adding rhythmic drive. The vocals are present throughout. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Burn\" by Josiah and the Bonnevilles was released as a single on August 30, 2023, and runs 2:10.",
+        "source": "https://music.apple.com/us/song/burn/1701937263"
+      },
+      {
+        "claim": "\"Burn\" was written by Josiah Leming, the artist behind Josiah and the Bonnevilles.",
+        "source": "https://www.shazam.com/en-us/song/1702224744/burn"
+      },
+      {
+        "claim": "\"Burn\" is track 3 on the album Endurance, released October 25, 2023. Discogs credits Josiah Leming as producer and mixer for that album, and Sam Moses as mastering engineer.",
+        "source": "https://www.discogs.com/release/29278132-Josiah-and-the-Bonnevilles-Endurance"
+      },
+      {
+        "claim": "Endurance was a self-produced album recorded in Nashville, Tennessee.",
+        "source": "https://grokipedia.com/page/Josiah_Leming"
+      },
+      {
+        "claim": "Endurance was a more stripped-down, introspective, acoustic-leaning solo effort, even though it carries the Bonnevilles name.",
+        "source": "https://www.amazon.com/Endurance-Josiah-Bonnevilles/dp/B0FKWXTCJR"
+      },
+      {
+        "claim": "\"Burn\" also appears on Endurance (Deluxe), a 20-track expanded edition released February 14, 2024.",
+        "source": "https://josiahandthe.bandcamp.com/album/endurance-deluxe"
+      },
+      {
+        "claim": "Josiah Leming is from Morristown, Tennessee. He dropped out of high school at 17 and toured the US while living out of his car. He later had a brief stint on American Idol and signed to Warner Bros. Records in 2008.",
+        "source": "https://en.wikipedia.org/wiki/Josiah_Leming"
+      },
+      {
+        "claim": "The name \"The Bonnevilles\" comes from an old Pontiac Bonneville that Leming and bassist Josh Nyback used to drive around the desert.",
+        "source": "https://www.euphoriazine.com/blog/2016/08/interviews-josiah-bonnevilles-mercury-lounge/"
+      },
+      {
+        "claim": "Josiah and the Bonnevilles began as a trio of Leming, Stephen Johnson and Josh Nyback. Their debut EP Cold Blood came out in 2016, followed by the full-length On Trial in 2018.",
+        "source": "https://www.amazon.com/Endurance-Josiah-Bonnevilles/dp/B0FKWXTCJR"
+      },
+      {
+        "claim": "Leming signed with Rounder Records for the follow-up album As Is, due May 8, 2026. It was co-produced by Leming and Konrad Snyder and is his first full-length since Endurance.",
+        "source": "https://americana-uk.com/josiah-brings-his-bonnevilles-with-him-for-his-latest-album"
+      }
+    ],
+    "lineage": "The song sits in the folk, Americana and country tradition, with Leming's Appalachian and Tennessee roots and a stripped-down, confessional songwriting style.",
+    "genres": [
+      "folk",
+      "americana",
+      "country"
+    ]
+  },
+  "draft": "\"I never really got over you / I just learned to do without.\" Josiah Leming puts the whole confession of **Burn** in its first verse, and the distinction he draws is a hard one. Getting over someone means healing. Doing without means rationing, building a life around the hole and calling it fine. The narrator knows which one he did, and he says it plainly, which is its own kind of courage.\n\nThe story is short. Someone left, out of a clear blue sky, trading today for tomorrow. The narrator's response is the part that stings: he held his tongue, stood up strong, and paid the full price in sorrow. Pride and grief stand right next to each other, and neither wins. He's proud he didn't beg, and it's obvious the silence cost him. Then comes the line that names the stakes: the day she walked away \"Was the last day of my youth.\" The lover becomes the border between the boy and the man in the mirror, and there's no crossing back.\n\nThe chorus is where the restraint gives. Every long-lost dream, every memory, gets boiled down to a lesson learned, and then the tears turn into fuel and someone strikes the match. \"Burn this body down\" from the opening sits uneasily here. Is it a purge or a wish to be gone? The song doesn't decide, and it's better for it. Even the lyric's structure tells on him: the last chorus calls \"burn\" twice instead of three times, as if the breath runs out before the fire does.\n\nWhat makes it land is that the music refuses to blaze. A fingerpicked acoustic guitar rolls through an arpeggio over a simple, sustained bass line, and the drums keep a plain kick, snare and hi-hat beat. The tempo is slow and the groove is gentle, almost easy. Leming sings alone in a mid-range voice with a slightly raw edge, earnest and direct, with no harmonies to soften it. The room sounds small and dry, the mic close. A song about setting yourself alight, played like a man still holding his tongue.\n\nThat tension fits the record it lives on. Leming wrote \"Burn\" and produced and mixed *Endurance* himself in Nashville. It's a stripped-down, acoustic-leaning album that carries the Bonnevilles name, a band named for an old Pontiac he and bassist Josh Nyback drove around the desert. He's from Morristown, Tennessee. He left high school at 17 and toured the country living out of his car before a brush with *American Idol* and a 2008 Warner Bros. deal. The song comes out of that Appalachian confessional strain of folk and Americana, where the plainest words do the heaviest lifting, and at just over two minutes it doesn't waste one.\n\nIt sticks because it gives you the difference between surviving a loss and getting over it, then plays that difference so quietly you can hear the match before it's struck.",
+  "factCheck": [
+    {
+      "claim": "\"I never really got over you / I just learned to do without.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly (two consecutive lines)."
+    },
+    {
+      "claim": "Leming wrote \"Burn\"",
+      "verdict": "supported",
+      "note": "Shazam source credits Josiah Leming as writer."
+    },
+    {
+      "claim": "Someone left out of a clear blue sky, trading today for tomorrow; narrator held his tongue, stood up strong, paid full in sorrow",
+      "verdict": "supported",
+      "note": "Paraphrases the lyrics."
+    },
+    {
+      "claim": "\"Was the last day of my youth.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The day she walked away",
+      "verdict": "corrected",
+      "note": "The lyric addresses a gender-neutral \"you\"; the gendered pronoun is not supported. Changed to \"you\"."
+    },
+    {
+      "claim": "The lover becomes the border between the boy and the man in the mirror",
+      "verdict": "supported",
+      "note": "Interpretation of \"You're the line that runs between...\"."
+    },
+    {
+      "claim": "Tears turn into fuel and someone strikes the match; dreams and memories boiled down to a lesson learned",
+      "verdict": "supported",
+      "note": "Reading of \"Tears like gas... Strike that match\" and \"Down to a lesson learned\"."
+    },
+    {
+      "claim": "\"Burn this body down\" from the opening",
+      "verdict": "corrected",
+      "note": "Lyric is accurate, but the quote count exceeded three lines. Converted to a paraphrase."
+    },
+    {
+      "claim": "The last chorus calls \"burn\" twice instead of three times",
+      "verdict": "corrected",
+      "note": "Per the lyrics, only the closing line of the last chorus drops from three burns to two. Wording made precise."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar arpeggio, simple sustained bass line, plain kick/snare/hi-hat beat, slow tempo, gentle groove",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Single mid-range voice, slightly raw, earnest and direct, no harmonies",
+      "verdict": "supported",
+      "note": "Mid-range and no harmonies in all passes; raw and earnest/direct in passes 2 and 3."
+    },
+    {
+      "claim": "Leming sings",
+      "verdict": "corrected",
+      "note": "The packet doesn't state who sings. Changed to \"the lone voice\"."
+    },
+    {
+      "claim": "The room sounds small and dry, the mic close",
+      "verdict": "corrected",
+      "note": "Small and dry supported by passes 2 and 3; close-miking only by pass 2. Dropped the mic claim and kept small, dry, intimate."
+    },
+    {
+      "claim": "Played like a man still holding his tongue",
+      "verdict": "corrected",
+      "note": "Tied the playing to a gendered performer. Reframed around the narrator."
+    },
+    {
+      "claim": "Leming produced and mixed Endurance himself in Nashville",
+      "verdict": "corrected",
+      "note": "Producer/mixer credit and self-produced are supported; Nashville is where it was recorded. Wording separated."
+    },
+    {
+      "claim": "Stripped-down, acoustic-leaning album that carries the Bonnevilles name",
+      "verdict": "supported",
+      "note": "Amazon source."
+    },
+    {
+      "claim": "Band named for an old Pontiac Leming and Josh Nyback drove around the desert",
+      "verdict": "supported",
+      "note": "Euphoriazine source."
+    },
+    {
+      "claim": "From Morristown, Tennessee; left high school at 17; toured the country living out of his car; American Idol; 2008 Warner Bros. deal",
+      "verdict": "supported",
+      "note": "Wikipedia source."
+    },
+    {
+      "claim": "Appalachian confessional strain of folk and Americana; just over two minutes",
+      "verdict": "supported",
+      "note": "Lineage note and 2:11 length."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.3359,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014845,
+        "detail": "1100 in / 193 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001482,
+        "detail": "1100 in / 192 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001477,
+        "detail": "1100 in / 190 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.20594,
+        "detail": "75615 in / 1471 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.064228,
+        "detail": "3697 in / 2472 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06129,
+        "detail": "4910 in / 5147 out"
+      }
+    ]
+  }
+}

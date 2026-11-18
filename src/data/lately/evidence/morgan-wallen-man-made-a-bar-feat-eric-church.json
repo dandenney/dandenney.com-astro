@@ -1,0 +1,208 @@
+{
+  "spotifyId": "73zawW1ttszLRgT9By826D",
+  "reviewedAt": "2026-11-18T20:07:28.118Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3606563"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady rhythm. Electric guitar plays melodic fills. Bass guitar provides a low-end foundation. Drums play a consistent beat with snare hits and cymbal crashes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a country rock ballad, with a slight swing.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy character. The delivery is earnest and storytelling. Harmonies are present in the chorus, with multiple voices singing in unison or close harmony.\n\nProduction:\nThe room sound is moderately spacious, suggesting a studio recording. The texture is polished, with instruments well-balanced. The overall sound is clean and professional.\n\nArrangement:\nThe excerpt begins with the lead vocalist and full band. The chorus features layered harmonies. The arrangement remains consistent throughout, with no significant drops or builds.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady rhythm. Electric guitar plays melodic fills. Bass guitar provides a low-end foundation. Drums play a consistent beat with snare hits and cymbal crashes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a country rock ballad, with a slight shuffle feel.\n\nVocals:\nThe lead voice is a male baritone, delivered with a clear, slightly raspy character. The delivery is earnest and storytelling. Harmonies are present, with a second male voice joining in unison or parallel harmony, creating a full, blended sound.\n\nProduction:\nThe room sounds moderately spacious, with some reverb. The texture is polished and clean, with instruments well-defined.\n\nArrangement:\nThe excerpt begins with the full band and lead vocals. Harmonies enter during the chorus-like sections. The arrangement remains consistent throughout, with no significant drops or builds.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a consistent strumming pattern. Electric guitar plays a clean, arpeggiated melody. Bass guitar provides a walking bass line. Drums play a steady beat with a snare backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a country ballad, with a slight swing feel.\n\nVocals:\nThe lead voice is male, with a slightly raspy, mid-range character. The delivery is conversational and earnest. Harmonies are present, with a second male voice singing above the lead in a close, stacked harmony.\n\nProduction:\nThe room sounds open, with a slight reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the full band. The lead vocal enters immediately, joined by harmonies. The electric guitar plays a melodic fill between vocal phrases. The full band continues throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Man Made a Bar\" was written by Rocky Block, Jordan Dozzi, Larry Fleet and Brett Tyler, and produced by Joey Moi.",
+        "source": "https://www.w4country.com/news/morgan-wallen-eric-churchs-man-made-a-bar-tops-billboards-country-airplay-chart/"
+      },
+      {
+        "claim": "The session musicians were Dan Dugmore (steel guitar), Bryan Sutton (mandolin, acoustic guitar), Tom Bukovac (electric guitar), Jimmie Lee Sloas (bass), Dave Cohen (keyboards) and Jerry Roe (drums, percussion).",
+        "source": "https://www.songfacts.com/facts/morgan-wallen/man-made-a-bar"
+      },
+      {
+        "claim": "Wallen said Larry Fleet sent him the song and that it was one of the last songs to make the album. He was on a tight deadline and hadn't planned on features. In the final week he asked Eric Church to duet on it.",
+        "source": "https://countrynow.com/morgan-wallen-and-eric-churchs-man-made-a-bar-hits-no-1-at-country-radio/"
+      },
+      {
+        "claim": "Larry Fleet said Wallen was the only artist he sent the song to.",
+        "source": "https://holler.country/lyrics/man-made-a-bar-by-morgan-wallen-and-eric-church-lyrics-and-meaning/"
+      },
+      {
+        "claim": "Co-writer Brett Tyler said he wanted to put a twist on the classic country \"guy walks into a bar\" heartbreak song. In his version the bartender opened the bar to help people through life's hardships, and the song then runs through the biblical creation story of Adam and Eve.",
+        "source": "https://www.whiskeyriff.com/2023/11/09/morgan-wallen-is-officially-releasing-man-made-a-bar-his-duet-with-eric-church-as-his-next-single/"
+      },
+      {
+        "claim": "Wallen called the duet with Church, one of his musical heroes, \"pretty mind-blowing\". He said Church was willing to do whatever was needed, and that the studio day with him was one he would never forget.",
+        "source": "https://musicmayhemmagazine.com/morgan-wallen-say-he-is-super-grateful-for-his-friendship-with-musical-hero-eric-church-i-respect-him-so-much/"
+      },
+      {
+        "claim": "The song is track 4 on the 36-track album One Thing at a Time. It was released to radio on November 13, 2023 as the album's seventh single, on Big Loud, Republic and Mercury.",
+        "source": "https://www.wikiwand.com/en/Man_Made_a_Bar"
+      },
+      {
+        "claim": "Wallen and Church gave the song its television debut with a surprise performance at the CMA Awards on November 8, 2023, in Nashville.",
+        "source": "https://countrynow.com/morgan-wallen-and-eric-churchs-man-made-a-bar-hits-no-1-at-country-radio/"
+      },
+      {
+        "claim": "The song reached No. 1 on Billboard's Country Airplay chart in April 2024. It was Wallen's 14th and Church's 12th No. 1 on that chart.",
+        "source": "https://www.whiskeyriff.com/2024/04/12/with-the-most-awkward-timing-possible-morgan-wallen-eric-churchs-man-made-a-bar-hits-1-on-the-charts/"
+      },
+      {
+        "claim": "Church co-wrote \"Quittin' Time\" on Wallen's Dangerous: The Double Album. He also took Wallen on tour and publicly supported him after the 2021 slur controversy.",
+        "source": "https://www.songfacts.com/facts/morgan-wallen/man-made-a-bar"
+      }
+    ],
+    "lineage": "The song is a modern mainstream country heartbreak-and-bar song that updates the classic country 'guy walks into a bar' trope with a biblical creation framing, and it pairs Wallen with his stated hero Eric Church.",
+    "genres": [
+      "country"
+    ]
+  },
+  "draft": "The bartender gets the best line in **Man Made A Bar**, and it isn't a joke. A man drops onto a stool, a darn fool because she walked out again, and the person pouring answers with plain solidarity: \"'Cause I, too, have been in your boots, my friend.\" The bartender opened the place in '85 to get over a first wife and has kept the doors open ever since. Heartbreak here isn't a private catastrophe. It's a trade, a shared condition, something one person already survived and built a room around.\n\nCo-writer Brett Tyler said he wanted to twist the old country setup of a guy walking into a bar, and the twist is the chorus. It runs the creation story in bar-stool cadence: God made the world, the man got lonely and begged for an angel, God made a girl as his best work of art. Then comes the kicker, \"he didn't make no place to go when she breaks your heart.\" It's funny, and it's also a small grievance against heaven. The song reveres the woman and resents the gap she leaves, and it never settles which feeling wins. Man fills the gap himself, with half-price buckets and a cover band.\n\nThe third act widens the room. \"Sometimes an angel falls too hard,\" and the bar becomes her refuge too. That one turn keeps the song from being a men's-club lament. Everyone at the rail is carrying the same weight.\n\nThe sound stays close to that steadiness. An acoustic guitar holds a steady strum, an electric guitar slips melodic fills between the vocal phrases, and the bass and snare walk it along at a moderate pace with a slight swing. The lead voice is clear with some rasp, earnest, more storyteller than belter. On the chorus a second voice stacks in close harmony, and the blend sounds like two regulars agreeing. The production is clean and polished, and the arrangement holds level rather than building drama, which suits a song about a place that's always there.\n\nLarry Fleet, who wrote it with Tyler, Rocky Block and Jordan Dozzi, sent it only to Morgan Wallen. It was one of the last songs to make *One Thing at a Time*, and in the final week Wallen asked Eric Church, one of his musical heroes, to join him. Wallen called the duet \"pretty mind-blowing.\" That fits the song's own idea: an older hand pulling up a stool next to a younger one.\n\nIt sticks because it hands you the oldest country comfort in a new shape: you're not the first to be wrecked like this, and someone kept the lights on for you.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"'Cause I, too, have been in your boots, my friend.\"",
+      "verdict": "corrected",
+      "note": "The lyric reads \"Yeah, 'cause I, too...\" with a lowercase c. Fixed the capitalization to match."
+    },
+    {
+      "claim": "A man sits on a stool, a darn fool, because she walked out again; the bartender answers with solidarity",
+      "verdict": "supported",
+      "note": "Matches the opening lyrics."
+    },
+    {
+      "claim": "The bartender opened the place in '85 to get over a first wife and has kept the doors open since",
+      "verdict": "supported",
+      "note": "Lyrics: \"Opened up back in '85, got me over my first wife / Been stayin' busy since the first night.\""
+    },
+    {
+      "claim": "Co-writer Brett Tyler said he wanted to twist the old country 'guy walks into a bar' setup",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The chorus runs the creation story; man gets lonely and asks for an angel; God makes a girl, his best work of art",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: \"he didn't make no place to go when she breaks your heart.\"",
+      "verdict": "supported",
+      "note": "Exact lyric text."
+    },
+    {
+      "claim": "Man fills the gap himself, with half-price buckets and a cover band",
+      "verdict": "corrected",
+      "note": "The lyric says buckets and a cover band are why some guys come for a good time, and the narrator says \"I know why they're here.\" Rewrote to match."
+    },
+    {
+      "claim": "\"The third act widens the room\"",
+      "verdict": "corrected",
+      "note": "The song's structure doesn't establish acts. Reworded to \"Later the song widens the room.\""
+    },
+    {
+      "claim": "Quote: \"Sometimes an angel falls too hard\"; the bar becomes her refuge too",
+      "verdict": "supported",
+      "note": "Lyrics: \"she needs a place to go and make a brand new star.\""
+    },
+    {
+      "claim": "Acoustic guitar holds a steady strum; electric guitar plays melodic fills",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Electric fills fall between the vocal phrases",
+      "verdict": "removed",
+      "note": "Only one pass says this."
+    },
+    {
+      "claim": "The bass and snare walk it along at a moderate pace with a slight swing",
+      "verdict": "corrected",
+      "note": "Walking bass appears in only one pass. Kept bass as low-end foundation, steady drums with snare, moderate tempo and slight swing."
+    },
+    {
+      "claim": "Lead voice is clear with some rasp, earnest, storyteller-like",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "On the chorus a second voice stacks in close harmony",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 describe a second voice in close or parallel harmony. Pass 1 places harmonies in the chorus."
+    },
+    {
+      "claim": "Production is clean and polished",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The arrangement holds level rather than building drama",
+      "verdict": "removed",
+      "note": "This is a claim about the arc of the whole song, which the excerpt can't support."
+    },
+    {
+      "claim": "Larry Fleet wrote it with Tyler, Rocky Block and Jordan Dozzi, and sent it only to Wallen",
+      "verdict": "supported",
+      "note": "Matches the credits and Fleet's statement."
+    },
+    {
+      "claim": "One of the last songs to make One Thing at a Time; Wallen asked Eric Church, one of his musical heroes, in the final week",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Wallen called the duet \"pretty mind-blowing\"",
+      "verdict": "supported",
+      "note": "Matches the quote in the packet."
+    },
+    {
+      "claim": "An older hand pulling up a stool next to a younger one",
+      "verdict": "corrected",
+      "note": "The ages of the artists aren't in the packet. Reworded without age."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1927,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014419,
+        "detail": "1108 in / 175 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014669,
+        "detail": "1108 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00063095,
+        "detail": "1108 in / 182 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08587,
+        "detail": "24875 in / 1612 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052312,
+        "detail": "4258 in / 1764 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050984,
+        "detail": "5377 in / 4023 out"
+      }
+    ]
+  }
+}

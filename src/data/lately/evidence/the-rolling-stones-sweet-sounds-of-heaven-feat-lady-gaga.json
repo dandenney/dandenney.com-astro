@@ -1,0 +1,220 @@
+{
+  "spotifyId": "5YW7oSt4jHBO7yE9XER2Be",
+  "reviewedAt": "2026-11-18T20:08:33.632Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7516238"
+  },
+  "listening": "Pass 1:\nInstruments:\nA drum kit plays a steady, mid-tempo beat with a prominent snare drum. A bass guitar plays a simple, walking bassline. An electric guitar plays sustained chords. A piano plays chords.\n\nTempo and Groove:\nThe tempo is mid-tempo. The groove is a steady, relaxed rock feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy character. The delivery is melodic and sustained. There are no harmonies in this excerpt.\n\nProduction:\nThe room sounds open and spacious. The texture is full and layered. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter shortly after the start. All instruments remain present throughout the excerpt.\n\nPass 2:\nInstruments:\nA drum kit plays a slow, steady beat with a prominent snare. A bass guitar plays a simple, walking line. An electric guitar plays sustained chords. A piano plays chords and fills.\n\nTempo and Groove:\nThe tempo is slow. The groove is a relaxed, gospel-influenced shuffle.\n\nVocals:\nA male voice sings in a low-mid range, with a slightly raspy, bluesy character. The delivery is soulful and expressive. A female voice joins in harmony on the chorus, singing in a higher register.\n\nProduction:\nThe room sounds spacious, with a natural reverb. The texture is warm and full. The production is polished, with clear separation between instruments.\n\nArrangement:\nThe excerpt begins with the full band playing. The male voice sings the verse, then the female voice joins for the chorus, adding a layer of harmony. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nA drum kit plays a slow, steady beat with a prominent snare. A bass guitar plays a simple, walking line. An electric guitar plays sustained chords. A piano plays chords.\n\nTempo and Groove:\nThe tempo is slow. The groove is a relaxed, gospel-influenced shuffle.\n\nVocals:\nA male voice sings in a low, gravelly character, with a slightly strained delivery. A female voice sings in a clear, powerful character, with a sustained delivery. The two voices sing in unison and in harmony.\n\nProduction:\nThe room sounds spacious, with a slight reverb on the vocals and instruments. The texture is full and warm. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band and vocals. The male voice sings the lead, with the female voice joining in harmony. The instruments maintain a consistent presence throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The song was written by Mick Jagger and Keith Richards and produced by Andrew Watt, and it grew out of a piano composition by Jagger.",
+        "source": "https://en.wikipedia.org/wiki/Sweet_Sounds_of_Heaven"
+      },
+      {
+        "claim": "Stevie Wonder plays Fender Rhodes, Moog and piano on the track, alongside a major vocal performance by Lady Gaga.",
+        "source": "https://v13.net/2023/09/the-rolling-stones-release-second-single-from-new-album-sweet-sounds-of-heaven-featuring-lady-gaga-and-stevie-wonder/"
+      },
+      {
+        "claim": "It was recorded at Henson Recording Studios in Los Angeles, Metropolis Studios in London and Sanctuary Studios in Nassau, Bahamas.",
+        "source": "https://blabbermouth.net/news/the-rolling-stones-share-sweet-sounds-of-heaven-single-featuring-lady-gaga-and-stevie-wonder"
+      },
+      {
+        "claim": "Discogs credits Steve Jordan on drums, Keith Richards on bass, Serban Ghenea as mixer and Matt Colton as mastering engineer. Polydor Records is listed as the record company.",
+        "source": "https://www.discogs.com/release/28477987-The-Rolling-Stones-Lady-Gaga-Stevie-Wonder-Sweet-Sounds-Of-Heaven"
+      },
+      {
+        "claim": "The band recorded the song largely live at Henson in January 2023, playing together in the same room, with overdubs added later.",
+        "source": "https://en.wikipedia.org/wiki/Sweet_Sounds_of_Heaven"
+      },
+      {
+        "claim": "Jagger said Gaga was recording in the same studio and walked in on the session. She curled up on the floor in front of him, someone handed her a mic, and she began singing oohs and ahs.",
+        "source": "https://www.yahoo.com/entertainment/lady-gaga-stevie-wonder-feature-232832632.html"
+      },
+      {
+        "claim": "Producer Andrew Watt, who has Stevie Wonder tattooed on his finger, said that when Jagger played him an early piano version he thought the song called for a guest. Watt then invited Wonder, who had toured with the Stones in 1972.",
+        "source": "https://www.rollingstone.com/music/music-features/rolling-stones-mick-jagger-keith-richards-hackney-diamonds-stevie-wonder-1234822701/"
+      },
+      {
+        "claim": "Jagger described the song as kind of like a gospel song that also has personal things in it.",
+        "source": "https://www.rollingstone.com/music/music-features/rolling-stones-mick-jagger-keith-richards-hackney-diamonds-stevie-wonder-1234822701/"
+      },
+      {
+        "claim": "Wonder said the song needed a place of celebration, and that to him it was saying hello, not goodbye.",
+        "source": "https://www.yahoo.com/entertainment/lady-gaga-stevie-wonder-feature-232832632.html"
+      },
+      {
+        "claim": "It was the second single from Hackney Diamonds, the band's first album of original material in 18 years and its first since Charlie Watts died. The album was released on 20 October 2023.",
+        "source": "https://www.billboard.com/music/rock/rolling-stones-sweet-sounds-of-heaven-lady-gaga-stevie-wonder-release-date-1235420814"
+      }
+    ],
+    "lineage": "Press materials describe it as a gospel-infused Stones epic in the lineage of \"You Can't Always Get What You Want\" and \"Shine A Light\".",
+    "genres": [
+      "gospel rock",
+      "soul",
+      "blues rock"
+    ]
+  },
+  "draft": "The hardest line in **Sweet Sounds Of Heaven** isn't a hymn. It's a refusal: \"No, I'm not, not goin' to Hell / In some dusty motel.\" It's the bluntest thing in a song otherwise full of blessings and falling light, and it gives the whole thing its spine. Around it sit prayers for the hungry, the smell of heaven, children singing about the land they were born in. Then the narrator plants a foot and says this isn't how the story ends. The defiance and the devotion never settle their argument, and the song is better for leaving them both standing.\n\nMick Jagger called it kind of like a gospel song that also has personal things in it, and that's an accurate map. The gospel part is all over the surface: bread and wine, Father and Son, a congregation told to sing, shout, and stand up proud. The personal part leaks out in the middle of the communion. The narrator wants to laugh and cry in the same breath, wants to be \"drenched in the rain\" of someone's love, and admits to \"finally, finally quenchin'\" a thirst that has clearly lasted a long time. That doubled \"finally\" carries more relief than any of the praise.\n\nThe band plays it slow and patient, a relaxed gospel shuffle built on a steady kit with a fat snare, a simple walking bass, and electric guitar holding long chords while piano fills in underneath. The lead vocal is raspy and worn at the edges. The room sounds big and warm, with natural reverb around everything, which fits how it was made: the Stones cut it largely live at Henson in Los Angeles, playing together in one room with Steve Jordan on drums and Keith Richards on bass. When a higher voice comes in to harmonize, the prayer stops being one person's.\n\nThe people in that room explain a lot. It started as a piano piece of Jagger's, and producer Andrew Watt heard a guest in it and invited Stevie Wonder, who plays Rhodes, Moog and piano here and who toured with the band back in 1972. Lady Gaga was recording down the hall, wandered in, curled up on the floor in front of Jagger, and started singing oohs and ahs into a mic someone handed her. It's the same churchy reach as \"You Can't Always Get What You Want\" and \"Shine A Light,\" and it was the band's first new music since Charlie Watts died. Wonder heard it as saying hello, not goodbye.\n\nThen comes the line the whole song leans toward: \"Let the old still believe that they're young.\" It's tender and stubborn at once, a blessing asked for by people who know exactly how old they are.\n\nWhat sticks is that the song lets you feel two things at once, the grace of being carried and the plain refusal to go quietly, and it never asks you to pick one.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"No, I'm not, not goin' to Hell / In some dusty motel.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Prayers for the hungry, the smell of heaven, and children praising the land of their birth appear in the lyrics.",
+      "verdict": "supported",
+      "note": "Matches lines about no woman or child going hungry, the scents of Heaven, and children praisin' the land of their birth."
+    },
+    {
+      "claim": "Jagger called it kind of like a gospel song that also has personal things in it.",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone paraphrase in the facts."
+    },
+    {
+      "claim": "Gospel imagery: bread and wine, Father and Son, 'sing, shout, stand up proud'.",
+      "verdict": "supported",
+      "note": "All in the lyrics."
+    },
+    {
+      "claim": "Quote \"drenched in the rain\"",
+      "verdict": "removed",
+      "note": "The quote is accurate, but it would make four quoted lyric lines, over the limit of three. Paraphrased instead."
+    },
+    {
+      "claim": "Quote \"finally, finally quenchin'\" and a thirst that 'has clearly lasted a long time'",
+      "verdict": "corrected",
+      "note": "The lyric is exact. 'Clearly' was softened because the length of the thirst is interpretation."
+    },
+    {
+      "claim": "Slow, patient, relaxed gospel shuffle",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on slow and a gospel-influenced shuffle."
+    },
+    {
+      "claim": "Steady kit with a 'fat' snare",
+      "verdict": "corrected",
+      "note": "All passes say a prominent snare. 'Fat' is unsupported."
+    },
+    {
+      "claim": "Simple walking bass; electric guitar holding long chords",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Piano 'fills in underneath'",
+      "verdict": "corrected",
+      "note": "Only one pass mentions fills. All three agree on piano chords."
+    },
+    {
+      "claim": "Lead vocal is raspy and worn at the edges",
+      "verdict": "corrected",
+      "note": "Raspy is supported by all three passes. 'Worn at the edges' was reduced to a plain description."
+    },
+    {
+      "claim": "Room sounds big and warm with natural reverb",
+      "verdict": "corrected",
+      "note": "Spacious is supported by all three passes. Warm and reverb are supported by two. 'Natural' appears in only one, so it was dropped."
+    },
+    {
+      "claim": "A higher voice comes in to harmonize",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 support a female harmony voice. The 'comes in' sequencing was removed because the excerpt's position is unknown."
+    },
+    {
+      "claim": "The Stones cut it largely live at Henson in Los Angeles, together in one room",
+      "verdict": "supported",
+      "note": "Wikipedia and Blabbermouth."
+    },
+    {
+      "claim": "Steve Jordan on drums, Keith Richards on bass",
+      "verdict": "supported",
+      "note": "Discogs credits."
+    },
+    {
+      "claim": "Started as a Jagger piano piece; Watt heard a guest in it and invited Stevie Wonder, who plays Rhodes, Moog and piano and toured with the band in 1972",
+      "verdict": "supported",
+      "note": "Wikipedia, v13, Rolling Stone."
+    },
+    {
+      "claim": "Lady Gaga was recording 'down the hall' and wandered in",
+      "verdict": "corrected",
+      "note": "The source says she was recording in the same studio and walked in on the session. 'Down the hall' is invented."
+    },
+    {
+      "claim": "She curled up on the floor in front of Jagger and sang oohs and ahs into a mic someone handed her",
+      "verdict": "supported",
+      "note": "Yahoo, quoting Jagger."
+    },
+    {
+      "claim": "Same churchy reach as 'You Can't Always Get What You Want' and 'Shine A Light'",
+      "verdict": "supported",
+      "note": "Press materials describe that lineage."
+    },
+    {
+      "claim": "It was the band's first new music since Charlie Watts died",
+      "verdict": "corrected",
+      "note": "The facts say the song is the second single from Hackney Diamonds, the band's first album of original material since Watts died. Reworded to say that."
+    },
+    {
+      "claim": "Wonder heard it as saying hello, not goodbye",
+      "verdict": "supported",
+      "note": "Yahoo."
+    },
+    {
+      "claim": "Quote \"Let the old still believe that they're young\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. 'Then comes' was reworded to avoid a position claim."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2005,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013844,
+        "detail": "1108 in / 152 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014519,
+        "detail": "1108 in / 179 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014944,
+        "detail": "1108 in / 196 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.085366,
+        "detail": "24723 in / 1592 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054592,
+        "detail": "4148 in / 1900 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056212,
+        "detail": "5346 in / 4552 out"
+      }
+    ]
+  }
+}

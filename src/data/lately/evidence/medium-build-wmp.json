@@ -1,0 +1,220 @@
+{
+  "spotifyId": "3YH6wnaA25qyutcSzPgYxS",
+  "reviewedAt": "2026-11-18T20:17:50.326Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7102247"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a simple, arpeggiated figure. A male voice sings in a clear, mid-range register, with a slightly nasal quality. The tempo is slow, with a relaxed, almost melancholic groove. The production is clean and dry, with the vocals upfront.\n\nAt around 0:09, a second male voice joins, singing in unison with the first, adding a fuller texture. A bass guitar enters, playing a simple, root-note pattern. A drum kit joins, playing a basic beat with a soft kick and snare, and open hi-hats. The arrangement remains sparse, with the focus on the vocals and acoustic guitar.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggio pattern. A male voice sings in a high register, with a slightly nasal, breathy quality. The tempo is slow, with a relaxed, almost melancholic groove. A second male voice joins in harmony, singing the same melody an octave lower. The production is clean and intimate, with a slight reverb on the vocals, suggesting a small room. The texture is sparse, with the guitar and vocals being the primary elements. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed, arpeggiated pattern. Electric guitar plays a clean, arpeggiated pattern with some sustain. Bass guitar plays a simple, root-note line. Drums play a driving, mid-tempo beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is mid-tempo. The groove feels steady and slightly melancholic, with a driving but not rushed feel.\n\nVocals:\nThe lead vocalist has a clear, slightly nasal voice. The delivery is conversational and earnest. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished. The room sounds like a dry, controlled studio space. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the full band. The acoustic guitar, electric guitar, bass, and drums are all present. The lead vocal enters at 0:00. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building significantly.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"WMP\" is track 1 on Medium Build's 9-track album roughboy, released November 21, 2018, and runs 3:16.",
+        "source": "https://mediumbuild.bandcamp.com/album/roughboy"
+      },
+      {
+        "claim": "All songs on roughboy, including \"WMP\", were written by Nicholas Carpenter and James Glaves.",
+        "source": "https://mediumbuild.bandcamp.com/album/roughboy"
+      },
+      {
+        "claim": "roughboy was mixed and mastered by James Glaves.",
+        "source": "https://mediumbuild.bandcamp.com/album/roughboy"
+      },
+      {
+        "claim": "The roughboy lineup was Nick Carpenter (vocals, guitar) with James Glaves (guitar/keyboards), James Dommek Jr. (drums) and Chad Reynvaan (bass).",
+        "source": "https://www.adn.com/arts/music/2018/11/29/medium-build-follow-up-among-a-trio-of-new-alaska-albums/"
+      },
+      {
+        "claim": "Glaves said almost every roughboy track was written about a specific real-life situation that he or Carpenter lived through, including love lost, anxiety, depression, suicide and addiction.",
+        "source": "https://www.adn.com/arts/music/2018/11/29/medium-build-follow-up-among-a-trio-of-new-alaska-albums/"
+      },
+      {
+        "claim": "Anchorage Daily News described roughboy as having a distinct '80s feel, richly layered without feeling overproduced, with candid lyricism. It came about six months after the album softboy.",
+        "source": "https://www.adn.com/arts/music/2018/11/29/medium-build-follow-up-among-a-trio-of-new-alaska-albums/"
+      },
+      {
+        "claim": "Medium Build's discography runs Falling Apart (2016), then softboy and roughboy (both 2018), then Wild (2019).",
+        "source": "https://en.wikipedia.org/wiki/Medium_Build"
+      },
+      {
+        "claim": "Medium Build is the project of Nick Carpenter, who studied music at Middle Tennessee State, dropped out, and moved to Anchorage, Alaska. His brother had lived there since 2009.",
+        "source": "https://noctismag.com/music/in-conversation-with-medium-build/"
+      },
+      {
+        "claim": "Carpenter met producer James Glaves at an Anchorage open mic. Glaves then joined as co-writer and producer for about three years.",
+        "source": "https://www.newsminer.com/features/latitude_65/anchorage-based-artist-recently-featured-on-hbo-comes-to-fairbanks/article_e43724c8-9b58-11ed-b19f-47d74f68fada.html"
+      },
+      {
+        "claim": "Carpenter has said the Medium Build name began as a joke and served as a safe place to hide and fail.",
+        "source": "https://noctismag.com/music/in-conversation-with-medium-build/"
+      }
+    ],
+    "lineage": "Anchorage, Alaska-scene indie/alternative pop with an '80s synth-pop feel and blunt, confessional singer-songwriter lyrics.",
+    "genres": [
+      "indie pop",
+      "alternative pop",
+      "synth pop"
+    ]
+  },
+  "draft": "The most damning line in **WMP** is also the gentlest: \"Babe, I'll be in bed in just a minute.\" It follows the admission that the narrator's face is glued to his phone, and it lands like every promise made half-turned away from the person waiting. Nick Carpenter sings it in a clear, slightly nasal voice, set up front in a clean, dry mix. He sounds like he's telling you across a kitchen table, not from a stage.\n\nThe song is a ledger of advice and accusations. It opens on the life advice handed down to him, \"Be a good hang, a decent guy,\" a creed so low-bar it reads as a joke and a trap at once. Then come the nights: blackouts, a \"whole new me\" who grabs the wheel and drives home drunk. The woman he's sleeping with says he's too much like her dad, too in love with his own head, a product of white male privilege. The title's initials come from her verdict, not his. He doesn't argue. He reports it as flatly as he reports the drinking, then retreats into a chorus that shrugs: too late to work out where he went wrong, so he'll be alone. Self-pity and self-indictment share the same breath, and the song won't choose between them.\n\nThe arrangement keeps all of that small. An acoustic guitar picks out a simple arpeggiated figure, bass holds root notes, drums keep a plain beat, and the groove has a steady, melancholy sway. A second voice shadows the lead, so the confession sounds less like a soliloquy and more like two people admitting the same thing. Carpenter wrote it with James Glaves, who also mixed and mastered roughboy. Glaves has said nearly every song on the record came from something one of them actually lived through, from lost love to addiction.\n\nThen the bridge breaks open. Told to make plans, and afraid of messing them up again, he recites the script: buy a house, have kids, get a job, \"Hang rope lights in the backyard,\" then a minivan, then a second house on the lake. Each item is more ordinary than the last. The promise that everything will be fine curdles into a repeated \"oh my god\" that stretches until it's nearly a howl. It's hard to tell whether he's reaching for that life or choking on it. Probably both.\n\nCarpenter started Medium Build after leaving music school in Tennessee for Anchorage, and he's called the name a safe place to hide and fail. As the opening track on roughboy, this song sets that terms sheet out plainly: the failures, lined up in order, with no excuses attached.\n\nYou end up holding both halves of him at once, the man who knows exactly what's wrong with himself and the one still promising, from the next room, that he'll be right there.",
+  "factCheck": [
+    {
+      "claim": "The lyric \"Babe, I'll be in bed in just a minute\" follows the admission that his face is glued to his phone",
+      "verdict": "corrected",
+      "note": "The quote is exact. The line comes two lines after the phone line, so the wording was loosened to 'comes after'."
+    },
+    {
+      "claim": "Nick Carpenter sings it",
+      "verdict": "supported",
+      "note": "The lineup lists Nick Carpenter on vocals."
+    },
+    {
+      "claim": "Clear, slightly nasal voice in a clean, dry mix",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on clear and slightly nasal, and on clean and dry. Pass 2 also says clean and slightly nasal."
+    },
+    {
+      "claim": "Vocal is set up front in the mix",
+      "verdict": "removed",
+      "note": "Only pass 1 says the vocals are upfront."
+    },
+    {
+      "claim": "He sounds like he's telling you across a kitchen table",
+      "verdict": "supported",
+      "note": "This is interpretation. Pass 3 describes the delivery as conversational and earnest."
+    },
+    {
+      "claim": "Quoted lyrics: 'Be a good hang, a decent guy', 'whole new me', 'Hang rope lights in the backyard'",
+      "verdict": "supported",
+      "note": "All match the lyrics exactly."
+    },
+    {
+      "claim": "Blackouts, a 'whole new me' who grabs the wheel and drives home drunk",
+      "verdict": "supported",
+      "note": "Matches the second verse."
+    },
+    {
+      "claim": "The woman says he's too much like her dad, too in love with his own head, a product of white male privilege",
+      "verdict": "supported",
+      "note": "Matches the verse."
+    },
+    {
+      "claim": "The title's initials come from her verdict, not his",
+      "verdict": "removed",
+      "note": "The packet never says what WMP stands for."
+    },
+    {
+      "claim": "Acoustic guitar picks out an arpeggiated figure; bass holds root notes",
+      "verdict": "supported",
+      "note": "Acoustic arpeggio is in all three passes. Root-note bass is in passes 1 and 3."
+    },
+    {
+      "claim": "Drums keep a plain beat; steady, melancholy sway",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 describe a basic or steady beat, and all passes say melancholic."
+    },
+    {
+      "claim": "The arrangement keeps all of that small",
+      "verdict": "corrected",
+      "note": "Pass 3 describes a full band, so 'small' was softened to 'plain'."
+    },
+    {
+      "claim": "A second voice shadows the lead",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a second voice."
+    },
+    {
+      "claim": "Carpenter wrote it with James Glaves, who also mixed and mastered roughboy",
+      "verdict": "supported",
+      "note": "Credits from Bandcamp."
+    },
+    {
+      "claim": "Glaves said nearly every song came from something one of them lived through, from lost love to addiction",
+      "verdict": "supported",
+      "note": "Matches the ADN article."
+    },
+    {
+      "claim": "'Then the bridge breaks open'",
+      "verdict": "corrected",
+      "note": "Section labels aren't supported. Reworded to say the song turns."
+    },
+    {
+      "claim": "Told to make plans, afraid of messing them up; buy a house, have kids, job, minivan, second house on the lake",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The repeated 'oh my god' stretches until it's nearly a howl",
+      "verdict": "corrected",
+      "note": "The lyric shows the stretched final word, but the listening notes say nothing about how it sounds. Reworded to rest on the lyric alone."
+    },
+    {
+      "claim": "Carpenter started Medium Build after leaving music school in Tennessee for Anchorage",
+      "verdict": "corrected",
+      "note": "The packet says he studied music at Middle Tennessee State, dropped out and moved to Anchorage. It does not give the order relative to starting the project."
+    },
+    {
+      "claim": "He's called the name a safe place to hide and fail",
+      "verdict": "supported",
+      "note": "Matches the Noctis interview."
+    },
+    {
+      "claim": "'WMP' is the opening track on roughboy",
+      "verdict": "supported",
+      "note": "Track 1."
+    },
+    {
+      "claim": "Promising 'from the next room'",
+      "verdict": "removed",
+      "note": "The lyrics don't place him in another room."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2675,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012861,
+        "detail": "1097 in / 114 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00051448,
+        "detail": "1097 in / 139 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014961,
+        "detail": "1097 in / 198 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13484400000000002,
+        "detail": "45777 in / 1329 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.077648,
+        "detail": "3682 in / 3146 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05171,
+        "detail": "4850 in / 4201 out"
+      }
+    ]
+  }
+}

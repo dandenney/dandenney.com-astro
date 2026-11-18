@@ -1,0 +1,194 @@
+{
+  "spotifyId": "1JcIXOir94YUYBt2cXTzn2",
+  "reviewedAt": "2026-11-18T19:52:28.516Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7507370"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar is strummed. A bass guitar plays a walking line. Drums play a simple beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is earnest and direct. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced, with a moderate amount of reverb suggesting a medium-sized room. The texture is smooth and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The vocals enter shortly after. All instruments remain consistent throughout the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar, strummed. Bass guitar, plucked. Drums, played with brushes.\n\nTempo and Groove:\nModerate tempo. The groove is a gentle, swaying feel, with a slight push and pull.\n\nVocals:\nA male voice, with a slightly raspy, breathy character. The delivery is melodic and earnest. There are no harmonies.\n\nProduction:\nThe sound is clean and clear, with a natural room feel. The texture is warm and inviting. The production is polished but not overly processed.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The vocals enter shortly after. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nAcoustic guitar, strummed. Bass guitar, plucked. Drums, played with brushes, including snare, kick, and cymbals.\n\nTempo and Groove:\nModerate tempo. The groove is relaxed and flowing, with a gentle swing feel.\n\nVocals:\nA male voice, with a slightly raspy, breathy character. The delivery is melodic and expressive. There are no harmonies.\n\nProduction:\nThe sound is clean and clear, with a natural room ambiance. The texture is warm and full. The production feels polished but not overly processed.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The vocals enter immediately. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Noah Kahan is the sole writer of \"Growing Sideways\", which is track 10 on Stick Season and runs 4:15.",
+        "source": "https://www.wikiwand.com/en/Stick_Season_(album)"
+      },
+      {
+        "claim": "The track is produced by Gabe Simon and Noah Kahan.",
+        "source": "https://readdork.com/lyrics/noah-kahan-growing-sideways"
+      },
+      {
+        "claim": "Stick Season was recorded at Guilford Sound in Guilford, Vermont, and at The Study in Nashville. Its labels are Mercury and Republic.",
+        "source": "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+      },
+      {
+        "claim": "Album credits list Kahan on vocals, background vocals, guitars and mandolin. Gabe Simon is credited with banjo, bass, drums, piano, organ, percussion, Moog bass and several guitars. These are album-wide credits, not specific to this track.",
+        "source": "https://www.allmusic.com/album/stick-season-mw0003816324"
+      },
+      {
+        "claim": "Kahan began writing the Stick Season album in his hometown of Strafford, Vermont, in 2020 during the COVID-19 pandemic.",
+        "source": "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+      },
+      {
+        "claim": "In a 2022 Q&A, Kahan said the album was recorded in Guilford, Vermont. He said he finally got to record songs that were close to him and that he never thought would be released. The same piece notes he wrote 10 of the 14 songs alone, including \"Growing Sideways\".",
+        "source": "https://www.songwriteruniverse.com/noah-kahan-interview-2022/"
+      },
+      {
+        "claim": "Lyrically the song works like a therapy session. It opens on a therapist's leather couch, and Kahan sings about seeing everyone around him move forward while he stays stagnant and coping.",
+        "source": "https://soundsofsaving.org/stories/noah-kahans-stick-season-speaks-to-the-mental-health-of-young-adults-through-powerful-folk-lyrics/"
+      },
+      {
+        "claim": "Boston Magazine reads the song as being about Kahan's younger self avoiding his \"dark feelings\", and more broadly about denial as a self-sabotaging defense mechanism. It also points to the lyric about intergenerational trauma.",
+        "source": "https://www.bostonmagazine.com/arts-entertainment/2023/08/31/noah-kahan-new-england/"
+      },
+      {
+        "claim": "A later duet version of the song with Sam Fender appeared on the re-release Stick Season (Forever).",
+        "source": "https://davesmusicdatabase.blogspot.com/2022/10/noah-kahan-stick-season-released.html"
+      },
+      {
+        "claim": "A live version of the song appears on Live From Fenway Park, recorded July 18–19, 2024, at Fenway Park in Boston and released August 30, 2024.",
+        "source": "https://en.wikipedia.org/wiki/Live_from_Fenway_Park"
+      },
+      {
+        "claim": "Kahan grew up in small towns in Vermont and New Hampshire. His mother played Paul Simon and Cat Stevens at home, and his father taught him guitar at age 8. His earlier albums were produced largely by Joel Little, and Stick Season moved away from that pop sound to folk.",
+        "source": "https://www.songwriteruniverse.com/noah-kahan-interview-2022/"
+      }
+    ],
+    "lineage": "The song sits in the New England-rooted, confessional folk and indie-folk singer-songwriter tradition. Its banjo and acoustic-led sound replaced the pop production of his earlier records.",
+    "genres": [
+      "folk",
+      "indie folk",
+      "folk-pop"
+    ]
+  },
+  "draft": "The punchline comes before the pain. **Growing Sideways** opens with Noah Kahan pouring his trauma out on a pricey leather couch belonging to a sad-looking therapist. The two of them argue about Jesus, find some middle ground, and within four lines he declares himself cured. The rest of the song is the bill coming due.\n\nKahan wrote it alone. It's track 10 on *Stick Season*, the album he started in his hometown of Strafford, Vermont, in 2020 and recorded at Guilford Sound in Vermont and The Study in Nashville, co-producing with Gabe Simon. He has said the record let him finally put out songs that were close to him, ones he never thought would be released. This song makes it clear why he doubted.\n\nThe writing is funny and wrecked in the same breath. He divides his anger into thirty parts and stores the worst of it in his liver, which plays like a bar joke until the next line: \"I'm still angry at my parents, for what their parents did to them.\" That one sentence carries three generations of damage, and he answers it with a shrug: it's a start. Pride and hurt sit together here. He wants credit for showing up, and he knows showing up isn't the same as getting better. The second verse undoes the first. He's off the meds, riding a manic high, and blowing his savings on athleisure so at least he suffers well-dressed.\n\nThe chorus names the defense outright. He ignores things, moves sideways, and forgets what he felt. Then comes the line that cuts: \"I'm terrified that I might never have met me.\" Everyone around him is growing. The fear isn't that he's broken. It's that he's a stranger to himself. The bridge goes darker and decides it's better to die numb than to feel everything. By the last chorus, the certainty that there are worse ways to stay alive has shifted from his own knowing to the Lord's, as if he can't vouch for it himself anymore.\n\nThe music never flinches at any of this, and that calm is the trick. Strummed acoustic guitar, plucked bass and brushed drums hold a moderate, gently swaying groove in a warm, natural-sounding room. Kahan's voice is slightly raspy and breathy, earnest, with no harmonies to soften it. He sounds alone on the couch. *Stick Season* traded the pop production of his earlier records, mostly made with Joel Little, for folk. You can hear the confessional plainness of the Paul Simon and Cat Stevens records his mother played at home, moved to a New England winter.\n\nIt sticks because it lets you laugh at the same coping trick you might be using, then lands on \"I guess I'll drive,\" which is half surrender and half the reason to keep going.",
+  "factCheck": [
+    {
+      "claim": "The song opens with Kahan pouring his trauma out on an overpriced leather couch belonging to a sad-eyed middle-aged man, a therapist.",
+      "verdict": "supported",
+      "note": "Matches the lyrics ('sad-eyed middle aged man's overpriced new leather couch'). The research notes describe it as a therapist's couch."
+    },
+    {
+      "claim": "They argue about Jesus, find middle ground, and within four lines he declares himself cured.",
+      "verdict": "supported",
+      "note": "Lyrics: 'we argued about Jesus, finally found some middle ground / I said, \"I'm cured\"' fall in the first four lines."
+    },
+    {
+      "claim": "Kahan wrote it alone; it's track 10 on Stick Season.",
+      "verdict": "supported",
+      "note": "Researched facts and the Songwriter Universe piece."
+    },
+    {
+      "claim": "Album started in Strafford, Vermont, in 2020, and recorded at Guilford Sound in Vermont and The Study in Nashville.",
+      "verdict": "supported",
+      "note": "Wikipedia. The recording locations are album-wide, and the draft describes them that way."
+    },
+    {
+      "claim": "Co-produced with Gabe Simon.",
+      "verdict": "supported",
+      "note": "Dork lists the track as produced by Gabe Simon and Noah Kahan."
+    },
+    {
+      "claim": "Kahan said the record let him finally put out songs that were close to him that he never thought would be released.",
+      "verdict": "supported",
+      "note": "2022 Q&A."
+    },
+    {
+      "claim": "He divides his anger into thirty parts and keeps the worst in his liver.",
+      "verdict": "supported",
+      "note": "Lyrics: '30 separate parts' and 'Keep the bad shit in my liver'."
+    },
+    {
+      "claim": "Quote: \"I'm still angry at my parents, for what their parents did to them.\"",
+      "verdict": "supported",
+      "note": "Exact lyric. The 'three generations' reading is interpretation."
+    },
+    {
+      "claim": "Second verse: off the meds, manic high, blowing his savings on athleisure so he suffers well-dressed.",
+      "verdict": "corrected",
+      "note": "The lyric says only 'Spent my savings at a Lulu' and 'sufferin' in style'. 'Athleisure' and 'well-dressed' are not in the lyrics or research, so the line now sticks to what the lyric says (a Lulu, suffering in style), paraphrased to stay within the quote limit."
+    },
+    {
+      "claim": "Quote: \"I'm terrified that I might never have met me.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The bridge decides it's better to die numb than to feel everything.",
+      "verdict": "supported",
+      "note": "Lyrics: 'it's better to die numb than feel it all', in a section distinct from the verses and choruses."
+    },
+    {
+      "claim": "In the last chorus the line shifts to 'Lord knows there are worse ways'.",
+      "verdict": "supported",
+      "note": "The final chorus has 'Lord knows', while the earlier choruses have 'I know'."
+    },
+    {
+      "claim": "Strummed acoustic guitar, plucked bass, brushed drums, moderate gently swaying groove, warm natural room.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on brushes, plucked bass, swaying or swing feel and warm natural room. Pass 1 agrees on acoustic guitar, bass, drums and moderate tempo."
+    },
+    {
+      "claim": "Voice is slightly raspy and breathy, earnest, no harmonies.",
+      "verdict": "supported",
+      "note": "All passes agree on no harmonies and earnest or expressive delivery. Passes 2 and 3 agree on breathy. All three say slightly raspy."
+    },
+    {
+      "claim": "Stick Season traded the pop production of his earlier records, mostly made with Joel Little, for folk.",
+      "verdict": "supported",
+      "note": "Songwriter Universe."
+    },
+    {
+      "claim": "You can hear the plainness of the Paul Simon and Cat Stevens records his mother played at home, moved to a New England winter.",
+      "verdict": "corrected",
+      "note": "The mother playing Paul Simon and Cat Stevens is sourced. 'Records' and 'winter' are embellishments, and the link is framed as an influence you can hear. Reworded as the critic's comparison, set in New England."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2769,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013892,
+        "detail": "1099 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013692,
+        "detail": "1099 in / 147 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013742,
+        "detail": "1099 in / 149 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.144286,
+        "detail": "49288 in / 1571 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07322,
+        "detail": "4015 in / 2858 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05531,
+        "detail": "5190 in / 4493 out"
+      }
+    ]
+  }
+}

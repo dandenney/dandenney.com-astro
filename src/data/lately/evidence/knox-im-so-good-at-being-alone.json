@@ -1,0 +1,185 @@
+{
+  "spotifyId": "2I0QVWKZuHhG2GSRGMiO0U",
+  "reviewedAt": "2026-11-18T20:00:40.004Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5507819"
+  },
+  "listening": "Pass 1:\nInstruments:\nA kick drum, snare drum, and hi-hats play a driving, four-on-the-floor beat. A bass guitar plays a simple, repeating line. A synth plays a sustained pad, and a clean electric guitar plays a rhythmic, arpeggiated figure.\n\nTempo and Groove:\nThe tempo is moderately fast. The groove is energetic and danceable, with a steady, driving feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is confident and slightly detached. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb on the vocals and drums. The overall texture is bright and spacious.\n\nArrangement:\nThe excerpt begins with the full band. The vocals enter immediately. The synth pad and electric guitar provide a consistent backdrop throughout. The drums maintain a steady beat, with no significant changes in dynamics or instrumentation.\n\nPass 2:\nInstruments:\nA kick drum, snare, and hi-hat play a driving, four-on-the-floor beat. A bass guitar plays a simple, repeating line. A synth plays a sustained pad, and a clean electric guitar plays a rhythmic, arpeggiated figure.\n\nTempo and Groove:\nThe tempo is moderately fast. The groove is upbeat and danceable.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is confident and slightly detached. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb on the vocals and drums, suggesting a medium-sized room. The texture is bright and energetic.\n\nArrangement:\nThe excerpt begins with the full instrumentation. The vocals enter immediately. The synth pad and electric guitar provide a consistent backing throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nA kick drum, snare drum, and hi-hats play a driving, four-on-the-floor beat. A bass guitar plays a simple, repeating line. A synth plays a sustained pad and a arpeggiated melody.\n\nTempo and Groove:\nThe tempo is moderately fast. The groove is energetic and danceable.\n\nVocals:\nA male voice sings the lead melody. The delivery is clear and confident. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The mix is clear and balanced. There is a sense of space around the instruments.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter shortly after. The synth arpeggio enters around the middle of the excerpt. The arrangement remains consistent throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I'm So Good At Being Alone\" is the seventh and closing track on Knox's seven-track EP \"I'm So Good At Being Alone?\", released October 6, 2023.",
+        "source": "https://www.deezer.com/en/album/485789925"
+      },
+      {
+        "claim": "The EP's copyright line reads Barbershop Records under exclusive license to Atlantic Recording Corporation.",
+        "source": "https://music.apple.com/us/album/im-so-good-at-being-alone/1706831548"
+      },
+      {
+        "claim": "The title track was co-written by DCF and co-written and produced by Captain Cuts.",
+        "source": "https://www.thisisnoisemgmt.com/news/captain-cuts-dcf-knox-alone"
+      },
+      {
+        "claim": "Deezer's writer credits for the track are Ben Berger, David Charles Fisher, Knox Morris and Ryan Rabin.",
+        "source": "https://www.deezer.com/en/album/485789925"
+      },
+      {
+        "claim": "Euphoria describes the EP title as a question and the title track as a statement, which it reads as a phase of personal reconciliation. It places the song at the end of an arc running from \"Man Down\" through \"Love Letter\" to moving on.",
+        "source": "https://www.euphoriazine.com/blog/2023/10/interviews-knox/"
+      },
+      {
+        "claim": "Knox told Euphoria that his first record was about losing someone and that this one is the process of getting over that.",
+        "source": "https://www.euphoriazine.com/blog/2023/10/interviews-knox/"
+      },
+      {
+        "claim": "Knox said the title song expands on what he and his team were capable of, and that the EP sounds more mature than his first EP, How to Lose a Girl in 7 Songs.",
+        "source": "https://www.thephotoladies.com/knox-tour-diary"
+      },
+      {
+        "claim": "The EP includes the singles \"Not The 1975\" and \"We're Not In Love Anymore\" (feat. Charlotte Sands). Nightly features on \"Miss When You Missed Me\".",
+        "source": "https://www.allmusic.com/artist/knox-mn0004467277"
+      },
+      {
+        "claim": "Knox's first EP, How to Lose a Girl in 7 Songs, came out February 17, 2023. It includes the viral 2022 single \"Sneakers\".",
+        "source": "https://en.wikipedia.org/wiki/Knox_(pop_rock_musician)"
+      },
+      {
+        "claim": "Knox Morris grew up in Dayton, Ohio, and attended Ohio University planning to become a teacher. He dropped out and moved to Nashville in early 2019. He later signed to Atlantic Records.",
+        "source": "https://www.billboard.com/music/pop/knox-not-the-1975-radio-chartbreaker-march-2024-interview-1235630947/"
+      }
+    ],
+    "lineage": "Knox's music sits in the Nashville-based, social-media-driven indie-pop and pop-rock scene, with AllMusic comparing it to the folk-pop of Ed Sheeran and the indie rock of The Band Camino.",
+    "genres": [
+      "indie pop",
+      "pop rock",
+      "alternative rock"
+    ]
+  },
+  "draft": "The punctuation tells half the story. Knox titled his 2023 EP *I'm So Good At Being Alone?*, question mark and all, then closed it with **I'm So Good At Being Alone**, no question mark. Euphoria read that gap as the record's arc: a question the earlier songs ask, a statement the last one finally makes. Knox told the magazine his first record was about losing someone and this one is the process of getting over that. The title track is where he lands, or at least where he says he does.\n\nThe first verse sells the perks with a straight face. He wakes whenever he wants, takes both sides of the bed, and skips a party for video games. It's light and a little goofy, and it's honest too, because that small freedom after a breakup is real. But the lyric keeps leaving its own door open. In the second verse he admits \"I won't feel like this forever,\" then decides to enjoy it while it lasts. That sounds like someone who knows the good mood is borrowed. Then comes \"I swear it's not that bad.\" People don't swear about things that don't need defending.\n\nThe section before the last chorus is where the two feelings sit right on top of each other. \"There's no one here but I'm not lonely, not lonely,\" he sings, and every line there doubles its final words, like a person saying something twice to hear whether it holds. He's done crying, he insists. Maybe. The song never settles whether this is healing or a pep talk, and it's better for leaving both in the room.\n\nThe sound picks the pep talk. A four-on-the-floor kick drives everything, with hi-hats ticking over a simple, repeating bass line. A synth pad holds underneath while a clean, arpeggiated guitar figure spins on top. It's moderately fast, bright and polished, with enough reverb on the voice and drums to give it room. Knox sings it clear and confident, a little detached, the way you'd tell your friends you're fine. That cool delivery gives him away. The track is dancing while the voice holds something at arm's length.\n\nKnox dropped out of Ohio University, where he'd planned to become a teacher, and moved to Nashville in 2019. He wrote this song with David Charles Fisher, Ben Berger and Ryan Rabin, and Captain Cuts produced it. It comes out of the Nashville, social-media-driven pop-rock scene that AllMusic ties to the Band Camino and Ed Sheeran. Knox said the song expands on what he and his team were capable of, and the bounce under such a shaky claim backs him up.\n\nIt sticks because you can dance to it and doubt it at the same time, and that's what most people getting over someone are doing anyway.\n\n<genres>pop rock, indie pop</genres>",
+  "factCheck": [
+    {
+      "claim": "The EP is titled I'm So Good At Being Alone? (with a question mark) and closes with the track I'm So Good At Being Alone (no question mark).",
+      "verdict": "supported",
+      "note": "Metadata gives the EP title with the question mark. Researched facts say the track is the seventh and closing track."
+    },
+    {
+      "claim": "Euphoria read the gap as the record's arc: a question the earlier songs ask, a statement the last one makes.",
+      "verdict": "corrected",
+      "note": "Euphoria calls the EP title a question and the title track a statement, reads that as a phase of personal reconciliation, and places the song at the end of an arc from 'Man Down' through 'Love Letter' to moving on. It doesn't say the earlier songs ask the question. Reworded to match."
+    },
+    {
+      "claim": "Knox told the magazine his first record was about losing someone and this one is the process of getting over that.",
+      "verdict": "supported",
+      "note": "Euphoria interview."
+    },
+    {
+      "claim": "First verse: wakes when he wants, sleeps on both sides of the bed, skips a party for video games.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "That small freedom after a breakup is real.",
+      "verdict": "corrected",
+      "note": "The lyrics never mention a breakup, so the phrase was cut back to the lyric's own situation."
+    },
+    {
+      "claim": "In the second verse he sings \"I won't feel like this forever\" and decides to enjoy it while it lasts.",
+      "verdict": "supported",
+      "note": "Quote matches the lyrics. It sits in the second verse."
+    },
+    {
+      "claim": "\"I swear it's not that bad\"",
+      "verdict": "supported",
+      "note": "Matches the lyric line 'I swear it's not that bad when'. The quote is a fragment."
+    },
+    {
+      "claim": "\"There's no one here but I'm not lonely, not lonely\"; every line in that section doubles its final words; 'no more tears' for the old me.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. All four lines repeat their closing phrase."
+    },
+    {
+      "claim": "Four-on-the-floor kick, hi-hats, simple repeating bass line, synth pad, clean arpeggiated guitar figure.",
+      "verdict": "supported",
+      "note": "All three passes agree on the drums, bass and pad. Passes 1 and 2 agree on the arpeggiated clean electric guitar."
+    },
+    {
+      "claim": "Moderately fast, bright and polished, with reverb on the voice and drums.",
+      "verdict": "supported",
+      "note": "Tempo is agreed by all three passes. Passes 1 and 2 agree on reverb and the bright texture. All three agree on clean and polished."
+    },
+    {
+      "claim": "Knox sings clear and confident, a little detached.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 say confident and slightly detached. Pass 3 says clear and confident. All three describe a male voice."
+    },
+    {
+      "claim": "Knox dropped out of Ohio University, where he'd planned to become a teacher, and moved to Nashville in 2019.",
+      "verdict": "supported",
+      "note": "Billboard says early 2019."
+    },
+    {
+      "claim": "He wrote the song with David Charles Fisher, Ben Berger and Ryan Rabin, and Captain Cuts produced it.",
+      "verdict": "supported",
+      "note": "Deezer writer credits and the Noise Mgmt item."
+    },
+    {
+      "claim": "It comes out of the Nashville, social-media-driven pop-rock scene that AllMusic ties to the Band Camino and Ed Sheeran.",
+      "verdict": "corrected",
+      "note": "AllMusic compares Knox's music to Ed Sheeran's folk-pop and The Band Camino's indie rock. It doesn't tie the scene to them. Reworded."
+    },
+    {
+      "claim": "Knox said the song expands on what he and his team were capable of.",
+      "verdict": "supported",
+      "note": "Photo Ladies tour diary."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.3526,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014901,
+        "detail": "1102 in / 195 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014701,
+        "detail": "1102 in / 187 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014126,
+        "detail": "1102 in / 164 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.222382,
+        "detail": "82526 in / 1733 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0761,
+        "detail": "3830 in / 3039 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04973,
+        "detail": "5000 in / 3973 out"
+      }
+    ]
+  }
+}

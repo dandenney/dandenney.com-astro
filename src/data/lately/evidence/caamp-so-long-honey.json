@@ -1,0 +1,220 @@
+{
+  "spotifyId": "5lgLYRy0KTluByvOQbCucp",
+  "reviewedAt": "2026-11-18T20:16:35.411Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4105515"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a bright, clear tone. A bass guitar plays a simple, foundational line. A drum kit provides a steady, mid-tempo groove with a light snare hit on beats two and four, and a consistent kick drum. The tempo is moderate, with a relaxed, slightly swung feel.\n\nA single male voice sings in a mid-range, with a slightly raspy, warm character. The delivery is conversational and melodic. There are no harmonies.\n\nThe production sounds like a dry, intimate room. The texture is clean and clear, with a natural, unpolished feel.\n\nThe arrangement begins with the acoustic guitar, bass, and drums. The vocals enter around the 0:20 mark, with no other instruments entering or dropping out within the excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a bright, clear tone. A banjo plays a rhythmic, strummed pattern, providing a driving feel. A bass guitar plays a simple, foundational line. Drums enter at 0:00, playing a steady, mid-tempo beat with a snare on beats two and four, and a kick drum on beats one and three. The groove feels relaxed and slightly swung.\n\nA male voice sings with a slightly raspy, mid-range character. The delivery is conversational and melodic. There are no harmonies.\n\nThe production sounds dry and intimate, with a clear, present texture. It feels raw and unpolished.\n\nThe arrangement begins with the acoustic guitar, banjo, and bass. Drums enter at 0:00. The vocals enter at 0:21. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady, arpeggiated rhythm. A banjo plays a melodic, plucked line. A bass guitar plays a simple, foundational line. A drum kit plays a light, brushed rhythm.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and flowing.\n\nVocals:\nA male voice sings in a clear, slightly raspy character. The delivery is melodic and unhurried. There are no harmonies.\n\nProduction:\nThe room sounds open. The texture is clean. The production is polished.\n\nArrangement:\nThe acoustic guitar, banjo, bass, and drums play throughout. The vocals enter at 0:21.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"So Long, Honey\" is track 4 on Caamp's self-titled debut album, which was released on March 8, 2016.",
+        "source": "https://www.discogs.com/release/28794853-Caamp-Caamp"
+      },
+      {
+        "claim": "All songs on the album, including \"So Long, Honey\", are credited as written by Taylor Meier and Evan Westfall.",
+        "source": "https://www.discogs.com/release/12829214-Caamp-Caamp"
+      },
+      {
+        "claim": "The album was produced by Caamp and Jesse Henry, and recorded by Brad Denson, Jason Joyal and Brandon MacLean.",
+        "source": "https://www.discogs.com/release/12829214-Caamp-Caamp"
+      },
+      {
+        "claim": "Credits list Brandon MacLean and Jason Joyal as mixers and Brian Lucey as mastering engineer. Sally Taylor Meier is credited with the cover design.",
+        "source": "https://www.discogs.com/release/12829214-Caamp-Caamp"
+      },
+      {
+        "claim": "Evan Westfall has described the debut as recorded in an unusual way. Their mentor Jesse Henry, who had been Taylor Meier's guitar teacher, put them in touch with a man named Brad.",
+        "source": "https://www.iheart.com/podcast/433-yes-columbus-70574363/episode/celebrating-10-years-of-caamp-ft-evan-westfall-co-founder-and-musician-341698898"
+      },
+      {
+        "claim": "Westfall said the album contains hidden references to nicknames and friends the band ran around with, and that these were a big inspiration for it.",
+        "source": "https://www.iheart.com/podcast/433-yes-columbus-70574363/episode/celebrating-10-years-of-caamp-ft-evan-westfall-co-founder-and-musician-341698898"
+      },
+      {
+        "claim": "Westfall said that on the first album the two wrote sitting across from each other, or Meier brought in a mostly finished song such as \"Vagabond\" and Westfall then added banjo parts.",
+        "source": "https://thebluegrasssituation.com/read/caamps-lavender-days-gets-its-glow-from-evan-westfalls-flatpicking-banjo/"
+      },
+      {
+        "claim": "Relix describes the 2016 debut as sparse, self-produced and self-titled.",
+        "source": "https://relix.com/features/detail/caamp-letters-to-your-future-self"
+      },
+      {
+        "claim": "The debut was originally released on Square Roots Records. Its later vinyl pressings carry the catalog number CAAMP001 on Caamp's own label.",
+        "source": "https://www.discogs.com/release/28794853-Caamp-Caamp"
+      },
+      {
+        "claim": "Caamp is an indie-folk band from Columbus, Ohio, formed by Taylor Meier (lead vocals, guitar) and Evan Westfall (banjo, harmony vocals, guitar). Bassist Matt Vinson later joined them.",
+        "source": "https://xpn.org/artist/caamp/"
+      }
+    ],
+    "lineage": "Caamp is an Ohio indie-folk act, built around guitar and banjo with harmonies, that grew out of the Athens, Ohio, coffee-shop and live scene around Ohio University.",
+    "genres": [
+      "indie folk",
+      "folk rock",
+      "contemporary folk"
+    ]
+  },
+  "draft": "The title reads like a goodbye, but the chorus says otherwise. In **So Long, Honey**, \"so long\" is about time, not farewell: you can only drift on the wind for so long before you come back down. The narrator isn't seeing anyone off. He's settling in to wait, and the whole song lives in that gap between letting go and refusing to.\n\nTaylor Meier and Evan Westfall wrote it for Caamp's self-titled 2016 debut, a record Relix called sparse and self-produced. Westfall has said the two wrote those early songs sitting across from each other, and you can hear that table-for-two closeness here. The fingerpicked acoustic guitar is bright and clear. The banjo works under it rather than on top. The bass keeps things simple, and the drums hold a relaxed, slightly swung mid-tempo with the snare landing on two and four. The room is dry and close, the take raw at the edges. Meier sings in a slightly raspy mid-range, conversational more than showy, as if he's talking someone down rather than performing for them.\n\nThe opening verse sets up the picture the song keeps returning to. Throw a rock and something breaks. Throw a feather and the wind takes it. The person he loves is the feather, and the narrator knows better than to try catching it. That's why the chorus lands so gently: \"And when you do, I'll be hangin' around.\" It's a casual phrase carrying a lot of weight, patience dressed up as loitering, so the want doesn't sound like need.\n\nThe second verse drops that guard. There's smoke in the room and a piano that doesn't work, and then a dry little correction: \"It never did.\" Nothing in this place was ever quite in tune. Right after that comes a plain admission, the feeling he gets when this person walks in and the wish that they'd stay. Pride and longing sit side by side, and the song never makes him pick one.\n\nThen it turns outward. The last section drops the lover entirely and becomes a blessing for everyone else: \"Be good to your mothers,\" because they did the best they could, and bleed for your brothers, because they'd do the same for you. Westfall has said the album is full of hidden nods to the friends and nicknames of the crowd the band ran with, and this coda sounds like a toast to that crowd. The \"Lord knows\" gives it a churchy lift, and the wordless oohs carry it out. The heartbreak doesn't get resolved. It gets folded into a bigger loyalty.\n\nThat's the move that sticks: a song about waiting for one person ends by telling you who will still be there while you wait.",
+  "factCheck": [
+    {
+      "claim": "The title reads like a goodbye, but 'so long' in the chorus is about time ('you can float on the wind for so long')",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyric."
+    },
+    {
+      "claim": "Taylor Meier and Evan Westfall wrote it",
+      "verdict": "supported",
+      "note": "Discogs songwriting credit."
+    },
+    {
+      "claim": "It is on Caamp's self-titled 2016 debut",
+      "verdict": "supported",
+      "note": "Track 4 on the album released March 8, 2016."
+    },
+    {
+      "claim": "Relix called the record sparse and self-produced",
+      "verdict": "supported",
+      "note": "Relix describes the debut as sparse, self-produced and self-titled."
+    },
+    {
+      "claim": "Westfall has said the two wrote those early songs sitting across from each other",
+      "verdict": "corrected",
+      "note": "He said they wrote sitting across from each other, or Meier brought in a mostly finished song. Added the alternative. Reworded so it isn't claimed for this specific song."
+    },
+    {
+      "claim": "You can hear that table-for-two closeness here",
+      "verdict": "corrected",
+      "note": "Kept as an interpretation of the intimate sound, no longer tied to how this song was written."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, bright and clear",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree, and pass 3 describes an arpeggiated acoustic guitar."
+    },
+    {
+      "claim": "The banjo works under the guitar rather than on top",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 confirm a banjo but disagree on its role (strummed and driving vs plucked and melodic). Reduced to the banjo's presence."
+    },
+    {
+      "claim": "Bass keeps things simple",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Drums hold a relaxed, slightly swung mid-tempo, with snare on two and four",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on swung feel and snare placement. Pass 3 agrees the groove is relaxed and moderate."
+    },
+    {
+      "claim": "Room is dry and close, raw at the edges",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on dry, intimate and unpolished. Pass 3 says polished, so the wording stays modest."
+    },
+    {
+      "claim": "Meier sings in a slightly raspy mid-range, conversational",
+      "verdict": "supported",
+      "note": "Raspy in all three. Conversational in passes 1 and 2. Meier is the lead vocalist per the band facts."
+    },
+    {
+      "claim": "Opening verse: rock breaks a window, feather blown away by the wind",
+      "verdict": "supported",
+      "note": "Matches the lyric. The feather-as-lover reading is interpretation."
+    },
+    {
+      "claim": "\"And when you do, I'll be hangin' around\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Smoke in the room and a piano that doesn't work",
+      "verdict": "corrected",
+      "note": "The lyric says the piano 'doesn't play'. Changed to match."
+    },
+    {
+      "claim": "\"It never did.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Nothing in this place was ever quite in tune",
+      "verdict": "corrected",
+      "note": "The lyric says nothing about tuning. Reworded as a reading of the broken-down room."
+    },
+    {
+      "claim": "The feeling he gets when this person is in the room and the wish that they'd stay",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "Last section becomes a blessing: be good to your mothers, they did the best they could, bleed for your brothers, they would",
+      "verdict": "supported",
+      "note": "Matches the lyrics and their order. 'Be good to your mothers' is an exact quote."
+    },
+    {
+      "claim": "Westfall has said the album has hidden nods to friends and nicknames of the crowd the band ran with",
+      "verdict": "supported",
+      "note": "Matches the iHeart interview. The link to this coda is the critic's interpretation."
+    },
+    {
+      "claim": "'Lord knows' gives a churchy lift; wordless oohs carry it out",
+      "verdict": "supported",
+      "note": "Both are in the lyrics. The 'churchy' reading is interpretation."
+    },
+    {
+      "claim": "The heartbreak gets folded into a bigger loyalty",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2553,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014592,
+        "detail": "1099 in / 183 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013592,
+        "detail": "1099 in / 143 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014242,
+        "detail": "1099 in / 169 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.142672,
+        "detail": "48756 in / 1516 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.055324,
+        "detail": "3641 in / 2038 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053098,
+        "detail": "4774 in / 4355 out"
+      }
+    ]
+  }
+}

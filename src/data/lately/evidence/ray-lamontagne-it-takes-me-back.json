@@ -1,0 +1,209 @@
+{
+  "spotifyId": "473SyXmf9C9w4CbIak2nM6",
+  "reviewedAt": "2026-11-18T19:51:08.095Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/6586740"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. A drum kit plays a slow, steady beat with brushes, including a snare drum, kick drum, and cymbals.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle.\n\nVocals:\nA male voice sings in a low, gravelly register. The delivery is smooth and melodic. There are no harmonies.\n\nProduction:\nThe room sounds spacious with a moderate amount of reverb. The texture is warm and full. The production is polished.\n\nArrangement:\nThe acoustic guitar, bass, and drums are present from the beginning. The vocals enter at 0:11. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a gentle, swaying feel. A bass guitar plays a simple, walking line. A male voice sings in a low, slightly raspy register, with a relaxed, almost conversational delivery. The vocals are delivered with a slight vibrato and a hint of a country inflection. The production is clean and warm, with a natural room sound. The texture is smooth and polished, with a clear separation of instruments. The arrangement is sparse, with the acoustic guitar and bass providing a steady foundation for the vocals. No other instruments enter or drop out within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. A drum kit plays a slow, steady beat with brushes, including a kick drum, snare drum, and cymbals.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle.\n\nVocals:\nA male voice sings in a low, breathy register. The delivery is smooth and intimate. There are no harmonies.\n\nProduction:\nThe room sounds open and spacious. The texture is warm and slightly raw, not overly polished.\n\nArrangement:\nThe acoustic guitar, bass, and drums are present from the beginning. The vocals enter at 0:11. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"It Takes Me Back\" is a track on the two-song single \"Broken Sky / It Takes Me Back\" by Ray LaMontagne, dated August 25, 2023 and credited to Liula Records distributed by Mick Music. The track runs 3:41.",
+        "source": "https://www.amazon.com/It-Takes-Me-Back/dp/B0CX277YMN"
+      },
+      {
+        "claim": "The Apple Music page lists \"It Takes Me Back\" with a July 28, 2023 date, ahead of the August 25 release of the full single.",
+        "source": "https://music.apple.com/ca/song/it-takes-me-back/1695035766"
+      },
+      {
+        "claim": "Discogs credits Ray LaMontagne with writing, producing and engineering the single. He is also credited with vocals, acoustic and electric guitar, bass, piano, percussion and harmonica.",
+        "source": "https://www.discogs.com/release/28182358-Ray-Lamontagne-Broken-Sky-It-Takes-Me-Back"
+      },
+      {
+        "claim": "Discogs credits Carl Broemel on pedal steel guitar and Ariel Bernstein on congas for \"It Takes Me Back\". The listing spells Broemel's name \"Broemet\".",
+        "source": "https://www.discogs.com/release/28182358-Ray-Lamontagne-Broken-Sky-It-Takes-Me-Back"
+      },
+      {
+        "claim": "Discogs lists the single as recorded at The Big Room, mixed by Kevin Ratterman and Ray LaMontagne, and mastered by Kevin Ratterman. Its 7-inch vinyl release is on Liula Records (LR002), dated September 5, 2023.",
+        "source": "https://www.discogs.com/release/28182358-Ray-Lamontagne-Broken-Sky-It-Takes-Me-Back"
+      },
+      {
+        "claim": "The song features My Morning Jacket's Carl Broemel on pedal steel guitar.",
+        "source": "https://www.amazon.com/It-Takes-Me-Back/dp/B0CX277YMN"
+      },
+      {
+        "claim": "Press coverage describes the song as being about LaMontagne's travels on the road. It uses pedal steel, harmonica and congas. His son Tobias LaMontagne (Zap Film Co.) made the single's lyric visualizer.",
+        "source": "https://themusicuniverse.com/ray-lamontagne-shares-takes-me-back/"
+      },
+      {
+        "claim": "The song's opening lyric looks back on a life spent on stages, calling out changes to a pickup band and riding in a tired van that broke down in the rain.",
+        "source": "https://www.raylamontagne.com/discography/it-takes-me-back-broken-sky"
+      },
+      {
+        "claim": "The single came before Long Way Home, LaMontagne's ninth studio album. It was released August 16, 2024 on his own Liula Records and co-produced by LaMontagne and Seth Kauffman.",
+        "source": "https://en.wikipedia.org/wiki/Long_Way_Home_(Ray_LaMontagne_album)"
+      },
+      {
+        "claim": "LaMontagne's 2020 album Monovision was his first entirely self-recorded album, with all instruments played by him.",
+        "source": "https://www.iheart.com/artist/ray-lamontagne-89562/"
+      },
+      {
+        "claim": "LaMontagne worked in a Maine shoe factory before hearing Stephen Stills' \"Treetop Flyer\" on the radio. That song led him to pursue music, and his debut album Trouble (2004) was produced by Ethan Johns.",
+        "source": "https://www.washingtonpost.com/wp-dyn/content/article/2006/12/07/AR2006120700576.html"
+      }
+    ],
+    "lineage": "The song sits in the singer-songwriter folk and Americana tradition, and critics have long compared LaMontagne's raspy, soulful voice to Van Morrison, Nick Drake and Tim Buckley.",
+    "genres": [
+      "alternative folk",
+      "folk rock",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "The best line in **It Takes Me Back** gives the landscape a better poker face than the narrator: \"The countryside just shrugs and sighs,\" and then it looks the other way. Ray LaMontagne opens with a life spent calling out chord changes to a pickup band, in a tired van that breaks down in the rain. The hills don't care who passed through, and that indifference lets the song grow nostalgic without turning sentimental.\n\nThe sound fits a song about memory. A fingerpicked acoustic guitar rolls through an arpeggiated pattern. A bass holds a simple line underneath, and brushed drums keep a slow, steady pulse. The room sounds warm and open, the playing is polished, and no harmonies pad the vocal. LaMontagne sings low, with a rasp at the edges but a smooth line through the middle. That's the voice critics have tied to Van Morrison, Nick Drake and Tim Buckley for twenty years. He wrote, produced and engineered the single himself and is credited on most of the instruments. My Morning Jacket's Carl Broemel adds pedal steel, Ariel Bernstein plays congas, and press coverage notes harmonica in the mix too. It's singer-songwriter folk worn in like an old jacket. This is the Americana of a man who once left a Maine shoe factory after hearing Stephen Stills on the radio, and who has clearly spent the years since in vans.\n\nThe verses slowly pile up feelings the chorus won't settle. In the second verse the narrator runs from Utah toward Abilene and ends up in cuffs. He makes his defense in the same breath: no angel, just born free. That's self-justification and hurt in one shrug, and the song leaves both standing. The bridge is where the hurt comes through. Away and alone, he longed to tell her he was sorry, \"But there ain't no turning back.\" That line quietly argues with the title. The chorus keeps saying the sound of wind through hickory takes him back to where he wants to be, but the bridge admits there's nothing there to return to. The light in her eyes went out \"Like windows painted black,\" a hard, plain image of a house still standing with nobody looking out.\n\nSo the chorus is a comfort he knows is partial. He can go back in his head, but not to her. The single came out a year before *Long Way Home*, his ninth album, and the title fits the song.\n\nThe song sticks because it lets you feel nostalgia as a refuge and an admission at once: the place you most want to go is the one memory can reach and you can't.",
+  "factCheck": [
+    {
+      "claim": "\"The countryside just shrugs and sighs\" and then it looks the other way",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Opens with a life spent calling out chord changes to a pickup band, in a tired van that breaks down in the rain",
+      "verdict": "corrected",
+      "note": "The lyric says \"calling out the changes\", not \"chord changes\". Changed to match. The van detail is supported."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with an arpeggiated pattern; bass with a simple line; slow, steady brushed drums",
+      "verdict": "supported",
+      "note": "All three passes agree on the guitar and bass. Passes 1 and 3 agree on the brushed drums."
+    },
+    {
+      "claim": "The room sounds warm and open",
+      "verdict": "supported",
+      "note": "Multiple passes describe the room as warm, spacious or open."
+    },
+    {
+      "claim": "The playing is polished",
+      "verdict": "removed",
+      "note": "Pass 3 says \"not overly polished\", which conflicts with the other two passes."
+    },
+    {
+      "claim": "No harmonies pad the vocal",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree."
+    },
+    {
+      "claim": "Sings low, with a rasp at the edges but a smooth line",
+      "verdict": "supported",
+      "note": "Low register, gravelly/raspy, and smooth delivery are each backed by at least two passes."
+    },
+    {
+      "claim": "Critics have tied the voice to Van Morrison, Nick Drake and Tim Buckley for twenty years",
+      "verdict": "corrected",
+      "note": "The comparison is supported. \"Twenty years\" is not; the packet says only \"long compared\"."
+    },
+    {
+      "claim": "He wrote, produced and engineered the single himself and is credited on most of the instruments",
+      "verdict": "corrected",
+      "note": "Discogs credits writing, producing and engineering. Mixing was shared with Kevin Ratterman and other players are credited, so \"himself\" and \"most\" were overreach. Rewritten to list his credited instruments."
+    },
+    {
+      "claim": "Carl Broemel of My Morning Jacket on pedal steel; Ariel Bernstein on congas; harmonica in the mix",
+      "verdict": "supported",
+      "note": "Supported by Discogs, Amazon and the press coverage."
+    },
+    {
+      "claim": "Singer-songwriter folk / Americana",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "A man who left a Maine shoe factory after hearing Stephen Stills on the radio",
+      "verdict": "corrected",
+      "note": "He worked in a Maine shoe factory before hearing Stills' \"Treetop Flyer\" on the radio, which led him to music. The draft implied he left because of it, and the song title was missing."
+    },
+    {
+      "claim": "Has clearly spent the years since in vans",
+      "verdict": "removed",
+      "note": "Unsupported. Replaced with the sourced point that press coverage describes the song as being about his travels on the road."
+    },
+    {
+      "claim": "Second verse: runs from Utah toward Abilene and ends up in cuffs; no angel, just born free",
+      "verdict": "supported",
+      "note": "Matches the lyrics and structure."
+    },
+    {
+      "claim": "Quote: \"But there ain't no turning back\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Quote: \"Like windows painted black\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Chorus says the sound of wind through hickory takes him back to where he wants to be",
+      "verdict": "supported",
+      "note": "Fair paraphrase of the lyrics."
+    },
+    {
+      "claim": "The single came out a year before Long Way Home, his ninth album",
+      "verdict": "corrected",
+      "note": "The single came out August 2023 and the album August 16, 2024. It is the ninth studio album. Wording adjusted."
+    },
+    {
+      "claim": "Interpretive readings (indifference of the landscape, the chorus as partial comfort, nostalgia as refuge and admission)",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2512,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013173,
+        "detail": "1101 in / 126 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014173,
+        "detail": "1101 in / 166 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014073,
+        "detail": "1101 in / 162 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.140816,
+        "detail": "47403 in / 1601 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.056564,
+        "detail": "3976 in / 2033 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049682,
+        "detail": "5101 in / 3948 out"
+      }
+    ]
+  }
+}

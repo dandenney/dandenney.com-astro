@@ -1,0 +1,162 @@
+{
+  "spotifyId": "39fD0qvjgk8RarJnoBiDTx",
+  "reviewedAt": "2026-11-18T20:14:13.997Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3445092"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Lovesick\" is track 6 on Laufey's second studio album Bewitched, released 8 September 2023, and runs 3:45.",
+        "source": "https://www.albumoftheyear.org/song/204721-lovesick/"
+      },
+      {
+        "claim": "Laufey wrote the song with her producer Spencer Stewart.",
+        "source": "https://www.euphoriazine.com/blog/2023/09/music/tracks-laufey-lovesick/"
+      },
+      {
+        "claim": "Credits list Laufey and Spencer Stewart as songwriters and producers. Laufey is credited on vocals and Junia Lín on violin. Steve Kaye mixed it and Joe LaPorta mastered it.",
+        "source": "https://www.albumoftheyear.org/song/204721-lovesick/"
+      },
+      {
+        "claim": "Laufey performed \"Lovesick\" live at the THING music festival before its 8 September release.",
+        "source": "https://www.euphoriazine.com/blog/2023/09/music/tracks-laufey-lovesick/"
+      },
+      {
+        "claim": "Lyrically the song describes falling for someone in a span of three days and later losing them.",
+        "source": "https://www.euphoriazine.com/blog/2023/09/music/tracks-laufey-lovesick/"
+      },
+      {
+        "claim": "One reviewer described the song as depicting the euphoria of falling in love. It includes the line \"God, I'm so lovesick / What have you done to me?\"",
+        "source": "https://thehowleronline.org/8261/ae/feeling-so-lovesick-with-laufeys-new-album-bewitched/"
+      },
+      {
+        "claim": "Bewitched is mostly jazz pop ballads written by Laufey and Spencer Stewart. The duo produced it together with the Philharmonia Orchestra and Dan Wilson.",
+        "source": "https://en.wikipedia.org/wiki/Bewitched_(Laufey_album)"
+      },
+      {
+        "claim": "Laufey described Bewitched as \"a love album, whether it be a love towards a friend or a lover or life\". She contrasted it with her previous album, which she called more hopeless romantic.",
+        "source": "https://www.grammy.com/news/icelandic-jazz-singer-laufey-interview-new-album-bewitched/"
+      },
+      {
+        "claim": "Bewitched won the Grammy for Best Traditional Pop Vocal Album, and Laufey performed with the Los Angeles Philharmonic at the Hollywood Bowl on the Bewitched Tour.",
+        "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Symphony:_Hollywood_Bowl"
+      },
+      {
+        "claim": "Laufey is an LA-based Icelandic-Chinese artist, composer, producer and multi-instrumentalist.",
+        "source": "https://www.onestowatch.com/en/blog/laufey-bewitched"
+      }
+    ],
+    "lineage": "Laufey's work, including this song, sits in a Great American Songbook-influenced jazz-pop tradition of original lovesick ballads. She calls the Songbook her \"bible\".",
+    "genres": [
+      "jazz pop",
+      "vocal jazz",
+      "traditional pop"
+    ]
+  },
+  "draft": "Three nights. That's the whole span of the affair in **Lovesick**, and the narrator still can't quite believe it. \"So unlike me,\" Laufey sings, then rides the line break straight into \"Fell in love in just three nights,\" as if the admission slipped out before it could be stopped. The surprise sits as heavy as the loss. This is someone who thought of themselves as careful, and who now lies awake listening to the floorboards in an empty house.\n\nThe chorus is where the song shows its hand. It's built from a memory polished until it looks like a film still: gold light on skin, hair caught in the wind, and \"The choir sang a melancholic hymn.\" That last line gives the game away. A memory of pure happiness wouldn't come with a sad soundtrack. The narrator is already scoring the romance as a loss even while recalling its brightest moment, so the euphoria and the grief arrive in the same breath and neither one wins.\n\nThen the morning comes, and the chorus changes between its two passes. The first time, the narrator is mourning and trying to hold on. The second time the bed is empty and the plan is to sleep until falling dead, a line so overblown it almost winks. That's the old torch-song move: take the lovesickness seriously by letting it go too far. The verses carry a quieter fear that's easier to recognize. The narrator wants in, inches closer, and worries that loving too much is exactly what will make the other person slip away. Wanting and bracing for loss happen in one motion.\n\nLaufey wrote and produced it with Spencer Stewart, Junia Lín is credited on violin, and it sits sixth on *Bewitched*, the 2023 album that won the Grammy for Best Traditional Pop Vocal Album. Laufey calls the Great American Songbook a \"bible,\" and the debt shows in the craft, not in imitation. This is an original written the way those standards were: a small situation, a big confession, and a hook phrased as a question to the absent lover, \"What have you done to me?\" Laufey has described *Bewitched* as a love album rather than a hopeless-romantic one. \"Lovesick\" is the track where that line gets blurry.\n\nBy the end the song gives up on words entirely and repeats wordless \"ah-ah\" phrases, the chorus's hymn turned into the whole song, as if the feeling had outrun the vocabulary.\n\nIt sticks because it lets you be thrilled and wrecked by the same three nights, and doesn't make you choose.",
+  "factCheck": [
+    {
+      "claim": "The narrator fell in love in just three nights.",
+      "verdict": "supported",
+      "note": "Lyric: \"Fell in love in just three nights.\""
+    },
+    {
+      "claim": "\"So unlike me,\" Laufey sings, then runs into \"Fell in love in just three nights\" across a line break.",
+      "verdict": "corrected",
+      "note": "The lyrics match (\"So unlike me, somehow I / Fell in love in just three nights\"). The draft had four quoted lyric lines, over the three-line limit, so the \"So unlike me\" quote became a paraphrase."
+    },
+    {
+      "claim": "The narrator \"lies awake listening to the floorboards in an empty house.\"",
+      "verdict": "corrected",
+      "note": "The lyrics give creaking floorboards and silence when alone, but nothing about lying awake. Changed to sitting alone in the creaking quiet."
+    },
+    {
+      "claim": "The chorus has gold light on skin, hair caught in the wind, and \"The choir sang a melancholic hymn.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. The reading of the line is interpretation."
+    },
+    {
+      "claim": "The two chorus passes differ: first mourning and trying to hold on, then an empty bed and a plan to sleep until falling dead.",
+      "verdict": "supported",
+      "note": "Matches \"I'd be mourning, tryin' to hold on\" and \"you're not in my bed / I'll just sleep until I fall dead.\""
+    },
+    {
+      "claim": "\"That's the old torch-song move.\"",
+      "verdict": "removed",
+      "note": "An unsupported claim about genre history. The packet only places the song in a Great American Songbook-influenced jazz-pop tradition. Reworded as the critic's own reading."
+    },
+    {
+      "claim": "The verses carry a fear of loving so much that the other person slips away, with the narrator inching closer.",
+      "verdict": "supported",
+      "note": "Lyrics: \"Inching closer, but I fear / That I'll love so much, you'll slip away.\""
+    },
+    {
+      "claim": "Laufey wrote and produced it with Spencer Stewart; Junia Lín is credited on violin; it is track six on Bewitched.",
+      "verdict": "supported",
+      "note": "Credits and track number are in the packet."
+    },
+    {
+      "claim": "Bewitched is the 2023 album that won the Grammy for Best Traditional Pop Vocal Album.",
+      "verdict": "supported",
+      "note": "Released 8 Sept 2023. The Grammy win is in the facts."
+    },
+    {
+      "claim": "Laufey calls the Great American Songbook a \"bible.\"",
+      "verdict": "supported",
+      "note": "Stated in the lineage note."
+    },
+    {
+      "claim": "The song is \"an original written the way those standards were: a small situation, a big confession.\"",
+      "verdict": "corrected",
+      "note": "This asserted how the standards were written, which the packet doesn't support. Reframed as an original ballad in that tradition."
+    },
+    {
+      "claim": "The hook is phrased as a question to the absent lover, \"What have you done to me?\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Laufey has described Bewitched as a love album rather than a hopeless-romantic one.",
+      "verdict": "corrected",
+      "note": "She called it \"a love album, whether it be a love towards a friend or a lover or life\" and contrasted it with her previous album, which she called more hopeless romantic. Rewritten to say that."
+    },
+    {
+      "claim": "The song ends on repeated wordless \"ah-ah\" phrases.",
+      "verdict": "supported",
+      "note": "The lyric structure closes with ah-ah sections. The reading of them is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1684,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080946,
+        "detail": "22613 in / 1572 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.042504,
+        "detail": "2936 in / 1538 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044906,
+        "detail": "4038 in / 3683 out"
+      }
+    ]
+  }
+}

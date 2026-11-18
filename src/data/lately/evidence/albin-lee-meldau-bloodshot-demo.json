@@ -1,0 +1,180 @@
+{
+  "spotifyId": "0iucZ9SllHkVAqnm5rx3Te",
+  "reviewedAt": "2026-11-18T20:09:41.399Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11506669"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern, with a bass note on the downbeat. The tempo is slow, with a relaxed, slightly melancholic feel. A male voice sings in a low-mid range, with a slightly raw, breathy character. The delivery is intimate and expressive, with a slight vibrato. No harmonies are present. The production sounds dry and close, with a natural, unpolished texture. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, or any significant builds.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line.\n\nTempo and Groove:\nThe tempo is slow. The groove is a gentle, swaying feel, with a slight push and pull.\n\nVocals:\nThe singer has a low-pitched, slightly raspy voice. The delivery is intimate and expressive, with some vibrato. There are no harmonies.\n\nProduction:\nThe sound is raw and unpolished, with a dry, close-miked texture. The room sounds small and intimate.\n\nArrangement:\nThe excerpt begins with acoustic guitar and vocals. The bass enters shortly after the vocals begin. The acoustic guitar maintains its pattern throughout, and the bass provides a steady foundation. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a gentle, swaying feel. The tempo is slow. A male voice sings with a slightly raspy, breathy character, delivering the melody in a straightforward manner. There are no harmonies. The production sounds raw and intimate, as if recorded in a small, dry room. The acoustic guitar and vocals are present throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Bloodshot\" is credited to two writers, Justin Parker and Albin Lee Meldau. Deezer lists the same two writers for \"Bloodshot (Demo)\".",
+        "source": "https://www.deezer.com/us/artist/9807574"
+      },
+      {
+        "claim": "Meldau calls \"Bloodshot\" \"dark and horrible\". NPR says it is about the wreckage of a tortured relationship and the crazed paranoia of jealousy.",
+        "source": "https://www.npr.org/event/music/538090328/albin-lee-meldau-tiny-desk-concert"
+      },
+      {
+        "claim": "In his NPR Tiny Desk performance of \"Bloodshot\", Meldau sang and played guitar. He was joined by Kalle Stenbäcken (keys, drums), Simon Andermo (bass, auxiliary percussion) and Simon Söfelde (drums). This is the live version, not the demo.",
+        "source": "https://www.npr.org/event/music/538090328/albin-lee-meldau-tiny-desk-concert"
+      },
+      {
+        "claim": "Deezer lists a \"Bloodshot (Demo)\" (2:52) on Meldau's 2016 EP Lovers.",
+        "source": "https://www.deezer.com/us/artist/9807574"
+      },
+      {
+        "claim": "The finished \"Bloodshot\" is the title track of Meldau's second EP, Bloodshot, released July 21, 2017 on Astralwerks. The EP's tracklist also includes \"Whitney (Demo)\".",
+        "source": "https://www.deezer.com/en/album/44675011"
+      },
+      {
+        "claim": "A reviewer called the finished \"Bloodshot\" soulful and emotional, with cinematic scope and horns, and compared it to a James Bond theme.",
+        "source": "https://www.theguysfrom.com/music/2017/8/18/dsd-august-18-2017-bloodshot-albin-lee-meldau"
+      },
+      {
+        "claim": "The song \"Bloodshot\" was used in the Marvel series Cloak & Dagger, in the episode \"Level Up\".",
+        "source": "https://marvelcinematicuniverse.fandom.com/wiki/Albin_Lee_Meldau"
+      },
+      {
+        "claim": "Meldau is a Swedish singer-songwriter with a throaty, classic-soul delivery, and he counts Sam Cooke and Van Morrison among his idols. He was born and raised in Gothenburg.",
+        "source": "https://www.amazon.com/Bloodshot-Albin-Lee-Meldau/dp/B073XBB1T4"
+      },
+      {
+        "claim": "His debut single \"Lou Lou\" came out in 2015. Its demo won him the chance to record with Björn Yttling of Peter Bjorn and John, who produced his first EP, Lovers (Astralwerks, 2016).",
+        "source": "https://www.amazon.com/Bloodshot-Albin-Lee-Meldau/dp/B073XBB1T4"
+      },
+      {
+        "claim": "Meldau was nominated for Best Newcomer at the 2017 Grammis. His full-length debut About You reached number two on Sweden's album chart in 2018.",
+        "source": "https://www.amazon.com/Bloodshot-Albin-Lee-Meldau/dp/B073XBB1T4"
+      }
+    ],
+    "lineage": "Meldau's music sits in the Swedish soul-influenced singer-songwriter tradition, with a classic-soul voice in the vein of Sam Cooke and Van Morrison.",
+    "genres": [
+      "soul",
+      "singer-songwriter",
+      "pop"
+    ]
+  },
+  "draft": "Few heartbreak songs open with a line as bleak as **\"Bloodshot - Demo\"** does. \"As I hang myself up to dry,\" Albin Lee Meldau sings. It sounds at first like laundry, a body wrung out and pinned to a line after a long cry. Then the darker reading arrives a beat later and won't leave. Meldau has called the song \"dark and horrible,\" and NPR describes it as a song about the wreckage of a tortured relationship and the crazed paranoia of jealousy. Both descriptions fit. What makes the demo hard to shake is how quietly it carries all that.\n\nThe setting is about as bare as a song gets. A fingerpicked acoustic guitar rolls through an arpeggiated pattern at a slow, swaying pace. The recording is dry and close, as if made in a small room with nothing between the voice and the microphone. There are no harmonies, so nobody comes in to keep the singer company. Meldau's voice is raspy and breathy, with a little vibrato he lets tremble instead of polish. It's the throaty, old-soul instrument of a Gothenburg songwriter who counts Sam Cooke and Van Morrison among his idols. Here it has been stripped of any band that might soften the blow.\n\nThe lyric, co-written with Justin Parker, is a study in need curdling into suspicion. The verses circle the bed: lying in it, crying in it, needing something, fearing something, and finally admitting the something is a person. Then the chorus turns, and the real wound shows: \"Is there someone new next to you?\" The song never answers, and the narrator never stops asking. The best moment is the mixed signal of the last verse. He tells his lover not to worry and offers to be there, then points to the wet pillow as proof of what it costs him. Then he sends them off with \"Drive on, Thelma and Louise,\" a movie getaway that is half blessing, half bitter dare. Generosity and self-pity sit in the same breath, and neither wins.\n\nThe finished \"Bloodshot,\" the title track of Meldau's second EP, went big, with horns and enough cinematic scope that one reviewer heard a James Bond theme in it. That version has its own pull. The demo, though, keeps the jealousy at bedside scale, where it actually happens. When the song closes on its two repeated words of grim certainty, it's unclear whether he has learned the truth or simply decided to believe the worst.\n\nYou come away feeling like you've sat on the edge of that wet pillow at 3 a.m., close enough to hear someone talk himself into heartbreak.",
+  "factCheck": [
+    {
+      "claim": "The song's opening line is \"As I hang myself up to dry\" (\"Few heartbreak songs open with a line as bleak\").",
+      "verdict": "corrected",
+      "note": "The lyric quote is exact, but the lyrics begin with \"Monday morning be coming.\" Reworded so the line is no longer called the opener."
+    },
+    {
+      "claim": "Meldau has called the song \"dark and horrible\"; NPR describes it as about the wreckage of a tortured relationship and the crazed paranoia of jealousy.",
+      "verdict": "supported",
+      "note": "Matches the NPR Tiny Desk source."
+    },
+    {
+      "claim": "Fingerpicked, arpeggiated acoustic guitar at a slow, swaying pace.",
+      "verdict": "supported",
+      "note": "All three passes agree on the fingerpicked arpeggio and slow tempo. Passes 2 and 3 agree on the swaying feel."
+    },
+    {
+      "claim": "Dry, close recording, as if made in a small room.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 say dry and close. Passes 2 and 3 say small room. The \"nothing between the voice and the microphone\" flourish was dropped."
+    },
+    {
+      "claim": "The setting is \"about as bare as a song gets\" and the demo is \"stripped of any band.\"",
+      "verdict": "corrected",
+      "note": "Pass 2 hears a bass guitar, so \"no band\" overstates it. Softened to \"spare\" and removed the claim of no band."
+    },
+    {
+      "claim": "No harmonies.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Raspy, breathy voice with some vibrato.",
+      "verdict": "supported",
+      "note": "Raspy is in passes 2 and 3. Breathy is in passes 1 and 3. Vibrato is in passes 1 and 2."
+    },
+    {
+      "claim": "A Gothenburg songwriter with a throaty, old-soul voice who counts Sam Cooke and Van Morrison among his idols.",
+      "verdict": "supported",
+      "note": "Matches the Amazon bio."
+    },
+    {
+      "claim": "The lyric was co-written with Justin Parker.",
+      "verdict": "supported",
+      "note": "Credited writers are Justin Parker and Albin Lee Meldau."
+    },
+    {
+      "claim": "The verses circle the bed (lying, crying, needing, fearing). \"Is there someone new next to you?\" The song never answers.",
+      "verdict": "supported",
+      "note": "The quote is exact and the reading rests on the lyrics."
+    },
+    {
+      "claim": "The \"last verse\" has him say not to worry and that he'll be there, with the wet pillow and \"Drive on, Thelma and Louise.\"",
+      "verdict": "corrected",
+      "note": "The quote is exact and the reading is interpretation. \"Last verse\" changed to \"later verse\" because a chorus and \"Now I know\" follow it."
+    },
+    {
+      "claim": "The finished \"Bloodshot\" is the title track of Meldau's second EP, with horns and cinematic scope, and one reviewer heard a James Bond theme.",
+      "verdict": "supported",
+      "note": "Matches the Deezer listing and the reviewer. \"Went big\" is a loose paraphrase of the horns and scope and was kept in plainer form."
+    },
+    {
+      "claim": "\"The song closes on its two repeated words of grim certainty.\"",
+      "verdict": "corrected",
+      "note": "The lyrics end with \"Now I know,\" repeated twice. That is three words said twice, not two words. Corrected."
+    },
+    {
+      "claim": "Imagery of sitting on the edge of the wet pillow at 3 a.m.",
+      "verdict": "removed",
+      "note": "3 a.m. appears nowhere in the lyrics or sources. Removed the time."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1818,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012801,
+        "detail": "1102 in / 111 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014251,
+        "detail": "1102 in / 169 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012026,
+        "detail": "1102 in / 80 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077952,
+        "detail": "20646 in / 1666 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049616,
+        "detail": "3434 in / 1794 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050292,
+        "detail": "4576 in / 4114 out"
+      }
+    ]
+  }
+}

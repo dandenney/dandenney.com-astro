@@ -1,0 +1,210 @@
+{
+  "spotifyId": "5QL8Uqhv0MQRYKRy6UKQIy",
+  "reviewedAt": "2026-11-18T20:12:03.749Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3067002"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a breathy, slightly strained character, delivering the melody with a sustained, almost mournful quality. A second, higher male voice provides a harmony, often in unison or a close interval. The vocals are dry, with minimal reverb.\n\nAcoustic guitar plays a fingerpicked arpeggiated pattern, providing a consistent, gentle rhythm. A bass guitar plays sustained, low notes, outlining the chord changes. A string section enters later, playing long, sustained chords that swell and recede.\n\nThe tempo is slow, creating a relaxed, drifting groove. The overall production is clean and polished, with a clear separation of instruments. The arrangement builds gradually, with the strings entering and adding fullness to the sound. The excerpt ends with the strings and vocals fading slightly.\n\nPass 2:\nA male voice sings lead, with a breathy, mid-range character, delivered smoothly. A second male voice provides a higher harmony, also smooth.\n\nAcoustic guitar plays a consistent arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter later, playing a light, steady beat with brushes on the snare and cymbals.\n\nThe tempo is slow, with a relaxed, swaying groove.\n\nThe production is clean and polished, with a sense of a medium-sized room. The texture is smooth and layered.\n\nThe arrangement begins with acoustic guitar and lead vocal. The bass enters shortly after. The second vocal harmony joins, and then the drums enter, building the texture. A sustained, high-pitched string-like sound enters towards the end, adding to the background.\n\nPass 3:\nA male voice sings lead, with a breathy, mid-range character and a sustained delivery. A second male voice provides a higher harmony, also breathy. Both voices are sung in a relaxed, almost whispered style.\n\nThe instrumentation includes an acoustic guitar, strummed gently, and a bass guitar playing a simple, sustained line. A drum machine provides a slow, steady beat with a kick drum and snare. A synth pad plays sustained chords, adding to the overall texture.\n\nThe tempo is slow, creating a relaxed and spacious groove. The production is clean and polished, with a sense of open room. The texture is smooth and layered.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning. There are no notable entries, drop-outs, or builds within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I Lied\" is a duet between Lord Huron and August Ponthier. Ponthier is credited as featured vocalist on the track, which appears on the 2021 album Long Lost.",
+        "source": "https://en.wikipedia.org/wiki/Long_Lost_(album)"
+      },
+      {
+        "claim": "All tracks on Long Lost, including \"I Lied\", were written by Ben Schneider. Schneider is also the album's producer.",
+        "source": "https://en.wikipedia.org/wiki/Long_Lost_(album)"
+      },
+      {
+        "claim": "Discogs credits for Long Lost list Ben Schneider as writer and producer, with Ben Tolliday and Mark Barry as co-producers. Tolliday, Barry and Willem Bleeker are listed as engineers, the album was recorded at Whispering Pines Studios, and it was mastered at Sterling Sound.",
+        "source": "https://www.discogs.com/release/19062271-Lord-Huron-Long-Lost"
+      },
+      {
+        "claim": "Long Lost was recorded at Lord Huron's own Los Angeles studio, Whispering Pines.",
+        "source": "https://www.michiganpublic.org/arts-culture/2021-06-11/michigan-roots-and-nostalgic-la-vibes-join-forces-on-lord-hurons-latest-album"
+      },
+      {
+        "claim": "For Long Lost, Schneider and bandmates Mark Barry, Miguel Briseño and Tom Renaud recorded live together in the studio for the first time.",
+        "source": "https://wfuv.org/content/lord-huron-1"
+      },
+      {
+        "claim": "Schneider cited classic country duets, such as Conway Twitty and Loretta Lynn and George Jones and Tammy Wynette, as an influence on \"I Lied\".",
+        "source": "https://atwoodmagazine.com/lhll-lord-huron-interview-long-lost-album-music-2021/"
+      },
+      {
+        "claim": "Atwood Magazine described \"I Lied\" as a poetic heartbreak duet.",
+        "source": "https://atwoodmagazine.com/lhll-lord-huron-interview-long-lost-album-music-2021/"
+      },
+      {
+        "claim": "Ponthier has said she recorded a demo vocal in about an hour in her bedroom after being connected through a mutual contact. She has also said the day she recorded the final vocal at Schneider's 1970s-style studio was the day they met.",
+        "source": "https://wayoutthere.fandom.com/wiki/I_Lied"
+      },
+      {
+        "claim": "Long Lost was written as if the songs came from fictional characters connected to the Whispering Pines studio. In this concept \"I Lied\" is credited to a fictional duo, Donny & Midge, and the music video presents it as an on-air recording session at Whispering Pines.",
+        "source": "https://wayoutthere.fandom.com/wiki/I_Lied"
+      },
+      {
+        "claim": "Lord Huron is a Los Angeles-based band that Ben Schneider founded in 2010 as a solo project. The name comes from Lake Huron, which Schneider grew up visiting.",
+        "source": "https://en.wikipedia.org/wiki/Lord_Huron"
+      }
+    ],
+    "lineage": "The song draws on 1960s–70s country male–female duets (Conway Twitty/Loretta Lynn, George Jones/Tammy Wynette) within Lord Huron's cinematic, retro-flavoured Americana-tinged indie folk rock.",
+    "genres": [
+      "indie folk",
+      "americana",
+      "folk rock"
+    ]
+  },
+  "draft": "Every verse of **\"I Lied\"** is built like a trap. A line opens on a promise, \"I swore that I'd become a better man for you, and I tried,\" and then lets it ride for a beat before the floor drops out on the last three words. Ben Schneider wrote it so the vows come first and the confession arrives late, the way a guilty person tells the truth: after the speech, almost under the breath.\n\nWhat makes it sting is that the lies aren't the cruel kind. They're the vows people make in love: forever, no one else, I'll never leave. The narrator meant them, or wanted to. By the third verse the song turns stranger: \"I read your letter in the morning by the lake, and I cried,\" and then, \"They were tears of joy, my chains are finally broken.\" That's the feeling at the center, and it's an ugly one to admit. Relief and guilt sit in the same body. Freedom arrives on the back of someone else's goodbye, and the song never apologizes for the joy or pretends it doesn't hurt. Then the confession repeats, six times over, until \"Ooh, I lied\" stops sounding like an admission and starts sounding like a hymn.\n\nSchneider has cited Conway Twitty and Loretta Lynn and George Jones and Tammy Wynette as models, and you can hear the old country duet's taste for heartbreak played straight. The bend is in how the two voices meet. August Ponthier's harmony sits higher, and the two voices sing the confession together, so the duet doesn't feel like a quarrel between two people. It sounds like two people agreeing on the worst thing about themselves. Both voices are breathy, held long, close to a sigh.\n\nThe arrangement stays out of the way. Fingerpicked acoustic guitar rolls through arpeggios, the bass holds long low notes under each chord, a light beat keeps time, and sustained chords hang high in the background. The tempo is slow and swaying, a last-dance tempo, and the production is clean enough that you can hear the room around the players. On *Long Lost* the band recorded live together in their Los Angeles studio, Whispering Pines, for the first time. The album's conceit credits this song to a fictional duo, Donny & Midge, and its video stages it as an on-air session there.\n\nThere's a quiet irony in the making of it. Ponthier cut a demo in her bedroom in about an hour, then recorded the final vocal on the day she and Schneider first met. Two near-strangers made a song about how little a lifetime of promises can mean, and they made it sound like years of history.\n\nThe song lets you feel the shameful lightness of being let go, so each \"I lied\" lands as a wound and a release at once.",
+  "factCheck": [
+    {
+      "claim": "Quoted lyric 'I swore that I'd become a better man for you, and I tried'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. The draft said the floor drops out on the last three words of this line, but the turn ('but I lied') comes in each verse's last line. Corrected the description."
+    },
+    {
+      "claim": "Every verse sets up promises and ends on the confession, which arrives late",
+      "verdict": "supported",
+      "note": "Each of the three verses ends with 'but I lied' in its last line."
+    },
+    {
+      "claim": "Ben Schneider wrote the song",
+      "verdict": "supported",
+      "note": "All Long Lost tracks, including 'I Lied', were written by Schneider."
+    },
+    {
+      "claim": "Quoted 'I read your letter in the morning by the lake, and I cried'",
+      "verdict": "removed",
+      "note": "The quote is accurate, but with the other quotes it put the review over the three-line quote limit. Replaced with a paraphrase of the letter by the lake."
+    },
+    {
+      "claim": "Quoted 'They were tears of joy, my chains are finally broken'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Freedom arrives on the back of someone else's goodbye",
+      "verdict": "corrected",
+      "note": "The lyrics never say the letter is a goodbye. Reworded to 'a letter from the person he left', which the lyrics support."
+    },
+    {
+      "claim": "The confession 'Ooh, I lied' repeats six times",
+      "verdict": "supported",
+      "note": "The final refrain block has six 'Ooh, I lied' lines."
+    },
+    {
+      "claim": "Schneider cited Conway Twitty/Loretta Lynn and George Jones/Tammy Wynette as models",
+      "verdict": "supported",
+      "note": "Cited as an influence on the song. Changed 'models' to 'influences'."
+    },
+    {
+      "claim": "August Ponthier's harmony sits higher; the two voices sing the confession together",
+      "verdict": "corrected",
+      "note": "The listening passes describe a second, higher voice (all three passes) but don't identify it as Ponthier. They also don't say who sings the refrain. Removed the attribution and the claim that both voices sing the confession together, and kept the higher harmony."
+    },
+    {
+      "claim": "Both voices are breathy, held long, close to a sigh",
+      "verdict": "corrected",
+      "note": "All three passes agree the lead is breathy and sustained. Only one pass calls the harmony breathy. Limited the description to the lead voice."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar rolls through arpeggios",
+      "verdict": "corrected",
+      "note": "Two passes agree on arpeggiated acoustic guitar. 'Fingerpicked' appears in only one, and a third says strummed. Dropped 'fingerpicked'."
+    },
+    {
+      "claim": "Bass holds long low notes under each chord",
+      "verdict": "supported",
+      "note": "All three passes describe sustained bass. Trimmed 'under each chord', which only one pass supports."
+    },
+    {
+      "claim": "A light beat keeps time",
+      "verdict": "corrected",
+      "note": "Two passes agree on a steady, slow, light beat, but they disagree on whether it's brushes or a drum machine. Described it as a slow, steady beat."
+    },
+    {
+      "claim": "Sustained chords hang high in the background",
+      "verdict": "corrected",
+      "note": "All three passes describe sustained backing sounds (strings or synth pad). 'High' is supported by only one. Dropped 'high'."
+    },
+    {
+      "claim": "The tempo is slow and swaying",
+      "verdict": "corrected",
+      "note": "All passes agree on slow and relaxed. 'Swaying' is supported by only one pass. Changed to slow and relaxed."
+    },
+    {
+      "claim": "Production is clean, with a sense of room around the players",
+      "verdict": "supported",
+      "note": "All three passes say clean and polished, and two mention a sense of room."
+    },
+    {
+      "claim": "On Long Lost the band recorded live together in Whispering Pines, their Los Angeles studio, for the first time",
+      "verdict": "supported",
+      "note": "Supported by the researched facts. Made clear this refers to the album."
+    },
+    {
+      "claim": "The album credits the song to a fictional duo, Donny & Midge, and the video stages it as an on-air session at Whispering Pines",
+      "verdict": "supported",
+      "note": "Matches the researched facts. Clarified 'the song's video'."
+    },
+    {
+      "claim": "Ponthier cut a demo in her bedroom in about an hour and recorded the final vocal the day she and Schneider first met",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Two near-strangers made it sound like years of history",
+      "verdict": "supported",
+      "note": "Interpretation resting on the supported fact that they met the day of the final vocal."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2723,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014219,
+        "detail": "1108 in / 167 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014119,
+        "detail": "1108 in / 163 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014194,
+        "detail": "1108 in / 166 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.146034,
+        "detail": "49822 in / 1639 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052936,
+        "detail": "3619 in / 1923 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.069032,
+        "detail": "4786 in / 5946 out"
+      }
+    ]
+  }
+}

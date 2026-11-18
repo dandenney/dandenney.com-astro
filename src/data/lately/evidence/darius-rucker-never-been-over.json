@@ -1,0 +1,194 @@
+{
+  "spotifyId": "5Izy5w7WRKyOTH7CtWgyPG",
+  "reviewedAt": "2026-11-18T20:02:49.069Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4139916"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a slightly raspy, mid-range character. He sings in a conversational, slightly melancholic delivery. A second male voice joins for harmonies, mostly in parallel thirds below the lead, creating a full, blended sound.\n\nThe tempo is moderate, with a relaxed, easygoing groove. The rhythm section consists of a bass guitar playing a walking bass line, and drums providing a steady, brushed beat with occasional snare accents. An acoustic guitar strums chords, and a steel guitar plays sustained, melodic lines, adding a country texture.\n\nThe production sounds clean and polished, with a natural room feel. The instruments are well-balanced, and the vocals are clear and present. The arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning.\n\nPass 2:\nA male voice sings lead, with a slightly raspy character, in a mid-range. He is joined by a male harmony singer, singing a third above. The tempo is slow, with a relaxed, swaying groove.\n\nAcoustic guitar plays a fingerpicked arpeggio pattern, providing the main harmonic and rhythmic foundation. A bass guitar plays a simple, sustained root-fifth pattern. A drum kit plays a gentle, brushed rhythm, emphasizing the backbeat.\n\nThe production is clean and polished, with a natural room sound. The texture is open and spacious.\n\nThe excerpt begins with the lead and harmony vocals already present. The instruments remain consistent throughout, with no significant changes in arrangement. The vocals drop out at the end, leaving the instrumental accompaniment to fade.\n\nPass 3:\nA male voice sings lead, with a slightly raspy, mid-range character. He sings in a conversational, slightly country-inflected style. A second male voice provides a lower harmony, often on the root, creating a full, blended sound.\n\nThe tempo is moderate, with a relaxed, easygoing groove. The rhythm section consists of a bass guitar playing a walking line, and drums providing a steady, brushed beat with occasional snare accents. An acoustic guitar plays strummed chords, while an electric guitar adds occasional melodic fills and arpeggios. A steel guitar provides sustained, sliding notes, adding a country texture.\n\nThe production is clean and polished, with a natural room sound. The instruments are well-balanced, creating a warm and inviting texture.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments present from the beginning. There are no significant changes in instrumentation or dynamics within this section.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Never Been Over\" was written by Darius Rucker, Lee Thomas Miller and John Osborne of Brothers Osborne.",
+        "source": "https://dariusrucker.com/new-album-carolyns-boy-available-october-6/"
+      },
+      {
+        "claim": "Discogs credits Ross Copperman as producer of \"Never Been Over\" (track 3 on Carolyn's Boy).",
+        "source": "https://www.discogs.com/release/28517986-Darius-Rucker-Carolyns-Boy"
+      },
+      {
+        "claim": "Qobuz lists Ross Copperman as producer and engineer of the track, and F. Reid Shippen among the mixing, recording and engineering credits on the album.",
+        "source": "https://www.qobuz.com/us-en/album/carolyns-boy-darius-rucker/qxj0nmbb9re2a"
+      },
+      {
+        "claim": "The song runs 3:25 and is on Carolyn's Boy, released October 6, 2023 on Capitol Records Nashville.",
+        "source": "https://www.deezer.com/en/track/2476992831"
+      },
+      {
+        "claim": "The song directly references Rucker's recent divorce after 20 years of marriage. Garden & Gun premiered it just before the album came out.",
+        "source": "https://gardenandgun.com/song-premiere-darius-ruckers-never-been-over"
+      },
+      {
+        "claim": "Rucker told Garden & Gun that writing the song was very cathartic and \"almost like therapy for me.\" He called it one of his favorite songs he has written.",
+        "source": "https://www.udiscovermusic.com/news/darius-rucker-carolyns-boy-album-never-been-over-song/"
+      },
+      {
+        "claim": "Rucker told Taste of Country it was the first song he wrote about the divorce, and that it was tough to write and tough to sing.",
+        "source": "https://www.udiscovermusic.com/news/darius-rucker-carolyns-boy-album-never-been-over-song/"
+      },
+      {
+        "claim": "Rucker began writing the song early in the COVID-19 pandemic. His co-writers saw it as a love song, while he saw it more as a breakup song.",
+        "source": "https://en.wikipedia.org/wiki/Carolyn's_Boy"
+      },
+      {
+        "claim": "The song first appeared as a solo cut. A duet re-recording with Jennifer Nettles was released in April 2024 and went to country radio on May 20, 2024.",
+        "source": "https://www.mca.com/darius-rucker-and-jennifer-nettles-unite-on-reimagined-version-of-ruckers-carolyn-boy-album-standout-never-been-over/"
+      },
+      {
+        "claim": "Carolyn's Boy is Rucker's first solo album in six years. It is dedicated to his mother, Carolyn, who raised him as a single parent and died before his success.",
+        "source": "https://gardenandgun.com/song-premiere-darius-ruckers-never-been-over"
+      }
+    ],
+    "lineage": "Contemporary mainstream Nashville country: a personal ballad from Rucker, who rose with Hootie & the Blowfish and later became a country solo artist.",
+    "genres": [
+      "country",
+      "country ballad"
+    ]
+  },
+  "draft": "The trick of **Never Been Over** is that the whole song is built from denials. The chorus runs through every breakup scene a country song could reach for: friends divided, records divided, walls going up, letters going into the fire, taillights shrinking down the road. This couple, the narrator insists, has never been any of it. Then the title phrase lands, \"But we've never been over,\" and it sounds like a vow and a wish at the same time.\n\nWho's singing it changes everything. Darius Rucker wrote the song with Lee Thomas Miller and John Osborne of Brothers Osborne, starting early in the pandemic, and it was the first thing he wrote about his divorce after 20 years of marriage. His co-writers heard a love song. He heard a breakup song. Both readings live in the lyric, and the song never makes you pick one. The verses list what this pair has come through: sunny days and straight-line wind, blue lights on back roads, dead quiet and rockstar loud. The pride in that list is real. So is the dread under it. The second verse slips in a line the rest of the song can't take back: \"Knowing that day will come.\" Later the bridge admits why they're still standing: \"That we don't know how to run.\" That isn't quite devotion. It's love that has outlasted the knowledge of how to leave, and Rucker lets the tenderness and the trap sit side by side.\n\nThe arrangement stays easy so the words can do the hurting. Brushed drums keep a steady beat, a walking bass line moves underneath, an acoustic guitar strums, and steel guitar holds long, sustained notes. The groove is relaxed. Ross Copperman's production is clean, with a natural room sound and nothing pushed to the front except the voice. Rucker sings conversationally, slightly raspy in the middle of his range, with a second voice blended in close harmony. It's contemporary Nashville through and through, polished and unhurried, and that plainness suits an artist who rose with Hootie & the Blowfish before building a country solo career. He doesn't oversell a single line.\n\nRucker called the writing \"almost like therapy for me\" and said the song was tough to sing. The structure shows the strain. The chorus comes around three times, each pass a little harder to believe, and at the end the setup line repeats and stalls before the payoff finally arrives, as if the singer needs one more breath before saying it.\n\nIt's a love song sung by someone who already knows how the story ends, and the gap between what the words swear and what the singer knows is the thing that keeps pulling you back.",
+  "factCheck": [
+    {
+      "claim": "The chorus lists friends divided, records divided, walls going up, letters burned, taillights fading, and says the couple has never been any of it",
+      "verdict": "supported",
+      "note": "Matches the lyric: 'splittin' up friends / splittin' up records / puttin' up walls / burnin' down letters', 'taillights fading'. Reading it as denials is interpretation."
+    },
+    {
+      "claim": "\"But we've never been over\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Rucker wrote the song with Lee Thomas Miller and John Osborne of Brothers Osborne",
+      "verdict": "supported",
+      "note": "Researched facts, dariusrucker.com."
+    },
+    {
+      "claim": "He started writing it early in the pandemic",
+      "verdict": "supported",
+      "note": "Researched facts: began writing early in the COVID-19 pandemic."
+    },
+    {
+      "claim": "It was the first thing he wrote about his divorce after 20 years of marriage",
+      "verdict": "supported",
+      "note": "Rucker told Taste of Country it was the first song he wrote about the divorce. Garden & Gun says the divorce followed 20 years of marriage."
+    },
+    {
+      "claim": "His co-writers heard a love song; he heard a breakup song",
+      "verdict": "supported",
+      "note": "Researched facts, Wikipedia."
+    },
+    {
+      "claim": "Verse images: sunny days and straight-line wind, blue lights on back roads, dead quiet and rockstar loud",
+      "verdict": "supported",
+      "note": "Close paraphrase of the verse lyrics."
+    },
+    {
+      "claim": "The second verse has the line \"Knowing that day will come.\"",
+      "verdict": "corrected",
+      "note": "The quote is exact, but it sits in a later section after the first chorus, not in the second verse. Changed to 'a later verse'."
+    },
+    {
+      "claim": "The bridge admits \"That we don't know how to run.\"",
+      "verdict": "supported",
+      "note": "Exact lyric, in its own two-line section between choruses."
+    },
+    {
+      "claim": "Brushed drums with a steady beat, walking bass line, strummed acoustic guitar, sustained steel guitar, relaxed groove",
+      "verdict": "supported",
+      "note": "Brushed drums and relaxed groove appear in all three passes. Walking bass, strummed acoustic and sustained steel appear in passes 1 and 3."
+    },
+    {
+      "claim": "Ross Copperman's production",
+      "verdict": "supported",
+      "note": "Discogs and Qobuz credit him as producer."
+    },
+    {
+      "claim": "Clean production with a natural room sound",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Nothing pushed to the front except the voice",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 say the instruments are well-balanced and the vocals clear and present. Reworded to match."
+    },
+    {
+      "claim": "Rucker sings conversationally, slightly raspy in the middle of his range, with a second voice in close harmony",
+      "verdict": "supported",
+      "note": "Conversational in passes 1 and 3. Raspy mid-range and a second male harmony voice in all three."
+    },
+    {
+      "claim": "Contemporary Nashville; Rucker rose with Hootie & the Blowfish before a country solo career",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Rucker called the writing \"almost like therapy for me\" and said the song was tough to sing",
+      "verdict": "supported",
+      "note": "Researched facts, Garden & Gun and Taste of Country quotes."
+    },
+    {
+      "claim": "The chorus comes around three times, and the 'We've been a lot of things' line repeats before the final payoff",
+      "verdict": "supported",
+      "note": "Shown by the lyric structure. The readings ('harder to believe', 'one more breath') are interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2853,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014092,
+        "detail": "1099 in / 163 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013942,
+        "detail": "1099 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014717,
+        "detail": "1099 in / 188 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.159084,
+        "detail": "56977 in / 1513 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.071744,
+        "detail": "3811 in / 2825 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050182,
+        "detail": "4931 in / 4032 out"
+      }
+    ]
+  }
+}

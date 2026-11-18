@@ -1,0 +1,180 @@
+{
+  "spotifyId": "1kiylxwnw8R8rJoCDtubWM",
+  "reviewedAt": "2026-11-18T19:58:13.848Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/1112587"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A bass guitar plays a simple, sustained line. Drums play a simple beat with kick, snare, and hi-hat. An electric guitar plays a clean, arpeggiated line.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, driving feel.\n\nVocals:\nA male voice sings with a slightly raspy, clear tone. The delivery is melodic and expressive. Harmonies are present in the chorus, with a higher voice joining the lead.\n\nProduction:\nThe room sounds moderately spacious with some reverb. The texture is full and layered. The production is polished and clean.\n\nArrangement:\nThe excerpt begins with the full band. The electric guitar enters with its arpeggiated line. The harmonies enter in the chorus. The arrangement remains consistent throughout the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A bass guitar plays a walking bass line. Drums play a simple beat with kick, snare, and hi-hat. An electric guitar plays a clean, arpeggiated line.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, steady rock feel.\n\nVocals:\nA male voice sings with a slightly raspy, warm character. The delivery is smooth and melodic. There are no harmonies.\n\nProduction:\nThe room sounds moderately sized with a natural, slightly resonant texture. The production is polished and clean.\n\nArrangement:\nAll instruments are present from the beginning. The electric guitar enters with its arpeggiated line after the first vocal phrase. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A bass guitar plays a simple, sustained line. Drums play a simple rock beat with kick, snare, and hi-hat. An electric guitar plays a clean, arpeggiated line.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, steady rock feel.\n\nVocals:\nA male voice sings with a slightly raspy, clear character. The delivery is melodic and expressive. There are no harmonies.\n\nProduction:\nThe room sounds moderately sized with some natural reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar enters with its arpeggiated line after the first vocal phrase. All instruments continue to play throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Let's Stay Home Tonight\" is track 10 on NEEDTOBREATHE's album H A R D L O V E, which has 12 songs, runs about 40 minutes, and was released July 15, 2016.",
+        "source": "https://www.amazon.com/LETS-STAY-HOME-TONIGHT/dp/B01DEBJL4M"
+      },
+      {
+        "claim": "H A R D L O V E is NEEDTOBREATHE's sixth studio album.",
+        "source": "https://www.youtube.com/watch?v=5M7C8B6agx0"
+      },
+      {
+        "claim": "The song was written by Bear Rinehart and Bo Rinehart with Nashville songwriter Luke Laird.",
+        "source": "https://en.wikipedia.org/wiki/Hard_Love_(album)"
+      },
+      {
+        "claim": "The album credits list the song's producers as NEEDTOBREATHE and Dave Tozer. Discogs credits Tozer with production, guitar, synthesizer, synth bass and drum programming, and with engineering.",
+        "source": "https://www.discogs.com/release/8767809-NEEDTOBREATHE-Hard-Love"
+      },
+      {
+        "claim": "Chris Connors is credited with engineering, organ, synthesizer and drum programming on the track. Carla Kelly, Carmen Roman, Clayton Bryant and Ebony Johnson sing backing vocals.",
+        "source": "https://www.discogs.com/release/8767809-NEEDTOBREATHE-Hard-Love"
+      },
+      {
+        "claim": "The album was primarily recorded at Plantation Studios in Charleston, South Carolina, with additional sessions at Night Fox Studio and Germano Studios in New York City. This is album-level information, not specific to this track.",
+        "source": "https://grokipedia.com/page/hard_love_album"
+      },
+      {
+        "claim": "An original demo of \"Let's Stay Home Tonight\" (3:32), credited to the same writers, appears on the album's extended track listing.",
+        "source": "https://en.wikipedia.org/wiki/Hard_Love_(album)"
+      },
+      {
+        "claim": "The lyrics are a romantic plea to skip going out, put records on, build a fire and slow down. A Liberty University student review points to it as the album's \"lovey-dovey\" song.",
+        "source": "https://www.liberty.edu/student-activities/blog/review-h-a-r-d-l-o-v-e-by-needtobreathe"
+      },
+      {
+        "claim": "AllMusic calls H A R D L O V E a concerted pop effort aimed at the mainstream. It describes the Carolina quartet as having debuted in 2006 and moved from CCM-lite rock to a full-fledged powerhouse.",
+        "source": "https://www.allmusic.com/album/hard-love-mw0002934640"
+      },
+      {
+        "claim": "H A R D L O V E won the GMA Dove Award for Rock/Contemporary Album of the Year on October 17, 2017.",
+        "source": "https://en.wikipedia.org/wiki/Hard_Love_(album)"
+      }
+    ],
+    "lineage": "NEEDTOBREATHE is a South Carolina band that grew out of Christian-market rock and Southern rock. It has drawn comparisons to U2, Coldplay and Mumford and Sons, and on H A R D L O V E it leans toward mainstream pop, with a synth-driven production on this track.",
+    "genres": [
+      "alternative rock",
+      "pop rock",
+      "southern rock"
+    ]
+  },
+  "draft": "The real confession in **Let's Stay Home Tonight** sits in the verse, not the chorus. \"Lately we've been walking in a straight line,\" the song admits, and the next lines fill in the picture: two people doing their own thing, heading downtown, making reservations, never finding time. It's a small, unglamorous problem. Nobody is cheating and nobody is leaving. The relationship has just turned into a schedule. The chorus is the fix the narrator offers, and it's a cozy one: put a couple records on, build a fire, dance till dawn, go nowhere.\n\nThe feeling NEEDTOBREATHE hands you is more tangled than the title lets on. The longing is real, a want to get back to the person underneath all the plans. Then the second verse tilts. \"I know you wanna get dressed up,\" it begins, and the narrator talks her out of it. There's no need for makeup, she's an angel, and then comes the line that gives it away: \"And I don't wanna share you.\" It's tender and a little possessive at once. The sweetness of wanting someone all to yourself sits right next to the wish that she not go out and be seen. The song never sorts those two out. It just asks again, softer.\n\nThe band plays it easy. An acoustic guitar strums over a simple kick, snare and hi-hat beat, the bass holds plain, sustained notes, and a clean electric guitar slips in with an arpeggiated figure after the first vocal phrase. The tempo is moderate and the groove relaxed, a steady rock feel that never pushes. The vocal is slightly raspy but clear, and it leads with melody. There's a bit of natural reverb in the room, and everything is polished smooth. It sounds like the evening the lyric describes.\n\nBear and Bo Rinehart wrote it with Nashville songwriter Luke Laird for H A R D L O V E, the South Carolina band's sixth album. AllMusic heard that record as a concerted pop push toward the mainstream from a group that started out in CCM-lite rock. The credits show the turn. Chris Connors is listed on organ, synthesizer and drum programming, alongside producer Dave Tozer, and four backing singers fill out the track: Carla Kelly, Carmen Roman, Clayton Bryant and Ebony Johnson. The album went on to win the Dove Award for Rock/Contemporary Album of the Year.\n\nThe chorus comes around four times almost word for word, and fire, records and dancing are stock images. The verses do the work, because they name the drift before offering the cure.\n\nIt sticks because it catches the moment you realize you've been living alongside someone instead of with them, and it offers the simplest fix there is: stay in.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"Lately we've been walking in a straight line\"; following lines about doing their own thing, going downtown, making reservations, never finding time",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. The paraphrase is accurate."
+    },
+    {
+      "claim": "Quotes: \"I know you wanna get dressed up\" and \"And I don't wanna share you\"; no need for makeup, she's an angel",
+      "verdict": "supported",
+      "note": "Both quotes match the lyrics. The makeup and angel lines are accurately paraphrased."
+    },
+    {
+      "claim": "Chorus: put a couple records on, build a fire, dance till dawn, go nowhere",
+      "verdict": "supported",
+      "note": "Matches the lyrics and the researched summary of the song."
+    },
+    {
+      "claim": "The chorus comes around four times almost word for word",
+      "verdict": "supported",
+      "note": "The lyrics show the chorus four times."
+    },
+    {
+      "claim": "Acoustic guitar strums; simple kick, snare and hi-hat beat; bass holds plain, sustained notes",
+      "verdict": "supported",
+      "note": "Acoustic and drums are in all three passes. Passes 1 and 3 agree on the sustained bass; pass 2 says walking, so two passes back the claim."
+    },
+    {
+      "claim": "A clean electric guitar slips in with an arpeggiated figure after the first vocal phrase",
+      "verdict": "corrected",
+      "note": "The clean, arpeggiated electric guitar is in all three passes. 'After the first vocal phrase' is a claim about where something happens in the song and pass 1 doesn't confirm it, so it was removed."
+    },
+    {
+      "claim": "Moderate tempo, relaxed groove, steady rock feel",
+      "verdict": "supported",
+      "note": "All three passes say moderate and relaxed. Passes 2 and 3 say steady rock feel."
+    },
+    {
+      "claim": "Vocal is slightly raspy but clear, leads with melody",
+      "verdict": "supported",
+      "note": "All three passes say slightly raspy. Passes 1 and 3 say clear, and all three say melodic. The draft doesn't specify gender."
+    },
+    {
+      "claim": "Bit of natural reverb in the room, polished production",
+      "verdict": "supported",
+      "note": "All three passes mention reverb or a natural room sound and a polished, clean production."
+    },
+    {
+      "claim": "Bear and Bo Rinehart wrote it with Nashville songwriter Luke Laird; H A R D L O V E is the South Carolina band's sixth album",
+      "verdict": "supported",
+      "note": "Researched facts and lineage note."
+    },
+    {
+      "claim": "AllMusic heard the record as a concerted pop push toward the mainstream from a group that started out in CCM-lite rock",
+      "verdict": "supported",
+      "note": "Matches the AllMusic summary."
+    },
+    {
+      "claim": "Chris Connors is listed on organ, synthesizer and drum programming; producer Dave Tozer; backing singers Carla Kelly, Carmen Roman, Clayton Bryant and Ebony Johnson",
+      "verdict": "supported",
+      "note": "Matches the Discogs-sourced credits."
+    },
+    {
+      "claim": "The album went on to win the Dove Award for Rock/Contemporary Album of the Year",
+      "verdict": "supported",
+      "note": "GMA Dove Award, October 17, 2017."
+    },
+    {
+      "claim": "Interpretive readings (tender and a little possessive; a relationship turned into a schedule; stock images; 'sounds like the evening the lyric describes')",
+      "verdict": "supported",
+      "note": "Interpretation resting on the quoted lyrics and supported sound details."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2004,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014185,
+        "detail": "1105 in / 166 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014135,
+        "detail": "1105 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014485,
+        "detail": "1105 in / 178 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077476,
+        "detail": "20318 in / 1684 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.072856,
+        "detail": "3844 in / 2874 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.045786,
+        "detail": "5023 in / 3574 out"
+      }
+    ]
+  }
+}

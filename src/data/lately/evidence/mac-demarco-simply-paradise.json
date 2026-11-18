@@ -1,0 +1,207 @@
+{
+  "spotifyId": "1EKpwGoisV5nUOqqMZ7gAJ",
+  "reviewedAt": "2026-11-18T20:06:24.940Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/10731854"
+  },
+  "listening": "Pass 1:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a simple, walking line. Drums provide a steady, mid-tempo beat with a snare on beats two and four. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and laid-back.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and unhurried. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals. The texture is smooth.\n\nArrangement:\nThe excerpt begins with all instruments present. The bass and drums maintain a consistent pattern. The guitar plays a repeating arpeggio. The synth pad provides continuous backing. Nothing drops out or builds significantly within this segment.\n\nPass 2:\nInstruments:\nA clean electric guitar plays a arpeggiated chord progression. A bass guitar plays a simple, walking line. Drums play a relaxed, swung beat with a prominent snare and ride cymbal.\n\nTempo and Groove:\nThe tempo is moderate. The groove is relaxed and swung, with a laid-back feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and unhurried. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals and drums. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the full band. The bass and drums maintain a consistent pattern. The guitar plays a repeating arpeggio. The vocals are present throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nA clean electric guitar plays a arpeggiated chord progression. A bass guitar plays a simple, walking line. Drums play a relaxed, swung beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and swung, with a slight shuffle feel from the drums.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and melodic. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, with a moderate amount of reverb suggesting a medium-sized room. The texture is polished.\n\nArrangement:\nThe excerpt begins with the full band. The bass guitar drops out briefly at the 0:17 mark, then re-enters. No other significant changes occur within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Mac DeMarco and Italian singer Ryan Paris (real name Fabio Roscioli) are credited as the songwriters of 'Simply Paradise'. Publishing is registered through SOCAN for DeMarco and GEMA for Paris.",
+        "source": "https://www.letras.com/mac-demarco/simply-paradise-feat-ryan-paris/"
+      },
+      {
+        "claim": "The single came out on 2 October 2023 on Mac's Record Label and runs 2:36.",
+        "source": "https://www.amazon.com/Simply-Paradise-Ryan-Paris/dp/B0CJR3YMJN"
+      },
+      {
+        "claim": "The collaboration began with DeMarco's 2014 Pitchfork documentary 'Pepperoni Playboy'. In it he praised Paris's 1983 hit 'Dolce Vita' as an inspiration and danced down the street to it.",
+        "source": "https://www.nme.com/news/music/mac-demarco-finally-teams-up-with-dolce-vita-singer-ryan-paris-for-new-song-simply-paradise-3508483"
+      },
+      {
+        "claim": "Paris saw the video and invited DeMarco to do a remix of 'Dolce Vita' together. DeMarco replied in a 2016 video that he was interested, and the pair did not work together until 2023.",
+        "source": "https://www.thefader.com/2023/10/02/mac-demarco-ital-disco-singer-ryan-paris-simply-paradise"
+      },
+      {
+        "claim": "Instead of a 'Dolce Vita' remix, the pair made a new original song.",
+        "source": "https://faroutmagazine.co.uk/mac-demarco-shares-ryan-paris-collaboration-simply-paradise/"
+      },
+      {
+        "claim": "DeMarco said Paris invited him in September 2023 to his home by the beach outside Rome. He said the song and video came out of the three nights he spent there.",
+        "source": "https://www.nme.com/news/music/mac-demarco-finally-teams-up-with-dolce-vita-singer-ryan-paris-for-new-song-simply-paradise-3508483"
+      },
+      {
+        "claim": "Paris said they had agreed in advance to write a song together. He said they got the idea of doing it like Michael Jackson and Paul McCartney's 'The Girl Is Mine' and finished the song in a few hours.",
+        "source": "https://relix.com/news/detail/mac-demarco-taps-dolce-vita-singer-ryan-paris-on-new-single-simply-paradise"
+      },
+      {
+        "claim": "The music video was shot by DeMarco's longtime partner, Kiera McNally.",
+        "source": "https://jambands.com/news/2023/10/03/mac-demarco-taps-dolce-vita-singer-ryan-paris-on-new-single-simply-paradise/"
+      },
+      {
+        "claim": "The Fader described the song as bittersweet, crushed-velvet R&B in which the two singers trade lines in the manner of 'The Girl Is Mine'. The video was filmed at sunset on an Italian beach.",
+        "source": "https://www.thefader.com/2023/10/02/mac-demarco-ital-disco-singer-ryan-paris-simply-paradise"
+      },
+      {
+        "claim": "Paris and DeMarco performed 'Simply Paradise' and 'Dolce Vita' together at several stops of DeMarco's European tour. A later collaboration, 'Still What I'm Looking For', followed the single.",
+        "source": "https://www.jambase.com/article/mac-demarco-ryan-paris-dolce-vita-live-europe"
+      }
+    ],
+    "lineage": "A mellow, guitar-led R&B and soft-rock duet that grew from DeMarco's fandom for Ryan Paris's 1983 Italo-disco hit 'Dolce Vita' and is modeled on the Michael Jackson and Paul McCartney duet 'The Girl Is Mine'.",
+    "genres": [
+      "soft rock",
+      "r&b",
+      "indie pop"
+    ]
+  },
+  "draft": "Near the end of **Simply Paradise**, the song stops pretending to be a song and turns into two guys talking. \"But listen, Mac,\" someone says, and then the clincher: \"'Italian do it better', Madonna said.\" The reply comes back half-convinced: \"Madonna? Sure, she knows.\" It's a throwaway, and it's the best moment on the record, because it gives away what the whole thing is really about. This is a love song about a woman neither singer seems to know, sung by two men who clearly like each other a lot.\n\nThe setup is borrowed on purpose. Ryan Paris has said he and Mac DeMarco took their idea from Michael Jackson and Paul McCartney's \"The Girl Is Mine,\" and they keep that duet's frame: two voices trading lines and claiming the same woman. The boasts are cartoonish. \"Don't try, don't try to have her,\" one warns. The other gets told \"your love is ordinary,\" the kind of insult you only throw at a friend. That's the emotional trick. Every line is possessive, but the feeling underneath is warmth, maybe even gratitude. The rivalry is just the excuse to stand at the same mic.\n\nThe backstory makes that warmth easy to believe. In his 2014 Pitchfork documentary *Pepperoni Playboy*, DeMarco called Paris's 1983 Italo-disco hit \"Dolce Vita\" an inspiration and danced down the street to it. Paris saw the video and offered to remix the song with him. DeMarco said yes in a 2016 video, and then nothing happened for seven years. In September 2023, Paris invited him to his home by the beach outside Rome. They wrote this in a few hours, and the song and its video came out of three nights there. Kiera McNally, DeMarco's longtime partner, shot the clip at sunset. Under the swagger, you can hear a fan who finally got the call.\n\nIt doesn't sound like \"Dolce Vita,\" though. Where you might expect Italo-disco gloss, the band lopes along instead. A clean electric guitar picks out arpeggiated chords, the bass walks a simple line, and the drums swing easy at a moderate tempo, with the snare pushed forward. The vocal is clear and mid-range, smooth and in no hurry, with a little reverb around it, and the production stays polished. The Fader called it bittersweet, crushed-velvet R&B, and that fits. Nothing in the groove is fighting over anybody.\n\nThe lyrics are thin, and some lines barely make sense (\"I know I can make you turn bad\"). The song doesn't hide that. It's built from \"yeah-yeah\" and the two-word title, and that loose, half-finished quality is part of the charm.\n\nWhat sticks is the gap between what the song says and what it means: two men insist the girl is theirs, and you end up hearing a long-delayed friendship finally getting its turn.",
+  "factCheck": [
+    {
+      "claim": "Near the end of the song, the lyrics turn into a spoken-style exchange between two voices",
+      "verdict": "supported",
+      "note": "The lyric structure puts the 'But listen, Mac' / Madonna passage in the final stanza. Reading it as two guys talking is interpretation."
+    },
+    {
+      "claim": "Quoted lines: \"But listen, Mac,\" / \"Italian do it better\", Madonna said / \"Madonna? Sure, she knows\"",
+      "verdict": "corrected",
+      "note": "The wording matches the lyrics, but the review quoted too many lines overall and gave three consecutive lines. Kept only the Madonna line as a quote and paraphrased the others."
+    },
+    {
+      "claim": "Quote: \"Don't try, don't try to have her\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: \"your love is ordinary\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: \"I know I can make you turn bad\" and the quoted \"yeah-yeah\"",
+      "verdict": "removed",
+      "note": "The lines are accurate, but they pushed the review past the three-quote limit. Kept the observation about thin lyrics without quoting."
+    },
+    {
+      "claim": "Ryan Paris has said he and DeMarco took their idea from 'The Girl Is Mine' by Michael Jackson and Paul McCartney",
+      "verdict": "supported",
+      "note": "Relix, attributed to Paris."
+    },
+    {
+      "claim": "They keep that duet's frame: two voices trading lines and claiming the same woman",
+      "verdict": "corrected",
+      "note": "The Fader supports the trading of lines. Nothing in the packet describes the other duet's subject, so the 'claiming the same woman' part was cut."
+    },
+    {
+      "claim": "2014 Pitchfork documentary Pepperoni Playboy; DeMarco praised Paris's 1983 hit 'Dolce Vita' as an inspiration and danced down the street to it",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "Paris saw the video and offered to remix the song with him",
+      "verdict": "supported",
+      "note": "Fader: Paris invited DeMarco to do a 'Dolce Vita' remix together."
+    },
+    {
+      "claim": "DeMarco said yes in a 2016 video, and then nothing happened for seven years",
+      "verdict": "corrected",
+      "note": "The packet says he replied that he was interested, and that they didn't work together until 2023. Reworded to match."
+    },
+    {
+      "claim": "In September 2023 Paris invited him to his home by the beach outside Rome; the song and video came out of three nights there",
+      "verdict": "supported",
+      "note": "NME, from DeMarco."
+    },
+    {
+      "claim": "They wrote this in a few hours",
+      "verdict": "supported",
+      "note": "Relix: Paris said they finished the song in a few hours. Attributed to Paris in the rewrite."
+    },
+    {
+      "claim": "Kiera McNally, DeMarco's longtime partner, shot the clip at sunset",
+      "verdict": "supported",
+      "note": "Jambands for McNally. The Fader says the video was filmed at sunset on an Italian beach."
+    },
+    {
+      "claim": "It doesn't sound like 'Dolce Vita'; you might expect Italo-disco gloss",
+      "verdict": "removed",
+      "note": "Nothing in the packet describes how 'Dolce Vita' sounds, so the comparison was dropped."
+    },
+    {
+      "claim": "Clean electric guitar with arpeggiated chords; bass walks a simple line; drums swing easy at a moderate tempo with the snare pushed forward",
+      "verdict": "supported",
+      "note": "All three passes agree on the guitar, bass and moderate tempo. Passes 2 and 3 describe a swung beat, and all three give the snare prominence."
+    },
+    {
+      "claim": "Vocal is clear, mid-range, smooth and unhurried, with a little reverb; production polished",
+      "verdict": "supported",
+      "note": "At least two passes agree on each point."
+    },
+    {
+      "claim": "The Fader called it bittersweet, crushed-velvet R&B",
+      "verdict": "supported",
+      "note": "Fader."
+    },
+    {
+      "claim": "The lyrics are thin and some lines barely make sense; built from yeahs and the two-word title",
+      "verdict": "supported",
+      "note": "Critical opinion resting on the lyrics, which are repetitive and loosely connected."
+    },
+    {
+      "claim": "Two men, a long-delayed friendship, warmth beneath the rivalry",
+      "verdict": "supported",
+      "note": "Interpretation resting on the backstory and the lyrics. The packet's facts use 'he' for both DeMarco and Paris."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2017,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014448,
+        "detail": "1101 in / 177 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014473,
+        "detail": "1101 in / 178 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014198,
+        "detail": "1101 in / 167 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.084306,
+        "detail": "23458 in / 1739 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053296,
+        "detail": "4024 in / 1860 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05979,
+        "detail": "5270 in / 4925 out"
+      }
+    ]
+  }
+}
