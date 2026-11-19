@@ -1,0 +1,145 @@
+{
+  "spotifyId": "4h1RBLxhbdApugOTryGZA6",
+  "reviewedAt": "2026-11-19T03:56:34.902Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7911358"
+  },
+  "listening": "Pass 1:\nA male voice sings the main melody, with a breathy, slightly strained character, in a mid-range. A female voice sings harmonies above the male voice, also breathy. Both voices are delivered with a sustained, legato feel.\n\nThe tempo is slow. The groove is driven by a kick drum and a sustained, low-frequency synth bass. A clean electric guitar plays arpeggiated chords with a delay effect. A synth pad provides a sustained, atmospheric background.\n\nThe production is polished, with a spacious room sound. The texture is smooth and layered.\n\nThe excerpt begins with the male voice and guitar. The female harmony enters shortly after. The synth pad and bass are present throughout. The kick drum enters around the halfway point, adding a subtle rhythmic pulse.\n\nPass 2:\nA male voice sings the main melody, with a breathy, slightly strained character. He is joined by a female voice in harmony, singing the same melody an octave higher. Both voices are delivered with a sustained, almost mournful quality.\n\nThe tempo is slow. The groove feels like a ballad, with a sense of weight and space.\n\nA clean electric guitar plays arpeggiated chords, providing a sparse harmonic foundation. A bass guitar plays sustained notes, outlining the root of the chords. A drum kit enters with a gentle, sustained cymbal wash and a soft kick drum, adding to the spacious feel.\n\nThe production is polished, with a clear and open sound. There's a sense of a large, perhaps artificial, room. The texture is clean and somewhat ethereal.\n\nThe excerpt begins with the male voice and electric guitar. The female voice enters shortly after, adding harmony. The bass guitar then joins, followed by the drums. The arrangement builds subtly with the addition of each instrument, creating a fuller sound towards the end.\n\nPass 3:\nA male voice sings the lead, with a breathy, slightly raspy character, delivering the melody in a mid-range. A female voice joins in harmony, singing a higher counter-melody, also with a breathy quality. The tempo is slow, with a sustained, flowing groove.\n\nThe instrumentation includes a sustained, low-frequency synth pad providing a foundational drone. A clean electric guitar plays arpeggiated figures, creating a shimmering texture. A bass guitar plays long, sustained notes, outlining the harmony. A drum machine provides a sparse, hip-hop-influenced beat with a prominent kick and snare.\n\nThe production is polished, with a clear and spacious room sound. The texture is layered, with the sustained elements creating a sense of depth.\n\nThe arrangement begins with the synth pad and guitar, joined by the male lead vocal. The female harmony enters later, adding a new melodic layer. The bass and drums enter, establishing the rhythmic foundation. No instruments drop out during the excerpt.",
+  "research": {
+    "identity": "unknown",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The song opens on a pile-up of refusals. Every line of the first verse leans on the same word, *never*, until it stops sounding like a statement and starts sounding like someone talking themselves out of hope. Then the second verse flips to a string of promises to keep showing up, in the dark, when the rivers rise, when the spider bites. That swing between giving up and hanging on is the whole emotional engine of **1000 Years**. Bush and Amy Lee don't pick a side.\n\nThe chorus is where the real confession sits. After crediting the other person with everything, saying they set the narrator free, the line turns on a single \"but\" and lands here: \"I love you best when there are no fears.\" The wish to sleep for a thousand years is tender and sad at once. It's a love that only feels safe when both people are unconscious, when nobody can be hurt or disappoint. The gratitude is real, and so is the exhaustion underneath it, and the song lets both stand.\n\nThe verses get darker in small ways. The slide into \"the ones you lost,\" the old slang about a monkey on your back: these hint at dependence, at something both people keep reaching for. Even the chorus wobbles. The first time it's \"you were all to me,\" the second time \"all for me,\" a one-word shift from devotion to something closer to sacrifice.\n\nThe sound keeps all that under a slow, heavy calm. A clean electric guitar picks out arpeggiated chords, and long, low bass notes sit beneath them like a floor you can feel more than hear. The lead voice is breathy and a little strained, holding its notes long. A second voice floats above it, breathy too, so the two seem to be leaning on each other rather than trading lines. A kick drum keeps a quiet pulse. The production is polished and roomy, with plenty of air around every part, which makes the closeness in the lyrics feel more fragile.\n\nThe bridge goes plain: up, down, in, out, then \"We're sinking, slowly sinking.\" The song ends on its strangest, most private line: \"I don't want you to see what this TV says to me.\" It's a small, embarrassed admission, the narrator hiding even their distractions, and it leaves the sinking unresolved.\n\nIt sticks because it gives you a love so worn out that the kindest thing either person can imagine is rest, and it sings that wish gently enough that you understand why.",
+  "factCheck": [
+    {
+      "claim": "Every line of the first verse begins with/leans on the word 'never'",
+      "verdict": "supported",
+      "note": "All four opening lines start with 'Never'."
+    },
+    {
+      "claim": "Second verse is a string of promises to show up: in the dark, when the rivers rise, when the spider bites",
+      "verdict": "supported",
+      "note": "Matches the 'See you in the dark... rivers rise... spider bites' lines. The reading as promises is interpretation."
+    },
+    {
+      "claim": "Bush and Amy Lee perform the song",
+      "verdict": "supported",
+      "note": "Artists in metadata."
+    },
+    {
+      "claim": "Quote: \"I love you best when there are no fears.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Chorus credits the other person with everything and says they set the narrator free, then turns on 'but'",
+      "verdict": "supported",
+      "note": "'You were all to me / You set me free / But I wish we could sleep for a thousand years'."
+    },
+    {
+      "claim": "The slide into \"the ones you lost\"",
+      "verdict": "supported",
+      "note": "Exact lyric fragment."
+    },
+    {
+      "claim": "The 'monkey on your back' is old slang",
+      "verdict": "corrected",
+      "note": "The idiom's history isn't in the packet. Reworded to refer to the lyric image only."
+    },
+    {
+      "claim": "First chorus is 'you were all to me', second is 'all for me'",
+      "verdict": "supported",
+      "note": "The lyrics show this variation. The reading of it as a shift toward sacrifice is interpretation."
+    },
+    {
+      "claim": "Clean electric guitar picks out arpeggiated chords",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Long, low bass notes sit beneath the guitar",
+      "verdict": "supported",
+      "note": "All three passes describe a sustained low bass."
+    },
+    {
+      "claim": "Lead voice is breathy and a little strained, holding notes long",
+      "verdict": "supported",
+      "note": "Breathy in all three passes, strained in two, sustained/legato in all."
+    },
+    {
+      "claim": "A second voice sings above, also breathy",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say breathy, and all three place it above or in harmony."
+    },
+    {
+      "claim": "A kick drum keeps a quiet pulse",
+      "verdict": "supported",
+      "note": "Kick in all three passes. Passes 1 and 2 describe it as subtle or soft."
+    },
+    {
+      "claim": "Production is polished and roomy with air around every part",
+      "verdict": "supported",
+      "note": "All three passes: polished, spacious."
+    },
+    {
+      "claim": "'The bridge' goes plain: up, down, in, out, 'We're sinking, slowly sinking'",
+      "verdict": "corrected",
+      "note": "The lyric section repeats, so calling it a bridge is a structural claim the lyrics don't support. Reworded without the label."
+    },
+    {
+      "claim": "The song ends on the line \"I don't want you to see what this TV says to me.\"",
+      "verdict": "corrected",
+      "note": "The quote is exact, but how the recording ends isn't established. Reworded to place the line late in the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.227,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013963,
+        "detail": "1106 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015113,
+        "detail": "1106 in / 203 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00070382,
+        "detail": "1106 in / 212 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.128886,
+        "detail": "47988 in / 291 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053164,
+        "detail": "2841 in / 2090 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.041342,
+        "detail": "3896 in / 3355 out"
+      }
+    ]
+  }
+}

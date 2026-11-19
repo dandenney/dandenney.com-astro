@@ -1,0 +1,195 @@
+{
+  "spotifyId": "5hK5lhsnwzrVrBZpDgD1wM",
+  "reviewedAt": "2026-11-19T03:49:49.719Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30540954"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked, arpeggiated pattern. A bass guitar plays a walking line. A drum kit plays a light, brushed beat with a snare drum and hi-hat.\n\nTempo and groove feel:\nThe tempo is moderate. The groove is a relaxed, swinging feel.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is conversational and slightly rhythmic. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, suggesting a small room. The texture is clean and unadorned. The production is polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The bass and drums maintain a consistent presence. The acoustic guitar continues its arpeggiated pattern throughout. The voice enters at the beginning and remains present. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady, fingerpicked arpeggio pattern throughout. A bass guitar plays a walking line. A drum kit plays a light, brushed beat with occasional snare accents.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly swung.\n\nVocals:\nA single, clear voice sings with a slightly breathy character. The delivery is conversational. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, suggesting a small room. The texture is clean and polished.\n\nArrangement:\nThe acoustic guitar, bass, and drums establish the core arrangement from the beginning. The vocals enter shortly after the start. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked pattern with a light, rhythmic strum on the off-beats. A bass guitar plays a walking line. A drum kit plays a shuffle beat with a closed hi-hat.\n\nTempo and Groove:\nThe tempo is medium-slow. The groove feels relaxed and slightly swung.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is conversational and slightly rhythmic. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, suggesting a polished studio recording. The texture is smooth. The room sounds dry.\n\nArrangement:\nThe acoustic guitar, bass, and drums are present throughout the excerpt. The voice enters at the beginning and remains constant. No instruments drop out or build significantly within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The single \"Rich People\" by Carsie Blanton came out on November 18, 2022 and runs 2:38.",
+        "source": "https://music.apple.com/us/song/rich-people/1655429852"
+      },
+      {
+        "claim": "Bandcamp credits the 2022 single as written by Carsie Blanton. Patrick Firth is credited with keys, background vocals, production and mixing. Joe Plowman is credited with bass, background vocals and arrangement.",
+        "source": "https://carsieblanton.bandcamp.com/track/rich-people-digital-single"
+      },
+      {
+        "claim": "The single was engineered by Will Tyson at The Studio in Nashville, TN.",
+        "source": "https://carsieblanton.bandcamp.com/track/rich-people-digital-single"
+      },
+      {
+        "claim": "Blanton says the song went viral on TikTok and about 50,000 strangers asked where to get it. She released it mid-tour, on day seven of a 21-day run, after a friend advised her to release it quickly.",
+        "source": "https://www.patreon.com/posts/rich-people-75120455"
+      },
+      {
+        "claim": "Blanton describes the song as a jazzy, jokey song about capitalism. Its lyrics describe a flood of bad news blamed on the wrong people (Black people, Jewish people, immigrants) when the real culprits are the super-rich.",
+        "source": "https://www.thenation.com/article/culture/rich-people-music-business-streaming/"
+      },
+      {
+        "claim": "Blanton wrote in The Nation that she is an independent artist with no record label funding her work. She also said she had been a full-time working songwriter for 15 years.",
+        "source": "https://www.thenation.com/article/culture/rich-people-music-business-streaming/"
+      },
+      {
+        "claim": "At a May 2024 show, Blanton said the song was written after Charlottesville. She also said she writes three kinds of songs: love songs, hate songs and protest songs.",
+        "source": "https://parklifedc.com/2024/05/10/live-review-carsie-blanton-w-josh-okeefe-the-hamilton-live-5-4-24/"
+      },
+      {
+        "claim": "Blanton said she rewrote the third and fourth verses before the tour that preceded the release, to get more consistent laughs.",
+        "source": "https://www.patreon.com/posts/rich-people-75120455"
+      },
+      {
+        "claim": "A later version of the song appears as track 3 on The Red Album Vol I, released September 5, 2024. That release credits the writing to Carsie Blanton and Joe Plowman.",
+        "source": "https://carsieblanton.bandcamp.com/track/rich-people-3"
+      },
+      {
+        "claim": "A June 16, 2023 re-release of \"Rich People\" lists Carsie Blanton and Joseph Plowman as producers.",
+        "source": "https://www.youtube.com/watch?v=gRKtvQLqRyM"
+      }
+    ],
+    "lineage": "The song sits in the tradition of American topical and protest songwriting, with a jazzy, humorous folk-pop delivery that Blanton's own releases and notes place alongside her other political material such as Love & Rage and Ugly Nasty Commie Bitch.",
+    "genres": [
+      "folk",
+      "jazzy pop",
+      "protest song"
+    ]
+  },
+  "draft": "The kindest line in **Rich People** isn't a punchline. It's \"Don't be ashamed if you get confused,\" sung to anyone who has walked away from the news or a family argument feeling stupid for not knowing what to say. Carsie Blanton's answer is a gift: \"Now you don't have to argue just sing this song.\" The song is a lyric sheet for the tongue-tied, a chorus you can hand to someone who knows something is wrong but keeps getting told to blame the wrong people.\n\nThat gentleness is what lets the anger land. Blanton has said she wrote it after Charlottesville, and the middle section turns into a call-and-response that names the scapegoats one at a time: Jews, Black people, immigrants, and then, pointedly, rednecks. Each question gets a flat denial and a redirect to the same answer. Putting rednecks on that list matters. It refuses to let a song against prejudice keep a target of its own, and it reaches toward the people a protest song usually writes off. Under the joke there is grief about neighbors turned against each other, and the song never sets that grief and the joke apart.\n\nBlanton calls it a jazzy, jokey song about capitalism, and the band plays it that way. Fingerpicked acoustic guitar, a walking bass line and light brushed drums sit in a relaxed, slightly swung groove at an easy moderate tempo. The room sounds dry and close. The voice is clear and conversational, almost talking the lines in rhythm, so the profanity in \"Rich people been fuckin us all\" comes off less as a shout than as a shrug from someone who has run out of polite ways to say it. The 1979 verse does the history lesson in four lines and closes the joke with a twist of the knife: Reagan and Thatcher \"fixed it right up, but not for you.\"\n\nThe craft shows up in the revisions. Blanton rewrote the third and fourth verses on tour to get more consistent laughs, and the song works like a bit that has been tested on rooms full of people. Patrick Firth produced and mixed it, Joe Plowman played bass and arranged it, and Will Tyson engineered it at The Studio in Nashville. After a clip went viral on TikTok and about 50,000 strangers asked where to find it, Blanton, an independent artist without label money, put it out on day seven of a 21-day tour. It belongs to a long line of American topical songs, next to her own Love & Rage and Ugly Nasty Commie Bitch. It works best as a singalong, a song meant to be passed around.\n\nIt takes the shame out of not having the words and gives you a chorus you can sing back at the news.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"Don't be ashamed if you get confused\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Lyric quote: \"Now you don't have to argue just sing this song\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. It is part of one line, within the quote limit."
+    },
+    {
+      "claim": "Anyone who has walked away from the news or a family argument feeling stupid",
+      "verdict": "corrected",
+      "note": "The lyric says friends and the news, not family. Changed to 'an argument with friends'."
+    },
+    {
+      "claim": "Quote count: the draft quotes four lyric lines, including \"Rich people been fuckin us all\"",
+      "verdict": "corrected",
+      "note": "The limit is three quoted lines. Dropped the profanity quote and described the chorus instead."
+    },
+    {
+      "claim": "Blanton has said she wrote it after Charlottesville",
+      "verdict": "supported",
+      "note": "She said this at a May 2024 show."
+    },
+    {
+      "claim": "The middle section is a call-and-response naming scapegoats: Jews, Black people, immigrants, rednecks",
+      "verdict": "corrected",
+      "note": "The scapegoats named in the lyrics are right. 'Call-and-response' and 'middle section' are structural claims the lyrics don't support, so it is now described as a run of questions and answers."
+    },
+    {
+      "claim": "Each question gets a flat denial and a redirect to rich people",
+      "verdict": "supported",
+      "note": "Matches the lyric pattern."
+    },
+    {
+      "claim": "Reading of rednecks, grief and neighbors turned against each other",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics, so it stays."
+    },
+    {
+      "claim": "Blanton calls it a jazzy, jokey song about capitalism",
+      "verdict": "supported",
+      "note": "Sourced to The Nation."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, walking bass, light brushed drums, relaxed slightly swung groove, moderate tempo, dry and close room, clear conversational voice delivered rhythmically",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element. Brushed drums are in passes 1 and 2, moderate tempo in 1 and 2, and a rhythmic delivery in 1 and 3."
+    },
+    {
+      "claim": "The 1979 verse is four lines and Reagan and Thatcher \"fixed it right up, but not for you\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The spelling is normalized to Reagan."
+    },
+    {
+      "claim": "Blanton rewrote the third and fourth verses on tour to get more consistent laughs",
+      "verdict": "corrected",
+      "note": "She rewrote them before the tour that preceded the release, not on tour."
+    },
+    {
+      "claim": "Patrick Firth produced and mixed it; Joe Plowman played bass and arranged; Will Tyson engineered it at The Studio in Nashville",
+      "verdict": "supported",
+      "note": "Matches the Bandcamp credits."
+    },
+    {
+      "claim": "After a clip went viral on TikTok and about 50,000 strangers asked where to find it, she released it",
+      "verdict": "corrected",
+      "note": "The source says the song went viral, not a clip. It does not state the order of events, so the 'after' sequence was removed."
+    },
+    {
+      "claim": "Independent artist without label money; released on day seven of a 21-day tour",
+      "verdict": "supported",
+      "note": "Matches The Nation and Patreon sources. It was a 21-day run."
+    },
+    {
+      "claim": "Belongs to a long line of American topical songs, next to Love & Rage and Ugly Nasty Commie Bitch",
+      "verdict": "supported",
+      "note": "Matches the stated lineage."
+    },
+    {
+      "claim": "Mention of a 'clip'",
+      "verdict": "removed",
+      "note": "Reference to a clip removed from the text."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1824,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014217,
+        "detail": "1099 in / 168 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013792,
+        "detail": "1099 in / 151 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014567,
+        "detail": "1099 in / 182 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.072804,
+        "detail": "18967 in / 1487 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052132,
+        "detail": "3668 in / 1873 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053254,
+        "detail": "4827 in / 4360 out"
+      }
+    ]
+  }
+}

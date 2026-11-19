@@ -1,0 +1,205 @@
+{
+  "spotifyId": "0EKBV6GybPtALXUgWqWrym",
+  "reviewedAt": "2026-11-19T15:35:04.792Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7889962"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a arpeggiated chord progression. A bass guitar enters, playing a root-note line. Drums enter, playing a driving rock beat with a strong backbeat on the snare. A lead voice sings with a clear, full tone, with a slight rasp at the edges. The delivery is powerful and direct. Harmonies enter, singing in unison with the lead voice, creating a fuller, richer sound. The production feels polished and clean, with a sense of open space around the instruments. The texture is full and layered, but not muddy. The arrangement builds steadily throughout the excerpt, with each instrument adding to the overall energy and drive.\n\nPass 2:\nAcoustic guitar plays a arpeggiated chord progression. A bass guitar enters, playing a root-note line. A drum kit enters, playing a driving beat with kick, snare, and hi-hat. A lead voice sings with a clear, strong character, with a slight rasp. The voice is delivered with a full, belted sound. Harmonies enter, singing in unison with the lead voice, then splitting into a three-part harmony. The production sounds like a medium-sized room, with a clear and present texture. The sound is polished. The arrangement builds with the addition of instruments and harmonies, creating a full and energetic sound.\n\nPass 3:\nAcoustic guitar plays a arpeggiated chord progression. A bass guitar enters, playing a root-note line. Drums enter, playing a driving rock beat with a strong backbeat on the snare. A lead voice sings with a clear, full tone, with a slight rasp. The delivery is powerful and direct. Harmonies enter, singing in unison with the lead voice, creating a fuller sound. The production is clean and polished, with a natural room sound. The texture is full and rich. The arrangement builds with the addition of instruments and harmonies, creating a sense of increasing intensity.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"The Story\" was written by Phil Hanseroth, not by Brandi Carlile. It is the title track of her 2007 second album.",
+        "source": "https://en.wikipedia.org/wiki/The_Story_(Brandi_Carlile_song)"
+      },
+      {
+        "claim": "T Bone Burnett produced the album. It was recorded over eleven days on two-inch audio tape at The Warehouse Studios in Vancouver, British Columbia.",
+        "source": "https://en.wikipedia.org/wiki/The_Story_(Brandi_Carlile_album)"
+      },
+      {
+        "claim": "The track was recorded in Vancouver with Tim Hanseroth on guitar, Phil Hanseroth on bass and Matt Chamberlain on drums.",
+        "source": "https://www.songfacts.com/facts/brandi-carlile/the-story"
+      },
+      {
+        "claim": "The song was recorded \"live to tape\". All the performers played and sang at the same time instead of tracking their parts separately.",
+        "source": "https://www.wikiwand.com/en/articles/The_Story_(Brandi_Carlile_song)"
+      },
+      {
+        "claim": "Burnett asked Carlile to sing the song without her acoustic guitar, because he thought the instrument was distracting her. She disagreed but put it down, and the take she recorded that way made the album.",
+        "source": "https://www.songfacts.com/facts/brandi-carlile/the-story"
+      },
+      {
+        "claim": "Phil Hanseroth wrote the song before he and his twin brother Tim began working with Carlile. They have been her performing and writing partners since 2004.",
+        "source": "https://en.wikipedia.org/wiki/The_Story_(Brandi_Carlile_song)"
+      },
+      {
+        "claim": "Phil Hanseroth married Carlile's sister Tiffany.",
+        "source": "https://www.songfacts.com/facts/brandi-carlile/the-story"
+      },
+      {
+        "claim": "In a 2013 Songfacts interview, Carlile said songs are \"malleable\". A love song can easily be heard as a song about someone's parents.",
+        "source": "https://www.songfacts.com/facts/brandi-carlile/the-story"
+      },
+      {
+        "claim": "The song was featured in Grey's Anatomy on April 12, 2007, and appears on the Grey's Anatomy Soundtrack album 3.",
+        "source": "https://www.wikiwand.com/en/articles/The_Story_(Brandi_Carlile_song)"
+      },
+      {
+        "claim": "Dolly Parton recorded the title track for Carlile's 2017 album Cover Stories, a track-by-track covers reimagining of The Story.",
+        "source": "https://en.wikipedia.org/wiki/Cover_Stories"
+      }
+    ],
+    "lineage": "A folk-rock and Americana ballad from the Seattle-based Carlile and the Hanseroth twins, produced by T Bone Burnett, who is known for roots-music production.",
+    "genres": [
+      "folk rock",
+      "americana",
+      "adult alternative"
+    ]
+  },
+  "draft": "The face does the talking first. **The Story** opens on \"lines across my face,\" creases offered as a record of everything survived, and the first verse sounds almost proud of them. Then comes the turn: \"But these stories don't mean anything / When you've got no one to tell them to.\" The pride doesn't go away. It turns out it was waiting on someone the whole time. By the song's own boasting, there were mountaintops climbed and an ocean swum, and the payoff for all of it is a single listener.\n\nPhil Hanseroth wrote the song before he and his twin brother Tim began working with Brandi Carlile. So Carlile is singing another person's confession, and the fit is close enough that it's easy to forget. The third verse is where the confession gets honest. \"It's hiding the words that don't come out,\" Carlile sings of a smile, and the friends who call the narrator blessed have no idea the head is a mess. Only the \"you\" knows. The devotion here is less pure romance than relief at being seen by one person while performing fine for everyone else. The swagger of breaking every rule sits right beside that admission, and the song never decides which is the truer picture.\n\nCarlile has said songs are \"malleable,\" that a love song can just as easily be heard as one about someone's parents. This one bears that out. Nothing in the lyric pins down what kind of love it is. It only says the love held up when the narrator was flat broke.\n\nT Bone Burnett produced the album in eleven days at The Warehouse Studios in Vancouver. This song was cut live to tape, with everyone playing and singing at once: Tim Hanseroth on guitar, Phil on bass, Matt Chamberlain on drums. Burnett asked Carlile to put down the acoustic guitar to sing, thinking it was a distraction. Carlile disagreed, set it down anyway, and that take made the record. You can hear what it freed up. An arpeggiated acoustic figure and a root-note bass line give way to a driving rock beat with a strong snare backbeat. The voice rides over it clear and full, with a slight rasp, powerful and direct. Harmonies join in unison and thicken the lead. The sound is clean and polished but keeps a natural room around it. Burnett's roots-music ear is pointed at folk-rock that wants to be loud.\n\nIt's an Americana ballad that builds like a rock song. That suits a lyric about a mess hidden behind a smile, because the arrangement keeps adding weight until the composure sounds like effort.\n\nWhat sticks is the moment pride gives way to need, when a lifetime of stories turns out to be worth nothing without the one person you'd tell them to.",
+  "factCheck": [
+    {
+      "claim": "The song opens on 'lines across my face,' creases offered as a record of what's survived",
+      "verdict": "corrected",
+      "note": "The lyric matches and the opening verse supports the reading. The quote marks were removed to stay within the three-line quote limit, and the image is now paraphrased."
+    },
+    {
+      "claim": "\"But these stories don't mean anything / When you've got no one to tell them to\"",
+      "verdict": "supported",
+      "note": "Exact match, two consecutive lines."
+    },
+    {
+      "claim": "Mountaintops climbed and an ocean swum",
+      "verdict": "supported",
+      "note": "Paraphrases 'I climbed across the mountain tops / Swam all across the ocean blue'."
+    },
+    {
+      "claim": "Phil Hanseroth wrote the song before he and twin brother Tim began working with Carlile",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "\"It's hiding the words that don't come out,\" sung of a smile",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Friends who call the narrator blessed don't know the head is a mess",
+      "verdict": "supported",
+      "note": "Matches the third verse."
+    },
+    {
+      "claim": "Narrator broke every rule; love held up when narrator was flat broke",
+      "verdict": "supported",
+      "note": "Lyric paraphrase."
+    },
+    {
+      "claim": "Carlile has said songs are 'malleable' and a love song can be heard as one about someone's parents",
+      "verdict": "supported",
+      "note": "2013 Songfacts interview."
+    },
+    {
+      "claim": "T Bone Burnett produced the album in eleven days at The Warehouse Studios in Vancouver",
+      "verdict": "supported",
+      "note": "Recorded over eleven days there. Wording adjusted to 'recorded'."
+    },
+    {
+      "claim": "Cut live to tape, everyone playing and singing at once; Tim Hanseroth guitar, Phil bass, Matt Chamberlain drums",
+      "verdict": "supported",
+      "note": "Wikiwand and Songfacts."
+    },
+    {
+      "claim": "Burnett asked Carlile to put down the acoustic guitar because it was a distraction; she disagreed, did it anyway, and that take made the record",
+      "verdict": "supported",
+      "note": "Songfacts."
+    },
+    {
+      "claim": "An arpeggiated acoustic figure and root-note bass line 'give way to' a driving rock beat",
+      "verdict": "corrected",
+      "note": "'Give way to' implies a sequence within the song, which can't be placed. Reworded to say the elements carry the song together."
+    },
+    {
+      "claim": "Driving rock beat with a strong snare backbeat",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree, and pass 2 also describes a driving beat with snare."
+    },
+    {
+      "claim": "Voice is clear and full, slight rasp, powerful and direct",
+      "verdict": "supported",
+      "note": "All three passes agree on clear, full and slight rasp. Passes 1 and 3 say powerful and direct, and pass 2 says strong and belted."
+    },
+    {
+      "claim": "Harmonies join in unison and thicken the lead",
+      "verdict": "corrected",
+      "note": "Unison harmonies are supported by all passes. 'Join' implied order, so it now says the harmonies double the lead."
+    },
+    {
+      "claim": "Clean, polished sound with a natural room around it",
+      "verdict": "supported",
+      "note": "All passes say polished or clean, and passes 1, 2 and 3 describe room or open space."
+    },
+    {
+      "claim": "The arrangement keeps adding weight",
+      "verdict": "supported",
+      "note": "All three passes describe a build from added instruments and harmonies. Softened slightly."
+    },
+    {
+      "claim": "Burnett's roots-music ear; Americana ballad / folk-rock",
+      "verdict": "supported",
+      "note": "Lineage note: Burnett is known for roots-music production, and the song is a folk-rock and Americana ballad."
+    },
+    {
+      "claim": "Readings of the confession, the pride and need, and the fit of Carlile singing another person's words",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics and the credit facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2117,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013317,
+        "detail": "1099 in / 132 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013017,
+        "detail": "1099 in / 120 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013392,
+        "detail": "1099 in / 135 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081844,
+        "detail": "24632 in / 1258 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07414,
+        "detail": "3270 in / 3053 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051736,
+        "detail": "4428 in / 4288 out"
+      }
+    ]
+  }
+}

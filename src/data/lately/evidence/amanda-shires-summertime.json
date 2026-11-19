@@ -1,0 +1,230 @@
+{
+  "spotifyId": "5Pk3W4zR90oKigFXvDpVaa",
+  "reviewedAt": "2026-11-19T04:02:40.398Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/18340700"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated accompaniment. A bass guitar plays a walking bass line. A piano plays chords. A violin plays sustained notes.\n\nTempo and groove:\nThe tempo is slow. The groove is a gentle, swaying feel.\n\nVocals:\nThe lead vocalist has a clear, smooth voice. The delivery is relaxed and expressive. There are harmonies in the chorus, with a second voice joining in unison or close harmony.\n\nProduction:\nThe room sounds open, with a slight reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the full instrumentation. The lead vocal is present throughout. The harmonies enter during the chorus sections. No instruments drop out or build significantly within this excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated accompaniment. A bass guitar plays a walking bass line. A violin plays sustained notes and fills. A piano plays chords.\n\nTempo and Groove:\nThe tempo is slow. The groove feels like a gentle, relaxed swing.\n\nVocals:\nThe lead voice is smooth and clear, with a slight vibrato. The delivery is calm and expressive. Harmonies are present, with a second voice joining in a lower register, creating a warm blend.\n\nProduction:\nThe room sounds open, with a natural reverb. The texture is clean and polished.\n\nArrangement:\nThe acoustic guitar and bass establish the foundation. The violin enters with sustained notes and then plays a short melodic fill. The piano provides harmonic support. The lead voice is present throughout, with the second voice joining for harmonies on specific phrases. No instruments drop out or build significantly within this excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated accompaniment. An upright bass plays a walking bass line. A fiddle plays sustained notes and fills. A piano plays chords.\n\nTempo and Groove:\nThe tempo is slow. The groove is a gentle, swinging feel.\n\nVocals:\nThe lead vocalist has a clear, slightly breathy voice. The delivery is smooth and expressive. There are harmonies with a second vocalist, often in unison or parallel thirds, creating a full sound.\n\nProduction:\nThe room sounds open with a natural reverb. The texture is warm and organic. The production is polished, with instruments and vocals well-balanced.\n\nArrangement:\nThe excerpt begins with the full ensemble. The lead vocal is prominent throughout. The fiddle provides melodic counterpoints and fills between vocal phrases. The piano and guitar maintain a consistent harmonic and rhythmic foundation. No instruments drop out or build significantly within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Summertime\" is the lead single from Amanda Shires and Bobbie Nelson's collaborative album Loving You, which came out June 23, 2023 on Silver Knife/ATO Records. Willie Nelson sings on the track.",
+        "source": "https://www.jambase.com/article/amanda-shires-bobbie-nelson-loving-you-album-summertime-cover"
+      },
+      {
+        "claim": "The song is a cover of George Gershwin's \"Summertime.\" Willie Nelson, Bobbie's younger brother, guests on vocals.",
+        "source": "https://www.brooklynvegan.com/amanda-shires-the-late-bobbie-nelson-announce-collab-lp-share-summertime-ft-willie-nelson/"
+      },
+      {
+        "claim": "The album was produced by Lawrence Rothman and Amanda Shires. Bobbie Nelson plays piano, and Shires sings and plays fiddle. Willie Nelson sings on track 4, \"Summertime.\"",
+        "source": "https://en.wikipedia.org/wiki/Loving_You_(Amanda_Shires_and_Bobbie_Nelson_album)"
+      },
+      {
+        "claim": "The \"Summertime\" video was co-directed by Shires and Deren Ney. It was filmed during the album sessions at Arlyn Studios in Austin, Texas. Arlyn is run by Bobbie's son Freddy Fletcher, who also played drums on the album.",
+        "source": "https://www.jambase.com/article/amanda-shires-bobbie-nelson-loving-you-album-summertime-cover"
+      },
+      {
+        "claim": "Shires said Bobbie Nelson died on March 10, 2022, just months after the two spent 6 days together in Austin recording the album.",
+        "source": "https://jambands.com/news/2023/04/26/amanda-shires-and-late-bobbie-nelson-announce-collaborative-lp-loving-you-share-single-summertime-featuring-willie-nelson/"
+      },
+      {
+        "claim": "Shires said Bobbie related to the song because she was a mother and the family unit was important to her, whether or not she had the idealized version.",
+        "source": "https://www.brooklynvegan.com/amanda-shires-the-late-bobbie-nelson-announce-collab-lp-share-summertime-ft-willie-nelson/"
+      },
+      {
+        "claim": "Shires recalled that after the two agreed to make a whole record, Bobbie said the next song would be \"Summertime.\"",
+        "source": "https://holler.country/feature/amanda-shires-blowing-on-embers/"
+      },
+      {
+        "claim": "Bobbie and Willie Nelson had already recorded \"Summertime\" for Willie's Grammy-winning 2016 album Summertime: Willie Nelson Sings Gershwin.",
+        "source": "https://guitargirlmag.com/news/music-news/amanda-shires-announces-collaborative-record-with-the-late-bobbie-nelson/"
+      },
+      {
+        "claim": "The album grew out of the sessions for Shires' 2022 solo album Take It Like a Man. She booked studio time with Bobbie for \"Always on My Mind\" because \"the only piano that fits that song is Bobbie's.\" They then decided to make a full album together.",
+        "source": "https://stereogum.com/2224664/amanda-shires-bobbie-nelson-always-on-my-mind/news"
+      },
+      {
+        "claim": "Consequence described the track as giving the jazz standard a southern twang, with Shires' fiddle over Bobbie's piano and Shires' bright soprano set against Willie's deep voice.",
+        "source": "https://consequence.net/2023/04/amanda-shires-bobbie-nelson-loving-you-summertime/"
+      }
+    ],
+    "lineage": "The track sits in the Texas country/Americana tradition, reworking a Gershwin jazz standard in the Nelson family's blend of country, gospel and standards.",
+    "genres": [
+      "country",
+      "americana",
+      "traditional pop"
+    ]
+  },
+  "draft": "In **Summertime**, a fiddle holds long notes and slips short fills between the sung lines, fingerpicked acoustic guitar rolls underneath, and a walking bass steps along at a slow, swaying pace. Bobbie Nelson's piano lays down plain, steady chords. The room is open and a little reverberant, and everything is clean, unhurried and close. It sounds like a lullaby because it is one. By the time anyone heard it, the woman at the piano was gone.\n\nAmanda Shires and Bobbie Nelson spent six days together in Austin making the album *Loving You*, and Bobbie died on March 10, 2022, a few months later. The record started almost by accident. During the sessions for Shires' *Take It Like a Man*, Shires booked time with Bobbie for \"Always on My Mind\" because, as she put it, \"the only piano that fits that song is Bobbie's.\" Once they agreed to make a whole album, Shires recalled, Bobbie named the next song herself: \"Summertime.\" She'd already cut it with her younger brother Willie for his Gershwin record, *Summertime: Willie Nelson Sings Gershwin*. Here Willie comes back to sing on it again, so the Nelson siblings' long habit of treating jazz standards like country and gospel hymns gets one more pass.\n\nGershwin's lyric is a promise no parent can fully keep. \"So hush, little baby\" is the job of a lullaby: calm the child, make the world sound safe. The second verse carries the real weight. The child will someday \"take to the sky,\" but until then, nothing will harm them, \"Not with your daddy and your mama / Standin' by.\" Shires said Bobbie loved the song because she was a mother and family mattered to her, \"whether or not she had the idealized version.\" That clause is the key. The song describes a home where daddy's rich and mama's good-looking, and it's sung by people who know homes rarely look like that. The comfort isn't a lie. It's a wish said out loud on behalf of someone smaller.\n\nThe voices carry that double feeling. Shires' bright soprano, clear and smooth, sits against Willie's deep voice, and the harmonies settle in warmly on the phrases they share. Nobody pushes. The arrangement never builds, and the song ends the way lullabies end, circling \"the livin' is easy\" until it lands back on \"don't you cry.\" The sessions happened at Arlyn Studios, which is run by Bobbie's son, Freddy Fletcher. So the family really was standing by while it was made.\n\nThe song gets to you because it's a promise of protection sung by someone who won't be there to keep it, and the tenderness doesn't waver at all.",
+  "factCheck": [
+    {
+      "claim": "Fiddle holds long notes and slips in short fills between sung lines",
+      "verdict": "supported",
+      "note": "All three passes give sustained notes. Passes 2 and 3 give fills, and pass 3 places them between vocal phrases."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar rolls underneath; walking bass; slow, swaying pace",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Bobbie Nelson's piano lays down plain, steady chords",
+      "verdict": "supported",
+      "note": "All passes have piano chords, and Bobbie plays piano on the album."
+    },
+    {
+      "claim": "Room is open and a little reverberant, clean and unhurried",
+      "verdict": "supported",
+      "note": "All passes agree on open room, reverb and a clean texture. The slow tempo and relaxed delivery back 'unhurried'."
+    },
+    {
+      "claim": "The sound is 'close'",
+      "verdict": "removed",
+      "note": "Not stated in the listening notes."
+    },
+    {
+      "claim": "It is a lullaby; the woman at the piano was gone by the time anyone heard it",
+      "verdict": "supported",
+      "note": "The lyric ('hush, little baby') is a lullaby. Bobbie died March 2022 and the single came out April 2023."
+    },
+    {
+      "claim": "Six days in Austin making Loving You; Bobbie died March 10, 2022, months later",
+      "verdict": "supported",
+      "note": "Shires' statement as reported."
+    },
+    {
+      "claim": "Record started 'almost by accident'",
+      "verdict": "corrected",
+      "note": "Reworded to say it grew out of the Take It Like a Man sessions, which the facts support."
+    },
+    {
+      "claim": "Shires booked time for 'Always on My Mind'; quote 'the only piano that fits that song is Bobbie's'",
+      "verdict": "supported",
+      "note": "The quote matches."
+    },
+    {
+      "claim": "Bobbie named the next song, 'Summertime', after they agreed to a full album",
+      "verdict": "supported",
+      "note": "Shires' recollection."
+    },
+    {
+      "claim": "Bobbie had already cut it with younger brother Willie for his Gershwin record",
+      "verdict": "supported",
+      "note": "Summertime: Willie Nelson Sings Gershwin (2016). Willie is Bobbie's younger brother."
+    },
+    {
+      "claim": "Willie sings on it again",
+      "verdict": "supported",
+      "note": "Willie guests on vocals."
+    },
+    {
+      "claim": "Nelson siblings' long habit of treating jazz standards like country and gospel hymns",
+      "verdict": "corrected",
+      "note": "Overstated. Reworded to the Nelson family's blend of country, gospel and standards, as in the lineage note."
+    },
+    {
+      "claim": "'Gershwin's lyric'",
+      "verdict": "corrected",
+      "note": "The song is a cover of a Gershwin song, but lyric authorship is not in the facts. Changed to 'the lyric'."
+    },
+    {
+      "claim": "Lyric quotes: 'So hush, little baby'; 'Not with your daddy and your mama / Standin' by'",
+      "verdict": "supported",
+      "note": "Exact matches."
+    },
+    {
+      "claim": "Quotes of 'take to the sky' and 'the livin' is easy', plus the extra lyric fragments",
+      "verdict": "removed",
+      "note": "Quotes trimmed to three; these became paraphrase. 'Don't you cry' is kept as the closing quote."
+    },
+    {
+      "claim": "Shires said Bobbie loved the song because she was a mother and family mattered, 'whether or not she had the idealized version' (in quotation marks)",
+      "verdict": "corrected",
+      "note": "The substance is supported, but the packet paraphrases Shires. Quote marks removed."
+    },
+    {
+      "claim": "The song is sung by people who know homes rarely look like that",
+      "verdict": "removed",
+      "note": "Attributes knowledge and feeling to the artists beyond what the words show. Replaced with a reading of the lyric itself."
+    },
+    {
+      "claim": "Shires' bright soprano against Willie's deep voice",
+      "verdict": "removed",
+      "note": "Comes from a review, not from two listening passes. Replaced with the lead voice being clear and smooth and a second voice joining."
+    },
+    {
+      "claim": "Harmonies settle in warmly on phrases they share",
+      "verdict": "corrected",
+      "note": "Passes agree on harmonies with a second voice, close to the lead or in unison. 'Warmly' is dropped as only partly supported."
+    },
+    {
+      "claim": "Arrangement never builds",
+      "verdict": "removed",
+      "note": "A claim about the whole song's arc, which the short excerpt cannot support."
+    },
+    {
+      "claim": "The song closes circling 'the livin' is easy' back to 'don't you cry'",
+      "verdict": "supported",
+      "note": "The lyric structure ends with 'So hush, little baby / Don't you cry'."
+    },
+    {
+      "claim": "Sessions at Arlyn Studios, run by Bobbie's son Freddy Fletcher",
+      "verdict": "supported",
+      "note": "The video was filmed during the album sessions at Arlyn."
+    },
+    {
+      "claim": "'Sung by someone who won't be there to keep it'",
+      "verdict": "corrected",
+      "note": "Bobbie plays piano and is not confirmed as a singer. Changed to 'played by'."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2125,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014788,
+        "detail": "1106 in / 190 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00056132,
+        "detail": "1106 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014813,
+        "detail": "1106 in / 191 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08347,
+        "detail": "23865 in / 1574 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.059916,
+        "detail": "3919 in / 2212 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06559,
+        "detail": "5100 in / 5539 out"
+      }
+    ]
+  }
+}

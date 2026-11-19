@@ -1,0 +1,195 @@
+{
+  "spotifyId": "6QDlws92UsMV5skj4pmxVL",
+  "reviewedAt": "2026-11-19T15:29:14.900Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/10336998"
+  },
+  "listening": "Pass 1:\nInstruments include an acoustic guitar, a bass guitar, and a drum kit. The acoustic guitar plays a fingerpicked arpeggiated pattern. The bass plays a walking line. The drums play a slow, simple beat with a snare hit on beats two and four, and a kick drum on one and three. The tempo is slow, with a gentle, swaying groove.\n\nThe lead vocal is a male voice, delivered in a high, clear, and slightly breathy tone. It is sung with a gentle vibrato. There are no harmonies.\n\nThe production has a raw, unpolished texture. The room sound is present, suggesting a natural acoustic space.\n\nThe arrangement remains consistent throughout the excerpt. All instruments and vocals are present from the beginning and continue without significant changes in dynamics or instrumentation.\n\nPass 2:\nInstruments include an acoustic guitar, a bass, and a drum kit. The guitar plays a fingerpicked arpeggiated pattern. The bass plays a walking line. The drums play a slow, simple beat with brushes on the snare and cymbals. The tempo is slow, with a relaxed, gentle groove.\n\nA single male voice sings the lead melody. The voice is clear and has a slightly breathy quality. The delivery is unhurried and smooth. There are no harmonies.\n\nThe production sounds like a dry, close-mic'd recording, with a clean, polished texture. There is no noticeable room reverb.\n\nThe arrangement is consistent throughout the excerpt. All instruments and vocals are present from the beginning and continue to the end without any significant changes in dynamics or instrumentation.\n\nPass 3:\nInstruments include an acoustic guitar, a bass guitar, and a drum kit. The acoustic guitar plays a fingerpicked arpeggiated pattern. The bass plays a walking line. The drums play a slow, simple beat with brushes on the snare, and a kick drum. The tempo is slow, with a relaxed, gentle groove.\n\nThe lead vocal is a male voice, delivered in a high register, with a breathy, slightly strained character. There are harmonies, with a second male voice singing a higher harmony, often in a falsetto.\n\nThe production has a dry, intimate room sound. The texture is clean and clear, with a polished feel.\n\nThe arrangement begins with the acoustic guitar and lead vocal. The bass enters shortly after, followed by the drums. The harmony vocal enters later in the excerpt. No instruments drop out or build significantly within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Waiting Around to Die\" is a cover of a Townes Van Zandt song. The Bandcamp credits list Van Zandt as the writer, published by Bug Music / Silver Dollar Music.",
+        "source": "https://mamabird.bandcamp.com/album/housebroken-man"
+      },
+      {
+        "claim": "Jim James of My Morning Jacket appears on the Quiet Life EP on this cover.",
+        "source": "https://theboot.com/quiet-life-housebroken-man/"
+      },
+      {
+        "claim": "Jim James plays bass guitar on Quiet Life's version, according to the video description.",
+        "source": "https://www.youtube.com/watch?v=ykh0uvffMvI"
+      },
+      {
+        "claim": "The track is credited as 'Waiting Around to Die (with Jim James)' and runs 4:44. Jim James appears courtesy of ATO Records.",
+        "source": "https://mamabird.bandcamp.com/album/housebroken-man"
+      },
+      {
+        "claim": "'Housebroken Man' and 'Waiting Around To Die' were recorded by Adam Selzer at Type Foundry in Portland, OR.",
+        "source": "https://mamabird.bandcamp.com/album/housebroken-man"
+      },
+      {
+        "claim": "Mama Bird's SoundCloud page for the title track says it was mixed by Greg Giorgio at Tarquin Studios in Bridgeport, CT. That page covers the EP's title track, not this song specifically.",
+        "source": "https://soundcloud.com/mamabirdrecordingco/housebroken-man"
+      },
+      {
+        "claim": "The Housebroken Man EP came out August 12, 2014 on Mama Bird Recording. It was recorded at five studios, in Portland, New England, South Carolina, Toronto and Nashville.",
+        "source": "https://theboot.com/quiet-life-housebroken-man/"
+      },
+      {
+        "claim": "Frontman Sean W. Spellman said the EP's songs were written when a lot of things were in flux, at weird or rough times in certain relationships.",
+        "source": "https://theboot.com/quiet-life-housebroken-man/"
+      },
+      {
+        "claim": "A review says the EP closes with the Townes Van Zandt cover, with an assist from Jim James. The review's reading is that Quiet Life can turn gut checks to gold despite the EP's worries.",
+        "source": "http://www.visiblevoice.net/new-posts/quiet-life-housebroken-man.html"
+      },
+      {
+        "claim": "Quiet Life were born in New London, CT and are based in Portland, OR. AllMusic describes them as Pacific Northwest Americana in the vein of the Lumineers, Head and the Heart, Shovels & Rope and Trampled by Turtles. Their discography includes Act Natural (2007), Big Green (2011), Wild Pack (2013) and Foggy (2016).",
+        "source": "https://www.allmusic.com/artist/quiet-life-mn0001562006"
+      }
+    ],
+    "lineage": "Quiet Life is a roots-rock and Americana band that moved from Connecticut to Portland, Oregon. Here it covers a classic by the Texas songwriter Townes Van Zandt, with a guest from My Morning Jacket.",
+    "genres": [
+      "roots rock",
+      "americana",
+      "country rock"
+    ]
+  },
+  "draft": "The cruelest line in **Waiting Around to Die** isn't about death. It sits in the second verse, tossed off in a list of relatives: \"He beat her with a belt once 'cause she cried.\" The mother heads to Tennessee, asks the father to take care of the kid, and the song moves on without a pause. That's the method of this Townes Van Zandt song. Terrible things get one line each, and the narrator keeps walking.\n\nQuiet Life, the Americana band born in New London, Connecticut and settled in Portland, Oregon, close their Housebroken Man EP with it. Adam Selzer recorded it at Type Foundry in Portland, and the band doesn't try to roughen it up. An acoustic guitar fingerpicks a steady arpeggio. The drums keep a slow, simple beat with brushes on the snare. The walking bass line comes from Jim James of My Morning Jacket. The recording is dry and clean, the voice set close, high and a little breathy. It sways. Nothing in the band flinches at what the words are saying, and that calm is what lets the words land.\n\nThe refrain carries the song. \"It's easier than just a-waitin' 'round to die\" is the narrator's excuse for everything: the gambling and the booze, the girl in a Tuscaloosa bar who cleaned him out, the wine and the train, the robbery that ends with a posse dragging him back to Muskogee. Each verse is another escape, defended the same way. There's a drifter's pride in that line, a shrug, and under it someone who has never had a reason to stay anywhere. By the prison verse the refrain stops being a choice. The waiting is just two long years of it.\n\nThen the last verse turns the whole song. Out of prison, he finally has a friend who doesn't steal or cheat or drink or lie. \"His name's Codeine, he's the nicest thing I've seen.\" It plays like a joke, and it's the saddest thing in the song, because his idea of kindness is built from everyone who failed him. He's done running. The plan now is to wait.\n\nFrontman Sean W. Spellman has said the EP's songs came from a time when a lot was in flux, with rough stretches in certain relationships. Quiet Life play this borrowed song gently, and that's the right call. The softness keeps you sitting next to the man instead of looking down at him.\n\nIt sticks because a man describes his whole ruined life in the same soft, swaying voice he'd use to introduce a friend, and by the end you realize that's exactly what he's doing.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"He beat her with a belt once 'cause she cried.\" Located in the second verse.",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, and it is the second verse."
+    },
+    {
+      "claim": "The mother heads to Tennessee and asks the father to take care of the kid.",
+      "verdict": "supported",
+      "note": "Matches 'She told him to take care of me, she headed down to Tennessee.'"
+    },
+    {
+      "claim": "It is a Townes Van Zandt song.",
+      "verdict": "supported",
+      "note": "Bandcamp credits list Van Zandt as the writer."
+    },
+    {
+      "claim": "Quiet Life are an Americana band born in New London, CT and settled in Portland, OR.",
+      "verdict": "supported",
+      "note": "AllMusic and the lineage note."
+    },
+    {
+      "claim": "They close the Housebroken Man EP with this song.",
+      "verdict": "supported",
+      "note": "The Visible Voice review says the EP closes with the Van Zandt cover."
+    },
+    {
+      "claim": "Adam Selzer recorded it at Type Foundry in Portland.",
+      "verdict": "supported",
+      "note": "Bandcamp credits."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar arpeggio, slow simple drum beat with brushes on the snare, walking bass line.",
+      "verdict": "supported",
+      "note": "Guitar and bass are agreed by all three passes. Brushes are in passes 2 and 3. The slow, simple beat is in all three."
+    },
+    {
+      "claim": "The walking bass line comes from Jim James of My Morning Jacket.",
+      "verdict": "supported",
+      "note": "The video description says Jim James plays bass guitar on this version, and he is credited on the track."
+    },
+    {
+      "claim": "The recording is dry and clean, and the voice is high and a little breathy.",
+      "verdict": "supported",
+      "note": "Dry and clean are in passes 2 and 3. High is in passes 1 and 3. Breathy is in all three."
+    },
+    {
+      "claim": "The voice is 'set close'.",
+      "verdict": "removed",
+      "note": "Only pass 2 says close-mic'd. Pass 1 says room sound is present."
+    },
+    {
+      "claim": "'It sways' and 'soft, swaying voice'.",
+      "verdict": "corrected",
+      "note": "Only pass 1 says swaying. Changed to the agreed slow, relaxed, gentle feel."
+    },
+    {
+      "claim": "The band doesn't try to roughen it up, and nothing in the band flinches at the words.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the dry, clean, consistent sound the passes agree on."
+    },
+    {
+      "claim": "Lyric quote: \"It's easier than just a-waitin' 'round to die.\"",
+      "verdict": "supported",
+      "note": "Matches the refrain exactly."
+    },
+    {
+      "claim": "The refrain excuses the gambling, booze, Tuscaloosa girl, wine and train, the robbery, and the posse dragging him back to Muskogee. Two long years in prison.",
+      "verdict": "supported",
+      "note": "All in the lyrics."
+    },
+    {
+      "claim": "Lyric quote: \"His name's Codeine, he's the nicest thing I've seen.\" The friend who doesn't steal or cheat or drink or lie.",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. The paraphrase is accurate."
+    },
+    {
+      "claim": "Spellman said the EP's songs came from a time when a lot was in flux, with rough stretches in certain relationships.",
+      "verdict": "corrected",
+      "note": "Supported by The Boot, but it was about the EP's songs being written. Reworded so it isn't implied that this borrowed song was written then."
+    },
+    {
+      "claim": "Interpretive readings: drifter's pride, the joke being the saddest thing, the softness keeps you beside the man, and the closing line.",
+      "verdict": "supported",
+      "note": "Interpretation grounded in the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2032,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014051,
+        "detail": "1102 in / 161 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014026,
+        "detail": "1102 in / 160 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014426,
+        "detail": "1102 in / 176 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.072244,
+        "detail": "19407 in / 1343 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.075672,
+        "detail": "3638 in / 3056 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05106,
+        "detail": "4760 in / 4154 out"
+      }
+    ]
+  }
+}

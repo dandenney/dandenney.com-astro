@@ -1,0 +1,200 @@
+{
+  "spotifyId": "41FUDbrnvoc7RH0APur9jy",
+  "reviewedAt": "2026-11-19T03:53:13.179Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5512721"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays arpeggiated chords with a fingerpicked style. A male voice sings a sustained, wordless melody with a slight vibrato. The tempo is slow, with a gentle, flowing feel. The voice is clear and present, with a natural, unpolished texture. The acoustic guitar continues its arpeggiated pattern. The voice then transitions to singing words, maintaining the same character and delivery. The arrangement remains sparse, with only the voice and acoustic guitar present throughout the excerpt.\n\nPass 2:\nAcoustic guitar plays arpeggiated chords with a fingerpicked style. A male voice sings with a breathy, sustained delivery, using a low register. The tempo is slow. The groove feels like a ballad. The production is clean and polished, with a sense of a medium-sized room. The texture is smooth.\n\nThe acoustic guitar begins the excerpt. The voice enters, singing a sustained \"ooh\" with a slight vibrato. The voice continues with another sustained \"ooh,\" then transitions into sung words. The acoustic guitar continues throughout. No other instruments are heard.\n\nPass 3:\nAcoustic guitar plays arpeggiated chords with a fingerpicked style. A male voice sings with a breathy, sustained delivery, using a low register. The tempo is slow. The groove feels like a ballad. There are no harmonies. The production sounds like a dry, close-miked recording, with a raw texture. The vocals are upfront in the mix. The acoustic guitar plays continuously throughout the excerpt. The male voice enters at the 0:00 mark, singing sustained notes, then drops out briefly before re-entering at the 0:19 mark with a more melodic phrase.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Lee DeWyze wrote \"Blackbird Song\" for AMC's The Walking Dead. It was used in Season 4, Episode 13, \"Alone\".",
+        "source": "https://www.youtube.com/watch?v=Wbgb3lgMluA"
+      },
+      {
+        "claim": "Qobuz credits Lee DeWyze as composer/lyricist, producer, and mixer of the track. It lists the track at 4:14 and the label as Vanguard Records (Welk Music Group).",
+        "source": "https://www.qobuz.com/us-en/album/blackbird-song-lee-dewyze/0001570783805"
+      },
+      {
+        "claim": "DeWyze came up with the idea of writing a song for the series after it had run a few seasons. He had not been interested in watching it in its early days.",
+        "source": "https://www.hollywoodreporter.com/music/music-news/dead-man-singing-lee-dewyze-699083/"
+      },
+      {
+        "claim": "DeWyze wrote the song in his living room and finished it over two evenings.",
+        "source": "https://www.hollywoodreporter.com/music/music-news/dead-man-singing-lee-dewyze-699083/"
+      },
+      {
+        "claim": "DeWyze wrote the song without any guarantee it would be used. He pushed Welk Music Group's Fred Jasper, VP of TV/Film Licensing, to submit it to the show.",
+        "source": "https://undeadwalking.com/2015/01/26/blackbird-song-walking-dead-video/"
+      },
+      {
+        "claim": "The song plays at the beginning and end of \"Alone\", for about four minutes of airtime in total. It soundtracks a flashback to Bob Stookey's solitary wandering before he joined Rick's group.",
+        "source": "https://www.hollywoodreporter.com/music/music-news/dead-man-singing-lee-dewyze-699083/"
+      },
+      {
+        "claim": "\"Alone\" aired on AMC on March 9, 2014. The song debuted at number 29 on Billboard's Pop Digital Songs chart and appears on The Walking Dead (AMC Original Soundtrack), Vol. 2.",
+        "source": "https://en.wikipedia.org/wiki/Alone_(The_Walking_Dead)"
+      },
+      {
+        "claim": "One reviewer describes the track as heavy on acoustic guitar and violin, with DeWyze's vocals as the centerpiece.",
+        "source": "https://undeadwalking.com/2015/01/26/blackbird-song-walking-dead-video/"
+      },
+      {
+        "claim": "DeWyze performed the song live at The Ark in Ann Arbor, MI, in July 2014.",
+        "source": "https://www.youtube.com/watch?v=O8YQ_-0jLFw"
+      },
+      {
+        "claim": "DeWyze won American Idol season 9 on May 26, 2010. Before that he had released two independent albums, So I'm Told (2007) and Slumberland (2010). He is from Mount Prospect, Illinois, and his influences include Cat Stevens, Eric Clapton, Ben Harper, and Simon & Garfunkel.",
+        "source": "https://www.last.fm/music/Lee+DeWyze/+wiki"
+      }
+    ],
+    "lineage": "Acoustic, folk-leaning singer-songwriter material written for a TV drama, from an American Idol winner who had earlier released independent albums.",
+    "genres": [
+      "alternative",
+      "folk",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "The first thing **Blackbird Song** gives you isn't a word. Over a slow, fingerpicked run of acoustic guitar chords, Lee DeWyze holds a long, wordless \"ooh,\" low and breathy, with just a slight tremble of vibrato at the edges. Only after that hum does the song start speaking, and by then the mood is set: someone is about to say something hard, and gently.\n\nWhat follows is barely a lyric sheet, eight lines with a refrain doing most of the work. The instruction comes first: pack up, get out, the blackbird song is over. Then a set of images flickers past like a town seen through a car window: dry mouths, a running river, \"Hands are tied, preacher sighs.\" That last image is the bleakest thing here. Even the person whose job is comfort has nothing left to offer but a breath.\n\nThen the song turns. \"Don't be scared, I'm still here,\" DeWyze sings, and right behind it, \"No more time for crying dear.\" Both lines are love, and they pull against each other. One holds a hand. The other wipes a face a little too fast. It's the voice of someone who has decided grief is a luxury the moment can't afford. Is the narrator steadying the other person, or steadying themselves by saying it out loud? The song never settles it, and DeWyze's delivery doesn't push either way. The voice stays close and upfront, unhurried, never rising to plead.\n\nDeWyze wrote it for The Walking Dead, a show he admits he hadn't cared about in its early seasons, and he wrote it on spec in his living room over two evenings, with no promise it would be used. He pushed his label's licensing VP, Fred Jasper, to submit it anyway. It landed in Season 4's \"Alone,\" opening and closing the episode over a flashback to Bob Stookey wandering by himself before he found Rick's group. That pairing sharpens the lyric. \"I'm still here\" means something different laid over a man with no one around to say it to him.\n\nDeWyze won American Idol, but this is closer to the records he says shaped him, Cat Stevens and Simon & Garfunkel, than to anything built for a stage. He produced and mixed it himself, and on this ballad that restraint is the right call: guitar, a voice, no harmonies to soften the blow.\n\nIt sticks because it sounds like the calmest person in a bad situation, the one telling you to leave while making sure you know you're not leaving alone.",
+  "factCheck": [
+    {
+      "claim": "The first thing the song gives you isn't a word; the wordless 'ooh' comes before the words ('only after that hum does the song start speaking', 'by then the mood is set')",
+      "verdict": "removed",
+      "note": "Ordering and where things fall in the song can't be established from an excerpt of unknown position. Reframed as the song pairing wordless singing with the words, without sequence."
+    },
+    {
+      "claim": "Slow, fingerpicked acoustic guitar chords",
+      "verdict": "supported",
+      "note": "All three passes: arpeggiated, fingerpicked acoustic guitar, slow tempo."
+    },
+    {
+      "claim": "Long wordless 'ooh', low and breathy, slight vibrato",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on the sustained wordless vocal with slight vibrato. Passes 2 and 3 agree on breathy, low register."
+    },
+    {
+      "claim": "Eight lines with a refrain",
+      "verdict": "removed",
+      "note": "The line count isn't needed and the lyric may be partial. Replaced with a description of the repeated line, which the lyrics do show."
+    },
+    {
+      "claim": "Quote: 'Hands are tied, preacher sighs'",
+      "verdict": "corrected",
+      "note": "The lyric has no comma: 'Hands are tied preacher sighs'."
+    },
+    {
+      "claim": "Quotes: 'Don't be scared, I'm still here' and 'No more time for crying dear'",
+      "verdict": "supported",
+      "note": "Match the lyrics exactly."
+    },
+    {
+      "claim": "Instruction first (pack up, leave, blackbird song is over), then dry mouths and a running river",
+      "verdict": "supported",
+      "note": "Paraphrase of the lyrics, in lyric order."
+    },
+    {
+      "claim": "Voice stays close and upfront, unhurried, never rising to plead",
+      "verdict": "corrected",
+      "note": "Close and upfront is backed by passes 1 and 3, and slow tempo by all passes. 'Never rising to plead' is an arc claim and was dropped."
+    },
+    {
+      "claim": "Wrote it for The Walking Dead, a show he admits he hadn't cared about in early seasons",
+      "verdict": "corrected",
+      "note": "The source says he wasn't interested in watching it early on. 'Admits' was removed."
+    },
+    {
+      "claim": "Wrote it in his living room over two evenings with no promise it would be used",
+      "verdict": "supported",
+      "note": "Hollywood Reporter and undeadwalking."
+    },
+    {
+      "claim": "Pushed 'his label's licensing VP, Fred Jasper' to submit it",
+      "verdict": "corrected",
+      "note": "Fred Jasper is VP of TV/Film Licensing at Welk Music Group. Named that way instead of as 'his label's'."
+    },
+    {
+      "claim": "Used in Season 4's 'Alone', opening and closing the episode over a flashback to Bob Stookey wandering alone before he joined Rick's group",
+      "verdict": "supported",
+      "note": "Source says it plays at the beginning and end of the episode. 'Found' changed to 'joined' to match the source."
+    },
+    {
+      "claim": "DeWyze won American Idol",
+      "verdict": "supported",
+      "note": "Won season 9."
+    },
+    {
+      "claim": "Closer to the records he says shaped him, Cat Stevens and Simon & Garfunkel",
+      "verdict": "corrected",
+      "note": "Last.fm lists these as influences, but there is no sourced statement from him about 'records he says'. Reworded as a comparison to listed influences."
+    },
+    {
+      "claim": "He produced and mixed it himself",
+      "verdict": "supported",
+      "note": "Qobuz credits him as producer and mixer."
+    },
+    {
+      "claim": "Guitar, a voice, no harmonies",
+      "verdict": "corrected",
+      "note": "Only one pass mentions no harmonies. Guitar and voice are supported by the passes, so the harmonies claim was dropped."
+    },
+    {
+      "claim": "Ballad",
+      "verdict": "supported",
+      "note": "Passes 2 and 3."
+    },
+    {
+      "claim": "Readings of the lyric (grief as luxury, steadying self or other, calmest person in the room)",
+      "verdict": "supported",
+      "note": "Interpretation resting on quoted lines."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2419,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012588,
+        "detail": "1106 in / 102 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013013,
+        "detail": "1106 in / 119 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00048382,
+        "detail": "1106 in / 124 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13658599999999999,
+        "detail": "45968 in / 1465 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049788,
+        "detail": "3147 in / 1860 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052452,
+        "detail": "4241 in / 4397 out"
+      }
+    ]
+  }
+}

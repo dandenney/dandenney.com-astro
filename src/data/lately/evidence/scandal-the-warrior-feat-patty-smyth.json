@@ -1,0 +1,205 @@
+{
+  "spotifyId": "2hQnLzly0jRPpLPp23sA4i",
+  "reviewedAt": "2026-11-19T03:52:07.453Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8029635"
+  },
+  "listening": "Pass 1:\nA driving, mid-tempo rock groove is established by a prominent kick drum, snare with reverb, and a steady bass guitar. An electric guitar plays a rhythmic, clean arpeggiated figure, then transitions to a distorted, sustained chord. A lead vocalist sings with a clear, strong voice, delivering the melody with some vibrato. Backing vocals provide harmonies, often in unison or parallel motion with the lead. A synth pad provides sustained chords, adding to the texture. The arrangement builds with the addition of the distorted guitar and backing vocals, creating a fuller sound. The production is polished, with a clear mix and a sense of a large room.\n\nPass 2:\nA driving, mid-tempo rock groove is established by a prominent kick drum, snare, and hi-hat, with a bass guitar playing a root-note-heavy line. An electric guitar plays a rhythmic, palm-muted riff. A synth pad provides sustained chords.\n\nA lead vocalist sings with a clear, strong voice, delivering the melody with a direct, slightly raw quality. Harmonies, sung by multiple voices, join the lead vocalist, often in unison or parallel motion, adding fullness to the choruses.\n\nThe production has a polished, arena-rock feel. The room sound is present but not overly reverberant, creating a sense of space without losing clarity. The texture is full and layered.\n\nThe excerpt begins with the full band and vocals already engaged. The lead vocal is consistently present, with harmonies entering and dropping out to emphasize certain phrases, particularly in the chorus sections. The electric guitar riff is a constant rhythmic element.\n\nPass 3:\nA driving rock tempo is established by a kick drum, snare, and hi-hat, with a prominent bass guitar playing a rhythmic line. An electric guitar plays a sustained chord. A lead voice sings with a clear, strong character, delivering the melody.\n\nAt around 0:06, a second electric guitar enters, playing a more melodic, arpeggiated line. A backing vocal harmony, with a similar character to the lead, joins in, creating a fuller sound. The drums maintain a consistent, driving groove.\n\nThe production has a polished, studio quality, with a clear separation of instruments. The room sound is not overtly present, suggesting a controlled environment. The texture is full and layered, with the guitars and vocals building on the rhythmic foundation. The arrangement remains consistent, with no significant drops or builds within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"The Warrior\" was written by Holly Knight and Nick Gilder and produced by Mike Chapman. It was the lead single from Scandal's 1984 album Warrior, credited as Scandal featuring Patty Smyth.",
+        "source": "https://www.tv80s.com/scandal/feat-patty-smyth-the-warrior/"
+      },
+      {
+        "claim": "Warrior was recorded at The Record Plant in New York City between August 1983 and January 1984. Some recording was also done at MCA-Whitney Studios in Glendale.",
+        "source": "https://www.discogs.com/Scandal-4-Featuring-Patty-Smyth-Warrior/release/5864120"
+      },
+      {
+        "claim": "Album credits list Patty Smyth on vocals, Zack Smith and Keith Mack on guitars and backing vocals, Ivan Elias on bass, Thommy Price on drums and backing vocals, and Peter Wood on synthesizer. William Wittman engineered and mixed.",
+        "source": "https://www.discogs.com/Scandal-4-Featuring-Patty-Smyth-Warrior/release/5864120"
+      },
+      {
+        "claim": "Patty Smyth said producer Mike Chapman, who also wrote with Holly Knight, brought the band \"The Warrior\". Smyth did not write it.",
+        "source": "https://www.songwriteruniverse.com/patty-smyth-interview-2020/"
+      },
+      {
+        "claim": "Patty Smyth loved the song and knew it was a hit. It reached #1 on the rock charts and #7 on the Billboard Hot 100.",
+        "source": "https://altaz933.com/episode/interview-patty-smyth-on-loving-the-warrior-but-hating-its-iconic-mtv-video/"
+      },
+      {
+        "claim": "Smyth said she was pressured into a concept video she didn't want and begged the label not to release it. She had wanted a live performance video. It became a Top 20 video of 1984.",
+        "source": "http://www.classicbands.com/PattySmythInterview.html"
+      },
+      {
+        "claim": "Smyth said in the book I Want My MTV that she was crestfallen when she saw the video. She said she had no idea it would look like an off-Broadway production of Cats.",
+        "source": "https://www.songfacts.com/facts/scandal/the-warrior"
+      },
+      {
+        "claim": "Holly Knight said she had never realised how much the warrior spirit was inside her before writing the song. She described it as standing up for what you believe in and following through.",
+        "source": "https://www.songfacts.com/facts/scandal/the-warrior"
+      },
+      {
+        "claim": "Warrior was Scandal's debut and only full-length studio album. \"The Warrior\" became the band's biggest hit, and the album was certified platinum. Smyth left the group soon afterwards and the band broke up.",
+        "source": "https://www.songwriteruniverse.com/patty-smyth-interview-2020/"
+      },
+      {
+        "claim": "Scandal's first release was the 1982 EP Scandal, which included \"Goodbye to You\". By the time the Warrior tour hit the road in 1984, only Smyth and Keith Mack remained from the original lineup.",
+        "source": "https://en.wikipedia.org/wiki/Scandal_(American_band)"
+      }
+    ],
+    "lineage": "The song is mid-1980s synth-and-guitar pop rock written by Holly Knight, who also wrote \"Love Is a Battlefield\" with Chapman. It sits in the same MTV-era radio-rock lane as Pat Benatar, The Cars and Foreigner.",
+    "genres": [
+      "pop rock",
+      "synth rock",
+      "new wave"
+    ]
+  },
+  "draft": "The whole bargain of **\"The Warrior\"** hangs on three words tucked into the chorus: \"If you survive.\" The song sounds like a victory lap, all swagger and stacked harmonies, but the promise it makes comes with conditions. Heart-to-heart you'll win, Patty Smyth tells the person she's chasing, and then she adds the catch. Love here isn't shelter. It's a test you might not pass.\n\nThe verses play out as a hunt. Smyth's narrator watches someone running from their own heart, calls out their hunger, and dares them to break loose. Then the frame flips: \"Who's the hunter, who's the game?\" That question is the song's most honest moment. For all the chest-out bravado, the singer doesn't know who's in control, and the wanting runs both ways. The key image, \"Shootin' at the walls of heartache,\" says even more. The gunfire isn't aimed at a lover. It's aimed at the hurt itself, the kind of fight you only pick once you've already been wounded. The pride and the pain never settle into one feeling, and the song doesn't try to make them.\n\nHolly Knight and Nick Gilder wrote it, and producer Mike Chapman, who'd written with Knight before, brought it to the band. Knight later said she hadn't realised how much warrior spirit was in her until she wrote it. To her, that spirit meant standing up for what you believe in and following through. Smyth didn't write a word, but she loved it and knew it was a hit. It went to number one on the rock charts and number seven on the Billboard Hot 100.\n\nThe record, cut largely at the Record Plant in New York, earns that confidence. Thommy Price's kick, snare and hi-hat lock in with Ivan Elias's bass for a driving mid-tempo push. The guitars from Zack Smith and Keith Mack shift between a clean arpeggiated figure and big sustained chords. Peter Wood's synth pad fills the space underneath. Smyth's voice is clear and strong. The backing vocals move in parallel with her, thickening the lines they want you to shout back. It's polished, full and built for radio, squarely in the lane of Pat Benatar, The Cars and Foreigner. Knight also co-wrote \"Love Is a Battlefield\" with Chapman, and the titles alone tell you she was working the same idea: romance as combat.\n\nThe song outgrew its costume. Smyth wanted a live performance video and got a concept piece she begged the label not to release. She said it looked like an off-Broadway production of *Cats*. It's a nice irony that a song about refusing to be tamed got dressed up anyway. Warrior was Scandal's only full-length album, and Smyth left soon after.\n\nIt sticks because it lets you feel armored and exposed in the same breath, swinging at heartache while admitting out loud that you might not make it through.",
+  "factCheck": [
+    {
+      "claim": "\"If you survive\" is a line in the chorus; \"Heart-to-heart you'll win\"",
+      "verdict": "supported",
+      "note": "Both lines match the lyrics exactly. They appear together in the repeated refrain."
+    },
+    {
+      "claim": "Patty Smyth tells the person she's chasing...",
+      "verdict": "corrected",
+      "note": "The facts name Smyth as lead vocalist but give no gender. Pronouns removed and the line reworded to \"the person being chased\"."
+    },
+    {
+      "claim": "Verses play out as a hunt: someone running from their own heart, hungry eyes, break loose",
+      "verdict": "supported",
+      "note": "Matches the lyrics (\"You run, run, run away / It's your heart that you betray\", \"Break out of captivity\"). This is interpretation resting on the lyrics."
+    },
+    {
+      "claim": "\"Who's the hunter, who's the game?\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "\"Shootin' at the walls of heartache\"",
+      "verdict": "supported",
+      "note": "Exact lyric. The reading of it is interpretation."
+    },
+    {
+      "claim": "Holly Knight and Nick Gilder wrote it; Mike Chapman, who'd written with Knight before, brought it to the band",
+      "verdict": "supported",
+      "note": "Matches the researched facts, including Smyth's account that Chapman brought the song."
+    },
+    {
+      "claim": "Knight said she hadn't realised how much warrior spirit was in her; she described it as standing up for what you believe in and following through",
+      "verdict": "supported",
+      "note": "Matches the Songfacts-sourced fact."
+    },
+    {
+      "claim": "Smyth didn't write it, loved it, knew it was a hit; #1 on rock charts, #7 on the Hot 100",
+      "verdict": "supported",
+      "note": "All in the researched facts."
+    },
+    {
+      "claim": "Cut largely at the Record Plant in New York",
+      "verdict": "corrected",
+      "note": "The recording location is documented for the album, with some work at MCA-Whitney. Reworded to refer to the album."
+    },
+    {
+      "claim": "Thommy Price's kick, snare and hi-hat lock in with Ivan Elias's bass; guitars from Zack Smith and Keith Mack; Peter Wood's synth",
+      "verdict": "corrected",
+      "note": "These are album-level credits, not track-specific. Rewritten as album credits, with the sound described separately."
+    },
+    {
+      "claim": "Driving mid-tempo push from kick, snare, hi-hat and bass",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Guitars shift between a clean arpeggiated figure and big sustained chords",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 agree on an arpeggiated figure and sustained chords. Only Pass 1 says \"clean\", and Pass 3 has them playing together, so the \"shift between\" sequencing and \"big\" were dropped."
+    },
+    {
+      "claim": "Synth pad fills the space underneath",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a sustained synth pad."
+    },
+    {
+      "claim": "Smyth's voice is clear and strong",
+      "verdict": "supported",
+      "note": "All three passes agree, and the credits list Smyth on vocals."
+    },
+    {
+      "claim": "Backing vocals move in parallel with the lead",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on unison or parallel harmonies."
+    },
+    {
+      "claim": "Polished, full, built for radio; same lane as Pat Benatar, The Cars and Foreigner",
+      "verdict": "supported",
+      "note": "Polish and full texture are backed by the passes, and the lineage note supports the comparison. \"Built for radio\" is opinion."
+    },
+    {
+      "claim": "Knight co-wrote \"Love Is a Battlefield\" with Chapman",
+      "verdict": "supported",
+      "note": "In the lineage note."
+    },
+    {
+      "claim": "Smyth wanted a live performance video, got a concept video she begged the label not to release; said it looked like an off-Broadway production of Cats",
+      "verdict": "supported",
+      "note": "Matches the Classic Bands and Songfacts facts."
+    },
+    {
+      "claim": "Warrior was Scandal's only full-length album; Smyth left soon after",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2856,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014282,
+        "detail": "1104 in / 170 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013357,
+        "detail": "1104 in / 133 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00065196,
+        "detail": "1104 in / 192 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.152398,
+        "detail": "53404 in / 1559 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.074,
+        "detail": "3950 in / 2910 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.055814,
+        "detail": "5187 in / 4544 out"
+      }
+    ]
+  }
+}

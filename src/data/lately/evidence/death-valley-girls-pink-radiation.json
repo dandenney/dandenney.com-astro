@@ -1,0 +1,185 @@
+{
+  "spotifyId": "6QzA7MFUNSayQahj5V7WXv",
+  "reviewedAt": "2026-11-19T03:38:33.202Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nA distorted electric guitar plays a sustained chord, with a second guitar playing a melodic line. A bass guitar plays a root-note pattern. Drums play a driving beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is driving and energetic.\n\nVocals:\nA single voice sings in a high register, with a slightly raw, unpolished character. The delivery is melodic and sustained. No harmonies are present.\n\nProduction:\nThe sound is full and somewhat raw, with a noticeable reverb on the vocals and a slightly gritty texture overall. The production is not overly polished.\n\nArrangement:\nAll instruments and vocals are present from the beginning of the excerpt. There are no significant changes in instrumentation or dynamics within this segment.\n\nPass 2:\nInstruments:\nA distorted electric guitar plays a sustained chord, with a second guitar playing a melodic line. A bass guitar plays a root-note-based line. Drums play a driving beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is driving and steady.\n\nVocals:\nA single voice sings in a high register, with a slightly raw, unpolished character. The delivery is melodic and sustained.\n\nProduction:\nThe sound is full and somewhat raw, with a noticeable amount of reverb on the vocals and guitars, suggesting a larger room or a spacious effect. The overall texture is thick.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocal line repeats throughout, with the guitars and drums maintaining a consistent pattern. No instruments drop out or build significantly within this segment.\n\nPass 3:\nInstruments:\nA distorted electric guitar plays a sustained, open chord. A bass guitar plays a simple, root-note line. Drums play a steady, driving beat with a prominent snare drum.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is driving and energetic, with a consistent, forward momentum.\n\nVocals:\nA single voice sings in a high register, with a slightly strained, almost shouting delivery. The voice has a raw, unpolished character. There are no harmonies.\n\nProduction:\nThe sound is raw and unpolished, with a noticeable amount of reverb, suggesting a larger room or space. The overall texture is thick and somewhat gritty.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt. The arrangement remains consistent throughout, with no noticeable changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Bonnie Bloomgarden is credited as the writer and composer of \"Pink Radiation\".",
+        "source": "https://www.deezer.com/en/artist/6557219"
+      },
+      {
+        "claim": "\"Pink Radiation\" is track 5 on Death Valley Girls' album Glow in the Dark, released June 10, 2016, and runs about five minutes.",
+        "source": "https://deathvalleygirls.bandcamp.com/album/glow-in-the-dark"
+      },
+      {
+        "claim": "Glow in the Dark first came out in 2016 on Burger Records (BRGR933). Suicide Squeeze Records reissued it on vinyl in 2021 (SSQ180).",
+        "source": "https://www.discogs.com/release/19994218-Death-Valley-Girls-Glow-In-The-Dark"
+      },
+      {
+        "claim": "The album was recorded at Station House Studio by Mark Rains. Only one song, \"Death Valley Boogie\", was recorded elsewhere (Valley Recording Co., by Joe Cardamone), so \"Pink Radiation\" was a Station House session.",
+        "source": "https://antonesrecordshop.com/products/death-valley-girls-glow-in-the-dark-lp-album-re-neo"
+      },
+      {
+        "claim": "Bonnie Bloomgarden said the album was recorded over two days with engineer Mark Rains at Station House Studio in Echo Park, California. She described the experience as kind of cosmic.",
+        "source": "https://newnoisemagazine.com/interviews/interview-death-valley-girls-outer-space-3/"
+      },
+      {
+        "claim": "Album credits list Alana Amram, Bonnie Bloomgarden, Jessie Jones, Larry Schemel and Laura Kelsey as performers. Jim Kissling mastered the record.",
+        "source": "https://www.discogs.com/release/19994218-Death-Valley-Girls-Glow-In-The-Dark"
+      },
+      {
+        "claim": "The band said they made the songs to introduce rock & roll to the dead, then chose to introduce it to the living. Glow in the Dark was recorded as a call to arms for other concepts they were working on.",
+        "source": "https://kspc.org/interview-death-valley-girls/"
+      },
+      {
+        "claim": "Glow in the Dark was the band's second full-length. It documented lineup changes: Alana Amram replaced Rachel Orosco on bass, and Jessie Jones joined to share vocals with Bloomgarden.",
+        "source": "https://www.allmusic.com/artist/death-valley-girls-mn0003280118"
+      },
+      {
+        "claim": "Death Valley Girls are a Los Angeles rock band formed in 2013. Their later albums Darkness Rains (2018), Under the Spell of Joy (2020) and Islands in the Sky (2023) came out on Suicide Squeeze.",
+        "source": "https://www.allmusic.com/artist/death-valley-girls-mn0003280118"
+      },
+      {
+        "claim": "The band shot a video for \"Disco\" from this album with Kansas, who later made the video for \"Disaster (Is What We're After)\" from Darkness Rains.",
+        "source": "http://altcitizen.com/death-valley-girls-interview/"
+      }
+    ],
+    "lineage": "Death Valley Girls sit in the Los Angeles garage and punk rock underground, tied to Burger Records and later Suicide Squeeze, and one interviewer described them as a proto-punk, rock 'n' roll gang.",
+    "genres": [
+      "garage rock",
+      "alternative rock",
+      "indie rock"
+    ]
+  },
+  "draft": "**Pink Radiation** is built on a held chord. A distorted electric guitar sustains it while a second guitar picks out a melodic line on top, the bass stays on root notes, and the drums push a medium-fast beat with the snare sitting right at the front. Over that, one voice sings high and sustained, raw at the edges, with no harmony to soften it. The reverb on the voice and guitars makes the room feel larger than a garage, but the grit stays. The parts lock into a pattern and hold it, and that steadiness is where the song gets its pull.\n\nThere's a reason it sounds like a summons. Death Valley Girls have said they made these songs to introduce rock & roll to the dead, then decided to introduce it to the living instead, and that **Glow in the Dark** was recorded as a call to arms. That's a joke and a mission statement at once, and this track takes the mission part seriously. The single unharmonized voice, stretched over a beat that won't let up, sounds less like a performance and more like calling out across a long distance and expecting to be heard.\n\nThe circumstances help. Bonnie Bloomgarden, credited as the song's writer, said the album was cut over two days with engineer Mark Rains at Station House Studio in Echo Park, and described the experience as kind of cosmic. You can hear the two-day speed in how little the track is fussed over. Nothing is polished down, and the thick, gritty texture sounds like a band playing in one room rather than a stack of overdubs. Glow in the Dark was the band's second full-length and documented a changing lineup, with Alana Amram arriving on bass and Jessie Jones joining to share vocals with Bloomgarden. The credits also list Larry Schemel and Laura Kelsey.\n\nThe record first came out on Burger Records, the label at the center of the Los Angeles garage underground, and one interviewer called the band a proto-punk, rock 'n' roll gang. That fits. This is the proto-punk idea that a few chords and a fixed beat, repeated with total conviction, can carry more feeling than a clever arrangement. At five minutes, the song gives that repetition room to build into a kind of trance instead of a quick blast.\n\nWhat makes it stick is the devotion: one voice and a riff that won't quit, believing hard enough that you end up believing with them.",
+  "factCheck": [
+    {
+      "claim": "A distorted electric guitar sustains a held chord while a second guitar plays a melodic line; bass stays on root notes; drums play a medium-fast driving beat with a prominent snare.",
+      "verdict": "supported",
+      "note": "All passes agree on the sustained chord, root-note bass, driving medium-fast beat and prominent snare. Passes 1 and 2 both give the second melodic guitar."
+    },
+    {
+      "claim": "One voice sings high and sustained, raw, with no harmony.",
+      "verdict": "supported",
+      "note": "All passes give a single high, raw voice. Passes 1 and 3 state there are no harmonies."
+    },
+    {
+      "claim": "Reverb on the voice and guitars makes the room feel larger than a garage.",
+      "verdict": "corrected",
+      "note": "Only pass 2 mentions reverb on the guitars, so it now refers to the voice only. Reverb on the voice and a larger-room feel are backed by multiple passes. 'Than a garage' was a comparison the notes don't support and was dropped."
+    },
+    {
+      "claim": "Gritty, thick texture; parts lock into a pattern and hold it.",
+      "verdict": "supported",
+      "note": "Gritty and thick are each backed by two passes. The consistent pattern is backed by passes 1–3."
+    },
+    {
+      "claim": "Death Valley Girls have said they made these songs to introduce rock & roll to the dead, then decided to introduce it to the living; Glow in the Dark was recorded as a call to arms.",
+      "verdict": "supported",
+      "note": "Matches the KSPC interview. The packet says 'for other concepts they were working on', and the interpretive gloss stays as the critic's reading."
+    },
+    {
+      "claim": "Bonnie Bloomgarden is credited as the song's writer.",
+      "verdict": "supported",
+      "note": "Deezer credit."
+    },
+    {
+      "claim": "The album was cut over two days with engineer Mark Rains at Station House Studio in Echo Park; she described it as kind of cosmic.",
+      "verdict": "supported",
+      "note": "New Noise interview."
+    },
+    {
+      "claim": "The thick, gritty texture sounds like a band playing in one room rather than a stack of overdubs.",
+      "verdict": "removed",
+      "note": "Nothing in the packet supports a claim about overdubs or how the track was tracked."
+    },
+    {
+      "claim": "Glow in the Dark was the second full-length and documented a changing lineup, with Alana Amram arriving on bass and Jessie Jones joining to share vocals with Bloomgarden.",
+      "verdict": "supported",
+      "note": "AllMusic."
+    },
+    {
+      "claim": "The credits also list Larry Schemel and Laura Kelsey.",
+      "verdict": "supported",
+      "note": "Discogs performer credits."
+    },
+    {
+      "claim": "The record first came out on Burger Records, the label at the center of the Los Angeles garage underground.",
+      "verdict": "corrected",
+      "note": "First release on Burger is supported. 'Label at the center of the scene' is unsupported. The packet only ties the band to Burger and the LA garage and punk underground."
+    },
+    {
+      "claim": "One interviewer called the band a proto-punk, rock 'n' roll gang.",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "This is the proto-punk idea that a few chords and a fixed beat, repeated with total conviction, can carry more feeling than a clever arrangement.",
+      "verdict": "corrected",
+      "note": "Dropped the genre-history claim and the 'few chords' detail. Reframed as an interpretation about repetition and conviction."
+    },
+    {
+      "claim": "At five minutes, the song gives repetition room to build into a trance.",
+      "verdict": "corrected",
+      "note": "Length of about five minutes is supported. 'Build' implied an arc over the song, so it was changed to 'settle'."
+    },
+    {
+      "claim": "Closing line: a riff that won't quit.",
+      "verdict": "corrected",
+      "note": "Changed 'riff' to 'guitar line' to match the described sound. The rest is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1744,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014014,
+        "detail": "1098 in / 160 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014264,
+        "detail": "1098 in / 170 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014314,
+        "detail": "1098 in / 172 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078556,
+        "detail": "21238 in / 1608 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.045496,
+        "detail": "3384 in / 1598 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046084,
+        "detail": "4442 in / 3720 out"
+      }
+    ]
+  }
+}

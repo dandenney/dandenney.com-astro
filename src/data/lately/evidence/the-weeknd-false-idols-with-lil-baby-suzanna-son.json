@@ -1,0 +1,220 @@
+{
+  "spotifyId": "6cViXqp01e3FrAaseuiSAV",
+  "reviewedAt": "2026-11-19T03:59:04.227Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5713265"
+  },
+  "listening": "Pass 1:\nInstruments:\nA male voice raps over a trap beat. The beat features a sustained, low-pitched synth pad, a hi-hat playing a fast, consistent rhythm, a snare drum on the two and four, and a kick drum playing a syncopated pattern.\n\nTempo and Groove:\nThe tempo is moderate. The groove is laid-back and steady.\n\nVocals:\nThe male voice has a clear, slightly nasal quality. He delivers the rap with a confident, rhythmic flow, using some vocal fry. There are no harmonies.\n\nProduction:\nThe production is clean and polished. The vocals are upfront and clear. The synth pad provides a smooth, atmospheric texture. The drums are crisp and punchy.\n\nArrangement:\nThe excerpt begins with the full beat and the male rapper. No elements drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA sustained, low-pitched synth pad plays throughout. A drum machine provides a steady, mid-tempo beat with a prominent kick and snare. A high-pitched synth melody plays intermittently.\n\nTempo and Groove:\nThe tempo is mid-tempo. The groove is steady and laid-back.\n\nVocals:\nA male voice delivers a rap in a clear, somewhat monotone style. The delivery is rhythmic and conversational. There are no harmonies.\n\nProduction:\nThe production is clean and polished. The sound is dry with minimal reverb, suggesting a close-mic’d feel. The texture is smooth.\n\nArrangement:\nThe synth pad and drum machine are present throughout. The rap vocals enter early and continue. The high-pitched synth melody enters and drops out, providing melodic accents. No significant builds or drops occur within the excerpt.\n\nPass 3:\nInstruments:\nA male voice raps over a trap beat with a prominent, deep 808 bass drum and a hi-hat playing a fast, consistent pattern. A synth pad plays sustained chords.\n\nTempo and Groove:\nThe tempo is moderate, with a laid-back, confident groove. The hi-hat’s quick rhythm adds a sense of urgency.\n\nVocals:\nThe male voice has a clear, slightly nasal character. He delivers the lyrics with a confident, rhythmic flow, using a conversational tone. There are no harmonies.\n\nProduction:\nThe production is clean and polished, with a dry, intimate room feel for the vocals. The bass is full and resonant, and the hi-hats are crisp.\n\nArrangement:\nThe excerpt begins with the full arrangement. The synth pad provides a continuous background. The vocals are present throughout, with no significant drops or builds in instrumentation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"False Idols\" was released June 30, 2023 by XO / Republic Records on the two-track single The Idol Episode 5 Part 1 (Music from the HBO Original Series).",
+        "source": "https://www.shazam.com/song/1694779399/false-idols"
+      },
+      {
+        "claim": "The writing credits are Abel Tesfaye (The Weeknd), Mike Dean, Suzanna Son, Dominique Jones (Lil Baby) and Jordan Holt-May.",
+        "source": "https://www.deezer.com/en/track/2346421975"
+      },
+      {
+        "claim": "Mike Dean is credited as producer, mixer and mastering engineer, with The Weeknd also credited as producer.",
+        "source": "https://www.discogs.com/release/27537288-The-Weeknd-Suzanna-Son-Lil-Baby-The-Idol-Episode-5-Part-1-Music-From-The-HBO-Original-Series"
+      },
+      {
+        "claim": "The Weeknd previewed the song on an Instagram live session on June 27, 2023, with producer Mike Dean in the studio.",
+        "source": "https://americansongwriter.com/the-weeknd-connects-with-lil-baby-for-false-idols/"
+      },
+      {
+        "claim": "The song is the second collaboration between The Weeknd and Lil Baby. Their first was \"Hurricane\" on Kanye West's 2021 album Donda.",
+        "source": "https://americansongwriter.com/the-weeknd-connects-with-lil-baby-for-false-idols/"
+      },
+      {
+        "claim": "Suzanna Son, an actress in The Idol, sings the hook. American Songwriter notes that the lyrics include double entendres about cocaine and Chrome Hearts.",
+        "source": "https://americansongwriter.com/the-weeknd-connects-with-lil-baby-for-false-idols/"
+      },
+      {
+        "claim": "The song appears in The Idol Season 1, Episode 5 (\"Jocelyn Forever\"), where Suzanna Son's character Chloe performs it for Finklestein, Chaim and Nikki as they wait for Joss to arrive. Tunefind also lists it in Episode 4, where Chloe plays and sings it in the studio.",
+        "source": "https://www.tunefind.com/song/suzanna-son/false-idols"
+      },
+      {
+        "claim": "It was released the same day as the solo Weeknd track \"Like a God\", ahead of the series finale. Complex reports that both tracks include co-production from Mike Dean.",
+        "source": "https://www.complex.com/music/a/tracewilliamcowen/the-weeknd-false-idols-lil-baby-like-a-god-the-idol"
+      },
+      {
+        "claim": "The Idol soundtrack material was released as per-episode EPs. It was originally planned as a single soundtrack album, The Idol, Vol. 1, which was scrapped.",
+        "source": "https://en.wikipedia.org/wiki/Music_from_The_Idol"
+      },
+      {
+        "claim": "Tesfaye has said Hurry Up Tomorrow is probably his last hurrah as the Weeknd. He has said he still wants to kill the Weeknd persona, and he partly attributes losing his voice on tour to exhaustion from juggling the After Hours til Dawn Tour with The Idol.",
+        "source": "https://en.wikipedia.org/wiki/Hurry_Up_Tomorrow"
+      }
+    ],
+    "lineage": "The song sits in the Weeknd's alternative R&B and pop soundtrack work, written for HBO's The Idol and built around Mike Dean's synth-heavy production plus a trap-leaning Lil Baby guest verse.",
+    "genres": [
+      "alternative r&b",
+      "trap",
+      "synthpop"
+    ]
+  },
+  "draft": "The prayer at the center of **False Idols** is sung so sweetly that its meaning nearly slips past: \"Makes you hurt again / So you can heal and say amen.\" That is a description of abuse dressed as worship, a god who wounds you so the comfort feels earned. Suzanna Son sings the hook, and the song lives in the space between that hymn and the rap around it, where people with every reason to feel secure keep admitting they don't.\n\nThe verses are a ledger. Contracts with \"baseball numbers,\" eight-figure taxes, a million for an hour-long set, diamonds that \"really be diamonds.\" The bragging is real, but it keeps snagging on something. \"But I went through a lot for this money and fame\" turns the flex into a receipt for damage. Then the narrator mentions a big brother at the end of his habeas appeals: \"I talk to him daily, I told him he still comin' home.\" The next line worries the brother will hear it as empty talk. Pride and guilt sit in the same bar, and neither wins. Later the paradise boasts collapse into \"But these false idols got me terrified,\" repeated until it stops sounding like a pose.\n\nThe production keeps all this cool on the surface. A low synth pad hangs under everything, fast hi-hats tick steadily, and the kick and snare land crisp and punchy. The groove is laid-back and mid-tempo, unhurried even when the words are frightened. The rap is mixed dry and close, clear with a slightly nasal edge, confident and conversational, with no harmonies padding it out. That intimacy matters. The fear arrives at speaking volume, as if nobody's supposed to overhear.\n\nAbel Tesfaye wrote it with Mike Dean, Son, Dominique Jones (Lil Baby) and Jordan Holt-May. Dean produced, mixed and mastered it, with The Weeknd co-producing. It's the second time The Weeknd and Lil Baby have worked together, after \"Hurricane\" on Kanye West's *Donda*. It was written for HBO's *The Idol*. In episode five, Son's character Chloe performs it for a room of handlers waiting on the show's star, Joss. Heard that way, the closing chant \"He will find her / He will fix her\" stops being devotional and starts sounding like a threat. Lines like \"We still walkin' with the cameras off\" and \"She ain't actin', I'm not an actor\" blur the show into the song. The track came out the same day as The Weeknd's solo \"Like a God,\" and its outro trails off on that same phrase.\n\nThe song makes you hear wealth as a wall around fear, and its prettiest melody is the one asking you to thank whoever hurt you.",
+  "factCheck": [
+    {
+      "claim": "Hook lyric 'Makes you hurt again / So you can heal and say amen'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The hook is 'sung so sweetly'",
+      "verdict": "removed",
+      "note": "The listening notes describe only the rap vocal. Nothing supports how the hook sounds."
+    },
+    {
+      "claim": "Suzanna Son sings the hook",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "Contracts with 'baseball numbers', eight-figure taxes, a million for a set, diamonds that 'really be diamonds'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. 'Hour-long' is a reading of '60minutes set'."
+    },
+    {
+      "claim": "'But I went through a lot for this money and fame'",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Big brother 'at the end of his habeas appeals'",
+      "verdict": "corrected",
+      "note": "The lyric says 'at the end of his habeas'. 'Appeals' was added, so it was dropped."
+    },
+    {
+      "claim": "'I talk to him daily, I told him he still comin' home' and the following line worries it will be heard as empty talk",
+      "verdict": "supported",
+      "note": "The lyric order supports it. The quote was turned into a paraphrase to stay within the quote limit."
+    },
+    {
+      "claim": "'But these false idols got me terrified', repeated until it stops sounding like a pose",
+      "verdict": "corrected",
+      "note": "The quote is exact. The terrified lines do recur, but the 'repeated' phrasing about this specific line was loosened."
+    },
+    {
+      "claim": "Low synth pad, steady fast hi-hats",
+      "verdict": "supported",
+      "note": "The pad appears in all three passes. Fast, steady hi-hats appear in passes 1 and 3."
+    },
+    {
+      "claim": "Kick and snare land crisp and punchy",
+      "verdict": "corrected",
+      "note": "Only pass 1 says crisp and punchy drums. Passes 1 and 2 agree on a prominent kick and snare, so that is what remains."
+    },
+    {
+      "claim": "Laid-back, mid-tempo groove",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Rap mixed dry and close, clear, slightly nasal, confident and conversational, no harmonies",
+      "verdict": "supported",
+      "note": "Dry and close: passes 2 and 3. Nasal: passes 1 and 3. Confident and conversational: each trait is in at least two passes. No harmonies: all three."
+    },
+    {
+      "claim": "Writers: Abel Tesfaye, Mike Dean, Son, Dominique Jones (Lil Baby), Jordan Holt-May",
+      "verdict": "supported",
+      "note": "Matches the credits."
+    },
+    {
+      "claim": "Dean produced, mixed and mastered; The Weeknd co-producing",
+      "verdict": "supported",
+      "note": "Discogs credits both as producers."
+    },
+    {
+      "claim": "Second collaboration with Lil Baby, after 'Hurricane' on Kanye West's Donda",
+      "verdict": "supported",
+      "note": "Supported. The year 2021 was added to the text."
+    },
+    {
+      "claim": "Written for HBO's The Idol",
+      "verdict": "supported",
+      "note": "Supported."
+    },
+    {
+      "claim": "In episode five Chloe performs it for a room of handlers waiting on the show's star, Joss",
+      "verdict": "corrected",
+      "note": "The source names Finklestein, Chaim and Nikki waiting for Joss to arrive. 'Handlers' and 'star' are not sourced, so the named characters are used instead."
+    },
+    {
+      "claim": "'He will find her / He will fix her' as the closing chant",
+      "verdict": "supported",
+      "note": "The lyric structure puts it near the end. The reading as a threat is interpretation. It was shortened to fragments."
+    },
+    {
+      "claim": "'We still walkin' with the cameras off' and 'She ain't actin', I'm not an actor'",
+      "verdict": "supported",
+      "note": "Exact lyrics, shortened to fragments."
+    },
+    {
+      "claim": "Released the same day as The Weeknd's solo 'Like a God'",
+      "verdict": "supported",
+      "note": "Supported."
+    },
+    {
+      "claim": "The outro trails off on the same phrase",
+      "verdict": "removed",
+      "note": "This is a claim about how the song ends, which the listening notes can't support. The shared phrase is kept as a lyric link."
+    },
+    {
+      "claim": "Its prettiest melody is the one asking you to thank whoever hurt you",
+      "verdict": "corrected",
+      "note": "No melody is described in the sound notes. It now refers to the hook's lyric."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2183,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014412,
+        "detail": "1114 in / 174 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014462,
+        "detail": "1114 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014687,
+        "detail": "1114 in / 185 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081592,
+        "detail": "23286 in / 1502 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.070288,
+        "detail": "4817 in / 2551 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06205,
+        "detail": "5995 in / 5006 out"
+      }
+    ]
+  }
+}

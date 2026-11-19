@@ -1,0 +1,190 @@
+{
+  "spotifyId": "5RLzgNuAfuKx808CN60gCy",
+  "reviewedAt": "2026-11-19T03:42:57.565Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/14728902"
+  },
+  "listening": "Pass 1:\nA clean electric guitar plays a arpeggiated chord progression with a delay effect. A kick drum and snare drum play a straight beat, with a closed hi-hat playing eighth notes. A bass guitar plays a simple, melodic line. A lead vocalist sings in a clear, mid-range voice, with a slight rasp. The vocals are delivered with a relaxed, conversational feel. There are no harmonies. The production is clean and polished, with a moderate amount of reverb on the vocals and guitar. The arrangement is consistent throughout the excerpt, with no major changes in instrumentation or dynamics. The tempo is moderate, with a relaxed, grooving feel.\n\nPass 2:\nAcoustic guitar plays a strummed chord progression with a driving rhythm. A bass guitar plays a simple, supportive line. Drums enter with a steady beat, featuring a kick drum on the downbeats, a snare on the backbeats, and a closed hi-hat playing eighth notes.\n\nA single voice sings the lead melody, with a clear, mid-range character. The delivery is rhythmic and slightly urgent. Harmonies enter, with two additional voices singing in unison or parallel to the lead, creating a fuller sound.\n\nThe production sounds clean and polished. The room sound is neutral, not overtly wet or dry. The texture is full but not dense, allowing individual instruments to be heard clearly.\n\nThe arrangement builds from the initial acoustic guitar and bass with the entry of drums and then harmonies. No instruments drop out within the excerpt. The overall tempo is moderate, with a consistent, driving groove.\n\nPass 3:\nAcoustic guitar plays a strummed rhythm, joined by a clean electric guitar playing a melodic line. A bass guitar enters, playing a simple, driving line. Drums enter with a steady beat, featuring a prominent kick and snare. The tempo is moderate, with a relaxed, slightly swaying groove.\n\nA single voice sings with a clear, mid-range character. The delivery is melodic and sustained, with some slight vocal fry. No harmonies are present.\n\nThe production sounds like a medium-sized room, with a clean and polished texture. The overall sound is well-balanced.\n\nThe arrangement builds from acoustic guitar and electric guitar, adding bass and drums. The vocals enter over the full band. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"1975\" is track 5 of Tash Sultana's six-track SUGAR EP., released 18 August 2023. It runs 7:16, and its ISRC is AUBM02300062.",
+        "source": "https://musicstax.com/track/1975/5RLzgNuAfuKx808CN60gCy"
+      },
+      {
+        "claim": "Tash Sultana is credited as sole composer and lyricist of \"1975\" (Taj Hendrix (Tash) Sultana). Sultana is also credited as producer, recording engineer and main artist. Richard Stolz is credited as a recording engineer, Konstantin Kersting as mixing engineer and Andrei Eremin as mastering engineer. The release is (P) 2023 Lonely Lands Records.",
+        "source": "https://www.qobuz.com/nz-en/album/sugar-ep-tash-sultana/qijspflr4rdgc"
+      },
+      {
+        "claim": "Sultana produced, composed, arranged and played every instrument on the EP, writing the songs at their own home and studio. The EP came out on Sultana's own label, Lonely Lands Records.",
+        "source": "https://au.rollingstone.com/music/music-news/tash-sultana-shares-sugar-ep-49553"
+      },
+      {
+        "claim": "NME describes \"1975\" as a ballad that reveals \"a side of me that I've never spoken about\", in Sultana's words. It calls the track a seven-minute epic about coming of age, with standout guitar work and a heady outro.",
+        "source": "https://www.nme.com/features/music-features/tash-sultana-sugar-track-by-track-3483023"
+      },
+      {
+        "claim": "Sultana said of the song, \"I'm just releasing trauma in [this] song\", and that you're allowed to keep some of you to you.",
+        "source": "https://www.nme.com/features/music-features/tash-sultana-sugar-track-by-track-3483023"
+      },
+      {
+        "claim": "Rolling Stone Australia describes \"1975\" as a deep track that delves into past trauma. It describes the EP as born during the pandemic.",
+        "source": "https://au.rollingstone.com/music/music-features/tash-sultana-sugar-ep-new-zealand-show-interview-52485/"
+      },
+      {
+        "claim": "Sultana explained the EP title: they took medication while making it, so \"Sugar\" means \"synthetic happiness\". Sultana also said they will never write or sound the same twice, and that their music is always evolving.",
+        "source": "https://au.rollingstone.com/music/music-features/tash-sultana-sugar-ep-new-zealand-show-interview-52485/"
+      },
+      {
+        "claim": "The song opens with a hook that name-checks the band The 1975 (\"You listen to The 1975 / While I just try to feel alive\"). The Music called it the most notable of the EP's longer tracks.",
+        "source": "https://themusic.com.au/reviews/album-review-tash-sultana-sugar-ep/3etj8fDz8vU/18-08-23"
+      },
+      {
+        "claim": "SUGAR is billed as the first half of Sultana's third studio album. It follows 2021's TERRA FIRMA, which topped the ARIA Albums Chart.",
+        "source": "https://themusic.com.au/reviews/album-review-tash-sultana-sugar-ep/3etj8fDz8vU/18-08-23"
+      },
+      {
+        "claim": "Sultana is a gender-fluid, Melbourne-based multi-instrumentalist, producer and singer-songwriter. They came up through open-mic nights and busking in Melbourne, then went on to platinum records and billions of streams.",
+        "source": "https://www.amazon.com/Sugar-EP-Tash-Sultana/dp/B0C51SC667"
+      }
+    ],
+    "lineage": "The song sits in Tash Sultana's DIY, self-produced, multi-instrumentalist tradition, which grew out of Melbourne busking and live looping and moves between pop, soul/R&B and alternative sounds.",
+    "genres": [
+      "alternative",
+      "pop",
+      "soul"
+    ]
+  },
+  "draft": "The first line of **1975** sets up two people in one room on different frequencies: \"You listen to The 1975 while I just try to feel alive.\" It's a sly hook. The name-check sounds light, almost like a joke about someone's taste in bands, but the second half of the line is a quiet admission of how hard ordinary living has become. Tash Sultana spends the rest of the song inside that gap: watching someone drift off, insisting on nonfiction over fantasy, then admitting that fantasy might be the only way through the night.\n\nThe pre-chorus is a run of questions, and they read like someone asking permission to feel. Is it weak, is it wrong, does it hurt to cry and let it out. None of them gets answered. The chorus offers escape instead of answers: talking until the lights go out, dancing until the lungs give out, the moon sweeping everyone into galaxies. Then comes the giveaway: \"And we convince ourselves for a moment of time.\" The bliss is real and temporary at once, and the song knows it. That sits close to what Sultana said about the EP's title, that \"Sugar\" means \"synthetic happiness,\" a name chosen while they were on medication during the making of the record.\n\nThe second verse turns judgment into kinship. The friends getting high, the designer things, the soul sold for a quick fix, and then: \"You know we're not so different you and me.\" The narrator sinks right alongside them. And then comes the line the whole song hangs on: \"And my mouth just can not say these things.\" It's a confession about not being able to confess. Sultana called the track a way of \"releasing trauma,\" revealing \"a side of me that I've never spoken about,\" and also said you're allowed to keep some of you to you. The lyric holds both at once. It promises \"someday you will know\" and still keeps the door mostly shut.\n\nThe sound wears all this lightly. Strummed acoustic guitar and a clean electric line sit over a simple bass part, a steady kick and snare, and closed hi-hats ticking out eighth notes. The tempo is moderate and the groove relaxed, with a polished, clean finish. A single clear voice carries it, mid-range with a slight grain and no harmonies to hide behind. That fits a song about saying too little.\n\nIt also fits how it was made. Sultana wrote, produced, arranged and played everything on the SUGAR EP. at home, carrying over the self-contained habits of their Melbourne busking and live-looping days. Here that solitude stops being a technique and becomes the subject.\n\n**1975** lets you sit beside someone who can't say what's wrong, feel the relief of a night that pretends everything is fine, and know the whole time that the pretending is part of the pain.",
+  "factCheck": [
+    {
+      "claim": "Opening quote: \"You listen to The 1975 while I just try to feel alive.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The hook name-checks The 1975; the name-check reads as light, with the second half an admission.",
+      "verdict": "supported",
+      "note": "The name-check is in the lyrics and the research notes. The reading is interpretation."
+    },
+    {
+      "claim": "The narrator is \"watching someone drift off\" and insists on nonfiction over fantasy.",
+      "verdict": "corrected",
+      "note": "\"Nonfiction, I don't like to live out fantasy\" is in the lyrics. Nobody drifting off is mentioned there; the lyric speaks of \"the disconnect.\" Reworded."
+    },
+    {
+      "claim": "The pre-chorus is a run of questions (weak, wrong, hurt to cry and let it out), none answered.",
+      "verdict": "supported",
+      "note": "The questions are in the lyrics. \"Unanswered\" is a reading."
+    },
+    {
+      "claim": "The chorus: talking until the lights go out, dancing until the lungs give out, the moon sweeping everyone into galaxies.",
+      "verdict": "supported",
+      "note": "A fair paraphrase of the lyrics."
+    },
+    {
+      "claim": "Quote: \"And we convince ourselves for a moment of time.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Sultana said \"Sugar\" means \"synthetic happiness,\" chosen because they were on medication while making the record.",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone Australia interview. The comparison to the lyric is interpretation."
+    },
+    {
+      "claim": "Second verse: friends getting high, designer things, soul sold for a quick fix; \"You know we're not so different you and me\"; the narrator sinks alongside them.",
+      "verdict": "supported",
+      "note": "The quote is exact and the rest paraphrases the lyrics (\"So we sink\")."
+    },
+    {
+      "claim": "Quote: \"And my mouth just can not say these things.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Sultana called the track a way of \"releasing trauma,\" revealing \"a side of me that I've never spoken about,\" and said you're allowed to keep some of you to you.",
+      "verdict": "supported",
+      "note": "All three are in the NME track-by-track."
+    },
+    {
+      "claim": "The lyric promises \"someday you will know.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics (\"But someday you will know\")."
+    },
+    {
+      "claim": "Strummed acoustic guitar and a clean electric line over a simple bass part, steady kick and snare, closed hi-hats in eighth notes; moderate tempo, relaxed groove, polished and clean.",
+      "verdict": "supported",
+      "note": "Each element is backed by at least two listening passes."
+    },
+    {
+      "claim": "A single clear voice, mid-range with a slight grain.",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree (rasp / vocal fry), and all three agree on clear and mid-range."
+    },
+    {
+      "claim": "No harmonies to hide behind.",
+      "verdict": "removed",
+      "note": "Passes disagree: pass 2 hears harmonies, passes 1 and 3 do not. Removed."
+    },
+    {
+      "claim": "Sultana wrote, produced, arranged and played everything on the EP at home.",
+      "verdict": "corrected",
+      "note": "The songs were written at Sultana's home and studio. Sultana produced, arranged and played every instrument. Nothing says it was all recorded at home. Reworded."
+    },
+    {
+      "claim": "Sultana's Melbourne busking and live-looping background shaped the self-contained approach.",
+      "verdict": "supported",
+      "note": "Backed by the lineage note and the Melbourne busking background."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1918,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00049637,
+        "detail": "1100 in / 131 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00055387,
+        "detail": "1100 in / 154 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014595,
+        "detail": "1100 in / 183 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.084842,
+        "detail": "23681 in / 1748 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054268,
+        "detail": "4107 in / 1892 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050226,
+        "detail": "5273 in / 3968 out"
+      }
+    ]
+  }
+}

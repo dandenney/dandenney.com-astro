@@ -1,0 +1,220 @@
+{
+  "spotifyId": "4X7sZqLL3YpjeJn9wLo9xN",
+  "reviewedAt": "2026-11-19T03:50:51.577Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8614619"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated figure with a clear, bright tone. The tempo is slow, with a gentle, flowing feel. A male voice enters, singing in a clear, mid-range register, with a smooth, unadorned delivery. The production is clean and dry, with a close-miked sound that suggests an intimate room. The texture is sparse, with the guitar and voice as the only elements. No other instruments enter or drop out.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated figure with a clear, bright tone. The tempo is slow, with a relaxed, flowing feel. A male voice enters, singing in a mid-range with a smooth, slightly breathy delivery. The production is clean and dry, with a close-miked feel, suggesting a small room. The arrangement remains consistent throughout, with the guitar and voice as the only elements.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated figure, with a bass line on the lower strings and a melody on the higher strings. The tempo is slow, with a relaxed, flowing feel. A male voice enters, singing in a clear, mid-range register, with a smooth, unadorned delivery. The production is clean and dry, with a close-miked sound that suggests a small room. The texture is sparse, with only the guitar and voice present. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"On The Run\" is track 2 on Robert Ellis's album Yesterday's News, released May 19, 2023 on his own label, Niles City Records (NCRS-002).",
+        "source": "https://www.discogs.com/release/27170811-Robert-Ellis-Yesterdays-News"
+      },
+      {
+        "claim": "Yesterday's News was recorded live to tape in two days. It features Ellis's tenor with only nylon-string guitar, upright bass and occasional handheld percussion.",
+        "source": "https://glidemagazine.com/288303/robert-ellis-to-release-new-album-yesterdays-news-and-shares-video-for-title-track/"
+      },
+      {
+        "claim": "Aden Bubek plays upright bass on the album. The album was produced at Niles City Sound, mastered at Electric Barryland by Jordan Richardson, and published by Southern Liberace Publishing LLC.",
+        "source": "https://www.discogs.com/release/27170811-Robert-Ellis-Yesterdays-News"
+      },
+      {
+        "claim": "No Depression describes \"On The Run\" as a hushed song that crosses the nameless stretches of West Texas. It compares the album's approach to Mark Kozelek, Nick Drake and Roy Harper.",
+        "source": "https://nodepression.com/album-reviews/album-review-robert-ellis-makes-the-most-of-minimal-for-yesterdays-news/"
+      },
+      {
+        "claim": "Under the Radar premiered \"On The Run\" as a single on April 26, 2023. It said the song leans into a dark, smoky side of Ellis's writing, recalling Nick Drake and Springsteen's Nebraska era.",
+        "source": "https://www.undertheradarmag.com/news/premiere_robert_ellis_shares_new_single_on_the_run"
+      },
+      {
+        "claim": "Americana Highways says \"On the Run\" finds Ellis pondering long, quiet, desolate road moments.",
+        "source": "https://americanahighways.org/2023/05/18/review-robert-ellis-yesterdays-news/"
+      },
+      {
+        "claim": "Ellis said he had spent his career making records he thought would be \"exciting\" to others, but the albums he is most drawn to are small, gentle and soft. He added that the new songs' stillness was their strength.",
+        "source": "https://americanahighways.org/2023/05/18/review-robert-ellis-yesterdays-news/"
+      },
+      {
+        "claim": "Yesterday's News is Ellis's sixth solo album and his first since leaving New West Records. It follows the 2019 album Texas Piano Man.",
+        "source": "https://magnetmagazine.com/2023/05/31/a-conversation-with-robert-ellis/"
+      },
+      {
+        "claim": "Ellis is a partner in Niles City Sound studio in Fort Worth. He has produced albums for Jamestown Revival and Zach Williams of the Lone Bellow, and has written string arrangements for Leon Bridges.",
+        "source": "https://americana-uk.com/robert-ellis-yesterdays-news"
+      },
+      {
+        "claim": "Ellis is from Lake Jackson, Texas.",
+        "source": "https://thebluegrasssituation.com/video/watch-robert-ellis-on-the-run-luck-sessions-at-tx-whiskey-ranch/"
+      }
+    ],
+    "lineage": "Sparse, hushed Texas singer-songwriter folk in the line of Townes Van Zandt, Nick Drake and Mark Kozelek, and a sharp turn from the piano-rock of his 2019 album Texas Piano Man.",
+    "genres": [
+      "folk",
+      "singer-songwriter",
+      "americana"
+    ]
+  },
+  "draft": "Robert Ellis sings about running with almost nothing moving. **On The Run** opens in the stretches of West Texas too empty to have a name, where you gas up at every chance because the next one might not come. Then it sets that flight against a slow, fingerpicked guitar figure, bright and clear, with a bass line walking under a melody on the high strings. The voice is close and dry, smooth and unadorned, as if the whole song were happening in a small room with the door shut. That gap between the subject and the sound is where the feeling lives.\n\nThe early images are heat and pressure: summer vapor coming off the asphalt, and the narrator \"Strapped into a fuselage and waiting to explode.\" That line holds the car, the body and the nerves at once. By the second verse the enemy has no name either, the money is running low, and the real fear surfaces: that this never ends, and that accepting anything \"preordained\" would feel like giving in. The song never says what's being fled. It doesn't need to.\n\nWhat makes it ache is that the narrator half-knows the running is pointless and keeps going anyway. The repeated couplet admits that distance changes nothing. You still land in the one place you really know. Then comes the defiance: \"If heaven feels like standing still I'd rather go to hell.\" There's pride in that line, and a kind of terror. The narrator fears the silence at the bottom of the well and fears becoming one more book on a shelf. The confession lands last and plainest: \"We are running from each other, we are running from ourselves.\" The \"we\" matters. Somebody else is in the car, and the flight is shared, which makes it lonelier, not less.\n\nThis is Ellis's sixth solo record and a sharp swerve from the piano-rock of 2019's *Texas Piano Man*. *Yesterday's News* was cut live to tape in two days at Niles City Sound, the Fort Worth studio he co-owns, with nylon-string guitar, Aden Bubek's upright bass and little else. Critics reached for Nick Drake, Mark Kozelek and Springsteen's *Nebraska*, and the Townes Van Zandt line of hushed Texas songwriting fits too. Ellis has said he spent years making records he thought others would find \"exciting,\" while the albums he loves are small and soft, and that stillness was these songs' strength. Here the stillness carries the argument: a restless heart, sung by someone who has finally stopped long enough to look at it.\n\nThe song closes on its title three times over, and the calm in the voice tells you the narrator has already understood what the words won't concede: you can't outdrive yourself.",
+  "factCheck": [
+    {
+      "claim": "Opens in West Texas stretches too empty to have a name; the narrator gases up whenever the chance comes",
+      "verdict": "corrected",
+      "note": "Matches the lyrics. 'Because the next one might not come' was an inference stated as fact, so it was reworded to follow the lyric."
+    },
+    {
+      "claim": "Slow, fingerpicked guitar figure, bright and clear",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A bass line walking under a melody on the high strings",
+      "verdict": "removed",
+      "note": "Only pass 3 mentions bass and melody strings. 'Walking' appears in none."
+    },
+    {
+      "claim": "Voice is close and dry, smooth and unadorned, as if in a small room",
+      "verdict": "supported",
+      "note": "Passes agree on close-miked, dry production, a smooth delivery and a small or intimate room. 'Door shut' is interpretive."
+    },
+    {
+      "claim": "Summer vapor coming off the asphalt",
+      "verdict": "corrected",
+      "note": "The lyric says 'rising from the road', not asphalt."
+    },
+    {
+      "claim": "\"Strapped into a fuselage and waiting to explode.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The line holds the car, the body and the nerves",
+      "verdict": "corrected",
+      "note": "No car is named in the lyrics, so it now says 'machine'. The rest is interpretation."
+    },
+    {
+      "claim": "By the second verse the enemy has no name; money running low",
+      "verdict": "corrected",
+      "note": "The enemy and money lines come in a later verse, after the first chorus and the second verse. Changed to 'later'."
+    },
+    {
+      "claim": "'Preordained' would feel like giving in; this never ends",
+      "verdict": "supported",
+      "note": "Lyric."
+    },
+    {
+      "claim": "The song never says what's being fled",
+      "verdict": "corrected",
+      "note": "The lyrics eventually say each other and ourselves. Reworded to say the song is slow to name it."
+    },
+    {
+      "claim": "\"If heaven feels like standing still I'd rather go to hell.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Silence at the bottom of the well; becoming another book on the shelf",
+      "verdict": "supported",
+      "note": "Lyric."
+    },
+    {
+      "claim": "\"We are running from each other, we are running from ourselves\" lands last",
+      "verdict": "corrected",
+      "note": "The quote is exact, but it is not the last line of the song. Changed to 'plainest'."
+    },
+    {
+      "claim": "Somebody else is in the car",
+      "verdict": "corrected",
+      "note": "The lyrics say 'we' but never name a car. Changed to 'along'."
+    },
+    {
+      "claim": "Sixth solo record; sharp swerve from the piano-rock of 2019's Texas Piano Man",
+      "verdict": "supported",
+      "note": "Researched facts and lineage note."
+    },
+    {
+      "claim": "Cut live to tape in two days at Niles City Sound",
+      "verdict": "corrected",
+      "note": "Live to tape in two days is supported. Niles City Sound is named only as where the album was produced."
+    },
+    {
+      "claim": "Fort Worth studio he co-owns",
+      "verdict": "supported",
+      "note": "Ellis is a partner in Niles City Sound in Fort Worth."
+    },
+    {
+      "claim": "Nylon-string guitar, Aden Bubek's upright bass and little else",
+      "verdict": "supported",
+      "note": "Album-level facts."
+    },
+    {
+      "claim": "Critics reached for Nick Drake, Mark Kozelek and Springsteen's Nebraska; Townes Van Zandt line fits",
+      "verdict": "supported",
+      "note": "No Depression, Under the Radar and the lineage note."
+    },
+    {
+      "claim": "Ellis spent years making records he thought others would find 'exciting'; he loves small, soft albums; the stillness was the songs' strength",
+      "verdict": "corrected",
+      "note": "Source says 'his career' and 'small, gentle and soft'. Wording adjusted."
+    },
+    {
+      "claim": "Song closes on its title three times over",
+      "verdict": "supported",
+      "note": "The lyrics end with three 'On the run' lines."
+    },
+    {
+      "claim": "Someone who has finally stopped long enough to look at it",
+      "verdict": "removed",
+      "note": "Assigns a state to the artist that the words don't show."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1802,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012514,
+        "detail": "1098 in / 100 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012214,
+        "detail": "1098 in / 88 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012914,
+        "detail": "1098 in / 116 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.079368,
+        "detail": "22409 in / 1455 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.047256,
+        "detail": "3389 in / 1685 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049828,
+        "detail": "4529 in / 4077 out"
+      }
+    ]
+  }
+}
