@@ -5,6 +5,7 @@ export type RithhmmPropType =
   | "assists-over"
   | "assists-under"
   | "blocks-under"
+  | "steals-under"
   | "rebounds-over"
   | "rebounds-under"
   | "points-under"
@@ -4871,5 +4872,48 @@ export const rithhmmPicks: RithhmmPick[] = [
     book: { name: "DraftKings", pick: "Luka Doncic Assists O/U Under 8.5", odds: "-134" },
     gameTime: "2026-11-17T22:10:00-06:00",
     loggedAt: "2026-11-17T15:42:14-06:00",
+  },
+  // 2026-11-19
+  {
+    id: 305,
+    date: "2026-11-19",
+    sport: "NBA",
+    pick: "LaMelo Ball Under 1.5 Steals",
+    odds: "-146",
+    rithmmOdds: "-140",
+    confidence: 62.4,
+    modelProjection: "Rithmm favors Under 1.5, 62.4% to 37.6%",
+    edge: 9.8,
+    matchup: "vs Knicks",
+    propType: "steals-under",
+    result: "pending",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
+    potentialReturn: 101.09,
+    book: { name: "DraftKings", pick: "LaMelo Ball Steals O/U Under 1.5", odds: "-146" },
+    gameTime: "2026-11-19T19:10:00-06:00",
+    loggedAt: "2026-11-19T13:26:06-06:00",
+  },
+  {
+    id: 306,
+    date: "2026-11-19",
+    sport: "NBA",
+    pick: "Brandin Podziemski Under 4.5 Assists",
+    odds: "-141",
+    rithmmOdds: "-148",
+    confidence: 60.7,
+    modelProjection: "Rithmm favors Under 4.5, 60.7% to 39.3%",
+    edge: 2.6,
+    matchup: "@ Grizzlies",
+    propType: "assists-under",
+    result: "pending",
+    portfolioAction: "bet",
+    betAmount: 60,
+    bettors: "dan-and-gardenOf",
+    potentialReturn: 102.55,
+    book: { name: "DraftKings", pick: "Brandin Podziemski Assists O/U Under 4.5", odds: "-141" },
+    gameTime: "2026-11-19T19:10:00-06:00",
+    loggedAt: "2026-11-19T13:26:06-06:00",
   },
 ];

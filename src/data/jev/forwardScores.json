@@ -2277,6 +2277,110 @@
         "input_tokens": 647,
         "output_tokens": 109
       }
+    },
+    "305": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-19T19:28:37.363Z",
+      "state": {
+        "date": "2026-11-19",
+        "sport": "NBA",
+        "matchup": "vs Knicks",
+        "pick": "LaMelo Ball Under 1.5 Steals",
+        "odds": "-146"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.71
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.42
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.82,
+          "confidence": 0.28,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.33,
+            "1": 0.52,
+            "2": 0.15
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 632,
+        "output_tokens": 109
+      }
+    },
+    "306": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-19T19:28:37.503Z",
+      "state": {
+        "date": "2026-11-19",
+        "sport": "NBA",
+        "matchup": "@ Grizzlies",
+        "pick": "Brandin Podziemski Under 4.5 Assists",
+        "odds": "-141"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.57
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.38
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.42,
+          "confidence": 0.36,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.59,
+            "1": 0.39,
+            "2": 0.02
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 637,
+        "output_tokens": 109
+      }
     }
   }
 }
