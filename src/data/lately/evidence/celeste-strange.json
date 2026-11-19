@@ -1,0 +1,200 @@
+{
+  "spotifyId": "7sq2z9oX2S0CvgTqCZ0ko4",
+  "reviewedAt": "2026-11-19T15:25:44.315Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8111123"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic piano plays a slow, arpeggiated chord progression. A bowed string instrument, possibly a cello, enters with sustained notes.\n\nTempo and Groove:\nThe tempo is slow. The groove feels like a ballad, with a gentle, flowing feel.\n\nVocals:\nA single voice, with a clear, slightly breathy character, sings the melody. The delivery is smooth and expressive. There are no harmonies.\n\nProduction:\nThe room sounds spacious, with a noticeable reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the piano. The bowed string instrument enters shortly after the vocals begin, playing sustained notes that complement the vocal line. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic piano plays a chordal accompaniment with a gentle, arpeggiated feel. A double bass plays a walking bass line. A string section enters later, playing sustained chords.\n\nTempo and Groove:\nThe tempo is slow. The groove is gentle and flowing, with a slight swing feel from the piano’s arpeggiation.\n\nVocals:\nA single voice sings with a clear, smooth character. The delivery is legato and expressive, with a slight vibrato. There are no harmonies.\n\nProduction:\nThe room sounds spacious and resonant, suggesting a live recording or a well-produced studio sound. The texture is clean and polished, with good separation between instruments.\n\nArrangement:\nThe excerpt begins with acoustic piano and double bass. The voice enters shortly after. A string section joins later, adding warmth and depth to the sound. No instruments drop out.\n\nPass 3:\nInstruments:\nAcoustic piano plays a chordal accompaniment with a gentle, arpeggiated feel. A double bass plays a walking bass line. A string section enters later, playing sustained chords.\n\nTempo and Groove:\nThe tempo is slow. The groove feels gentle and flowing, with a slight swing feel from the piano’s arpeggiation.\n\nVocals:\nA single voice sings with a clear, smooth character. The delivery is expressive and sustained. There are no harmonies.\n\nProduction:\nThe room sounds spacious, with a natural reverb. The texture is warm and polished.\n\nArrangement:\nThe excerpt begins with acoustic piano and double bass. The voice enters shortly after. A string section joins later, adding a sustained layer underneath the existing instruments. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Strange\" was written by Celeste Waite, Stephen Wrabel (Wrabel) and Jamie Hartman, and Hartman produced it.",
+        "source": "https://en.wikipedia.org/wiki/Strange_(Celeste_song)"
+      },
+      {
+        "claim": "The Not Your Muse (Deluxe) release of \"Strange\" is dated January 29, 2021 on Polydor Records.",
+        "source": "https://www.shazam.com/en-us/song/1477478505/strange"
+      },
+      {
+        "claim": "The song was first released on 4 September 2019 through Both Sides and Polydor as the lead single from Celeste's debut album Not Your Muse.",
+        "source": "https://en.wikipedia.org/wiki/Strange_(Celeste_song)"
+      },
+      {
+        "claim": "The song was written and recorded in Los Angeles.",
+        "source": "https://en.wikipedia.org/wiki/Strange_(Celeste_song)"
+      },
+      {
+        "claim": "The track features strings from musician Sebastian Plano.",
+        "source": "https://en.wikipedia.org/wiki/Strange_(Celeste_song)"
+      },
+      {
+        "claim": "Capital XTRA, citing Our Culture Mag, reports the song was inspired by the 2018 California wildfires. The loss of people and relationships in the fires brought Celeste's own personal experiences to the surface.",
+        "source": "https://www.capitalxtra.com/features/celeste-singer-uk-age-lyrics-songs-facts/"
+      },
+      {
+        "claim": "The Evening Standard described the song as a slow, smouldering ballad about the oddness of seeing an ex and feeling like strangers after once spending every day together. It features blurred piano chords and sparse strings.",
+        "source": "https://davidsmyth.co.uk/2019/11/celeste-interview-evening-standard-8-nov-2019/"
+      },
+      {
+        "claim": "Celeste has said she had to convince her team to let her play \"Strange\" at the BRITs. She believes most people only like \"Strange\", which she says has become her Achilles heel.",
+        "source": "https://www.port-magazine.com/issue-36/celeste/"
+      },
+      {
+        "claim": "Jamie Hartman wrote and produced nine songs on Not Your Muse, which reached number 1 on the UK Albums Chart.",
+        "source": "https://en.wikipedia.org/wiki/Jamie_Hartman"
+      },
+      {
+        "claim": "Celeste Epiphany Waite was born 5 May 1994 in Culver City, California, and is an English singer-songwriter. Not Your Muse was nominated for the Mercury Prize and the BRIT Award for Album of the Year in 2021.",
+        "source": "https://en.wikipedia.org/wiki/Celeste_(singer)"
+      }
+    ],
+    "lineage": "The song sits in the British soul and jazz-inflected torch-ballad tradition, built on piano, strings and Celeste's raspy voice.",
+    "genres": [
+      "soul",
+      "pop",
+      "r&b"
+    ]
+  },
+  "draft": "The cruelest line in **Strange** is the plainest one: \"I am still me / You are still you.\" Nothing has been taken. Both people are standing right there, intact, and that is the problem. Celeste writes the end of a love affair as a kind of missing-persons case where nobody went missing, and the chorus keeps running the same arithmetic: strangers, then friends, then lovers, then strangers again. The circle closes on the word it started with, which is exactly how it feels.\n\nThe verses carry a quieter argument. \"I tried for you\" opens the song like a defense, and the smoke and dirt that \"wouldn't move\" sounds like someone still keeping score of their own effort. The song reportedly grew out of the 2018 California wildfires, where the loss of people and relationships brought Celeste's own history to the surface, and you can hear that haze in the opening image. Then the want gets more desperate: \"I'd pull your strings for one more dance.\" It's a puppeteer's wish, a little ugly in its honesty, wanting control just long enough to get one more moment back. The song doesn't punish that impulse. It lets the grief and the self-justification sit in the same breath.\n\nThe arrangement stays out of the way. Acoustic piano rolls out slow, arpeggiated chords with a faint swing to them, and a double bass walks underneath. Strings, played by Sebastian Plano, come in after the voice, holding long sustained notes rather than swelling for effect. The room is spacious, with plenty of reverb, and the whole thing is clean. Celeste sings alone, no harmonies, the delivery smooth and unhurried, as if raising the voice would admit too much. The Evening Standard called it a slow, smouldering ballad, and that's right: it burns low and never flares. That restraint places it in the British soul and jazz-inflected torch-song lineage, where the drama lives in phrasing and space, not volume.\n\nCeleste wrote it in Los Angeles with Wrabel and Jamie Hartman, who also produced. It came out in 2019 as the lead single from Not Your Muse, and it has followed Celeste since. Celeste had to talk the team into performing it at the BRITs, and has called it an Achilles heel, the one song people seem to want. That makes sense. Late in the song the silence creeps to the bedside and tells the narrator who they are, and the shock of that leaves them unable to stand. It's the most exposed moment on the record, and the chorus that follows doesn't comfort anyone. It just repeats the cycle.\n\n**Strange** sticks because it lets you sit across from someone you once knew completely, both of you unchanged, and feel how much was lost anyway.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"I am still me / You are still you.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Two consecutive lines, within the quote limit."
+    },
+    {
+      "claim": "Chorus runs strangers, friends, lovers, strangers again; the circle closes on the word it started with",
+      "verdict": "supported",
+      "note": "Matches the lyrics; the closing-circle reading is interpretation."
+    },
+    {
+      "claim": "Quote: \"I tried for you\" and the smoke and dirt that \"wouldn't move\"",
+      "verdict": "corrected",
+      "note": "Lyrics match, but the draft quoted more than three lines in total. Both are now paraphrased to stay within the quote limit."
+    },
+    {
+      "claim": "Song reportedly grew out of the 2018 California wildfires; loss of people and relationships brought Celeste's own history to the surface",
+      "verdict": "corrected",
+      "note": "Supported as a reported claim. The source says 'personal experiences', so wording adjusted. 'You can hear that haze' is interpretation."
+    },
+    {
+      "claim": "Quote: \"I'd pull your strings for one more dance.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Acoustic piano plays slow, arpeggiated chords with a faint swing; double bass walks underneath",
+      "verdict": "supported",
+      "note": "Piano and slow tempo in all passes; swing and walking double bass in passes 2 and 3 (two passes agree)."
+    },
+    {
+      "claim": "Strings played by Sebastian Plano",
+      "verdict": "supported",
+      "note": "Researched fact: the track features strings from Sebastian Plano."
+    },
+    {
+      "claim": "Strings come in after the voice",
+      "verdict": "removed",
+      "note": "Passes disagree on the order, and this is a position claim within the song."
+    },
+    {
+      "claim": "Strings hold sustained notes rather than swelling",
+      "verdict": "supported",
+      "note": "All passes describe sustained notes or chords; no significant build is noted."
+    },
+    {
+      "claim": "Spacious room, plenty of reverb, clean sound",
+      "verdict": "supported",
+      "note": "All three passes agree on spacious, reverb and clean/polished."
+    },
+    {
+      "claim": "Celeste sings alone, no harmonies, smooth delivery",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The Evening Standard called it a slow, smouldering ballad",
+      "verdict": "supported",
+      "note": "Researched fact."
+    },
+    {
+      "claim": "Lineage: British soul and jazz-inflected torch-ballad tradition, where the drama lives in phrasing and space, not volume",
+      "verdict": "corrected",
+      "note": "The lineage is supported. The generalization about the tradition's priorities is unsupported and was dropped."
+    },
+    {
+      "claim": "Written in Los Angeles with Wrabel and Jamie Hartman, who also produced",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Came out in 2019 as the lead single from Not Your Muse",
+      "verdict": "supported",
+      "note": "Released 4 September 2019 as the lead single."
+    },
+    {
+      "claim": "It has followed Celeste since; she had to talk the team into letting her play it at the BRITs; she calls it an Achilles heel",
+      "verdict": "supported",
+      "note": "Port Magazine facts."
+    },
+    {
+      "claim": "Silence creeps to the bedside and tells the narrator who they are; the narrator can't stand",
+      "verdict": "supported",
+      "note": "Paraphrases the verse before the final chorus. Placement is shown by the lyric structure."
+    },
+    {
+      "claim": "The chorus that follows just repeats the cycle",
+      "verdict": "supported",
+      "note": "The lyrics show the chorus repeating after that verse."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1854,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001463,
+        "detail": "1095 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014105,
+        "detail": "1095 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013855,
+        "detail": "1095 in / 154 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.07772,
+        "detail": "22245 in / 1323 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05368,
+        "detail": "3495 in / 1985 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049718,
+        "detail": "4669 in / 4038 out"
+      }
+    ]
+  }
+}

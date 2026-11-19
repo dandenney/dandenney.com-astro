@@ -1,0 +1,162 @@
+{
+  "spotifyId": "66yvX4stoMKIiTcZeDJGpt",
+  "reviewedAt": "2026-11-19T15:33:53.870Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/29902815"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"A Little Bit of Everything\" is a cover of a song written by Taylor Goldsmith and first released by Dawes on June 7, 2011.",
+        "source": "https://secondhandsongs.com/performance/1556720/all"
+      },
+      {
+        "claim": "McAlpine's version came out on the two-track Spotify Singles release on April 5, 2023.",
+        "source": "https://secondhandsongs.com/performance/1556720/all"
+      },
+      {
+        "claim": "Spotify Singles pairs a new version of her own song \"ceilings\" (side A) with the Dawes cover (side B).",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lizzy-McAlpine-Releases-Spotify-Singles-20230405"
+      },
+      {
+        "claim": "The Spotify Singles session was recorded at Spotify Studios in Los Angeles.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lizzy-McAlpine-Releases-Spotify-Singles-20230405"
+      },
+      {
+        "claim": "The cover is an acoustic ballad version of the Dawes song.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lizzy-McAlpine-Releases-Spotify-Singles-20230405"
+      },
+      {
+        "claim": "McAlpine said she chose the song because she thinks it is one of the best songs ever written, and that its lyrics are simple yet profound.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lizzy-McAlpine-Releases-Spotify-Singles-20230405"
+      },
+      {
+        "claim": "Dork's lyrics page credits Ryan Lerman as producer of this version.",
+        "source": "https://readdork.com/lyrics/lizzy-mcalpine-a-little-bit-of-everything"
+      },
+      {
+        "claim": "The release came soon after \"ceilings\" became her breakthrough song and reached the UK top ten in March 2023.",
+        "source": "https://en.wikipedia.org/wiki/Ceilings_(song)"
+      },
+      {
+        "claim": "McAlpine attended Berklee College of Music in Boston after graduating from Lower Merion High School near Philadelphia.",
+        "source": "https://www.inquirer.com/entertainment/music/lizzy-mcalpine-older-interview-met-philly-20240620.html"
+      },
+      {
+        "claim": "She released her debut EP, Indigo, in 2018 and signed with RCA Records in 2023, releasing the album Older in 2024.",
+        "source": "https://en.wikipedia.org/wiki/Lizzy_McAlpine"
+      }
+    ],
+    "lineage": "A stripped-back acoustic cover of a Dawes song, from the Americana and folk-rock songwriting tradition, performed in McAlpine's confessional folk-pop style.",
+    "genres": [
+      "folk-pop",
+      "indie folk",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "A man stands on the Golden Gate with traffic at his back, one leg over the rail, and Taylor Goldsmith gives him a line so dry it almost reads as a joke: \"Setting out to join a demographic.\" That's the cruelty of a statistic, a life about to become a number. Then a sergeant asks the only question that matters, what he's doing it for, and the chorus answers with a shrug that is really a sob. It's the mountains, the fog, the evening news, a first dog dying. No single reason. Just the weight of all of it at once.\n\n**A Little Bit of Everything** first belonged to Dawes, who released it in 2011, and Goldsmith built it in the Americana and folk-rock storytelling tradition: three strangers, three verses, one refrain that bends to fit each of them. The second is an older man at a buffet who has outlived his own bright future and his only son. When the server asks, \"Have you figured out yet, what it is you want?\" he answers with biscuits, beans, an extra chicken wing, anything that helps him forget. Grief and appetite stand side by side here, and the song never pretends one cancels the other. He's smiling, and he's piling his plate to stay upright.\n\nThe third verse turns the same phrase toward love. A bride planning a fall wedding isn't having fun, her fiancé notices, and she tells him to worry about his shirt size. What she wants is smaller and larger than the ceremony: the way he jokes, the way he aches, waking before him to watch him wake. The structure says a lot. Each verse hangs on a question someone asks, and each answer refuses to be one thing. Despair, hunger and devotion turn out to have the same shape.\n\nLizzy McAlpine cut it as an acoustic ballad for a Spotify Singles session in Los Angeles, with Ryan Lerman producing, pairing it with a new take on \"ceilings\" just after that song became her breakthrough. She said she picked it because she thinks it's one of the best songs ever written, simple yet profound. Choosing a stripped setting fits that faith. The words carry the load, especially the final chorus, which pulls the camera all the way back: psychics and doctors all right and all wrong, and the advice that \"It's like trying to make out every word / When you should simply hum along.\"\n\nThe song lets you stop hunting for the one reason someone hurts or loves, and just sit with the pile of small and enormous things that add up to a person.",
+  "factCheck": [
+    {
+      "claim": "The opening scene is set on the Golden Gate bridge.",
+      "verdict": "corrected",
+      "note": "The lyrics say San Francisco traffic and a bridge side facing the jail, but never name the Golden Gate. Changed to 'a San Francisco bridge'."
+    },
+    {
+      "claim": "Taylor Goldsmith wrote the song and gave the opening man the line \"Setting out to join a demographic.\"",
+      "verdict": "supported",
+      "note": "Goldsmith is the credited writer, and the quote matches the lyrics."
+    },
+    {
+      "claim": "A sergeant asks the man what he's doing it for.",
+      "verdict": "supported",
+      "note": "Matches the second verse."
+    },
+    {
+      "claim": "The chorus lists mountains, fog, the news, and the death of a first dog.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. 'Evening news' is a fair paraphrase of 'news at six o'clock'."
+    },
+    {
+      "claim": "Dawes released the song in 2011.",
+      "verdict": "supported",
+      "note": "First released June 7, 2011."
+    },
+    {
+      "claim": "The song sits in the Americana and folk-rock storytelling tradition, with three verses and a refrain that bends to fit each.",
+      "verdict": "supported",
+      "note": "Backed by the lineage note and the lyric structure."
+    },
+    {
+      "claim": "The older man at the buffet has lost his bright future and his only son, is smiling, and is asked \"Have you figured out yet, what it is you want?\" He answers with biscuits, beans, and an extra chicken wing.",
+      "verdict": "supported",
+      "note": "Quote and details match the lyrics."
+    },
+    {
+      "claim": "The bride is planning a fall wedding, her man says she isn't having fun, and she tells him to worry about his shirt size. She wants the way he jokes and aches, and to watch him wake.",
+      "verdict": "supported",
+      "note": "Matches the third verse and chorus. 'Fiancé' is a reasonable reading of 'her man'."
+    },
+    {
+      "claim": "Each verse hangs on a question someone asks.",
+      "verdict": "supported",
+      "note": "The sergeant, the server, and the man asking 'can I make an observation?' each pose a question. This is a reading of the lyrics."
+    },
+    {
+      "claim": "McAlpine cut it as an acoustic ballad for a Spotify Singles session in Los Angeles, paired with a new take on \"ceilings\".",
+      "verdict": "supported",
+      "note": "Backed by the BroadwayWorld source."
+    },
+    {
+      "claim": "Ryan Lerman produced this version.",
+      "verdict": "supported",
+      "note": "Credited on Dork's lyrics page."
+    },
+    {
+      "claim": "The release came just after \"ceilings\" became her breakthrough.",
+      "verdict": "supported",
+      "note": "Backed by the Wikipedia entry for 'Ceilings' (UK top ten, March 2023)."
+    },
+    {
+      "claim": "McAlpine said she chose it because it's one of the best songs ever written, with lyrics simple yet profound.",
+      "verdict": "supported",
+      "note": "Paraphrases her quoted statement."
+    },
+    {
+      "claim": "The final chorus pulls back to psychics and doctors being all right and all wrong, with the quoted lines \"It's like trying to make out every word / When you should simply hum along.\"",
+      "verdict": "supported",
+      "note": "The quote matches the lyrics exactly, and the lyric structure shows this is the last stanza."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.17,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080954,
+        "detail": "23862 in / 1323 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0482,
+        "detail": "3035 in / 1803 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.040804,
+        "detail": "4127 in / 3255 out"
+      }
+    ]
+  }
+}

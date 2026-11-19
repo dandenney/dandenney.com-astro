@@ -1,0 +1,210 @@
+{
+  "spotifyId": "4lhdZPsJSq7LrkdhrKXsLR",
+  "reviewedAt": "2026-11-19T15:19:20.959Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9647521"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: strummed, with a clean, bright tone.\nElectric guitar: plays a sustained, clean, single-note melody.\nBass: plays a simple, foundational line.\nDrums: kick, snare, and hi-hat, played with a light, steady beat.\n\nTempo and groove:\nMedium tempo, with a relaxed, steady groove.\n\nVocals:\nA single voice, male, with a clear, mid-range tone. The delivery is calm and melodic.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb, suggesting a medium-sized room. The texture is smooth and balanced.\n\nArrangement:\nThe excerpt begins with the full band. The electric guitar plays a recurring melodic phrase. The vocals enter and remain present throughout. No instruments drop out or build significantly within this excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar: fingerpicked, with a clean, bright tone.\nElectric guitar: plays a sustained, clean chord.\nBass: plays a simple, foundational line.\nDrums: unsure.\n\nTempo and Groove:\nSlow tempo. The groove feels relaxed and flowing.\n\nVocals:\nVoice character: A male voice, with a clear, slightly breathy quality.\nDelivery: Melodic, with a gentle, sustained delivery.\nHarmonies: Unsure.\n\nProduction:\nRoom: Sounds like a medium-sized room, with a natural, open feel.\nTexture: Clean and clear, with good separation between instruments.\nPolished/Raw: Polished, with a professional mix.\n\nArrangement:\nThe acoustic guitar and bass establish the foundation. The electric guitar enters with a sustained chord, adding to the texture. The vocals enter shortly after, carrying the melody. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar: strummed, with a clean, bright tone.\nBass guitar: playing a simple, sustained root-note line.\nDrums: playing a slow, steady beat with kick, snare, and hi-hat.\n\nTempo and groove:\nSlow tempo. The groove is relaxed and slightly melancholic.\n\nVocals:\nA single male voice, singing in a clear, mid-range register. The delivery is straightforward and unadorned. There are no harmonies.\n\nProduction:\nThe room sounds open, with a natural, unpolished texture. The overall sound is raw and intimate.\n\nArrangement:\nThe excerpt begins with the acoustic guitar, bass, and drums already established. The vocals enter immediately. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Distant Horizons is track 7 on Imagine the Crackle, released 20 May 2016 on Bad Afro Records, and runs 2:54.",
+        "source": "https://badafrorecords.bandcamp.com/album/imagine-the-crackle"
+      },
+      {
+        "claim": "Christian Hede Madsen is credited as writer and composer of Distant Horizons.",
+        "source": "https://www.deezer.com/en/track/124009106"
+      },
+      {
+        "claim": "Bellhound Choir is a solo project by Christian Hede Madsen from Copenhagen.",
+        "source": "https://badafrorecords.bandcamp.com/album/imagine-the-crackle"
+      },
+      {
+        "claim": "Sebastian Wolff of Kellermensch produced Imagine the Crackle and played drums on it. Discogs credits him as recording engineer and producer. Steffen Sørensen mixed the album.",
+        "source": "https://badafrorecords.bandcamp.com/album/imagine-the-crackle"
+      },
+      {
+        "claim": "Discogs credits Madsen on guitar and vocals, Sebastian Wolff on drums and Mads Uldall-Jessen on upright bass. Brian Mørk Hansen mastered the album.",
+        "source": "https://www.discogs.com/release/8574141-Bellhound-Choir-Imagine-the-Crackle"
+      },
+      {
+        "claim": "Camilla Munch's vocals feature on several songs, including Distant Horizons, according to the Danish outlet Bibzoom.",
+        "source": "https://bibzoom.dk/artikel/bellhound-choir-imagine-crackle"
+      },
+      {
+        "claim": "The album's musician lineup is Christian Hede Madsen (guitar, vocals), Camilla Munch (vocals, Rhodes), Mads Uldall-Jesen (double bass), Søren Stensby (violin) and Sebastian Wolff (drums).",
+        "source": "https://theprogthief.de/en/imagine-the-crackle-by-bellhound-choir/"
+      },
+      {
+        "claim": "The album was recorded in 2015 and released in May 2016. Bad Afro Records was drawn to its dark, stripped-down alternative blues feel.",
+        "source": "https://badafrorecords.bandcamp.com/album/imagine-the-crackle"
+      },
+      {
+        "claim": "Madsen previously fronted the Danish stoner rock band Pet the Preacher. Bellhound Choir's 2015 EP Stray Screech Beast was a departure from that band's heavy rock toward darker country, folk and blues.",
+        "source": "https://theobelisk.net/obelisk/2017/02/14/bellhound-choir-worried-kid-release/"
+      },
+      {
+        "claim": "Rockfreaks reviewed Imagine the Crackle and picked out Distant Horizons as one of the album's most stunning tracks.",
+        "source": "https://www.rockfreaks.net/albums/8310"
+      }
+    ],
+    "lineage": "Bellhound Choir sits in a dark, Scandinavian take on blues and folk that one source calls \"Scandinavian blues noir\", coming out of Danish heavy and stoner rock.",
+    "genres": [
+      "blues rock",
+      "dark folk",
+      "alternative blues"
+    ]
+  },
+  "draft": "The first line breaks in the wrong place. \"I'm too tired to / To sleep\" hangs on that dangling \"to,\" doubles it, and only then reaches the verb, the way a sentence comes out at three in the morning when the mind has stopped finishing its thoughts. **Distant Horizons** opens on that kind of tiredness, the kind past the point where rest is still possible, and everything after is sung from inside it.\n\nChristian Hede Madsen, who wrote the song and records as Bellhound Choir, keeps the words few and the picture blurry. The narrator works on orders from something called the beast. In the first verse a lesson rolls through the air the narrator breathes. By the second, the beast lives in the poison the narrator drinks. That shift is the confession. A threat that was in the atmosphere, something you can't help taking in, is now something you pour for yourself. The song never says what the poison is, and doesn't need to.\n\nBetween those verses sits the strangest moment. The narrator is too close to someone, that someone is too close back, and there's a whole explanation held behind \"if you only knew.\" Closeness here is both what the narrator wants and the danger. Tenderness and warning arrive together, and neither cancels the other.\n\nThen the chorus. The distant horizon is falling, said three times, then \"Well, and it won't be long 'til it hits me.\" The far edge of the world, the one thing that's supposed to stay far, is coming down. That \"Well\" is a shrug before impact. There's no fight in it and no plea, just dread worn as patience.\n\nThe band plays it calm. A strummed acoustic guitar with a clean, bright tone carries the song, over a simple bass line (the album credits Mads Uldall-Jessen on upright bass) and a slow, steady kick, snare, and hi-hat from Sebastian Wolff of Kellermensch, who also produced the record. A clean electric guitar sustains above it all. The vocal is clear, mid-range, and unhurried, and Camilla Munch, who sings on several of the album's songs, is among the voices here. The room sounds open and natural. That steadiness is the trick: the words describe collapse, and the music won't flinch.\n\nMadsen came to this from Danish stoner rock, fronting Pet the Preacher before turning Bellhound Choir toward darker country, folk, and blues, a strain one writer called \"Scandinavian blues noir.\" Bad Afro Records was drawn to the album's dark, stripped-down alternative blues, and Rockfreaks picked this track as one of its most stunning. It shows what that move kept. The heaviness is still there, only without the volume. The lyric is spare enough to read as a sketch, but the gaps are where the fear lives.\n\nIt lets you stand next to someone who can see the sky coming down and feel how tired you'd have to be to sing about it that calmly.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote \"I'm too tired to / To sleep\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Lyric quotes \"if you only knew\" and \"Well, and it won't be long 'til it hits me\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics. The total number of quoted lyric lines stays within the limit."
+    },
+    {
+      "claim": "The narrator works on orders from the beast; a lesson rolls in the air in the first verse; the beast lives in the poison in the second",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The reading of the shift is interpretation."
+    },
+    {
+      "claim": "The chorus's distant-horizon line is said three times",
+      "verdict": "supported",
+      "note": "The lyrics repeat it three times in each chorus."
+    },
+    {
+      "claim": "The closeness lines sit \"between those verses\"",
+      "verdict": "corrected",
+      "note": "In the lyrics the closeness lines come after the first chorus and before the second verse. Changed to \"between the two choruses\"."
+    },
+    {
+      "claim": "Christian Hede Madsen wrote the song and records as Bellhound Choir",
+      "verdict": "supported",
+      "note": "Deezer credits him as writer and composer. Bandcamp calls Bellhound Choir his solo project."
+    },
+    {
+      "claim": "Strummed acoustic guitar with a clean, bright tone",
+      "verdict": "supported",
+      "note": "All three passes agree on clean and bright. Two passes say strummed."
+    },
+    {
+      "claim": "Simple bass line",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The album credits Mads Uldall-Jessen on upright bass",
+      "verdict": "supported",
+      "note": "Discogs credits him on upright bass for the album."
+    },
+    {
+      "claim": "Slow, steady kick, snare, and hi-hat; Sebastian Wolff of Kellermensch on drums",
+      "verdict": "corrected",
+      "note": "Two passes agree on the kick, snare and hi-hat, and two say slow tempo. Wolff is credited on drums and as producer for the album, not for this specific track, so the wording now says he plays drums on the record."
+    },
+    {
+      "claim": "Wolff of Kellermensch also produced the record",
+      "verdict": "supported",
+      "note": "Bandcamp and Discogs credit him as producer."
+    },
+    {
+      "claim": "A clean electric guitar sustains above it all",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a clean, sustained electric guitar."
+    },
+    {
+      "claim": "Clear, mid-range, unhurried vocal",
+      "verdict": "supported",
+      "note": "The passes agree on clear, mid-range, calm and gentle."
+    },
+    {
+      "claim": "Camilla Munch sings on several of the album's songs and is among the voices here",
+      "verdict": "corrected",
+      "note": "Bibzoom says her vocals feature on this song. The listening passes describe a single voice, so the line now states only the credit and drops \"among the voices here\"."
+    },
+    {
+      "claim": "The room sounds open and natural",
+      "verdict": "supported",
+      "note": "All three passes describe a natural, open, medium-sized room."
+    },
+    {
+      "claim": "Madsen came from Danish stoner rock, fronting Pet the Preacher, then moved toward darker country, folk and blues",
+      "verdict": "supported",
+      "note": "The Obelisk says so, citing the 2015 EP Stray Screech Beast."
+    },
+    {
+      "claim": "\"Scandinavian blues noir\"",
+      "verdict": "supported",
+      "note": "A source uses the phrase."
+    },
+    {
+      "claim": "Bad Afro Records was drawn to the album's dark, stripped-down alternative blues",
+      "verdict": "supported",
+      "note": "Stated on Bandcamp."
+    },
+    {
+      "claim": "Rockfreaks picked this track as one of the album's most stunning",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "Interpretive readings (three a.m. tiredness, the shrug in \"Well\", the heaviness without the volume, and so on)",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics and supported sound details."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.215,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014492,
+        "detail": "1099 in / 179 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014917,
+        "detail": "1099 in / 196 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014117,
+        "detail": "1099 in / 164 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.075622,
+        "detail": "21306 in / 1301 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.081356,
+        "detail": "3539 in / 3360 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053678,
+        "detail": "4769 in / 4414 out"
+      }
+    ]
+  }
+}

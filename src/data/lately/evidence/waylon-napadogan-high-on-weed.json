@@ -1,0 +1,205 @@
+{
+  "spotifyId": "6Y0O5lJ5pb3SH9BzPmk5QD",
+  "reviewedAt": "2026-11-19T15:24:42.209Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nA distorted electric guitar plays a fast, driving riff with a palm-muted chugging rhythm. A bass guitar plays a complementary, driving line. Drums provide a fast, driving beat with a prominent snare and kick, and frequent cymbal crashes.\n\nA male voice sings in a clear, mid-range register, with a slightly nasal quality. The delivery is energetic and conversational, with a slight upward inflection at the end of phrases. There are no harmonies.\n\nThe production is raw and unpolished, with a dry, close-miked sound. The instruments are tightly mixed, creating a dense, energetic texture.\n\nThe excerpt begins with all instruments and vocals already present. The arrangement remains consistent throughout, with no noticeable changes in instrumentation or dynamics.\n\nPass 2:\nA distorted electric guitar plays a fast, driving riff with palm-muted notes. A bass guitar plays a complementary, driving line. Drums play a fast, driving beat with a prominent snare and kick, and a consistent hi-hat pattern.\n\nA male voice sings in a clear, mid-range, with a slightly nasal quality. The delivery is conversational and rhythmic. There are no harmonies.\n\nThe production is clean and polished, with a tight, dry sound. There is no discernible room sound.\n\nThe excerpt begins with all instruments playing. The vocals enter shortly after. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building.\n\nPass 3:\nA distorted electric guitar plays a fast, driving riff with palm-muted notes. A bass guitar plays a complementary, driving line. Drums play a fast, driving rock beat with a prominent snare and kick drum, and a consistent hi-hat pattern.\n\nA male voice sings in a clear, mid-range register, with a slightly raw, unpolished character. The delivery is rhythmic and conversational. There are no harmonies.\n\nThe production sounds like a live band in a medium-sized room, with a slightly raw, unpolished texture. The sound is clear and direct.\n\nThe excerpt begins with all instruments playing. The vocals enter shortly after. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"High on Weed\" is a one-track single by Waylon Napadogan, released February 22, 2023, running 3:06.",
+        "source": "https://music.apple.com/us/song/high-on-weed/1673813589"
+      },
+      {
+        "claim": "Apple Music lists the single under the Rock genre, with a 2023 copyright line (℗) to Waylon Napadogan, who is also the label.",
+        "source": "https://music.apple.com/us/album/high-on-weed-single/1673813588"
+      },
+      {
+        "claim": "Waylon Napadogan is a musician and comedian from New Brunswick, Canada.",
+        "source": "https://www.last.fm/music/Waylon+Napadogan?top_tracks_date_preset=LAST_30_DAYS"
+      },
+      {
+        "claim": "Before \"High on Weed\", he released the single \"Oh Ya No For Sure Bud\" (Dec 2, 2021), the six-track EP \"I Seen a Sasquatch\" (Jul 22, 2022), and the single \"No Wonder Sharon Took the Kids and Left My Ass Again\" (Nov 18, 2022).",
+        "source": "https://www.last.fm/music/Waylon+Napadogan/+albums?order=most_popular"
+      },
+      {
+        "claim": "After \"High on Weed\" he released \"Stuck in a Porta Potty\" (Sep 12, 2023), \"98 Pontiac Sunfire\" (Nov 2023), and \"2008 Ford Ranger\" (Aug 20, 2024).",
+        "source": "https://www.last.fm/music/Waylon+Napadogan/+albums?order=most_popular"
+      },
+      {
+        "claim": "His latest release as of the sources is the single \"Lot Lizard\", dated July 5, 2025.",
+        "source": "https://www.last.fm/music/Waylon+Napadogan?top_tracks_date_preset=LAST_30_DAYS"
+      },
+      {
+        "claim": "He appeared as a comedy singer and pianist on America's Got Talent Season 17. He was eliminated at the audition stage after performing an original song about naming a baby Gary.",
+        "source": "https://agt.fandom.com/wiki/Waylon_Napadogan"
+      },
+      {
+        "claim": "In a Strange Grooves podcast interview he discussed how he got into music, his early influences, how he used TikTok and Instagram to build an audience, and where the ideas for his viral songs come from.",
+        "source": "https://www.strangegrooves.com/episodes/volume-89-waylon-napadogan"
+      },
+      {
+        "claim": "He has described writing \"Frig Off Bud\", which he calls probably his oldest song, at age seven as a defence against school bullies. Grid City Magazine linked him to the mullet-era 90s New Country sound.",
+        "source": "http://www.gridcitymagazine.com/video-frig-off-bud-waylon-napadogan/"
+      },
+      {
+        "claim": "He markets his songs on TikTok as comedy and country music, and describes his music as Canadian.",
+        "source": "https://www.tiktok.com/@waylonnapadogan/video/7309878048663358725?lang=en"
+      }
+    ],
+    "lineage": "Napadogan's songs sit in the Atlantic Canadian comedy-country tradition, with 90s New Country-style songwriting and humour about Maritime working-class life, spread largely through TikTok and Instagram.",
+    "genres": [
+      "comedy country",
+      "alternative country",
+      "rock"
+    ]
+  },
+  "draft": "A palm-muted guitar riff, distorted and fast, chugs under **High on Weed** like an engine that won't idle down. Bass doubles the drive, the snare and kick hit hard, and a steady hi-hat keeps everything locked. Nothing drops out, nothing builds. The band just stays in the pocket and keeps pushing.\n\nThat steadiness is the joke's delivery system. Waylon Napadogan is a musician and comedian from New Brunswick, and he markets his songs on TikTok as comedy and country. This one Apple Music files under Rock, and you can hear why: the riff owes more to a garage than to a honky-tonk. But the songwriting instinct is the same one running through his catalogue, which reads like a list of things a Maritime guy might say out loud, own, or get stuck in: \"Oh Ya No For Sure Bud,\" \"I Seen a Sasquatch,\" \"No Wonder Sharon Took the Kids and Left My Ass Again,\" \"Stuck in a Porta Potty,\" \"98 Pontiac Sunfire,\" \"2008 Ford Ranger.\" The titles are the punchlines and the premises at once. \"High on Weed\" is as blunt as any of them. It names a state of being and doesn't apologize for it.\n\nThe vocal is clear, mid-range, a little nasal, with no harmonies stacked behind it. It's conversational and rhythmic, riding the beat like someone telling a story at speed rather than performing one. The production is dry and tight, a little raw around the edges, the sound of a few people playing close together rather than a studio dressing them up. Napadogan is his own label here, and the record sounds like it: direct, unfussed, built to land on a phone speaker and get shared.\n\nThere's a feeling underneath the bit worth taking seriously. Napadogan has said he wrote \"Frig Off Bud,\" probably his oldest song, at seven, as a defence against school bullies. That's a kid learning that a funny song can be armour, that you can say the rough thing first and set the terms. He carried that instinct onto the America's Got Talent stage with an original about naming a baby Gary, and into an audience built on TikTok and Instagram. \"High on Weed\" comes out of the same place: the plain pleasure of saying the unpolished thing in a loud room and watching people laugh with you instead of at you.\n\nIt sticks because the band plays it completely straight, so you're grinning at the title and nodding along to the riff before you've decided whether it's a joke.",
+  "factCheck": [
+    {
+      "claim": "Distorted, fast, palm-muted guitar riff drives the song",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Bass doubles the drive",
+      "verdict": "corrected",
+      "note": "Passes describe a complementary driving bass line, not one doubling the riff. Reworded."
+    },
+    {
+      "claim": "Snare and kick hit hard; steady hi-hat",
+      "verdict": "supported",
+      "note": "Prominent snare and kick in all passes; consistent hi-hat in passes 2 and 3. 'Hit hard' softened to 'up front'."
+    },
+    {
+      "claim": "Nothing drops out, nothing builds; the band stays in the pocket",
+      "verdict": "removed",
+      "note": "Passes only describe a short excerpt, so a claim about the song's overall arc is unsupported."
+    },
+    {
+      "claim": "Waylon Napadogan is a musician and comedian from New Brunswick",
+      "verdict": "supported",
+      "note": "Last.fm."
+    },
+    {
+      "claim": "Markets his songs on TikTok as comedy and country",
+      "verdict": "supported",
+      "note": "TikTok source."
+    },
+    {
+      "claim": "Apple Music files it under Rock",
+      "verdict": "supported",
+      "note": "Apple Music listing."
+    },
+    {
+      "claim": "Riff owes more to a garage than to a honky-tonk",
+      "verdict": "supported",
+      "note": "Interpretation resting on the described sound."
+    },
+    {
+      "claim": "Catalogue titles (Oh Ya No For Sure Bud, I Seen a Sasquatch, No Wonder Sharon..., Stuck in a Porta Potty, 98 Pontiac Sunfire, 2008 Ford Ranger)",
+      "verdict": "supported",
+      "note": "All appear in the researched discography and the titles are quoted correctly."
+    },
+    {
+      "claim": "Titles read like things a Maritime guy might say; 'High on Weed' names a state of being and doesn't apologize",
+      "verdict": "supported",
+      "note": "Critic's interpretation based on titles and the lineage note; no lyrics are quoted."
+    },
+    {
+      "claim": "Vocal is clear, mid-range, a little nasal, no harmonies, conversational and rhythmic",
+      "verdict": "supported",
+      "note": "Clear, mid-range, nasal (passes 1 and 2); no harmonies and conversational/rhythmic (all)."
+    },
+    {
+      "claim": "Production is dry and tight, a little raw",
+      "verdict": "supported",
+      "note": "Dry and tight in passes 1 and 2; raw in passes 1 and 3."
+    },
+    {
+      "claim": "Sound of a few people playing close together rather than a studio dressing them up",
+      "verdict": "removed",
+      "note": "Only pass 3 suggests a live-band room feel, and pass 2 calls it clean and polished."
+    },
+    {
+      "claim": "Napadogan is his own label",
+      "verdict": "supported",
+      "note": "Apple Music ℗ line."
+    },
+    {
+      "claim": "Built to land on a phone speaker and get shared",
+      "verdict": "supported",
+      "note": "Interpretation; he builds his audience on TikTok and Instagram."
+    },
+    {
+      "claim": "Wrote 'Frig Off Bud', probably his oldest song, at seven as a defence against school bullies",
+      "verdict": "supported",
+      "note": "Grid City Magazine."
+    },
+    {
+      "claim": "Appeared on America's Got Talent with an original song about naming a baby Gary",
+      "verdict": "supported",
+      "note": "AGT wiki."
+    },
+    {
+      "claim": "Audience built on TikTok and Instagram",
+      "verdict": "supported",
+      "note": "Strange Grooves interview."
+    },
+    {
+      "claim": "The band plays it completely straight",
+      "verdict": "supported",
+      "note": "Interpretation of the consistent, driving arrangement."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2302,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013758,
+        "detail": "1102 in / 149 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013833,
+        "detail": "1102 in / 152 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00050897,
+        "detail": "1102 in / 133 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.132428,
+        "detail": "43884 in / 1466 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05028,
+        "detail": "3220 in / 1870 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044182,
+        "detail": "4336 in / 3551 out"
+      }
+    ]
+  }
+}

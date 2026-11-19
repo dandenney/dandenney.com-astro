@@ -1,0 +1,190 @@
+{
+  "spotifyId": "3oRT45v51KOyV37KPmemc3",
+  "reviewedAt": "2026-11-19T15:33:03.592Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3830731"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a simple, strummed chord progression. A bass guitar enters, playing a root-note line. Drums enter with a steady, mid-tempo beat, featuring a snare on beats two and four. The groove feels relaxed and slightly melancholic.\n\nA single voice sings with a clear, slightly breathy character. The delivery is conversational and understated. There are no harmonies.\n\nThe production sounds clean and polished. The room sound is neutral, not overtly wet or dry. The texture is smooth.\n\nThe arrangement builds gradually. The acoustic guitar is present throughout. The bass enters, followed by the drums. The vocals are present from the beginning of the excerpt. No instruments drop out.\n\nPass 2:\nAcoustic guitar plays a fingerpicked pattern. A male voice sings a harmony in the first two seconds, then a female voice takes the lead, singing in a clear, slightly breathy tone. The tempo is moderate, with a relaxed, slightly melancholic groove. The production is clean and polished, with a natural room sound.\n\nA bass guitar enters, playing a simple, supportive line. Drums enter with a light, brushed feel, emphasizing the backbeat. The female voice continues to sing, with occasional subtle vocal harmonies. The arrangement remains sparse, with the instruments providing a gentle backdrop to the vocals. The female voice has a slight vibrato. The overall texture is smooth and uncluttered.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady rhythm with a light strumming pattern. A bass guitar plays a simple, root-note-driven line. Drums enter with a kick, snare, and hi-hat, playing a straightforward beat. A piano plays sustained chords.\n\nTempo and Groove Feel:\nThe tempo is moderate. The groove is relaxed and steady, with a slight country-pop feel.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is conversational and unadorned. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals. The texture is smooth.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and piano. Drums enter shortly after the vocals begin. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Self Love\" by Avery Anna was released April 4, 2023 as a single on Warner Records Nashville.",
+        "source": "https://www.shazam.com/song/1677872239/self-love"
+      },
+      {
+        "claim": "The song runs 2:51.",
+        "source": "https://www.deezer.com/us/album/418942847"
+      },
+      {
+        "claim": "Deezer credits the writers as Andrew Goldstein, Ava Suppelsa, Avery Anna, David Fanning and Zarni De Vette.",
+        "source": "https://www.deezer.com/us/album/418942847"
+      },
+      {
+        "claim": "Andrew Goldstein is credited as co-writer and co-producer of \"Self Love\". AllMusic lists him on keyboards, programming and synthesizer.",
+        "source": "https://en.wikipedia.org/wiki/Andrew_Goldstein_(musician)"
+      },
+      {
+        "claim": "Chordzone credits Andrew Goldstein and David Fanning as producers. It is a chord-chart site, not a primary source.",
+        "source": "https://www.chordzone.org/2023/06/avery-anna-self-love-chords-and-tabs-for-guitar-and-piano-sheet-music-tabs.html"
+      },
+      {
+        "claim": "AllMusic credits Goldstein on Avery Anna's \"Self Love\" as composer, keyboards, producer, programming and synthesizer.",
+        "source": "https://www.allmusic.com/artist/andrew-goldstein-mn0001208093"
+      },
+      {
+        "claim": "The lyric is a wry confession that she hates how \"self-love\" sounds and struggles to practice it. It mentions a therapy exercise of listing ten things she likes about herself, of which she managed three.",
+        "source": "https://readdork.com/lyrics/avery-anna-self-love-2023"
+      },
+      {
+        "claim": "Holler describes \"Self Love\" and \"I Will (When You Do)\" as Avery Anna's move toward a bigger, rockier sound, after earlier vulnerable, journal-like songs such as \"Just Cause I Love You\".",
+        "source": "https://holler.country/news/breaking/interview-avery-anna-discusses-c2c-festival-2025-writing-vanilla-for-her-sister-and-more/"
+      },
+      {
+        "claim": "Avery Anna was born March 2, 2004 in Flagstaff, Arizona. She moved to Nashville in August 2021 at age 17 and signed with Warner Music Nashville in June 2022.",
+        "source": "https://en.wikipedia.org/wiki/Avery_Anna"
+      },
+      {
+        "claim": "Her management and production deal with David Fanning came after a viral TikTok. Her debut EP Mood Swings (2022) was made with Fanning as writer, producer and manager.",
+        "source": "https://countrynow.com/country-next-avery-anna/"
+      }
+    ],
+    "lineage": "A modern country singer-songwriter track in the Nashville pop-country tradition, with a rockier, pop-rock edge and confessional, journal-style songwriting.",
+    "genres": [
+      "country",
+      "pop rock",
+      "country pop"
+    ]
+  },
+  "draft": "The song opens on a compliment thrown at a stranger: \"You're so pretty,\" and then the confession of where it happened, *I say that to a random girl in the bathroom*. It's a small, true scene. Anyone who has been the person handing out warmth in a club restroom knows the giver often has none left for themselves. Avery Anna stacks up more of these kindnesses in the first verse. She forgives the exes, texts friends to check in, smiles nice and sweet. Then the floor drops: \"Deep down in reality.\"\n\n**Self Love** is a song about generosity that only flows outward. It is also a song embarrassed by its own subject. The chorus starts with \"I hate the way 'self-love' sounds\" and builds to *I hate this dumb self-love song*. That's the clever, defensive move at the center of it. She mocks the language of wellness while admitting she needs what it's selling. The irritation and the need sit in the same line, and neither one wins. The best trick is in the line break. \"I'm the only one, I don't let my\" hangs open, then \"self love\" lands as both the noun in the title and something she won't let her own self do.\n\nThe second verse makes it funnier and sadder. A therapist's exercise asks for ten things she likes about herself, and she reports back: *Only got to three, what does that say about therapy?* She turns her failure into a punchline aimed at the treatment. Then she admits posting \"Treat yourself nice\" for followers she can't take the advice for. The joke holds the hurt at arm's length, and the arm-length is the point.\n\nThe music keeps that hurt from tipping into melodrama. A strummed acoustic guitar sets a mid-tempo, slightly melancholy groove. A bass comes in on plain root notes, then drums with a steady backbeat. The production is clean and smooth, and the voice is clear, a little breathy, conversational. It sounds like someone talking herself through it rather than belting for rescue.\n\nAvery Anna co-wrote it with Andrew Goldstein, who co-produced and plays keys and synths, plus Ava Suppelsa, David Fanning and Zarni De Vette. It came out on Warner Records Nashville in 2023, less than two years after she moved to town at seventeen. Holler grouped it with \"I Will (When You Do)\" as her turn toward a bigger, rockier sound after more journal-like songs. But the writing here is still pure diary, Nashville pop-country confession with a teenager's eye-roll built in.\n\nIt sticks because it lets you be kind to everyone else and cynical about yourself in the same breath, and then quietly notices how much that costs.",
+  "factCheck": [
+    {
+      "claim": "The song opens with the line \"You're so pretty\" said to a random girl in the bathroom",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The bathroom line is now paraphrased to stay within the three-quote limit."
+    },
+    {
+      "claim": "Anyone who has been the person handing out warmth in a club restroom...",
+      "verdict": "corrected",
+      "note": "The lyric says 'bathroom' and never mentions a club. 'Club' removed. The reading itself is interpretation and stays."
+    },
+    {
+      "claim": "Forgives the exes, texts friends to check in, smiles nice and sweet",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"Deep down in reality\" as the turn",
+      "verdict": "supported",
+      "note": "The line is accurate. It is now paraphrased rather than quoted, because the draft had more than three quoted lines."
+    },
+    {
+      "claim": "Quoted lyrics: 'I hate the way \"self-love\" sounds', 'I hate this dumb self-love song', \"I'm the only one, I don't let my\", \"Only got to three...\", \"Treat yourself nice\"",
+      "verdict": "corrected",
+      "note": "All quotes were accurate, but the draft quoted far more than three lines. Reduced to three quoted lines and paraphrased the rest."
+    },
+    {
+      "claim": "The chorus ends mid-sentence, with 'self love' landing as the title and as what she won't allow herself",
+      "verdict": "supported",
+      "note": "Follows from the lyric structure. This is a reading of the lyrics. Now phrased without gendered pronouns."
+    },
+    {
+      "claim": "A therapist's exercise asks for ten things she likes about herself; she got to three",
+      "verdict": "corrected",
+      "note": "The lyric mentions a therapy exercise, not a therapist. Adjusted wording."
+    },
+    {
+      "claim": "Posting 'Treat yourself nice' for followers she can't take the advice for",
+      "verdict": "corrected",
+      "note": "The lyric says 'posted a caption' and never mentions followers. The sentence was also garbled. Reworded."
+    },
+    {
+      "claim": "Strummed acoustic guitar, mid-tempo, slightly melancholy groove",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say strummed (pass 2 says fingerpicked). All three say moderate or mid-tempo. Passes 1 and 2 say slightly melancholic."
+    },
+    {
+      "claim": "Bass comes in on plain root notes, then drums with a steady backbeat",
+      "verdict": "corrected",
+      "note": "Root-note bass and a backbeat are backed by at least two passes. The 'comes in, then' sequencing is not supported, since the passes disagree and the excerpt's position is unknown. Sequencing removed."
+    },
+    {
+      "claim": "Clean, smooth production; clear, slightly breathy, conversational voice",
+      "verdict": "supported",
+      "note": "Backed by at least two passes."
+    },
+    {
+      "claim": "Sounds like someone talking herself through it",
+      "verdict": "corrected",
+      "note": "Gendered pronoun removed. The singer's gender is not established in the facts, and only one pass says female."
+    },
+    {
+      "claim": "Co-written with Andrew Goldstein (co-producer, keys and synths), Ava Suppelsa, David Fanning and Zarni De Vette",
+      "verdict": "supported",
+      "note": "Matches Deezer, AllMusic and Wikipedia. 'Plays' softened to 'credited on'."
+    },
+    {
+      "claim": "Released on Warner Records Nashville in 2023, less than two years after she moved to town at seventeen",
+      "verdict": "supported",
+      "note": "Moved to Nashville in August 2021 at 17. Released April 2023."
+    },
+    {
+      "claim": "Holler grouped it with 'I Will (When You Do)' as a turn toward a bigger, rockier sound after more journal-like songs",
+      "verdict": "supported",
+      "note": "Matches the Holler summary."
+    },
+    {
+      "claim": "Nashville pop-country confession with a teenager's eye-roll built in",
+      "verdict": "corrected",
+      "note": "The 'teenager' characterization is not supported by the facts. Removed. The Nashville pop-country confessional lineage is supported."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2527,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013586,
+        "detail": "1097 in / 143 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013536,
+        "detail": "1097 in / 141 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014661,
+        "detail": "1097 in / 186 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.130984,
+        "detail": "44187 in / 1261 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053304,
+        "detail": "3621 in / 1941 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.064264,
+        "detail": "4777 in / 5471 out"
+      }
+    ]
+  }
+}

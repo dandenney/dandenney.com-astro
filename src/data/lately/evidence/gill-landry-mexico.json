@@ -1,0 +1,200 @@
+{
+  "spotifyId": "0mFdK30Qlw4AFwNooBzgU0",
+  "reviewedAt": "2026-11-19T15:28:05.296Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13831198"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady rhythm with a bass line. A second acoustic guitar plays a melodic counterpoint. A steel guitar plays sustained notes. A drum kit plays a simple beat with brushes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly shuffling.\n\nVocals:\nA male voice sings in a clear, slightly raspy character. The delivery is conversational. There are no harmonies.\n\nProduction:\nThe room sounds open. The texture is warm and slightly raw. The production is not overly polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The steel guitar enters with sustained notes. The drum kit maintains a consistent beat. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady rhythm with a bass line. A second acoustic guitar plays a melodic counterpoint. A steel guitar plays sustained notes. A drum kit plays a simple beat with brushes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly melancholic.\n\nVocals:\nThe voice is male, with a slightly raspy character. The delivery is conversational. There are no harmonies.\n\nProduction:\nThe room sounds open. The texture is warm. The production is polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The steel guitar enters around 0:07, playing sustained notes. All instruments continue to play throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady rhythm with a fingerpicked bass line and strummed chords. A bass guitar plays a walking bass line. A drum kit plays a shuffle groove with brushes. A steel guitar plays sustained notes with a vibrato.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed shuffle.\n\nVocals:\nThe voice is male, with a slightly raspy character. The delivery is conversational. There are no harmonies.\n\nProduction:\nThe room sounds open. The texture is warm. The production is polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The steel guitar enters at 0:10, playing sustained notes. The vocals re-enter at 0:24.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Mexico\" appears on Gill Landry's album The Ballad of Lawless Soirez, released 30 January 2007; the Bandcamp page lists it as track 1, running 3:25.",
+        "source": "https://gilllandry.bandcamp.com/album/the-ballad-of-lawless-soirez"
+      },
+      {
+        "claim": "Shazam lists \"Mexico\" as released 30 January 2007 by Rubber Tramp Records. Discogs, AllMusic and Wikipedia credit the album's CD and digital release to Nettwerk.",
+        "source": "https://www.shazam.com/en-us/song/1596037269/mexico"
+      },
+      {
+        "claim": "Gill Landry (Gilbert Landry) is credited as sole writer of \"Mexico\".",
+        "source": "https://www.deezer.com/en/track/1556372762"
+      },
+      {
+        "claim": "Discogs credits the album's production to Nick Jaina and Gill Landry. For \"Mexico\" (track 9), it credits Jason Powers as recording engineer and Adam Selzer as mixer. Eric Ames mastered the album.",
+        "source": "https://www.discogs.com/release/904055-Gill-Landry-The-Ballad-Of-Lawless-Soirez"
+      },
+      {
+        "claim": "Album musicians credited on Discogs include Peter Broderick (mandolin, musical saw), Annie Ford (viola, fiddle, clarinet), Ryan Donohue (upright bass), Gavin Bowes (drums), Mike Danner (accordion), Skip Von Kuske (cello), Daniel Snow (trombone) and Victor Nash (trumpet). The credits are for the album, not specifically for \"Mexico\".",
+        "source": "https://www.discogs.com/release/904055-Gill-Landry-The-Ballad-Of-Lawless-Soirez"
+      },
+      {
+        "claim": "AllMusic gives the album's recording date as 2006 and its genres as Pop/Rock and Folk. Nick Jaina is credited with Fender Rhodes, organ, piano, mixing and production.",
+        "source": "https://www.allmusic.com/album/the-ballad-of-lawless-soirez-mw0000560761"
+      },
+      {
+        "claim": "The lyric of \"Mexico\" is a breakup song whose refrain is that the narrator's baby doesn't love him anymore. It uses imagery such as voodoo swamp angels, cypress groves and a cop's brutal touch, and ends on the line about loving his money and Mexico.",
+        "source": "https://www.shazam.com/en-us/song/1596037269/mexico"
+      },
+      {
+        "claim": "The album is Landry's solo debut. Wikipedia says the songs came out of leaving Old Crow Medicine Show's relative security and a tough breakup with a one-time fiancée.",
+        "source": "https://en.wikipedia.org/wiki/Gill_Landry"
+      },
+      {
+        "claim": "Landry is a Louisiana-born singer-songwriter, multi-instrumentalist and former street busker who was a member of Old Crow Medicine Show. He met the band busking in New Orleans during Mardi Gras in 2000, after forming the Syncopators two years earlier.",
+        "source": "https://citybeat.com/music/article/13000925/sound-advice-gill-landry-with-noah-smith"
+      },
+      {
+        "claim": "Landry's later solo albums are Piety & Desire (2011), the self-titled Gill Landry (ATO Records, 2015), Love Rides a Dark Horse (2017), Skeleton at the Banquet (2019/2020) and Cinnamon Canyon Blues (2024). He left Old Crow after the 2015 album.",
+        "source": "https://music.apple.com/us/artist/gill-landry/212299090"
+      }
+    ],
+    "lineage": "Landry's solo debut sits in gritty, blues-inflected folk and rootsy Southern Americana, shaped by his Louisiana roots and New Orleans street-busking days.",
+    "genres": [
+      "folk rock",
+      "americana",
+      "blues"
+    ]
+  },
+  "draft": "By the last verse of **Mexico**, the narrator has been listing his baby's loves for so long that it takes a moment to notice he's finally made the list himself. \"My baby loves my money and Mexico,\" Gill Landry sings, and there it is: the only place he shows up in her world is his wallet, filed next to a country she'd rather be in.\n\nThe whole song runs on that list. Every verse stacks up what she loves, and every verse lands on the same flat refrain: \"But my baby she don't love me no more.\" The \"my baby\" lament is an old blues move, but Landry fills it with a Louisiana grab bag of charms and vices. She loves a talisman and a holy ghost, moonshine, stolen pearls, the burglar's wine. She also loves \"lotus swamp banjos under cypress groves,\" which isn't an accusation at all. It's a picture he clearly loves too.\n\nThat mix is where the song gets interesting. Half the list reads like a case against her: addiction, a dungeon, a cop with a brutal touch. The other half is tender, blood red roses and December snow. The narrator can't decide whether he's indicting her or still admiring her, and the song never makes him choose. Knowing someone this well, down to the strange things that move them, and getting nothing back is its own kind of hurt. The money line stings because it's the one place he lets the bitterness show plainly.\n\nThe band plays it easy, which makes the bruise sit lower. An acoustic guitar keeps a steady rhythm with the bass line folded in, and a second acoustic picks out a counter-melody. Brushes push a relaxed shuffle at a moderate walk. A steel guitar holds long notes over the top, the closest the arrangement gets to crying. Landry's voice is a little raspy and pitched like conversation, with no harmonies to soften it. The room sounds open and warm, clean without feeling fussed over.\n\nThe song comes from Landry's solo debut, recorded in 2006 and produced with Nick Jaina. Jason Powers engineered this track and Adam Selzer mixed it. Landry, a Louisiana-born former street busker, had left the relative security of Old Crow Medicine Show, and the songs grew out of that leap and a hard breakup with a one-time fiancée. \"Mexico\" doesn't need the backstory, but it fits the tone of someone taking stock of a steady thing that's gone.\n\nWhat keeps you coming back is that refrain doing double duty, as every catalog of her loves turns into a quiet count of what the narrator never got to be.",
+  "factCheck": [
+    {
+      "claim": "The last verse includes the line \"My baby loves my money and Mexico\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly and falls in the final verse."
+    },
+    {
+      "claim": "Every verse stacks up what she loves and lands on the refrain \"But my baby she don't love me no more.\"",
+      "verdict": "supported",
+      "note": "Quote and structure match the lyrics."
+    },
+    {
+      "claim": "\"lotus swamp banjos under cypress groves\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "She loves a talisman and a holy ghost, moonshine, stolen pearls, the burglar's wine",
+      "verdict": "supported",
+      "note": "Paraphrase of the lyrics, not presented as a quote."
+    },
+    {
+      "claim": "The \"my baby\" lament is an old blues move",
+      "verdict": "corrected",
+      "note": "A claim about blues history isn't backed by the packet. Reworded to the supported lineage of blues-inflected folk."
+    },
+    {
+      "claim": "Half the list reads like a case against her (addiction, a dungeon, a cop with a brutal touch); the other half is tender (blood red roses, December snow)",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics."
+    },
+    {
+      "claim": "Acoustic guitar keeps a steady rhythm with a bass line, and a second acoustic plays a counter-melody",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree; pass 3 also describes the guitar's bass line."
+    },
+    {
+      "claim": "Brushes drive a relaxed shuffle at a moderate tempo",
+      "verdict": "supported",
+      "note": "All passes agree on brushes and a moderate tempo; passes 1 and 3 agree on the shuffle."
+    },
+    {
+      "claim": "A steel guitar holds long notes",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Raspy, conversational voice with no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The room sounds open and warm",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Clean without feeling fussed over",
+      "verdict": "removed",
+      "note": "The passes disagree on polish (one says not overly polished, two say polished), so the claim isn't backed by agreement."
+    },
+    {
+      "claim": "Solo debut, recorded in 2006, produced with Nick Jaina",
+      "verdict": "supported",
+      "note": "Wikipedia on the debut, AllMusic on the recording date, Discogs on production."
+    },
+    {
+      "claim": "Jason Powers engineered this track and Adam Selzer mixed it",
+      "verdict": "supported",
+      "note": "Discogs credits for \"Mexico\"."
+    },
+    {
+      "claim": "Landry is a Louisiana-born former street busker",
+      "verdict": "supported",
+      "note": "From the CityBeat profile."
+    },
+    {
+      "claim": "Landry had left the relative security of Old Crow Medicine Show, and the songs grew out of that leap",
+      "verdict": "removed",
+      "note": "The packet conflicts: Wikipedia says the songs came from leaving Old Crow, while Apple says he left after 2015. Reworded to say only that he played with the band."
+    },
+    {
+      "claim": "The songs grew out of a hard breakup with a one-time fiancée",
+      "verdict": "supported",
+      "note": "Wikipedia."
+    },
+    {
+      "claim": "The money line is the one place the bitterness shows plainly; the steel guitar is the closest the arrangement gets to crying; the refrain does double duty",
+      "verdict": "supported",
+      "note": "Critic's interpretation grounded in the lyrics and the sound notes."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2146,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013858,
+        "detail": "1096 in / 154 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014058,
+        "detail": "1096 in / 162 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013658,
+        "detail": "1096 in / 146 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080556,
+        "detail": "21778 in / 1700 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07592,
+        "detail": "3715 in / 3053 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053992,
+        "detail": "4846 in / 4430 out"
+      }
+    ]
+  }
+}

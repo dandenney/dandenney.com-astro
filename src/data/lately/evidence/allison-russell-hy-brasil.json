@@ -1,0 +1,190 @@
+{
+  "spotifyId": "2OeMJJ4QlZKW0mjpbIckiq",
+  "reviewedAt": "2026-11-19T15:39:39.059Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5727501"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a slow, arpeggiated figure. A low, sustained synth pad enters. A female voice sings a narrative melody, clear and resonant, with a slight vibrato. The tempo is slow, creating a contemplative, unhurried feel. The production is clean, with a sense of open space around the instruments and voice. The acoustic guitar continues its pattern, and the synth pad remains constant. The voice is the primary focus, with no harmonies present in this excerpt.\n\nPass 2:\nA slow, steady synth pad with a low drone opens the excerpt. A plucked string instrument, possibly a banjo, enters with a simple, arpeggiated melody. A single voice, with a clear, resonant tone, begins singing in a moderate tempo. The delivery is unhurried and expressive.\n\nThe voice is joined by a second voice, creating a two-part harmony, often in parallel motion. The plucked string instrument continues its accompaniment, maintaining a consistent, gentle rhythm. The synth pad remains a constant, providing a warm, sustained background.\n\nThe production feels clean and polished, with a sense of spaciousness. The texture is relatively sparse, allowing the individual instruments and voices to be clearly heard. There are no abrupt changes in the arrangement; the elements gradually build and sustain throughout the excerpt.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggio pattern with a clean, bright tone. A low, sustained synth pad enters, adding a soft, airy texture. A voice with a clear, resonant character sings a melody with a gentle vibrato. The tempo is slow, creating a contemplative groove. The production is clean and polished, with a sense of open space. The voice is centered in the mix, with the guitar and synth providing a subtle backing. The voice is unaccompanied by harmonies.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Hy-Brasil is track 6 (5:35) on Allison Russell's debut solo album Outside Child, released 21 May 2021.",
+        "source": "https://allisonrussell.bandcamp.com/album/outside-child"
+      },
+      {
+        "claim": "Allison Russell and JT Nero (Jeremy Lindsay) are credited as writers of Hy-Brasil.",
+        "source": "https://www.shugarecords.com/products/allisonrusselloutsidechild-newlprecord2021fantasyusa180gramorangevinyl-pop"
+      },
+      {
+        "claim": "Dan Knobler produced, engineered and mixed Outside Child, and Kim Rosen mastered it.",
+        "source": "https://americanahighways.org/2021/05/18/review-allison-russell-outside-child/"
+      },
+      {
+        "claim": "The album was recorded at Sound Emporium, Studio A, in Nashville, on September 18-21, 2019.",
+        "source": "https://www.discogs.com/release/22689065-Allison-Russell-Outside-Child"
+      },
+      {
+        "claim": "Russell recorded the album in four days with a full band in the studio, taking only three or four takes per song. The album was funded by a Canada Council for the Arts grant.",
+        "source": "https://en.wikipedia.org/wiki/Outside_Child"
+      },
+      {
+        "claim": "Album personnel include Russell (lead vocals, clarinet, banjo), JT Nero (acoustic guitar), Joe Pisapia (guitars), Chris Merrill (bass), Jamie Dick and Jason Burger (drums and percussion), and Drew Lindsay (keys). The McCrary Sisters, Ruth Moody, Erin Rae and Yola sing harmony vocals, though Discogs credits Yola on 'The Runner' specifically.",
+        "source": "https://www.discogs.com/release/22689065-Allison-Russell-Outside-Child"
+      },
+      {
+        "claim": "Russell said she played all the clarinet on the record live in the room with the band, and she pointed to the end of Hy-Brasil as an example.",
+        "source": "https://countryqueer.com/stories/interview/allison-russell-the-country-queer-interview-pt-1/"
+      },
+      {
+        "claim": "In Hy-Brasil, Russell draws on the ballad tradition of her Scottish heritage. The song is a tribute to her Scottish Canadian grandmother, Dr. Isobel Roger Robertson, whom Russell calls 'the brightest light of my childhood'.",
+        "source": "https://nodepression.org/spotlight-like-sucking-the-poison-from-a-snake-bite-allison-russell-shares-her-story-on-outside-child/"
+      },
+      {
+        "claim": "Hy-Brasil is a legendary, possibly mythical island west of Ireland. In the song it becomes the place her soul travels to in order to escape childhood abuse.",
+        "source": "https://nodepression.org/spotlight-like-sucking-the-poison-from-a-snake-bite-allison-russell-shares-her-story-on-outside-child/"
+      },
+      {
+        "claim": "Brandi Carlile played the album to Fantasy Records, which signed Russell and released Outside Child. The album later won the Americana Music Association's 2022 Album of the Year and was Grammy-nominated for Best Americana Album.",
+        "source": "https://en.wikipedia.org/wiki/Outside_Child"
+      }
+    ],
+    "lineage": "The song sits in contemporary Americana and folk, drawing on Scottish ballad tradition and Irish myth, and it is part of a Nashville-recorded song cycle about surviving childhood abuse.",
+    "genres": [
+      "americana",
+      "contemporary folk",
+      "chamber folk"
+    ]
+  },
+  "draft": "The chorus of **Hy-Brasil** is a spell, and it works the way spells do: by counting. Seven black rabbits, twenty-one daffodil petals, the thirteenth note of a blackcap's trill. A child could memorize it. In Allison Russell's song, a child did, and used it to leave.\n\nThe facts are hard. Hy-Brasil is a legendary island said to lie west of Ireland, and on Outside Child, Russell's debut solo album about surviving childhood abuse, it becomes the place her soul goes when her body can't. The song is a tribute to her Scottish Canadian grandmother, Dr. Isobel Roger Robertson, whom Russell calls \"the brightest light of my childhood.\" The lyric starts a generation further back, with a great-grandmother who \"was a magic weaver\" and sang words she'd carried across the water. So the charm is inherited. What one woman sang to keep a homeland close, a later child learns to say to keep herself whole.\n\nThe craft is in how plainly Russell states the unbearable and how lushly she dresses the escape. \"Though my brittle body was caught in his snare\" is one quiet line, and then the song turns away into heather and cold light: \"Cup of cold sun and a winterpill.\" That image is lovely and slightly off, like something from a dream you half trust. The child isn't denying what is happening. She is choosing where to be while it happens. That's the feeling the song holds, and it doesn't pretend it was a good trade.\n\nThe last verse claims a victory, \"Though I drowned for ten years, I'm still rising,\" and the next line says she is \"stronger for my pain and suffering.\" Pride and damage sit right next to each other there, unreconciled, and the chorus comes back exactly as before. The spell never changes. That repetition says survival was a practice more than a single event.\n\nThe sound gives the words room. A fingerpicked acoustic guitar walks slow arpeggios over a low, sustained synth pad, and the production leaves plenty of open air around everything. Russell's voice is clear and resonant, with a gentle vibrato, unhurried enough to make the charm feel recited more than performed. She draws on the ballad tradition of her Scottish heritage, and you can hear that lineage in the storytelling verses and the refrain that returns like a tide. The band cut the album in four days at Sound Emporium in Nashville, three or four takes a song, with Dan Knobler producing. Russell has said she played all the clarinet live in the room and pointed to the end of this song as the proof.\n\nIt sticks because it teaches you the counting rhyme, and once you know it, you understand what it was for.",
+  "factCheck": [
+    {
+      "claim": "The chorus counts out seven black rabbits, twenty-one daffodil petals and the thirteenth note of a blackcap's trill.",
+      "verdict": "supported",
+      "note": "Paraphrases the refrain lines accurately."
+    },
+    {
+      "claim": "Hy-Brasil is a legendary island said to lie west of Ireland, and in the song it is the place her soul goes to escape.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Outside Child is Russell's debut solo album about surviving childhood abuse.",
+      "verdict": "supported",
+      "note": "The packet gives it as her debut solo album and as a song cycle about surviving childhood abuse."
+    },
+    {
+      "claim": "The song is a tribute to her Scottish Canadian grandmother, Dr. Isobel Roger Robertson, whom Russell calls \"the brightest light of my childhood.\"",
+      "verdict": "supported",
+      "note": "Name and quote match the researched facts."
+    },
+    {
+      "claim": "The lyric opens with a great-grandmother who \"was a magic weaver\" and sang words she'd carried across the water.",
+      "verdict": "supported",
+      "note": "The lyric reads \"My great grandmother was a magic weaver / Came across the water... Sang the words she learned to say.\" The quote is an exact substring."
+    },
+    {
+      "claim": "\"Though my brittle body was caught in his snare\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "\"Cup of cold sun and a winterpill\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The line is \"one quiet line\".",
+      "verdict": "corrected",
+      "note": "\"Quiet\" implies a delivery that the listening passes don't establish. Changed to \"plain\", which describes the wording."
+    },
+    {
+      "claim": "\"Though I drowned for ten years, I'm still rising\" and the next line \"stronger for my pain and suffering\"",
+      "verdict": "supported",
+      "note": "Both quotes are exact and the lines are consecutive. The chorus repeats unchanged afterward, as the lyrics show."
+    },
+    {
+      "claim": "A fingerpicked acoustic guitar walks slow arpeggios over a low, sustained synth pad.",
+      "verdict": "corrected",
+      "note": "All three passes agree on the arpeggiated guitar, the slow feel and the low synth pad. Only one pass says \"fingerpicked\", so that word was dropped."
+    },
+    {
+      "claim": "The production is clean and leaves open air around everything.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Russell's voice is clear and resonant, with a gentle vibrato, and unhurried.",
+      "verdict": "supported",
+      "note": "The passes agree on clear, resonant and unhurried, and two passes give slight or gentle vibrato."
+    },
+    {
+      "claim": "You can hear the Scottish ballad lineage in the storytelling verses.",
+      "verdict": "corrected",
+      "note": "The ballad influence is sourced, but \"you can hear\" makes it a sound claim the passes don't support. Reworded to rest on the lyric's narrative structure."
+    },
+    {
+      "claim": "She draws on the ballad tradition of her Scottish heritage.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The band cut the album in four days at Sound Emporium in Nashville, three or four takes a song, with Dan Knobler producing.",
+      "verdict": "supported",
+      "note": "Matches the researched facts on recording place, duration, takes and producer."
+    },
+    {
+      "claim": "Russell said she played all the clarinet live in the room and pointed to the end of this song as the proof.",
+      "verdict": "corrected",
+      "note": "The source says she pointed to the end of the song as an example. \"Proof\" overstated it."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1898,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012514,
+        "detail": "1098 in / 100 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012514,
+        "detail": "1098 in / 100 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014089,
+        "detail": "1098 in / 163 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080936,
+        "detail": "23023 in / 1489 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.056304,
+        "detail": "3901 in / 2035 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.048688,
+        "detail": "5064 in / 3856 out"
+      }
+    ]
+  }
+}
