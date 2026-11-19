@@ -1,0 +1,220 @@
+{
+  "spotifyId": "2kDApipZtTzjwGfKujcg2z",
+  "reviewedAt": "2026-11-19T04:06:26.350Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2460613"
+  },
+  "listening": "Pass 1:\nA driving, distorted electric guitar plays a rhythmic riff. A live drum kit plays a fast, tight beat with a strong snare. A male voice sings rapidly, with a slightly nasal, raw character. The delivery is conversational and energetic, with a hint of a British accent. The production is raw and upfront, with a dry, close-mic'd feel. There are no obvious room acoustics.\n\nThe first section features the rapid-fire vocal delivery over the guitar and drums. The vocal is mostly single-tracked, but a layered, slightly delayed effect is heard on some words. The tempo is fast and the groove is driving.\n\nAt the 0:14 mark, the vocal delivery shifts to a more melodic, anthemic style. A second, higher-pitched male vocal harmony enters, creating a fuller sound. The electric guitar becomes more prominent, playing a sustained, slightly distorted chord progression. The drums maintain their driving beat. The overall texture becomes thicker and more expansive.\n\nPass 2:\nA driving, distorted electric guitar plays a riff with a punk feel. A live drum kit plays a fast, straight beat with a strong snare on beats two and four. A male voice sings in a high-pitched, slightly strained, raw tone, with a fast, spoken-word delivery in the first half. The second half features a more melodic, shouted vocal. A second male voice provides a lower-pitched, harmonized vocal line in the second half. The production is raw and unpolished, with a dry, close-mic'd sound. The arrangement features the guitar and drums entering together, with the vocals joining shortly after. The second half introduces the harmonized vocal and a more anthemic, singalong feel.\n\nPass 3:\nA driving, distorted electric guitar plays a rhythmic riff. A live drum kit provides a fast, energetic beat with a prominent snare. A male voice sings in a high-pitched, slightly strained, raw tone, with a fast, spoken-word delivery in the first half, then a more melodic, sung delivery in the second. The vocals are doubled in the second half, creating a harmony. A synth bass plays a simple, driving line. The production is raw and unpolished, with a sense of a small, live room. The arrangement builds from a single vocal line to a doubled vocal line with a more melodic feel. The tempo is fast and the groove is energetic.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Lowlife\" was released on 7 June 2023 via Locomotion/Geffen Records, after a premiere with Zane Lowe on Apple Music.",
+        "source": "https://www.universalmusic.ca/2023/06/07/yungblud-returns-with-new-single-lowlife/"
+      },
+      {
+        "claim": "The Apple Music listing gives the copyright as 2023 Locomotion Recordings Limited, under exclusive license to Geffen Records, and classes the single as alternative.",
+        "source": "https://music.apple.com/us/album/lowlife-single/1689702304"
+      },
+      {
+        "claim": "YUNGBLUD wrote \"Lowlife\" with Jake Torrey and Paul Meany, and all three produced it.",
+        "source": "https://musicmayhemmagazine.com/an-emo-adventure-yungbluds-lowlife-music-video-takes-viewers-back-to-his-younger-days/"
+      },
+      {
+        "claim": "Fan-wiki credits list Meany on keyboards and programming, Torrey on bass, guitar and piano, and Harrison on vocals and percussion. Adam Hawkins, Jack Miele and Joe LaPorta are credited as engineers. This is a fan-maintained source.",
+        "source": "https://yungblud.fandom.com/wiki/Lowlife"
+      },
+      {
+        "claim": "YUNGBLUD says he wrote the song because he didn't want to leave his house. He describes wanting to be nothing, and craving the kind of boredom spent in the same sheets watching mind-numbing TV.",
+        "source": "https://www.udiscovermusic.com/news/yungblud-lowlife/"
+      },
+      {
+        "claim": "He went into the studio with Paul Meany with no references. He said he wasn't trying to make something like 'Close To Me', 'Born This Way' or 'Life On Mars', and that each session started from a blank canvas with a beat.",
+        "source": "https://americansongwriter.com/yungblud-shares-preview-of-forthcoming-project-with-new-single-lowlife/"
+      },
+      {
+        "claim": "The label presented the single as the start of a new era. It described a return to his alternative roots, with quirky, detailed production and instrumentation that feels both new and nostalgic.",
+        "source": "https://celebrityaccess.com/2023/06/09/yungblud-returns-with-the-single-lowlife/"
+      },
+      {
+        "claim": "The single was teased with hand-written notes sent to fans, which gave locations in London, Los Angeles and Germany. Blacked-out cars bearing the single's title appeared at those locations.",
+        "source": "https://www.universalmusic.ca/2023/06/07/yungblud-returns-with-new-single-lowlife/"
+      },
+      {
+        "claim": "For the music video, YUNGBLUD wanted something like \"emo Shameless or St Trinians on Acid\". It was shot in Camden Town, and he walks alongside his younger self.",
+        "source": "https://musicmayhemmagazine.com/an-emo-adventure-yungbluds-lowlife-music-video-takes-viewers-back-to-his-younger-days/"
+      },
+      {
+        "claim": "\"Lowlife\" follows his 2022 self-titled album, which includes the singles \"The Funeral\" and \"Tissues\". On the discography page it is listed as a non-album single.",
+        "source": "https://www.97xonline.com/news/yungblud-premieres/U36BSJRU5WAWYJG7QTGDX3SZFY/"
+      }
+    ],
+    "lineage": "The song sits in the alternative, pop-punk and emo-leaning tradition, with nostalgic production and a sing-along chorus. The press describes YUNGBLUD as a Doncaster-born, Gen-Z rock and pop-punk figure.",
+    "genres": [
+      "alternative rock",
+      "pop punk",
+      "alternative"
+    ]
+  },
+  "draft": "The chorus is a refusal dressed as a party: **Lowlife** wants to \"stay right here in my underwear,\" and it hollers the plan over a driving, distorted guitar riff and a fast live beat with a hard snare. It sounds like a gang shout. It's really one person who can't face the door.\n\nYUNGBLUD has said he wrote the song because he didn't want to leave his house. He wanted to be nothing, he said, and craved a specific kind of boredom: the same sheets, mind-numbing TV. That's a strange thing to build a sing-along on, and it's why the song works. The verses come at you fast, almost spoken, in a raw, slightly strained voice recorded dry and close. Then the delivery swings into something melodic and anthemic, with a second vocal doubling the line. The production stays unpolished, which suits a song about not bothering to clean up.\n\nListen past the swagger and the verses keep confessing. \"You know I get embarrassed most of the days,\" he admits, walking around Camden with a smirk he clearly doesn't feel. The next move is \"Buy a bottle of gin to get the memories erased.\" The smirk and the gin are the same gesture. Then comes the oddest, most disarming turn. He quotes a friend's line, \"young, dumb, living off mum,\" and stops to own up that not all the words are his and to ask not to be judged. A song this loud about not caring keeps worrying what you'll think. Later he calls himself \"hypocritical maybe, a petulant baby\" before snapping at himself to shut up. He seems to know exactly how the act looks, and he won't drop it.\n\nHe co-wrote and co-produced the track with Jake Torrey and Paul Meany. YUNGBLUD said they went in with no references and started each session from a blank canvas and a beat. He wasn't chasing \"Close To Me\" or \"Life On Mars.\" The label framed it as a return to his alternative roots, and the pop-punk bones show: the riff, the snare, the \"la-la-la\" chants built for a crowd to fill in. The emo streak is in the self-diagnosis. It also shows in the video, which he pitched as \"emo Shameless\" and shot in Camden, walking beside his younger self.\n\nThe song closes on a voicemail. It's mum again, the same mum from the borrowed line, and he's skipping Sunday dinner because he's had too much to drink. He signs off \"I love ya.\" After all the bravado about not needing saving, the last thing he does is call home.\n\nThe hook lets you shout your worst week as a victory chant, and then the voicemail quietly shows you the person who needed the chant.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote \"stay right here in my underwear\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Driving, distorted guitar riff and fast live beat with hard snare",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "It sounds like a gang shout / really one person who can't face the door",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics and the harmonized vocal."
+    },
+    {
+      "claim": "YUNGBLUD wrote the song because he didn't want to leave his house; wanted to be nothing; craved boredom in the same sheets watching mind-numbing TV",
+      "verdict": "supported",
+      "note": "Matches the uDiscover quote summary."
+    },
+    {
+      "claim": "Verses fast and almost spoken; raw, slightly strained voice; dry, close recording; later melodic and anthemic",
+      "verdict": "supported",
+      "note": "Passes agree on fast spoken-style delivery giving way to melodic delivery. Raw and dry/close are agreed by at least two passes. Tied to verse and chorus via the lyric structure."
+    },
+    {
+      "claim": "A second vocal doubling the line",
+      "verdict": "corrected",
+      "note": "Passes agree on a second voice or harmony. Reworded to 'a second voice harmonizing'."
+    },
+    {
+      "claim": "Production stays unpolished",
+      "verdict": "supported",
+      "note": "All passes say raw; passes 2 and 3 say unpolished."
+    },
+    {
+      "claim": "Quote \"You know I get embarrassed most of the days\"",
+      "verdict": "corrected",
+      "note": "The lyric reads 'embarrased', so the quote didn't match. Paraphrased instead. This also keeps the draft within the three-quote limit."
+    },
+    {
+      "claim": "Walking around Camden with a smirk he clearly doesn't feel",
+      "verdict": "corrected",
+      "note": "Camden and the smirk are in the lyrics. 'Clearly doesn't feel' was overstated and is now softened to interpretation."
+    },
+    {
+      "claim": "Quote \"Buy a bottle of gin to get the memories erased\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "He quotes a friend's line, \"young, dumb, living off mum,\" owns up that not all the words are his, and asks not to be judged",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Calls himself \"hypocritical maybe, a petulant baby\" before snapping at himself to shut up",
+      "verdict": "corrected",
+      "note": "Quote removed to stay within the three-quote limit. The 'shut up' target is ambiguous in the lyric, so it now says he tells someone to shut up."
+    },
+    {
+      "claim": "Co-wrote and co-produced with Jake Torrey and Paul Meany",
+      "verdict": "supported",
+      "note": "Music Mayhem source."
+    },
+    {
+      "claim": "They went in with no references and started each session from a blank canvas and a beat",
+      "verdict": "corrected",
+      "note": "The source says he went in with Meany with no references. Adjusted the subject."
+    },
+    {
+      "claim": "Wasn't chasing \"Close To Me\" or \"Life On Mars\"",
+      "verdict": "supported",
+      "note": "Per American Songwriter."
+    },
+    {
+      "claim": "Label framed it as a return to his alternative roots",
+      "verdict": "supported",
+      "note": "Per CelebrityAccess."
+    },
+    {
+      "claim": "Pop-punk bones: riff, snare, la-la-la chants; emo streak in the self-diagnosis",
+      "verdict": "supported",
+      "note": "Interpretation backed by the punk-feel riff in the listening notes, the lyrics, and the stated lineage."
+    },
+    {
+      "claim": "Video pitched as \"emo Shameless,\" shot in Camden, walking beside his younger self",
+      "verdict": "supported",
+      "note": "Per Music Mayhem."
+    },
+    {
+      "claim": "The song closes on a voicemail",
+      "verdict": "corrected",
+      "note": "The lyrics end with a spoken message to mum, but 'voicemail' is not stated. Reworded."
+    },
+    {
+      "claim": "It's mum again, the same mum from the borrowed line",
+      "verdict": "removed",
+      "note": "Nothing links the friend's line to the narrator's own mum."
+    },
+    {
+      "claim": "Skipping Sunday dinner because he's had too much to drink; signs off \"I love ya\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "After the bravado about not needing saving, the last thing he does is call home",
+      "verdict": "corrected",
+      "note": "'I don't need you to save me' is in the lyrics. 'Call' is not stated, so it now says he reaches out to his mum."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2041,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013417,
+        "detail": "1099 in / 136 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013692,
+        "detail": "1099 in / 147 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00066544,
+        "detail": "1099 in / 199 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08621000000000001,
+        "detail": "25075 in / 1606 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05618,
+        "detail": "4500 in / 1909 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.058358,
+        "detail": "5654 in / 4705 out"
+      }
+    ]
+  }
+}

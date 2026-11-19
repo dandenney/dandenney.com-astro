@@ -1,0 +1,185 @@
+{
+  "spotifyId": "2vcJAWazBGDeUIbzdU0zV8",
+  "reviewedAt": "2026-11-19T03:41:53.011Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8303989"
+  },
+  "listening": "Pass 1:\nA female singer is accompanied by a piano, bass, and drums. The piano plays chords with a light, arpeggiated feel. The bass plays a walking line, and the drums provide a steady, medium-tempo groove with a swing feel. The singer has a clear, bright voice and delivers the lyrics with a conversational, slightly melancholic tone. There are no harmonies. The production sounds clean and polished, with a natural room sound. The arrangement remains consistent throughout the excerpt, with all instruments present from the beginning.\n\nPass 2:\nA female voice sings with a clear, slightly breathy tone, delivering a lead melody with some vibrato. The tempo is medium, with a laid-back, slightly swung groove.\n\nThe instrumentation includes a piano playing chords and a bass guitar providing a walking bass line. Drums enter with a light, brushed snare pattern and a kick drum, establishing the groove. A string section enters, playing sustained chords.\n\nThe production is clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is smooth.\n\nThe arrangement builds from a piano and bass intro, with drums and strings entering to fill out the sound. The vocals are consistently present, with a single lead voice throughout.\n\nPass 3:\nA female voice sings with a clear, slightly breathy tone, delivering a lead vocal with a pop-like delivery. The tempo is medium, with a relaxed, slightly swaying groove.\n\nThe instrumentation includes a piano playing chords, a bass providing a walking line, and drums with a light, brushed feel. A string section enters and exits, adding sustained chords.\n\nThe production is clean and polished, with a moderate room sound. The texture is full but not dense.\n\nThe arrangement features the lead vocal throughout. The piano, bass, and drums form the core. Strings enter at the 0:07 mark, drop out at 0:12, and re-enter at 0:22, adding a layer of warmth. There are no significant builds or drops in intensity within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"i'm confident that i'm insecure\" was released August 11, 2023 via Jon Bellion's Beautiful Mind Records.",
+        "source": "https://atwoodmagazine.com/lwci-lawrence-interview-music-2023-im-confident-that-im-insecure/"
+      },
+      {
+        "claim": "It is a conversational, confessional song sung by Gracie Lawrence. Atwood Magazine called it the band's most intimate and vulnerable track to date.",
+        "source": "https://atwoodmagazine.com/lwci-lawrence-interview-music-2023-im-confident-that-im-insecure/"
+      },
+      {
+        "claim": "Gracie Lawrence wrote the track during a particularly low point in the COVID-19 pandemic.",
+        "source": "https://atwoodmagazine.com/lwci-lawrence-interview-music-2023-im-confident-that-im-insecure/"
+      },
+      {
+        "claim": "Gracie said she began writing it during a stressed-out night in Covid. She shared it with her brother Clyde, then with bandmates Jonny and Jordan and with Jon Bellion, who helped write and shape it.",
+        "source": "https://shorefire.com/releases/entry/lawrence-release-first-single-of-2023-listen-to-im-confident-that-im-insecure"
+      },
+      {
+        "claim": "Clyde Lawrence said the song is built on the idea that everyone has some degree of both confidence and insecurity.",
+        "source": "https://shorefire.com/releases/entry/lawrence-release-first-single-of-2023-listen-to-im-confident-that-im-insecure"
+      },
+      {
+        "claim": "It was the band's first single of 2023. It came out the day before a 50+-date stadium tour with the Jonas Brothers began at Yankee Stadium.",
+        "source": "https://shorefire.com/releases/entry/lawrence-release-first-single-of-2023-listen-to-im-confident-that-im-insecure"
+      },
+      {
+        "claim": "Songwriting credits go to Clyde Lawrence, Gracie Lawrence, Jon Bellion, Jonny Koh and Jordan Cohen. Production credits go to those same five plus The Diner (production crew).",
+        "source": "https://readdork.com/lyrics/lawrence-im-confident-that-im-insecure"
+      },
+      {
+        "claim": "The track runs 2:42 and was later included on the album Family Business (2024), which was co-produced with Jon Bellion.",
+        "source": "https://music.apple.com/us/song/im-confident-that-im-insecure/1850863715"
+      },
+      {
+        "claim": "Lawrence are an eight-piece soul-pop band from New York City, led by siblings Clyde and Gracie Lawrence. They signed to Beautiful Mind Records in 2019 and released Hotel TV, produced by Bellion, in 2021.",
+        "source": "https://jonbellion.fandom.com/wiki/Lawrence"
+      },
+      {
+        "claim": "Clyde and Gracie grew up in New York City listening to Stevie Wonder, Randy Newman and Aretha Franklin records. The band is known for a keyboard-driven sound with tight horns and fully live arrangements.",
+        "source": "https://www.youtube.com/post/UgkxBpPt6b7t2MfPTvUuqAw0_ynQQ51hxn8P"
+      }
+    ],
+    "lineage": "The song sits in Lawrence's keyboard- and horn-driven New York pop-soul tradition, shaped by Stevie Wonder, Randy Newman and Aretha Franklin, and by their long collaboration with Jon Bellion's Beautiful Mind Records.",
+    "genres": [
+      "pop-soul",
+      "pop",
+      "r&b"
+    ]
+  },
+  "draft": "The joke lands before the hurt does. \"But I'm tough, so I'm just gonna cry in bed for free,\" Gracie Lawrence sings, and the line works both ways. It's a punchline about skipping therapy, and it's also a picture of someone alone at night, choosing the cheaper kind of falling apart. That double edge runs through all of **i'm confident that i'm insecure**. The humor isn't a way out of the feeling. It's how the feeling gets said out loud at all.\n\nGracie started writing it on a stressed-out night during a low stretch of the pandemic. She played it for her brother Clyde, then for bandmates Jonny Koh and Jordan Cohen and for Jon Bellion, who helped shape it. You can hear that origin in the lyric's shape. The verses spill like a late-night text to yourself, half self-diagnosis and half self-roast. Then, tucked into the second verse, comes the plainest sentence in the song: \"But I need to know that if I die that you'll be proud of me.\" It arrives right after she claims she's \"not deep\" and doesn't want to think about death. The denial and the need sit next to each other, and the song never pretends one cancels the other.\n\nThe music holds all of this gently. Piano chords and a walking bass line set a medium, slightly swung groove, the drums are brushed, and strings slide in with sustained chords that warm the room without crowding it. Gracie's voice is clear with a little breath around the edges, so the confessions come across as conversation, not performance. It's clean, polished pop-soul from a band raised on Stevie Wonder, Randy Newman and Aretha Franklin records, and the Randy Newman part shows most here: the wry, specific line that turns out to hide real pain.\n\nThe final stretch widens the lens. Pisces jokes give way to a list of famous things doubting themselves, a Jersey Shore pun among them, and the best of the list is \"And I know that Ringo sometimes wishes he was Paul.\" It's silly, and it's also generous. Clyde has said the song rests on the idea that everyone carries some mix of confidence and insecurity, and that list is where the private confession becomes company. The background vocals spell it out. Everybody gets insecure sometimes.\n\nLawrence put this out the day before opening a stadium tour with the Jonas Brothers at Yankee Stadium. Releasing a song about being knocked flat by criticism right before walking onto the biggest stages of their career is its own small act of the song's title.\n\nThe song gets you to laugh at your own worst nighttime thoughts, then quietly admits they're real, so you feel less alone with yours.",
+  "factCheck": [
+    {
+      "claim": "Gracie Lawrence sings \"But I'm tough, so I'm just gonna cry in bed for free\"",
+      "verdict": "supported",
+      "note": "Lyric matches exactly. The packet names Gracie Lawrence as the singer."
+    },
+    {
+      "claim": "Gracie started writing it on a stressed-out night during a low stretch of the pandemic",
+      "verdict": "supported",
+      "note": "Matches the Covid-era writing facts."
+    },
+    {
+      "claim": "She played it for Clyde, then bandmates Jonny Koh and Jordan Cohen and Jon Bellion, who helped shape it",
+      "verdict": "supported",
+      "note": "The sharing sequence is sourced. The full names come from the songwriting credits."
+    },
+    {
+      "claim": "\"But I need to know that if I die that you'll be proud of me\" appears in the second verse, after she says she's not deep and doesn't want to know about death",
+      "verdict": "supported",
+      "note": "The quote and the order match the lyrics. I removed the quotation marks around 'not deep' to stay within the quote limit."
+    },
+    {
+      "claim": "Piano chords and a walking bass line set a medium, slightly swung groove",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The drums are brushed",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree."
+    },
+    {
+      "claim": "Strings come in with sustained chords",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. I changed 'slide in' to 'come in' to stay neutral."
+    },
+    {
+      "claim": "Gracie's voice is clear with a little breath around the edges; clean, polished production",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on the slight breathiness, and all passes agree on clear voice and clean production."
+    },
+    {
+      "claim": "A band raised on Stevie Wonder, Randy Newman and Aretha Franklin records",
+      "verdict": "corrected",
+      "note": "The packet says Clyde and Gracie grew up listening to these artists, not the whole band. Reworded to refer to the siblings."
+    },
+    {
+      "claim": "The final stretch widens the lens; the list of famous things includes a Jersey Shore pun; the Ringo line",
+      "verdict": "corrected",
+      "note": "The Ringo quote matches. The lyrics' order supports the list coming later, but 'final stretch' is an arc claim, so I changed it to 'later'."
+    },
+    {
+      "claim": "Clyde has said the song rests on the idea that everyone carries some mix of confidence and insecurity",
+      "verdict": "supported",
+      "note": "Matches Clyde's sourced statement."
+    },
+    {
+      "claim": "The background vocals spell it out: everybody gets insecure sometimes",
+      "verdict": "corrected",
+      "note": "The listening passes describe a single lead voice and no harmonies, so 'background vocals' is unsupported. Reworded to point to the parenthetical lyric line."
+    },
+    {
+      "claim": "Put out the day before opening a stadium tour with the Jonas Brothers at Yankee Stadium",
+      "verdict": "supported",
+      "note": "Matches the sourced release and tour facts."
+    },
+    {
+      "claim": "Right before walking onto the biggest stages of their career",
+      "verdict": "corrected",
+      "note": "'Biggest of their career' is not in the packet. Reduced to stadium stages."
+    },
+    {
+      "claim": "Pop-soul; Randy Newman-like wry, specific line hiding pain",
+      "verdict": "supported",
+      "note": "Interpretive comparison resting on the sourced influences, so it stays."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2414,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012679,
+        "detail": "1103 in / 106 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013654,
+        "detail": "1103 in / 145 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00058443,
+        "detail": "1103 in / 165 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14607399999999998,
+        "detail": "49782 in / 1651 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.044332,
+        "detail": "3983 in / 1420 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047782,
+        "detail": "5146 in / 3749 out"
+      }
+    ]
+  }
+}

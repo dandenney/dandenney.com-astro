@@ -1,0 +1,220 @@
+{
+  "spotifyId": "5mGCZQJ9sstHLR6yQjnt2w",
+  "reviewedAt": "2026-11-19T03:40:57.747Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/36779764"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggio pattern with a clean, bright tone. The tempo is slow, creating a gentle, flowing groove. A single voice, with a clear, slightly breathy character, sings the melody. The delivery is unadorned and direct. There are no harmonies. The production sounds raw and intimate, as if recorded in a small, untreated room. The guitar and vocals are prominent, with no other instruments present. The arrangement remains consistent throughout the excerpt, with no noticeable changes in instrumentation or dynamics.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clean, bright tone. A single voice sings with a clear, slightly breathy character, in a mid-range. The delivery is unhurried and conversational. There are no harmonies. The tempo is slow, creating a relaxed, gentle groove. The production sounds raw and intimate, as if recorded in a small, untreated room. The guitar and vocals are prominent, with no other instruments present. The texture is sparse and unpolished. The arrangement remains consistent throughout the excerpt, with no new elements entering or dropping out.\n\nPass 3:\nA single acoustic guitar plays a fingerpicked arpeggio pattern at a slow tempo, establishing a gentle, swaying groove. The guitar has a clean, bright tone. A single voice sings with a clear, slightly breathy character, delivering the melody in a conversational, unadorned style. The vocals are upfront and dry, with no discernible reverb or effects. The guitar and vocals are the only elements present, creating an intimate, raw texture. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no build-up in intensity.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "'Rising Sun' is the opening track (5:51) of Erin Durant's album Islands, released 28 June 2019 on Keeled Scales.",
+        "source": "https://erindurant.bandcamp.com/album/islands"
+      },
+      {
+        "claim": "Islands was produced by Kyp Malone of TV on the Radio.",
+        "source": "https://erindurant.bandcamp.com/album/islands"
+      },
+      {
+        "claim": "Album credits: Erin Durant (songs, vocals, piano, dulcimer, organ). Kyp Malone (electric guitar, synth, mellotron, organ, percussion). Otto Hauser (drums, percussion). Tyler Evans (bass, acoustic guitar). Patrick Holmes (clarinet). Elizabeth LoPiccolo (flute). Dave Smoota Smith (trombone). Chris DiMeglio (trumpet). Kath Bloom (harmonica). Jon Catfish DeLorme (pedal steel). These are album-wide credits, not a track-by-track breakdown.",
+        "source": "https://erindurant.bandcamp.com/album/islands"
+      },
+      {
+        "claim": "Islands was recorded by Charles Burst at Seaside Lounge, mixed by Gabriel Galvin at Four Foot Studios, and mastered by John Golden at Golden Mastering.",
+        "source": "https://erindurant.bandcamp.com/album/islands"
+      },
+      {
+        "claim": "The streaming metadata for 'Rising Sun' lists Kyp Malone as producer and Gabriel Galvin as mixer.",
+        "source": "https://www.youtube.com/watch?v=K3h43qr_1yc"
+      },
+      {
+        "claim": "'Rising Sun' was the fourth and final single released ahead of Islands. One blog described it as the album's 'raison d'etre'. It pairs gently strolling guitar and muted toms with strung-out trumpets.",
+        "source": "https://balloonmachineblog.wordpress.com/2019/06/13/new-song-erin-durant-rising-sun/"
+      },
+      {
+        "claim": "RNZ's Song Crush said the song starts optimistic and resilient but slowly falls apart over almost six minutes. By the end, Durant is mourning lost futures and asking to be held.",
+        "source": "https://www.rnz.co.nz/national/programmes/song-crush/audio/2018706928/song-crush-charli-xcx-and-christine-and-the-queens-k-flay-erin-durant"
+      },
+      {
+        "claim": "In an interview, Durant said she wanted Islands to feel a little like sand, wood and water, with possibilities in the desert and at the ocean. She also said New Orleans music is part of her and that New York gave her community and experiences that shaped her last two records.",
+        "source": "https://fortherabbits.net/2019/07/15/erin-durant-in-their-own-words/"
+      },
+      {
+        "claim": "Islands is Durant's second album. It builds on her debut Blueberry Mountain (2016), whose minimal piano-based folk songs it expands into warmer, richer arrangements.",
+        "source": "https://varioussmallflames.co.uk/2019/07/08/erin-durant-islands/"
+      },
+      {
+        "claim": "Durant was born and raised in New Orleans and is based in Brooklyn. She says she discovered early folk, country and blues in her 20s.",
+        "source": "https://www.thelineofbestfit.com/features/interviews/erin-durant-on-the-rise"
+      }
+    ],
+    "lineage": "Durant's piano-led, orchestrated songwriting draws on American folk, country and blues traditions, and her label's description compares it to Joanna Newsom, Joni Mitchell and Julie Byrne.",
+    "genres": [
+      "indie folk",
+      "singer-songwriter",
+      "americana"
+    ]
+  },
+  "draft": "**Rising Sun** opens with Erin Durant greeting the weather like an old friend: \"Hello wind, haven't seen you in years.\" It's a sweet, odd first line, and it sets the terms. The narrator has been away from wide-open things, indoors and \"learning some rituals / Like how to truly love another.\" The early verses carry a hopeful, slightly sheepish pride: mistakes admitted, plans to go \"far\" and \"wide\" and \"back to the sunny side.\" It sounds like someone talking themselves into it.\n\nThen there's the house. Durant was born and raised in New Orleans, and the title plus \"There is a house in New Orleans\" points straight at the old song about the house of ruin. Durant bends it. This house is a green California bungalow on Moss Street, one the narrator has never seen, and it \"takes me someplace that I've never been.\" The doomed brothel turns into an imagined refuge. When the chorus arrives at the river and the sea, the land of the rising sun hands out absolution instead of a warning: \"Don't matter what you have done.\"\n\nThe absolution doesn't hold. RNZ's Song Crush heard the song start optimistic and slowly fall apart over almost six minutes, and the lyrics show how. The future verse comes back twice, and both times the narrator calls out to tomorrow and hears \"no way.\" The last thing asked for is small and heavy: \"Just want you to hold me till my time is up.\" Tired, a little drunk, the narrator lets the big talk of going wide shrink down to one person's arms. The hope and the defeat are both still in the song, side by side, and neither wins.\n\nThe sound keeps all of this close. A fingerpicked acoustic guitar rolls through a clean, bright arpeggio at a slow, swaying pace. Durant's voice is clear and a little breathy, sung dry and upfront with no harmony to soften it. The delivery is conversational, almost offhand, which makes the confessions land harder. It feels like a small room. One blog that called the song the album's raison d'être also heard muted toms and strung-out trumpets around that strolling guitar. That lines up with what Islands does more broadly: it takes the minimal piano folk of Durant's 2016 debut, *Blueberry Mountain*, into warmer, fuller arrangements under producer Kyp Malone of TV on the Radio.\n\nDurant has said New Orleans music is part of her and that she wanted *Islands* to feel like sand, wood and water. This opener is that idea at its most personal: a hometown remembered as a place the narrator has never been.\n\nIt sticks because it lets you watch someone reach for a whole new life and then settle, honestly and without shame, for being held.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"Hello wind, haven't seen you in years\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator is \"indoors\"",
+      "verdict": "removed",
+      "note": "The lyrics say \"I've been here\" but never place the narrator indoors."
+    },
+    {
+      "claim": "Quote: \"learning some rituals / Like how to truly love another\"",
+      "verdict": "corrected",
+      "note": "The lyric is accurate, but the draft quoted more than three lines in total. Paraphrased to keep the quotes to three lines."
+    },
+    {
+      "claim": "Plans to go far, wide and back to the sunny side; mistakes admitted",
+      "verdict": "supported",
+      "note": "Lyrics: \"I'm going far, I'm going wide / I'm going back to the sunny side\"; \"Been making mistakes\". Now paraphrased."
+    },
+    {
+      "claim": "Durant was born and raised in New Orleans",
+      "verdict": "supported",
+      "note": "Line of Best Fit interview."
+    },
+    {
+      "claim": "The title and \"There is a house in New Orleans\" point at the old song about the house of ruin; the \"doomed brothel\"",
+      "verdict": "corrected",
+      "note": "The history of the older song is not in the packet. Kept only as an interpretive echo of \"House of the Rising Sun\" and cut the \"house of ruin\" and \"doomed brothel\" claims."
+    },
+    {
+      "claim": "A green California bungalow on Moss Street that the narrator has never seen; \"takes me someplace that I've never been\"",
+      "verdict": "corrected",
+      "note": "Details match the lyrics. Paraphrased to stay within the quote limit."
+    },
+    {
+      "claim": "\"the chorus arrives at the river and the sea\"",
+      "verdict": "corrected",
+      "note": "The lyrics show this section only once, so calling it a chorus is unsupported. Reworded as the song turning to the river."
+    },
+    {
+      "claim": "Quote: \"Don't matter what you have done\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "RNZ's Song Crush heard the song start optimistic and slowly fall apart over almost six minutes",
+      "verdict": "supported",
+      "note": "RNZ Song Crush."
+    },
+    {
+      "claim": "The future verse comes back twice",
+      "verdict": "corrected",
+      "note": "The verse appears twice in total, so it comes back once. Reworded."
+    },
+    {
+      "claim": "Narrator calls out to tomorrow and hears \"no way\"",
+      "verdict": "supported",
+      "note": "Lyric: \"Been calling out its name, but think I heard 'no way'\". Reworded to \"the future\"."
+    },
+    {
+      "claim": "Quote: \"Just want you to hold me till my time is up\"; tired, a little drunk",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, clean and bright, slow",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Guitar has a swaying pace",
+      "verdict": "corrected",
+      "note": "Only pass 3 says \"swaying\"; all three agree on a slow, gentle feel. Changed to gentle."
+    },
+    {
+      "claim": "Voice is clear and a little breathy; no harmony; conversational",
+      "verdict": "supported",
+      "note": "All three passes agree on the voice. Passes 1 and 2 report no harmonies. Passes 2 and 3 say conversational."
+    },
+    {
+      "claim": "Voice is sung dry and upfront",
+      "verdict": "removed",
+      "note": "Only pass 3 says dry and upfront."
+    },
+    {
+      "claim": "It feels like a small room",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 describe a raw, intimate small untreated room."
+    },
+    {
+      "claim": "One blog called the song the album's raison d'être and heard muted toms and strung-out trumpets around strolling guitar",
+      "verdict": "supported",
+      "note": "Balloon Machine blog."
+    },
+    {
+      "claim": "Islands takes the minimal piano folk of the 2016 debut Blueberry Mountain into warmer, fuller arrangements; produced by Kyp Malone of TV on the Radio",
+      "verdict": "supported",
+      "note": "Various Small Flames; Bandcamp."
+    },
+    {
+      "claim": "Durant said New Orleans music is part of her and she wanted Islands to feel like sand, wood and water",
+      "verdict": "corrected",
+      "note": "She said \"a little like\" sand, wood and water. Added the qualifier."
+    },
+    {
+      "claim": "The opener is that idea \"at its most personal\"; hometown remembered as a place the narrator has never been",
+      "verdict": "corrected",
+      "note": "This was an overreach tying the sand/wood/water quote to the song and equating narrator with artist. Reframed as interpretation of the New Orleans detail. Rising Sun being the opening track is supported."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1922,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012761,
+        "detail": "1097 in / 110 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012911,
+        "detail": "1097 in / 116 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00046698,
+        "detail": "1097 in / 120 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.072262,
+        "detail": "18721 in / 1482 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051288,
+        "detail": "3582 in / 1848 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06566,
+        "detail": "4760 in / 5614 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "spotifyId": "2PV9sorI2h94qEPke7SlGI",
+  "reviewedAt": "2026-11-19T03:39:44.012Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5578416"
+  },
+  "listening": "Pass 1:\nInstruments:\nA drum kit plays a steady, driving beat with a prominent snare drum. A bass guitar plays a simple, repetitive line. A distorted electric guitar plays a sustained chord. A synthesizer plays a high-pitched, shimmering pad.\n\nTempo and Groove:\nThe tempo is moderate, with a driving, rock-oriented groove. The feel is steady and propulsive.\n\nVocals:\nA male voice sings in a clear, somewhat nasal tone. The delivery is straightforward and melodic. There are no harmonies.\n\nProduction:\nThe sound is somewhat raw and unpolished, with a slightly distant room sound. The texture is full and layered.\n\nArrangement:\nThe excerpt begins with all instruments playing. The bass and drums maintain a consistent pattern throughout. The electric guitar plays a sustained chord that fades in and out. The synthesizer plays a continuous pad. The vocals are present throughout the excerpt. Nothing drops out or builds significantly within the excerpt.\n\nPass 2:\nInstruments:\nA drum kit plays a steady, driving beat with a prominent snare drum. A bass guitar plays a simple, repetitive line. A distorted electric guitar plays sustained chords and occasional melodic phrases. A synthesizer plays a high-pitched, shimmering pad.\n\nTempo and Groove:\nThe tempo is moderate, with a driving, rock-oriented groove. The feel is steady and propulsive.\n\nVocals:\nA single voice sings in a clear, somewhat nasal tone. The delivery is melodic and slightly detached. There are no harmonies.\n\nProduction:\nThe sound is somewhat raw and unpolished, with a slightly distant room sound. The texture is full and layered.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar occasionally drops out or plays a different melodic line, but the core instrumentation remains consistent throughout. There are no significant builds or drops within the excerpt.\n\nPass 3:\nInstruments:\nA drum kit plays a steady, driving beat with a prominent snare drum. A bass guitar plays a simple, repetitive line. An electric guitar plays a sustained, slightly distorted chord. A synthesizer plays a high-pitched, shimmering pad.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, driving groove. The feel is somewhat urgent and insistent.\n\nVocals:\nA single voice sings in a clear, somewhat nasal tone. The delivery is direct and slightly detached. There are no harmonies.\n\nProduction:\nThe sound is somewhat raw and unpolished, with a slightly distant and reverberant quality. The texture is full and layered.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Baby's on Fire\" is the third track on Brian Eno's debut solo album Here Come the Warm Jets. Wikipedia dates the album to 1974, while other sources say 1973.",
+        "source": "https://en.wikipedia.org/wiki/Baby%27s_on_Fire"
+      },
+      {
+        "claim": "Eno wrote and produced the song, and he handled production and mixing for most of the album.",
+        "source": "https://en.wikipedia.org/wiki/Baby%27s_on_Fire"
+      },
+      {
+        "claim": "The track was recorded in September 1973 at Majestic Studios in Clapham, London. Eno had recorded most of his earlier material there.",
+        "source": "https://en.wikipedia.org/wiki/Baby's_on_Fire"
+      },
+      {
+        "claim": "The musicians credited on the track are Simon King, Marty Simon, Robert Fripp, Paul Rudolph and John Wetton, plus Eno himself.",
+        "source": "https://en.wikipedia.org/wiki/Baby's_on_Fire"
+      },
+      {
+        "claim": "Eno is credited with vocals and synthesizer, John Wetton with bass, and Paul Rudolph with guitar. Robert Fripp's long guitar solo dominates the recording.",
+        "source": "https://powerpop.blog/2026/08/23/brian-eno-babys-on-fire/"
+      },
+      {
+        "claim": "Fripp's solo runs about three minutes over shifting drum accents. It continues through the return of Eno's vocals without following the beat.",
+        "source": "https://www.allmusic.com/song/babys-on-fire-mt0010275930"
+      },
+      {
+        "claim": "Fripp said he played the solo right after getting off a plane from America, and that he was exhausted.",
+        "source": "https://en.wikipedia.org/wiki/Baby's_on_Fire"
+      },
+      {
+        "claim": "Eno said the song starts out sounding very sinister but has very ordinary words, sung with an incredible amount of passion. He also said he chooses words for their vowel sounds and aggression rather than meaning, and joked that it could have been \"Baby's on hire\".",
+        "source": "https://thequietus.com/interviews/rocks-backpages/brian-eno-interview-chrissie-hynde-nme-here-come-the-warm-jets/"
+      },
+      {
+        "claim": "The song is a surreal fantasy about a photography session involving a burning woman, unthinking laughing onlookers, and two second-hand tobacconists.",
+        "source": "https://en.wikipedia.org/wiki/Baby's_on_Fire"
+      },
+      {
+        "claim": "Eno wrote \"Baby's on Fire\" right after leaving Roxy Music, and one writer calls it bitterly cynical. Most of the rest of the album's lyrics were improvised in response to the recorded instrumental tracks.",
+        "source": "https://www.moredarkthanshark.org/eno_int_popm-feb24.html"
+      }
+    ],
+    "lineage": "The song belongs to Eno's early-to-mid-1970s experimental pop and art-rock phase after he left glam and art-rock band Roxy Music. This came before his turn to ambient music, and AllMusic describes those albums as bridging the two styles.",
+    "genres": [
+      "art rock",
+      "experimental rock",
+      "glam rock"
+    ]
+  },
+  "draft": "\"Take your time she's only burning.\" A photographer's instruction, said as calmly as a note about lighting, and it's the coldest line in **Baby's On Fire**. Brian Eno builds the song around a woman in flames and a crowd that treats her as a subject. Laughing boys wait for photos. Rescuers are told to talk about something else. The wind is asked to help the fire along. Nobody reaches for her. The cruelty isn't the fire itself. It's how ordinary everyone stays around it.\n\nEno once said the song starts out sounding sinister but uses very ordinary words, sung with an incredible amount of passion. He said he picks words for their vowels and their aggression more than their meaning, and joked it could just as well have been \"Baby's on hire.\" Even taken at his word, the attitude comes through in the sound of the words. Nursery-rhyme doubling falls on the rowers, the wind and the clicking shutters, playground chants for a scene of someone being hurt. Then comes the surreal detour to Juanita and Juan, second-hand tobacco sellers who pocket whatever is left in the ashtrays. It widens the frame to a world where everyone is scavenging something.\n\nHe wrote it right after leaving Roxy Music, and one writer has called it bitterly cynical. The narrator's own wound flickers through in \"I could be half the man I used to,\" a line that cuts off before its last word. Spite and self-pity share that line, and the song doesn't sort them out. The final verse shrugs at the whole spectacle: \"But any idiot would know that.\"\n\nThe band plays it straight, which is what makes it unnerving. A drum kit drives a steady beat with the snare out front. John Wetton's bass repeats a simple line. A distorted guitar holds sustained chords while a high synth pad shimmers overhead. The room sounds raw and a little distant. Eno's voice is clear, slightly nasal and detached, with no harmonies to soften it. The track was recorded in September 1973 at Majestic Studios in Clapham, with Paul Rudolph on guitar and Simon King and Marty Simon also credited. It belongs to Eno's art-rock and experimental pop stretch between Roxy Music and the ambient records.\n\nThen there's Robert Fripp. His solo runs about three minutes over shifting drum accents and keeps going straight through Eno's return to the mic, refusing to follow the beat. Fripp said he played it fresh off a plane from America, exhausted. Surrounded by bystanders who can't be bothered, the one player who won't fall in line ends up as the song's only real disturbance.\n\nThe groove makes you one of the onlookers, nodding along while someone burns, and the small guilt of enjoying it is exactly what keeps pulling you back.",
+  "factCheck": [
+    {
+      "claim": "\"Take your time she's only burning.\" is a lyric",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. Reading it as a photographer's instruction fits the preceding line, \"Photographers snip snap.\""
+    },
+    {
+      "claim": "Laughing boys wait for photos; rescuers are told to change the subject; the wind is asked to lend assistance",
+      "verdict": "supported",
+      "note": "Paraphrases the lyrics. These are interpretive readings."
+    },
+    {
+      "claim": "Eno said the song starts out sinister with very ordinary words sung with an incredible amount of passion",
+      "verdict": "supported",
+      "note": "Quietus interview."
+    },
+    {
+      "claim": "Eno picks words for vowels and aggression over meaning, and joked about \"Baby's on hire\"",
+      "verdict": "supported",
+      "note": "Same interview."
+    },
+    {
+      "claim": "Doubled words (row row, blow blow, snip snap) work like nursery-rhyme or playground chants",
+      "verdict": "supported",
+      "note": "The doubling is in the lyrics. The comparison is the critic's interpretation."
+    },
+    {
+      "claim": "Juanita and Juan, second-hand tobacco sellers, pocket whatever is left in the ashtrays",
+      "verdict": "corrected",
+      "note": "The lyrics say Juanita and Juan sell second-hand tobacco, but only Juan empties the ashtrays and pockets what he collects. Reworded."
+    },
+    {
+      "claim": "He wrote it right after leaving Roxy Music; one writer called it bitterly cynical",
+      "verdict": "supported",
+      "note": "moredarkthanshark source."
+    },
+    {
+      "claim": "\"I could be half the man I used to\" is a line that cuts off before its last word",
+      "verdict": "removed",
+      "note": "Nothing in the lyrics or listening notes supports a claim about how the line is delivered or cut off. The quote itself is accurate and stays."
+    },
+    {
+      "claim": "Final verse: \"But any idiot would know that.\"",
+      "verdict": "supported",
+      "note": "Exact lyric. It is the last stanza of the lyrics."
+    },
+    {
+      "claim": "Drum kit with steady beat and snare out front; simple repetitive bass; distorted guitar sustained chords; high shimmering synth pad",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "John Wetton plays bass",
+      "verdict": "supported",
+      "note": "Powerpop blog credit. The passes agree on a simple repeating bass line."
+    },
+    {
+      "claim": "Raw, slightly distant room sound",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Eno's voice is clear, slightly nasal, detached, with no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree on clear, nasal and no harmonies. Two passes say detached. Eno is credited with vocals."
+    },
+    {
+      "claim": "Recorded September 1973 at Majestic Studios in Clapham; Paul Rudolph on guitar; Simon King and Marty Simon credited",
+      "verdict": "supported",
+      "note": "Wikipedia and powerpop blog."
+    },
+    {
+      "claim": "Belongs to Eno's art-rock and experimental pop stretch between Roxy Music and the ambient records",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Fripp's solo runs about three minutes over shifting drum accents and continues through Eno's returning vocals without following the beat",
+      "verdict": "supported",
+      "note": "AllMusic."
+    },
+    {
+      "claim": "Fripp said he played it fresh off a plane from America, exhausted",
+      "verdict": "supported",
+      "note": "Wikipedia."
+    },
+    {
+      "claim": "Fripp is the song's only real disturbance; the groove makes you an onlooker",
+      "verdict": "supported",
+      "note": "Interpretation resting on supported facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2156,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014047,
+        "detail": "1109 in / 160 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014847,
+        "detail": "1109 in / 192 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014597,
+        "detail": "1109 in / 182 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.0826,
+        "detail": "24575 in / 1345 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.078228,
+        "detail": "3702 in / 3171 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050424,
+        "detail": "4912 in / 4060 out"
+      }
+    ]
+  }
+}

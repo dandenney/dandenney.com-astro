@@ -1,0 +1,202 @@
+{
+  "spotifyId": "2IPgxg2c1jk45Ay32Cqz33",
+  "reviewedAt": "2026-11-19T03:47:45.910Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/31827767"
+  },
+  "listening": "Pass 1:\nInstruments:\nA drum kit plays a steady beat with a prominent snare. An electric bass plays a walking line. An electric guitar plays rhythmic chords. A keyboard plays sustained chords.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is a shuffle, with a driving, upbeat feel.\n\nVocals:\nThe lead vocalist has a clear, mid-range voice. The delivery is energetic and slightly raw. Backing vocals provide harmonies, often in unison or parallel to the lead.\n\nProduction:\nThe room sounds medium-sized. The texture is full and slightly gritty. The production is moderately polished, with a live band feel.\n\nArrangement:\nThe excerpt begins with the full band and lead vocals. Backing vocals enter and drop out, supporting the lead. The keyboard sustains chords throughout, while the guitar plays rhythmic accents. The drums and bass maintain a consistent foundation.\n\nPass 2:\nInstruments:\nA drum kit plays a driving, mid-tempo beat with a prominent snare on beats two and four. A bass guitar plays a simple, rhythmic line. An electric guitar plays a clean, rhythmic chord progression. A keyboard plays sustained chords.\n\nTempo and Groove:\nThe tempo is mid-fast. The groove is a driving, rock-and-roll feel.\n\nVocals:\nThe lead vocalist is a male with a clear, slightly raspy voice. He sings with a confident, energetic delivery. There are backing vocals, also male, singing harmonies in unison with the lead.\n\nProduction:\nThe sound is bright and clear, with a moderate amount of reverb. The texture is full and layered. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The lead vocalist enters immediately. Backing vocals join in for the chorus. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nA drum kit plays a driving beat with a prominent snare and hi-hat. An electric bass plays a walking line. An electric guitar plays rhythmic chords with a slight crunch, and a second electric guitar plays a melodic, sustained line.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is a steady, driving rock feel.\n\nVocals:\nThe lead vocalist has a clear, mid-range voice with a slightly raw edge. The delivery is energetic and forward. Backing vocals provide harmonies, often in unison or parallel to the lead.\n\nProduction:\nThe sound is moderately polished with a clear mix. The texture is full but not overly dense. The room sound is present but not overly reverberant.\n\nArrangement:\nThe excerpt begins with the full band. The lead vocalist sings a verse, then the backing vocals join for a call-and-response section. The lead guitar plays a sustained melodic line during the latter part of the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The digital single 'I'm Alive / Verbal Expressions' by Johnny Thunder was released 7 January 2011 by Parlophone Records. It has two tracks: 'I'm Alive' (2:56) and 'Verbal Expressions of T.V.' (2:47).",
+        "source": "https://music.apple.com/us/album/im-alive-verbal-expressions-single/689298773"
+      },
+      {
+        "claim": "'I'm Alive' was written by Tommy James and Peter Lucia of Tommy James and the Shondells. Thunder's version is a cover.",
+        "source": "https://secondhandsongs.com/performance/271344/all"
+      },
+      {
+        "claim": "The Qobuz listing for the 2011 release carries a 1969 phonographic copyright date for 'I'm Alive'. It credits Teddy Vann as producer of the B-side, 'Verbal Expressions of T.V.'",
+        "source": "https://www.qobuz.com/se-en/album/im-alive-verbal-expressions-johnny-thunder/5099909483651"
+      },
+      {
+        "claim": "AllMusic's credits for the release list Tommy James and Peter Lucia as composers and Teddy Vann as producer.",
+        "source": "https://www.allmusic.com/album/im-alive-verbal-expressions-mw0002135020"
+      },
+      {
+        "claim": "The song was first issued as a 1969 single on the small New York label Calla Records, backed with 'Verbal Expressions of T.V.' It did not sell well enough to sustain his career.",
+        "source": "https://www.songfacts.com/facts/johnny-thunder/im-alive"
+      },
+      {
+        "claim": "Tommy James is credited as 'Arranger and Musical Concept' on the Calla single (C-161). The record has heavy fuzz guitar over a funky beat.",
+        "source": "http://itsgreatshakes.blogspot.com/2005/10/johnny-thunder-im-alive-calla-c-161.html"
+      },
+      {
+        "claim": "Songfacts says Thunder howls on this track, unlike his usual soft R&B vocal style on 'Loop De Loop'. It describes the vibe as closer to garage rock than to R&B or pop.",
+        "source": "https://www.songfacts.com/facts/johnny-thunder/im-alive"
+      },
+      {
+        "claim": "Thunder told Billboard author Wayne Jancik that 'I'm Alive' was his first true rock effort. He also cited Bob Dylan's Rolling Stone remark about it.",
+        "source": "http://itsgreatshakes.blogspot.com/2005/10/johnny-thunder-im-alive-calla-c-161.html"
+      },
+      {
+        "claim": "In a 1969 Rolling Stone interview with Jann Wenner, Bob Dylan said he heard 'I'm Alive' on the radio and called it one of the most powerful records he had ever heard.",
+        "source": "https://en.wikipedia.org/wiki/I'm_Alive_(Tommy_James_and_the_Shondells_song)"
+      },
+      {
+        "claim": "Johnny Thunder was born Leroy 'Gilbert' Hamilton in Leesburg, Florida, on 15 August 1931 and died 6 September 2024. His biggest hit was 'Loop de Loop' (1963), produced by Teddy Vann, which reached no. 4 on the Billboard Hot 100. His labels included Diamond, Capitol, Vee Jay, Calla and Stateside.",
+        "source": "https://en.wikipedia.org/wiki/Johnny_Thunder_(singer)"
+      }
+    ],
+    "lineage": "A 1969 Calla Records cover of a Tommy James and the Shondells song, recorded by an early-'60s R&B and novelty-pop singer, it sits in the late-'60s fuzz-guitar garage, soul and funk-rock tradition.",
+    "genres": [
+      "garage rock",
+      "r&b",
+      "blues rock"
+    ]
+  },
+  "draft": "\"I'm no stone,\" Johnny Thunder sings, and the backing voices answer, \"I'm alive.\" Then: \"I'm no rock.\" Then, half-swallowed, \"No piece of metal.\" It's a strange list to have to make. Nobody needs to announce they aren't made of metal unless someone has been treating them that way, and that's the pressure under all the joy of **I'm Alive**. The song is a shout of being here, and it's also a case being argued.\n\nThe song came from Tommy James and Peter Lucia of Tommy James and the Shondells, and James is credited with the arrangement and \"musical concept\" on Thunder's 1969 single for Calla, a small New York label. Thunder was six years past \"Loop de Loop,\" the 1963 Teddy Vann production that went to No. 4. This was a different animal. Thunder later told the writer Wayne Jancik it was his first true rock record, and you can hear him leaning into the change. The voice is clear but carries a raw edge, pushed forward and full of energy. The band drives at a medium-fast clip: a snare that snaps, a bass walking underneath, an electric guitar chopping rhythm chords, and a keyboard holding long chords that keep the whole thing warm. Backing singers double and harmonize with the lead, so the claim never sounds like one person alone. It sits right where late-'60s garage rock, soul, and funk-rock were bleeding into each other.\n\nThe lyrics are mostly one phrase, repeated until it turns from statement into chant. In between, they slip in the reasons it needs saying. \"Who cares if my hair is a little bit long\" waves off a scold. \"I'm red and yellow and black and tan, I'm a man!\" stretches personhood across every color it can name. And then, tucked in after \"doin' my things,\" comes the tell: \"You better believe me.\" That's not the voice of someone sure of being believed. The pride and the plea sit in the same breath, and the song never settles which one is winning. It just says the word again, louder.\n\nThunder liked to point out that Bob Dylan, talking to Jann Wenner in Rolling Stone in 1969, named \"I'm Alive\" among the most powerful records he'd ever heard on the radio. The single still didn't sell enough to keep Thunder's career going. That makes \"doin' my thing and singin' my song\" land a little harder now. The record insists on a life the market didn't make room for.\n\nBy the last run of \"I'm alive, I'm alive, I'm alive,\" it has stopped being information and become breathing, and you end up chanting it along with him, half celebrating and half making sure.",
+  "factCheck": [
+    {
+      "claim": "\"I'm no stone,\" Thunder sings and backing voices answer \"I'm alive\"; also \"I'm no rock\" and \"No piece of metal\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics, including the parenthetical \"(I'm alive)\" responses. Because of the three-line quote limit, only \"I'm no stone\" stays as a quote and the other two are paraphrased."
+    },
+    {
+      "claim": "\"half-swallowed\" delivery of \"No piece of metal\"",
+      "verdict": "removed",
+      "note": "A specific vocal-delivery claim that no listening pass supports."
+    },
+    {
+      "claim": "Written by Tommy James and Peter Lucia of the Shondells",
+      "verdict": "supported",
+      "note": "SecondHandSongs and AllMusic."
+    },
+    {
+      "claim": "James credited with arrangement and \"musical concept\" on Thunder's 1969 Calla single; Calla is a small New York label",
+      "verdict": "supported",
+      "note": "Calla C-161 credits 'Arranger and Musical Concept'; Songfacts gives the label description."
+    },
+    {
+      "claim": "Six years past \"Loop de Loop,\" the 1963 Teddy Vann production that went to No. 4",
+      "verdict": "corrected",
+      "note": "It reached no. 4 on the Billboard Hot 100. The chart is now named."
+    },
+    {
+      "claim": "Thunder told Wayne Jancik it was his first true rock record",
+      "verdict": "supported",
+      "note": "Source says \"first true rock effort.\""
+    },
+    {
+      "claim": "Voice is clear with a raw edge, energetic, pushed forward",
+      "verdict": "supported",
+      "note": "Passes 1, 2 and 3 agree."
+    },
+    {
+      "claim": "Medium-fast band; prominent snare; walking bass; rhythmic electric guitar chords; keyboard sustaining chords",
+      "verdict": "supported",
+      "note": "Agreed by at least two passes. \"Snaps\" and \"chopping\" were replaced with plainer wording."
+    },
+    {
+      "claim": "Backing singers double and harmonize with the lead",
+      "verdict": "supported",
+      "note": "All three passes mention unison or parallel harmonies."
+    },
+    {
+      "claim": "Late-'60s garage rock, soul and funk-rock \"were bleeding into each other\"",
+      "verdict": "corrected",
+      "note": "The lineage note supports the tradition. The claim about how the scenes interacted historically was softened to where the song sits."
+    },
+    {
+      "claim": "Lyrics are mostly one phrase repeated; \"Who cares if my hair is a little bit long\"; the colors line; \"You better believe me\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The colors line is now paraphrased and \"every color it can name\" was dropped as an overstatement."
+    },
+    {
+      "claim": "\"doin' my things\" precedes \"You better believe me\"",
+      "verdict": "supported",
+      "note": "Lyric order confirmed. The quoted fragment was cut to stay within the three-line quote limit."
+    },
+    {
+      "claim": "The song \"just says the word again, louder\"",
+      "verdict": "corrected",
+      "note": "\"Louder\" is a claim about dynamics over the song that the passes don't support. Removed."
+    },
+    {
+      "claim": "Thunder \"liked to point out\" Dylan's remark",
+      "verdict": "corrected",
+      "note": "Source says Thunder cited Dylan's Rolling Stone remark to Jancik. Reworded."
+    },
+    {
+      "claim": "Dylan in 1969 Rolling Stone, talking to Jann Wenner, named it among the most powerful records he'd ever heard on the radio",
+      "verdict": "corrected",
+      "note": "Dylan said he heard it on the radio and called it one of the most powerful records he had ever heard. Rewritten to match."
+    },
+    {
+      "claim": "The single didn't sell enough to keep his career going",
+      "verdict": "supported",
+      "note": "Songfacts."
+    },
+    {
+      "claim": "\"doin' my thing and singin' my song\" quote",
+      "verdict": "removed",
+      "note": "The lyric is accurate, but it was cut to stay within the three-line quote limit. The idea is kept as a paraphrase."
+    },
+    {
+      "claim": "Final run of \"I'm alive\" repeated three times becomes breathing",
+      "verdict": "corrected",
+      "note": "Interpretation is fine. The quote was cut for the quote limit and the wording now rests on the lyric's repetition."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2741,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014767,
+        "detail": "1099 in / 190 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00066794,
+        "detail": "1099 in / 200 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00062294,
+        "detail": "1099 in / 182 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15300999999999998,
+        "detail": "51065 in / 2088 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.062916,
+        "detail": "4079 in / 2330 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.055376,
+        "detail": "5228 in / 4492 out"
+      }
+    ]
+  }
+}

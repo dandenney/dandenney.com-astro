@@ -1,0 +1,205 @@
+{
+  "spotifyId": "6INztpNwOTlfSKTuPo0HOP",
+  "reviewedAt": "2026-11-19T04:01:24.425Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4073943"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a sustained, low-end line. Drums play a slow, steady beat with a kick, snare, and hi-hat. A synth pad provides a sustained, airy texture.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and flowing.\n\nVocals:\nA male voice sings in a low, breathy register. The delivery is intimate and conversational. A second, higher male voice joins in harmony, singing the same melody.\n\nProduction:\nThe room sounds open and spacious. The texture is smooth and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and vocals. Drums enter shortly after the start. The second vocal harmony enters around the middle of the excerpt. All instruments continue to play throughout.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a sustained, low-end line. A drum kit plays a slow, steady beat with a prominent snare. A synth pad provides a sustained, airy texture.\n\nTempo and Groove:\nSlow tempo. The groove feels relaxed and flowing.\n\nVocals:\nA male voice sings in a low, breathy register. The delivery is intimate and conversational. A second male voice joins for harmonies, singing in a slightly higher register, creating a smooth blend.\n\nProduction:\nThe room sounds open and spacious. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and vocals. The drum kit enters shortly after, establishing the beat. The synth pad enters and sustains throughout. The second vocal harmony enters and remains present. No instruments drop out.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a slow, sustained line. A drum kit plays a slow, sparse beat with a kick drum and snare. A string section plays sustained chords.\n\nTempo and Groove:\nThe tempo is slow. The groove feels like a ballad, with a gentle, flowing feel.\n\nVocals:\nA male voice sings in a low register with a breathy, intimate character. The delivery is smooth and controlled. A female voice joins in harmony, singing in a higher register, also with a breathy character. The harmonies are close and blend well.\n\nProduction:\nThe room sounds spacious, with a sense of depth. The texture is smooth and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and male vocals. The drum kit enters shortly after, followed by the female harmony. The string section enters and sustains throughout the rest of the excerpt. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"The Alcott\" is the seventh track on The National's ninth studio album, First Two Pages of Frankenstein, released April 28, 2023 on 4AD.",
+        "source": "https://www.last.fm/music/The+National/_/The+Alcott+(feat.+Taylor+Swift)"
+      },
+      {
+        "claim": "The song is credited to three writers: Matt Berninger, Aaron Dessner and Taylor Swift.",
+        "source": "https://www.shazam.com/song/1660283622/the-alcott-feat-taylor-swift"
+      },
+      {
+        "claim": "The National produced the track at Long Pond studio in the Hudson Valley, New York.",
+        "source": "https://www.songfacts.com/facts/the-national/the-alcott"
+      },
+      {
+        "claim": "Aaron Dessner first wrote the music. Berninger wrote the main part of the song to it, and Dessner sent it to Swift, who he knew liked the music.",
+        "source": "https://www.xsnoize.com/the-national-share-video-for-the-alcott-feat-taylor-swift/"
+      },
+      {
+        "claim": "Swift replied with a voice memo containing all her parts, with lyrics she had added in dialogue with Berninger.",
+        "source": "https://www.xsnoize.com/the-national-share-video-for-the-alcott-feat-taylor-swift/"
+      },
+      {
+        "claim": "Berninger says he wrote the song with his wife Carin in mind. Swift added her own perspective and wrote all of her parts.",
+        "source": "https://www.nme.com/features/music-interviews/the-national-matt-berninger-interview-new-albums-taylor-swift-3506365"
+      },
+      {
+        "claim": "Berninger told Variety that Swift wrote a whole different perspective onto a song he had written about his wife, so the song suddenly had two sides.",
+        "source": "https://variety.com/2023/music/news/the-national-first-two-pages-of-frankenstein-album-interview-taylor-swift-1235597779/"
+      },
+      {
+        "claim": "Berninger said he imagined a contained moment and narrative between two people. The song is set to sparse piano and strings, with a couple trying to revive a troubled relationship.",
+        "source": "https://taylorswiftswitzerland.ch/index.php/features/the-alcott/"
+      },
+      {
+        "claim": "It is Swift's second duet with The National's Berninger, after \"Coney Island\" on evermore. Aaron Dessner co-produced Swift's 2020 albums Folklore and evermore.",
+        "source": "https://www.avclub.com/taylor-swift-duet-the-alcott-the-national-new-album-1850386232"
+      },
+      {
+        "claim": "The National formed in Brooklyn in 1999 and are friends from Cincinnati. The lineup is Matt Berninger, brothers Aaron and Bryce Dessner, and brothers Scott and Bryan Devendorf.",
+        "source": "https://www.last.fm/music/The+National/_/The+Alcott+(feat.+Taylor+Swift)"
+      }
+    ],
+    "lineage": "The song sits in The National's brooding, piano-led indie rock tradition, and it extends the Aaron Dessner–Taylor Swift folk-leaning collaborations that began with Folklore and evermore.",
+    "genres": [
+      "indie rock",
+      "downtempo",
+      "alternative"
+    ]
+  },
+  "draft": "Someone is sitting in the corner in the back of a place called **The Alcott**, writing in a golden notebook about \"someone / Who used to be me.\" The narrator walks in already knowing this. That's the setup Matt Berninger built, a single contained scene between two people. He has said he wrote it with his wife, Carin, in mind. Then Taylor Swift answered it, and the song stopped being one man's confession and became an argument with two sides.\n\nThe music came first. Aaron Dessner wrote it and Berninger wrote the main body of the song over it. Dessner sent it to Swift, who sent back a voice memo with all her parts, lyrics she wrote in dialogue with Berninger. It's their second duet after \"Coney Island,\" and it extends the partnership Dessner and Swift started on Folklore and evermore. The National produced it at Long Pond in the Hudson Valley.\n\nThe arrangement stays out of the way. A fingerpicked acoustic guitar circles under a slow, sustained bass line. Unhurried drums lean on the snare, and a synth pad hangs in a big, clean room. Berninger sings low and breathy, close to the mic, like he's talking across a small table. Then a second, higher voice slides in beside him in close harmony, and the blend is so smooth it almost hides how much the two of them disagree.\n\nThe disagreement is the song. Berninger's narrator knows exactly what he's doing. He waits for her to look up, sees her smile, and then wonders how many times he can pull this before she stops believing him. The pride of still being wanted sits right next to the shame of using it. The chorus swaps its pronouns as it goes, so the reluctance passes from one of them to the other. By the end, the narrator is admitting he never wanted to fall back in either.\n\nSwift's counter-lines crowd in around that chorus and won't let it settle. \"Have I become one of your problems?\" turns his confession back on him. Then comes the line that keeps the song from being a simple apology: \"'Cause I love this curse on our house.\" Neither of them wants out. Berninger's long run of \"I'll ruin it all over\" isn't a threat or a plea. It's a forecast, and the second voice answers it with something close to an invitation.\n\nNothing gets fixed. The song closes on the same three words it keeps returning to, back in love, and that's the point. What sticks is the sound of two people who can each see the wreck coming, and who reach for each other anyway because the wreck is theirs.",
+  "factCheck": [
+    {
+      "claim": "The narrator sits in the back corner of a place called The Alcott, with someone writing in a golden notebook about \"someone / Who used to be me.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The quote is two consecutive lines and is accurate."
+    },
+    {
+      "claim": "Berninger built a single contained scene between two people.",
+      "verdict": "supported",
+      "note": "Berninger said he imagined a contained moment and narrative between two people."
+    },
+    {
+      "claim": "Berninger wrote it with his wife, Carin, in mind.",
+      "verdict": "supported",
+      "note": "NME interview."
+    },
+    {
+      "claim": "Swift answered it, and the song became a two-sided argument.",
+      "verdict": "supported",
+      "note": "Variety quote: Swift wrote a whole different perspective, so the song suddenly had two sides."
+    },
+    {
+      "claim": "Dessner wrote the music first, Berninger wrote the main body over it, Dessner sent it to Swift, and she returned a voice memo with all her parts, written in dialogue with Berninger.",
+      "verdict": "supported",
+      "note": "xsnoize."
+    },
+    {
+      "claim": "It is their second duet after \"Coney Island,\" and it extends the Dessner–Swift partnership from Folklore and evermore.",
+      "verdict": "supported",
+      "note": "AV Club and the lineage note."
+    },
+    {
+      "claim": "The National produced it at Long Pond in the Hudson Valley.",
+      "verdict": "supported",
+      "note": "Songfacts."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar and a slow, sustained bass line.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Unhurried drums lean on the snare.",
+      "verdict": "corrected",
+      "note": "All passes agree on slow drums, but only one calls the snare prominent. Changed to slow, steady drums."
+    },
+    {
+      "claim": "A synth pad hangs in a big, clean room.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on the pad. All passes describe the room as open, spacious and polished."
+    },
+    {
+      "claim": "Berninger sings low and breathy, close to the mic, like he's talking across a small table.",
+      "verdict": "corrected",
+      "note": "Low, breathy, intimate and conversational are supported. \"Close to the mic\" is a production claim no pass makes, so it was removed."
+    },
+    {
+      "claim": "Then a second, higher voice slides in beside him in close harmony; the blend is so smooth it hides how much the two of them disagree.",
+      "verdict": "corrected",
+      "note": "A higher second voice and a smooth blend are supported. The passes disagree on whether that voice is male or female, so the draft can't tie it to Swift. The entry timing (\"then\", \"slides in\") was dropped."
+    },
+    {
+      "claim": "The narrator waits for her to look up, sees her smile, and wonders how many times he can do this before she stops believing.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Pronouns were loosened since the lyrics don't say who is who."
+    },
+    {
+      "claim": "The chorus swaps its pronouns as it goes.",
+      "verdict": "supported",
+      "note": "\"last thing you wanted\" becomes \"last thing I wanted\", and the problems/truth roles flip."
+    },
+    {
+      "claim": "By the end, the narrator admits he never wanted to fall back in either.",
+      "verdict": "corrected",
+      "note": "The late chorus does say \"the last thing I wanted\", but the \"either\" and \"he\" framing was shaky. Reworded to stay with the lyric."
+    },
+    {
+      "claim": "Swift's counter-lines crowd in around the chorus.",
+      "verdict": "corrected",
+      "note": "The packet says Swift wrote all her parts but doesn't say which lines are hers. Changed to \"the lines in parentheses\"."
+    },
+    {
+      "claim": "\"Have I become one of your problems?\" and \"'Cause I love this curse on our house.\"",
+      "verdict": "supported",
+      "note": "Both are exact lyric quotes."
+    },
+    {
+      "claim": "Berninger's long run of \"I'll ruin it all over\" is answered by the second voice.",
+      "verdict": "corrected",
+      "note": "The speaker attribution and the voice attribution were unsupported. Now attributes the answer to the parenthetical lines."
+    },
+    {
+      "claim": "The song closes on the same three words, back in love.",
+      "verdict": "corrected",
+      "note": "The last lyric line is \"Back in love with you.\" Corrected to quote it."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2006,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014588,
+        "detail": "1106 in / 182 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015063,
+        "detail": "1106 in / 201 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014413,
+        "detail": "1106 in / 175 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080122,
+        "detail": "23611 in / 1290 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054608,
+        "detail": "4087 in / 1913 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.061482,
+        "detail": "5196 in / 5109 out"
+      }
+    ]
+  }
+}
