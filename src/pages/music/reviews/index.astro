@@ -18,6 +18,20 @@ const formatDuration = (ms: number) => {
   return `${minutes}:${String(seconds).padStart(2, "0")}`;
 };
 
+const searchText = (song: (typeof songs)[number]) =>
+  [
+    song.data.title,
+    song.data.artist,
+    ...song.data.artists,
+    song.data.album,
+    ...song.data.genres,
+    ...song.data.tags,
+  ]
+    .join(" ")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
 const totalMs = songs.reduce((sum, song) => sum + song.data.duration, 0);
 const runtimeHours = Math.floor(totalMs / 3_600_000);
 const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
@@ -72,7 +86,26 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
           </p>
         </div>
       ) : (
-        <ol class="tracklist">
+        <>
+        <div class="filter px-8" role="search">
+          <label for="track-filter" class="filter-label text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+            [&nbsp;Filter&nbsp;]
+          </label>
+          <input
+            id="track-filter"
+            class="filter-input"
+            type="search"
+            placeholder="Song, artist, album, genre"
+            autocomplete="off"
+            spellcheck="false"
+            aria-controls="tracklist"
+            aria-keyshortcuts="/"
+          />
+          <p class="filter-count text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500" aria-live="polite">
+            {songs.length} tracks
+          </p>
+        </div>
+        <ol class="tracklist" id="tracklist" data-total={songs.length}>
           {songs.map((song, i) => {
             const year = song.data.releaseDate.slice(0, 4);
             const album =
@@ -80,7 +113,7 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
                 ? song.data.album
                 : null;
             return (
-              <li class="track">
+              <li class="track" data-search={searchText(song)}>
                 <a
                   href={`/music/reviews/${songSlug(song)}/`}
                   class="track-link"
@@ -116,6 +149,10 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
             );
           })}
         </ol>
+        <p class="filter-empty px-8" hidden>
+          Nothing in rotation matches that. Try an artist or a genre.
+        </p>
+        </>
       )}
 
       {retired.length > 0 && (
@@ -128,7 +165,7 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
           </p>
           <ul class="retired-list">
             {retired.map((song) => (
-              <li>
+              <li data-search={searchText(song)}>
                 <a href={`/music/reviews/${songSlug(song)}/`} class="retired-link">
                   {song.data.title} <span class="retired-artist">&middot; {song.data.artist}</span>
                 </a>
@@ -291,8 +328,77 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
         padding: 0;
       }
 
-      .track + .track {
+      .track:not([hidden]) ~ .track:not([hidden]) {
         border-top: 1px solid var(--rule);
+      }
+
+      /* ---------- Filter ---------- */
+      .filter {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem 1.5rem;
+        padding-block: 1.25rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .filter-label {
+        flex: none;
+      }
+
+      .filter-input {
+        flex: 1;
+        min-width: 0;
+        padding: 0.25rem 0;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        background: transparent;
+        color: var(--ink);
+        font-size: clamp(1.125rem, 2vw, 1.5rem);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        transition: border-color 0.2s var(--ease-out-quart);
+      }
+
+      .filter-input::placeholder {
+        color: #94a3b8;
+        font-weight: 500;
+      }
+
+      .filter-input:focus {
+        outline: none;
+        border-bottom-color: var(--accent);
+      }
+
+      .filter-input::-webkit-search-cancel-button {
+        cursor: pointer;
+      }
+
+      .filter-count {
+        flex: none;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .filter-empty {
+        padding-block: 3rem;
+        color: #64748b;
+      }
+
+      :global(.dark) .filter-empty {
+        color: #94a3b8;
+      }
+
+      @media (max-width: 40rem) {
+        .filter {
+          flex-wrap: wrap;
+          padding: 1rem 1.25rem;
+        }
+        .filter-input {
+          order: 3;
+          flex-basis: 100%;
+        }
+        .filter-count {
+          margin-left: auto;
+        }
       }
 
       .track-link {
@@ -644,6 +750,76 @@ const runtimeMinutes = Math.round((totalMs % 3_600_000) / 60_000);
                 stagger: 0.05,
               }),
           });
+        }
+
+        /* ----- Type-to-filter ----- */
+        const input = document.querySelector<HTMLInputElement>("#track-filter");
+        const count = document.querySelector<HTMLElement>(".filter-count");
+        const empty = document.querySelector<HTMLElement>(".filter-empty");
+        const retired = document.querySelector<HTMLElement>(".retired");
+        if (input && count && empty) {
+          const rows = Array.from(list.querySelectorAll<HTMLElement>(".track"));
+          const retiredRows = retired
+            ? Array.from(retired.querySelectorAll<HTMLElement>("li"))
+            : [];
+          const total = rows.length;
+          const normalize = (s: string) =>
+            s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+          const apply = () => {
+            const terms = normalize(input.value).split(/\s+/).filter(Boolean);
+            const matches = (el: HTMLElement) => {
+              const haystack = el.dataset.search ?? "";
+              return terms.every((t) => haystack.includes(t));
+            };
+            let shown = 0;
+            for (const row of rows) {
+              const hit = matches(row);
+              row.hidden = !hit;
+              if (hit) shown++;
+            }
+            let retiredShown = 0;
+            for (const row of retiredRows) {
+              const hit = matches(row);
+              row.hidden = !hit;
+              if (hit) retiredShown++;
+            }
+            if (retired) retired.hidden = retiredShown === 0;
+            empty.hidden = shown > 0;
+            count.textContent = terms.length
+              ? `${shown} of ${total} tracks`
+              : `${total} tracks`;
+            if (terms.length) gsap.set(rows, { opacity: 1, y: 0 });
+            ScrollTrigger.refresh();
+          };
+
+          input.addEventListener("input", apply, { signal });
+          input.addEventListener(
+            "keydown",
+            (e) => {
+              if (e.key === "Escape" && input.value) {
+                input.value = "";
+                apply();
+              }
+            },
+            { signal },
+          );
+          document.addEventListener(
+            "keydown",
+            (e) => {
+              if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+              const t = e.target;
+              if (
+                t instanceof HTMLElement &&
+                (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))
+              )
+                return;
+              e.preventDefault();
+              input.focus();
+            },
+            { signal },
+          );
+          if (input.value) apply();
         }
 
         /* ----- Floating album-art preview ----- */
