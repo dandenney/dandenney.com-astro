@@ -2381,6 +2381,112 @@
         "input_tokens": 637,
         "output_tokens": 109
       }
+    },
+    "307": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-20T16:41:33.347Z",
+      "state": {
+        "date": "2026-11-20",
+        "sport": "NBA",
+        "matchup": "vs Pacers",
+        "pick": "Tyrese Proctor Over 1.5 3-Pointers",
+        "odds": "-151",
+        "recentForm": "8/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.76
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_over",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 1,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.78,
+          "confidence": 0.37,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.58,
+            "2": 0.1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 649,
+        "output_tokens": 109
+      }
+    },
+    "308": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-20T16:41:33.470Z",
+      "state": {
+        "date": "2026-11-20",
+        "sport": "NBA",
+        "matchup": "@ Jazz",
+        "pick": "Dillon Brooks Over 1.5 3-Pointers",
+        "odds": "-146",
+        "recentForm": "6/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.58
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_over",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 1,
+            "player_under": 0
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.88,
+          "confidence": 0.52,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.68,
+            "2": 0.1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 648,
+        "output_tokens": 109
+      }
     }
   }
 }
