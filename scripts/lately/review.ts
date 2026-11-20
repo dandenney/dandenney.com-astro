@@ -176,7 +176,7 @@ async function getClip(track: Track): Promise<{ audio: Buffer; source: string } 
   const embed = await fetch(`https://open.spotify.com/embed/track/${track.id}`, { headers: { "User-Agent": "Mozilla/5.0" } })
     .then((r) => r.text())
     .catch(() => "");
-  const preview = embed.match(/"audioPreview":\{"format":"[^"]*","url":"([^"]+)"/)?.[1];
+  const preview = embed.match(/"audioPreview":\{[^}]*"url":"([^"]+)"/)?.[1];
   if (preview) urls.push({ url: preview, source: "spotify" });
   for (const { url, source } of urls) {
     const res = await fetch(url);
