@@ -1,0 +1,122 @@
+{
+  "spotifyId": "12hFIo6qXSlxyDluikwc73",
+  "reviewedAt": "2026-11-20T17:29:16.986Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13868579"
+  },
+  "listening": null,
+  "research": {
+    "identity": "likely",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The most damning line in **Shake! Shake! Shake!** is in the chorus, wedged between a piggy bank and a bar tab: \"My last dime I wasted on an alibi.\" The narrator didn't spend the money on rent or on the drink they're nursing. They spent it on a story, an excuse built to cover something, and they admit it in the same breath that's supposed to be the singalong.\n\nThe song is credited to The Deadbeat Cousins with Liam St. John, and it's built on that contradiction. The verses are a list of charges against someone else. They left without a word. They're \"on another level\" while the rest of us scrape by. They plot the narrator's downfall and spin webs the narrator walks right into. It's the voice of someone who's been wronged and has rehearsed the case. Then the chorus flips it. The penny goes in the piggy bank, the dime goes to the alibi, and the debt comes due. Paying for every mistake, one drink at a time, is a confession dressed up as a toast. The blame and the guilt never settle into one story, and the song is smart enough not to force them.\n\nThe chorus is written as a chant, each section opening on a word hammered three times: shake, pay, and later take. It reads like a barker's call or a schoolyard rhyme, which makes the shame easier to shout. You can yell your own failings when they come in threes.\n\nThe third verse is where the bravado slips. Offered whatever the other person wants, the narrator says there isn't much left to give, and turns their shared misery into a dare: \"We best learn how to swim.\" That \"we\" matters. Whatever happened, they're both still in the water. Then comes the bleakest pair of lines, moving from gasoline to \"lines\" and landing on a shrug: \"But I'm fixin' to stay high.\" There's no plan to get better. The fear is named and then pushed down with whatever's on hand, and that loose, Southern-tinged \"fixin'\" makes it sound less like defiance than like a habit.\n\nThe short \"Take! Take! Take!\" section near the end plays like a settlement. The narrator signs on the dotted line and gives up any claim to what belongs to the other person. It's the closest the song gets to letting go, and it's handled like paperwork. After that the chorus comes back, and the last line repeats three times, as if the drinking can't quite stop.\n\nThe song lets you shout along with someone who blames everyone else and pays for it all himself, and by the third time through the chorus you can't tell whether you're joining the toast or the apology.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"My last dime I wasted on an alibi.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The line is wedged between a piggy bank and a bar tab",
+      "verdict": "corrected",
+      "note": "The piggy bank line is in the lyrics. A bar tab is not. Changed to 'a drink'."
+    },
+    {
+      "claim": "The narrator didn't spend the money on rent or on the drink they're nursing",
+      "verdict": "corrected",
+      "note": "Interpretation of the lyric, but 'nursing' and 'rent' added unsupported detail. Reworded to stay with the lyric's situation."
+    },
+    {
+      "claim": "Song is credited to The Deadbeat Cousins with Liam St. John",
+      "verdict": "corrected",
+      "note": "Both are listed as artists, and the release is under The Deadbeat Cousins. No songwriting credit is given, so 'credited' was softened to 'artists'."
+    },
+    {
+      "claim": "Verses list charges: they left without a word, 'on another level', rest of us scrape by, plot downfall, spin webs",
+      "verdict": "supported",
+      "note": "Paraphrases of 'You left without a sign', 'On another level', 'still trying to get by', 'My downfall you connive', 'You spin another web'. Quote matches."
+    },
+    {
+      "claim": "Chorus: penny in piggy bank, dime to alibi, paying for every mistake one drink at a time",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The chorus is written as a chant, with a word hammered three times: shake, pay, and later take",
+      "verdict": "corrected",
+      "note": "Shake/Pay/Take are each repeated three times. 'Each section opening' was imprecise, so it was reworded."
+    },
+    {
+      "claim": "The third verse contains 'We best learn how to swim' and the gasoline/lines lines",
+      "verdict": "corrected",
+      "note": "'Take what you see fit...' is the third verse. 'Bleached and purified...' is the fourth. Fixed the verse references."
+    },
+    {
+      "claim": "Lyric quote: \"We best learn how to swim\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics (case aside)."
+    },
+    {
+      "claim": "Lyric quote: \"But I'm fixin' to stay high.\" and 'gasoline to lines'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "'Fixin'' is loose and Southern-tinged",
+      "verdict": "removed",
+      "note": "Regional or genre claim with no support, and nothing is known about the singer's origins."
+    },
+    {
+      "claim": "The 'Take! Take! Take!' section comes near the end and the narrator signs on the dotted line, giving up claim to what's the other's",
+      "verdict": "corrected",
+      "note": "The lyrics show it between the second and final choruses. Reworded to that placement. 'What's yours, it isn't mine' supports the rest."
+    },
+    {
+      "claim": "The chorus returns and the last line repeats three times",
+      "verdict": "supported",
+      "note": "The lyrics end with 'One drink at a time' three times."
+    },
+    {
+      "claim": "Narrator 'pays for it all himself'",
+      "verdict": "corrected",
+      "note": "The narrator's gender is not established. Changed to 'themselves'."
+    },
+    {
+      "claim": "Chorus appears three times (third time through)",
+      "verdict": "supported",
+      "note": "The lyrics show three choruses."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1684,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078326,
+        "detail": "21723 in / 1488 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.048524,
+        "detail": "1916 in / 2043 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.041564,
+        "detail": "3027 in / 3551 out"
+      }
+    ]
+  }
+}

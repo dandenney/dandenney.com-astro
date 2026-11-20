@@ -1,0 +1,162 @@
+{
+  "spotifyId": "020YsiW7gnBiqTAmEg7eTc",
+  "reviewedAt": "2026-11-20T17:23:02.062Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/10666920"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Pixie Geldof said she wrote \"Woman Go Wild\" with Fryars and that it is the only piano-led song on the album.",
+        "source": "https://www.refinery29.com/en-gb/2016/11/128583/pixie-geldof-album-im-yours-track-explainer"
+      },
+      {
+        "claim": "Geldof said the song was quick and easy to write. She said recording it was the slowest, most intricate part of the album process.",
+        "source": "https://www.refinery29.com/en-gb/2016/11/128583/pixie-geldof-album-im-yours-track-explainer"
+      },
+      {
+        "claim": "The album I'm Yours was produced by Tony Hoffer, whose credits include Goldfrapp, Beck, Air and Ladyhawke. Geldof recorded it in Los Angeles.",
+        "source": "https://www.hotpress.com/music/pixies-lot-interview-with-pixie-geldof-19178962"
+      },
+      {
+        "claim": "\"Woman Go Wild\" was the fourth single from I'm Yours. It followed \"Sweet Thing\", \"So Strong\" and \"Escape Route\".",
+        "source": "https://www.nme.com/news/music/watch-pixie-geldofs-mesmerising-new-video-woman-gone-wild-1817307"
+      },
+      {
+        "claim": "The \"Woman Go Wild\" video was directed by Balthazar Klarwein. It follows a teenage girl through a prom love story.",
+        "source": "https://i-d.co/article/pixie-geldofs-new-video-woman-go-wild-is-a-sweet-teen-love-story/"
+      },
+      {
+        "claim": "In the video, a young woman listens to Geldof on a Walkman and daydreams about a school dance. There she finds the girl she likes, and the two end up floating underwater together.",
+        "source": "https://www.out.com/popnography/2016/11/04/pixie-geldof-tells-teenage-love-story-woman-go-wild-video"
+      },
+      {
+        "claim": "I'm Yours is Geldof's debut album. It was released on 4 November 2016 on Stranger Records, a UK indie label.",
+        "source": "https://northerntransmissions.com/pixie-geldof-debuts-new-song-woman-go-wild/"
+      },
+      {
+        "claim": "Geldof said working on the album helped her cope after the death of her sister Peaches in 2014. She said she needed to stay busy with something she loved.",
+        "source": "https://i-d.vice.com/en_uk/article/evnjmm/pixie-geldofs-new-video-woman-go-wild-is-a-sweet-teen-love-story"
+      },
+      {
+        "claim": "Before her solo career, Geldof wrote Hole- and Libertines-inspired songs under the name Violet. The album's oldest song, \"Wild Things Grow\", dates from those sessions.",
+        "source": "https://www.nme.com/blogs/nme-radar/pixie-geldof-qa-on-her-new-album-762023"
+      },
+      {
+        "claim": "NME describes I'm Yours as a blend of country and dream-pop. Geldof got into country through her parents, Bob Geldof and Paula Yates.",
+        "source": "https://www.nme.com/blogs/nme-radar/pixie-geldof-qa-on-her-new-album-762023"
+      }
+    ],
+    "lineage": "The song sits in the dreamy, hazy leftfield pop and country-tinged dream-pop of Geldof's debut album, which she made with Los Angeles producer Tony Hoffer.",
+    "genres": [
+      "dream pop",
+      "country-tinged pop",
+      "leftfield pop"
+    ]
+  },
+  "draft": "The most telling words in **Woman Go Wild** come in parentheses. By the last run of the chorus, Pixie Geldof has sung the title hook again and again as plain fact, and then she slips a condition in front of it: \"(If you want).\" The power she's been describing, his look and her coming undone, turns out to be something she's offering rather than something he takes. That small hedge holds the whole song.\n\nGeldof wrote it with Fryars and has said it came quick and easy. The lyric's shape shows why: two verses of confession, a pre-chorus where everything slows down, and a chorus that repeats until the words wear smooth. What she's confessing is not simple, though. The first verse opens on devotion and then turns on itself: \"It hurts me when you hold me,\" she sings, and right after that she admits that nobody warned her needing someone could feel this wrong. The second verse moves toward something close to relief at being past rescue: \"I'm glad no one can save me now.\" Pain and pleasure sit in the same breath. Geldof doesn't sort them out. She reports both.\n\nThe pre-chorus explains the pull. It's about being seen, the sense that this person knows everything about her that she doesn't. That's the feeling underneath the title. It isn't quite lust. It's the dizzy comfort of handing yourself to someone who seems to understand you better than you do. Then the third verse adds a flash of leverage. She admits she made him wait, calls him her man and her king, and ties the crown to a condition: if she's all his, he'll keep wanting her. The surrender is also a bargain, and she knows it.\n\nBy Geldof's account it's the only piano-led song on *I'm Yours*, her 2016 debut for Stranger Records. The easy song turned out to be the hard one to record, and she has called its sessions the slowest, most intricate part of making the album. Tony Hoffer, whose credits run through Goldfrapp, Beck and Air, produced the record in Los Angeles. NME heard the album as country crossed with dream-pop, and the country comes honestly: she got into it through her parents, Bob Geldof and Paula Yates. From that tradition the song takes its blunt, unembarrassed devotion. Then it bends that devotion toward something murkier, a need she half distrusts.\n\nBalthazar Klarwein's video turns the \"boy\" and \"king\" of the lyric into a teenage girl on a Walkman, daydreaming her way to a school dance and to the girl she likes. That reading fits the hook without strain. Being undone by a look isn't tied to any one kind of love.\n\nThe song lets you feel how good it is to be known, and how much it costs to want that so badly you'd put \"if you want\" in front of your own wildness.",
+  "factCheck": [
+    {
+      "claim": "The parenthetical \"(If you want)\" appears in the final run of the chorus, in front of the title hook",
+      "verdict": "supported",
+      "note": "Lyrics close with four \"(If you want) you can make a woman go wild\" lines. The title hook repeats throughout before that."
+    },
+    {
+      "claim": "Geldof wrote the song with Fryars and has said it came quick and easy",
+      "verdict": "supported",
+      "note": "Refinery29 facts."
+    },
+    {
+      "claim": "The lyric has \"two verses of confession\" before the chorus section, and later a \"third verse\"",
+      "verdict": "corrected",
+      "note": "The lyrics have three verse sections (\"Darling, you control me...\", \"Boy, it's like you want me...\", \"I'll be honest...\"). The draft contradicted itself, so it now says three."
+    },
+    {
+      "claim": "A pre-chorus where everything slows down, and a chorus that repeats",
+      "verdict": "supported",
+      "note": "\"Everything appears to / Slow, slow down\" and the repeated hook are in the lyrics."
+    },
+    {
+      "claim": "Quote: \"It hurts me when you hold me\" and the line about needing someone feeling this wrong",
+      "verdict": "supported",
+      "note": "Matches the lyrics: \"It hurts me when you hold me\" and \"Needing you could ever be this wrong\"."
+    },
+    {
+      "claim": "Quote: \"I'm glad no one can save me now\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "She admits she made him wait, calls him her man and her king, and ties it to a condition about being all his",
+      "verdict": "supported",
+      "note": "\"I let you wait / You are my man, you are my king / If I'm all yours / Then you want me again and again\". The bargain reading is interpretation."
+    },
+    {
+      "claim": "It is the only piano-led song on I'm Yours, her 2016 debut for Stranger Records",
+      "verdict": "supported",
+      "note": "Refinery29, Northern Transmissions and Spotify metadata."
+    },
+    {
+      "claim": "Recording the song was the slowest, most intricate part of making the album",
+      "verdict": "supported",
+      "note": "Refinery29 facts."
+    },
+    {
+      "claim": "Tony Hoffer, whose credits include Goldfrapp, Beck and Air, produced the record in Los Angeles",
+      "verdict": "supported",
+      "note": "Hot Press facts."
+    },
+    {
+      "claim": "NME heard the album as country crossed with dream-pop; Geldof got into country through her parents Bob Geldof and Paula Yates",
+      "verdict": "supported",
+      "note": "NME facts."
+    },
+    {
+      "claim": "From that tradition the song takes its blunt, unembarrassed devotion, then bends it",
+      "verdict": "corrected",
+      "note": "Interpretive, but it asserted the song borrows from country directly. Reworded as a reading of the song, tied to the album's country-tinged dream-pop."
+    },
+    {
+      "claim": "Balthazar Klarwein's video follows a teenage girl on a Walkman who daydreams about a school dance and the girl she likes",
+      "verdict": "supported",
+      "note": "I-D and Out facts. The link to the lyric's \"boy\" and \"king\" is interpretation."
+    },
+    {
+      "claim": "No banned words; no mention of evidence, clips or sources",
+      "verdict": "supported",
+      "note": "None found."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1873,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.076686,
+        "detail": "21193 in / 1430 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.062844,
+        "detail": "3021 in / 2538 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047796,
+        "detail": "4208 in / 3938 out"
+      }
+    ]
+  }
+}

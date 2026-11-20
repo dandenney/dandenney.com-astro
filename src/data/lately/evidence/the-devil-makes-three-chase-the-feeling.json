@@ -1,0 +1,177 @@
+{
+  "spotifyId": "43C88JXdWHHlyfghixFJI2",
+  "reviewedAt": "2026-11-20T17:31:58.324Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2358252"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Chase the Feeling\" is a cover written by Kris Kristofferson, first released by him in 2006. The Devil Makes Three put out their version on Redemption & Ruin on September 16, 2016.",
+        "source": "https://secondhandsongs.com/performance/1091203/all"
+      },
+      {
+        "claim": "It is track 4 of 12 on Redemption & Ruin, on Side A of the vinyl release, which is a 12-song cover record.",
+        "source": "https://newwestrecords.com/products/the-devil-makes-three-redemption-ruin-vinyl"
+      },
+      {
+        "claim": "Shazam credits for the track list Jerry Roe on drums, Dan Dugmore on pedal steel guitar, Lucia Turino on upright bass, Cooper McBean on vocals and Pete Bernhard on background vocals. It runs 3:34, and an audio-only video was released on August 26, 2016.",
+        "source": "https://www.shazam.com/song/1436939538/chase-the-feeling"
+      },
+      {
+        "claim": "The album was recorded in Nashville with engineer/co-producer Dave Ferguson, best known for his work with Cowboy Jack Clement and Johnny Cash, at his Butcher Shoppe studio.",
+        "source": "https://chicago.suntimes.com/2017/1/18/18364401/the-devil-makes-three-thrives-on-music-traditions"
+      },
+      {
+        "claim": "Pete Bernhard said the Butcher Shoppe is in Germantown and that the Johnny Cash American recordings were made there. He said the band recorded the album live and had guests including Jerry Douglas, Tim O'Brien and Chance McCoy of Old Crow Medicine Show.",
+        "source": "https://yourtahoeguide.com/2016/12/devil-makes-three-riff-redemption/"
+      },
+      {
+        "claim": "Bernhard said the band arranged songs with the guest players and then hit record. He said they \"let the guests produce it, so to speak,\" with arrangements created spontaneously.",
+        "source": "https://magnetmagazine.com/2016/10/14/the-devil-makes-three-redemption-songs/"
+      },
+      {
+        "claim": "Bernhard said the album is split into two sides, a \"ruin\" side about messing up your life and partying and a \"redemption\" side of traditional and gospel songs. 'Chase the Feeling' sits on the ruin side, in the first half, which the label says covers faults and vices.",
+        "source": "https://chicago.suntimes.com/2017/1/18/18364401/the-devil-makes-three-thrives-on-music-traditions"
+      },
+      {
+        "claim": "Bernhard said the covers album was meant to point to the artists who influenced the band. He said it took years to narrow the list to 12 tunes.",
+        "source": "https://magnetmagazine.com/2016/10/14/the-devil-makes-three-redemption-songs/"
+      },
+      {
+        "claim": "Redemption & Ruin is the only covers album The Devil Makes Three has released. It is their fifth studio album.",
+        "source": "https://www.wmot.org/show/the-string/2025-03-13/pete-bernhard-on-the-spirits-powering-the-devil-makes-three"
+      },
+      {
+        "claim": "The band formed in Olympia, WA, with Pete Bernhard and Cooper McBean, and moved to Santa Cruz, CA. The trio is Bernhard, McBean and upright bassist Lucia Turino. Bernhard is originally from Vermont.",
+        "source": "https://www.wmot.org/show/the-string/2025-03-13/pete-bernhard-on-the-spirits-powering-the-devil-makes-three"
+      }
+    ],
+    "lineage": "The band blends old-time, bluegrass, folk, country, blues, rockabilly and punk, and this track sits in that Americana and country-songwriter tradition as a cover of a Kris Kristofferson song.",
+    "genres": [
+      "americana",
+      "folk punk",
+      "string band"
+    ]
+  },
+  "draft": "The meanest line in **Chase The Feeling** is a compliment. \"Ain't you handsome when you're high?\" lands in every chorus. It reads as a sneer, but there is something else in it too: a narrator who has watched someone glow on the way down and can't quite stop noticing the glow. The song lives in that split. It is disgust and tenderness in the same breath, and neither one wins.\n\nKris Kristofferson wrote it and first released it in 2006. The Devil Makes Three cut their version for *Redemption & Ruin*, their fifth studio album and their only covers record. Pete Bernhard has said the album was meant to point at the artists who shaped the band, and that narrowing it to 12 tunes took years. He split it into two halves: a ruin side about wrecking your life and partying, and a redemption side of traditional and gospel songs. This one sits fourth, deep on the ruin side, where the label files faults and vices.\n\nThe writing is pure Kristofferson in how it refuses to stand above its subject. The first line is \"Takes one, to know one, I know how you feel.\" Before any judgment arrives, the narrator admits to the same hunger. That makes everything after it harder to hear as a lecture. The middle verse hands over a life piece by piece, the joy, the children, the wife, each line repeating the same surrender as if the speaker is reading out terms of a deal already signed. Then comes the flat little shrug: you know better, you just don't care. By the last verse the voice shifts into a stunned first person, \"I begin to wonder how it is you're still alive,\" and the anger gives way to plain bewilderment. The refrain, \"Nothing matters / Chase that feeling 'til you die,\" closes the song twice. It is the addict's creed, said back to them, and maybe said to the mirror.\n\nCooper McBean takes the lead vocal, with Bernhard singing background. Lucia Turino plays upright bass, Jerry Roe plays drums, and Dan Dugmore plays pedal steel, a country instrument for a country songwriter's song. The band made the record in Nashville at Dave Ferguson's Butcher Shoppe studio. Ferguson co-produced and is best known for his work with Cowboy Jack Clement and Johnny Cash, and Bernhard has said the Cash American recordings were made in that same Germantown room. They recorded it live, building arrangements on the spot with the guest players and then hitting record, letting the guests \"produce it, so to speak.\"\n\nWhat sticks is that the song never lets you pick a side: you hear yourself in the person being scolded and in the one doing the scolding, and the compliment cuts both ways.",
+  "factCheck": [
+    {
+      "claim": "\"Ain't you handsome when you're high?\" recurs in every chorus",
+      "verdict": "supported",
+      "note": "Lyric matches exactly and repeats in each chorus."
+    },
+    {
+      "claim": "Kris Kristofferson wrote it and first released it in 2006",
+      "verdict": "supported",
+      "note": "Researched facts (SecondHandSongs)."
+    },
+    {
+      "claim": "The Devil Makes Three cut it for Redemption & Ruin, their fifth studio album and only covers record",
+      "verdict": "supported",
+      "note": "WMOT source."
+    },
+    {
+      "claim": "Bernhard said the album was meant to point at influences, and narrowing to 12 tunes took years",
+      "verdict": "supported",
+      "note": "Magnet Magazine."
+    },
+    {
+      "claim": "Bernhard split the album into a ruin side about wrecking your life and partying and a redemption side of traditional and gospel songs",
+      "verdict": "supported",
+      "note": "Sun-Times."
+    },
+    {
+      "claim": "The song sits fourth, deep on the ruin side, where the label files faults and vices",
+      "verdict": "corrected",
+      "note": "It is track 4 of 12 and in the first half of the ruin side, not deep on it. Changed to 'in the first half'."
+    },
+    {
+      "claim": "First line is \"Takes one, to know one, I know how you feel\"",
+      "verdict": "supported",
+      "note": "Exact lyric. The reading that the narrator shares the hunger is interpretation and was softened to kinship."
+    },
+    {
+      "claim": "\"The writing is pure Kristofferson in how it refuses to stand above its subject\"",
+      "verdict": "removed",
+      "note": "Unsupported claim about Kristofferson's songwriting style. Kept the observation about the song only."
+    },
+    {
+      "claim": "Middle verse hands over joy, children, wife",
+      "verdict": "supported",
+      "note": "Matches the lyrics; the reading is interpretation."
+    },
+    {
+      "claim": "\"you know better, you just don't care\" presented as a quote",
+      "verdict": "corrected",
+      "note": "Not an exact lyric match (actual: 'You know, you know better / You just don't care'). Rewritten as a paraphrase."
+    },
+    {
+      "claim": "By the last verse the voice shifts into first person, \"I begin to wonder how it is you're still alive\"",
+      "verdict": "corrected",
+      "note": "Lyric quote is exact, but first person appears from the first verse ('I know how you feel', 'I've seen them'), so it is not a shift. Reworded as the narrator returning."
+    },
+    {
+      "claim": "Refrain \"Nothing matters / Chase that feeling 'til you die\" closes the song twice",
+      "verdict": "corrected",
+      "note": "Lyrics repeat it twice at the end, so the structure is supported. The direct quote was turned into a paraphrase to stay within the three-quote limit."
+    },
+    {
+      "claim": "Cooper McBean lead vocal, Bernhard background vocals, Turino upright bass, Roe drums, Dugmore pedal steel",
+      "verdict": "supported",
+      "note": "Shazam credits."
+    },
+    {
+      "claim": "Pedal steel is a country instrument for a country songwriter's song",
+      "verdict": "supported",
+      "note": "Interpretation resting on the credits and the country-songwriter lineage. Phrasing trimmed."
+    },
+    {
+      "claim": "Recorded in Nashville at Dave Ferguson's Butcher Shoppe; Ferguson co-produced and is known for Cowboy Jack Clement and Johnny Cash",
+      "verdict": "supported",
+      "note": "Sun-Times."
+    },
+    {
+      "claim": "Bernhard said the Cash American recordings were made in the Germantown studio",
+      "verdict": "supported",
+      "note": "Your Tahoe Guide."
+    },
+    {
+      "claim": "They recorded it live, building arrangements on the spot with guest players, letting guests \"produce it, so to speak\"",
+      "verdict": "corrected",
+      "note": "Quote and album-level facts are supported. The draft implied guests played on this track, but none are credited for it. Reworded as being about the album."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.183,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08268400000000001,
+        "detail": "22287 in / 1811 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.048984,
+        "detail": "3001 in / 1849 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05129,
+        "detail": "4170 in / 4295 out"
+      }
+    ]
+  }
+}

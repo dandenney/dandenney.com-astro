@@ -1,0 +1,152 @@
+{
+  "spotifyId": "3zrNYpPvbW4LS7Y1E1ORIA",
+  "reviewedAt": "2026-11-20T17:13:51.931Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/24114151"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "'i've been thinking' is track 8 on Elizabeth's debut solo album The Wonderful World of Nature, and runs about 3:07.",
+        "source": "https://open.spotify.com/album/6dI8hzKFsBlkTsrsEI0c4m"
+      },
+      {
+        "claim": "AllMusic credits the song's writing to Elizabeth Mitchell, the Melbourne artist who records as Elizabeth.",
+        "source": "https://www.allmusic.com/album/the-wonderful-world-of-nature-mw0003329587"
+      },
+      {
+        "claim": "The album was produced by John Castle, whose other credits include Hatchie, Cub Sport, Jack River and Vance Joy.",
+        "source": "http://www.ourgoldenfriend.com/news/2019/8/11/elizabeth-debut-album-the-wonderful-world-of-nature-out-november-1-2019"
+      },
+      {
+        "claim": "The album came out on 1 November 2019 on the Our Golden Friend label.",
+        "source": "https://themusicnetwork.com/new-world-artists-elizabeth/"
+      },
+      {
+        "claim": "A deluxe edition of the album was released on 23 October 2020. It added 'i've been thinking' to a run of tracks on the Bandcamp deluxe edition listing and included piano versions of 'wind upon your cheek' and 'death toll'.",
+        "source": "https://elizabethband.bandcamp.com/album/the-wonderful-world-of-nature-deluxe-edition"
+      },
+      {
+        "claim": "Elizabeth was working on the album for the better part of two years. She went through a period of sonic experimentation while working out what music should accompany her lyrics.",
+        "source": "https://scenestr.com.au/music/elizabeth-promotes-a-green-future-at-darebin-music-feast-20191004"
+      },
+      {
+        "claim": "Elizabeth calls the album a break-up album. It sifts through the pain of her divorce, and she described it as questioning whether you're terrible because it's in your nature.",
+        "source": "https://archive.junkee.com/elizabeth-interview-wonderful-nature-album/226783"
+      },
+      {
+        "claim": "Elizabeth Mitchell was previously lead singer of the Melbourne indie-pop quartet Totally Mild, which broke up in 2019. The album is her first solo record.",
+        "source": "https://themusic.com.au/reviews/elizabeth-the-wonderful-world-of-nature-katie-livingstone/yDDQ2t3c394/31-10-19"
+      },
+      {
+        "claim": "The album's framing calls her a 'new patron saint of sad girls' and a queer pop anti-heroine. Triple R made it Album of the Week.",
+        "source": "https://www.rrr.org.au/explore/album-of-the-week/elizabeth-the-wonderful-world-of-nature"
+      },
+      {
+        "claim": "AllMusic lists the album's styles as dream pop, indie pop, and alternative singer/songwriter.",
+        "source": "https://www.allmusic.com/album/the-wonderful-world-of-nature-mw0003329587"
+      }
+    ],
+    "lineage": "The song sits in Melbourne's indie scene as a dreamy, melancholic 'sad-pop' break-up record, and one outlet compared Elizabeth to Lana Del Rey.",
+    "genres": [
+      "dream pop",
+      "indie pop",
+      "sad pop"
+    ]
+  },
+  "draft": "The trick of **i've been thinking** is one word. Early in its last verse the narrator asks, \"Is it terrible that I don't care?\" A couple of lines later the question has turned into a statement, and the \"I\" has become a \"we.\" Somewhere in that small gap the guilt stops being private. Elizabeth doesn't announce the change. She just lets the pronoun move.\n\nThe situation is plain and messy. Two friends crossed a line, and somebody else, the \"she\" of the third verse, was on the other side of it. The opening verses are memory: touch, friendship, \"the way that you moved,\" the title phrase repeated like someone circling a thing they can't put down. Then comes the excuse, and it's a funny, flimsy, very human one: \"What a chemical thing, I should be let off.\" It's a plea in a courtroom where the narrator is also the judge. Blame the body, blame the chemistry, ask for leniency. It doesn't quite work, and the song knows it.\n\nWhat makes the song honest is that it never picks between shame and wanting. \"Would you do it again? I would\" lands as a dare and a confession in the same breath, answered before the other person can speak. The closing image, hands in hair, is small and physical. That's the point. Everything abstract, whether it was terrible or whether anyone knew, gets pushed aside by one remembered touch. The last line drops \"see\" for \"want.\" Memory has become desire again.\n\nThat tension runs through the whole of *The Wonderful World of Nature*, the first solo record from Elizabeth Mitchell, the Melbourne writer who used to front the indie-pop quartet Totally Mild. She has called it a break-up album that works through her divorce, one that asks whether you're terrible because it's simply in your nature. This song puts that question in the mouth of someone who has done the thing and still can't make themselves sorry. Mitchell is credited as its writer. The album was produced by John Castle, whose résumé runs through Hatchie, Cub Sport, Jack River and Vance Joy, and she spent the better part of two years figuring out what music her words needed.\n\nThe record gets filed under dream pop and indie pop, and it sits in Melbourne's run of melancholy sad-pop. One outlet reached for Lana Del Rey, and you can see why in the lyric's mix of glamour and self-incrimination. Triple R made the album its Album of the Week. The framing around it called her a new patron saint of sad girls and a queer pop anti-heroine, and \"anti-heroine\" fits here. This narrator isn't asking you to forgive anything, only to admit you know the feeling.\n\nThe song sticks because it catches the moment you stop asking whether something was wrong and start wishing it would happen again, and it doesn't pretend that's an easy thing to hear yourself say.",
+  "factCheck": [
+    {
+      "claim": "The narrator asks \"Is it terrible that I don't care?\" and a couple of lines later it becomes a statement with \"we\" (\"It's so terrible that we don't care\").",
+      "verdict": "corrected",
+      "note": "Both lines match the lyrics and the I-to-we shift is in the text. \"Early in its last verse\" is loose, so it now reads \"In its last verse\"."
+    },
+    {
+      "claim": "The \"she\" of the third verse; two friends crossed a line; opening verses are memory; \"the way that you moved\"; title phrase repeated.",
+      "verdict": "supported",
+      "note": "Matches \"Did she know we were actors?\", \"you were my friend\", \"I remember the way that you moved\" and the repeated \"I've been thinking\". The reading is interpretation."
+    },
+    {
+      "claim": "\"What a chemical thing, I should be let off\"; \"Would you do it again? I would\"; hands in hair; last line swaps \"see\" for \"want\".",
+      "verdict": "supported",
+      "note": "The quotes are exact. \"All I see\" becomes \"All I want\" in the final lines."
+    },
+    {
+      "claim": "The Wonderful World of Nature is the first solo record from Elizabeth Mitchell, a Melbourne writer who used to front the indie-pop quartet Totally Mild.",
+      "verdict": "supported",
+      "note": "Supported by The Music and AllMusic."
+    },
+    {
+      "claim": "She has called it a break-up album that works through her divorce and asks whether you're terrible because it's in your nature.",
+      "verdict": "supported",
+      "note": "Supported by the Junkee interview."
+    },
+    {
+      "claim": "That tension runs through the whole of the album.",
+      "verdict": "corrected",
+      "note": "Claiming it runs through the whole album goes beyond the facts, so it is softened to the album's guiding question."
+    },
+    {
+      "claim": "Mitchell is credited as writer; produced by John Castle, whose credits include Hatchie, Cub Sport, Jack River and Vance Joy.",
+      "verdict": "supported",
+      "note": "Supported by AllMusic and the Our Golden Friend news post."
+    },
+    {
+      "claim": "She spent the better part of two years figuring out what music her words needed.",
+      "verdict": "supported",
+      "note": "Supported by the Scenestr piece."
+    },
+    {
+      "claim": "The record is filed under dream pop and indie pop and sits in Melbourne's run of melancholy sad-pop.",
+      "verdict": "corrected",
+      "note": "The styles come from AllMusic. \"Run of\" implies scene history that isn't sourced, so it now says the song sits in Melbourne's indie scene as a melancholic sad-pop break-up record."
+    },
+    {
+      "claim": "One outlet compared Elizabeth to Lana Del Rey, and you can see why in the lyric's mix of glamour and self-incrimination.",
+      "verdict": "corrected",
+      "note": "The comparison is supported. \"Glamour\" isn't grounded in the lyrics, so it is changed to \"seduction\"."
+    },
+    {
+      "claim": "Triple R made the album its Album of the Week; the framing called her a new patron saint of sad girls and a queer pop anti-heroine.",
+      "verdict": "supported",
+      "note": "Supported by the Triple R page."
+    },
+    {
+      "claim": "No claims about how the song sounds.",
+      "verdict": "supported",
+      "note": "The draft makes no sound claims, so none needed listening notes."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1675,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.076648,
+        "detail": "20584 in / 1548 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.046396,
+        "detail": "2634 in / 1793 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044484,
+        "detail": "3842 in / 3680 out"
+      }
+    ]
+  }
+}

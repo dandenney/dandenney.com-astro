@@ -1,0 +1,162 @@
+{
+  "spotifyId": "6XkQ6jiSJFAXxfCVH5Hwzm",
+  "reviewedAt": "2026-11-20T17:33:48.008Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/31181237"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Gears\" is track 4 on the 8-track self-titled album 'Joshua Quimby', released April 22, 2022.",
+        "source": "https://www.shazam.com/album/1779110262/joshua-quimby"
+      },
+      {
+        "claim": "Joshua Allen Quimby is the credited writer and composer of \"Gears\".",
+        "source": "https://www.deezer.com/us/album/303544067"
+      },
+      {
+        "claim": "Album credits: Quimby wrote the songs and played vocals and resonator guitar. Zach Bunton played fiddle, Christian Starrett played flat-top guitar, Max Baker played upright bass and sang backing vocals, and Elliott Prather played mandolin and sang backing vocals.",
+        "source": "https://joshuaquimby.bandcamp.com/album/joshua-quimby"
+      },
+      {
+        "claim": "Asher Condit produced, mixed and mastered the album. Abby Cracraft made the artwork.",
+        "source": "https://joshuaquimby.bandcamp.com/album/joshua-quimby"
+      },
+      {
+        "claim": "Quimby said the self-titled record was tracked in about 5 hours at Asher Condit's home studio.",
+        "source": "https://www.theselfportraitgospel.com/interviews/the-joshua-quimby-interview"
+      },
+      {
+        "claim": "\"Gears\" runs 3:35. Its lyrics describe heavy marijuana use as self-medication, with the refrain 'the grass it's a-burnin', the gears they're a-churnin''.",
+        "source": "https://www.shazam.com/en-us/song/1779110351/gears"
+      },
+      {
+        "claim": "\"Gears\" was also released as a standalone single, and Quimby has recorded it for OurVinyl Sessions and performed it live at Carter Vintage.",
+        "source": "https://sonichits.com/artist/Joshua_Quimby"
+      },
+      {
+        "claim": "Quimby's later releases include These Old Jeans (2023), Back Home (May 2024), Something Like Country (2025) and Piecemeal (August 2026).",
+        "source": "https://joshuaquimby.bandcamp.com/album/joshua-quimby"
+      },
+      {
+        "claim": "Quimby is a singer, songwriter and guitar picker from small-town Connecticut who lives in Nashville, Tennessee.",
+        "source": "https://joshuaquimby.bandcamp.com/album/joshua-quimby"
+      },
+      {
+        "claim": "Quimby said he first picked up music at age ten as a guitar player and didn't take songwriting seriously until a few years before the interview.",
+        "source": "https://www.theselfportraitgospel.com/interviews/the-joshua-quimby-interview"
+      }
+    ],
+    "lineage": "Quimby's music sits in the Nashville-based Americana and folk-blues tradition, which blends folk, blues and country guitar picking with raw lyricism.",
+    "genres": [
+      "folk-rock",
+      "americana",
+      "alt-country"
+    ]
+  },
+  "draft": "The first image in **Gears** is a callus. \"The tip of my thumb has been whittled like wood,\" Joshua Quimby sings, and he doesn't put it down to years of picking but to working a lighter too hard. It's a good opening because it shows the habit before it names it. The body has been reshaped by repetition, the way a tool handle wears smooth, and the narrator reports it the way you'd mention the weather.\n\nThe song is about smoking weed all day to keep a bad mind quiet, and Quimby is honest about how little he understands of what he's medicating. He's on the floor of his room, dazed, chewing on thoughts that leave him distraught \"for a reason I couldn't discern.\" That admission carries the song. There's no breakup or death behind it, only a fog of worry with no name, and the reefer is the one thing that sets the mind free for a while. He knows the trade is a bad one. He calls it fighting fire with fire, which is a way of saying the cure and the trouble are made of the same stuff.\n\nWhat keeps \"Gears\" from being a stoner novelty is the fatalism. \"I live by the pipe and I'll die by it too,\" he says, then hedges: \"Least that's how it seems to me.\" That small qualifier holds the whole feeling. It's resignation with a crack in it, someone stating his doom and leaving room to be wrong about it. The refrain, \"the grass it's a-burnin', the gears they're a-churnin',\" puts two engines side by side: the smoke and the mind it's meant to slow, both running and neither winning. \"That's how it always will be\" comes twice after each chorus and three times at the end, as if saying it more could make it true.\n\nThe writing leans on old-time diction, those \"a-tokin'\" and \"a-settin'\" prefixes borrowed from Appalachian ballads and country blues. That puts a modern habit into an old frame, the same one that held moonshine songs and laments about the bottle. Quimby, a Connecticut native working out of Nashville, wrote it himself, and the self-titled album it comes from was cut in about five hours at producer Asher Condit's home studio. The band was Quimby on resonator guitar, plus fiddle, flat-top guitar, upright bass and mandolin. A quick, low-fuss session like that suits a song this plainspoken about a habit it doesn't plan to break.\n\n\"Gears\" sticks because it lets you sit on that floor with someone who knows exactly what he's doing to himself and still can't tell you why he needs to.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"The tip of my thumb has been whittled like wood\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The reading of it as a callus from the lighter, not from picking, rests on the next line, 'The way I'm abusin' the lighter'."
+    },
+    {
+      "claim": "The song is about smoking weed all day to self-medicate; the narrator is on the floor of his room, dazed, with worried thoughts he can't explain",
+      "verdict": "supported",
+      "note": "Backed by the lyrics and the researched facts."
+    },
+    {
+      "claim": "Lyric quote: \"for a reason I couldn't discern\"",
+      "verdict": "removed",
+      "note": "The quote is accurate. It was cut to keep the review within three quoted lines, and the idea is now paraphrased."
+    },
+    {
+      "claim": "He calls it fighting fire with fire",
+      "verdict": "supported",
+      "note": "Lyric: 'a-tryna fight fire with fire'."
+    },
+    {
+      "claim": "Lyric quote: \"I live by the pipe and I'll die by it too,\"",
+      "verdict": "removed",
+      "note": "The quote is accurate. It was cut to keep the review within three quoted lines, and the idea is now paraphrased."
+    },
+    {
+      "claim": "Lyric quote: \"Least that's how it seems to me.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Refrain quote: \"the grass it's a-burnin', the gears they're a-churnin',\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"That's how it always will be\" comes twice after each chorus and three times at the end",
+      "verdict": "corrected",
+      "note": "The lyrics show it twice at the end of each of the first two refrains and three times in the last. The wording was adjusted and the quote turned into a paraphrase."
+    },
+    {
+      "claim": "The a- prefixes ('a-tokin'', 'a-settin'') are borrowed from Appalachian ballads and country blues, and that frame held moonshine songs and laments about the bottle",
+      "verdict": "removed",
+      "note": "No support for the genre-history claim. The prefixes do appear in the lyrics. The review now ties them only to the supported Nashville Americana and folk-blues lineage."
+    },
+    {
+      "claim": "Quimby is a Connecticut native working out of Nashville",
+      "verdict": "corrected",
+      "note": "He is from small-town Connecticut and lives in Nashville. Wording adjusted to match."
+    },
+    {
+      "claim": "Quimby wrote the song himself",
+      "verdict": "supported",
+      "note": "He is the credited writer and composer."
+    },
+    {
+      "claim": "The self-titled album was cut in about five hours at producer Asher Condit's home studio",
+      "verdict": "supported",
+      "note": "Quimby said it was tracked in about 5 hours at Condit's home studio, and Condit produced the album."
+    },
+    {
+      "claim": "The band was Quimby on resonator guitar plus fiddle, flat-top guitar, upright bass and mandolin",
+      "verdict": "corrected",
+      "note": "These are album-level credits, not track-specific. Reworded as the album's lineup, with Quimby also on vocals."
+    },
+    {
+      "claim": "Sits in an Americana / folk-blues tradition",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.217,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.130872,
+        "detail": "44296 in / 1228 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.039476,
+        "detail": "2649 in / 1444 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046664,
+        "detail": "3762 in / 3914 out"
+      }
+    ]
+  }
+}

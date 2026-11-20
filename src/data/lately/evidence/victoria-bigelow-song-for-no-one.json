@@ -1,0 +1,192 @@
+{
+  "spotifyId": "4kcsFSmFyzga8vopTqLKpK",
+  "reviewedAt": "2026-11-20T17:28:20.365Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/16905299"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Song for No One\" was released December 1, 2022 via Tone Tree Music, following her September 2022 single \"Oblivion\".",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-song-for-no-one-song-review/"
+      },
+      {
+        "claim": "Atwood Magazine called it Bigelow's third release of 2022 and described it as a dreamy, raw outpouring of love and grief.",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-song-for-no-one-song-review/"
+      },
+      {
+        "claim": "Bigelow told Atwood Magazine that a 'song for no one' is a song for everyone.",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-song-for-no-one-song-review/"
+      },
+      {
+        "claim": "Atwood describes her sound as taking cues from 'the desert and Mazzy Star'. It calls this track a lush, forlorn arrangement of mellow, moody instruments with heavy reverb.",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-song-for-no-one-song-review/"
+      },
+      {
+        "claim": "The song has a non-traditional structure. Three verses build to an outro that works as a chorus.",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-song-for-no-one-song-review/"
+      },
+      {
+        "claim": "The song was later included on the EP Songs for No One Vol. 1, released August 25, 2023 via Immortal Records.",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-songs-for-no-one-vol-1-ep-interview-music-feature/"
+      },
+      {
+        "claim": "Bigelow said the Vol. 1 material began when she moved from Nashville, which she disliked, to the desert. She wrote the songs after working through some grief.",
+        "source": "https://atwoodmagazine.com/vbsn-victoria-bigelow-songs-for-no-one-vol-1-ep-interview-music-feature/"
+      },
+      {
+        "claim": "Bigelow said the Vol. 1 songs were all born very quickly, within a few days of each other.",
+        "source": "https://www.intersectmagazine.com/post/victoria-bigelow-talks-writing-songs-for-no-one-creative-catharsis"
+      },
+      {
+        "claim": "Bigelow and her partner Devan Skaggs have made EPs together in their home studio. She writes, sings and plays a few instruments, and he brings the songs to life.",
+        "source": "https://www.intersectmagazine.com/post/victoria-bigelow-talks-writing-songs-for-no-one-creative-catharsis"
+      },
+      {
+        "claim": "Bigelow is a Georgia-raised, Arizona-based musician. She names Alanis Morissette, Aimee Mann and Taylor Swift as early influences.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Victoria-Bigelow-Shares-Gorgeous-Deeply-Personal-New-Single-Video-20240501"
+      }
+    ],
+    "lineage": "It sits in the dreamy, reverb-heavy, minimalist indie-folk singer-songwriter tradition, with Atwood citing the desert and Mazzy Star as touchstones.",
+    "genres": [
+      "dream pop",
+      "indie folk",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "Each verse of **Song for No One** ends on the same word, and each time the word lands differently. First it's a confession: the narrator's anxiety is all in their head, and that's exactly what's wrong. Then it turns defensive, a shrug that dares you to object. By the third verse it has become a release. \"Now I'm not your problem,\" Victoria Bigelow sings, and the line carries more feeling than its few words should hold.\n\nWhat comes before it is a portrait of someone shrinking to fit another person. The song opens with a wish to feel what a partner feels when stoned, to visit \"the places you go,\" and one hit is enough to convince the narrator that everyone is bored of them. The second verse holds the sharpest image: \"You told me I am more fun with a drink in my hand.\" The answer is to drink as much as possible, a self-erasure delivered almost flatly, as if it were the obvious thing to do. Bigelow doesn't ask you to judge either person. She sets out the anger, the depression, the eagerness to please, and lets you sit inside them.\n\nThen the relief. The narrator says they've never felt such relief as the day the other person turned away, and the song doesn't argue with that. But relief isn't the last word. Atwood Magazine notes that the track skips a traditional chorus: three verses build to an outro that does the chorus's job. That outro is a vow, \"I'll never open myself up like this again,\" repeated until it sounds less like a decision than a spell. Between the repetitions come memories trailing the narrator through the streets and a new touch that registers as nothing at all. Freedom and numbness share the same breath, and neither cancels the other.\n\nAtwood heard the track as a lush, forlorn arrangement of mellow, moody instruments under heavy reverb, and placed Bigelow's sound somewhere between the desert and Mazzy Star. The desert is literal. Bigelow has said these songs began after she left Nashville, a city she disliked, and they came after she had worked through some grief. They arrived within days of each other, and she makes her records with her partner, Devan Skaggs, in their home studio. She has named Aimee Mann and Alanis Morissette as early influences, and you can hear that lineage in the writing's dry, pointed turns, as when a single word gets weighed three different ways.\n\nBigelow has said a song for no one is a song for everyone. That fits a track about being told you're too much, then not enough, then finally nobody's concern. Once you've felt the third \"problem\" land as both escape and wound, the vow that follows sounds like someone promising never to feel again, already knowing the promise won't hold.",
+  "factCheck": [
+    {
+      "claim": "Each verse ends on the same word (\"problem\")",
+      "verdict": "supported",
+      "note": "Verses end 'that's the problem', 'So what's the problem?', 'Now I'm not your problem'."
+    },
+    {
+      "claim": "First it's a confession: the narrator's anxiety is all in their head, and that's exactly what's wrong",
+      "verdict": "corrected",
+      "note": "In the lyrics the partner says 'It's all in your head, baby' and the narrator answers 'that's the problem'. Reworded so the line is attributed correctly."
+    },
+    {
+      "claim": "Second 'problem' is defensive, third is a release",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics."
+    },
+    {
+      "claim": "\"Now I'm not your problem\" quote",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Opens with a wish to feel what a partner feels when stoned; one hit convinces the narrator everyone is bored of them",
+      "verdict": "supported",
+      "note": "Matches lines 1-3."
+    },
+    {
+      "claim": "Quote \"the places you go\"",
+      "verdict": "removed",
+      "note": "The words match the lyrics, but the draft had four quotes against a three-quote limit. Paraphrased instead."
+    },
+    {
+      "claim": "\"You told me I am more fun with a drink in my hand.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The answer is to drink as much as possible, 'a self-erasure delivered almost flatly'",
+      "verdict": "corrected",
+      "note": "The drinking is in the lyrics ('drink as much as I can'). The claim about flat vocal delivery is a sound claim with no listening notes, so it was removed."
+    },
+    {
+      "claim": "Narrator says they've never felt such relief as the day the other person turned away",
+      "verdict": "supported",
+      "note": "Matches verse 3."
+    },
+    {
+      "claim": "Three verses build to an outro that does the chorus's job; no traditional chorus",
+      "verdict": "supported",
+      "note": "Researched fact on structure. Attribution to the publication dropped."
+    },
+    {
+      "claim": "Outro is a vow, \"I'll never open myself up like this again\", with memories and a new touch that registers as nothing",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Reading is interpretation."
+    },
+    {
+      "claim": "Lush, forlorn arrangement of mellow, moody instruments under heavy reverb",
+      "verdict": "removed",
+      "note": "Comes from a magazine's description. No listening notes exist, so sound claims are unsupported."
+    },
+    {
+      "claim": "Sound takes cues from the desert and Mazzy Star",
+      "verdict": "supported",
+      "note": "Researched fact and lineage line. Kept as lineage, without the attribution."
+    },
+    {
+      "claim": "Songs began after she left Nashville, a city she disliked; she worked through some grief",
+      "verdict": "supported",
+      "note": "Matches the Vol. 1 interview fact, and the song is on that EP."
+    },
+    {
+      "claim": "The songs arrived within days of each other",
+      "verdict": "supported",
+      "note": "Intersect interview."
+    },
+    {
+      "claim": "She makes her records with partner Devan Skaggs in their home studio",
+      "verdict": "corrected",
+      "note": "The source says they have made EPs together in their home studio. Changed 'records' to 'EPs'."
+    },
+    {
+      "claim": "Named Aimee Mann and Alanis Morissette as early influences",
+      "verdict": "supported",
+      "note": "Taylor Swift is also named, which is not contradicted."
+    },
+    {
+      "claim": "You can hear that lineage in the writing's dry, pointed turns",
+      "verdict": "corrected",
+      "note": "Opinion, but 'dry' was dropped as an unsupported description."
+    },
+    {
+      "claim": "Bigelow has said a song for no one is a song for everyone",
+      "verdict": "supported",
+      "note": "Researched fact."
+    },
+    {
+      "claim": "A track about being told you're too much, then not enough",
+      "verdict": "corrected",
+      "note": "'Too much' isn't backed by the lyrics. Reworded to what they show (told you're more fun with a drink)."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2425,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.143672,
+        "detail": "47061 in / 1955 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.048564,
+        "detail": "2856 in / 1857 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050222,
+        "detail": "4006 in / 4221 out"
+      }
+    ]
+  }
+}

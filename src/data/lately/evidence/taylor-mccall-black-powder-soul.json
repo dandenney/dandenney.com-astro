@@ -1,0 +1,172 @@
+{
+  "spotifyId": "0KbCBafoO4ShzNvkcY2cJe",
+  "reviewedAt": "2026-11-20T17:14:43.150Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7220570"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The title track 'Black Powder Soul' is credited to Taylor McCall and Dave Pahanish as composers.",
+        "source": "https://www.deezer.com/us/album/231411262"
+      },
+      {
+        "claim": "The album Black Powder Soul was produced by Sean McConnell.",
+        "source": "https://www.roughtrade.com/taylor-mccall/black-powder-soul/lp-x2"
+      },
+      {
+        "claim": "The album was recorded at Silent Desert Studio in Nolensville, TN, mixed at Dockside Studio, and mastered by Brian Lucey at Magic Garden Mastering.",
+        "source": "https://www.discogs.com/release/20580607-Taylor-McCall-Black-Powder-Soul"
+      },
+      {
+        "claim": "McCall and McConnell spent two weeks in McConnell's home studio making the album, and the sound only began to take shape around the third day.",
+        "source": "https://holler.country/feature/interview/introducing-taylor-mccall/"
+      },
+      {
+        "claim": "McCall said the title song was the hardest song he ever wrote, taking three days.",
+        "source": "https://thebluegrasssituation.com/read/bgs-55-taylor-mccall/"
+      },
+      {
+        "claim": "The album is bookended by an old recording of McCall's grandfather singing the hymn 'Old Ship of Zion'.",
+        "source": "https://holler.country/feature/interview/introducing-taylor-mccall/"
+      },
+      {
+        "claim": "McCall said the album is the circle of life, and that everyone has a black powder soul that can explode but also has redemption in them.",
+        "source": "https://www.roughtrade.com/taylor-mccall/black-powder-soul/lp-x2"
+      },
+      {
+        "claim": "McCall arranged the track listing as a Biblical chronology.",
+        "source": "https://americansongwriter.com/taylor-mccalls-black-powder-soul-an-unlikely-artist-earns-his-rightful-place-in-the-industry/"
+      },
+      {
+        "claim": "The album was released September 24, 2021 on Black Powder Soul Records, marketed and distributed by Thirty Tigers. It has 14 tracks.",
+        "source": "https://music.apple.com/us/album/black-powder-soul/1568397046"
+      },
+      {
+        "claim": "McCall is from Easley, South Carolina. He studied fisheries and wildlife management at Montana State University before turning to music, and later opened for Robert Plant in the UK.",
+        "source": "https://www.loudersound.com/features/taylor-mccall-mellow-war"
+      }
+    ],
+    "lineage": "It sits in the darker, edgier side of country and Americana, where God-and-devil themes and gospel, blues and guitar rock meet, which Holler compared to Steve Earle.",
+    "genres": [
+      "country",
+      "americana",
+      "country rock"
+    ]
+  },
+  "draft": "The detail that sells **Black Powder Soul** is the oddly specific one: \"No I don't play poker since that stint in Spokane.\" It's a joke with a scar under it. Taylor McCall's narrator won't say what happened in Spokane, only that it was bad enough to change his habits. The rest of the first verse fills in a life of bootleg moonshine and bathtub gin and ends with a line that cuts two ways: \"That's why my over under is my only friend.\" An over-under is a stacked double-barrel shotgun. It's also a betting line. Either way, the only thing this man trusts is something that can go off.\n\nThat's the black powder of the title. It's old, unstable, and dangerous to carry. The narrator wears it like an identity, lawless and proud of it, but the chorus tells on him. \"My heart is burning / My blood runs cold\" is swagger and dread in the same breath. He's hot-tempered and scared, and he doesn't get to pick one. The dark clouds above and the fire below put him between heaven and hell with no room to stand. The second verse makes the trap literal. You can run the tables, but you can't outrun the people at them, and when \"there ain't no running east or west,\" blood money is what's left to eat on.\n\nThe song never resolves that, and McCall seems to know it shouldn't. He has called the album a circle of life and said everyone has a black powder soul, something that can explode but also holds redemption. That word only makes sense across the full record. He sequenced the tracks as a Biblical chronology, and he bookended them with an old recording of his grandfather singing the hymn \"Old Ship of Zion.\" Inside that frame, this song is the man before any rescue arrives. It's a Saturday-night soul inside a Sunday-morning structure.\n\nMcCall co-wrote it with Dave Pahanish and said it was the hardest song he ever wrote, three days of work. The economy shows. The narrator's whole history comes through in hints: a city, a drink, a gun, a card game gone wrong. The album was cut at Silent Desert Studio in Nolensville, Tennessee, with Sean McConnell producing. The South Carolina native, who studied fisheries and wildlife management in Montana before he turned to music, lands in the darker corner of Americana, where God and the devil share a bar stool. Holler heard Steve Earle in that territory, and the outlaw-with-a-conscience fits.\n\nThe song lets you feel what it's like to be proud of the very thing that's going to blow you apart.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"No I don't play poker since that stint in Spokane.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator won't say what happened in Spokane, only that it was bad enough to change his habits.",
+      "verdict": "corrected",
+      "note": "The lyrics do give a cause: the stint in Spokane was 'over some bootleg moonshine / over my bathtub gin.' Rewritten to say so."
+    },
+    {
+      "claim": "The rest of the first verse fills in a life of bootleg moonshine and bathtub gin.",
+      "verdict": "corrected",
+      "note": "The moonshine and gin are the stated reason for the Spokane stint, not extra background. Reworded."
+    },
+    {
+      "claim": "Lyric quote: \"That's why my over under is my only friend.\"",
+      "verdict": "supported",
+      "note": "Matches exactly. It closes the first verse."
+    },
+    {
+      "claim": "An over-under is a stacked double-barrel shotgun and also a betting line.",
+      "verdict": "supported",
+      "note": "Reading of the lyric's double meaning, which suits the poker and gambling context. Kept as interpretation."
+    },
+    {
+      "claim": "Lyric quote: \"My heart is burning / My blood runs cold\"",
+      "verdict": "supported",
+      "note": "Two consecutive lines, exact match."
+    },
+    {
+      "claim": "Dark clouds above and fire below put him between heaven and hell.",
+      "verdict": "supported",
+      "note": "Interpretation of the lyric imagery."
+    },
+    {
+      "claim": "\"there ain't no running east or west\"; you can run the tables but can't outrun the people at them; blood money is what's left to eat on.",
+      "verdict": "corrected",
+      "note": "The quote is exact. The lyric says only 'you can't out run them,' so 'the people at them' was an over-specific gloss. Loosened."
+    },
+    {
+      "claim": "McCall called the album a circle of life and said everyone has a black powder soul that can explode but also has redemption.",
+      "verdict": "supported",
+      "note": "Rough Trade source."
+    },
+    {
+      "claim": "He sequenced the tracks as a Biblical chronology and bookended them with an old recording of his grandfather singing 'Old Ship of Zion.'",
+      "verdict": "supported",
+      "note": "American Songwriter and Holler sources."
+    },
+    {
+      "claim": "Co-written with Dave Pahanish; McCall said it was the hardest song he ever wrote, three days of work.",
+      "verdict": "supported",
+      "note": "Deezer credits and BGS interview."
+    },
+    {
+      "claim": "The album was cut at Silent Desert Studio in Nolensville, Tennessee, with Sean McConnell producing.",
+      "verdict": "supported",
+      "note": "Discogs and Rough Trade."
+    },
+    {
+      "claim": "South Carolina native who studied fisheries and wildlife management in Montana before turning to music.",
+      "verdict": "supported",
+      "note": "Louder Sound; Easley, SC and Montana State."
+    },
+    {
+      "claim": "Darker corner of Americana where God and the devil meet; Holler heard Steve Earle in that territory.",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "The lyrics give a history of a city, a drink, a gun, a card game gone wrong.",
+      "verdict": "supported",
+      "note": "Spokane, moonshine, gin, over-under, poker and tables are all in the lyrics."
+    },
+    {
+      "claim": "That word only makes sense across the full record.",
+      "verdict": "removed",
+      "note": "Unsupported assertion about the album. Cut."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1648,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.07905,
+        "detail": "22505 in / 1404 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.044164,
+        "detail": "2536 in / 1701 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.041624,
+        "detail": "3652 in / 3432 out"
+      }
+    ]
+  }
+}

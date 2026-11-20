@@ -1,0 +1,187 @@
+{
+  "spotifyId": "1KrC1a04RkYrJB02M35hET",
+  "reviewedAt": "2026-11-20T17:20:58.220Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8075660"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Amelie\" was released as a single on February 10, 2023, ahead of Gracie Abrams' debut album Good Riddance, which came out February 24, 2023 on Interscope Records.",
+        "source": "https://www.universalmusic.ca/press-releases/gracie-abrams-premieres-new-song-amelie-today/"
+      },
+      {
+        "claim": "Aaron Dessner of The National produced both \"Amelie\" and the previous single \"Where do we go now?\".",
+        "source": "https://www.universalmusic.ca/press-releases/gracie-abrams-premieres-new-song-amelie-today/"
+      },
+      {
+        "claim": "\"Amelie\" is credited as written by Aaron Dessner and Gracie Abrams. Abrams sings and Dessner plays acoustic guitar.",
+        "source": "https://www.shazam.com/en-us/song/1664288818/amelie"
+      },
+      {
+        "claim": "It was the third single from Good Riddance, after \"Difficult\" (October 2022) and \"Where Do We Go Now?\" (January 2023).",
+        "source": "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
+      },
+      {
+        "claim": "Abrams wrote the lyrics to \"Amelie\" in a journal entry long before she recorded the song.",
+        "source": "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
+      },
+      {
+        "claim": "Good Riddance was made over about two years, with Abrams visiting Dessner's Long Pond studio for five- or ten-day stretches. She found it more comfortable and less distracting than recording in Los Angeles.",
+        "source": "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
+      },
+      {
+        "claim": "Abrams had been a fan of The National since age 12.",
+        "source": "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
+      },
+      {
+        "claim": "Clash described \"Amelie\" as a finger-plucked ode to a girl who has become a memory. The opening lyric is about meeting a girl who \"ripped me open\" and who doesn't know the narrator's name.",
+        "source": "https://www.clashmusic.com/features/coming-undone-gracie-abrams-interviewed/"
+      },
+      {
+        "claim": "Euphoria Magazine noted the song leaves open whether Amelie is a real person or an illusion conjured from past memories.",
+        "source": "https://www.euphoriazine.com/blog/2023/02/music/tracks-gracie-abrams-amelie/"
+      },
+      {
+        "claim": "Abrams told Rolling Stone that, entering adulthood, she wanted to be more straightforward with herself and avoid the trap of victimhood. She described Good Riddance as forcing her to reflect and be accountable.",
+        "source": "https://www.rollingstone.com/music/music-news/gracie-abrams-amelie-debut-album-good-riddance-1234677304/"
+      }
+    ],
+    "lineage": "The song sits in the confessional, intimate singer-songwriter tradition, with an indie-folk feel from Aaron Dessner's acoustic-guitar production. Abrams names Joni Mitchell as her most formative influence.",
+    "genres": [
+      "indie folk",
+      "singer-songwriter",
+      "pop"
+    ]
+  },
+  "draft": "The person at the center of **\"Amelie\"** never learns the narrator exists. That's the first thing Gracie Abrams tells you, and the song never takes it back. A girl on a sofa asks a million questions, and by eleven o'clock the narrator has memorized her face. Then the opening verse closes the door on itself: \"She doesn't know my name.\" Whatever happened that night happened on one side only.\n\nAbrams sets this down plainly, like the journal entry it started as. She wrote the lyrics long before she recorded them, and the verses keep a diary's habits: small details logged without comment. Her hair was up. She cried about her obsessions. The feeling isn't romance so much as being marked by someone who walked through without noticing. The song's central question turns on that: \"Why'd it feel louder / When all of it went unspoken?\" Silence is what made it big. Nothing was said, so nothing could be settled, and the narrator is left hoping it will just go away.\n\nThe chorus repeats the name until it starts to blur, and then it asks whether Amelie was ever real at all, or \"all in a dream.\" That doubt is the song's quiet honesty. The narrator half-knows this person has become a memory polished past recognition. Abrams doesn't turn that into a twist. She lets the longing and the suspicion sit together. The bridge does the same with its rhymes, setting a nursery rhyme against a funeral rite. Amelie's words felt like both, comfort and loss at once, and the narrator offers a whole life to someone who wasn't asking for it.\n\nThere's no blame anywhere in it. Abrams has said that entering adulthood she wanted to be straighter with herself and stay out of the trap of victimhood, and here the narrator owns the whole lopsided thing, admitting a willingness to let this stranger ruin all their days. The chorus usually ends on \"I don't know,\" but twice it swaps in \"tell me no.\" That's a plea to be released, and it lands harder than any accusation.\n\nAaron Dessner of The National produced it, wrote it with Abrams, and plays the acoustic guitar. Clash called it a finger-plucked ode, which suits a song built from one evening's worth of memory. Abrams made her debut album *Good Riddance* in stretches at Dessner's Long Pond studio, away from Los Angeles, and this third single carries the confessional line she traces back to Joni Mitchell. The writing is close to the bone and specific enough to embarrass.\n\nIt sticks because it names something rarely admitted out loud, that a person you barely met can rearrange you, and leaves you wondering who in your own life never knew they did.",
+  "factCheck": [
+    {
+      "claim": "The narrator sat on a sofa with a girl who asked a million questions, and by 11 had memorized her face; she doesn't know the narrator's name.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. 'Eleven o'clock' is a fair reading of 'by 11'."
+    },
+    {
+      "claim": "Quote: \"She doesn't know my name.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The lyrics started as a journal entry that Abrams wrote long before recording the song.",
+      "verdict": "supported",
+      "note": "Per the Good Riddance album article."
+    },
+    {
+      "claim": "Abrams 'sets this down plainly'.",
+      "verdict": "corrected",
+      "note": "As written it could be read as a claim about vocal delivery, which nothing supports. Reworded to describe the writing."
+    },
+    {
+      "claim": "Her hair was up; she cried about her obsessions.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: \"Why'd it feel louder / When all of it went unspoken?\"",
+      "verdict": "supported",
+      "note": "Exact lyric, two consecutive lines."
+    },
+    {
+      "claim": "The narrator is left hoping it will go away.",
+      "verdict": "supported",
+      "note": "Lyric: 'All I can do is hope that / This will go away'."
+    },
+    {
+      "claim": "The chorus repeats the name and asks whether Amelie was real or 'all in a dream'.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Euphoria Magazine also notes the ambiguity."
+    },
+    {
+      "claim": "The narrator has turned this person into a memory.",
+      "verdict": "supported",
+      "note": "Interpretation, consistent with the lyrics and with Clash's description of a girl who has become a memory."
+    },
+    {
+      "claim": "'The bridge' sets a nursery rhyme against a funeral rite.",
+      "verdict": "corrected",
+      "note": "The nursery rhyme and funeral rite lines are in the lyrics, but labeling the section a bridge is a claim about song structure. Changed to 'a stretch of the lyric'."
+    },
+    {
+      "claim": "The narrator offers a whole life to someone who wasn't asking for it.",
+      "verdict": "supported",
+      "note": "Lyric: 'I'm comfortable handin' you my whole life'. Reading is interpretive."
+    },
+    {
+      "claim": "Abrams has said that entering adulthood she wanted to be straighter with herself and avoid the trap of victimhood.",
+      "verdict": "supported",
+      "note": "Rolling Stone interview."
+    },
+    {
+      "claim": "The narrator admits a willingness to let this stranger ruin all their days.",
+      "verdict": "supported",
+      "note": "Lyric: 'she doesn't know I'd let her / Ruin all my days'."
+    },
+    {
+      "claim": "The chorus usually ends on 'I don't know' but twice swaps in 'tell me no'.",
+      "verdict": "supported",
+      "note": "'Tell me no' replaces the last line in two choruses; the others end 'I don't know'."
+    },
+    {
+      "claim": "Aaron Dessner of The National produced it, co-wrote it with Abrams, and plays acoustic guitar.",
+      "verdict": "supported",
+      "note": "Press release and Shazam credits."
+    },
+    {
+      "claim": "Clash called it a finger-plucked ode.",
+      "verdict": "supported",
+      "note": "Clash described it as a finger-plucked ode to a girl who has become a memory."
+    },
+    {
+      "claim": "Abrams made Good Riddance, her debut album, in stretches at Dessner's Long Pond studio, away from Los Angeles.",
+      "verdict": "supported",
+      "note": "She visited for five- or ten-day stretches and found it more comfortable than recording in Los Angeles."
+    },
+    {
+      "claim": "This is the third single.",
+      "verdict": "supported",
+      "note": "After 'Difficult' and 'Where Do We Go Now?'."
+    },
+    {
+      "claim": "The song 'carries the confessional line she traces back to Joni Mitchell'.",
+      "verdict": "corrected",
+      "note": "Overstated. The sources say Abrams names Joni Mitchell as her most formative influence and that the song sits in the confessional singer-songwriter tradition. Reworded to say that."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1772,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08489000000000001,
+        "detail": "25435 in / 1402 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.045968,
+        "detail": "3007 in / 1697 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046328,
+        "detail": "4164 in / 3800 out"
+      }
+    ]
+  }
+}

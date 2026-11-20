@@ -1,0 +1,187 @@
+{
+  "spotifyId": "1JUtrCqYzJ80tcAzMbCvir",
+  "reviewedAt": "2026-11-20T17:19:04.612Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8290798"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Lottery\" was released on February 17, 2023 by Streamcut/RCA Records as a single by Latto.",
+        "source": "https://musicboard.app/album/lottery-feat-lu-kala/latto/?tracks=1441148758"
+      },
+      {
+        "claim": "Shazam's credits list Dr. Luke and Brandon Benjamin as producers. Revolt instead credits production to Dr. Luke and Rocco Did It Again!",
+        "source": "https://www.shazam.com/en-us/song/1670711235/lottery-feat-lu-kala"
+      },
+      {
+        "claim": "Revolt credits the production to Rocco Did It Again! and Dr. Luke, which differs from the Shazam and WhoSampled producer credits.",
+        "source": "https://www.revolt.tv/article/2023-02-17/273995/latto-lu-kala-lottery-video"
+      },
+      {
+        "claim": "The writing credits are Alyssa Stephens, Brandon Benjamin, Lusamba Vanessa Kalala (LU KALA), Lauren Larue, Lukasz Gottwald (Dr. Luke), LunchMoney Lewis, Randall Hammers, Rocco Valdes and Steph Jones.",
+        "source": "https://www.shazam.com/en-us/song/1670711235/lottery-feat-lu-kala"
+      },
+      {
+        "claim": "Latto and LU KALA are credited with vocals, and Lauren Larue and Steph Jones with backing vocals. Dr. Luke and Brandon Benjamin are credited with programming.",
+        "source": "https://www.shazam.com/en-us/song/1670711235/lottery-feat-lu-kala"
+      },
+      {
+        "claim": "LU KALA told Entertainment Tonight that she started writing the song's hook in March 2022.",
+        "source": "https://lu-kala.fandom.com/wiki/Lottery"
+      },
+      {
+        "claim": "Latto teased the song on Instagram on February 9, 2023, and she and LU KALA announced it on February 13. They performed it together at Billboard Women in Music on March 1, 2023.",
+        "source": "https://lu-kala.fandom.com/wiki/Lottery"
+      },
+      {
+        "claim": "The video was directed by Chandler Lass. It shows Latto and LU KALA in disco and casino-themed sets and riding in a limo through Las Vegas. Latto said the visuals flowed with the beat, matching its 70s disco flavor.",
+        "source": "https://www.whosampled.com/Latto/Lottery/"
+      },
+      {
+        "claim": "The song's theme is that Latto's future partner is so lucky he has basically won the lottery. Uproxx describes a groovy, disco-inspired beat.",
+        "source": "https://uproxx.com/music/latto-lu-kala-lottery-single/"
+      },
+      {
+        "claim": "\"Lottery\" was LU KALA's first entry on the Billboard Hot 100 and the Canadian Hot 100. She is a Congolese-Canadian singer-songwriter who emigrated to Canada at age three.",
+        "source": "https://en.wikipedia.org/wiki/Lu_Kala"
+      }
+    ],
+    "lineage": "The song is a disco-inspired pop-rap dancefloor single from Atlanta-area rapper Latto, following her 2022 album 777, which she said experimented with pop, R&B and trap sounds.",
+    "genres": [
+      "pop rap",
+      "disco-pop",
+      "hip-hop"
+    ]
+  },
+  "draft": "Every line of the hook in **Lottery** starts with the same word: *if*. \"If I let you put your hands all over me,\" the song begins, and the whole record hangs on that conditional. Nothing has happened yet. The man in question hasn't won anything. He's holding a ticket, and the women on the track are deciding whether it pays out. That small grammatical choice turns what could be a straight come-on into a song about leverage, about who gets to say yes and what that yes is worth.\n\nLU KALA, the Congolese-Canadian singer-songwriter who moved to Canada at three, told Entertainment Tonight she started writing that hook in March 2022. Almost a year later it became a duet with Latto, and LU KALA's first entry on the Billboard Hot 100 and the Canadian Hot 100. It's a fitting debut for her, because the hook is the song's spine. Latto comes in laughing, crowning herself the biggest, and spends her verses spinning the metaphor until it nearly breaks: \"Play him like a scratch off,\" she says, measuring a lover the way you'd measure a dollar ticket at a gas station counter.\n\nThe pleasure here is pride, loud and unembarrassed. But there's a real tension underneath that the song never settles. A lottery is pure luck. Yet the second verse insists on the opposite: \"You gotta work for this, can't purchase this,\" it warns, demanding that he prove himself worthy. So is he lucky, or did he earn it? The song wants both, and that contradiction is the most human thing about it. It's the voice of someone who knows her own value and also knows how often people try to shortcut their way to it. Notice, too, what sits in the hook next to the body: \"what I got on my mind,\" the fantasies she might tell. The real jackpot, the song hints, is being let inside her head, and that's the part held back hardest.\n\nUproxx called the beat groovy and disco-inspired, and Latto said the video's look followed its 70s disco flavor. Director Chandler Lass put the two in disco and casino sets and sent them through Las Vegas in a limo, which makes the metaphor literal. It also extends where Latto went on her 2022 album *777*, which she described as experimenting with pop, R&B and trap. Dr. Luke is among the producers, and the writing room was crowded, with nine credited writers including both singers. The pair performed it together at Billboard Women in Music in March 2023.\n\n**Lottery** sticks because it lets you borrow a feeling most people rarely hold out loud: the certainty that you are the prize, and the other person had better know it.",
+  "factCheck": [
+    {
+      "claim": "Every line of the hook starts with the same word: 'if'.",
+      "verdict": "corrected",
+      "note": "Three of the four hook lines begin with 'If'. The fourth is 'You won the lottery'. Rewritten as 'Three lines of the hook open with...'."
+    },
+    {
+      "claim": "'If I let you put your hands all over me,' the song begins",
+      "verdict": "corrected",
+      "note": "The lyrics open with the spoken 'Big Latto / Hahahaha / The biggest' before the hook. Changed to say the hook opens that way. The quote itself matches."
+    },
+    {
+      "claim": "The women on the track are deciding whether it pays out",
+      "verdict": "corrected",
+      "note": "The lyrics only give one narrator's first-person conditional. Changed to the narrator."
+    },
+    {
+      "claim": "LU KALA is a Congolese-Canadian singer-songwriter who moved to Canada at three",
+      "verdict": "supported",
+      "note": "Wikipedia: emigrated to Canada at age three."
+    },
+    {
+      "claim": "LU KALA told Entertainment Tonight she started writing the hook in March 2022",
+      "verdict": "supported",
+      "note": "Matches the researched fact."
+    },
+    {
+      "claim": "Almost a year later it became a duet with Latto",
+      "verdict": "corrected",
+      "note": "Single released Feb 17, 2023. Reworded to say the song came out almost a year later."
+    },
+    {
+      "claim": "LU KALA's first entry on the Billboard Hot 100 and the Canadian Hot 100",
+      "verdict": "supported",
+      "note": "Matches Wikipedia."
+    },
+    {
+      "claim": "Latto comes in laughing, crowning herself the biggest",
+      "verdict": "supported",
+      "note": "Lyrics open with 'Big Latto / Hahahaha / The biggest'. Reading is interpretive."
+    },
+    {
+      "claim": "'Play him like a scratch off'",
+      "verdict": "supported",
+      "note": "Exact lyric. The gas-station-counter detail was an invented scene, so it was trimmed to a general image."
+    },
+    {
+      "claim": "'You gotta work for this, can't purchase this' appears in the second verse",
+      "verdict": "supported",
+      "note": "Exact lyric, in the later rap verse after 'Whoa, there, baby'."
+    },
+    {
+      "claim": "Quote 'what I got on my mind'",
+      "verdict": "removed",
+      "note": "The quote was accurate, but four quoted lines exceed the limit of three. Converted to a paraphrase."
+    },
+    {
+      "claim": "Uproxx called the beat groovy and disco-inspired",
+      "verdict": "supported",
+      "note": "Matches Uproxx description."
+    },
+    {
+      "claim": "Latto said the video's look followed its 70s disco flavor",
+      "verdict": "supported",
+      "note": "Source says the visuals flowed with the beat, matching its 70s disco flavor."
+    },
+    {
+      "claim": "Chandler Lass directed; disco and casino sets; limo through Las Vegas",
+      "verdict": "supported",
+      "note": "Matches WhoSampled."
+    },
+    {
+      "claim": "Latto's 2022 album 777 experimented with pop, R&B and trap, as she described it",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Dr. Luke is among the producers",
+      "verdict": "supported",
+      "note": "Credited by both Shazam and Revolt."
+    },
+    {
+      "claim": "Nine credited writers including both singers",
+      "verdict": "corrected",
+      "note": "Nine writers are listed. Only LU KALA is identifiable by name, since Latto's legal name isn't given. Reworded to nine credited writers, including LU KALA."
+    },
+    {
+      "claim": "The pair performed it together at Billboard Women in Music in March 2023",
+      "verdict": "supported",
+      "note": "March 1, 2023."
+    },
+    {
+      "claim": "Interpretive claims (leverage, luck versus earning, the jackpot being access to her mind, the closing line)",
+      "verdict": "supported",
+      "note": "Readings rest on quoted lyrics and are presented as interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1879,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08801400000000001,
+        "detail": "24172 in / 1967 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049552,
+        "detail": "3473 in / 1783 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050378,
+        "detail": "4619 in / 4114 out"
+      }
+    ]
+  }
+}

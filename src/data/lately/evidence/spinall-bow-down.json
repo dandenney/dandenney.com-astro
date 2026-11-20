@@ -1,0 +1,187 @@
+{
+  "spotifyId": "6PoD6ZYOAMkCJAbpAgpT1T",
+  "reviewedAt": "2026-11-20T17:16:56.401Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13114930"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Bow Down\" (feat. Amaarae) is track 9 on SPINALL's album TOP BOY, released 17 February 2023, and runs 2:03.",
+        "source": "https://spinall.bandcamp.com/album/top-boy"
+      },
+      {
+        "claim": "The song was released by TheCAPMusic as part of the album Top Boy.",
+        "source": "https://www.shazam.com/en-us/song/1686434763/bow-down"
+      },
+      {
+        "claim": "The songwriters are Ama Serwah Genfi (Amaarae) and Sodamola Oluseye Desmond (Spinall).",
+        "source": "https://www.shazam.com/en-us/song/1686434763/bow-down"
+      },
+      {
+        "claim": "Spinall is the sole credited producer of \"Bow Down\".",
+        "source": "https://en.wikipedia.org/wiki/Top_Boy_(album)"
+      },
+      {
+        "claim": "Afrocritik called the track slightly disappointing, saying its sparse instrumentals did not quite match Amaarae's sonic presence.",
+        "source": "https://afrocritik.com/dj-spinall-topboy-album/"
+      },
+      {
+        "claim": "iMullar praised Amaarae's performance, citing trumpet horns in the production and a second verse that marks her as one of the voices of alternative music. It named the song a standout on the album.",
+        "source": "https://imullar.com/2023/02/27/review-spinall-top-boy/"
+      },
+      {
+        "claim": "African Folder reads the song as Spinall's nod to the alté movement, since it enlists the Ghanaian singer Amaarae.",
+        "source": "https://africanfolder.com/spinall-top-boy-album-review/"
+      },
+      {
+        "claim": "Spinall told Apple Music that the album title Top Boy was inspired by people who have beaten the odds and used the resources available to them to succeed.",
+        "source": "https://en.wikipedia.org/wiki/Top_Boy_(album)"
+      },
+      {
+        "claim": "Top Boy is Spinall's sixth studio album. Its lead single was a remix of \"Sere\", a track from his previous album Grace.",
+        "source": "https://en.wikipedia.org/wiki/Top_Boy_(album)"
+      },
+      {
+        "claim": "Spinall is a Nigerian DJ and producer who brands his style TheCAP (The CrazyAzzParty). His career includes an Atlantic Records UK deal and his 2015 debut album My Story.",
+        "source": "https://www.amazon.com/Top-Mama/dp/B0BSH1KQB4"
+      }
+    ],
+    "lineage": "The song sits in contemporary Nigerian and pan-African DJ-curated afrobeats, with an alté (alternative Afro-fusion) guest turn from Ghanaian singer Amaarae.",
+    "genres": [
+      "afrobeats",
+      "alté",
+      "amapiano"
+    ]
+  },
+  "draft": "The whole song turns on a request that sounds like a command until you hear the last word. \"Make me bow down / To it please,\" Amaarae sings at the end of each refrain. That \"please\" gives it away. The narrator has spent the verses sounding like the most powerful person in the room. Here she asks to be overpowered, and she's polite about it.\n\n**Bow Down** is track nine on SPINALL's sixth album, *TOP BOY*. Spinall produced it alone and wrote it with Amaarae. He has said the album's title honors people who beat the odds with whatever they had on hand. The song's opening fits that brief in its own way. It asks for money in naira, cedis and dollars, Nigerian and Ghanaian currency next to the American kind, and it wants more, not less. Pleasure and enjoyment are named as the reason for being here. It's a pan-African wish list, delivered with the ease of someone who expects to get it.\n\nThen the song slides from wealth into worship. Amaarae calls herself the holy spirit to the godless and warns off anyone trying \"witchy witchy\" tricks. In the hook a lover asks her to whine her waist, and the moment flips the religious language around: \"Feels like Gods giving praise to me.\" She isn't the one praying. She's the one being prayed to. A few lines later she admits she's lost in the sauce and lost in her thoughts, a slave to the very thing she controls. Pride and surrender sit in the same four bars, and the song never chooses between them.\n\nThe second verse is pure play: a Bee Gees joke, Fiji Water as a swimming pool, a wink that none of this stays PG. iMullar singled out that verse as the moment Amaarae proves she's one of alternative music's key voices, and named the track a standout. African Folder heard Spinall nodding to the alté scene by bringing in the Ghanaian singer. Afrocritik was cooler, finding the production too sparse to match her presence. iMullar heard trumpet horns in it.\n\nThat disagreement is part of the appeal. This is a DJ's record that leaves room for a guest to take it over, and Amaarae does. At two minutes it's a quick visit, two verses and a chant, with no time to explain itself.\n\nWhat sticks is that \"please\": a voice sure enough of its own divinity to beg for someone who can bring it to its knees, and you end up wanting that too.",
+  "factCheck": [
+    {
+      "claim": "\"Make me bow down / To it please\" closes the refrain (quote)",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly and the lines recur at the end of each Bow Down chant."
+    },
+    {
+      "claim": "Amaarae sings that line / Amaarae calls herself the holy spirit / the narrator is 'she'",
+      "verdict": "corrected",
+      "note": "The packet does not say who sings which lines or give a gender for the narrator. Attributed to the narrator or the song, with no gendered pronouns."
+    },
+    {
+      "claim": "Bow Down is track nine on SPINALL's sixth album TOP BOY",
+      "verdict": "supported",
+      "note": "Track 9 and sixth studio album are both in the researched facts."
+    },
+    {
+      "claim": "Spinall produced it alone and wrote it with Amaarae",
+      "verdict": "supported",
+      "note": "Sole credited producer. Songwriters are Amaarae and Spinall."
+    },
+    {
+      "claim": "He has said the album's title honors people who beat the odds with whatever they had on hand",
+      "verdict": "supported",
+      "note": "Spinall told Apple Music the title was inspired by people who beat the odds and used available resources."
+    },
+    {
+      "claim": "The opening asks for money in naira, cedis and dollars, 'Nigerian and Ghanaian currency'",
+      "verdict": "corrected",
+      "note": "The lyrics name naira, cedi and dollar. The packet does not say which countries use them, so that gloss was removed."
+    },
+    {
+      "claim": "Pleasure and enjoyment are named as the reason for being here",
+      "verdict": "corrected",
+      "note": "The lyric is 'loving and enjoyment', so the wording was fixed."
+    },
+    {
+      "claim": "It wants more, not less",
+      "verdict": "supported",
+      "note": "'We pray for more / Nigga not less'."
+    },
+    {
+      "claim": "A lover asks her to whine her waist",
+      "verdict": "corrected",
+      "note": "The lyric is 'He say baby whine ya / Waist on me', so it was rephrased closer to the text and the word 'hook' dropped."
+    },
+    {
+      "claim": "\"Feels like Gods giving praise to me\" (quote)",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "\"witchy witchy\" tricks (quote)",
+      "verdict": "supported",
+      "note": "From 'No do me witchy witchy'."
+    },
+    {
+      "claim": "Lost in the sauce, lost in her thoughts, a slave to the thing she controls; 'same four bars'",
+      "verdict": "corrected",
+      "note": "The lyrics support the lost and slave lines. 'Four bars' is a musical-structure claim, so it became 'same stanza'."
+    },
+    {
+      "claim": "Second verse has a Bee Gees joke, Fiji Water, and a wink about not keeping it PG",
+      "verdict": "supported",
+      "note": "Lyrics: 'Like a bee gee', 'Water Fiji', 'We nuh keep it pg'."
+    },
+    {
+      "claim": "iMullar singled out that (Bee Gees) verse as the moment Amaarae proves she's one of alternative music's key voices",
+      "verdict": "corrected",
+      "note": "iMullar cites a second verse that marks Amaarae as one of the voices of alternative music. The packet doesn't confirm it is the Bee Gees verse, and gives no pronoun for Amaarae. Reworded."
+    },
+    {
+      "claim": "iMullar named the track a standout and heard trumpet horns",
+      "verdict": "supported",
+      "note": "Both are in the iMullar summary."
+    },
+    {
+      "claim": "African Folder heard Spinall nodding to the alté scene by bringing in the Ghanaian singer",
+      "verdict": "supported",
+      "note": "Matches the African Folder reading."
+    },
+    {
+      "claim": "Afrocritik found the production too sparse to match her presence",
+      "verdict": "corrected",
+      "note": "Afrocritik called it slightly disappointing, saying the sparse instrumentals did not quite match Amaarae's presence. Softened and de-gendered."
+    },
+    {
+      "claim": "At two minutes, two verses and a chant",
+      "verdict": "supported",
+      "note": "Runtime is 2:03, and the lyrics show two verses with a chant."
+    },
+    {
+      "claim": "A DJ's record that leaves room for a guest",
+      "verdict": "supported",
+      "note": "Spinall is a DJ and producer and Amaarae is the guest. The reading of the song is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1744,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077448,
+        "detail": "22804 in / 1184 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.044864,
+        "detail": "2731 in / 1697 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052096,
+        "detail": "3808 in / 4448 out"
+      }
+    ]
+  }
+}

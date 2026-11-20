@@ -1,0 +1,167 @@
+{
+  "spotifyId": "5fQ8zHRjtlN9Unfiaz4OQf",
+  "reviewedAt": "2026-11-20T17:32:54.438Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/30684959"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"The Preacher\" is the 3:40 closing track (track 6) of Jamie N Commons' Rumble And Sway EP, issued by KIDinaKORNER/Interscope in 2013.",
+        "source": "https://www.amazon.com/Rumble-Sway-EP-Jamie-Commons/dp/B00BJW6PA2"
+      },
+      {
+        "claim": "Discogs credits Jamie N Commons as the sole writer of \"The Preacher\".",
+        "source": "https://www.discogs.com/release/4557668-Jamie-N-Commons-Rumble-And-Sway-EP"
+      },
+      {
+        "claim": "Discogs credits \"The Preacher\" to producers Eliot James and Jamie N Commons, with Benjamin Markham as co-producer. This differs from the rest of the EP, which was produced by Alex da Kid.",
+        "source": "https://www.discogs.com/release/4557668-Jamie-N-Commons-Rumble-And-Sway-EP"
+      },
+      {
+        "claim": "Apple Music's editorial text calls \"The Preacher\" the standout tune and says it closes on a dusty dirge.",
+        "source": "https://music.apple.com/us/album/rumble-and-sway-ep/1444619629"
+      },
+      {
+        "claim": "A review on Qobuz says a spoken-word, Internet-themed \"promo\" spot sits in the middle of \"The Preacher\". The same review attributes production of the song to Rick Rubin, which conflicts with the Discogs credits.",
+        "source": "https://www.qobuz.com/gb-en/album/rumble-and-sway-ep-jamie-n-commons/0060253732911"
+      },
+      {
+        "claim": "The song has been synced to TV, including Justified (season 6, episode 7) and Tidelands (season 1, episode 6), and was heard in a preview for Defiance.",
+        "source": "https://www.tunefind.com/song/jamie-n-commons/the-preacher"
+      },
+      {
+        "claim": "Commons described the Rumble And Sway EP as the first effort of his partnership with Alex da Kid at Interscope. He called it a collection of experiments in updating the blues sound with modern production techniques.",
+        "source": "https://www.grammy.com/news/video-exclusive-grammycom-interview-with-jamie-n-commons/"
+      },
+      {
+        "claim": "Commons was born in Bristol, England, and moved with his family to Chicago at age six. He spent eight years there immersed in the blues before returning to England's West Country at 16.",
+        "source": "https://www.amazon.com/Rumble-Sway-EP-Jamie-Commons/dp/B00BJW6PA2"
+      },
+      {
+        "claim": "Commons studied music at Goldsmiths in London. His debut EP, The Baron, came out in 2011 on Luv Luv Luv Records, and Alex da Kid then signed him to KIDinaKORNER/Interscope.",
+        "source": "https://www.grammy.com/news/video-exclusive-grammycom-interview-with-jamie-n-commons/"
+      },
+      {
+        "claim": "Commons grew up in a religious family with an atheist father, and says this gave him a deep-rooted engagement with religion. This is relevant context for the song's preacher theme, but he did not tie it to the song in that interview.",
+        "source": "https://www.clashmusic.com/features/ones-to-watch-jamie-n-commons/"
+      }
+    ],
+    "lineage": "The song sits in a modern gothic, swamp-gospel blues tradition, with Tom Waits and Nick Cave comparisons, which Commons updated with modern production.",
+    "genres": [
+      "blues rock",
+      "swamp gospel",
+      "alternative"
+    ]
+  },
+  "draft": "A man stands on the scaffold with a noose around his neck, and he is still preaching. That's the scene at the center of **The Preacher**, and Jamie N Commons, who wrote it alone, sets it up the way an old murder ballad would. There's a cold wind over prairie gold and a church bell \"screaming\" from the steeple, calling the children of men to watch. The refrain gives the whole portrait in one line: \"one hand on the trigger, one hand on the cross.\" The next line keeps a narrator's distance. Jesus and his family, it says, are \"two things he's lost.\"\n\nWhat makes the song more than a gallows tale is how it splits the guilt. The crowd has \"blood in their eyes and blood in their hearts\" for the blood drying on his hands, and the lyric never says which is worse. The hanging is righteous and it's a mob, both at once.\n\nThen the preacher speaks. His defense is short and total: \"I spoke to the lord on the mountain top,\" and His bidding was all he could do. The refrain flips around him. Early on he cries \"Oh Lord what have you done\" and warns that someone won't see heaven. It's unclear whether he means himself, the crowd, or God, and that blur is the point. By the end the same cry has hardened into \"Now show me heaven or kingdom come.\" Terror has become a demand. You can hear a man who needs his crime to have been holy, because the alternative is that he lost his family for nothing. Pride and dread sit in the same breath, and the song won't settle which one wins.\n\nCommons was born in Bristol and moved to Chicago at six. He spent eight years there soaking up the blues before returning to England's West Country at sixteen. He has also talked about growing up in a religious family with an atheist father, which left him deeply engaged with faith. He called Rumble And Sway, his first release with Alex da Kid at Interscope, a set of experiments in updating the blues with modern production. \"The Preacher\" stands slightly apart from the rest of it. Commons produced it with Eliot James, with Benjamin Markham as co-producer, while Alex da Kid handled the rest of the record. The song closes the EP on a dusty dirge. It belongs to the gothic swamp-gospel line of Tom Waits and Nick Cave, where scripture and violence share a pulpit. It's no surprise it ended up in an episode of *Justified*.\n\nThe song sticks because it makes you stand in the crowd and on the scaffold at the same time, unsure whether you're watching justice or a man who believed every word.",
+  "factCheck": [
+    {
+      "claim": "The scene is a man on the scaffold with a noose around his neck who is still preaching.",
+      "verdict": "supported",
+      "note": "Lyrics: 'March him to the scaffold and string him up on high' and 'He cried with a noose round his neck.'"
+    },
+    {
+      "claim": "Jamie N Commons wrote the song alone.",
+      "verdict": "supported",
+      "note": "Discogs credits him as sole writer."
+    },
+    {
+      "claim": "Cold wind, prairie gold, a church bell 'screaming' from the steeple, calling the children of men.",
+      "verdict": "supported",
+      "note": "Matches the opening lines. 'Calling them to watch' is interpretation."
+    },
+    {
+      "claim": "'one hand on the trigger, one hand on the cross' and 'two things he's lost' are quoted from the refrain.",
+      "verdict": "supported",
+      "note": "Both quotes match the lyrics."
+    },
+    {
+      "claim": "The crowd has 'blood in their eyes and blood in their hearts' for the blood drying on his hands.",
+      "verdict": "supported",
+      "note": "Quote matches. The paraphrase of 'blood turning dry on his hands' is fair."
+    },
+    {
+      "claim": "'I spoke to the lord on the mountain top' and his bidding was all he could do.",
+      "verdict": "supported",
+      "note": "Quote matches the lyric. The paraphrase is fair."
+    },
+    {
+      "claim": "He first cries 'Oh Lord what have you done', and later the cry becomes 'Now show me heaven or kingdom come.'",
+      "verdict": "supported",
+      "note": "Both quotes match. The order follows the lyric's structure. 'By the end' was changed to 'Later' to avoid a claim about the song's arc."
+    },
+    {
+      "claim": "You can hear a man who needs his crime to have been holy.",
+      "verdict": "corrected",
+      "note": "'Hear' implies a claim about vocal delivery, which is unsupported. Changed to 'read'."
+    },
+    {
+      "claim": "Commons was born in Bristol, moved to Chicago at six, spent eight years immersed in the blues, and returned to England's West Country at sixteen.",
+      "verdict": "supported",
+      "note": "Matches the Amazon biography."
+    },
+    {
+      "claim": "Commons grew up in a religious family with an atheist father, leaving him deeply engaged with religion.",
+      "verdict": "supported",
+      "note": "Clash source. The draft does not tie this to the song."
+    },
+    {
+      "claim": "Commons called Rumble And Sway his first work with Alex da Kid at Interscope and a set of experiments in updating the blues with modern production.",
+      "verdict": "supported",
+      "note": "Grammy interview."
+    },
+    {
+      "claim": "The Preacher was produced by Commons and Eliot James, with Benjamin Markham as co-producer, while Alex da Kid produced the rest of the EP.",
+      "verdict": "supported",
+      "note": "Discogs credits. The Qobuz Rick Rubin attribution conflicts and is not used."
+    },
+    {
+      "claim": "The song closes the EP on a dusty dirge.",
+      "verdict": "corrected",
+      "note": "The song closing the EP (track 6) is supported. 'Dusty dirge' is a sound description with no listening-note support, so it was removed."
+    },
+    {
+      "claim": "The song belongs to the gothic swamp-gospel line of Tom Waits and Nick Cave.",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "The song ended up in an episode of Justified.",
+      "verdict": "supported",
+      "note": "Tunefind: season 6, episode 7."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1718,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078486,
+        "detail": "21373 in / 1574 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.04758,
+        "detail": "2940 in / 1791 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04571,
+        "detail": "4065 in / 3758 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "spotifyId": "3zFpiSDKVg4SOzjsZf05vK",
+  "reviewedAt": "2026-11-20T17:21:58.772Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4047136"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Amy Lee's \"With or Without You\" is a cover of U2's 1987 song, which first appeared on the album The Joshua Tree.",
+        "source": "https://www.loudersound.com/news/amy-lee-covers-u2-s-with-or-without-you"
+      },
+      {
+        "claim": "The original U2 song is credited to Bono, The Edge, Larry Mullen Jr. and Adam Clayton.",
+        "source": "https://en.wikipedia.org/wiki/Recover,_Vol._1"
+      },
+      {
+        "claim": "Lee's version is a dark, synth-heavy, minimalist industrial take on the arena-rock ballad.",
+        "source": "https://www.rollingstone.com/music/music-news/hear-amy-lees-haunting-cover-of-u2s-with-or-without-you-55180/"
+      },
+      {
+        "claim": "It was the second entry in Lee's YouTube covers series, after her cover of Portishead's \"It's a Fire\". The black-and-white video shows Lee posing by foliage and recording in her home studio.",
+        "source": "https://www.rollingstone.com/music/music-news/hear-amy-lees-haunting-cover-of-u2s-with-or-without-you-55180/"
+      },
+      {
+        "claim": "Lee said the dark arrangement was playing in her head as she woke one morning. She went straight upstairs and laid down the synth and basic vocal.",
+        "source": "https://music.mxdwn.com/2015/11/19/news/listen-amy-lee-covers-with-or-without-you-by-u2-and-its-a-fire-by-portishead/"
+      },
+      {
+        "claim": "Lee said she saw U2 live at Madison Square Garden in 2015 and found it inspiring. It made her excited to play live again, and she called this track her favorite of theirs.",
+        "source": "https://blabbermouth.net/news/evanescences-amy-lee-releases-cover-version-of-u2s-with-or-without-you"
+      },
+      {
+        "claim": "Lee said of the song: \"Love is rarely simple; more often, it's tearing your guts out.\"",
+        "source": "https://blabbermouth.net/news/evanescences-amy-lee-releases-cover-version-of-u2s-with-or-without-you"
+      },
+      {
+        "claim": "Lee said in a July 2015 radio interview that she had been recording cover songs and wanted to release them online.",
+        "source": "https://en.wikipedia.org/wiki/Recover,_Vol._1"
+      },
+      {
+        "claim": "The song was later collected on the EP Recover, Vol. 1, released February 19, 2016. The EP has four covers, by U2, Portishead, Led Zeppelin and Chris Isaak, with videos directed by Eric Ryan Anderson.",
+        "source": "https://en.wikipedia.org/wiki/Recover,_Vol._1"
+      },
+      {
+        "claim": "Lee is the singer of Evanescence. The band returned in 2015 after a three-year hiatus, and Lee launched her YouTube channel to showcase her solo work.",
+        "source": "https://www.loudersound.com/news/amy-lee-covers-u2-s-with-or-without-you"
+      }
+    ],
+    "lineage": "A solo cover by the Evanescence frontwoman, reworking a U2 stadium-rock classic as dark, minimalist synth-driven industrial rock, in the spirit of her self-released home-studio covers series.",
+    "genres": [
+      "industrial rock",
+      "alternative rock",
+      "synth-driven cover"
+    ]
+  },
+  "draft": "Amy Lee woke up one morning with this arrangement already playing in her head. She went straight upstairs and laid down the synth and a basic vocal. That origin explains a lot about **With or Without You**: it's a version built from whatever arrived first, before anyone could talk it into being bigger.\n\nBigger is what the original was. U2's 1987 song from *The Joshua Tree*, credited to Bono, The Edge, Larry Mullen Jr. and Adam Clayton, is an arena-rock ballad, a song made for a room full of people to hold up together. Lee keeps the song's push and pull but drops the scale, recasting it as dark, synth-heavy, minimalist industrial rock. Her timing makes the move more interesting. She had just seen U2 at Madison Square Garden in 2015, called the night inspiring, and named this her favorite of their songs. It even made her want to play live again. So the cover is a fan's tribute to a stadium, made alone in a home studio. The black-and-white video shows exactly that: Lee recording there, and posing by foliage.\n\nThe lyric suits the shrinking, because it's about being stuck in a space too small to move in. The speaker waits \"on a bed of nails,\" hands tied, body bruised. The title says it plainly: no way to live with this person, no way to live without them. The most honest line is the one that admits some fault: \"You give it all, but I want more.\" The complaint and the confession sit in the same breath. The speaker knows the other person has given everything and still can't be satisfied, and the song never decides whether that's the lover's failure or the speaker's.\n\nThen comes the phrase that does the real work: \"And you give yourself away.\" It could mean surrender, or betrayal, or simply getting caught, the way a face gives away a secret. The lyric repeats it and then breaks it off, \"And you give...\" over and over, as if the speaker can't bear to finish the sentence. By \"nothing left to lose,\" there's nothing left to bargain with either. Lee summed it up herself: \"Love is rarely simple; more often, it's tearing your guts out.\"\n\nThis was the second entry in her YouTube covers series, after Portishead's \"It's a Fire.\" It came the year Evanescence returned from a three-year hiatus. The song later landed on the *Recover, Vol. 1* EP alongside covers of Led Zeppelin and Chris Isaak.\n\nIt sticks because it takes a song built for thousands of voices and hands it back to one person in one room, which is where this kind of wanting actually lives.",
+  "factCheck": [
+    {
+      "claim": "Lee woke with the arrangement in her head, went straight upstairs and laid down the synth and a basic vocal.",
+      "verdict": "supported",
+      "note": "Matches Lee's account in the mxdwn source."
+    },
+    {
+      "claim": "U2's 1987 song from The Joshua Tree, credited to Bono, The Edge, Larry Mullen Jr. and Adam Clayton.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The original is an arena-rock ballad.",
+      "verdict": "supported",
+      "note": "Rolling Stone describes it this way. 'Made for a room full of people to hold up together' is interpretation."
+    },
+    {
+      "claim": "Lee's version is dark, synth-heavy, minimalist industrial rock.",
+      "verdict": "supported",
+      "note": "Rolling Stone description, which is a researched fact and not a listening claim."
+    },
+    {
+      "claim": "Lee saw U2 at Madison Square Garden in 2015, found it inspiring, named this her favorite of their songs, and it made her want to play live again.",
+      "verdict": "supported",
+      "note": "Matches the Blabbermouth source."
+    },
+    {
+      "claim": "The cover was made alone in a home studio.",
+      "verdict": "corrected",
+      "note": "The video shows her recording in her home studio, but 'alone' isn't supported, so it was removed."
+    },
+    {
+      "claim": "The black-and-white video shows Lee recording at home and posing by foliage.",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone source."
+    },
+    {
+      "claim": "Lyric quotes: 'on a bed of nails', 'You give it all, but I want more', 'And you give yourself away', 'And you give...', 'nothing left to lose'.",
+      "verdict": "corrected",
+      "note": "The quotes match the lyrics, but five was over the three-line limit. 'And you give...' and 'nothing left to lose' are now paraphrased."
+    },
+    {
+      "claim": "The lyric repeats 'And you give yourself away' and then breaks off into 'And you give...' repeatedly.",
+      "verdict": "supported",
+      "note": "Shown by the lyric structure."
+    },
+    {
+      "claim": "Hands tied, body bruised.",
+      "verdict": "supported",
+      "note": "Paraphrase of 'My hands are tied / My body bruised'."
+    },
+    {
+      "claim": "Lee said: 'Love is rarely simple; more often, it's tearing your guts out.'",
+      "verdict": "supported",
+      "note": "Exact quote from Blabbermouth. Wording changed from 'summed it up' to 'said of the song' to match the source."
+    },
+    {
+      "claim": "Second entry in her YouTube covers series, after Portishead's 'It's a Fire'.",
+      "verdict": "supported",
+      "note": "Matches Rolling Stone."
+    },
+    {
+      "claim": "Evanescence returned in 2015 after a three-year hiatus.",
+      "verdict": "supported",
+      "note": "Matches Louder Sound."
+    },
+    {
+      "claim": "Later on the Recover, Vol. 1 EP alongside covers of Led Zeppelin and Chris Isaak.",
+      "verdict": "supported",
+      "note": "Matches Wikipedia. The EP also has a Portishead cover."
+    },
+    {
+      "claim": "Lee keeps the song's push and pull but drops the scale.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the supported description of the arrangement."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.186,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080388,
+        "detail": "22559 in / 1527 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.063356,
+        "detail": "2734 in / 2621 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04226,
+        "detail": "3860 in / 3454 out"
+      }
+    ]
+  }
+}

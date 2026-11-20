@@ -1,0 +1,167 @@
+{
+  "spotifyId": "03Jtlb7ArRkx7RyB1LCnYw",
+  "reviewedAt": "2026-11-20T17:26:14.595Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/6497837"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Im Fine\" by Witchz was released on March 11, 2022 as a single, under exclusive license to Amuseio AB.",
+        "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
+      },
+      {
+        "claim": "Shazam's metadata credits the composer of \"Im Fine\" as Michael Lattino.",
+        "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
+      },
+      {
+        "claim": "The track runs 2:06 and is tagged Alternative.",
+        "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
+      },
+      {
+        "claim": "Tunebat lists the song as G major at about 95 BPM and marks it explicit. The label is given as Witchz, under exclusive license to Amuseio AB.",
+        "source": "https://tunebat.com/Info/Im-Fine-Witchz/03Jtlb7ArRkx7RyB1LCnYw"
+      },
+      {
+        "claim": "The Spotify release for \"Im Fine\" is a 2-song single, and an instrumental version is listed on Spotify.",
+        "source": "https://open.spotify.com/album/0xtp0BAnlPkiUc3CQeko3x"
+      },
+      {
+        "claim": "Witchz is a Las Vegas-based singer, songwriter and producer who has released music since 2020, starting with the debut EP Santi Minogo. Two EPs followed in 2022, Charmer and All We Need.",
+        "source": "https://cavedwellermusic.net/albums-reviews/artist-review-witchz/"
+      },
+      {
+        "claim": "Witchz is known for dark, breathy covers of classics, including Nirvana's \"Smells Like Teen Spirit\", Kate Bush's \"Running Up That Hill\" and Chris Isaak's \"Wicked Game\".",
+        "source": "https://cavedwellermusic.net/albums-reviews/artist-review-witchz/"
+      },
+      {
+        "claim": "The Witchz cover of \"Smells Like Teen Spirit\" (Alt Mix) came out on 2022-02-18, about three weeks before \"Im Fine\". It is among the artist's top songs on Apple Music, alongside \"Im Fine\".",
+        "source": "https://music.apple.com/us/artist/witchz/1492494904"
+      },
+      {
+        "claim": "Witchz says they are a producer/songwriter who looked for a singer until about a month before releasing their first music. They started singing themselves after seeing the Bradley Cooper/Lady Gaga film.",
+        "source": "https://x.com/witchzmusic/status/1508895939133538306"
+      },
+      {
+        "claim": "Witchz says they make all the music and also act as their own PR department. They have since toured Europe, with a sold-out final night in Cologne.",
+        "source": "https://www.tiktok.com/@witchzmusic/video/7491714733205163310"
+      }
+    ],
+    "lineage": "Witchz sits in a dark, bass-heavy alternative/electronic pop lane that one review describes as blending alternative, electronic and dark western music, and that grew through viral TikTok covers of rock and pop classics.",
+    "genres": [
+      "alternative",
+      "dark pop",
+      "electropop"
+    ]
+  },
+  "draft": "The prayer in **Im Fine** doesn't get past its own first line. Witchz announces \"I just said a prayer,\" then says it, the same three words four times over, and then flips the order and swears in the middle of it. That's the song's emotional truth in miniature: someone reaching for help in the only words they have left, and finding those words wear out after a few repetitions. A few lines later comes the doubt about whether the world is an evil simulation or the problem is just their own mind, which is what exhaustion sounds like when it starts looking for an explanation.\n\nWhat makes the song cut is how calmly it opens. The first verse moves from not wanting to wake up to feeling \"kinda vile,\" then shrugs: \"But hey I been here before.\" That line is half comfort and half warning. Familiarity is supposed to make despair manageable, and here it mostly makes it routine. The narrator isn't surprised by the low. They're tired of it.\n\nThe chorus is where the hiding starts. It's a short run of clipped phrases. They can't swallow, they insist this isn't like them, they know people don't like them, and they offer to leave. Then: \"Save our time / I'm fine.\" The leaving gets framed as a favor to everyone else, and \"I'm fine\" lands as the most obvious lie in the song, the thing you say to end the conversation before anyone looks closer. The second chorus changes one word. \"This ain't like me\" becomes \"they ain't like me,\" and the denial about the self turns into distance from the people around them. It's the same isolation from the other side.\n\nWitchz, a Las Vegas producer and songwriter who makes all the music and handles their own promotion, came up through dark, breathy covers of rock and pop classics that spread on TikTok. The take on Nirvana's \"Smells Like Teen Spirit\" arrived about three weeks before this single, and the two now sit side by side among the artist's most-played songs. That link fits. \"Im Fine\" carries the same grunge-era instinct to wrap alienation in a flat, unbothered hook. The song is credited to Michael Lattino, and it's sharper for its brevity. Witchz has said they spent years looking for a singer before deciding to sing their own songs, and there's something fitting in a record this private coming from someone who stepped up to the microphone only when no one else did.\n\nIt sticks because you recognize the reflex it catches, saying you're fine at the exact moment you are furthest from it, and hoping someone hears the gap.",
+  "factCheck": [
+    {
+      "claim": "The lyric 'I just said a prayer' is followed by 'God help me' four times, then a flipped 'Help Me God I'm fucked up all the time'",
+      "verdict": "corrected",
+      "note": "The repetition and the flipped order match the lyrics. 'Swears in the middle of it' was imprecise, so it now points to the line 'fucked up all the time'."
+    },
+    {
+      "claim": "Evil simulation / own mind doubt a few lines later",
+      "verdict": "supported",
+      "note": "Matches 'Evil simulation / I feel like I live in one / Or I just lost my mind'."
+    },
+    {
+      "claim": "The song opens calmly",
+      "verdict": "removed",
+      "note": "A sound or delivery claim with no listening notes behind it. The opening lyrics ('Fuck this shit can't take it anymore') don't read as calm either."
+    },
+    {
+      "claim": "Quotes 'kinda vile' and 'But hey I been here before'",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "Chorus is a short run of clipped phrases",
+      "verdict": "corrected",
+      "note": "'Clipped' could imply sound. Reworded to describe the short lines on the page."
+    },
+    {
+      "claim": "Quote 'Save our time / I'm fine'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Second chorus changes 'This ain't like me' to 'they ain't like me'",
+      "verdict": "supported",
+      "note": "First chorus has 'This ain't like me', second has 'They ain't like me'."
+    },
+    {
+      "claim": "Witchz is a Las Vegas producer and songwriter who makes all the music and handles their own promotion",
+      "verdict": "supported",
+      "note": "Supported by the artist review and Witchz's own TikTok statement about being their own PR department."
+    },
+    {
+      "claim": "Came up through dark, breathy covers of rock and pop classics that spread on TikTok",
+      "verdict": "supported",
+      "note": "Supported by the artist review and the lineage note about viral TikTok covers."
+    },
+    {
+      "claim": "The 'Smells Like Teen Spirit' cover arrived about three weeks before this single",
+      "verdict": "supported",
+      "note": "The cover came out 2022-02-18 and the single 2022-03-11."
+    },
+    {
+      "claim": "The two sit side by side among the artist's most-played songs",
+      "verdict": "corrected",
+      "note": "The source says 'top songs on Apple Music', not 'most-played'. Reworded."
+    },
+    {
+      "claim": "'Im Fine' carries a grunge-era instinct to wrap alienation in a flat, unbothered hook",
+      "verdict": "removed",
+      "note": "An unsupported sound claim and an unsupported genre-lineage claim."
+    },
+    {
+      "claim": "The song is credited to Michael Lattino",
+      "verdict": "supported",
+      "note": "Composer credit in the metadata."
+    },
+    {
+      "claim": "Witchz spent years looking for a singer before deciding to sing",
+      "verdict": "corrected",
+      "note": "The source says they looked for a singer until about a month before releasing their first music. 'Years' removed. Added that they started singing after seeing the Bradley Cooper/Lady Gaga film."
+    },
+    {
+      "claim": "The song is sharper for its brevity",
+      "verdict": "supported",
+      "note": "Opinion resting on the 2:06 length."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1607,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.072462,
+        "detail": "19856 in / 1275 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.044872,
+        "detail": "2593 in / 1725 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.043398,
+        "detail": "3689 in / 3602 out"
+      }
+    ]
+  }
+}

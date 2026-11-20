@@ -1,0 +1,162 @@
+{
+  "spotifyId": "7x4b0UccXSKBWxWmjcrG2T",
+  "reviewedAt": "2026-11-20T17:24:10.939Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8295212"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"And I Love Her\" was written by John Lennon and Paul McCartney and first released by The Beatles in 1964. Cobain's version is a cover.",
+        "source": "https://secondhandsongs.com/performance/422858/versions"
+      },
+      {
+        "claim": "Discogs credits the cassette transfers to Kyle Lane, with Jeff Fura supervising. It lists the Lennon/McCartney writing credit for the track, which runs 2:05 and is track 20 on the cassette edition.",
+        "source": "https://www.discogs.com/release/7758521-Kurt-Cobain-Montage-Of-Heck-The-Home-Recordings"
+      },
+      {
+        "claim": "The cover is a raw, acoustic take. Director Brett Morgen found it on a random tape and used it in his documentary.",
+        "source": "https://consequence.net/2015/10/kurt-cobain-the-beatles-and-i-love-her/"
+      },
+      {
+        "claim": "The cover first surfaced online in April 2015 but was taken down soon after. It was also released as a 7-inch single backed with Cobain's early version of \"Sappy\".",
+        "source": "https://consequence.net/2015/10/kurt-cobain-the-beatles-and-i-love-her/"
+      },
+      {
+        "claim": "Brett Morgen went through the Cobain archives for home recordings and rare tracks while curating the album. The 31-track deluxe edition serves as the soundtrack to the Montage of Heck documentary.",
+        "source": "https://www.nme.com/news/music/kurt-cobain-10-1213348"
+      },
+      {
+        "claim": "Far Out says Cobain, a notorious Beatles fan, covered the Beatles only once on record. It calls his version a goth-tinged reimagining. It also says his distrust of Paul McCartney makes a cover of a McCartney-written song more interesting.",
+        "source": "https://faroutmagazine.co.uk/kurt-cobains-isolated-vocals-beatles-cover/"
+      },
+      {
+        "claim": "The album's tracks are covers, original songs, early Nirvana demos, interludes and spoken-word entries that Cobain recorded himself. The album's recording dates are given as 1986–1994.",
+        "source": "https://en.wikipedia.org/wiki/Montage_of_Heck:_The_Home_Recordings"
+      },
+      {
+        "claim": "Morgen said he curated the album so listeners would feel they were in Kurt's Olympia, Washington apartment in the late Eighties, watching him create.",
+        "source": "https://www.recordpusher.com/products/cobain-kurt-montage-of-heck-home-recordings"
+      },
+      {
+        "claim": "Morgen compared the album to Dylan's Bootleg Series. He said it shows a side of Kurt that he could not fully explore in a three-piece band.",
+        "source": "https://www.nme.com/news/music/kurt-cobain-10-1213348"
+      },
+      {
+        "claim": "Cobain was born in Aberdeen, Washington, in 1967. He rose to fame as Nirvana's frontman and died by suicide in Seattle in April 1994, aged 27.",
+        "source": "https://en.wikipedia.org/wiki/Kurt_Cobain:_Montage_of_Heck"
+      }
+    ],
+    "lineage": "A lo-fi, solo acoustic home-recorded cover of a Beatles ballad, on a grunge-era archive release of Cobain's Aberdeen/Olympia cassette demos and sound collages.",
+    "genres": [
+      "grunge",
+      "lo-fi",
+      "acoustic"
+    ]
+  },
+  "draft": "On a tape Brett Morgen describes as random, buried in Kurt Cobain's archive of home cassettes, there was a Beatles love song. Morgen pulled it into his documentary *Montage of Heck*, and the raw, acoustic take of **And I Love Her** landed on the soundtrack album that followed. It's two minutes of one of the plainest love songs ever written, recorded at home by someone famous for anything but plainness.\n\nThe choice is the first thing to sit with. Lennon and McCartney's 1964 ballad doesn't plead or argue. Its narrator just reports good fortune: she gives him everything, she kisses him tenderly, he loves her. Far Out calls Cobain a notorious Beatles fan who covered the band only once on record, and notes that his distrust of Paul McCartney makes this choice of a McCartney song more interesting. That's a real tension. Admiration and suspicion can live in the same listener, and here the admiration wins out long enough to get the song on tape.\n\nThe lyric is built from simple opposites set in an old-fashioned word order: \"Bright are the stars that shine / Dark is the sky.\" The inversion gives it the weight of a hymn, and the darkness is there from the start, but only as the thing that makes the light visible. Far Out hears Cobain's version as a goth-tinged reimagining, and that reading has a foothold in the words. The night sky was always part of the picture.\n\nThe best moment is a slip of address. The verses talk *about* her, in the third person, a little shy, a little formal. Then the middle section turns: \"As long as I / Hold you near me.\" For a few lines the narrator stops describing the lover and speaks straight to her. That shift is where the song shows how much it feels, and it passes as quickly as it comes.\n\nMorgen compared the collection to Dylan's Bootleg Series. He said it shows a side of Cobain he couldn't fully explore in a three-piece band. The album gathers covers, demos, and spoken pieces recorded between 1986 and 1994. Cobain died that last year, at 27. So when the song promises, again and again, that this love will never die, two feelings sit side by side and don't settle. The lyric is pure confidence. The listener knows how the story of the person singing it ends. Neither cancels the other.\n\nYou come away holding a vow of forever in a voice that didn't get one, and the song's tenderness makes that harder to put down, not easier.",
+  "factCheck": [
+    {
+      "claim": "Brett Morgen describes the tape as random",
+      "verdict": "corrected",
+      "note": "The packet says Morgen found the track on a random tape. It doesn't say he described it that way. Reworded."
+    },
+    {
+      "claim": "The track was in Cobain's archive of home cassettes",
+      "verdict": "supported",
+      "note": "Morgen went through the Cobain archives for home recordings, and the Discogs entry credits cassette transfers. 'Buried' dropped as unsupported color."
+    },
+    {
+      "claim": "Morgen used it in his documentary Montage of Heck",
+      "verdict": "supported",
+      "note": "Consequence says he used it in his documentary."
+    },
+    {
+      "claim": "It landed on the soundtrack album that followed",
+      "verdict": "corrected",
+      "note": "The 31-track deluxe edition is the documentary soundtrack. Reworded to say so, with no claim about sequence."
+    },
+    {
+      "claim": "Raw, acoustic take, about two minutes, recorded at home",
+      "verdict": "supported",
+      "note": "The track runs 2:05. The cover is described as raw and acoustic, and the album is home recordings."
+    },
+    {
+      "claim": "Lennon and McCartney's 1964 ballad",
+      "verdict": "supported",
+      "note": "Written by Lennon and McCartney, first released by The Beatles in 1964."
+    },
+    {
+      "claim": "Far Out: Cobain a notorious Beatles fan who covered the band only once on record; distrust of McCartney makes the cover more interesting",
+      "verdict": "supported",
+      "note": "Matches the Far Out summary."
+    },
+    {
+      "claim": "Far Out hears the version as a goth-tinged reimagining",
+      "verdict": "supported",
+      "note": "Attributed to Far Out."
+    },
+    {
+      "claim": "Lyric quotes: 'Bright are the stars that shine / Dark is the sky' and 'As long as I / Hold you near me'",
+      "verdict": "corrected",
+      "note": "The quotes match the lyrics, but together they ran four lines, over the three-line limit. Trimmed the second to 'Hold you near me'."
+    },
+    {
+      "claim": "The darkness is there from the start",
+      "verdict": "removed",
+      "note": "This is a positional claim, and the dark sky first appears in the second verse. Removed."
+    },
+    {
+      "claim": "The verses are in the third person, then the song turns to address 'you'",
+      "verdict": "supported",
+      "note": "Follows the lyrics: 'she gives me', 'my lover', then 'Hold you near me'. Kept as interpretation."
+    },
+    {
+      "claim": "Morgen compared the collection to Dylan's Bootleg Series and said it shows a side of Cobain he couldn't fully explore in a three-piece band",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "The album gathers covers, demos and spoken pieces recorded 1986–1994",
+      "verdict": "supported",
+      "note": "Wikipedia, as given in the packet."
+    },
+    {
+      "claim": "Cobain died in 1994 at 27",
+      "verdict": "supported",
+      "note": "The packet says he died in April 1994, aged 27."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1942,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.092074,
+        "detail": "24367 in / 2334 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.060884,
+        "detail": "2646 in / 2515 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.041254,
+        "detail": "3742 in / 3377 out"
+      }
+    ]
+  }
+}

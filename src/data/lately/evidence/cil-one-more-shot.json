@@ -1,0 +1,186 @@
+{
+  "spotifyId": "79uXvsyNG97zMLLq4bloRa",
+  "reviewedAt": "2026-11-20T17:20:04.499Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8425926"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"One More Shot\" was released on October 5, 2022 as a single by Cil. It is credited to Cillables, LLC under exclusive license to Warner Records, in association with Interlude Records.",
+        "source": "https://open.spotify.com/track/79uXvsyNG97zMLLq4bloRa"
+      },
+      {
+        "claim": "The song was written by Annika Wells, Cil (Cecilia Webber) and Dan Gleyzer (Kaizoku).",
+        "source": "https://www.shazam.com/en-us/song/1674586637/one-more-shot-one-take-version"
+      },
+      {
+        "claim": "The song was produced by Bēkon, Chakra and Pete G (Peter Gonzales).",
+        "source": "https://readdork.com/lyrics/cil-one-more-shot-one-take-version-2023"
+      },
+      {
+        "claim": "Credits list Cil on vocals, Chakra on guitar and Bekon on mellotron. Dale Becker is listed under production and engineering.",
+        "source": "https://www.shazam.com/en-us/song/1674586637/one-more-shot-one-take-version"
+      },
+      {
+        "claim": "Cil describes the song's origin in a Zach Sang Show interview, which covers how it came out of a freestyle session, her TikTok journey, and the moment it went viral.",
+        "source": "https://www.tiktok.com/@zachsangshow/video/7544148757403733279"
+      },
+      {
+        "claim": "It was Cil's debut single. It continued to gain traction on TikTok, and it was later included on her EP Tears Dry On Their Own.",
+        "source": "https://5centsound.com/blog/give-cil-one-shot-to-be-your-next-favorite-artist/"
+      },
+      {
+        "claim": "Streaming platforms list the song on the June 2, 2023 EP Tears Dry On Their Own. A separate \"One Take Version\" single followed on March 3, 2023.",
+        "source": "https://www.shazam.com/song/1689836034/one-more-shot"
+      },
+      {
+        "claim": "Cil moved to Los Angeles alone in April 2021 at age 18 to pursue music. She cites Stevie Nicks, Etta James and Aretha Franklin, and later Amy Winehouse, Adele and Lana Del Rey, as influences.",
+        "source": "https://5centsound.com/blog/give-cil-one-shot-to-be-your-next-favorite-artist/"
+      },
+      {
+        "claim": "Cil is a Colorado-born, LA-based singer-songwriter who makes R&B-infused pop. \"One More Shot\" and \"Bloodsucker\" are her best-known singles, and her 2025 EP is don't hold me accountable.",
+        "source": "https://www.iheart.com/podcast/269-this-song-is-yours-81560774/episode/the-ting-tings-279507549/"
+      },
+      {
+        "claim": "Cil says \"One More Shot\" was the only song out when she began touring. She names it, with \"Bloodsucker\" and \"pretty years\", as a guaranteed part of every live show.",
+        "source": "https://theunseenmag.de/cil-interview"
+      }
+    ],
+    "lineage": "It sits in a contemporary pop tradition that draws on R&B and the pop-star legacy of the last decade, with influences ranging from Stevie Nicks and Aretha Franklin to Amy Winehouse, Adele and Lana Del Rey.",
+    "genres": [
+      "pop",
+      "r&b"
+    ]
+  },
+  "draft": "**One More Shot** starts with a victory lap. The narrator announces a win before telling us what the fight was, and by the time the details arrive, the win looks a lot like a wound. Cil builds the song on one pun. A \"shot\" is a bullet, and a shot is a second chance. The chorus keeps both loaded at once, so every promise of forgiveness lands as a threat, and every threat sounds like someone begging to be asked back.\n\nThe image that sets it up comes early: \"You dressed me in white.\" The next line finishes it as a burial instead of a wedding. Bridal white becomes the clothes you lay a body out in. The narrator would have stayed until the end. Instead the partner \"gave me the gun.\" That gift is the betrayal itself, which hands over the power to punish. The rage is real, but so is the bitterness of having been given no choice but to feel it.\n\nThe second verse is where the song stops posing. Before the cheating there was tenderness: holding someone all night, then noticing the purple under their eyes. The narrator clocks the drug use first, then the lie about \"that girl,\" then the bruise on the neck. The detail that cuts deepest is \"I'm not surprised.\" That isn't fury. It's exhaustion, the sound of someone who saw it coming and loved them anyway. Then comes the line that gives the whole act away: \"Well that just depends if you're sorry.\" The killer wants an apology. The chorus says \"Blood on my hands, you're already dead,\" and in the next breath offers one more shot. Pride and longing never settle. The song ends on the same knot, with the narrator promising to put the partner to rest, a phrase that could mean a funeral or finally letting go.\n\nCil wrote it with Annika Wells and Dan Gleyzer (Kaizoku). It came out of a freestyle session, and the lyric has that loose, talked-out feel, with scraps of argument stitched into hooks. Bēkon, Chakra and Pete G produced it, with Chakra on guitar and Bēkon on mellotron. It was her debut single, released on Warner a year and a half after she moved to Los Angeles alone at 18. It caught on through TikTok and became the only song she had out when she started touring. She still calls it a fixture of every show. Her influences run through Stevie Nicks, Etta James, Amy Winehouse and Lana Del Rey, and the song carries that line's taste for heartbreak dressed up as danger.\n\nIt sticks because you can hear the bluff and still believe the hurt, and every time the chorus comes back you're waiting to see whether the narrator pulls the trigger or opens the door.",
+  "factCheck": [
+    {
+      "claim": "The song opens on a victory lap: 'Oh my god / I won'.",
+      "verdict": "supported",
+      "note": "The lyrics open with these lines. The reading of them is interpretation."
+    },
+    {
+      "claim": "A 'shot' is both a bullet and a second chance.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics ('one more shot', 'gave me the gun')."
+    },
+    {
+      "claim": "Cil builds the song on one pun.",
+      "verdict": "corrected",
+      "note": "Cil is one of three credited writers (Annika Wells, Cil, Dan Gleyzer). Reworded so the song, not Cil alone, is built on the pun."
+    },
+    {
+      "claim": "Quote: 'You dressed me in white.'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator would have stayed until the end; the partner 'gave me the gun'.",
+      "verdict": "supported",
+      "note": "Matches 'I would've stayed 'til death took me out' and 'And gave me the gun'. The gun line is now paraphrased to keep the quote count within the limit."
+    },
+    {
+      "claim": "Quote: 'I'm not surprised.'",
+      "verdict": "supported",
+      "note": "Matches 'Oh, I'm not surprised'."
+    },
+    {
+      "claim": "The narrator notices the purple under the eyes, the drug use, 'that girl', and the bruise on the neck.",
+      "verdict": "supported",
+      "note": "All appear in the second verse."
+    },
+    {
+      "claim": "Quote: 'Well that just depends if you're sorry.'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Quote: 'Blood on my hands, you're already dead.'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. Paraphrased in the rewrite to stay within the three-quote limit."
+    },
+    {
+      "claim": "The song ends with the narrator promising to put the partner to rest.",
+      "verdict": "corrected",
+      "note": "The lyrics' structure shows the final chorus, but the review shouldn't claim a sound or arc ending. Reworded to say the chorus returns to that promise."
+    },
+    {
+      "claim": "Cil wrote it with Annika Wells and Dan Gleyzer (Kaizoku).",
+      "verdict": "supported",
+      "note": "Shazam credits."
+    },
+    {
+      "claim": "It came out of a freestyle session.",
+      "verdict": "supported",
+      "note": "Cil's Zach Sang Show interview, as described in the packet."
+    },
+    {
+      "claim": "Bēkon, Chakra and Pete G produced it; Chakra on guitar, Bēkon on mellotron.",
+      "verdict": "supported",
+      "note": "Production and credits facts."
+    },
+    {
+      "claim": "Debut single, released on Warner, a year and a half after she moved to LA alone at 18.",
+      "verdict": "supported",
+      "note": "She moved in April 2021 at 18 and the single came out October 5, 2022, about 18 months later. Warner Records is the label."
+    },
+    {
+      "claim": "It caught on through TikTok and was the only song she had out when she started touring.",
+      "verdict": "supported",
+      "note": "5centsound and The Unseen Mag."
+    },
+    {
+      "claim": "She still calls it a fixture of every show.",
+      "verdict": "corrected",
+      "note": "She names it as a guaranteed part of every live show. 'Still' isn't supported, so it was dropped."
+    },
+    {
+      "claim": "Her influences run through Stevie Nicks, Etta James, Amy Winehouse and Lana Del Rey.",
+      "verdict": "supported",
+      "note": "Listed influences."
+    },
+    {
+      "claim": "The song carries that line's taste for heartbreak dressed up as danger.",
+      "verdict": "supported",
+      "note": "Interpretive comparison built on the listed influences."
+    },
+    {
+      "claim": "The lyric has a loose, talked-out feel with scraps of argument stitched into hooks.",
+      "verdict": "supported",
+      "note": "Interpretation of the lyrics, not a sound claim."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2202,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.121352,
+        "detail": "38471 in / 1441 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049068,
+        "detail": "2877 in / 1878 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049804,
+        "detail": "4032 in / 4174 out"
+      }
+    ]
+  }
+}

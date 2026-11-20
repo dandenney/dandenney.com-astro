@@ -1,0 +1,157 @@
+{
+  "spotifyId": "4cHzLJYgiEO0gd46pioLWV",
+  "reviewedAt": "2026-11-20T17:25:15.027Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2887480"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Let's Talk About Your Hair\" is track 6 on Have Mercy's album The Earth Pushed Back, released May 21, 2013, and runs 3:55.",
+        "source": "https://ruderecords.bandcamp.com/album/the-earth-pushed-back"
+      },
+      {
+        "claim": "Streaming-service credits list the song's composers as Brian Swindle, Andrew Johnson, Nick Woolford and Aaron Alt.",
+        "source": "https://www.deezer.com/us/track/1759832797"
+      },
+      {
+        "claim": "A lyrics and credits page lists the song as written by Brian Swindle and produced by J. Robbins.",
+        "source": "https://readdork.com/lyrics/have-mercy-let-s-talk-about-your-hair-2013"
+      },
+      {
+        "claim": "Album credits list Brian Swindle, Aaron Alt, Nick Woolford and Andrew Johnson as performers. J. Robbins is credited as producer, recording engineer and mixer, Justin Fogleman as engineer, and Dan Coutant as mastering engineer.",
+        "source": "https://rateyourmusic.com/release/album/have-mercy/the-earth-pushed-back/"
+      },
+      {
+        "claim": "The album was recorded at The Magpie Cage in the band's hometown of Baltimore, with J. Robbins producing.",
+        "source": "https://ghettoblastermagazine.com/features/bands-on-bands/bands-on-bands-brian-swindle-have-mercy-on-dear-and-the-headlights-drunk-like-bible-times/"
+      },
+      {
+        "claim": "The song was released as a new-song debut ahead of the album, which came out via Topshelf Records.",
+        "source": "https://www.thepunksite.com/news/topshelf-records-lets-talk-about-your-hair/"
+      },
+      {
+        "claim": "Swindle said The Earth Pushed Back is about one relationship he had, though it also covers multiple subjects. He said the LP was recorded in five days.",
+        "source": "https://www.punknews.org/article/54467/interviews-have-mercy"
+      },
+      {
+        "claim": "Swindle later said the album was rushed. The band went in with a set number of songs and still had to come up with two or three more in the studio. He also said it took four days to record.",
+        "source": "https://www.dailycal.org/archives/have-mercys-vocalist-talks-hopeless-records-and-crying-fans/article_09b5ac0e-7613-5963-bbab-bccd50a74e0f.html"
+      },
+      {
+        "claim": "At the band's first headlining tour show in Baltimore, fans screamed back the lyrics to \"Hell\" and \"Let's Talk About Your Hair\".",
+        "source": "https://wers.org/have-mercy-frontman-discusses-sold-out-hometown-show/"
+      },
+      {
+        "claim": "The Earth Pushed Back was Have Mercy's debut full-length. It followed the 2012 EP My Oldest Friend and was followed by A Place of Our Own (2014), after the band moved from Topshelf to Hopeless Records.",
+        "source": "https://www.dailycal.org/archives/have-mercys-vocalist-talks-hopeless-records-and-crying-fans/article_09b5ac0e-7613-5963-bbab-bccd50a74e0f.html"
+      }
+    ],
+    "lineage": "Rate Your Music places the album in the emo revival movement, with melodic, melancholic emo, post-hardcore and Midwest emo descriptors.",
+    "genres": [
+      "emo",
+      "post-hardcore",
+      "alternative rock"
+    ]
+  },
+  "draft": "The breakup in **Let's Talk About Your Hair** happens in a single pronoun. The song opens with two people going to bed and dreaming of better things: a god, a devil, the narrator, and a partner who \"lost your wings.\" When that verse comes back late in the song, the dream is word for word the same, but the \"we\" has become an \"I.\" Have Mercy never point at the change. They let the repeat do the work, and the bed is half empty before you notice.\n\nEverything between those verses is a conversation that can't happen. The chorus opens on a knot of a line: \"But I know that you know that I know that you don't really care.\" Each clause stacks on the last until there's nowhere left to pretend. Both people can see the end, and each can see the other seeing it. Then comes the dodge, offered almost gently: \"Let's talk about your hair and how it's grown.\" Small talk becomes the last thing the two of them can still share. It's a kindness and a surrender at once, and the line right after admits they're getting nowhere. By the final choruses even that shrinks. \"And how it's grown\" drops away, and the small talk runs out too.\n\nWhat keeps the song from being pure resignation is the hope the narrator can't quite kill. Early on they admit they always wondered when the love stopped and still can't see it clearly. In the middle they ask about the man in the partner's dreams, then add a short, exposed question: \"And was it me?\" Certainty that it's over sits right next to a wish to have been the one dreamed about, and the song never settles which feeling wins.\n\nBrian Swindle has said Have Mercy's debut full-length, *The Earth Pushed Back*, is about one relationship he had, and this song plays like that record's still center. The band (Swindle, Andrew Johnson, Nick Woolford and Aaron Alt) made it fast in their hometown of Baltimore at The Magpie Cage, with J. Robbins producing, engineering and mixing. Swindle later called the sessions rushed, with two or three songs still being written in the studio. The album sits in the emo revival, and the song takes that tradition's habit of turning a breakup into an argument the narrator holds with themselves, circling the same words until they wear smooth.\n\nAt the band's first headlining show in Baltimore, fans screamed these lyrics back at them. A song about two people with nothing left to say became something a room could shout together.\n\nIt sticks because most people have sat through the conversation where everyone knows and nobody says it, and this song hands you the knowing part to repeat until it almost feels like an answer.",
+  "factCheck": [
+    {
+      "claim": "The song opens with 'We went to bed that night' and the verse returns later as 'I went to bed that night' with the rest of the verse unchanged ('A god, a devil, and me / And how you lost your wings').",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The verse repeats after the choruses with 'We' changed to 'I'."
+    },
+    {
+      "claim": "Quoted lines: 'lost your wings', 'But I know that you know that I know that you don't really care', 'Let's talk about your hair and how it's grown', 'And was it me?'",
+      "verdict": "supported",
+      "note": "All quotes match the lyrics exactly."
+    },
+    {
+      "claim": "The line after the hair line admits they're getting nowhere.",
+      "verdict": "supported",
+      "note": "'And how we know that we're not getting anywhere' follows it."
+    },
+    {
+      "claim": "In the final choruses 'And how it's grown' drops away.",
+      "verdict": "supported",
+      "note": "The last repeats read 'Let's talk about your hair / And how we know...' with no 'how it's grown'."
+    },
+    {
+      "claim": "The narrator always wondered when the love stopped and can't see clearly; later asks about the man in the partner's dreams.",
+      "verdict": "supported",
+      "note": "Based on 'I always wondered when you stopped loving me / But I can't see clearly' and 'Tell me about the man in your dreams / And was it me?'. 'In the middle' was changed to 'Then' to avoid a positional claim."
+    },
+    {
+      "claim": "The small talk is 'offered almost gently' and 'And was it me?' is 'exposed'.",
+      "verdict": "removed",
+      "note": "These describe delivery or sound, and no listening notes support them. 'Exposed' was dropped and 'almost gently' was cut."
+    },
+    {
+      "claim": "Brian Swindle has said The Earth Pushed Back is about one relationship he had; it is Have Mercy's debut full-length.",
+      "verdict": "supported",
+      "note": "Supported by the Punknews and Daily Cal sources."
+    },
+    {
+      "claim": "Band members Swindle, Andrew Johnson, Nick Woolford and Aaron Alt.",
+      "verdict": "supported",
+      "note": "Listed as performers in the album credits."
+    },
+    {
+      "claim": "Made fast in Baltimore (the band's hometown) at The Magpie Cage with J. Robbins producing, engineering and mixing.",
+      "verdict": "supported",
+      "note": "Recorded in four to five days, per Swindle. Robbins is credited as producer, recording engineer and mixer."
+    },
+    {
+      "claim": "Swindle later called the sessions rushed, with two or three songs still being written in the studio.",
+      "verdict": "corrected",
+      "note": "Swindle called the album rushed. The wording was adjusted to match."
+    },
+    {
+      "claim": "The album sits in the emo revival.",
+      "verdict": "supported",
+      "note": "The album is placed in the emo revival movement."
+    },
+    {
+      "claim": "The song takes that tradition's habit of turning a breakup into an argument the narrator holds with themselves.",
+      "verdict": "removed",
+      "note": "This is an unsupported claim about the genre's history and habits. It was recast as a reading of the song itself."
+    },
+    {
+      "claim": "At the band's first headlining show in Baltimore, fans screamed these lyrics back.",
+      "verdict": "corrected",
+      "note": "It was the first headlining tour show in Baltimore. Fans screamed back lyrics to 'Hell' and this song. The wording was tightened."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1846,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080144,
+        "detail": "21672 in / 1680 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.058408,
+        "detail": "2957 in / 2329 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046076,
+        "detail": "4078 in / 3792 out"
+      }
+    ]
+  }
+}

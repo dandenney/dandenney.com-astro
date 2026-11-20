@@ -1,0 +1,161 @@
+{
+  "spotifyId": "3SsGrCb1eaSpGhRDqPaTln",
+  "reviewedAt": "2026-11-20T17:12:55.120Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": null
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2837273"
+  },
+  "listening": null,
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Snowbank Blues is a track on The Backseat Lovers' album Waiting to Spill, released October 28, 2022 via Capitol Records.",
+        "source": "https://en.wikipedia.org/wiki/The_Backseat_Lovers"
+      },
+      {
+        "claim": "Snowbank Blues is credited to Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward as writers and composers.",
+        "source": "https://www.deezer.com/en/track/1976803177"
+      },
+      {
+        "claim": "Waiting to Spill was produced by six-time Grammy-winning producer David Greenbaum. AllMusic's credits list him as engineer, mixer and producer.",
+        "source": "https://www.allmusic.com/album/waiting-to-spill-mw0003783792"
+      },
+      {
+        "claim": "The Backseat Lovers lineup on the album was Joshua Harmon (lead vocals, guitar), Jonas Swanson (lead guitar, vocals), KJ Ward (bass) and Juice Welch (drums, vocals).",
+        "source": "https://www.yahoo.com/entertainment/backseat-lovers-break-down-album-150057933.html"
+      },
+      {
+        "claim": "Harmon said Snowbank Blues began as a way to make his father laugh by imitating the riff of a classic country tune. He then saw potential in the parody.",
+        "source": "https://www.yahoo.com/entertainment/backseat-lovers-break-down-album-150057933.html"
+      },
+      {
+        "claim": "Harmon said he and Swanson made a garage-band demo in about two hours, using a rice-filled Altoid case as a shaker and improvising the structure. They then tried to capture that DIY feel in the studio recording.",
+        "source": "https://www.yahoo.com/entertainment/backseat-lovers-break-down-album-150057933.html"
+      },
+      {
+        "claim": "A stop-motion video for Snowbank Blues, directed and animated by Emmy-nominated Colin Lepper, premiered at the Utah Museum of Contemporary Art and was released in March 2023.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Video-The-Backseat-Lovers-Share-New-Video-For-Snowbank-Blues-20230329"
+      },
+      {
+        "claim": "The band were fully independent, self-producing and self-funding until they finished Waiting to Spill, and then signed to Capitol Records.",
+        "source": "https://atwoodmagazine.com/blws-the-backseat-lovers-interview-waiting-to-spill/"
+      },
+      {
+        "claim": "The band formed in 2018 in Provo, Utah, when Joshua Harmon and Jonas Swanson met in a queue for an open-mic night. Their self-released 2019 debut was When We Were Friends.",
+        "source": "https://www.amazon.com/Snowbank-Blues/dp/B0F411BT4V"
+      },
+      {
+        "claim": "Lyrics from Snowbank Blues address hiding anxiety behind a smile and performing on stage. A Las Vegas Weekly feature quotes them.",
+        "source": "https://lasvegasweekly.com/ae/music/2023/apr/27/the-backseat-lovers-find-comfort-in-growing-pains/"
+      }
+    ],
+    "lineage": "The Backseat Lovers are a Utah indie-rock band whose influences include Cage the Elephant, Arctic Monkeys, Vampire Weekend and Pinegrove. Their parents' classic rock and Radiohead were also formative.",
+    "genres": [
+      "indie rock",
+      "alternative rock"
+    ]
+  },
+  "draft": "The loneliest line in **Snowbank Blues** comes early and almost slips past: \"Catching up on sleep's harder when I'm waking up next to me.\" Someone else should be there. Instead the narrator wakes beside the one person they've had too much of. Everything after that is a list of ways to get away from yourself: the job, the smoke with friends, the girl down the road, the bus out of town tomorrow.\n\nThe Backseat Lovers wrote it as a band, with Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward all credited. Harmon has said it began as a joke, a way to make his father laugh by imitating the riff of a classic country tune. Then he heard something real under the parody. He and Swanson cut a garage demo in about two hours, improvising the structure and shaking a rice-filled Altoid tin for percussion, and the band tried to keep that homemade feel when they recorded it for *Waiting to Spill* with producer David Greenbaum. The country bones explain the title and the shape of the complaints. Working for the man, a woman waiting in the wings, a town snowed in. These are old blues furniture, and the song rearranges them for someone who can't stand still.\n\nWhat makes it more than a pastiche is how honest it is about guilt. The temptation verse doesn't pretend to be innocent. The narrator asks how they can say no when the one they love is a thousand miles away, and the question is half excuse, half confession. Then the distance flips. By the third verse the narrator is the one who'll be gone tomorrow, surrounded by coffee, cameras and people they've had enough of.\n\nThat's where the anxiety comes up. Something on their chest is hurting their health, and the smile everyone sees isn't for them. Then comes the strangest line: \"Take the stage and put the mask back on the shelf.\" It might mean the stage is the only place they can stop pretending. It might mean the mask is just waiting there for the next show. The song doesn't choose.\n\nThe chorus wants something simple, the windows rolled down, and the snow won't allow it. Then the last verse turns on the person who left. The narrator grants they had to go, but they had no right \"To take the sun.\" Understanding and accusation sit together in that line, and neither one wins.\n\nThe song lets you hold a grudge and a heartache at the same time, and admit you're not sure which one is keeping you up.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"Catching up on sleep's harder when I'm waking up next to me.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator's list of escapes includes \"the bus out of town tomorrow\"",
+      "verdict": "corrected",
+      "note": "The lyrics say \"Tomorrow I'll be gone\" and mention no bus. Changed to the plan to be gone tomorrow."
+    },
+    {
+      "claim": "Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward are all credited as writers",
+      "verdict": "supported",
+      "note": "Matches the Deezer writer credits. \"Wrote it as a band\" is a fair reading, since these four are the lineup."
+    },
+    {
+      "claim": "Harmon said it began as a joke to make his father laugh by imitating the riff of a classic country tune",
+      "verdict": "supported",
+      "note": "Matches the Yahoo interview."
+    },
+    {
+      "claim": "Then he heard something real under the parody",
+      "verdict": "corrected",
+      "note": "The source says he saw potential in the parody. Reworded to match."
+    },
+    {
+      "claim": "He and Swanson cut a garage demo in about two hours, improvising the structure, with a rice-filled Altoid tin as a shaker",
+      "verdict": "supported",
+      "note": "Supported. The source says \"case\", so the wording was changed to match."
+    },
+    {
+      "claim": "The band tried to keep that homemade feel in the studio recording for Waiting to Spill with producer David Greenbaum",
+      "verdict": "supported",
+      "note": "Greenbaum produced the album, and the source says they tried to capture the DIY feel in the studio."
+    },
+    {
+      "claim": "The country bones explain the title; woman waiting in the wings; these are old blues furniture",
+      "verdict": "corrected",
+      "note": "The title claim is unsupported, and no \"woman waiting in the wings\" appears in the lyrics (a girl sends looks). The claim about blues tradition is a genre-history claim with no support. Rewritten as an interpretation of the complaints without genre-history assertions."
+    },
+    {
+      "claim": "The narrator asks how they can say no when the one they love is a thousand miles away",
+      "verdict": "corrected",
+      "note": "The lyric is \"How can I say no? When you're a thousand miles away.\" Nothing says the \"you\" is a loved one. Reworded."
+    },
+    {
+      "claim": "By the third verse the narrator is surrounded by coffee, cameras and people they've had enough of",
+      "verdict": "corrected",
+      "note": "The lyrics give coffee in a cup, cameras in the face, and enough of the people in the place. Verse numbering and \"surrounded by coffee\" were loosened."
+    },
+    {
+      "claim": "Something on their chest is hurting their health; the smile isn't for them; the anxiety",
+      "verdict": "supported",
+      "note": "Matches the lyrics and the Las Vegas Weekly summary about hiding anxiety behind a smile."
+    },
+    {
+      "claim": "Lyric quote: \"Take the stage and put the mask back on the shelf.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Windows-down lines repeat as a chorus; snow blocks it",
+      "verdict": "supported",
+      "note": "The lines repeat in the lyrics."
+    },
+    {
+      "claim": "The narrator grants they had to go but had no right \"To take the sun.\"",
+      "verdict": "supported",
+      "note": "Matches \"I know you had to leave / But you didn't have the right / To take the sun.\""
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2356,
+    "steps": [
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13991599999999998,
+        "detail": "47273 in / 1537 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0526,
+        "detail": "2870 in / 2056 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.043074,
+        "detail": "3947 in / 3518 out"
+      }
+    ]
+  }
+}
