@@ -1,160 +1,193 @@
 {
   "spotifyId": "3SsGrCb1eaSpGhRDqPaTln",
-  "reviewedAt": "2026-11-20T17:12:55.120Z",
+  "reviewedAt": "2026-11-20T17:59:06.181Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/2837273"
   },
-  "listening": null,
+  "listening": "Pass 1:\nHere's what can be heard in the excerpt:\n\n**Instruments and how they're played:**\nAcoustic guitar plays a fingerpicked pattern, then transitions to strumming. Electric bass plays a simple, sustained line. Drums enter later, playing a straightforward beat with kick, snare, and hi-hat.\n\n**Tempo and groove feel:**\nThe tempo is moderate. The groove starts relaxed and gentle, then becomes more driving and rhythmic with the entry of drums and strummed guitar.\n\n**Vocals:**\nA single voice sings with a slightly raspy, mid-range character. The delivery is conversational and melodic. No harmonies are present.\n\n**Production:**\nThe sound is dry and intimate, suggesting a small room. The texture is clear and unadorned. The production feels raw rather than highly polished.\n\n**Arrangement:**\nThe excerpt begins with acoustic guitar and bass. The voice enters shortly after. Drums enter around the halfway point, and the acoustic guitar shifts to strumming, building the intensity and rhythmic drive.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern, with a clean, bright tone. A second acoustic guitar strums chords, providing rhythmic drive. The tempo is moderate, with a relaxed, slightly swung feel.\n\nA male voice sings in a clear, slightly nasal tone, with a conversational delivery. He sings the melody in a relatively narrow range. No harmonies are present.\n\nThe production sounds dry and intimate, with a close-miked quality. The texture is clean and unadorned, with a raw, unpolished feel.\n\nThe excerpt begins with the fingerpicked acoustic guitar and vocals. The strummed acoustic guitar enters shortly after the vocals begin, adding fullness. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\n- **Instruments and how they're played:** A clean electric guitar plays arpeggiated chords with a slight tremolo effect. A bass guitar plays a simple, walking line. Drums enter later, playing a straightforward rock beat with kick, snare, and hi-hat.\n- **Tempo and groove feel:** The tempo is moderate. The groove feels relaxed and slightly melancholic at first, then becomes more driving and urgent when the drums enter.\n- **Vocals:** A male voice sings with a slightly raspy, mid-range character. The delivery is conversational and expressive. There are no harmonies.\n- **Production:** The room sounds open, with a natural reverb. The texture is clean and clear. The production feels polished but not overly slick, retaining a raw edge.\n- **Arrangement:** The excerpt begins with just electric guitar and bass. Vocals enter shortly after. Drums enter around the halfway point, adding significant rhythmic drive and energy to the arrangement.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "Snowbank Blues is a track on The Backseat Lovers' album Waiting to Spill, released October 28, 2022 via Capitol Records.",
-        "source": "https://en.wikipedia.org/wiki/The_Backseat_Lovers"
-      },
-      {
-        "claim": "Snowbank Blues is credited to Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward as writers and composers.",
+        "claim": "\"Snowbank Blues\" is credited to all four band members as writers and composers: Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward.",
         "source": "https://www.deezer.com/en/track/1976803177"
       },
       {
-        "claim": "Waiting to Spill was produced by six-time Grammy-winning producer David Greenbaum. AllMusic's credits list him as engineer, mixer and producer.",
-        "source": "https://www.allmusic.com/album/waiting-to-spill-mw0003783792"
+        "claim": "David Greenbaum is credited as producer, mixer and engineer on the album, and on \"Snowbank Blues\" specifically.",
+        "source": "https://www.qobuz.com/us-en/album/waiting-to-spill-the-backseat-lovers/gzkigaqtrywec"
       },
       {
-        "claim": "The Backseat Lovers lineup on the album was Joshua Harmon (lead vocals, guitar), Jonas Swanson (lead guitar, vocals), KJ Ward (bass) and Juice Welch (drums, vocals).",
+        "claim": "On \"Snowbank Blues\", Harmon is credited with acoustic guitar and vocals, Swanson with electric guitar and background vocals, and Welch with drums. Additional performers credited include Emily Elkin, Heather Lockie and Eric Clark.",
+        "source": "https://www.qobuz.com/us-en/album/waiting-to-spill-the-backseat-lovers/gzkigaqtrywec"
+      },
+      {
+        "claim": "According to Harmon, the song began as a way to make his father laugh by imitating the riff of a classic country tune. He then realised the parody had potential.",
         "source": "https://www.yahoo.com/entertainment/backseat-lovers-break-down-album-150057933.html"
       },
       {
-        "claim": "Harmon said Snowbank Blues began as a way to make his father laugh by imitating the riff of a classic country tune. He then saw potential in the parody.",
+        "claim": "Harmon said he and Swanson made a garage-band demo in about two hours, using a rice-filled Altoid case as a shaker and improvising the structure. They tried to capture the same DIY feel in the studio recording.",
         "source": "https://www.yahoo.com/entertainment/backseat-lovers-break-down-album-150057933.html"
       },
       {
-        "claim": "Harmon said he and Swanson made a garage-band demo in about two hours, using a rice-filled Altoid case as a shaker and improvising the structure. They then tried to capture that DIY feel in the studio recording.",
-        "source": "https://www.yahoo.com/entertainment/backseat-lovers-break-down-album-150057933.html"
+        "claim": "A stop-motion video for \"Snowbank Blues\", animated and directed by Colin Lepper, premiered at the Utah Museum of Contemporary Art.",
+        "source": "https://ghettoblastermagazine.com/uncategorized/the-backseat-lovers-share-video-for-snowbank-blues/"
       },
       {
-        "claim": "A stop-motion video for Snowbank Blues, directed and animated by Emmy-nominated Colin Lepper, premiered at the Utah Museum of Contemporary Art and was released in March 2023.",
-        "source": "https://www.broadwayworld.com/bwwmusic/article/Video-The-Backseat-Lovers-Share-New-Video-For-Snowbank-Blues-20230329"
+        "claim": "It is track 6 on Waiting to Spill and runs about 3:17.",
+        "source": "https://www.albumoftheyear.org/song/58301-snowbank-blues/"
       },
       {
-        "claim": "The band were fully independent, self-producing and self-funding until they finished Waiting to Spill, and then signed to Capitol Records.",
-        "source": "https://atwoodmagazine.com/blws-the-backseat-lovers-interview-waiting-to-spill/"
+        "claim": "Waiting to Spill was released October 28, 2022 on Capitol Records. It is the band's sophomore album and was produced by six-time Grammy-winning producer David Greenbaum.",
+        "source": "https://www.thecurrent.org/feature/2022/12/13/the-backseat-lovers-perform-in-the-current-studio"
       },
       {
-        "claim": "The band formed in 2018 in Provo, Utah, when Joshua Harmon and Jonas Swanson met in a queue for an open-mic night. Their self-released 2019 debut was When We Were Friends.",
+        "claim": "The band self-produced their 2019 debut When We Were Friends and had not worked with a producer before Greenbaum.",
+        "source": "https://www.yuckmagazine.co.uk/features/backseat-lovers-new-album-waiting-spill-the-utah-band"
+      },
+      {
+        "claim": "The Backseat Lovers formed in 2018 in Provo, Utah. Joshua Harmon and Jonas Swanson, who met in a queue for an open-mic night, brought in Juice Welch on drums and, later, KJ Ward on bass.",
         "source": "https://www.amazon.com/Snowbank-Blues/dp/B0F411BT4V"
-      },
-      {
-        "claim": "Lyrics from Snowbank Blues address hiding anxiety behind a smile and performing on stage. A Las Vegas Weekly feature quotes them.",
-        "source": "https://lasvegasweekly.com/ae/music/2023/apr/27/the-backseat-lovers-find-comfort-in-growing-pains/"
       }
     ],
-    "lineage": "The Backseat Lovers are a Utah indie-rock band whose influences include Cage the Elephant, Arctic Monkeys, Vampire Weekend and Pinegrove. Their parents' classic rock and Radiohead were also formative.",
+    "lineage": "The song sits in the 2020s Utah indie-rock tradition, with influences the band has cited including Cage the Elephant, Arctic Monkeys, Vampire Weekend and Pinegrove.",
     "genres": [
       "indie rock",
       "alternative rock"
     ]
   },
-  "draft": "The loneliest line in **Snowbank Blues** comes early and almost slips past: \"Catching up on sleep's harder when I'm waking up next to me.\" Someone else should be there. Instead the narrator wakes beside the one person they've had too much of. Everything after that is a list of ways to get away from yourself: the job, the smoke with friends, the girl down the road, the bus out of town tomorrow.\n\nThe Backseat Lovers wrote it as a band, with Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward all credited. Harmon has said it began as a joke, a way to make his father laugh by imitating the riff of a classic country tune. Then he heard something real under the parody. He and Swanson cut a garage demo in about two hours, improvising the structure and shaking a rice-filled Altoid tin for percussion, and the band tried to keep that homemade feel when they recorded it for *Waiting to Spill* with producer David Greenbaum. The country bones explain the title and the shape of the complaints. Working for the man, a woman waiting in the wings, a town snowed in. These are old blues furniture, and the song rearranges them for someone who can't stand still.\n\nWhat makes it more than a pastiche is how honest it is about guilt. The temptation verse doesn't pretend to be innocent. The narrator asks how they can say no when the one they love is a thousand miles away, and the question is half excuse, half confession. Then the distance flips. By the third verse the narrator is the one who'll be gone tomorrow, surrounded by coffee, cameras and people they've had enough of.\n\nThat's where the anxiety comes up. Something on their chest is hurting their health, and the smile everyone sees isn't for them. Then comes the strangest line: \"Take the stage and put the mask back on the shelf.\" It might mean the stage is the only place they can stop pretending. It might mean the mask is just waiting there for the next show. The song doesn't choose.\n\nThe chorus wants something simple, the windows rolled down, and the snow won't allow it. Then the last verse turns on the person who left. The narrator grants they had to go, but they had no right \"To take the sun.\" Understanding and accusation sit together in that line, and neither one wins.\n\nThe song lets you hold a grudge and a heartache at the same time, and admit you're not sure which one is keeping you up.",
+  "draft": "**Snowbank Blues** started as a bit. Joshua Harmon has said he was imitating the riff of a classic country tune to make his father laugh, then realised the parody had real potential. He and Jonas Swanson knocked out a garage demo in about two hours, improvising the structure and shaking a rice-filled Altoid case for percussion. That origin explains a lot. The song opens on the stock phrases of a working-stiff lament: the boss, the daily grind, smoking with friends to get through the night. Then it quietly stops joking.\n\nThe turn comes before the first verse is out. Harmon sings, \"Catching up on sleep's harder when I'm waking up next to me.\" It's a clever line, a near-pun on sleeping alone, and it's also the loneliest thing in the song. Someone is gone, a thousand miles off. The narrator is left with a girl down the road sending looks and a question he asks out loud so he doesn't have to answer it: how can he say no when you're that far away? Self-justification and longing arrive in the same breath, and the song doesn't sort them out.\n\nThen the frame widens. Coffee, cameras in his face, too many people in this place, a mask shelved and a stage to take. He admits the smile isn't for himself, that something on his chest is wearing on his health. It's the strain of being watched while missing someone. The refrain pins it to place: he'd roll the windows down if the snow hadn't swallowed the town. Even the urge to get out is snowed in. When he says tomorrow he'll be gone, maybe a thousand miles away, he's measuring himself against the distance she put between them.\n\nThe sound keeps the demo's promise. A fingerpicked guitar line, clean and bright, moves at an easy, moderate pace. Harmon's voice is slightly raspy and conversational, with no harmonies around it. Strummed chords fill things out, and when the drums arrive with a plain kick-snare-hi-hat beat, the groove stops ambling and starts to push. The production is dry and close, raw rather than buffed. That's the feel the band said they tried to carry from the garage into the studio, on their first record made with an outside producer, David Greenbaum.\n\nThe last lines drop the cool. He grants that she had to leave, and then the accusation comes: \"But you didn't have the right / To take the sun.\" It's unfair, and he half knows it. That's why it stings.\n\nThe song leaves you holding that lopsided grief, the kind that understands why someone had to go and still blames them for the cold.",
   "factCheck": [
     {
-      "claim": "Lyric quote: \"Catching up on sleep's harder when I'm waking up next to me.\"",
+      "claim": "Harmon has said he was imitating the riff of a classic country tune to make his father laugh, then realised the parody had potential",
       "verdict": "supported",
-      "note": "Matches the lyrics exactly."
+      "note": "Matches the Yahoo interview facts."
     },
     {
-      "claim": "The narrator's list of escapes includes \"the bus out of town tomorrow\"",
+      "claim": "Harmon and Swanson made a garage demo in about two hours, improvising the structure and using a rice-filled Altoid case as percussion",
+      "verdict": "supported",
+      "note": "The packet says the case was used as a shaker, which the draft's 'shaking... for percussion' matches."
+    },
+    {
+      "claim": "Opening lyrics: working for the boss, the daily grind, smoking with friends to get through the night",
+      "verdict": "supported",
+      "note": "Fair paraphrase of 'working for the man / every goddamn day' and 'smoking with my friends / to wash the nights away'."
+    },
+    {
+      "claim": "Quote: \"Catching up on sleep's harder when I'm waking up next to me\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. The 'near-pun on sleeping alone' is interpretation."
+    },
+    {
+      "claim": "A girl down the road sends looks; the narrator asks 'how can I say no' when someone is a thousand miles away",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Coffee, cameras, too many people, mask on the shelf, taking the stage, smile not for himself, something on his chest affecting his health",
+      "verdict": "supported",
+      "note": "All taken from the lyrics."
+    },
+    {
+      "claim": "Refrain about rolling the windows down while snow has swallowed the town; 'tomorrow I'll be gone, could be a thousand miles away'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The distance 'she' put between them / 'she had to leave'",
       "verdict": "corrected",
-      "note": "The lyrics say \"Tomorrow I'll be gone\" and mention no bus. Changed to the plan to be gone tomorrow."
+      "note": "The lyrics never give the gender of the person who left ('you'). Changed to gender-neutral wording."
     },
     {
-      "claim": "Joshua Harmon, Jonas Swanson, Juice Welch and KJ Ward are all credited as writers",
-      "verdict": "supported",
-      "note": "Matches the Deezer writer credits. \"Wrote it as a band\" is a fair reading, since these four are the lineup."
-    },
-    {
-      "claim": "Harmon said it began as a joke to make his father laugh by imitating the riff of a classic country tune",
-      "verdict": "supported",
-      "note": "Matches the Yahoo interview."
-    },
-    {
-      "claim": "Then he heard something real under the parody",
+      "claim": "Fingerpicked guitar line, clean and bright",
       "verdict": "corrected",
-      "note": "The source says he saw potential in the parody. Reworded to match."
+      "note": "Fingerpicked/arpeggiated and clean are backed by multiple passes. 'Bright' appears in only one pass, so it was removed."
     },
     {
-      "claim": "He and Swanson cut a garage demo in about two hours, improvising the structure, with a rice-filled Altoid tin as a shaker",
+      "claim": "Easy, moderate pace",
       "verdict": "supported",
-      "note": "Supported. The source says \"case\", so the wording was changed to match."
+      "note": "All three passes agree on a moderate, relaxed tempo."
     },
     {
-      "claim": "The band tried to keep that homemade feel in the studio recording for Waiting to Spill with producer David Greenbaum",
+      "claim": "Harmon's voice is slightly raspy and conversational, with no harmonies",
       "verdict": "supported",
-      "note": "Greenbaum produced the album, and the source says they tried to capture the DIY feel in the studio."
+      "note": "Raspy appears in passes 1 and 3, conversational in all three, and no harmonies in all three. Harmon is credited with vocals."
     },
     {
-      "claim": "The country bones explain the title; woman waiting in the wings; these are old blues furniture",
+      "claim": "Strummed chords fill things out",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on strumming."
+    },
+    {
+      "claim": "When the drums arrive with a plain kick-snare-hi-hat beat, the groove stops ambling and starts to push",
       "verdict": "corrected",
-      "note": "The title claim is unsupported, and no \"woman waiting in the wings\" appears in the lyrics (a girl sends looks). The claim about blues tradition is a genre-history claim with no support. Rewritten as an interpretation of the complaints without genre-history assertions."
+      "note": "Drums with a straightforward beat and more drive are backed by passes 1 and 3. The 'arrive'/'stops ambling' framing describes position and an arc within an excerpt of unknown position, so it was reworded as a static description."
     },
     {
-      "claim": "The narrator asks how they can say no when the one they love is a thousand miles away",
+      "claim": "Production is dry and close, raw rather than buffed",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on dry, intimate and raw."
+    },
+    {
+      "claim": "The band said they tried to carry the garage feel into the studio",
       "verdict": "corrected",
-      "note": "The lyric is \"How can I say no? When you're a thousand miles away.\" Nothing says the \"you\" is a loved one. Reworded."
+      "note": "The source attributes this to Harmon, who said 'they' tried to capture the DIY feel. Attributed to Harmon."
     },
     {
-      "claim": "By the third verse the narrator is surrounded by coffee, cameras and people they've had enough of",
-      "verdict": "corrected",
-      "note": "The lyrics give coffee in a cup, cameras in the face, and enough of the people in the place. Verse numbering and \"surrounded by coffee\" were loosened."
-    },
-    {
-      "claim": "Something on their chest is hurting their health; the smile isn't for them; the anxiety",
+      "claim": "First record made with an outside producer, David Greenbaum",
       "verdict": "supported",
-      "note": "Matches the lyrics and the Las Vegas Weekly summary about hiding anxiety behind a smile."
+      "note": "The debut was self-produced, and the band had not worked with a producer before Greenbaum."
     },
     {
-      "claim": "Lyric quote: \"Take the stage and put the mask back on the shelf.\"",
+      "claim": "Quote: \"But you didn't have the right / To take the sun\"; 'I know you had to leave'",
       "verdict": "supported",
-      "note": "Matches the lyrics exactly."
-    },
-    {
-      "claim": "Windows-down lines repeat as a chorus; snow blocks it",
-      "verdict": "supported",
-      "note": "The lines repeat in the lyrics."
-    },
-    {
-      "claim": "The narrator grants they had to go but had no right \"To take the sun.\"",
-      "verdict": "supported",
-      "note": "Matches \"I know you had to leave / But you didn't have the right / To take the sun.\""
+      "note": "Matches the lyrics. Two consecutive lines, within the limit."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.2356,
+    "totalUsd": 0.2779,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013845,
+        "detail": "1100 in / 153 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014995,
+        "detail": "1100 in / 199 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001537,
+        "detail": "1100 in / 214 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.13991599999999998,
-        "detail": "47273 in / 1537 out / 3 searches"
+        "usd": 0.139154,
+        "detail": "46862 in / 1543 out / 3 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.0526,
-        "detail": "2870 in / 2056 out"
+        "usd": 0.080924,
+        "detail": "3806 in / 3285 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.043074,
-        "detail": "3947 in / 3518 out"
+        "usd": 0.053356,
+        "detail": "4928 in / 4350 out"
       }
     ]
   }

@@ -8,9 +8,9 @@ spotifyUrl: "https://open.spotify.com/track/020YsiW7gnBiqTAmEg7eTc"
 spotifyId: "020YsiW7gnBiqTAmEg7eTc"
 albumArt: "https://i.scdn.co/image/ab67616d0000b27394b37ce199802151920635cb"
 duration: 238965
-genres: ["dream-pop", "country-pop", "indie pop"]
+genres: ["dream pop", "country pop", "art pop"]
 pubDate: "2026-11-20"
-tags: ["pixie-geldof", "dream-pop", "country-pop", "indie-pop", "2016"]
+tags: ["pixie-geldof", "dream-pop", "country-pop", "art-pop", "2016"]
 pipeline: "lately"
 sources:
   - title: "refinery29.com: Pixie Geldof Im Yours Album Track Explainer"
@@ -23,22 +23,20 @@ sources:
     url: "https://i-d.co/article/pixie-geldofs-new-video-woman-go-wild-is-a-sweet-teen-love-story/"
   - title: "Out Magazine: Pixie Geldof Tells a Teenage Love Story in ‘Woman Go Wild’ Video"
     url: "https://www.out.com/popnography/2016/11/04/pixie-geldof-tells-teenage-love-story-woman-go-wild-video"
-  - title: "northerntransmissions.com"
+  - title: "Northern Transmissions: Pixie Geldof debuts new song \"Woman Go Wild\""
     url: "https://northerntransmissions.com/pixie-geldof-debuts-new-song-woman-go-wild/"
-  - title: "i-d.vice.com"
-    url: "https://i-d.vice.com/en_uk/article/evnjmm/pixie-geldofs-new-video-woman-go-wild-is-a-sweet-teen-love-story"
   - title: "NME: Pixie Geldof On Her Emotional Debut Album"
     url: "https://www.nme.com/blogs/nme-radar/pixie-geldof-qa-on-her-new-album-762023"
 aiGenerated: true
 ---
-The most telling words in **Woman Go Wild** come in parentheses. By the last run of the chorus, Pixie Geldof has sung the title hook again and again as plain fact, and then she slips a condition in front of it: "(If you want)." The power she's been describing, his look and her coming undone, turns out to be something she's offering rather than something he takes. That small hedge holds the whole song.
+The most revealing line in **Woman Go Wild** comes late, in the section after the second chorus, and it's only four words long: "If I'm all yours." Up to that point the song reads as a full surrender. With that one "if," it becomes a bargain. The narrator hands herself over, then names the price: be wanted again and again.
 
-Geldof wrote it with Fryars and has said it came quick and easy. The lyric's shape shows why: three verses of confession, a pre-chorus where everything slows down, and a chorus that repeats until the words wear smooth. What she's confessing is not simple, though. The first verse opens on devotion and then turns on itself: "It hurts me when you hold me," she sings, and right after that she admits that nobody warned her needing someone could feel this wrong. The second verse moves toward something close to relief at being past rescue: "I'm glad no one can save me now." Pain and pleasure sit in the same breath. Geldof doesn't sort them out. She reports both.
+Surrender is where the song starts. The opening verse admits to being controlled, and the next one opens on "It hurts me when you hold me." It goes on to say that nobody warned her needing someone could feel this wrong. She knows, and she stays anyway. The third verse turns that knowledge into something close to pride: "I'm glad no one can save me now." The song never sorts out the hurt from the pleasure. It lets the narrator be wounded and thrilled in the same breath, and it lets her know this is a bad idea while choosing it on purpose. In the chorus, being looked at is what undoes her, a gaze that seems to know more about her than she does.
 
-The pre-chorus explains the pull. It's about being seen, the sense that this person knows everything about her that she doesn't. That's the feeling underneath the title. It isn't quite lust. It's the dizzy comfort of handing yourself to someone who seems to understand you better than you do. Then the third verse adds a flash of leverage. She admits she made him wait, calls him her man and her king, and ties the crown to a condition: if she's all his, he'll keep wanting her. The surrender is also a bargain, and she knows it.
+The music holds that feeling still. A synth pad lays down long sustained chords. The bass plays a simple root-fifth pattern over and over, and a drum machine keeps a slow, steady beat with a prominent snare on two and four. The groove is laid-back and unhurried, which suits a lyric that keeps asking the moment to slow down. Geldof's voice is breathy, and she holds her notes long instead of pushing them. No harmonies come in to keep her company. The production is clean and polished, with some room air around the voice.
 
-By Geldof's account it's the only piano-led song on *I'm Yours*, her 2016 debut for Stranger Records. The easy song turned out to be the hard one to record, and she has called its sessions the slowest, most intricate part of making the album. Tony Hoffer, whose credits run through Goldfrapp, Beck and Air, produced the record in Los Angeles. NME heard the album as country crossed with dream-pop, and the country comes honestly: she got into it through her parents, Bob Geldof and Paula Yates. The song's devotion is blunt and unembarrassed, which fits that country-tinged setting. Then it bends toward something murkier, a need she half distrusts.
+Geldof wrote it with Fryars and says the writing came easily and fast. Recording it, she says, was the slowest and most intricate part of making the album. You can hear that care in how little moves. The album, her debut *I'm Yours*, was cut in Los Angeles with producer Tony Hoffer, whose work with Goldfrapp and Air fits the glossy hush. Underneath sits the country she traces to her parents' records, Dolly Parton and Kris Kristofferson. The country shows in the devotion, in a narrator willing to crown her lover king outright. It's a long way from the Hole- and Libertines-inspired songs she wrote earlier in a band called Violet.
 
-Balthazar Klarwein's video turns the "boy" and "king" of the lyric into a teenage girl on a Walkman, daydreaming her way to a school dance and to the girl she likes. That reading fits the hook without strain. Being undone by a look isn't tied to any one kind of love.
+Balthazar Klarwein's video moves the song somewhere unexpected. A teenage girl listens on a Walkman in a park and daydreams about a school dance, where she finds the girl she likes, and the two end up floating underwater. The picture of a crush played out in a daydream fits the closing refrain, where "(If you want)" keeps getting tacked onto the hook and the decision passes to someone else.
 
-The song lets you feel how good it is to be known, and how much it costs to want that so badly you'd put "if you want" in front of your own wildness.
+The song lets you feel how good it is to stop resisting, and how even that kind of giving in can come with terms attached.

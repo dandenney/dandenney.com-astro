@@ -1,161 +1,204 @@
 {
   "spotifyId": "7x4b0UccXSKBWxWmjcrG2T",
-  "reviewedAt": "2026-11-20T17:24:10.939Z",
+  "reviewedAt": "2026-11-20T17:48:50.286Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/8295212"
   },
-  "listening": null,
+  "listening": "Pass 1:\nA single acoustic guitar plays a chord-melody accompaniment, strummed with a pick. The tempo is slow, with a relaxed, slightly dragging feel. A male voice sings in a low-mid range, with a raw, slightly strained quality. The delivery is unpolished, with some wavering in pitch. There are no harmonies. The production suggests a small, untreated room, with a dry, intimate texture. The sound is raw and unpolished. The arrangement is consistent throughout the excerpt, with no instruments entering or dropping out.\n\nPass 2:\nA single acoustic guitar plays a arpeggiated chord progression with a strummed bass note. The tempo is slow, with a relaxed, slightly dragging feel. A male voice sings in a low, rough, and slightly strained character. The delivery is melodic but with a raw, unpolished quality. There are no harmonies. The production suggests a small, dry room with a close microphone. The texture is raw and unpolished. The arrangement remains consistent throughout the excerpt, with only the guitar and voice present.\n\nPass 3:\nA single acoustic guitar plays a chord progression with a strummed rhythm, joined by a bass guitar playing a root-note line. The tempo is slow, with a relaxed, slightly dragging feel. A male voice sings in a low-mid range, with a raw, slightly strained quality. The delivery is melodic, with a hint of vibrato. There are no harmonies. The production sounds like a dry room, with a raw, unpolished texture. The acoustic guitar and bass are present throughout. The vocals enter at the beginning and continue until the end.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "\"And I Love Her\" was written by John Lennon and Paul McCartney and first released by The Beatles in 1964. Cobain's version is a cover.",
-        "source": "https://secondhandsongs.com/performance/422858/versions"
-      },
-      {
-        "claim": "Discogs credits the cassette transfers to Kyle Lane, with Jeff Fura supervising. It lists the Lennon/McCartney writing credit for the track, which runs 2:05 and is track 20 on the cassette edition.",
-        "source": "https://www.discogs.com/release/7758521-Kurt-Cobain-Montage-Of-Heck-The-Home-Recordings"
-      },
-      {
-        "claim": "The cover is a raw, acoustic take. Director Brett Morgen found it on a random tape and used it in his documentary.",
-        "source": "https://consequence.net/2015/10/kurt-cobain-the-beatles-and-i-love-her/"
-      },
-      {
-        "claim": "The cover first surfaced online in April 2015 but was taken down soon after. It was also released as a 7-inch single backed with Cobain's early version of \"Sappy\".",
-        "source": "https://consequence.net/2015/10/kurt-cobain-the-beatles-and-i-love-her/"
-      },
-      {
-        "claim": "Brett Morgen went through the Cobain archives for home recordings and rare tracks while curating the album. The 31-track deluxe edition serves as the soundtrack to the Montage of Heck documentary.",
+        "claim": "Kurt Cobain's \"And I Love Her\" is a cover of The Beatles' 1964 song of the same name.",
         "source": "https://www.nme.com/news/music/kurt-cobain-10-1213348"
       },
       {
-        "claim": "Far Out says Cobain, a notorious Beatles fan, covered the Beatles only once on record. It calls his version a goth-tinged reimagining. It also says his distrust of Paul McCartney makes a cover of a McCartney-written song more interesting.",
-        "source": "https://faroutmagazine.co.uk/kurt-cobains-isolated-vocals-beatles-cover/"
+        "claim": "The track appears on Montage of Heck: The Home Recordings, which was released on November 13, 2015. It came as a 31-track deluxe edition or a 13-track standard edition.",
+        "source": "https://www.nme.com/news/music/kurt-cobain-10-1213348"
       },
       {
-        "claim": "The album's tracks are covers, original songs, early Nirvana demos, interludes and spoken-word entries that Cobain recorded himself. The album's recording dates are given as 1986–1994.",
+        "claim": "The album is the soundtrack to Brett Morgen's Cobain documentary Montage of Heck. Morgen went through Cobain's archives of home recordings and rare tracks to curate it.",
+        "source": "https://www.nme.com/news/music/kurt-cobain-10-1213348"
+      },
+      {
+        "claim": "Morgen found the raw, acoustic take on a random tape and used it in his film.",
+        "source": "https://consequence.net/2015/10/kurt-cobain-the-beatles-and-i-love-her/"
+      },
+      {
+        "claim": "The cover first surfaced online in April 2015 but was taken down soon after. It was later made available officially through Spotify.",
+        "source": "https://consequence.net/2015/10/kurt-cobain-the-beatles-and-i-love-her/"
+      },
+      {
+        "claim": "Last.fm says the recording was likely made in 1987 or 1988 and was released in 2015 as the sole single from the soundtrack. This dating comes from a user-edited wiki.",
+        "source": "https://www.last.fm/music/Kurt+Cobain/_/And+I+Love+Her"
+      },
+      {
+        "claim": "A 7-inch single pairs \"And I Love Her\" with an early demo of \"Sappy\". It was scheduled for November 20, 2015.",
+        "source": "https://diffuser.fm/kurt-cobain-collection-montage-of-heck-the-home-recordings-track-list-unveiled/"
+      },
+      {
+        "claim": "Morgen found the source cassettes when Courtney Love and Frances Bean Cobain approached him about a documentary. He chose to release material from cassette number 54, titled Montage of Heck, out of 108 tapes.",
         "source": "https://en.wikipedia.org/wiki/Montage_of_Heck:_The_Home_Recordings"
       },
       {
-        "claim": "Morgen said he curated the album so listeners would feel they were in Kurt's Olympia, Washington apartment in the late Eighties, watching him create.",
-        "source": "https://www.recordpusher.com/products/cobain-kurt-montage-of-heck-home-recordings"
-      },
-      {
-        "claim": "Morgen compared the album to Dylan's Bootleg Series. He said it shows a side of Kurt that he could not fully explore in a three-piece band.",
+        "claim": "Morgen said the home recordings show another side of Cobain, an artistic outlet he couldn't fully use in a three-piece band. He compared the release to Bob Dylan's Bootleg Series.",
         "source": "https://www.nme.com/news/music/kurt-cobain-10-1213348"
       },
       {
-        "claim": "Cobain was born in Aberdeen, Washington, in 1967. He rose to fame as Nirvana's frontman and died by suicide in Seattle in April 1994, aged 27.",
+        "claim": "The film's title comes from a collage Cobain made on a 4-track cassette recorder around 1988. Cobain was born in 1967 to a car mechanic father and a waitress mother, and his daughter Frances Bean Cobain was a co-executive producer on the film.",
         "source": "https://en.wikipedia.org/wiki/Kurt_Cobain:_Montage_of_Heck"
       }
     ],
-    "lineage": "A lo-fi, solo acoustic home-recorded cover of a Beatles ballad, on a grunge-era archive release of Cobain's Aberdeen/Olympia cassette demos and sound collages.",
+    "lineage": "It is a raw, lo-fi acoustic home-tape cover of a Beatles song from Nirvana frontman Kurt Cobain's private cassette archive, released as a solo companion to the Montage of Heck documentary.",
     "genres": [
-      "grunge",
       "lo-fi",
-      "acoustic"
+      "acoustic",
+      "grunge"
     ]
   },
-  "draft": "On a tape Brett Morgen describes as random, buried in Kurt Cobain's archive of home cassettes, there was a Beatles love song. Morgen pulled it into his documentary *Montage of Heck*, and the raw, acoustic take of **And I Love Her** landed on the soundtrack album that followed. It's two minutes of one of the plainest love songs ever written, recorded at home by someone famous for anything but plainness.\n\nThe choice is the first thing to sit with. Lennon and McCartney's 1964 ballad doesn't plead or argue. Its narrator just reports good fortune: she gives him everything, she kisses him tenderly, he loves her. Far Out calls Cobain a notorious Beatles fan who covered the band only once on record, and notes that his distrust of Paul McCartney makes this choice of a McCartney song more interesting. That's a real tension. Admiration and suspicion can live in the same listener, and here the admiration wins out long enough to get the song on tape.\n\nThe lyric is built from simple opposites set in an old-fashioned word order: \"Bright are the stars that shine / Dark is the sky.\" The inversion gives it the weight of a hymn, and the darkness is there from the start, but only as the thing that makes the light visible. Far Out hears Cobain's version as a goth-tinged reimagining, and that reading has a foothold in the words. The night sky was always part of the picture.\n\nThe best moment is a slip of address. The verses talk *about* her, in the third person, a little shy, a little formal. Then the middle section turns: \"As long as I / Hold you near me.\" For a few lines the narrator stops describing the lover and speaks straight to her. That shift is where the song shows how much it feels, and it passes as quickly as it comes.\n\nMorgen compared the collection to Dylan's Bootleg Series. He said it shows a side of Cobain he couldn't fully explore in a three-piece band. The album gathers covers, demos, and spoken pieces recorded between 1986 and 1994. Cobain died that last year, at 27. So when the song promises, again and again, that this love will never die, two feelings sit side by side and don't settle. The lyric is pure confidence. The listener knows how the story of the person singing it ends. Neither cancels the other.\n\nYou come away holding a vow of forever in a voice that didn't get one, and the song's tenderness makes that harder to put down, not easier.",
+  "draft": "The only time **\"And I Love Her\"** speaks to the person it's about is in the middle, in two words: \"Hold you near me.\" Everywhere else she's \"her,\" described to someone else, held at the distance of a report. Then for one line the singer turns and talks to her directly before turning back. Paul McCartney wrote that shift into the Beatles' 1964 original. Kurt Cobain keeps it, and in his hands it lands harder, because nothing in the recording is trying to sound sure of itself.\n\nWhat's here is one acoustic guitar, strummed slowly, with a relaxed tempo that seems to drag a little behind the beat, and a voice in a low-middle range that sounds raw and a bit strained. There are no harmonies. The Beatles' version had a delicate guitar figure and a light touch of percussion. This has a small, dry room and a person sitting in it. The roughness doesn't fight the song. It changes what the song is about.\n\nThe lyric is almost pure plain devotion: \"She gives me everything / And tenderly.\" It's a song with no conflict in it. No rival, no leaving, no doubt, just stars, a dark sky, and a promise that \"this love of mine / Will never die.\" Sung cleanly, that promise sounds like a fact. Sung in a strained voice at a dragging pace, it sounds like something the singer needs to say out loud to keep believing it. The words stay certain while the voice carrying them sounds worn, and the recording never settles which one to trust. The song ends where it always does, on \"And I love her,\" a statement made to nobody in particular.\n\nCobain wasn't making a record here. Brett Morgen found the take on a random tape while digging through Cobain's archive of home cassettes for his documentary *Montage of Heck*, and used it in the film. It leaked online in April 2015, came down, and then arrived officially as part of *Montage of Heck: The Home Recordings*, with a 7-inch pairing it with an early demo of \"Sappy.\" Morgen described these tapes as another side of Cobain, an outlet he couldn't fully use in a three-piece band, and compared the project to Dylan's Bootleg Series. That fits. This is a songwriter learning a song he loved by playing it alone, and the private setting gives a love song a kind of shyness the original never had.\n\nWhat stays with you is that single turn to \"you.\" For one line, a person singing alone in a room stops describing love and speaks to the one he loves.",
   "factCheck": [
     {
-      "claim": "Brett Morgen describes the tape as random",
+      "claim": "The only time the song speaks to the person it's about is in two words: 'Hold you near me.'",
       "verdict": "corrected",
-      "note": "The packet says Morgen found the track on a random tape. It doesn't say he described it that way. Reworded."
+      "note": "'Hold you near me' is three words. 'You' appears only in that line, so the 'only time' reading holds. Removed 'in the middle' as a position claim and changed the count."
     },
     {
-      "claim": "The track was in Cobain's archive of home cassettes",
+      "claim": "Quote: 'Hold you near me.'",
       "verdict": "supported",
-      "note": "Morgen went through the Cobain archives for home recordings, and the Discogs entry credits cassette transfers. 'Buried' dropped as unsupported color."
+      "note": "Matches the lyrics."
     },
     {
-      "claim": "Morgen used it in his documentary Montage of Heck",
-      "verdict": "supported",
-      "note": "Consequence says he used it in his documentary."
-    },
-    {
-      "claim": "It landed on the soundtrack album that followed",
-      "verdict": "corrected",
-      "note": "The 31-track deluxe edition is the documentary soundtrack. Reworded to say so, with no claim about sequence."
-    },
-    {
-      "claim": "Raw, acoustic take, about two minutes, recorded at home",
-      "verdict": "supported",
-      "note": "The track runs 2:05. The cover is described as raw and acoustic, and the album is home recordings."
-    },
-    {
-      "claim": "Lennon and McCartney's 1964 ballad",
-      "verdict": "supported",
-      "note": "Written by Lennon and McCartney, first released by The Beatles in 1964."
-    },
-    {
-      "claim": "Far Out: Cobain a notorious Beatles fan who covered the band only once on record; distrust of McCartney makes the cover more interesting",
-      "verdict": "supported",
-      "note": "Matches the Far Out summary."
-    },
-    {
-      "claim": "Far Out hears the version as a goth-tinged reimagining",
-      "verdict": "supported",
-      "note": "Attributed to Far Out."
-    },
-    {
-      "claim": "Lyric quotes: 'Bright are the stars that shine / Dark is the sky' and 'As long as I / Hold you near me'",
-      "verdict": "corrected",
-      "note": "The quotes match the lyrics, but together they ran four lines, over the three-line limit. Trimmed the second to 'Hold you near me'."
-    },
-    {
-      "claim": "The darkness is there from the start",
+      "claim": "Paul McCartney wrote that shift into the Beatles' 1964 original.",
       "verdict": "removed",
-      "note": "This is a positional claim, and the dark sky first appears in the second verse. Removed."
+      "note": "The packet gives only that the song is a cover of a 1964 Beatles song. It has no songwriter credit and nothing on the original's lyrics."
     },
     {
-      "claim": "The verses are in the third person, then the song turns to address 'you'",
+      "claim": "Cobain's recording is a cover of the Beatles' 1964 song.",
       "verdict": "supported",
-      "note": "Follows the lyrics: 'she gives me', 'my lover', then 'Hold you near me'. Kept as interpretation."
+      "note": "Researched facts (NME)."
     },
     {
-      "claim": "Morgen compared the collection to Dylan's Bootleg Series and said it shows a side of Cobain he couldn't fully explore in a three-piece band",
+      "claim": "One acoustic guitar, strummed slowly, with a relaxed tempo that drags a little.",
+      "verdict": "supported",
+      "note": "All three passes agree on a single acoustic guitar and a slow, relaxed, slightly dragging feel."
+    },
+    {
+      "claim": "A low-middle voice that sounds raw and a bit strained; no harmonies.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Small, dry room.",
+      "verdict": "supported",
+      "note": "At least two passes describe a small, dry room."
+    },
+    {
+      "claim": "The Beatles' version had a delicate guitar figure and a light touch of percussion.",
+      "verdict": "removed",
+      "note": "Nothing in the packet describes the original's arrangement."
+    },
+    {
+      "claim": "Quote: 'She gives me everything / And tenderly.'",
+      "verdict": "supported",
+      "note": "Exact match, but trimmed to one line to stay within the three-line quote limit."
+    },
+    {
+      "claim": "Quote: 'this love of mine / Will never die.'",
+      "verdict": "corrected",
+      "note": "The wording is accurate, but it was trimmed to 'Will never die' for the quote limit."
+    },
+    {
+      "claim": "No rival, no leaving, no doubt, just stars, a dark sky, and a promise.",
+      "verdict": "supported",
+      "note": "Consistent with the lyrics."
+    },
+    {
+      "claim": "The song ends on 'And I love her.'",
+      "verdict": "corrected",
+      "note": "The lyrics do end on the title line and each stanza closes on it. Reworded without quoting, to stay within the quote limit."
+    },
+    {
+      "claim": "Cobain wasn't making a record here.",
+      "verdict": "corrected",
+      "note": "Stated as fact about intent. Reframed as a home tape, which the packet supports."
+    },
+    {
+      "claim": "Morgen found the take on a random tape while going through Cobain's archive of home cassettes for his documentary, and used it in the film.",
+      "verdict": "supported",
+      "note": "Consequence, NME and Wikipedia entries."
+    },
+    {
+      "claim": "It leaked online in April 2015, came down, then arrived officially on Montage of Heck: The Home Recordings.",
+      "verdict": "corrected",
+      "note": "The packet says it 'surfaced online' in April 2015 and was taken down. 'Leaked' was not supported. The official release on the album is supported."
+    },
+    {
+      "claim": "A 7-inch pairs it with an early demo of 'Sappy.'",
+      "verdict": "supported",
+      "note": "Diffuser."
+    },
+    {
+      "claim": "Morgen described the tapes as another side of Cobain, an outlet he couldn't fully use in a three-piece band, and compared the project to Dylan's Bootleg Series.",
       "verdict": "supported",
       "note": "NME."
     },
     {
-      "claim": "The album gathers covers, demos and spoken pieces recorded 1986–1994",
-      "verdict": "supported",
-      "note": "Wikipedia, as given in the packet."
+      "claim": "This is a songwriter learning a song he loved by playing it alone.",
+      "verdict": "removed",
+      "note": "Nothing supports Cobain's purpose or feelings toward the song, or that he was alone. Reframed as interpretation of what is heard."
     },
     {
-      "claim": "Cobain died in 1994 at 27",
-      "verdict": "supported",
-      "note": "The packet says he died in April 1994, aged 27."
+      "claim": "The private setting gives a love song a shyness the original never had.",
+      "verdict": "corrected",
+      "note": "The comparison to the original is unsupported. Kept the reading of this recording only."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1942,
+    "totalUsd": 0.1517,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001257,
+        "detail": "1100 in / 102 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001282,
+        "detail": "1100 in / 112 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001272,
+        "detail": "1100 in / 108 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.092074,
-        "detail": "24367 in / 2334 out / 2 searches"
+        "usd": 0.052008,
+        "detail": "14464 in / 1308 out / 1 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.060884,
-        "detail": "2646 in / 2515 out"
+        "usd": 0.044704,
+        "detail": "3136 in / 1608 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.041254,
-        "detail": "3742 in / 3377 out"
+        "usd": 0.051216,
+        "detail": "4233 in / 4275 out"
       }
     ]
   }

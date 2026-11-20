@@ -8,25 +8,29 @@ spotifyUrl: "https://open.spotify.com/track/6XkQ6jiSJFAXxfCVH5Hwzm"
 spotifyId: "6XkQ6jiSJFAXxfCVH5Hwzm"
 albumArt: "https://i.scdn.co/image/ab67616d0000b2739108acb1ab5b62b37f6b7368"
 duration: 215958
-genres: ["americana", "folk-blues", "country"]
+genres: ["americana", "folk-rock", "country"]
 pubDate: "2026-11-20"
-tags: ["joshua-quimby", "americana", "folk-blues", "country", "2022"]
+tags: ["joshua-quimby", "americana", "folk-rock", "country", "2022"]
 pipeline: "lately"
 sources:
-  - title: "joshuaquimby.bandcamp.com: Client Challenge"
-    url: "https://joshuaquimby.bandcamp.com/album/joshua-quimby"
   - title: "theselfportraitgospel.com: The Self Portrait Gospel"
     url: "https://www.theselfportraitgospel.com/interviews/the-joshua-quimby-interview"
-  - title: "sonichits.com"
-    url: "https://sonichits.com/artist/Joshua_Quimby"
+  - title: "Whiskey Riff | A RIFF on what country is really about.: A 5-Song Introduction To New England Native Joshua Quimby | Whiskey Riff"
+    url: "https://www.whiskeyriff.com/2024/11/12/meet-joshua-quimby/"
+  - title: "Saddle Mountain Post: The North Remembers: Joshua Quimby is Bringing It All Back Home"
+    url: "https://saddlemountainpost.com/features/the-north-remembers-joshua-quimby-is-bringing-it-all-back-home/"
+  - title: "x.com"
+    url: "https://x.com/jquimbymusic"
 aiGenerated: true
 ---
-The first image in **Gears** is a callus. "The tip of my thumb has been whittled like wood," Joshua Quimby sings, and he doesn't put it down to years of picking but to working a lighter too hard. It's a good opening because it shows the habit before it names it. The body has been reshaped by repetition, the way a tool handle wears smooth, and the narrator reports it the way you'd mention the weather.
+Start with the thumb. In the first line of **Gears**, Joshua Quimby looks down and finds that "the tip of my thumb has been whittled like wood," worn down by the lighter he can't stop flicking. It's a funny image, and a little alarming. The habit has left a mark on the body, and he reports it the way you'd mention a callus from a guitar string. That mix of wry detail and quiet damage runs through the whole song.
 
-The song is about smoking weed all day to keep a bad mind quiet, and Quimby is honest about how little he understands of what he's medicating. He's on the floor of his room, dazed, chewing on thoughts that leave him distraught for reasons he can't pin down. That admission carries the song. There's no breakup or death behind it, only a fog of worry with no name, and the reefer is the one thing that sets the mind free for a while. He knows the trade is a bad one. He calls it fighting fire with fire, which is a way of saying the cure and the trouble are made of the same stuff.
+Quimby wrote it, and the lyric is plain about what it covers: heavy marijuana use as self-medication. He knows the cure is part of the problem. He's smoking to put out a fire that the smoking keeps feeding. The second verse finds him on the floor of his room "in the company of constant concern," which is the loneliest line here. Worry is the only one keeping him company, and he can't even name where it comes from. Anyone who has felt anxious for no reason they could point to will know that floor.
 
-What keeps "Gears" from being a stoner novelty is the fatalism. He says he'll live by the pipe and die by it, then hedges: "Least that's how it seems to me." That small qualifier holds the whole feeling. It's resignation with a crack in it, someone stating his doom and leaving room to be wrong about it. The refrain, "the grass it's a-burnin', the gears they're a-churnin'," puts two engines side by side: the smoke and the mind it's meant to slow, both running and neither winning. He follows it by repeating that this is how it will always be, twice at the end of the first two refrains and three times in the last, as if saying it more could make it true.
+The refrain ties two images together. The grass burns and the gears keep churning: the drug and the restless mind run side by side, and neither one wins. He calls it permanent, living and dying by the pipe, then hedges with "Least that's how it seems to me." That small doubt is the most hopeful moment in the song. It's fatalism with a crack in it. But the song doesn't pry the crack open. The closing line repeats three times, as if saying it enough could make it true.
 
-The writing leans on old-time diction, those "a-tokin'" and "a-settin'" prefixes. That puts a modern habit inside the Nashville-based Americana and folk-blues tradition, where folk, blues and country picking meet plainspoken lyrics. Quimby, from small-town Connecticut and now living in Nashville, wrote the song himself. The self-titled album it comes from was tracked in about five hours at producer Asher Condit's home studio. It pairs his resonator guitar with fiddle, flat-top guitar, upright bass and mandolin, with two of those players also singing backing vocals. A quick, low-fuss session like that suits a song this plainspoken about a habit it doesn't plan to break.
+The band plays against all that heaviness. An acoustic guitar strums at a moderate, swinging pace, a walking bass and steady drums keep things loose, and a fiddle carries a melodic line full of slides and double stops. The room sounds open and the mix is clean. Quimby sings alone, no harmonies, in a slightly raspy mid-range voice, and he delivers it straight. The easy groove sounds like the relief the reefer promises, which is the point and also the trap.
 
-"Gears" sticks because it lets you sit on that floor with someone who knows exactly what he's doing to himself and still can't tell you why he needs to.
+The folksy "a-tokin'," "a-burnin'" diction fits a songwriter who names Hank Williams Sr. and John Prine among his influences, and the rasp sits near Colter Wall. Quimby, who was raised in Connecticut and moved to Nashville at 18 meaning only to play guitar for others, has said this self-titled debut is angstier, angrier and darker than the EP that followed, a reflection of a more muddled, troubled mind. "Gears" shows that mind without dressing it up.
+
+It sticks because it makes the comfort and the trap sound like the same easy swing, so you sway along before you notice he's still on the floor.

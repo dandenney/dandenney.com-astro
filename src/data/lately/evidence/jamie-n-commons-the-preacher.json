@@ -1,166 +1,209 @@
 {
   "spotifyId": "5fQ8zHRjtlN9Unfiaz4OQf",
-  "reviewedAt": "2026-11-20T17:32:54.438Z",
+  "reviewedAt": "2026-11-20T17:46:29.023Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/30684959"
   },
-  "listening": null,
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: strummed, playing chords.\nElectric guitar: clean, arpeggiated, with some sustain.\nDrums: playing a simple, steady beat with kick, snare, and hi-hat.\nBass: playing a simple, walking line.\n\nTempo and groove feel:\nSlow to medium tempo. A steady, slightly melancholic groove.\n\nVocals:\nVoice character: male, low-pitched, slightly gravelly.\nDelivery: sung, with a conversational, almost spoken quality.\nHarmonies: unsure.\n\nProduction:\nRoom: sounds like a medium-sized room, with some natural reverb.\nTexture: warm, slightly raw.\nPolished/raw: more on the raw side, but not unrefined.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter shortly after. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.\n\nPass 2:\nInstruments:\nAcoustic guitar: strummed, with a consistent rhythm.\nBass guitar: plays a simple, foundational line.\nDrums: a kick drum and snare drum provide a steady, driving beat.\n\nTempo and groove feel:\nThe tempo is moderate, with a steady, driving groove. It feels like a march.\n\nVocals:\nVoice character: a male voice, with a slightly raspy, weathered quality.\nDelivery: sung with a clear, deliberate articulation, and a sense of urgency.\nHarmonies: unsure.\n\nProduction:\nRoom: sounds like a medium-sized room, with a natural, un-processed feel.\nTexture: raw and organic.\nPolished/raw: raw.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter shortly after the start. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or entering.\n\nPass 3:\nInstruments:\nAcoustic guitar: strummed, with a consistent rhythm.\nBass guitar: plays a simple, foundational line.\nDrums: kick, snare, and hi-hat, providing a steady, driving beat.\nElectric guitar: enters with a sustained, slightly distorted chord, then plays a simple, melodic line.\n\nTempo and groove feel:\nModerate tempo. The groove is steady and driving, with a slight country-rock feel.\n\nVocals:\nVoice character: A male voice, with a slightly gravelly, resonant quality.\nDelivery: Lead vocal is clear and direct, with a storytelling tone.\nHarmonies: Unsure.\n\nProduction:\nRoom: Sounds like a medium-sized room, with some natural reverb.\nTexture: The sound is full and warm, with a slight grit from the electric guitar.\nPolished/Raw: A balanced mix of polished and raw, leaning slightly towards raw.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The lead vocal enters immediately. The electric guitar enters around the 0:06 mark, playing a sustained chord, then a melodic line. The arrangement remains consistent throughout the excerpt, with no significant drops or builds.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "\"The Preacher\" is the 3:40 closing track (track 6) of Jamie N Commons' Rumble And Sway EP, issued by KIDinaKORNER/Interscope in 2013.",
+        "claim": "\"The Preacher\" is the closing track (track 6, 3:40) of Jamie N Commons' Rumble and Sway EP, released on KIDinaKORNER/Interscope.",
         "source": "https://www.amazon.com/Rumble-Sway-EP-Jamie-Commons/dp/B00BJW6PA2"
       },
       {
-        "claim": "Discogs credits Jamie N Commons as the sole writer of \"The Preacher\".",
-        "source": "https://www.discogs.com/release/4557668-Jamie-N-Commons-Rumble-And-Sway-EP"
+        "claim": "Jamie N Commons is the sole credited songwriter of \"The Preacher\".",
+        "source": "https://www.deezer.com/en/album/39548581"
       },
       {
-        "claim": "Discogs credits \"The Preacher\" to producers Eliot James and Jamie N Commons, with Benjamin Markham as co-producer. This differs from the rest of the EP, which was produced by Alex da Kid.",
-        "source": "https://www.discogs.com/release/4557668-Jamie-N-Commons-Rumble-And-Sway-EP"
+        "claim": "An AllMusic-sourced review describes the track as Rick Rubin-produced, with a spoken-word, Internet-themed 'promo' spot in the middle.",
+        "source": "https://www.qobuz.com/dk-en/album/rumble-and-sway-ep-jamie-n-commons/0060253732911"
       },
       {
-        "claim": "Apple Music's editorial text calls \"The Preacher\" the standout tune and says it closes on a dusty dirge.",
-        "source": "https://music.apple.com/us/album/rumble-and-sway-ep/1444619629"
+        "claim": "The song first appeared on Commons' debut EP The Baron (2011, Luv Luv Luv Records), and the Rumble and Sway EP, produced by Alex da Kid, followed in early 2013.",
+        "source": "https://www.amazon.com/Rumble-Sway-EP-Jamie-Commons/dp/B00BJW6PA2"
       },
       {
-        "claim": "A review on Qobuz says a spoken-word, Internet-themed \"promo\" spot sits in the middle of \"The Preacher\". The same review attributes production of the song to Rick Rubin, which conflicts with the Discogs credits.",
-        "source": "https://www.qobuz.com/gb-en/album/rumble-and-sway-ep-jamie-n-commons/0060253732911"
+        "claim": "The lyrics tell of a Southern pastor who strangles his wife and dismembers her body.",
+        "source": "https://www.mrporter.com/journal/journal_issue53/3"
       },
       {
-        "claim": "The song has been synced to TV, including Justified (season 6, episode 7) and Tidelands (season 1, episode 6), and was heard in a preview for Defiance.",
+        "claim": "One blog describes the narrator as an evangelical preacher from Alabama who strangled his wife and put her chopped-up body in a freezer.",
+        "source": "https://theswillmerchants.com/2011/11/11/jamie-n-commons-the-preacher/"
+      },
+      {
+        "claim": "Commons said the follow-up video for 'Devil In Me' was made by the same directors, James Willis and Ben Murray, who made the first video for 'The Preacher'. Its start includes the instrumental section of 'The Preacher' playing on a record player.",
+        "source": "https://www.clashmusic.com/music-videos/behind-the-scenes-jamie-n-commons/"
+      },
+      {
+        "claim": "Commons has said he wants to 'push the boundaries of what blues can be' and make the sound accessible to people who don't normally listen to blues. In 2012 he was heading to the US to meet producer Rick Rubin.",
+        "source": "https://www.clashmusic.com/features/ones-to-watch-jamie-n-commons/"
+      },
+      {
+        "claim": "The song has been used in TV, including Justified (S6E7, 2015) and Tidelands (S1E6, 2018).",
         "source": "https://www.tunefind.com/song/jamie-n-commons/the-preacher"
       },
       {
-        "claim": "Commons described the Rumble And Sway EP as the first effort of his partnership with Alex da Kid at Interscope. He called it a collection of experiments in updating the blues sound with modern production techniques.",
-        "source": "https://www.grammy.com/news/video-exclusive-grammycom-interview-with-jamie-n-commons/"
-      },
-      {
-        "claim": "Commons was born in Bristol, England, and moved with his family to Chicago at age six. He spent eight years there immersed in the blues before returning to England's West Country at 16.",
+        "claim": "Commons was born in Bristol and moved to Chicago at age six, where he absorbed Chicago blues. He later moved to London and studied music at Goldsmiths.",
         "source": "https://www.amazon.com/Rumble-Sway-EP-Jamie-Commons/dp/B00BJW6PA2"
-      },
-      {
-        "claim": "Commons studied music at Goldsmiths in London. His debut EP, The Baron, came out in 2011 on Luv Luv Luv Records, and Alex da Kid then signed him to KIDinaKORNER/Interscope.",
-        "source": "https://www.grammy.com/news/video-exclusive-grammycom-interview-with-jamie-n-commons/"
-      },
-      {
-        "claim": "Commons grew up in a religious family with an atheist father, and says this gave him a deep-rooted engagement with religion. This is relevant context for the song's preacher theme, but he did not tie it to the song in that interview.",
-        "source": "https://www.clashmusic.com/features/ones-to-watch-jamie-n-commons/"
       }
     ],
-    "lineage": "The song sits in a modern gothic, swamp-gospel blues tradition, with Tom Waits and Nick Cave comparisons, which Commons updated with modern production.",
+    "lineage": "Commons' gravel-voiced 'modern gothic' blues, with murder-ballad storytelling, draws comparisons to Tom Waits and Nick Cave and to the Chicago blues and Southern swamp-gospel tradition.",
     "genres": [
       "blues rock",
-      "swamp gospel",
-      "alternative"
+      "alternative",
+      "gothic blues"
     ]
   },
-  "draft": "A man stands on the scaffold with a noose around his neck, and he is still preaching. That's the scene at the center of **The Preacher**, and Jamie N Commons, who wrote it alone, sets it up the way an old murder ballad would. There's a cold wind over prairie gold and a church bell \"screaming\" from the steeple, calling the children of men to watch. The refrain gives the whole portrait in one line: \"one hand on the trigger, one hand on the cross.\" The next line keeps a narrator's distance. Jesus and his family, it says, are \"two things he's lost.\"\n\nWhat makes the song more than a gallows tale is how it splits the guilt. The crowd has \"blood in their eyes and blood in their hearts\" for the blood drying on his hands, and the lyric never says which is worse. The hanging is righteous and it's a mob, both at once.\n\nThen the preacher speaks. His defense is short and total: \"I spoke to the lord on the mountain top,\" and His bidding was all he could do. The refrain flips around him. Early on he cries \"Oh Lord what have you done\" and warns that someone won't see heaven. It's unclear whether he means himself, the crowd, or God, and that blur is the point. By the end the same cry has hardened into \"Now show me heaven or kingdom come.\" Terror has become a demand. You can hear a man who needs his crime to have been holy, because the alternative is that he lost his family for nothing. Pride and dread sit in the same breath, and the song won't settle which one wins.\n\nCommons was born in Bristol and moved to Chicago at six. He spent eight years there soaking up the blues before returning to England's West Country at sixteen. He has also talked about growing up in a religious family with an atheist father, which left him deeply engaged with faith. He called Rumble And Sway, his first release with Alex da Kid at Interscope, a set of experiments in updating the blues with modern production. \"The Preacher\" stands slightly apart from the rest of it. Commons produced it with Eliot James, with Benjamin Markham as co-producer, while Alex da Kid handled the rest of the record. The song closes the EP on a dusty dirge. It belongs to the gothic swamp-gospel line of Tom Waits and Nick Cave, where scripture and violence share a pulpit. It's no surprise it ended up in an episode of *Justified*.\n\nThe song sticks because it makes you stand in the crowd and on the scaffold at the same time, unsure whether you're watching justice or a man who believed every word.",
+  "draft": "The hinge of **The Preacher** is a single swapped line. Early on, someone cries \"Oh Lord what have you done,\" a voice of horror telling the condemned man he'll never see heaven. By the end the words have been rewritten, and the cry is a demand: \"Now show me heaven or kingdom come.\" Same melody, same refrain, but the man on the gallows has stopped asking forgiveness and started presenting an invoice.\n\nJamie N Commons wrote it alone, and he tells it as a murder ballad, the old form where the killing is already done and the song lives in its aftermath. Accounts of the song describe a preacher who strangled his wife. The lyric never says so outright. It circles the act through what's left behind: \"the blood turning dry on his hands,\" and a refrain that tallies the damage like a ledger, Jesus and his family named as \"two things he's lost.\" The central image does the rest. \"One hand on the trigger, one hand on the cross\" is a man holding his violence and his faith at the same time and refusing to let go of either.\n\nThe song's most unsettling move is letting him speak. Halfway through, the narration hands over the floor, and the preacher addresses his \"wayward flock\" with a noose around his neck. His defense is plain: \"His bidding was all I could do.\" He doesn't sound like a man hiding guilt. He sounds certain, and the certainty is the horror. Commons also doesn't let the crowd off. The mob calling for the scaffold has \"blood in their eyes and blood in their hearts,\" so the righteousness on both sides of the rope starts to look alike. The song never settles whether the preacher is mad or damned or simply believes what he says. It leaves you standing in the square with everyone else.\n\nThe band plays it straight and steady, which suits a hanging. Strummed acoustic guitar and a simple bass line sit on a kick-and-snare beat that drives forward without hurrying. An electric guitar adds long, sustained notes above it. The room sounds like a real one, with some natural reverb and a raw edge. Commons sings in a gravelly, weathered voice with the deliberate pacing of someone telling a story at the edge of a fire.\n\nThat gothic blues has drawn comparisons to Tom Waits and Nick Cave, and the roots go back further. Commons was born in Bristol, moved to Chicago at six and absorbed the city's blues there. He has said he wants to \"push the boundaries of what blues can be\" for listeners who don't usually go near it. The song first appeared on his 2011 debut EP, The Baron, and returned as the closing track of Rumble and Sway. It later scored a scene of *Justified*, a show that knows a thing or two about men who mistake their own will for God's.\n\nWhat sticks is how reasonable the preacher sounds, and how close the song lets you get to a conviction you'd never want to share.",
   "factCheck": [
     {
-      "claim": "The scene is a man on the scaffold with a noose around his neck who is still preaching.",
-      "verdict": "supported",
-      "note": "Lyrics: 'March him to the scaffold and string him up on high' and 'He cried with a noose round his neck.'"
-    },
-    {
-      "claim": "Jamie N Commons wrote the song alone.",
-      "verdict": "supported",
-      "note": "Discogs credits him as sole writer."
-    },
-    {
-      "claim": "Cold wind, prairie gold, a church bell 'screaming' from the steeple, calling the children of men.",
-      "verdict": "supported",
-      "note": "Matches the opening lines. 'Calling them to watch' is interpretation."
-    },
-    {
-      "claim": "'one hand on the trigger, one hand on the cross' and 'two things he's lost' are quoted from the refrain.",
-      "verdict": "supported",
-      "note": "Both quotes match the lyrics."
-    },
-    {
-      "claim": "The crowd has 'blood in their eyes and blood in their hearts' for the blood drying on his hands.",
-      "verdict": "supported",
-      "note": "Quote matches. The paraphrase of 'blood turning dry on his hands' is fair."
-    },
-    {
-      "claim": "'I spoke to the lord on the mountain top' and his bidding was all he could do.",
-      "verdict": "supported",
-      "note": "Quote matches the lyric. The paraphrase is fair."
-    },
-    {
-      "claim": "He first cries 'Oh Lord what have you done', and later the cry becomes 'Now show me heaven or kingdom come.'",
-      "verdict": "supported",
-      "note": "Both quotes match. The order follows the lyric's structure. 'By the end' was changed to 'Later' to avoid a claim about the song's arc."
-    },
-    {
-      "claim": "You can hear a man who needs his crime to have been holy.",
+      "claim": "The hinge is a single swapped line; early on someone cries 'Oh Lord what have you done,' a voice of horror telling the condemned man he'll never see heaven",
       "verdict": "corrected",
-      "note": "'Hear' implies a claim about vocal delivery, which is unsupported. Changed to 'read'."
+      "note": "The lyrics attribute both cries to 'He cries', so a separate horrified voice isn't supported. It's also two lines that change, not one. Rewritten as the same refrain turning from dismay with heaven ruled out into a demand. The first quote was dropped to stay within the three-line quote limit."
     },
     {
-      "claim": "Commons was born in Bristol, moved to Chicago at six, spent eight years immersed in the blues, and returned to England's West Country at sixteen.",
-      "verdict": "supported",
-      "note": "Matches the Amazon biography."
-    },
-    {
-      "claim": "Commons grew up in a religious family with an atheist father, leaving him deeply engaged with religion.",
-      "verdict": "supported",
-      "note": "Clash source. The draft does not tie this to the song."
-    },
-    {
-      "claim": "Commons called Rumble And Sway his first work with Alex da Kid at Interscope and a set of experiments in updating the blues with modern production.",
-      "verdict": "supported",
-      "note": "Grammy interview."
-    },
-    {
-      "claim": "The Preacher was produced by Commons and Eliot James, with Benjamin Markham as co-producer, while Alex da Kid produced the rest of the EP.",
-      "verdict": "supported",
-      "note": "Discogs credits. The Qobuz Rick Rubin attribution conflicts and is not used."
-    },
-    {
-      "claim": "The song closes the EP on a dusty dirge.",
+      "claim": "By the end the words have been rewritten: 'Now show me heaven or kingdom come.'",
       "verdict": "corrected",
-      "note": "The song closing the EP (track 6) is supported. 'Dusty dirge' is a sound description with no listening-note support, so it was removed."
+      "note": "The quote matches the lyrics. 'By the end' is a position claim and the final stanza is the trigger/cross refrain, so it now says the refrain turns."
     },
     {
-      "claim": "The song belongs to the gothic swamp-gospel line of Tom Waits and Nick Cave.",
-      "verdict": "supported",
-      "note": "Matches the lineage note."
+      "claim": "Same melody, same refrain",
+      "verdict": "removed",
+      "note": "Melody repetition isn't backed by the listening passes."
     },
     {
-      "claim": "The song ended up in an episode of Justified.",
+      "claim": "Jamie N Commons wrote it alone",
       "verdict": "supported",
-      "note": "Tunefind: season 6, episode 7."
+      "note": "Sole credited songwriter."
+    },
+    {
+      "claim": "He tells it as a murder ballad, the old form where the killing is already done and the song lives in its aftermath",
+      "verdict": "corrected",
+      "note": "The murder-ballad storytelling is supported by the lineage note. The genre-history definition is not, so it was removed."
+    },
+    {
+      "claim": "Accounts describe a preacher who strangled his wife; the lyric never says so outright",
+      "verdict": "supported",
+      "note": "The strangling is in the researched facts and the lyrics don't state it. The phrasing was changed to avoid pointing at sources."
+    },
+    {
+      "claim": "'the blood turning dry on his hands'",
+      "verdict": "corrected",
+      "note": "The lyric matches but was paraphrased to keep to three quoted lines."
+    },
+    {
+      "claim": "'two things he's lost' / 'One hand on the trigger, one hand on the cross'",
+      "verdict": "supported",
+      "note": "The trigger/cross line matches the lyrics and is kept. The 'two things he's lost' quote was turned into a paraphrase for the quote limit."
+    },
+    {
+      "claim": "Halfway through, the narration hands over the floor; the preacher addresses his 'wayward flock' with a noose around his neck",
+      "verdict": "corrected",
+      "note": "The lyrics support this ('He cried with a noose round his neck'), but 'halfway through' is a position claim, so it now says 'later'. The 'wayward flock' quote was paraphrased."
+    },
+    {
+      "claim": "'His bidding was all I could do'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The mob has 'blood in their eyes and blood in their hearts'",
+      "verdict": "corrected",
+      "note": "The lyric is supported, but the quote was paraphrased for the quote limit."
+    },
+    {
+      "claim": "Strummed acoustic guitar, simple bass line, kick-and-snare beat that drives forward",
+      "verdict": "supported",
+      "note": "All three passes agree on the acoustic guitar, bass and kick/snare. Two passes say driving and the third says steady."
+    },
+    {
+      "claim": "Electric guitar adds long, sustained notes",
+      "verdict": "supported",
+      "note": "Pass 1 and pass 3 both describe sustain."
+    },
+    {
+      "claim": "Room sounds real with natural reverb and a raw edge",
+      "verdict": "supported",
+      "note": "All passes agree on a medium room and raw texture, and two mention natural reverb."
+    },
+    {
+      "claim": "Gravelly, weathered voice with deliberate, storytelling pacing",
+      "verdict": "supported",
+      "note": "Passes agree on gravelly or raspy, and on a deliberate, storytelling delivery."
+    },
+    {
+      "claim": "Gothic blues has drawn comparisons to Tom Waits and Nick Cave",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Born in Bristol, moved to Chicago at six, absorbed the city's blues",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "He has said he wants to 'push the boundaries of what blues can be' for listeners who don't usually go near it",
+      "verdict": "supported",
+      "note": "Clash feature."
+    },
+    {
+      "claim": "First appeared on 2011 debut EP The Baron and returned as closing track of Rumble and Sway",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "It later scored a scene of Justified, a show that knows about men who mistake their own will for God's",
+      "verdict": "corrected",
+      "note": "Use on Justified (S6E7, 2015) is supported. The characterization of the show is unsupported and was removed."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1718,
+    "totalUsd": 0.207,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014717,
+        "detail": "1099 in / 188 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014867,
+        "detail": "1099 in / 194 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0016392,
+        "detail": "1099 in / 255 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.078486,
-        "detail": "21373 in / 1574 out / 2 searches"
+        "usd": 0.078914,
+        "detail": "22202 in / 1451 out / 2 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.04758,
-        "detail": "2940 in / 1791 out"
+        "usd": 0.059084,
+        "detail": "3926 in / 2169 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.04571,
-        "detail": "4065 in / 3758 out"
+        "usd": 0.06439,
+        "detail": "5155 in / 5408 out"
       }
     ]
   }

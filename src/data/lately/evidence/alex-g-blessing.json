@@ -1,166 +1,196 @@
 {
   "spotifyId": "5mKJrP0WTkVdZnrxwxOPoN",
-  "reviewedAt": "2026-11-20T17:30:56.850Z",
+  "reviewedAt": "2026-11-20T17:38:13.384Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/899175"
   },
-  "listening": null,
+  "listening": "Pass 1:\nA male voice sings in a mid-range, with a slightly raw, unpolished character. The delivery is mostly spoken, with some melodic phrases. A second voice, also male, provides harmonies, often in unison or octaves, creating a layered effect.\n\nA clean electric guitar plays arpeggiated chords, with a slight reverb. A bass guitar plays a simple, foundational line. Drums enter later, providing a steady, driving beat with a prominent kick and snare.\n\nThe tempo is moderate, with a relaxed, slightly swung groove. The production is raw and intimate, with a close-miked feel. The room sounds small, with a short, natural reverb.\n\nThe arrangement builds gradually. The excerpt begins with vocals and guitar. The bass enters shortly after. The drums enter around the halfway mark, adding rhythmic drive. A synth pad enters towards the end, providing a sustained, atmospheric layer.\n\nPass 2:\nA male voice sings with a slightly nasal, mid-range character. The delivery is mostly spoken, with some melodic phrases. A second voice, also male, provides close harmonies, often in unison or octaves, and sometimes in a call-and-response pattern.\n\nA clean electric guitar plays a simple, arpeggiated chord progression. A bass guitar plays a foundational, rhythmic line. Drums provide a steady, driving beat with a prominent snare.\n\nThe tempo is moderate, with a consistent, forward-moving groove. The production is clean and polished, with a dry, intimate room sound for the vocals. The texture is relatively sparse at the beginning, building in density.\n\nThe excerpt begins with vocals, guitar, bass, and drums. The second vocal enters shortly after the first. The arrangement remains consistent until the final third, where the instruments drop out, and a sustained, distorted synth pad enters, creating a wall of sound. The vocals also drop out at this point.\n\nPass 3:\nA male voice sings in a mid-range, with a slightly raw character. The delivery is mostly spoken, with some melodic phrases. A second, higher-pitched voice provides harmonies, often echoing the lead.\n\nInstruments include an acoustic guitar, strummed with a clean sound, and a bass guitar playing a simple, sustained line. A drum machine provides a steady, mid-tempo beat with a four-on-the-floor feel. The groove is relaxed and consistent.\n\nThe production is clean and polished, with a dry, intimate room sound. The texture is clear, with individual instruments easily discernible.\n\nThe arrangement remains consistent for the first half of the excerpt. Around the halfway mark, a sustained, high-pitched synth pad enters, gradually building in volume and presence, creating a drone-like effect that continues to the end. No instruments drop out.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "The Bandcamp credits for 'Blessing' list Jacob Portrait as engineer at Clubhouse in Rhinebeck, NY, Samuel Acchione on guitar, John Heywood on bass and Tom Kelly on drums.",
-        "source": "https://sandy.bandcamp.com/track/blessing-1"
+        "claim": "\"Blessing\" is a 3:05 track on Alex G's ninth studio album God Save the Animals, released September 23, 2022 by Domino Recording Co.",
+        "source": "https://sandy.bandcamp.com/album/god-save-the-animals"
       },
       {
-        "claim": "'Blessing' was the first single from God Save the Animals. It came out on May 23, 2022, before the album was announced.",
+        "claim": "\"Blessing\" was the album's first single, released May 23, 2022, before the album was announced.",
         "source": "https://en.wikipedia.org/wiki/God_Save_the_Animals"
       },
       {
-        "claim": "The album God Save the Animals came out on September 23, 2022 on Domino. It was produced by Alex G and Jacob Portrait, and all tracks were written by Alex Giannascoli.",
-        "source": "https://en.wikipedia.org/wiki/God_Save_the_Animals"
-      },
-      {
-        "claim": "Discogs lists Jacob Portrait as producer and mixer of the album. Mixing was at SugarHouse in NYC, and mastering was by Heba Kadry. Recording took place at several studios, including Clubhouse Recording Studios.",
+        "claim": "The album was produced by Alex G and Jacob Portrait, and Alex G is credited as writer and performer. Portrait also mixed it at SugarHouse in NYC.",
         "source": "https://www.discogs.com/release/24581057-Alex-G-God-Save-The-Animals"
+      },
+      {
+        "claim": "On \"Blessing\", Samuel Acchione plays guitar, John Heywood plays bass and Tom Kelly plays drums.",
+        "source": "https://sandy.bandcamp.com/album/god-save-the-animals"
+      },
+      {
+        "claim": "Alex G wrote and demoed the songs alone at home, then asked about six engineers at different studios to record them, wanting 'a routine that was outside of my apartment'. Headroom Studios in Philadelphia and Gradwell House Recording in Haddon Heights, NJ are among the studios credited.",
+        "source": "https://sandy.bandcamp.com/album/god-save-the-animals"
       },
       {
         "claim": "Alex G told NME that 'Blessing' was inspired by Audioslave.",
         "source": "https://www.nme.com/features/music-interviews/alex-g-interview-2022-god-save-the-animals-3365307"
       },
       {
-        "claim": "The lyrics of 'Blessing' include biblical flood imagery. Alex G told NME he was drawn to the emotional weight of religious language.",
+        "claim": "The lyrics refer to walking through mud and rising from a flood by living like the fishes. NME reads the flood as a biblical reference within the album's religious imagery.",
         "source": "https://www.nme.com/features/music-interviews/alex-g-interview-2022-god-save-the-animals-3365307"
       },
       {
-        "claim": "Reviewers describe 'Blessing' as whispered vocals over cavernous synths. A guitar freak-out follows, and the song ends on a foreboding synth outro.",
-        "source": "https://www.iowapublicradio.org/2022-05-24/alex-g-blessing"
+        "claim": "Alex G told Pitchfork that several people close to him had become religious, which made him wonder what they found. He has said he is not religious and explores forgiveness and growth through religious language.",
+        "source": "https://www.thecrimson.com/article/2022/9/27/alex-g-god-save-the-animals-album-review/"
       },
       {
-        "claim": "The album was the first Alex G record made solely in professional studios. One critic compared the whispery sound of 'Blessing' to 90s alt-grunge.",
+        "claim": "Reviewers describe the song as a whispered vocal over a distorted, synth-and-guitar-heavy arrangement. One compared it to the whispery alt-grunge of the 90s.",
         "source": "https://jocknewsletter.substack.com/p/alex-g-has-let-the-sun-in"
       },
       {
-        "claim": "Alex G has said most of the album's God references were inspired by people close to him who recently became religious. He said writing the songs helped him explore what faith meant.",
-        "source": "https://thepostrider.com/on-god-save-the-animals-alex-g-finally-puts-it-all-together/"
-      },
-      {
-        "claim": "Alex G (Alexander Giannascoli) was born on February 3, 1993 in Havertown, Pennsylvania. He mostly records solo and is joined live by Sam Acchione, John Heywood and Tom Kelly, a lineup unchanged since 2016.",
-        "source": "https://en.wikipedia.org/wiki/Alex_G"
+        "claim": "God Save the Animals was the first Alex G album recorded with outside engineers in professional studios rather than at home on GarageBand. It was his Billboard 200 debut, peaking at 144.",
+        "source": "https://www.allmusic.com/artist/alex-g-mn0003292911"
       }
     ],
-    "lineage": "Alex G is a Philadelphia singer-songwriter who began in bedroom-recorded indie rock and later moved toward polished studio production. 'Blessing' pairs 90s alt-rock/grunge-style whispered vocals with experimental electronic textures.",
+    "lineage": "Alex G, a Philadelphia musician who began as a Bandcamp-era bedroom-pop/lo-fi artist, moves on this track toward 90s alt-grunge-inflected, electronically textured indie rock.",
     "genres": [
       "indie rock",
       "alternative rock",
       "experimental pop"
     ]
   },
-  "draft": "Every line of **Blessing** arrives twice. Alex G says it, and something says it back: \"Every day (every day) / Is a blessing (is a blessing).\" On paper it reads like a congregation answering a preacher, the call-and-response of a church service. Sung in the whisper critics heard over cavernous synths, the echo sounds less like a crowd and more like a voice trying a phrase on to see if it holds weight. Repetition is how prayer works, and it's also how you talk yourself into something.\n\nThe words are almost a children's hymn. Mud, fishes, a flood. The image that matters is the conditional: \"If I live (if I live) / Like the fishes (like the fishes).\" The fish don't escape the flood. They belong to it. The salvation offered here is to stop fighting the water and become something that can breathe in it. That's a strange, slightly unsettling idea of grace, and the song never explains it. It just keeps repeating it.\n\nAlex G has said most of the God references on *God Save the Animals* came from people close to him who had recently become religious, and that writing the songs helped him work out what faith meant. He also told NME he was drawn to the emotional weight of religious language. That's the feeling in \"Blessing\": standing just outside someone else's belief, borrowing its words, and finding they carry more than expected. Gratitude and dread share the same few lines. Calling every day a blessing while walking through mud is either faith or stubbornness, and the song leaves both possible. The little \"huh\" that slips in after \"every day\" and \"through the mud\" sounds like someone half-questioning what they just said.\n\nHe named Audioslave as an inspiration, which is a surprising touchstone for an artist who started out making bedroom-recorded indie rock in Philadelphia. One critic heard 90s alt-grunge in the whispered vocals, and the song reportedly breaks into a guitar freak-out before ending on a foreboding synth outro, so the blessing doesn't get the last word. This was the album's first single, released before the record was even announced. It was also the start of Alex G's first record made entirely in professional studios. Jacob Portrait engineered it at Clubhouse in Rhinebeck, New York, with Samuel Acchione on guitar, John Heywood on bass and Tom Kelly on drums. That's his touring band, together since 2016, finally playing on the record.\n\n\"Blessing\" sticks because it hands you a comforting phrase and lets you feel how much fear it takes to keep saying it.",
+  "draft": "The whole lyric of **Blessing** is eight short phrases, and every one of them gets said twice. A lead voice offers a line and a second voice hands it straight back, sometimes in unison, sometimes an octave apart. It plays less like a chorus than a responsive reading, one person leading and another repeating, and neither seems sure who is convincing whom. \"Every day is a blessing,\" it begins, and the echo arrives before the thought has time to settle.\n\nThat doubling is where the feeling lives. The blessing is in the present tense, but so is the trudge through the mud. The rescue is only conditional: the singer will rise from the flood if they can learn to live \"like the fishes,\" which means going under instead of fighting the water. That is gratitude recited as a way through, not a report from the other side. Then there are the little \"huh\"s tossed in at the ends of lines, offhand and almost a shrug. They keep the hymn from going pious, and they sound like someone half-embarrassed to be praying out loud. Alex G told Pitchfork that several people close to him had become religious, and it made him wonder what they'd found. He has said he isn't religious himself, and that he reaches for this language to think about forgiveness and growth. Heard that way, \"Blessing\" is someone trying on another person's prayer, saying it aloud to see if it holds. Hope and doubt stand next to each other, and the song never decides between them.\n\nThe delivery is mostly spoken, raw and close, breaking into melody only now and then. Reviewers heard it as a whisper. Underneath, a clean electric guitar arpeggiates, the bass keeps a simple foundational line, and the drums hold a steady beat at a moderate, unhurried pace. Then a sustained synth pad swells into the room and thickens it, until the small voice seems to be chanting against something much bigger.\n\nThat pressure is the lineage. Alex G told NME the song was inspired by Audioslave, an unlikely source for a Philadelphia songwriter who came up as a Bandcamp bedroom recorder. One critic heard the whispery alt-grunge of the 90s. What \"Blessing\" borrows is the weight, the sense of heavy, distorted air bearing down. What it bends is the response. Where that music would howl, this murmurs.\n\nIt's also a song about leaving the room. *God Save the Animals* was the first Alex G album made with outside engineers in professional studios rather than on GarageBand at home. He wanted, he said, \"a routine that was outside of my apartment.\" Samuel Acchione plays guitar here, John Heywood bass, Tom Kelly drums. Alex G co-produced with Jacob Portrait, who mixed the record at SugarHouse in New York. \"Blessing\" was the first single, released before the album was even announced.\n\nIt sticks because it lets you say the hopeful thing before you believe it, and then hear someone say it back to you.",
   "factCheck": [
     {
-      "claim": "Every line arrives twice, with a parenthetical echo after each phrase",
+      "claim": "The lyric is eight short phrases, each said twice (lead and echo).",
+      "verdict": "supported",
+      "note": "The lyrics show eight phrases with parenthetical echoes, repeated across the song."
+    },
+    {
+      "claim": "A second voice hands each line back, sometimes in unison, sometimes an octave apart.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on unison/octave harmonies, pass 3 on an echoing second voice, and the lyrics' parentheticals show the echo."
+    },
+    {
+      "claim": "Quote: \"Every day is a blessing\"",
+      "verdict": "supported",
+      "note": "Matches the lyric lines 'Every day' / 'Is a blessing' (echoes omitted)."
+    },
+    {
+      "claim": "Rise from the flood if they live \"like the fishes\"; the rescue is conditional; present-tense walking through mud.",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The 'going under instead of fighting the water' reading is interpretation."
+    },
+    {
+      "claim": "Little \"huh\"s at the ends of lines.",
+      "verdict": "supported",
+      "note": "'Every day, huh', 'Through the mud, huh' and 'If I live, huh' appear in the lyrics."
+    },
+    {
+      "claim": "Alex G told Pitchfork several people close to him became religious and he wondered what they found; he isn't religious and uses the language to explore forgiveness and growth.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Delivery is mostly spoken, raw and close, with occasional melody; reviewers heard a whisper.",
+      "verdict": "supported",
+      "note": "All passes agree on mostly spoken with some melody. Raw and close/intimate is backed by at least two passes. The reviewer whisper description is in the researched facts."
+    },
+    {
+      "claim": "Clean electric guitar arpeggiates, simple bass line, steady drums at a moderate, unhurried pace.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on clean electric arpeggios. All three agree on simple bass, steady drums and moderate tempo. Pass 3 calls the groove relaxed."
+    },
+    {
+      "claim": "\"Then\" a sustained synth pad swells into the room and thickens it, until the small voice seems to be chanting against something bigger.",
       "verdict": "corrected",
-      "note": "Most lines have a parenthetical echo, but a few ('Every day' alone, 'Every day' at the end) do not. Changed to 'Nearly every line'."
+      "note": "The passes agree a sustained synth pad is present but disagree on when it enters and how it behaves. Removed the sequencing ('Then', 'until') and the swelling; kept the sustained pad and the interpretive image."
     },
     {
-      "claim": "Quote: \"Every day (every day) / Is a blessing (is a blessing).\"",
+      "claim": "Alex G told NME the song was inspired by Audioslave.",
       "verdict": "supported",
-      "note": "Matches the lyrics exactly, two consecutive lines."
+      "note": "Matches the researched facts."
     },
     {
-      "claim": "Quote: \"If I live (if I live) / Like the fishes (like the fishes).\"",
-      "verdict": "supported",
-      "note": "Matches the lyrics exactly, two consecutive lines."
-    },
-    {
-      "claim": "Whispered vocals over cavernous synths",
-      "verdict": "supported",
-      "note": "The researched facts state this description. Kept as plain description and dropped the 'critics heard' attribution."
-    },
-    {
-      "claim": "The 'huh' follows 'every day' and 'through the mud'",
-      "verdict": "corrected",
-      "note": "'Huh' also follows 'if I live' in the lyrics. Added it. Reworded 'sounds like' to 'reads like', since the reading rests on the lyric text."
-    },
-    {
-      "claim": "Alex G said most God references on the album came from people close to him who recently became religious, and that writing helped him explore faith",
-      "verdict": "supported",
-      "note": "Matches The Post Rider fact."
-    },
-    {
-      "claim": "Alex G told NME he was drawn to the emotional weight of religious language",
-      "verdict": "supported",
-      "note": "Matches the NME fact."
-    },
-    {
-      "claim": "He named Audioslave as an inspiration for the song",
-      "verdict": "supported",
-      "note": "Alex G told NME that 'Blessing' was inspired by Audioslave."
-    },
-    {
-      "claim": "Alex G started out making bedroom-recorded indie rock in Philadelphia",
+      "claim": "Philadelphia songwriter who came up as a Bandcamp bedroom recorder.",
       "verdict": "supported",
       "note": "Matches the lineage note."
     },
     {
-      "claim": "One critic heard 90s alt-grunge in the whispered vocals",
+      "claim": "One critic heard the whispery alt-grunge of the 90s.",
       "verdict": "supported",
-      "note": "A critic compared the whispery sound to 90s alt-grunge."
+      "note": "Matches the researched facts."
     },
     {
-      "claim": "The song reportedly breaks into a guitar freak-out before ending on a foreboding synth outro, so the blessing doesn't get the last word",
-      "verdict": "removed",
-      "note": "This places events within the song and describes its ending. Not supported by listening notes or lyric structure."
-    },
-    {
-      "claim": "It was the album's first single, released before the record was announced",
+      "claim": "The song borrows weight and heavy distorted air; where that music would howl, this murmurs.",
       "verdict": "supported",
-      "note": "Released May 23, 2022, before the album was announced."
+      "note": "Interpretive comparison resting on supported facts (distorted arrangement, whispered vocal, Audioslave influence)."
     },
     {
-      "claim": "It was the start of Alex G's first record made entirely in professional studios",
-      "verdict": "corrected",
-      "note": "The album was the first made solely in professional studios. 'The start of' is not stated, so the wording now follows the fact."
+      "claim": "God Save the Animals was the first Alex G album made with outside engineers in professional studios rather than on GarageBand at home; quote \"a routine that was outside of my apartment.\"",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
     },
     {
-      "claim": "Jacob Portrait engineered it at Clubhouse in Rhinebeck, New York, with Samuel Acchione on guitar, John Heywood on bass and Tom Kelly on drums",
+      "claim": "Samuel Acchione guitar, John Heywood bass, Tom Kelly drums.",
       "verdict": "supported",
       "note": "Matches the Bandcamp credits."
     },
     {
-      "claim": "That's his touring band, together since 2016, finally playing on the record",
-      "verdict": "corrected",
-      "note": "The facts say the three join him live in a lineup unchanged since 2016. 'Finally playing on the record' is unsupported and was removed."
+      "claim": "Alex G co-produced with Jacob Portrait, who mixed the record at SugarHouse in New York.",
+      "verdict": "supported",
+      "note": "Matches the Discogs credits (NYC)."
+    },
+    {
+      "claim": "\"Blessing\" was the first single, released before the album was announced.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
     }
   ],
-  "lint": [],
+  "lint": [
+    "source"
+  ],
   "cost": {
-    "totalUsd": 0.2242,
+    "totalUsd": 0.2741,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014471,
+        "detail": "1098 in / 178 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015071,
+        "detail": "1098 in / 202 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014646,
+        "detail": "1098 in / 185 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.135982,
-        "detail": "46066 in / 1385 out / 3 searches"
+        "usd": 0.139008,
+        "detail": "47549 in / 1391 out / 3 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.041904,
-        "detail": "2766 in / 1542 out"
+        "usd": 0.076644,
+        "detail": "3631 in / 3106 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.046358,
-        "detail": "3879 in / 3860 out"
+        "usd": 0.054068,
+        "detail": "4874 in / 4432 out"
       }
     ]
   }

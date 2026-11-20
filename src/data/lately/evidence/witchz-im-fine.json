@@ -1,166 +1,195 @@
 {
   "spotifyId": "03Jtlb7ArRkx7RyB1LCnYw",
-  "reviewedAt": "2026-11-20T17:26:14.595Z",
+  "reviewedAt": "2026-11-20T18:03:46.286Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/6497837"
   },
-  "listening": null,
+  "listening": "Pass 1:\nA male voice sings with a breathy, slightly strained delivery, often in a low register. He uses a mix of sustained notes and rhythmic, almost spoken phrases. There are no harmonies.\n\nThe instrumentation includes a sustained, low-frequency synth pad, a clean electric guitar playing arpeggiated chords, and a simple, consistent drum beat with a prominent kick and snare. The tempo is slow, creating a laid-back, almost dragging groove.\n\nThe production is clean and polished, with a dry, intimate room sound. The texture is smooth, with no noticeable grit or distortion.\n\nThe arrangement remains consistent throughout the excerpt. The synth pad, guitar, and drums play continuously, providing a steady backdrop for the vocals. No instruments enter or drop out, and there are no significant builds.\n\nPass 2:\nA male voice sings with a breathy, slightly strained delivery, often in a higher register. He uses some vocal fry. There are no harmonies.\n\nA slow, steady tempo is established by a kick drum and a sparse, sustained synth pad. A clean electric guitar plays a simple, arpeggiated melody with a slight delay effect. The groove feels laid-back and somewhat melancholic.\n\nThe production is clean and polished. The room sounds open, with a noticeable reverb on the vocals and guitar. The texture is smooth.\n\nThe arrangement is minimal. The synth pad and guitar are present throughout. The kick drum enters early, providing a consistent pulse. The vocals are the primary focus, with the instruments providing a spacious backdrop. No elements drop out or build significantly within the excerpt.\n\nPass 3:\nA male voice sings in a low, breathy register, with a slightly nasal quality. The delivery is a mix of spoken word and melodic phrases, with some vocal fry. There are no harmonies.\n\nA slow, steady beat is provided by a kick drum and a snare drum with a tight, dry sound. A synth bass plays a simple, sustained line. A clean electric guitar plays arpeggiated chords with a subtle delay effect.\n\nThe tempo is slow, creating a laid-back, almost dragging groove. The production is clean and polished, with a dry, intimate room sound. The overall texture is sparse and atmospheric.\n\nThe excerpt begins with the vocals and the synth bass. The drums enter shortly after, establishing the beat. The guitar enters later, adding harmonic texture. No elements drop out or build significantly within the excerpt.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "\"Im Fine\" by Witchz was released on March 11, 2022 as a single, under exclusive license to Amuseio AB.",
+        "claim": "\"Im Fine\" by Witchz was released on March 11, 2022, under exclusive license to Amuseio AB.",
         "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
       },
       {
-        "claim": "Shazam's metadata credits the composer of \"Im Fine\" as Michael Lattino.",
-        "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
-      },
-      {
-        "claim": "The track runs 2:06 and is tagged Alternative.",
-        "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
-      },
-      {
-        "claim": "Tunebat lists the song as G major at about 95 BPM and marks it explicit. The label is given as Witchz, under exclusive license to Amuseio AB.",
+        "claim": "The track runs 2:06. Its label is listed as Witchz, under exclusive license to Amuseio AB. It is marked explicit, and Tunebat lists it as G major at about 95 BPM.",
         "source": "https://tunebat.com/Info/Im-Fine-Witchz/03Jtlb7ArRkx7RyB1LCnYw"
       },
       {
-        "claim": "The Spotify release for \"Im Fine\" is a 2-song single, and an instrumental version is listed on Spotify.",
+        "claim": "Michael Lattino is credited as the composer/writer of \"Im Fine\".",
+        "source": "https://www.shazam.com/en-us/song/1632621432/im-fine"
+      },
+      {
+        "claim": "The single has two songs, \"Im Fine\" and an instrumental version of it.",
         "source": "https://open.spotify.com/album/0xtp0BAnlPkiUc3CQeko3x"
       },
       {
-        "claim": "Witchz is a Las Vegas-based singer, songwriter and producer who has released music since 2020, starting with the debut EP Santi Minogo. Two EPs followed in 2022, Charmer and All We Need.",
-        "source": "https://cavedwellermusic.net/albums-reviews/artist-review-witchz/"
+        "claim": "The instrumental version of \"Im Fine\" runs 2:03.",
+        "source": "https://music.apple.com/ru/song/im-fine-instrumental/1632621858?l=en-GB"
       },
       {
-        "claim": "Witchz is known for dark, breathy covers of classics, including Nirvana's \"Smells Like Teen Spirit\", Kate Bush's \"Running Up That Hill\" and Chris Isaak's \"Wicked Game\".",
-        "source": "https://cavedwellermusic.net/albums-reviews/artist-review-witchz/"
+        "claim": "Witchz is a solo project with bass-heavy production and bleak vocals. Its lyrics deal with violence, aggression, sometimes love, and mostly the mental battle within. The producer was born and raised in Las Vegas.",
+        "source": "https://www.last.fm/music/Witchz/+wiki"
       },
       {
-        "claim": "The Witchz cover of \"Smells Like Teen Spirit\" (Alt Mix) came out on 2022-02-18, about three weeks before \"Im Fine\". It is among the artist's top songs on Apple Music, alongside \"Im Fine\".",
+        "claim": "Witchz's catalog includes the 2020 EP Santi Minogo, the Nirvana cover \"Smells Like Teen Spirit\" (2021, with an Alt Mix in 2022), \"Wicked Game\" and \"Villain Mode\" (2022), and \"The Magick\" and \"Killem\" (2023).",
         "source": "https://music.apple.com/us/artist/witchz/1492494904"
       },
       {
-        "claim": "Witchz says they are a producer/songwriter who looked for a singer until about a month before releasing their first music. They started singing themselves after seeing the Bradley Cooper/Lady Gaga film.",
-        "source": "https://x.com/witchzmusic/status/1508895939133538306"
+        "claim": "A Cave Dweller Music review describes Witchz's sound as a blend of alternative, electronic and dark western music. It reports over half a million monthly listeners, more than 13 million Spotify plays for the Teen Spirit cover, and a TikTok remix teaser of one of his tracks with Sam Smith's \"Unholy\" that drew close to a million views.",
+        "source": "https://cavedwellermusic.net/albums-reviews/artist-review-witchz/"
       },
       {
-        "claim": "Witchz says they make all the music and also act as their own PR department. They have since toured Europe, with a sold-out final night in Cologne.",
+        "claim": "In a TikTok video, Witchz says he makes all the music himself and also acts as his own PR department. The same account's post-tour message mentions a sold-out final night in Cologne and a flight home to Las Vegas.",
         "source": "https://www.tiktok.com/@witchzmusic/video/7491714733205163310"
       }
     ],
-    "lineage": "Witchz sits in a dark, bass-heavy alternative/electronic pop lane that one review describes as blending alternative, electronic and dark western music, and that grew through viral TikTok covers of rock and pop classics.",
+    "lineage": "Witchz sits in a modern internet-era alternative scene that mixes bass-heavy electronic production with guitars and dark, moody vocals, and the project is also known for covers of rock classics such as Nirvana.",
     "genres": [
       "alternative",
-      "dark pop",
-      "electropop"
+      "electropop",
+      "dark electronic"
     ]
   },
-  "draft": "The prayer in **Im Fine** doesn't get past its own first line. Witchz announces \"I just said a prayer,\" then says it, the same three words four times over, and then flips the order and swears in the middle of it. That's the song's emotional truth in miniature: someone reaching for help in the only words they have left, and finding those words wear out after a few repetitions. A few lines later comes the doubt about whether the world is an evil simulation or the problem is just their own mind, which is what exhaustion sounds like when it starts looking for an explanation.\n\nWhat makes the song cut is how calmly it opens. The first verse moves from not wanting to wake up to feeling \"kinda vile,\" then shrugs: \"But hey I been here before.\" That line is half comfort and half warning. Familiarity is supposed to make despair manageable, and here it mostly makes it routine. The narrator isn't surprised by the low. They're tired of it.\n\nThe chorus is where the hiding starts. It's a short run of clipped phrases. They can't swallow, they insist this isn't like them, they know people don't like them, and they offer to leave. Then: \"Save our time / I'm fine.\" The leaving gets framed as a favor to everyone else, and \"I'm fine\" lands as the most obvious lie in the song, the thing you say to end the conversation before anyone looks closer. The second chorus changes one word. \"This ain't like me\" becomes \"they ain't like me,\" and the denial about the self turns into distance from the people around them. It's the same isolation from the other side.\n\nWitchz, a Las Vegas producer and songwriter who makes all the music and handles their own promotion, came up through dark, breathy covers of rock and pop classics that spread on TikTok. The take on Nirvana's \"Smells Like Teen Spirit\" arrived about three weeks before this single, and the two now sit side by side among the artist's most-played songs. That link fits. \"Im Fine\" carries the same grunge-era instinct to wrap alienation in a flat, unbothered hook. The song is credited to Michael Lattino, and it's sharper for its brevity. Witchz has said they spent years looking for a singer before deciding to sing their own songs, and there's something fitting in a record this private coming from someone who stepped up to the microphone only when no one else did.\n\nIt sticks because you recognize the reflex it catches, saying you're fine at the exact moment you are furthest from it, and hoping someone hears the gap.",
+  "draft": "The most revealing moment in **Im Fine** comes in the second pass through the chorus, where a single word changes. The first time, the line says this isn't like him. The second time, it says they aren't like him. A confession about losing yourself turns into a reason to pull away from everyone else, and the song never stops to notice. That small slide is the whole emotional mechanism of the track. It's how a person talks himself out of asking for help.\n\nThe verse lays out the despair plainly. Not wanting to wake up, feeling vile, and then a shrug: \"But hey I been here before.\" That line carries two feelings at once. There's a weary pride in having survived this place, and there's the grief of knowing the place by heart. Then the prayer arrives, and it isn't eloquent. \"God help me\" repeats four times in a row, then a fifth, reversed and running into the admission that he's messed up all the time. The repetition sounds like someone who has run out of other words. Next comes the suspicion that the world itself is an evil simulation, or else that his mind is gone. The song lets both explanations stand.\n\nThe chorus is where the hiding starts. A throat that can't swallow, the certainty that people don't like him, a decision to leave before anyone has to ask. \"Save our time\" is generous on its surface, sparing everyone the trouble, and it's what makes the closing \"I'm fine\" land as the lie it is.\n\nThe sound matches that composure. Witchz, the solo project of Las Vegas producer Michael Lattino, who writes the songs and makes all the music himself, keeps the bed clean and polished. A low synth holds sustained notes, a clean electric guitar picks arpeggiated chords through a light delay, and kick and snare keep a slow, almost dragging pulse. The room is dry and close. The voice is breathy and slightly strained, low in register, with some vocal fry, moving between sung lines and phrases that are nearly spoken. There are no harmonies. Nobody joins in, which suits a song about deciding to go it alone.\n\nThe project's reputation runs toward bass-heavy darkness, with lyrics mostly about \"the mental battle within,\" and this track fits that internet-era alternative lane. It mixes electronic production with guitar, the same lane that turned his Nirvana cover into a streaming hit. What sets **Im Fine** apart is restraint. The arrangement never dramatizes the crisis. It stays smooth and even while the words fall apart.\n\nThe song puts you inside the moment someone tells you they're fine, and it lets you hear everything they left out.",
   "factCheck": [
     {
-      "claim": "The lyric 'I just said a prayer' is followed by 'God help me' four times, then a flipped 'Help Me God I'm fucked up all the time'",
-      "verdict": "corrected",
-      "note": "The repetition and the flipped order match the lyrics. 'Swears in the middle of it' was imprecise, so it now points to the line 'fucked up all the time'."
-    },
-    {
-      "claim": "Evil simulation / own mind doubt a few lines later",
+      "claim": "The first chorus says 'This ain't like me' and the second says 'They ain't like me', so one word changes",
       "verdict": "supported",
-      "note": "Matches 'Evil simulation / I feel like I live in one / Or I just lost my mind'."
+      "note": "Matches the lyrics. The reading of the shift is interpretation. Rewritten to quote the lines and avoid assuming the narrator's gender."
     },
     {
-      "claim": "The song opens calmly",
-      "verdict": "removed",
-      "note": "A sound or delivery claim with no listening notes behind it. The opening lyrics ('Fuck this shit can't take it anymore') don't read as calm either."
-    },
-    {
-      "claim": "Quotes 'kinda vile' and 'But hey I been here before'",
+      "claim": "Quote: 'But hey I been here before'",
       "verdict": "supported",
-      "note": "Both match the lyrics exactly."
+      "note": "Exact match."
     },
     {
-      "claim": "Chorus is a short run of clipped phrases",
-      "verdict": "corrected",
-      "note": "'Clipped' could imply sound. Reworded to describe the short lines on the page."
-    },
-    {
-      "claim": "Quote 'Save our time / I'm fine'",
+      "claim": "Not wanting to wake up, feeling vile",
       "verdict": "supported",
       "note": "Matches the lyrics."
     },
     {
-      "claim": "Second chorus changes 'This ain't like me' to 'they ain't like me'",
+      "claim": "'God help me' repeats four times, then a fifth reversed ('Help Me God I'm fucked up all the time')",
       "verdict": "supported",
-      "note": "First chorus has 'This ain't like me', second has 'They ain't like me'."
+      "note": "Matches the lyric structure."
     },
     {
-      "claim": "Witchz is a Las Vegas producer and songwriter who makes all the music and handles their own promotion",
+      "claim": "Evil simulation / lost my mind; the song lets both explanations stand",
       "verdict": "supported",
-      "note": "Supported by the artist review and Witchz's own TikTok statement about being their own PR department."
+      "note": "Matches the lyrics. The reading is interpretation."
     },
     {
-      "claim": "Came up through dark, breathy covers of rock and pop classics that spread on TikTok",
+      "claim": "Quote: 'Save our time' and the closing 'I'm fine'",
       "verdict": "supported",
-      "note": "Supported by the artist review and the lineage note about viral TikTok covers."
+      "note": "Exact match. The song ends the lyrics on 'I'm fine'."
     },
     {
-      "claim": "The 'Smells Like Teen Spirit' cover arrived about three weeks before this single",
-      "verdict": "supported",
-      "note": "The cover came out 2022-02-18 and the single 2022-03-11."
-    },
-    {
-      "claim": "The two sit side by side among the artist's most-played songs",
+      "claim": "Witchz is the solo project of Las Vegas producer Michael Lattino, who writes the songs",
       "verdict": "corrected",
-      "note": "The source says 'top songs on Apple Music', not 'most-played'. Reworded."
+      "note": "The packet credits Lattino as writer of this song and says Witchz is a solo project whose producer was born and raised in Las Vegas. It never says outright that Lattino is the producer. Rewritten to state the credit and the Las Vegas origin separately."
     },
     {
-      "claim": "'Im Fine' carries a grunge-era instinct to wrap alienation in a flat, unbothered hook",
+      "claim": "He makes all the music himself",
+      "verdict": "supported",
+      "note": "From the TikTok video, in which Witchz says this."
+    },
+    {
+      "claim": "Clean and polished production",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Low synth holding sustained notes",
+      "verdict": "supported",
+      "note": "All three passes describe a sustained synth part, and two of them place it low."
+    },
+    {
+      "claim": "Clean electric guitar with arpeggiated chords through a light delay",
+      "verdict": "supported",
+      "note": "All three passes agree on the guitar, and two mention delay."
+    },
+    {
+      "claim": "Kick and snare keep a slow, almost dragging pulse",
+      "verdict": "supported",
+      "note": "At least two passes agree."
+    },
+    {
+      "claim": "The room is dry and close",
       "verdict": "removed",
-      "note": "An unsupported sound claim and an unsupported genre-lineage claim."
+      "note": "Pass 2 describes an open room with reverb, which contradicts the other two."
     },
     {
-      "claim": "The song is credited to Michael Lattino",
-      "verdict": "supported",
-      "note": "Composer credit in the metadata."
-    },
-    {
-      "claim": "Witchz spent years looking for a singer before deciding to sing",
+      "claim": "Voice is breathy and slightly strained, low in register",
       "verdict": "corrected",
-      "note": "The source says they looked for a singer until about a month before releasing their first music. 'Years' removed. Added that they started singing after seeing the Bradley Cooper/Lady Gaga film."
+      "note": "Breathy and slightly strained is supported. Register is contradicted (pass 2 says higher), so it was removed."
     },
     {
-      "claim": "The song is sharper for its brevity",
+      "claim": "Some vocal fry; moves between sung and nearly spoken phrases; no harmonies",
       "verdict": "supported",
-      "note": "Opinion resting on the 2:06 length."
+      "note": "Vocal fry (passes 2 and 3), sung/spoken mix (passes 1 and 3), no harmonies (all three)."
+    },
+    {
+      "claim": "Lyrics mostly about 'the mental battle within'; bass-heavy, dark internet-era alternative lane",
+      "verdict": "supported",
+      "note": "From the Last.fm wiki and the lineage note."
+    },
+    {
+      "claim": "Same lane that turned his Nirvana cover into a streaming hit",
+      "verdict": "corrected",
+      "note": "The causal claim is unsupported. The packet only reports 13 million+ Spotify plays for the cover, so the sentence now says that."
+    },
+    {
+      "claim": "The arrangement never dramatizes the crisis",
+      "verdict": "corrected",
+      "note": "'Never' claims something about the whole song. Reworded to what the passes support: steady playing with no builds in what was heard."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1607,
+    "totalUsd": 0.1834,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014111,
+        "detail": "1097 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014036,
+        "detail": "1097 in / 161 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014311,
+        "detail": "1097 in / 172 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.072462,
-        "detail": "19856 in / 1275 out / 2 searches"
+        "usd": 0.07178,
+        "detail": "18775 in / 1423 out / 2 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.044872,
-        "detail": "2593 in / 1725 out"
+        "usd": 0.052696,
+        "detail": "3409 in / 1953 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.043398,
-        "detail": "3689 in / 3602 out"
+        "usd": 0.054646,
+        "detail": "4538 in / 4557 out"
       }
     ]
   }

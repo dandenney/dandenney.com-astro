@@ -8,33 +8,29 @@ spotifyUrl: "https://open.spotify.com/track/1lpUCvji6ZrKCYCqWhwxdK"
 spotifyId: "1lpUCvji6ZrKCYCqWhwxdK"
 albumArt: "https://i.scdn.co/image/ab67616d0000b273962ad89325bf301f0a12e03a"
 duration: 269448
-genres: ["americana", "folk", "singer-songwriter"]
+genres: ["americana", "folk", "chamber folk"]
 pubDate: "2026-11-20"
-tags: ["emily-scott-robinson", "americana", "folk", "singer-songwriter", "2022"]
+tags: ["emily-scott-robinson", "americana", "folk", "chamber-folk", "2022"]
 pipeline: "lately"
 sources:
   - title: "emilyscottrobinson.bandcamp.com: Client Challenge"
     url: "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
-  - title: "Oh Boy Records Shop: Built On Bones (LP) Emily Scott Robinson"
-    url: "https://ohboy.com/products/pre-order-built-on-bones-lp-emily-scott-robinson"
   - title: "The Boot: Emily Scott Robinson Conjures Up Magic With Mystical 'Built on Bones' [LISTEN]"
     url: "https://theboot.com/emily-scott-robinson-built-on-bones-song/"
   - title: "brooklynvegan.com"
     url: "https://www.brooklynvegan.com/emily-scott-robinson-preps-built-on-bones-stream-the-title-track/"
   - title: "nashvillescene.com"
     url: "https://www.nashvillescene.com/music/nashvillecream/emily-scott-robinson-the-cream-q-a/article_07696ef2-560c-11ed-9475-67eb97d07b59.html"
-  - title: "Wide Open Country: Emily Scott Robinson's 'Built on Bones' and the Magic of Feminine Energy"
-    url: "https://www.wideopencountry.com/emily-scott-robinson-built-on-bones/"
 aiGenerated: true
 ---
-The word that carries **Built on Bones** isn't "bones." It's "everything," which comes back three times after nearly every line until the song seems to be saying nothing else. Emily Scott Robinson wrote it as the prophecy the Witches deliver in her Macbeth song cycle, the one that foretells his rise to power and his death. That refrain turns a single doomed thane into something wider. It isn't only his castle that sits on a grave. It's everything.
+The whole of **Built on Bones** rests on one word, "everything," sung three times over and over until it stops meaning anything and starts working like a spell. Between those repetitions, Emily Scott Robinson slips in the prophecy that Shakespeare's Witches hand to Macbeth: his rise, his fall, the forest that will walk. It opens her six-song cycle for the Witches, and it was the first song she wrote for the job, just after finishing *American Siren*.
 
-The song began on a stage. In spring 2021, director Colin Sullivan asked Robinson to compose music for Telluride Theatre's Macbeth, and she ended up directing the music and playing Hecate. This was the first song she wrote for the production, just after she finished *American Siren*. It became the title track and opener of a six-song cycle on John Prine's Oh Boy Records. It was recorded in May 2022 at The Creative Workshop in Nashville, with Brandy Zdan producing. Robinson plays guitar and sings, and Alisa Amador and Lizzy Ross of Violet Bell sing with her. Three voices make sense for a song about a coven.
+The job came from Telluride Theatre. Director Colin Sullivan asked Robinson in spring 2021 to compose music for *Macbeth*, and the two settled on making the Witches beautiful, tempting, powerful and playful rather than ugly and evil. You can hear that choice everywhere. Fingerpicked acoustic guitar rolls out slow arpeggios, a cello (Kaitlyn Raitz plays on the record) holds long notes beneath it, and the tempo sways gently. Robinson's lead is clear and direct. Alisa Amador and Lizzy Ross of Violet Bell sing the other two Witches, and the three-part harmony is tight and stacked close. Producer Brandy Zdan keeps the room intimate and clean, so nothing sounds like a cauldron. It sounds like a lullaby, which is the unsettling part.
 
-What's unusual is the feeling Robinson gives the Witches. She and Sullivan wanted them powerful and playful rather than ugly and evil, and the lyric reads less like a curse than like testimony from people who have seen how this goes. Blood was spilt along this road, they say, and then comes the line that cuts deepest: "You cannot wash it white with snow." It refuses to let guilt be covered over, and anyone who knows the play will think of Lady Macbeth's hands before she ever scrubs them.
+The words aren't gentle at all. "Everything here is built on bones" is a historian's line as much as a witch's: every crown, every road, every kingdom stands on somebody's dead. "You cannot wash it white with snow" is blood that won't come clean, guilt that no amount of scrubbing will lift. And "A soldier not from woman born" is the riddle that will come for Macbeth, delivered plainly, no louder than the lines around it.
 
-Two feelings sit side by side here, and the song lets both stand. One is grim certainty: "men will do as they're foretold." The other is something close to mercy: "Seek to know no more tonight," as if the Witches would spare Macbeth the sight of his own end if he would only stop asking. The famous prophecies are there too, the soldier not born of woman and Birnam Wood coming down. But they're framed as a warning, and the closing lyrics circle back to that plea to stop seeking before they land on "bones" again.
+That evenness is where the feeling lives. These Witches aren't gloating. They warn, over and over. They tell Macbeth to hide his face, to seek to know no more tonight, that despair waits for him. There's pity in it, and something colder beside it: they know men will do what they've been told they'll do, and they sing it anyway. The two feelings never settle. Robinson said she, Ross, Amador and Zdan meant the record to heal the line of women who came before them, and to declare that women's power can't be controlled by a violent patriarchy. Heard that way, the bones belong to the women too. The harmony is three voices who've seen this story before and refuse to be its villains.
 
-Robinson has said everything in the song was chosen with intention. The concept she and Sullivan worked from was to counter the history of violence against women and their magic. That gives "everything here is built on bones" a second meaning. It's Macbeth's crimes, and it's also whatever the people telling the story buried along the way.
+The closing lines shrink to a single word, "bones," after a stretch of octave harmonies. It lands on John Prine's old label, Oh Boy, a home for plainspoken songs that this one slips a very old story into.
 
-The song puts you where the Witches stand, knowing how the story ends and watching someone walk toward it anyway.
+You leave it hearing doom sung with tenderness, and you can't decide whether the Witches are cursing Macbeth or mourning him.

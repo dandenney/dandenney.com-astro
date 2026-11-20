@@ -1,45 +1,45 @@
 {
   "spotifyId": "11rzdF3j62M3TS7zwiPkZV",
-  "reviewedAt": "2026-11-20T17:27:16.088Z",
+  "reviewedAt": "2026-11-20T17:55:13.814Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/13676325"
   },
-  "listening": null,
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, then strummed.\nBass guitar: plays a walking line.\nDrums: kick, snare, hi-hat, crash cymbal.\n\nTempo and groove:\nMedium tempo. The groove is a relaxed, driving feel.\n\nVocals:\nA male voice, with a slightly raspy, mid-range character. The delivery is conversational and expressive. No harmonies.\n\nProduction:\nThe room sounds fairly dry. The texture is clean and clear, with a polished feel.\n\nArrangement:\nThe excerpt begins with fingerpicked acoustic guitar and vocals. Bass guitar enters shortly after. Drums enter around the 0:04 mark, with the acoustic guitar switching to strumming. The arrangement remains consistent throughout the rest of the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar: fingerpicked, then strummed.\nBass guitar: plays a walking line.\nDrums: kick, snare, and hi-hat.\n\nTempo and Groove:\nMedium tempo. The groove is a relaxed, driving feel.\n\nVocals:\nVoice character: A male voice, with a slightly raw, mid-range tone.\nDelivery: The singer delivers the lyrics with a conversational, slightly melancholic feel.\nHarmonies: Unsure.\n\nProduction:\nRoom: Unsure.\nTexture: The sound is clean and clear, with a natural, unpolished feel.\nHow polished or raw: Raw.\n\nArrangement:\nThe excerpt begins with fingerpicked acoustic guitar and a male vocal. Bass guitar enters, followed by drums. The acoustic guitar transitions to strumming. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked pattern with a consistent bass line. A second acoustic guitar strums chords. A bass guitar plays a simple, melodic line. A drum kit plays a light, driving beat with brushes.\n\nTempo and Groove:\nThe tempo is moderate. The groove is relaxed and flowing, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and earnest. There are no harmonies.\n\nProduction:\nThe room sounds open and natural. The texture is clean and warm. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter immediately. No instruments drop out or build within the excerpt.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "\"Slowly (Acoustic)\" is a one-track single by Skuff Micksun, released January 13, 2023. It runs 2:43 and is credited to 652534 Records DK.",
+        "claim": "\"Slowly (Acoustic)\" is a one-track single by Skuff Micksun, released January 13, 2023, with a running time of 2:43 and a ℗ line to 652534 Records DK.",
         "source": "https://music.apple.com/us/album/slowly-acoustic-single/1660307637"
       },
       {
-        "claim": "Qobuz's credits for the parent song \"Slowly\" (same label, same 13 Jan 2023 date) list Tyler Cratcha as composer, and Casey W. Skufca as composer and lyricist. Casey W. Skufca appears to be Skuff Micksun's legal name, though no source states this directly.",
+        "claim": "Qobuz's credits for the Slowly listing (released 13/01/2023 on 652534 Records DK) name Casey W. Skufca as composer and lyricist and Tyler Cratcha as composer. Skuff Micksun is the main artist.",
         "source": "https://www.qobuz.com/ie-en/album/slowly-skuff-micksun/ya2ni8w07evxc"
       },
       {
-        "claim": "The original studio single \"Slowly\" came out in 2022, before the acoustic version.",
-        "source": "https://music.apple.com/us/album/slowly-acoustic-single/1660307637"
+        "claim": "The original studio version, \"Slowly\", came out August 5, 2022 on the artist's Bandcamp. The acoustic version followed as a separate single.",
+        "source": "https://skuffmicksun.bandcamp.com/track/slowly"
       },
       {
-        "claim": "The artist promoted the acoustic version on TikTok as \"out everywhere to keep you warm\". He tagged it #acoustic, #singersongwriter and #midwestemo.",
+        "claim": "The artist announced the acoustic version on TikTok with the line \"Slowly acoustic is out everywhere to keep you warm!\" and tagged it #acoustic #singersongwriter #midwestemo #emo.",
         "source": "https://www.tiktok.com/@skuffmicksun"
       },
       {
-        "claim": "\"Slowly (Acoustic)\" is on side A of the limited-edition signed and numbered pink vinyl (200 copies), next to \"Magnificent\", \"Bruises\", \"Spoke\", \"Movin' On\" and \"Haunt\".",
+        "claim": "Skuff Micksun's limited-edition signed and numbered pink vinyl (200 copies) includes \"Slowly (Acoustic)\" on Side A, after \"Magnificent\".",
         "source": "https://www.skuffmicksun.com/products/skuff-micksun-limited-edition-vinyl-only-200-ever"
       },
       {
-        "claim": "Skuff Micksun is a singer-songwriter based in Cleveland, Ohio.",
+        "claim": "Skuff Micksun is based in Cleveland, Ohio.",
         "source": "https://skuffmicksun.bandcamp.com/"
       },
       {
-        "claim": "He started playing music at thirteen and taught himself guitar. He played in Cleveland bands until 19, then moved to Chicago and dropped out of Columbia after one year. He spent about six years in Chicago playing in a band and writing the solo project that became Skuff Micksun.",
+        "claim": "He started playing music at 13 on a self-taught guitar. He played in Cleveland bands until 19, then moved to Chicago and dropped out of Columbia after one year. He spent about six years there in a band while writing the solo project that became Skuff Micksun.",
         "source": "https://voyageohio.com/interview/meet-skuff-micksun-of-cleveland-ohio/"
       },
       {
@@ -47,125 +47,173 @@
         "source": "https://voyageohio.com/interview/meet-skuff-micksun-of-cleveland-ohio/"
       },
       {
-        "claim": "He returned to Cleveland after seven years in Chicago. He described writing the 2022 single \"Magnificent\" by putting words down first, then running to his keyboard to write the music.",
-        "source": "https://www.clevescene.com/music/clevelands-skuff-micksun-releases-new-single-and-accompanying-music-video-38384493"
+        "claim": "Press notes describe him as an alternative/indie artist from Cleveland who quit a 9-to-5 to become a full-time artist, and who combines spoken word with melodies.",
+        "source": "https://100percentrock.com/2023/03/a-dirty-dozen-with-skuff-mickson-march-2023/"
       },
       {
-        "claim": "He has said his shows with IDLES left the biggest mark on him. He named Justin Vernon (Bon Iver) as his dream collaborator.",
-        "source": "https://100percentrock.com/2023/03/a-dirty-dozen-with-skuff-mickson-march-2023/"
+        "claim": "Before music became his full-time work, his jobs included muralist, tattoo artist, graphic designer, children's art teacher, set construction worker and art director.",
+        "source": "https://canvasrebel.com/meet-skuff-micksun/"
       }
     ],
-    "lineage": "A Cleveland, Ohio DIY singer-songwriter whose acoustic, confessional material is tagged by the artist himself as midwest emo and elder emo.",
+    "lineage": "Sources place him in the Cleveland, Ohio underground as an alternative/indie singer-songwriter who blends spoken-word poetry with acoustic, folk and electronic touches, and he tags his own acoustic material #midwestemo.",
     "genres": [
-      "singer/songwriter",
       "alternative",
-      "midwest emo"
+      "indie",
+      "singer-songwriter"
     ]
   },
-  "draft": "Waking up is the first crisis here. The song opens with someone surfacing \"born again out of REM,\" headless and half-sure they've died, then hauling a body out of bed. The next move is the one that tells you everything: \"Tell myself I'm okay.\" It isn't a statement. It's a chore, done in the same flat breath as getting on with the day, and then two words land on their own: mostly lonely.\n\n**Slowly** is a Cleveland singer-songwriter's song about the gap between functioning and being alive, and Skuff Micksun keeps that gap open on purpose. The verses slide between \"I\" and \"we\" without warning. \"We don't wanna be dark no more,\" then \"I don't wanna be dark no more.\" One foot in the grave, no sleep in days, trouble every day. Sometimes the darkness is shared. Sometimes it's private property. The song never settles which. That restlessness is the feeling: you can't tell whether you're one person in trouble or part of a generation in trouble, and neither answer helps much.\n\nThe long middle stretch is where the writing gets interesting. It runs on a chain of rhymes (senses, senseless, makes sense, headless, relentless, endless, \"wreck-less\") that sounds like a mind spinning a word until it stops meaning anything. Then it turns on itself: \"Am I doing it again.\" That line is the confession. The narrator catches the spiral mid-spiral, names the urge to crawl out of their own skin, and in the same passage says \"It's all my fault\" and \"It's not all bad.\" Blame and comfort sit side by side, and the song lets both stand.\n\nThe chorus asks for very little: a light, a spark, a smile from someone. The detail that stings is where that smile has to come from, a part of the other person \"that hasn't died.\" It's a plea for company from someone else who's also barely holding on. And then it undercuts its own modest hope: \"But I'm barely alive.\"\n\nSkuff Micksun tagged the acoustic version midwest emo, and it fits that tradition's habit of self-implicating, plainspoken confession, the kind that narrates its own bad thinking out loud. Credits list Casey W. Skufca as lyricist and composer, with Tyler Cratcha as co-composer. When he put it out, he said it was there \"to keep you warm,\" which is a generous way to hand someone a song this cold. That's the trick, though. Warmth here means recognition, not rescue.\n\nWhat sticks is how small the ask is, and how far away it still feels: you finish the song wanting to be that one smile for somebody.",
+  "draft": "**Slowly** starts with someone waking up and checking whether he's dead. \"Born again out of REM,\" Skuff Micksun sings, then lists the morning chores of getting through: drag the body out of bed, and \"Tell myself I'm okay.\" The next line is \"then proceed with my day,\" and the flatness is the point. It's a routine, not a recovery. The words \"mostly lonely\" hang there on their own, the one thing the routine can't cover.\n\nThe song keeps sliding between \"I\" and \"we.\" \"We don't wanna be dark no more,\" it says, then \"I don't wanna,\" as if the narrator can't decide whether this sinking feeling is shared or his alone. That uncertainty is the most human thing in the song. In the second verse the words speed into a run of rhymes: senses, senseless, headless, relentless, endless, wreck-less. This is where his habit of mixing spoken word with melody shows. The wordplay is almost a joke, until it turns into \"It's all my fault\" and then, right after, \"We might all be doomed.\" Blaming himself and fearing for everyone sit next to each other with no line between them. Then comes the sharpest moment, a narrator catching himself mid-spiral: \"Am I doing it again.\" He knows the pattern of getting \"real, real dark\" in his head and wanting out of his own skin. Knowing it doesn't stop it.\n\nThe chorus asks for very little, a light, a spark, a smile from someone that comes from a part of them that hasn't died. It's modest and generous at once. The narrator is looking for something alive in other people because he's short on it himself. Then it ends on \"But I'm barely alive,\" and the hope doesn't cancel the confession.\n\nThis acoustic take came out in January 2023, after the studio original arrived on Bandcamp the previous August. Fingerpicked guitar gives way to strumming as a kick, snare and hi-hat come in, and a bass walks underneath. The tempo is medium and the groove is relaxed but pushing forward. The mix is clean and clear. Skuff Micksun's mid-range voice has a little rasp in it and stays conversational, with no harmonies dressing it up, so it sounds like someone talking you through a bad week. He tagged the release #midwestemo, and it fits that tradition's habit of putting a plain, unguarded confession over guitars that keep moving. When he announced it, he said it was out \"to keep you warm,\" which is a kind way to frame a song this dark.\n\nHe wrote it with Tyler Cratcha, credited under his given name, Casey W. Skufca. He works out of Cleveland and has said the \"Micksun\" honors his late father, Mick. The chorus is plain to the point of feeling generic on first listen, and the \"we\" sometimes blurs who's actually in trouble. But that blur is also how depression talks.\n\nWhat sticks is the narrator's voice catching itself, asking if it's happening again, and you recognizing that question from the inside.",
   "factCheck": [
     {
-      "claim": "The song opens with someone surfacing 'born again out of REM,' headless, half-sure they've died, hauling a body out of bed.",
+      "claim": "Lyric quote \"Born again out of REM\" and the opening situation of waking up and contemplating being dead",
       "verdict": "supported",
-      "note": "Matches the opening lyrics ('I awake with no head / Contemplate if I'm dead / Pull my body out of bed'). The direct quote was turned into a paraphrase to stay within the three-line quote limit."
+      "note": "Matches the lyrics (\"Contemplate if I'm dead\")."
     },
     {
-      "claim": "\"Tell myself I'm okay\"",
-      "verdict": "supported",
-      "note": "Exact lyric. The 'chore' reading is interpretation."
-    },
-    {
-      "claim": "Two words land on their own: mostly lonely.",
-      "verdict": "supported",
-      "note": "'Mostly lonely' is set as its own line in the lyrics. The quote marks were dropped as it is not one of the three quoted lines."
-    },
-    {
-      "claim": "Skuff Micksun is a Cleveland singer-songwriter.",
-      "verdict": "supported",
-      "note": "Bandcamp fact."
-    },
-    {
-      "claim": "Skuff Micksun keeps that gap open on purpose.",
+      "claim": "\"Tell myself I'm okay\" and \"then proceed with my day\" quoted as lines",
       "verdict": "corrected",
-      "note": "Intent isn't shown by the evidence; reworded to describe what the lyrics do."
+      "note": "The lines are in the lyrics, but the draft quoted far more than three lyric lines. These two are now paraphrased."
     },
     {
-      "claim": "Verses slide between 'I' and 'we'; 'We don't wanna be dark no more,' then 'I don't wanna be dark no more'; one foot in the grave, no sleep in days, trouble every day.",
+      "claim": "\"Mostly lonely\" hangs on its own",
       "verdict": "supported",
-      "note": "All present in the lyrics. The direct quotes were paraphrased to stay within the quote limit."
+      "note": "It appears as a standalone line twice. Now paraphrased to stay within the three-quote limit."
     },
     {
-      "claim": "A long middle stretch runs on a chain of rhymes (senses, senseless, makes sense, headless, relentless, endless, 'wreck-less').",
+      "claim": "Slides between \"I\" and \"we\" (\"We don't wanna be dark no more\" / \"I don't wanna\")",
       "verdict": "supported",
-      "note": "The words are in the lyrics, and the lyric structure puts that section between the repeated choruses. Reworded slightly to 'rhymes and echoes' since some are repetitions, not strict rhymes."
+      "note": "The lyrics shift between we and I. Now paraphrased rather than quoted."
     },
     {
-      "claim": "\"Am I doing it again\"",
+      "claim": "Second-verse run of words: senses, senseless, headless, relentless, endless, wreck-less",
       "verdict": "supported",
-      "note": "Exact lyric."
+      "note": "All words appear in the lyrics. Reworded as a run of -less words, since senses/senseless isn't a true rhyme."
     },
     {
-      "claim": "The narrator names the urge to crawl out of their own skin and says 'It's all my fault' and 'It's not all bad.'",
+      "claim": "Spoken-word-with-melody habit shows in the wordplay",
       "verdict": "supported",
-      "note": "Lyrics match. The quotes were paraphrased to keep to three quoted lines."
+      "note": "Press notes say he combines spoken word with melodies. The link to this passage is interpretation."
     },
     {
-      "claim": "The chorus asks for a light, a spark, a smile from someone, from a part of them 'that hasn't died.'",
+      "claim": "\"It's all my fault\" followed directly by \"We might all be doomed\"",
       "verdict": "supported",
-      "note": "Matches lyrics. The quote was paraphrased."
+      "note": "The lines are consecutive in the lyrics. Now paraphrased."
     },
     {
-      "claim": "\"But I'm barely alive\"",
+      "claim": "\"Am I doing it again\" / getting \"real, real dark\" / wanting out of his own skin",
       "verdict": "supported",
-      "note": "Exact lyric."
+      "note": "Matches the lyrics. \"Am I doing it again\" is kept as a quote; the other lines are paraphrased."
     },
     {
-      "claim": "Skuff Micksun tagged the acoustic version midwest emo.",
+      "claim": "Chorus asks for a light, a spark, a smile from a part of someone that hasn't died",
       "verdict": "supported",
-      "note": "TikTok post tagged #midwestemo."
+      "note": "Matches the lyrics."
     },
     {
-      "claim": "It fits that tradition's habit of self-implicating, plainspoken confession.",
+      "claim": "\"Then it ends on 'But I'm barely alive'\"",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics, but \"ends\" is a claim about song structure. Changed to the chorus landing on that line."
+    },
+    {
+      "claim": "Acoustic take released January 2023; studio original on Bandcamp the previous August",
+      "verdict": "supported",
+      "note": "Released 2023-01-13; the original came out Aug 5, 2022 on Bandcamp."
+    },
+    {
+      "claim": "Fingerpicked guitar gives way to strumming as kick, snare and hi-hat come in, with a walking bass",
+      "verdict": "corrected",
+      "note": "Fingerpicked and strummed guitar, walking bass, and kick/snare/hi-hat are backed by two passes. The sequence of drums entering is a positional claim, and pass 3 describes a full band from the start, so it was dropped."
+    },
+    {
+      "claim": "Medium tempo, relaxed but driving groove",
+      "verdict": "supported",
+      "note": "All passes agree on medium/moderate and relaxed. Two say driving."
+    },
+    {
+      "claim": "Mix is clean and clear",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Mid-range voice with a little rasp, conversational, no harmonies",
+      "verdict": "corrected",
+      "note": "Mid-range, conversational and no harmonies are backed by at least two passes. Rasp appears in only one pass, so it was removed."
+    },
+    {
+      "claim": "He tagged the release #midwestemo",
+      "verdict": "corrected",
+      "note": "He tagged the TikTok announcement, not the release itself."
+    },
+    {
+      "claim": "It fits that tradition's habit of putting a plain, unguarded confession over guitars that keep moving",
       "verdict": "removed",
-      "note": "A claim about the genre's history is not supported. Replaced with a plain statement about the tag and the song's confessional writing."
+      "note": "A claim about emo's conventions with no support. Replaced with a description of this song."
     },
     {
-      "claim": "Credits list Casey W. Skufca as lyricist and composer, with Tyler Cratcha as co-composer.",
-      "verdict": "corrected",
-      "note": "The credits are Qobuz's for the original 'Slowly,' not the acoustic version. Skufca is listed as composer and lyricist and Cratcha as composer. The name link to the artist is not stated directly, so the review does not assert it."
-    },
-    {
-      "claim": "When he put it out, he said it was there 'to keep you warm.'",
-      "verdict": "corrected",
-      "note": "The quote comes from his TikTok promotion: 'out everywhere to keep you warm.' Reworded to match."
-    },
-    {
-      "claim": "Warmth here means recognition, not rescue; the ask is small; you finish wanting to be that one smile for somebody.",
+      "claim": "He said it was out \"to keep you warm\"",
       "verdict": "supported",
-      "note": "Interpretation resting on the lyrics."
+      "note": "From the TikTok announcement: \"Slowly acoustic is out everywhere to keep you warm!\""
+    },
+    {
+      "claim": "He wrote it with Tyler Cratcha, credited under his given name, Casey W. Skufca",
+      "verdict": "corrected",
+      "note": "Credits name Casey W. Skufca as composer and lyricist and Tyler Cratcha as composer. Nothing says Skufca is his given name or that he is the same person as Skuff Micksun, so that was removed."
+    },
+    {
+      "claim": "Based in Cleveland; \"Micksun\" honors his late father, Mick",
+      "verdict": "supported",
+      "note": "Per Bandcamp and the Voyage Ohio interview."
+    },
+    {
+      "claim": "Chorus can feel generic; the \"we\" blurs who's in trouble",
+      "verdict": "supported",
+      "note": "Critical opinion resting on the lyrics."
+    },
+    {
+      "claim": "Banned words / evidence mentions",
+      "verdict": "supported",
+      "note": "None present. Lyric quotes were trimmed to three lines."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1723,
+    "totalUsd": 0.2039,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014126,
+        "detail": "1102 in / 164 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013876,
+        "detail": "1102 in / 154 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014476,
+        "detail": "1102 in / 178 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.076802,
-        "detail": "20361 in / 1608 out / 2 searches"
+        "usd": 0.072666,
+        "detail": "18463 in / 1574 out / 2 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.047984,
-        "detail": "3076 in / 1784 out"
+        "usd": 0.057208,
+        "detail": "3912 in / 2078 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.047546,
-        "detail": "4203 in / 3914 out"
+        "usd": 0.06978,
+        "detail": "5170 in / 5944 out"
       }
     ]
   }

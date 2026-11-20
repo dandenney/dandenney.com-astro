@@ -8,31 +8,31 @@ spotifyUrl: "https://open.spotify.com/track/1KrC1a04RkYrJB02M35hET"
 spotifyId: "1KrC1a04RkYrJB02M35hET"
 albumArt: "https://i.scdn.co/image/ab67616d0000b273137de25c203ca93a39a60ab4"
 duration: 259592
-genres: ["indie folk", "singer-songwriter", "confessional pop"]
+genres: ["indie folk", "singer-songwriter", "bedroom pop"]
 pubDate: "2026-11-20"
-tags: ["gracie-abrams", "indie-folk", "singer-songwriter", "confessional-pop", "2023"]
+tags: ["gracie-abrams", "indie-folk", "singer-songwriter", "bedroom-pop", "2023"]
 pipeline: "lately"
 sources:
+  - title: "Rolling Stone: Gracie Abrams Searches for Subconscious Illusions on 'Amelie'"
+    url: "https://www.rollingstone.com/music/music-news/gracie-abrams-amelie-debut-album-good-riddance-1234677304/"
   - title: "Universal Music Canada: GRACIE ABRAMS PREMIERES NEW SONG “AMELIE” TODAY"
     url: "https://www.universalmusic.ca/press-releases/gracie-abrams-premieres-new-song-amelie-today/"
+  - title: "flaunt.com: Gracie Abrams | Because Sometimes The Weight Of It All Transforms Into Freedom"
+    url: "https://www.flaunt.com/post/gracie-abrams-the-critical-mass-issue"
   - title: "Wikipedia: Good Riddance (album)"
     url: "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
   - title: "clashmusic.com"
     url: "https://www.clashmusic.com/features/coming-undone-gracie-abrams-interviewed/"
-  - title: "euphoriazine.com"
-    url: "https://www.euphoriazine.com/blog/2023/02/music/tracks-gracie-abrams-amelie/"
-  - title: "Rolling Stone: Gracie Abrams Searches for Subconscious Illusions on 'Amelie'"
-    url: "https://www.rollingstone.com/music/music-news/gracie-abrams-amelie-debut-album-good-riddance-1234677304/"
+  - title: "The Gryphon: Gracie Abrams' new single ‘Amelie’: 4:20 of calm and melancholy"
+    url: "https://www.thegryphon.co.uk/2023/02/11/gracie-abrams-new-single-amelie-420-of-calm-and-melancholy/"
 aiGenerated: true
 ---
-The person at the center of **"Amelie"** never learns the narrator exists. That's the first thing Gracie Abrams tells you, and the song never takes it back. A girl on a sofa asks a million questions, and by eleven o'clock the narrator has memorized her face. Then the opening verse closes the door on itself: "She doesn't know my name." Whatever happened that night happened on one side only.
+By 11, the narrator of **Amelie** has memorized a stranger's face. That's the whole event: a sofa, a girl full of questions, a night that leaves the real feeling unsaid. Gracie Abrams builds the song on the gap between how small that encounter was and how large it grew in one person. The first verse puts it plainly, "She sorta ripped me open," and that "sorta" carries a flinch of embarrassment at feeling this much over so little. The other half of the injury comes right after. She has no idea, and she doesn't know the narrator's name.
 
-The writing is plain, like the journal entry it started as. Abrams wrote the lyrics long before she recorded them, and the verses keep a diary's habits: small details logged without comment. Her hair was up. She cried about her obsessions. The feeling isn't romance so much as being marked by someone who walked through without noticing. The song's central question turns on that: "Why'd it feel louder / When all of it went unspoken?" Silence is what made it big. Nothing was said, so nothing could be settled, and the narrator is left hoping it will just go away.
+The best line is a question: "Why'd it feel louder / When all of it went unspoken?" Silence works as an amplifier here, and the song never pretends otherwise. The next thought is a hope that the feeling will simply leave. Then come the details that prove it won't: her hair up, her crying about her obsessions, and the confession that the narrator would let her ruin every day ahead. Wanting to be free of someone and being ready to hand them everything sit side by side within a few lines, and Abrams doesn't pick one.
 
-The chorus repeats the name until it starts to blur, and then it asks whether Amelie was ever real at all, or "all in a dream." That doubt is the song's quiet honesty. The narrator half-knows this person has become a memory polished past recognition. Abrams doesn't turn that into a twist. She lets the longing and the suspicion sit together. One stretch of the lyric does the same with its rhymes, setting a nursery rhyme against a funeral rite. Amelie's words felt like both, comfort and loss at once, and the narrator offers a whole life to someone who wasn't asking for it.
+The chorus turns memory into doubt. It asks where she went, then whether she was ever there at all, as if one vivid evening were too much to have really happened. The refrain circles like a nursery rhyme, and a late verse reaches for that very image. Her words felt like a nursery rhyme and also like a funeral rite. Twice the chorus swaps "I don't know" for a plea to be told no. The next lines immediately reverse it into asking for more, and the song closes on the plea. Those repeated refrains make up much of the back half. Some listeners will find it stalls. Others will hear a mind that can't stop replaying the same scene.
 
-There's no blame anywhere in it. Abrams has said that entering adulthood she wanted to be straighter with herself and stay out of the trap of victimhood, and here the narrator owns the whole lopsided thing, admitting a willingness to let this stranger ruin all their days. The chorus usually ends on "I don't know," but twice it swaps in "tell me no." That's a plea to be released, and it lands harder than any accusation.
+Abrams said the song started as a journal entry. She wrote it while Aaron Dessner of The National strummed guitar, and they recorded it quickly. It was the second preview of her debut album, Good Riddance, which Dessner produced at Long Pond in the Hudson Valley. Abrams has said the sparseness is why it's one of her favorites. That sparseness is audible. A fingerpicked acoustic guitar rolls out slow arpeggios under a sustained synth pad. The voice stays soft, breathy and intimate, and a second vocal layer joins on some phrases. The room sounds open, and the mix is clean and polished. It follows the diary-candid singer-songwriter pop of the 2020s. Dessner's folk-leaning restraint keeps the production from adding any drama the story doesn't have.
 
-Aaron Dessner of The National produced it, wrote it with Abrams, and plays the acoustic guitar. Clash called it a finger-plucked ode, which suits a song built from one evening's worth of memory. Abrams made her debut album *Good Riddance* in stretches at Dessner's Long Pond studio, away from Los Angeles. This third single sits in the confessional singer-songwriter tradition, and she names Joni Mitchell as her most formative influence. The writing is close to the bone and specific enough to embarrass.
-
-It sticks because it names something rarely admitted out loud, that a person you barely met can rearrange you, and leaves you wondering who in your own life never knew they did.
+The song sticks because it admits something most people hide: that a single evening with someone who will never think of you again can be enough to leave you asking whether you dreamed them.

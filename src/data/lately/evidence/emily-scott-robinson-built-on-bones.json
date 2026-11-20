@@ -1,171 +1,199 @@
 {
   "spotifyId": "1lpUCvji6ZrKCYCqWhwxdK",
-  "reviewedAt": "2026-11-20T17:15:57.034Z",
+  "reviewedAt": "2026-11-20T17:42:49.109Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/10473500"
   },
-  "listening": null,
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A cello plays sustained notes.\n\nTempo and Groove:\nThe tempo is slow. The groove is a gentle, flowing feel.\n\nVocals:\nA female voice sings the lead melody. Her delivery is clear and direct.\nHarmonies enter, sung by multiple voices in unison, creating a full, layered sound.\n\nProduction:\nThe room sounds open, with a natural reverb. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar and cello. The lead vocal enters, followed by harmonies. The harmonies become more prominent and layered as the excerpt progresses.\n\nPass 2:\nInstruments:\nAcoustic guitar plays fingerpicked arpeggios. A bass guitar plays a walking bassline. A drum kit plays a slow, steady beat with brushes.\n\nTempo and Groove Feel\nThe tempo is slow. The groove is a gentle, swaying feel.\n\nVocals\nA female voice sings in a clear, alto range. The delivery is calm and deliberate. Harmonies enter in the second half, with two additional female voices joining in a close, stacked arrangement.\n\nProduction\nThe room sounds intimate, with a slight reverb. The texture is warm and organic. The production is polished.\n\nArrangement\nThe excerpt begins with acoustic guitar, bass, and lead vocal. The drum kit enters shortly after. Harmonies join the lead vocal in the second half, creating a fuller sound.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A cello plays sustained notes.\n\nTempo and Groove:\nThe tempo is slow. The groove is a gentle, flowing ballad.\n\nVocals:\nA female voice sings the lead melody. Her delivery is clear and direct. Harmonies enter, sung by multiple voices, creating a layered, full sound. The harmonies are tight and blend well.\n\nProduction:\nThe sound is clean and polished. The room sounds intimate. The texture is smooth.\n\nArrangement:\nThe excerpt begins with acoustic guitar and cello. The lead vocal enters, followed by harmonies. The harmonies build in intensity and number of voices.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "\"Built on Bones\" is the title track and opener of Emily Scott Robinson's six-song Oh Boy Records EP/song cycle for the Witches of Shakespeare's Macbeth, released October 28, 2022.",
+        "claim": "\"Built on Bones\" is the opening title track of Emily Scott Robinson's six-song EP/song cycle for the Witches of Shakespeare's Macbeth. The EP was released October 28, 2022 on Oh Boy Records.",
         "source": "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
       },
       {
-        "claim": "Emily Scott Robinson wrote and composed all the songs on the project. The EP credits list her on guitar and vocals, Alisa Amador on vocals, and Lizzy Ross of Violet Bell on vocals.",
+        "claim": "In the song cycle, the title track is the prophecy the Witches deliver. It foretells Macbeth's rise to power and his death.",
         "source": "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
       },
       {
-        "claim": "Brandy Zdan produced the record. Teddy Morgan was recording/mixing engineer and Richard Dodd mastered it.",
+        "claim": "Emily Scott Robinson wrote and composed all the songs. Brandy Zdan produced, Teddy Morgan engineered and mixed, and Richard Dodd mastered.",
         "source": "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
       },
       {
-        "claim": "The EP was recorded at The Creative Workshop in Nashville, TN. Oh Boy's page says the recording was made in May 2022.",
-        "source": "https://ohboy.com/products/pre-order-built-on-bones-lp-emily-scott-robinson"
+        "claim": "The EP was recorded at The Creative Workshop in Nashville. The Bandcamp page says the recording was made in May 2022.",
+        "source": "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
       },
       {
-        "claim": "Other players include Ellen Angelico (electric and baritone guitar), Josh Grange (pedal steel, piano, electric guitar), Aaron Haynes (drums), Vanessa McGowan and Teddy Morgan (bass), Eamon McLoughlin (fiddle), Kaitlyn Raitz (cello), and Kristin Weber (violin, string arrangements).",
+        "claim": "Robinson sings and plays guitar. Alisa Amador and Lizzy Ross of Violet Bell sing as the three Witches in three-part harmony.",
+        "source": "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
+      },
+      {
+        "claim": "Other musicians on the record are Ellen Angelico (electric and baritone guitar), Josh Grange (pedal steel, piano, electric guitar), Aaron Haynes (drums), Vanessa McGowan and Teddy Morgan (bass), Eamon McLoughlin (fiddle), Kaitlyn Raitz (cello), and Kristin Weber (violin, string arrangements).",
         "source": "https://theboot.com/emily-scott-robinson-built-on-bones-song/"
       },
       {
-        "claim": "The songs were first written for Telluride Theatre's Macbeth after director Colin Sullivan asked Robinson to compose music in spring 2021. Robinson directed the music and played Hecate on stage.",
+        "claim": "The songs were originally commissioned for Telluride Theatre's Macbeth. Robinson directed the music and played Hecate on stage. After a strong fan response she recorded them with Zdan, Amador and Ross.",
         "source": "https://www.brooklynvegan.com/emily-scott-robinson-preps-built-on-bones-stream-the-title-track/"
       },
       {
-        "claim": "In the song cycle, \"Built on Bones\" is the prophecy the Witches deliver, foretelling Macbeth's rise to power and death.",
-        "source": "https://ohboy.com/products/pre-order-built-on-bones-lp-emily-scott-robinson"
+        "claim": "Theatre director Colin Sullivan asked Robinson in spring 2021 to compose music for Macbeth. Their idea was to make the Witches beautiful, tempting, powerful and playful, instead of ugly and evil.",
+        "source": "https://www.brooklynvegan.com/emily-scott-robinson-preps-built-on-bones-stream-the-title-track/"
       },
       {
-        "claim": "Robinson told the Nashville Scene that \"Built on Bones\" was the first song she wrote for the Macbeth production. She had just finished writing American Siren and was starting on Macbeth.",
+        "claim": "Robinson said the title track was the first song she wrote for the production. She had just finished writing American Siren.",
         "source": "https://www.nashvillescene.com/music/nashvillecream/emily-scott-robinson-the-cream-q-a/article_07696ef2-560c-11ed-9475-67eb97d07b59.html"
       },
       {
-        "claim": "Robinson says the song is mostly not taken directly from Macbeth's text. Lines such as \"ashes of our sisters burned\" refer directly to the witch trials, and she says everything in the song was chosen with intention.",
-        "source": "https://www.wideopencountry.com/emily-scott-robinson-built-on-bones/"
-      },
-      {
-        "claim": "Robinson and Sullivan's concept was to give the Witches a powerful voice and to counter the history of violence against women and their magic. The Witches are cast as beautiful, powerful and playful rather than ugly and evil.",
+        "claim": "Robinson said she, Ross, Amador and Zdan intended to heal the lineage of women who came before them and to declare that women's power and magic can't be controlled by a violent patriarchy.",
         "source": "https://theboot.com/emily-scott-robinson-built-on-bones-song/"
       }
     ],
-    "lineage": "The project sits in the Nashville Americana/folk singer-songwriter tradition on John Prine's Oh Boy Records, applied to a theatrical, Shakespeare-based song cycle with three-part harmony and Tom Waits-inspired production touches.",
+    "lineage": "The song sits in the Americana/folk singer-songwriter tradition on John Prine's Oh Boy Records, here applied to a theatrical, feminist retelling of Macbeth with Tom Waits-inspired production and southern gothic atmosphere.",
     "genres": [
       "americana",
       "folk",
       "alt-country"
     ]
   },
-  "draft": "The word that carries **Built on Bones** isn't \"bones.\" It's \"everything,\" sung three times after nearly every line until it stops sounding like a word and starts working like a drumbeat. Emily Scott Robinson wrote the song as the Witches' prophecy in Macbeth, the scene that foretells his rise and his death. That chant turns a single doomed thane into something wider. It isn't only his castle that sits on a grave. It's everything.\n\nThe song began on a stage. In spring 2021, director Colin Sullivan asked Robinson to compose music for Telluride Theatre's Macbeth, and she ended up directing the music and playing Hecate. This was the first song she wrote for the production, coming right after she finished *American Siren*. It became the title track and opener of a six-song cycle on John Prine's Oh Boy Records. It was recorded in May 2022 at The Creative Workshop in Nashville, with Brandy Zdan producing. Robinson plays guitar and sings, and Alisa Amador and Lizzy Ross of Violet Bell sing with her. Three voices make sense for a song sung by a coven.\n\nWhat's unusual is the feeling Robinson gives the Witches. She and Sullivan wanted them powerful and playful rather than ugly and evil, and in a tradition that tends to hear the weird sisters as cackling villains, that's a real change. The song doesn't sound like a curse. It sounds like testimony. \"Blood was spilt along this road\" is said flatly, the way someone talks who has watched it happen before. Then comes the line that cuts deepest: \"You cannot wash it white with snow.\" It refuses to let guilt be covered over, and anyone who knows the play will hear Lady Macbeth's hands in it before she ever scrubs them.\n\nTwo feelings sit side by side here, and the song lets both stand. One is grim certainty: \"men will do as they're foretold.\" The other is something close to mercy: \"Seek to know no more tonight,\" as if the Witches would spare Macbeth the sight of his own end if he would only stop asking. The famous prophecies are there too, the soldier \"not from woman born\" and Birnam Wood on the march. But they're framed as a warning: \"you have been warned.\" By the last verses the lines fold back on themselves, the plea to stop seeking repeats, and the refrain thins down to \"Bones / Bones / Bones.\"\n\nRobinson has said everything in the song was chosen with intention. Part of that intention, by her and Sullivan's account, was to push back against the history of violence against women and their magic. That gives \"everything here is built on bones\" a second meaning. It's Macbeth's crimes, and it's also whatever the people telling the story buried along the way.\n\nThe song makes you stand where the Witches stand, knowing how the story ends and watching someone walk toward it anyway.",
+  "draft": "The whole of **Built on Bones** rests on one word, sung three times over and over until it stops meaning anything and starts working like a spell. Between those repetitions, Emily Scott Robinson slips in the prophecy that Shakespeare's Witches hand to Macbeth: his rise, his fall, the forest that will walk. It opens her six-song cycle for the Witches, and it was the first song she wrote for the job, just after finishing *American Siren*.\n\nThe job came from Telluride Theatre. Director Colin Sullivan asked Robinson in spring 2021 to score his *Macbeth*, and the two agreed the Witches should be beautiful, tempting, powerful and playful rather than ugly and evil. You can hear that choice everywhere. Fingerpicked acoustic guitar rolls out slow arpeggios, a cello (Kaitlyn Raitz plays on the record) holds long notes beneath it, and the tempo sways gently. Robinson's lead is clear and unhurried. Then Alisa Amador and Lizzy Ross of Violet Bell come in as the other two Witches, and the three-part harmony stacks tight and keeps thickening. Producer Brandy Zdan keeps the room intimate and clean, so nothing sounds like a cauldron. It sounds like a lullaby, which is the unsettling part.\n\nThe words aren't gentle at all. \"Everything here is built on bones\" is a historian's line as much as a witch's: every crown, every road, every kingdom stands on somebody's dead. \"You cannot wash it white with snow\" reaches ahead to Lady Macbeth scrubbing at her hands, guilt that no amount of cleaning will lift. And \"A soldier not from woman born\" is the riddle that will undo the king, delivered as calmly as a weather report.\n\nThat calm is where the feeling lives. These Witches aren't gloating. They warn, over and over. They tell Macbeth to hide his face, to seek to know no more tonight, that despair waits for him. There's pity in it, and something colder beside it: they know men will do what they've been told they'll do, and they sing it anyway. The two feelings never settle. Robinson said she, Ross, Amador and Zdan meant the record to heal the line of women who came before them, and to declare that women's power can't be controlled by a violent patriarchy. Heard that way, the bones belong to the women too. The harmony is three voices who've seen this story before and refuse to be its villains.\n\nIt ends with the word stripped down to \"bones,\" the harmonies climbing into octaves, on John Prine's old label Oh Boy, a long way from Scotland and right at home.\n\nYou leave it hearing doom sung with tenderness, and you can't decide whether the Witches are cursing Macbeth or mourning him.",
   "factCheck": [
     {
-      "claim": "'Everything' follows nearly every line, three times each",
+      "claim": "The song leans on one word, sung three times over and over, until it works like a spell",
       "verdict": "supported",
-      "note": "The lyrics repeat 'Everything everything everything' after almost every line."
+      "note": "The lyrics repeat 'Everything everything everything' after nearly every line. The body now names the word. The spell comparison is interpretation."
     },
     {
-      "claim": "The repeated word 'stops sounding like a word and starts working like a drumbeat'",
-      "verdict": "removed",
-      "note": "This describes how the song sounds, and no listening notes are available. Reworded as a point about the lyric's repetition on the page."
-    },
-    {
-      "claim": "Robinson wrote the song as the Witches' prophecy, foretelling Macbeth's rise and death",
+      "claim": "The song delivers the Witches' prophecy to Macbeth: his rise, his fall, the forest that will walk",
       "verdict": "supported",
-      "note": "Oh Boy's page describes it as the prophecy the Witches deliver in the song cycle. 'The scene' was dropped because the packet doesn't tie the song to a scene."
+      "note": "Researched facts say the title track is the prophecy that foretells Macbeth's rise and death. The lyrics mention Birnam Wood."
     },
     {
-      "claim": "Colin Sullivan asked Robinson in spring 2021 to compose music for Telluride Theatre's Macbeth; she directed the music and played Hecate",
+      "claim": "It opens her six-song cycle and was the first song she wrote for the job, just after finishing American Siren",
       "verdict": "supported",
-      "note": "BrooklynVegan."
+      "note": "Both points are in the Bandcamp and Nashville Scene facts."
     },
     {
-      "claim": "First song she wrote for the production, just after finishing American Siren",
+      "claim": "Telluride Theatre commissioned the music; director Colin Sullivan asked Robinson in spring 2021; the Witches were to be beautiful, tempting, powerful and playful rather than ugly and evil",
       "verdict": "supported",
-      "note": "Nashville Scene. Reworded to match 'had just finished writing American Siren'."
+      "note": "Matches the BrooklynVegan facts. 'Score his Macbeth' was reworded to 'compose music for Macbeth'."
     },
     {
-      "claim": "Title track and opener of a six-song cycle on Oh Boy Records (John Prine's label)",
+      "claim": "Fingerpicked acoustic guitar plays slow arpeggios; a cello holds long notes",
       "verdict": "supported",
-      "note": "Bandcamp, Oh Boy, and the lineage note."
+      "note": "All three passes agree on the fingerpicked guitar. Passes 1 and 3 agree on the sustained cello."
     },
     {
-      "claim": "Recorded May 2022 at The Creative Workshop in Nashville, produced by Brandy Zdan",
+      "claim": "Kaitlyn Raitz plays cello on the record",
       "verdict": "supported",
-      "note": "Oh Boy page and Bandcamp."
+      "note": "Credited in the Boot facts."
     },
     {
-      "claim": "Robinson on guitar and vocals; Alisa Amador and Lizzy Ross of Violet Bell on vocals",
+      "claim": "The tempo sways gently",
       "verdict": "supported",
-      "note": "EP credits."
+      "note": "All passes say slow and gentle, flowing or swaying."
     },
     {
-      "claim": "She and Sullivan wanted the Witches powerful and playful rather than ugly and evil",
-      "verdict": "supported",
-      "note": "The Boot."
-    },
-    {
-      "claim": "A tradition that tends to hear the weird sisters as cackling villains",
-      "verdict": "removed",
-      "note": "Unsupported claim about the history of Macbeth interpretation."
-    },
-    {
-      "claim": "The song 'sounds like testimony'; 'Blood was spilt' is said flatly, like someone who has watched it happen before",
-      "verdict": "removed",
-      "note": "These are claims about vocal delivery with no listening notes. Reframed as a reading of the lyrics, with the 'flatly' description dropped."
-    },
-    {
-      "claim": "Quoted lyrics: 'You cannot wash it white with snow', 'men will do as they're foretold', 'Seek to know no more tonight'",
-      "verdict": "supported",
-      "note": "Exact matches. Other quotes were trimmed or paraphrased to stay within three quoted lines."
-    },
-    {
-      "claim": "Soldier 'not from woman born', Birnam Wood, 'you have been warned'",
-      "verdict": "supported",
-      "note": "In the lyrics; now paraphrased rather than quoted."
-    },
-    {
-      "claim": "Closing lyrics repeat the plea to stop seeking and end on 'Bones'",
-      "verdict": "supported",
-      "note": "The lyric structure shows this. The 'thins down' phrasing was softened so it doesn't imply how it sounds."
-    },
-    {
-      "claim": "Robinson has said everything in the song was chosen with intention",
-      "verdict": "supported",
-      "note": "Wide Open Country."
-    },
-    {
-      "claim": "That intention included pushing back against the history of violence against women and their magic",
+      "claim": "Robinson's lead is clear and unhurried",
       "verdict": "corrected",
-      "note": "The packet gives this as the concept she and Sullivan worked from, not as her statement about word choice. Reworded accordingly."
+      "note": "'Clear and direct' is backed by passes 1 and 3. 'Unhurried' was only loosely backed, so it was changed to 'direct'."
+    },
+    {
+      "claim": "Amador and Ross of Violet Bell come in as the other two Witches; the three-part harmony stacks tight and keeps thickening",
+      "verdict": "corrected",
+      "note": "Their roles and the three-part harmony are credited. Tight, stacked harmonies are backed by passes 2 and 3. 'Then... come in' and 'keeps thickening' describe order and arc within the clip, so they were removed."
+    },
+    {
+      "claim": "Producer Brandy Zdan keeps the room intimate and clean",
+      "verdict": "supported",
+      "note": "Zdan is credited as producer. Intimate and clean are each backed by two passes."
+    },
+    {
+      "claim": "'Everything here is built on bones'; 'You cannot wash it white with snow'; 'A soldier not from woman born'",
+      "verdict": "supported",
+      "note": "All three quotes match the lyrics exactly."
+    },
+    {
+      "claim": "The snow line reaches ahead to Lady Macbeth scrubbing at her hands",
+      "verdict": "removed",
+      "note": "Lady Macbeth and the handwashing scene are not in the evidence. Replaced with a reading of the line as blood that won't come clean."
+    },
+    {
+      "claim": "The soldier line is the riddle that will undo the king, delivered as calmly as a weather report",
+      "verdict": "corrected",
+      "note": "The lyrics say the soldier 'will come for you', and the prophecy foretells Macbeth's death. 'King' was dropped. Only pass 2 says 'calm', so the delivery description was softened to plain."
+    },
+    {
+      "claim": "They tell Macbeth to hide his face, seek to know no more tonight, and that despair waits; men will do what they've been told",
+      "verdict": "supported",
+      "note": "A reading of the lyrics 'Hide your face from prophesy', 'Seek to know no more tonight', 'Despair you will upon the sight' and 'men will do as they're foretold'."
+    },
+    {
+      "claim": "Robinson said she, Ross, Amador and Zdan meant to heal the line of women before them and declare women's power can't be controlled by a violent patriarchy",
+      "verdict": "supported",
+      "note": "Matches the Boot facts."
+    },
+    {
+      "claim": "The last lines strip down to 'bones', with octave harmonies",
+      "verdict": "corrected",
+      "note": "The lyric structure shows the closing 'Bones / Bones' lines, and the lyrics mark octave harmonies. 'Harmonies climbing' was reworded as an ordering of the lyric structure, not a sound arc."
+    },
+    {
+      "claim": "On John Prine's old label Oh Boy",
+      "verdict": "supported",
+      "note": "Oh Boy Records is the label, and the lineage note ties it to Prine."
+    },
+    {
+      "claim": "A long way from Scotland and right at home",
+      "verdict": "removed",
+      "note": "Scotland is not in the evidence."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1823,
+    "totalUsd": 0.1995,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013566,
+        "detail": "1107 in / 141 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014116,
+        "detail": "1107 in / 163 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013466,
+        "detail": "1107 in / 137 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.08264400000000001,
-        "detail": "23002 in / 1664 out / 2 searches"
+        "usd": 0.081596,
+        "detail": "23098 in / 1540 out / 2 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.04922,
-        "detail": "3160 in / 1829 out"
+        "usd": 0.055824,
+        "detail": "3896 in / 2012 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.050474,
-        "detail": "4387 in / 4170 out"
+        "usd": 0.057918,
+        "detail": "5114 in / 4769 out"
       }
     ]
   }

@@ -8,29 +8,35 @@ spotifyUrl: "https://open.spotify.com/track/12cZWGf5ZgLcKubEW9mx5q"
 spotifyId: "12cZWGf5ZgLcKubEW9mx5q"
 albumArt: "https://i.scdn.co/image/ab67616d0000b273a76c4e0bace73e8f9afa4e3a"
 duration: 264473
-genres: ["hip hop", "conscious rap", "orchestral rap"]
+genres: ["hip-hop", "christian hip-hop", "conscious rap"]
 pubDate: "2026-11-20"
-tags: ["nf", "hip-hop", "conscious-rap", "orchestral-rap", "2023"]
+tags: ["nf", "hip-hop", "christian-hip-hop", "conscious-rap", "2023"]
 pipeline: "lately"
 sources:
   - title: "Wikipedia: Hope (NF song)"
     url: "https://en.wikipedia.org/wiki/Hope_(NF_song)"
-  - title: "Calvin University Chimes: NF releases fifth studio album “HOPE,” signifying the hope of change"
-    url: "https://calvinchimes.org/2023/04/15/nf-releases-fifth-studio-album-hope-signifying-the-hope-of-change/"
-  - title: "Plugged In: Hope"
-    url: "https://www.pluggedin.com/track-reviews/nf-hope/"
+  - title: "Songfacts: Hope by NF"
+    url: "https://www.songfacts.com/facts/nf/hope"
   - title: "Wikipedia: Hope (NF album)"
     url: "https://en.wikipedia.org/wiki/Hope_(NF_album)"
+  - title: "Hillsdale Collegian: 'HOPE' reveals NF's maturing message & sound 'HOPE' reveals NF's maturing message & sound"
+    url: "https://hillsdalecollegian.com/2023/03/hope-reveals-nfs-maturing-message-sound/"
+  - title: "Universal Music Canada: NF RELEASES INSPIRING NEW SINGLE AND VIDEO “HOPE”"
+    url: "https://www.universalmusic.ca/press-releases/nf-releases-inspiring-new-single-and-video-hope/"
+  - title: "NME: NF announces new album 'HOPE' with defiant new single 'Motto'"
+    url: "https://www.nme.com/news/music/nf-new-single-music-video-motto-his-upcoming-album-hope-3413926"
   - title: "NME: NF: \"Sometimes I just like to poke fun at our industry\""
     url: "https://www.nme.com/features/music-interviews/nf-rapper-interview-new-hope-album-2023-3428624"
 aiGenerated: true
 ---
-**HOPE** turns on a firing. NF addresses the person who has run things for three decades, the one "draggin' your feet" and pinning the standstill on someone else, and tells him his time is up. That person is NF. The address is warm and merciless at once: "Nate, you've had a great run." It's the tone of a boss letting down a loyal employee, and the kindness makes it sting more. Then, like an emcee clearing the stage, the song introduces its own album. That fits, since "Hope" is the opening track and the lead single of the record named after it.
+Partway through **HOPE**, NF fires himself. "Nate, you've had a great run," he says, with the cool courtesy of a manager clearing out a desk, and then a new voice steps up to introduce the album. It plays as a bit, but it isn't a joke. The self being let go spent thirty years dragging his feet and promising progress, and the self doing the firing still sounds like he's apologizing: "I don't want you to feel like a failure / I know this hurts." Pride and tenderness share the same breath. He's cutting loose a version of himself he still feels sorry for.
 
-What follows is a definition of success in a rapid, list-like build, the slam-poetry cadence critics often compare to Eminem. Taking a pay cut to do what you love. Turning failure into fuel. Then the song stops reciting and starts confessing. NF calls a mental breakdown "the push I needed" to get help, and admits it took becoming a father to look in the mirror. The most tender moment is also the most tangled. Picking up a son every day, NF promises the boy will never stand at a window wondering if dad will show up, then turns to a parent: "Mama, I forgive you." Forgiveness and old injury sit in the same line, and the song doesn't pretend one cancels the other. The fear underneath isn't for NF at all. It's that a child might grow up feeling never enough.
+The music stays out of the way so that argument can land. A simple, melancholy piano figure keeps circling while a synth bass holds long notes underneath and a pad fills the air. The kick and snare are sparse and plain, a hip-hop beat with no extra decoration. The mix is clean and dry, the vocal right up front. Staccato strings and a pulsing echo of background voices come in as the song moves on. NF wrote it with Tommee Profitt, who also handled mixing and programming, and the two produced it with Jeff Sojka. Patrick Tohill, NF's regular visual collaborator, gets a co-production credit as well.
 
-The craft shows in the long "30 years of" litany, more than thirty rounds of the same phrase with a new word stapled on each time: hollow, bitter, stagnant, lonely. The repetition is the point. Shame feels like a sentence you keep serving, and the list keeps going until it lands on "pushing everyone away." Then the old self breaks in, in parentheses, telling the new one "you'll never be loved." The current voice answers each charge until the closing lines, where the doubting voice cuts in with "(no)" and the claim to take the reins has to be made twice before it sticks.
+The verses start as a pep talk, a definition of success built from grinding and dreaming big, and then they get heavier. NF calls a mental breakdown the push that got him into help. He picks up his son every morning and promises the boy will never be the kid at the window wondering whether dad is coming. Then he catches himself, says that wasn't a shot, and adds, "Mama, I forgive you." Forgiveness and the old injury sit in the same bar. He can't say one without the other showing.
 
-NF wrote the song with Tommee Profitt, his longtime collaborator, and the two produced it with Jeff Sojka, carrying their cinematic orchestral approach: plucky piano chords that move into staccato strings and a pulsing echo of background voices. In the video, which NF co-directed with Patrick Tohill, the split is literal, one NF in white reaching for change, one in black wanting to stay put. NF told NME the pressure on this album was greater than ever because so long had passed since his last one. The song turns that weight into an argument with the mirror.
+Then comes the pileup: thirty years of shame, of anger, of fake, of chains, ending on thirty years of pushing everyone away. After that, the doubting voice speaks in parentheses and NF answers it line for line until it cuts him off mid-sentence. He finishes anyway, with one word: reins. The video, which NF co-directed with Tohill, stages the same fight between his old self and new self over whose album this will be.
 
-It sticks because you hear someone win an argument with the worst voice in their own head by one interrupted word, and you know exactly how close it was.
+It's the confessional, Christian-rooted rap NF has built his name on, the kind press often holds up against Eminem. Here he turns that streak toward optimism. He has called writing "therapy," and this song sounds like a session that ends on a breakthrough.
+
+What sticks is hearing someone forgive the people who hurt him, himself included, then grab the last word before the old voice can finish, so you feel hope arrive as an argument he wins.

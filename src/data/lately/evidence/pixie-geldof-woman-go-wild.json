@@ -1,29 +1,33 @@
 {
   "spotifyId": "020YsiW7gnBiqTAmEg7eTc",
-  "reviewedAt": "2026-11-20T17:23:02.062Z",
+  "reviewedAt": "2026-11-20T17:53:55.214Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/10666920"
   },
-  "listening": null,
+  "listening": "Pass 1:\nA synth pad plays sustained chords. A bass guitar plays a simple, repeating root-fifth pattern. A drum machine provides a slow, steady beat with a prominent snare on beats two and four. A single voice sings with a breathy, slightly raspy character, using a low register. The delivery is melodic and sustained. There are no harmonies. The production has a clean, polished texture with a sense of a small, intimate room. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds. The tempo is slow. The groove feel is laid-back and steady.\n\nPass 2:\nA synth pad provides a sustained, warm bed. A bass plays a simple, repeating line. Drums enter with a slow, steady beat, featuring a prominent snare. The tempo is slow. The groove feels relaxed and slightly dragging.\n\nThe lead vocal is a clear, breathy voice, delivered with a gentle, almost whispered quality. There are no harmonies.\n\nThe production has a spacious room sound, with a slightly hazy texture. It sounds polished.\n\nThe arrangement begins with the synth pad and bass. Drums enter, establishing the beat. The lead vocal then enters, remaining consistent throughout. No elements drop out or build significantly within the excerpt.\n\nPass 3:\nA synth pad plays sustained chords. A bass synth plays a simple, repeating root-fifth pattern. A drum machine provides a slow, steady beat with a kick on beats one and three, and a snare on beats two and four. A tambourine plays eighth notes.\n\nThe tempo is slow. The groove feels relaxed and steady.\n\nThe lead vocal is a female voice, sung with a breathy, slightly melancholic character. The delivery is mostly sustained notes, with some slight vocal fry. There are no obvious harmonies.\n\nThe production has a medium-sized room sound, with a clean, polished texture.\n\nThe arrangement is consistent throughout the excerpt. All instruments and vocals are present from the beginning and remain until the end, with no significant changes in their presence or intensity.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "Pixie Geldof said she wrote \"Woman Go Wild\" with Fryars and that it is the only piano-led song on the album.",
+        "claim": "Pixie Geldof says she wrote \"Woman Go Wild\" with Fryars, and that it is the only piano-led song on the album.",
         "source": "https://www.refinery29.com/en-gb/2016/11/128583/pixie-geldof-album-im-yours-track-explainer"
       },
       {
-        "claim": "Geldof said the song was quick and easy to write. She said recording it was the slowest, most intricate part of the album process.",
+        "claim": "Geldof says writing the song was easy and quick. She says recording it was the slowest, most intricate part of the album process.",
         "source": "https://www.refinery29.com/en-gb/2016/11/128583/pixie-geldof-album-im-yours-track-explainer"
       },
       {
-        "claim": "The album I'm Yours was produced by Tony Hoffer, whose credits include Goldfrapp, Beck, Air and Ladyhawke. Geldof recorded it in Los Angeles.",
+        "claim": "The album I'm Yours was produced by Tony Hoffer, whose credits include Goldfrapp, Beck, Air and Ladyhawke.",
+        "source": "https://www.hotpress.com/music/pixies-lot-interview-with-pixie-geldof-19178962"
+      },
+      {
+        "claim": "I'm Yours was recorded in Los Angeles with Tony Hoffer.",
         "source": "https://www.hotpress.com/music/pixies-lot-interview-with-pixie-geldof-19178962"
       },
       {
@@ -31,131 +35,180 @@
         "source": "https://www.nme.com/news/music/watch-pixie-geldofs-mesmerising-new-video-woman-gone-wild-1817307"
       },
       {
-        "claim": "The \"Woman Go Wild\" video was directed by Balthazar Klarwein. It follows a teenage girl through a prom love story.",
+        "claim": "The video for \"Woman Go Wild\" was directed by Balthazar Klarwein. It follows a teenage girl through a prom love story.",
         "source": "https://i-d.co/article/pixie-geldofs-new-video-woman-go-wild-is-a-sweet-teen-love-story/"
       },
       {
-        "claim": "In the video, a young woman listens to Geldof on a Walkman and daydreams about a school dance. There she finds the girl she likes, and the two end up floating underwater together.",
+        "claim": "In the video, a young woman listens to Geldof on a Walkman in a park. She daydreams about a school dance where she finds the girl she likes, and the two end up floating underwater together.",
         "source": "https://www.out.com/popnography/2016/11/04/pixie-geldof-tells-teenage-love-story-woman-go-wild-video"
       },
       {
-        "claim": "I'm Yours is Geldof's debut album. It was released on 4 November 2016 on Stranger Records, a UK indie label.",
+        "claim": "I'm Yours is Geldof's debut album. It came out on 4 November 2016 on Stranger Records.",
         "source": "https://northerntransmissions.com/pixie-geldof-debuts-new-song-woman-go-wild/"
       },
       {
-        "claim": "Geldof said working on the album helped her cope after the death of her sister Peaches in 2014. She said she needed to stay busy with something she loved.",
-        "source": "https://i-d.vice.com/en_uk/article/evnjmm/pixie-geldofs-new-video-woman-go-wild-is-a-sweet-teen-love-story"
+        "claim": "Geldof said finishing the album helped her cope after her sister Peaches died in 2014. She said she needed to stay busy with something she loved.",
+        "source": "https://www.nme.com/news/music/watch-pixie-geldofs-mesmerising-new-video-woman-gone-wild-1817307"
       },
       {
-        "claim": "Before her solo career, Geldof wrote Hole- and Libertines-inspired songs under the name Violet. The album's oldest song, \"Wild Things Grow\", dates from those sessions.",
-        "source": "https://www.nme.com/blogs/nme-radar/pixie-geldof-qa-on-her-new-album-762023"
-      },
-      {
-        "claim": "NME describes I'm Yours as a blend of country and dream-pop. Geldof got into country through her parents, Bob Geldof and Paula Yates.",
+        "claim": "Before her solo career, Geldof wrote Hole- and Libertines-inspired songs in a band called Violet. The album blends country and dream-pop and includes \"Wild Things Grow\" from those Violet writing sessions.",
         "source": "https://www.nme.com/blogs/nme-radar/pixie-geldof-qa-on-her-new-album-762023"
       }
     ],
-    "lineage": "The song sits in the dreamy, hazy leftfield pop and country-tinged dream-pop of Geldof's debut album, which she made with Los Angeles producer Tony Hoffer.",
+    "lineage": "The song sits in a country-tinged, dream-pop and leftfield pop vein. Geldof traces her country roots to her parents' record collection and to artists such as Dolly Parton and Kris Kristofferson.",
     "genres": [
-      "dream pop",
-      "country-tinged pop",
+      "dream-pop",
+      "country",
       "leftfield pop"
     ]
   },
-  "draft": "The most telling words in **Woman Go Wild** come in parentheses. By the last run of the chorus, Pixie Geldof has sung the title hook again and again as plain fact, and then she slips a condition in front of it: \"(If you want).\" The power she's been describing, his look and her coming undone, turns out to be something she's offering rather than something he takes. That small hedge holds the whole song.\n\nGeldof wrote it with Fryars and has said it came quick and easy. The lyric's shape shows why: two verses of confession, a pre-chorus where everything slows down, and a chorus that repeats until the words wear smooth. What she's confessing is not simple, though. The first verse opens on devotion and then turns on itself: \"It hurts me when you hold me,\" she sings, and right after that she admits that nobody warned her needing someone could feel this wrong. The second verse moves toward something close to relief at being past rescue: \"I'm glad no one can save me now.\" Pain and pleasure sit in the same breath. Geldof doesn't sort them out. She reports both.\n\nThe pre-chorus explains the pull. It's about being seen, the sense that this person knows everything about her that she doesn't. That's the feeling underneath the title. It isn't quite lust. It's the dizzy comfort of handing yourself to someone who seems to understand you better than you do. Then the third verse adds a flash of leverage. She admits she made him wait, calls him her man and her king, and ties the crown to a condition: if she's all his, he'll keep wanting her. The surrender is also a bargain, and she knows it.\n\nBy Geldof's account it's the only piano-led song on *I'm Yours*, her 2016 debut for Stranger Records. The easy song turned out to be the hard one to record, and she has called its sessions the slowest, most intricate part of making the album. Tony Hoffer, whose credits run through Goldfrapp, Beck and Air, produced the record in Los Angeles. NME heard the album as country crossed with dream-pop, and the country comes honestly: she got into it through her parents, Bob Geldof and Paula Yates. From that tradition the song takes its blunt, unembarrassed devotion. Then it bends that devotion toward something murkier, a need she half distrusts.\n\nBalthazar Klarwein's video turns the \"boy\" and \"king\" of the lyric into a teenage girl on a Walkman, daydreaming her way to a school dance and to the girl she likes. That reading fits the hook without strain. Being undone by a look isn't tied to any one kind of love.\n\nThe song lets you feel how good it is to be known, and how much it costs to want that so badly you'd put \"if you want\" in front of your own wildness.",
+  "draft": "The most revealing line in **Woman Go Wild** comes late, in the section after the second chorus, and it's only four words long: \"If I'm all yours.\" Up to that point the song reads as a full surrender. With that one \"if,\" it becomes a bargain. Geldof hands herself over, then names the price: be wanted again and again.\n\nSurrender is where the song starts. The opening verse admits to being controlled, and the second verse stops on the line \"It hurts me when you hold me.\" The verse goes on to say that nobody warned her needing someone could feel this wrong. She knows, and she stays anyway. The third verse turns that knowledge into something close to pride: \"I'm glad no one can save me now.\" The song never sorts out the hurt from the pleasure. It lets the narrator be wounded and thrilled in the same breath, and it lets her know this is a bad idea while choosing it on purpose. In the chorus, being looked at is what undoes her, a gaze that seems to know more about her than she does.\n\nThe music holds that feeling still. A synth pad lays down long sustained chords. The bass walks a simple root-fifth pattern over and over, and a drum machine keeps a slow, steady beat with the snare landing hard on two and four. The groove is laid-back and unhurried, which suits a lyric that keeps asking the moment to slow down. Geldof's voice is breathy with a little rasp at the edges, and she holds her notes long instead of pushing them. No harmonies come in to keep her company. The production is clean and polished, with some room air around the voice.\n\nGeldof wrote it with Fryars and says the writing came easily and fast. Recording it, she says, was the slowest and most intricate part of making the album. You can hear that care in how little moves. The album, her debut *I'm Yours*, was cut in Los Angeles with producer Tony Hoffer, whose work with Goldfrapp and Air explains the glossy hush. Underneath sits the country she traces to her parents' records, Dolly Parton and Kris Kristofferson. The country shows in the devotion, in a narrator willing to crown her lover king outright. Before going solo she wrote Hole- and Libertines-inspired songs in a band called Violet. This song keeps some of that recklessness and slows it to a sway.\n\nBalthazar Klarwein's video moves the song somewhere unexpected. A teenage girl listens on a Walkman in a park and daydreams about a school dance, where she finds the girl she likes, and the two end up floating underwater. That reading suits the closing refrain, where \"(If you want)\" keeps getting tacked onto the hook and the decision passes to someone else.\n\nThe song lets you feel how good it is to stop resisting, and how even that kind of giving in can come with terms attached.",
   "factCheck": [
     {
-      "claim": "The parenthetical \"(If you want)\" appears in the final run of the chorus, in front of the title hook",
+      "claim": "The line \"If I'm all yours\" is four words and comes after the second chorus.",
       "verdict": "supported",
-      "note": "Lyrics close with four \"(If you want) you can make a woman go wild\" lines. The title hook repeats throughout before that."
+      "note": "The lyrics show the \"I'll be honest, I let you wait\" section after the second chorus. The quote matches exactly."
     },
     {
-      "claim": "Geldof wrote the song with Fryars and has said it came quick and easy",
+      "claim": "The opening verse admits to being controlled.",
       "verdict": "supported",
-      "note": "Refinery29 facts."
+      "note": "\"Darling, you control me.\""
     },
     {
-      "claim": "The lyric has \"two verses of confession\" before the chorus section, and later a \"third verse\"",
+      "claim": "The second verse \"stops on\" the line \"It hurts me when you hold me.\"",
       "verdict": "corrected",
-      "note": "The lyrics have three verse sections (\"Darling, you control me...\", \"Boy, it's like you want me...\", \"I'll be honest...\"). The draft contradicted itself, so it now says three."
+      "note": "That line opens the second stanza and doesn't end it. Changed to \"opens on\"."
     },
     {
-      "claim": "A pre-chorus where everything slows down, and a chorus that repeats",
+      "claim": "The verse says nobody warned her that needing someone could feel this wrong.",
       "verdict": "supported",
-      "note": "\"Everything appears to / Slow, slow down\" and the repeated hook are in the lyrics."
+      "note": "\"Sweet love never told me once / Needing you could ever be this wrong.\" This is a fair paraphrase."
     },
     {
-      "claim": "Quote: \"It hurts me when you hold me\" and the line about needing someone feeling this wrong",
+      "claim": "The third verse has \"I'm glad no one can save me now.\"",
       "verdict": "supported",
-      "note": "Matches the lyrics: \"It hurts me when you hold me\" and \"Needing you could ever be this wrong\"."
+      "note": "The quote is exact."
     },
     {
-      "claim": "Quote: \"I'm glad no one can save me now\"",
-      "verdict": "supported",
-      "note": "Exact match."
-    },
-    {
-      "claim": "She admits she made him wait, calls him her man and her king, and ties it to a condition about being all his",
-      "verdict": "supported",
-      "note": "\"I let you wait / You are my man, you are my king / If I'm all yours / Then you want me again and again\". The bargain reading is interpretation."
-    },
-    {
-      "claim": "It is the only piano-led song on I'm Yours, her 2016 debut for Stranger Records",
-      "verdict": "supported",
-      "note": "Refinery29, Northern Transmissions and Spotify metadata."
-    },
-    {
-      "claim": "Recording the song was the slowest, most intricate part of making the album",
-      "verdict": "supported",
-      "note": "Refinery29 facts."
-    },
-    {
-      "claim": "Tony Hoffer, whose credits include Goldfrapp, Beck and Air, produced the record in Los Angeles",
-      "verdict": "supported",
-      "note": "Hot Press facts."
-    },
-    {
-      "claim": "NME heard the album as country crossed with dream-pop; Geldof got into country through her parents Bob Geldof and Paula Yates",
-      "verdict": "supported",
-      "note": "NME facts."
-    },
-    {
-      "claim": "From that tradition the song takes its blunt, unembarrassed devotion, then bends it",
+      "claim": "Geldof hands herself over and names the price.",
       "verdict": "corrected",
-      "note": "Interpretive, but it asserted the song borrows from country directly. Reworded as a reading of the song, tied to the album's country-tinged dream-pop."
+      "note": "This attributes the narrator's stance to the artist. Changed to \"the narrator\"."
     },
     {
-      "claim": "Balthazar Klarwein's video follows a teenage girl on a Walkman who daydreams about a school dance and the girl she likes",
+      "claim": "The synth pad plays long sustained chords.",
       "verdict": "supported",
-      "note": "I-D and Out facts. The link to the lyric's \"boy\" and \"king\" is interpretation."
+      "note": "All three passes agree."
     },
     {
-      "claim": "No banned words; no mention of evidence, clips or sources",
+      "claim": "The bass \"walks\" a simple root-fifth pattern.",
+      "verdict": "corrected",
+      "note": "Two passes say a repeating root-fifth pattern. \"Walks\" implies a walking bass, so it was changed to \"plays\"."
+    },
+    {
+      "claim": "A drum machine keeps a slow, steady beat with the snare landing hard on two and four.",
+      "verdict": "corrected",
+      "note": "Passes 1 and 3 give snare on two and four, and Pass 2 says a prominent snare. \"Landing hard\" was changed to \"prominent\"."
+    },
+    {
+      "claim": "The groove is laid-back and unhurried.",
       "verdict": "supported",
-      "note": "None found."
+      "note": "All three passes describe a relaxed, laid-back groove."
+    },
+    {
+      "claim": "The voice is breathy with a little rasp at the edges.",
+      "verdict": "corrected",
+      "note": "All three passes agree on breathy. Only Pass 1 says raspy, and Pass 3 says vocal fry, so the rasp was dropped."
+    },
+    {
+      "claim": "She holds her notes long, with no harmonies.",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 describe sustained delivery, and all three passes agree there are no harmonies."
+    },
+    {
+      "claim": "The production is clean and polished, with some room air around the voice.",
+      "verdict": "supported",
+      "note": "All three passes mention polish and a room sound."
+    },
+    {
+      "claim": "Geldof wrote it with Fryars, and the writing came easily and fast.",
+      "verdict": "supported",
+      "note": "Refinery29."
+    },
+    {
+      "claim": "Recording was the slowest, most intricate part of the album process.",
+      "verdict": "supported",
+      "note": "Refinery29."
+    },
+    {
+      "claim": "The debut album I'm Yours was cut in Los Angeles with producer Tony Hoffer, whose work includes Goldfrapp and Air.",
+      "verdict": "supported",
+      "note": "Hot Press and Northern Transmissions. The claim that his credits \"explain the glossy hush\" is interpretation, softened."
+    },
+    {
+      "claim": "Country roots trace to her parents' records, Dolly Parton and Kris Kristofferson.",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Before going solo she wrote Hole- and Libertines-inspired songs in a band called Violet.",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "This song keeps some of that recklessness and slows it to a sway.",
+      "verdict": "removed",
+      "note": "Nothing supports a link between this song and the Violet songs, and no listening pass describes a sway."
+    },
+    {
+      "claim": "Balthazar Klarwein directed the video, in which a teenage girl listens on a Walkman in a park, daydreams about a school dance where she finds the girl she likes, and the two float underwater.",
+      "verdict": "supported",
+      "note": "I-D and Out."
+    },
+    {
+      "claim": "The closing refrain repeats \"(If you want)\" before the hook.",
+      "verdict": "supported",
+      "note": "The lyrics show the final section. The vague \"that reading\" link was rewritten as plain interpretation."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1873,
+    "totalUsd": 0.2159,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001312,
+        "detail": "1100 in / 124 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001397,
+        "detail": "1100 in / 158 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001327,
+        "detail": "1100 in / 130 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.076686,
-        "detail": "21193 in / 1430 out / 2 searches"
+        "usd": 0.07616,
+        "detail": "21170 in / 1382 out / 2 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.062844,
-        "detail": "3021 in / 2538 out"
+        "usd": 0.07622,
+        "detail": "3670 in / 3077 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.047796,
-        "detail": "4208 in / 3938 out"
+        "usd": 0.059496,
+        "detail": "4873 in / 4975 out"
       }
     ]
   }

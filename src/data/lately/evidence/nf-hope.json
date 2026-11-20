@@ -1,191 +1,199 @@
 {
   "spotifyId": "12cZWGf5ZgLcKubEW9mx5q",
-  "reviewedAt": "2026-11-20T17:18:02.509Z",
+  "reviewedAt": "2026-11-20T17:52:35.756Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/7683213"
   },
-  "listening": null,
+  "listening": "Pass 1:\nThe excerpt features a male voice, rapping in a clear, mid-range tone. His delivery is rhythmic and precise, with a consistent, driving flow. There are no harmonies.\n\nThe instrumentation is sparse. A piano plays a simple, arpeggiated chord progression, providing a melancholic backdrop. A subtle, low-frequency synth pad adds depth and a sustained, atmospheric quality. Percussion is minimal, consisting of a kick drum and snare, creating a steady, mid-tempo groove. The tempo feels consistent and deliberate.\n\nThe production is clean and polished, with a dry, intimate room sound. The vocals are upfront and clear, with a slight reverb that adds a touch of space without sounding distant. The overall texture is smooth and well-balanced.\n\nThe arrangement builds subtly. The piano and synth are present throughout. The kick and snare enter around the 0:13 mark, adding a rhythmic pulse. No elements drop out.\n\nPass 2:\nA male voice raps with a clear, forward delivery, using a slightly raspy tone. He is the sole vocalist. The tempo is slow, with a relaxed, almost dragging groove.\n\nA piano plays a simple, arpeggiated chord progression, providing a gentle, melancholic backdrop. A synth bass enters, playing long, sustained notes that underpin the harmony. A kick drum and snare drum provide a sparse, hip-hop-influenced beat. The snare has a sharp, almost clap-like sound.\n\nThe production is clean and polished, with a sense of space around the instruments. The vocals are dry and upfront. The arrangement is minimal, with the piano establishing the mood, followed by the subtle addition of the synth bass and drums. There are no significant builds or drops within the excerpt.\n\nPass 3:\nInstruments:\nA male voice raps over a piano, which plays a simple, repeating chord progression. A synth bass enters, playing a sustained note. A kick drum and snare drum enter, playing a simple, driving beat. A synth pad enters, playing a sustained chord.\n\nTempo and Groove Feel:\nThe tempo is moderate. The groove is driving and energetic.\n\nVocals:\nThe male voice is clear and articulate. He raps with a confident, assertive delivery. There are no harmonies.\n\nProduction:\nThe production is clean and polished. The instruments are well-balanced and the vocals are clear and present. The room sounds dry.\n\nArrangement:\nThe excerpt begins with the male voice rapping over a piano. The synth bass enters, followed by the kick drum and snare drum. The synth pad enters, adding a layer of atmosphere. The arrangement builds in intensity as more instruments are added.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "\"Hope\" is a song by American rapper NF. It was released on February 16, 2023, as the lead single from his fifth studio album, also called Hope.",
+        "claim": "\"HOPE\" was released on February 16, 2023, as the lead single from NF's fifth studio album, also called HOPE.",
         "source": "https://en.wikipedia.org/wiki/Hope_(NF_song)"
       },
       {
-        "claim": "NF wrote the song with Tommee Profitt. The two produced it with Jeff Sojka.",
+        "claim": "Nate Feuerstein (NF) wrote the song with Tommee Profitt. The two produced it with Jeff Sojka.",
         "source": "https://en.wikipedia.org/wiki/Hope_(NF_song)"
       },
       {
-        "claim": "The official music video came out the same day as the song. NF and Patrick Tohill directed it.",
-        "source": "https://en.wikipedia.org/wiki/Hope_(NF_song)"
+        "claim": "Songfacts credits Patrick Tohill as a co-producer as well. Tohill is better known as a director and is NF's regular visual collaborator.",
+        "source": "https://www.songfacts.com/facts/nf/hope"
       },
       {
-        "claim": "The song opens with plucky piano chords. These move into staccato strings and a pulsing echo of background voices.",
-        "source": "https://en.wikipedia.org/wiki/Hope_(NF_song)"
-      },
-      {
-        "claim": "The song is the opening track on the album Hope. One reviewer says it marks a turning point in which NF accepts change and lets go of his pride. The same review says the lighter side of NF takes control in the last line, \"I'm taking the reins.\"",
-        "source": "https://calvinchimes.org/2023/04/15/nf-releases-fifth-studio-album-hope-signifying-the-hope-of-change/"
-      },
-      {
-        "claim": "In the video, NF plays two versions of himself. One wears all white and wants to change and find hope. The other wears all black and wants to stay the same.",
-        "source": "https://calvinchimes.org/2023/04/15/nf-releases-fifth-studio-album-hope-signifying-the-hope-of-change/"
-      },
-      {
-        "claim": "Lyrically, NF speaks to his former self after about 30 years of struggle. He says he is done waiting on false promises and is moving forward in hope.",
-        "source": "https://www.pluggedin.com/track-reviews/nf-hope/"
-      },
-      {
-        "claim": "The Hope album was preceded by the singles \"Hope\" and \"Motto\". A third single, \"Happy\", came out the same day as the album.",
+        "claim": "On the album, Tommee Profitt handled mixing and programming for the title track.",
         "source": "https://en.wikipedia.org/wiki/Hope_(NF_album)"
       },
       {
-        "claim": "Hope debuted at number two on the US Billboard 200 with 123,000 album-equivalent units. This was NF's third top-ten album.",
-        "source": "https://en.wikipedia.org/wiki/Hope_(NF_album)"
+        "claim": "The song opens with plucky piano chords. It moves into staccato strings and a pulsing echo of background voices.",
+        "source": "https://en.wikipedia.org/wiki/Hope_(NF_song)"
       },
       {
-        "claim": "NF told NME that making the album felt harder than before. He said the pressure was greater than ever because so long had passed since his last album.",
+        "claim": "The music video came out the same day as the song. NF and Patrick Tohill directed it.",
+        "source": "https://en.wikipedia.org/wiki/Hope_(NF_song)"
+      },
+      {
+        "claim": "In the video, competing voices (NF's old self and new self) fight over whose album it will be. The new self wins and names the album \"HOPE\".",
+        "source": "https://hillsdalecollegian.com/2023/03/hope-reveals-nfs-maturing-message-sound/"
+      },
+      {
+        "claim": "The single is NF's first release of 2023. Universal Music Canada's press release says it finds him assessing his musical journey so far and looking ahead. It is the lead single from his first album since 2019's The Search and his first longer project since the 2021 mixtape CLOUDS (THE MIXTAPE).",
+        "source": "https://www.universalmusic.ca/press-releases/nf-releases-inspiring-new-single-and-video-hope/"
+      },
+      {
+        "claim": "NME reported that the song reached 32 million global streams in its first week.",
+        "source": "https://www.nme.com/news/music/nf-new-single-music-video-motto-his-upcoming-album-hope-3413926"
+      },
+      {
+        "claim": "In an NME interview, NF described writing and recording as \"therapy\" and \"an outlet\" for him.",
         "source": "https://www.nme.com/features/music-interviews/nf-rapper-interview-new-hope-album-2023-3428624"
       }
     ],
-    "lineage": "NF's Hope sits in the confessional, mental-health-focused rap tradition. It pairs rapid, slam-poetry-style lyrics with cinematic orchestral production from longtime collaborator Tommee Profitt, and critics often compare it to Eminem's style.",
+    "lineage": "The song sits in NF's confessional, mental-health-focused Christian-rooted hip-hop, which press often compares to Eminem-style rap, and it marks a turn toward optimism and new beginnings.",
     "genres": [
-      "hip-hop",
-      "rap",
-      "cinematic hip-hop"
+      "hip hop",
+      "emo rap",
+      "christian hip hop"
     ]
   },
-  "draft": "**HOPE** begins with a firing. NF turns to the person who has run things for three decades, the one \"draggin' your feet\" and blaming everyone else for the standstill, and tells him his time is up. That person is NF. The address is warm and merciless at once: \"Nate, you've had a great run.\" It's the tone of a boss letting down a loyal employee, and the kindness makes it sting more. Then, like an emcee clearing the stage, the song introduces its own album. That fits, since \"Hope\" is the opening track and the lead single of the record named after it.\n\nWhat follows is a definition of success in a rapid, list-like build, the slam-poetry cadence critics have long tied to Eminem. Taking a pay cut to do what you love. Turning failure into fuel. Then the song stops reciting and starts confessing. NF calls a mental breakdown \"the push I needed\" to get help, and admits it took becoming a father to look in the mirror. The most tender moment is also the most tangled. Picking up a son each morning, NF promises the boy will never stand at a window wondering if dad will come home, then turns to a parent: \"Mama, I forgive you.\" Forgiveness and old injury sit in the same line, and the song doesn't pretend one cancels the other. The fear underneath isn't for NF at all. It's that a child might grow up feeling never enough.\n\nThe craft shows in the long \"30 years of\" litany, more than thirty rounds of the same phrase with a new word stapled on each time: hollow, bitter, stagnant, lonely. The repetition is the point. Shame feels like a sentence you keep serving, and the list keeps going until it lands on \"pushing everyone away.\" Then the old self breaks in, in parentheses, telling the new one \"you'll never be loved.\" The current voice answers each charge until the last line, where the doubting voice cuts in with \"(no)\" and the claim to take the reins has to be made twice before it sticks.\n\nTommee Profitt, NF's longtime collaborator, co-wrote and co-produced it with NF and Jeff Sojka, carrying their cinematic orchestral approach: plucky piano chords giving way to staccato strings and a pulsing echo of background voices. In the video, which NF co-directed with Patrick Tohill, the split is literal, one NF in white reaching for change, one in black wanting to stay put. NF told NME the pressure on this album was greater than ever after so long away. The song turns that weight into an argument with the mirror.\n\nIt sticks because you hear someone win an argument with the worst voice in their own head by one interrupted word, and you know exactly how close it was.",
+  "draft": "Partway through **HOPE**, NF fires himself. \"Nate, you've had a great run,\" he says, with the cool courtesy of a manager clearing out a desk, and then a new voice steps up to introduce the album. It plays as a bit, but it isn't a joke. The self being let go spent thirty years dragging his feet and blaming everyone else, and the self doing the firing still sounds like he's apologizing: \"I don't want you to feel like a failure / I know this hurts.\" Pride and tenderness share the same breath. He's cutting loose a version of himself he still feels sorry for.\n\nThe music stays out of the way so that argument can land. Plucky piano chords open it, a simple, melancholy figure that keeps circling while a synth bass holds long notes underneath and a pad fills the air. Kick and snare come in plain and unfussy. The mix is clean and dry, the vocal right up front with no harmonies to soften it, and the track builds by stacking layers rather than by any big swing. Staccato strings and a pulsing echo of background voices arrive as it goes. NF wrote the song with Tommee Profitt, who also handled mixing and programming, and the two produced it with Jeff Sojka. Patrick Tohill, NF's regular director, gets a co-production credit as well.\n\nThe verses start as a pep talk, a definition of success built from grinding and dreaming big, and then they get heavier. NF calls a mental breakdown the push that got him into help. He picks up his son every morning and promises the boy will never be the kid at the window wondering whether dad is coming. Then he catches himself, says that wasn't a shot, and adds, \"Mama, I forgive you.\" Forgiveness and the old injury sit in the same bar. He can't say one without the other showing.\n\nThen comes the pileup: thirty years of shame, of anger, of fake, of chains, ending on thirty years of pushing everyone away. After that, the doubting voice speaks in parentheses and NF answers it line for line until it cuts him off mid-sentence. He finishes anyway, with one word: reins. The video, which NF co-directed with Tohill, stages the same fight between his old self and new self over whose album this will be.\n\nIt's the confessional, Christian-rooted rap NF has built his name on, the kind press often holds up against Eminem. He keeps the device of arguing with yourself on record and bends it toward optimism. He has called writing \"therapy,\" and this song sounds like a session that ends on a breakthrough.\n\nWhat sticks is hearing someone forgive the people who hurt him, himself included, then grab the last word before the old voice can finish, so you feel hope arrive as an argument he wins.",
   "factCheck": [
     {
-      "claim": "The song begins with a firing.",
-      "verdict": "corrected",
-      "note": "The lyrics open with 'Hope / I'm on my way, I'm coming' before the 30-years address. Reworded to 'turns on a firing' so it makes no claim about how the song starts."
-    },
-    {
-      "claim": "The addressee is 'draggin' your feet' and blaming everyone else for the standstill.",
-      "verdict": "corrected",
-      "note": "The quote is exact. The lyric is 'Tellin' me I'm the reason we're stagnant', so the addressee pins the standstill on the narrator, not on everyone else. Fixed."
-    },
-    {
-      "claim": "The person addressed is NF himself.",
-      "verdict": "supported",
-      "note": "Plugged In: NF speaks to his former self after about 30 years of struggle. The lyric also says 'Nate'."
-    },
-    {
-      "claim": "\"Nate, you've had a great run.\"",
-      "verdict": "supported",
-      "note": "Matches the lyrics exactly."
-    },
-    {
-      "claim": "The song introduces its own album; 'Hope' is the opening track and lead single of the album Hope.",
-      "verdict": "supported",
-      "note": "The lyrics ('I'd like to introduce my... album... HOPE') and the facts agree."
-    },
-    {
-      "claim": "The slam-poetry cadence critics have long tied to Eminem.",
-      "verdict": "corrected",
-      "note": "The packet says critics 'often compare' it to Eminem. 'Long tied' overstated the history. Fixed."
-    },
-    {
-      "claim": "Taking a pay cut to do what you love; turning failure into fuel.",
-      "verdict": "supported",
-      "note": "Matches 'take the pay cut' and 'turn 'em into motivation'."
-    },
-    {
-      "claim": "NF calls a mental breakdown \"the push I needed\" to get help.",
-      "verdict": "supported",
-      "note": "Exact lyric fragment, and the context is in the lyrics."
-    },
-    {
-      "claim": "It took becoming a father to look in the mirror.",
-      "verdict": "supported",
-      "note": "Lyrics: 'Having kids will make you really take a step back / And look in the mirror... that's what it did'."
-    },
-    {
-      "claim": "Picking up a son each morning; promises he won't wonder if dad will come home.",
-      "verdict": "corrected",
-      "note": "The lyrics say 'every day' and 'show up', not 'each morning' and 'come home'. Fixed."
-    },
-    {
-      "claim": "\"Mama, I forgive you.\"",
+      "claim": "Quote: \"Nate, you've had a great run\"",
       "verdict": "supported",
       "note": "Matches the lyrics."
     },
     {
-      "claim": "The fear is that a child might grow up feeling never enough.",
-      "verdict": "supported",
-      "note": "Lyrics: 'Thinking that he'll never be enough'."
-    },
-    {
-      "claim": "More than thirty rounds of '30 years of' with words like hollow, bitter, stagnant, lonely, ending on 'pushing everyone away'.",
-      "verdict": "supported",
-      "note": "The lyrics have 32 instances. All the words and the quote are present."
-    },
-    {
-      "claim": "The old self breaks in in parentheses with 'you'll never be loved'.",
-      "verdict": "supported",
-      "note": "Matches '(You'll never be loved, you'll never be safe)'. Reading it as the old self fits the facts."
-    },
-    {
-      "claim": "The doubting voice cuts in with '(no)' and the claim to take the reins is made twice.",
-      "verdict": "supported",
-      "note": "Lyrics: 'I'm taking the- (no)' then 'I'm taking the / Reins'. 'Last line' loosened to 'closing lines'."
-    },
-    {
-      "claim": "Tommee Profitt co-wrote and co-produced it with NF and Jeff Sojka.",
+      "claim": "The self being let go spent thirty years dragging his feet and blaming everyone else",
       "verdict": "corrected",
-      "note": "NF wrote it with Profitt. The two produced it with Sojka. Reworded to match."
+      "note": "The lyrics say the voice drags its feet and blames the speaker as the cause of the stagnation, and promises progress without delivering. They don't say it blames everyone else. Reworded."
     },
     {
-      "claim": "Profitt is NF's longtime collaborator; cinematic orchestral approach.",
+      "claim": "Quote: \"I don't want you to feel like a failure / I know this hurts\"",
       "verdict": "supported",
-      "note": "Stated in the lineage note."
+      "note": "Two consecutive lines, exact match."
     },
     {
-      "claim": "Plucky piano chords giving way to staccato strings and a pulsing echo of background voices.",
-      "verdict": "supported",
-      "note": "Wikipedia fact: the song opens with plucky piano chords that move into staccato strings and a pulsing echo of background voices."
-    },
-    {
-      "claim": "Video co-directed with Patrick Tohill; NF in white wants change, NF in black wants to stay the same.",
-      "verdict": "supported",
-      "note": "Wikipedia and Calvin Chimes."
-    },
-    {
-      "claim": "NF told NME the pressure was greater than ever after so long away.",
+      "claim": "Plucky piano chords open it, a simple, melancholy figure that keeps circling",
       "verdict": "corrected",
-      "note": "The packet says so long had passed since his last album. Reworded."
+      "note": "Passes agree on a simple, arpeggiated or repeating, melancholic piano. \"Open it\" is a position claim and \"plucky\" is not backed by two passes. Reworded to the piano figure only."
+    },
+    {
+      "claim": "Synth bass holds long notes underneath and a pad fills the air",
+      "verdict": "supported",
+      "note": "Synth bass with sustained notes appears in passes 2 and 3. A synth pad appears in passes 1 and 3."
+    },
+    {
+      "claim": "Kick and snare come in plain and unfussy",
+      "verdict": "corrected",
+      "note": "Passes agree the drums are sparse and simple. Entry timing is a position claim. Reworded."
+    },
+    {
+      "claim": "The mix is clean and dry, the vocal right up front",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "No harmonies to soften it",
+      "verdict": "removed",
+      "note": "Contradicted by the lyrics' parenthetical voices and the researched note on background voices."
+    },
+    {
+      "claim": "The track builds by stacking layers rather than by any big swing",
+      "verdict": "removed",
+      "note": "Arrangement-arc claim. The passes disagree on builds."
+    },
+    {
+      "claim": "Staccato strings and a pulsing echo of background voices arrive as it goes",
+      "verdict": "supported",
+      "note": "Researched fact: it moves into staccato strings and a pulsing echo of background voices."
+    },
+    {
+      "claim": "NF wrote the song with Tommee Profitt, who also handled mixing and programming; the two produced it with Jeff Sojka",
+      "verdict": "supported",
+      "note": "Wikipedia for the song and album."
+    },
+    {
+      "claim": "Patrick Tohill, NF's regular director, gets a co-production credit",
+      "verdict": "corrected",
+      "note": "Songfacts credits him as co-producer and calls him NF's regular visual collaborator. Reworded."
+    },
+    {
+      "claim": "Verses give a definition of success built from grinding and dreaming big; mental breakdown as the push to get help; picks up his son every day; the window line; \"that wasn't a shot\"; quote \"Mama, I forgive you\"",
+      "verdict": "supported",
+      "note": "All match the lyrics. The quote is exact."
+    },
+    {
+      "claim": "Thirty years of shame, anger, fake, chains, ending on pushing everyone away; doubting voice in parentheses; \"(no)\" interruption; ends on \"Reins\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The video, co-directed by NF and Tohill, stages the fight between old self and new self over whose album it will be",
+      "verdict": "supported",
+      "note": "Wikipedia and Hillsdale Collegian."
+    },
+    {
+      "claim": "Confessional, Christian-rooted rap that press often compares to Eminem; a turn toward optimism",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "He keeps the device of arguing with yourself on record",
+      "verdict": "removed",
+      "note": "Implies earlier use of the device, which isn't supported."
+    },
+    {
+      "claim": "He has called writing \"therapy\"",
+      "verdict": "supported",
+      "note": "NME interview."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.2645,
+    "totalUsd": 0.2962,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014683,
+        "detail": "1096 in / 187 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014808,
+        "detail": "1096 in / 192 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00057578,
+        "detail": "1096 in / 164 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.15228,
-        "detail": "54845 in / 1259 out / 3 searches"
+        "usd": 0.15862199999999999,
+        "detail": "57781 in / 1306 out / 3 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.051548,
-        "detail": "3912 in / 1795 out"
+        "usd": 0.078292,
+        "detail": "4753 in / 2964 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.060648,
-        "detail": "5064 in / 5052 out"
+        "usd": 0.055762,
+        "detail": "5926 in / 4391 out"
       }
     ]
   }

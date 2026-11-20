@@ -8,31 +8,31 @@ spotifyUrl: "https://open.spotify.com/track/43C88JXdWHHlyfghixFJI2"
 spotifyId: "43C88JXdWHHlyfghixFJI2"
 albumArt: "https://i.scdn.co/image/ab67616d0000b2730e3df2c0d51754182bd2bd56"
 duration: 214675
-genres: ["americana", "alt-country", "folk"]
+genres: ["country", "americana", "bluegrass"]
 pubDate: "2026-11-20"
-tags: ["the-devil-makes-three", "americana", "alt-country", "folk", "2016"]
+tags: ["the-devil-makes-three", "country", "americana", "bluegrass", "2016"]
 pipeline: "lately"
 sources:
   - title: "secondhandsongs.com"
-    url: "https://secondhandsongs.com/performance/1091203/all"
-  - title: "New West Records: The Devil Makes Three - Redemption & Ruin [Vinyl]"
-    url: "https://newwestrecords.com/products/the-devil-makes-three-redemption-ruin-vinyl"
-  - title: "Chicago Sun-Times: The Devil Makes Three thrives on music traditions"
-    url: "https://chicago.suntimes.com/2017/1/18/18364401/the-devil-makes-three-thrives-on-music-traditions"
-  - title: "yourtahoeguide.com"
+    url: "https://secondhandsongs.com/performance/1091203"
+  - title: "New West Records: The Devil Makes Three - Redemption & Ruin [CD]"
+    url: "https://newwestrecords.com/products/the-devil-makes-three-redemption-ruin-cd"
+  - title: "discogs.com"
+    url: "https://www.discogs.com/release/12368934-The-Devil-Makes-Three-Redemption-Ruin"
+  - title: "PopMatters: The Devil Makes Three: Redemption & Ruin &raquo; PopMatters"
+    url: "https://www.popmatters.com/the-devil-makes-three-redemption-ruin-2495416160.html"
+  - title: "The Pitch: The Devil Makes Three maps out its Redemption & Ruin"
+    url: "https://www.thepitchkc.com/music/news/article/20780484/the-devil-makes-three-maps-out-its-redemption-ruin"
+  - title: "Tahoe Guide: The Devil Makes Three | Riff on Redemption"
     url: "https://yourtahoeguide.com/2016/12/devil-makes-three-riff-redemption/"
-  - title: "Magnet Magazine: The Devil Makes Three: Redemption Songs"
-    url: "https://magnetmagazine.com/2016/10/14/the-devil-makes-three-redemption-songs/"
-  - title: "WMOT: Pete Bernhard On The ‘Spirits’ Powering The Devil Makes Three"
-    url: "https://www.wmot.org/show/the-string/2025-03-13/pete-bernhard-on-the-spirits-powering-the-devil-makes-three"
 aiGenerated: true
 ---
-The meanest line in **Chase The Feeling** is a compliment. "Ain't you handsome when you're high?" lands in every chorus. It reads as a sneer, but there is something else in it too: a narrator who has watched someone glow on the way down and can't quite stop noticing the glow. The song lives in that split. It is disgust and tenderness in the same breath, and neither one wins.
+"Ain't you handsome when you're high?" is a compliment with a knife in it. On **Chase The Feeling**, The Devil Makes Three set that question over a shuffle with a slight swing, and the easy groove makes it cut deeper. The song is Kris Kristofferson's, first released by him in 2006. The band placed it fourth on Redemption & Ruin, the covers record Pete Bernhard described as one side redemption and one side ruin. This one sits on the ruin side, among songs about the vices that drive people to make music in the first place.
 
-Kris Kristofferson wrote it and first released it in 2006. The Devil Makes Three cut their version for *Redemption & Ruin*, their fifth studio album and their only covers record. Pete Bernhard has said the album was meant to point at the artists who shaped the band, and that narrowing it to 12 tunes took years. He split it into two halves: a ruin side about messing up your life and partying, and a redemption side of traditional and gospel songs. This one sits fourth, in the first half of the ruin side, where the label files faults and vices.
+What keeps it from turning into a sermon is the opening line: "Takes one, to know one, I know how you feel." The narrator isn't standing on clean ground. Everything after it, the scorn and the pity, comes from someone who knows those demons and has watched them drag you down the hallways of your own brain. Kinship and contempt sit side by side, and the song never lets one cancel the other. The middle verse becomes a run of bitter permissions, each "let it" pushing the damage further from the user, until "Let it run your children off" hands the bill to people who never chose any of this. Then comes the flattest line in the song. You know better, the narrator says, you just don't care. It sounds less like an accusation than like exhaustion.
 
-The writing refuses to stand above its subject. It opens with "Takes one, to know one, I know how you feel." Before any judgment arrives, the narrator claims kinship. That makes everything after it harder to hear as a lecture. The middle verse hands over a life piece by piece, the children, the wife, the joy you love, each line repeating the same surrender as if the speaker is reading out the terms of a deal already signed. Then comes the flat little shrug: the person knows better and just doesn't care. The last verse brings the narrator back in, with "I begin to wonder how it is you're still alive," and the anger gives way to plain bewilderment. The refrain, which is also the title's advice, closes the song twice. It is the addict's creed, said back to them, and maybe said to the mirror.
+The last verse drifts into midnight and a young woman who is younger than her eyes. It ends with the narrator wondering how you're still alive, a line caught halfway between awe and dread. The doubled chorus at the close could read as filler. Instead it plays like the habit itself, the same promise made twice.
 
-Cooper McBean takes the lead vocal, with Bernhard singing background. Lucia Turino plays upright bass, Jerry Roe plays drums, and Dan Dugmore plays pedal steel, a fitting instrument for a country songwriter's song. The album was made in Nashville at Dave Ferguson's Butcher Shoppe studio. Ferguson co-produced and is best known for his work with Cowboy Jack Clement and Johnny Cash, and Bernhard has said the Cash American recordings were made in that same Germantown room. The band recorded the album live, arranging songs with their guest players and then hitting record, letting the guests "produce it, so to speak."
+Cooper McBean is credited on vocals, and the voice is clear with a little rasp. It stays conversational, with no harmonies stacked behind it. So every line arrives one-on-one, like something said across a kitchen table. An acoustic guitar strums steadily over a walking bass line, and Lucia Turino is credited on upright. The banjo threads melodic fills around the vocal, and the drums keep a simple, driving beat with a snare backbeat. The sound is dry and unpolished. The band cut most of the album live at The Butcher Shoppe in Nashville with David Ferguson engineering, and the credits add Jerry Roe on drums, Dan Dugmore on pedal steel, and Bobby Wood on organ. Bernhard said the record was meant to show where the band comes from. Here they take Kristofferson's blunt, plainspoken writing and run it through their old-time string-band sound, keeping it light on its feet when it could have dragged.
 
-What sticks is that the song never lets you pick a side: you hear yourself in the person being scolded and in the one doing the scolding, and the compliment cuts both ways.
+The song holds you in that uneasy spot where you love someone and can't stand watching them, and the bounce under it makes the disaster sound almost like a good time, which is exactly how it looks from the inside.

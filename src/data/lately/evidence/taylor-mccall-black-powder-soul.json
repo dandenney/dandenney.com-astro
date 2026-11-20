@@ -1,171 +1,204 @@
 {
   "spotifyId": "0KbCBafoO4ShzNvkcY2cJe",
-  "reviewedAt": "2026-11-20T17:14:43.150Z",
+  "reviewedAt": "2026-11-20T17:57:50.798Z",
   "models": {
     "writer": "claude-opus-5-5",
     "research": "claude-sonnet-5-5",
-    "listen": null
+    "listen": "google/gemini-2.5-flash"
   },
   "lyrics": {
     "status": "found",
     "source": "https://lrclib.net/api/get/7220570"
   },
-  "listening": null,
+  "listening": "Pass 1:\nA male voice sings with a slightly raspy, mid-range character, delivering the lyrics in a conversational, almost spoken style. There are no harmonies.\n\nThe tempo is slow, with a relaxed, bluesy groove. The instruments include a clean electric guitar playing a simple, repetitive riff, and a bass guitar providing a steady, walking line. A drum kit plays a basic beat with a prominent snare on beats two and four.\n\nThe production sounds raw and unpolished, with a dry, close-miked feel. There's no discernible room sound or reverb.\n\nThe arrangement is sparse. The vocals are present throughout. The electric guitar, bass, and drums maintain their parts consistently. No instruments drop out or build within the excerpt.\n\nPass 2:\nA male voice sings in a clear, mid-range, with a slight rasp. He is accompanied by a clean electric guitar playing arpeggiated chords, and a bass guitar playing a root-note pattern. The tempo is slow, with a relaxed, swinging feel.\n\nAt around 0:08, a second electric guitar enters, playing a sustained, distorted melody. The vocals become more forceful, with a slight vibrato. The drums enter at 0:14, playing a simple, driving beat with a prominent snare drum. The arrangement builds with the addition of the drums and the second guitar, creating a fuller, more powerful sound. The production is clean and polished, with a clear separation of instruments. The room sounds like a medium-sized studio.\n\nPass 3:\nA male voice sings in a clear, mid-range, with a slight rasp, in a call-and-response style. The lead vocal is dry, with a single harmony vocal entering later, also dry.\n\nA clean electric guitar plays a arpeggiated figure with a slight tremolo effect. A second electric guitar plays a sustained, distorted chord. A bass guitar plays a root-note pattern. Drums enter with a snare backbeat, kick drum, and hi-hat. The tempo is moderate, with a driving, rock feel.\n\nThe production is clean and polished, with a close-miked, dry sound. The arrangement builds from a sparse opening with just the vocal and clean guitar, adding the distorted guitar, then the bass and drums. The vocal then becomes more prominent, with the harmony vocal entering.",
   "research": {
     "identity": "confirmed",
     "facts": [
       {
-        "claim": "The title track 'Black Powder Soul' is credited to Taylor McCall and Dave Pahanish as composers.",
-        "source": "https://www.deezer.com/us/album/231411262"
+        "claim": "The title track \"Black Powder Soul\" was written by Taylor McCall and Dave Pahanish.",
+        "source": "https://www.shazam.com/track/571166483/black-powder-soul"
       },
       {
-        "claim": "The album Black Powder Soul was produced by Sean McConnell.",
-        "source": "https://www.roughtrade.com/taylor-mccall/black-powder-soul/lp-x2"
+        "claim": "Sean McConnell produced the song and the album.",
+        "source": "https://www.shazam.com/track/571166483/black-powder-soul"
       },
       {
-        "claim": "The album was recorded at Silent Desert Studio in Nolensville, TN, mixed at Dockside Studio, and mastered by Brian Lucey at Magic Garden Mastering.",
+        "claim": "The vinyl release credits recording at Silent Desert Studio in Nolensville, TN, mixing at Dockside Studio, and mastering at Magic Garden Mastering.",
         "source": "https://www.discogs.com/release/20580607-Taylor-McCall-Black-Powder-Soul"
       },
       {
-        "claim": "McCall and McConnell spent two weeks in McConnell's home studio making the album, and the sound only began to take shape around the third day.",
-        "source": "https://holler.country/feature/interview/introducing-taylor-mccall/"
-      },
-      {
-        "claim": "McCall said the title song was the hardest song he ever wrote, taking three days.",
+        "claim": "McCall says the title song was the hardest he ever wrote, taking three days.",
         "source": "https://thebluegrasssituation.com/read/bgs-55-taylor-mccall/"
       },
       {
-        "claim": "The album is bookended by an old recording of McCall's grandfather singing the hymn 'Old Ship of Zion'.",
+        "claim": "McCall says he had the verses and described the song to his friend Dave Pahanish, who responded with the phrase 'Black Powder Soul'.",
         "source": "https://holler.country/feature/interview/introducing-taylor-mccall/"
       },
       {
-        "claim": "McCall said the album is the circle of life, and that everyone has a black powder soul that can explode but also has redemption in them.",
-        "source": "https://www.roughtrade.com/taylor-mccall/black-powder-soul/lp-x2"
+        "claim": "McCall and McConnell met for the first time at a co-write that produced 'So Damn Lucky'. The album was made over two weeks in McConnell's home studio.",
+        "source": "https://holler.country/feature/interview/introducing-taylor-mccall/"
       },
       {
-        "claim": "McCall arranged the track listing as a Biblical chronology.",
-        "source": "https://americansongwriter.com/taylor-mccalls-black-powder-soul-an-unlikely-artist-earns-his-rightful-place-in-the-industry/"
+        "claim": "McCall's own description of the album: a circle of life in which the things that clutter the pure soul are all present, and everyone has a black powder soul that can explode but can also be redeemed.",
+        "source": "https://www.roughtrade.com/en-us/product/taylor-mccall/black-powder-soul-1"
       },
       {
-        "claim": "The album was released September 24, 2021 on Black Powder Soul Records, marketed and distributed by Thirty Tigers. It has 14 tracks.",
-        "source": "https://music.apple.com/us/album/black-powder-soul/1568397046"
+        "claim": "The album opens with a 49-second clip of McCall's late grandfather and his teenage mother, who were in a traveling gospel group, singing the hymn 'Old Ship of Zion'.",
+        "source": "https://www.hookandbarrel.com/music/taylor-mccall-black-powder-soul"
       },
       {
-        "claim": "McCall is from Easley, South Carolina. He studied fisheries and wildlife management at Montana State University before turning to music, and later opened for Robert Plant in the UK.",
-        "source": "https://www.loudersound.com/features/taylor-mccall-mellow-war"
+        "claim": "A review describes the title track as opening with a lone reverbed guitar and backing vocal before McCall's whiskey-soaked vocals come in.",
+        "source": "https://www.pulsemusicmagazine.com/taylor-mccalls-black-powder-soul-wages-war-between-good-evil/"
+      },
+      {
+        "claim": "The album was released 24 September 2021 on Black Powder Soul Records, marketed and distributed by Thirty Tigers. McCall is from Easley, South Carolina, and now lives in Franklin, Tennessee. His follow-up, 'Mellow War', is stylistically very different.",
+        "source": "https://greenvillejournal.com/arts-culture/upstate-native-taylor-mccall-returns-to-radio-room-with-a-haunting-new-album-upstate-beat/"
       }
     ],
-    "lineage": "It sits in the darker, edgier side of country and Americana, where God-and-devil themes and gospel, blues and guitar rock meet, which Holler compared to Steve Earle.",
+    "lineage": "A dark, gospel-tinged Americana and country record that Holler places among the edgier, good-versus-evil strains of country and compares to Steve Earle.",
     "genres": [
       "country",
       "americana",
-      "country rock"
+      "dark country"
     ]
   },
-  "draft": "The detail that sells **Black Powder Soul** is the oddly specific one: \"No I don't play poker since that stint in Spokane.\" It's a joke with a scar under it. Taylor McCall's narrator won't say what happened in Spokane, only that it was bad enough to change his habits. The rest of the first verse fills in a life of bootleg moonshine and bathtub gin and ends with a line that cuts two ways: \"That's why my over under is my only friend.\" An over-under is a stacked double-barrel shotgun. It's also a betting line. Either way, the only thing this man trusts is something that can go off.\n\nThat's the black powder of the title. It's old, unstable, and dangerous to carry. The narrator wears it like an identity, lawless and proud of it, but the chorus tells on him. \"My heart is burning / My blood runs cold\" is swagger and dread in the same breath. He's hot-tempered and scared, and he doesn't get to pick one. The dark clouds above and the fire below put him between heaven and hell with no room to stand. The second verse makes the trap literal. You can run the tables, but you can't outrun the people at them, and when \"there ain't no running east or west,\" blood money is what's left to eat on.\n\nThe song never resolves that, and McCall seems to know it shouldn't. He has called the album a circle of life and said everyone has a black powder soul, something that can explode but also holds redemption. That word only makes sense across the full record. He sequenced the tracks as a Biblical chronology, and he bookended them with an old recording of his grandfather singing the hymn \"Old Ship of Zion.\" Inside that frame, this song is the man before any rescue arrives. It's a Saturday-night soul inside a Sunday-morning structure.\n\nMcCall co-wrote it with Dave Pahanish and said it was the hardest song he ever wrote, three days of work. The economy shows. The narrator's whole history comes through in hints: a city, a drink, a gun, a card game gone wrong. The album was cut at Silent Desert Studio in Nolensville, Tennessee, with Sean McConnell producing. The South Carolina native, who studied fisheries and wildlife management in Montana before he turned to music, lands in the darker corner of Americana, where God and the devil share a bar stool. Holler heard Steve Earle in that territory, and the outlaw-with-a-conscience fits.\n\nThe song lets you feel what it's like to be proud of the very thing that's going to blow you apart.",
+  "draft": "The only friend the narrator of **Black Powder Soul** admits to is a gun. \"That's why my over under is my only friend,\" Taylor McCall sings, and the phrase does double work. An over-under is a stacked double-barrel shotgun. It's also a betting line, which fits a man who quit poker after something went wrong in Spokane. The first verse sets him up like a figure from an old ballad: a soldier with no war to fight, a man outside the law, trading in moonshine and bathtub gin. It plays as bragging until that last line. All the swagger lands on loneliness.\n\nThe chorus is where the pride splits open. \"My heart is burning / My blood runs cold\" isn't a contradiction the song tries to settle. He's hot and cold at once, storm clouds overhead and fire underfoot, and the title names what that makes him: black powder, the old unstable stuff that sits quiet until a spark finds it. McCall has described the album as a circle in which everyone carries a soul like that, one that can explode but can also be redeemed. This song keeps the first half of that promise and holds back the second. By the second verse there \"ain't no running east or west,\" and the hustlers and blood money close in like weather.\n\nMcCall has said it was the hardest song to write, three days of work. The verses came first. When McCall described the song to co-writer Dave Pahanish, Pahanish answered with the phrase \"Black Powder Soul.\" A man this boxed in by his own story needed somebody else to name it.\n\nSean McConnell produced, and the album was made over two weeks in his home studio. The song opens on a lone guitar and a backing vocal before McCall comes in. The band then works patiently: a clean electric guitar picking out arpeggios, bass holding the root, a slow, relaxed groove with the snare cracking on the backbeat, and a second guitar laying a sustained, distorted line underneath like smoke. The voice is mid-range with a rasp at the edges, recorded dry and close, and it pushes harder as the drums and that dirty guitar fill in.\n\nHoller compares McCall to Steve Earle and places the record among the edgier, good-versus-evil strains of country, and the inheritance is plain: an outlaw self-portrait that's half confession. The album opens with McCall's late grandfather and mother, singers in a traveling gospel group, on \"Old Ship of Zion,\" and this song answers that hymn from the sinner's side.\n\nIt sticks because it puts you inside a man who is burning and freezing at once, proud of the danger in himself and afraid of it, and it never tells you where the spark will land.",
   "factCheck": [
     {
-      "claim": "Lyric quote: \"No I don't play poker since that stint in Spokane.\"",
+      "claim": "Narrator's only friend is a gun; the lyric 'That's why my over under is my only friend'",
       "verdict": "supported",
-      "note": "Matches the lyrics exactly."
+      "note": "Quote matches the lyrics exactly. Reading the over-under as a shotgun and a betting term is interpretation of the lyric. Kept, with the extra gun-description detail trimmed."
     },
     {
-      "claim": "The narrator won't say what happened in Spokane, only that it was bad enough to change his habits.",
+      "claim": "He quit poker after something went wrong in Spokane",
       "verdict": "corrected",
-      "note": "The lyrics do give a cause: the stint in Spokane was 'over some bootleg moonshine / over my bathtub gin.' Rewritten to say so."
+      "note": "The lyric says only 'I don't play poker since that stint in Spokane'. 'Something went wrong' is unsupported, so it now follows the lyric."
     },
     {
-      "claim": "The rest of the first verse fills in a life of bootleg moonshine and bathtub gin.",
+      "claim": "Trading in moonshine and bathtub gin",
       "verdict": "corrected",
-      "note": "The moonshine and gin are the stated reason for the Spokane stint, not extra background. Reworded."
+      "note": "The lyrics say the Spokane stint was 'over some bootleg moonshine / over my bathtub gin'. Nothing says he traded in them. Reworded."
     },
     {
-      "claim": "Lyric quote: \"That's why my over under is my only friend.\"",
+      "claim": "Soldier with no war, man outside the law",
       "verdict": "supported",
-      "note": "Matches exactly. It closes the first verse."
+      "note": "From 'warless soldier' and 'lawless man'."
     },
     {
-      "claim": "An over-under is a stacked double-barrel shotgun and also a betting line.",
+      "claim": "'My heart is burning / My blood runs cold'",
       "verdict": "supported",
-      "note": "Reading of the lyric's double meaning, which suits the poker and gambling context. Kept as interpretation."
+      "note": "Exact match, two consecutive lines."
     },
     {
-      "claim": "Lyric quote: \"My heart is burning / My blood runs cold\"",
-      "verdict": "supported",
-      "note": "Two consecutive lines, exact match."
-    },
-    {
-      "claim": "Dark clouds above and fire below put him between heaven and hell.",
-      "verdict": "supported",
-      "note": "Interpretation of the lyric imagery."
-    },
-    {
-      "claim": "\"there ain't no running east or west\"; you can run the tables but can't outrun the people at them; blood money is what's left to eat on.",
+      "claim": "Storm clouds overhead and fire underfoot",
       "verdict": "corrected",
-      "note": "The quote is exact. The lyric says only 'you can't out run them,' so 'the people at them' was an over-specific gloss. Loosened."
+      "note": "The lyric says 'dark clouds above me' and 'fire is below'. 'Storm' changed to 'dark'."
     },
     {
-      "claim": "McCall called the album a circle of life and said everyone has a black powder soul that can explode but also has redemption.",
+      "claim": "'ain't no running east or west'",
       "verdict": "supported",
-      "note": "Rough Trade source."
+      "note": "Fragment of the lyric 'When there ain't no running east or west'. It sits in the second verse, as the draft says."
     },
     {
-      "claim": "He sequenced the tracks as a Biblical chronology and bookended them with an old recording of his grandfather singing 'Old Ship of Zion.'",
+      "claim": "McCall describes the album as a circle where everyone carries a soul that can explode but can be redeemed",
       "verdict": "supported",
-      "note": "American Songwriter and Holler sources."
+      "note": "Matches McCall's own description (Rough Trade)."
     },
     {
-      "claim": "Co-written with Dave Pahanish; McCall said it was the hardest song he ever wrote, three days of work.",
+      "claim": "Hardest song he wrote, three days",
       "verdict": "supported",
-      "note": "Deezer credits and BGS interview."
+      "note": "BGS source. Rewritten to match 'hardest he ever wrote'."
     },
     {
-      "claim": "The album was cut at Silent Desert Studio in Nolensville, Tennessee, with Sean McConnell producing.",
+      "claim": "Verses came first; Pahanish answered with the phrase 'Black Powder Soul'",
       "verdict": "supported",
-      "note": "Discogs and Rough Trade."
+      "note": "Holler interview."
     },
     {
-      "claim": "South Carolina native who studied fisheries and wildlife management in Montana before turning to music.",
+      "claim": "Sean McConnell produced; album made over two weeks in his home studio",
       "verdict": "supported",
-      "note": "Louder Sound; Easley, SC and Montana State."
+      "note": "Shazam and Holler."
     },
     {
-      "claim": "Darker corner of Americana where God and the devil meet; Holler heard Steve Earle in that territory.",
-      "verdict": "supported",
-      "note": "Matches the lineage note."
-    },
-    {
-      "claim": "The lyrics give a history of a city, a drink, a gun, a card game gone wrong.",
-      "verdict": "supported",
-      "note": "Spokane, moonshine, gin, over-under, poker and tables are all in the lyrics."
-    },
-    {
-      "claim": "That word only makes sense across the full record.",
+      "claim": "Song opens on a lone guitar and a backing vocal before McCall comes in",
       "verdict": "removed",
-      "note": "Unsupported assertion about the album. Cut."
+      "note": "This is a claim about how the song begins. The listening notes can't support it, since the excerpt's position is unknown and the passes disagree on any build."
+    },
+    {
+      "claim": "Clean electric guitar arpeggios, bass on root notes, slow relaxed groove, snare on the backbeat",
+      "verdict": "supported",
+      "note": "At least two passes agree on each."
+    },
+    {
+      "claim": "Second guitar laying a sustained, distorted line",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. The 'like smoke' comparison is interpretation."
+    },
+    {
+      "claim": "Mid-range voice with a rasp, recorded dry and close",
+      "verdict": "supported",
+      "note": "All three passes agree on the voice. Passes 1 and 3 agree on dry, close-miked."
+    },
+    {
+      "claim": "The voice pushes harder as drums and distorted guitar fill in",
+      "verdict": "removed",
+      "note": "This is an arc or build claim. Pass 1 says nothing builds, and position in the song is unknown."
+    },
+    {
+      "claim": "Holler compares McCall to Steve Earle and places the record among edgier good-versus-evil country",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Album opens with McCall's late grandfather and mother, a traveling gospel group, singing 'Old Ship of Zion'",
+      "verdict": "supported",
+      "note": "Hook and Barrel. Clarified that the mother was a teenager at the time."
+    },
+    {
+      "claim": "This song answers the hymn from the sinner's side",
+      "verdict": "supported",
+      "note": "Interpretation resting on supported facts."
     }
   ],
   "lint": [],
   "cost": {
-    "totalUsd": 0.1648,
+    "totalUsd": 0.2955,
     "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013764,
+        "detail": "1098 in / 150 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013939,
+        "detail": "1098 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014239,
+        "detail": "1098 in / 169 out"
+      },
       {
         "step": "research",
         "model": "claude-sonnet-5-5",
-        "usd": 0.07905,
-        "detail": "22505 in / 1404 out / 2 searches"
+        "usd": 0.150798,
+        "detail": "51184 in / 1843 out / 3 searches"
       },
       {
         "step": "write",
         "model": "claude-opus-5-5",
-        "usd": 0.044164,
-        "detail": "2536 in / 1701 out"
+        "usd": 0.091088,
+        "detail": "3412 in / 3872 out"
       },
       {
         "step": "fact-check",
         "model": "claude-sonnet-5-5",
-        "usd": 0.041624,
-        "detail": "3652 in / 3432 out"
+        "usd": 0.049456,
+        "detail": "4558 in / 4034 out"
       }
     ]
   }
