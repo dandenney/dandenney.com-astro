@@ -1,0 +1,200 @@
+{
+  "spotifyId": "1KrC1a04RkYrJB02M35hET",
+  "reviewedAt": "2026-11-20T17:44:00.352Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8075660"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, arpeggiated.\nElectric guitar: sustained, clean tone, with tremolo.\nSynth pad: sustained, warm.\n\nTempo and groove feel:\nSlow tempo, with a gentle, flowing feel.\n\nVocals:\nVoice character: soft, breathy, with a slightly melancholic tone.\nDelivery: intimate, with a clear, unadorned quality.\nHarmonies: layered vocals on certain phrases, creating a soft, ethereal blend.\n\nProduction:\nRoom: spacious, with a sense of openness.\nTexture: smooth and polished, with a clean mix.\nHow polished or raw: polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar and vocals. The synth pad enters shortly after, providing a sustained backdrop. The electric guitar enters later, adding sustained notes with tremolo. The vocals are consistently present throughout, with layered harmonies appearing on specific phrases.\n\nPass 2:\nInstruments:\nAcoustic guitar, played with a fingerpicking style.\nSynthesizer, playing sustained pads.\n\nTempo and Groove Feel\nSlow tempo. The groove feels gentle and flowing, with a slight rubato feel.\n\nVocals\nVoice character: Soft, breathy, and intimate.\nDelivery: Melodic, with a slightly melancholic tone.\nHarmonies: Unsure.\n\nProduction\nRoom: Unsure.\nTexture: Smooth and airy.\nHow polished or raw: Polished.\n\nArrangement\nThe excerpt begins with acoustic guitar and a sustained synth pad. A single vocal line enters, followed by a second vocal line that harmonizes with the first. The synth pad continues throughout.\n\nPass 3:\nInstruments:\nAcoustic guitar, played with a fingerpicked arpeggiated pattern.\nSynthesizer, playing sustained pads.\n\nTempo and Groove:\nSlow tempo. The groove feels gentle and flowing, driven by the arpeggiated guitar.\n\nVocals:\nThe voice is soft and breathy, with a light, airy character. The delivery is intimate and hushed. There are harmonies, with a second vocal layer singing in unison or a close interval, creating a fuller, slightly ethereal sound.\n\nProduction:\nThe room sounds open and spacious. The texture is smooth and polished, with a clean mix.\n\nArrangement:\nThe excerpt begins with the acoustic guitar and sustained synth pads. The main vocal enters shortly after, followed by the harmony vocal. All elements remain present throughout the excerpt, with no significant drops or builds.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Amelie\" was released on February 10, 2023, as the second preview single from Gracie Abrams' debut album Good Riddance, which came out February 24, 2023 on Interscope Records.",
+        "source": "https://www.rollingstone.com/music/music-news/gracie-abrams-amelie-debut-album-good-riddance-1234677304/"
+      },
+      {
+        "claim": "\"Amelie\" was produced by Aaron Dessner of The National.",
+        "source": "https://www.universalmusic.ca/press-releases/gracie-abrams-premieres-new-song-amelie-today/"
+      },
+      {
+        "claim": "Shazam credits \"Amelie\" as written by Aaron Dessner and Gracie Abrams, with Abrams on vocals and Dessner on acoustic guitar.",
+        "source": "https://www.shazam.com/en-us/song/1664288818/amelie"
+      },
+      {
+        "claim": "Abrams said \"Amelie\" started as a journal entry. She wrote the song while Aaron Dessner strummed guitar, and the two recorded it quickly.",
+        "source": "https://www.flaunt.com/post/gracie-abrams-the-critical-mass-issue"
+      },
+      {
+        "claim": "Abrams said the song's sparseness appealed to her and that it is one of her favorite songs on the record for that reason.",
+        "source": "https://www.flaunt.com/post/gracie-abrams-the-critical-mass-issue"
+      },
+      {
+        "claim": "Good Riddance was recorded at Long Pond studio in the Hudson Valley and produced by Dessner.",
+        "source": "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
+      },
+      {
+        "claim": "The lyrics recall a brief but powerful encounter with a girl, Amelie, who \"doesn't know my name.\" The chorus asks whether she was real or \"all in a dream.\"",
+        "source": "https://www.rollingstone.com/music/music-news/gracie-abrams-amelie-debut-album-good-riddance-1234677304/"
+      },
+      {
+        "claim": "Clash described \"Amelie\" as a finger-plucked ode to a girl who has become a memory.",
+        "source": "https://www.clashmusic.com/features/coming-undone-gracie-abrams-interviewed/"
+      },
+      {
+        "claim": "Abrams wrote on Instagram that \"Amelie\" is one of her and Dessner's favourites on the record.",
+        "source": "https://www.thegryphon.co.uk/2023/02/11/gracie-abrams-new-single-amelie-420-of-calm-and-melancholy/"
+      },
+      {
+        "claim": "Abrams made her debut with \"Mean It\" in October 2019. Before Good Riddance she released an EP produced by Blake Slatkin and the 12-track project This Is What It Feels Like (2021).",
+        "source": "https://www.universalmusic.ca/press-releases/gracie-abrams-premieres-new-song-amelie-today/"
+      }
+    ],
+    "lineage": "It sits in the confessional, diaristic singer-songwriter tradition of 2020s pop, shaped by Aaron Dessner's sparse, folk-leaning production.",
+    "genres": [
+      "pop",
+      "indie folk",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "By 11 o'clock, the narrator of **Amelie** has memorized a stranger's face. That's the whole event: a sofa, a girl full of questions, a night that ends with nothing said out loud. Gracie Abrams builds the song on the gap between how small that encounter was and how large it grew in one person. The first verse puts it plainly, \"She sorta ripped me open,\" and that \"sorta\" carries a flinch of embarrassment at feeling this much over so little. The other half of the injury comes right after. She has no idea, and she never learned the narrator's name.\n\nThe best line is a question: \"Why'd it feel louder / When all of it went unspoken?\" Silence works as an amplifier here, and the song never pretends otherwise. The next thought is a hope that the feeling will simply leave. Then come the details that prove it won't: her hair up, her crying about her obsessions, and the confession that the narrator would let her ruin every day ahead. Wanting to be free of someone and being ready to hand them everything sit in the same verse, and Abrams doesn't pick one.\n\nThe chorus turns memory into doubt. It asks where she went, then whether she was ever there at all, as if one vivid evening were too much to have really happened. The refrain circles like a lullaby, and the bridge names that quality. Her words felt like something sung to a child and also like something read over a grave. Twice the chorus swaps \"I don't know\" for a plea to be told no. The bridge immediately reverses it into asking for more, and the song closes on the plea. Those repeated refrains make up most of the second half. Some listeners will find it stalls. Others will hear a mind that can't stop replaying the same scene.\n\nAbrams said the song started as a journal entry. She wrote it while Aaron Dessner of The National strummed guitar, and they recorded it quickly. It was the second preview of her debut album, Good Riddance, which Dessner produced at Long Pond in the Hudson Valley. Abrams has said the sparseness is why it's one of her favorites. That sparseness is audible. A fingerpicked acoustic guitar rolls out slow arpeggios under a sustained synth pad. The voice stays soft and breathy, close to a whisper, and a second vocal line slips in to double some phrases. The room sounds open, and the mix is clean and polished. It follows the diary-candid singer-songwriter pop of the 2020s. Dessner's folk-leaning restraint keeps the production from adding any drama the story doesn't have.\n\nThe song sticks because it admits something most people hide: that a single evening with someone who will never think of you again can be enough to leave you asking whether you dreamed them.",
+  "factCheck": [
+    {
+      "claim": "By 11 o'clock the narrator has memorized a stranger's face",
+      "verdict": "corrected",
+      "note": "The lyric is 'by 11 / Memorized her face.' Changed to 'By 11' to match it. 'Stranger' is a fair reading of a girl who 'doesn't know my name.'"
+    },
+    {
+      "claim": "A sofa, a girl full of questions, a night that ends with nothing said out loud",
+      "verdict": "corrected",
+      "note": "The lyrics say they talked ('She asked me a million questions / I answered'). What goes 'unspoken' is the feeling. Reworded."
+    },
+    {
+      "claim": "'She sorta ripped me open' and she never learned the narrator's name",
+      "verdict": "corrected",
+      "note": "The quote is exact. The lyric is 'She doesn't know my name,' so the wording now matches."
+    },
+    {
+      "claim": "'Why'd it feel louder / When all of it went unspoken?'",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Hope that the feeling will leave; her hair up, crying about her obsessions, would let her ruin every day",
+      "verdict": "supported",
+      "note": "Matches 'hope that / This will go away,' 'she had her hair up,' 'She cried about her obsessions,' and 'Ruin all my days.'"
+    },
+    {
+      "claim": "Wanting to be free and being ready to hand over everything sit in the same verse",
+      "verdict": "corrected",
+      "note": "These come in separate stanzas. Changed to 'within a few lines.'"
+    },
+    {
+      "claim": "The chorus asks where she went, then whether she was ever there; the refrain circles like a lullaby and the bridge names that quality",
+      "verdict": "corrected",
+      "note": "The lyric says 'nursery rhyme,' not lullaby, and it describes her words rather than the refrain. Reworded."
+    },
+    {
+      "claim": "Her words felt like something read over a grave",
+      "verdict": "corrected",
+      "note": "The lyric is 'funeral rite.' Reworded."
+    },
+    {
+      "claim": "Twice the chorus swaps 'I don't know' for 'tell me no,' then asks for more, and the song closes on the plea",
+      "verdict": "supported",
+      "note": "Two choruses end 'tell me no,' one followed by 'Or tell me more,' and the last line is 'tell me no.'"
+    },
+    {
+      "claim": "Repeated refrains make up most of the second half",
+      "verdict": "corrected",
+      "note": "The lyric structure shows heavy chorus repetition late on. Softened to 'much of the back half.'"
+    },
+    {
+      "claim": "Abrams said the song started as a journal entry; she wrote it while Aaron Dessner of The National strummed guitar; they recorded it quickly",
+      "verdict": "supported",
+      "note": "Flaunt and the Universal press release."
+    },
+    {
+      "claim": "Second preview of debut album Good Riddance, produced by Dessner at Long Pond in the Hudson Valley",
+      "verdict": "supported",
+      "note": "Rolling Stone and Wikipedia. The album was recorded at Long Pond."
+    },
+    {
+      "claim": "Abrams has said the sparseness is why it's one of her favorites",
+      "verdict": "supported",
+      "note": "Flaunt."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with slow arpeggios under a sustained synth pad",
+      "verdict": "supported",
+      "note": "All passes agree on the guitar, the pad and the slow tempo. Passes 1 and 3 say arpeggiated."
+    },
+    {
+      "claim": "Voice soft and breathy, close to a whisper",
+      "verdict": "corrected",
+      "note": "Soft, breathy and intimate are agreed on. Only one pass says 'hushed,' so 'close to a whisper' was removed."
+    },
+    {
+      "claim": "A second vocal line slips in to double some phrases",
+      "verdict": "corrected",
+      "note": "All three passes agree on a second vocal layer or harmony. Where it enters is unsupported, and 'double' is too specific. Reworded."
+    },
+    {
+      "claim": "Room sounds open; mix clean and polished",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say open and spacious; all three say polished, and passes 1 and 3 say clean."
+    },
+    {
+      "claim": "Follows diary-candid singer-songwriter pop of the 2020s; Dessner's folk-leaning restraint",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2153,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013686,
+        "detail": "1097 in / 147 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014336,
+        "detail": "1097 in / 173 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014886,
+        "detail": "1097 in / 195 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083792,
+        "detail": "25371 in / 1305 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.074932,
+        "detail": "3893 in / 2968 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052276,
+        "detail": "5063 in / 4215 out"
+      }
+    ]
+  }
+}

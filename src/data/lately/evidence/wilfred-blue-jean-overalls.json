@@ -1,0 +1,140 @@
+{
+  "spotifyId": "0N2H8sLFlk3OhF7rDNIK6O",
+  "reviewedAt": "2026-11-20T18:04:36.084Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13561392"
+  },
+  "listening": "Pass 1:\n- **Instruments and how they're played:** Acoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums play a light, brushed beat with a kick drum on beats one and three, and a snare on two and four.\n- **Tempo and groove feel:** Slow tempo. The groove feels relaxed and gentle.\n- **Vocals:** A male voice sings in a mid-range, with a slightly breathy and intimate delivery. There are no harmonies.\n- **Production:** The room sounds open, with a slight reverb on the vocals and guitar. The texture is clean and clear. The production is polished.\n- **Arrangement:** The excerpt begins with all instruments present. The bass and drums maintain a consistent pattern throughout. The acoustic guitar continues its arpeggiated pattern. The vocals are present throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\n- **Instruments and how they're played:** Acoustic guitar, strummed with a steady rhythm. Bass guitar, playing a walking bass line. Drums, playing a simple beat with kick, snare, and hi-hat.\n- **Tempo and groove feel:** Moderate tempo. The groove is relaxed and steady, with a slight swing feel.\n- **Vocals:** A male voice, singing in a clear, mid-range register. The delivery is conversational and slightly melancholic. No harmonies are present.\n- **Production:** The room sounds medium-sized, with a natural, un-reverberated texture. The production is clean and polished, with a balanced mix.\n- **Arrangement:** The excerpt begins with all instruments and vocals present. The arrangement remains consistent throughout, with no instruments entering or dropping out, and no significant builds.\n\nPass 3:\nHere's a description of the excerpt:\n\n**Instruments and how they're played:**\nAcoustic guitar plays a fingerpicked arpeggiated pattern, providing a consistent harmonic and rhythmic foundation. A bass guitar plays a simple, sustained root-note line. Drums play a slow, steady beat with brushes, featuring a kick drum and snare.\n\n**Tempo and groove feel:**\nThe tempo is slow. The groove feels gentle and flowing, with a slight swing.\n\n**Vocals:**\nThe voice is male, with a clear, mid-range character. The delivery is melodic and sustained, with a slight vibrato. There are no harmonies.\n\n**Production:**\nThe room sounds open, with a natural reverb. The texture is clean and polished.\n\n**Arrangement:**\nThe acoustic guitar, bass, and drums are present throughout. The vocals enter at the beginning and continue throughout the excerpt. No instruments drop out or build within this section.",
+  "research": {
+    "identity": "unknown",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The woman in **blue jean overalls** has painted her own clothes. That's the first image Wilfred gives us, and it tells you most of what you need to know: she wears her work, and the work is a disguise. The song is a portrait of someone whose art reads as joy to everyone else while it carries the thing she can't say out loud.\n\nThe writing turns on a gap between two people looking at the same canvas. The chorus lays it out plainly: she drinks alone in the dark, she falls asleep on the floor when things get too heavy, and she keeps up appearances well enough that no one finds out. Then comes the line that holds the whole song: \"She'll never tell you that she sees pain, where you see art.\" It's an empathy song about the limits of empathy. The viewer admires, the painter hurts, and the color sits between them doing its job too well.\n\nWhat keeps it from being a simple lament is the detail in the verses. She pours her coffee as if it might be her last. She commits to a canvas knowing she can't take it back. And then, quietly, there's this: \"She leaves an empty space for you, just in case.\" That's the hope she won't admit to, a small opening for someone to notice. The song lets the hiding and the wanting-to-be-found sit side by side without picking one.\n\nWatch how the second verse shifts. The first starts \"with the pain that she still holds,\" and the second starts with \"hatred,\" a harder word and a darker admission. The chorus that follows drops its last phrase and stops at \"she sees pain,\" as if the words gave out. The bridge then becomes a painting in progress, yellows moving through orange to red, \"to the color of red wine blood,\" the drinking from the chorus bleeding into the palette. The blues go from morning sky to shadow, and the shadows are left untouched, the parts of herself she won't paint over.\n\nThe arrangement is gentle and restrained. A fingerpicked acoustic guitar carries it, with bass holding a simple sustained line and drums played with brushes, kick and snare kept soft. The tempo is slow, with a slight swing in the groove. Wilfred sings in a clear mid-range with no harmonies stacked on top, and the production is clean and polished, with a touch of open-room reverb. Nothing crowds the lyric, which suits a song about someone nobody looks at closely enough.\n\nThere's a twist built into the premise: the song tells you everything she'll never tell you. The singer is the one who noticed, and you finish the song wondering whose overalls you've only admired from across the room.",
+  "factCheck": [
+    {
+      "claim": "The woman in the overalls has painted her own clothes.",
+      "verdict": "supported",
+      "note": "Lyric: 'blue jean overalls that she painted'."
+    },
+    {
+      "claim": "That's the first image Wilfred gives us.",
+      "verdict": "supported",
+      "note": "It is the opening line of the lyrics."
+    },
+    {
+      "claim": "Her art reads as joy to everyone else.",
+      "verdict": "corrected",
+      "note": "'Joy' isn't in the lyrics. The song says others see 'art', so the line now says 'art'."
+    },
+    {
+      "claim": "The chorus: she drinks alone in the dark, falls asleep on the floor when things get too heavy, and keeps up appearances so no one finds out.",
+      "verdict": "corrected",
+      "note": "The lyrics say 'drinking in the dark', not 'alone'. 'Alone' was removed. The rest is a fair paraphrase of 'life's too hard', 'no one will ever know' and 'plays her part'."
+    },
+    {
+      "claim": "Quote: \"She'll never tell you that she sees pain, where you see art.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "She pours her coffee as if it might be her last; she commits to a canvas she can't take back.",
+      "verdict": "supported",
+      "note": "Matches 'pours her morning coffee like it's her last' and 'a canvas she can't take it back'."
+    },
+    {
+      "claim": "Quote: \"She leaves an empty space for you, just in case.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The first verse starts 'with the pain that she still holds' and the second starts with 'hatred'.",
+      "verdict": "supported",
+      "note": "Both lines are in the lyrics."
+    },
+    {
+      "claim": "The chorus that follows drops its last phrase and stops at 'she sees pain'.",
+      "verdict": "supported",
+      "note": "The second chorus in the lyrics ends at 'she sees pain'."
+    },
+    {
+      "claim": "The bridge is a painting in progress: yellows to orange to red, 'to the color of red wine blood'; blues from morning sky to shadows left untouched.",
+      "verdict": "supported",
+      "note": "The lyric structure shows this section and the images. The quote matches apart from capitalization, and the readings are interpretation."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar carries it; bass holds a simple sustained line; drums played with brushes.",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on each."
+    },
+    {
+      "claim": "Kick and snare kept soft.",
+      "verdict": "removed",
+      "note": "Only one pass describes the drums as light. The phrase was cut to 'kick and snare'."
+    },
+    {
+      "claim": "Slow tempo with a slight swing in the groove.",
+      "verdict": "supported",
+      "note": "Slow: passes 1 and 3. Swing: passes 2 and 3."
+    },
+    {
+      "claim": "Clear mid-range vocal, no harmonies; clean, polished production; touch of open-room reverb.",
+      "verdict": "supported",
+      "note": "Vocal and production points are agreed on by all passes. Open room with reverb is agreed on by passes 1 and 3."
+    },
+    {
+      "claim": "Interpretive claims (an empathy song about the limits of empathy; the singer is the one who noticed; the shadows as the parts she won't paint over; nothing crowds the lyric).",
+      "verdict": "supported",
+      "note": "These are critical readings that rest on the lyrics and the supported sound details."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.203,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014736,
+        "detail": "1097 in / 189 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014936,
+        "detail": "1097 in / 197 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014386,
+        "detail": "1097 in / 175 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.108456,
+        "detail": "37693 in / 307 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.045336,
+        "detail": "2824 in / 1702 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044798,
+        "detail": "3934 in / 3693 out"
+      }
+    ]
+  }
+}

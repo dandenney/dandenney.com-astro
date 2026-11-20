@@ -1,0 +1,201 @@
+{
+  "spotifyId": "12hFIo6qXSlxyDluikwc73",
+  "reviewedAt": "2026-11-20T18:00:18.748Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13868579"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic drums play a driving, four-on-the-floor beat with a prominent snare backbeat. An electric bass plays a simple, root-note-focused line. An electric guitar plays a clean, arpeggiated figure.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is a steady, driving rock feel.\n\nVocals:\nA single voice sings in a medium-high register. The delivery is clear and direct. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, with a moderate amount of reverb suggesting a medium-sized room. The texture is polished.\n\nArrangement:\nThe excerpt begins with the full band. The electric guitar drops out briefly at the end of the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar strums a steady rhythm. Electric guitar plays a simple, clean, single-note melody. Bass guitar plays a walking bassline. Drums play a simple rock beat with a prominent snare.\n\nTempo and Groove:\nMedium tempo. The groove feels steady and driving, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is rhythmic and conversational. There are no harmonies.\n\nProduction:\nThe room sounds dry and intimate. The texture is clean and bright. The production is polished.\n\nArrangement:\nThe song begins with acoustic guitar, electric guitar, bass, and drums. The vocals enter immediately. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar strums a steady rhythm. Electric guitar plays a simple, clean, single-note melody. Bass guitar plays a walking bass line. Drums play a simple rock beat with a prominent snare.\n\nTempo and Groove:\nMedium tempo. The groove feels steady and driving, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and slightly raw. There are no harmonies.\n\nProduction:\nThe room sounds dry and intimate. The texture is clean and direct. The production feels polished but not overly processed.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar enters with a melody after the first vocal phrase. The arrangement remains consistent throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Shake! Shake! Shake!\" is credited to The Deadbeat Cousins & Liam St. John and was released as a single on 2022-11-11, with a running time of 3:08.",
+        "source": "https://www.shazam.com/en-us/artist/the-deadbeat-cousins/1431601433"
+      },
+      {
+        "claim": "Deezer lists the writers and composers as Jaren Glade Soelberg, Jess Alan Soelberg, Matthew Parry Shaker, Jason James Roedl and Shannon Liam St. John.",
+        "source": "https://www.deezer.com/us/artist/92504622"
+      },
+      {
+        "claim": "Liam St. John is a Los Angeles-based blues and blues rock musician. Viberate lists this song as one of his collaborations with The Deadbeat Cousins.",
+        "source": "https://www.viberate.com/artist/liam-st-john/"
+      },
+      {
+        "claim": "Viberate describes the track as combining St. John's soulful vocals with the band's blues rock sound, a hard-rocking rhythm section and guitar riffs.",
+        "source": "https://www.viberate.com/artist/the-deadbeat-cousins/"
+      },
+      {
+        "claim": "The Deadbeat Cousins formed in Phoenix, Arizona in 2017. The core members are Matt Shaker (vocals, guitar), Jaren Soelberg (guitar), Jess Soelberg (bass) and Jason Roedl (drums). Jess Soelberg is related to Jaren.",
+        "source": "https://www.deezer.com/en/artist/50360262"
+      },
+      {
+        "claim": "Shaker and Soelberg have been friends since seventh grade, but they had not collaborated on music until they started the Cousins.",
+        "source": "https://www.phoenixnewtimes.com/music/phoenix-blues-rockers-the-deadbeat-cousins-are-poised-for-their-big-break-11588235/"
+      },
+      {
+        "claim": "The band chose its name in a brainstorming session, settling on Deadbeat Cousins over Coyote Cousins.",
+        "source": "https://inthebucketplaylist.com/interview-with-the-deadbeat-cousins-folk-and-blues-are-deadbeat-cousins/"
+      },
+      {
+        "claim": "The band's debut album Get By came out in 2019. Old Habits followed on September 23, 2022, about seven weeks before this single. Both were released on the band's own label, The Deadbeat Cousins.",
+        "source": "https://www.shazam.com/song/1563531213/dont-tell-me-no-lies"
+      },
+      {
+        "claim": "The band's Bandsintown bio says they play blues rock \"because we like it when the rooms shake a bit\". It also says bassist Jess moved to Nashville, leaving a four-piece.",
+        "source": "https://www.bandsintown.com/a/14032892-the-deadbeat-cousins"
+      }
+    ],
+    "lineage": "The song sits in the Arizona (Phoenix/Mesa) blues-rock scene, in a style sources describe as drawing on classic blues and rock traditions with modern alternative and indie rock touches.",
+    "genres": [
+      "blues rock",
+      "blues",
+      "rock"
+    ]
+  },
+  "draft": "A chorus built on three verbs, shake, pay, take, keeps a ledger for a life going under. **Shake! Shake! Shake!** opens that ledger with a child's piggy bank, the narrator dropping in a penny, and then admits where the real money went: \"My last dime I wasted on an alibi.\" It's a small, sharp confession. Not spent on a drink or a debt, but on a story to cover something. The guilt is already in the purchase.\n\nWhat makes the song sting is that the narrator can't decide whose fault this is. The verses point outward. Someone left without a word, someone plotted the downfall and spun the web the narrator walked straight into. Then the chorus turns the finger around: \"Now I'm payin' for all my mistakes,\" and the bill comes due \"One drink at a time.\" That last phrase bends the recovery-room mantra about taking things one day at a time into a slow, deliberate slide. Blame and self-blame sit next to each other and never settle, which is how it actually feels to be left and to know you helped it happen.\n\nThe fourth verse makes that tension plainer. The narrator talks about being bleached and purified, then lists gasoline and lines in the same breath, and ends by saying they're fixing to stay high. Cleanness is the wish, and the wish loses. By the bridge there's nothing left to argue over. \"What's yours, it isn't mine\" reads like a settlement signed out of exhaustion, the dotted line in the previous line making it sound almost legal. Then the chorus returns, and the song closes by repeating its drink-at-a-time line until it sounds like a habit rather than a hook.\n\nThe band plays all of this steady and unhurried. Strummed acoustic guitar sits under a clean electric line that picks out single notes. A walking bass and a snare-heavy rock beat give it a driving pulse with a slight swing. The room is dry and close, the sound polished without being slick. Liam St. John sings it alone, with no harmonies, clear and conversational, as if laying out the accounts to someone across a table.\n\nThe Deadbeat Cousins came together in Phoenix in 2017, built around Matt Shaker and Jaren Soelberg, friends since seventh grade, and they've said they play blues rock because they like it when the rooms shake a bit. Their debut album was called Get By, and the first verse here admits they're still trying to. The credits list all five writers, St. John among them, and the song arrived seven weeks after their second record, Old Habits.\n\nIt sticks because it lets you be angry at someone and ashamed of yourself in the same chorus, and it never makes you choose.",
+  "factCheck": [
+    {
+      "claim": "A chorus built on three verbs, shake, pay, take",
+      "verdict": "corrected",
+      "note": "'Take! Take! Take!' belongs to a separate section, not the chorus. Reworded to 'A song built on three verbs'."
+    },
+    {
+      "claim": "opens that ledger with a child's piggy bank, the narrator dropping in a penny",
+      "verdict": "corrected",
+      "note": "The piggy bank and penny are in the lyrics, but they appear in the chorus, not at the song's opening. 'Opens' and 'child's' were removed."
+    },
+    {
+      "claim": "\"My last dime I wasted on an alibi.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Someone left without a word; someone plotted the downfall and spun the web the narrator walked into",
+      "verdict": "supported",
+      "note": "Paraphrases 'You left without a sign', 'My downfall you connive', 'You spin another web / And I walk straight into your lies'."
+    },
+    {
+      "claim": "\"Now I'm payin' for all my mistakes,\" and the bill comes due \"One drink at a time.\"",
+      "verdict": "corrected",
+      "note": "Both quotes match the lyrics. The draft quoted four lines in total, over the limit of three, so the mistakes line is now paraphrased."
+    },
+    {
+      "claim": "That last phrase bends the recovery-room mantra about taking things one day at a time into a slow, deliberate slide",
+      "verdict": "corrected",
+      "note": "The cultural claim about a recovery mantra isn't in the packet. Rewritten as a listener's reading that the phrase echoes 'one day at a time'."
+    },
+    {
+      "claim": "The fourth verse: bleached and purified, gasoline and lines, fixing to stay high",
+      "verdict": "supported",
+      "note": "It is the fourth verse in the lyric structure and the paraphrase matches the text."
+    },
+    {
+      "claim": "By the bridge... \"What's yours, it isn't mine\"... the dotted line in the previous line",
+      "verdict": "supported",
+      "note": "The quote is exact and 'I'll sign on the dotted line' is the preceding line. The section's placement is shown by the lyric structure."
+    },
+    {
+      "claim": "The chorus returns, and the song closes by repeating its drink-at-a-time line",
+      "verdict": "supported",
+      "note": "The lyric structure shows the final chorus and the repeated 'One drink at a time'."
+    },
+    {
+      "claim": "The band plays all of this steady and unhurried",
+      "verdict": "corrected",
+      "note": "'Steady' and 'driving' are supported by all passes. 'Unhurried' conflicts with pass 1 (medium-fast, driving), so it was replaced."
+    },
+    {
+      "claim": "Strummed acoustic guitar under a clean electric line of single notes; walking bass; snare-heavy rock beat; slight swing",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on each detail, and all three agree on the clean electric guitar and prominent snare."
+    },
+    {
+      "claim": "The room is dry and close, the sound polished without being slick",
+      "verdict": "corrected",
+      "note": "Dry and intimate is backed by passes 2 and 3, and polished by all three. 'Without being slick' rests on one pass only, so it was dropped."
+    },
+    {
+      "claim": "Liam St. John sings it alone, with no harmonies, clear and conversational",
+      "verdict": "corrected",
+      "note": "A single voice with no harmonies, clear and direct or conversational, is supported. Naming the lead singer isn't established for certain, so the line now describes the voice without naming the singer."
+    },
+    {
+      "claim": "The Deadbeat Cousins came together in Phoenix in 2017",
+      "verdict": "supported",
+      "note": "Deezer bio."
+    },
+    {
+      "claim": "Matt Shaker and Jaren Soelberg, friends since seventh grade",
+      "verdict": "supported",
+      "note": "Phoenix New Times. 'Built around' was softened to a plain statement."
+    },
+    {
+      "claim": "They play blues rock because they like it when the rooms shake a bit",
+      "verdict": "supported",
+      "note": "Bandsintown bio."
+    },
+    {
+      "claim": "Their debut album was called Get By, and the first verse here admits they're still trying to",
+      "verdict": "corrected",
+      "note": "The debut album Get By (2019) is supported. The lyric says 'we're still trying to get by', but it voices the narrator, not the band, so the link is now framed as an echo."
+    },
+    {
+      "claim": "The credits list all five writers, St. John among them",
+      "verdict": "supported",
+      "note": "Deezer lists five writers including Shannon Liam St. John."
+    },
+    {
+      "claim": "The song arrived seven weeks after their second record, Old Habits",
+      "verdict": "corrected",
+      "note": "Old Habits (Sept 23, 2022) came about seven weeks before the single, which is supported. 'Second record' isn't stated, so it was removed."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2018,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014066,
+        "detail": "1107 in / 161 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014016,
+        "detail": "1107 in / 159 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00055725,
+        "detail": "1107 in / 153 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.07817,
+        "detail": "21750 in / 1467 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053804,
+        "detail": "3641 in / 1962 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.066454,
+        "detail": "4792 in / 5687 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "spotifyId": "3zFpiSDKVg4SOzjsZf05vK",
+  "reviewedAt": "2026-11-20T17:39:21.033Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4047136"
+  },
+  "listening": "Pass 1:\nInstruments:\nA sustained, low-pitched synth pad provides a drone. A clean electric guitar plays arpeggiated chords. Drums play a slow, driving beat with prominent snare hits and cymbal crashes.\n\nTempo and Groove:\nThe tempo is slow. The groove feels like a ballad, with a sense of building intensity.\n\nVocals:\nThe voice is female, with a clear, strong character. The delivery is powerful and sustained, with a slight vibrato. There are no obvious harmonies, but the voice is layered, creating a fuller sound.\n\nProduction:\nThe production sounds polished and full. The room sounds spacious, with a noticeable reverb on the vocals and drums. The texture is rich and layered.\n\nArrangement:\nThe excerpt begins with the synth pad and electric guitar already playing. The drums enter shortly after, establishing the beat. The vocals are present throughout, with a layered quality. There is a slight build in intensity as the drums become more prominent.\n\nPass 2:\nInstruments:\nA sustained, low-pitched synth pad provides a foundation. A clean electric guitar plays a arpeggiated melody with a delay effect. Drums enter with a kick, snare, and hi-hat pattern.\n\nTempo and Groove:\nThe tempo is slow. The groove feels like a ballad, with a steady, driving rhythm once the drums enter.\n\nVocals:\nA female voice sings with a clear, strong character. The delivery is sustained and expressive. There are no harmonies.\n\nProduction:\nThe room sounds spacious, with a noticeable reverb on the vocals and guitar. The texture is full and layered. The production is polished.\n\nArrangement:\nThe synth pad and electric guitar begin the excerpt. The drums enter around the 7-second mark, establishing a rhythmic pulse. The vocals are present throughout. No elements drop out.\n\nPass 3:\nInstruments:\nA synth pad plays sustained chords. A bass guitar plays a simple, repeating line. Drums play a slow, steady beat with a prominent kick and snare.\n\nTempo and Groove:\nThe tempo is slow. The groove feels like a ballad, with a sense of gentle forward motion.\n\nVocals:\nA female voice sings the lead melody. The delivery is clear and sustained, with a slight vibrato. There are no harmonies.\n\nProduction:\nThe room sounds spacious, with a noticeable reverb on the vocals and drums. The texture is smooth and polished.\n\nArrangement:\nThe excerpt begins with the synth pad, bass, and drums already playing. The lead vocal enters immediately. No instruments drop out or build significantly within this short excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Amy Lee's \"With or Without You\" is a cover of U2's song, which first appeared on their 1987 album The Joshua Tree.",
+        "source": "https://www.loudersound.com/news/amy-lee-covers-u2-s-with-or-without-you"
+      },
+      {
+        "claim": "Lee released the cover through her newly launched YouTube channel in November 2015, as her second cover video there.",
+        "source": "https://blabbermouth.net/news/evanescences-amy-lee-releases-cover-version-of-u2s-with-or-without-you"
+      },
+      {
+        "claim": "The cover follows her first cover in the series, Portishead's \"It's a Fire\".",
+        "source": "https://www.rollingstone.com/music/music-news/hear-amy-lees-haunting-cover-of-u2s-with-or-without-you-55180/"
+      },
+      {
+        "claim": "Rolling Stone described the arrangement as a dark, synth-heavy, minimalist industrial take on the arena-rock original. Its black-and-white video shows Lee posing by foliage and recording in her home studio.",
+        "source": "https://www.rollingstone.com/music/music-news/hear-amy-lees-haunting-cover-of-u2s-with-or-without-you-55180/"
+      },
+      {
+        "claim": "Lee said the dark version was playing in her head as she woke up one morning. She then went straight upstairs and laid down the synth and basic vocal.",
+        "source": "https://loudwire.com/watch-evanescence-amy-lee-cover-u2-with-or-without-you/"
+      },
+      {
+        "claim": "Lee said she saw U2 live at Madison Square Garden in 2015, that it made her excited to play live again, and that this is still her favorite U2 track.",
+        "source": "https://blabbermouth.net/news/evanescences-amy-lee-releases-cover-version-of-u2s-with-or-without-you"
+      },
+      {
+        "claim": "Lee said love is rarely simple and is more often tearing your guts out, which is why the song haunts her dreams.",
+        "source": "https://www.loudersound.com/news/amy-lee-covers-u2-s-with-or-without-you"
+      },
+      {
+        "claim": "mxdwn noted that Lee swapped the piano and strings of the original for heavy synth and put the emphasis on the lyrics.",
+        "source": "https://music.mxdwn.com/2015/11/19/news/listen-amy-lee-covers-with-or-without-you-by-u2-and-its-a-fire-by-portishead/"
+      },
+      {
+        "claim": "The track was later included on Lee's covers EP Recover, Vol. 1, released February 19, 2016, which has four covers and videos directed by Eric Ryan Anderson.",
+        "source": "https://en.wikipedia.org/wiki/Recover,_Vol._1"
+      },
+      {
+        "claim": "Lee is the frontwoman of Evanescence, and the cover was part of a YouTube channel created to showcase her solo work.",
+        "source": "https://www.loudersound.com/news/amy-lee-covers-u2-s-with-or-without-you"
+      }
+    ],
+    "lineage": "A dark, synth-driven industrial reworking of a 1987 U2 arena-rock ballad, issued as part of Amy Lee's solo covers series after her work with Evanescence.",
+    "genres": [
+      "industrial rock",
+      "alternative rock",
+      "synth rock"
+    ]
+  },
+  "draft": "**With or Without You** has always been a song about a bind, and Amy Lee strips it down until the bind is all that's left. A low synth pad hums underneath like something left running in an empty room. A clean electric guitar picks out arpeggios. The drums keep a slow ballad pace, kick and snare landing with weight, all of it soaked in reverb so the space feels huge and cold. Rolling Stone heard it as a minimalist, industrial take on an arena-rock original. That is the right frame. U2's 1987 version, from *The Joshua Tree*, swells toward release. Lee's leaves the walls up.\n\nThe swap matters. Lee traded the piano and strings of the original for heavy synth and pushed the lyrics to the front. Her voice is clear and strong and held long on the vowels, with a slight vibrato and no harmonies to soften it. Nobody joins in. That loneliness is the point, because the song describes a person caught between two kinds of pain. \"I can't live / With or without you\" is not a romantic flourish here. It sounds like a diagnosis.\n\nThe writing holds more than one feeling at once, and the cover lets them sit unresolved. \"On a bed of nails she makes me wait\" brings in a third figure and turns patience into punishment. Then comes the line that gives the narrator away: \"You give it all, but I want more.\" There's grievance in it, and also an ugly, honest admission that nothing would be enough. The refrain, \"And you give yourself away,\" cuts in both directions. It could be an accusation or a lament for someone erasing themselves, and the repetitions trail off into \"And you give…\" as if the sentence can't be finished. The middle section reads like a body counting its damage: hands tied, bruised, \"nothing left to lose.\"\n\nLee has said love is rarely simple and more often tears your guts out, which is why the song stays with her. She saw U2 at Madison Square Garden in 2015, called this her favorite of their tracks, and came away wanting to play live again. Then the dark version arrived in her head one morning as she woke up. She went straight upstairs and laid down the synth and a basic vocal. It became the second cover on her new YouTube channel, a home for her work outside Evanescence, after Portishead's \"It's a Fire.\" The black-and-white video shows her by foliage and at work in her home studio, and it was later collected on the *Recover, Vol. 1* EP.\n\nWhat sticks is the refusal to let the chorus lift you out of the trap, so you stay inside that cold, echoing room with someone who can neither leave nor stay.",
+  "factCheck": [
+    {
+      "claim": "A low synth pad hums underneath; clean electric guitar picks out arpeggios",
+      "verdict": "supported",
+      "note": "Synth pad appears in all three passes. Arpeggiated clean electric guitar appears in passes 1 and 2."
+    },
+    {
+      "claim": "Drums keep a slow ballad pace with kick and snare landing with weight",
+      "verdict": "supported",
+      "note": "Slow ballad feel in all passes. Snare in all three, kick in passes 2 and 3."
+    },
+    {
+      "claim": "Reverb makes the space feel huge and cold",
+      "verdict": "supported",
+      "note": "Spacious room and noticeable reverb in all passes. 'Cold' is the critic's interpretation."
+    },
+    {
+      "claim": "Rolling Stone heard it as a minimalist, industrial take on an arena-rock original",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone description in the researched facts."
+    },
+    {
+      "claim": "U2's 1987 version, from The Joshua Tree",
+      "verdict": "supported",
+      "note": "Researched facts confirm the 1987 album The Joshua Tree."
+    },
+    {
+      "claim": "U2's version swells toward release",
+      "verdict": "removed",
+      "note": "No evidence describes the original's sound or arc. Replaced with the supported 'arena rock' framing."
+    },
+    {
+      "claim": "Lee traded the piano and strings of the original for heavy synth and pushed the lyrics to the front",
+      "verdict": "supported",
+      "note": "mxdwn note in researched facts."
+    },
+    {
+      "claim": "Voice is clear and strong, held long, slight vibrato, no harmonies",
+      "verdict": "supported",
+      "note": "Clear and strong in all passes, sustained delivery in all, vibrato in passes 1 and 3, no harmonies in all."
+    },
+    {
+      "claim": "Nobody joins in",
+      "verdict": "removed",
+      "note": "Pass 1 describes the voice as layered, so this overstates the case. 'No harmonies' is kept."
+    },
+    {
+      "claim": "\"I can't live / With or without you\" quote",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics, but it was converted to a paraphrase to keep within the three-quoted-line limit."
+    },
+    {
+      "claim": "\"On a bed of nails she makes me wait\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "\"You give it all, but I want more\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "\"And you give yourself away\" refrain; repetitions trail off into 'And you give…'",
+      "verdict": "supported",
+      "note": "Exact lyric. The trailing repetitions are in the lyric text. The second quote was turned into description for the quote limit."
+    },
+    {
+      "claim": "The middle section reads like a body counting its damage: hands tied, bruised, \"nothing left to lose\"",
+      "verdict": "corrected",
+      "note": "'Middle section' is a positional claim, so it was changed to 'one stanza'. The quote was paraphrased for the quote limit."
+    },
+    {
+      "claim": "Lee said love is rarely simple and more often tears your guts out, which is why the song stays with her",
+      "verdict": "corrected",
+      "note": "Source says the song haunts her dreams. Reworded to 'lingers in her dreams'."
+    },
+    {
+      "claim": "Saw U2 at Madison Square Garden in 2015, favorite U2 track, wanted to play live again",
+      "verdict": "supported",
+      "note": "Blabbermouth quote in researched facts."
+    },
+    {
+      "claim": "Then the dark version arrived in her head one morning; she went upstairs and laid down the synth and basic vocal",
+      "verdict": "corrected",
+      "note": "Supported, but 'Then' implied a sequence after the U2 show that isn't stated. Removed."
+    },
+    {
+      "claim": "Second cover on her new YouTube channel for work outside Evanescence, after Portishead's 'It's a Fire'",
+      "verdict": "supported",
+      "note": "Matches Louder Sound, Blabbermouth and Rolling Stone facts."
+    },
+    {
+      "claim": "Black-and-white video shows her by foliage and at work in her home studio",
+      "verdict": "supported",
+      "note": "Rolling Stone description."
+    },
+    {
+      "claim": "Later collected on the Recover, Vol. 1 EP",
+      "verdict": "supported",
+      "note": "Wikipedia fact in packet."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.194,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013822,
+        "detail": "1092 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014347,
+        "detail": "1092 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014947,
+        "detail": "1092 in / 200 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077358,
+        "detail": "21079 in / 1520 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.055272,
+        "detail": "3583 in / 2047 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.057104,
+        "detail": "4722 in / 4766 out"
+      }
+    ]
+  }
+}

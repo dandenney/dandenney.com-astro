@@ -1,0 +1,195 @@
+{
+  "spotifyId": "6XkQ6jiSJFAXxfCVH5Hwzm",
+  "reviewedAt": "2026-11-20T17:47:49.426Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/31181237"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A fiddle plays a melodic line with double stops. A bass plays a walking line. A drum kit plays a simple beat with a snare backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, swinging feel.\n\nVocals:\nA single voice sings with a slightly raspy, clear tone. The delivery is straightforward. There are no harmonies.\n\nProduction:\nThe room sounds open. The texture is clean. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band. The fiddle plays a melodic line throughout. The bass and drums maintain a steady rhythm. The vocals sing two lines, then the fiddle takes a short solo over the band. The vocals return for two more lines, then the fiddle plays another short solo. The excerpt ends with the full band playing.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A fiddle plays a melodic line with slides and double stops.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, swinging feel.\n\nVocals:\nA single voice sings with a slightly raspy, mid-range character. The delivery is straightforward. No harmonies are present.\n\nProduction:\nThe room sounds open. The texture is clean. The production is polished.\n\nArrangement:\nThe excerpt begins with the voice, acoustic guitar, and fiddle. The fiddle plays a counter-melody to the voice. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm. A fiddle plays a melodic line with slides and double stops. A bass guitar plays a walking bass line. A drum kit plays a shuffle rhythm with brushes.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a shuffle, with a relaxed, swinging feel.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is conversational and slightly melancholic. No harmonies are present.\n\nProduction:\nThe room sounds live, with a natural reverb. The texture is warm and organic. The production is polished, with a balanced mix.\n\nArrangement:\nThe excerpt begins with all instruments playing. The fiddle plays a melodic line throughout, with a brief break in the middle. The vocals enter at the beginning and continue throughout. The bass and drums maintain a steady rhythm. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Gears\" was written by Joshua Allen Quimby.",
+        "source": "https://www.shazam.com/song/1779110351/gears"
+      },
+      {
+        "claim": "\"Gears\" is track 4 on Joshua Quimby's self-titled album, released 22 April 2022 and credited ℗ 2022 Joshua Quimby. The album opens with \"Ticket to Hartford\" and also includes \"To the Choir\" and \"Crescent Smile\".",
+        "source": "https://www.deezer.com/en/artist/74544352"
+      },
+      {
+        "claim": "\"Gears\" was first put out as a standalone single dated 8 April 2022. It runs about 3:35 and Apple Music tags it folk-rock.",
+        "source": "https://music.apple.com/hu/album/gears-single/1779110350"
+      },
+      {
+        "claim": "The lyrics of \"Gears\" deal with heavy marijuana use and self-medication.",
+        "source": "https://www.shazam.com/song/1779110351/gears"
+      },
+      {
+        "claim": "Quimby recorded a live version, \"Gears (OurVinyl Sessions)\", which opens the 4-song \"Joshua Quimby | OurVinyl Sessions\" release of 19 July 2023.",
+        "source": "https://www.amazon.com/Joshua-Quimby-OurVinyl-Sessions/dp/B0CBQN251X"
+      },
+      {
+        "claim": "Quimby says his self-titled debut is angstier, angrier and darker than the later \"These Old Jeans\" EP. He calls it a reflection of a more muddled, troubled mind.",
+        "source": "https://www.theselfportraitgospel.com/interviews/the-joshua-quimby-interview"
+      },
+      {
+        "claim": "Quimby was born in Rhode Island, raised in Connecticut, and now lives in Nashville.",
+        "source": "https://www.whiskeyriff.com/2024/11/12/meet-joshua-quimby/"
+      },
+      {
+        "claim": "Quimby moved to Nashville at 18, at first intending only to play guitar for other people before writing and recording his own music.",
+        "source": "https://saddlemountainpost.com/features/the-north-remembers-joshua-quimby-is-bringing-it-all-back-home/"
+      },
+      {
+        "claim": "Quimby's second album, \"Back Home\" (May 2024), is a record about his New England roots. His influences include Bob Dylan, Hank Williams Sr. and John Prine.",
+        "source": "https://music.amazon.com/es-co/podcasts/eb665e3f-79c6-41a2-b5fb-9fe89cc0ec85/episodes/23e96a9a-5151-4665-a1b4-9cf6499b5736/americana-curious-joshua-quimby---rustic-and-righteous"
+      },
+      {
+        "claim": "His fourth album, \"Piecemeal\", came out 7 August 2026. It has ten songs and three poems, with features from Angela Autumn and Pompey.",
+        "source": "https://x.com/jquimbymusic"
+      }
+    ],
+    "lineage": "Quimby's music sits in the folk, Americana and country tradition, with a raspy, Colter Wall-like vocal style and Dylan, Hank Williams Sr. and John Prine as cited influences.",
+    "genres": [
+      "folk-rock",
+      "country",
+      "americana"
+    ]
+  },
+  "draft": "Start with the thumb. In the first line of **Gears**, Joshua Quimby looks down and finds that \"the tip of my thumb has been whittled like wood,\" worn down by the lighter he can't stop flicking. It's a funny image, and a little alarming. The habit has left a mark on the body, and he reports it the way you'd mention a callus from a guitar string. That mix of wry detail and quiet damage runs through the whole song.\n\nQuimby wrote it alone, and the lyric is plain about what it covers: heavy marijuana use as self-medication. He knows the cure is part of the problem. He's smoking to put out a fire that the smoking keeps feeding. The second verse finds him on the floor of his room \"in the company of constant concern,\" which is the loneliest line here. Worry is the only one keeping him company, and he can't even name where it comes from. Anyone who has felt anxious for no reason they could point to will know that floor.\n\nThe refrain ties two images together. The grass burns and the gears keep churning: the drug and the restless mind run side by side, and neither one wins. He calls it permanent, living and dying by the pipe, then hedges with \"Least that's how it seems to me.\" That small doubt is the most hopeful moment in the song. It's fatalism with a crack in it. The last verse doesn't follow up on it, though. The closing line repeats three times, as if saying it enough could make it true.\n\nThe band plays against all that heaviness. An acoustic guitar strums at a moderate, swinging pace, a walking bass and steady drums keep things loose, and a fiddle threads a counter-melody around the voice with slides and double stops. The room sounds open and the mix is clean. Quimby sings alone, no harmonies, in a slightly raspy mid-range voice, and he delivers it straight. The easy groove sounds like the relief the reefer promises, which is the point and also the trap.\n\nThe folksy \"a-tokin',\" \"a-burnin'\" diction nods to the old-time vernacular of Hank Williams Sr. and the plainspoken humor of John Prine, both of whom Quimby names as influences. The rasp sits near Colter Wall. Quimby, who was raised in Connecticut and moved to Nashville at 18 meaning only to play guitar for others, has called this debut his angrier, darker record, the work of a muddled, troubled mind. \"Gears\" shows that mind without dressing it up.\n\nIt sticks because it makes the comfort and the trap sound like the same easy swing, so you sway along before you notice he's still on the floor.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"the tip of my thumb has been whittled like wood\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The thumb is worn down by the lighter he can't stop flicking",
+      "verdict": "supported",
+      "note": "Reading of 'the way I'm abusin' the lighter'. Interpretation."
+    },
+    {
+      "claim": "Quimby wrote it alone",
+      "verdict": "corrected",
+      "note": "The writing credit is Joshua Allen Quimby. 'Alone' goes beyond that, so it now just says he wrote it."
+    },
+    {
+      "claim": "The lyric covers heavy marijuana use as self-medication",
+      "verdict": "supported",
+      "note": "Stated in the researched facts, and the lyrics say 'self-medicatin'' and 'tokin' all day'."
+    },
+    {
+      "claim": "He's smoking to put out a fire that the smoking keeps feeding",
+      "verdict": "supported",
+      "note": "Interpretation of 'fight fire with fire'."
+    },
+    {
+      "claim": "Lyric quote: \"in the company of constant concern\"; he's on the floor of his room and can't name where the worry comes from",
+      "verdict": "supported",
+      "note": "Quote is exact. 'A reason I couldn't discern' backs the second point."
+    },
+    {
+      "claim": "Lyric quote: \"Least that's how it seems to me\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The last verse doesn't follow up on the hedge; the closing line repeats three times",
+      "verdict": "corrected",
+      "note": "The last verse actually repeats the hedge line. 'That's how it always will be' does appear three times at the end. Reworded so only the three-fold repetition is claimed."
+    },
+    {
+      "claim": "Acoustic guitar strums at a moderate, swinging pace; walking bass and steady drums",
+      "verdict": "supported",
+      "note": "Guitar, tempo and groove are agreed by all passes. Walking bass is in passes 1 and 3. Steady drums and bass are in passes 1 and 3."
+    },
+    {
+      "claim": "A fiddle threads a counter-melody around the voice with slides and double stops",
+      "verdict": "corrected",
+      "note": "Only pass 2 says 'counter-melody'. Passes agree on a fiddle melodic line with double stops, and slides in passes 2 and 3. Reworded to that."
+    },
+    {
+      "claim": "The room sounds open and the mix is clean",
+      "verdict": "supported",
+      "note": "Open room and clean texture in passes 1 and 2. Pass 3 is consistent."
+    },
+    {
+      "claim": "Single voice, no harmonies, slightly raspy mid-range, straightforward delivery",
+      "verdict": "supported",
+      "note": "Agreed by at least two passes."
+    },
+    {
+      "claim": "The easy groove sounds like the relief the reefer promises",
+      "verdict": "supported",
+      "note": "Interpretation resting on the agreed relaxed swing and the lyric 'settin' my troubled mind free'."
+    },
+    {
+      "claim": "The diction nods to the old-time vernacular of Hank Williams Sr. and the plainspoken humor of John Prine, both named by Quimby as influences",
+      "verdict": "corrected",
+      "note": "The influences are supported. Claims about what Williams's and Prine's writing is like are not in the packet, so the sentence now ties the diction to the named influences without characterizing them."
+    },
+    {
+      "claim": "The rasp sits near Colter Wall",
+      "verdict": "supported",
+      "note": "The lineage note describes a raspy, Colter Wall-like vocal style."
+    },
+    {
+      "claim": "Quimby was raised in Connecticut and moved to Nashville at 18 meaning only to play guitar for others",
+      "verdict": "supported",
+      "note": "Supported by the Whiskey Riff and Saddle Mountain Post facts."
+    },
+    {
+      "claim": "Quimby has called this debut his angrier, darker record, the work of a muddled, troubled mind",
+      "verdict": "corrected",
+      "note": "He compares the debut to the later 'These Old Jeans' EP, calling it angstier, angrier and darker and a reflection of a more muddled, troubled mind. Comparison restored."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2412,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00049544,
+        "detail": "1099 in / 131 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014542,
+        "detail": "1099 in / 181 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014767,
+        "detail": "1099 in / 190 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.134192,
+        "detail": "45571 in / 1305 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053728,
+        "detail": "3622 in / 1962 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049886,
+        "detail": "4758 in / 4037 out"
+      }
+    ]
+  }
+}

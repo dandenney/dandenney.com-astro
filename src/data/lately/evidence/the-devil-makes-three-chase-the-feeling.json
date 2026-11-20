@@ -1,0 +1,230 @@
+{
+  "spotifyId": "43C88JXdWHHlyfghixFJI2",
+  "reviewedAt": "2026-11-20T18:01:35.375Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2358252"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady rhythm with a strummed chord pattern. A bass guitar plays a walking bass line. A banjo plays a melodic counterpoint to the vocals, with some quick runs and fills. A drum kit provides a simple, driving beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, driving feel. The groove is a shuffle, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is straightforward and rhythmic. There are no harmonies.\n\nProduction:\nThe sound is dry and direct, with a raw, unpolished texture. The room sound is minimal.\n\nArrangement:\nAll instruments are present from the beginning. The banjo plays fills between vocal phrases. The arrangement remains consistent throughout the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a rhythmic strumming pattern. A bass guitar plays a walking bass line. A banjo plays a melodic line with a bright, plucked tone. A drum kit provides a steady beat with a snare drum backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a shuffle, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is conversational and relaxed. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, suggesting a small room. The texture is raw and unpolished.\n\nArrangement:\nAll instruments are present from the beginning. The banjo plays a short melodic fill at the end of the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady, strummed rhythm. A bass guitar plays a walking bass line. A banjo plays a melodic counterpoint to the vocals. A drum kit plays a simple, driving beat with snare accents.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a steady, driving folk-rock or country-rock feel.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy voice. The delivery is direct and conversational. There are no harmonies.\n\nProduction:\nThe production sounds clean and balanced. The texture is clear and defined. It sounds polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The banjo enters with a melodic line after the first vocal phrase. All instruments maintain their roles throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Chase the Feeling\" is a cover of a Kris Kristofferson song. Kristofferson first released it in 2006, and The Devil Makes Three put it on Redemption & Ruin in 2016.",
+        "source": "https://secondhandsongs.com/performance/1091203"
+      },
+      {
+        "claim": "It is track 4 on Redemption & Ruin, a 12-song covers record released on New West Records on September 16, 2016.",
+        "source": "https://newwestrecords.com/products/the-devil-makes-three-redemption-ruin-cd"
+      },
+      {
+        "claim": "The song's credits list Jerry Roe on drums, Dan Dugmore on pedal steel guitar, Bobby Wood on organ and Lucia Turino on upright bass. Cooper McBean is listed on vocals and Pete Bernhard on background vocals.",
+        "source": "https://www.shazam.com/song/1436939538/chase-the-feeling"
+      },
+      {
+        "claim": "The album is credited as produced by The Devil Makes Three, with David Ferguson as associate producer and recording engineer. David Shipley mastered it.",
+        "source": "https://www.discogs.com/release/12368934-The-Devil-Makes-Three-Redemption-Ruin"
+      },
+      {
+        "claim": "The album was recorded at The Butcher Shoppe in Nashville, TN, and mastered at Foxwood Mastering in Nashville.",
+        "source": "https://www.discogs.com/release/9044358-The-Devil-Makes-Three-Redemption-Ruin"
+      },
+      {
+        "claim": "The band recorded the album live at Dave Ferguson's Butcher Shoppe studio instead of multi-tracking it, according to PopMatters. Bernhard says most tracks were cut live with the guest musicians.",
+        "source": "https://www.popmatters.com/the-devil-makes-three-redemption-ruin-2495416160.html"
+      },
+      {
+        "claim": "Pete Bernhard said guests such as Jerry Douglas effectively co-produced songs by contributing ideas, and that the band recorded most tracks live with them.",
+        "source": "https://www.thepitchkc.com/music/news/article/20780484/the-devil-makes-three-maps-out-its-redemption-ruin"
+      },
+      {
+        "claim": "Bernhard described the album as one side redemption and one side ruin. He said it collects songs by heroes who inspired the band, intended to show listeners where the band comes from.",
+        "source": "https://yourtahoeguide.com/2016/12/devil-makes-three-riff-redemption/"
+      },
+      {
+        "claim": "The album's first half deals with the faults and vices that drive creation in music, and the second half deals with absolution and forgiveness. Its covers range from blues (Robert Johnson, Muddy Waters) to country (Townes Van Zandt, Hank Williams Sr.), gospel, bluegrass and Tom Waits.",
+        "source": "https://newwestrecords.com/products/the-devil-makes-three-redemption-ruin-cd"
+      },
+      {
+        "claim": "Redemption & Ruin is the band's only covers album and their fifth release (second for New West). The band started in Olympia, WA, and moved to Santa Cruz, CA. Their earlier album I'm a Stranger Here (2013) was produced by Buddy Miller.",
+        "source": "https://www.popmatters.com/the-devil-makes-three-redemption-ruin-2495416160.html"
+      }
+    ],
+    "lineage": "The Devil Makes Three blend bluegrass, folk, country, blues and rockabilly into an old-time string-band sound, and Redemption & Ruin pays tribute to the blues, gospel, country and bluegrass figures who shaped them.",
+    "genres": [
+      "americana",
+      "folk",
+      "string band"
+    ]
+  },
+  "draft": "\"Ain't you handsome when you're high?\" is a compliment with a knife in it. On **Chase The Feeling**, The Devil Makes Three set that question over a loping shuffle, and the easy swing of the groove makes it cut deeper. The song is Kris Kristofferson's, first released by him in 2006. The band placed it fourth on Redemption & Ruin, the covers record Pete Bernhard described as one side redemption and one side ruin. This one sits on the ruin side, among songs about the vices that drive people to make music in the first place.\n\nWhat keeps it from turning into a sermon is the opening line: \"Takes one, to know one, I know how you feel.\" The narrator isn't standing on clean ground. Everything after it, the scorn and the pity, comes from someone who knows those demons and has watched them drag a friend down the hallways of his own brain. Kinship and contempt sit side by side, and the song never lets one cancel the other. The middle verse becomes a run of bitter permissions, each \"let it\" pushing the damage further from the user, until \"Let it run your children off\" hands the bill to people who never chose any of this. Then comes the flattest line in the song. He knows better, the narrator says, he just doesn't care. It sounds less like an accusation than like exhaustion.\n\nThe last verse drifts into midnight and a lover whose eyes look older than she is. It ends with the narrator wondering how this man is still alive, a line caught halfway between awe and dread. The doubled chorus at the close could read as filler. Instead it plays like the habit itself, the same promise made twice.\n\nCooper McBean takes the lead, with a clear voice and a little rasp, and he sings conversationally, with no harmonies stacked behind him. So every line arrives one-on-one, like something said across a kitchen table. An acoustic guitar strums steadily over a walking bass line, and Lucia Turino is credited on upright. The banjo answers the vocal with quick runs between phrases, and the drums keep a simple, driving beat with the snare out front. The sound is dry and unpolished. The band cut most of the album live at The Butcher Shoppe in Nashville with David Ferguson engineering, and the credits add Jerry Roe on drums, Dan Dugmore on pedal steel, and Bobby Wood on organ. Bernhard said the record was meant to show where the band comes from. Here they take Kristofferson's blunt, plainspoken writing and run it through their old-time string-band sound, keeping it light on its feet when it could have dragged.\n\nThe song holds you in that uneasy spot where you love someone and can't stand watching them, and the bounce under it makes the disaster sound almost like a good time, which is exactly how it looks from the inside.",
+  "factCheck": [
+    {
+      "claim": "\"Ain't you handsome when you're high?\" (lyric quote)",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The song is a loping shuffle with an easy swing",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a shuffle with a slight swing. I dropped 'loping' as a flourish."
+    },
+    {
+      "claim": "Kris Kristofferson's song, first released by him in 2006",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Placed fourth on Redemption & Ruin, a covers record",
+      "verdict": "supported",
+      "note": "Track 4 of a 12-song covers album."
+    },
+    {
+      "claim": "Pete Bernhard described the album as one side redemption and one side ruin",
+      "verdict": "supported",
+      "note": "Sourced to Bernhard."
+    },
+    {
+      "claim": "This song sits on the ruin side, among songs about vices that drive people to make music",
+      "verdict": "supported",
+      "note": "The first half of the album covers faults and vices, and track 4 of 12 falls in that half."
+    },
+    {
+      "claim": "\"Takes one, to know one, I know how you feel.\" (lyric quote)",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator watched a friend drag down the hallways of his own brain",
+      "verdict": "corrected",
+      "note": "The lyrics address 'you' and never say friend or gender. Changed to 'someone' and 'your own brain' phrasing."
+    },
+    {
+      "claim": "\"Let it run your children off\" (lyric quote)",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "He knows better, he just doesn't care",
+      "verdict": "corrected",
+      "note": "The lyric is 'You know better / You just don't care', addressed to 'you'. Removed the assumed gender."
+    },
+    {
+      "claim": "The last verse involves a lover whose eyes look older than she is",
+      "verdict": "corrected",
+      "note": "The lyric says 'a pretty piece of hunger who was younger than her eyes'. 'Lover' is not stated. Reworded to a young woman."
+    },
+    {
+      "claim": "The narrator wonders how this man is still alive",
+      "verdict": "corrected",
+      "note": "The lyric is 'how it is you're still alive'. Removed 'man'."
+    },
+    {
+      "claim": "The chorus repeats twice at the close",
+      "verdict": "supported",
+      "note": "The lyrics' structure shows the final chorus couplet repeated."
+    },
+    {
+      "claim": "Cooper McBean takes the lead",
+      "verdict": "corrected",
+      "note": "McBean is credited on vocals, and Bernhard on background vocals. Reworded to 'credited on vocals'."
+    },
+    {
+      "claim": "Clear voice with a little rasp, conversational, no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree on clear and slightly raspy with no harmonies. Passes 2 and 3 say conversational. Removed 'him'."
+    },
+    {
+      "claim": "Acoustic guitar strums steadily over a walking bass line; Lucia Turino credited on upright",
+      "verdict": "supported",
+      "note": "All three passes agree, and the credit is in the researched facts."
+    },
+    {
+      "claim": "Banjo answers the vocal with quick runs between phrases",
+      "verdict": "corrected",
+      "note": "'Quick runs' appears in only one pass. The passes agree on melodic banjo fills and counterpoint around the vocal."
+    },
+    {
+      "claim": "Drums keep a simple, driving beat with the snare out front",
+      "verdict": "corrected",
+      "note": "The passes agree on a simple, driving beat with snare backbeat and accents. 'Out front' was dropped."
+    },
+    {
+      "claim": "The sound is dry and unpolished",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Band cut most of the album live at The Butcher Shoppe in Nashville with David Ferguson engineering",
+      "verdict": "supported",
+      "note": "Sourced to PopMatters, Pitch KC and Discogs."
+    },
+    {
+      "claim": "Credits include Jerry Roe on drums, Dan Dugmore on pedal steel, Bobby Wood on organ",
+      "verdict": "supported",
+      "note": "Matches the credits."
+    },
+    {
+      "claim": "Bernhard said the record was meant to show where the band comes from",
+      "verdict": "supported",
+      "note": "Sourced to Bernhard."
+    },
+    {
+      "claim": "Old-time string-band sound",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Interpretive readings (knife in a compliment, exhaustion, awe and dread, the habit itself, kitchen table, the final sentence)",
+      "verdict": "supported",
+      "note": "Critic interpretation resting on the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2163,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013895,
+        "detail": "1100 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014495,
+        "detail": "1100 in / 179 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001407,
+        "detail": "1100 in / 162 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08176800000000001,
+        "detail": "22004 in / 1776 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.073308,
+        "detail": "3792 in / 2907 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.057002,
+        "detail": "4991 in / 4702 out"
+      }
+    ]
+  }
+}
