@@ -226,5 +226,7 @@ export const sessions: Session[] = [
         note: "Best total of eight good shots logged in Stock Yardage. Carry ran 94 to 147 and total 127 to 165. Only good shots were logged, so no session averages.",
       },
     ],
+    takeaway:
+      "The first of many distance measurement sessions, which explains the spread. The numbers should tighten as the swing gets more consistent.",
   },
 ];
