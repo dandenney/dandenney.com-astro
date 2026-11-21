@@ -202,4 +202,29 @@ export const sessions: Session[] = [
     takeaway:
       "Seventy-two 7-irons averaging 129 total, up from 102 at the August assessment with only 2 mph more club speed. The gap is contact: smash factor averaged 1.18, while the last shot hit 1.30 and flew 144 with launch, spin, and descent all inside the ideal windows.",
   },
+  {
+    id: 6,
+    player: "dan",
+    date: "2026-11-20",
+    venueSlug: "golftec-nashville-west",
+    kind: "practice",
+    focus: "First Stock Yardage session: 6-iron, 8-iron, gap wedge",
+    clubs: [
+      {
+        club: "gw",
+        longest: 114,
+        note: "Best total of five good shots logged in Stock Yardage. Carry ran 89 to 101 and total 102 to 114. Only good shots were logged, so no session averages.",
+      },
+      {
+        club: "8i",
+        longest: 132,
+        note: "Best total of 11 good shots logged in Stock Yardage. Carry ran 82 to 121 and total 104 to 132. Only good shots were logged, so no session averages.",
+      },
+      {
+        club: "6i",
+        longest: 165,
+        note: "Best total of eight good shots logged in Stock Yardage. Carry ran 94 to 147 and total 127 to 165. Only good shots were logged, so no session averages.",
+      },
+    ],
+  },
 ];
