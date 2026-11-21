@@ -10,6 +10,27 @@ export interface LibraryLink {
 
 export const libraryLinks: LibraryLink[] = [
   {
+    title: "Tomjohnville",
+    url: "https://www.tomjohn.design/content/tomjohnville?ref=sidebar",
+    description: "Tomjohnville began as a simple portfolio redesign and grew into an interactive 3D town. The creator tested many ideas, then refined the game with characters, projects, dialogue, multiplayer, and hidden surprises. This…",
+    created: "2026-11-21",
+    kind: "read",
+  },
+  {
+    title: "Designing with html",
+    url: "https://shiftnudge.com/archive/26905760?ref=sidebar",
+    description: "The author built a design page directly in HTML, using AI to generate ideas and refine them. Good design still depends on human judgment, clear goals, and careful editing. The author sees AI-assisted building as a fast…",
+    created: "2026-11-21",
+    kind: "read",
+  },
+  {
+    title: "Tron UI for shadcn/ui | The Gridcn",
+    url: "https://thegridcn.com/",
+    description: "The Gridcn is a Tron-inspired theme and component library for shadcn/ui. It includes six Greek-god color themes, 50+ components, and neon glow effects. Three.js features add immersive 3D grids, particles, and light…",
+    created: "2026-11-21",
+    kind: "read",
+  },
+  {
     title: "FrontierCode 2.0",
     url: "https://cognition.com/blog/frontier-code-2.0?utm_source=chatgpt.com",
     description: "FrontierCode 2.0 is a tougher coding benchmark designed to better reflect real software work. It uses more varied tasks, larger code changes, and stricter checks, especially for thoroughness. Its results show that…",
