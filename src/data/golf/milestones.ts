@@ -88,4 +88,15 @@ export const milestones: Milestone[] = [
     roundId: 6,
     annotate: true,
   },
+  {
+    id: 9,
+    player: "dan",
+    date: "2026-11-15",
+    kind: "first",
+    title: "First pars",
+    detail: "Pars on the sixth and ninth at Harpeth Valley, on the way to a 39 and a new low nine.",
+    venueSlug: "harpeth-valley-golf-center",
+    roundId: 10,
+    annotate: true,
+  },
 ];

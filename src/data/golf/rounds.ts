@@ -130,6 +130,9 @@ export const rounds: Round[] = [
     tees: "Red",
     par: 27,
     score: 39,
+    holes: [6, 5, 4, 6, 4, 3, 4, 4, 3],
+    gir: { hit: 1, of: 9 },
+    note: "Low nine. First pars, on the sixth and ninth, with a 3 to close.",
   },
   {
     id: 11,
@@ -141,6 +144,7 @@ export const rounds: Round[] = [
     tees: "Red",
     par: 27,
     score: 46,
-    note: "Second loop of the day, seven worse than the first.",
+    holes: [5, 5, 5, 6, 5, 6, 5, 4, 5],
+    note: "Second loop of the day, seven worse than the first. Steady 5s with no pars, and all seven strokes went on holes 5 through 9.",
   },
 ];
