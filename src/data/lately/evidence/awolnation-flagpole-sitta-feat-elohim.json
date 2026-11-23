@@ -1,0 +1,190 @@
+{
+  "spotifyId": "5KcdcUuL8YI3PqeQIvJj2H",
+  "reviewedAt": "2026-11-23T14:23:35.481Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/243972"
+  },
+  "listening": "Pass 1:\nA synth pad plays sustained chords. A drum machine provides a steady, mid-tempo beat with a four-on-the-floor kick, snare on two and four, and hi-hats. A bass synth plays a simple, repeating melodic line. A voice sings with a breathy, slightly processed character, delivering the melody in a relatively high register. The vocal delivery is mostly sustained notes, with some slight vibrato. There are no harmonies. The production sounds polished, with a clear, open texture. The room sounds like a medium-sized space with some reverb. The arrangement remains consistent throughout the excerpt, with all instruments playing continuously.\n\nPass 2:\nA synth pad plays sustained chords. A drum machine provides a steady, mid-tempo beat with a four-on-the-floor kick, snare on two and four, and hi-hats. A bass synth plays a simple, repeating melodic line. A voice sings with a breathy, slightly processed character, delivering the melody in a relatively high register. The voice is doubled, creating a harmony. The production sounds clean and polished, with a moderate amount of reverb on the vocals, suggesting a larger room. The arrangement remains consistent throughout the excerpt, with all instruments playing continuously.\n\nPass 3:\nA synth pad plays sustained chords. A drum machine provides a steady, mid-tempo beat with a four-on-the-floor kick, snare on two and four, and a closed hi-hat playing eighth notes. A bass synth plays a simple, repetitive line. A voice sings in a clear, mid-range register, with a slightly breathy delivery. The vocal melody is mostly stepwise. A second vocal layer harmonizes above the main vocal, often in a higher register. The production is clean and polished, with a moderate amount of reverb on the vocals. The texture is full but not dense. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out.",
+  "research": {
+    "identity": "unknown",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The trick of this version of **Flagpole Sitta** is how calm it sounds while the narrator comes apart. A synth pad holds long, sustained chords. A drum machine keeps a steady mid-tempo pulse, kick on every beat, snare on two and four, hi-hats ticking along. A bass synth loops a simple line. Over that, AWOLNATION and Elohim sing in a breathy, slightly processed voice pitched fairly high, with a second vocal layer stacked on the main one, all of it wrapped in clean reverb. Nothing lurches. The song is a list of nerves, paranoia and contempt, and the production carries it like a slow walk through a bright hallway.\n\nThat gap is where the feeling lives. The narrator never admits to being in trouble outright. The closest the song comes is the chorus: \"I'm not sick but I'm not well.\" It's a half-confession, the kind you give when someone asks how you're doing and the honest answer would take too long. Everything around it is armor. There's a sneer at people who breed and people who own TVs, a brag about piercing a tongue that \"doesn't hurt.\" There's a crack that anyone who's bored must be boring. The jokes work as a guard. The repeated \"okay...\" asides land like shrugs, a way of laughing before anyone else can.\n\nBut the cracks show. The verses slide from self-inspection, staring into a mirror at \"the rottenness and evil in me,\" to blame. Someone told them all he was crazy and got him committed, and then the grammar turns on itself: \"You killed my mind.\" It starts as a wish to shut off his own head and ends as an accusation. Pride and fear sit together and never settle. He wants to go underground with the moles, and he still wants you to watch him go.\n\nThen there's the guilt tucked into the second chorus: \"And it's a sin to live so well.\" Nothing else in the song admits comfort. It's a strange thing to hear next to a narrator who says he's in hell, and the song doesn't explain it. Maybe the misery is real and also a little bit chosen. The lyric leaves both open.\n\nThe wish list in the middle, publishing 'zines and raging against machines, reads like a scene the narrator wants to belong to and mocks at the same time. In this cover it's sung softly, without irony, and that makes it sound almost wistful. The song closes on a count-off, \"one, two, three, four,\" as if the band were about to start over.\n\nThe song lets you hear someone joke their way through a breakdown in a voice gentle enough that you notice, under the joking, that he's asking for help.",
+  "factCheck": [
+    {
+      "claim": "Synth pad plays sustained chords",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Drum machine, steady mid-tempo, kick on every beat, snare on two and four, hi-hats",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Bass synth loops a simple line",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "AWOLNATION and Elohim sing in a breathy, slightly processed voice",
+      "verdict": "corrected",
+      "note": "Breathy is in all three passes and slightly processed in two. The packet doesn't say who sings, so the vocal is no longer attributed to the two artists."
+    },
+    {
+      "claim": "Voice pitched fairly high",
+      "verdict": "removed",
+      "note": "Passes 1 and 2 say high register, but pass 3 says mid-range, so the passes don't agree."
+    },
+    {
+      "claim": "A second vocal layer stacked on the main one",
+      "verdict": "removed",
+      "note": "Pass 1 says there are no harmonies, so the passes conflict. Dropped to be safe."
+    },
+    {
+      "claim": "Clean reverb / polished production",
+      "verdict": "supported",
+      "note": "All passes say clean and polished. Two or more mention moderate vocal reverb."
+    },
+    {
+      "claim": "Nothing lurches",
+      "verdict": "removed",
+      "note": "This describes the whole arrangement, but the listening notes cover only a short excerpt."
+    },
+    {
+      "claim": "this version / In this cover",
+      "verdict": "removed",
+      "note": "The packet never says the track is a cover or names an original."
+    },
+    {
+      "claim": "Sung softly, without irony, almost wistful (wish-list section)",
+      "verdict": "removed",
+      "note": "Not backed by the listening notes, which can't be tied to a position in the song."
+    },
+    {
+      "claim": "Quote: \"I'm not sick but I'm not well\"",
+      "verdict": "supported",
+      "note": "Matches the lyric as a substring of \"I'm, I'm not sick but I'm not well\"."
+    },
+    {
+      "claim": "Sneer at people who own TVs",
+      "verdict": "corrected",
+      "note": "The lyric sneers at people breeding, and the narrator says they don't own a TV."
+    },
+    {
+      "claim": "Brag about piercing a tongue that \"doesn't hurt\"",
+      "verdict": "corrected",
+      "note": "It is a wish (\"I wanna pierce my tongue\"), not a brag. The quote is now a paraphrase to keep the number of lyric quotes down."
+    },
+    {
+      "claim": "Anyone who's bored must be boring",
+      "verdict": "supported",
+      "note": "Paraphrases \"if you're bored, then you're boring\"."
+    },
+    {
+      "claim": "Repeated \"okay...\" asides",
+      "verdict": "supported",
+      "note": "The lyrics repeat \"(okay...)\"."
+    },
+    {
+      "claim": "Mirror line about rottenness and evil",
+      "verdict": "supported",
+      "note": "Matches the lyric. Now paraphrased, not quoted."
+    },
+    {
+      "claim": "Someone told them all he was crazy and got him committed",
+      "verdict": "corrected",
+      "note": "The lyric says they put the narrator in the hospital and \"You told them all I was crazy\". Wording fixed, and the gendered pronoun for the narrator is gone."
+    },
+    {
+      "claim": "Quote: \"You killed my mind\"",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "Wish to shut off his own head becomes an accusation",
+      "verdict": "supported",
+      "note": "Reading of \"I'd like to turn off time / And kill my mind / You kill my mind\"."
+    },
+    {
+      "claim": "Going underground with the moles; still wants you to watch",
+      "verdict": "corrected",
+      "note": "The mole line is in the lyric. The \"watch him go\" reading is now tied to the flagpole line about seeing who salutes."
+    },
+    {
+      "claim": "Quote: \"And it's a sin to live so well\" in the second chorus",
+      "verdict": "corrected",
+      "note": "The quote matches. It appears in later choruses and not the first, so \"second chorus\" became \"a later chorus\"."
+    },
+    {
+      "claim": "Narrator says he's in hell",
+      "verdict": "corrected",
+      "note": "The lyric is \"I'm so hot 'cause I'm in hell\". The gendered pronoun is gone."
+    },
+    {
+      "claim": "Wish list: 'zines and raging against machines",
+      "verdict": "supported",
+      "note": "Paraphrases the lyric."
+    },
+    {
+      "claim": "Song closes on a count-off, as if the band were about to start over",
+      "verdict": "corrected",
+      "note": "The lyric ends on \"One, two, three, four\". \"Band\" is replaced with \"song\", and the line is no longer quoted."
+    },
+    {
+      "claim": "He's asking for help",
+      "verdict": "corrected",
+      "note": "This is an interpretation, but it assumed the narrator's gender. Reworded neutrally."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2651,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013522,
+        "detail": "1109 in / 139 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013347,
+        "detail": "1109 in / 132 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012997,
+        "detail": "1109 in / 118 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.138128,
+        "detail": "52464 in / 320 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.04852,
+        "detail": "2705 in / 1885 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.074468,
+        "detail": "3844 in / 6678 out"
+      }
+    ]
+  }
+}

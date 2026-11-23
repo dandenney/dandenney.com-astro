@@ -1,0 +1,199 @@
+{
+  "spotifyId": "3wUlBGnMds6MiA3EMsAQON",
+  "reviewedAt": "2026-11-23T14:18:41.339Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/12865022"
+  },
+  "listening": "Pass 1:\nA male voice sings in a high tenor, with a clear, slightly breathy delivery. He is joined by a female voice, singing in unison, with a similar character. Both voices are clean and well-articulated.\n\nA piano plays arpeggiated chords, providing a steady harmonic foundation. A string section enters, playing sustained chords that swell and recede. A bass guitar plays a simple, walking line. Drums enter with a light, brushed snare and cymbal pattern, establishing a slow, deliberate tempo. The groove feels like a ballad, with a gentle, flowing feel.\n\nThe production is polished and clean, with a sense of a medium-sized room. The texture is lush, with the strings adding warmth and depth. The arrangement builds gradually, with the strings and drums entering to create a fuller sound.\n\nPass 2:\nA solo female voice sings in French, followed by a male voice singing in English. Both are clear, with a slight vibrato, and delivered with a sustained, melodic quality. They are not harmonizing.\n\nA piano plays arpeggiated chords, providing a steady, flowing accompaniment. A string section enters, playing sustained chords that swell and recede, adding a rich, orchestral texture. The tempo is slow, with a consistent, deliberate feel.\n\nThe production is polished, with a spacious room sound. The texture is smooth and full. The arrangement builds gradually, with the strings entering to enhance the existing piano and vocals, then receding slightly towards the end of the excerpt.\n\nPass 3:\nA male voice sings in a high tenor, with a clear, slightly breathy delivery. A female voice joins in unison, with a similar character. Both voices are clean and unadorned.\n\nA piano plays arpeggiated chords, providing a steady, flowing accompaniment. A string section enters, playing sustained chords that swell and recede. A bass guitar plays a simple, foundational line.\n\nThe tempo is slow, with a gentle, swaying feel. The groove is smooth and unhurried.\n\nThe production is polished, with a spacious, resonant room sound. The texture is rich and layered, but not dense.\n\nThe excerpt begins with the male voice and piano. The female voice enters, harmonizing in unison. The strings gradually build in volume, adding warmth and depth. The bass guitar enters, reinforcing the harmonic foundation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The Mylène Farmer duet version of Muse's \"Ghosts (How Can I Move On)\" was released as a digital single by Warner Records on December 8, 2022. It runs 3:37 and is paired with the original version.",
+        "source": "https://www.deezer.com/us/album/382867417"
+      },
+      {
+        "claim": "Matthew Bellamy wrote and composed the song, and Muse produced it. It appears on the album Will of the People, and the working title was \"The Great Reset\".",
+        "source": "https://musewiki.org/Ghosts_(How_Can_I_Move_On)_(song)"
+      },
+      {
+        "claim": "Discogs credits list Bellamy on guitar and vocals, Chris Wolstenholme on bass and Dominic Howard on drums. They also list Muse as producer and engineer, Aleks Von Korff for additional production, Serban Ghenea as mixer, Bryce Bordone as mixing engineer, Chris Gehringer as mastering engineer and Jerome Devoise as Farmer's vocal engineer.",
+        "source": "https://www.discogs.com/release/25416247-Muse-Feat-Myl%C3%A8ne-Farmer-Ghosts-How-Can-I-Move-On"
+      },
+      {
+        "claim": "Farmer is credited as co-writer under her legal name, Mylene Jeanne Gautier. She adapted part of the lyrics into French for this version.",
+        "source": "https://www.discogs.com/release/25416247-Muse-Feat-Myl%C3%A8ne-Farmer-Ghosts-How-Can-I-Move-On"
+      },
+      {
+        "claim": "The song was recorded in 2021 and first appeared on Will of the People, released August 26, 2022.",
+        "source": "https://musewiki.org/Ghosts_(How_Can_I_Move_On)_(feat._Myl%C3%A8ne_Farmer)_(single)"
+      },
+      {
+        "claim": "Bellamy has said that Muse reviewed their albums and setlists and found they lacked a good ballad or acoustic track. He was surprised that Chris Wolstenholme and Dominic Howard agreed to put this song on the record.",
+        "source": "https://musewiki.org/Ghosts_(How_Can_I_Move_On)_(song)"
+      },
+      {
+        "claim": "French press describes the song as a piano ballad Bellamy wrote during lockdown, dedicated to the loss of a loved one. The duet recasts it as a break-up song.",
+        "source": "https://www.chartsinfrance.net/Mylene-Farmer/news-123338.html"
+      },
+      {
+        "claim": "Bellamy said the band had always thought the song's emotion would grow with a powerful female voice. He thanked Farmer and said the band was offering the song to its French fans.",
+        "source": "https://www.mylene.net/modules/index.php?r=4&z=5254"
+      },
+      {
+        "claim": "Farmer said Bellamy gave her a huge gift by letting her accompany him on the song. She had called him as fascinating as Freddie Mercury and attended Muse's October 25 concert at the Salle Pleyel in Paris.",
+        "source": "https://mylenefarmerbook.com/2022/12/15/ghosts-how-can-i-move-on-duet-with-muse/"
+      },
+      {
+        "claim": "This was the second duet version of the song. An earlier version with Italian singer Elisa was released on November 25, 2022.",
+        "source": "https://musewiki.org/Ghosts_(How_Can_I_Move_On)_(song)"
+      }
+    ],
+    "lineage": "The song is an acoustic piano ballad within Muse's alternative rock catalog, and its Mylène Farmer duet version is aimed at the French market.",
+    "genres": [
+      "alternative rock",
+      "rock ballad"
+    ]
+  },
+  "draft": "The cruelest line in **Ghosts (How Can I Move On)** is a question about property. \"When all the best things I have we made together?\" Grief is supposed to be about absence. Here it's about everything that's still in the room, every good thing in the narrator's life carrying a second set of fingerprints. On the second time through, \"made\" becomes \"built,\" and the shift makes the shared life sound more solid.\n\nMatt Bellamy wrote the song during lockdown, and French press describes it as dedicated to the loss of a loved one. Read that way, the confession in the second verse lands hard. The narrator wants one more conversation to set things straight and is sure the dead would \"love and forgive\" them. That certainty sounds like hope and like guilt at once, and the song never decides which. Meanwhile the chorus raises a glass to letting go in the same breath that admits being lost in a void with a ghost. The toast and the drowning sit side by side. Nobody moves on.\n\nFor a band known for running rock music through grand machinery, the arrangement is bare by design. A piano rolls out arpeggiated chords at a slow, deliberate pace, and a simple bass line holds the floor. Strings come in on sustained chords that swell and pull back like breath. The room sounds big, the production polished. Bellamy has said Muse looked over their albums and setlists and found no good ballad. He was surprised Chris Wolstenholme and Dominic Howard agreed to put this one on *Will of the People*.\n\nThis duet version gives the song a second mourner. Bellamy said the band always felt the emotion would grow with a powerful female voice, and Mylène Farmer meets his clear, slightly breathy high tenor in unison. Two people singing one line is a different picture from one person singing alone. Farmer also adapted part of the lyric into French, earning a co-writing credit under her legal name, Mylene Jeanne Gautier. The French press reads her version as a break-up song, and the lyric holds up either way. A death and a breakup leave the same coldness, and the bridge says it in two lines that differ by one word:\n\n\"How can I sleep with this coldness beside me?\" / \"How can I sleep with this coldness inside me?\"\n\nThe empty side of the bed becomes the empty space in the chest. That's the whole song in a single rhyme on itself. Farmer called the chance to sing it a huge gift and has compared Bellamy to Freddie Mercury. Here, Bellamy works on a much smaller scale.\n\nIt sticks because it lets you hold the toast and the grief at once, raising a glass to letting go while admitting you haven't let go at all.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"When all the best things I have we made together?\"",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "On the second time through, \"made\" becomes \"built\"",
+      "verdict": "supported",
+      "note": "The lyrics show \"built together\" in the second chorus and \"made together\" in the first and third."
+    },
+    {
+      "claim": "Bellamy wrote the song during lockdown; French press describes it as dedicated to the loss of a loved one",
+      "verdict": "supported",
+      "note": "Matches the chartsinfrance item."
+    },
+    {
+      "claim": "Narrator is sure the dead would \"love and forgive\" them; wants to set things straight",
+      "verdict": "supported",
+      "note": "The lyric reads \"I'd set things straight / And I believe that you would love and forgive me.\" \"Sure\" was softened to \"believes\" because the lyric says \"I believe\"."
+    },
+    {
+      "claim": "The chorus toasts letting go while admitting being lost in a void with a ghost",
+      "verdict": "supported",
+      "note": "Matches \"Here's to letting go / But I am lost in a void with your ghost...\""
+    },
+    {
+      "claim": "Muse is a band known for running rock music through grand machinery; the arrangement is bare by design",
+      "verdict": "removed",
+      "note": "Band reputation and design intent are not in the evidence. The arrangement also includes strings, bass and other parts, so \"bare\" is overstated."
+    },
+    {
+      "claim": "Piano plays arpeggiated chords at a slow, deliberate pace",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A simple bass line holds the floor",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree."
+    },
+    {
+      "claim": "Strings come in on sustained chords that swell and pull back",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The room sounds big, the production polished",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 agree on a spacious room, and all three call the production polished. \"Big\" was changed to \"spacious\"."
+    },
+    {
+      "claim": "Bellamy said Muse reviewed albums and setlists and found no good ballad; surprised Wolstenholme and Howard agreed to put it on Will of the People",
+      "verdict": "supported",
+      "note": "Matches the musewiki quote summary."
+    },
+    {
+      "claim": "Bellamy said the band always felt the emotion would grow with a powerful female voice",
+      "verdict": "supported",
+      "note": "Matches the mylene.net item."
+    },
+    {
+      "claim": "Farmer meets his clear, slightly breathy high tenor in unison",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on the high tenor, the clear, slightly breathy delivery and the female voice in unison. Rephrased slightly."
+    },
+    {
+      "claim": "Farmer adapted part of the lyric into French, earning a co-writing credit under her legal name, Mylene Jeanne Gautier",
+      "verdict": "corrected",
+      "note": "The credit and the French adaptation are supported. \"Earning\" implies causation, so it now reads \"credited as co-writer\"."
+    },
+    {
+      "claim": "French press reads her version as a break-up song",
+      "verdict": "supported",
+      "note": "The chartsinfrance item says the duet recasts it as a break-up song."
+    },
+    {
+      "claim": "\"the bridge says it in two lines\"",
+      "verdict": "corrected",
+      "note": "The lyrics don't establish a bridge, so the label was dropped. The quote matches the lyric exactly and differs by one word (beside/inside)."
+    },
+    {
+      "claim": "Here, Bellamy works on a much smaller scale",
+      "verdict": "removed",
+      "note": "Unsupported comparison and a non sequitur."
+    },
+    {
+      "claim": "Farmer called the chance to sing it a huge gift and has compared Bellamy to Freddie Mercury",
+      "verdict": "corrected",
+      "note": "Farmer said Bellamy gave her a huge gift by letting her accompany him, and called him as fascinating as Freddie Mercury. Wording tightened to match."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1933,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013515,
+        "detail": "1115 in / 138 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014365,
+        "detail": "1115 in / 172 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00059843,
+        "detail": "1115 in / 167 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08348,
+        "detail": "24245 in / 1499 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.055696,
+        "detail": "3784 in / 2028 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050732,
+        "detail": "4936 in / 4086 out"
+      }
+    ]
+  }
+}
