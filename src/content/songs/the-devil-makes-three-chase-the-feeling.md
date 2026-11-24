@@ -25,6 +25,12 @@ sources:
     url: "https://www.thepitchkc.com/music/news/article/20780484/the-devil-makes-three-maps-out-its-redemption-ruin"
   - title: "Tahoe Guide: The Devil Makes Three | Riff on Redemption"
     url: "https://yourtahoeguide.com/2016/12/devil-makes-three-riff-redemption/"
+recordedAt:
+  - studio: "The Butcher Shoppe"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/9044358-The-Devil-Makes-Three-Redemption-Ruin"
 aiGenerated: true
 ---
 "Ain't you handsome when you're high?" is a compliment with a knife in it. On **Chase The Feeling**, The Devil Makes Three set that question over a shuffle with a slight swing, and the easy groove makes it cut deeper. The song is Kris Kristofferson's, first released by him in 2006. The band placed it fourth on Redemption & Ruin, the covers record Pete Bernhard described as one side redemption and one side ruin. This one sits on the ruin side, among songs about the vices that drive people to make music in the first place.

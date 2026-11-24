@@ -12,6 +12,11 @@ genres: ["southern gothic"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["southern gothic"]
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://countrydiscoghraphy2.blogspot.com/2024_05_03_archive.html"
 aiGenerated: true
 ---
 

@@ -110,6 +110,17 @@ const songs = defineCollection({
     sources: z
       .array(z.object({ title: z.string(), url: z.url() }))
       .optional(),
+    recordedAt: z
+      .array(
+        z.object({
+          studio: z.string().optional(),
+          city: z.string(),
+          state: z.string().optional(),
+          country: z.string().optional(),
+          source: z.url().optional(),
+        })
+      )
+      .optional(),
     pipeline: z.enum(["legacy", "agent", "lately"]).default("legacy"),
     aiGenerated: z.boolean().default(true),
   }),

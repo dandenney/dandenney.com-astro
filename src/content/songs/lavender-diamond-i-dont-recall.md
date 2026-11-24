@@ -29,6 +29,12 @@ sources:
     url: "https://americansongwriter.com/lavender-diamond/"
   - title: "interviewmagazine.com"
     url: "https://www.interviewmagazine.com/music/lavender-diamond"
+recordedAt:
+  - studio: "Tarbox Road Studios"
+    city: "Cassadaga"
+    state: "New York"
+    country: "United States"
+    source: "https://exclaim.ca/music/article/lavender_diamond_return_with_incorruptible_heart"
 aiGenerated: true
 ---
 **I Don't Recall** opens with a count, one two three, as if the band were about to start a happy song. Then the first claim lands: "I can't remember anything at all." It's a strange thing to sing over a tune built to stay in your head. The narrator says the past has been wiped clean, yet every line that follows is memory: the life they knew, the love they shared, the person who is gone. The amnesia is a defense, and the song shows that it doesn't work.

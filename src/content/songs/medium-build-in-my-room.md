@@ -27,6 +27,11 @@ sources:
     url: "https://www.rollingstone.com/music/music-features/medium-build-country-songwriter-interview-1235289555/"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/artist/medium-build-mn0004242941"
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.universalmusic.ca/press-releases/medium-builds-highly-anticipated-debut-full-length-album-country-out-now-on-slowplay-island-records/"
 aiGenerated: true
 ---
 The detail that sets everything up comes early: when Dad gets home from an eleven-hour shift, the kid loses the TV. Nobody is cruel in **"In My Room."** Mom is stressed trying to make sure everyone eats, big brother is numbing out on the PlayStation, and the house is too full of tired people for a quiet kid to take up space. So he goes to his room.

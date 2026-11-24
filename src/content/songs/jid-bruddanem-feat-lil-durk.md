@@ -31,6 +31,12 @@ sources:
     url: "https://en.wikipedia.org/wiki/The_Forever_Story"
   - title: "last.fm: Client Challenge"
     url: "https://www.last.fm/music/JID/_/Bruddanem+(feat.+Lil+Durk)"
+recordedAt:
+  - studio: "Blue Room Studios"
+    city: "Atlanta"
+    state: "Georgia"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/The_Forever_Story"
 aiGenerated: true
 ---
 Late in the song, **Bruddanem** turns gentle: "Take care of your skin, take care of your liver." It arrives after all the Glocks, spun blocks, and opps hit, and it changes what the rest of the song meant. All that menace was a way of saying I love you in the only words that felt safe to use.

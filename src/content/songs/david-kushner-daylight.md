@@ -29,6 +29,14 @@ sources:
     url: "https://www.papermag.com/david-kushner"
   - title: "wikiwand.com"
     url: "https://www.wikiwand.com/en/David_Kushner_(singer-songwriter)"
+recordedAt:
+  - city: "Dublin"
+    country: "Ireland"
+    source: "https://www.soundonsound.com/techniques/inside-track-david-kushner-daylight"
+  - city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://www.soundonsound.com/techniques/inside-track-david-kushner-daylight"
 aiGenerated: true
 ---
 The confession in **Daylight** is that confessing doesn't work. David Kushner writes from inside a habit he knows is wrong, and the chorus gives the whole problem away in its first line: "Oh, I love it and I hate it at the same time." It's not a riddle and he isn't trying to solve it. It's a plain statement of where he stands, sung over and over until the repetition starts to feel like the trap itself.

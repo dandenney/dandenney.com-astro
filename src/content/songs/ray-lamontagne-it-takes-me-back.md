@@ -25,6 +25,12 @@ sources:
     url: "https://www.iheart.com/artist/ray-lamontagne-89562/"
   - title: "washingtonpost.com: Ray LaMontagne, Finding His Place"
     url: "https://www.washingtonpost.com/wp-dyn/content/article/2006/12/07/AR2006120700576.html"
+recordedAt:
+  - studio: "The Big Room (Apple Hill)"
+    city: "Ashfield"
+    state: "Massachusetts"
+    country: "United States"
+    source: "https://www.discogs.com/release/28182358-Ray-Lamontagne-Broken-Sky-It-Takes-Me-Back"
 aiGenerated: true
 ---
 The best line in **It Takes Me Back** gives the landscape a better poker face than the narrator: "The countryside just shrugs and sighs," and then it looks the other way. Ray LaMontagne opens with a life spent calling out the changes to a pickup band, in a tired van that breaks down in the rain. The hills don't care who passed through, and that indifference lets the song grow nostalgic without turning sentimental.

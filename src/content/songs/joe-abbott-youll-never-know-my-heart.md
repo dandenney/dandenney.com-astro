@@ -23,6 +23,12 @@ sources:
     url: "https://babyhorserecords.com/category/announcements/"
   - title: "Baby Horse Records: Joe Abbot’s “Six More Weeks of Winter”!"
     url: "https://babyhorserecords.com/joe-abbots-six-more-weeks-of-winter/"
+recordedAt:
+  - studio: "Flash Recording"
+    city: "Vancouver"
+    state: "British Columbia"
+    country: "Canada"
+    source: "https://joeabbott.bandcamp.com/album/duster"
 aiGenerated: true
 ---
 A song called **You'll Never Know My Heart** ought to sound guarded, and this one doesn't. Two voices sing it, sometimes in close harmony and sometimes in unison, over a brushed shuffle that never hurries. The title is a closed door. The sound is two people standing in the same doorway, breathing on the same beat. That gap between the words on the label and the warmth in the room is where the song lives, and it's worth sitting in.

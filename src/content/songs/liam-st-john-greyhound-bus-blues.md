@@ -12,6 +12,12 @@ genres: ["country blues","southern gothic"]
 # preview: ""
 pubDate: "2025-12-04"
 tags: ["country blues","southern gothic"]
+recordedAt:
+  - studio: "The Blue Room"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/35047340-Liam-St-John-Man-Of-The-North"
 aiGenerated: true
 ---
 

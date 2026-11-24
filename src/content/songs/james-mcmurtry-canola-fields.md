@@ -31,6 +31,27 @@ sources:
     url: "https://en.wikipedia.org/wiki/2022_Americana_Music_Honors_%26_Awards"
   - title: "Wikipedia: James McMurtry"
     url: "https://en.wikipedia.org/wiki/James_McMurtry"
+recordedAt:
+  - studio: "Jackson Browne's Groovemasters"
+    city: "Santa Monica"
+    state: "California"
+    country: "USA"
+    source: "https://jamesmcmurtry.bandcamp.com/album/the-horses-and-the-hounds"
+  - studio: "Infinitespin Records"
+    city: "Van Nuys"
+    state: "California"
+    country: "USA"
+    source: "https://jamesmcmurtry.bandcamp.com/album/the-horses-and-the-hounds"
+  - studio: "Arlyn Studios"
+    city: "Austin"
+    state: "Texas"
+    country: "USA"
+    source: "https://jamesmcmurtry.bandcamp.com/album/the-horses-and-the-hounds"
+  - studio: "The Zone Studios"
+    city: "Dripping Springs"
+    state: "Texas"
+    country: "USA"
+    source: "https://jamesmcmurtry.bandcamp.com/album/the-horses-and-the-hounds"
 aiGenerated: true
 ---
 A field of canola in Southern Alberta turns nearly the same chartreuse as a '69 Bug, and suddenly James McMurtry's narrator is back in San Jose, years younger, remembering someone he loved driving it around town. That's how **Canola Fields** opens, and it's a sharp picture of how memory works: not a decision to look back, but a color that ambushes you from the highway. McMurtry has said the song grew slowly out of those Alberta fields and a roadside sign advertising canola processing, phone number and all. It's the kind of mundane detail a good storyteller hoards until it earns a place.

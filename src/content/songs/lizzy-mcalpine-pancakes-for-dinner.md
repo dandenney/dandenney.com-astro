@@ -23,6 +23,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Lizzy_McAlpine"
   - title: "wearetheguard.com"
     url: "https://www.wearetheguard.com/music/best-new-artists-lizzy-mcalpine"
+recordedAt:
+  - city: "Boston"
+    state: "Massachusetts"
+    country: "United States"
+    source: "https://www.yahoo.com/entertainment/meet-lizzy-mcalpine-genius-songwriter-151047010.html"
 aiGenerated: true
 ---
 The whole song hangs on a bargain struck on a plane: if this thing goes down tonight, the narrator figures, there's nothing left to lose by telling the truth. **Pancakes for Dinner** uses imagined disaster as a permission slip. It's a confession that can only happen if the stakes get high enough, and Lizzy McAlpine circles it the whole way through.

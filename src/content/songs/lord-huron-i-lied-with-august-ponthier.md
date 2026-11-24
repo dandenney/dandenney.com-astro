@@ -27,6 +27,12 @@ sources:
     url: "https://wayoutthere.fandom.com/wiki/I_Lied"
   - title: "Wikipedia: Lord Huron"
     url: "https://en.wikipedia.org/wiki/Lord_Huron"
+recordedAt:
+  - studio: "Whispering Pines Studios"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://www.michiganpublic.org/arts-culture/2021-06-11/michigan-roots-and-nostalgic-la-vibes-join-forces-on-lord-hurons-latest-album"
 aiGenerated: true
 ---
 Every verse of **"I Lied"** is built like a trap. Each one opens on a promise, "I swore that I'd become a better man for you, and I tried," and lets it stand for a few lines before the last line takes it back. Ben Schneider wrote it so the vows come first and the confession arrives late, the way a guilty person tells the truth: after the speech, almost under the breath.

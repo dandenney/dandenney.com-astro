@@ -12,6 +12,11 @@ genres: ["alt country","americana","bluegrass"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["alt country","americana"]
+recordedAt:
+  - city: "East Tennessee (exact town not given)"
+    state: "Tennessee"
+    country: "USA"
+    source: "https://www.pastemagazine.com/music/darrell-scott/darrell-scott-ghost-of-hank-williams"
 aiGenerated: true
 ---
 

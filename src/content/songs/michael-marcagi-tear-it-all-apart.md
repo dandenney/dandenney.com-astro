@@ -23,6 +23,12 @@ sources:
     url: "https://themusic.com.au/features/michael-marcagi-spin-off-festival-tear-it-all-apart-interview/SvbwXF9eQUA/11-07-24"
   - title: "SongwriterUniverse: Interview With Michael Marcagi On New EP Midwest Kid"
     url: "https://www.songwriteruniverse.com/michael-marcagi-songs-midwest-kid-tour/"
+recordedAt:
+  - studio: "Sun Mountain Studios"
+    city: "Boiceville"
+    state: "New York"
+    country: "United States"
+    source: "https://hudsonvalleyone.com/2024/10/30/producer-david-baron-on-authenticity-tiktok-and-hudson-valleys-growing-music-industry/"
 aiGenerated: true
 ---
 The house is still there. That's the cruel joke at the start of **Tear It All Apart**: Michael Marcagi keeps driving to the place he grew up, laughing it off in the rearview, and only then gives the detail that turns the scene: "But my parents haven't lived there in four years." He isn't visiting anyone. He's visiting a version of himself that the building still seems to hold, and he can't stop going back.

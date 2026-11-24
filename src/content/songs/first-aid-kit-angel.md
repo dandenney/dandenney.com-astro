@@ -27,6 +27,11 @@ sources:
     url: "https://www.thelineofbestfit.com/features/interviews/first-aid-kit-still-each-others-ride-or-die"
   - title: "Mindbomb Records: First Aid Kit – Palomino"
     url: "https://www.mindbombrecords.com/first-aid-kit-palomino.html"
+recordedAt:
+  - studio: "Studio Rymden"
+    city: "Stockholm"
+    country: "Sweden"
+    source: "https://www.rollingstone.co.uk/music/first-aid-kit-announce-new-album-palomino-single-listen-uk-tour-dates-tickets-21464/"
 aiGenerated: true
 ---
 The hardest line in **Angel** isn't the shout. It's the quiet bit of logic in the second verse: "But if I didn't speak it, it wouldn't be real." Anyone who has sat on a feeling for years knows that bargain. Keep the pain unsaid and you can pretend it's manageable. First Aid Kit's song is about breaking that deal, and about how exposed it feels to do it.

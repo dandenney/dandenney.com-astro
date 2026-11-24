@@ -23,6 +23,12 @@ sources:
     url: "https://stereogum.com/1327912/the-10-best-bright-eyes-songs/lists"
   - title: "PopMatters: Bright Eyes: The People's Key &raquo; PopMatters"
     url: "https://www.popmatters.com/136881-bright-eyes-the-peoples-key-2496080133.html"
+recordedAt:
+  - studio: "ARC Studios"
+    city: "Omaha"
+    state: "Nebraska"
+    country: "United States"
+    source: "https://www.punknews.org/article/40784/bright-eyes-plan-new-album-for-february"
 aiGenerated: true
 ---
 The consolation in **Ladder Song** is blunt enough to sting. Bright Eyes sings that you're going to lose what you love most, then offers comfort that sounds at first like a shrug: "You're not unique in dying." That line is reassuring, but the comfort is cold. Grief here doesn't get to feel special. It gets folded into everyone else's, and that turns out to be the only kindness on hand.

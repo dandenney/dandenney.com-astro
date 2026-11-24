@@ -21,6 +21,12 @@ sources:
     url: "https://musicinjection.com.au/2015/09/28/garrett-kato-just-released-his-new-record-that-low-and-lonesome-sound/"
   - title: "Photographer: Garrett Kato"
     url: "https://www.rachellong.com.au/interview-garrett-kato"
+recordedAt:
+  - studio: "301 Studios"
+    city: "Byron Bay"
+    state: "New South Wales"
+    country: "Australia"
+    source: "https://www.discogs.com/release/13416594-Garrett-Kato-That-Low-And-Lonesome-Sound"
 aiGenerated: true
 ---
 A grieving person usually goes one of two ways: they feel too much, or they shut it all off. **Sweet Jane** is about the second kind, and about watching it happen to someone you love. Garrett Kato's narrator isn't the one in trouble. He's the one standing nearby, noticing that Jane has gone numb. The chorus says her heart is acting like it doesn't want to work right, and that she's in a bad enough place that "Now you tried everything / Just to feel something." There's no scolding in it. It reads like a diagnosis spoken by a friend who has run out of ways to help.

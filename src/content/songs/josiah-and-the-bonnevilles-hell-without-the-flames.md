@@ -29,6 +29,12 @@ sources:
     url: "https://americana-uk.com/josiah-and-the-bonnevilles-as-is"
   - title: "Wikipedia: Josiah Leming"
     url: "https://en.wikipedia.org/wiki/Josiah_Leming"
+recordedAt:
+  - studio: "The Study"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/37359684-Josiah-and-the-Bonnevilles-As-Is"
 aiGenerated: true
 ---
 "She didn't slam the door." That's the line in **Hell Without the Flames** that tells you what kind of hell this is. Nobody screams. Someone leaves on a Monday, quietly, and the narrator explains why in one more line: "But it was always one day more." A better life was promised for a date that kept sliding, and she got tired of waiting. The song never lets the narrator off that hook. It never lets the narrator fully own it, either.

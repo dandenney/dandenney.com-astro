@@ -25,6 +25,12 @@ sources:
     url: "https://digitalbeatmag.com/album-review-black-mojo-under-the-sun/"
   - title: "Wikipedia: Blacktop Mojo"
     url: "https://en.wikipedia.org/wiki/Blacktop_Mojo"
+recordedAt:
+  - studio: "Rosewood Studios"
+    city: "Tyler"
+    state: "Texas"
+    country: "United States"
+    source: "https://www.landsharkpromotion.com/blacktop-mojo---can-t-sleep.html"
 aiGenerated: true
 ---
 The chorus line on **It Won't Last** is a brag that doesn't hold up: "The best thing about this feeling is it won't last." Matt James sings it like a man who has already made peace with the morning, but everything around that line argues the other way. The same chorus opens with "Why can't it just stay the same?" The narrator is calling the ending a mercy while begging for one more hour, and the song never settles which one he means.

@@ -29,6 +29,12 @@ sources:
     url: "https://www.herald-dispatch.com/features_entertainment/boone-county-singer-songwriter-logan-halstead-latest-musician-to-rise-from-wv/article_39c57fe7-e234-55ce-8bba-b85c6d3f9e77.html"
   - title: "thebluegrasssituation.com"
     url: "https://thebluegrasssituation.com/read/bgs-55-logan-halstead/"
+recordedAt:
+  - studio: "Sound Emporium"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://holler.country/feature/introducing/album-premiere-logan-halstead-dark-black-coal/"
 aiGenerated: true
 ---
 The guitar on **Dark Black Coal** is fingerpicked and patient, with a steady bass line rolling under the melody. It's recorded close and dry, the kind of sound that puts you in a small room with whoever's playing. There are no harmonies, no other voices. The singing is low and a little gravelly, the feel relaxed and unhurried. Nothing is dressed up.

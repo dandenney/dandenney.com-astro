@@ -25,6 +25,12 @@ sources:
     url: "https://beat.com.au/the-teskey-brothers-go-back-to-their-roots-for-melbourne-international-jazz-festival/"
   - title: "Atwood Magazine: The Teskey Brothers Explore Heartache's Destructive Depths with \"Pain and Misery\""
     url: "https://atwoodmagazine.com/the-teskey-brothers-explore-heartaches-destructive-depths-with-pain-and-misery/"
+recordedAt:
+  - studio: "Half Mile Harvest Studios"
+    city: "Warrandyte"
+    state: "Victoria"
+    country: "Australia"
+    source: "https://happymag.tv/chatting-soul-blues-and-an-american-future-with-the-teskey-brothers/"
 aiGenerated: true
 ---
 The chorus of **Pain and Misery** begs someone to stay who has already gone. That's the whole knot of the song: a plea for presence wrapped around a plain report of absence. The narrator isn't building a case or trying to win anyone back with reasons. They're still asking after the answer has been given.

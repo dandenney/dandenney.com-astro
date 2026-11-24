@@ -27,6 +27,11 @@ sources:
     url: "https://www.bringthenoiseuk.com/202508/features/interviews/music-interview-amigo-the-devil-from-seedless-trees-to-family-roots"
   - title: "Wikipedia: Amigo the Devil"
     url: "https://en.wikipedia.org/wiki/Amigo_the_Devil"
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.spinmagazine.com/2024/03/amigo-the-devil-interview/"
 aiGenerated: true
 ---
 The joke that lands hardest in **Cannibal Within** is a suicide joke. The verse opens by announcing, almost like a weather report, that it turns out the narrator is depressed. Then it offers a fix: turn on the radio, cock it back. Then comes the caveat: "I just don't wanna blow my brains out to Hotel California." It's funny, and it's meant to be. But just before that, the song told you what the funny is for. Someone has noticed that this person uses jokes and joy to dodge the realization. The narrator hears the diagnosis and answers it with another joke. That's the trap, shown in one move.

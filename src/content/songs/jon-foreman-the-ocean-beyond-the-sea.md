@@ -25,6 +25,12 @@ sources:
     url: "https://www.newreleasetoday.com/albumdetail.php?album_id=25051"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/artist/mn0000073969"
+recordedAt:
+  - studio: "Melody League Studios"
+    city: "San Diego"
+    state: "California"
+    country: "United States"
+    source: "https://www.ccmmagazine.com/news/jon-foreman-releases-1st-solo-album-departures/"
 aiGenerated: true
 ---
 The most telling line in **The Ocean Beyond The Sea** is the third: "Only the shipwrecked could ever find it." Jon Foreman builds the whole song on that reversal. Each verse names a place past the edge of the known world (an ocean beyond the sea, a forest beyond the trees, a valley above the sky) and then names who can't reach it. The fowler can't find the freed songbird. Humankind's towers can't find the valley. The rich man can't find the highway "beyond where power is bought and sold." It has the shape of a beatitude: comfort is promised to the people whose boats already went down, and kept from the ones with the means to go looking.

@@ -25,6 +25,12 @@ sources:
     url: "https://dyingscene.com/archive/ds-interview-tim-barry-on-being-lost-and-rootless/"
   - title: "Wikipedia: Tim Barry"
     url: "https://en.wikipedia.org/wiki/Tim_Barry"
+recordedAt:
+  - studio: "Minimum Wage Studio"
+    city: "Richmond"
+    state: "Virginia"
+    country: "United States"
+    source: "https://www.discogs.com/release/2538296-Tim-Barry-Rivanna-Junction"
 aiGenerated: true
 ---
 The lyrics open with a parenthetical aside: Tim Barry hates this song. Before the first verse he's already called it a pain in his ass, and the rest of **Avoiding Catatonic Surrender** keeps arguing with itself the same way. The first scene is a Motel 6 in East Brunswick, New Jersey: smoking until the lungs burn, ice in the trash can to cool the beer. Then comes the detail that turns a road complaint into something lonelier: "Breathe in the perfume in the room of the person last here." He's alone, and the closest thing to company is the scent a stranger left behind.

@@ -21,6 +21,11 @@ sources:
     url: "https://saddlemountainpost.com/features/the-north-remembers-joshua-quimby-is-bringing-it-all-back-home/"
   - title: "x.com"
     url: "https://x.com/jquimbymusic"
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.theselfportraitgospel.com/interviews/the-joshua-quimby-interview"
 aiGenerated: true
 ---
 Start with the thumb. In the first line of **Gears**, Joshua Quimby looks down and finds that "the tip of my thumb has been whittled like wood," worn down by the lighter he can't stop flicking. It's a funny image, and a little alarming. The habit has left a mark on the body, and he reports it the way you'd mention a callus from a guitar string. That mix of wry detail and quiet damage runs through the whole song.

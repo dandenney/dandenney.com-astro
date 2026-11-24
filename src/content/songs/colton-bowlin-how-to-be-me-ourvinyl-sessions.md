@@ -25,6 +25,12 @@ sources:
     url: "https://holler.country/feature/introducing/10-country-and-americana-artists-you-need-to-know-november-2025/"
   - title: "ococean.com: Backstage at the Beach: Artist Q&A from Oceans Calling and Country Calling"
     url: "https://www.ococean.com/blog/post/backstage-at-the-beach-artist-qa-from-oceans-calling-and-country-calling/"
+recordedAt:
+  - studio: "OurVinyl Studio"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "http://countrydiscoghraphy2.blogspot.com/2026/03/colton-bowlin.html"
 aiGenerated: true
 ---
 The guitar does two jobs at once on **How to be Me**. A fingerpicked, rolling arpeggio carries the melody while a bass line runs underneath it, so the song brings its own floor and its own motion with nothing else in the room to help. The tempo sits in the middle, unhurried. The voice comes in slightly raspy and mid-range, pitched like someone talking across a kitchen table rather than projecting to the back of a hall. There are no harmonies, no second voice to soften a line or tell you it'll be fine. It's guitar and voice, and that turns out to be the right size for what the song is about.

@@ -12,6 +12,22 @@ genres: ["country","acoustic country"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["country","acoustic country"]
+recordedAt:
+  - studio: "Back Stage Studio (at Sound Stage Studios)"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/18399937-David-Nail-Fighter"
+  - studio: "The House"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/18399937-David-Nail-Fighter"
+  - studio: "The Q Room"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/18399937-David-Nail-Fighter"
 aiGenerated: true
 ---
 

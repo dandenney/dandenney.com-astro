@@ -29,6 +29,22 @@ sources:
     url: "https://www.wikiwand.com/en/Man_Made_a_Bar"
   - title: "Whiskey Riff | A RIFF on what country is really about.: With The Most Awkward Timing Possible, Morgan Wallen & Eric Church’s “Man Made A Bar” Hits #1 On The Charts | Whiskey Riff"
     url: "https://www.whiskeyriff.com/2024/04/12/with-the-most-awkward-timing-possible-morgan-wallen-eric-churchs-man-made-a-bar-hits-1-on-the-charts/"
+recordedAt:
+  - studio: "Blackbird Studio D"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://lci-mt.iii.com/iii/encore/record/C__Rb3044212__Lf:facetcollections:::__P0,1__Orightresult__U__X7?lang=eng&suite=cobalt&fromlibrarywebsite=true&ivts=cezALz6dNYVp7r/kmO4TtA%3D%3D&casts=gU9Ble1mx/hvQqQhvxl9Cg%3D%3D"
+  - studio: "Blackbird Studio A"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://lci-mt.iii.com/iii/encore/record/C__Rb3044212__Lf:facetcollections:::__P0,1__Orightresult__U__X7?lang=eng&suite=cobalt&fromlibrarywebsite=true&ivts=cezALz6dNYVp7r/kmO4TtA%3D%3D&casts=gU9Ble1mx/hvQqQhvxl9Cg%3D%3D"
+  - studio: "Ocean Way Studio A"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://lci-mt.iii.com/iii/encore/record/C__Rb3044212__Lf:facetcollections:::__P0,1__Orightresult__U__X7?lang=eng&suite=cobalt&fromlibrarywebsite=true&ivts=cezALz6dNYVp7r/kmO4TtA%3D%3D&casts=gU9Ble1mx/hvQqQhvxl9Cg%3D%3D"
 aiGenerated: true
 ---
 The bartender gets the best line in **Man Made A Bar**, and it isn't a joke. A man drops onto a stool, a darn fool because she walked out again, and the person pouring answers with plain solidarity: "'cause I, too, have been in your boots, my friend." The bartender opened the place in '85 to get over a first wife and has kept busy ever since. Heartbreak here isn't a private catastrophe. It's a trade, a shared condition, something one person already survived and built a room around.

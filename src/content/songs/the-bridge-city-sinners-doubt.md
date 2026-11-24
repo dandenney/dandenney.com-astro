@@ -25,6 +25,12 @@ sources:
     url: "https://www.unratedmag.com/bridge-city-sinners/"
   - title: "Click Roll Boom: Bridge City Sinners release album “Age Of Doubt”"
     url: "https://www.clickrollboom.co.uk/news/n1ocebpf6i82h6qv94cdbpiru0o9e1"
+recordedAt:
+  - studio: "Interlace Audio"
+    city: "Portland"
+    state: "OR"
+    country: "USA"
+    source: "https://bridgecitysinners.bandcamp.com/album/in-the-age-of-doubt"
 aiGenerated: true
 ---
 The upright bass on **Doubt** walks like it has somewhere to be. A plucked line moves under a steady drum kit with a loose swing, a banjo keeps the rhythm going, and a fiddle draws a melody with vibrato over the top. It's a band playing at a dancing tempo, not a funeral pace. That matters, because the song is about the voice in your own head that turns on you.

@@ -31,6 +31,12 @@ sources:
     url: "https://www.sixshooterrecords.com/2019-william-prince-reliever"
   - title: "BroadwayWorld.com: William Prince Announces Brand New Album 'Reliever'"
     url: "https://www.broadwayworld.com/bwwmusic/article/William-Prince-Announces-Brand-New-Album-Reliever-20191111"
+recordedAt:
+  - studio: "Historic RCA Studio A"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://williamprince.bandcamp.com/album/reliever"
 aiGenerated: true
 ---
 The question at the center of **The Spark** isn't "will you stay with me." It's harder than that: "My love if we burn would you burn right next to me?" William Prince doesn't just promise protection. He asks for company inside the danger, and that's a braver, more grown-up kind of love song than the title lets on.

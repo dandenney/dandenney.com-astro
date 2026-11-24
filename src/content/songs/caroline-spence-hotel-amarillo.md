@@ -12,6 +12,12 @@ genres: ["americana"]
 # preview: ""
 pubDate: "2025-12-09"
 tags: ["americana"]
+recordedAt:
+  - studio: "Mr. Lemons"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.lonesomehighway.com/music-reviews/tag/Levi+Parham"
 aiGenerated: true
 ---
 

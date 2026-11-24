@@ -29,6 +29,11 @@ sources:
     url: "https://chartmetric.com/artist/4555447"
   - title: "Global Traveler: More Live Music in Philly"
     url: "https://www.globaltravelerusa.com/blog/more-live-music-in-philly/"
+recordedAt:
+  - city: "Philadelphia"
+    state: "Pennsylvania"
+    country: "United States"
+    source: "https://www.globaltravelerusa.com/blog/more-live-music-in-philly/"
 aiGenerated: true
 ---
 The toothpaste is the detail that does it. Plenty of breakup songs inventory what a lover left behind, but **"Tangerine"** lands on the most ordinary object in the bathroom and turns it into a small act of self-harm: "No brush but you left your toothpaste / So I won't forget how you taste." The narrator isn't just stumbling over leftovers. They're keeping them on purpose, so the wound stays fresh.

@@ -27,6 +27,11 @@ sources:
     url: "https://clclt.com/music-2/cd-review-bombadils-metrics-of-affection-3210705/"
   - title: "Time Out Worldwide: Music – best playlists, songs, artists and news"
     url: "https://www.timeout.com/newyork/music/bombadil-beats-the-odds-with-a-new-lp"
+recordedAt:
+  - city: "Durham"
+    state: "North Carolina"
+    country: "United States"
+    source: "https://www.blueridgeoutdoors.com/trail-mix/bombadil-comeback-kids/"
 aiGenerated: true
 ---
 **Thank You** is a list of advice that keeps interrupting itself. It starts like a commencement speech: forget the ones who let you down, stay gracious toward the ones who stuck around, believe in yourself even if your own mother starts to doubt you. Then it tells you to write down everyone you love and immediately thinks better of it: "You might not want to tell all of them because that could weird some people out." That hedge is the whole song in small. It wants to say the big, open-hearted thing, and it can't stop noticing how awkward the big, open-hearted thing sounds out loud.

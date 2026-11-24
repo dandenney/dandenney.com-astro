@@ -27,6 +27,15 @@ sources:
     url: "http://www.momandpopmusic.com/blog/caamp-releases-lavender-days"
   - title: "Wikipedia: Caamp"
     url: "https://en.wikipedia.org/wiki/Caamp"
+recordedAt:
+  - city: "Durham"
+    state: "North Carolina"
+    country: "USA"
+    source: "https://jambands.com/news/2022/03/11/caamp-announce-newest-album-lavender-days-share-single-believe/"
+  - city: "Columbus"
+    state: "Ohio"
+    country: "USA"
+    source: "https://en.wikipedia.org/wiki/Lavender_Days"
 aiGenerated: true
 ---
 "You'll bring your snowshoes and I'll bring the beer." That line holds the whole plan of **Snowshoes**: a cold place, a split of supplies, two people who already know who carries what. Caamp builds the song on that kind of easy division of labor, then spends most of its length nudging someone to do the one thing they keep putting off.

@@ -23,6 +23,12 @@ sources:
     url: "https://www.wikiwand.com/en/articles/The_Story_(Brandi_Carlile_song)"
   - title: "Wikipedia: Cover Stories"
     url: "https://en.wikipedia.org/wiki/Cover_Stories"
+recordedAt:
+  - studio: "The Warehouse Studios"
+    city: "Vancouver"
+    state: "British Columbia"
+    country: "Canada"
+    source: "https://en.wikipedia.org/wiki/The_Story_(Brandi_Carlile_album)"
 aiGenerated: true
 ---
 The face does the talking first. **The Story** opens on the creases in a face, offered as a record of everything survived, and the first verse sounds almost proud of them. Then comes the turn: "But these stories don't mean anything / When you've got no one to tell them to." The pride doesn't go away. It turns out it was waiting on someone the whole time. By the song's own boasting, there were mountaintops climbed and an ocean swum, and the payoff for all of it is a single listener.

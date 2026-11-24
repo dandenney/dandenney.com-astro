@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import MarkdownToggle from "../components/MarkdownToggle.astro";
 import { ClientRouter } from "astro:transitions";
 import { formatAddedAt } from "@/lib/lately";
+import { findStudio } from "@/lib/studios";
 
 const {
   title,
@@ -17,6 +18,7 @@ const {
   genres,
   tags,
   sources,
+  recordedAt,
   aiGenerated,
   slug,
   addedAt,
@@ -56,6 +58,13 @@ const formatDate = (dateStr: string) => {
 
 const trackNo = trackNumber ? String(trackNumber).padStart(2, "0") : null;
 const nextNo = String(trackNumber ? (trackNumber % totalTracks) + 1 : 1).padStart(2, "0");
+const recordedPlaces = ((recordedAt ?? []) as { studio?: string; city: string; state?: string }[]).map((place) => {
+  const studio = findStudio(place);
+  return {
+    label: place.studio ? `${place.studio}, ${place.city}` : place.city,
+    href: studio ? `/music/nashville#${studio.slug}` : null,
+  };
+});
 const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[];
 ---
 
@@ -154,6 +163,19 @@ const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[
             <div class="credit">
               <dt>Added to Lately</dt>
               <dd>{formatAddedAt(addedAt)}</dd>
+            </div>
+          )}
+          {recordedPlaces.length > 0 && (
+            <div class="credit">
+              <dt>Recorded at</dt>
+              <dd>
+                {recordedPlaces.map((place, i) => (
+                  <>
+                    {i > 0 && " · "}
+                    {place.href ? <a href={place.href} class="credit-link">{place.label}</a> : place.label}
+                  </>
+                ))}
+              </dd>
             </div>
           )}
           <div class="credit">
@@ -435,6 +457,18 @@ const soundsLike = [...new Set([...(genres ?? []), ...(tags ?? [])])] as string[
         font-size: 0.875rem;
         font-weight: 600;
         color: var(--ink);
+      }
+
+      .credit-link {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: var(--accent, #b91c1c);
+        text-underline-offset: 0.2em;
+      }
+
+      .credit-link:hover,
+      .credit-link:focus-visible {
+        color: var(--accent, #b91c1c);
       }
 
       /* ---------- Review body ---------- */

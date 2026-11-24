@@ -29,6 +29,12 @@ sources:
     url: "https://stereogum.com/2224664/amanda-shires-bobbie-nelson-always-on-my-mind/news"
   - title: "Consequence: Amanda Shires announces covers album with the late Bobbie Nelson, shares \"Summertime\": Stream"
     url: "https://consequence.net/2023/04/amanda-shires-bobbie-nelson-loving-you-summertime/"
+recordedAt:
+  - studio: "Arlyn Studios"
+    city: "Austin"
+    state: "Texas"
+    country: "United States"
+    source: "https://www.jambase.com/article/amanda-shires-bobbie-nelson-loving-you-album-summertime-cover"
 aiGenerated: true
 ---
 In **Summertime**, a fiddle holds long notes and slips short fills between the sung lines, fingerpicked acoustic guitar rolls underneath, and a walking bass steps along at a slow, swaying pace. Bobbie Nelson's piano lays down plain, steady chords. The room is open and a little reverberant, and everything is clean and unhurried. It sounds like a lullaby because it is one. By the time anyone heard it, the woman at the piano was gone.

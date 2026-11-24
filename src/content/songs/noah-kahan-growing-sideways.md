@@ -31,6 +31,17 @@ sources:
     url: "https://davesmusicdatabase.blogspot.com/2022/10/noah-kahan-stick-season-released.html"
   - title: "Wikipedia: Live from Fenway Park"
     url: "https://en.wikipedia.org/wiki/Live_from_Fenway_Park"
+recordedAt:
+  - studio: "Guilford Sound"
+    city: "Guilford"
+    state: "Vermont"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+  - studio: "The Study"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/24957121-Noah-Kahan-Stick-Season"
 aiGenerated: true
 ---
 The punchline comes before the pain. **Growing Sideways** opens with Noah Kahan pouring his trauma out on a pricey leather couch belonging to a sad-eyed therapist. The two of them argue about Jesus, find some middle ground, and within four lines he declares himself cured. The rest of the song is the bill coming due.

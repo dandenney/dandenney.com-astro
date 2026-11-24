@@ -21,6 +21,11 @@ sources:
     url: "https://www.nme.com/features/music-interviews/cordelia-artist-interview-caramel-ep-little-life-radar-3596321"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/artist/cordelia-mn0004587770"
+recordedAt:
+  - city: "London"
+    state: "England"
+    country: "United Kingdom"
+    source: "https://www.onestowatch.com/en/blog/cordelia-little-life-interview"
 aiGenerated: true
 ---
 The whole song hangs on a hedge. **Little Life** keeps arriving at its big declaration, "I think I like this little life," and every time, the "I think" stays in. Cordelia never upgrades it to love, never drops the qualifier. That small reluctance is the most honest thing here. It's the sound of someone talking themselves into contentment and finding, a little to their surprise, that it's working.

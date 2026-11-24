@@ -25,6 +25,19 @@ sources:
     url: "https://www.npr.org/transcripts/89870758?storyId=89870758%3FstoryId%3D89870758"
   - title: "last.fm: Client Challenge"
     url: "https://last.fm/music/Kate+Nash/+wiki"
+recordedAt:
+  - studio: "Eastcote Studios"
+    city: "London"
+    country: "England"
+    source: "https://www.allmusic.com/album/made-of-bricks-mw0000495646"
+  - studio: "Miloco Studios"
+    city: "London"
+    country: "England"
+    source: "https://www.discogs.com/release/3724979-Kate-Nash-Made-Of-Bricks"
+  - studio: "The Pool"
+    city: "London"
+    country: "England"
+    source: "https://www.discogs.com/release/3724979-Kate-Nash-Made-Of-Bricks"
 aiGenerated: true
 ---
 The detail that gives the whole thing away is a cup of tea. Deep into a long list of wishes, Kate Nash sings, "I wish that you knew when I said two sugars, actually I meant three." It's a small, funny line, and it holds the song's whole ache. The narrator doesn't correct the order. She'd rather be misread than look like she wants too much, and she hopes someone will love her closely enough to catch the lie anyway.

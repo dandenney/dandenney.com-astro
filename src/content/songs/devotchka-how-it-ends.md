@@ -27,6 +27,12 @@ sources:
     url: "https://en.wikipedia.org/wiki/DeVotchKa"
   - title: "adn.com"
     url: "https://www.adn.com/music/article/devotchka-front-man-reflects-breakout-album-how-it-ends/2012/12/28/"
+recordedAt:
+  - studio: "Wavelab Studio"
+    city: "Tucson"
+    state: "Arizona"
+    country: "United States"
+    source: "https://www.discogs.com/release/2301438-Devotchka-How-It-Ends"
 aiGenerated: true
 ---
 **How It Ends** opens with an object and an instruction: "Hold your grandmother's Bible to your breast." It's a strange way to begin a song about fate. It isn't a prayer, and it isn't a doubt. It's a test, and the person holding the book wants it to pass. Nick Urata sings in the second person, so the burden lands on whoever's listening. Somebody has to be strong here. Everyone depends on you, the lyric says, and you already know what you have to do.

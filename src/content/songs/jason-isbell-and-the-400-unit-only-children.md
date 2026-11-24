@@ -29,6 +29,12 @@ sources:
     url: "https://www.nashvillescene.com/music/features/jason-isbell-and-the-400-unit-get-deep-beneath-the-skin-on-i-reunions-i/article_1d4bc79a-2fb1-5e58-855f-fd43315f2aed.html"
   - title: "Rolling Stone Australia: Watch Jason Isbell’s Haunting ‘Only Children’ Video"
     url: "https://au.rollingstone.com/music/music-news/jason-isbell-only-children-video-17860"
+recordedAt:
+  - studio: "RCA Studio A"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.roughtrade.com/en-us/product/jason-isbell-and-the-400-unit/reunions"
 aiGenerated: true
 ---
 In **Only Children**, a mother at a funeral, with the hearse idling in the parking lot, says, "Heaven's wasted on the dead." Jason Isbell doesn't dress that line up. He sets it down and moves on, the way people do when grief comes out sideways as a joke.

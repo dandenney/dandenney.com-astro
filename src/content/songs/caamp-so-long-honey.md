@@ -23,6 +23,12 @@ sources:
     url: "https://relix.com/features/detail/caamp-letters-to-your-future-self"
   - title: "WXPN | Vinyl At Heart: CAAMP: “Going to the Country” (World Cafe Version)"
     url: "https://xpn.org/artist/caamp/"
+recordedAt:
+  - studio: "Square Roots Records"
+    city: "Troy"
+    state: "Ohio"
+    country: "USA"
+    source: "https://miamivalleytoday.com/troy-native-receives-gold-record/"
 aiGenerated: true
 ---
 The title reads like a goodbye, but the chorus says otherwise. In **So Long, Honey**, "so long" is about time, not farewell: you can only drift on the wind for so long before you come back down. The narrator isn't seeing anyone off. He's settling in to wait, and the whole song lives in that gap between letting go and refusing to.

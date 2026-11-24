@@ -25,6 +25,17 @@ sources:
     url: "https://www.alligator.com/albums/Buddy-Guy---The-Blues-Dont-Lie-Double-Vinyl-LP/"
   - title: "chicagobluesguide.com"
     url: "https://www.chicagobluesguide.com/post/buddy-guy-the-blues-don-t-lie"
+recordedAt:
+  - studio: "Blackbird Studio"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "USA"
+    source: "https://www.discogs.com/release/24703280-Buddy-Guy-The-Blues-Dont-Lie"
+  - studio: "Purple House Studio"
+    city: "Leipers Fork"
+    state: "Tennessee"
+    country: "USA"
+    source: "https://www.discogs.com/release/24703280-Buddy-Guy-The-Blues-Dont-Lie"
 aiGenerated: true
 ---
 The first surprise is the groove. **Gunsmoke Blues** is about school shootings, and it swings: a walking bass line, a shuffle with the snare up front, clean electric guitars trading lines, a medium tempo that never hurries. That ease is deliberate-sounding. The steadiness reads as exhaustion, the sound of people who have heard this story too many times to raise their voices about it.

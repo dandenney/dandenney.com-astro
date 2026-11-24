@@ -31,6 +31,12 @@ sources:
     url: "https://www.showboxpresents.com/events/detail/1320646"
   - title: "Jambands: Sierra Ferrell Details New LP 'Trail of Flowers,' Shares \"Dollar Bill Bar\""
     url: "https://jambands.com/news/2024/01/18/sierra-ferrell-details-new-lp-trail-of-flowers-shares-dollar-bill-bar/"
+recordedAt:
+  - studio: "Sound Emporium Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://shorefire.com/releases/entry/sierra-ferrell-trail-of-flowers-eagerly-awaited-album-out-march-22-via-rounder-records"
 aiGenerated: true
 ---
 The line that turns **Rosemary** inside out is one it repeats until it changes meaning. "Rosemary waits for you" first sounds like a rival up on the hillside, patient and inviting, the place the narrator's lover slips off to. By the last verse the same words mark a grave under a flower bush. Sierra Ferrell, the song's sole writer, never announces the turn. The narrator just says they made a garden and dug it in the morning, and the old phrase comes back carrying a body.

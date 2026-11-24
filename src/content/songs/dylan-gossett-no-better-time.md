@@ -23,6 +23,11 @@ sources:
     url: "https://www.texasmonthly.com/arts-entertainment/dylan-gossett-austin-city-limits/"
   - title: "musicrow.com"
     url: "https://musicrow.com/2025/07/dylan-gossett-lets-the-songs-lead-on-self-made-debut-album-westward-interview/"
+recordedAt:
+  - city: "Austin"
+    state: "Texas"
+    country: "United States"
+    source: "https://www.billboard.com/pro/coal-singer-dylan-gossett-signs-record-label-talks-new-ep/"
 aiGenerated: true
 ---
 The strangest bit of advice in **No Better Time** is about crying. "Like the times when you come home, not the times when you're leavin'," Dylan Gossett sings, telling someone to hold their tears for the homecoming and not the departure. Most songs grieve the leaving. This one treats leaving as the easy part, the thing you're supposed to do, and saves the ache for the day you make it back. That reversal tells you whose song this is: someone who stayed too long, or watched someone else do it.

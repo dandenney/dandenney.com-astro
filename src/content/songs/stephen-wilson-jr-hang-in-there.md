@@ -27,6 +27,27 @@ sources:
     url: "https://www.loudersound.com/features/ten-years-ago-i-was-a-scientist-in-a-lab-coat-and-had-never-sung-in-front-of-anybody-in-my-life-from-microbiologist-to-musician-the-unlikely-rise-of-stephen-wilson-jr"
   - title: "Official Website: Stephen Wilson Jr."
     url: "https://stephenwilsonjr.com/"
+recordedAt:
+  - studio: "Farmland Studios"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/30099275-Stephen-Wilson-Jr-S%C3%B8n-Of-Dad"
+  - studio: "Whistle Stop"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/30099275-Stephen-Wilson-Jr-S%C3%B8n-Of-Dad"
+  - studio: "Stone Airplane"
+    city: "Birmingham"
+    state: "MI"
+    country: "USA"
+    source: "https://www.discogs.com/release/30099275-Stephen-Wilson-Jr-S%C3%B8n-Of-Dad"
+  - studio: "Aashrum Studios"
+    city: "Detroit"
+    state: "MI"
+    country: "USA"
+    source: "https://www.discogs.com/release/30099275-Stephen-Wilson-Jr-S%C3%B8n-Of-Dad"
 aiGenerated: true
 ---
 The father in **Hang in There** gets the best line, and he gets it from the passenger seat: "boy would ya go a little slower? / You're worrisome son, make your old man look a little older." It's a dad joke with a worry folded inside it, the kind of thing a parent says to a grown kid so the fear comes out as teasing. Stephen Wilson Jr. sets it right after the flattest sentence in the song, the plain admission that it's not right he's not here, and the pairing does the work. Grief arrives as a complaint. Then memory answers with a voice that's still alive, still needling.

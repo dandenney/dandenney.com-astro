@@ -25,6 +25,17 @@ sources:
     url: "https://en.wikipedia.org/wiki/The_Great_Divide_(Noah_Kahan_album)"
   - title: "Wikipedia: Noah Kahan"
     url: "https://en.wikipedia.org/wiki/Noah_Kahan"
+recordedAt:
+  - studio: "Guilford Sound"
+    city: "Guilford"
+    state: "Vermont"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+  - studio: "The Study"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
 aiGenerated: true
 ---
 Most songs about going home end at the front door. **The View Between Villages** stops a mile short, then throws the car into reverse. Noah Kahan has said the song tracks the drive between South Strafford and Strafford, Vermont, the town where he was born. He feels at peace on that road, and the anxiety comes back once he passes his old house. The whole song lives in that gap. It's a map of one stretch of asphalt where a person can stand to be himself.

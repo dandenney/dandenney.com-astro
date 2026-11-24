@@ -27,6 +27,12 @@ sources:
     url: "https://stitchedsound.com/interview-with-dustin-kensrue/"
   - title: "Wikipedia: Thoughts That Float on a Different Blood"
     url: "https://en.wikipedia.org/wiki/Thoughts_That_Float_on_a_Different_Blood"
+recordedAt:
+  - studio: "The Constellation Room"
+    city: "Santa Ana"
+    state: "California"
+    country: "United States"
+    source: "https://www.discogs.com/release/8361062-Dustin-Kensrue-Thoughts-That-Float-On-A-Different-Blood"
 aiGenerated: true
 ---
 The song opens on a blasphemy that turns into a prayer partway through the first line. **Jesus Christ** starts as the kind of thing you mutter at a pretty face across a room, then becomes the person being spoken to. Later the narrator asks Him directly, "So what did you do those three days you were dead?" It's a wisecrack and a real question at once, and the song never settles which one it means.

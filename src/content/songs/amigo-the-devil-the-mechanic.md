@@ -25,6 +25,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Amigo_the_Devil"
   - title: "All Eyes Media: Amigo the Devil"
     url: "https://alleyesmedia.com/clients/amigo-the-devil/"
+recordedAt:
+  - city: "Nashville area (Kiranos's home basement, outside Nashville)"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.spinmagazine.com/2024/03/amigo-the-devil-interview/"
 aiGenerated: true
 ---
 The confession arrives disguised as a compliment: "I knew you weren't broken / I just needed something to fix." It's the hinge of **The Mechanic**, and it reframes everything around it. The narrator has spent the song promising repairs, swearing that this time it's real, while admitting the partner has heard the same pledge for years. Then the cover slips. The fixing was never for the other person. It was for the one holding the wrench.

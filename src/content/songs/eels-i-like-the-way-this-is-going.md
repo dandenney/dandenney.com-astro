@@ -23,6 +23,12 @@ sources:
     url: "https://www.lyricsmania.com/i_like_the_way_this_is_going_lyrics_eels.html"
   - title: "Kevin EG Perry: Collected Works: Eels"
     url: "https://kevinegperry.com/2010/08/03/eels-interview/"
+recordedAt:
+  - studio: "OneHitsville, U.S.A."
+    city: "Los Feliz, Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Tomorrow_Morning_(album)"
 aiGenerated: true
 ---
 Most love songs promise forever. **I Like The Way This Is Going** won't go that far. Eels hang the whole song on a phrase about direction, not arrival, and that small hedge is where the feeling lives. The narrator doesn't swear devotion. The narrator notices that things are trending well and says so, again and again, like someone afraid to jinx it.

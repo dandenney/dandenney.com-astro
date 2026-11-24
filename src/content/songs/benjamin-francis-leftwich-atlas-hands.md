@@ -12,6 +12,11 @@ genres: ["indie folk"]
 # preview: ""
 pubDate: "2025-12-09"
 tags: ["indie folk"]
+recordedAt:
+  - studio: "2KHZ Studios"
+    city: "London"
+    country: "United Kingdom"
+    source: "https://www.discogs.com/release/3946790-Benjamin-Francis-Leftwich-Last-Smoke-Before-The-Snowstorm"
 aiGenerated: true
 ---
 

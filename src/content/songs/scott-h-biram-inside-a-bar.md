@@ -23,6 +23,12 @@ sources:
     url: "https://glidemagazine.com/299125/video-premiere-scott-h-biram-blesses-us-dusty-confessional-inside-a-bar/"
   - title: "Parklife DC: Live Review: Scott H. Biram @ Jammin’ Java — 4/24/24"
     url: "https://parklifedc.com/2024/04/28/live-review-scott-h-biram-jammin-java-4-24-24/"
+recordedAt:
+  - studio: "Hiram's Hell Hole"
+    city: "Austin"
+    state: "Texas"
+    country: "United States"
+    source: "https://www.dirtyrock.info/2024/05/entrevista-a-scott-h-biram-solo-soy-un-levantador-de-espiritus/"
 aiGenerated: true
 ---
 In the video for **Inside A Bar**, the band behind Scott H. Biram only exists in a dream sequence. That fits a song about a man alone in two ways. Biram played every instrument on the record, and the narrator he wrote is both a lonely bar regular and the frontman playing to nobody on a Monday night. The man on the stage and the man at the bar are the same guy.

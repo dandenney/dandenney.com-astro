@@ -25,6 +25,16 @@ sources:
     url: "https://www.ticketnews.com/2008/08/ben-folds-tours-this-fall-with-new-album/"
   - title: "Rolling Stone: Why I Leaked It: Ben Folds Comes Clean About His Fake (And Real) New Album, “Way To Normal”"
     url: "https://www.rollingstone.com/music/music-news/why-i-leaked-it-ben-folds-comes-clean-about-his-fake-and-real-new-album-way-to-normal-249549/"
+recordedAt:
+  - city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.nme.com/news/music/ben-folds-7-1330783"
+  - studio: "Avatar Studios"
+    city: "New York"
+    state: "NY"
+    country: "USA"
+    source: "https://www.discogs.com/release/2073406-Ben-Folds-Way-To-Normal"
 aiGenerated: true
 ---
 Two people sing **You Don't Know Me** at each other, and the only thing they agree on is the chorus. Ben Folds and Regina Spektor trade the title line back and forth, often landing in unison or parallel thirds. So the harmony is doing something sly: two voices, perfectly matched, each accusing the other of never having listened. It's the most together this couple gets.

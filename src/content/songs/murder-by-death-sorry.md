@@ -12,6 +12,12 @@ genres: ["southern gothic","folk punk","alt country"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["southern gothic","folk punk"]
+recordedAt:
+  - studio: "Invisible Island"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://www.discogs.com/release/34155871-Murder-By-Death-Egg-Dart"
 aiGenerated: true
 ---
 

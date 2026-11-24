@@ -33,6 +33,12 @@ sources:
     url: "https://unkantelope.com/28226/entertainment/jid-tells-his-rags-to-riches-story-in-third-studio-album-the-forever-story/"
   - title: "Wikipedia: JID"
     url: "https://en.wikipedia.org/wiki/JID"
+recordedAt:
+  - studio: "Blue Room Studios"
+    city: "Atlanta"
+    state: "Georgia"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/The_Forever_Story"
 aiGenerated: true
 ---
 The first thing anyone in **Just In Time** does after waking up is pray, and the prayer goes to a gun. Kenny Mason's chorus opens on "Woke up at six (six), pray to a .9," then keeps stacking its numbers: six, then twelve, which shows up again as something to run from. From there it turns to a boast that sounds more like a dare: I got the time today. On a song this crowded with clock talk, that claim carries weight. Time here means danger, punishment, and survival. Having any to spare is the flex.

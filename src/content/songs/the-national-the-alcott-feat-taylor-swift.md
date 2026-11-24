@@ -27,6 +27,12 @@ sources:
     url: "https://taylorswiftswitzerland.ch/index.php/features/the-alcott/"
   - title: "AV Club: Taylor Swift teams up with The National for some more angst"
     url: "https://www.avclub.com/taylor-swift-duet-the-alcott-the-national-new-album-1850386232"
+recordedAt:
+  - studio: "Long Pond"
+    city: "Hudson Valley"
+    state: "New York"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/The_Alcott"
 aiGenerated: true
 ---
 Someone is sitting in the corner at the back of a place called **The Alcott**, writing in a golden notebook about "someone / Who used to be me." The narrator walks in already knowing this. That's the setup Matt Berninger built, a single contained scene between two people. He has said he wrote it with his wife, Carin, in mind. Then Taylor Swift answered it, and the song stopped being one man's confession and became an argument with two sides.

@@ -23,6 +23,12 @@ sources:
     url: "https://www.thecurrent.org/feature/2019/10/12/white-reaper-you-deserve-love-might-be-right-studio-session"
   - title: "Wikipedia: White Reaper"
     url: "https://en.wikipedia.org/wiki/White_Reaper"
+recordedAt:
+  - studio: "Neon Cross"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/14300625-White-Reaper-You-Deserve-Love"
 aiGenerated: true
 ---
 The best line in **Might Be Right** is an admission of failure set to music that refuses to sound defeated. "And I always fall / A little short in front of you," Tony Esposito sings, and the band loops it, a self-own repeated until it turns into a chant. Nobody in the song is wallowing. They're just saying it louder.
