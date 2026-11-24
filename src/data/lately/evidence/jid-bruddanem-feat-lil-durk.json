@@ -1,0 +1,204 @@
+{
+  "spotifyId": "60pZpM5WjUBQvaQ5E37XW6",
+  "reviewedAt": "2026-11-24T01:20:56.831Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3945803"
+  },
+  "listening": "Pass 1:\n- **Instruments and how they're played:** A prominent, sustained bass synth provides a low-end foundation. A synth pad plays sustained chords, creating a harmonic bed. A hi-hat plays a consistent, fast pattern with a closed sound. A snare drum plays on beats two and four, with a tight, dry sound. A kick drum plays a syncopated pattern, driving the rhythm. A melodic synth line plays a simple, repetitive phrase, adding a counterpoint to the vocals.\n- **Tempo and groove feel:** The tempo is moderately fast. The groove is steady and driving, with a hip-hop feel.\n- **Vocals:** A male voice raps with a clear, rhythmic delivery. The voice is somewhat gravelly. There are layered background vocals that repeat a phrase, creating a call-and-response effect.\n- **Production:** The sound is clean and polished. The mix is clear, with instruments well-defined. There is a sense of a dry, close room.\n- **Arrangement:** The excerpt begins with the full instrumentation and vocals. The background vocals enter and repeat a phrase. The melodic synth line continues throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\n- **Instruments and how they're played:** A sustained, low-pitched synth pad provides a harmonic bed. A higher-pitched synth plays a melodic line with a slightly detuned, wavering quality. A kick drum and snare drum play a consistent, driving beat. A hi-hat plays a fast, open-and-closed pattern. A deep, resonant bass synth plays a simple, repetitive line.\n- **Tempo and groove feel:** The tempo is moderate. The groove is steady and driving, with a slight bounce from the hi-hat.\n- **Vocals:** The primary vocal is a male voice, delivered in a rhythmic, spoken-word style with a slightly raspy character. There are layered, harmonized backing vocals that sing a melodic phrase, also with a male voice character.\n- **Production:** The sound is polished and clear. There is a sense of a medium-sized room, with some reverb on the vocals and drums. The texture is full and layered.\n- **Arrangement:** The excerpt begins with the main vocal and instrumental elements already established. The layered backing vocals enter and repeat a phrase, then drop out, leaving the main vocal and instrumental track to continue.\n\nPass 3:\n- **Instruments and how they're played:** A prominent, sustained, low-frequency synth bass provides the harmonic foundation. A high-pitched, arpeggiated synth plays a melodic counterpoint. A trap drum kit features a tight, snappy snare, a consistent hi-hat pattern, and a deep kick drum.\n- **Tempo and groove feel:** The tempo is moderate. The groove is laid-back and steady, driven by the consistent drum pattern and the smooth synth bass.\n- **Vocals:** The lead vocal is a male voice, delivered in a rhythmic, spoken-word rap style. The delivery is clear and articulate. There are layered backing vocals, also male, singing a melodic, harmonized phrase that repeats.\n- **Production:** The production is clean and polished. The room sound is dry. The texture is smooth, with clear separation between instruments.\n- **Arrangement:** The excerpt begins with the full instrumental arrangement and lead vocal. The backing vocals enter and repeat a phrase, creating a call-and-response feel with the lead. The lead vocal continues throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Bruddanem\" is track 8 on JID's album The Forever Story, released August 26, 2022 on Dreamville/Interscope, and runs 3:55.",
+        "source": "https://readdork.com/track/jid-bruddanem-feat-lil-durk-2"
+      },
+      {
+        "claim": "The song was produced by DJ Khalil, TU!, Christo and Yuli.",
+        "source": "https://www.hotnewhiphop.com/413799-jid-and-lil-durk-connect-on-the-forever-story-track-bruddanem-new-song"
+      },
+      {
+        "claim": "Credits list DJ Khalil, Neal Pogue, Yuli and Christo as producers, with Yuli as additional producer. Mustafa the Poet is credited for spoken word.",
+        "source": "https://www.albumoftheyear.org/song/50225-bruddanem/"
+      },
+      {
+        "claim": "Engineering credits: John Kadadu recorded it, Derek Ali and Curtis \"Sircut\" Bye mixed it, and Nicolas De Porcel mastered it.",
+        "source": "https://www.albumoftheyear.org/song/50225-bruddanem/"
+      },
+      {
+        "claim": "Songwriting credits include JID (Destin Route), Lil Durk (Durk Banks), DJ Khalil, Neal Pogue and Daniel Seeff.",
+        "source": "https://rateyourmusic.com/song/jid/bruddanem/"
+      },
+      {
+        "claim": "The Forever Story was executive produced by Christo, who had 10 credits across its 16 tracks.",
+        "source": "https://www.revolt.tv/article/2022-10-20/246010/jid-bruddanem-crack-sandwich-video"
+      },
+      {
+        "claim": "The title plays on the Chicago slang word \"foenem\", meaning family. JID and Lil Durk pledge loyalty to their brothers, both blood and not.",
+        "source": "https://dailytrojan.com/2022/08/30/jid-shines-in-the-forever-story/"
+      },
+      {
+        "claim": "A double music video for \"Bruddanem\" and \"Crack Sandwich\" was released in October 2022. Mac Grant and Chad Tennies directed it.",
+        "source": "https://www.revolt.tv/article/2022-10-20/246010/jid-bruddanem-crack-sandwich-video"
+      },
+      {
+        "claim": "One review praises JID's sung chorus over an old-school instrumental. It also says Durk's verse covers rivals and brothers who would slide for him.",
+        "source": "https://ratingsgamemusic.com/2022/08/26/jid-the-forever-story-album-review/"
+      },
+      {
+        "claim": "The Forever Story is a conceptual sequel to JID's 2017 debut The Never Story. It was recorded from 2020 to 2022 and focuses on JID's upbringing and family.",
+        "source": "https://en.wikipedia.org/wiki/The_Forever_Story"
+      },
+      {
+        "claim": "JID is an Atlanta rapper born Destin Route. He signed to J. Cole's Dreamville in 2017 and first appeared with the 2015 EP DiCaprio.",
+        "source": "https://www.last.fm/music/JID/_/Bruddanem+(feat.+Lil+Durk)"
+      }
+    ],
+    "lineage": "The song belongs to Atlanta lyrical, soul-inflected hip-hop on Dreamville, and it pairs JID with Chicago drill-era rapper Lil Durk on a loyalty-to-family theme.",
+    "genres": [
+      "hip-hop",
+      "rap",
+      "neo-soul"
+    ]
+  },
+  "draft": "The last thing **Bruddanem** asks of anyone is gentle: \"Take care of your skin, take care of your liver.\" It arrives after nearly four minutes of Glocks, blocks spun, and opps hit, and it changes what the rest of the song meant. All that menace was a way of saying I love you in the only words that felt safe to use.\n\nThe title bends Chicago's \"foenem,\" slang for family, into something JID can carry home to Atlanta. Pairing him with Lil Durk makes sense of it. JID's corner is lyrical, soul-leaning Dreamville rap, and Durk comes from the drill era. They meet on one subject, loyalty to brothers by blood and by choice. JID sings the chorus, and the hook works by stacking: the same title phrase lands at the end of every line until the repetition sounds like a vow. Layered, harmonized backing voices answer the lead in a call-and-response. Under them sit a sustained low synth bass and a soft pad. A small, repeating synth figure runs high over the top, and a tight snare and quick hi-hats keep the groove steady at a moderate tempo. It's clean and dry, with room left for the words.\n\nThose words are where the feeling lives. The long middle verse goes back to childhood. Summers when \"somebody dead and somebody scared, so nobody saw,\" a grown-up laid off and stuck in bed, bail money, kids to feed. Then a quiet confession: \"Got a whippin' for nothin', that's somethin' my brother did.\" The narrator took the punishment and kept quiet, and he tells it with pride, not resentment. That's where the loyalty comes from. It was taught through silence, sore skin, and knowing the brother would have done the same.\n\nPride and grief sit side by side here without settling. One line boasts and mourns at the same time: \"My brother gon' slide, but two of my brothers had died.\" Another remembers the power knocked out and sleeping by the window, hungry. The bravado is real, but so is the hole under it. When the closing lines turn to \"I see you, I love you,\" with two straps at dinner and a promise not to let anyone wither, the song stops pretending those are different feelings. Mustafa the Poet is credited for spoken word, and the producers include DJ Khalil, Christo and Yuli. One reviewer called the beat old-school, and the hook does have that warm, settled pull.\n\nIt sticks because it lets you hear protectiveness the way these brothers learned it: half threat, half caretaking, and impossible to pull apart.",
+  "factCheck": [
+    {
+      "claim": "Near the end the song turns gentle with the line \"Take care of your skin, take care of your liver.\"",
+      "verdict": "corrected",
+      "note": "The lyric quote is exact and sits near the end of the lyrics, but \"the last thing it asks\" and \"after nearly four minutes\" overstate it, since the final line is \"I won't let you.\" Reworded to \"late in the song\" and dropped the runtime framing."
+    },
+    {
+      "claim": "The song has Glocks, blocks spun, and opps hit before the gentle turn.",
+      "verdict": "supported",
+      "note": "Matches the lyrics: \"I got the Glock,\" \"I spin the block,\" \"Fucked the opps up,\" \"buddy got hit.\""
+    },
+    {
+      "claim": "The title bends Chicago's \"foenem,\" slang for family.",
+      "verdict": "supported",
+      "note": "Daily Trojan source. The \"carry home to Atlanta\" line is interpretation resting on JID being an Atlanta rapper."
+    },
+    {
+      "claim": "JID's corner is lyrical, soul-leaning Dreamville rap, and Durk comes from the drill era.",
+      "verdict": "supported",
+      "note": "Matches the lineage note and the last.fm info."
+    },
+    {
+      "claim": "They meet on loyalty to brothers by blood and by choice.",
+      "verdict": "supported",
+      "note": "Daily Trojan: pledging loyalty to brothers, both blood and not."
+    },
+    {
+      "claim": "JID sings the chorus.",
+      "verdict": "supported",
+      "note": "A review praises JID's sung chorus."
+    },
+    {
+      "claim": "The same title phrase lands at the end of every line of the hook.",
+      "verdict": "corrected",
+      "note": "Not every hook line ends in \"bruddanem\" (\"You gotta watch my bros,\" \"That shit ain't nothin' 'bout nothin'\"). Changed to \"line after line.\""
+    },
+    {
+      "claim": "Layered, harmonized backing voices answer the lead in call-and-response.",
+      "verdict": "supported",
+      "note": "All three passes describe layered backing vocals, and two describe call-and-response."
+    },
+    {
+      "claim": "A sustained low synth bass and a soft pad sit under the vocals.",
+      "verdict": "corrected",
+      "note": "Bass is in all three passes. A sustained pad is in two. \"Soft\" is not backed, so it was removed."
+    },
+    {
+      "claim": "A small repeating high synth figure, a tight snare, quick hi-hats, a steady groove at a moderate tempo.",
+      "verdict": "supported",
+      "note": "Each element is backed by at least two passes."
+    },
+    {
+      "claim": "The production is clean and dry.",
+      "verdict": "supported",
+      "note": "Clean and polished in all passes. Dry in passes 1 and 3."
+    },
+    {
+      "claim": "The long middle verse goes back to childhood: summers when \"somebody dead and somebody scared, so nobody saw,\" a grown-up laid off, bail money, kids to feed.",
+      "verdict": "supported",
+      "note": "The quote is exact and the details match the lyrics."
+    },
+    {
+      "claim": "\"Got a whippin' for nothin', that's somethin' my brother did.\" The narrator took the punishment and kept quiet, and tells it with pride.",
+      "verdict": "supported",
+      "note": "The quote is exact. The reading rests on \"I never snitch.\" Removed the gendered \"he\" for the narrator."
+    },
+    {
+      "claim": "\"My brother gon' slide, but two of my brothers had died.\"",
+      "verdict": "supported",
+      "note": "Exact quote. The pride-and-grief reading is interpretation."
+    },
+    {
+      "claim": "Power knocked out, sleeping by the window, hungry.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Closing lines: \"I see you, I love you,\" two straps at dinner, a promise not to let anyone wither.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Mustafa the Poet is credited for spoken word; producers include DJ Khalil, Christo and Yuli.",
+      "verdict": "supported",
+      "note": "Matches the credits."
+    },
+    {
+      "claim": "One reviewer called the beat old-school.",
+      "verdict": "supported",
+      "note": "Ratings Game Music review: old-school instrumental."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2618,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015622,
+        "detail": "1109 in / 223 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0016297,
+        "detail": "1109 in / 250 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00079098,
+        "detail": "1109 in / 246 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13173400000000002,
+        "detail": "43842 in / 1405 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.069,
+        "detail": "5175 in / 2415 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.057044,
+        "detail": "6302 in / 4444 out"
+      }
+    ]
+  }
+}

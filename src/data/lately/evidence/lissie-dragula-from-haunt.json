@@ -1,0 +1,230 @@
+{
+  "spotifyId": "2GcHk7h9mWyhePvBBVv5Dh",
+  "reviewedAt": "2026-11-24T01:36:36.239Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/20079446"
+  },
+  "listening": "Pass 1:\nA female voice sings with a clear, strong, slightly breathy tone, using vibrato. The delivery is melodic and sustained. There are no harmonies.\n\nAcoustic guitar plays a consistent, strummed rhythm. A bass guitar plays a simple, sustained line. Drums provide a steady, driving beat with kick, snare, and cymbals.\n\nThe tempo is moderate. The groove feels steady and driving.\n\nThe production is clean and polished. The sound feels like a medium-sized room.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning and continuing to the end. Nothing enters, drops out, or builds within this section.\n\nPass 2:\nA single voice sings with a clear, strong, and slightly breathy character, with a vibrato that is sometimes wide. The delivery is melodic and sustained. The voice is accompanied by a sparse arrangement. A bass guitar plays a simple, sustained root note pattern. A clean electric guitar plays arpeggiated chords with a slight reverb. A drum kit plays a slow, steady beat with a kick drum and snare, and a ride cymbal marking the pulse. The tempo is slow, creating a spacious and deliberate groove. The production is clean and polished, with a sense of open space around the instruments. The texture is light. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nA female voice sings with a clear, strong, slightly breathy character, delivering the melody with a sustained, almost soaring quality. There are no harmonies.\n\nThe instrumentation includes a bass guitar playing a sustained, low-end line, and a drum kit providing a steady, driving beat with a prominent kick drum and snare. A clean electric guitar plays arpeggiated chords, adding a shimmering texture.\n\nThe tempo is moderate, and the groove feels steady and driving.\n\nThe production sounds polished, with a clear and present vocal. The overall texture is full but not overly dense. The room sounds like a medium-sized space with some natural reverb.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning and no significant changes in dynamics or instrumentation.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Lissie's \"Dragula\" is a cover of Rob Zombie's song, made for the horror film Haunt.",
+        "source": "https://www.lpm.org/music/2019-09-24/lissie-dragula"
+      },
+      {
+        "claim": "The song is credited as written by Rob Zombie and Scott Humphrey and performed by Lissie in the Haunt soundtrack listing.",
+        "source": "https://m.imdb.com/title/tt6535880/soundtrack"
+      },
+      {
+        "claim": "Lionboy Records released the cover as a digital single on September 13, 2019, the same day Haunt opened.",
+        "source": "https://filmmusicreporter.com/2019/09/13/lissies-dragula-cover-from-haunt-released/"
+      },
+      {
+        "claim": "Lissie said she was honored that the Haunt directors asked her to cover the song. She said they come from her hometown area, the Quad Cities.",
+        "source": "https://fullinbloom.com/lissie-covers-rob-zombies-dragula-for-new-film-haunt-listen/"
+      },
+      {
+        "claim": "Lissie thanked Lance at Humans Win! Recording Studio for creating the track with her.",
+        "source": "https://fullinbloom.com/lissie-covers-rob-zombies-dragula-for-new-film-haunt-listen/"
+      },
+      {
+        "claim": "Haunt directors Scott Beck and Bryan Woods said they had wanted to work with Lissie for years. They said she crafted the cover with Lance Conrad at Humans Win! Recording Studio.",
+        "source": "https://www.quadcities.com/spotlight/event-spotlight/movies/beck-and-woods/quad-cities-lissie-joins-beck-and-woods-for-haunt-soundtrack/"
+      },
+      {
+        "claim": "Her cover plays over the end credits of Haunt and is a softer, slower, acoustic take on the original.",
+        "source": "https://smithsverdict.com/2022/04/"
+      },
+      {
+        "claim": "Haunt is written and directed by Scott Beck and Bryan Woods, the writers of A Quiet Place, and was executive produced by Eli Roth.",
+        "source": "https://halloweendailynews.com/2019/09/lissie-dragula-haunt-soundtrack/"
+      },
+      {
+        "claim": "Lissie (Elisabeth Maurus) was born in 1982 in Rock Island, Illinois. Her debut album Catching a Tiger came out in 2010, and her 2018 album Castles was a UK Top Ten record.",
+        "source": "https://www.allmusic.com/artist/lissie-mn0000810515"
+      },
+      {
+        "claim": "Lissie also appeared in Twin Peaks season 3, performing \"Wild West\", and she released a covers EP, Thank You To The Flowers, in 2020.",
+        "source": "https://www.bandsintown.com/e/1034544304-lissie-at-the-acorn"
+      }
+    ],
+    "lineage": "A stripped-back, ethereal acoustic reinterpretation of a 1998 industrial-metal classic, in the tradition of slowed-down cover versions used over horror-film end credits, coming from a Midwestern folk-rock/Americana singer-songwriter.",
+    "genres": [
+      "folk rock",
+      "indie folk",
+      "americana"
+    ]
+  },
+  "draft": "**Dragula** was built to stomp. In Lissie's hands it glides. The words haven't changed. A dead thing still narrates, still goes digging through ditches and burning through witches, still slams into the back of its hot rod. But the voice delivering them is clear, strong and a little breathy, holding each note long with a vibrato that widens as it goes. The menace hasn't been removed. It's been made to sound beautiful, and that's harder to shake.\n\nThe song is Rob Zombie's, written with Scott Humphrey, and Lissie recorded it for Haunt, the horror film by Scott Beck and Bryan Woods, the writers of A Quiet Place. Her version plays over the end credits, a softer, slower take on the original. It belongs to a tradition horror fans know well: once the screaming is done, the familiar song comes back hushed and strange, and the dread lingers into the lights coming up. The job has a hometown thread too. Beck and Woods come from the Quad Cities, the same area as Lissie, who was born in Rock Island, Illinois. She said she was honored they asked, and they said they'd wanted to work with her for years. She built the track with Lance Conrad at Humans Win! Recording Studio.\n\nThe arrangement stays out of the way. A bass holds simple, sustained notes. A clean electric guitar picks out arpeggiated chords with some reverb on them. The drums keep a steady kick-and-snare pulse that moves the song forward without hurrying it. The production is polished and open, with room around every instrument, and there are no harmonies, so the single voice carries everything. That plainness is the trick. Nothing in the sound winks at you.\n\nZombie's lyrics are pure monster brag, a catalog of things the narrator has become: the sky, the pool, the rat. \"Dead I am the sky, watchin' angels cry\" sounds gloating when it's barked. Sung this sustained and melodic, it sounds closer to grief, or to a calm that's scarier than grief. The best line is \"Tender is the fur, dyin' as you purr,\" and Lissie seems to have built the whole cover around it, tenderness and killing in the same breath, neither one cancelling the other. The final stretch repeats the coaxing \"do it baby\" and the command \"Burn like an animal,\" and a voice this warm turns the order into an invitation. That's the unsettling part. The narrator isn't raging. It's enjoying itself, and it wants company.\n\nThe cover lets you feel what a monster might feel from the inside, unhurried and almost loving, and the sweetness is what keeps it in your head after the credits roll.",
+  "factCheck": [
+    {
+      "claim": "Dragula 'was built to stomp'; Lissie's version 'glides'",
+      "verdict": "supported",
+      "note": "Opinion framing, backed by the cover being a softer, slower take on the original (an industrial-metal song)."
+    },
+    {
+      "claim": "A dead thing narrates, digs through ditches, burns through witches, slams in the back of its Dragula",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "'its hot rod'",
+      "verdict": "removed",
+      "note": "The lyrics only say 'Dragula'. Nothing identifies it as a hot rod."
+    },
+    {
+      "claim": "Voice is clear, strong, a little breathy",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Holds each note long, with vibrato that widens as it goes",
+      "verdict": "corrected",
+      "note": "Sustained, melodic delivery is supported. Vibrato appears in two passes, only as 'sometimes wide'. 'Widens as it goes' implies a progression and was dropped."
+    },
+    {
+      "claim": "Song is Rob Zombie's, written with Scott Humphrey; Lissie recorded it for Haunt",
+      "verdict": "supported",
+      "note": "Credits and context confirmed."
+    },
+    {
+      "claim": "Haunt is by Scott Beck and Bryan Woods, writers of A Quiet Place",
+      "verdict": "supported",
+      "note": "Confirmed."
+    },
+    {
+      "claim": "Her version plays over the end credits, a softer, slower take",
+      "verdict": "supported",
+      "note": "Confirmed."
+    },
+    {
+      "claim": "A tradition horror fans know well: screaming done, familiar song returns hushed, dread lingers as lights come up",
+      "verdict": "corrected",
+      "note": "Slowed-down covers over horror end credits are supported as a tradition. The 'horror fans know well' and dread-into-the-lights flourish were softened to interpretation."
+    },
+    {
+      "claim": "Beck and Woods come from the Quad Cities, same area as Lissie; she was born in Rock Island, Illinois",
+      "verdict": "supported",
+      "note": "Lissie said they come from her hometown area. Birthplace confirmed."
+    },
+    {
+      "claim": "She said she was honored they asked; they said they'd wanted to work with her for years",
+      "verdict": "supported",
+      "note": "Confirmed."
+    },
+    {
+      "claim": "She built the track with Lance Conrad at Humans Win! Recording Studio",
+      "verdict": "supported",
+      "note": "Confirmed by the directors' statement and Lissie's thanks."
+    },
+    {
+      "claim": "Bass holds simple, sustained notes",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Clean electric guitar picks out arpeggiated chords with some reverb on them",
+      "verdict": "corrected",
+      "note": "Clean electric arpeggios appear in two passes. Reverb on the guitar appears in only one, so it was dropped."
+    },
+    {
+      "claim": "Drums keep a steady kick-and-snare pulse",
+      "verdict": "supported",
+      "note": "All passes agree on steady kick and snare."
+    },
+    {
+      "claim": "Production is polished and open, with room around every instrument",
+      "verdict": "corrected",
+      "note": "Clean and polished is supported. 'Open space around every instrument' appears in only one pass and was removed."
+    },
+    {
+      "claim": "No harmonies, single voice carries everything",
+      "verdict": "supported",
+      "note": "Two passes say no harmonies and a third says a single voice."
+    },
+    {
+      "claim": "Quote: 'Dead I am the sky, watchin' angels cry'",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Quote: 'Tender is the fur, dyin' as you purr'",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Quote: 'Burn like an animal' and repeated 'do it baby'",
+      "verdict": "supported",
+      "note": "Exact match; the repetition is visible in the lyric structure."
+    },
+    {
+      "claim": "Lyric is a catalog of things the narrator has become: the sky, the pool, the rat",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The line 'sounds gloating when it's barked'",
+      "verdict": "corrected",
+      "note": "Nothing describes how the original is sung. It was reframed as how the line reads on the page."
+    },
+    {
+      "claim": "Lissie 'seems to have built the whole cover around' the fur line",
+      "verdict": "corrected",
+      "note": "This claimed intent. It was recast as the critic's reading of where the cover's approach shows."
+    },
+    {
+      "claim": "'a voice this warm'",
+      "verdict": "corrected",
+      "note": "'Warm' is not in the listening notes. It was replaced with 'clear and breathy'."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2362,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013629,
+        "detail": "1103 in / 144 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014004,
+        "detail": "1103 in / 159 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00051693,
+        "detail": "1103 in / 138 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.127936,
+        "detail": "42398 in / 1314 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052176,
+        "detail": "3584 in / 1892 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052796,
+        "detail": "4743 in / 4331 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "spotifyId": "1Q8UhAL4Ebspx05qAFGyTn",
+  "reviewedAt": "2026-11-23T14:21:02.327Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/15227651"
+  },
+  "listening": "Pass 1:\nA male voice delivers a rap in a mid-range, with a slightly raw, unpolished character. The delivery is rhythmic and conversational, with some spoken-word elements. There are no harmonies.\n\nThe tempo is moderate, with a laid-back, steady groove. The main instruments are a synth bass, playing a simple, repetitive line, and a drum machine providing a basic hip-hop beat with a prominent snare. A high-pitched synth melody enters and drops out, playing a short, repetitive phrase.\n\nThe production sounds dry, with minimal reverb, creating an intimate, close-up feel. The texture is clean and clear, with a polished, modern sound.\n\nThe arrangement is sparse. The synth bass and drum machine establish the groove from the beginning. The high-pitched synth melody enters briefly, then drops out, returning later in the excerpt. The vocals are present throughout.\n\nPass 2:\nA male voice delivers a rap in Arabic, then switches to English. The voice is clear and present, with a slightly dry, intimate character. He uses a rhythmic, spoken delivery, with some melodic inflection. There are no harmonies.\n\nThe tempo is moderate, with a laid-back, slightly swung groove. A simple, dry drum machine beat provides the rhythmic foundation, featuring a snare on beats two and four. A low, sustained synth bass provides a harmonic anchor. A clean, plucked electric guitar plays a simple, repetitive arpeggiated figure.\n\nThe production is clean and polished, with a close-miked vocal sound. The overall texture is sparse and open.\n\nThe excerpt begins with the full arrangement. The drum machine drops out briefly around the 0:09 mark, leaving only the bass, guitar, and vocals, before re-entering. The vocals switch from Arabic to English around 0:21.\n\nPass 3:\nThe excerpt features a male voice rapping over a sparse, mid-tempo beat. The voice is clear and direct, with a conversational delivery. There are no harmonies.\n\nThe instrumentation includes a simple, dry drum machine beat with a prominent kick and snare. A low, sustained synth bass provides a rhythmic foundation. A clean, plucked synth melody plays a simple, repeating phrase.\n\nThe production is dry and intimate, with no discernible room sound. The texture is clean and polished.\n\nThe arrangement remains consistent throughout the excerpt. The beat, bass, and synth melody are present from the beginning and continue without significant changes. The rapping is continuous.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"I Guess\" by Saint Levant and Playyard was released as a single on December 12, 2022. It runs 2:38 and is credited to 2048 LLC.",
+        "source": "https://music.apple.com/us/album/i-guess-single/1659288366"
+      },
+      {
+        "claim": "Playyard is the artist and producer Henry Morris, who is Saint Levant's college friend (Saint Levant's real name is Marwan Abdelhamid).",
+        "source": "https://www.rollingstone.com/music/music-features/saint-levant-very-few-friends-i-guess-1234650481/"
+      },
+      {
+        "claim": "The track was produced by Henry Morris and Marwan Abdelhamid (Saint Levant). It uses live instrumentation, with a lead guitar riff and a drum beat that comes in later in the song.",
+        "source": "https://scenenoise.com/New-Music/Palestinian-Sensation-Saint-Levant-Releases-Sensual-track-I-Guess"
+      },
+      {
+        "claim": "Morris and Abdelhamid wrote the bass line first. They then sent it to Abdelhamid's father, who suggested sampling Timbaland and Elton John's 2007 collaboration \"2 Man Show.\"",
+        "source": "https://www.rollingstone.com/music/music-features/saint-levant-very-few-friends-i-guess-1234650481/"
+      },
+      {
+        "claim": "Rolling Stone describes the song as sensual and Brent Faiyaz-like. It is sung from the perspective of a man who questions whether his lover really knows him. Saint Levant called it a bedroom song.",
+        "source": "https://www.rollingstone.com/music/music-features/saint-levant-very-few-friends-i-guess-1234650481/"
+      },
+      {
+        "claim": "Playyard sings the opening hook. Saint Levant follows with his deep vocal register and multilingual delivery. The music video shows the two in record stores, on metro cars and performing on stage.",
+        "source": "https://scenenoise.com/New-Music/Palestinian-Sensation-Saint-Levant-Releases-Sensual-track-I-Guess"
+      },
+      {
+        "claim": "The song refers to Saint Levant leaving home for the US at 17, in the line about being 17 when he left home.",
+        "source": "https://envimedia.co/7-things-to-know-about-saint-levant/"
+      },
+      {
+        "claim": "The song came out shortly after Saint Levant's viral trilingual (English, French, Arabic) track \"Very Few Friends\" in November 2022.",
+        "source": "https://en.wikipedia.org/wiki/Saint_Levant"
+      },
+      {
+        "claim": "Saint Levant is a Palestinian singer-songwriter and rapper. He was born Marwan Abdelhamid on October 6, 2000, in Jerusalem, and is based in California. His stage name puns on Yves Saint Laurent and the Levant region.",
+        "source": "https://en.wikipedia.org/wiki/Saint_Levant"
+      },
+      {
+        "claim": "Saint Levant began listening to Arab hip-hop artists such as Shabjdeed and Marwan Moussa in his teens. Rolling Stone says his lyrics try to normalize taboo discussions of sex and mental health in the Middle East and North Africa.",
+        "source": "https://www.rollingstone.com/music/music-features/saint-levant-very-few-friends-i-guess-1234650481/"
+      }
+    ],
+    "lineage": "The song sits in a multilingual, genre-blending Palestinian diaspora hip-hop and R&B scene, influenced by Arab hip-hop artists like Shabjdeed and Marwan Moussa.",
+    "genres": [
+      "hip-hop",
+      "r&b",
+      "alternative rap"
+    ]
+  },
+  "draft": "The most telling moment in **I Guess** comes in Arabic. Saint Levant switches out of English to tell a lover, again and again, to take it easy and that he understands her. Then he raises the stakes and swears it on his mother's life. In the English verses he is sarcastic and guarded. When he reaches for his mother tongue, the defenses drop and he simply pleads to be believed.\n\nThe hook, which Playyard sings, sets up the hurt. Someone who left is out \"living it up\" and still thinking of the two of them in the club. She once said it was never enough. The reply is a shrug with a bruise under it: \"I guess, that I'on't know shit.\" It's pride talking, conceding the argument so he doesn't have to admit how much it stings. Rolling Stone describes the song as a man questioning whether his lover really knows him. Saint Levant called it a bedroom song, and the verses are frank about desire. But the ache keeps showing through. He says he has a lot on his mind and needs to share the pain. Twice he says he doesn't think she really wants him, and each time he leaves a door open after it.\n\nThen comes the line that widens the frame: \"I was 17 when I left home.\" That's Saint Levant's own story. He was born in Jerusalem and moved to the U.S. at 17, and he pictures himself setting out in Timberlands and headphones. All of a sudden the doubt about being known runs deeper than one relationship. Here is someone far from where he started, wondering if anyone has the full picture.\n\nThe track itself is spare and close. A synth bass and a dry drum machine with a firm snare hold a laid-back, unhurried groove. A short plucked melodic figure repeats on top, and Saint Levant and Playyard (producer Henry Morris, his college friend) built it around a lead guitar riff. Nothing is soaked in reverb, so the rapping sounds conversational, almost spoken across a pillow. Morris and Saint Levant wrote the bass line first. Saint Levant's father then suggested sampling Timbaland and Elton John's \"2 Man Show,\" and the closing refrain about having been around the world takes its shape from there, two friends making the most of a small setup.\n\nIt's easy to see why Rolling Stone heard Brent Faiyaz in it. The song also comes from a teenager who grew up on Arab rappers like Shabjdeed and Marwan Moussa. That background helps explain why the frankness about sex and pain doesn't seem forced. He's speaking plainly about the things that usually go unsaid.\n\nWhat sticks is how the song flips between two languages, a shrug in English and an oath in Arabic, so you can hear how badly he needs to be understood.",
+  "factCheck": [
+    {
+      "claim": "The key moment is in Arabic; Saint Levant tells a lover to take it easy and says he understands her, and swears on his mother's life",
+      "verdict": "supported",
+      "note": "Matches the Arabic lines ('على مهلك', 'أنا فاهمك', 'وحياة أمي'). The reading is interpretation. Saint Levant is credited as the rapper."
+    },
+    {
+      "claim": "He moves from English to Arabic; English verses are sarcastic and guarded",
+      "verdict": "supported",
+      "note": "The lyrics show both languages and Pass 2 hears Arabic and English. The tone is interpretation."
+    },
+    {
+      "claim": "Playyard sings the hook",
+      "verdict": "supported",
+      "note": "Scene Noise says Playyard sings the opening hook."
+    },
+    {
+      "claim": "Someone who left is out 'living it up'",
+      "verdict": "corrected",
+      "note": "The lyrics never say she left. Reworded to say she is out living it up."
+    },
+    {
+      "claim": "Quoted lines 'living it up', 'I guess, that I'on't know shit', 'I was 17 when I left home'",
+      "verdict": "supported",
+      "note": "All match the lyrics exactly."
+    },
+    {
+      "claim": "Rolling Stone describes the song as a man questioning whether his lover really knows him; Saint Levant called it a bedroom song",
+      "verdict": "supported",
+      "note": "Stated in the Rolling Stone item."
+    },
+    {
+      "claim": "He says he has a lot on his mind and needs to share the pain; twice says he doesn't think she really wants him, then leaves a door open",
+      "verdict": "supported",
+      "note": "Matches the lyrics, which repeat 'But if you do'."
+    },
+    {
+      "claim": "The 17 line is Saint Levant's own story; born in Jerusalem, moved to the US at 17",
+      "verdict": "supported",
+      "note": "Supported by the envimedia and Wikipedia items."
+    },
+    {
+      "claim": "Synth bass and dry drum machine with firm snare, laid-back groove",
+      "verdict": "supported",
+      "note": "Agreed across the passes."
+    },
+    {
+      "claim": "A short plucked melodic figure repeats",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say plucked and repeating, and Pass 1 describes a short repeated phrase. The instrument is left unspecified because the passes disagree (guitar vs. synth)."
+    },
+    {
+      "claim": "Saint Levant and Playyard built it around a lead guitar riff",
+      "verdict": "corrected",
+      "note": "The source says the track features a lead guitar riff. It also says the bass line was written first, so 'built it around' was wrong. Reworded."
+    },
+    {
+      "claim": "Playyard is producer Henry Morris, Saint Levant's college friend",
+      "verdict": "supported",
+      "note": "Rolling Stone."
+    },
+    {
+      "claim": "Nothing is soaked in reverb; close, dry, conversational vocal",
+      "verdict": "supported",
+      "note": "All three passes describe dry, intimate production."
+    },
+    {
+      "claim": "Morris and Saint Levant wrote the bass line first; his father suggested sampling Timbaland and Elton John's '2 Man Show'",
+      "verdict": "supported",
+      "note": "Rolling Stone."
+    },
+    {
+      "claim": "The closing refrain about being around the world takes its shape from the sample",
+      "verdict": "corrected",
+      "note": "'Closing' is a placement claim the packet can't support, and the link to the sample is stated too firmly. Reworded as a nod in the 'two-man show' lyric."
+    },
+    {
+      "claim": "Rolling Stone heard Brent Faiyaz in it",
+      "verdict": "supported",
+      "note": "Rolling Stone calls it Brent Faiyaz-like."
+    },
+    {
+      "claim": "The song comes from a teenager who grew up on Arab rappers like Shabjdeed and Marwan Moussa",
+      "verdict": "corrected",
+      "note": "He was born in 2000 and the song is from 2022, so he was not a teenager when he made it. He began listening to those artists in his teens. Reworded."
+    },
+    {
+      "claim": "The frankness about sex and pain doesn't seem forced; he speaks plainly about unsaid things",
+      "verdict": "supported",
+      "note": "Interpretation, backed by Rolling Stone saying his lyrics try to normalize taboo talk about sex and mental health."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.189,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014545,
+        "detail": "1100 in / 181 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013245,
+        "detail": "1100 in / 129 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001477,
+        "detail": "1100 in / 190 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.073734,
+        "detail": "19557 in / 1462 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.057756,
+        "detail": "3994 in / 2089 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053294,
+        "detail": "5172 in / 4295 out"
+      }
+    ]
+  }
+}

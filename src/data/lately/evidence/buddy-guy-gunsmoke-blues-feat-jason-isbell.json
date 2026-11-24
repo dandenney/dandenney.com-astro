@@ -1,0 +1,210 @@
+{
+  "spotifyId": "62QWywMNsKrR05lOSYUAzg",
+  "reviewedAt": "2026-11-23T14:36:24.331Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2019523"
+  },
+  "listening": "Pass 1:\nInstruments:\nElectric guitar plays a clean, arpeggiated riff with some vibrato. A bass guitar plays a walking line. Drums play a shuffle beat with a prominent snare and hi-hat. A second electric guitar plays a bluesy lead line with some bends.\n\nTempo and Groove:\nMedium tempo, with a relaxed, swinging blues shuffle feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy character. The delivery is conversational and soulful. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the clean electric guitar, bass, and drums. The lead electric guitar enters shortly after the first vocal line. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 2:\nInstruments:\nA clean electric guitar plays a bluesy riff with a slight tremolo. A bass guitar plays a walking line. Drums play a shuffle beat with a prominent snare. A second electric guitar plays a clean, sustained chord.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, bluesy shuffle.\n\nVocals:\nA male voice sings in a clear, slightly raspy character. The delivery is conversational and soulful. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, with a slight reverb suggesting a medium-sized room. The texture is polished.\n\nArrangement:\nThe excerpt begins with the full band. The lead vocal enters, followed by a second vocal line that mirrors the first. The second vocal drops out, and the lead vocal continues. The excerpt ends with the lead vocal and the full band.\n\nPass 3:\nInstruments:\nA clean electric guitar plays a bluesy riff with some vibrato. A bass guitar plays a walking line. Drums play a shuffle beat with a prominent snare. A second electric guitar plays a clean, arpeggiated line.\n\nTempo and Groove:\nThe tempo is medium-slow. The groove is a relaxed, swinging shuffle.\n\nVocals:\nThe lead vocalist has a gravelly, slightly raspy voice. The delivery is conversational and bluesy. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb, suggesting a medium-sized room. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the lead vocal, electric guitar, bass, and drums. The second electric guitar enters with an arpeggiated line. The lead vocal continues, with the instruments maintaining their parts.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Gunsmoke Blues\" was written by Tom Hambridge and Richard Fleming.",
+        "source": "https://www.deezer.com/en/album/340468817"
+      },
+      {
+        "claim": "The song was produced by Tom Hambridge, who also plays drums on it. Hambridge produced the album The Blues Don't Lie.",
+        "source": "https://www.discogs.com/release/24703280-Buddy-Guy-The-Blues-Dont-Lie"
+      },
+      {
+        "claim": "Personnel on the track: Buddy Guy (vocals, electric guitar), Jason Isbell (vocals, electric guitar), Tom Hambridge (drums), Reese Wynans (piano, Wurlitzer), Michael Rhodes (bass) and Rob McNelley (electric guitar).",
+        "source": "https://www.discogs.com/release/24703280-Buddy-Guy-The-Blues-Dont-Lie"
+      },
+      {
+        "claim": "The album sessions were recorded by Ducky Carlisle at Blackbird Studios in Nashville. Isbell's part was recorded separately by Casey Wasner at Purple House Studio in Leipers Fork, Tennessee.",
+        "source": "https://www.discogs.com/release/24703280-Buddy-Guy-The-Blues-Dont-Lie"
+      },
+      {
+        "claim": "The song is about gun violence and school shootings in the US. Guy and Isbell trade vocals and guitar licks, and both sing the refrain \"A million thoughts and prayers won't bring back anyone.\"",
+        "source": "https://www.stereogum.com/2196114/buddy-guy-gunsmoke-blues-feat-jason-isbell/music/"
+      },
+      {
+        "claim": "It was the lead single from Guy's 34th studio album, The Blues Don't Lie, released September 30, 2022 on RCA/Silvertone. That date was the 65th anniversary of Guy's arrival in Chicago from Baton Rouge.",
+        "source": "https://www.guitarworld.com/news/buddy-guy-gunsmoke-blues-jason-isbell"
+      },
+      {
+        "claim": "Isbell tweeted on release day that it was hard to believe he was on a song with Buddy Guy. He wrote that he couldn't imagine a higher honor and called it a great song.",
+        "source": "https://www.brooklynvegan.com/buddy-guy-shares-jason-isbell-duet-gunsmoke-blues-off-upcoming-album/"
+      },
+      {
+        "claim": "The Blues Don't Lie follows Guy's Grammy-winning 2018 album The Blues Is Alive and Well. Other guests on it include Mavis Staples, Elvis Costello, James Taylor, Bobby Rush and Wendy Moten.",
+        "source": "https://www.alligator.com/albums/Buddy-Guy---The-Blues-Dont-Lie-Double-Vinyl-LP/"
+      },
+      {
+        "claim": "Guy and Hambridge have worked together since the 2008 album Skin Deep. Hambridge co-wrote 13 of the originals on The Blues Don't Lie.",
+        "source": "https://www.chicagobluesguide.com/post/buddy-guy-the-blues-don-t-lie"
+      },
+      {
+        "claim": "Guy arrived in Chicago by train from Baton Rouge, Louisiana, in September 1957 with just his guitar and the clothes he was wearing.",
+        "source": "https://www.alligator.com/albums/Buddy-Guy---The-Blues-Dont-Lie-Double-Vinyl-LP/"
+      }
+    ],
+    "lineage": "A topical, slow-burning electric blues song in the Chicago blues tradition of Buddy Guy, paired with Americana/alt-country songwriter Jason Isbell.",
+    "genres": [
+      "electric blues",
+      "chicago blues",
+      "blues rock"
+    ]
+  },
+  "draft": "The first surprise is the groove. **Gunsmoke Blues** is about school shootings, and it swings: a walking bass line, a shuffle with the snare up front, two clean electric guitars, a medium tempo that never hurries. That ease is deliberate. The blues has always carried bad news at a walking pace, and here the steadiness sounds like exhaustion, the sound of people who have heard this story too many times to raise their voices about it.\n\nTom Hambridge and Richard Fleming wrote it in the oldest shape the form has, the AAB verse: state the line, state it again, then answer it. \"Trouble down at the high school\" comes twice before the third line explains how most people meet these events, in the morning paper and on the evening news. The repetition does double duty. It's the blues tradition, and it's also the news cycle, the same headline coming back around.\n\nThe verses move on purpose from a school to a church to a kitchen. The church verse lands hardest. It ends flat on \"God's people ain't here no more,\" and nothing softens it. Then a mother notices her son \"ain't acting right\" and gets a worried feeling. The song never says whether he's grieving, scared, or something worse. That gap holds the dread of a parent who can't name what she's afraid of.\n\nThe last verse turns on the people watching. Some blame the shooter, some blame the gun, and the song won't referee, because the bullets keep coming either way. Then comes the line the whole track leans on: \"A million thoughts and prayers / Won't bring back anyone.\" Buddy Guy and Jason Isbell both sing it, and the lyric keeps circling back to it, with someone calling out for it to be said again. It's anger, but tired anger, the kind that has stopped trying to be polite.\n\nThe pairing tells its own story. Guy came to Chicago from Baton Rouge in 1957 with his guitar and the clothes he had on, and this was the lead single from his 34th album, released on the 65th anniversary of that arrival. Isbell comes from the Americana side. He recorded his vocal and guitar separately in Leipers Fork, Tennessee, and called the duet the highest honor he could imagine. The band cut their parts at Blackbird in Nashville: Hambridge producing and on drums, Reese Wynans on piano and Wurlitzer, Michael Rhodes on bass, Rob McNelley on guitar. The vocals are conversational and a little raspy, set in clean, moderate room reverb. If anything, the polish keeps the rage tidier than the words are.\n\nIt sticks because the song won't shout, and that calm makes you hear how ordinary the grief has become.",
+  "factCheck": [
+    {
+      "claim": "The song is about school shootings",
+      "verdict": "supported",
+      "note": "Sources describe it as about gun violence and school shootings in the US."
+    },
+    {
+      "claim": "Walking bass line, shuffle with prominent snare, clean electric guitars, medium tempo",
+      "verdict": "supported",
+      "note": "All three passes agree on walking bass, shuffle with prominent snare, clean electric guitars and a medium/moderate tempo. The draft's 'two' guitars was changed to plain 'clean electric guitars', because the personnel list names more than two guitarists."
+    },
+    {
+      "claim": "The blues has always carried bad news at a walking pace",
+      "verdict": "removed",
+      "note": "Unsupported claim about the history of the genre."
+    },
+    {
+      "claim": "Tom Hambridge and Richard Fleming wrote it",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "It is written in 'the oldest shape the form has, the AAB verse'",
+      "verdict": "corrected",
+      "note": "'Oldest shape' is an unsupported history claim. The repeat-then-answer pattern is visible in the lyrics, so only that is kept."
+    },
+    {
+      "claim": "'Trouble down at the high school' comes twice before the third line explains how people meet these events",
+      "verdict": "corrected",
+      "note": "The quote is exact. The newspaper and news lines are the closing pair of the verse, not a single third line, so the wording was fixed."
+    },
+    {
+      "claim": "Verses move on purpose from a school to a church to a kitchen",
+      "verdict": "corrected",
+      "note": "No kitchen appears in the lyrics, and 'on purpose' asserts intent. Changed to a house of worship and a mother and son."
+    },
+    {
+      "claim": "\"God's people ain't here no more\"",
+      "verdict": "supported",
+      "note": "Exact lyric. Its position at the end of the verse is shown by the lyric structure."
+    },
+    {
+      "claim": "A mother notices her son 'ain't acting right' and gets a worried feeling",
+      "verdict": "supported",
+      "note": "Matches the lyric. The quoted fragment was turned into a paraphrase to stay within the three-line quote limit."
+    },
+    {
+      "claim": "Some blame the shooter, some blame the gun, but the bullets keep coming",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"A million thoughts and prayers / Won't bring back anyone\" sung by both Guy and Isbell",
+      "verdict": "supported",
+      "note": "The lyric is exact, and sources say both sing the refrain. The quote was trimmed to one line to meet the quote limit."
+    },
+    {
+      "claim": "Someone calls out for it to be said again",
+      "verdict": "supported",
+      "note": "The lyrics include '(Say that again)'."
+    },
+    {
+      "claim": "Guy came to Chicago from Baton Rouge in 1957 with his guitar and the clothes he had on",
+      "verdict": "supported",
+      "note": "Sources say September 1957, by train."
+    },
+    {
+      "claim": "Lead single from his 34th album, released on the 65th anniversary of that arrival",
+      "verdict": "corrected",
+      "note": "The 34th studio album, The Blues Don't Lie, was released on the anniversary, not the single. Wording clarified."
+    },
+    {
+      "claim": "Isbell comes from the Americana side",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Isbell recorded his vocal and guitar separately in Leipers Fork, Tennessee",
+      "verdict": "corrected",
+      "note": "Sources say his 'part' was recorded separately at Purple House Studio in Leipers Fork. Changed to 'part'."
+    },
+    {
+      "claim": "Isbell called the duet the highest honor he could imagine",
+      "verdict": "corrected",
+      "note": "He wrote that he couldn't imagine a higher honor. Reworded closer to that."
+    },
+    {
+      "claim": "The band cut their parts at Blackbird in Nashville",
+      "verdict": "corrected",
+      "note": "Sources say the album sessions were recorded there, so the wording was changed to the sessions."
+    },
+    {
+      "claim": "Hambridge produced and played drums; Wynans piano/Wurlitzer; Rhodes bass; McNelley guitar",
+      "verdict": "supported",
+      "note": "Matches the personnel list."
+    },
+    {
+      "claim": "Vocals are conversational and a little raspy, in clean, moderate room reverb",
+      "verdict": "supported",
+      "note": "All three passes agree on conversational and raspy vocals, a clean sound and medium-room reverb."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2961,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014544,
+        "detail": "1108 in / 180 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014594,
+        "detail": "1108 in / 182 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014544,
+        "detail": "1108 in / 180 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15389,
+        "detail": "54025 in / 1584 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.074476,
+        "detail": "3909 in / 2942 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06335,
+        "detail": "5070 in / 5321 out"
+      }
+    ]
+  }
+}

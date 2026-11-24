@@ -1,0 +1,200 @@
+{
+  "spotifyId": "4Nwrh5BlZ8I31znYQULS7G",
+  "reviewedAt": "2026-11-24T01:38:56.477Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5006420"
+  },
+  "listening": "Pass 1:\nA male voice sings in a high register, with a breathy, sustained delivery, often using falsetto. The vocal is doubled, creating a harmony. The production is clean and polished, with a sense of space.\n\nA piano plays arpeggiated chords, providing a gentle, flowing accompaniment. A string section enters, playing sustained chords that swell and recede, adding to the expansive feel. The tempo is slow, creating a contemplative groove.\n\nThe arrangement builds subtly, with the strings entering and increasing in volume, supporting the vocal. The piano remains consistent throughout.\n\nPass 2:\nA male voice sings in a high register, with a breathy, sustained delivery. He sings a melody with a narrow range, often repeating notes. There are no harmonies.\n\nA piano plays arpeggiated chords, providing a gentle, flowing accompaniment. A string section enters, playing sustained, mournful chords. The strings swell and recede, creating a sense of ebb and flow.\n\nThe tempo is slow, creating a contemplative and spacious feel. The groove is loose, with no discernible percussion.\n\nThe production is clean and polished, with a sense of spaciousness. The instruments are well-defined, and the vocals are prominent. The overall texture is smooth and ethereal.\n\nThe arrangement builds gradually, with the piano establishing the harmonic foundation, followed by the entrance of the strings, and then the vocals. The strings swell and recede, creating dynamic shifts within the excerpt.\n\nPass 3:\nA male voice sings in a high register, with a breathy, sustained delivery. He sings a melody with a narrow range, often repeating notes. The vocal is doubled, creating a subtle harmony.\n\nA piano plays a slow, arpeggiated chord progression, providing the harmonic foundation. Its sound is clean and sustained. A string section enters, playing long, sustained notes that swell and recede, adding a rich, warm texture. The strings are bowed smoothly.\n\nThe tempo is slow, creating a deliberate and expansive feel. The groove is absent, with no percussive elements. The production is polished, with a sense of open space around the instruments. The texture is smooth and blended.\n\nThe excerpt begins with the piano and vocals. The strings enter gradually, building in volume and presence. No elements drop out within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Spectre\" is a song by the English rock band Radiohead. It was produced by Nigel Godrich.",
+        "source": "https://en.wikipedia.org/wiki/Spectre_(song)"
+      },
+      {
+        "claim": "Radiohead recorded \"Spectre\", an orchestral ballad, for the 2015 James Bond film Spectre after their earlier submission \"Man of War\" was rejected.",
+        "source": "https://en.wikipedia.org/wiki/Spectre_(song)"
+      },
+      {
+        "claim": "Radiohead released \"Spectre\" as a free download on SoundCloud on Christmas Day 2015. It was their first release since the 2011 single \"The Daily Mail\" / \"Staircase\".",
+        "source": "https://en.wikipedia.org/wiki/Spectre_(song)"
+      },
+      {
+        "claim": "Thom Yorke said on Twitter that the band was asked to write a tune for the Bond movie Spectre and that it \"didn't work out\". He posted a clip of the track as the year closed.",
+        "source": "https://www.irishtimes.com/culture/music/radiohead-song-was-rejected-as-james-bond-theme-1.2477674"
+      },
+      {
+        "claim": "Jonny Greenwood said the song was rejected for being \"too dark\". Sam Smith's \"Writing's on the Wall\" became the film's theme.",
+        "source": "https://theworldofjamesbondblog.wordpress.com/2016/11/30/spectre-unused-song/"
+      },
+      {
+        "claim": "Nigel Godrich called the Bond experience a \"real waste of energy\" that disrupted work on A Moon Shaped Pool.",
+        "source": "https://en.wikipedia.org/wiki/Spectre_(song)"
+      },
+      {
+        "claim": "The song opens with minor piano chords over strings and synthesisers, and Yorke sings in falsetto.",
+        "source": "https://www.irishtimes.com/culture/music/radiohead-song-was-rejected-as-james-bond-theme-1.2477674"
+      },
+      {
+        "claim": "Pitchfork named \"Spectre\" Best New Music. It called the song one of the finest Radiohead songs in some years.",
+        "source": "https://en.wikipedia.org/wiki/Spectre_(song)"
+      },
+      {
+        "claim": "\"Spectre\" appeared as a B-side on the vinyl single of \"Burn the Witch\".",
+        "source": "https://en.wikipedia.org/wiki/Burn_the_Witch_(Radiohead_song)"
+      },
+      {
+        "claim": "Radiohead's Bond work interrupted sessions for A Moon Shaped Pool, which was produced by Nigel Godrich. That album's strings and choir were arranged by Jonny Greenwood and played by the London Contemporary Orchestra.",
+        "source": "https://culture.fandom.com/wiki/A_Moon_Shaped_Pool"
+      }
+    ],
+    "lineage": "The song sits in the tradition of orchestral Bond-theme ballads. Sources say it has a sombre, sweeping grandeur that \"might have fit well into the Bond song canon\", and it comes out of the string-and-piano work Radiohead did around A Moon Shaped Pool.",
+    "genres": [
+      "art rock",
+      "orchestral ballad",
+      "alternative rock"
+    ]
+  },
+  "draft": "The first thing Thom Yorke sings on **Spectre** is a confession, not a threat: \"I'm lost, I'm a ghost.\" There's no swagger in it. It comes in falsetto, high and breathy, each note held long while the melody barely moves, circling a few pitches like someone pacing a small room. Underneath, minor piano chords roll out in slow arpeggios. Then the strings come in and start to breathe, swelling and pulling back. There are no drums. Nothing pushes the song forward. It just hangs in the air.\n\nThat stillness is part of why it never became a Bond theme. Radiohead wrote it for the 2015 film after an earlier try, \"Man of War,\" was turned down, and this one didn't make it either. Jonny Greenwood said it was rejected for being \"too dark,\" and Sam Smith's \"Writing's on the Wall\" took the slot. Nigel Godrich, who produced it, later called the whole episode a \"real waste of energy\" that cut into work on A Moon Shaped Pool. The band gave the song away on SoundCloud on Christmas Day, their first new music since 2011, and Pitchfork called it one of their finest songs in years.\n\nThe darkness Greenwood mentioned lives less in the arrangement than in where the song stands. The big orchestral Bond ballad usually sings about danger from a safe height. This one sings from inside it. The narrator is emptied out and occupied by something else, with a hunger that burns through like a bullet. Rumour, suspicion, anger and fear pile up like symptoms. Against all of that there's exactly one solid thing, a kiss: \"Is when you put your lips to me.\" It's the tenderest line here and the shakiest one, because a few lines later fear has the narrator second-guessing even love.\n\nWatch what happens when the lines come back. They return almost word for word, but \"could see\" turns into \"can see.\" Where the lover's lips used to be, the answer is now \"Spectre has come for me.\" The one truth has changed hands. Love was what the narrator held onto. By the last line, the only sure thing left is the thing that's hunting them. Yorke doesn't raise his voice for it. The doubled vocal stays soft, and the strings keep rising and falling, as if the narrator had known all along this was coming.\n\nThat calm is where the grief sits. A rejected spy theme turns out to be a quiet song about losing your grip on the one person who made sense, and it holds you there with the narrator, unafraid and undone at once, as the dark finally arrives.",
+  "factCheck": [
+    {
+      "claim": "The song opens with the lyric \"I'm lost, I'm a ghost\" and Thom Yorke sings it",
+      "verdict": "supported",
+      "note": "First line of the lyrics. Yorke's vocal is confirmed by the researched facts."
+    },
+    {
+      "claim": "Falsetto, high and breathy, held notes, narrow melody circling a few pitches",
+      "verdict": "supported",
+      "note": "High, breathy, sustained is in all three passes. Narrow range with repeated notes is in passes 2 and 3. Falsetto is in pass 1 and the Irish Times fact."
+    },
+    {
+      "claim": "Minor piano chords in slow arpeggios",
+      "verdict": "supported",
+      "note": "Arpeggiated piano is in all passes, slow tempo in passes 2 and 3, and minor chords in the Irish Times fact."
+    },
+    {
+      "claim": "\"Then the strings come in\" (sequence), swelling and pulling back",
+      "verdict": "corrected",
+      "note": "Swelling and receding strings are in all passes. The 'then' implies a place in the song, so the sequencing was removed."
+    },
+    {
+      "claim": "There are no drums",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 both say there is no percussion."
+    },
+    {
+      "claim": "The stillness is part of why it never became a Bond theme",
+      "verdict": "corrected",
+      "note": "The only sourced reason is Greenwood's 'too dark'. The causal claim was removed and the sourced fact kept."
+    },
+    {
+      "claim": "Written for the 2015 Bond film after \"Man of War\" was rejected; this one didn't make it either",
+      "verdict": "supported",
+      "note": "Researched facts, plus Yorke saying it 'didn't work out'."
+    },
+    {
+      "claim": "Greenwood said it was rejected for being \"too dark\"; Sam Smith's \"Writing's on the Wall\" took the slot",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Godrich produced it and called the episode a \"real waste of energy\" that cut into A Moon Shaped Pool",
+      "verdict": "supported",
+      "note": "Matches the researched facts: the Bond work disrupted the album."
+    },
+    {
+      "claim": "Given away on SoundCloud on Christmas Day, first new music since 2011",
+      "verdict": "corrected",
+      "note": "The sourced fact is 'first release since the 2011 single'. Wording adjusted."
+    },
+    {
+      "claim": "Pitchfork called it one of their finest songs in years",
+      "verdict": "supported",
+      "note": "Pitchfork named it Best New Music and called it one of the finest Radiohead songs in some years."
+    },
+    {
+      "claim": "The big orchestral Bond ballad usually sings about danger from a safe height",
+      "verdict": "removed",
+      "note": "A generalization about the Bond-ballad tradition with no support."
+    },
+    {
+      "claim": "Narrator is emptied out and occupied; hunger burns like a bullet; rumour, suspicion, anger and fear pile up",
+      "verdict": "supported",
+      "note": "Reading of 'Dispossessed, taken host', 'My hunger burns a bullet hole', and the lyrics on rumours, anger and fear."
+    },
+    {
+      "claim": "Quote: \"Is when you put your lips to me\"",
+      "verdict": "supported",
+      "note": "Exact match with the lyrics."
+    },
+    {
+      "claim": "Fear has the narrator second-guessing love a few lines later",
+      "verdict": "corrected",
+      "note": "The lyric is 'Fear puts a spell on us / Always second-guessing love', so the wording was changed to 'them' rather than a lone narrator."
+    },
+    {
+      "claim": "Lines return with \"could see\" becoming \"can see\" and ending on \"Spectre has come for me\"",
+      "verdict": "supported",
+      "note": "Exact lyric changes. The last line comes from the lyric structure."
+    },
+    {
+      "claim": "Yorke doesn't raise his voice at the end; the doubled vocal stays soft and the strings keep rising and falling by the last line",
+      "verdict": "corrected",
+      "note": "Doubled vocal (passes 1 and 3), breathy delivery, and swelling strings are supported. Tying them to the final line is a positional claim, so the sound description was made general."
+    },
+    {
+      "claim": "A rejected spy theme turns out to be a quiet song",
+      "verdict": "corrected",
+      "note": "'Quiet' is not in the listening notes. Changed to 'slow', which is supported."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2123,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00046198,
+        "detail": "1097 in / 118 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014511,
+        "detail": "1097 in / 180 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014286,
+        "detail": "1097 in / 171 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.08310000000000001,
+        "detail": "24265 in / 1457 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.072208,
+        "detail": "3322 in / 2946 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053668,
+        "detail": "4444 in / 4478 out"
+      }
+    ]
+  }
+}

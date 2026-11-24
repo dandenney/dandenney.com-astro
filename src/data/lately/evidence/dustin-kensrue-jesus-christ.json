@@ -1,0 +1,205 @@
+{
+  "spotifyId": "6EkjhQji4AS8uMZTigtaPN",
+  "reviewedAt": "2026-11-24T01:17:32.296Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8524760"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar is strummed with a pick. A bass guitar plays a walking line. Drums enter at 0:15, playing a simple rock beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving rock feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy baritone. The delivery is earnest and direct. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, with a close-miked feel. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter at 0:15, adding rhythmic drive. The arrangement remains consistent throughout the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar is strummed with a pick. A bass guitar plays a simple, sustained line. Drums enter at 0:15 with a kick, snare, and hi-hat pattern.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, driving feel, with the drums providing a steady, forward momentum.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is earnest and slightly raw, with a hint of gravel in the tone. There are no harmonies.\n\nProduction:\nThe production sounds relatively dry, with a close-miked feel. The texture is clean and direct, with a raw, unpolished quality.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. At 0:15, drums enter, adding a rhythmic foundation. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar is strummed with a pick. A bass guitar plays a simple, low line. Drums enter at 0:14 with a kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a straight feel, with a driving, steady rhythm once the drums enter.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is earnest and direct. There are no harmonies.\n\nProduction:\nThe sound is dry and close-miked, with a raw, unpolished texture. There is no discernible room sound.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. The drums enter at 0:14, establishing a full band sound. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Dustin Kensrue's cover of \"Jesus Christ\" is track 4 on Thoughts That Float on a Different Blood, released March 18, 2016 by Vagrant Records, and runs 3:37.",
+        "source": "https://www.shazam.com/song/1490696476/jesus-christ?tab=lyrics"
+      },
+      {
+        "claim": "The song is a cover of Brand New's \"Jesus Christ\". The Discogs credits list Jesse Lacey as the writer.",
+        "source": "https://www.discogs.com/release/8361062-Dustin-Kensrue-Thoughts-That-Float-On-A-Different-Blood"
+      },
+      {
+        "claim": "Brand New's original \"Jesus Christ\" is from The Devil and God Are Raging Inside Me and was released as a single on March 26, 2007. Kensrue covered it in 2016 for Thoughts That Float on a Different Blood.",
+        "source": "https://en.wikipedia.org/wiki/Jesus_Christ_(Brand_New_song)"
+      },
+      {
+        "claim": "The album is a 10-track live album made up entirely of covers. It was recorded over two nights in December 2015 in Santa Ana, California.",
+        "source": "https://diffuser.fm/dustin-kensrue-covers-album/"
+      },
+      {
+        "claim": "The album was recorded live at the Constellation Room in Santa Ana, California. The performances feature only an acoustic guitar.",
+        "source": "https://exclaim.ca/music/article/dustin_kensrue-thoughts_that_float_on_a_different_blood"
+      },
+      {
+        "claim": "Brian Eichelberger is credited as engineer and mixer, and Troy Glessner as mastering engineer. The record was mastered at Spectre Mastering.",
+        "source": "https://www.discogs.com/release/8361062-Dustin-Kensrue-Thoughts-That-Float-On-A-Different-Blood"
+      },
+      {
+        "claim": "Streaming credits list Kensrue as the only performer on this track, as composer and vocalist.",
+        "source": "https://www.qobuz.com/au-en/album/thoughts-that-float-on-a-different-blood-dustin-kensrue/yyff10zg8ocda"
+      },
+      {
+        "claim": "Kensrue said he has long done solo acoustic covers. He said covering songs is a good exercise because you study how others structure them. He also said he likes leaving live records raw.",
+        "source": "https://stitchedsound.com/interview-with-dustin-kensrue/"
+      },
+      {
+        "claim": "The album is Kensrue's fifth solo release and his first live album. It was followed by the Record Store Day EP More Thoughts That Float on a Different Blood on November 25, 2016.",
+        "source": "https://en.wikipedia.org/wiki/Thoughts_That_Float_on_a_Different_Blood"
+      },
+      {
+        "claim": "Kensrue is the lead singer, lyricist and guitarist of the Irvine, California band Thrice. His solo debut Please Come Home came out in 2007, and Thrice's reunion album To Be Everywhere Is to Be Nowhere followed in May 2016.",
+        "source": "https://www.amazon.com/Thoughts-That-Float-Different-Blood/dp/B0F1B84Z5Y"
+      }
+    ],
+    "lineage": "A stripped-down acoustic cover of a Brand New emo song, made by a post-hardcore frontman working in a singer-songwriter and folk mode on a live covers record.",
+    "genres": [
+      "acoustic",
+      "singer-songwriter",
+      "indie folk"
+    ]
+  },
+  "draft": "The song opens on a blasphemy that turns into a prayer partway through the first line. **Jesus Christ** starts as the kind of thing you mutter at a pretty face across a room, then becomes the person being spoken to. By the second verse the narrator is asking Him directly, \"So what did you do those three days you were dead?\" It's a wisecrack and a real question at once, and the song never settles which one it means.\n\nJesse Lacey wrote it for Brand New's *The Devil and God Are Raging Inside Me*, and it came out as a single in 2007. That record was where emo's second wave grew up and got frightened. The lyric is lonely in a plain way: nobody in the bed, the night hard to get through, the fear of dying alone and arriving somewhere you won't know anyone. The narrator isn't scared of death, only of what comes after, and the reasoning is clear: \"my bright, is far too slight, to hold back all my dark.\" Under the jokes is someone who has done the moral math and doesn't like the answer.\n\nThe confessions get sharper from there. The narrator admits to sharpening a \"lying technique,\" then makes the song's ugliest and most honest admission: \"I'm scared I'll get scared.\" That's the reason, he says, he'd try to nail Christ back up. He isn't rejecting faith. He's afraid of his own panic. He asks for a sign so he'll know it's over and won't fight it, which is bargaining dressed up as surrender. The Doubting Thomas story gets flipped too: at the gates, it's Thomas asking to see the narrator's hands.\n\nDustin Kensrue, who fronts the Irvine band Thrice, recorded the song live at the Constellation Room in Santa Ana over two nights in December 2015. It came out on *Thoughts That Float on a Different Blood*, a record made up entirely of covers. It's him and an acoustic guitar, strummed with a pick at a steady, moderate pace. His voice is clear with some grit at the edges, and the delivery is earnest and direct, with no harmonies to soften it. The recording is dry and close, and he has said he likes leaving live records raw. That suits a song this exposed. Kensrue has also called covering songs a way to study how other writers build them, and you can hear that respect here. He doesn't add flourishes. He lets Lacey's structure carry the weight.\n\nWhat changes in the move from band to one guitar is the irony. Kensrue sings the sarcasm with a straight face, so the jokes read less like armor and more like a person trying to stay brave out loud.\n\nIt sticks because it says the thing most people won't say about faith, that the scariest part isn't God but how you might act when it matters, and it lets you laugh at that right before it scares you.",
+  "factCheck": [
+    {
+      "claim": "The song opens on a blasphemy that turns into a prayer; 'Jesus Christ' starts as a mutter at a pretty face, then becomes the person addressed",
+      "verdict": "supported",
+      "note": "Interpretation resting on the opening lyric 'Jesus Christ, that's a pretty face.'"
+    },
+    {
+      "claim": "By the second verse the narrator asks Him directly, 'So what did you do those three days you were dead?'",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics exactly. 'Second verse' is a structural claim the lyrics don't mark, so it now says 'later'."
+    },
+    {
+      "claim": "Jesse Lacey wrote it for Brand New's The Devil and God Are Raging Inside Me, and it came out as a single in 2007",
+      "verdict": "supported",
+      "note": "Discogs lists Lacey as writer. Wikipedia gives the album and a March 26, 2007 single release. Wording adjusted to 'wrote it' and 'appears on'."
+    },
+    {
+      "claim": "That record was where emo's second wave grew up and got frightened",
+      "verdict": "removed",
+      "note": "Scene-history claim with no support in the packet."
+    },
+    {
+      "claim": "Lyric details: nobody in the bed, the night hard to get through, fear of dying alone and arriving where you won't know anyone; not scared to die, a little scared of what comes after",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: 'my bright, is far too slight, to hold back all my dark'",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "The narrator admits to sharpening a 'lying technique'",
+      "verdict": "corrected",
+      "note": "Supported by 'hone my lying technique'. Turned into a paraphrase to keep the quoted lines to three."
+    },
+    {
+      "claim": "Quote: 'I'm scared I'll get scared'; he'd try to nail Christ back up; asks for a sign so he'll know it's over; Thomas asks to see the narrator's hands",
+      "verdict": "supported",
+      "note": "Matches the lyrics. 'He' for the narrator was replaced with neutral phrasing."
+    },
+    {
+      "claim": "Kensrue fronts the Irvine band Thrice",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Recorded live at the Constellation Room in Santa Ana over two nights in December 2015, on a record of all covers",
+      "verdict": "supported",
+      "note": "Diffuser and Exclaim describe the album's recording. Phrased as the album's recording."
+    },
+    {
+      "claim": "It's him and an acoustic guitar",
+      "verdict": "removed",
+      "note": "The listening passes all agree on bass and a drum kit alongside the acoustic guitar, which conflicts with this claim. Replaced with what the passes agree on."
+    },
+    {
+      "claim": "Acoustic guitar strummed with a pick at a steady, moderate pace",
+      "verdict": "supported",
+      "note": "All three passes agree on the pick-strummed acoustic guitar and moderate tempo."
+    },
+    {
+      "claim": "Voice is clear with some grit; earnest and direct; no harmonies",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 mention rasp or gravel, and all three agree on clear, earnest and no harmonies."
+    },
+    {
+      "claim": "The recording is dry and close",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "He has said he likes leaving live records raw; called covering songs a way to study how others build them",
+      "verdict": "supported",
+      "note": "Stitched Sound interview."
+    },
+    {
+      "claim": "He doesn't add flourishes; he lets Lacey's structure carry the weight",
+      "verdict": "supported",
+      "note": "Interpretation, kept as opinion."
+    },
+    {
+      "claim": "What changes in the move from band to one guitar is the irony",
+      "verdict": "corrected",
+      "note": "The 'one guitar' claim is unsupported and the comparison to the original's sound isn't in the packet. Reframed around how the vocal delivers the sarcasm."
+    },
+    {
+      "claim": "Closing line about how the song sticks",
+      "verdict": "supported",
+      "note": "Interpretation."
+    },
+    {
+      "claim": "Brand New's original had unspecified relation; no banned words or evidence references",
+      "verdict": "supported",
+      "note": "Checked the banned list; none present."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1892,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013992,
+        "detail": "1099 in / 159 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014367,
+        "detail": "1099 in / 174 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014667,
+        "detail": "1099 in / 186 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078514,
+        "detail": "21762 in / 1499 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049716,
+        "detail": "3854 in / 1715 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056668,
+        "detail": "5049 in / 4657 out"
+      }
+    ]
+  }
+}

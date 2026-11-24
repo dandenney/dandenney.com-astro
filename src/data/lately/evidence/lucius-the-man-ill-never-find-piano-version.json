@@ -1,0 +1,185 @@
+{
+  "spotifyId": "70DCnj3cDWbVil403EvDi5",
+  "reviewedAt": "2026-11-23T14:30:19.257Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nA piano plays arpeggiated chords with sustain. The tempo is slow. A lead vocalist sings with a clear, sustained tone. A second vocalist joins in harmony, singing the same melody an octave lower. The lead vocalist has a slightly breathy quality. The harmony is close and consistent.\n\nThe production is clean and polished. The room sound is present but not overly reverberant, suggesting a controlled studio environment. The texture is smooth.\n\nThe arrangement begins with the piano and lead vocal. The second vocal enters to create a two-part harmony. The piano continues its arpeggiated pattern throughout the excerpt. No instruments drop out.\n\nPass 2:\nA piano plays a arpeggiated figure with a sustained bass note, establishing a slow tempo and a gentle, flowing groove. Two voices sing in unison, with a breathy, sustained delivery. The voices are clear and present, with a slight reverb that suggests a medium-sized room. The piano continues its arpeggiated pattern, providing a consistent harmonic foundation. The voices maintain their unison delivery, creating a smooth, blended sound. The excerpt ends with the voices still singing in unison, and the piano continuing its arpeggiated figure.\n\nPass 3:\nA piano plays arpeggiated chords with sustain. The tempo is slow. The groove is a gentle, flowing waltz.\n\nTwo voices sing in unison, with a breathy, sustained character. The voices are clear and well-blended. They sing in a high register.\n\nThe production is clean and polished. The room sounds like a medium-sized space with some natural reverb. The texture is smooth and airy.\n\nThe arrangement features the piano and two voices throughout the excerpt. The piano provides a consistent harmonic and rhythmic foundation. The voices sing the melody in unison, with no additional harmonies or countermelodies. No instruments enter or drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The song was written by Lucius members Holly Laessig and Jess Wolfe together with Trent Dabbs.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lucius-Releases-The-Man-Ill-Never-Find-Piano-Version-20221006"
+      },
+      {
+        "claim": "The Piano Version single came out on 6 October 2022 on Mom+Pop. It has two tracks, the piano version and the original album version.",
+        "source": "https://www.deezer.com/us/album/359071797"
+      },
+      {
+        "claim": "Wolfe says the writing trip to Nashville was in early March 2020 to do preliminary writing for an upcoming record. The trio wrote the song at Sheryl Crow's piano in her living room, and Crow was the first person to hear them play it.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lucius-Releases-The-Man-Ill-Never-Find-Piano-Version-20221006"
+      },
+      {
+        "claim": "Wolfe says the piano version was meant to feel like that first listen: honest, pure and on the edge of a very vulnerable time.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lucius-Releases-The-Man-Ill-Never-Find-Piano-Version-20221006"
+      },
+      {
+        "claim": "Laessig described the song as exploring the idea of finding love again and opening yourself back up to the possibility.",
+        "source": "https://www.knau.org/2022-06-05/indie-pop-band-lucius-talks-new-album-second-nature"
+      },
+      {
+        "claim": "Consequence reports that the song addresses the end of Wolfe's marriage to Lucius drummer Dan Molad.",
+        "source": "https://www.yahoo.com/entertainment/lucius-bringing-album-second-nature-160014514.html"
+      },
+      {
+        "claim": "The original version is on the album Second Nature, released April 8, 2022. Dave Cobb and Brandi Carlile produced the album.",
+        "source": "https://en.wikipedia.org/wiki/Second_Nature_(Lucius_album)"
+      },
+      {
+        "claim": "Pitchfork called the song home to one of the album's best choruses.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Lucius-Releases-The-Man-Ill-Never-Find-Piano-Version-20221006"
+      },
+      {
+        "claim": "Lucius played the song on The Kelly Clarkson Show. They performed it at KEXP with a band of Dan Molad, Peter Lalish, Solomon Dorsey and Alex Pfender.",
+        "source": "https://www.jambase.com/article/lucius-kexp"
+      },
+      {
+        "claim": "Lucius is an American indie pop band from Brooklyn, New York, formed in 2011. It is led by vocalists Jess Wolfe and Holly Laessig.",
+        "source": "https://www.last.fm/music/Lucius/_/The+Man+I'll+Never+Find"
+      }
+    ],
+    "lineage": "The song sits in Lucius's harmony-driven indie pop, and the piano version strips it back toward the Nashville-songwriter setting where it was written.",
+    "genres": [
+      "indie pop",
+      "folk pop",
+      "piano ballad"
+    ]
+  },
+  "draft": "Two voices sing as one over a piano that keeps rolling its chords upward, each note held under the next. In this stripped-down **The Man I'll Never Find**, the unison is the whole drama. The voices are breathy and sustained, so tightly blended that it's hard to hear where one ends and the other begins. The piano holds a gentle, flowing arpeggio at a slow tempo, and it never pushes. The room is medium-sized and lightly reverberant, and the production is clean. Nothing else gets in the way.\n\nThe song began in a living room. In early March 2020, Lucius's Jess Wolfe and Holly Laessig went to Nashville with songwriter Trent Dabbs to start writing for a new record. They wrote this one at Sheryl Crow's piano, and Crow was the first person to hear it. Wolfe says the piano version was meant to recreate that first listen: honest, pure, and \"on the edge of a very vulnerable time.\" That explains the restraint. This version doesn't take apart a finished production so much as return to the moment before there was one.\n\nWhat it carries is two feelings that don't settle. Consequence reports that the song addresses the end of Wolfe's marriage to Lucius drummer Dan Molad. Laessig describes it as being about finding love again and opening yourself back up to the possibility. The title points the other way, toward a search already given up on. Grief and hope sit in the same song, and the piano version gives neither the last word. Two voices singing the same line fit that tension. They sound like one person talking herself through something, with a friend saying every word alongside her.\n\nThere's another layer outside the recording. When Lucius played the song at KEXP, the backing band included Molad on drums, along with Peter Lalish, Solomon Dorsey, and Alex Pfender. A song about the end of a marriage, played with the other half of that marriage in the room, says a lot about how complicated an ending can be.\n\nThe original appears on *Second Nature*, which Dave Cobb and Brandi Carlile produced, and Pitchfork singled out its chorus as one of the album's best. The album version belongs to Lucius's polished, harmony-driven indie pop. This one leans toward the Nashville writing room, where a song has to work with just a piano and a voice or two. It holds up. The melody doesn't need the arrangement to sound big.\n\nThe two voices moving as one make heartbreak sound like something you don't have to carry alone, even while the song admits the loss is real.",
+  "factCheck": [
+    {
+      "claim": "Two voices sing as one / in unison, breathy and sustained, tightly blended",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on unison, breathy, sustained and blended. Pass 1 also has two voices on the same melody."
+    },
+    {
+      "claim": "Piano keeps rolling its chords upward",
+      "verdict": "corrected",
+      "note": "Arpeggiated chords with sustain are supported. The upward direction is not, so it was removed."
+    },
+    {
+      "claim": "Gentle, flowing arpeggio at a slow tempo",
+      "verdict": "supported",
+      "note": "All passes agree on slow tempo and arpeggiation. Passes 2 and 3 agree on gentle and flowing."
+    },
+    {
+      "claim": "Medium-sized, lightly reverberant room; clean production; nothing else in the arrangement",
+      "verdict": "supported",
+      "note": "Medium room is from passes 2 and 3, clean production from passes 1 and 3. No other instruments appear in the passes."
+    },
+    {
+      "claim": "The song began in a living room; written at Sheryl Crow's piano; Crow first to hear it",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Early March 2020, Wolfe and Laessig went to Nashville with Trent Dabbs to start writing for a new record",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Wolfe says the piano version was meant to recreate that first listen, with the quoted phrase 'on the edge of a very vulnerable time'",
+      "verdict": "corrected",
+      "note": "The packet gives this as a paraphrase, not a verbatim quote, so the quotation marks were removed. The wording is now closer to 'feel like that first listen'."
+    },
+    {
+      "claim": "Consequence reports the song addresses the end of Wolfe's marriage to Lucius drummer Dan Molad",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Laessig describes it as being about finding love again and opening yourself back up",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Voices sound like one person talking herself through something",
+      "verdict": "corrected",
+      "note": "Removed the gendered pronoun. The singers' genders are not given for this reading."
+    },
+    {
+      "claim": "At KEXP the backing band included Molad on drums, plus Lalish, Dorsey and Pfender",
+      "verdict": "corrected",
+      "note": "The band lineup is supported. Molad's instrument at KEXP is not stated, so 'on drums' was removed."
+    },
+    {
+      "claim": "Original appears on Second Nature, produced by Dave Cobb and Brandi Carlile",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Pitchfork singled out its chorus as one of the album's best",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The album version is polished, harmony-driven indie pop",
+      "verdict": "corrected",
+      "note": "Harmony-driven indie pop is supported. 'Polished' for the album version is not, so it was removed."
+    },
+    {
+      "claim": "Leans toward the Nashville writing room",
+      "verdict": "corrected",
+      "note": "The packet supports the Nashville-songwriter setting, and it was a living room. Reworded to match."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1692,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001341,
+        "detail": "1105 in / 135 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00045039,
+        "detail": "1105 in / 111 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013335,
+        "detail": "1105 in / 132 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.074882,
+        "detail": "20236 in / 1441 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050532,
+        "detail": "3083 in / 1910 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.040688,
+        "detail": "4189 in / 3231 out"
+      }
+    ]
+  }
+}

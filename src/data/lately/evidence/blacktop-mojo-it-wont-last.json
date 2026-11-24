@@ -1,0 +1,225 @@
+{
+  "spotifyId": "0E7EohFQ83z7H4yAqeHjEs",
+  "reviewedAt": "2026-11-23T14:11:23.966Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2052300"
+  },
+  "listening": "Pass 1:\nA male voice sings with a slightly raspy, mid-range character. He delivers the lyrics with a sustained, melodic approach, occasionally adding a subtle vocal fry. There are no harmonies.\n\nThe tempo is moderate. The groove is a straight feel, driven by a consistent drum beat with a prominent snare on beats two and four.\n\nA clean electric guitar plays arpeggiated chords, providing a sustained, open texture. A bass guitar plays a foundational, root-note line. The drums feature a standard rock beat with kick, snare, and cymbals.\n\nThe production sounds polished. The instruments are well-defined and balanced. There's a sense of a medium-sized room, with a slight reverb on the vocals and instruments.\n\nThe arrangement remains consistent throughout the excerpt. All instruments and vocals are present from the beginning and continue without significant changes in dynamics or instrumentation.\n\nPass 2:\nA male voice sings in a mid-range, with a slightly raw, bluesy character. He sings the main melody, with a second voice joining for harmonies on some phrases.\n\nThe tempo is moderate. The groove is a slow, driving rock feel.\n\nA clean electric guitar plays arpeggiated chords with a slight tremolo effect. A bass guitar plays a simple, root-note pattern. Drums provide a steady, driving beat with a prominent snare drum.\n\nThe production is clear and polished, with a natural room sound. The texture is full but not overly dense.\n\nThe arrangement is consistent throughout the excerpt. The lead vocal is present from the beginning, with harmonies entering and dropping out. The instruments maintain their roles without significant changes in dynamics or instrumentation.\n\nPass 3:\nA male voice sings in a mid-range, with a slightly raw, bluesy character. He sings the main melody, with a second voice joining for harmonies on some phrases.\n\nThe tempo is moderate, with a driving, rock groove. Drums play a steady beat with a prominent snare. A bass guitar plays a foundational, rhythmic line. Two electric guitars are present: one plays a clean, arpeggiated figure, while the other provides a distorted, sustained chord.\n\nThe production is clear and polished, with a natural room sound. The texture is full, with all instruments well-defined.\n\nThe arrangement remains consistent throughout the excerpt. The clean guitar introduces the arpeggiated figure, then the drums, bass, and distorted guitar enter, establishing the full band sound. The vocals enter shortly after, with harmonies appearing intermittently. No instruments drop out or build significantly within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Matt James said \"It Won't Last\" is about the fleeting feelings of a hookup: an intense connection that, by morning, turns out to have been an intoxicating moment.",
+        "source": "https://www.antimusic.com/news/20/February/03Blacktop_Mojo_Release_It_Wont_Last_Video.shtml"
+      },
+      {
+        "claim": "James said the song is very guitar driven. The band wanted the video to showcase guitarists Chuck and Kiefer.",
+        "source": "https://ghostcultmag.com/blacktop-mojo-release-official-music-video-for-it-wont-last-on-tour-now/"
+      },
+      {
+        "claim": "The performance video for \"It Won't Last\" was shot at the Bodega bar in Fort Worth, Texas, by videographer Dustin Dow and Larry Hinson, who the band met on the Defy the Sun Tour with Otherwise.",
+        "source": "https://www.antimusic.com/news/20/February/03Blacktop_Mojo_Release_It_Wont_Last_Video.shtml"
+      },
+      {
+        "claim": "Under the Sun was produced and engineered by Philip Mosley. It came out on Sand Hill Records (SHR004CD) and the tracklist puts \"It Won't Last\" at track 5.",
+        "source": "https://www.discogs.com/release/14184986-Blacktop-Mojo-Under-The-Sun"
+      },
+      {
+        "claim": "Chuck Wepfer replaced Kenneth Irwin on guitar before the band recorded with Mosley, and Under the Sun was his recording debut with the band.",
+        "source": "https://www.allmusic.com/artist/blacktop-mojo-mn0003297786"
+      },
+      {
+        "claim": "The album's credited band lineup was Matt James (vocals), Nathan Gillis (drums), Ryan Kiefer (lead guitar), Matt Curtis (bass) and Chuck Wepfer (guitar). The album track runs 5:37.",
+        "source": "https://digitalbeatmag.com/album-review-black-mojo-under-the-sun/"
+      },
+      {
+        "claim": "Under the Sun was the band's third studio album and was funded by a fan crowdfunding campaign. The band said that as independent artists, everything they do is fan-funded.",
+        "source": "https://digitalbeatmag.com/album-review-black-mojo-under-the-sun/"
+      },
+      {
+        "claim": "The band returned home in October 2018 to begin writing material for their third LP, after about ten months of touring behind the previous album.",
+        "source": "https://www.allmusic.com/artist/blacktop-mojo-mn0003297786"
+      },
+      {
+        "claim": "Blacktop Mojo is a rock band from Palestine, Texas, founded in 2012 by vocalist Matt James and drummer Nathan Gillis.",
+        "source": "https://en.wikipedia.org/wiki/Blacktop_Mojo"
+      },
+      {
+        "claim": "The band's earlier album Burn the Ships (2017) was produced by Muscle Shoals producer Jimmy Johnson. It included their widely viewed cover of Aerosmith's \"Dream On\".",
+        "source": "https://ghostcultmag.com/blacktop-mojo-talks-about-their-new-album-pledge-music-and-publicity-and-more/"
+      }
+    ],
+    "lineage": "Texas hard rock and post-grunge with Southern rock and bluesy touches, as seen in sources describing the band as hard rock/post-grunge and noting a shift from sensual blues to pounding hard rock on this track.",
+    "genres": [
+      "hard rock",
+      "post-grunge",
+      "southern rock"
+    ]
+  },
+  "draft": "The chorus line on **It Won't Last** is a brag that doesn't hold up: \"The best thing about this feeling is it won't last.\" Matt James sings it like a man who has already made peace with the morning, but everything around that line argues the other way. The same chorus opens with \"Why can't it just stay the same?\" The narrator is calling the ending a mercy while begging for one more hour, and the song never settles which one he means.\n\nJames has said the song is about a hookup, an intense connection that turns out by daylight to have been an intoxicating moment. The lyric fills that out with small, tired details. There's whiskey left in the bottle. Two people stare at each other in silence. Both have had too much, and he could do with another. The pleading shows up where he tries to sound noble. \"What Kind of man would I be if I didn't hold you?\" frames tenderness as an obligation. A few lines later he reminds her he warned her he'd leave, so the leaving is already her fault. By the second verse he offers to stay as long as she'll let him, then undercuts the offer: \"So just try to forget me.\" That's a man asking to be let off the hook and hoping not to be. The song lands its last word on the title phrase, repeated alone, as if he's still talking himself into it.\n\nThe music holds that tension without spelling it out. A clean electric guitar rolls through arpeggiated chords, open and patient, over a bass that sits on the root and a steady beat with a heavy snare. The tempo is moderate and the groove drives, so the song keeps moving even while the words want time to stop. James has a raw, bluesy edge in the mid-range, and second-voice harmonies slip in on some phrases. The room sounds natural and the production is polished. Philip Mosley produced and engineered *Under the Sun*, the Palestine, Texas band's fan-funded third album.\n\nJames called the song very guitar driven, and the band built its video, shot at the Bodega bar in Fort Worth, around guitarists Ryan Kiefer and Chuck Wepfer. That focus fits. *Under the Sun* was Wepfer's first record with the band. The track sits in Texas hard rock and post-grunge, with the Southern blues lean the band carried over from *Burn the Ships*, which Muscle Shoals veteran Jimmy Johnson produced. It's built for a bar like the one in the video, loud enough to drown out second thoughts.\n\nThe song works because you can hear the narrator insisting the ending is the good part, and you don't believe him for a second.",
+  "factCheck": [
+    {
+      "claim": "Chorus line \"The best thing about this feeling is it won't last.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Chorus opens with \"Why can't it just stay the same?\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics and the repeated structure."
+    },
+    {
+      "claim": "James has said the song is about a hookup, an intense connection that by daylight was an intoxicating moment.",
+      "verdict": "supported",
+      "note": "Matches the antimusic.com quote."
+    },
+    {
+      "claim": "Details: whiskey left in the bottle, staring in silence, both had too much, he could do with another.",
+      "verdict": "supported",
+      "note": "All in the lyrics."
+    },
+    {
+      "claim": "Quote \"What Kind of man would I be if I didn't hold you?\"",
+      "verdict": "supported",
+      "note": "Exact match, including the capital K."
+    },
+    {
+      "claim": "A few lines later he reminds her he warned her he'd leave.",
+      "verdict": "corrected",
+      "note": "The \"Baby I told you\" line comes immediately after, so \"a few lines later\" was changed to \"Right after.\" The reading that the leaving is her fault is interpretation and stays."
+    },
+    {
+      "claim": "In the second verse he offers to stay as long as she'll let him, then says \"So just try to forget me.\"",
+      "verdict": "supported",
+      "note": "Lyrics match. Two verses are evident from the structure."
+    },
+    {
+      "claim": "The last word is the title phrase, repeated alone.",
+      "verdict": "supported",
+      "note": "The lyrics end with a standalone \"It won't last.\""
+    },
+    {
+      "claim": "Clean electric guitar with arpeggiated chords, open texture.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Bass sits on the root.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 say root-note, and pass 3 says foundational."
+    },
+    {
+      "claim": "Steady beat with a heavy snare.",
+      "verdict": "corrected",
+      "note": "The passes say \"prominent snare,\" not \"heavy,\" so the wording was changed."
+    },
+    {
+      "claim": "Moderate tempo, driving groove.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Raw, bluesy mid-range voice.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say raw and bluesy, and pass 1 says slightly raspy."
+    },
+    {
+      "claim": "Second-voice harmonies on some phrases.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. Pass 1 disagrees, but two passes are enough."
+    },
+    {
+      "claim": "Natural-sounding room, polished production.",
+      "verdict": "supported",
+      "note": "Polished is in all three passes, and natural room is in passes 2 and 3."
+    },
+    {
+      "claim": "Philip Mosley produced and engineered Under the Sun, the Palestine, Texas band's fan-funded third album.",
+      "verdict": "supported",
+      "note": "Discogs, Wikipedia and Digital Beat."
+    },
+    {
+      "claim": "James called the song very guitar driven.",
+      "verdict": "supported",
+      "note": "Ghostcult."
+    },
+    {
+      "claim": "The video, shot at the Bodega bar in Fort Worth, was built around guitarists Ryan Kiefer and Chuck Wepfer.",
+      "verdict": "supported",
+      "note": "The band wanted to showcase \"Chuck and Kiefer,\" and the lineup names them as Ryan Kiefer and Chuck Wepfer. The Bodega in Fort Worth is sourced."
+    },
+    {
+      "claim": "Under the Sun was Wepfer's first record with the band.",
+      "verdict": "supported",
+      "note": "AllMusic."
+    },
+    {
+      "claim": "The track sits in Texas hard rock and post-grunge with Southern blues lean.",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "The Southern blues lean was carried over from Burn the Ships.",
+      "verdict": "removed",
+      "note": "No source ties the earlier album's sound to this song."
+    },
+    {
+      "claim": "Burn the Ships was produced by Muscle Shoals veteran Jimmy Johnson.",
+      "verdict": "corrected",
+      "note": "The source says \"Muscle Shoals producer.\" \"Veteran\" was dropped."
+    },
+    {
+      "claim": "Loud enough to drown out second thoughts.",
+      "verdict": "corrected",
+      "note": "Loudness isn't supported by the listening notes. Reworded as an opinion about the song's feel."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1796,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014473,
+        "detail": "1101 in / 178 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013948,
+        "detail": "1101 in / 157 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0006273,
+        "detail": "1101 in / 183 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.078036,
+        "detail": "22368 in / 1330 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.048224,
+        "detail": "3726 in / 1666 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049886,
+        "detail": "4843 in / 4020 out"
+      }
+    ]
+  }
+}

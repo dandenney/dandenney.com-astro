@@ -1,0 +1,197 @@
+{
+  "spotifyId": "4rEbmwddkXOslwBEfpVr5j",
+  "reviewedAt": "2026-11-24T01:42:39.742Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nA male voice sings in a mid-range, with a slightly raw, unpolished character. He sings the main melody, with a second male voice providing a lower harmony in some sections.\n\nThe tempo is moderate, with a driving, rock-and-roll groove. The drums play a consistent beat with a strong backbeat, featuring a prominent snare drum. A bass guitar plays a walking bass line, providing a solid rhythmic and harmonic foundation. An electric guitar plays a clean, arpeggiated riff in the first half, then switches to a distorted, rhythmic strumming pattern in the second half.\n\nThe production is raw and unpolished, with a dry, close-miked sound. The instruments are well-balanced, but the overall texture is gritty and energetic.\n\nThe arrangement starts with vocals, bass, and drums, with the clean electric guitar entering shortly after. The second half introduces a distorted electric guitar and a more driving drum pattern, creating a build in intensity.\n\nPass 2:\nA male voice sings in a mid-range, with a slightly raw, unpolished character. He sings the main melody, with a second male voice providing a lower harmony. The vocals are delivered with a steady, driving feel.\n\nThe song has a moderate tempo and a driving, rock groove. The instrumentation includes a drum kit playing a consistent rock beat, a bass guitar providing a steady root-note line, and an electric guitar playing a distorted, rhythmic riff. The guitar also plays a short, melodic fill.\n\nThe production is raw and unpolished, with a dry, close-miked sound. The overall texture is full and energetic.\n\nThe arrangement starts with vocals, bass, and drums. The electric guitar enters with a distorted riff, then drops out for a short period before re-entering with the same riff. The vocals continue throughout the excerpt.\n\nPass 3:\nA male voice sings in a mid-range, with a slightly raw, unpolished character. He sings the melody with a direct, almost spoken delivery. There are no harmonies.\n\nThe tempo is moderate, with a driving, rock-and-roll groove. The drums play a consistent beat with a strong backbeat. A bass guitar plays a simple, repetitive line. An electric guitar plays a clean, arpeggiated figure, then switches to a distorted, rhythmic strumming pattern.\n\nThe production is raw and unpolished, with a dry, close-miked sound. The instruments are clearly separated, but there is a sense of a live, unadorned performance.\n\nThe arrangement starts with the vocals, bass, and clean electric guitar. The drums enter, establishing the groove. The electric guitar then switches to a distorted sound, and the song builds in intensity as the full band plays together.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"On Tuesdays\" is track 10 on the 4onthefloor's debut album 4x4, which runs 2:22. The album came out on Double Asterisk Group on February 8, 2011.",
+        "source": "https://music.apple.com/us/album/4x4/419141360"
+      },
+      {
+        "claim": "The Bandcamp version of the track is titled \"(Drunk) On Tuesdays\".",
+        "source": "https://4otf.bandcamp.com/album/4x4"
+      },
+      {
+        "claim": "Gabriel Douglas is credited as writer and composer of the live versions of \"(Drunk) On Tuesdays\", from the 2019 Codfish Hollow and 2021 First Avenue live albums.",
+        "source": "https://www.deezer.com/us/artist/1350202"
+      },
+      {
+        "claim": "4x4 was recorded at Creation Audio (listed on Discogs as Creation Studios) in Minneapolis. Miles Hanson mastered the album. The band called the session quick and said it was the first time all four members had been in a studio together.",
+        "source": "https://performermag.com/new-music-and-video/interviews-and-features/the-4onthefloor/"
+      },
+      {
+        "claim": "Discogs credits the album's recording to Creation Studios.",
+        "source": "https://www.discogs.com/release/3161579-The-4onthefloor-4X4"
+      },
+      {
+        "claim": "The 4x4 lineup was Gabe Douglas (vocals, guitar), James Gould (guitar, backing vocals), Chris Holm (bass, harmonica, backing vocals) and Mark Larson (percussion). Each member played a bass drum.",
+        "source": "https://rockid.org/2012/04/18/the-4onthefloor-4x4-2011/"
+      },
+      {
+        "claim": "The band writes every song in 4/4 time. Each member plays a kick drum while playing his instrument. This is the idea behind the name and behind the 4x4 title.",
+        "source": "https://bigtakeover.com/recordings/the-4onthefloor-all-in-double-asterisk"
+      },
+      {
+        "claim": "In an interview the band rated the difficulty of writing everything in 4/4 at about a 4 out of 10. They said the 4/4 decision was made as the band was forming.",
+        "source": "https://performermag.com/new-music-and-video/interviews-and-features/the-4onthefloor/"
+      },
+      {
+        "claim": "After playing SXSW 2011, the band self-released a double-LP edition of 4x4 in April 2011. Vita.mn named them best new band of 2011.",
+        "source": "https://en.wikipedia.org/wiki/The_4onthefloor"
+      },
+      {
+        "claim": "A&E's Duck Dynasty used the 4x4 track \"Workin' Man Zombie\" as its theme song.",
+        "source": "https://bigtakeover.com/recordings/the-4onthefloor-all-in-double-asterisk"
+      }
+    ],
+    "lineage": "The 4onthefloor are a Minneapolis band playing stomping, bar-room blues rock with roots-rock and Americana leanings, in a tradition critics compare to the Black Keys, Creedence Clearwater Revival and the North Mississippi Allstars.",
+    "genres": [
+      "stompin' blues",
+      "blues rock",
+      "roots rock"
+    ]
+  },
+  "draft": "On Bandcamp, the 4onthefloor give this song one more word: **\"(Drunk) On Tuesdays.\"** The streaming title drops the parenthesis, and on its own \"On Tuesdays\" reads like a standing appointment. Put the word back and it becomes an admission about the least festive night of the week. Nobody gets drunk on a Tuesday for a holiday. That small edit is the emotional key to the track, and the band plays it straight, without a wink and without apology.\n\nGabe Douglas, who sings and plays guitar in the band, sits in the middle of his range with a raw, unpolished edge. Nothing is smoothed over. In places a second voice slides in underneath with a lower harmony, and it shifts the mood. A weeknight drunk is lonelier sung alone. The harmony sounds like someone on the next stool keeping pace.\n\nUnder them the groove moves at a moderate, driving clip. The drums hold a steady beat with a firm backbeat. The bass keeps a simple, repeating line that never reaches for attention. An electric guitar picks a clean arpeggiated figure, then digs into distorted, rhythmic strumming, and the band leans harder as it does. It plays less like a release than a shrug turning into a stomp.\n\nThat stomp is the band's whole idea. The 4onthefloor write every song in 4/4, and each of the four members plays a kick drum alongside his own instrument. The name comes from it, and so does the album title, *4x4*. Asked how hard the rule makes songwriting, the band put it at about a four out of ten, which sounds like a joke and a fact at the same time.\n\n*4x4* was their debut, cut quickly at Creation Audio in Minneapolis, the first time all four had been in a studio together. The sound carries that hurry. It is dry, close-miked, gritty and full of energy, with no polish to hide behind.\n\nThe tradition here is bar-room blues rock, the line critics draw through Creedence Clearwater Revival, the North Mississippi Allstars and the Black Keys. The song borrows Creedence's economy and is over in under two and a half minutes. It borrows the Keys' close, scuffed recording too. Then it builds all of that on the band's own rule: four players, four kick drums, four beats to the bar.\n\nDouglas is credited as writer on live recordings of the song from Codfish Hollow in 2019 and First Avenue in 2021, so it stayed in the set long after the debut.\n\nIt makes an ordinary weeknight feel worth stomping your foot for, without pretending it was ever anything more than an ordinary weeknight.",
+  "factCheck": [
+    {
+      "claim": "The Bandcamp version is titled \"(Drunk) On Tuesdays\"",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The streaming title drops the parenthesis",
+      "verdict": "corrected",
+      "note": "The streaming title drops the word \"(Drunk)\", not just the parenthesis. Reworded."
+    },
+    {
+      "claim": "The band plays it straight, without a wink and without apology",
+      "verdict": "removed",
+      "note": "A claim about tone and intent. No lyrics are available and the listening notes don't support it."
+    },
+    {
+      "claim": "Gabe Douglas sings and plays guitar in the band",
+      "verdict": "supported",
+      "note": "The 4x4 lineup lists Gabe Douglas on vocals and guitar."
+    },
+    {
+      "claim": "Mid-range male voice with a raw, unpolished edge",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A second voice comes in underneath with a lower harmony in places",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree. Pass 3 hears no harmonies, so \"in places\" is kept."
+    },
+    {
+      "claim": "Moderate, driving groove; steady drums with a firm backbeat; simple, repeating bass line",
+      "verdict": "supported",
+      "note": "Backed by at least two passes."
+    },
+    {
+      "claim": "Electric guitar plays a clean arpeggiated figure, then distorted rhythmic strumming, and the band gets heavier",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on the clean-to-distorted change and the build in intensity."
+    },
+    {
+      "claim": "The sound is dry, close-miked, gritty, full of energy",
+      "verdict": "corrected",
+      "note": "\"Dry, close-miked\", raw and energetic are supported by multiple passes. \"Gritty\" and \"full\" each appear in only one pass. Removed."
+    },
+    {
+      "claim": "The band writes every song in 4/4, each member plays a kick drum, and this gives the band name and the album title",
+      "verdict": "supported",
+      "note": "Matches Big Takeover and Rock ID."
+    },
+    {
+      "claim": "The band rated the difficulty of the 4/4 rule at about 4 out of 10",
+      "verdict": "supported",
+      "note": "Matches the Performer interview."
+    },
+    {
+      "claim": "4x4 was their debut, cut quickly at Creation Audio in Minneapolis, the first time all four had been in a studio together",
+      "verdict": "supported",
+      "note": "Matches the Performer interview and the debut-album fact."
+    },
+    {
+      "claim": "Bar-room blues rock tradition; critics compare the band to Creedence, North Mississippi Allstars and the Black Keys",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "The song borrows Creedence's economy and the Keys' scuffed recording",
+      "verdict": "corrected",
+      "note": "Stated as direct influence, which the evidence doesn't show. Recast as a comparison."
+    },
+    {
+      "claim": "The song runs under two and a half minutes",
+      "verdict": "supported",
+      "note": "Length is 2:23."
+    },
+    {
+      "claim": "Douglas is credited as writer on the live versions from Codfish Hollow 2019 and First Avenue 2021",
+      "verdict": "supported",
+      "note": "Matches the Deezer credits."
+    },
+    {
+      "claim": "The song stayed in the set long after the debut",
+      "verdict": "supported",
+      "note": "Reasonable inference from the live albums that include it."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2759,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014423,
+        "detail": "1101 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015023,
+        "detail": "1101 in / 200 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0006348,
+        "detail": "1101 in / 186 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13495200000000002,
+        "detail": "45326 in / 1430 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.087476,
+        "detail": "3319 in / 3710 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049936,
+        "detail": "4478 in / 4098 out"
+      }
+    ]
+  }
+}

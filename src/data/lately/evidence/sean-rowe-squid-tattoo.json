@@ -1,0 +1,190 @@
+{
+  "spotifyId": "32y2b0QIUhAPg8k20BQ6XE",
+  "reviewedAt": "2026-11-24T01:33:08.216Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\n- **Instruments:** Acoustic guitar, electric guitar, bass guitar, drums. The acoustic guitar plays a strummed rhythm. The electric guitar plays a clean, arpeggiated melody with some sustain. The bass plays a walking line. The drums play a steady beat with a prominent snare.\n- **Tempo and Groove:** Moderate tempo, with a relaxed, slightly shuffling groove.\n- **Vocals:** A male voice, with a slightly gravelly, mid-range character. The delivery is conversational and melodic. No harmonies are present.\n- **Production:** The sound is clean and well-balanced. There's a sense of a natural room, not overly processed. The texture is warm and clear.\n- **Arrangement:** The excerpt begins with the full band playing. The vocals enter around the 0:19 mark, with the instrumental arrangement remaining consistent throughout.\n\nPass 2:\n- **Instruments:** Acoustic guitar, electric guitar, bass guitar, drums. The acoustic guitar plays a strummed rhythm. The electric guitar plays a clean, arpeggiated melody with some sustain. The bass plays a walking line. The drums play a steady beat with a prominent snare and hi-hat.\n- **Tempo and Groove:** Moderate tempo. The groove is a relaxed, driving feel.\n- **Vocals:** A male voice with a slightly raspy, mid-range character. The delivery is conversational and melodic. No harmonies are present.\n- **Production:** The room sounds fairly dry, with a clear, present texture. The production is polished, with instruments well-defined in the mix.\n- **Arrangement:** The excerpt begins with all instruments playing. The vocals enter around the 0:19 mark, with the instrumental arrangement remaining consistent throughout.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a rhythmic strumming pattern. Electric guitar plays a clean, arpeggiated line. Bass guitar plays a walking bass line. Drums play a steady, driving beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving rock feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is straightforward and melodic. No harmonies are present.\n\nProduction:\nThe sound is clean and well-balanced, with a moderate amount of reverb suggesting a medium-sized room. The texture is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The acoustic guitar, electric guitar, bass, and drums are all present from the start. The vocals enter around the 0:19 mark, singing over the established instrumental arrangement. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Sean Rowe wrote the words and music for the album, including \"Squid Tattoo\". The album was produced, mixed and mastered by Troy Pohl.",
+        "source": "https://seanrowemusic.bandcamp.com/album/the-darkness-dressed-in-colored-lights"
+      },
+      {
+        "claim": "The album was recorded by Brian Joseph and Troy Pohl. Shane Leonard, Chris Carey and Sean Rowe did additional recording.",
+        "source": "https://seanrowemusic.bandcamp.com/album/the-darkness-dressed-in-colored-lights"
+      },
+      {
+        "claim": "The album was recorded at Hive, Brian Joseph's studio in Eau Claire, Wisconsin. Joseph is a Grammy-winning engineer who has worked with Bon Iver.",
+        "source": "https://seanrowemusic.bandcamp.com/album/the-darkness-dressed-in-colored-lights"
+      },
+      {
+        "claim": "Rowe and his team recorded most of the album over 10 days at Hive. He and Pohl then spent the next few months finishing it after he returned home.",
+        "source": "https://americansongwriter.com/sean-rowes-journey-of-self-discovery-inspires-new-album-the-darkness-dressed-in-colored-lights/"
+      },
+      {
+        "claim": "Courtney Hartman was flown in from Colorado to sing background vocals and play guitar on the album.",
+        "source": "https://seanrowemusic.bandcamp.com/album/the-darkness-dressed-in-colored-lights"
+      },
+      {
+        "claim": "Rowe said \"Squid Tattoo\" is about the fleeting feeling of romantically imagining a future with someone you haven't actually met. He added that the future will most likely never happen.",
+        "source": "https://www.sideways-media.com/news-updates/seanrowe-squidtattoo"
+      },
+      {
+        "claim": "\"Squid Tattoo\" was released as a single on September 13, 2021. It came before the album's October 8, 2021 release on Fluff & Gravy Records.",
+        "source": "https://www.sideways-media.com/news-updates/seanrowe-squidtattoo"
+      },
+      {
+        "claim": "\"Squid Tattoo\" was the third single from the album.",
+        "source": "https://www.youtube.com/watch?v=L8Z_tB6dS10"
+      },
+      {
+        "claim": "Holler describes the song as upbeat. It is built on a groove with James Brown-style honking horns, and its subject is a new romance with someone who has a squid tattoo.",
+        "source": "https://holler.country/reviews/album-review/sean-rowe-the-darkness-dressed-in-colored-lights/"
+      },
+      {
+        "claim": "Rowe grew up in Troy, New York, and began playing locally in 2003. The Wall Street Journal compared his baritone to late-'60s Van Morrison and late-era Johnny Cash.",
+        "source": "https://nysmusic.com/2021/10/27/sean-rowe-looks-back-on-the-darkness-dressed-in-colored-lights/"
+      }
+    ],
+    "lineage": "Rowe sits in the singer-songwriter tradition of folk, Americana and folk rock, and sources compare his lyrics to Tom Waits and Leonard Cohen and his baritone to Johnny Cash.",
+    "genres": [
+      "folk rock",
+      "americana",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "A squid tattoo is a strange detail to fall for, and that's the point. It's the kind of thing you'd notice on a stranger across a room and build a whole life around before they ever turned to look at you. Sean Rowe has said **Squid Tattoo** is about exactly that: the brief, romantic rush of imagining a future with someone you haven't actually met, a future he admits will most likely never happen. Holler heard it as a new romance with the person wearing the ink. Both readings land on the same pleasant ache, the early glow where everything is still possible because nothing has been tested.\n\nWhat keeps the song from turning mopey is the groove. An acoustic guitar strums steady time, a clean electric picks out arpeggios that hang in the air a little longer than they need to, and the bass walks instead of sitting on the root. The drums keep a level pace with the snare out front. The tempo is moderate and the feel is loose, a band settled into a pocket rather than pushing at it. Holler also points to James Brown-style honking horns, which pull a folk-rock songwriter toward a soul-revue strut. That fits a singer the Wall Street Journal compared to late-'60s Van Morrison, the stretch when folk songs borrowed freely from R&B and nobody bothered to separate the two.\n\nRowe's voice is slightly raspy and stays conversational. He doesn't oversell the fantasy. He sounds like someone narrating a daydream while fully aware it's a daydream, enjoying the picture and keeping one foot outside it. That's the honest part. The hope and the doubt sit together, and the song never asks you to choose between them. The upbeat swing carries the pleasure, and Rowe's own account of the song carries the knowledge that it won't last. You get both at once, the way you do when you let yourself picture a life with someone and already know you'll never say hello.\n\nRowe, who grew up in Troy, New York, wrote the words and music. Most of the album was cut in ten days at Hive, Brian Joseph's studio in Eau Claire, Wisconsin. Joseph, the Grammy-winning engineer known for his work with Bon Iver, recorded it alongside producer Troy Pohl, and Pohl and Rowe then spent months finishing it. The result is clean and well balanced, every instrument with room to stand. Courtney Hartman flew in from Colorado to add background vocals and guitar across the record.\n\nThe song lets you enjoy a crush on someone you'll never know, and it makes the impossibility feel like part of the fun.",
+  "factCheck": [
+    {
+      "claim": "Rowe has said the song is about the brief, romantic rush of imagining a future with someone you haven't met, a future that will most likely never happen",
+      "verdict": "supported",
+      "note": "Matches Rowe's quoted description in the researched facts."
+    },
+    {
+      "claim": "Holler heard it as a new romance with the person wearing the ink",
+      "verdict": "supported",
+      "note": "Holler describes the subject as a new romance with someone who has a squid tattoo."
+    },
+    {
+      "claim": "Acoustic guitar strums steady time; clean electric picks out arpeggios with sustain; bass walks; drums keep a level pace with snare out front",
+      "verdict": "supported",
+      "note": "All three passes agree on these instruments and roles."
+    },
+    {
+      "claim": "Tempo is moderate and the feel is loose",
+      "verdict": "corrected",
+      "note": "Moderate tempo is supported. 'Loose' is not what the passes say; two passes say 'relaxed'. Changed to 'relaxed'."
+    },
+    {
+      "claim": "Holler points to James Brown-style honking horns",
+      "verdict": "supported",
+      "note": "Attributed to Holler in the researched facts. The listening passes mention no horns, so the claim stays attributed to Holler and is not stated as a heard sound."
+    },
+    {
+      "claim": "The horns pull a folk-rock songwriter toward a soul-revue strut",
+      "verdict": "supported",
+      "note": "Interpretation. Folk rock appears in the lineage note."
+    },
+    {
+      "claim": "The Wall Street Journal compared Rowe to late-'60s Van Morrison",
+      "verdict": "corrected",
+      "note": "The WSJ compared his baritone to late-'60s Van Morrison and late-era Johnny Cash. The comparison is now stated that way."
+    },
+    {
+      "claim": "Late-'60s was a stretch when folk songs borrowed freely from R&B and nobody bothered to separate the two",
+      "verdict": "removed",
+      "note": "Genre history with no support in the packet."
+    },
+    {
+      "claim": "Rowe's voice is slightly raspy and conversational",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on gravelly/raspy and conversational."
+    },
+    {
+      "claim": "Upbeat swing carries the pleasure",
+      "verdict": "corrected",
+      "note": "Holler calls the song upbeat. 'Swing' overstates the groove, so it now says 'upbeat groove'."
+    },
+    {
+      "claim": "Rowe grew up in Troy, New York, and wrote the words and music",
+      "verdict": "supported",
+      "note": "Both facts are in the packet."
+    },
+    {
+      "claim": "Most of the album was cut in ten days at Hive, Brian Joseph's studio in Eau Claire, Wisconsin",
+      "verdict": "supported",
+      "note": "Matches the packet."
+    },
+    {
+      "claim": "Joseph is a Grammy-winning engineer known for his work with Bon Iver",
+      "verdict": "corrected",
+      "note": "The packet says he has worked with Bon Iver, not that he is known for it. Reworded."
+    },
+    {
+      "claim": "Joseph recorded it alongside producer Troy Pohl; Pohl and Rowe then spent months finishing it",
+      "verdict": "supported",
+      "note": "Matches the packet."
+    },
+    {
+      "claim": "The result is clean and well balanced, every instrument with room to stand",
+      "verdict": "supported",
+      "note": "Passes agree on clean, well-balanced, well-defined production."
+    },
+    {
+      "claim": "Courtney Hartman flew in from Colorado to add background vocals and guitar across the record",
+      "verdict": "corrected",
+      "note": "The packet says she sang background vocals and played guitar on the album. 'Across the record' implies more than that, so it now says 'on the album'."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1962,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014514,
+        "detail": "1098 in / 180 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014489,
+        "detail": "1098 in / 179 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014689,
+        "detail": "1098 in / 187 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077276,
+        "detail": "21768 in / 1374 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.069028,
+        "detail": "3417 in / 2768 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.045572,
+        "detail": "4551 in / 3647 out"
+      }
+    ]
+  }
+}

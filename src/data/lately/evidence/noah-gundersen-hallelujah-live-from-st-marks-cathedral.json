@@ -1,0 +1,205 @@
+{
+  "spotifyId": "6j8raw7B0oKnoyxNWCpuGw",
+  "reviewedAt": "2026-11-24T01:24:22.036Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays arpeggiated chords with a clean, bright tone. A male voice sings the word \"Hallelujah\" with a clear, sustained delivery, then a second voice joins in harmony, singing the same word. The tempo is slow, with a reflective, unhurried feel. The production sounds raw and intimate, with a noticeable room reverb, suggesting a live recording in a large space. The arrangement is sparse, with the guitar and two voices present throughout. No instruments enter or drop out.\n\nPass 2:\nAcoustic guitar plays arpeggiated chords with a clean, bright tone. A male voice sings the word \"Hallelujah\" with a clear, sustained delivery, then a second voice joins in harmony, singing the same word. The tempo is slow, with a reflective, unhurried feel. The production is clean and spacious, suggesting a large room with natural reverb. The texture is sparse, with only the two voices and the acoustic guitar. The arrangement remains consistent throughout the excerpt, with no new instruments entering or dropping out. The voices are prominent, with the guitar providing a gentle accompaniment.\n\nPass 3:\nAcoustic guitar plays arpeggiated chords with a clean, bright tone. A male voice sings the word \"Hallelujah\" with a breathy, slightly raspy character, delivered in a slow, sustained manner. The tempo is slow, with a free, unhurried feel. The production sounds raw and intimate, with a noticeable room reverb suggesting a large, live space. The vocal delivery is mostly solo, with a second, lower harmony entering briefly on \"Hallelujah\" at 0:07 and 0:15. The guitar continues its arpeggiated pattern throughout, with no other instruments entering or dropping out. The vocal delivery is consistent in its character and sustained notes.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The single 'Hallelujah (Live from St. Mark's Cathedral)' by Noah Gundersen was released on August 19, 2022. The track runs about 5:52.",
+        "source": "https://music.apple.com/ro/song/hallelujah-live-from-st-marks-cathedral/1636723954"
+      },
+      {
+        "claim": "The release is credited as ℗ 2022 80BPM LLC under exclusive licence to Cooking Vinyl America LLC.",
+        "source": "https://music.apple.com/us/album/hallelujah-live-from-st-marks-cathedral-single/1636723946"
+      },
+      {
+        "claim": "Gundersen performed 'Hallelujah' as a Leonard Cohen cover at a concert at Saint Mark's Episcopal Cathedral in Seattle on December 4, 2021.",
+        "source": "https://www.setlist.fm/setlist/noah-gundersen/2021/saint-marks-episcopal-cathedral-seattle-wa-b8b819a.html"
+      },
+      {
+        "claim": "The December 4, 2021 St. Mark's Cathedral show was announced as a live performance of his album A Pillar of Salt in its entirety.",
+        "source": "https://en.wikipedia.org/wiki/A_Pillar_of_Salt"
+      },
+      {
+        "claim": "A Pillar of Salt (2021) is Gundersen's sixth studio album. It was released by Cooking Vinyl America on October 8, 2021, and produced by Andy Park.",
+        "source": "https://en.wikipedia.org/wiki/A_Pillar_of_Salt"
+      },
+      {
+        "claim": "A companion single from the same cathedral recording, 'Sleepless in Seattle (Live from St. Mark's Cathedral)', was also released in 2022. 'Sleepless in Seattle' is Gundersen's own song, first released September 10, 2021.",
+        "source": "https://en.wikipedia.org/wiki/A_Pillar_of_Salt"
+      },
+      {
+        "claim": "Gundersen was born in Olympia and raised in Centralia, Washington. He was home-schooled by conservative, religious parents, left home at 18, and started playing around Seattle.",
+        "source": "https://www.seattletimes.com/entertainment/music/noah-gundersen-on-therapy-mushrooms-and-his-new-album-lover/"
+      },
+      {
+        "claim": "In 2008, Gundersen and his sister Abby formed the band The Courage. The band played until 2011, when he focused on a solo singer-songwriter career.",
+        "source": "https://thegreatdiscontent.com/interview/noah-gundersen/"
+      },
+      {
+        "claim": "His 2014 self-produced full-length debut was Ledges. It followed a series of solo EPs, including 2011's Family.",
+        "source": "https://music.youtube.com/channel/UCHTyKylSvUgnWVWeuIkKtvg"
+      },
+      {
+        "claim": "Gundersen has said his work is primarily autobiographical and that he makes music for himself first. He described songwriting as a therapeutic process.",
+        "source": "https://entertainmentvoice.com/2019/08/23/noah-gundersen-talks-lover-self-realization-and-the-art-of-motorcycle-maintenance/"
+      }
+    ],
+    "lineage": "A solo live cover of Leonard Cohen's 'Hallelujah', recorded in a Seattle cathedral, by a Pacific Northwest indie-folk singer-songwriter whose work often deals with faith and doubt.",
+    "genres": [
+      "indie folk",
+      "singer-songwriter",
+      "folk"
+    ]
+  },
+  "draft": "A second voice slides in under the title word, low and close, and the cathedral takes both of them and holds the sound a beat longer than either singer does. That held note is the whole argument of Noah Gundersen's **Hallelujah - Live from St. Mark's Cathedral**: a song of praise sung in a room built for praise, by someone who grew up inside that language and walked out of it.\n\nThe facts make the setting matter. Gundersen was raised in Centralia, Washington, home-schooled by conservative, religious parents, and left home at 18 to play around Seattle. On December 4, 2021, he played Saint Mark's Episcopal Cathedral in Seattle, a show announced as a full performance of his sixth album, A Pillar of Salt. Leonard Cohen's song came along that night as a cover. A companion recording of his own \"Sleepless in Seattle\" came out of the same evening. He has called his work mostly autobiographical and described songwriting as therapy. Put those pieces together and a cover becomes something more personal. He isn't borrowing a church song. He's bringing an old vocabulary back into the building where it lives and seeing whether it still fits.\n\nThe arrangement doesn't try to answer that question. An acoustic guitar picks out arpeggiated chords, the tone clean and bright, never strummed hard. The tempo is slow and unhurried, close to the pace of someone thinking out loud. Gundersen's voice is clear and sustained, and he leans on long notes rather than pushing for volume. The harmony voice arrives on the refrain and doesn't crowd it. Nothing else is in the mix: just strings, two voices, and a lot of air. The room reverb is the third instrument, and it makes the recording feel raw and close even as the space opens out behind it.\n\nThat restraint is the right call. This is a song people tend to perform as a climb toward a big release. Here the release comes from the stone walls, not the singer. Gundersen sings the word plainly and lets the cathedral decide how much weight it carries. What he feels about it stays in the delivery, steady and careful. Reverence and distance sit side by side, and he doesn't settle which one wins.\n\nThe second voice matters for the same reason. Praise sung alone can sound like a private wrestling match. With a harmony under it, it becomes something shared, even if each singer means something different by it.\n\nYou hear a person stand in a church and say the oldest word in the room without being sure what it means to him anymore, and the building gives it back to you, softer and longer, as if it still believes for both of you.",
+  "factCheck": [
+    {
+      "claim": "A second voice joins on the title word, and the cathedral holds the sound a beat longer",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on a second voice joining in harmony on 'Hallelujah'. All three passes agree on large-room reverb. The 'beat longer' phrasing is interpretation."
+    },
+    {
+      "claim": "The second voice is 'low and close'",
+      "verdict": "removed",
+      "note": "Only pass 3 calls the harmony lower. No two passes agree on 'low' or 'close'."
+    },
+    {
+      "claim": "The singer 'grew up inside that language and walked out of it'",
+      "verdict": "corrected",
+      "note": "Religious upbringing and leaving home at 18 are sourced. Walking out of the faith is not stated. Reworded to what the facts show."
+    },
+    {
+      "claim": "Raised in Centralia, Washington, home-schooled by conservative, religious parents, left home at 18 to play around Seattle",
+      "verdict": "supported",
+      "note": "Seattle Times source."
+    },
+    {
+      "claim": "On December 4, 2021 he played Saint Mark's Episcopal Cathedral in Seattle, announced as a full performance of his sixth album A Pillar of Salt",
+      "verdict": "supported",
+      "note": "Setlist.fm and the A Pillar of Salt article."
+    },
+    {
+      "claim": "Leonard Cohen's song was played that night as a cover",
+      "verdict": "supported",
+      "note": "Setlist.fm."
+    },
+    {
+      "claim": "A companion recording of his own 'Sleepless in Seattle' came out of the same evening",
+      "verdict": "corrected",
+      "note": "The source says a companion single from the same cathedral recording was released in 2022 and that the song is his own. It does not say 'same evening'. Reworded."
+    },
+    {
+      "claim": "He has called his work mostly autobiographical and described songwriting as therapy",
+      "verdict": "supported",
+      "note": "Entertainment Voice interview: primarily autobiographical, a therapeutic process."
+    },
+    {
+      "claim": "He isn't borrowing a church song",
+      "verdict": "corrected",
+      "note": "Cohen's song is not described as a church song. Reframed as interpretation."
+    },
+    {
+      "claim": "Acoustic guitar picks out arpeggiated chords, clean and bright",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "The guitar is 'never strummed hard'",
+      "verdict": "removed",
+      "note": "This covers more than the excerpt can show."
+    },
+    {
+      "claim": "Tempo is slow and unhurried",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "The voice is clear and sustained, leaning on long notes rather than pushing for volume",
+      "verdict": "corrected",
+      "note": "Clear and sustained is backed by passes 1 and 2. Pass 3 adds breathy. The 'rather than pushing for volume' comparison is unsupported and was removed."
+    },
+    {
+      "claim": "The harmony voice arrives on the refrain",
+      "verdict": "corrected",
+      "note": "Song structure is unknown, so 'refrain' is unsupported. The passes only say the harmony joins on the word 'Hallelujah'."
+    },
+    {
+      "claim": "Just guitar, two voices, and a lot of air; sparse",
+      "verdict": "supported",
+      "note": "All three passes describe a sparse texture of guitar and voices. 'Strings' changed to 'guitar'."
+    },
+    {
+      "claim": "Room reverb, raw and close, with space opening behind it",
+      "verdict": "supported",
+      "note": "All three passes note large-room reverb. Passes 1 and 3 say raw and intimate, and pass 2 says spacious."
+    },
+    {
+      "claim": "This is a song people tend to perform as a climb toward a big release",
+      "verdict": "removed",
+      "note": "A claim about the song's performance history with no support."
+    },
+    {
+      "claim": "The release comes from the stone walls",
+      "verdict": "corrected",
+      "note": "Stone construction is unsupported. Changed to 'the room'."
+    },
+    {
+      "claim": "Without being sure what it means to him anymore; each singer means something different",
+      "verdict": "removed",
+      "note": "These attribute feelings that no lyrics or listening notes show."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2368,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013066,
+        "detail": "1107 in / 121 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013616,
+        "detail": "1107 in / 143 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012641,
+        "detail": "1107 in / 104 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13347799999999999,
+        "detail": "43644 in / 1619 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.047616,
+        "detail": "3189 in / 1743 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051748,
+        "detail": "4319 in / 4311 out"
+      }
+    ]
+  }
+}

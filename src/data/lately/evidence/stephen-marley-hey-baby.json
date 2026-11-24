@@ -1,0 +1,200 @@
+{
+  "spotifyId": "1Bsl6Jw7bJtQ4pc7OQREog",
+  "reviewedAt": "2026-11-23T14:15:02.325Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4490140"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a consistent, strummed rhythm. Electric bass plays a simple, walking line. Drums provide a steady, mid-tempo reggae beat with a prominent snare on beats two and four. A keyboard plays sustained chords.\n\nTempo and Groove:\nMid-tempo, relaxed reggae groove.\n\nVocals:\nTwo male voices. The first is a lead, singing with a clear, slightly raspy character. The second voice is a harmony, lower in pitch, joining the lead in a call-and-response or layered fashion.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals. The texture is full but not dense.\n\nArrangement:\nThe excerpt begins with the full band and lead vocal. A harmony vocal enters around the 16-second mark, joining the lead. No instruments drop out or build significantly within this short excerpt.\n\nPass 2:\nInstruments:\nA drum kit plays a steady, mid-tempo reggae beat with a prominent snare drum on beats two and four. A bass guitar plays a simple, repetitive line. A clean electric guitar plays a rhythmic, arpeggiated chord pattern. A keyboard plays sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is relaxed and steady, with a slight swing feel.\n\nVocals:\nTwo male voices sing. The lead voice is clear and melodic, with a slightly raspy quality. The second voice provides harmonies, often in unison or a third above the lead. The delivery is conversational and soulful.\n\nProduction:\nThe sound is clean and well-balanced. The texture is warm and full, with a slight reverb on the vocals. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band and vocals. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nAcoustic drums play a reggae-influenced beat with a prominent kick and snare. A bass guitar plays a simple, rhythmic line. A clean electric guitar plays a melodic, arpeggiated figure. A keyboard plays sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is laid-back and relaxed, with a slight swing feel.\n\nVocals:\nTwo male voices sing. The lead voice is clear and melodic, with a slightly raspy quality. The second voice provides harmonies, often singing in unison or a third above the lead.\n\nProduction:\nThe sound is relatively dry, suggesting a close-miked recording. The texture is clean and polished, with good separation between instruments.\n\nArrangement:\nThe excerpt begins with the full band and lead vocal. The second vocal enters to provide harmonies. No instruments drop out or build significantly within this short excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Hey Baby\" (feat. Mos Def) is a 4:55 track on Stephen Marley's debut solo album Mind Control, released March 20, 2007.",
+        "source": "https://music.amazon.co.uk/tracks/B07N3V1BMV"
+      },
+      {
+        "claim": "The track is credited as ℗ 2007 Universal Records, a division of UMG Recordings. Audiomack lists Damian \"Jr. Gong\" Marley as producer, though that listing is not corroborated elsewhere.",
+        "source": "https://audiomack.com/stephen-marley/song/hey-baby"
+      },
+      {
+        "claim": "Reggae Report says the song was written for Marley's children. He used to sing it to them on the road, and they now consider it their song.",
+        "source": "https://reggaereport.com/mind-control-stephen-marley/"
+      },
+      {
+        "claim": "Reggae Report says the Mos Def rap on the track was a two-year-old rap, remixed for the album. Marley says it adds \"swagger\".",
+        "source": "https://reggaereport.com/mind-control-stephen-marley/"
+      },
+      {
+        "claim": "According to Reggae Report, \"Hey Baby\" is the only song on Mind Control that Stephen Marley did not write himself.",
+        "source": "https://reggaereport.com/mind-control-stephen-marley/"
+      },
+      {
+        "claim": "In a Glide Magazine interview about Mind Control, Marley was asked why he chose Mos Def for \"Hey Baby\". His answer, as excerpted, is that Mos Def is a conscious person who can bring enlightenment to a topic, and that the two are friends.",
+        "source": "https://glidemagazine.com/9470/stephen-marley-mind-control/"
+      },
+      {
+        "claim": "A review describes \"Hey Baby\" as having a bit of neo-soul sheen. On the album Marley mixes roots reggae, dancehall, hip-hop and contemporary R&B.",
+        "source": "https://music.apple.com/us/album/mind-control/218795604"
+      },
+      {
+        "claim": "Stephen Marley is the second son of Bob and Rita Marley. He was a member of the Melody Makers and a producer for other artists before releasing Mind Control, his first solo album, in 2007.",
+        "source": "https://www.amazon.com/Hey-Baby-feat-Mos-Def/dp/B07N3QBQT5"
+      },
+      {
+        "claim": "Marley produced his brother Damian's albums Halfway Tree (2001) and Welcome to Jamrock (2005). He also began production work in 1996, remixing the Fugees and later working with Eve, Krayzie Bone and Erykah Badu.",
+        "source": "https://en.wikipedia.org/wiki/Stephen_Marley"
+      },
+      {
+        "claim": "Mind Control was nominated for the Reggae Grammy, with the ceremony on February 10, 2008. Its follow-ups were Mind Control Acoustic (2008), Revelation Pt. 1: The Root of Life (2011) and Revelation Pt. 2: The Fruit of Life (2016).",
+        "source": "https://reggaereport.com/mind-control-stephen-marley/"
+      }
+    ],
+    "lineage": "The song sits in the Marley family's roots reggae tradition, blended with hip-hop and neo-soul, and the album drew criticism from some reggae purists for that mix.",
+    "genres": [
+      "reggae",
+      "reggae-hip-hop",
+      "neo-soul"
+    ]
+  },
+  "draft": "In the last choruses of **Hey Baby**, one word changes. All along, the singer has had to \"bear\" a cross. By the end, it has to be \"bury.\" The weight he's been carrying out the door gets put in the ground, and the man who kept leaving finally sounds like he's coming home. It's a one-letter-off rewrite, and it holds the whole song: a promise that the long absence was worth it, made by someone who badly needs that to be true.\n\nThe opening verse is a leaving speech, and it argues with itself. \"I got to do what I must do to be a better man,\" Stephen Marley sings, which is pride and apology in the same breath. He insists the road is how he keeps his blessings from turning into curses. He also keeps asking to be forgiven for it. Watch the plea shift between verses: first it's \"please don't fuss,\" then \"please don't cry.\" The person at home has gone from annoyed to hurt, and the singer knows it. He doesn't resolve that. He just keeps promising.\n\nRead it as a love song and it works. But it was written for Marley's children. He used to sing it to them on the road, and they now call it theirs. That changes the \"baby.\" The guilt becomes a parent's guilt, and the promise is being made to someone too young to argue back. The tender images, wind and tree, warmth of day and cool of night, start to sound like a father trying to describe a closeness he can't be there to give.\n\nThe band keeps all of this gentle. A steady, mid-tempo reggae beat lands its snare on two and four. The bass line stays simple. A clean electric guitar picks out an arpeggiated figure, and keyboards hold sustained chords underneath. The groove has a slight swing, relaxed and unhurried. The lead voice is clear with a little rasp, and a second voice shadows it in unison or a third above. That gives the chorus the feel of a family singalong. The polish is real, and it's the neo-soul sheen that put Mind Control at odds with some reggae purists. Here, though, it suits a lullaby.\n\nMos Def's verse was a rap he'd had for two years, remixed for the album. Marley says it adds \"swagger,\" and he picked his friend for being a conscious voice. Mos Def brings the loneliness the singing smooths over: \"And the spot is hot it's cold and lonely at nights.\" He's admitting the road costs the traveler too, not just the people left behind. Then he lands on the song's real comfort: every road ends, \"and I'm back home again.\"\n\nWhat sticks is how hard the song works to reassure. You can hear a parent soothing a child, and at the same time soothing himself that the leaving was worth it.",
+  "factCheck": [
+    {
+      "claim": "The cross is \"bear\" in the early choruses and \"bury\" in the last choruses.",
+      "verdict": "supported",
+      "note": "The lyrics show \"bear my cross\" in the first two choruses and \"bury my cross\" in the later ones. The order comes from the lyric structure."
+    },
+    {
+      "claim": "The change is a \"one-letter-off rewrite.\"",
+      "verdict": "corrected",
+      "note": "\"Bear\" and \"bury\" differ by more than one letter. Reworded to \"a small rewrite.\""
+    },
+    {
+      "claim": "Quote: \"I got to do what I must do to be a better man\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly. Stephen Marley as the singer is consistent with the credits and with Mos Def's separate rap verse."
+    },
+    {
+      "claim": "Quotes \"please don't fuss\" and \"please don't cry\" appear in successive verses.",
+      "verdict": "supported",
+      "note": "Both phrases are in the lyrics, in that order. The reading of the listener going from annoyed to hurt is interpretation."
+    },
+    {
+      "claim": "The song was written for Marley's children. He used to sing it to them on the road, and they now call it theirs.",
+      "verdict": "supported",
+      "note": "Reggae Report."
+    },
+    {
+      "claim": "Imagery of wind, tree, warmth of day and cool of night.",
+      "verdict": "supported",
+      "note": "Matches the lyrics (\"wind that blows,\" \"widow tree,\" \"warmth of day,\" \"cool of night\")."
+    },
+    {
+      "claim": "Steady mid-tempo reggae beat with the snare on two and four.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree, and pass 3 notes a prominent snare."
+    },
+    {
+      "claim": "Simple bass line.",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Clean electric guitar with an arpeggiated figure.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree."
+    },
+    {
+      "claim": "Keyboards hold sustained chords.",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Groove has a slight swing and is relaxed.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 for the swing. All three for relaxed."
+    },
+    {
+      "claim": "Lead voice is clear with a little rasp. A second voice shadows it in unison or a third above.",
+      "verdict": "supported",
+      "note": "All three passes for the lead. Passes 2 and 3 for the harmony."
+    },
+    {
+      "claim": "The second voice gives \"the chorus\" the feel of a family singalong.",
+      "verdict": "corrected",
+      "note": "The excerpt's position is unknown, so the claim about the chorus was removed. The singalong feel is kept as interpretation."
+    },
+    {
+      "claim": "The polish is real, and it's the neo-soul sheen that put Mind Control at odds with some reggae purists.",
+      "verdict": "corrected",
+      "note": "A review mentions neo-soul sheen on this track, and the album's genre mix drew purist criticism. Tying the track's polish directly to the purist complaint was not supported, so the wording now keeps them separate."
+    },
+    {
+      "claim": "Mos Def's verse was a two-year-old rap, remixed for the album. Marley says it adds \"swagger.\"",
+      "verdict": "supported",
+      "note": "Reggae Report."
+    },
+    {
+      "claim": "Marley picked Mos Def, a friend, as a conscious voice.",
+      "verdict": "supported",
+      "note": "Glide Magazine interview."
+    },
+    {
+      "claim": "Quote: \"And the spot is hot it's cold and lonely at nights\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Quote: \"and I'm back home again\"",
+      "verdict": "supported",
+      "note": "Matches the lyric. Replaced with a paraphrase to stay within the three-line quote limit."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2473,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014745,
+        "detail": "1100 in / 189 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001482,
+        "detail": "1100 in / 192 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001467,
+        "detail": "1100 in / 186 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.124402,
+        "detail": "38866 in / 1667 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.065816,
+        "detail": "4239 in / 2443 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.0527,
+        "detail": "5395 in / 4191 out"
+      }
+    ]
+  }
+}

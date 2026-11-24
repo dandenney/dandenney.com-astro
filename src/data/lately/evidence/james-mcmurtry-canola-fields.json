@@ -1,0 +1,209 @@
+{
+  "spotifyId": "6qgbLRTPfUVyWMPHYgyHS6",
+  "reviewedAt": "2026-11-24T01:32:00.662Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4863198"
+  },
+  "listening": "Pass 1:\nInstruments:\nA male voice sings lead vocals. An acoustic guitar plays a fingerpicked accompaniment. A bass guitar plays a simple, root-note line. A drum kit plays a steady, mid-tempo beat.\n\nTempo and Groove:\nThe tempo is moderate, with a relaxed, slightly swung feel. The groove is laid-back and steady, with a subtle country-folk influence.\n\nVocals:\nThe male voice is clear and slightly gravelly, with a conversational delivery. There are no harmonies.\n\nProduction:\nThe production is clean and clear, with a natural room sound. The texture is warm and organic, with a slightly raw, unpolished feel.\n\nArrangement:\nThe acoustic guitar and bass establish the main melody and rhythm. The drums enter shortly after, providing a steady beat. The vocals are present throughout the excerpt. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA male voice sings lead vocals. An acoustic guitar plays a fingerpicked accompaniment. A bass guitar plays a simple, root-note line. A drum kit plays a steady, mid-tempo beat.\n\nTempo and Groove:\nThe tempo is moderate, with a relaxed, slightly shuffling groove.\n\nVocals:\nThe male voice is gravelly and slightly raspy, with a conversational delivery. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, with a natural, unpolished texture. The mix is clear, with all instruments well-defined.\n\nArrangement:\nThe acoustic guitar and bass establish the song's foundation. The drums enter shortly after the vocals begin, adding a steady rhythm. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nA male voice sings lead vocals. An acoustic guitar plays a steady rhythm. A bass guitar plays a simple, walking bassline. A drum kit plays a straightforward beat with a snare drum backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, country-folk feel.\n\nVocals:\nThe voice is a low-pitched male voice. The delivery is conversational and clear. There are no harmonies.\n\nProduction:\nThe room sounds like a small, dry space. The texture is clean and clear. The production is polished.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Canola Fields\" is the opening track of James McMurtry's album The Horses and the Hounds, released August 20, 2021 on New West Records.",
+        "source": "https://jamesmcmurtryofficial.bandcamp.com/album/the-horses-and-the-hounds"
+      },
+      {
+        "claim": "McMurtry is the sole credited writer of \"Canola Fields\".",
+        "source": "https://en.wikipedia.org/wiki/The_Horses_and_the_Hounds"
+      },
+      {
+        "claim": "The album, including this song, was produced by Ross Hogarth, who also recorded and mixed it. Hogarth had recorded McMurtry's first two albums.",
+        "source": "https://jamesmcmurtry.bandcamp.com/album/the-horses-and-the-hounds"
+      },
+      {
+        "claim": "The album was recorded mainly at Jackson Browne's Groovemasters in Santa Monica, with more recording at Infinitespin Records in Van Nuys and Arlyn Studios in Austin. Additional recording was done at The Zone in Dripping Springs, Texas.",
+        "source": "https://jamesmcmurtry.bandcamp.com/album/the-horses-and-the-hounds"
+      },
+      {
+        "claim": "McMurtry said the band tracked the album in June 2019. The pandemic delayed the overdubs and mixing, and the release timing was the label's decision.",
+        "source": "https://artsfuse.org/269881/music-interview-singer-songwriter-james-mcmurtry-playing-with-words/"
+      },
+      {
+        "claim": "The song was released June 9, 2021 as the lead single when the album was announced. It was the first McMurtry album in about seven years, following 2015's Complicated Game.",
+        "source": "https://www.rollingstone.com/music/music-country/james-mcmurtry-canola-fields-new-song-1180540/"
+      },
+      {
+        "claim": "McMurtry said the song formed over time. It grew from the fields he saw in Alberta and a roadside sign reading 'Canola Processing' with a phone number.",
+        "source": "https://savingcountrymusic.com/james-mcmurtry-announces-new-album-the-horses-the-hounds/"
+      },
+      {
+        "claim": "The song opens with the narrator thinking of someone while crossing Southern Alberta canola fields, and the fields' color recalls a chartreuse '69 Bug once driven around San Jose. The lyrics also mention Santa Cruz and Los Gatos.",
+        "source": "https://jamesmcmurtry.bandcamp.com/track/canola-fields"
+      },
+      {
+        "claim": "McMurtry said \"Canola Fields\" and \"Jackie\" were his favorite songs on the album.",
+        "source": "https://www.unratedmag.com/__heart_heart_with_james_mcmurtry/"
+      },
+      {
+        "claim": "\"Canola Fields\" was nominated for Song of the Year at the 2022 Americana Music Honors & Awards. Brandi Carlile's \"Right on Time\" won.",
+        "source": "https://en.wikipedia.org/wiki/2022_Americana_Music_Honors_%26_Awards"
+      },
+      {
+        "claim": "McMurtry is the son of novelist Larry McMurtry. John Mellencamp co-produced his 1989 debut Too Long in the Wasteland, and the 2006 Americana Song of the Year went to his \"We Can't Make It Here\".",
+        "source": "https://en.wikipedia.org/wiki/James_McMurtry"
+      }
+    ],
+    "lineage": "The song sits in the Austin-based Americana, roots-rock and alt-country singer-songwriter tradition, with literate story-songs and character sketches.",
+    "genres": [
+      "americana",
+      "roots rock",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "A field of canola in Southern Alberta turns the exact yellow-green of a '69 Volkswagen Beetle, and suddenly James McMurtry's narrator is back in San Jose, decades younger, watching someone he loved drive it around town. That's how **Canola Fields** opens, and it's a perfect picture of how memory actually works: not a decision to look back, but a color that ambushes you from the highway. McMurtry has said the song grew slowly out of those Alberta fields and a roadside sign advertising canola processing, phone number and all. It's the kind of mundane detail a good storyteller hoards until it earns a place.\n\nWhat follows is a whole friendship told in road trips. There's an old white Lincoln with suicide doors and always room for more, then a bad ride back from Santa Cruz watching a surfer win her over. The narrator admits more than he means to: \"And I coulda cut his throat.\" He blames the whiskey, insists they were never really a couple, then shuts the door twice: he doesn't want to think about that. The jealousy, the shame, and the self-defense all stay in the room together, unresolved, which is exactly how old regret feels.\n\nThe second half brings them back together years later, in Brooklyn, where she's living with her sister and walking with her keys clenched in her fist. That small, guarded detail does a lot of work. Life hasn't been easy on either of them. On a cross-town bus they finally act on a crush thirty years old, and McMurtry lands the line of the song: \"You can't be young and do that.\" It's half rueful, half grateful. Youth would have wrecked it. The repetitions pile up as the song goes on, and the line starts to sound like something he's still convincing himself of. The chorus is a plain, scared plea to Marie: \"Take a death grip on some part of me,\" before he drifts out to sea.\n\nThe band, cut in June 2019 with Ross Hogarth producing, keeps out of the way. Fingerpicked acoustic guitar, a bass walking the root notes, drums holding a steady mid-tempo shuffle. The room is dry and close. McMurtry's voice is gravelly and conversational, no harmonies, like a man telling you this across a kitchen table. It's squarely in the Austin story-song tradition, literate and unhurried, and it opened his first album in about seven years. McMurtry named it one of his two favorites on the record, and it earned an Americana Song of the Year nomination.\n\nWhat sticks is how the song lets loneliness and gratitude share one breath: you hear a man admit he's adrift, and still treasure the late, unlikely moment someone held on.",
+  "factCheck": [
+    {
+      "claim": "Canola fields in Southern Alberta are the same yellow-green as a '69 Volkswagen Beetle",
+      "verdict": "corrected",
+      "note": "The lyric says 'about the same chartreuse as that '69 Bug'. 'Exact' was overstated, and 'Volkswagen Beetle' isn't in the facts, so it now reads '69 Bug."
+    },
+    {
+      "claim": "The narrator is back in San Jose, decades younger, watching someone he loved drive the car",
+      "verdict": "corrected",
+      "note": "The lyric says 'You used to drive around San Jose'. 'Decades' isn't supported, so it now says 'years younger'."
+    },
+    {
+      "claim": "McMurtry said the song grew slowly from the Alberta fields and a roadside sign for canola processing with a phone number",
+      "verdict": "supported",
+      "note": "Matches the researched facts: the song formed over time from the fields and a 'Canola Processing' sign with a phone number."
+    },
+    {
+      "claim": "Old white Lincoln with suicide doors and always room for more; ride back from Santa Cruz; surfer",
+      "verdict": "supported",
+      "note": "All in the lyrics. 'Win her over' is interpretation."
+    },
+    {
+      "claim": "Quote: \"And I coulda cut his throat\"",
+      "verdict": "supported",
+      "note": "Exact lyric match."
+    },
+    {
+      "claim": "He blames the whiskey, says they weren't a couple, and repeats that he doesn't want to think about it",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The second half brings them together in Brooklyn, where she's living with her sister",
+      "verdict": "corrected",
+      "note": "The lyrics say she moved in with her sister and that they met up in Brooklyn. They don't say she lived in Brooklyn. 'Second half' was also changed to 'later'."
+    },
+    {
+      "claim": "She carries her keys in her fist",
+      "verdict": "supported",
+      "note": "Lyric: 'You carried your keys in your fist.'"
+    },
+    {
+      "claim": "Life hasn't been easy on either of them",
+      "verdict": "corrected",
+      "note": "Reworded to rest on the lyrics ('bustin' apart at the seams') and kept as interpretation."
+    },
+    {
+      "claim": "On a cross-town bus they act on a thirty-year-old crush; quote \"You can't be young and do that\"",
+      "verdict": "supported",
+      "note": "Exact lyric match."
+    },
+    {
+      "claim": "The repetitions pile up as the song goes on",
+      "verdict": "supported",
+      "note": "The lyric structure shows the refrain growing from two repeats to four."
+    },
+    {
+      "claim": "Chorus quote \"Take a death grip on some part of me,\" before he drifts out to sea",
+      "verdict": "corrected",
+      "note": "The quote is exact. The lyric asks to be kept from drifting, so the phrasing now says that."
+    },
+    {
+      "claim": "Recorded in June 2019 with Ross Hogarth producing",
+      "verdict": "supported",
+      "note": "McMurtry said the band tracked the album in June 2019, and Hogarth produced it."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, bass walking the root notes, steady mid-tempo shuffle",
+      "verdict": "corrected",
+      "note": "Two passes support fingerpicked guitar, a simple root-note bass, and a steady mid-tempo, slightly swung groove. Only one pass says 'walking' bass, so that wording was dropped."
+    },
+    {
+      "claim": "Dry, close room; gravelly, conversational voice; no harmonies",
+      "verdict": "supported",
+      "note": "At least two passes agree on each point."
+    },
+    {
+      "claim": "In the Austin story-song tradition, literate and unhurried",
+      "verdict": "supported",
+      "note": "Matches the stated lineage. 'Unhurried' is a critic's opinion."
+    },
+    {
+      "claim": "Opened his first album in about seven years",
+      "verdict": "supported",
+      "note": "It is the opening track and the first album since 2015's Complicated Game."
+    },
+    {
+      "claim": "McMurtry named it one of his two favorites on the record",
+      "verdict": "supported",
+      "note": "He named it and 'Jackie' as favorites."
+    },
+    {
+      "claim": "It earned an Americana Song of the Year nomination",
+      "verdict": "supported",
+      "note": "Nominated at the 2022 Americana Music Honors & Awards."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.265,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014645,
+        "detail": "1100 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001362,
+        "detail": "1100 in / 144 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001407,
+        "detail": "1100 in / 162 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.1552,
+        "detail": "54510 in / 1618 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052924,
+        "detail": "4196 in / 1807 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052682,
+        "detail": "5351 in / 4198 out"
+      }
+    ]
+  }
+}

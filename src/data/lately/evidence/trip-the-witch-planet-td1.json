@@ -1,0 +1,185 @@
+{
+  "spotifyId": "2ATJh7ipgIyvGPDXTj8S5k",
+  "reviewedAt": "2026-11-24T01:34:05.868Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nA synth pad plays sustained chords. A synth lead plays a melodic line with a fast attack and a long release. A bass guitar plays a low, sustained line. Drums play a simple, driving beat with a kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is steady and driving.\n\nVocals:\nNo vocals are present in this excerpt.\n\nProduction:\nThe sound is clean and polished. The synth pad has a wide, spacious texture. The synth lead is clear and prominent. The bass is deep and resonant. The drums are crisp and well-defined.\n\nArrangement:\nThe synth pad, synth lead, bass, and drums all play continuously throughout the excerpt. The synth lead plays a melodic phrase that repeats. The drums maintain a consistent beat.\n\nPass 2:\nInstruments:\nA synth pad plays sustained chords. A synth lead plays a melodic line with a fast attack and a long release. A bass guitar plays a low, sustained line. Drums play a steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is slow. The groove is a slow, driving feel.\n\nVocals:\nNo vocals are present in this excerpt.\n\nProduction:\nThe sound is polished and clean. The texture is smooth. The room is spacious with a long reverb tail.\n\nArrangement:\nThe synth pad and bass guitar enter first, followed by the drums. The synth lead enters shortly after, playing a melody. The synth lead drops out, and the synth pad, bass, and drums continue. The synth lead re-enters at the end of the excerpt.\n\nPass 3:\nInstruments:\nA synth pad plays sustained chords. A synth lead plays a melody with a fast attack and a long release. A kick drum and snare drum play a steady beat. A bass guitar plays a simple, sustained line.\n\nTempo and Groove:\nThe tempo is slow. The groove is steady and driving.\n\nVocals:\nNo vocals are present in this excerpt.\n\nProduction:\nThe sound is spacious with a long reverb tail. The texture is smooth and polished.\n\nArrangement:\nThe synth pad and bass guitar establish the harmonic and rhythmic foundation. The synth lead enters with a melody. The drums enter, establishing a steady beat. The synth lead drops out, leaving the synth pad, bass, and drums. The synth lead re-enters.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Planet TD1\" is track 5 on the self-titled debut album Trip The Witch, released 10 September 2021, and runs 4:56.",
+        "source": "https://tripthewitch.bandcamp.com/track/planet-td1"
+      },
+      {
+        "claim": "Trip The Witch is a collaborative project between Stone Temple Pilots guitarist Dean DeLeo and Nashville session guitarist Tom Bukovac.",
+        "source": "https://tripthewitch.bandcamp.com/track/planet-td1"
+      },
+      {
+        "claim": "Tom Bukovac and Dean DeLeo are the credited songwriters of \"Planet TD1\".",
+        "source": "https://sessiondays.com/2022/10/25/2021-trip-the-witch-trip-the-witch/"
+      },
+      {
+        "claim": "Bandcamp credits for the track: Tom Bukovac (electric guitar, vibes, keyboards), Dean DeLeo (electric guitar, keyboards), Ryan Williams (B3 organ), Steve Mackey (bass) and Ian Fitchuk (drums). Session Days lists Fitchuk on drums and Williams on Hammond organ, but does not list Mackey on this track.",
+        "source": "https://tripthewitch.bandcamp.com/track/planet-td1"
+      },
+      {
+        "claim": "The album was produced by Trip The Witch, mixed by Ryan Williams, and mastered by JJ Golden at Golden Mastering. Engineers were Ryan Williams, Shannon Forrest, Konrad Snyder, Mills Logan and Paul Moak.",
+        "source": "https://tripthewitch.bandcamp.com/album/trip-the-witch"
+      },
+      {
+        "claim": "Bukovac said \"Planet TD1\" was one of the first songs the pair came up with, and that it set the template for the album. He said the title stands for 'Tom Dean 1'.",
+        "source": "https://tripthewitch.bandcamp.com/album/trip-the-witch"
+      },
+      {
+        "claim": "The album was written and recorded entirely online during the pandemic, with the pair emailing parts to each other. DeLeo and Bukovac had not met in person.",
+        "source": "https://www.guitarworld.com/news/dean-deleo-tom-bukovac-trip-the-witch"
+      },
+      {
+        "claim": "Bukovac described the writing process as sending DeLeo a riff and getting one back. After a while they had a million riffs and began assembling them into songs.",
+        "source": "https://ghostcultmag.com/trip-the-witch-stp-shares-new-single-saturn-we-miss-you-ft-jon-anderson-of-yes/"
+      },
+      {
+        "claim": "The album is ten mostly instrumental tracks. Its first single, \"Saturn We Miss You\", features vocals by Jon Anderson of Yes.",
+        "source": "https://www.iconvsicon.com/2021/09/10/dean-deleo-of-stone-temple-pilots-tom-bukovac-join-forces-for-trip-the-witch-album/"
+      },
+      {
+        "claim": "A remastered edition with 2 bonus tracks was released on 11 January 2022, and it includes a remastered \"Planet TD1\".",
+        "source": "https://tripthewitch.bandcamp.com/album/trip-the-witch-remastered-w-2-bonus-tracks"
+      }
+    ],
+    "lineage": "A pandemic-era, remotely recorded guitar-driven instrumental collaboration between a Stone Temple Pilots guitarist and a Nashville session player, tagged by Bandcamp as space rock and instrumental rock.",
+    "genres": [
+      "instrumental rock",
+      "space rock",
+      "neo-psychedelia"
+    ]
+  },
+  "draft": "A melody arrives on a fast, clean attack, hangs in the air on a long release, then disappears and leaves the rest of the band holding the floor. A pad stretches sustained chords wide. A bass line sits low and patient. Kick and snare keep a steady, driving pulse at a slow walk. Then the melody comes back. **Planet TD1** is built on that small drama of leaving and returning, and it turns out to be the right shape for a song made by two people who had never been in the same room.\n\nTrip the Witch is Dean DeLeo, the Stone Temple Pilots guitarist, and Tom Bukovac, a Nashville session guitarist. They wrote and recorded their self-titled debut entirely online during the pandemic, emailing parts back and forth without ever meeting in person. Bukovac has described the process as sending DeLeo a riff and getting one back, until they had a million riffs and started stitching them into songs. \"Planet TD1\" was one of the first. The title, he said, stands for \"Tom Dean 1,\" and the track set the template for everything else on the record.\n\nKnowing that changes how the song lands. The feeling here isn't loneliness, exactly. It's closer to the steadiness of a conversation carried on at a distance, where each answer takes a while to arrive and you trust that it will. The rhythm section never wavers. The lead line steps away and the ground holds. When it returns, it doesn't strain or show off. It just picks the thread back up.\n\nThe production is polished and smooth, with a long reverb tail that makes the room feel bigger than any one studio. That fits the space-rock and instrumental-rock lineage the record sits in, though this is the calm end of that tradition, closer to drifting than to launching. Both players are credited on electric guitar and keyboards, with Bukovac adding vibes, Ryan Williams on B3 organ, and Ian Fitchuk on drums. Williams also mixed the album. The album's first single brought in Jon Anderson of Yes on vocals, but most of the record, this track included, lets the instruments carry everything.\n\nThe song's restraint is its strength. Nothing piles up and nothing breaks loose. The parts repeat and trade places, and the slow, unhurried groove asks you to stay inside it rather than wait for a payoff.\n\nWhat sticks is that returning melody, which plays like a message answered across a long distance and leaves you feeling that the gap between two people can be crossed if someone keeps sending the next part.",
+  "factCheck": [
+    {
+      "claim": "The melody has a fast attack and a long release.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The lead drops out, leaving the rest of the band, then comes back.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. Pass 1 says all parts play continuously, but two passes are enough."
+    },
+    {
+      "claim": "Planet TD1 is built on that small drama of leaving and returning.",
+      "verdict": "corrected",
+      "note": "Describing the structure of the whole song goes beyond what the excerpt shows. Reworded to say the drama is in the song, not that the song is built on it."
+    },
+    {
+      "claim": "A pad plays sustained, wide chords; the bass is low and patient; kick and snare keep a steady, driving pulse at a slow tempo.",
+      "verdict": "supported",
+      "note": "Passes agree on the sustained pad chords, the low sustained bass, the steady driving groove and the slow tempo (passes 2 and 3). The pad's spacious sound is supported by all three passes."
+    },
+    {
+      "claim": "The two players had never been in the same room; the album was written and recorded entirely online during the pandemic, with parts emailed back and forth.",
+      "verdict": "supported",
+      "note": "Guitar World."
+    },
+    {
+      "claim": "Trip the Witch is Dean DeLeo of Stone Temple Pilots and Nashville session guitarist Tom Bukovac.",
+      "verdict": "supported",
+      "note": "Bandcamp."
+    },
+    {
+      "claim": "Bukovac described sending DeLeo a riff and getting one back, ending up with a million riffs that became songs.",
+      "verdict": "supported",
+      "note": "Ghost Cult."
+    },
+    {
+      "claim": "The track was one of the first written, set the album's template, and the title means 'Tom Dean 1'.",
+      "verdict": "supported",
+      "note": "Bandcamp album notes."
+    },
+    {
+      "claim": "The production is polished and smooth with a long reverb tail.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree, and pass 1 agrees on polished."
+    },
+    {
+      "claim": "The record sits in a space-rock and instrumental-rock lineage.",
+      "verdict": "supported",
+      "note": "Bandcamp tags."
+    },
+    {
+      "claim": "Both players are credited on electric guitar and keyboards, Bukovac also on vibes, Ryan Williams on B3 organ, Ian Fitchuk on drums; Williams mixed the album.",
+      "verdict": "supported",
+      "note": "Bandcamp credits."
+    },
+    {
+      "claim": "The first single features Jon Anderson of Yes on vocals.",
+      "verdict": "supported",
+      "note": "Icon vs Icon."
+    },
+    {
+      "claim": "Most of the record, this track included, lets the instruments carry everything.",
+      "verdict": "corrected",
+      "note": "The album is described as mostly instrumental, but nothing confirms the track has no vocals anywhere. Removed 'this track included'."
+    },
+    {
+      "claim": "Nothing piles up and nothing breaks loose; the parts repeat and trade places.",
+      "verdict": "corrected",
+      "note": "These are claims about the whole arc and are not supported. Replaced with a statement about the slow, steady groove."
+    },
+    {
+      "claim": "The rhythm section never wavers.",
+      "verdict": "supported",
+      "note": "Passes describe a consistent steady beat and bass. Kept as a reading of the groove."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1688,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001427,
+        "detail": "1100 in / 170 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00059387,
+        "detail": "1100 in / 170 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00055887,
+        "detail": "1100 in / 156 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.074924,
+        "detail": "20522 in / 1388 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.04894,
+        "detail": "3380 in / 1771 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.042346,
+        "detail": "4488 in / 3337 out"
+      }
+    ]
+  }
+}

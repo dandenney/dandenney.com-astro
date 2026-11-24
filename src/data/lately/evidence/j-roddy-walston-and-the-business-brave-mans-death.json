@@ -1,0 +1,215 @@
+{
+  "spotifyId": "26V4mdiCfPc5rQfhoRCo9j",
+  "reviewedAt": "2026-11-24T01:26:29.687Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/10733422"
+  },
+  "listening": "Pass 1:\nA male voice sings with a slightly raspy, mid-range character, delivering the lyrics with a driving, almost shouting quality. He is joined by a second male voice for harmonies, often in unison or a third above, adding fullness to the vocal line.\n\nThe instruments include an electric guitar, playing a distorted, driving riff with a slight tremolo effect. A bass guitar provides a solid, root-note foundation. Drums lay down a consistent, driving beat with a prominent snare and kick, featuring occasional cymbal crashes. A piano plays chords, adding a rhythmic and harmonic layer.\n\nThe tempo is fast, with a driving, rock-and-roll groove feel.\n\nThe production sounds raw and unpolished, with a slightly compressed, full texture. The room sound is unclear, but there's a sense of a live, energetic performance.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning and maintaining their roles. There are no notable entrances, drop-outs, or builds within this segment.\n\nPass 2:\nA male voice sings with a slightly raspy, mid-range character, delivering the lyrics with a clear, forward presence. He is accompanied by a male harmony voice, singing in unison or parallel to the lead.\n\nThe instrumentation includes an electric guitar, playing a distorted, overdriven riff with a prominent, driving rhythm. A bass guitar provides a solid, low-end foundation, playing a walking line. Drums lay down a steady, mid-tempo beat with a strong backbeat, featuring snare hits and cymbal crashes.\n\nThe tempo is mid-tempo, with a driving, rock-and-roll groove feel. The production is raw and unpolished, with a slightly gritty texture. The room sound is somewhat open, but not overly reverberant.\n\nThe arrangement remains consistent throughout the excerpt, with all instruments and vocals present from the beginning and continuing without drops or significant builds.\n\nPass 3:\nA male voice sings with a raw, slightly strained character, delivering a lead vocal with a clear, forward presence. He is joined by a male harmony vocalist, singing in unison or parallel lines.\n\nThe instruments include an electric guitar, playing a distorted, overdriven riff with a blues-rock feel. A bass guitar provides a driving, rhythmic foundation. Drums play a steady, mid-tempo beat with a strong backbeat, featuring snare hits and cymbal crashes. A piano or keyboard is present, playing chords that fill out the harmony.\n\nThe tempo is mid-tempo, with a driving, rock-and-roll groove. The feel is energetic and slightly gritty.\n\nThe production is raw and unpolished, with a live-sounding room. The texture is full and slightly compressed.\n\nThe arrangement features all instruments and vocals present from the beginning, maintaining a consistent energy throughout the excerpt. There are no significant entries, drop-outs, or builds within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Brave Man's Death\" is a 5:21 track on the band's 2010 self-titled album. Credits list the writers as J. Roddy Walston & The Business and Billy Gordon.",
+        "source": "https://www.allmusic.com/album/j-roddy-walston-and-the-business-mw0002011547"
+      },
+      {
+        "claim": "AllMusic credits Billy Gordon with engineering, mixing, guitar and vocals on the album. It credits Roddy Walston with guitar, piano and vocals.",
+        "source": "https://www.allmusic.com/album/j-roddy-walston-and-the-business-mw0002011547"
+      },
+      {
+        "claim": "The album was produced by Kevin Augunas. It was recorded in less than two weeks at Sound City Studios and Fairfax Recordings in Los Angeles, with minimal overdubs.",
+        "source": "https://nodepression.com/j-roddy-walston-and-the-business/"
+      },
+      {
+        "claim": "The band recorded to tape on a roughly 40-year-old machine rather than modern digital equipment. Most of the 10-song album was taped live in the studio.",
+        "source": "https://www.baltimoresun.com/2010/07/25/j-roddy-means-business-2/"
+      },
+      {
+        "claim": "Walston said nearly every take on the album came from the first three takes. He also said the band tried to play the songs well and record them that way, rather than overproduce.",
+        "source": "https://www.baltimoremagazine.com/section/artsentertainment/q-a-with-j-roddy-walston-and-the-business/"
+      },
+      {
+        "claim": "SPIN named \"Brave Man's Death\" and \"Don't Break the Needle\" as album high points, describing them as rollicking boogie with soulful lyrics. Walston said of the record, \"We didn't want to use computers.\"",
+        "source": "https://www.spinmagazine.com/2010/08/breaking-out-j-roddy-walston-and-business/"
+      },
+      {
+        "claim": "The song's lyrics tell of a son shamed by his father who wants a \"brave man's death.\"",
+        "source": "https://www.letras.com/j-roddy-walston-e-the-business/brave-mans-death/"
+      },
+      {
+        "claim": "\"Brave Man's Death\" was used in the MTV reality series \"Caged,\" along with \"Don't Break the Needle\" and \"Pigs and Pearls.\"",
+        "source": "https://en.wikipedia.org/wiki/J._Roddy_Walston_and_the_Business"
+      },
+      {
+        "claim": "The band played \"Brave Man's Death\" on NPR's World Cafe in 2010, along with \"Don't Break the Needle\" and \"Full Growing Man.\"",
+        "source": "https://www.npr.org/2010/09/23/130051069/j-roddy-walston-and-the-business-on-world-cafe"
+      },
+      {
+        "claim": "The band formed in Cleveland, Tennessee in 2002 and moved to Baltimore in 2004. It self-released Hail Mega Boys in 2007 and signed to Vagrant via Fairfax Recordings in November 2009. The self-titled album was released July 27, 2010.",
+        "source": "https://en.wikipedia.org/wiki/J._Roddy_Walston_and_the_Business"
+      }
+    ],
+    "lineage": "The band plays piano-driven Southern rock 'n' roll rooted in rollicking soul, blues and gospel, with Tennessee Bible-belt roots and a Baltimore base.",
+    "genres": [
+      "southern rock",
+      "roots rock",
+      "indie rock"
+    ]
+  },
+  "draft": "A father who won't give his son his name, then dies proud the day the boy gets a gun. That's where **Brave Man's Death** starts, and everything after is the son trying to earn back what was held from him at birth. \"Said he wouldn't put his name on me\" is the wound. The rest of the song is the scar tissue.\n\nWhat makes it hard to shake is how the narrator keeps telling on himself. The father's pride only arrives with a weapon, and the tear in his eye comes with the line about not thinking \"of a better way to die.\" Love, in this family, is something you get by being hard enough to deserve it. Then comes the spoon the lord puts in his mouth: \"It tasted so bitter, but I couldn't spit it out.\" It's an inheritance he didn't choose and can't refuse, tasting of his mother's money, which he steals once she's buried. Her last note tells him to die like a brave man, so even the tender parent hands down the same creed.\n\nHe passes it on. He has a woman with kids, and admits flatly that he never loved them. When she dies she tells him life was worth the pain, and he can't take it in. Late in the song there's a knife, a dead man, blood on his hands, and a heart he holds, then hides, because it's tearing him apart. The cry that follows, \"God, I want to die like a man,\" is bravado and begging at once. The chorus fears dying \"in the middle of the night,\" and the closing borrows the child's bedtime prayer, the one that worries about dying before you wake. Underneath the gasoline and salted fields is a kid afraid of going unseen.\n\nThe band plays all this as rollicking boogie, and that clash is the point. A distorted, overdriven guitar riff locks in with a bass that holds the floor. The drums hit a strong backbeat with crashing cymbals, and piano chords fill out the middle in the band's Southern rock 'n' roll way, rooted in blues, soul and gospel out of Tennessee's Bible belt. The lead vocal is raspy and pushed forward, doubled by a second voice in unison and parallel lines, so the creed sounds shouted by a crowd. The groove is mid-tempo and driving, never rushed.\n\nThe sound is raw and live because it was made that way. Producer Kevin Augunas cut the album in under two weeks at Sound City and Fairfax Recordings in Los Angeles. The band played mostly live to a tape machine about 40 years old, kept overdubs to a minimum, and took nearly everything from the first three takes. Billy Gordon, who engineered and mixed the record, shares the writing credit with the band.\n\nYou end up stomping along to a man who learned love only as a dare, and his fear of dying unseen gets under the swagger before you notice.",
+  "factCheck": [
+    {
+      "claim": "A father shames his son and refuses to give him his name, then dies proud the day the boy gets a gun",
+      "verdict": "supported",
+      "note": "Matches lyrics: 'put his shame on me', 'wouldn't put his name on me', 'he died the day I got a gun / Said that he was proud'."
+    },
+    {
+      "claim": "Quote: 'Said he wouldn't put his name on me'",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Quote: 'of a better way to die' tied to the tear in the father's eye",
+      "verdict": "supported",
+      "note": "Exact lyric, and the tear and the line sit together in the lyrics."
+    },
+    {
+      "claim": "Quote: 'It tasted so bitter, but I couldn't spit it out'",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The taste is of his mother's money, which he steals once she's buried",
+      "verdict": "corrected",
+      "note": "The lyrics say he stole it 'cause she took it to the grave. Reworded to follow the lyric rather than imply a sequence."
+    },
+    {
+      "claim": "Mother's note tells him to die like a brave man",
+      "verdict": "supported",
+      "note": "Note clenched in her right hand: 'better die like a brave man'."
+    },
+    {
+      "claim": "He has a woman with kids and never loved them; she tells him life was worth the pain as she dies",
+      "verdict": "supported",
+      "note": "Lyrics: 'She said she loved them / I never did'; 'life was worth the pain'. The reading that he can't take it in is interpretation."
+    },
+    {
+      "claim": "A knife, a dead man, blood on his hands, and a heart he holds then hides because it's tearing him apart, in the later part of the song",
+      "verdict": "supported",
+      "note": "All present in the later lyric stanzas."
+    },
+    {
+      "claim": "Quote: 'God, I want to die like a man'",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Quote: 'in the middle of the night'",
+      "verdict": "supported",
+      "note": "Exact lyric from the chorus."
+    },
+    {
+      "claim": "The closing borrows the child's bedtime prayer",
+      "verdict": "supported",
+      "note": "The final lines ('Praying' the lord / A soul to keep') support this as the critic's interpretation."
+    },
+    {
+      "claim": "The band plays it as rollicking boogie",
+      "verdict": "supported",
+      "note": "SPIN described the song as rollicking boogie with soulful lyrics."
+    },
+    {
+      "claim": "Distorted, overdriven guitar riff; bass holding the foundation; strong backbeat with cymbal crashes; piano chords",
+      "verdict": "supported",
+      "note": "At least two passes agree on each. Piano appears in passes 1 and 3."
+    },
+    {
+      "claim": "Southern rock 'n' roll rooted in blues, soul and gospel out of Tennessee's Bible belt",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Raspy, forward lead vocal doubled by a second voice in unison and parallel lines",
+      "verdict": "supported",
+      "note": "Raspy in passes 1 and 2, forward presence in passes 2 and 3, harmony voice in all three."
+    },
+    {
+      "claim": "Vocals make the creed sound 'shouted by a crowd'",
+      "verdict": "corrected",
+      "note": "Only one pass mentions shouting. Reworded as a looser interpretation of the doubled vocal."
+    },
+    {
+      "claim": "Groove is mid-tempo and driving, never rushed",
+      "verdict": "corrected",
+      "note": "Two passes say mid-tempo and driving, but one says fast. 'Never rushed' removed."
+    },
+    {
+      "claim": "Sound is raw and live",
+      "verdict": "supported",
+      "note": "Raw in all three passes; live-sounding in passes 1 and 3. The album was mostly taped live."
+    },
+    {
+      "claim": "Producer Kevin Augunas; album cut in under two weeks at Sound City and Fairfax Recordings in Los Angeles",
+      "verdict": "supported",
+      "note": "nodepression.com."
+    },
+    {
+      "claim": "Mostly live to a roughly 40-year-old tape machine, minimal overdubs, nearly everything from the first three takes",
+      "verdict": "supported",
+      "note": "Baltimore Sun, nodepression.com, Baltimore Magazine."
+    },
+    {
+      "claim": "Billy Gordon engineered and mixed the record and shares the writing credit with the band",
+      "verdict": "supported",
+      "note": "AllMusic credits."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1904,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015319,
+        "detail": "1108 in / 211 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014969,
+        "detail": "1108 in / 197 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014544,
+        "detail": "1108 in / 180 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.076104,
+        "detail": "20892 in / 1432 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.053884,
+        "detail": "4236 in / 1847 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05597,
+        "detail": "5425 in / 4512 out"
+      }
+    ]
+  }
+}

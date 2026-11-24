@@ -1,0 +1,175 @@
+{
+  "spotifyId": "31rAjc9lk3ZhAIP6HkeZU3",
+  "reviewedAt": "2026-11-24T01:37:40.227Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/14820873"
+  },
+  "listening": "Pass 1:\nA male voice sings with a slightly raspy, mid-range character. His delivery is mostly sustained, with some melodic slides. He is doubled in harmony, with the second voice singing a higher, softer line.\n\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained root-note line. A drum kit plays a slow, steady beat with a snare hit on beat two and four, and a kick drum on beat one and three. The tempo is slow. The groove feels relaxed and steady.\n\nThe production is clean and polished. The room sounds dry, with no noticeable reverb. The texture is smooth and clear.\n\nThe arrangement is consistent throughout the excerpt. All instruments and vocals are present from the beginning and remain until the end. There are no noticeable builds or drops.\n\nPass 2:\nA male voice sings with a slightly raspy, mid-range character. His delivery is clear and direct, with a subtle vibrato. He sings the main melody, with a second vocal layer providing a higher harmony on some phrases.\n\nAcoustic guitar plays a consistent arpeggiated pattern, providing a gentle, flowing accompaniment. A bass guitar enters around the 0:08 mark, playing a simple, sustained root-note pattern. Drums enter around 0:18, playing a slow, steady beat with a soft kick and snare, and a light cymbal wash.\n\nThe tempo is slow, creating a relaxed and contemplative groove. The production has a clean, polished texture, with a sense of a moderately sized room. The overall sound is intimate and clear.\n\nThe arrangement builds gradually, starting with just voice and acoustic guitar, then adding bass, and finally drums, creating a subtle increase in density and rhythmic drive.\n\nPass 3:\nA male voice sings with a slightly raspy, mid-range character. The delivery is melodic and sustained, with a subtle vibrato. There are no harmonies.\n\nAcoustic guitar plays a fingerpicked arpeggiated pattern, providing a steady harmonic and rhythmic foundation. A bass guitar enters around the 0:08 mark, playing a simple, sustained root-note line. A drum kit enters around 0:18, playing a slow, sparse beat with kick and snare, and a closed hi-hat on the off-beats.\n\nThe tempo is slow. The groove feels relaxed and slightly melancholic.\n\nThe production is clean and polished. The room sounds dry, with no noticeable reverb on the vocals or instruments. The texture is sparse, allowing each instrument to be clearly heard.\n\nThe arrangement builds gradually. The excerpt begins with just the vocal and acoustic guitar. The bass enters, followed by the drums, adding subtle layers to the texture. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Bad For Me\" is track 3 on Peter Raffoul's six-song EP Songs from House In Blue, released July 1, 2022.",
+        "source": "https://music.apple.com/us/album/songs-from-house-in-blue-ep/1628447459"
+      },
+      {
+        "claim": "Raffoul co-wrote \"Bad For Me\" with Connor Thuotte and Kate York.",
+        "source": "https://www.shazam.com/en-gb/song/1628447801/bad-for-me"
+      },
+      {
+        "claim": "Credits list Owen Lewis as producer and programmer, Connor Thuotte on guitar, and Raffoul on piano. Chris Gehringer, John O'Mahony and Henry Brill also appear in the production and engineering credits.",
+        "source": "https://www.shazam.com/en-gb/song/1628447801/bad-for-me"
+      },
+      {
+        "claim": "The EP's press notes describe the song as bringing potent beats and prismatic textures to an unflinching meditation on cycles of self-destruction.",
+        "source": "https://www.highresaudio.com/en/album/view/js4e96/peter-raffoul-songs-from-house-in-blue"
+      },
+      {
+        "claim": "Raffoul said that during a breakup or other hard time, doing things that are bad for you can feel easier as a way to numb yourself. This is the idea the song grew from.",
+        "source": "https://www.highresaudio.com/en/album/view/js4e96/peter-raffoul-songs-from-house-in-blue"
+      },
+      {
+        "claim": "Raffoul said Thuotte played a simple chord progression on a $5 yard-sale guitar, and that guitar part was used on the final version.",
+        "source": "https://www.highresaudio.com/en/album/view/js4e96/peter-raffoul-songs-from-house-in-blue"
+      },
+      {
+        "claim": "Official music video, lyric video and rooftop performance videos of \"Bad For Me\" were released on YouTube.",
+        "source": "https://www.youtube.com/watch?v=Q0bVftS_xug"
+      },
+      {
+        "claim": "Raffoul is a Canadian-born, Nashville-based singer-songwriter from Leamington, Ontario. Songs from House In Blue was his debut EP.",
+        "source": "https://first-avenue.com/performer/peter-raffoul/"
+      },
+      {
+        "claim": "He comes from a musical family: his father Jody has played in rock bands for over three decades, and his brother Billy is a singer-songwriter signed to Interscope. Peter took up piano at 17.",
+        "source": "https://first-avenue.com/performer/peter-raffoul/"
+      },
+      {
+        "claim": "Raffoul has said most of his songs are about admitting that things are far from perfect, and that he finds hopefulness in that.",
+        "source": "https://www.bringinitbackwards.com/interview-peter-raffoul/"
+      }
+    ],
+    "lineage": "Raffoul's Nashville-based alternative singer-songwriter music mixes raw, confessional songwriting with influences from the Beatles, late-'80s college rock, left-of-center hip-hop and soulful balladry.",
+    "genres": [
+      "alternative",
+      "singer-songwriter",
+      "pop rock"
+    ]
+  },
+  "draft": "The phrase that matters most in **Bad For Me** is the one that doesn't finish. Again and again the chorus reaches for its reason, \"to make me feel better,\" and on the fourth pass it stops short: \"To make me feel.\" The word \"better\" just falls away. It's a small cut, but it changes the whole confession. The narrator isn't chasing happiness anymore. They're chasing any feeling at all, and the song keeps landing on that gap until it ends there, still unfinished.\n\nPeter Raffoul built the song from a plain idea he's described in interviews. When you're going through a breakup or some other hard stretch, doing what's bad for you can feel easier, because it numbs you. The verses spell out the trap without excuses: weeks of getting high and staying numb, places you shouldn't be, and the flat admission that \"something / Always seems to feel like nothing.\" That line holds the real ache. The trouble isn't that nothing helps. It's that even the things that should help feel like nothing.\n\nThe second verse names what the numbness is covering. The narrator pictures someone else holding an ex and telling them the same things they once heard, then asks the question underneath everything: \"Or am I in this alone.\" Self-destruction sits right next to a stubborn, almost hopeful need to know the other person hurts too. The song doesn't pretend that need is noble, and it doesn't settle it either.\n\nThe sound stays gentle where a lesser song might lean on drama. A fingerpicked acoustic guitar rolls through arpeggios. Raffoul has said co-writer Connor Thuotte played that simple progression on a $5 yard-sale guitar, and the part made the final cut. Bass holds sustained root notes, and a slow kick and snare join without hurry, the arrangement stacking up one patient layer at a time. Raffoul's voice is mid-range with a little rasp, sustained and steady with a light vibrato, sometimes shadowed by a softer harmony above. Owen Lewis's production is clean and dry, so nothing blurs the words.\n\nRaffoul, a Leamington, Ontario native working out of Nashville, wrote it with Thuotte and Kate York for his debut EP, *Songs from House In Blue*. It fits the confessional, soul-leaning balladry he draws on, and his own description of his songs, admitting things are far from perfect and finding a kind of hope in saying so. The hope here is in the honesty itself.\n\nThat clipped \"to make me feel\" is the hook that stays with you, because it catches the exact moment when wanting to feel better gives way to just wanting to feel anything.",
+  "factCheck": [
+    {
+      "claim": "The chorus repeats 'to make me feel better' and on the fourth pass cuts to 'To make me feel.'",
+      "verdict": "supported",
+      "note": "The lyrics repeat 'To make me feel better' three times, then 'To make me feel.' The pattern recurs and the lyrics end on the clipped line."
+    },
+    {
+      "claim": "Raffoul built the song from the idea that during a breakup or hard stretch, doing bad things can feel easier because it numbs you. He described this 'in interviews.'",
+      "verdict": "corrected",
+      "note": "The idea is sourced to Raffoul, but the packet doesn't say it came from interviews. Changed to 'he's described.'"
+    },
+    {
+      "claim": "Lyrics: weeks of getting high and staying numb, places you shouldn't be, and 'something / Always seems to feel like nothing.'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The quote is two consecutive lines."
+    },
+    {
+      "claim": "'The second verse' names what the numbness covers: the narrator pictures someone else holding an ex and telling them the same things they once heard.",
+      "verdict": "corrected",
+      "note": "The lyrics don't label a 'second verse.' Also, the narrator is the one who told the other person things ('tell you things I told you'), not the ex. Reworded."
+    },
+    {
+      "claim": "'Or am I in this alone' quote.",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Raffoul said Connor Thuotte played a simple progression on a $5 yard-sale guitar and the part made the final cut. The draft tied it to the fingerpicked acoustic guitar.",
+      "verdict": "corrected",
+      "note": "The fact is sourced, but the packet doesn't say the yard-sale guitar part is the fingerpicked arpeggio heard. Kept the story and separated it from the sound description."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar arpeggios.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Bass holds sustained root notes.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A slow kick and snare join without hurry, and the arrangement stacks up one patient layer at a time.",
+      "verdict": "corrected",
+      "note": "Slow kick-and-snare drums are supported by all passes. The gradual build is contradicted by Pass 1 and is a claim about the arc, which the notes can't support. Removed."
+    },
+    {
+      "claim": "Voice is mid-range with a little rasp, sustained, light vibrato, sometimes shadowed by a softer higher harmony.",
+      "verdict": "supported",
+      "note": "Rasp and mid-range appear in all passes. Vibrato in Passes 2 and 3. Harmony in Passes 1 and 2. 'Steady' was dropped as unsupported."
+    },
+    {
+      "claim": "Owen Lewis's production is clean and dry.",
+      "verdict": "supported",
+      "note": "Lewis is credited as producer and programmer. Clean production in all passes, dry in Passes 1 and 3."
+    },
+    {
+      "claim": "Raffoul is a Leamington, Ontario native working out of Nashville; wrote it with Thuotte and Kate York; Songs from House In Blue is his debut EP.",
+      "verdict": "supported",
+      "note": "Matches the researched facts. Changed 'for' to 'on' to avoid implying the song was written for the EP."
+    },
+    {
+      "claim": "He draws on confessional, soul-leaning balladry, and describes his songs as admitting things are far from perfect and finding hope in that.",
+      "verdict": "supported",
+      "note": "Matches the lineage note and the interview fact."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2254,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014317,
+        "detail": "1099 in / 172 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015092,
+        "detail": "1099 in / 203 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00064544,
+        "detail": "1099 in / 191 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.123898,
+        "detail": "40039 in / 1382 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050064,
+        "detail": "3711 in / 1761 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047866,
+        "detail": "4858 in / 3815 out"
+      }
+    ]
+  }
+}

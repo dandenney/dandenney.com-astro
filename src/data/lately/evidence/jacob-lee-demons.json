@@ -1,0 +1,190 @@
+{
+  "spotifyId": "2TwPS8vPh7ffcLhee3ocjA",
+  "reviewedAt": "2026-11-23T14:28:07.128Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/1887385"
+  },
+  "listening": "Pass 1:\nThe excerpt begins with a driving, mid-tempo groove featuring a kick drum, snare, and hi-hat. A male voice sings with a clear, slightly breathy tone, delivering a melody with some sustained notes. A synth pad provides a sustained chordal background.\n\nAt around the 0:06 mark, a distorted electric guitar enters, playing a rhythmic, chugging pattern. The vocals become more layered, with harmonies joining the lead. The drums maintain their driving feel.\n\nAround 0:10, the electric guitar drops out, and the vocals become more prominent, with the harmonies continuing. The synth pad remains. The drums continue with the same pattern.\n\nAt approximately 0:17, the drums simplify, becoming less busy. The vocals shift to a lower register, with a more intimate delivery, and the harmonies are less prominent. The synth pad continues to provide a sustained background. The overall texture becomes sparser and more open.\n\nThe production sounds polished, with a clear and present vocal mix. The room sound is relatively dry, without significant reverb.\n\nPass 2:\nThe excerpt begins with a driving, mid-tempo groove. A male voice sings the lead melody, with a clean, slightly breathy character. He is accompanied by a layered, full male choir, singing harmonies. The vocals are upfront and clear.\n\nInstrumentation includes a prominent kick drum and snare, providing a steady, driving beat. A bass guitar plays a foundational, rhythmic line. A clean electric guitar plays arpeggiated chords, with a bright, sustained tone. A synth pad provides a warm, sustained background.\n\nThe production is polished and clean, with a clear, open room sound. The texture is full and layered.\n\nThe arrangement builds slightly in intensity in the first half, with the choir becoming more prominent. In the second half, the choir drops out, and the lead vocal becomes more intimate, with the instrumentation becoming sparser, featuring only the bass, drums, and a more subdued synth pad. The tempo remains consistent throughout.\n\nPass 3:\nThe excerpt begins with a male voice singing, accompanied by a driving, mid-tempo beat with a strong kick drum and snare. A synth pad provides a sustained chord, and a distorted electric guitar plays a rhythmic, palm-muted riff. The vocals are clear and forward, with a slight reverb.\n\nAt around 0:06, a second male voice joins in harmony, singing the same melody. The electric guitar becomes more prominent, playing a sustained, slightly distorted chord. The drums maintain their driving rhythm.\n\nAround 0:10, the harmony drops out, and the lead vocal continues alone. The electric guitar shifts to a more melodic, sustained line.\n\nAt 0:17, the drums become less prominent, and the electric guitar plays a clean, arpeggiated figure. The vocals become softer and more intimate, with a slight echo. The synth pad remains, providing a sustained background.\n\nThe overall production is polished and clean, with a clear separation of instruments. The room sound is spacious, with a moderate amount of reverb. The tempo is consistent throughout, maintaining a steady, mid-tempo groove.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Demons\" is the opening track (4:11) on Jacob Lee's album Philosophy, released February 1, 2019.",
+        "source": "https://www.discogs.com/release/30378410-Jacob-Lee-Philosophy"
+      },
+      {
+        "claim": "Jacob Lee is credited as songwriter, composer and lyricist of \"Demons\", and Matt Bartlem as producer.",
+        "source": "https://www.shazam.com/song/6782965278/demons"
+      },
+      {
+        "claim": "Philosophy is Lee's debut studio album. It came out on his independent label, Philosophical Records, and he also owns the Lowly Lyricist brand.",
+        "source": "https://www.last.fm/music/Jacob+Lee/Philosophy"
+      },
+      {
+        "claim": "Sputnikmusic describes \"Demons\" as staying mostly within pop-rock. Its bridge has a guitar solo surrounded by swelling synthesisers. The review says the song opens the album with a punch.",
+        "source": "https://www.sputnikmusic.com/review/80408/Jacob-Lee-Philosophy/"
+      },
+      {
+        "claim": "In a track-by-track piece, Lee recalls the adrenaline he felt while writing \"Demons\". He says it returned later, after about four months of doubt, when he felt he might be writing something decent.",
+        "source": "https://happymag.tv/jacob-lee-track-by-track/"
+      },
+      {
+        "claim": "Lee says every track of his was written alone, behind closed doors, on an acoustic guitar. The band-style production was added afterward.",
+        "source": "https://musicmattersmedia.com/2019/04/30/jacob-lee-musical-philosophy-from-down-under/"
+      },
+      {
+        "claim": "Lee grew up on the Gold Coast, Australia. He watched his father rehearse for shows, and his father gave him his first guitar and taught him the basics of chords and songwriting.",
+        "source": "https://madeinshoreditch.co.uk/2019/08/21/interview-meet-alternative-pop-sensation-jacob-lee/"
+      },
+      {
+        "claim": "Lee began posting individual tracks online in 2014. When asked about songwriting influences, he named only prose authors: Marcus Aurelius, Paulo Coelho and Mitch Albom.",
+        "source": "https://musicmattersmedia.com/2019/04/30/jacob-lee-musical-philosophy-from-down-under/"
+      },
+      {
+        "claim": "Before Philosophy, Lee released the EPs Sine Qua Non (2016) and Clarity (2017). \"Demons\" was also issued as a standalone single in 2017, and a re-recorded \"Philosophical Sessions\" version appeared in 2019.",
+        "source": "https://music.apple.com/nz/album/philosophical-sessions/1447372209"
+      },
+      {
+        "claim": "Lee's second album is titled Conscience. He described his songwriting as obsessed with philosophy and lyricism.",
+        "source": "https://happymag.tv/jacob-lee-talks-us-through-his-visceral-new-single-silhouette-and-album-number-three/"
+      }
+    ],
+    "lineage": "Jacob Lee is an Australian (Gold Coast) independent alternative-pop singer-songwriter. His songs are acoustic-guitar-written and lyric-driven, with pop-rock and electronic production.",
+    "genres": [
+      "alternative pop",
+      "indie pop",
+      "pop rock"
+    ]
+  },
+  "draft": "\"Deep in my structure, I think I still love her.\" *Structure* is a strange word for a love song. It's more blueprint than heartbeat, and it shows how the narrator of **Demons** sees himself: as something built and load-bearing, now cracking. Later he names a rupture where she should be. Jacob Lee writes like someone trying to reason through a feeling that won't be reasoned with. That fits a songwriter who, asked about influences, named Marcus Aurelius, Paulo Coelho and Mitch Albom rather than any musician.\n\nThe betrayal here is specific. The \"you\" didn't just leave. They switched sides. \"But you took their side and you pulled them to freedom\" is the chorus's sharp turn. He had been doing the slow work of keeping his worst self locked down, and someone he trusted opened the door. Then comes the line that carries the hurt: \"I kept your secrets and I thought that you would do the same.\" It's a ledger, a fairness argument, and the self-justification sits right next to the wound. He needs it on record that he held up his end. Notice that \"her\" is spoken about while \"you\" is spoken to. The song never says whether they're the same person, so grief and accusation stay tangled. Even his requests are small and worn out: sleep, breath, peace.\n\nLee says he writes everything alone, behind closed doors, on an acoustic guitar, with the band arrangement added afterward. Here that came from producer Matt Bartlem. A driving mid-tempo beat, kick and snare hitting square, runs under a sustained synth pad while a distorted electric guitar chugs. Lee's voice is clear and a little breathy, and stacked harmonies thicken the lead. In quieter stretches the drums ease back, a clean arpeggiated guitar comes forward, and the vocal turns close and intimate. Sputnikmusic heard it as mostly pop-rock, with a bridge guitar solo wrapped in swelling synths, and called it a punchy opener for *Philosophy*, his debut.\n\nLee clearly knew it mattered. He recalls the adrenaline of writing it coming back after about four months of doubt, the sense that he might finally be making something decent. He released it as a single in 2017, re-recorded it, then put it first on the album. Late in the song the chorus repeats so many times it stops sounding like a complaint and starts sounding like someone saying it over until it makes sense.\n\nWhat sticks is that last line's quiet bookkeeping, the way you keep counting the secrets you kept when the loyalty never came back.",
+  "factCheck": [
+    {
+      "claim": "\"Deep in my structure, I think I still love her.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Later he names a rupture where she should be.",
+      "verdict": "supported",
+      "note": "Second verse: \"I feel a rupture / From where she should be.\""
+    },
+    {
+      "claim": "Lee, asked about influences, named Marcus Aurelius, Paulo Coelho and Mitch Albom rather than any musician.",
+      "verdict": "supported",
+      "note": "He named only prose authors when asked about songwriting influences."
+    },
+    {
+      "claim": "\"But you took their side and you pulled them to freedom\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. Calling it the chorus is a reading of the repeated lines."
+    },
+    {
+      "claim": "\"I kept your secrets and I thought that you would do the same.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "His requests are sleep, breath, peace; \"her\" is spoken about and \"you\" is spoken to.",
+      "verdict": "supported",
+      "note": "Lyrics: \"I need some sleep,\" \"I want to breathe,\" \"Leave me in peace.\" The her/you split is visible in the lyrics."
+    },
+    {
+      "claim": "Lee says he writes everything alone, behind closed doors, on an acoustic guitar, with the band arrangement added afterward.",
+      "verdict": "supported",
+      "note": "Matches the Music Matters interview, which says the band-style production was added afterward."
+    },
+    {
+      "claim": "Here that came from producer Matt Bartlem.",
+      "verdict": "corrected",
+      "note": "Bartlem is credited as producer, but nothing says the band arrangement came from him. Reworded to credit him as producer only."
+    },
+    {
+      "claim": "Driving mid-tempo beat, kick and snare, sustained synth pad, distorted chugging electric guitar.",
+      "verdict": "supported",
+      "note": "All three passes agree on the beat and the pad. Passes 1 and 3 agree on the distorted, rhythmic guitar."
+    },
+    {
+      "claim": "Voice is clear and a little breathy, with stacked harmonies thickening the lead.",
+      "verdict": "supported",
+      "note": "All passes agree."
+    },
+    {
+      "claim": "In quieter stretches the drums ease back, a clean arpeggiated guitar comes forward, and the vocal turns close and intimate.",
+      "verdict": "corrected",
+      "note": "The drums easing back and the intimate vocal are agreed by all passes. The clean arpeggiated guitar \"coming forward\" is positional and the passes disagree on where it sits, so that part was dropped."
+    },
+    {
+      "claim": "Sputnikmusic heard it as mostly pop-rock, with a bridge guitar solo wrapped in swelling synths, and called it a punchy opener for Philosophy, his debut.",
+      "verdict": "supported",
+      "note": "Matches the Sputnikmusic summary. Philosophy is his debut studio album."
+    },
+    {
+      "claim": "Lee recalls the adrenaline of writing it coming back after about four months of doubt, the sense he might be making something decent.",
+      "verdict": "supported",
+      "note": "Matches the Happy Mag track-by-track."
+    },
+    {
+      "claim": "He released it as a single in 2017, re-recorded it, then put it first on the album.",
+      "verdict": "corrected",
+      "note": "The single (2017) and the track's opening slot on the 2019 album are supported. The re-recorded Philosophical Sessions version also came out in 2019, and its order relative to the album is unknown, so the sequence was removed."
+    },
+    {
+      "claim": "Late in the song the chorus repeats so many times that it stops sounding like a complaint.",
+      "verdict": "supported",
+      "note": "The repetition at the end of the lyrics supports this. The rest is interpretation."
+    },
+    {
+      "claim": "Interpretive readings: structure as blueprint, the ledger, demons let loose by the 'you', the closing line's bookkeeping.",
+      "verdict": "supported",
+      "note": "These are critic's readings grounded in the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2887,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00064948,
+        "detail": "1097 in / 193 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015536,
+        "detail": "1097 in / 221 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015811,
+        "detail": "1097 in / 232 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15184999999999998,
+        "detail": "50865 in / 2012 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07834,
+        "detail": "3910 in / 3135 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.054762,
+        "detail": "5046 in / 4467 out"
+      }
+    ]
+  }
+}

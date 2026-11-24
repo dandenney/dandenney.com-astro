@@ -1,0 +1,200 @@
+{
+  "spotifyId": "5U80M7CpKNCS1AVyCacOXU",
+  "reviewedAt": "2026-11-23T14:32:40.486Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/25502236"
+  },
+  "listening": "Pass 1:\nA clean electric guitar plays a arpeggiated chord progression with a tremolo effect. A second electric guitar plays a sustained, higher-pitched melody. A bass guitar plays a simple, root-note line. Drums provide a steady, mid-tempo beat with a snare on beats two and four. The groove is relaxed and slightly swaying.\n\nA single voice sings in a clear, mid-range register with a slightly nasal quality. The delivery is melodic and unhurried. There are no harmonies.\n\nThe production sounds dry and intimate, with minimal room ambience. The texture is clean and unpolished, with a raw, direct feel.\n\nThe excerpt begins with the full band playing. The vocals enter shortly after the guitars establish the main progression. No instruments drop out or build significantly within this segment.\n\nPass 2:\nA clean electric guitar plays a arpeggiated chord progression with a tremolo effect. A second electric guitar plays a sustained, higher-pitched melody. A bass guitar plays a simple, root-note line. Drums provide a steady, mid-tempo beat with a snare on beats two and four, and a closed hi-hat on eighth notes. The groove feels relaxed and slightly melancholic.\n\nA single voice sings in a clear, mid-range register, with a slightly nasal quality. The delivery is unhurried and melodic. There are no harmonies.\n\nThe production sounds dry and intimate, with a slight reverb on the vocals and guitars. The texture is clean and unpolished.\n\nThe excerpt begins with the full band playing. The second electric guitar drops out briefly before re-entering. The vocals are present throughout.\n\nPass 3:\nA clean electric guitar plays a arpeggiated chord progression with a tremolo effect. A second electric guitar plays a sustained, higher-pitched melody. A bass guitar plays a simple, root-note line. Drums provide a steady, mid-tempo beat with a snare on beats two and four. The groove feels relaxed and slightly melancholic.\n\nA single voice sings in a clear, mid-range register with a slightly nasal quality. The delivery is unadorned and direct. There are no harmonies.\n\nThe production sounds dry and intimate, with a close-miked feel. The texture is clean and uncompressed. The overall sound is polished.\n\nThe excerpt begins with the electric guitar, bass, and drums already playing. The vocals enter shortly after. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "'Shopping Center Sunsets' is track 4 on T. Hardy Morris's album The Digital Age of Rome, released June 25, 2021 on Normaltown Records.",
+        "source": "https://thardymorris.bandcamp.com/album/the-digital-age-of-rome"
+      },
+      {
+        "claim": "Album credits say all songs were written by T. Hardy Morris, except 'Shopping Center Sunsets', which he wrote with Adam Landry.",
+        "source": "https://thardymorris.bandcamp.com/album/the-digital-age-of-rome"
+      },
+      {
+        "claim": "Adam Landry produced the album. It was recorded and mixed at Tweed Recording in Athens, GA, and engineered and mixed by Nate Nelson, with additional engineering by Charlie Chastain. John Baldwin mastered it in Nashville.",
+        "source": "https://thardymorris.bandcamp.com/album/the-digital-age-of-rome"
+      },
+      {
+        "claim": "Album musicians include Brad Morgan (Drive-By Truckers) on drums, Vaughn Lamb on bass, Charlton Eugene Woolfolk III on electric guitar, Matt 'Pistol' Stoessel on steel guitar, and Faye Webster, Shelly Colvin and Landry on vocals. Landry also plays drums, bass, guitars, keys and percussion.",
+        "source": "https://thardymorris.bandcamp.com/album/the-digital-age-of-rome"
+      },
+      {
+        "claim": "Morris released 'Shopping Center Sunsets' as a single with a video on May 27, 2021, about a month before the album.",
+        "source": "https://twitter.com/THardyMorris"
+      },
+      {
+        "claim": "The album was recorded in a deserted downtown Athens, Georgia, after the pandemic stopped Morris's plans to record his 12 spring-2020 demos.",
+        "source": "https://newwestrecords.com/products/t-hardy-morris-the-digital-age-of-rome-cd"
+      },
+      {
+        "claim": "Morris said he wanted the album to sound like how the world felt to him in the second half of 2020: uncomfortable and chaotic, dystopian but still beautiful.",
+        "source": "https://thardymorris.bandcamp.com/album/the-digital-age-of-rome"
+      },
+      {
+        "claim": "Glide Magazine describes the song as being about the rundown strip malls found in towns of every size. The Record Dept calls it a satirical song.",
+        "source": "https://glidemagazine.com/258210/t-hardy-morris-makes-sadness-sound-good-on-thoughtful-indie-rocker-the-digital-age-of-rome-album-review/"
+      },
+      {
+        "claim": "The Digital Age of Rome is Morris's fourth solo LP and second for Normaltown Records, and Landry also produced his previous solo album and Diamond Rugs.",
+        "source": "https://glidemagazine.com/258210/t-hardy-morris-makes-sadness-sound-good-on-thoughtful-indie-rocker-the-digital-age-of-rome-album-review/"
+      },
+      {
+        "claim": "Morris is a Georgia-born musician who first came to fame as guitarist and singer of the Southern hard rock band Dead Confederate. He also played in Diamond Rugs, and his earlier solo albums include Audition Tapes, Drownin' on a Mountaintop (2015) and Dude, The Obscure (2018).",
+        "source": "https://www.amazon.com/Digital-Age-Rome-Hardy-Morris/dp/B0915FWYRX"
+      }
+    ],
+    "lineage": "The song sits in Athens, Georgia's Southern indie and rock songwriting scene, and it moves Morris from the classic-rock feel of his earlier albums toward a more contemporary, synth-tinged sound.",
+    "genres": [
+      "indie rock",
+      "southern rock",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "There's a minute every evening when the parking lot outside the vape shop and the title-loan office turns the color of a cocktail. **Shopping Center Sunsets** is about that light landing on all the wrong things. T. Hardy Morris builds the chorus as an inventory: vape pens, a hair supply shop, tattoo flash, a dinette set on layaway, a store selling pet fish at a discount. \"Car title cash regrets\" is the sharpest item on the shelf, four words that carry a whole bad month.\n\nThe Record Dept calls it satirical, and Glide Magazine hears a song about the rundown strip malls that turn up in towns of every size. Both are right, and neither is the whole story. The verses step out of the catalog and into the narrator's own errands: a liquor run because the bedside table has gone dry, a thought that the lottery deserves more attention. The one making the jokes is also a customer. Then the sky goes magenta and the feeling flips. \"Under God's neon sign\" mocks and means it at once. \"Nature sees my need to believe\" is as unguarded as the song gets, someone admitting they crave a sign before the sign shows up. The song never decides whether the sunset is grace or just a pretty accident over a parking lot, and it's better for refusing. On the page it closes on that need-to-believe line alone, without the answer that followed it every time before, so the wish is left hanging.\n\nThe music keeps a straight face. A clean electric guitar rolls arpeggios through a tremolo, a second guitar holds long, high notes over it, the bass stays on the roots, and the drums sit at an easy mid-tempo with the snare on two and four. The groove sways a little, more evening stroll than march. Morris sings in a clear, slightly nasal mid-range, unhurried, with no harmonies behind, and the dry, close production puts the voice right at your shoulder.\n\nMorris wrote it with Adam Landry, who produced The Digital Age of Rome at Tweed Recording in a downtown Athens, Georgia, emptied out by the pandemic. Morris, once the guitarist and singer of the Southern hard rock band Dead Confederate, said he wanted the record to sound the way the second half of 2020 felt to him: uncomfortable, chaotic, dystopian but still beautiful. This song is that sentence set to a tremolo guitar. It belongs to Athens's Southern indie songwriting, on an album that steers him away from the classic-rock feel of his earlier records.\n\nIt sticks because it lets you laugh at the strip mall, then catches you standing in its parking lot, waiting for the sky to tell you something.",
+  "factCheck": [
+    {
+      "claim": "The parking lot outside a vape shop and a title-loan office at sunset",
+      "verdict": "corrected",
+      "note": "The lyrics give 'electronic cigarettes' and 'car title cash regrets', not a vape shop or a title-loan office. Reworded to stay close to the lyrics."
+    },
+    {
+      "claim": "The chorus is an inventory of vape pens, a hair supply shop, tattoo flash, a dinette set on layaway, and discount pet fish",
+      "verdict": "corrected",
+      "note": "The lyrics say 'electronic cigarettes', 'hair supply outlets', 'tribal tattoo concepts', 'lay away dinet sets' and 'discount aquatic pets'. 'Tattoo flash' and 'vape pens' replaced with the lyric's wording. The repeating section is a refrain, so 'chorus' kept loosely."
+    },
+    {
+      "claim": "\"Car title cash regrets\" is four words",
+      "verdict": "supported",
+      "note": "Exact lyric, four words."
+    },
+    {
+      "claim": "The Record Dept calls it satirical; Glide Magazine hears a song about rundown strip malls in towns of every size",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Verses: a liquor run because the bedside table is dry; a thought that the lottery deserves more attention",
+      "verdict": "supported",
+      "note": "Matches 'I head for the liquor store / My bedside table's dry' and 'I should play the lotto more'."
+    },
+    {
+      "claim": "The sky goes magenta",
+      "verdict": "supported",
+      "note": "Lyric: 'Deep magenta sky'."
+    },
+    {
+      "claim": "Quotes \"Under God's neon sign\" and \"Nature sees my need to believe\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "The lyric closes on the need-to-believe line without the answer that followed it every time before",
+      "verdict": "corrected",
+      "note": "The lyric's structure supports this, but the line was followed by 'And sends me' twice, not 'every time'. Reworded."
+    },
+    {
+      "claim": "Clean electric guitar arpeggios through a tremolo; a second guitar holds long, high notes; bass on the roots; mid-tempo drums with snare on two and four",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The groove sways a little, more evening stroll than march",
+      "verdict": "corrected",
+      "note": "Only one pass says 'swaying'. Two passes say relaxed. Reworded to 'relaxed'."
+    },
+    {
+      "claim": "Clear, slightly nasal mid-range voice, unhurried, no harmonies",
+      "verdict": "supported",
+      "note": "All passes agree on the voice and the lack of harmonies. Two passes say 'unhurried'."
+    },
+    {
+      "claim": "Dry, close production",
+      "verdict": "corrected",
+      "note": "'Dry and intimate' is agreed by all three passes. 'Close-miked' appears in only one, so 'close' was dropped."
+    },
+    {
+      "claim": "Morris wrote it with Adam Landry, who produced The Digital Age of Rome",
+      "verdict": "supported",
+      "note": "Matches the album credits."
+    },
+    {
+      "claim": "Recorded at Tweed Recording in a downtown Athens, Georgia, emptied out by the pandemic",
+      "verdict": "supported",
+      "note": "Tweed Recording in Athens, GA, and a deserted downtown Athens after the pandemic changed plans."
+    },
+    {
+      "claim": "Morris was once guitarist and singer of the Southern hard rock band Dead Confederate",
+      "verdict": "supported",
+      "note": "He first came to fame in that role."
+    },
+    {
+      "claim": "Morris wanted the record to sound like the second half of 2020: uncomfortable, chaotic, dystopian but still beautiful",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "The song belongs to Athens's Southern indie songwriting and moves him away from the classic-rock feel of his earlier records",
+      "verdict": "supported",
+      "note": "Matches the lineage note. Attributed to the song, not the whole album."
+    },
+    {
+      "claim": "\"This song is that sentence set to a tremolo guitar\"; \"the music keeps a straight face\"",
+      "verdict": "supported",
+      "note": "Interpretation resting on supported facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2228,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014198,
+        "detail": "1101 in / 167 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014223,
+        "detail": "1101 in / 168 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014123,
+        "detail": "1101 in / 164 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081628,
+        "detail": "22219 in / 1719 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.085128,
+        "detail": "3817 in / 3493 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051746,
+        "detail": "4983 in / 4178 out"
+      }
+    ]
+  }
+}

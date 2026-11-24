@@ -1,0 +1,210 @@
+{
+  "spotifyId": "0rcycf0AIw2hSgDgABzfLO",
+  "reviewedAt": "2026-11-23T14:17:36.551Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11058163"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar is fingerpicked throughout, playing arpeggiated chords. A bass guitar plays a simple, sustained line.\n\nTempo and Groove:\nThe tempo is slow, with a relaxed, gentle feel. The groove is steady and unhurried.\n\nVocals:\nA single voice, with a medium-low register, sings in a clear, unadorned manner. The delivery is direct. There are no harmonies.\n\nProduction:\nThe sound is clean and clear, with a sense of a small, intimate room. The texture is smooth and polished.\n\nArrangement:\nThe acoustic guitar and bass begin together. The voice enters shortly after. All elements remain constant throughout the excerpt.\n\nPass 2:\nInstruments:\nAn acoustic guitar plays arpeggiated chords with a fingerpicking style. A bass guitar plays a walking bass line. A drum kit plays a simple, steady beat with brushes, including kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and melodic, with a slight vibrato. There are no harmonies.\n\nProduction:\nThe production sounds clean and polished. The room sounds like a medium-sized, dry space. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the acoustic guitar, bass, and drums playing together. The vocals enter shortly after. All instruments maintain their parts throughout, with no significant changes in dynamics or instrumentation.\n\nPass 3:\nInstruments:\nAn acoustic guitar plays fingerpicked arpeggios throughout, with a bass guitar playing a walking bass line. A drum kit plays a simple beat with brushes.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and melodic, with no harmonies present.\n\nProduction:\nThe production sounds clean and polished. The room sounds like a medium-sized space with a natural reverb. The texture is smooth.\n\nArrangement:\nThe acoustic guitar, bass, and drums are present from the beginning. The vocals enter at the 0:02 mark. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Prisoner\" is track 4 on Stumfol's debut album \"12\", released 10 June 2013 on Fond Of Life Records. It runs 2:41 on Bandcamp.",
+        "source": "https://fondoflife.bandcamp.com/album/12"
+      },
+      {
+        "claim": "Christian Stumfol is credited as the writer and composer of the album's songs, including \"Prisoner\".",
+        "source": "https://www.qobuz.com/no-en/album/12-stumfol/4260281743447"
+      },
+      {
+        "claim": "Discogs credits the \"12\" LP as recorded by Antonio Raimondo, mastered by Arne Thiemann, with layout by Matthias Bäuerle. The vinyl was issued under Fond Of Life (FOL066) and Angry Chuck Records (CHUCK#32).",
+        "source": "https://www.discogs.com/release/6466828-Stumfol-12"
+      },
+      {
+        "claim": "Antonio Raimondo is listed among the various members and collaborators in the Stumfol project, alongside Christian's brother Daniel Stumfol, Tim Petran and Andreas Streble.",
+        "source": "https://www.discogs.com/artist/4220665-Stumfol"
+      },
+      {
+        "claim": "A video for \"Prisoner\" was released in April 2013, ahead of the album.",
+        "source": "https://www.visions.de/news/stumfol-12/"
+      },
+      {
+        "claim": "The \"12\" LP came in 12 different hand-screenprinted cover versions, each limited to 25 copies. Twelve different artists made artwork for the album's 12 songs.",
+        "source": "https://www.visions.de/news/stumfol-12/"
+      },
+      {
+        "claim": "Ox-Fanzine said \"Prisoner\" had circulated online as a video for some time before the album. It described the album as sounding like a mix of Tom Petty and Bruce Springsteen, with Rumbleseat and Foundations also named as reference points.",
+        "source": "https://www.ox-fanzine.de/review/12-90453"
+      },
+      {
+        "claim": "Allschools said that on tracks like \"From Peacetime To War\" and \"Prisoner\", Stumfol keeps things relaxed and uses little frills. It placed the album between best-friends folk, working-class attitude and acoustic punk.",
+        "source": "https://www.allschools.de/recordReview/show/Stumfol_-_12"
+      },
+      {
+        "claim": "Christian Stumfol is a German singer-songwriter from Baden-Württemberg. He also sings and plays bass in the punk band Clap Your Hands Twice, and \"12\" was his solo debut album.",
+        "source": "https://www.ox-fanzine.de/review/12-90453"
+      },
+      {
+        "claim": "The albums that followed \"12\" were Pareto (2014), Cold Brew (2016) and Long Story Short (2019). Before the album he had released the 7-inch \"Coffee Sessions\", limited to 100 copies with covers hand-painted in coffee.",
+        "source": "https://goout.net/en/stumfol/pzxjcgg/"
+      }
+    ],
+    "lineage": "Stumfol's songs sit in the punk-rooted singer-songwriter and acoustic-folk tradition, with Springsteen and Tom Petty comparisons from reviewers and a DIY ethos tied to Germany's Fond Of Life Records punk scene.",
+    "genres": [
+      "singer-songwriter",
+      "acoustic punk",
+      "folk rock"
+    ]
+  },
+  "draft": "The most startling line in **Prisoner** is also the quietest: \"No one tried to stop me.\" The narrator of Christian Stumfol's song spends most of its 2:40 describing a life inside a cell he was born into, a voice in a language he couldn't follow, a light he couldn't tell from a dream. Then he walks out, and nothing happens. No guard, no alarm, no chase. The escape is an anticlimax, and that anticlimax is the whole wound.\n\nStumfol builds toward it with a refrain that works like a proverb someone repeats to stay sane: \"You cannot miss what you have never seen before / But deep inside, you know there must be more.\" The first line is a defense, a way of making peace with the walls. The second gives the defense away. Both lines sit in the same breath and neither wins, which is exactly what living with a quiet longing feels like. You talk yourself out of it and it stays anyway.\n\nThe final verse is where relief and regret arrive together. The narrator learns he was always free, free \"as a bird,\" and you can hear the lift in that discovery. But the song doesn't end on the bird. It ends on a confession, \"But I was just too scared to see,\" and then on the open question of who he could have been. The cage was fear. Finding the door open means admitting he could have left long ago, and the song lets that sting sit next to the joy without smoothing either one over.\n\nThe arrangement refuses any drama, which is right for a story whose big moment is nobody reacting. Fingerpicked acoustic guitar rolls out patient arpeggios over a walking bass line, while brushes keep a soft, steady beat on the kit. The tempo is slow and the groove relaxed, almost easy. The voice is clear and mid-range, sung smooth and melodic with no harmonies to lean on, so the words land plainly, one person telling you something hard in a level tone. The production is clean, with nothing between you and the story.\n\nIt's a long way from the punk Stumfol plays bass and sings in with Clap Your Hands Twice, but the DIY roots show. \"Prisoner\" opened his solo debut *12* on Fond Of Life Records, an album that came in twelve hand-screenprinted covers. Ox-Fanzine heard Tom Petty and Springsteen in the record, with Rumbleseat and Foundations as nearer cousins. Allschools singled out this track for its relaxed, low-frills approach and placed the album between best-friends folk, working-class attitude and acoustic punk. That fits: this is a campfire parable told by someone who came up in basements.\n\nThe song sticks because it turns the fear of a locked door into something worse and more familiar, the dawning knowledge that you were the one holding it shut.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"No one tried to stop me.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric. The 'quietest line' framing was a sound/dynamics claim with no support, so it was changed to 'plainest'."
+    },
+    {
+      "claim": "Christian Stumfol's song; he wrote it",
+      "verdict": "supported",
+      "note": "Qobuz credits him as writer and composer."
+    },
+    {
+      "claim": "The song's 2:40 length",
+      "verdict": "removed",
+      "note": "Spotify says 2:40 and Bandcamp says 2:41. The runtime was padding, so it was dropped."
+    },
+    {
+      "claim": "Narrator born into a cell, hears a voice in a language he couldn't follow, sees a light he can't tell from a dream, then leaves and nobody stops him",
+      "verdict": "supported",
+      "note": "Paraphrases the lyrics: born in a prison, the voice and the language, the light, 'Was it real or just a dream?', 'No one tried to stop me'. 'No guard, no alarm, no chase' is the critic's reading."
+    },
+    {
+      "claim": "Refrain quote: \"You cannot miss what you have never seen before / But deep inside, you know there must be more.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly. 'In the same breath' described the delivery without support, so it was changed to 'side by side'."
+    },
+    {
+      "claim": "\"you can hear the lift in that discovery\"",
+      "verdict": "removed",
+      "note": "A sound claim not backed by the listening passes."
+    },
+    {
+      "claim": "Quotes \"as a bird\" and \"But I was just too scared to see\"; the song ends on the confession and the question of who he could have been",
+      "verdict": "corrected",
+      "note": "The lyrics support the content and the order. The quoted lines were paraphrased to keep to the three-line quote limit."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar arpeggios, walking bass line, brushes on the kit",
+      "verdict": "supported",
+      "note": "Guitar is agreed by all three passes. Walking bass and brushes are agreed by passes 2 and 3."
+    },
+    {
+      "claim": "Brushes keep a 'soft' beat",
+      "verdict": "corrected",
+      "note": "The passes say 'simple, steady'. 'Soft' was not stated."
+    },
+    {
+      "claim": "Slow tempo, relaxed groove",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Voice clear, mid-range, smooth and melodic, no harmonies",
+      "verdict": "supported",
+      "note": "Clear, mid-range and no harmonies are agreed by all three passes. Smooth and melodic is agreed by passes 2 and 3."
+    },
+    {
+      "claim": "Clean production",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "\"The arrangement refuses any drama\"",
+      "verdict": "corrected",
+      "note": "This was a claim about the whole arrangement. The passes only cover a short excerpt, so it was softened."
+    },
+    {
+      "claim": "Stumfol plays bass and sings in the punk band Clap Your Hands Twice",
+      "verdict": "supported",
+      "note": "Ox-Fanzine."
+    },
+    {
+      "claim": "\"Prisoner\" opened his solo debut 12",
+      "verdict": "corrected",
+      "note": "It is track 4, not the opener. 12 was his solo debut."
+    },
+    {
+      "claim": "Album came in twelve hand-screenprinted covers; on Fond Of Life Records",
+      "verdict": "supported",
+      "note": "Visions.de for the covers; Bandcamp for the label."
+    },
+    {
+      "claim": "Ox-Fanzine heard Tom Petty and Springsteen, with Rumbleseat and Foundations as 'nearer cousins'",
+      "verdict": "corrected",
+      "note": "Rumbleseat and Foundations were named as reference points. 'Nearer cousins' was embellishment."
+    },
+    {
+      "claim": "Allschools singled out this track and placed the album between best-friends folk, working-class attitude and acoustic punk",
+      "verdict": "corrected",
+      "note": "It named 'Prisoner' alongside 'From Peacetime To War' as relaxed and low-frills. The album placement is supported."
+    },
+    {
+      "claim": "\"someone who came up in basements\"",
+      "verdict": "removed",
+      "note": "Unsupported biographical claim."
+    },
+    {
+      "claim": "DIY roots / punk scene ties",
+      "verdict": "supported",
+      "note": "Lineage note: DIY ethos tied to the Fond Of Life punk scene."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2437,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013689,
+        "detail": "1098 in / 147 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013964,
+        "detail": "1098 in / 158 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014339,
+        "detail": "1098 in / 173 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.132154,
+        "detail": "43822 in / 1451 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.0508,
+        "detail": "3520 in / 1836 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056532,
+        "detail": "4701 in / 4713 out"
+      }
+    ]
+  }
+}

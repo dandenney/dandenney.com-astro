@@ -1,0 +1,180 @@
+{
+  "spotifyId": "0c99z8W7OHHf7dgzxBVAIg",
+  "reviewedAt": "2026-11-23T14:26:46.768Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/4207288"
+  },
+  "listening": "Pass 1:\nA clean electric guitar plays arpeggiated chords with a chorus effect. A drum machine provides a steady, mid-tempo beat with a kick, snare, and hi-hat. A bass guitar plays a simple, root-note pattern.\n\nA male voice sings the lead melody, with a clear, slightly breathy character. Harmonies, also sung by a male voice, enter on certain phrases, creating a stacked, full sound. The delivery is relaxed and conversational.\n\nThe production sounds clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The overall texture is smooth.\n\nThe excerpt begins with all instruments and vocals present. The lead vocal is prominent, with harmonies supporting. The arrangement remains consistent throughout, with no significant changes in instrumentation or dynamics.\n\nPass 2:\nA clean electric guitar plays arpeggiated chords with a slight delay, establishing a moderate tempo. A bass guitar enters, playing a simple, driving line. Drums join with a steady beat, featuring a kick, snare, and open hi-hat on the off-beats, creating a relaxed, slightly swung groove.\n\nA male voice sings the lead melody, with a clear, mid-range character and a smooth delivery. Harmonies, also male, enter, often in parallel thirds or fifths, adding fullness to the vocal lines.\n\nThe production sounds clean and polished. The instruments are well-defined, and the vocals are upfront. There's a sense of a medium-sized room, with a slight reverb on the vocals and guitar.\n\nThe arrangement builds with the introduction of each instrument, then maintains a consistent texture. The vocals are prominent throughout, with harmonies appearing and disappearing to emphasize certain phrases. The excerpt ends with the full band playing.\n\nPass 3:\nA clean electric guitar plays a arpeggiated chord progression with a slight delay. A bass guitar plays a simple, root-note line. Drums enter with a steady, mid-tempo beat, featuring a prominent kick and snare, and open hi-hats on the off-beats.\n\nA male voice sings with a clean, slightly breathy character, delivering the melody in a relatively high register. Harmonies enter, with a second male voice singing a higher harmony, creating a full, stacked vocal sound.\n\nThe production is clean and polished, with a clear separation of instruments. The overall texture is bright and open, suggesting a medium-sized room.\n\nThe excerpt begins with the full band and vocals. The drums drop out briefly, leaving only the guitar, bass, and vocals, before re-entering with the full arrangement. The vocals remain consistent throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"You're Gonna Cry\" was released as a single on July 21, 2022, on the DWLLRS label. It runs 3:39 and is listed as alternative.",
+        "source": "https://www.shazam.com/song/1633399153/youre-gonna-cry"
+      },
+      {
+        "claim": "The song was written by Bren Eissman and Joey Spurgeon, the two members of DWLLRS.",
+        "source": "https://www.shazam.com/song/1633399153/youre-gonna-cry"
+      },
+      {
+        "claim": "The single is copyrighted ℗ 2022 DWLLRS. Apple Music lists it as a one-song single.",
+        "source": "https://music.apple.com/us/album/youre-gonna-cry-single/1633399153"
+      },
+      {
+        "claim": "DWLLRS are singer/guitarists Bren Eissman and Joey Spurgeon, who both grew up in San Clemente, California.",
+        "source": "https://www.amazon.co.uk/Youre-Gonna-Cry/dp/B0B61DT9HK"
+      },
+      {
+        "claim": "Their first single, \"And Then We'll Be Alright,\" came out at the start of 2020. In 2022 they signed to Island Records and went viral with \"Float Through the Ceiling\" and \"Blue Spirits.\"",
+        "source": "https://www.amazon.co.uk/Youre-Gonna-Cry/dp/B0B61DT9HK"
+      },
+      {
+        "claim": "The band name comes from \"to dwell\", a term Bren's dad coined sarcastically about the pair's tendency to overthink everything.",
+        "source": "https://www.musicmetricsvault.com/artists/dwllrs/2TviQllPVEQ7E68Yr4uPKR"
+      },
+      {
+        "claim": "Bren and Joey say they grew close through late-night dorm-room conversations about existential dread and a shared tendency to overthink. Joey said, \"We just tend to dwell on stuff.\"",
+        "source": "https://medium.com/@trenducsd/dwllrs-11-9-22-990da43310f0"
+      },
+      {
+        "claim": "Bren and Joey met at a basketball camp in sixth grade, went to the same high school, and later became college roommates. That is when they started the project.",
+        "source": "https://roadtripplaylists.com/dwllrs-how-mutual-overthinking-led-to-alt-pops-newest-rising-stars/"
+      },
+      {
+        "claim": "Bren said he wants DWLLRS music to feel like driving down PCH in high school, crying and listening to Current Joys.",
+        "source": "https://roadtripplaylists.com/dwllrs-how-mutual-overthinking-led-to-alt-pops-newest-rising-stars/"
+      },
+      {
+        "claim": "A review of their Voodoo Room show cites Dominic Fike and Frank Ocean as vocal influences, and Brockhampton and Roy Blair as influences on the experimental production.",
+        "source": "https://medium.com/@trenducsd/dwllrs-11-9-22-990da43310f0"
+      }
+    ],
+    "lineage": "DWLLRS sit in the lo-fi, bedroom-made indie/alt-pop scene of the California coast, with hazy, nostalgic, minimalist songs that went viral on TikTok.",
+    "genres": [
+      "alternative pop",
+      "indie pop",
+      "lo-fi"
+    ]
+  },
+  "draft": "The chorus of **You're Gonna Cry** pulls a strange trick. It opens with an apology, \"Believe me, I'm sorry,\" then predicts your tears three times over, then swings out to the end of everything: \"You're gonna cry, we're gonna die, we're so right.\" Grief, mortality, and a teenager's total certainty all land in one breath, and DWLLRS don't pick a winner. The narrator is apologizing for a hurt that hasn't happened yet, and seems almost proud to be the one who saw it coming.\n\nThat fits a duo who named themselves after a habit. Bren Eissman and Joey Spurgeon, who wrote the song together, took \"DWLLRS\" from \"to dwell,\" a word Bren's dad used sarcastically about how much the two overthink. Here the dwelling runs both ways. The verses look back: old friends laughing, a failed raid on a parents' liquor cabinet, a first kiss that turned to ashes. Each one ends in a shrug that's really a verdict: \"It never works, it never worked.\" The past tense and present tense sitting next to each other is the whole song in small. What failed then is still failing now.\n\nThe second verse admits even more. Over a plea to be held like something holy, the narrator says the quiet part: \"I keep lying to myself, but I think it's working out.\" There's no irony in the delivery. It's a person half-watching their own self-deception and choosing to keep it going because it helps.\n\nThe sound keeps all of this gentle. A clean electric guitar rolls through arpeggiated chords with a slight delay, over a simple root-note bass line and a steady mid-tempo beat, with open hi-hats on the off-beats. The vocal is clean and a little breathy, and harmonies stack up behind certain phrases until the lines feel crowded with company. The production is polished, with a modest room reverb. That's tidier than the bedroom-pop scene of the California coast the duo came up in, but the nostalgic haze is the same. The calm groove under lyrics about inevitable heartbreak is the point. It sounds like someone explaining the worst news kindly.\n\nBren has said he wants their music to feel like driving down PCH in high school, crying to Current Joys, and the closing stretch shows what he means. The prediction turns inward: \"I'll be crying over love.\" Then the lines start to repeat and break off mid-phrase, as if the overthinking has finally run out of words.\n\nIt sticks because it apologizes for your heartbreak before it happens, and by the end you can tell the singer is mostly bracing for their own.",
+  "factCheck": [
+    {
+      "claim": "Chorus opens 'Believe me, I'm sorry,' then 'You're gonna cry' three times, then 'You're gonna cry, we're gonna die, we're so right.'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The 'Believe me, I'm sorry' quote was turned into a paraphrase to keep the review to three quoted lines."
+    },
+    {
+      "claim": "A 'teenager's total certainty'",
+      "verdict": "corrected",
+      "note": "The lyrics never say the narrator is a teenager. Changed to 'total certainty'."
+    },
+    {
+      "claim": "Bren Eissman and Joey Spurgeon wrote the song together",
+      "verdict": "supported",
+      "note": "Shazam credits both."
+    },
+    {
+      "claim": "The name comes from 'to dwell,' a word Bren's dad used sarcastically about the pair overthinking",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Verses recall old friends laughing, a failed liquor-cabinet raid, and a first kiss that turned to ashes",
+      "verdict": "supported",
+      "note": "Rests on the lyrics, with 'failed' read from 'It never works.'"
+    },
+    {
+      "claim": "Each verse ends in 'It never works, it never worked'",
+      "verdict": "corrected",
+      "note": "Only the first stanza ends that way. The second ends 'It's gonna hurt, it's gotta hurt.'"
+    },
+    {
+      "claim": "'The second verse' contains the 'Hold me like it's holy' / 'I keep lying to myself' lines",
+      "verdict": "corrected",
+      "note": "Those lines come in a later stanza after the chorus, not the second verse. Reworded to 'later.' The 'I keep lying to myself, but I think it's working out' quote matches the lyrics."
+    },
+    {
+      "claim": "'There's no irony in the delivery'",
+      "verdict": "removed",
+      "note": "The listening passes don't agree on this. They say only 'relaxed' and 'smooth.'"
+    },
+    {
+      "claim": "Guitar: clean electric, arpeggiated chords, slight delay; simple root-note bass; steady mid-tempo beat; open hi-hats on off-beats",
+      "verdict": "supported",
+      "note": "At least two passes agree on each."
+    },
+    {
+      "claim": "Vocal clean and a little breathy; harmonies stack behind certain phrases",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say breathy. All three describe stacked or full harmonies."
+    },
+    {
+      "claim": "Polished production with modest room reverb",
+      "verdict": "supported",
+      "note": "All passes agree on clean and polished, and on a medium room with reverb."
+    },
+    {
+      "claim": "The sound is tidier than the bedroom-pop scene of the California coast the duo came up in, but the nostalgic haze is the same",
+      "verdict": "corrected",
+      "note": "No pass describes haze in the sound, so that part was dropped. The scene lineage and San Clemente roots are supported, so the line now says the production is cleaner than that scene's usual haze."
+    },
+    {
+      "claim": "Bren wants the music to feel like driving down PCH in high school, crying to Current Joys",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Closing stretch: 'I'll be crying over love' quote, then lines repeat and break off mid-phrase",
+      "verdict": "corrected",
+      "note": "The lyrics split this as 'I'll be crying / Over love,' so it is now a paraphrase. The repetition and the 'it never–' cut-off are in the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2416,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013998,
+        "detail": "1101 in / 159 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014423,
+        "detail": "1101 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014898,
+        "detail": "1101 in / 195 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13564199999999998,
+        "detail": "45961 in / 1372 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.048732,
+        "detail": "3748 in / 1687 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052912,
+        "detail": "4886 in / 4314 out"
+      }
+    ]
+  }
+}

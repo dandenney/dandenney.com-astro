@@ -1,0 +1,205 @@
+{
+  "spotifyId": "7xVpkVkd1klTzLJEysIR7z",
+  "reviewedAt": "2026-11-23T14:19:55.584Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7805254"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar, played with a pick, strumming chords.\n\nTempo and Groove:\nModerate tempo, with a steady, driving feel.\n\nVocals:\nA male voice, with a slightly raspy, unpolished character. The delivery is clear and direct, with no harmonies.\n\nProduction:\nThe sound is raw and unpolished, with a dry, intimate room sound. There is no noticeable reverb or effects.\n\nArrangement:\nThe acoustic guitar and vocals are present throughout the excerpt. There are no changes in instrumentation or dynamics.\n\nPass 2:\nInstruments:\nAcoustic guitar and a harmonica. The guitar plays a fingerpicked accompaniment, while the harmonica plays a melodic line, sometimes in unison with the vocals, sometimes as a counter-melody.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, unhurried feel. The groove is a gentle, flowing folk rhythm.\n\nVocals:\nA male voice sings in a clear, slightly raspy character. The delivery is direct and narrative, with no harmonies.\n\nProduction:\nThe sound is raw and intimate, as if recorded in a small room. There's a natural, unpolished texture, with no obvious effects or studio trickery.\n\nArrangement:\nThe guitar and harmonica play continuously throughout the excerpt. The vocals enter at the beginning and remain present, creating a consistent, unchanging arrangement.\n\nPass 3:\nAcoustic guitar plays a steady, fingerpicked accompaniment with a clear, ringing tone. A male voice sings solo, with a slightly raspy, unpolished character, delivering the lyrics in a conversational, almost spoken style. The tempo is slow, and the groove feels like a gentle, unhurried folk ballad. The production sounds raw and intimate, as if recorded in a small, dry room with minimal processing. The arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out, and no significant builds.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Bob Dylan wrote \"Masters of War\" over the winter of 1962–63. It was released on The Freewheelin' Bob Dylan in spring 1963.",
+        "source": "https://en.wikipedia.org/wiki/Masters_of_War"
+      },
+      {
+        "claim": "The Freewheelin' version was recorded on April 24, 1963 and released by Columbia on May 27, 1963. John H. Hammond is credited as producer. (Songfacts gives the date as April 23.)",
+        "source": "https://en.wikipedia.org/wiki/Masters_of_War"
+      },
+      {
+        "claim": "Freewheelin' was assembled from eight sessions at Columbia's Studio A, 799 Seventh Avenue, New York City, between April 1962 and April 1963.",
+        "source": "https://en.wikipedia.org/wiki/The_Freewheelin%27_Bob_Dylan"
+      },
+      {
+        "claim": "Songfacts says Dylan did six takes of the song and the third is the one on the album.",
+        "source": "https://www.songfacts.com/facts/bob-dylan/masters-of-war"
+      },
+      {
+        "claim": "The melody is taken from the traditional \"Nottamun Town\". Dylan borrowed the arrangement from folksinger Jean Ritchie's family version.",
+        "source": "https://americansongwriter.com/the-30-greatest-bob-dylan-songs-8-masters-of-war/"
+      },
+      {
+        "claim": "In the Freewheelin' liner notes Dylan said he had never written anything like it before. He said he doesn't sing songs hoping people will die, but couldn't help it with this one, calling it a reaction to the last straw.",
+        "source": "https://americansongwriter.com/the-30-greatest-bob-dylan-songs-8-masters-of-war/"
+      },
+      {
+        "claim": "In a September 10, 2001 interview Dylan said the song is not an anti-war song.",
+        "source": "https://americansongwriter.com/the-30-greatest-bob-dylan-songs-8-masters-of-war/"
+      },
+      {
+        "claim": "Late in the sessions Dylan told friends the album needed more \"finger-pointin'\" songs. \"Masters of War\" was the first result, an attack on the military-industrial complex.",
+        "source": "https://rollingstoneindia.com/the-freewheelin-bob-dylan-inside-his-first-classic/"
+      },
+      {
+        "claim": "Freewheelin' was Dylan's second album. He wrote 12 of its 13 songs after writing just two on his 1962 debut, and the album took his writing of contemporary words to traditional melodies further.",
+        "source": "https://rollingstoneindia.com/the-freewheelin-bob-dylan-inside-his-first-classic/"
+      },
+      {
+        "claim": "Dylan did not play an acoustic version of the song for 30 years after 1963, until a 1994 concert in Hiroshima, Japan. He performed it on stage 884 times between 1963 and 2016.",
+        "source": "https://bob-dylan.org.uk/archives/30061"
+      }
+    ],
+    "lineage": "The song belongs to the early-1960s American folk revival and protest-song scene, and it sets new anti-war words to a traditional English-American folk melody.",
+    "genres": [
+      "folk",
+      "protest song",
+      "folk revival"
+    ]
+  },
+  "draft": "The last thing the narrator of **Masters of War** promises is a graveside vigil. He'll follow the casket, watch it lowered, and stand there \"'Til I'm sure that you're dead.\" It's one of the coldest closing lines in American song, and Bob Dylan knew it. In the Freewheelin' liner notes he said he'd never written anything like it, that he doesn't sing songs hoping people will die, but with this one he couldn't help it. He called it a reaction to the last straw.\n\nThat admission matters, because the fury here is only the surface. Read the song verse by verse and fear keeps showing through. The men who build the big guns and death planes never appear on the battlefield. They put the gun in someone else's hand and run when the bullets fly. The narrator is the one holding that gun, or expecting to. Then the song turns from the young dying in the mud to children who haven't been born yet: \"Fear to bring children / Into the world.\" His own baby comes up next, unborn and unnamed. That's where the anger comes from: the threat to the life he hasn't started yet.\n\nThere's insecurity in it too. Halfway through, he answers the critics in his head, the ones who'd call him young and unlearned, and he settles the argument by saying even Jesus wouldn't forgive these men. He claims a moral certainty that he then uses to refuse forgiveness himself. The song never squares that, and it's stronger for leaving it alone. In a 2001 interview Dylan said it isn't an anti-war song. The lyric bears him out. It isn't pleading for peace. It's an accusation aimed at the people who profit from war.\n\nThe sound gives the anger no cover. A fingerpicked acoustic guitar holds a steady, unhurried pattern. The guitar rings clear and the room is small and dry. Dylan's voice is raspy, plain, and direct, with no harmonies and nothing added. The accompaniment never builds, so the escalation all happens in the words.\n\nThe tune is old. Dylan took the melody from the traditional \"Nottamun Town,\" borrowing the arrangement from Jean Ritchie's family version. That was how Freewheelin' worked. On his second album he wrote 12 of the 13 songs and pushed further at setting new words to traditional melodies. Late in the sessions he told friends the record needed more \"finger-pointin'\" songs, and this was the first one he wrote. It was cut in spring 1963 at Columbia's Studio A with John H. Hammond producing, and Songfacts reports the album uses the third of six takes. Dylan wouldn't play it acoustic again for 30 years, until a 1994 concert in Hiroshima.\n\nWhat stays with you is how calm the music is under all that rage, a voice keeping steady while it says something it can't take back.",
+  "factCheck": [
+    {
+      "claim": "The song ends on a graveside vigil, with the line \"'Til I'm sure that you're dead.\"",
+      "verdict": "supported",
+      "note": "The last stanza matches the lyric exactly."
+    },
+    {
+      "claim": "It's one of the coldest closing lines in American song.",
+      "verdict": "supported",
+      "note": "Critical opinion resting on the lyric, so it stays."
+    },
+    {
+      "claim": "\"and Bob Dylan knew it\"",
+      "verdict": "removed",
+      "note": "Claims Dylan's awareness of the line's effect. Nothing in the packet supports it."
+    },
+    {
+      "claim": "In the liner notes Dylan said he'd never written anything like it, doesn't sing songs hoping people will die but couldn't help it here, and called it a reaction to the last straw.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Quote \"Fear to bring children / Into the world\"",
+      "verdict": "supported",
+      "note": "Exact two-line quote. The total of quoted lines stays within three."
+    },
+    {
+      "claim": "The builders put the gun in someone else's hand and run when the bullets fly. His baby, \"unborn and unnamed,\" comes up next.",
+      "verdict": "supported",
+      "note": "Matches the lyrics and their order. The reading is interpretation."
+    },
+    {
+      "claim": "Halfway through, he answers critics who'd call him young and unlearned, and says even Jesus wouldn't forgive.",
+      "verdict": "corrected",
+      "note": "The stanza falls after the midpoint, so \"Halfway through\" became \"Later.\" The rest is a lyric reading."
+    },
+    {
+      "claim": "In a 2001 interview Dylan said it isn't an anti-war song.",
+      "verdict": "supported",
+      "note": "September 10, 2001 interview."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, steady, unhurried pattern.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say fingerpicked and unhurried. All three say steady."
+    },
+    {
+      "claim": "The guitar rings clear.",
+      "verdict": "removed",
+      "note": "Only pass 3 describes a clear, ringing tone."
+    },
+    {
+      "claim": "The room is small and dry.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Dylan's voice is raspy, plain, direct, with no harmonies.",
+      "verdict": "supported",
+      "note": "All three passes agree. The passes say \"slightly raspy,\" so the review does too."
+    },
+    {
+      "claim": "The accompaniment never builds, so the escalation all happens in the words.",
+      "verdict": "removed",
+      "note": "A claim about the song's overall arc. The notes only describe a short excerpt."
+    },
+    {
+      "claim": "Melody from \"Nottamun Town,\" arrangement borrowed from Jean Ritchie's family version.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "On his second album he wrote 12 of 13 songs and pushed further at setting new words to traditional melodies.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "He told friends the record needed more \"finger-pointin'\" songs, and this was the first one he wrote.",
+      "verdict": "corrected",
+      "note": "The source says it was the first result of that remark, not necessarily the first he wrote. Reworded."
+    },
+    {
+      "claim": "Cut in spring 1963 at Columbia's Studio A with John H. Hammond producing.",
+      "verdict": "corrected",
+      "note": "The song was recorded in April 1963 with Hammond producing. The packet places Studio A only for the album's sessions overall, so the studio was dropped."
+    },
+    {
+      "claim": "Songfacts reports the album uses the third of six takes.",
+      "verdict": "corrected",
+      "note": "The fact is supported but was attributed to a source in the text. Restated without the attribution."
+    },
+    {
+      "claim": "Dylan wouldn't play it acoustic again for 30 years, until a 1994 concert in Hiroshima.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1942,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012639,
+        "detail": "1098 in / 105 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012889,
+        "detail": "1098 in / 115 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014264,
+        "detail": "1098 in / 170 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.085554,
+        "detail": "24717 in / 1612 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051652,
+        "detail": "3668 in / 1849 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053018,
+        "detail": "4874 in / 4327 out"
+      }
+    ]
+  }
+}

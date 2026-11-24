@@ -1,0 +1,185 @@
+{
+  "spotifyId": "6dkMzWvRYpuAfvRHLLw7YL",
+  "reviewedAt": "2026-11-23T14:13:53.457Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11648632"
+  },
+  "listening": "Pass 1:\nA male voice sings in a mid-range, with a slightly raw, unpolished character. The delivery is melodic and sustained. There are no harmonies.\n\nAcoustic guitar plays a fingerpicked arpeggiated pattern, providing a consistent rhythmic and harmonic foundation. The tempo is slow, creating a relaxed, unhurried groove.\n\nThe production sounds raw and intimate, as if recorded in a small room. The instruments and vocals are clear and present, with no noticeable reverb or effects.\n\nThe arrangement is sparse. The acoustic guitar begins, followed by the entrance of the male vocal. No other instruments enter or drop out within the excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a steady, medium tempo. The groove feels like a gentle sway. A male voice sings in a low-mid range, with a slightly raspy, clear delivery. The production is raw, with a close, intimate room sound. The voice is dry, and the guitar has a natural reverb. The arrangement is consistent throughout the excerpt, with only the voice and guitar present. No other instruments enter or drop out.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a bass line. The tempo is slow, with a relaxed, slightly swung feel. A male voice sings in a mid-range, with a clear, slightly raw character. The delivery is unadorned and direct. No harmonies are present. The production sounds like a dry, intimate room, with a raw, unpolished texture. The acoustic guitar and voice are present throughout the excerpt. No instruments enter or drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The OurVinyl Sessions version of \"Dark Black Coal\" is track 2 on the four-song EP \"Logan Halstead | OurVinyl Sessions\", released June 7, 2022, and runs 3:27.",
+        "source": "https://ourvinyl.bandcamp.com/album/logan-halstead-ourvinyl-sessions"
+      },
+      {
+        "claim": "The EP is copyrighted 2022 OurVinyl TV, Inc.",
+        "source": "https://music.apple.com/us/album/logan-halstead-ourvinyl-sessions-ep/1614530679"
+      },
+      {
+        "claim": "Logan Halstead is credited as the writer of \"Dark Black Coal (OurVinyl Sessions)\".",
+        "source": "https://www.deezer.com/en/artist/150847102"
+      },
+      {
+        "claim": "A OurVinyl Sessions performance by Halstead was filmed and recorded live. The Facebook post says this about \"Kentucky Sky\" from the same session set.",
+        "source": "https://www.facebook.com/ourvinyl/videos/logan-halstead-kentucky-sky-ourvinyl-sessions/725587365310194/"
+      },
+      {
+        "claim": "Halstead wrote \"Dark Black Coal\" at age 15. He released a cellphone video of it in 2020.",
+        "source": "https://turnuptheamp.com/home/2023/4/26/review-logan-halstead-dark-black-coal"
+      },
+      {
+        "claim": "RadioWV recorded and posted a video of \"Dark Black Coal\" in December 2020, and the video went viral. Halstead recorded it and \"Far From Here\" on the same day.",
+        "source": "https://www.thehippiesandcowboys.com/blog/logan-halstead-q-and-a-with-jay"
+      },
+      {
+        "claim": "Halstead said the song is about the sacrifices his family and many others made for coal. He also said his dad, uncle, papaw and most of the men in his family worked in the mines around Boone County.",
+        "source": "https://holler.country/feature/introducing/album-premiere-logan-halstead-dark-black-coal/"
+      },
+      {
+        "claim": "Halstead said he never thought of being a musician before the RadioWV video of \"Dark Black Coal\" took off, and that music had been a hobby.",
+        "source": "https://saddlemountainpost.com/features/logan-halstead-wreck-on-the-appalachian-highway/"
+      },
+      {
+        "claim": "The studio version of \"Dark Black Coal\" is the title track of Halstead's 2023 debut album on Thirty Tigers. Lawrence Rothman produced the album, which was recorded at Sound Emporium Studios in Nashville.",
+        "source": "https://www.brooklynvegan.com/country-singer-logan-halstead-preps-debut-lp-dark-black-coal-watch-the-coal-river-video/"
+      },
+      {
+        "claim": "Halstead was born in Kentucky and raised in Boone County, West Virginia. He has cited Tyler Childers and Sturgill Simpson as influences, along with Cole Chaney and Nicholas Jamerson.",
+        "source": "https://purplefiddle.com/bands/logan-halstead/"
+      }
+    ],
+    "lineage": "It sits in the Appalachian country-folk and Americana tradition of Kentucky and West Virginia singer-songwriters such as Tyler Childers, Sturgill Simpson and Cole Chaney, with coal-country storytelling.",
+    "genres": [
+      "country",
+      "folk",
+      "americana"
+    ]
+  },
+  "draft": "The chorus of **Dark Black Coal** is a bargain, and the speaker isn't asking to win it. \"Dark black coal, take my soul / I owe it to you anyways.\" There's no protest in that line. The mine already has him, and the debt is just stated as fact. What he asks for comes next, and it's smaller and more desperate: keep the mountain away from his children. Faith, resignation, and a father's fear are packed into four lines, and none of them cancels the others out.\n\nLogan Halstead wrote it at 15. He has said the song is about the sacrifices his family and many others made for coal, and that his dad, his uncle, his papaw and most of the men in his family worked the mines around Boone County, West Virginia. That changes how the verses land. A teenager is describing the life the men around him lived, and the one waiting for him if the \"boy with a hunger / To get far away from this town\" never gets out.\n\nWatch the pronouns. The verses keep saying \"you\": you wake up, you grab your hard hat, you pray you make it home. It's a way of describing pain at arm's length, the way people talk about their own lives when \"I\" is too much. Then the chorus drops the distance and says \"my soul\" and \"my children.\" The second verse jumps \"20 years older,\" and the hunger to leave is gone. In its place is a row of men underground, \"Proving their collars are blue.\" That line holds pride and a kind of defensiveness at once. It's an identity worth claiming and also a life that keeps asking to be justified.\n\nThis OurVinyl Sessions take keeps it bare. A fingerpicked acoustic guitar rolls through its arpeggios at an unhurried pace, and Halstead sings over it in a slightly raw, unvarnished voice with no harmonies and nothing to soften the room. The recording is close and dry, so the words carry all the weight. Halstead never leans on the grief. He states it plainly, the way people talk about loss they've grown up around.\n\nThe song first spread in 2020, through a cellphone video and then a RadioWV performance that went viral. Halstead has said he never thought of being a musician before it took off. A studio version became the title track of his 2023 Thirty Tigers debut. It belongs with the Kentucky and West Virginia writers he cites, Tyler Childers, Sturgill Simpson, Cole Chaney and Nicholas Jamerson, part of a coal-country tradition where the ballad is how a family's labor gets put on the record.\n\nIt sticks because the speaker has already given up on saving himself, so you end up carrying his one remaining hope for the kids.",
+  "factCheck": [
+    {
+      "claim": "Chorus quote: \"Dark black coal, take my soul / I owe it to you anyways.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, and it's two consecutive lines."
+    },
+    {
+      "claim": "The chorus asks to keep the mountain away from his children, and it is four lines long.",
+      "verdict": "supported",
+      "note": "Matches \"Just don't let my children become the victims / Of the mountain's evil ways.\" The chorus is four lines."
+    },
+    {
+      "claim": "Faith, resignation, and a father's fear are packed into the four chorus lines.",
+      "verdict": "corrected",
+      "note": "The chorus has no prayer or faith language. The prayer is in an earlier verse. Replaced \"faith\" with \"debt\" so the reading rests on the chorus text."
+    },
+    {
+      "claim": "Logan Halstead wrote it at 15.",
+      "verdict": "supported",
+      "note": "Turn Up the Amp source."
+    },
+    {
+      "claim": "Halstead said the song is about the sacrifices his family and many others made for coal, and his dad, uncle, papaw and most of the men in his family worked the mines around Boone County, West Virginia.",
+      "verdict": "supported",
+      "note": "Holler.country source. Boone County, West Virginia is where he was raised."
+    },
+    {
+      "claim": "Quotes \"boy with a hunger / To get far away from this town\", \"20 years older\", \"Proving their collars are blue\", \"my soul\" and \"my children\".",
+      "verdict": "supported",
+      "note": "All match the lyrics."
+    },
+    {
+      "claim": "The verses keep saying \"you\" (wake up, grab your hard hat, pray you make it home), and the chorus shifts to \"my\".",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The psychological reading is interpretation."
+    },
+    {
+      "claim": "The second verse jumps \"20 years older\".",
+      "verdict": "corrected",
+      "note": "Verse numbering is ambiguous, since the line comes after the first chorus. Changed to \"a later verse\"."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with arpeggios at an unhurried pace.",
+      "verdict": "supported",
+      "note": "All three passes agree on fingerpicked arpeggiated acoustic guitar. Passes 1 and 3 say slow and relaxed, and pass 2 says a gentle sway."
+    },
+    {
+      "claim": "A slightly raw voice, no harmonies, close and dry room sound, only voice and guitar.",
+      "verdict": "supported",
+      "note": "Backed by at least two passes. All three describe a slightly raw voice and a dry, intimate room. Passes 1 and 3 say no harmonies, and pass 2 says only voice and guitar."
+    },
+    {
+      "claim": "The song first spread in 2020, through a cellphone video and then a RadioWV performance that went viral.",
+      "verdict": "corrected",
+      "note": "The packet gives a 2020 cellphone video release and a December 2020 viral RadioWV video, but not that the cellphone video came first or that it spread the song. Reworded."
+    },
+    {
+      "claim": "Halstead has said he never thought of being a musician before it took off.",
+      "verdict": "supported",
+      "note": "He said this about before the RadioWV video took off. Clarified the wording."
+    },
+    {
+      "claim": "A studio version became the title track of his 2023 Thirty Tigers debut.",
+      "verdict": "supported",
+      "note": "BrooklynVegan source."
+    },
+    {
+      "claim": "Halstead cites Tyler Childers, Sturgill Simpson, Cole Chaney and Nicholas Jamerson, who are all Kentucky and West Virginia writers.",
+      "verdict": "corrected",
+      "note": "The four are cited as influences. The Kentucky and West Virginia tradition is given for Childers, Simpson and Chaney, but Jamerson's origin isn't supported. Reworded."
+    },
+    {
+      "claim": "Coal-country tradition where the ballad is how a family's labor gets put on the record.",
+      "verdict": "corrected",
+      "note": "A claim about a tradition's history is unsupported as stated. Reduced to the supported lineage of Appalachian country-folk with coal-country storytelling."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2497,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012488,
+        "detail": "1106 in / 98 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012538,
+        "detail": "1106 in / 100 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013338,
+        "detail": "1106 in / 132 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14190999999999998,
+        "detail": "48665 in / 1458 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049596,
+        "detail": "3374 in / 1805 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05435,
+        "detail": "4515 in / 4532 out"
+      }
+    ]
+  }
+}

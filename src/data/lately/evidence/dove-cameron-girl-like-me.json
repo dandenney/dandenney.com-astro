@@ -1,0 +1,190 @@
+{
+  "spotifyId": "7bal8JfR3tSB9Qgf7wAGPL",
+  "reviewedAt": "2026-11-23T14:22:21.175Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/963005"
+  },
+  "listening": "Pass 1:\nInstruments:\nA kick drum and snare drum provide a driving, consistent beat. A bass guitar plays a simple, repetitive line. An electric guitar plays a clean, arpeggiated riff, and later a distorted, sustained chord. A synth pad provides a sustained, atmospheric layer.\n\nTempo and Groove:\nThe tempo is moderate. The groove is steady and driving, with a slight urgency from the consistent drum pattern.\n\nVocals:\nThe lead vocal is a clear, mid-range voice. The delivery is mostly melodic, with some spoken-word elements. Harmonies are present, often in unison or close intervals, creating a layered, full sound.\n\nProduction:\nThe room sounds open and moderately reverberant. The texture is clean and polished, with clear separation between instruments.\n\nArrangement:\nThe excerpt begins with the full band, including the lead vocal. The lead vocal drops out briefly, replaced by a sustained electric guitar chord. The lead vocal re-enters, with the electric guitar playing a clean riff. The synth pad enters and sustains throughout the latter half.\n\nPass 2:\nInstruments:\n- Synthesizer: playing a sustained pad, a plucked arpeggiated melody, and a bass line.\n- Drums: playing a driving beat with kick, snare, and hi-hats.\n- Electric Guitar: playing a distorted, sustained riff.\n\nTempo and Groove:\n- The tempo is moderate to fast.\n- The groove is driving and energetic, with a consistent four-on-the-floor feel.\n\nVocals:\n- Voice character: The voice is clear and bright, with a slight breathiness.\n- Delivery: The delivery is confident and rhythmic, with some melodic runs.\n- Harmonies: There are layered harmonies, creating a full, almost choral sound at times.\n\nProduction:\n- Room: The sound feels open and spacious, with some reverb.\n- Texture: The texture is layered and full, with a mix of electronic and acoustic-sounding elements.\n- Polished/Raw: The production is polished and clean.\n\nArrangement:\n- The excerpt begins with the full arrangement already in place.\n- The arpeggiated synth melody is prominent throughout.\n- The drums maintain a consistent beat.\n- The electric guitar enters and drops out, providing rhythmic accents.\n- The vocals are present throughout, with layered harmonies building in intensity.\n\nPass 3:\nInstruments:\n- Synthesizer: playing a sustained pad, a plucked arpeggiated melody, and a bassline.\n- Drums: playing a driving beat with a kick, snare, and hi-hats.\n- Electric guitar: playing a distorted, sustained riff.\n\nTempo and groove feel:\n- The tempo is moderate to fast.\n- The groove is driving and energetic, with a consistent four-on-the-floor feel.\n\nVocals:\n- Voice character: The voice is clear and bright.\n- Delivery: The delivery is confident and rhythmic, with some spoken-word elements.\n- Harmonies: There are layered harmonies, creating a full sound.\n\nProduction:\n- Room: The room sounds open and spacious.\n- Texture: The texture is polished and layered, with a mix of electronic and acoustic elements.\n- Polished/raw: The production is polished and clean.\n\nArrangement:\n- The excerpt begins with a synth pad and arpeggiated melody, joined by drums and bass.\n- The electric guitar enters, playing a sustained riff.\n- The vocals enter, with layered harmonies.\n- The arrangement remains consistent throughout the excerpt, with all elements present.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Girl Like Me\" was released on December 9, 2022 as a single on Disruptor Records/Columbia Records, and runs 2:29.",
+        "source": "https://www.amazon.com/Girl-Like-Me-Dove-Cameron/dp/B0BP2YWFZC"
+      },
+      {
+        "claim": "The song was written by Dove Cameron, Edwyn Collins, Evan Blair and Lowell, and produced by Evan Blair.",
+        "source": "https://readdork.com/lyrics/dove-cameron-girl-like-me-2022"
+      },
+      {
+        "claim": "The track interpolates or samples Edwyn Collins' \"A Girl Like You\", flipping its perspective. Cameron said she \"rewrote\" the 1994 hit.",
+        "source": "https://digital.abcaudio.com/news/dove-cameron-reveals-how-demi-moore-inspired-her-new-song-girl-me"
+      },
+      {
+        "claim": "Cameron said the song was inspired by Demi Moore's villain scene in Charlie's Angels: Full Throttle (2003), where \"A Girl Like You\" plays.",
+        "source": "https://digital.abcaudio.com/news/dove-cameron-reveals-how-demi-moore-inspired-her-new-song-girl-me"
+      },
+      {
+        "claim": "Cameron told People she had loved \"A Girl Like You\" for about 15 years. She first thought of covering it on tour, then decided to flip the narrative to \"have you ever met a girl like me before\".",
+        "source": "https://www.iheart.com/content/2022-12-09-dove-camerons-new-song-was-inspired-by-2000s-demi-more/"
+      },
+      {
+        "claim": "Cameron performed the song for the first time at iHeartRadio 102.7 KIIS FM's Jingle Ball in Los Angeles on December 2, 2022.",
+        "source": "https://www.iheart.com/content/2022-12-09-dove-camerons-new-song-was-inspired-by-2000s-demi-more/"
+      },
+      {
+        "claim": "Cameron first teased the song on TikTok in March 2022.",
+        "source": "https://uproxx.com/pop/dove-cameron-girl-like-me/"
+      },
+      {
+        "claim": "Press described the track as a sultry, fast-paced pop anthem. The electric guitar enters after the first chorus.",
+        "source": "https://uproxx.com/pop/dove-cameron-girl-like-me/"
+      },
+      {
+        "claim": "In the singles chronology, \"Girl Like Me\" follows \"Bad Idea\" (Oct 2022), which Evan Blair also produced. Blair also produced her earlier singles \"Boyfriend\" and \"Breakfast\".",
+        "source": "https://en.wikipedia.org/wiki/Bad_Idea_(Dove_Cameron_song)"
+      },
+      {
+        "claim": "Cameron first rose to fame on the Disney Channel. Her solo EP \"Bloodshot/Waste\" came out in September 2019, and \"Boyfriend\" (2022) hit number 12 on the Billboard Hot 100.",
+        "source": "https://www.amazon.com/Girl-Like-Me-Dove-Cameron/dp/B0BP2YWFZC"
+      }
+    ],
+    "lineage": "A 2020s alt-pop/pop-rock single that reworks Edwyn Collins' 1994 post-punk-tinged hit \"A Girl Like You\" with a flipped, femme-fatale perspective.",
+    "genres": [
+      "pop",
+      "pop rock",
+      "alt-pop"
+    ]
+  },
+  "draft": "The chorus of **Girl Like Me** keeps tripping before the last word. \"Never met a girl like, never met a girl like,\" again and again, the sentence cut off right where the boast should land, and \"me\" doesn't arrive until the song's final line. The tease is built into the grammar. Dove Cameron spends two and a half minutes describing herself to a man and won't finish the description until she's done with him.\n\nThe bones come from Edwyn Collins' 1994 hit \"A Girl Like You,\" and Collins shares the writing credit with Cameron, Evan Blair and Lowell. Cameron said she'd loved that song for about 15 years and first thought of covering it on tour, then decided to flip it so the question became \"have you ever met a girl like me before.\" The spark was a specific image: Demi Moore's villain scene in *Charlie's Angels: Full Throttle*, where the Collins song plays. That tells you the stance. Collins sang about the girl. Cameron answers as the girl, and she plays her as the villain who knows the camera is on her.\n\nThe verses are pure taunt. \"Nothing makes you smaller, than being a big man\" is the sharpest line here, an insult built as a neat little paradox. She calls him heathen and handsome like pet names with a blade in them, mocks his tantrum, and leads him through the dance while asking if a woman has ever been allowed to do that. Then one line slips sideways: \"And I'm not even here I'm just a phantom.\" It comes tossed off between jabs, and it lets in a cold draft. The power she's describing might belong to a character more than a person, a role worn so well that whoever's inside it half vanishes. The song never stops to sort that out. Contempt, appetite and a flicker of absence share the same verse, and the swagger holds.\n\nBlair, who also produced \"Bad Idea,\" \"Boyfriend\" and \"Breakfast,\" frames it in glossy, driving pop: four-on-the-floor kick and snare with ticking hi-hats, synth bass, a sustained pad, and a plucked arpeggiated figure that keeps everything leaning forward. After the first chorus a distorted electric guitar comes in with long held notes, a rougher edge for a song built on a '90s rock hit. Cameron's voice is clear and bright, the delivery clipped and rhythmic, sliding toward speech in spots, while stacked harmonies swell into something close to a choir at her back. The mix is open and reverberant, like a big stage with the lights down.\n\nThe stutter is clever for a long time, and it runs a little long by the last pile-up of repeats.\n\nWhat sticks is the withheld word: you spend the whole song waiting for her to say \"me,\" and by the time she does, you've already agreed.",
+  "factCheck": [
+    {
+      "claim": "Chorus line \"Never met a girl like, never met a girl like\" repeats, cut off before the last word",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"me\" doesn't arrive until the song's final line",
+      "verdict": "corrected",
+      "note": "The line \"You've never met a girl like me before\" says \"me\" in the chorus. Only the stuttering repeats are cut off, and the final line is the one that ends on \"me\". The opening and closing sentences were rewritten to match."
+    },
+    {
+      "claim": "Song runs about two and a half minutes",
+      "verdict": "supported",
+      "note": "Length is 2:29."
+    },
+    {
+      "claim": "Bones come from Edwyn Collins' 1994 hit \"A Girl Like You\"; Collins shares writing credit with Cameron, Evan Blair and Lowell",
+      "verdict": "supported",
+      "note": "Matches the credits and the interpolation fact."
+    },
+    {
+      "claim": "Cameron loved the song for about 15 years, first thought of covering it on tour, then decided to flip it to \"have you ever met a girl like me before\"",
+      "verdict": "supported",
+      "note": "Matches the People/iHeart account."
+    },
+    {
+      "claim": "Inspired by Demi Moore's villain scene in Charlie's Angels: Full Throttle, where the Collins song plays",
+      "verdict": "supported",
+      "note": "Cameron's stated inspiration."
+    },
+    {
+      "claim": "Collins sang about the girl; Cameron answers as the girl, playing the villain who knows the camera is on her",
+      "verdict": "supported",
+      "note": "Interpretation resting on the flipped-perspective fact. It stays."
+    },
+    {
+      "claim": "Lyric quotes: \"Nothing makes you smaller, than being a big man\"; \"And I'm not even here I'm just a phantom\"; heathen, handsome, tantrum, leading the dance",
+      "verdict": "supported",
+      "note": "All match the lyrics exactly."
+    },
+    {
+      "claim": "Blair also produced \"Bad Idea,\" \"Boyfriend\" and \"Breakfast\"",
+      "verdict": "supported",
+      "note": "Matches the singles chronology."
+    },
+    {
+      "claim": "Four-on-the-floor kick and snare with hi-hats, synth bass, sustained pad, plucked arpeggiated synth figure",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on all of these, and the pad is in all three. \"Ticking\" was dropped as an unsupported embellishment."
+    },
+    {
+      "claim": "After the first chorus a distorted electric guitar comes in with long held notes",
+      "verdict": "supported",
+      "note": "Press says the guitar enters after the first chorus, and all passes describe a distorted or sustained guitar."
+    },
+    {
+      "claim": "A song built on a '90s rock hit",
+      "verdict": "corrected",
+      "note": "The packet says 1994 hit with a post-punk tinge, not a rock hit, so it now reads \"a 1994 hit\"."
+    },
+    {
+      "claim": "Voice clear and bright, delivery clipped and rhythmic, sliding toward speech",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 agree on clear and bright and on confident, rhythmic delivery, and passes 1 and 3 mention spoken-word elements. \"Clipped\" was changed to \"confident\"."
+    },
+    {
+      "claim": "Stacked harmonies swell into something close to a choir",
+      "verdict": "corrected",
+      "note": "Only one pass says choral. All three agree on layered harmonies, so the claim was reduced to that."
+    },
+    {
+      "claim": "Mix is open and reverberant, like a big stage with the lights down",
+      "verdict": "supported",
+      "note": "The passes agree on open and reverberant; the simile is the critic's. \"Lights down\" was trimmed."
+    },
+    {
+      "claim": "Closing: you spend the whole song waiting for her to say \"me\"",
+      "verdict": "corrected",
+      "note": "\"me\" is said in the chorus, so the closing was reworked around the cut-off phrase finally closing on the last line."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2965,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0016364,
+        "detail": "1098 in / 254 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015489,
+        "detail": "1098 in / 219 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0016814,
+        "detail": "1098 in / 272 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.155082,
+        "detail": "54801 in / 1548 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.080812,
+        "detail": "4213 in / 3198 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.055728,
+        "detail": "5404 in / 4492 out"
+      }
+    ]
+  }
+}
