@@ -1,0 +1,200 @@
+{
+  "spotifyId": "5m9OR6G4lNt9Da6dy1xpHx",
+  "reviewedAt": "2026-11-24T15:16:33.200Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/1000825"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays arpeggiated chords with a clean tone. Electric guitar plays a sustained, clean melody line. A bass guitar plays a walking bass line. Drums play a light, steady beat with brushes, featuring a snare drum and cymbals.\n\nTempo and Groove\nThe tempo is medium-slow. The groove feels relaxed and flowing, with a gentle swing.\n\nVocals\nA male voice sings with a smooth, clear character and a gentle delivery. A female voice sings in harmony, often above the male voice, with a similar smooth character. The harmonies are close and blend well.\n\nProduction\nThe room sounds open and spacious, with a moderate amount of reverb. The texture is clean and polished, with clear separation between instruments.\n\nArrangement\nThe excerpt begins with acoustic guitar, electric guitar, and bass. Drums enter shortly after the beginning. The male and female voices sing together throughout most of the excerpt. No instruments drop out or build significantly within this segment.\n\nPass 2:\nInstruments:\nAcoustic guitar plays arpeggiated chords. Electric guitar plays a sustained melody. A bass guitar plays a walking bass line. Drums play a light, brushed beat with a snare drum on beats two and four.\n\nTempo and Groove\nThe tempo is slow. The groove is relaxed and gentle.\n\nVocals\nA male voice sings in a low register, with a smooth, breathy delivery. A female voice sings in a higher register, with a clear, sustained delivery. Both voices sing in unison for some phrases, and in harmony for others.\n\nProduction\nThe room sounds spacious, with a noticeable reverb on the vocals and guitars. The texture is warm and full. The production is polished.\n\nArrangement\nThe excerpt begins with acoustic guitar, electric guitar, and bass. Drums enter shortly after. The male voice enters, followed by the female voice. Both voices sing together, then the male voice sings alone, then both voices sing together again. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays fingerpicked arpeggios. A bass guitar plays a walking line. Drums play a light, brushed beat. A keyboard plays sustained chords.\n\nTempo and Groove\nThe tempo is slow. The groove feels relaxed and gentle.\n\nVocals\nA male voice sings with a smooth, clear character. The delivery is gentle and melodic. A female voice joins in harmony, singing in unison with the male voice for some phrases, and then in a higher harmony.\n\nProduction\nThe room sounds spacious with a noticeable reverb. The texture is warm and full. The production feels polished.\n\nArrangement\nThe excerpt begins with acoustic guitar, bass, and keyboard. The male voice enters, followed by the female voice in harmony. Drums enter with a light beat. The arrangement remains consistent throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The song was co-written by Jacob Collier and Lizzy McAlpine. McAlpine sings on it and John Mayer plays guitar.",
+        "source": "https://www.udiscovermusic.com/news/jacob-collier-never-gonna-be-alone-lizzy-mcalpine/"
+      },
+      {
+        "claim": "Collier says he wrote the song in the depths of lockdown the year before its release, with his friend Lizzy McAlpine.",
+        "source": "https://www.udiscovermusic.com/news/jacob-collier-never-gonna-be-alone-lizzy-mcalpine/"
+      },
+      {
+        "claim": "Collier says he wanted to explore the emotional world of isolation, loss and memory. He did this by piecing together a tapestry of soft orchestral sounds, blurring the lines between reality and imagination.",
+        "source": "https://www.udiscovermusic.com/news/jacob-collier-never-gonna-be-alone-lizzy-mcalpine/"
+      },
+      {
+        "claim": "Collier told Rolling Stone that having John Mayer lend his guitar tones was a surreal thrill. He said he grew up listening to Mayer's music in a deep way.",
+        "source": "https://www.rollingstone.com/music/music-news/jacob-collier-john-mayer-lizzy-mcalpine-never-gonna-be-alone-song-1365323/"
+      },
+      {
+        "claim": "Collier and McAlpine trade verses and their voices intermingle on the chorus, over Mayer's guitar.",
+        "source": "https://www.rollingstone.com/music/music-news/jacob-collier-john-mayer-lizzy-mcalpine-never-gonna-be-alone-song-1365323/"
+      },
+      {
+        "claim": "It was released on 10 June 2022 as Collier's first official single since Djesse Vol. 3. That album earned three nominations at the 2021 Grammys, including Album of the Year.",
+        "source": "https://shorefire.com/releases/entry/jacob-collier-releases-first-new-song-of-2022never-gonna-be-alone-featuring-lizzy-mcalpine-john-mayer"
+      },
+      {
+        "claim": "The song later appeared on Djesse Vol. 4 (released 29 February 2024), the fourth and final instalment of the Djesse series. Collier produced all of that album's tracks except \"Wherever I Go\".",
+        "source": "https://en.wikipedia.org/wiki/Djesse_Vol._4"
+      },
+      {
+        "claim": "On Djesse Vol. 4, the song credits Collier, McAlpine and Mayer as writers. It contains a sample of Collier's \"In Too Deep (Acoustic Version)\".",
+        "source": "https://en.wikipedia.org/wiki/Djesse_Vol._4"
+      },
+      {
+        "claim": "Discogs credits John Mayer with the electric guitar solo on the Djesse Vol. 4 version of the song. Emily Lazar is credited as mastering engineer for the album.",
+        "source": "https://www.discogs.com/release/30075988-Jacob-Collier-Djesse-Vol-4"
+      },
+      {
+        "claim": "The trio first performed the song live together at Lizzy McAlpine's 6 October 2022 show at the Troubadour in Los Angeles. McAlpine and Collier played acoustic guitars and Mayer played a Charvel Custom Shop San Dimas.",
+        "source": "https://www.musicradar.com/news/john-mayer-lizzy-mcalpine-jacob-collier-live"
+      }
+    ],
+    "lineage": "The song sits in the lineage of Collier's genre-blending, harmony-heavy pop and R&B, a style that grew out of his YouTube multi-instrumental, layered-vocal arrangements and runs through the Djesse series.",
+    "genres": [
+      "pop",
+      "r&b",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "A patch of sunlight on a carpet is a small thing to build a song around, and that smallness is the point. **Never Gonna Be Alone** opens with the narrator looking at the spot \"on the carpet where I held you for a moment in June,\" and everything after is an effort to stay inside that moment. Jacob Collier wrote it with his friend Lizzy McAlpine in the depths of lockdown, and he has said he wanted to explore isolation, loss and memory. You can hear all three in where the lyric goes: a room, a window, a door, a garden at night with a tree looking up at the moon. Nobody leaves home. The person being loved exists only as a place.\n\nThe chorus is where the feeling splits. \"You'll be right where I left you, sitting on the floor\" sounds like comfort, a lover waiting and unchanged. But only a memory can stay that still. So when the line turns to the title, the promise of never being alone is also an admission that the real company is gone. The bridge says so outright, \"Even though I know / Nothing's gonna change,\" then swerves straight back to devotion, vowing to keep finding the way back. The song never settles whether that return is healing or a trap. It holds gratitude and grief in the same hand.\n\nThe sound matches that hush. Fingerpicked acoustic guitar rolls through arpeggios, a bass walks underneath, and brushed drums keep a slow, relaxed sway. The room is spacious, the reverb soft, the whole thing warm and polished. Collier and McAlpine trade verses, and on the chorus their voices intermingle, sliding between unison and close harmony so you can't always tell where one ends. For a musician whose style grew out of stacking his own voice into dense, genre-blending harmony, this is a close, intimate setting: two singers, one memory.\n\nJohn Mayer's guitar threads through it. His electric holds long, clean, sustained notes, more a third voice than a lead. Collier called having Mayer lend his tones a surreal thrill, coming from someone who grew up listening to Mayer's music closely. The trio first played it together in October 2022 at McAlpine's Troubadour show, and the track later found a home on Djesse Vol. 4.\n\nThe last lines circle back to the sunlight and the carpet and stop at \"held you for a moment,\" with June left off, the memory cut short before it can finish. The song teaches you how loneliness can disguise itself as company, and lets you feel how tender and how sad that disguise is at the same time.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"on the carpet where I held you for a moment in June\"",
+      "verdict": "supported",
+      "note": "Matches the lyric text."
+    },
+    {
+      "claim": "Collier wrote the song with his friend Lizzy McAlpine in the depths of lockdown",
+      "verdict": "supported",
+      "note": "Researched facts (uDiscoverMusic)."
+    },
+    {
+      "claim": "Collier has said he wanted to explore isolation, loss and memory",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Lyric imagery: a room, a window, a door, a garden at night with a tree looking up at the moon",
+      "verdict": "supported",
+      "note": "Lyrics mention room, window, door, garden, tree, moon and gloom."
+    },
+    {
+      "claim": "Lyric quote: \"You'll be right where I left you, sitting on the floor\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Lyric quote: \"Even though I know / Nothing's gonna change\" followed by a return to devotion (finding the way back)",
+      "verdict": "supported",
+      "note": "Exact match, two consecutive lines. \"I'll always find my way back here to you\" backs the reading."
+    },
+    {
+      "claim": "Lyric quote: \"held you for a moment\" with June left off in the closing lines",
+      "verdict": "corrected",
+      "note": "The closing lines do omit \"in June\", but the fourth quoted fragment exceeded the three-quote limit. Changed to a paraphrase."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar rolls through arpeggios",
+      "verdict": "corrected",
+      "note": "Arpeggios are agreed by all three passes. \"Fingerpicked\" appears in only one, so it was dropped."
+    },
+    {
+      "claim": "A bass walks underneath; brushed drums",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Slow, relaxed sway",
+      "verdict": "corrected",
+      "note": "Slow and relaxed are supported. \"Sway\" rests on one pass (\"gentle swing\") and was removed."
+    },
+    {
+      "claim": "Spacious room, soft reverb, warm and polished",
+      "verdict": "corrected",
+      "note": "Spacious, reverb, warm and polished are supported. \"Soft\" reverb is not, so it became \"noticeable\"."
+    },
+    {
+      "claim": "Collier and McAlpine trade verses and their voices intermingle on the chorus",
+      "verdict": "supported",
+      "note": "Rolling Stone fact."
+    },
+    {
+      "claim": "Voices slide between unison and close harmony",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on unison and harmony. Pass 1 says close harmonies."
+    },
+    {
+      "claim": "Collier's style grew out of stacking his own voice into dense, genre-blending harmony",
+      "verdict": "supported",
+      "note": "Lineage note: YouTube layered-vocal arrangements and genre-blending harmony-heavy pop."
+    },
+    {
+      "claim": "Mayer's electric holds long, clean, sustained notes, more a third voice than a lead",
+      "verdict": "corrected",
+      "note": "A sustained electric guitar melody is agreed by two passes. \"Clean\" was only in one, so it was removed. The third-voice reading stays as interpretation."
+    },
+    {
+      "claim": "Collier called having Mayer lend his tones a surreal thrill, and grew up listening to Mayer's music closely",
+      "verdict": "corrected",
+      "note": "The source says he grew up listening in a deep way. Wording adjusted."
+    },
+    {
+      "claim": "The trio first played it together in October 2022 at McAlpine's Troubadour show",
+      "verdict": "supported",
+      "note": "Musicradar fact (6 Oct 2022)."
+    },
+    {
+      "claim": "The track later appeared on Djesse Vol. 4",
+      "verdict": "supported",
+      "note": "Wikipedia fact."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2109,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001429,
+        "detail": "1115 in / 169 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015165,
+        "detail": "1115 in / 204 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015265,
+        "detail": "1115 in / 208 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080032,
+        "detail": "22246 in / 1554 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.074556,
+        "detail": "4089 in / 2910 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05179,
+        "detail": "5200 in / 4139 out"
+      }
+    ]
+  }
+}

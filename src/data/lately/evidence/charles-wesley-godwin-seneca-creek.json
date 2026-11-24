@@ -1,0 +1,190 @@
+{
+  "spotifyId": "1jXf7CPzkfIpClT2a7caIa",
+  "reviewedAt": "2026-11-24T15:36:45.969Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3830767"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar is fingerpicked. A male voice sings lead. A bass guitar plays a simple line. A second acoustic guitar strums chords. A drum kit plays a simple beat.\n\nTempo and Groove:\nSlow tempo, with a relaxed, easygoing feel.\n\nVocals:\nThe male lead vocalist has a clear, slightly raspy voice. He sings in a conversational, unadorned style. No harmonies are present.\n\nProduction:\nThe sound is clean and clear, with a natural room sound. The texture is warm and full, with a polished but not overly slick feel.\n\nArrangement:\nThe excerpt begins with fingerpicked acoustic guitar and lead vocals. Bass guitar enters shortly after, followed by a second acoustic guitar strumming chords. The drum kit enters around the 0:24 mark, establishing a full band sound. No instruments drop out.\n\nPass 2:\nInstruments:\nAcoustic guitar is fingerpicked. A bass guitar plays a simple, sustained line. A steel guitar plays sustained, melodic fills. A drum kit plays a simple, brushed beat.\n\nTempo and Groove:\nSlow tempo, with a relaxed, gentle feel.\n\nVocals:\nA male voice sings in a clear, mid-range tone. The delivery is calm and narrative. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a natural room sound. The texture is smooth and warm.\n\nArrangement:\nThe excerpt begins with acoustic guitar and vocals. Bass guitar enters shortly after, followed by the steel guitar. The drum kit enters around the 0:24 mark, adding to the rhythm section. No instruments drop out.\n\nPass 3:\nInstruments:\nAcoustic guitar is fingerpicked. A male voice sings lead. A bass guitar plays a simple line. A second acoustic guitar strums chords. A drum kit plays a simple beat.\n\nTempo and Groove:\nThe tempo is slow. The groove is a gentle, relaxed country feel.\n\nVocals:\nThe male voice is clear and resonant, delivered with a smooth, slightly melancholic tone. There are no harmonies.\n\nProduction:\nThe room sounds open and natural. The texture is clean and polished, with a clear separation of instruments.\n\nArrangement:\nThe excerpt begins with fingerpicked acoustic guitar and lead vocals. Bass guitar enters shortly after, followed by a second strummed acoustic guitar. The drum kit enters around the 0:24 mark, adding a gentle rhythmic foundation. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Charles Wesley Godwin wrote and composed \"Seneca Creek\"; its running time is 5:26.",
+        "source": "https://www.deezer.com/us/track/2851531622"
+      },
+      {
+        "claim": "Godwin wrote the whole Seneca album by himself.",
+        "source": "https://countrycentral.com/reviews/charles-wesley-godwin-seneca/"
+      },
+      {
+        "claim": "Al Torrence produced, engineered and mixed the Seneca album, and Garrett Haines mastered it.",
+        "source": "https://www.discogs.com/release/13669243-Charles-Wesley-Godwin-Seneca"
+      },
+      {
+        "claim": "The credits for \"Seneca Creek\" list Nate Catanzarite on double bass, Joe Pinchotti on drums, Ben Townsend on fiddle and banjo, Eric Heywood on pedal steel guitar, and Al Torrence on rhythm guitar.",
+        "source": "https://release-page-service.discogs.com/release/13669243-Charles-Wesley-Godwin-Seneca"
+      },
+      {
+        "claim": "Seneca was recorded at Music Garden Studios, which is an 1890s Victorian house turned studio in New Brighton, Pennsylvania. It was mastered at Treelady Studios.",
+        "source": "https://www.babyrobotmedia.com/charles-wesley-godwin/"
+      },
+      {
+        "claim": "Godwin says \"Seneca Creek\" is about his grandparents' life together and is written biographically from his grandfather's perspective. He calls it the song nearest and dearest to him on the album.",
+        "source": "https://klofmag.com/2019/01/video-premiere-charles-wesley-godwin-seneca-creek/"
+      },
+      {
+        "claim": "Godwin picked Eric Heywood for the pedal steel part after hearing his playing on a live version of Ray LaMontagne's \"Empty\" in December 2017. He reached Heywood through Jeffrey Foucault.",
+        "source": "https://klofmag.com/2019/01/video-premiere-charles-wesley-godwin-seneca-creek/"
+      },
+      {
+        "claim": "The song tells the story of his grandparents' courtship in the spring of 1949. It follows the couple over about 50 years.",
+        "source": "https://www.babyrobotmedia.com/charles-wesley-godwin/"
+      },
+      {
+        "claim": "A stripped-down acoustic studio version of \"Seneca Creek\" closes the album. It was premiered as a video in January 2019, ahead of the Feb 15, 2019 release.",
+        "source": "https://klofmag.com/2019/01/video-premiere-charles-wesley-godwin-seneca-creek/"
+      },
+      {
+        "claim": "Godwin, from Morgantown, West Virginia, wrote the Appalachian songs on his debut solo album Seneca while living in the Midwest. \"Hardwood Floors\" became a streaming success from the album.",
+        "source": "https://www.allmusic.com/artist/charles-wesley-godwin-mn0003817019"
+      }
+    ],
+    "lineage": "The song sits in Appalachian country-folk and Americana storytelling, rooted in West Virginia family and place; one reviewer called Seneca a \"gothic concept record\" about where Godwin came from.",
+    "genres": [
+      "country",
+      "americana",
+      "folk"
+    ]
+  },
+  "draft": "Halfway through **Seneca Creek**, the water comes up. It's 1985, and the narrator names what the flood carried off: Gandee, North Fork, South Branch. Then comes the plainest line in the song: \"But it only took the other side.\" The house he built is still standing. There's relief in that, and pride, and something quieter underneath, the knowledge that luck sorted his family from the neighbors'. The song doesn't stop to weigh it. It moves on.\n\nCharles Wesley Godwin wrote it about his grandparents, in his grandfather's voice, and calls it the song nearest and dearest to him on Seneca, an album he wrote alone. It opens in the spring of 1949 with a girl named Ruth washing her feet in the creek and a young man promising half a karat. She answers that no stone can match the creek's shine, and that's the marriage in miniature: he wants to provide, she already has what she wants. Korea takes four lines, mud and retreats and every boy from his hometown dead, and then he's coming home with money in his pocket. The grief gets said fast and set down. The plan is what he'd rather talk about.\n\nThe plan is the chorus. The first time, it's an invitation, all let's and we'll. Near the end the same words return in the past tense, sung toward a grave on the hill above the water. Only the grammar changes, and that's where it hurts. Between those choruses sits a shrug that admits hard years without blaming anyone, \"You loved yours, I did the same,\" and then the illness, when the two of them invent trips for the hell of it and he offers, \"I'll take you back to any year.\" The pride and the grief never separate. A promise kept is still a promise that ends.\n\nThe sound stays out of the story's way. Fingerpicked acoustic guitar carries it, with a second guitar strumming, a simple bass line and a kit keeping an easy beat at a slow tempo. The voice is clear and conversational with no harmonies around it. Eric Heywood is credited on pedal steel; Godwin chose him after hearing him on a live take of Ray LaMontagne's \"Empty,\" reaching him through Jeffrey Foucault. Al Torrence produced the record in an 1890s Victorian house turned studio in New Brighton, Pennsylvania, and it has that clean, warm, natural-room feel. A Morgantown native writing Appalachian songs from the Midwest, Godwin keeps the place names exact, and that exactness is the song's version of devotion.\n\nIt's a love song told as a ledger of what held, and when the chorus comes back in the past tense you feel a whole life fold into one changed verb.",
+  "factCheck": [
+    {
+      "claim": "Halfway through the song, the water comes up (position in song)",
+      "verdict": "corrected",
+      "note": "Positional claim not supported; reworded to drop 'Halfway through'."
+    },
+    {
+      "claim": "1985 flood took Gandee, North Fork, South Branch; the house he built still stands",
+      "verdict": "supported",
+      "note": "Lyrics: 'In '85 the creek did rise... Took Gandee, North Fork and South Branch too / The house still stood that I built for you.'"
+    },
+    {
+      "claim": "Quote: \"But it only took the other side.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric exactly."
+    },
+    {
+      "claim": "Godwin wrote it about his grandparents, in his grandfather's voice; calls it the song nearest and dearest to him on Seneca; he wrote the album alone",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Spring of 1949, Ruth washing her feet in the creek, half a karat, her reply about the creek's shine",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Korea takes four lines: mud, retreats, every boy from his hometown dead; then he comes home with money in his pocket",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Chorus is all let's/we'll at first and returns in past tense near the end, after the grave on the hill",
+      "verdict": "supported",
+      "note": "Matches the lyric structure."
+    },
+    {
+      "claim": "Quote: \"You loved yours, I did the same\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Illness, invented trips 'for the hell of it'; quote \"I'll take you back to any year\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar, second strumming guitar, simple bass line, easy drum beat, slow tempo, no harmonies",
+      "verdict": "supported",
+      "note": "At least two passes agree on each; fingerpicked guitar, bass, drums, slow tempo and no harmonies are in all three."
+    },
+    {
+      "claim": "Voice is clear and conversational",
+      "verdict": "corrected",
+      "note": "'Clear' is backed by the passes; 'conversational' is only firmly in one. Changed to 'clear and calm'."
+    },
+    {
+      "claim": "Clean, warm, natural-room feel",
+      "verdict": "supported",
+      "note": "Clean, natural room and warm texture are agreed across passes."
+    },
+    {
+      "claim": "Eric Heywood credited on pedal steel; Godwin chose him after hearing a live 'Empty' by Ray LaMontagne, reached via Jeffrey Foucault",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Al Torrence produced the record; made in an 1890s Victorian house turned studio in New Brighton, Pennsylvania",
+      "verdict": "supported",
+      "note": "Torrence produced the album; it was recorded at Music Garden Studios, as described."
+    },
+    {
+      "claim": "A Morgantown native writing Appalachian songs from the Midwest",
+      "verdict": "supported",
+      "note": "Godwin is from Morgantown, WV and wrote the songs while living in the Midwest."
+    },
+    {
+      "claim": "Godwin keeps the place names exact",
+      "verdict": "corrected",
+      "note": "Nothing confirms the names are exact or real; changed to 'specific'."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.283,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014017,
+        "detail": "1099 in / 160 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014567,
+        "detail": "1099 in / 182 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014242,
+        "detail": "1099 in / 169 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14283600000000002,
+        "detail": "49278 in / 1428 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.086028,
+        "detail": "3902 in / 3521 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049836,
+        "detail": "5058 in / 3972 out"
+      }
+    ]
+  }
+}

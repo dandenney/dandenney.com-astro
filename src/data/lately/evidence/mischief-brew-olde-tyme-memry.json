@@ -1,0 +1,212 @@
+{
+  "spotifyId": "6URM0i4a8gng1WFB1Krnte",
+  "reviewedAt": "2026-11-24T15:20:21.783Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2892186"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar, bass guitar, drums, and a mandolin. The acoustic guitar plays a strummed rhythm, the bass plays a walking line, and the drums play a simple, driving beat. The mandolin plays a melodic counterpoint.\n\nTempo and Groove:\nThe tempo is moderately fast. The groove is a lively, upbeat folk-punk feel.\n\nVocals:\nThe voice is a male baritone, delivered with a raw, slightly strained quality. The delivery is energetic and conversational. There are no harmonies.\n\nProduction:\nThe room sounds somewhat live, with a natural reverb. The texture is raw and unpolished, with a DIY aesthetic.\n\nArrangement:\nThe excerpt begins with the full band playing. The mandolin enters around the 0:10 mark, adding a new melodic layer. The arrangement remains consistent throughout the excerpt.\n\nPass 2:\nInstruments:\n- Acoustic guitar: strummed, with a clear, bright tone.\n- Bass: plays a walking bass line, providing a steady rhythmic foundation.\n- Drums: light, with a simple beat, featuring snare and kick.\n\nTempo and groove feel:\n- Moderate tempo.\n- A relaxed, slightly swinging feel, reminiscent of folk or country music.\n\nVocals:\n- Voice character: a male voice, with a slightly raspy, conversational quality.\n- Delivery: sung in a clear, narrative style.\n- Harmonies: a second voice joins for harmonies in the chorus, creating a fuller sound.\n\nProduction:\n- Room: sounds like a dry, intimate space.\n- Texture: clean and uncluttered.\n- Polished/raw: leans towards a raw, live sound, but well-recorded.\n\nArrangement:\n- The excerpt begins with a single voice and acoustic guitar.\n- Bass and drums enter, establishing a full band sound.\n- A second voice joins for harmonies during the chorus.\n\nPass 3:\nInstruments:\nAcoustic guitar: strummed, with a clear, bright tone.\nBass guitar: playing a walking bass line.\nDrums: playing a steady, driving beat with snare, kick, and cymbals.\n\nTempo and groove feel:\nMedium-fast tempo.\nA lively, upbeat, and slightly rollicking feel.\n\nVocals:\nVoice character: A male voice, with a slightly gravelly, earnest quality.\nDelivery: Melodic, with a clear, forward projection.\nHarmonies: Unison vocals on the chorus, adding fullness.\n\nProduction:\nRoom: Sounds like a medium-sized room, with a natural, un-processed feel.\nTexture: Raw and organic, with instruments clearly defined.\nPolished/raw: More on the raw side, with a live band feel.\n\nArrangement:\nThe excerpt begins with a single male voice and acoustic guitar.\nBass guitar enters, followed by drums, building to a full band sound.\nThe vocals shift to a unison delivery for the chorus, adding emphasis.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Olde Tyme Mem'ry\" is track 2 on Mischief Brew's 'Bacchanal 'N' Philadelphia', released 2 February 2016 and running 4:59.",
+        "source": "https://mischiefbrew.bandcamp.com/track/olde-tyme-memry"
+      },
+      {
+        "claim": "Erik F. Petersen is credited as the songwriter.",
+        "source": "https://www.last.fm/music/Mischief+Brew/_/Olde+Tyme+Mem'ry/+lyrics"
+      },
+      {
+        "claim": "The album was issued on CD and digital by Fistolo Records and on vinyl by Square Of Opposition Records. It combines the 'Philadelphia' side of the Robert Blake split LP (tracks 1-6) with the 'Bakenal' EP.",
+        "source": "https://mischiefbrew.bandcamp.com/album/bacchanal-n-philadelphia"
+      },
+      {
+        "claim": "The songs were remastered from the original 2002 analog tapes for the 2016 release.",
+        "source": "https://mischiefbrew.bandcamp.com/album/bacchanal-n-philadelphia"
+      },
+      {
+        "claim": "The song first appeared in 2003 on the 'Bellingham & Philadelphia' split with Robert Blake, released by Art of the Underground and credited to Erik Petersen. It was later reissued on 'Bacchanal 'N' Philadelphia'.",
+        "source": "https://bookshopapocalypse.com/products/erik-petersen-mischief-brew-robert-blake-bellingham-philadelphia-split-vinyl-lp-2003-art-of-the-underground"
+      },
+      {
+        "claim": "Petersen said the Blake split and the 'Bakenal' EP were recorded all at once and then divided into two releases. He also said he played all the instruments on the early Mischief Brew recordings, including drums.",
+        "source": "https://nodepression.org/broolyns-guignol-philadelphias-mischief-brew-fight-dirty/"
+      },
+      {
+        "claim": "The lyrics lament disappearing traditional trades and crafts. They criticize the commercialization of rustic 'olde tyme' country life, with images such as a farm sold off and a father's ghost sold as an antique.",
+        "source": "https://www.last.fm/music/Mischief+Brew/_/Olde+Tyme+Mem'ry/+lyrics"
+      },
+      {
+        "claim": "Mischief Brew was a Philadelphia folk punk band founded by Erik Petersen as a solo project after his previous band, The Orphans, broke up in 2000. Petersen died on July 14, 2016.",
+        "source": "https://en.wikipedia.org/wiki/Mischief_Brew"
+      },
+      {
+        "claim": "Fistolo Records describes the album as the band's first two official studio releases from 2003 in one package.",
+        "source": "https://fistolo.tumblr.com/catalog"
+      },
+      {
+        "claim": "Petersen drew inspiration from 1960s protest movements and from artists such as Woody Guthrie and Crass. His lyrics often pay homage to early 20th-century American labor radicalism.",
+        "source": "https://en-academic.com/dic.nsf/enwiki/4205409"
+      }
+    ],
+    "lineage": "The song sits in the Philadelphia DIY folk-punk and anarcho-punk tradition, which blends acoustic protest-song storytelling with punk ethos and draws on Woody Guthrie and Crass.",
+    "genres": [
+      "folk punk",
+      "anarcho-punk",
+      "acoustic punk"
+    ]
+  },
+  "draft": "The first line is a pun so old it creaks: **\"Olde Tyme Mem'ry\"** opens with \"When Father bought the farm, we sold the farm,\" and the joke turns on you before you finish smiling. A man died, and the family cashed out. The next line names the shame without dressing it up: \"Mistook his blood for rustic charm.\" The narrator doesn't blame the city first. The narrator starts with what *we* did.\n\nThat admission is what keeps the song from being a simple grumble about kids who can't hold a spade. Erik F. Petersen, who wrote it, frames the whole thing as a bar conversation. The barman gets a real argument, telling the singer he's living in the past and asking why anyone should keep a dying craft alive instead of ending its misery. Petersen lets that stand. The reply isn't a rebuttal. It's a battered hand held out and a plea to be heard. Grief and stubbornness sit together here, and neither wins.\n\nThe satire is sharp and very funny. There's a gas stove in a second home made up to look like oak, even giving off smoke and glowing embers, and a \"Home, Sweet Home\" quilt hung under some Thoreau. Then the narrator admits to being called a throwback and to crying while remembering. That's the bruise under the jokes. By the later verses the narrator has become the antique, offering to be locked behind plastic glass, a eulogy that will get sold off as folk art. The chorus keeps landing on one image of a lost honesty: \"Of a day when wood was wooden, silver-silver, gold was gold.\" The water in the whiskey and brass passed off as gold make it a drinking song about being cheated, and about doing some of the cheating yourself.\n\nThe sound fits the barroom. A bright, strummed acoustic guitar carries a rough, conversational voice. A walking bass line and plain, steady drums fall in behind it at a lively clip, and the room feels live and unvarnished. The chorus fills out with more voice behind it, like the regulars joining in. Petersen said he played every instrument on Mischief Brew's early recordings, drums included. That makes the pub singalong a kind of one-man crowd, a fitting fake for a song about fakes.\n\nThe lineage is easy to hear: Woody Guthrie's talking-blues storytelling run through the punk grit of Crass, and the Philadelphia DIY folk-punk scene Petersen helped build. The song first came out in 2003 on a split with Robert Blake. It was remastered from the original 2002 analog tapes for this 2016 collection, months before Petersen died that July. A song about craft being boxed up as memorabilia ended up as a recovered artifact itself.\n\nIt sticks because the narrator mourns a father and a whole way of living while admitting a share in selling both, so the chorus feels less like nostalgia than a confession you can raise a glass to.",
+  "factCheck": [
+    {
+      "claim": "Opening quote 'When Father bought the farm, we sold the farm' and 'Mistook his blood for rustic charm'",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly and are consecutive lines. Reading the idiom as a death and a cash-out is interpretation resting on the lyric."
+    },
+    {
+      "claim": "Erik F. Petersen wrote the song",
+      "verdict": "supported",
+      "note": "Songwriter credit in the packet."
+    },
+    {
+      "claim": "Petersen frames the whole thing as a bar conversation",
+      "verdict": "corrected",
+      "note": "The barman appears in one verse and 'another round' in the chorus, but not every verse is set in a bar. Softened to 'much of it'."
+    },
+    {
+      "claim": "The barman tells the singer 'he's' living in the past, and asks why keep a dying craft instead of ending its misery",
+      "verdict": "corrected",
+      "note": "The lyric is 'We're living in the past.' Reworded to match, and removed the gendered pronoun for the narrator."
+    },
+    {
+      "claim": "The reply is a battered hand held out and a plea to be heard",
+      "verdict": "supported",
+      "note": "Lyrics: 'So I hold out this battered hand / Will you listen?'"
+    },
+    {
+      "claim": "Gas stove in a second home made up to look like oak, giving off smoke and glowing embers",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "A 'Home, Sweet Home' quilt hung under some Thoreau",
+      "verdict": "corrected",
+      "note": "The lyric puts the quilt's text 'below some wise words from Thoreau', so the draft's arrangement was reversed or ambiguous. Reworded to a quilt paired with Thoreau's wise words. This also keeps the direct quotes to three."
+    },
+    {
+      "claim": "The narrator admits being called a throwback and crying while remembering",
+      "verdict": "supported",
+      "note": "Lyric: 'they call me throwback; when I cry I remember'."
+    },
+    {
+      "claim": "The narrator offers to be locked behind plastic glass; a eulogy sold as folk art",
+      "verdict": "supported",
+      "note": "Lyrics: 'lock me up behind plastic glass' and 'This antique's rustic eulogy / Shall be sold as folk artistry'."
+    },
+    {
+      "claim": "Chorus line 'Of a day when wood was wooden, silver-silver, gold was gold.'",
+      "verdict": "supported",
+      "note": "Exact match. This is the third quoted line."
+    },
+    {
+      "claim": "Water in the whiskey and brass passed off as gold; a drinking song about being cheated",
+      "verdict": "supported",
+      "note": "Lyric images. The reading is interpretation."
+    },
+    {
+      "claim": "Bright strummed acoustic guitar, rough conversational voice, walking bass, plain steady drums, lively clip, live unvarnished room",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element."
+    },
+    {
+      "claim": "The chorus fills out with more voice behind it",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 describe added or unison voices on the chorus. Pass 1 mentions none, but two agree."
+    },
+    {
+      "claim": "Petersen said he played every instrument on Mischief Brew's early recordings, drums included",
+      "verdict": "supported",
+      "note": "Sourced from the nodepression interview."
+    },
+    {
+      "claim": "That makes the pub singalong a one-man crowd, a fitting fake",
+      "verdict": "removed",
+      "note": "Nothing says Petersen sang the extra chorus voices. Rewritten to claim only that the instruments were his."
+    },
+    {
+      "claim": "Woody Guthrie's talking-blues storytelling run through the punk grit of Crass",
+      "verdict": "corrected",
+      "note": "'Talking-blues' is unsupported. The packet supports acoustic protest-song storytelling with punk ethos, and Petersen's inspiration from Guthrie and Crass."
+    },
+    {
+      "claim": "The Philadelphia DIY folk-punk scene Petersen helped build",
+      "verdict": "corrected",
+      "note": "'Helped build' is unsupported. The packet says he founded Mischief Brew, a Philadelphia folk punk band, and that the song sits in the Philadelphia DIY folk-punk tradition."
+    },
+    {
+      "claim": "First came out in 2003 on a split with Robert Blake",
+      "verdict": "supported",
+      "note": "Bellingham & Philadelphia split, Art of the Underground."
+    },
+    {
+      "claim": "Remastered from the original 2002 analog tapes for the 2016 collection, months before Petersen died that July",
+      "verdict": "supported",
+      "note": "Released 2 Feb 2016; Petersen died 14 July 2016."
+    },
+    {
+      "claim": "A song about craft boxed up as memorabilia ended up as a recovered artifact",
+      "verdict": "supported",
+      "note": "Interpretation resting on the remaster and reissue facts."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2791,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014564,
+        "detail": "1104 in / 181 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0007177,
+        "detail": "1104 in / 216 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015564,
+        "detail": "1104 in / 221 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14183600000000002,
+        "detail": "48368 in / 1510 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.059664,
+        "detail": "4361 in / 2111 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.07383,
+        "detail": "5600 in / 6263 out"
+      }
+    ]
+  }
+}

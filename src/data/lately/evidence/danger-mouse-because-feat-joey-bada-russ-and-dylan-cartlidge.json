@@ -1,0 +1,200 @@
+{
+  "spotifyId": "1nLHSHocLNaLJCjKO153zw",
+  "reviewedAt": "2026-11-24T15:17:50.241Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/1564061"
+  },
+  "listening": "Pass 1:\n- Instruments: A drum kit plays a steady, mid-tempo hip-hop beat with a prominent snare on beats 2 and 4. A bass guitar plays a simple, repeating melodic line. A keyboard or synthesizer plays a sustained, warm pad sound. A guitar plays a clean, arpeggiated melody with a slight vibrato.\n- Tempo and groove feel: Mid-tempo, relaxed, and steady. The groove is laid-back and slightly swung.\n- Vocals: A male voice raps with a clear, rhythmic delivery. Later, a male voice sings a melodic line with a slightly breathy, smooth character. There are no harmonies.\n- Production: The sound is polished and clean. There is a sense of a medium-sized room, with a slight reverb on the vocals and instruments. The texture is smooth and well-balanced.\n- Arrangement: The excerpt begins with the full instrumental arrangement and the rapping voice. Around the 0:23 mark, the rapping voice drops out, and the singing voice enters, taking the lead over the continuing instrumental track.\n\nPass 2:\n- Instruments: A drum machine plays a hip-hop beat with a prominent snare and kick. A bass guitar plays a simple, repetitive line. A keyboard plays a sustained, warm pad sound. A guitar plays a clean, arpeggiated melody.\n- Tempo and groove: The tempo is moderate. The groove is laid-back and steady.\n- Vocals: A male voice raps in a clear, rhythmic delivery. Later, a female voice sings with a smooth, slightly breathy character. There are no harmonies.\n- Production: The sound is clean and polished. The room sound is dry. The texture is smooth.\n- Arrangement: The drums, bass, keyboard, and guitar play throughout. The male rap vocal is present for the first half, then drops out. The female vocal enters for the second half.\n\nPass 3:\n- Instruments: A drum kit plays a slow, steady hip-hop beat with a prominent snare. A bass guitar plays a simple, repetitive line. A keyboard plays sustained, warm chords. A guitar plays a short, clean, arpeggiated riff.\n- Tempo and groove: The tempo is slow. The groove is laid-back and steady.\n- Vocals: A male voice raps in a clear, rhythmic delivery. Later, a female voice sings with a smooth, slightly breathy character. There are no harmonies.\n- Production: The sound is clean and polished. The room sound is dry.\n- Arrangement: The drums, bass, and keyboard establish the groove. The guitar enters and plays a short riff. The male voice raps over the instrumental. The female voice enters and sings a melodic line.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Because\" was released on June 8, 2022 as the second single from Danger Mouse and Black Thought's collaborative album Cheat Codes, featuring Joey Bada$$, Russ and Dylan Cartlidge.",
+        "source": "https://www.okayplayer.com/music/black-thought-danger-mouse-link-with-joey-bada-russ-and-dylan-cartlidge-on-because.html"
+      },
+      {
+        "claim": "It follows \"No Gold Teeth,\" the first single from Cheat Codes, and The Fader calls it a posse cut.",
+        "source": "https://www.thefader.com/2022/06/08/black-thought-and-danger-mouse-because-joey-badass-russ-and-dylan-cartlidge"
+      },
+      {
+        "claim": "Cheat Codes is produced by Danger Mouse. The album credits list Black Thought on vocals and engineering, and Danger Mouse on production and engineering.",
+        "source": "https://en.wikipedia.org/wiki/Cheat_Codes_(album)"
+      },
+      {
+        "claim": "Writing credits for \"Because\" list Dorian Burton (Danger Mouse's legal name), Dylan Cartlidge, Herman Kelly, Jo-Vaughn Virginie Scott (Joey Bada$$), Russell James Vitale (Russ) and Trotter (Black Thought). The track runs 4:41.",
+        "source": "https://en.wikipedia.org/wiki/Cheat_Codes_(album)"
+      },
+      {
+        "claim": "Danger Mouse said the two of them were the only people in the room when they recorded the album. He also said they ended up keeping everything instead of just demoing it.",
+        "source": "https://www.theringer.com/rap/2022/8/11/23300233/danger-mouse-black-thought-cheat-codes-interview-new-album"
+      },
+      {
+        "claim": "Joey Bada$$ said he was a big fan of both Black Thought and Danger Mouse. He called Black Thought one of the greatest rappers ever, and said joining the record was a no-brainer when they asked.",
+        "source": "https://www.okayplayer.com/music/black-thought-danger-mouse-link-with-joey-bada-russ-and-dylan-cartlidge-on-because.html"
+      },
+      {
+        "claim": "Russ said that collaborating with one of the greatest lyricists of all time, alongside Danger Mouse, was an honor.",
+        "source": "https://www.okayplayer.com/music/black-thought-danger-mouse-link-with-joey-bada-russ-and-dylan-cartlidge-on-because.html"
+      },
+      {
+        "claim": "Black Thought's verse reflects on violence and his upbringing. It ends with the line about dying \"just because.\"",
+        "source": "https://www.pastemagazine.com/music/danger-mouse-black-thought/danger-mouse-and-black-thought-join-forces-with-jo"
+      },
+      {
+        "claim": "Consequence describes the track as luxurious, retro-soul Danger Mouse production, with a hook from Dylan Cartlidge that sounds time-warped.",
+        "source": "https://consequence.net/2022/06/danger-mouse-black-thought-because-stream/"
+      },
+      {
+        "claim": "Cheat Codes was first mooted around 2006 under the name Dangerous Thoughts. Scheduling conflicts held it up until the pair reconvened in 2018. It marks Danger Mouse's first hip-hop album since his 2005 DANGERDOOM album with MF DOOM, The Mouse and the Mask. Black Thought had made three solo albums since The Roots' last record.",
+        "source": "https://djmag.com/features/danger-mouse-black-thought-cracking-code"
+      }
+    ],
+    "lineage": "The song is a posse cut in the boom-bap and sample-based soul-rap tradition. It pairs The Roots' Black Thought with Gnarls Barkley and DANGERDOOM producer Danger Mouse, with younger guest rappers Joey Bada$$ and Russ and UK vocalist Dylan Cartlidge.",
+    "genres": [
+      "hip hop",
+      "soul",
+      "boom bap"
+    ]
+  },
+  "draft": "The hook keeps saying **\"Because\"** as if a reason is coming, and none ever arrives. Dylan Cartlidge sings it as a weary half-answer, a voice Consequence heard as time-warped: \"Because this love is so non-desirable.\" Then Black Thought takes that empty word and closes his verse with it: \"Don't need a reason to die, we die just because.\" The chorus sounds like a love song gone sour. The verse shows it was about something much heavier.\n\nThat turn is the emotional key. Black Thought's verse, which Paste reads as a reflection on violence and upbringing, moves through cheap candy from the deli, street games, a cellmate reading Machiavelli, and a narrator turning from one faith to the next looking for something that holds. The images come fast and dense, the way the best of his writing does, but the feeling under them is a tired shrug at how cheap life gets treated. He doesn't rage. He reports, and that restraint is what hurts. The verse before it pushes the same weight further back, through Elmina's door of no return and a narrator screaming into the ocean for comfort, history and grief stacked on top of each other with nowhere to put them down.\n\nDanger Mouse keeps the bed calm underneath all of it. A steady hip-hop beat with a firm snare, a simple bass line circling, warm sustained keys, and a clean arpeggiated guitar figure. The groove is laid-back, the mix clean and dry, and the sung hook stands alone without harmonies stacked behind it. Consequence called it luxurious retro soul, and that fits the tradition the song sits in, sample-minded soul-rap with boom-bap bones. The comfort of the sound is the point. It lets hard verses go down easy, then stick.\n\nThe Fader called it a posse cut, and the guests widen the frame. One verse sets skateboard nostalgia beside the memory of people shot outside a dry cleaner, Cohibas in Costa Rica beside stop-and-frisk, a parent's warning so the streets \"would never father\" him. Success hasn't erased anything, and the verse ends by admitting you don't know that part of him. The last verse is the most exposed: a toxic marriage handed down, money that broke a family, chasing approval while knowing better, and \"I don't vacation, dawg, I guilt trip.\" It's self-justification and self-disgust in the same breath, and the verse doesn't settle between them.\n\nDanger Mouse and Black Thought first floated this partnership around 2006 and only reconvened in 2018. You can hear the patience in it.\n\nIt sticks because the hook keeps promising a reason, and by the end you understand the missing reason is the wound.",
+  "factCheck": [
+    {
+      "claim": "Dylan Cartlidge sings the 'Because' hook, and Consequence heard it as time-warped",
+      "verdict": "supported",
+      "note": "Consequence describes a hook from Dylan Cartlidge that sounds time-warped. 'Weary half-answer' is interpretation."
+    },
+    {
+      "claim": "Quote: 'Because this love is so non-desirable'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Black Thought closes his verse with 'Don't need a reason to die, we die just because'",
+      "verdict": "supported",
+      "note": "The quote matches the lyrics exactly. Paste says Black Thought's verse ends with the 'just because' line."
+    },
+    {
+      "claim": "Paste reads Black Thought's verse as a reflection on violence and upbringing",
+      "verdict": "supported",
+      "note": "Matches the Paste summary in the researched facts."
+    },
+    {
+      "claim": "The verse moves through cheap candy from the deli, street games, a cellmate reading Machiavelli, and turning to different faiths",
+      "verdict": "supported",
+      "note": "Lyrics: shoestrings, lemon drops and chips from the deli; spinner tops and skelly; 'my celly read Niccolò Machiavelli'; Muhammad, Buddha, Dalai Lama."
+    },
+    {
+      "claim": "The images come fast and dense, 'the way the best of his writing does'",
+      "verdict": "corrected",
+      "note": "The comparison to the rest of his writing has no support. Kept the description of the verse and dropped the comparison."
+    },
+    {
+      "claim": "The earlier verse references Elmina's door of no return and screaming into the ocean for emotional support",
+      "verdict": "supported",
+      "note": "Lyrics: 'the door of no return at Elmina' and 'Screamin' into the ocean for emotional support'."
+    },
+    {
+      "claim": "Steady hip-hop beat with firm snare, simple repeating bass line, warm sustained keys, clean arpeggiated guitar",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Laid-back groove, clean and dry mix, sung hook without harmonies",
+      "verdict": "supported",
+      "note": "All passes agree on laid-back, clean and no harmonies. Passes 2 and 3 agree on dry."
+    },
+    {
+      "claim": "Consequence called it luxurious retro soul",
+      "verdict": "supported",
+      "note": "Matches Consequence's description of the production."
+    },
+    {
+      "claim": "The song sits in a tradition of sample-minded soul-rap with boom-bap bones",
+      "verdict": "supported",
+      "note": "Matches the lineage note: boom-bap and sample-based soul-rap tradition."
+    },
+    {
+      "claim": "The Fader called it a posse cut",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "'The guests widen the frame' and the skateboard/dry cleaner/Cohibas verse is one of the guests'",
+      "verdict": "corrected",
+      "note": "The packet doesn't say who raps which verse. Removed the implied attribution to the guests."
+    },
+    {
+      "claim": "One verse sets skateboard nostalgia beside shootings outside a cleaner, Cohibas in Costa Rica beside stop-and-frisk, and a parent's warning so the streets 'would never father' him",
+      "verdict": "supported",
+      "note": "Lyrics: practicing ollies, 'clapped at in front the cleaners', 'Cohibas out in Costa Rica', 'stopped and frisked', 'So the streets would never father me'. The quote matches."
+    },
+    {
+      "claim": "The verse ends by admitting you don't know that part of him",
+      "verdict": "supported",
+      "note": "Lyric: 'But you don't know that part of me'."
+    },
+    {
+      "claim": "The last verse covers a toxic marriage, money that split a family, chasing approval, and 'I don't vacation, dawg, I guilt trip'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The quote is a contiguous fragment."
+    },
+    {
+      "claim": "Danger Mouse and Black Thought first floated the partnership around 2006 and reconvened in 2018",
+      "verdict": "supported",
+      "note": "DJ Mag: first mooted around 2006, reconvened in 2018."
+    },
+    {
+      "claim": "'You can hear the patience in it'",
+      "verdict": "supported",
+      "note": "Interpretation resting on the supported 2006 to 2018 timeline."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2233,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014348,
+        "detail": "1126 in / 170 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015698,
+        "detail": "1126 in / 224 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014348,
+        "detail": "1126 in / 170 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.087132,
+        "detail": "23951 in / 1923 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.06792,
+        "detail": "5190 in / 2358 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.063838,
+        "detail": "6364 in / 5111 out"
+      }
+    ]
+  }
+}
