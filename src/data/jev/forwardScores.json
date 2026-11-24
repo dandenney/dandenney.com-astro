@@ -2747,6 +2747,112 @@
         "input_tokens": 635,
         "output_tokens": 109
       }
+    },
+    "314": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-24T15:04:11.132Z",
+      "state": {
+        "date": "2026-11-24",
+        "sport": "NBA",
+        "matchup": "PIS @ ORL (DraftKings: DET @ ORL)",
+        "pick": "Cade Cunningham Under 8.5 Assists",
+        "odds": "-126",
+        "recentForm": "6/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.58
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.6,
+          "confidence": 0.31,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.43,
+            "1": 0.54,
+            "2": 0.03
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 657,
+        "output_tokens": 109
+      }
+    },
+    "315": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-24T15:04:11.235Z",
+      "state": {
+        "date": "2026-11-24",
+        "sport": "NBA",
+        "matchup": "DAL @ DEN",
+        "pick": "Nikola Jokić Under 1.5 Steals",
+        "odds": "-144",
+        "recentForm": "7/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.72
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 1.07,
+          "confidence": 0.32,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.19,
+            "1": 0.55,
+            "2": 0.26
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 647,
+        "output_tokens": 109
+      }
     }
   }
 }
