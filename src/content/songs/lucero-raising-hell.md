@@ -23,6 +23,12 @@ sources:
     url: "https://waitingroomrecords.com/products/lucero-lucero"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/artist/lucero-mn0000310905"
+recordedAt:
+  - studio: "Zebra Ranch (the Dickinson family's barn)"
+    city: "Coldwater"
+    state: "Mississippi"
+    country: "United States"
+    source: "https://lucero.bandcamp.com/album/lucero"
 aiGenerated: true
 ---
 **Raising Hell** opens on a brag that's really a worry. "Well my little brother's raising hell," Ben Nichols sings, and the next lines pile up the evidence: whiskey nights, rodeos, strippers in Austin, a kid who probably ought to be in jail and can't remember the good times he keeps telling everyone about. There's pride in the telling, the way an older sibling passes along the wild stories. There's also worry, because the brother's money is running out and a job is the one option he won't consider.

@@ -31,6 +31,17 @@ sources:
     url: "https://www.nbc.com/nbc-insider/post-malone-morgan-wallen-i-had-some-help-lyrics-meaning-explained"
   - title: "Wikipedia: F-1 Trillion"
     url: "https://en.wikipedia.org/wiki/F-1_Trillion"
+recordedAt:
+  - studio: "Big Loud Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/31522472-Post-Malone-Featuring-Morgan-Wallen-I-Had-Some-Help"
+  - studio: "East Iris Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/31522472-Post-Malone-Featuring-Morgan-Wallen-I-Had-Some-Help"
 aiGenerated: true
 ---
 The joke lands before the hurt does. **I Had Some Help** takes a stock phrase, "teamwork makes the dream work", and turns it into a way to hand half the blame for a wrecked relationship back to the other person. The narrator has been drinking hard, and the song admits it: "been deep in every weekend." It just won't let him carry it alone. "Don't act like you ain't help me pull that bottle off the shelf" is the line that holds the whole song. It's an accusation, and it's also a confession said as fast as possible so it can be turned around.

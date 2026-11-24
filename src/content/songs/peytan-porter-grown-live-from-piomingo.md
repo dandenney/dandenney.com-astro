@@ -23,6 +23,12 @@ sources:
     url: "https://countrynow.com/peytan-porter-readies-grown-a-six-song-testament-to-personal-growth-and-authenticity/"
   - title: "Celeb Secrets Country: Peytan Porter Depicts Alternate Image of Afterlife in New Single \"God’s Hotel\" (Listen)"
     url: "https://celebsecretscountry.com/2023/07/31/peytan-porter-depicts-alternate-image-of-afterlife-in-new-single-gods-hotel-listen/"
+recordedAt:
+  - studio: "Piomingo"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.facebook.com/piomingonashville/"
 aiGenerated: true
 ---
 Two things carry **Grown (Live from Piomingo)**: an acoustic guitar picking out arpeggios in a clean, bright tone, and Peytan Porter's voice, clear and unhurried, riding on top. The tempo leans back instead of pushing, the playing has a raw, unpolished edge, and the whole performance feels like it's happening a few feet away. For a song about making peace with where you've ended up, that plainness makes the case. Nothing is dressed up to look like more than it is.

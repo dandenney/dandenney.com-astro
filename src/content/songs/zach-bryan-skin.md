@@ -25,6 +25,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Skin_(Zach_Bryan_song)"
   - title: "Elite Daily: Brianna Chickenfry Posts A Pointed TikTok After Zach Bryan"
     url: "https://www.elitedaily.com/entertainment/brianna-chickenfry-response-zach-bryan-diss-tracks"
+recordedAt:
+  - city: "Tulsa"
+    state: "Oklahoma"
+    country: "United States"
+    source: "https://www.antimusic.com/p/26/c0120zach_bryans_with_heaven_on_top_debuts_at_no_1_on_billboard_200.shtml"
 aiGenerated: true
 ---
 The question comes first, and it's almost gentle. **"Skin"** opens with Zach Bryan asking "How do tattoos take to your skin?" as if checking on a wound. Then the questions sharpen. Is she walking around Tribeca with someone new? Can she still smell the Wisconsin wind from one late October? By the end of the first verse he's wondering whether she'll make an honest man out of somebody who can't tell a one-night stand from closure, and the tenderness has turned into a jab.

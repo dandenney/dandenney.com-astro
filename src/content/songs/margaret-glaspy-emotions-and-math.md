@@ -29,6 +29,12 @@ sources:
     url: "https://performermag.com/new-music-and-video/interviews-and-features/margaret-glaspy-emotions-and-math-interview/"
   - title: "Music Musings & Such: FEATURE: Spotlight: Margaret Glaspy"
     url: "https://www.musicmusingsandsuch.com/musicmusingsandsuch/2020/5/14/feature-spotlight-margaret-glaspy"
+recordedAt:
+  - studio: "Sear Sound"
+    city: "New York City"
+    state: "New York"
+    country: "United States"
+    source: "https://www.discogs.com/release/8683706-Margaret-Glaspy-Emotions-And-Math"
 aiGenerated: true
 ---
 There's a bath in this song, and it isn't relaxing. On **Emotions and Math**, Margaret Glaspy's narrator spends the nights her partner is away awake until 4 a.m. and the mornings hitting snooze, and she sums up the state in one cold, exact image: "Shiverin in an ice cold bath / Of emotions and math." The longing is there. So is the counting of days, the tally kept because tallying feels like control when nothing else does. Glaspy said the phrase fit the whole record because she was making something emotive that was also process-driven and analytical. Here that tension stops being a working method and becomes the narrator's problem.

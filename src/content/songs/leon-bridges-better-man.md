@@ -31,6 +31,12 @@ sources:
     url: "https://djbooth.net/songs/leon-bridges-better-man"
   - title: "WNYC | New York Public Radio, Podcasts, Live Streaming Radio, News: Leon Bridges,"
     url: "https://wnyc.org/story/leon-bridges-coming-home/"
+recordedAt:
+  - studio: "Niles City Sound"
+    city: "Fort Worth"
+    state: "Texas"
+    country: "United States"
+    source: "https://www.discogs.com/release/8940873-Leon-Bridges-Coming-Home"
 aiGenerated: true
 ---
 The promise in **Better Man** is so small it almost slips past: "I just wanna be a better man." Not a perfect one, not a new one. Leon Bridges opens by saying the narrator doesn't want much, and the modesty is the tell. Someone who has wrecked something is asking for as little as possible, hoping a small request is easier to grant.

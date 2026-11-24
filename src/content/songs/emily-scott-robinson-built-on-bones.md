@@ -21,6 +21,12 @@ sources:
     url: "https://www.brooklynvegan.com/emily-scott-robinson-preps-built-on-bones-stream-the-title-track/"
   - title: "nashvillescene.com"
     url: "https://www.nashvillescene.com/music/nashvillecream/emily-scott-robinson-the-cream-q-a/article_07696ef2-560c-11ed-9475-67eb97d07b59.html"
+recordedAt:
+  - studio: "The Creative Workshop"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://emilyscottrobinson.bandcamp.com/album/built-on-bones"
 aiGenerated: true
 ---
 The whole of **Built on Bones** rests on one word, "everything," sung three times over and over until it stops meaning anything and starts working like a spell. Between those repetitions, Emily Scott Robinson slips in the prophecy that Shakespeare's Witches hand to Macbeth: his rise, his fall, the forest that will walk. It opens her six-song cycle for the Witches, and it was the first song she wrote for the job, just after finishing *American Siren*.

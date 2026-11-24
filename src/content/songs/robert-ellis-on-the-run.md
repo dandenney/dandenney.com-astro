@@ -29,6 +29,12 @@ sources:
     url: "https://americana-uk.com/robert-ellis-yesterdays-news"
   - title: "thebluegrasssituation.com"
     url: "https://thebluegrasssituation.com/video/watch-robert-ellis-on-the-run-luck-sessions-at-tx-whiskey-ranch/"
+recordedAt:
+  - studio: "Niles City Sound"
+    city: "Fort Worth"
+    state: "Texas"
+    country: "United States"
+    source: "https://www.frontview-magazine.be/en/news/robert-ellis-to-release-new-studio-album-yesterdays-news"
 aiGenerated: true
 ---
 Robert Ellis sings about running with almost nothing moving. **On The Run** opens in the stretches of West Texas too empty to have a name, where the narrator gases up every time a chance comes. Then it sets that flight against a slow, fingerpicked guitar figure, bright and clear. The voice is close and dry, smooth and unadorned, as if the whole song were happening in a small room with the door shut. That gap between the subject and the sound is where the feeling lives.

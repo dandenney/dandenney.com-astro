@@ -21,6 +21,12 @@ sources:
     url: "https://newwestrecords.com/products/t-hardy-morris-the-digital-age-of-rome-cd"
   - title: "Glide Magazine: T. Hardy Morris Makes Sadness Sound Good on Thoughtful Indie Rocker 'The Digital Age Of Rome' (ALBUM REVIEW)"
     url: "https://glidemagazine.com/258210/t-hardy-morris-makes-sadness-sound-good-on-thoughtful-indie-rocker-the-digital-age-of-rome-album-review/"
+recordedAt:
+  - studio: "Tweed Recording"
+    city: "Athens"
+    state: "Georgia"
+    country: "United States"
+    source: "https://thardymorris.bandcamp.com/album/the-digital-age-of-rome"
 aiGenerated: true
 ---
 There's a minute every evening when the parking lot outside the e-cigarette counter and the car-title lender turns the color of a cocktail. **Shopping Center Sunsets** is about that light landing on all the wrong things. T. Hardy Morris builds the refrain as an inventory: electronic cigarettes, hair supply outlets, tribal tattoo concepts, dinette sets on layaway, discount aquatic pets. "Car title cash regrets" is the sharpest item on the shelf, four words that carry a whole bad month.

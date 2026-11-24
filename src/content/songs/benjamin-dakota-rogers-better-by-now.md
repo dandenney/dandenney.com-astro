@@ -27,6 +27,12 @@ sources:
     url: "https://getlifestylenews.blogspot.com/2019/03/five-questions-withbenjamin-dakota.html"
   - title: "Wikipedia: Benjamin Dakota Rogers"
     url: "https://en.wikipedia.org/wiki/Benjamin_Dakota_Rogers"
+recordedAt:
+  - studio: "Catherine North Studios"
+    city: "Hamilton"
+    state: "Ontario"
+    country: "Canada"
+    source: "https://trespassmusic.org/home/blog/benjamin-dakota-rogers-releases-new-album-better-by-now-april-6"
 aiGenerated: true
 ---
 The stars in **Better by Now** are doing everyone else a favor. They're "Shining down like kerosene lights," guiding sailors home, sending sinners to bed, chasing the monsters out of somebody's head. Benjamin Dakota Rogers opens the song with that whole list of comforts, then turns around and admits none of it reaches him. "Ain't it funny" opens both verses, and it isn't funny. It's the wry shrug of someone who can see the cure working on everybody but himself.

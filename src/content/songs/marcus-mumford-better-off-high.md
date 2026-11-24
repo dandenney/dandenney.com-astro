@@ -13,6 +13,12 @@ pubDate: "2026-11-24"
 tags: ["marcus-mumford", "folk-rock", "singer-songwriter", "2022"]
 pipeline: "lately"
 sources: []
+recordedAt:
+  - studio: "Sound City Studios"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Self-Titled_(Marcus_Mumford_album)"
 aiGenerated: true
 ---
 The blessing comes first, and it is a hard one: **Better Off High** opens by thanking a drug, and then sets the terms in five plain words, "Better off high than dead." Marcus Mumford doesn't dress it up as a slogan or a dare. It sounds like something said out loud in a kitchen, late, after the other options have run out. It's gratitude with the joy taken out, the relief of someone who has stopped asking for recovery and will settle for survival.

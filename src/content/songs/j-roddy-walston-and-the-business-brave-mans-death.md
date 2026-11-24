@@ -27,6 +27,17 @@ sources:
     url: "https://en.wikipedia.org/wiki/J._Roddy_Walston_and_the_Business"
   - title: "NPR: J. Roddy Walston And The Business On World Cafe"
     url: "https://www.npr.org/2010/09/23/130051069/j-roddy-walston-and-the-business-on-world-cafe"
+recordedAt:
+  - studio: "Sound City Studios"
+    city: "Los Angeles (Van Nuys)"
+    state: "California"
+    country: "United States"
+    source: "https://nodepression.com/j-roddy-walston-and-the-business/"
+  - studio: "Fairfax Recordings"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://nodepression.com/j-roddy-walston-and-the-business/"
 aiGenerated: true
 ---
 A father who won't give his son his name, then dies proud the day the boy gets a gun. That's where **Brave Man's Death** starts, and everything after is the son trying to earn back what was held from him at birth. "Said he wouldn't put his name on me" is the wound. The rest of the song is the scar tissue.

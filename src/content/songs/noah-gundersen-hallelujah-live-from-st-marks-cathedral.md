@@ -23,6 +23,12 @@ sources:
     url: "https://thegreatdiscontent.com/interview/noah-gundersen/"
   - title: "Entertainment Voice: Noah Gundersen Talks ‘Lover’ and the Art of Motorcycle Maintenance"
     url: "https://entertainmentvoice.com/2019/08/23/noah-gundersen-talks-lover-self-realization-and-the-art-of-motorcycle-maintenance/"
+recordedAt:
+  - studio: "St. Mark's Cathedral"
+    city: "Seattle"
+    state: "Washington"
+    country: "United States"
+    source: "https://www.broadwayworld.com/bwwmusic/article/Noah-Gundersen-Announces-A-Pillar-Of-Salt-Live-Livestream-20211207"
 aiGenerated: true
 ---
 A second voice joins on the title word, and the cathedral takes both of them and holds the sound a beat longer than either singer does. That held note is the whole argument of Noah Gundersen's **Hallelujah - Live from St. Mark's Cathedral**: a song of praise sung in a room built for praise, by someone raised inside that language.

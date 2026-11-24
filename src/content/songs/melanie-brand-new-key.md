@@ -29,6 +29,12 @@ sources:
     url: "https://en.wikipedia.org/wiki/Melanie_(singer)"
   - title: "Wikipedia: Stoneground Words"
     url: "https://en.wikipedia.org/wiki/Stoneground_Words"
+recordedAt:
+  - studio: "Allegro Sound Studios"
+    city: "New York City"
+    state: "New York"
+    country: "United States"
+    source: "https://www.songfacts.com/facts/melanie/brand-new-key"
 aiGenerated: true
 ---
 Someone on a bicycle rolls past a window at night, then comes back on roller skates at daylight, and only then admits what's going on: "I'm okay alone, but you've got something I need." That line is the whole trick of **Brand New Key**. It's a brag and a plea in the same breath. The narrator wants you to know they're fine, really, and also that they've been circling your house since last night.

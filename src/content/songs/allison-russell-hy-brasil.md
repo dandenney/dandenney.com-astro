@@ -27,6 +27,12 @@ sources:
     url: "https://countryqueer.com/stories/interview/allison-russell-the-country-queer-interview-pt-1/"
   - title: "No Depression: Roots Music and Culture Journalism: SPOTLIGHT: ‘Like Sucking the Poison from a Snake Bite,’ Allison Russell Shares Her Story on ‘Outside Child’ - No Depression"
     url: "https://nodepression.org/spotlight-like-sucking-the-poison-from-a-snake-bite-allison-russell-shares-her-story-on-outside-child/"
+recordedAt:
+  - studio: "Sound Emporium (Studio A)"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.discogs.com/release/22689065-Allison-Russell-Outside-Child"
 aiGenerated: true
 ---
 The chorus of **Hy-Brasil** is a spell, and it works the way spells do: by counting. Seven black rabbits, twenty-one daffodil petals, the thirteenth note of a blackcap's trill. A child could memorize it. In Allison Russell's song, a child did, and used it to leave.

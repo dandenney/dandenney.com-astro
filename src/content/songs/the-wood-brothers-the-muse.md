@@ -29,6 +29,12 @@ sources:
     url: "https://en.wikipedia.org/wiki/The_Wood_Brothers"
   - title: "Whatzup: Wood Brothers' musical journey brings them to Clyde"
     url: "https://whatzup.com/wood-brothers-musical-journey-brings-them-to-clyde/"
+recordedAt:
+  - studio: "Southern Ground Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.thewoodbros.com/the-muse"
 aiGenerated: true
 ---
 Three rooms, three times the same seat. **The Muse** opens with a narrator perched on "this never-made bed," moves him to the end of a dirty old bar, and finally sets him down in a hospital room. Each verse closes on the same hedged prayer, "Thank God, whoever you are," a thank-you sent to no fixed address. That phrase carries the whole song. The gratitude is real, but it comes out sideways. It's tucked inside a conditional (*if I was thinking, I'd be thinking*), and the refrain explains why: thinking is the last thing you want to do. Some moments are too good to look at directly. Others are too bad.

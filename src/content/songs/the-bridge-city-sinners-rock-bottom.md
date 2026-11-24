@@ -23,6 +23,12 @@ sources:
     url: "https://savingcountrymusic.com/halloween-review-the-bridge-city-sinners-unholy-hymns/"
   - title: "Riot Fest: How Bridge City Sinners’ Libby Lux Molded Her Spite Into Songs"
     url: "https://riotfest.org/2022/08/24/how-bridge-city-sinners-libby-lux-molded-her-spite-into-songs/"
+recordedAt:
+  - studio: "LowShelf Recording"
+    city: "Portland"
+    state: "Oregon"
+    country: "United States"
+    source: "https://riotfest.org/2022/08/24/how-bridge-city-sinners-libby-lux-molded-her-spite-into-songs/"
 aiGenerated: true
 ---
 Every verse of **Rock Bottom** calls a feeling by name, like an old acquaintance at the door: Lonely, Depression, Guilty, Regret, Hopeless, Drinking. The Bridge City Sinners treat despair as company. The song asks loneliness to hold the narrator and say it loves them, while admitting that the love is a lie. Depression gets the warmest welcome of all: "Depression, hello, my old friend." The greeting is affectionate, even relieved, because at least with this friend the narrator won't die alone. That's the hard part to sit with. The narrator isn't fighting these feelings. They've moved in, and they're the only ones who stay.

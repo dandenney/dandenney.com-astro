@@ -27,6 +27,21 @@ sources:
     url: "https://www.rollingstone.com/music/music-features/rolling-stones-mick-jagger-keith-richards-hackney-diamonds-stevie-wonder-1234822701/"
   - title: "billboard.com: Rolling Stones' Lady Gaga & Stevie Wonder Collab: Release Date"
     url: "https://www.billboard.com/music/rock/rolling-stones-sweet-sounds-of-heaven-lady-gaga-stevie-wonder-release-date-1235420814"
+recordedAt:
+  - studio: "Henson Recording Studios"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Sweet_Sounds_of_Heaven"
+  - studio: "Metropolis Studios"
+    city: "London"
+    state: "England"
+    country: "United Kingdom"
+    source: "https://www.sonicperspectives.com/news/the-rolling-stones-new-single-sweet-sounds-of-heaven-features-lady-gaga-and-stevie-wonder/"
+  - studio: "Sanctuary Studios"
+    city: "Nassau"
+    country: "Bahamas"
+    source: "https://www.sonicperspectives.com/news/the-rolling-stones-new-single-sweet-sounds-of-heaven-features-lady-gaga-and-stevie-wonder/"
 aiGenerated: true
 ---
 The hardest line in **Sweet Sounds Of Heaven** isn't a hymn. It's a refusal: "No, I'm not, not goin' to Hell / In some dusty motel." It's the bluntest thing in a song otherwise full of blessings and falling light, and it gives the whole thing its spine. Around it sit prayers for the hungry, the smell of heaven, children singing about the land they were born in. Then the narrator plants a foot and says this isn't how the story ends. The defiance and the devotion never settle their argument, and the song is better for leaving them both standing.

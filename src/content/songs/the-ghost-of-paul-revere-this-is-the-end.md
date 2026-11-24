@@ -19,6 +19,12 @@ sources:
     url: "https://www.pressherald.com/2014/02/20/making_noise__the_ghost_of_paul_revere_shine_with__believe__/"
   - title: "americanavibesshop.com: Americana Vibes"
     url: "https://americanavibesshop.com/products/the-ghost-of-paul-revere-believe-cd"
+recordedAt:
+  - studio: "The Halo (Halo Studios)"
+    city: "Portland"
+    state: "Maine"
+    country: "United States"
+    source: "https://www.pressherald.com/2014/02/20/making_noise__the_ghost_of_paul_revere_shine_with__believe__/"
 aiGenerated: true
 ---
 "Give me my last cigarette" is a condemned person's request, and on **This Is the End** The Ghost of Paul Revere make it a chorus a whole room could sing. The song belongs to someone at the very end, someone who dug the grave and figures they might as well get in, yet it moves like a front-porch singalong. Acoustic guitar strums steadily, a banjo runs a melodic line over the top, and bass and a simple drum beat hold a relaxed, unhurried pace. The song lives in the gap between what it says and how it sounds.

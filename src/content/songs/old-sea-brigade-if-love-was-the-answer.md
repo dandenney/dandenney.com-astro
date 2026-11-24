@@ -12,6 +12,11 @@ genres: ["indie folk","folk pop"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["indie folk","folk pop"]
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://litehouse.media/2025/04/05/old-sea-brigade-announces-new-ep-shares-green-tea-feat-katie-pruitt/"
 aiGenerated: true
 ---
 

@@ -27,6 +27,12 @@ sources:
     url: "https://www.wfdd.org/arts/2023-03-24/for-the-beloved-trios-return-nickel-creek-created-its-own-world"
   - title: "Radio Milwaukee: For the beloved trio's return, Nickel Creek created its own world"
     url: "https://radiomilwaukee.org/discover-music/artist-interviews/2023-03-24/for-the-beloved-trios-return-nickel-creek-created-its-own-world"
+recordedAt:
+  - studio: "RCA Studio A"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://thebluegrasssituation.com/read/artist-of-the-month-nickel-creek/"
 aiGenerated: true
 ---
 "My God, it's good to see you" is how **Celebrants** begins, and it sounds less like a lyric than the first thing out of someone's mouth at the door. Nickel Creek put that greeting at the top of their fifth album, their first record since 2014's *A Dotted Line*. It was shaped by the pandemic shutdown and by something like 75 or 80 days of writing together before a month in the studio. The song is a reunion. What makes it sting is that it's also an apology.

@@ -27,6 +27,11 @@ sources:
     url: "https://www.thelineofbestfit.com/features/longread/donovan-woods-gentle-storyteller-interview"
   - title: "parade.com"
     url: "https://parade.com/1114455/laurawhitmore/donovan-woods-without-people-album/"
+recordedAt:
+  - city: "Toronto"
+    state: "Ontario"
+    country: "Canada"
+    source: "https://www.james-bunton.com/donovan-woods-8"
 aiGenerated: true
 ---
 The tell is the word "man." Tucked inside the last platitude of the chorus, "It is what it is, man, it's alright," it tells you exactly who the narrator of **Grew Apart** is talking to: other guys, probably over a drink, probably asking what happened. And what happened, we learn in the verses, is ugly. There were nights she left, texts he received, a lie told "with a straight face." He has the receipts. He just won't use them.

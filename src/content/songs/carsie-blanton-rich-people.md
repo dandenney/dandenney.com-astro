@@ -21,6 +21,12 @@ sources:
     url: "https://www.thenation.com/article/culture/rich-people-music-business-streaming/"
   - title: "Parklife DC: Live Review: Carsie Blanton w/ Josh Okeefe @ The Hamilton Live — 5/4/24"
     url: "https://parklifedc.com/2024/05/10/live-review-carsie-blanton-w-josh-okeefe-the-hamilton-live-5-4-24/"
+recordedAt:
+  - studio: "The Studio"
+    city: "Nashville"
+    state: "TN"
+    country: "USA"
+    source: "https://carsieblanton.bandcamp.com/album/rich-people-digital-single"
 aiGenerated: true
 ---
 The kindest line in **Rich People** isn't a punchline. It's "Don't be ashamed if you get confused," sung to anyone who has walked away from the news or an argument with friends feeling stupid for not knowing what to say. Carsie Blanton's answer is a gift: "Now you don't have to argue just sing this song." The song is a lyric sheet for the tongue-tied, a chorus you can hand to someone who knows something is wrong but keeps getting told to blame the wrong people.

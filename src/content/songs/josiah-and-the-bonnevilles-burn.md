@@ -25,6 +25,11 @@ sources:
     url: "https://www.euphoriazine.com/blog/2016/08/interviews-josiah-bonnevilles-mercury-lounge/"
   - title: "Americana UK: Josiah brings his Bonnevilles with him for his latest album"
     url: "https://americana-uk.com/josiah-brings-his-bonnevilles-with-him-for-his-latest-album"
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://grokipedia.com/page/Josiah_Leming"
 aiGenerated: true
 ---
 "I never really got over you / I just learned to do without." Josiah Leming puts the whole confession of **Burn** in its first verse, and the distinction he draws is a hard one. Getting over someone means healing. Doing without means rationing, building a life around the hole and calling it fine. The narrator knows which one he did, and he says it plainly, which is its own kind of courage.

@@ -27,6 +27,11 @@ sources:
     url: "https://www.pop-music.ca/mt-joy-mt-joy-vinyl.html"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/album/mt-joy-mw0003140598"
+recordedAt:
+  - city: "Pasadena"
+    state: "California"
+    country: "United States"
+    source: "https://magnetmagazine.com/2018/05/07/mt-joy-get-happy/"
 aiGenerated: true
 ---
 The song opens with a body check. **Julia** starts with "Straighten my sweater, fix my spine," a narrator pulling himself together in a food line, high, rattled, and about to order from his favourite waitress. It's a funny, small scene. He doesn't know what he asked for. She's smiling like he can't afford it. Mt. Joy plays the crush for laughs at first, and the laughs make what comes next land harder.

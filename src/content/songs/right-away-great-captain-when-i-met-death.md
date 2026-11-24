@@ -12,6 +12,12 @@ genres: ["folk punk"]
 # preview: ""
 pubDate: "2025-12-13"
 tags: ["folk punk"]
+recordedAt:
+  - studio: "Dan Hannon's house (living room studio)"
+    city: "Atlanta"
+    state: "Georgia"
+    country: "United States"
+    source: "https://www.bandsintown.com/a/70336-right-away-great-captain!"
 aiGenerated: true
 ---
 

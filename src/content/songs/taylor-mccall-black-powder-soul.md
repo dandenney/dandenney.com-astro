@@ -27,6 +27,12 @@ sources:
     url: "https://www.pulsemusicmagazine.com/taylor-mccalls-black-powder-soul-wages-war-between-good-evil/"
   - title: "GREENVILLE JOURNAL: Upstate native Taylor McCall returns to Radio Room with a haunting new album: Upstate Beat"
     url: "https://greenvillejournal.com/arts-culture/upstate-native-taylor-mccall-returns-to-radio-room-with-a-haunting-new-album-upstate-beat/"
+recordedAt:
+  - studio: "Silent Desert Studio"
+    city: "Nolensville"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/20580607-Taylor-McCall-Black-Powder-Soul"
 aiGenerated: true
 ---
 The only friend the narrator of **Black Powder Soul** admits to is a gun. "That's why my over under is my only friend," Taylor McCall sings, and the phrase does double work. An over-under is a shotgun. It's also a betting term, which fits a man who hasn't played poker since a stint in Spokane, one that started over bootleg moonshine and bathtub gin. The first verse sets him up like a figure from an old ballad: a soldier with no war to fight, a man outside the law. It plays as bragging until that last line. All the swagger lands on loneliness.

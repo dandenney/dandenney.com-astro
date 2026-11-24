@@ -12,6 +12,12 @@ genres: ["alt country","southern gothic"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["alt country","southern gothic"]
+recordedAt:
+  - studio: "Southern Grooves Studio"
+    city: "Memphis"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://luceromusic.com/lucero-unplugged/"
 aiGenerated: true
 ---
 

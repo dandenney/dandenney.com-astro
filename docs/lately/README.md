@@ -24,6 +24,11 @@ Reviewed songs that were removed from it move to "Out of rotation".
    grounding rules). A second pass fact-checks every claim against the packet and rewrites.
    If the check returns no report or body, it retries once, then marks the song failed
    rather than publishing the unchecked draft.
+   Research also returns `recordedAt` (studio, city, source URL for where this version was
+   tracked), written to the song's frontmatter. Nashville-area studios listed in
+   `src/data/music/nashvilleStudios.ts` are pinned on `/music/nashville`; songs whose studio
+   isn't listed yet show under "Somewhere in Nashville" until it's added there.
+   `scripts/lately/backfill-recorded-at.ts <slug>...` fills `recordedAt` for older reviews.
 5. Output: `src/content/songs/<slug>.md` plus `src/data/lately/evidence/<slug>.json`
    (listening notes, sourced facts, draft, fact-check report, per-step cost). Lyrics
    text isn't stored.

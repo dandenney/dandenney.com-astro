@@ -27,6 +27,17 @@ sources:
     url: "https://www.thefader.com/2023/10/06/kacey-musgraves-noah-kahan-she-calls-me-back"
   - title: "Whiskey Riff | A RIFF on what country is really about.: Noah Kahan And Kacey Musgraves Release Duet Version Of His Song “She Calls Me Back” | Whiskey Riff"
     url: "https://www.whiskeyriff.com/2023/10/06/noah-kahan-and-kacey-musgraves-release-duet-version-of-his-song-she-calls-me-back/"
+recordedAt:
+  - studio: "Guilford Sound"
+    city: "Guilford"
+    state: "Vermont"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+  - studio: "The Study"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
 aiGenerated: true
 ---
 "This town's the same as you left it, your page was blank, but I read it." That line holds the whole problem of **She Calls Me Back (with Kacey Musgraves)**. One person left. One stayed. The one who stayed is still reading meaning into silence, still dialing the number, still treating a callback as the only proof that everything's alright. Noah Kahan wrote the song alone, and it sounds like a private ledger. The repeated chorus sets heaven in someone's eyes against a narrator who "was not baptized," someone close to grace but never let in.

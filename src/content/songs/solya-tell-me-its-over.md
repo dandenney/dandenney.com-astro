@@ -25,6 +25,12 @@ sources:
     url: "https://www.sweetyhigh.com/read/solya-fun-facts-trivia-woman-crush-wednesday-012826"
   - title: "Wikipedia: Solya"
     url: "https://en.wikipedia.org/wiki/Solya"
+recordedAt:
+  - studio: "Club Sound Machine"
+    city: "Lockhart"
+    state: "Texas"
+    country: "United States"
+    source: "https://soundcloud.com/solyamusic/queen-of-texas-1"
 aiGenerated: true
 ---
 The cruelest line in **Tell Me It's Over** is a request. "Tell me you never said I was the one," Solya sings, over and over, asking for a lie that would make leaving easier. If the promise was never made, nothing was broken, and nobody has to grieve it. The chorus turns a plea for closure into a command, repeated until it sounds less like asking and more like testing whether the words can be made true by saying them enough.

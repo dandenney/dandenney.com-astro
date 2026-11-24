@@ -27,6 +27,11 @@ sources:
     url: "https://northerntransmissions.com/pixie-geldof-debuts-new-song-woman-go-wild/"
   - title: "NME: Pixie Geldof On Her Emotional Debut Album"
     url: "https://www.nme.com/blogs/nme-radar/pixie-geldof-qa-on-her-new-album-762023"
+recordedAt:
+  - city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://www.hotpress.com/music/album-review-pixie-geldof-iim-yoursi-19103069"
 aiGenerated: true
 ---
 The most revealing line in **Woman Go Wild** comes late, in the section after the second chorus, and it's only four words long: "If I'm all yours." Up to that point the song reads as a full surrender. With that one "if," it becomes a bargain. The narrator hands herself over, then names the price: be wanted again and again.

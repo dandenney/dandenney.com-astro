@@ -23,6 +23,22 @@ sources:
     url: "https://www.liberty.edu/student-activities/blog/review-h-a-r-d-l-o-v-e-by-needtobreathe"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/album/hard-love-mw0002934640"
+recordedAt:
+  - studio: "Plantation Studios"
+    city: "Charleston"
+    state: "South Carolina"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Hard_Love_(album)"
+  - studio: "Night Fox Studio"
+    city: "New York City"
+    state: "New York"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Hard_Love_(album)"
+  - studio: "Germano Studios"
+    city: "New York City"
+    state: "New York"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Hard_Love_(album)"
 aiGenerated: true
 ---
 The real confession in **Let's Stay Home Tonight** sits in the verse, not the chorus. "Lately we've been walking in a straight line," the song admits, and the next lines fill in the picture: two people doing their own thing, heading downtown, making reservations, never finding time. It's a small, unglamorous problem. Nobody is cheating and nobody is leaving. The relationship has just turned into a schedule. The chorus is the fix the narrator offers, and it's a cozy one: put a couple records on, build a fire, dance till dawn, go nowhere.

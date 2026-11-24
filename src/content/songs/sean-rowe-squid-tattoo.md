@@ -23,6 +23,12 @@ sources:
     url: "https://holler.country/reviews/album-review/sean-rowe-the-darkness-dressed-in-colored-lights/"
   - title: "NYS Music: Sean Rowe Looks Back on ‘The Darkness Dressed in Colored Lights’"
     url: "https://nysmusic.com/2021/10/27/sean-rowe-looks-back-on-the-darkness-dressed-in-colored-lights/"
+recordedAt:
+  - studio: "Hive"
+    city: "Eau Claire"
+    state: "Wisconsin"
+    country: "United States"
+    source: "https://seanrowemusic.bandcamp.com/album/the-darkness-dressed-in-colored-lights"
 aiGenerated: true
 ---
 A squid tattoo is a strange detail to fall for, and that's the point. It's the kind of thing you'd notice on a stranger across a room and build a whole life around before they ever turned to look at you. Sean Rowe has said **Squid Tattoo** is about exactly that: the brief, romantic rush of imagining a future with someone you haven't actually met, a future he admits will most likely never happen. Holler heard it as a new romance with the person wearing the ink. Both readings land on the same pleasant ache, the early glow where everything is still possible because nothing has been tested.

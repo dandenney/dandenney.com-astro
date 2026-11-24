@@ -31,6 +31,12 @@ sources:
     url: "https://www.allmusic.com/artist/lissie-mn0000810515"
   - title: "bandsintown.com"
     url: "https://www.bandsintown.com/e/1034544304-lissie-at-the-acorn"
+recordedAt:
+  - studio: "Humans Win! Recording Studio"
+    city: "Minneapolis"
+    state: "Minnesota"
+    country: "United States"
+    source: "https://www.discogs.com/label/471171-Humans-Win!"
 aiGenerated: true
 ---
 **Dragula** was built to stomp. In Lissie's hands it glides. The words haven't changed. A dead thing still narrates, still goes digging through ditches and burning through witches, still slams in the back of its Dragula. But the voice delivering them is clear, strong and a little breathy, sustaining its notes with a vibrato that sometimes goes wide. The menace hasn't been removed. It's been made to sound beautiful, and that's harder to shake.

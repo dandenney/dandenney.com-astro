@@ -19,6 +19,10 @@ sources:
     url: "https://www.discogs.com/release/18272848-Josiah-and-the-Bonnevilles-Motel-Mayday"
   - title: "last.fm: Client Challenge"
     url: "https://www.last.fm/music/Josiah+and+the+Bonnevilles/Motel+Mayday"
+recordedAt:
+  - city: "London"
+    country: "United Kingdom"
+    source: "https://propermusic.com/products/josiahandthebonnevilles-motelmayday"
 aiGenerated: true
 ---
 The chorus of **Motel Mayday** never changes its mind, but who it's aimed at does. "I should have known better, I should have stayed away," the narrator sings, and he means it. Then in the second verse the line comes back with the pronoun flipped. Now it's the Lord saying it, answering a man who has just picked a fight with heaven over how much he hates the road. That small change is the whole song in miniature: a man trying to file his own bad decisions as somebody else's fault, and being handed them right back.

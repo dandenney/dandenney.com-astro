@@ -25,6 +25,12 @@ sources:
     url: "https://bigtakeover.com/recordings/the-4onthefloor-all-in-double-asterisk"
   - title: "Wikipedia: The 4onthefloor"
     url: "https://en.wikipedia.org/wiki/The_4onthefloor"
+recordedAt:
+  - studio: "Creation Audio"
+    city: "Minneapolis"
+    state: "Minnesota"
+    country: "United States"
+    source: "https://performermag.com/new-music-and-video/interviews-and-features/the-4onthefloor/"
 aiGenerated: true
 ---
 On Bandcamp, the 4onthefloor give this song one more word: **"(Drunk) On Tuesdays."** The streaming title drops it, and on its own "On Tuesdays" reads like a standing appointment. Put the word back and it becomes an admission about the least festive night of the week. Nobody gets drunk on a Tuesday for a holiday. That small edit is the emotional key to the track.

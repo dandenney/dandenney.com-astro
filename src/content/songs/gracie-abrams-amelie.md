@@ -25,6 +25,12 @@ sources:
     url: "https://www.clashmusic.com/features/coming-undone-gracie-abrams-interviewed/"
   - title: "The Gryphon: Gracie Abrams' new single ‘Amelie’: 4:20 of calm and melancholy"
     url: "https://www.thegryphon.co.uk/2023/02/11/gracie-abrams-new-single-amelie-420-of-calm-and-melancholy/"
+recordedAt:
+  - studio: "Long Pond"
+    city: "Hudson Valley"
+    state: "New York"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Good_Riddance_(album)"
 aiGenerated: true
 ---
 By 11, the narrator of **Amelie** has memorized a stranger's face. That's the whole event: a sofa, a girl full of questions, a night that leaves the real feeling unsaid. Gracie Abrams builds the song on the gap between how small that encounter was and how large it grew in one person. The first verse puts it plainly, "She sorta ripped me open," and that "sorta" carries a flinch of embarrassment at feeling this much over so little. The other half of the injury comes right after. She has no idea, and she doesn't know the narrator's name.

@@ -1,0 +1,557 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE_TITLE } from "@/consts";
+import { getCollection } from "astro:content";
+import { songSlug } from "@/lib/lately";
+import { nashvilleRecordings } from "@/lib/studios";
+
+export const prerender = true;
+
+const { studios, unplaced } = nashvilleRecordings(await getCollection("songs"));
+const songCount = new Set(studios.flatMap((s) => s.songs.map((song) => song.id))).size;
+
+const mapData = studios.map((studio, i) => ({
+  slug: studio.slug,
+  index: String(i + 1).padStart(2, "0"),
+  name: studio.name,
+  neighborhood: studio.neighborhood,
+  coordinates: studio.coordinates,
+  approximate: Boolean(studio.approximate),
+  songs: studio.songs.map((song) => ({
+    title: song.data.title,
+    artist: song.data.artist,
+    url: `/music/reviews/${songSlug(song)}/`,
+  })),
+}));
+---
+
+<BaseLayout
+  title="Recorded in Nashville | Dan Denney"
+  description="Songs from my Heavy Rotation reviews that were recorded in Nashville, pinned to the studios where they were cut"
+  bodyClass="bg-white dark:bg-slate-900"
+>
+  <Fragment slot="head">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  </Fragment>
+  <main class="rooms-page bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+    <Header title={SITE_TITLE} />
+
+    <section class="hero px-8">
+      <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+        <span class="whitespace-nowrap">[&nbsp;Music / Recorded in Nashville&nbsp;]</span>
+      </p>
+      <h1 class="hero-title text-slate-900 dark:text-slate-100">
+        <span class="hero-line">Nashville</span>
+        <span class="hero-line hero-line-accent">R<span class="hero-o"><span class="sr-only">o</span><span class="hero-disc" aria-hidden="true"></span></span>oms</span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-copy text-gray-600 dark:text-slate-300">
+          Songs from Heavy Rotation that were cut in and around Nashville,
+          pinned to the studios where they were recorded.
+        </p>
+        <div class="hero-aside">
+          <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+            {songCount} songs &middot; {studios.length} studios
+          </p>
+          <a
+            href="/music/reviews"
+            class="text-sm font-semibold text-red-700 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+            >All song reviews &rarr;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="hatch-band" aria-hidden="true"></div>
+
+    <div class="rooms">
+      <div class="rooms-map">
+        <div id="studio-map" role="region" aria-label="Map of Nashville recording studios"></div>
+      </div>
+
+      <ol class="studio-list" id="studio-list">
+        {mapData.map((studio) => (
+          <li class="studio" id={studio.slug} data-slug={studio.slug}>
+            <button type="button" class="studio-head" data-fly={studio.slug} aria-controls="studio-map">
+              <span class="studio-num" aria-hidden="true">{studio.index}</span>
+              <span class="studio-main">
+                <span class="studio-name">{studio.name}</span>
+                <span class="studio-hood">
+                  {studio.neighborhood}{studio.approximate && <span> &middot; approximate</span>}
+                </span>
+              </span>
+              <span class="studio-count">{studio.songs.length}</span>
+            </button>
+            <ul class="studio-songs">
+              {studio.songs.map((song) => (
+                <li>
+                  <a href={song.url} class="studio-song">
+                    <span class="studio-song-title">{song.title}</span>
+                    <span class="studio-song-artist">{song.artist}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    {unplaced.length > 0 && (
+      <section class="unplaced px-8">
+        <p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+          [&nbsp;Somewhere in Nashville&nbsp;]
+        </p>
+        <p class="unplaced-copy text-gray-600 dark:text-slate-300">
+          Recorded in town, but the room isn't pinned yet.
+        </p>
+        <ul class="unplaced-list">
+          {unplaced.map(({ song, studio }) => (
+            <li>
+              <a href={`/music/reviews/${songSlug(song)}/`} class="studio-song">
+                <span class="studio-song-title">{song.data.title}</span>
+                <span class="studio-song-artist">
+                  {song.data.artist}{studio && <> &middot; {studio}</>}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </main>
+  <Footer />
+
+  <script is:inline type="application/json" id="studio-data" set:html={JSON.stringify(mapData)} />
+  <script is:inline src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script>
+    type StudioPin = {
+      slug: string;
+      index: string;
+      name: string;
+      neighborhood: string;
+      coordinates: [number, number];
+      approximate: boolean;
+      songs: { title: string; artist: string; url: string }[];
+    };
+
+    const mapboxgl = (window as any).mapboxgl;
+    const data: StudioPin[] = JSON.parse(document.getElementById("studio-data")!.textContent || "[]");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const styleFor = () =>
+      document.documentElement.classList.contains("dark")
+        ? "mapbox://styles/mapbox/dark-v11"
+        : "mapbox://styles/mapbox/light-v11";
+
+    const escape = (text: string) =>
+      text.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+
+    if (mapboxgl && data.length) {
+      mapboxgl.accessToken = "pk.eyJ1IjoiZGFuZGVubmV5IiwiYSI6Indwc05iZW8ifQ.X8KMtaHslofn7K0TY8A8Ug";
+      const map = new mapboxgl.Map({
+        container: "studio-map",
+        style: styleFor(),
+        center: [-86.79, 36.14],
+        zoom: 11.5,
+        cooperativeGestures: true,
+      });
+      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "top-right");
+
+      const bounds = new mapboxgl.LngLatBounds();
+      const markers = new Map<string, { marker: any; el: HTMLElement }>();
+
+      for (const studio of data) {
+        bounds.extend(studio.coordinates);
+        const el = document.createElement("button");
+        el.type = "button";
+        el.className = `studio-pin${studio.approximate ? " is-approximate" : ""}`;
+        el.style.setProperty("--size", `${Math.min(30 + studio.songs.length * 6, 60)}px`);
+        el.setAttribute("aria-label", `${studio.name}, ${studio.songs.length} song${studio.songs.length === 1 ? "" : "s"}`);
+        el.innerHTML = `<span class="studio-pin-count">${studio.songs.length}</span>`;
+
+        const popup = new mapboxgl.Popup({ offset: 18, maxWidth: "280px", className: "studio-popup" }).setHTML(
+          `<p class="studio-popup-hood">${escape(studio.neighborhood)}${studio.approximate ? " &middot; approximate" : ""}</p>
+           <h3 class="studio-popup-name">${escape(studio.name)}</h3>
+           <ul class="studio-popup-songs">${studio.songs
+             .map((s) => `<li><a href="${s.url}"><strong>${escape(s.title)}</strong> ${escape(s.artist)}</a></li>`)
+             .join("")}</ul>`,
+        );
+        popup.on("open", () => select(studio.slug, false));
+
+        const marker = new mapboxgl.Marker({ element: el }).setLngLat(studio.coordinates).setPopup(popup).addTo(map);
+        markers.set(studio.slug, { marker, el });
+      }
+
+      map.on("load", () => {
+        if (data.length > 1) map.fitBounds(bounds, { padding: 60, maxZoom: 13, duration: 0 });
+      });
+
+      const select = (slug: string, fly: boolean) => {
+        document.querySelectorAll<HTMLElement>(".studio").forEach((li) => li.classList.toggle("is-active", li.dataset.slug === slug));
+        markers.forEach(({ el }, key) => el.classList.toggle("is-active", key === slug));
+        const studio = data.find((s) => s.slug === slug);
+        if (!fly || !studio) return;
+        const { marker } = markers.get(slug)!;
+        map.flyTo({ center: studio.coordinates, zoom: Math.max(map.getZoom(), 14), duration: reduceMotion ? 0 : 1200 });
+        if (!marker.getPopup().isOpen()) marker.togglePopup();
+        if (window.matchMedia("(max-width: 1023px)").matches) {
+          document.getElementById("studio-map")!.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+        }
+      };
+
+      document.querySelectorAll<HTMLButtonElement>("[data-fly]").forEach((button) => {
+        button.addEventListener("click", () => {
+          markers.forEach(({ marker }, key) => key !== button.dataset.fly && marker.getPopup().isOpen() && marker.togglePopup());
+          select(button.dataset.fly!, true);
+        });
+      });
+
+      if (location.hash) {
+        const slug = location.hash.slice(1);
+        if (markers.has(slug)) map.once("load", () => select(slug, true));
+      }
+
+      new MutationObserver(() => map.setStyle(styleFor())).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+  </script>
+
+  <style>
+    .rooms-page {
+      --ink: #0f172a;
+      --paper: #ffffff;
+      --accent: #b91c1c;
+      --hatch: #cbd5e1;
+      --rule: #e2e8f0;
+      --muted: #64748b;
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    :global(.dark) .rooms-page {
+      --ink: #f1f5f9;
+      --paper: #0f172a;
+      --accent: #f87171;
+      --hatch: #1e293b;
+      --rule: #334155;
+      --muted: #94a3b8;
+    }
+
+    .hero {
+      padding-top: clamp(4rem, 9vh, 7rem);
+      padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
+    }
+    .hero-title {
+      margin-top: 1.25rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: clamp(3.25rem, 11.5vw, 8.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+    }
+    .hero-line {
+      display: block;
+    }
+    .hero-line-accent {
+      color: var(--accent);
+    }
+    .hero-o {
+      position: relative;
+      display: inline-block;
+    }
+    .hero-disc {
+      position: relative;
+      display: inline-block;
+      width: 0.76em;
+      height: 0.76em;
+      margin-inline: 0.015em;
+      border-radius: 50%;
+      transform: translateY(0.055em);
+      background:
+        radial-gradient(circle, var(--paper) 0 11%, var(--accent) 11% 35%, transparent 35%),
+        repeating-radial-gradient(
+          circle,
+          var(--ink) 0 0.045em,
+          color-mix(in oklab, var(--ink), var(--paper) 22%) 0.045em 0.06em
+        );
+      animation: disc-spin 6s linear infinite;
+    }
+    @keyframes disc-spin {
+      to {
+        transform: translateY(0.055em) rotate(360deg);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-disc {
+        animation: none;
+      }
+    }
+    .hero-foot {
+      margin-top: clamp(1.75rem, 4vh, 3rem);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem 3rem;
+    }
+    .hero-copy {
+      max-width: 44ch;
+      font-size: 1.125rem;
+      line-height: 1.7;
+    }
+    .hero-aside {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .hatch-band {
+      height: 0.875rem;
+      border-block: 1px solid var(--rule);
+      background-image: repeating-linear-gradient(-45deg, transparent, transparent 4px, var(--hatch) 4px, var(--hatch) 5px);
+    }
+
+    .rooms {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-bottom: 1px solid var(--rule);
+    }
+    @media (min-width: 1024px) {
+      .rooms {
+        grid-template-columns: minmax(0, 1.4fr) minmax(22rem, 1fr);
+      }
+    }
+    .rooms-map {
+      position: relative;
+      border-bottom: 1px solid var(--rule);
+    }
+    #studio-map {
+      height: 60vh;
+      min-height: 22rem;
+    }
+    @media (min-width: 1024px) {
+      .rooms-map {
+        border-bottom: 0;
+        border-right: 1px solid var(--rule);
+      }
+      #studio-map {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        max-height: 56rem;
+      }
+    }
+
+    .studio-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .studio {
+      border-bottom: 1px solid var(--rule);
+    }
+    .studio:last-child {
+      border-bottom: 0;
+    }
+    .studio-head {
+      display: grid;
+      grid-template-columns: 2rem 1fr auto;
+      align-items: baseline;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 1.25rem 2rem 0.5rem;
+      text-align: left;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      color: inherit;
+    }
+    .studio-head:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+    .studio-num,
+    .studio-count {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .studio-name {
+      display: block;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      font-size: 1.375rem;
+      line-height: 1.1;
+      transition: color 0.2s var(--ease-out-quart);
+    }
+    .studio-hood {
+      display: block;
+      margin-top: 0.25rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    @media (hover: hover) {
+      .studio-head:hover .studio-name {
+        color: var(--accent);
+      }
+    }
+    .studio.is-active .studio-name,
+    .studio.is-active .studio-num {
+      color: var(--accent);
+    }
+
+    .studio-songs,
+    .unplaced-list {
+      list-style: none;
+      margin: 0;
+      padding: 0 2rem 1.25rem 4.75rem;
+    }
+    .studio-song {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0 0.5rem;
+      padding: 0.3rem 0;
+      text-decoration: none;
+      color: inherit;
+    }
+    .studio-song-title {
+      font-weight: 600;
+    }
+    .studio-song-artist {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    @media (hover: hover) {
+      .studio-song:hover .studio-song-title {
+        color: var(--accent);
+      }
+    }
+    .studio-song:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .unplaced {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+    }
+    .unplaced-copy {
+      margin-top: 0.75rem;
+    }
+    .unplaced-list {
+      padding: 1rem 0 0;
+      columns: 18rem;
+      column-gap: 2rem;
+    }
+    .unplaced-list li {
+      break-inside: avoid;
+    }
+
+    :global(.studio-pin) {
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle, #b91c1c 0 30%, transparent 30%),
+        repeating-radial-gradient(circle, #0f172a 0 2px, #334155 2px 3px);
+      box-shadow: 0 2px 8px rgb(15 23 42 / 0.35);
+      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    :global(.studio-pin.is-approximate) {
+      outline: 2px dashed #b91c1c;
+      outline-offset: 3px;
+    }
+    :global(.studio-pin-count) {
+      color: #fff;
+      font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    :global(.studio-pin.is-active),
+    :global(.studio-pin:focus-visible) {
+      transform: scale(1.15);
+      outline: 2px solid #f87171;
+      outline-offset: 3px;
+      z-index: 2;
+    }
+    @media (hover: hover) {
+      :global(.studio-pin:hover) {
+        transform: scale(1.1);
+      }
+    }
+
+    :global(.studio-popup .mapboxgl-popup-content) {
+      padding: 1rem 1.25rem;
+      border-radius: 0.5rem;
+      font-family: inherit;
+      color: #0f172a;
+    }
+    :global(.dark .studio-popup .mapboxgl-popup-content) {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    :global(.dark .studio-popup.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip) {
+      border-top-color: #0f172a;
+    }
+    :global(.dark .studio-popup.mapboxgl-popup-anchor-top .mapboxgl-popup-tip) {
+      border-bottom-color: #0f172a;
+    }
+    :global(.dark .studio-popup.mapboxgl-popup-anchor-left .mapboxgl-popup-tip) {
+      border-right-color: #0f172a;
+    }
+    :global(.dark .studio-popup.mapboxgl-popup-anchor-right .mapboxgl-popup-tip) {
+      border-left-color: #0f172a;
+    }
+    :global(.studio-popup-hood) {
+      margin: 0;
+      font: 0.6875rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.7;
+    }
+    :global(.studio-popup-name) {
+      margin: 0.25rem 0 0.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      line-height: 1.1;
+    }
+    :global(.studio-popup-songs) {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+    :global(.studio-popup-songs li + li) {
+      margin-top: 0.35rem;
+    }
+    :global(.studio-popup-songs a) {
+      color: inherit;
+      text-decoration: none;
+    }
+    :global(.studio-popup-songs a:hover strong) {
+      color: #b91c1c;
+    }
+    :global(.dark .studio-popup-songs a:hover strong) {
+      color: #f87171;
+    }
+    :global(.studio-popup .mapboxgl-popup-close-button) {
+      font-size: 1.25rem;
+      padding: 0.25rem 0.5rem;
+      color: inherit;
+    }
+  </style>
+</BaseLayout>

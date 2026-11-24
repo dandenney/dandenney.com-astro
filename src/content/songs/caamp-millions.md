@@ -12,6 +12,12 @@ genres: ["indie folk","folk"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["indie folk","folk"]
+recordedAt:
+  - studio: "Sear Sound"
+    city: "New York"
+    state: "New York"
+    country: "USA"
+    source: "https://en.wikipedia.org/wiki/Copper_Changes_Color"
 aiGenerated: true
 ---
 

@@ -25,6 +25,12 @@ sources:
     url: "https://au.rollingstone.com/music/music-features/tash-sultana-sugar-ep-new-zealand-show-interview-52485/"
   - title: "themusic.com.au"
     url: "https://themusic.com.au/reviews/album-review-tash-sultana-sugar-ep/3etj8fDz8vU/18-08-23"
+recordedAt:
+  - studio: "Lonely Lands Studio"
+    city: "Melbourne"
+    state: "Victoria"
+    country: "Australia"
+    source: "https://www.peermusic.com/news/46939"
 aiGenerated: true
 ---
 The first line of **1975** sets up two people on different frequencies: "You listen to The 1975 while I just try to feel alive." It's a sly hook. The name-check sounds light, almost like a joke about someone's taste in bands, but the second half of the line is a quiet admission of how hard ordinary living has become. Tash Sultana spends the rest of the song inside that gap: naming the disconnect, insisting on nonfiction over fantasy, then circling toward a night where fantasy might be the only way through.

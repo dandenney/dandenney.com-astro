@@ -25,6 +25,12 @@ sources:
     url: "https://varioussmallflames.co.uk/2019/07/08/erin-durant-islands/"
   - title: "The Line of Best Fit: On The Rise: Erin Durant"
     url: "https://www.thelineofbestfit.com/features/interviews/erin-durant-on-the-rise"
+recordedAt:
+  - studio: "Seaside Lounge"
+    city: "Brooklyn"
+    state: "New York"
+    country: "United States"
+    source: "https://erindurant.bandcamp.com/album/islands"
 aiGenerated: true
 ---
 **Rising Sun** opens on a narrator greeting the weather like an old friend: "Hello wind, haven't seen you in years." It's a sweet, odd first line, and it sets the terms. This is someone who has been away from wide-open things, staying put and learning rituals, including how to truly love another. The early verses carry a hopeful, slightly sheepish pride: mistakes admitted, a vow to go far, go wide, head back to the sunny side. It sounds like someone talking themselves into it.

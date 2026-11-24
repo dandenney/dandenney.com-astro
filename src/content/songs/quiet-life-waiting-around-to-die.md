@@ -23,6 +23,12 @@ sources:
     url: "http://www.visiblevoice.net/new-posts/quiet-life-housebroken-man.html"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/artist/quiet-life-mn0001562006"
+recordedAt:
+  - studio: "Type Foundry"
+    city: "Portland"
+    state: "Oregon"
+    country: "United States"
+    source: "https://mamabird.bandcamp.com/album/housebroken-man"
 aiGenerated: true
 ---
 The cruelest line in **Waiting Around to Die** isn't about death. It sits in the second verse, tossed off in a list of relatives: "He beat her with a belt once 'cause she cried." The mother heads to Tennessee, asks the father to take care of the kid, and the song moves on without a pause. That's the method of this Townes Van Zandt song. Terrible things get one line each, and the narrator keeps walking.

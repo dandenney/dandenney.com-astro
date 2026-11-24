@@ -27,6 +27,12 @@ sources:
     url: "https://theboot.com/charley-crockett-welcome-to-hard-times-interview/"
   - title: "Plaid Room Records: Charley Crockett - Welcome To Hard Times"
     url: "https://www.plaidroomrecords.com/products/b-charley-crockett-b-br-i-the-valley-i"
+recordedAt:
+  - studio: "Soil of the South Studios"
+    city: "Valdosta"
+    state: "Georgia"
+    country: "USA"
+    source: "https://antonesrecordshop.com/collections/new/products/charley-crockett-welcome-to-hard-times-lp-album"
 aiGenerated: true
 ---
 **Welcome to Hard Times** opens with a pitch. Crockett plays the barker at the door of a rigged house, telling everyone (boys and girls, women, children, you and him) that life is a casino and the dice are loaded. Even a hobo, he adds, could tell you that much. It's a dry joke, and the chorus leans into it with the cheerful menace of a host who knows how your night will end: "Do you like sinnin'? No? / Well, you will before you go." The welcome is warm. The room is crooked. That gap is where the song lives.

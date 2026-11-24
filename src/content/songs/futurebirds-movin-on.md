@@ -12,6 +12,12 @@ genres: ["alt country"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["alt country"]
+recordedAt:
+  - studio: "Sonic Ranch"
+    city: "Tornillo"
+    state: "TX"
+    country: "USA"
+    source: "https://futurebirdsmusic.bandcamp.com/album/easy-company"
 aiGenerated: true
 ---
 

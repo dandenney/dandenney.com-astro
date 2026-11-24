@@ -12,6 +12,12 @@ genres: ["southern gothic","bluegrass","americana","newgrass","folk"]
 # preview: ""
 pubDate: "2025-11-19"
 tags: ["southern gothic","bluegrass"]
+recordedAt:
+  - studio: "Casa de Windchimes"
+    city: "Pueblo"
+    state: "Colorado"
+    country: "United States"
+    source: "https://www.discogs.com/release/8101787-The-Haunted-Windchimes-Out-With-The-Crow"
 aiGenerated: true
 ---
 

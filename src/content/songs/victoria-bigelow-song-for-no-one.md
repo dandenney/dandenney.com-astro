@@ -21,6 +21,11 @@ sources:
     url: "https://www.intersectmagazine.com/post/victoria-bigelow-talks-writing-songs-for-no-one-creative-catharsis"
   - title: "BroadwayWorld.com: Victoria Bigelow Shares Gorgeous, Deeply Personal New Single & Video"
     url: "https://www.broadwayworld.com/bwwmusic/article/Victoria-Bigelow-Shares-Gorgeous-Deeply-Personal-New-Single-Video-20240501"
+recordedAt:
+  - city: "Phoenix"
+    state: "Arizona"
+    country: "United States"
+    source: "https://www.intersectmagazine.com/post/victoria-bigelow-talks-writing-songs-for-no-one-creative-catharsis"
 aiGenerated: true
 ---
 Every verse of **Song for No One** ends on the same word, and Victoria Bigelow turns it like a coin. First the problem is the narrator's own head. Then it's a defiant shrug. By the third verse it's handed back across the table: "Now I'm not your problem." That small rotation carries the whole relationship, the story of someone who spent too long being the issue and finally gets to set the label down.

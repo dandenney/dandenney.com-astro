@@ -25,6 +25,22 @@ sources:
     url: "https://kxy.iheart.com/content/2026-09-28-luke-bryan-shares-why-it-was-very-intimidating-to-perform-with-chris-stapleton/"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/album/crash-my-party-mw0002532581/credits"
+recordedAt:
+  - studio: "Ocean Way Nashville"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Crash_My_Party"
+  - studio: "Blackbird Studio"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Crash_My_Party"
+  - studio: "Starstruck Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Crash_My_Party"
 aiGenerated: true
 ---
 The narrator of **Drink A Beer** gets bad news over the phone and does the most honest thing a grieving person can do: nothing useful. "So I just hung up the phone," Luke Bryan sings, and the song never pretends there was a better response available. There's no speech. There's only a walk that ends at a pier, and a decision not to go home yet.

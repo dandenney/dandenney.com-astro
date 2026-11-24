@@ -25,6 +25,12 @@ sources:
     url: "https://www.inquirer.com/entertainment/music/lizzy-mcalpine-older-interview-met-philly-20240620.html"
   - title: "Wikipedia: Lizzy McAlpine"
     url: "https://en.wikipedia.org/wiki/Lizzy_McAlpine"
+recordedAt:
+  - studio: "Spotify Studios"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://www.last.fm/music/Lizzy+McAlpine/Spotify+Singles"
 aiGenerated: true
 ---
 A man stands on a San Francisco bridge with traffic at his back, one leg over the rail, and Taylor Goldsmith gives him a line so dry it almost reads as a joke: "Setting out to join a demographic." That's the cruelty of a statistic, a life about to become a number. Then a sergeant asks the only question that matters, what he's doing it for, and the chorus answers with a shrug that is really a sob. It's the mountains, the fog, the evening news, a first dog dying. No single reason. Just the weight of all of it at once.

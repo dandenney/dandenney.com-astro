@@ -25,6 +25,12 @@ sources:
     url: "https://www.billboard.com/music/chart-beat/ayron-jones-blood-in-the-water-number-1-mainstream-rock-airplay-chart-1235409592/"
   - title: "last.fm: Client Challenge"
     url: "https://www.last.fm/music/Ayron+Jones/Blood+In+The+Water"
+recordedAt:
+  - studio: "Sienna Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.dekmag.com/lounge/2023/5/24/ayronjones"
 aiGenerated: true
 ---
 **Blood In The Water** opens on a death without tears. "Didn't cry on the day she died / She couldn't stand the tears," Ayron Jones sings, and the second line flips the first. Holding back the tears isn't numbness. It's obedience. Even in mourning, she sets the terms. The next verse moves to a man, and the grief gets stranger: Jones can't pray "for a man I never knew." By the chorus he's a father. These are two deaths, and neither one gets a clean goodbye. One has a rule standing in the way. The other has a stranger's absence.

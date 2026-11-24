@@ -17,6 +17,17 @@ sources:
     url: "https://en.wikipedia.org/wiki/The_Paper_Kites"
   - title: "recordstoreday.com"
     url: "https://recordstoreday.com/UPC/067003648325"
+recordedAt:
+  - studio: "Bakehouse Studios"
+    city: "Melbourne"
+    state: "Victoria"
+    country: "Australia"
+    source: "https://www.discogs.com/release/29551786-The-Paper-Kites-Woodland"
+  - studio: "Studio One"
+    city: "Melbourne"
+    state: "Victoria"
+    country: "Australia"
+    source: "https://www.discogs.com/release/29551786-The-Paper-Kites-Woodland"
 aiGenerated: true
 ---
 The kindest line in **Featherstone** is also its saddest: "When you go, what you leave is a work of art." Sam Bentley, who wrote the song and sings it, doesn't describe the mark a departing lover leaves as a bruise or a scar. He calls it art, and he places it on his chest and on his heart. It's a generous way to describe being hurt, and maybe a defensive one. Framing the loss as beautiful lets him keep it without having to say how much it stings.

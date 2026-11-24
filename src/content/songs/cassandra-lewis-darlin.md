@@ -21,6 +21,12 @@ sources:
     url: "https://nashvillevoyager.com/interview/conversations-with-cassandra-lewis/"
   - title: "allaboutjazz.com"
     url: "https://www.allaboutjazz.com/musicians/cassandra-lewis/"
+recordedAt:
+  - studio: "Bird & Egg Studios"
+    city: "Richmond"
+    state: "CA"
+    country: "USA"
+    source: "https://cassandralewismusic.bandcamp.com/album/always-all-ways"
 aiGenerated: true
 ---
 A walking bass line isn't what you expect under a fingerpicked acoustic guitar. On **Darlin'**, the guitar rolls out its arpeggios like a folk song, patient and close. Underneath, the bass moves step by step, the way it might in a slow-dance country tune or a soul ballad. Cassandra Lewis calls her sound "Cosmic Americana," music rooted in classic country, blues, soul and psychedelic rock, and this pairing fits the name. The country and the soul share one floor, and neither is asked to leave.

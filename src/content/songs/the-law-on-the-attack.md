@@ -12,6 +12,12 @@ genres: ["indie folk"]
 # preview: ""
 pubDate: "2025-12-03"
 tags: ["indie folk"]
+recordedAt:
+  - studio: "Old Soul Studio"
+    city: "Catskill"
+    state: "New York"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Langhorne_Slim"
 aiGenerated: true
 ---
 

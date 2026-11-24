@@ -28,6 +28,7 @@ import {
   writeJson,
   type LatelySnapshot,
 } from "./lib.ts";
+import { recordedAtYaml, type RecordedAt } from "./recorded-at.ts";
 
 const STYLEPACK = readFileSync("docs/lately/stylepack.md", "utf8");
 const BANNED = /\b(visceral|tapestry|sonic|soundscape|poignant|haunting|ethereal|evocative|testament|delve|resonates)\b/i;
@@ -39,6 +40,7 @@ type Lyrics = { status: "found" | "instrumental" | "missing"; text: string | nul
 type Research = {
   identity: "confirmed" | "likely" | "unknown";
   facts: { claim: string; source: string }[];
+  recordedAt?: RecordedAt[];
   lineage: string | null;
   genres: string[];
 };
@@ -216,9 +218,10 @@ Return only JSON, no prose before or after:
   "identity": "confirmed if sources clearly match this artist and release, likely if probable but unconfirmed, unknown if nothing matched",
   "facts": [{ "claim": "one short factual statement", "source": "URL that states it" }],
   "lineage": "one sentence on the tradition or scene this sits in, grounded in what sources say, or null",
-  "genres": ["1-3 lowercase genre descriptors used by sources"]
+  "genres": ["1-3 lowercase genre descriptors used by sources"],
+  "recordedAt": [{ "studio": "studio name or null if sources only give a city", "city": "city", "state": "state/province or null", "country": "country", "source": "URL that states it" }]
 }
-Include 0-10 facts. Each claim must be a plain fact, not a note about the search. Leave out anything you can't tie to a URL. ${lyrics.status === "missing" ? "Lyrics weren't found, so skip lyric claims." : ""}`;
+Include 0-10 facts. Each claim must be a plain fact, not a note about the search. Leave out anything you can't tie to a URL. recordedAt lists where this exact version was tracked (album sessions count; a live or session version counts where that session happened; mixing, mastering, writing, or where the artist lives don't); leave it empty rather than guessing. ${lyrics.status === "missing" ? "Lyrics weren't found, so skip lyric claims." : ""}`;
   try {
     const text = await claude({ model: RESEARCH_MODEL, prompt, maxTokens: 3000, webSearches: 5, meter, step: "research" });
     let data: Research;
@@ -230,7 +233,13 @@ Include 0-10 facts. Each claim must be a plain fact, not a note about the search
     }
     const identity = data.identity === "confirmed" || data.identity === "likely" ? data.identity : "unknown";
     if (identity !== "confirmed") return { identity, facts: [], lineage: null, genres: [] };
-    return { identity, facts: (data.facts ?? []).filter((f) => f.claim && f.source?.startsWith("http")), lineage: data.lineage ?? null, genres: data.genres ?? [] };
+    return {
+      identity,
+      facts: (data.facts ?? []).filter((f) => f.claim && f.source?.startsWith("http")),
+      lineage: data.lineage ?? null,
+      genres: data.genres ?? [],
+      recordedAt: (data.recordedAt ?? []).filter((r) => r.city && r.source?.startsWith("http")),
+    };
   } catch (error) {
     console.warn(`   research failed: ${(error as Error).message}`);
     return { identity: "unknown", facts: [], lineage: null, genres: [] };
@@ -327,7 +336,7 @@ async function factCheckWithRetry(packet: string, draft: string, meter: CostMete
 const yaml = (s: string) => JSON.stringify(s);
 const yamlList = (list: string[]) => `[${list.map(yaml).join(", ")}]`;
 
-function frontmatter(track: Track, genres: string[], pubDate: string, sources: { title: string; url: string }[]) {
+function frontmatter(track: Track, genres: string[], pubDate: string, sources: { title: string; url: string }[], recordedAt: RecordedAt[]) {
   const year = track.releaseDate.slice(0, 4);
   const tags = [...new Set([slugify(track.artist), ...genres.map(slugify), year])].filter(Boolean);
   return `---
@@ -345,7 +354,7 @@ tags: ${yamlList(tags)}
 pipeline: "lately"
 sources:
 ${sources.map((s) => `  - title: ${yaml(s.title)}\n    url: ${yaml(s.url)}`).join("\n") || "  []"}
-aiGenerated: true
+${recordedAtYaml(recordedAt)}aiGenerated: true
 ---
 `.replace("sources:\n  []", "sources: []");
 }
@@ -450,7 +459,7 @@ for (const id of queue) {
   const sourceUrls = [...new Set(facts.facts.map((f) => f.source))].filter((url) => !STORE_DOMAINS.test(sourceTitle(url)));
   const labeled = await Promise.all(sourceUrls.map(async (url) => ({ title: await sourceLabel(url), url })));
   const sources = labeled.filter((s, i) => labeled.findIndex((o) => o.title === s.title) === i);
-  const markdown = `${frontmatter(track, genres, pubDate, sources)}${checked.body.trim()}\n`;
+  const markdown = `${frontmatter(track, genres, pubDate, sources, facts.recordedAt ?? [])}${checked.body.trim()}\n`;
 
   if (dryRun) {
     console.log(`\n${markdown}`);

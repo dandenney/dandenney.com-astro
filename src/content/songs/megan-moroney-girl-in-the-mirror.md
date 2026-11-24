@@ -23,6 +23,22 @@ sources:
     url: "https://tasteofcountry.com/megan-moroney-girl-in-the-mirror-lyrics/"
   - title: "Holler: “The Strength Is In Walking Away”: Megan Moroney Gives Empowering Message About Her Song, ‘Girl In The Mirror’"
     url: "https://holler.country/news/breaking/megan-moroney-girl-in-the-mirror-empowerment-message/"
+recordedAt:
+  - studio: "The Castle Recording Studios"
+    city: "Franklin"
+    state: "TN"
+    country: "USA"
+    source: "https://www.discogs.com/release/27140811-Megan-Moroney-Lucky"
+  - studio: "West End Sound"
+    city: "Atlanta"
+    state: "GA"
+    country: "USA"
+    source: "https://www.discogs.com/release/27140811-Megan-Moroney-Lucky"
+  - studio: "The Projector Room"
+    city: "Decatur"
+    state: "GA"
+    country: "USA"
+    source: "https://www.discogs.com/release/27140811-Megan-Moroney-Lucky"
 aiGenerated: true
 ---
 The narrator of **Girl in the Mirror** keeps pointing at someone else. She stands in front of a mirror and describes a stranger: a woman who has gotten used to crying, who lifts a man onto a pedestal while he keeps putting her down, who has lost her damn mind over him. The chorus states the split plainly: "She looks just like me, but I don't recognize her." That third person works as a shield. It's easier to pity someone else's heavy, tired eyes than to admit they're your own.

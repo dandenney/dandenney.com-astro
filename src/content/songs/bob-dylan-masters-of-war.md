@@ -25,6 +25,12 @@ sources:
     url: "https://rollingstoneindia.com/the-freewheelin-bob-dylan-inside-his-first-classic/"
   - title: "Untold Dylan: How Bob Dylan became a poet first and a songwriter second: “Masters of War”"
     url: "https://bob-dylan.org.uk/archives/30061"
+recordedAt:
+  - studio: "Columbia Studio A (Columbia Recording Studios, 799 Seventh Avenue)"
+    city: "New York City"
+    state: "New York"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/The_Freewheelin%27_Bob_Dylan"
 aiGenerated: true
 ---
 The last thing the narrator of **Masters of War** promises is a graveside vigil. He'll follow the casket, watch it lowered, and stand there "'Til I'm sure that you're dead." It's one of the coldest closing lines in American song. In the Freewheelin' liner notes Bob Dylan said he'd never written anything like it, that he doesn't sing songs hoping people will die, but with this one he couldn't help it. He called it a reaction to the last straw.

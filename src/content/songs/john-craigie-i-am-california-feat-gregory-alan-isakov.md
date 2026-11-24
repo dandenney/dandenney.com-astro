@@ -29,6 +29,11 @@ sources:
     url: "https://www.wweek.com/music/2017/12/05/john-craigie-isnt-afraid-of-intimacy/"
   - title: "Folk Alley: A Q & A with John Craigie"
     url: "https://folkalley.com/a-q-a-with-john-craigie/"
+recordedAt:
+  - city: "Portland"
+    state: "Oregon"
+    country: "United States"
+    source: "https://www.wweek.com/music/2017/12/05/john-craigie-isnt-afraid-of-intimacy/"
 aiGenerated: true
 ---
 A state doesn't usually get to talk back, but in **I Am California** it does, and it sounds like an ex who knows you'll call. The chorus hands everything over: drink the wine, cut the trees, make love on the beaches, smoke the weed. It reads like generosity until you hear the shrug under it. Take what you want. You'll be back.

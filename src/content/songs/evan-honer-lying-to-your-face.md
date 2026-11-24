@@ -19,6 +19,11 @@ sources:
     url: "https://www.northwestnoisemagazine.com/post/evan-honer-sets-off-on-his-it-s-a-long-road-tour"
   - title: "Wikipedia: Evan Honer"
     url: "https://en.wikipedia.org/wiki/Evan_Honer"
+recordedAt:
+  - city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.newsbreak.com/whiskey-riff-510620/4258837405729-evan-honer-juxtaposes-life-on-the-road-with-a-desire-to-settle-down-in-introspective-new-record-everything-i-wanted"
 aiGenerated: true
 ---
 The most deflating line in **Lying To Your Face** is also the funniest. The chorus builds a superhero: if you need saving, the singer will suit up. Then it lands on the question that undoes all of it: "you'll still ask 'why were you late.'" It's the gap between grand devotion and a small, nagging doubt, and anyone who has loved someone who can't quite believe them knows how that sounds across a kitchen.

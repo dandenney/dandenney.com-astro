@@ -27,6 +27,12 @@ sources:
     url: "https://en.wikipedia.org/wiki/Carolyn's_Boy"
   - title: "mca.com"
     url: "https://www.mca.com/darius-rucker-and-jennifer-nettles-unite-on-reimagined-version-of-ruckers-carolyn-boy-album-standout-never-been-over/"
+recordedAt:
+  - studio: "Blackbird Studio"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.yahoo.com/entertainment/writers-behind-darius-rucker-jennifer-184742340.html"
 aiGenerated: true
 ---
 The trick of **Never Been Over** is that the whole song is built from denials. The chorus runs through every breakup scene a country song could reach for: friends divided, records divided, walls going up, letters going into the fire, taillights shrinking down the road. This couple, the narrator insists, has never been any of it. Then the title phrase lands, "But we've never been over," and it sounds like a vow and a wish at the same time.

@@ -27,6 +27,12 @@ sources:
     url: "https://www.rollingstone.com/music/music-country/see-jason-isbells-gorgeous-animated-if-we-were-vampires-video-201514"
   - title: "Wikipedia: Jason Isbell"
     url: "https://en.wikipedia.org/wiki/Jason_Isbell"
+recordedAt:
+  - studio: "RCA Studio A"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://www.rollingstone.com/music/music-country/jason-isbell-on-new-album-the-nashville-sound-its-a-risky-statement-203766/"
 aiGenerated: true
 ---
 **If We Were Vampires** spends its whole first stretch saying what love isn't. It isn't the dress, the light on her skin, her hands in the dark, her nails leaving "love's watermark." Each verse sets up a lovely, specific image and then waves it off. Jason Isbell writes the catalog of a devoted husband and then says none of it is the point. The point is that one of them will die first.

@@ -25,6 +25,12 @@ sources:
     url: "https://americana-uk.com/emily-scott-robinson-appalachia"
   - title: "Love Vinyl Records: Emily Scott Robinson - Appalachia (VINYL LP OH BOY OBR093LP 2026) | NEW Mint (M) Mint (M)"
     url: "https://www.lovevinylrecords.com/products/emily-scott-robinson-presale-9-4-26-appalachia-vinyl-lp-oh-boy-obr093lp-2026-mint-m-mint-m"
+recordedAt:
+  - studio: "Dreamland Recording Studios"
+    city: "West Hurley"
+    state: "New York"
+    country: "United States"
+    source: "https://femmusic.com/2026/01/30/emily-scott-robinson-appalachia/"
 aiGenerated: true
 ---
 In **Cast Iron Heart**, the whole argument rides on a skillet. Left out in the rain, rusted, written off, it comes back with a little love and shines like new. Emily Scott Robinson builds a love song on that image, and she never strains it. "Got a lot of salt and seasoning," goes one line, and it works both ways at once. It is cookware, and it is a person admitting they've been through things.

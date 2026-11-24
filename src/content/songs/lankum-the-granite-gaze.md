@@ -12,6 +12,12 @@ genres: ["folk","traditional folk","southern gothic","celtic"]
 # preview: ""
 pubDate: "2025-11-29"
 tags: ["folk","traditional folk"]
+recordedAt:
+  - studio: "Guerrilla Studios"
+    city: "Dublin"
+    state: "Leinster"
+    country: "Ireland"
+    source: "https://www.discogs.com/release/11009554-Lankum-Between-The-Earth-And-Sky"
 aiGenerated: true
 ---
 

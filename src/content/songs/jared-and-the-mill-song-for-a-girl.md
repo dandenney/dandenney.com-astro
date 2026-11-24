@@ -23,6 +23,12 @@ sources:
     url: "https://glidemagazine.com/173766/jared-mill-share-track-track/"
   - title: "Mother Church Pew: Interview: Jared & The Mill"
     url: "https://motherchurchpew.com/2016/08/30/interview-with-jared-the-mill/"
+recordedAt:
+  - studio: "House of Blues Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "http://m.axs.com/interview-jared-the-mill-chronicle-their-latest-recording-and-producti-106235"
 aiGenerated: true
 ---
 In **Song for a Girl**, Jared Kolesar hands a woman's confession back to her. Early on she tells him she wishes she were "as interesting / As half the things you read," a small, self-deprecating admission. By the last verse it's his line: "I swear I'm not as interesting as half the things you read." The words barely change. The meaning flips. What was her insecurity becomes his excuse, and the song lives in the gap between the two.

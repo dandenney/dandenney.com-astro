@@ -23,6 +23,17 @@ sources:
     url: "https://en.wikipedia.org/wiki/Gill_Landry"
   - title: "Cincinnati CityBeat: Sound Advice: Gill Landry with Noah Smith"
     url: "https://citybeat.com/music/article/13000925/sound-advice-gill-landry-with-noah-smith"
+recordedAt:
+  - studio: "Jackpot! Recording Studio"
+    city: "Portland"
+    state: "Oregon"
+    country: "United States"
+    source: "https://gilllandry.bandcamp.com/album/the-ballad-of-lawless-soirez"
+  - studio: "Type Foundry"
+    city: "Portland"
+    state: "Oregon"
+    country: "United States"
+    source: "https://gilllandry.bandcamp.com/album/the-ballad-of-lawless-soirez"
 aiGenerated: true
 ---
 By the last verse of **Mexico**, the narrator has been listing his baby's loves for so long that it takes a moment to notice he's finally made the list himself. "My baby loves my money and Mexico," Gill Landry sings, and there it is: the only place he shows up in her world is his wallet, filed next to a country she'd rather be in.

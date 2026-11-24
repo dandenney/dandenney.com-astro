@@ -27,6 +27,12 @@ sources:
     url: "https://michiganmusic.fandom.com/wiki/Crane_Wives,_The"
   - title: "Wikipedia: The Crane Wives"
     url: "https://en.wikipedia.org/wiki/The_Crane_Wives"
+recordedAt:
+  - studio: "Dogtown Studio"
+    city: "Grand Rapids"
+    state: "Michigan"
+    country: "United States"
+    source: "https://localspins.com/dogtown-studio-showcasing-musics-power-and-potential-through-performance-videos-local-spins/"
 aiGenerated: true
 ---
 The whole song turns on one line at the end of the chorus. **Nobody** keeps circling a single claim, that no one has ever loved the narrator the way this woman does, and then it lands on the catch: "Like she tells me she does." The love is real enough to name. Whether it's love or just her word for it, the narrator can't say. The second time around, the line shrinks to a shrug, so she tells me. Near the end the narrator drops the hedge once and says she loves me, plain, before falling back to it. You can hear someone trying out the sentence they want to believe, and failing to hold it.

@@ -25,6 +25,17 @@ sources:
     url: "https://www.songfacts.com/facts/noah-kahan/northern-attitude"
   - title: "Wikipedia: Noah Kahan"
     url: "https://en.wikipedia.org/wiki/Noah_Kahan"
+recordedAt:
+  - studio: "Guilford Sound"
+    city: "Guilford"
+    state: "Vermont"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
+  - studio: "The Study"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/Stick_Season_(album)"
 aiGenerated: true
 ---
 **Northern Attitude** opens on small talk. Noah Kahan runs through the questions you ask someone you haven't seen in years: how have you been, have you settled down, are you proud, where are the kids now. Then the verse stops asking and starts summing up. You build a boat, you build a life, and the losses follow in the same flat rhythm, as if they were just the next items on the list. Another stanza finds a person lost and getting high, alone and "Scared to live, scared to die." When the boat stanza comes back, "friends" has turned into "kids," and the portrait has gone darker. It's never clear whether Kahan is describing an old neighbor, a parent, or the life he can see waiting for himself. The song works because it never settles that question.
