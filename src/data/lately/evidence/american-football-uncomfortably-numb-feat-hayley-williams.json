@@ -1,0 +1,210 @@
+{
+  "spotifyId": "03k5XShK3FRSfDJq1zvYsB",
+  "reviewedAt": "2026-11-24T01:29:57.600Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2906291"
+  },
+  "listening": "Pass 1:\nInstruments:\nA clean electric guitar plays a arpeggiated melody. A second clean electric guitar plays a counter-melody. A bass guitar plays a walking line. A drum kit plays a driving beat with a prominent snare drum.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a steady, driving rock beat.\n\nVocals:\nA single voice sings with a clear, slightly breathy character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe sound feels like it's in a medium-sized room. The texture is clean and clear. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band. The first voice enters after a few seconds. The second voice enters later in the excerpt. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nThe excerpt features a drum kit, bass guitar, and electric guitar. The drums play a steady beat with a prominent snare drum. The bass guitar plays a walking bass line. The electric guitar plays arpeggiated chords with a clean tone.\n\nTempo and groove feel:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA single voice sings with a clear, sustained character. The delivery is melodic and expressive. There are no harmonies.\n\nProduction:\nThe production sounds like a medium-sized room. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter shortly after the beginning. All instruments continue playing throughout the excerpt.\n\nPass 3:\nInstruments:\nA drum kit plays a straight beat with a snare hit on beats two and four. A bass guitar plays a simple, repeating line. An electric guitar plays a clean, arpeggiated melody.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving feel.\n\nVocals:\nA single voice sings with a clear, slightly breathy character. The delivery is melodic and sustained. There are no harmonies.\n\nProduction:\nThe sound is clean and polished with a moderate amount of reverb, suggesting a medium-sized room. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter shortly after the beginning. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "All tracks on American Football (LP3) are credited as written by American Football, and Hayley Williams is credited with additional vocals on 'Uncomfortably Numb'.",
+        "source": "https://en.wikipedia.org/wiki/American_Football_(2019_album)"
+      },
+      {
+        "claim": "Jason Cupp is credited as engineer, mixer and producer on LP3. The credits also list Mike Kinsella, Steve Holmes and Nate Kinsella as group members, and Hayley Williams as featured artist and vocalist.",
+        "source": "https://www.allmusic.com/album/american-football-lp3--mw0003239155"
+      },
+      {
+        "claim": "The band used the same producer (Jason Cupp) and the same studio (Arc Studios in Omaha, Nebraska) as on LP2, but took a markedly different approach to the recording.",
+        "source": "https://americanfootball.bandcamp.com/album/american-football-lp3"
+      },
+      {
+        "claim": "Kristina Dutton played violin and wrote the violin arrangements on 'Uncomfortably Numb', 'Silhouettes' and 'Life Support'.",
+        "source": "https://en.wikipedia.org/wiki/American_Football_(2019_album)"
+      },
+      {
+        "claim": "The song was released as a single on January 22, 2019, with a music video. Rolling Stone described it as earnest but more pop-leaning than the band's earlier music, with Kinsella and Williams singing about youthful regrets and more naive relationships.",
+        "source": "https://www.rollingstone.com/music/music-news/hayley-williams-american-football-uncomfortably-numb-782236/"
+      },
+      {
+        "claim": "The video was directed by Atiba Jefferson. It is mostly a point-of-view depiction of the aftermath of an emergency incident, with the victim treated by paramedics. It followed the single 'Silhouettes' from December 2018.",
+        "source": "https://www.nme.com/news/music/american-football-team-up-with-paramores-hayley-williams-for-new-song-uncomfortably-numb-2436632"
+      },
+      {
+        "claim": "The video has cameos from Blake Anderson of Workaholics, pro skater Paul Rodriguez and Samhain drummer London May.",
+        "source": "https://floodmagazine.com/56528/listen-paramores-hayley-williams-teams-up-with-american-football-on-uncomfortably-numb/"
+      },
+      {
+        "claim": "Describing LP3 in a press release, Kinsella said LP2 was about working out how to use the band's different 'arms'. For LP3 the band decided to use them.",
+        "source": "https://www.nme.com/news/music/american-football-team-up-with-paramores-hayley-williams-for-new-song-uncomfortably-numb-2436632"
+      },
+      {
+        "claim": "LP3 was the first American Football album with outside guest vocalists singing alongside Mike Kinsella. They were Hayley Williams on 'Uncomfortably Numb', Elizabeth Powell of Land of Talk and Rachel Goswell of Slowdive. AllMusic said Williams' powerful style risks overpowering Kinsella and adds a pop sheen at odds with the resigned lyrics.",
+        "source": "https://www.allmusic.com/album/american-football-lp3--mw0003239155"
+      },
+      {
+        "claim": "American Football formed in 1997 in Urbana, Illinois, when Mike Kinsella, Steve Lamos and Steve Holmes were students at the University of Illinois at Urbana-Champaign. Kinsella's nephew Nate Kinsella joined for the reunion shows.",
+        "source": "https://en.wikipedia.org/wiki/American_Football_discography"
+      }
+    ],
+    "lineage": "The song sits in the emo and Midwest emo tradition, with chiming, twinkly guitars from the Kinsella family's Illinois scene, and it pushes toward a more polished, pop-leaning sound through the Paramore guest vocal.",
+    "genres": [
+      "emo",
+      "indie rock",
+      "midwest emo"
+    ]
+  },
+  "draft": "The line that gives **Uncomfortably Numb** away is a confession built like a punchline: \"Now, as a father, I blame the booze.\" Just before it, the narrator admits to blaming their own father as a kid. The symmetry is the wound. Blame hasn't gone anywhere. It has moved down a generation and picked a new target. The narrator sees the pattern clearly and still can't climb out of it, and that clarity is what makes the numbness uncomfortable rather than restful. The title takes a familiar phrase and makes it itch.\n\nThe song keeps stacking that kind of honesty next to self-protection. \"All my sympathy prescribed\" turns feeling into something dosed out. \"Struggling for two\" turns parenthood into a heavier load rather than a cure. Then a verse begins tenderly and slides into an admission of having pushed someone around to break them in. It's never clear whether the \"you\" is a partner or the drink itself. The verse ends in surrender either way, then snaps back to the family line: \"Comatose, like father like son.\" Through all of it, questions in parentheses cut in, asking whose ugly side is ugliest, like a second conscience talking over the first.\n\nMike Kinsella and Hayley Williams of Paramore share the song. It's the first time American Football brought outside voices onto a record, a band whose roots go back to a 1997 dorm-room start in Urbana, Illinois. The music still runs on the chiming, interlocking guitar logic of that Midwest emo scene. Clean electric arpeggios sit over a walking bass line, and the drums keep a steady, driving pulse with the snare out front, all at an unhurried middle tempo. The lead vocal is clear and slightly breathy, holding notes instead of pushing them. Jason Cupp produced again at Arc Studios in Omaha, and the sound is polished and roomy. Kristina Dutton wrote and played the violin parts. Kinsella has said that the band spent its previous album figuring out how to use its different arms, and this time it decided to use them.\n\nSome critics found Williams' power a little much, a pop sheen laid over lyrics that sound resigned. That friction is real, but it may be the point. A bright, steady band carries someone describing going under, which is how numbness tends to look from outside. The last verse goes darker and funnier at once: \"I'll make new friends in the ambulance.\" The video, directed by Atiba Jefferson, takes that line at its word, a point-of-view ride through an emergency and its aftermath.\n\nThe song sticks because it describes the feeling of not feeling so precisely that you end up carrying the ache the narrator says is gone.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"Now, as a father, I blame the booze.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "The narrator blames their own father in youth",
+      "verdict": "supported",
+      "note": "Lyric: \"I blamed my father in my youth.\""
+    },
+    {
+      "claim": "Quotes of \"All my sympathy prescribed\" and \"Struggling for two\"",
+      "verdict": "corrected",
+      "note": "The wording is accurate, but five quoted lyric lines exceeds the three-line limit. Both are now paraphrased without quote marks."
+    },
+    {
+      "claim": "Verse begins gentle and slides into having pushed someone around to break them in; the verse ends with \"I've tried but you've won\"",
+      "verdict": "supported",
+      "note": "Matches \"We were gentle to begin / Then I pushed you around to break you in\" and \"I've tried but you've won.\" The partner-or-drink reading is interpretation."
+    },
+    {
+      "claim": "Lyric quote: \"Comatose, like father like son.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Parenthetical questions run \"through all of it\"",
+      "verdict": "corrected",
+      "note": "The parenthetical lines appear only in the second verse. Narrowed to that verse."
+    },
+    {
+      "claim": "Lyric quote: \"I'll make new friends in the ambulance.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Mike Kinsella and Hayley Williams of Paramore share the song",
+      "verdict": "supported",
+      "note": "Kinsella and Williams are credited as vocalists, and the lineage note identifies Williams as the Paramore guest."
+    },
+    {
+      "claim": "First time American Football brought outside voices onto a record",
+      "verdict": "supported",
+      "note": "LP3 was the first album with outside guest vocalists."
+    },
+    {
+      "claim": "1997 \"dorm-room\" start in Urbana, Illinois",
+      "verdict": "corrected",
+      "note": "The band formed in 1997 in Urbana while members were students. \"Dorm-room\" is unsupported and was removed."
+    },
+    {
+      "claim": "Chiming, interlocking guitar logic of the Midwest emo scene",
+      "verdict": "corrected",
+      "note": "Chiming guitars and the emo lineage are supported. \"Interlocking\" is not, since only one pass describes a single guitar and others differ. Removed."
+    },
+    {
+      "claim": "Clean electric arpeggios over a walking bass line, steady driving drums with the snare out front, moderate tempo",
+      "verdict": "supported",
+      "note": "At least two passes agree on each element."
+    },
+    {
+      "claim": "Lead vocal clear and slightly breathy, holding notes",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say slightly breathy, and all passes say clear and sustained."
+    },
+    {
+      "claim": "Jason Cupp produced again at Arc Studios in Omaha",
+      "verdict": "supported",
+      "note": "Same producer and studio as LP2."
+    },
+    {
+      "claim": "Sound is polished and roomy",
+      "verdict": "corrected",
+      "note": "Polished and clean is supported, and a medium-sized room is agreed. \"Roomy\" overstated it, so it was rephrased."
+    },
+    {
+      "claim": "Kristina Dutton wrote and played the violin parts",
+      "verdict": "corrected",
+      "note": "She played violin and wrote the violin arrangements. Wording adjusted."
+    },
+    {
+      "claim": "Kinsella said the previous album was about figuring out the band's different arms and this time they decided to use them",
+      "verdict": "supported",
+      "note": "From the press release quote."
+    },
+    {
+      "claim": "Some critics found Williams' power a little much, a pop sheen over resigned lyrics",
+      "verdict": "corrected",
+      "note": "Only AllMusic is cited. Attributed to AllMusic instead of \"some critics.\""
+    },
+    {
+      "claim": "Video directed by Atiba Jefferson, a point-of-view ride through an emergency and its aftermath",
+      "verdict": "corrected",
+      "note": "Director is supported. The video is a point-of-view depiction of the aftermath of an emergency with the victim treated by paramedics; \"ride\" was unsupported."
+    },
+    {
+      "claim": "The last verse goes darker and funnier at once",
+      "verdict": "supported",
+      "note": "The line closes the lyrics. The tone is interpretation."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2134,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013819,
+        "detail": "1108 in / 151 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013894,
+        "detail": "1108 in / 154 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00060345,
+        "detail": "1108 in / 171 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083548,
+        "detail": "23029 in / 1749 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.070656,
+        "detail": "3779 in / 2777 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.055858,
+        "detail": "4944 in / 4597 out"
+      }
+    ]
+  }
+}

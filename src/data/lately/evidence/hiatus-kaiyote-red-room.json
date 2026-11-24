@@ -1,0 +1,190 @@
+{
+  "spotifyId": "55mvtucws4Mnro27744t9X",
+  "reviewedAt": "2026-11-24T01:27:30.791Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5010295"
+  },
+  "listening": "Pass 1:\nInstruments:\nA drum kit plays a loose, syncopated beat with a prominent snare. A bass guitar plays a walking bass line. An electric guitar plays clean, arpeggiated chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels laid-back and slightly off-kilter, with a subtle swing.\n\nVocals:\nA single voice sings with a breathy, clear character. The delivery is relaxed and melodic. No harmonies are present.\n\nProduction:\nThe sound is clean and well-defined, with a sense of space. The texture is smooth. The production is polished.\n\nArrangement:\nThe excerpt begins with drums, bass, and guitar. The voice enters shortly after. The electric guitar plays a short, clean solo-like phrase. The voice drops out briefly and then re-enters. The instruments maintain their roles throughout.\n\nPass 2:\nInstruments:\nA drum kit plays a loose, syncopated beat with a prominent snare. A bass guitar plays a walking bass line. An electric guitar plays clean, arpeggiated chords. A keyboard plays sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is laid-back and slightly swung, with a relaxed feel.\n\nVocals:\nA single voice sings with a breathy, slightly raspy character. The delivery is melodic and smooth. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a clear, open room sound. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the full ensemble. The electric guitar enters with a melodic line. The keyboard sustains chords throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nA drum kit plays a loose, syncopated beat with a prominent snare. A bass guitar plays a walking bass line. An electric guitar plays clean, arpeggiated chords. A keyboard plays sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is laid-back and slightly swung, with a relaxed feel.\n\nVocals:\nA single voice sings with a clear, breathy character. The delivery is smooth and melodic. No harmonies are present.\n\nProduction:\nThe production sounds clean and polished. The room sound is neutral, with a slight reverb on the vocals and drums. The texture is smooth.\n\nArrangement:\nThe excerpt begins with the full band. The electric guitar plays a prominent arpeggiated figure throughout. The bass and drums maintain a consistent rhythm. The keyboard provides sustained harmonic support. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Red Room\" is the second single from Hiatus Kaiyote's album Mood Valiant, following \"Get Sun\", which came out in March 2021. The album was released June 25, 2021 on Brainfeeder/Ninja Tune.",
+        "source": "https://au.rollingstone.com/music/music-news/hiatus-kaiyote-new-song-red-room-25652/"
+      },
+      {
+        "claim": "Mood Valiant is the band's first album in six years, following 2015's Choose Your Weapon.",
+        "source": "https://au.rollingstone.com/music/music-news/hiatus-kaiyote-new-song-red-room-25652/"
+      },
+      {
+        "claim": "Nai Palm said the song was inspired by the red light in her vocal booth and by her old house, which had a lot of red-colored glass. When the sun set, her whole room turned red.",
+        "source": "https://www.rollingstone.com/music/music-news/hiatus-kaiyote-new-song-red-room-1161731/"
+      },
+      {
+        "claim": "Drummer Perrin Moss said \"Red Room\" came together faster than any other Hiatus Kaiyote song. He described the session as just having fun, in a warm place in another country.",
+        "source": "https://www.rollingstone.com/music/music-news/hiatus-kaiyote-new-song-red-room-1161731/"
+      },
+      {
+        "claim": "Bassist Paul Bender came up with the pensive riff behind \"Red Room\" during the Rio de Janeiro sessions.",
+        "source": "https://daily.bandcamp.com/features/hiatus-kaiyote-mood-valiant-interview"
+      },
+      {
+        "claim": "The band said Bender wrote the bass riff in the studio on the fly. They did a couple of passes, recorded it, and that was it.",
+        "source": "https://www.theringer.com/2021/07/01/music/hiatus-kaiyote-interview-mood-valiant"
+      },
+      {
+        "claim": "NME reports \"Red Room\" was recorded on the fly at 2am in Rio, after the band had \"heaps of tea\" and cachaça.",
+        "source": "https://www.nme.com/big-reads/hiatus-kaiyote-cover-interview-2021-mood-valiant-2980549"
+      },
+      {
+        "claim": "The \"Red Room\" video was directed by Tré Koch. The room the band stands in gradually turns red, and an old car scribbled with \"Mood Valiant\" goes from white to red at the end.",
+        "source": "https://www.rollingstone.com/music/music-news/hiatus-kaiyote-new-song-red-room-1161731/"
+      },
+      {
+        "claim": "Rolling Stone describes the track as slinky, woozy lo-fi soul. It has tight bass and drums, winding guitar and languid piano under Nai Palm's vocals.",
+        "source": "https://www.rollingstone.com/music/music-news/hiatus-kaiyote-new-song-red-room-1161731/"
+      },
+      {
+        "claim": "The band is Nai Palm (vocals, guitar), Paul Bender (bass), Simon Mavin (keys) and Perrin Moss (drums). They formed in Melbourne in 2011.",
+        "source": "https://en.wikipedia.org/wiki/Hiatus_Kaiyote"
+      }
+    ],
+    "lineage": "Hiatus Kaiyote are a Melbourne band whose genre-hopping sound blends neo-soul, jazz-funk and future soul, and \"Red Room\" sits on the moody, lo-fi soul side of that catalog.",
+    "genres": [
+      "neo-soul",
+      "future soul",
+      "jazz-funk"
+    ]
+  },
+  "draft": "Close your eyes facing a sunset and you know the color Nai Palm is singing about. \"It feels like I'm inside my eyelids\" is the best line on **Red Room**. It turns a lit-up bedroom into something you feel from the inside: warm, blood-tinted, private. A line earlier, she's inside a flower. The images keep folding inward, from the room to the petals to the skin over your own eyes. The song isn't looking at a beautiful thing. It's sealed up inside one.\n\nNai Palm said the idea came from the red light in her vocal booth and from an old house full of red glass, where her whole room went red at sundown. The lyric barely moves past that fact, and it doesn't need to. \"I got a red room\" comes back again and again. The final line is just that phrase said twice, like someone saying it over to themselves. Then comes the plain wish at the center: \"I don't wanna be / Anywhere but here.\" Songs about wanting usually want something else. This one wants nothing more. The catch sits in its own words, though. A red hour is a sunset, and sunsets don't stay. The contentment is real, and so is the knowledge that the light is already leaving. The song lets both stand. When the voice catches on \"be-be-be,\" it sounds less like ornament and more like trying to hold on to a moment by stretching it.\n\nThe band plays like they're in no hurry either. The drums are loose and syncopated, with a snare that sits up front. Paul Bender's walking bass line moves under clean, arpeggiated electric guitar while keyboard chords hold steady underneath. The tempo is moderate and the swing is slight, laid back without going slack. Nai Palm sings alone, breathy and smooth, with no harmonies stacked on top, which keeps the room feeling like one person's space.\n\nThat ease was earned the fun way. Bender came up with the riff on the fly during the band's Rio de Janeiro sessions for *Mood Valiant*, their first album in six years. NME reports they cut it at 2am after heaps of tea and cachaça. Drummer Perrin Moss said it came together faster than any Hiatus Kaiyote song ever had. That fits a Melbourne band known for jumping between neo-soul, jazz-funk and future soul. Here they drop the showy side and let a groove sit, the moody end of their catalog where nothing has to prove anything.\n\nIt's a song about being exactly where you want to be just as the light runs out, and it makes you want to stay in that room with it.",
+  "factCheck": [
+    {
+      "claim": "\"It feels like I'm inside my eyelids\" is a lyric, and a line earlier she sings \"inside a flower\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, and the flower line comes immediately before it."
+    },
+    {
+      "claim": "Nai Palm said the idea came from the red light in her vocal booth and an old house full of red glass, where her whole room went red at sundown",
+      "verdict": "supported",
+      "note": "Rolling Stone fact."
+    },
+    {
+      "claim": "The final line is the red-room phrase said twice",
+      "verdict": "supported",
+      "note": "The lyrics end \"I got a red room, I got a red room\"."
+    },
+    {
+      "claim": "Quoted lyrics: \"I got a red room\", \"It feels like I'm inside my eyelids\", \"I don't wanna be / Anywhere but here\"",
+      "verdict": "corrected",
+      "note": "All matched the lyrics, but together they came to four quoted lines, over the three-line limit. The \"I got a red room\" quote is now a paraphrase."
+    },
+    {
+      "claim": "The voice catches on \"be-be-be\"",
+      "verdict": "supported",
+      "note": "The stuttered \"be-be-be\" is in the lyrics. The reading of it as holding on to a moment is interpretation."
+    },
+    {
+      "claim": "Drums are loose and syncopated with a prominent snare",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Walking bass line under clean, arpeggiated electric guitar",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Keyboard chords hold steady underneath",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on sustained keyboard chords."
+    },
+    {
+      "claim": "Moderate tempo, slight swing, laid back",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Single breathy, smooth voice with no harmonies",
+      "verdict": "supported",
+      "note": "All passes agree on single voice, breathy, and no harmonies. Two describe it as smooth, and the third as relaxed and melodic."
+    },
+    {
+      "claim": "Paul Bender is the bassist and came up with the riff on the fly in the Rio de Janeiro sessions",
+      "verdict": "supported",
+      "note": "Bandcamp Daily and The Ringer."
+    },
+    {
+      "claim": "Mood Valiant is their first album in six years",
+      "verdict": "supported",
+      "note": "Rolling Stone Australia."
+    },
+    {
+      "claim": "NME reports it was cut at 2am after heaps of tea and cachaça",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "Perrin Moss said it came together faster than any Hiatus Kaiyote song",
+      "verdict": "supported",
+      "note": "Rolling Stone. The session was described as just having fun."
+    },
+    {
+      "claim": "Melbourne band known for neo-soul, jazz-funk and future soul; Red Room sits on the moody end of the catalog",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Readings: sealed inside the image, contentment alongside the knowledge the light is leaving, sunsets don't stay, drops the showy side",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics and the supported facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1822,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00059137,
+        "detail": "1100 in / 169 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014545,
+        "detail": "1100 in / 181 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014745,
+        "detail": "1100 in / 189 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080538,
+        "detail": "22999 in / 1454 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05232,
+        "detail": "3910 in / 1834 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.045786,
+        "detail": "5023 in / 3574 out"
+      }
+    ]
+  }
+}

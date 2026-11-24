@@ -1,0 +1,205 @@
+{
+  "spotifyId": "4C6Uex2ILwJi9sZXRdmqXp",
+  "reviewedAt": "2026-11-24T01:28:42.945Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7830508"
+  },
+  "listening": "Pass 1:\nHere's a description of the excerpt:\n\n**Instruments and How They're Played:**\nA prominent, sustained bass note provides a low-end foundation. A high-pitched, plucked synth plays a repetitive, staccato melody. A kick drum and snare drum provide a steady, driving beat. A high-hat plays a consistent, open-and-closed pattern.\n\n**Tempo and Groove Feel:**\nThe tempo is moderately fast. The groove feels steady and rhythmic, with a consistent forward momentum.\n\n**Vocals:**\nThe voice is clear and assertive, with a rhythmic, spoken-word delivery that occasionally shifts into a melodic, sung phrase. There are no harmonies.\n\n**Production:**\nThe sound is clean and polished, with a clear separation between instruments. The texture is bright and punchy. The room sound is dry, with no noticeable reverb.\n\n**Arrangement:**\nThe excerpt begins with the full instrumentation. The vocals enter immediately and remain present throughout. No instruments drop out or build significantly within this segment.\n\nPass 2:\nHere's a description of the excerpt:\n\n**Instruments and How They're Played:**\nA prominent, sustained bass note provides a low-end foundation. A high-pitched, plucked synth melody plays a repetitive, staccato pattern. A kick drum and snare drum provide a driving, consistent beat. A high-hat plays a quick, open-and-closed pattern.\n\n**Tempo and Groove Feel:**\nThe tempo is moderately fast. The groove feels steady and rhythmic, with a consistent, driving pulse.\n\n**Vocals:**\nThe voice is clear and direct, with a confident, rhythmic delivery. The vocal is mostly spoken-word, with some sung phrases. There are no discernible harmonies.\n\n**Production:**\nThe sound is clean and polished, with a dry, close-up texture. There is no noticeable room reverb.\n\n**Arrangement:**\nThe excerpt begins with all instruments playing. The bass and drums maintain a consistent presence throughout. The synth melody is continuous. The vocals are present for most of the excerpt, with short instrumental breaks.\n\nPass 3:\nHere's a description of the excerpt:\n\n**Instruments and How They're Played:**\nA prominent, sustained bass note provides a low-end foundation. A high-pitched, plucked synth melody plays a repetitive, short phrase. A kick drum and snare drum provide a steady, driving beat. A high-hat plays a consistent, rapid pattern.\n\n**Tempo and Groove Feel:**\nThe tempo is fast. The groove feels driving and energetic.\n\n**Vocals:**\nA single voice delivers the lyrics with a clear, direct character. The delivery is rhythmic and conversational, with some words emphasized. There are no harmonies.\n\n**Production:**\nThe sound is clean and polished. The texture is bright, with a clear separation between instruments. The room sound is dry, with no noticeable reverb.\n\n**Arrangement:**\nThe excerpt begins with all instruments playing. The bass note is consistent throughout. The synth melody repeats. The drums maintain a steady pattern. No elements drop out or build significantly within this short segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Super Freaky Girl\" was produced by Dr. Luke and Malibu Babie, with Vaughn Oliver and Aaron Joseph also credited as producers.",
+        "source": "https://www.whosampled.com/sample/973455/Nicki-Minaj-Super-Freaky-Girl-Rick-James-Super-Freak/"
+      },
+      {
+        "claim": "The song interpolates Rick James's 1981 single \"Super Freak\", which James co-wrote with Alonzo Miller. Minaj had earlier sampled \"Super Freak\" on \"Dilly Dally\" from her 2007 mixtape Playtime Is Over.",
+        "source": "https://en.wikipedia.org/wiki/Super_Freaky_Girl"
+      },
+      {
+        "claim": "Malibu Babie said she and two collaborators landed on the \"Super Freak\" sample and fine-tuned the beat for several hours. It then reached LunchMoney Lewis and was played for Minaj, who wrote the whole song within about 24 hours.",
+        "source": "https://www.billboard.com/pro/nicki-minaj-super-freaky-girl-producer-malibu-babie-hot-100/"
+      },
+      {
+        "claim": "Malibu Babie became the first woman this century to debut at No. 1 on Hot R&B/Hip-Hop Songs as a producer, with this song.",
+        "source": "https://www.billboard.com/pro/nicki-minaj-super-freaky-girl-producer-malibu-babie-hot-100/"
+      },
+      {
+        "claim": "Minaj previewed the song as \"Freaky Girl\" on social media in July 2022. Rick James's official account called the snippet a \"banger\".",
+        "source": "https://en.wikipedia.org/wiki/Super_Freaky_Girl"
+      },
+      {
+        "claim": "Minaj asked fans to choose the title. She said legal issues kept her from using \"Freaky Girl\" or \"Freak\" (the fan-poll winner), so she settled on \"Super Freaky Girl\".",
+        "source": "https://en.wikipedia.org/wiki/Super_Freaky_Girl"
+      },
+      {
+        "claim": "The track features Minaj's alter ego Nick James, named after Rick James. It is bass-heavy and opens with James's a cappella vocals.",
+        "source": "https://en.wikipedia.org/wiki/Super_Freaky_Girl"
+      },
+      {
+        "claim": "The song debuted at No. 1 on the Billboard Hot 100. It was Minaj's first No. 1 as a solo artist and her 21st Hot 100 top 10.",
+        "source": "https://www.billboard.com/music/chart-beat/nicki-minaj-super-freaky-girl-debuts-atop-billboard-hot-100-1235129278/"
+      },
+      {
+        "claim": "It was the lead single from Minaj's fifth studio album Pink Friday 2 (Republic Records, December 8, 2023), and is certified double platinum in the US.",
+        "source": "https://en.wikipedia.org/wiki/Pink_Friday_2"
+      },
+      {
+        "claim": "A \"Queen Mix\" of the song followed in September 2022, featuring JT, BIA, Katie Got Bandz, Akbar V and Maliibu Miitch. A Roman Remix was released six days after the original.",
+        "source": "https://www.revolt.tv/article/2022-09-09/191030/nicki-minaj-jt-bia-katie-got-bandz-akbar-v-maliibu-miitch-super-freaky-girl-queen-mix-single"
+      }
+    ],
+    "lineage": "A raunchy, sample-based pop-rap record that reworks Rick James's funk hit \"Super Freak\" from a woman's point of view, in line with Minaj's tradition of pairing hip-hop with pop hooks.",
+    "genres": [
+      "pop rap",
+      "hip hop",
+      "funk"
+    ]
+  },
+  "draft": "The first voice on **Super Freaky Girl** isn't Nicki Minaj's. It's Rick James, a cappella, singing that she's alright, that girl's alright with him. Then the record takes the microphone away from him. In James's 1981 \"Super Freak,\" co-written with Alonzo Miller, the freak was someone he watched and described. Here she does the describing, and she isn't waiting for anyone's approval.\n\nMinaj has been circling this song a long time. She sampled \"Super Freak\" on \"Dilly Dally\" back on her 2007 mixtape *Playtime Is Over*. This time the spark came from producer Malibu Babie, who said she and two collaborators landed on the sample and spent hours fine-tuning the beat. It passed through LunchMoney Lewis to Minaj, who wrote the whole song in about a day. Dr. Luke, Vaughn Oliver and Aaron Joseph share the production credits. Even the alter ego she raps as, Nick James, tips a hat to the original.\n\nThe beat is bright and bass-heavy. A sustained low note holds the floor while a high, plucked synth pecks out a short staccato figure, and kick, snare and quick hi-hats keep a steady, driving pace. The mix is dry and close, with no reverb to hide in. That suits a voice this direct: mostly rapped and conversational, slipping into sung phrases, never padded with harmonies. It's just her, right up front.\n\nThe feeling here is pleasure, and the pleasure comes from being in charge. The chorus runs through everything she can do and lands on the man's side of it: \"every time he leave me 'lone, he always tell me he miss it.\" His longing is the punchline, and then it becomes a chant, F-R-E-A-K spelled out like a cheer at a game she's already won. The verses move from the bedroom to the arena. \"I got a princess face, a killer body, samurai mind\" is a self-portrait in three quick strokes. The rivalry matters as much as the sex: an ex who went up against her and lost, imitators who can't be Nicki. The best joke is a résumé gag, \"On applications, I write 'pressure',\" a boast and a wink in the same breath. Desire and competition sit side by side, and neither one apologizes for the other.\n\nThe song debuted at No. 1 on the Hot 100, Minaj's first solo chart-topper. It also made Malibu Babie the first woman this century to debut at No. 1 on Hot R&B/Hip-Hop Songs as a producer. That's a fitting result for a record about who gets to tell the story.\n\nYou come away knowing how it feels when a song that once stared at a woman gets answered by her, louder and funnier and completely in control.",
+  "factCheck": [
+    {
+      "claim": "The song opens with Rick James singing a cappella",
+      "verdict": "supported",
+      "note": "Packet says the track opens with James's a cappella vocals. The opening lines 'She's alright / That girl's alright with me' fit."
+    },
+    {
+      "claim": "James's 1981 'Super Freak', co-written with Alonzo Miller",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "In the original, the freak was someone James watched and described",
+      "verdict": "removed",
+      "note": "Nothing in the packet describes the original's lyrics. Reframed using the lineage note: the song reworks 'Super Freak' from a woman's point of view."
+    },
+    {
+      "claim": "Minaj sampled 'Super Freak' on 'Dilly Dally' from the 2007 mixtape Playtime Is Over",
+      "verdict": "supported",
+      "note": "Matches the Wikipedia fact."
+    },
+    {
+      "claim": "Malibu Babie said she and two collaborators landed on the sample and spent hours fine-tuning the beat; it passed to LunchMoney Lewis and Minaj, who wrote the song in about a day",
+      "verdict": "supported",
+      "note": "Matches the Billboard fact ('several hours', 'within about 24 hours')."
+    },
+    {
+      "claim": "Dr. Luke, Vaughn Oliver and Aaron Joseph share production credits",
+      "verdict": "supported",
+      "note": "Credited producers also include Malibu Babie, which the review already names. Wording adjusted to say so."
+    },
+    {
+      "claim": "Alter ego Nick James tips a hat to the original",
+      "verdict": "supported",
+      "note": "Packet says the alter ego is named after Rick James."
+    },
+    {
+      "claim": "The beat is bright and bass-heavy",
+      "verdict": "supported",
+      "note": "Bass-heavy is in the research. Bright is described in passes 1 and 3."
+    },
+    {
+      "claim": "Sustained low note, high plucked staccato synth, kick, snare and quick hi-hats with a steady driving pace",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The mix is dry and close, with no reverb",
+      "verdict": "corrected",
+      "note": "Dry with no reverb is in all three passes. 'Close' appears only in pass 2, so it was dropped."
+    },
+    {
+      "claim": "Voice is direct, mostly rapped and conversational, with sung phrases and no harmonies",
+      "verdict": "supported",
+      "note": "Passes agree on a spoken or rhythmic delivery, some sung phrases and no harmonies. 'Rapped' is a fair reading of the rhythmic delivery."
+    },
+    {
+      "claim": "Quoted lyric: 'every time he leave me 'lone, he always tell me he miss it'",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Quoted lyric: 'I got a princess face, a killer body, samurai mind'",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Quoted lyric: 'On applications, I write \"pressure\"'",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "F-R-E-A-K spelled out as a chant; an ex who went up against her and lost; imitators who can't be Nicki",
+      "verdict": "supported",
+      "note": "All grounded in the lyrics."
+    },
+    {
+      "claim": "The verses move from the bedroom to the arena",
+      "verdict": "corrected",
+      "note": "'Arena' has no basis in the lyrics. Changed to rivalry, which the lyrics support."
+    },
+    {
+      "claim": "Debuted at No. 1 on the Hot 100, Minaj's first solo chart-topper",
+      "verdict": "supported",
+      "note": "Matches the Billboard fact."
+    },
+    {
+      "claim": "Malibu Babie was the first woman this century to debut at No. 1 on Hot R&B/Hip-Hop Songs as a producer",
+      "verdict": "supported",
+      "note": "Matches the Billboard fact."
+    },
+    {
+      "claim": "Closing line: a song that once stared at a woman gets answered by her",
+      "verdict": "corrected",
+      "note": "Relied on the unsupported description of the original. Reworded as the one being described taking the mic."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2883,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015442,
+        "detail": "1099 in / 217 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00069544,
+        "detail": "1099 in / 211 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00069044,
+        "detail": "1099 in / 209 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.153396,
+        "detail": "53463 in / 1647 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.078644,
+        "detail": "4656 in / 3001 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053288,
+        "detail": "5849 in / 4159 out"
+      }
+    ]
+  }
+}

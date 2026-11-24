@@ -1,0 +1,205 @@
+{
+  "spotifyId": "5Ufu00BzpVFQES5LNtT4NS",
+  "reviewedAt": "2026-11-24T01:39:58.235Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5362228"
+  },
+  "listening": "Pass 1:\nA male voice sings with a slightly strained, mid-range character, delivering the melody with a sustained, almost mournful quality. He is accompanied by a clean electric guitar playing arpeggiated chords, a bass guitar providing a low, steady foundation, and a drum kit with a soft, driving beat. The tempo is moderate, creating a reflective groove.\n\nThe production is clean and polished, with a sense of open space around the instruments. The texture is smooth, with no noticeable raw edges.\n\nThe arrangement begins with the guitar, bass, and drums establishing the core instrumentation. The vocals enter shortly after, carrying the main melody. No instruments drop out or build significantly within this excerpt.\n\nPass 2:\nA male voice sings with a slightly raspy, mid-range character, delivered with a sustained, melodic feel. He is accompanied by a clean electric guitar playing arpeggiated chords, a bass guitar playing a root-note pattern, and a drum kit with a kick, snare, and hi-hat. The tempo is slow, with a relaxed, steady groove.\n\nThe production is clean and polished, with a natural room sound. The texture is open and clear.\n\nThe arrangement begins with the full band. The drums drop out briefly, leaving only the guitar and bass, before re-entering with a more active hi-hat pattern. The vocals are mostly single-tracked, with a layered harmony appearing on some phrases.\n\nPass 3:\nA male voice sings with a slightly raspy, mid-range character, delivering the melody with a sustained, almost mournful quality. He is accompanied by a clean electric guitar playing arpeggiated chords, a bass guitar playing a root-note pattern, and a drum kit providing a steady, mid-tempo beat. The drums feature a prominent snare and kick, with light cymbal work.\n\nThe production sounds polished, with a clear, open room feel. The texture is clean, allowing each instrument to be distinct.\n\nThe arrangement remains consistent throughout the excerpt, with no instruments entering or dropping out. The vocal delivery is mostly solo, with a subtle, layered harmony appearing on the word \"family\" at 0:13 and 0:16, and again on \"thoughtful\" at 0:28. The tempo is consistent and the groove feels steady.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Family (Blackbird)\" is a one-track single by Badflower, 4:08 long, on Big Machine Records / John Varvatos Records, with a 2022-07-01 release date on Deezer.",
+        "source": "https://www.deezer.com/us/album/330124277"
+      },
+      {
+        "claim": "The composer credits for \"Family (Blackbird)\" are the four band members: Josh Katz, Joey Morrow, Alex Espiritu and Anthony Sonetti.",
+        "source": "https://www.deezer.com/us/album/330124277"
+      },
+      {
+        "claim": "The track is an orchestral version of the band's song \"Family\". Amazon Music lists it as \"Family (Blackbird / Amazon Original)\" and dates it April 1, 2022. Josh Katz later said the band recorded two orchestral songs and released only \"Family\".",
+        "source": "https://www.strifemag.com/interviews/interviews-2022/interview-upcoming-music-touring-more-with-badflowers-josh-katz/"
+      },
+      {
+        "claim": "The orchestral version was first available only on Amazon Music, and was later released on all platforms.",
+        "source": "https://www.strifemag.com/interviews/interviews-2022/interview-upcoming-music-touring-more-with-badflowers-josh-katz/"
+      },
+      {
+        "claim": "The original \"Family\" was the lead single from Badflower's second album, This Is How the World Ends (released September 24, 2021). Lyrically it reflects Katz's strained relationship with his own family.",
+        "source": "https://www.1057thepoint.com/music-news/badflower-frontman-finds-responsibility-in-bad-energy-with-raw-new-single-family/"
+      },
+      {
+        "claim": "Katz said the song is very important to him. He wrote about spending years trying to understand why he distances himself from the people he cares about most, and why dealing with his family as an adult feels uncomfortable.",
+        "source": "https://loudwire.com/badflower-family-video-lyrics-this-is-how-the-world-ends-album/"
+      },
+      {
+        "claim": "Katz said that at age 30 he realized his own role in the \"bad energy\" in his relationships. He sent the song to his family and began having the conversations the song says he can't have.",
+        "source": "https://www.1057thepoint.com/music-news/badflower-frontman-finds-responsibility-in-bad-energy-with-raw-new-single-family/"
+      },
+      {
+        "claim": "Katz compared the \"brutal honesty\" of \"Family\" to the band's breakout single \"Ghost\", though \"Family\" comes from a different perspective.",
+        "source": "https://www.1057thepoint.com/music-news/badflower-frontman-finds-responsibility-in-bad-energy-with-raw-new-single-family/"
+      },
+      {
+        "claim": "In 2022 Katz said \"Family\" is a really hard song to sing live, though it has gotten easier.",
+        "source": "https://www.strifemag.com/interviews/interviews-2022/interview-upcoming-music-touring-more-with-badflowers-josh-katz/"
+      },
+      {
+        "claim": "Badflower is a Los Angeles band. The re-formed lineup is Josh Katz (vocals/guitar), Joey Morrow (guitar), Anthony Sonetti (drums) and Alex Espiritu (bass). Their debut album OK, I'm Sick came out in early 2019 on Big Machine, and \"Ghost\" was their first modern rock radio hit in 2018.",
+        "source": "https://www.amazon.com/Family-Blackbird-Amazon-Original-Explicit/dp/B09VQY7XJQ"
+      }
+    ],
+    "lineage": "Badflower sit in the Los Angeles hard rock and post-grunge tradition, with a Sunset Strip-inspired swagger and comparisons to Royal Blood and early Silverchair.",
+    "genres": [
+      "alternative rock",
+      "hard rock",
+      "post-grunge"
+    ]
+  },
+  "draft": "The math in **Family (Blackbird)** is brutal and simple: \"First 15 years I'm the favourite son,\" Josh Katz sings, and then the second half of a thirty-year life arrives as its mirror image, the hated one. There's no event in between, no single fight that explains the turn. That's the most honest thing about the song. Estrangement rarely has a date. It accumulates, one missed call and one unsent birthday card at a time, until a person looks up and can't find the way back.\n\nKatz has said he spent years trying to understand why he pushes away the people he cares about most, and why being with his family as an adult feels so uncomfortable. The lyrics don't solve that. They circle it. The narrator is drunk and missing home, dreaming of a version where \"everyone still likes me,\" and the confession comes in a flat, damning list: he made his sisters cry, he calls himself a shitty brother, nobody's friend. Then comes the line that holds the whole ache: \"I never say 'I love you' even though I want to.\" Wanting and doing have come apart, and he can feel the gap without being able to close it.\n\nWhat keeps the song from becoming pure self-flagellation is that it won't stay in one emotional key. Guilt keeps sliding into grievance. \"This is all my fault\" sits a few lines from \"Is everyone against me?\" The last verse goes further, scoffing that families only say \"I love you\" because they're supposed to, then insisting, \"And most families lie, but I meant it every time.\" That contradicts what he said earlier, and the song lets it stand. Self-hatred and self-defense live in the same body here. Anyone who has been the difficult one at the holiday table will recognize both.\n\nThis is the orchestral reworking of the lead single from *This Is How the World Ends*, and it pulls Badflower well away from their Los Angeles hard-rock swagger. A clean electric guitar picks out arpeggiated chords over bass and a steady, unhurried drum kit. The production is polished and open, with room around each instrument. Katz's voice is a little raspy, held long and mournful in the middle of his range, and a quiet harmony slips in behind him on certain words, as if someone else were briefly carrying the weight. The repeated cry of \"What happened to this family?\" lands harder at this pace. There's nowhere for it to hide.\n\nKatz has said the song is hard to sing live. He also said that after writing it, he sent it to his family and started having the conversations the narrator can't have. That makes the song a kind of bridge he built before he could cross it.\n\nIt sticks because it says the thing you've been too proud or too scared to say to your own people, and it lets you hear how much it costs to say it.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote \"First 15 years I'm the favourite son\"; the later years as \"the hated one\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The 'thirty-year life' framing is arithmetic from the 15 + 15 lines."
+    },
+    {
+      "claim": "No event in between, no single fight; estrangement accumulates through missed calls and birthday cards",
+      "verdict": "supported",
+      "note": "Interpretive reading of the lyric situation (the 'Texts, calls, hugs, birthday cards' line). Allowed as a critic's reading."
+    },
+    {
+      "claim": "Katz has said he spent years trying to understand why he pushes away the people he cares about most, and why being with family as an adult feels uncomfortable",
+      "verdict": "supported",
+      "note": "Matches the Loudwire-sourced fact."
+    },
+    {
+      "claim": "Narrator is drunk and missing home; \"everyone still likes me\"",
+      "verdict": "supported",
+      "note": "Matches 'Ugly, drunk, cold and missin' home' and 'everyone still likes me'."
+    },
+    {
+      "claim": "He made his sisters cry; calls himself a shitty brother, nobody's friend",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"I never say 'I love you' even though I want to.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "\"This is all my fault\" sits a few lines from \"Is everyone against me?\"",
+      "verdict": "supported",
+      "note": "Both lines are in the lyrics and fairly close together."
+    },
+    {
+      "claim": "The last verse scoffs that families only say \"I love you\" because they're supposed to",
+      "verdict": "corrected",
+      "note": "The lyric is 'We only say I love you 'cause that's what we're supposed to', not about families generally. Reworded to 'we', and 'last verse' changed to 'later' to avoid overclaiming structure."
+    },
+    {
+      "claim": "\"And most families lie, but I meant it every time.\"",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The orchestral reworking of the lead single from This Is How the World Ends",
+      "verdict": "supported",
+      "note": "The orchestral version and the lead-single status of the original are both in the researched facts."
+    },
+    {
+      "claim": "Pulls Badflower away from their Los Angeles hard-rock swagger",
+      "verdict": "supported",
+      "note": "Badflower is an LA band and the lineage note names the swagger. The contrast is opinion."
+    },
+    {
+      "claim": "Clean electric guitar with arpeggiated chords, bass, steady unhurried drum kit",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Production polished and open, room around each instrument",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Voice a little raspy, sustained and mournful, mid-range",
+      "verdict": "supported",
+      "note": "Raspy in passes 2 and 3, mournful in passes 1 and 3, mid-range and sustained in all."
+    },
+    {
+      "claim": "A quiet harmony slips in behind him on certain words",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on layered harmony on some phrases. No timestamps used."
+    },
+    {
+      "claim": "\"What happened to this family?\" repeated",
+      "verdict": "supported",
+      "note": "Exact lyric, repeated in the lyrics."
+    },
+    {
+      "claim": "Katz has said the song is hard to sing live",
+      "verdict": "supported",
+      "note": "Matches the 2022 interview fact."
+    },
+    {
+      "claim": "He sent the song to his family and started having the conversations the narrator can't have",
+      "verdict": "supported",
+      "note": "Matches the 1057thepoint fact."
+    },
+    {
+      "claim": "The song is a bridge he built before he could cross it",
+      "verdict": "corrected",
+      "note": "Kept as interpretation but reworded so it doesn't assert a timeline beyond the sourced facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2273,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013517,
+        "detail": "1099 in / 140 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014542,
+        "detail": "1099 in / 181 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013742,
+        "detail": "1099 in / 149 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.126964,
+        "detail": "39902 in / 1716 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.046432,
+        "detail": "3898 in / 1542 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04974,
+        "detail": "5065 in / 3961 out"
+      }
+    ]
+  }
+}

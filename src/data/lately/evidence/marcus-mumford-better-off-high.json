@@ -1,0 +1,140 @@
+{
+  "spotifyId": "4qErRQ7XZCogsJDzyvWTLY",
+  "reviewedAt": "2026-11-24T01:19:44.075Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/5904657"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained root-note line. Drums enter with a kick, snare, and hi-hat pattern, establishing a steady beat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly melancholic, with a gentle forward momentum once the drums enter.\n\nVocals:\nThe male voice is clear and slightly raspy, delivered in a mid-range. The delivery is melodic and expressive. Harmonies enter on the word \"holding,\" with a higher voice joining the lead.\n\nProduction:\nThe production sounds clean and somewhat polished, with a clear separation of instruments. The texture is open, allowing each element space. There's a sense of a medium-sized room.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. The male vocal enters shortly after. Drums enter around the 0:10 mark, establishing the full rhythm section. Harmonies join the lead vocal at 0:20, building the vocal texture.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained root-note line. Drums enter with a kick, snare, and hi-hat pattern, then a crash cymbal.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and steady, with a slight forward momentum once the drums enter.\n\nVocals:\nA single male voice sings in a clear, mid-range register. The delivery is melodic and relatively smooth. There are no harmonies.\n\nProduction:\nThe sound feels moderately dry with some subtle reverb. The texture is clean and the production sounds polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. The male vocal enters shortly after. Drums enter around the halfway mark, adding a rhythmic foundation and building the intensity slightly. No instruments drop out.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggio pattern. A bass guitar plays a simple, sustained line. Drums enter with a kick and snare on beats one and three, and a hi-hat on the off-beats. A tambourine shakes on the off-beats.\n\nTempo and Groove:\nThe tempo is slow. The groove is a gentle, swaying feel, with the drums providing a steady, understated pulse.\n\nVocals:\nThe lead voice is male, with a clear, slightly breathy character. The delivery is melodic and sustained. Harmonies enter on the word \"holding,\" with a second male voice joining in a higher register.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb suggesting a medium-sized room. The texture is open and airy.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. The lead vocal enters, followed by drums and tambourine. Harmonies enter on the word \"holding\" and continue to the end of the excerpt.",
+  "research": {
+    "identity": "unknown",
+    "facts": [],
+    "lineage": null,
+    "genres": []
+  },
+  "draft": "The blessing comes first, and it is a hard one: **Better Off High** opens by thanking a drug, and then sets the terms in five plain words, \"Better off high than dead.\" Marcus Mumford doesn't dress it up as a slogan or a dare. It sounds like something said out loud in a kitchen, late, after the other options have run out. It's gratitude with the joy taken out, the relief of someone who has stopped asking for recovery and will settle for survival.\n\nThe song is aimed at a \"you,\" and the narrator spends most of it watching. Someone has settled their affairs and is dressed in white, like a bride or a new believer, and the image never decides whether it means an ending or a start. Then there's the handful of dimes and the person \"back on the line,\" which reads like calls from somewhere far off, a payphone and a short supply of coins. The truest moment is a small admission. The quiet in that person's mind \"Almost deceives me.\" That \"almost\" carries the whole weight of loving someone in trouble: wanting so badly to believe the calm, and not being able to.\n\nThe arrangement keeps its head down. A fingerpicked acoustic guitar rolls out an arpeggio over a bass that mostly sits on the root and holds it. When the kick, snare, and hi-hat come in, they don't push. They give the song a steady, unhurried walk at a moderate tempo. Mumford's voice is clear and mid-range, melodic rather than raw, and the production is clean, with an open, roomy feel that leaves space around each part. On the word \"holding\" a higher harmony joins the lead, and it's a quiet stroke. The line about clutching those dimes is the moment the singer stops being alone.\n\nLate in the song the watcher turns into a patient. \"Get some pills\" arrives in the narrator's own mouth, followed by \"And it still feels like there are hooks in me.\" The line about tedious talk being cheap and easy sounds like contempt for the comfort people offer, and maybe for the narrator's own excuses too. Mumford lets the pride and the shame sit side by side. The chorus question about what else to try never gets an answer, just a shrug of a word repeated and let go.\n\nThen the opening blessing comes back unchanged, and the song ends where it began, with the same gratitude and none of it resolved.\n\nWhat sticks is the sound of someone thanking the thing that keeps a person alive while hating that it has come to this, and the song asks you to hold both feelings at once without choosing.",
+  "factCheck": [
+    {
+      "claim": "Better Off High opens by thanking a drug ('Bless that medicine')",
+      "verdict": "supported",
+      "note": "The first lyric line is 'Bless that medicine'."
+    },
+    {
+      "claim": "'Better off high than dead' is five words, quoted exactly",
+      "verdict": "supported",
+      "note": "Matches the lyrics, and the line is five words."
+    },
+    {
+      "claim": "Said out loud in a kitchen, late, after other options have run out; gratitude with the joy taken out",
+      "verdict": "supported",
+      "note": "Interpretive reading of the lyric's situation, not stated as fact."
+    },
+    {
+      "claim": "Song addressed to a 'you'; someone has settled affairs and is dressed in white, like a bride or a new believer",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Handful of dimes and 'back on the line' read as a payphone call",
+      "verdict": "supported",
+      "note": "Interpretation. The 'back on the line' quote was turned into a paraphrase to stay within the three-line quote limit."
+    },
+    {
+      "claim": "'Almost deceives me' about the quiet in the person's mind",
+      "verdict": "supported",
+      "note": "Quote matches ('The lost stillness in your mind / Almost deceives me')."
+    },
+    {
+      "claim": "Fingerpicked acoustic arpeggio over a root-note bass; kick, snare, hi-hat; moderate tempo",
+      "verdict": "supported",
+      "note": "All passes agree on guitar, bass and drums. Passes 1 and 2 agree on moderate tempo, and bass roots are in passes 1 and 2."
+    },
+    {
+      "claim": "Voice clear and mid-range, melodic 'rather than raw'",
+      "verdict": "corrected",
+      "note": "Pass 1 calls the voice slightly raspy, so 'rather than raw' is unsupported. Reduced to clear, mid-range and melodic."
+    },
+    {
+      "claim": "Clean production with an open, roomy feel and space around each part",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree on open texture and a medium-sized room, and all passes say clean."
+    },
+    {
+      "claim": "Higher harmony joins the lead on the word 'holding'",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree. Pass 2 says no harmonies, but two passes are enough."
+    },
+    {
+      "claim": "'Get some pills' and 'And it still feels like there are hooks in me' quoted late in the song",
+      "verdict": "corrected",
+      "note": "Both lines are in the lyrics, and their place late in the lyric is shown by the lyric structure. Too many quoted lines overall, so 'Get some pills' became a paraphrase."
+    },
+    {
+      "claim": "Tedious talk 'cheap and easy' sounds like contempt for comfort offered",
+      "verdict": "supported",
+      "note": "Interpretation of the lyrics."
+    },
+    {
+      "claim": "Mumford lets the pride and the shame sit side by side",
+      "verdict": "corrected",
+      "note": "Pride and shame aren't shown in the lyrics, and the draft assigned them to the artist. Reworded to contempt and need in the song."
+    },
+    {
+      "claim": "The 'chorus question' about what else to try goes unanswered, with 'Anyway' repeated",
+      "verdict": "corrected",
+      "note": "Calling it a chorus is a structural claim the lyrics don't establish. Changed to 'the recurring question'. The 'Anyway' repetition is in the lyrics."
+    },
+    {
+      "claim": "The opening blessing returns unchanged and the song ends where it began",
+      "verdict": "corrected",
+      "note": "The last lyric stanza repeats the opening one, but how the song itself ends is unsupported. Limited to the lyric's close."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2539,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00061044,
+        "detail": "1099 in / 177 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015267,
+        "detail": "1099 in / 210 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015542,
+        "detail": "1099 in / 221 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.13794,
+        "detail": "51975 in / 399 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051516,
+        "detail": "2744 in / 2027 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.060792,
+        "detail": "3846 in / 5310 out"
+      }
+    ]
+  }
+}
