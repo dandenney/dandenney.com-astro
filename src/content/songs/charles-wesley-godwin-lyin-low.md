@@ -25,6 +25,12 @@ sources:
     url: "https://holler.country/news/breaking/charles-wesley-godwin-announces-new-live-from-the-church-ep/"
   - title: "sonichits.com"
     url: "https://sonichits.com/artist/Charles_Wesley_Godwin"
+recordedAt:
+  - studio: "Music Garden Studios"
+    city: "New Brighton"
+    state: "Pennsylvania"
+    country: "United States"
+    source: "https://www.soundandsoulonline.com/2021/10/19/chasing-more-charles-wesley-godwin/"
 aiGenerated: true
 ---
 "Lying low" usually means hiding out. In **Lyin' Low**, Charles Wesley Godwin gives the phrase a second floor. The narrator lies low by choice, up the holler on the north side of the mountain. His father lay low because the job demanded it: "In a better way than my daddy minin' thirty inch coal." The chorus sets a man resting on his own land beside a man in the mine, and it never says which feeling should win. There's pride in that line, and gratitude, and maybe a little guilt about having the easier version of a hard inheritance. Godwin's own father was a coal miner, which makes the comparison feel less like a device and more like a debt being acknowledged.

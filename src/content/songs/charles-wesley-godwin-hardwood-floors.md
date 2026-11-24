@@ -23,6 +23,12 @@ sources:
     url: "https://americanahighways.org/2019/02/15/review-charles-wesley-godwin-sings-with-authenticity-about-seneca-creek/"
   - title: "Nashville.com: Charles Wesley Godwin Set To Release Debut Album"
     url: "https://www.nashville.com/charles-wesley-godwin-set-to-release-debut-album/"
+recordedAt:
+  - studio: "Music Garden Studios"
+    city: "New Brighton"
+    state: "Pennsylvania"
+    country: "United States"
+    source: "https://www.soundandsoulonline.com/2021/10/19/chasing-more-charles-wesley-godwin/"
 aiGenerated: true
 ---
 The narrator of **Hardwood Floors** doesn't ask for much. Stay downstairs, watch the blue dress come down the steps, then take a hand and dance. Charles Wesley Godwin has said the song was inspired by a date night with his wife, and that it's about living in the moment. The song is that, but the moment is hard-won. Before the first chorus arrives, the narrator admits "it seems like we're always fightin' time," and the only thing keeping hope alive on the bad nights is a thought carried "across state lines."

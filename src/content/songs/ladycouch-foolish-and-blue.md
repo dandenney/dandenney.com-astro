@@ -25,6 +25,12 @@ sources:
     url: "https://www.wmot.org/roots-radio-news/2021-12-03/allen-thompson-and-keshia-bailey-on-the-couch"
   - title: "The Nashvillian: LadyCouch Hits It With “The Future Looks Fine”"
     url: "https://thenashvillian.com/ladycouch-the-future-looks-fine/"
+recordedAt:
+  - studio: "Thunder Sound Studios"
+    city: "Franklin"
+    state: "Kentucky"
+    country: "United States"
+    source: "https://ladycouch.bandcamp.com/track/foolish-and-blue"
 aiGenerated: true
 ---
 Two voices lean on the same note in **Foolish and Blue**, and that pairing makes the song's case before anything else does. A slightly raspy, mid-range lead holds its lines long and steady. A higher voice settles in beside it, sometimes in unison, sometimes a close interval above. It sounds like company. That fits how the song came to be. Keshia Bailey has said she was a little heartbroken when she and Allen Thompson wrote it, and that singing through the heartache helped.

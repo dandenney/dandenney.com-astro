@@ -17,6 +17,12 @@ sources:
     url: "https://americanahighways.org/2021/10/06/song-premiere-charles-wesley-godwin-strong/"
   - title: "First Avenue: Charles Wesley Godwin"
     url: "https://first-avenue.com/performer/charles-wesley-godwin/"
+recordedAt:
+  - studio: "Music Garden Studios"
+    city: "New Brighton"
+    state: "Pennsylvania"
+    country: "United States"
+    source: "https://thecreekfm.com/2021/10/19/chasing-more-charles-wesley-godwin/"
 aiGenerated: true
 ---
 There's a runner in the chorus of **Strong**. Charles Wesley Godwin names Prefontaine, puts him in the outside lane coming around the bend, and asks you to picture yourself there: behind, worn out, kicking anyway. It's an unusual figure for a West Virginia country-folk song to lean on, and it works because a race is something you finish with your body. Nobody talks their way down the last straightaway.

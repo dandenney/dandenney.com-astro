@@ -21,6 +21,12 @@ sources:
     url: "https://amigothedevil.bandcamp.com/track/the-dreamer-2"
   - title: "Wikipedia: Amigo the Devil"
     url: "https://en.wikipedia.org/wiki/Amigo_the_Devil"
+recordedAt:
+  - studio: "Sunset Lodge Recording"
+    city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://store.liarsclubrecords.com/products/amigo-the-devil-vol-1-cd"
 aiGenerated: true
 ---
 **The Dreamer** saves its worst line for the middle of a love scene. The verse sets a romantic table, with the best food, the best wine, bodies pressed together, and then Amigo the Devil slides in "My gun against your spine" in the same even, unhurried voice, as if it were one more detail of a perfect evening. The next line calls it leaving the world the way dreamers do. In this narrator's mind there is no difference between a candlelit dinner and a murder-suicide. That's the horror of the song, and it's why it works.

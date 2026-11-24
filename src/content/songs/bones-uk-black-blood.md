@@ -27,6 +27,11 @@ sources:
     url: "https://altcorner.com/reviews/bones-uk-unplugged/"
   - title: "quipmag.com"
     url: "https://quipmag.com/the-future-of-rock-is-here-an-interview-with-bones-uk/"
+recordedAt:
+  - city: "Los Angeles"
+    state: "California"
+    country: "United States"
+    source: "https://www.roundhillmusic.com/roster/bones-uk"
 aiGenerated: true
 ---
 The quotation marks are the giveaway. In **Black Blood**, Bones UK put scare quotes around "cool" and "being loved," two ideas the narrator waves off as not for them. That punctuation is armor. It's how you say a thing out loud while making sure nobody can accuse you of wanting it.

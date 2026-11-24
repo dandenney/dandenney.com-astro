@@ -25,6 +25,12 @@ sources:
     url: "https://www.allmusic.com/artist/foy-vance-mn0000907816/biography"
   - title: "kids.kiddle.co: Foy Vance facts for kids"
     url: "https://kids.kiddle.co/Foy_Vance"
+recordedAt:
+  - studio: "FAME Studios"
+    city: "Muscle Shoals"
+    state: "Alabama"
+    country: "USA"
+    source: "https://www.prostudiomasters.com/album/page/36804"
 aiGenerated: true
 ---
 "Even so, Lord just the same." That's the line that holds **Make It Rain** together, and it's a strange thing to pray. Foy Vance has just admitted the fire will hurt. He knows the tears might be wasted. He asks for it anyway, eight times over in the early choruses, as if saying it enough could turn dread into consent.

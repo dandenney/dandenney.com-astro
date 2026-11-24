@@ -27,6 +27,12 @@ sources:
     url: "https://fistolo.tumblr.com/catalog"
   - title: "Academic Dictionaries and Encyclopedias: Mischief Brew"
     url: "https://en-academic.com/dic.nsf/enwiki/4205409"
+recordedAt:
+  - studio: "Golden Brown"
+    city: "Brooklyn"
+    state: "New York"
+    country: "United States"
+    source: "https://www.mischiefbrew.com/discography"
 aiGenerated: true
 ---
 The first line is a pun so old it creaks: **"Olde Tyme Mem'ry"** opens with "When Father bought the farm, we sold the farm," and the joke turns on you before you finish smiling. A man died, and the family cashed out. The next line names the shame without dressing it up: "Mistook his blood for rustic charm." The narrator doesn't blame the city first. The narrator starts with what *we* did.

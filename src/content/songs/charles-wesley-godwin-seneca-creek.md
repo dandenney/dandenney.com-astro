@@ -25,6 +25,12 @@ sources:
     url: "https://klofmag.com/2019/01/video-premiere-charles-wesley-godwin-seneca-creek/"
   - title: "allmusic.com"
     url: "https://www.allmusic.com/artist/charles-wesley-godwin-mn0003817019"
+recordedAt:
+  - studio: "Music Garden Studios"
+    city: "New Brighton"
+    state: "Pennsylvania"
+    country: "USA"
+    source: "https://www.discogs.com/release/25457863-Charles-Wesley-Godwin-Seneca"
 aiGenerated: true
 ---
 In **Seneca Creek**, the water comes up. It's 1985, and the narrator names what the flood carried off: Gandee, North Fork, South Branch. Then comes the plainest line in the song: "But it only took the other side." The house he built is still standing. There's relief in that, and pride, and something quieter underneath, the knowledge that luck sorted his family from the neighbors'. The song doesn't stop to weigh it. It moves on.

@@ -23,6 +23,12 @@ sources:
     url: "https://www.broadwayworld.com/bwwmusic/article/Jeremy-Pinnell-to-Release-Sophomore-Studio-Album-Ties-of-Blood-and-Affection-20170612"
   - title: "WEKU: Ky Singer Jeremy Pinnell Brings Old-Time Country Sound And A Rep For Being \"Good People\""
     url: "https://www.weku.org/kentucky-arts-and-culture/2021-07-27/ky-singer-jeremy-pinnell-brings-old-time-country-sound-and-a-rep-for-being-good-people"
+recordedAt:
+  - studio: "Candyland Recording Studio"
+    city: "Dayton"
+    state: "Kentucky"
+    country: "United States"
+    source: "https://www.discogs.com/release/24709322-Jeremy-Pinnell-Ties-Of-Blood-And-Affection"
 aiGenerated: true
 ---
 The preacher shows up in the second verse, and the narrator of **Ballad of 1892** has no patience for him. "The preacher wanna tell me that he knows about hell," Jeremy Pinnell sings from a prison cell, and the next lines make the case against him: no job, no home, and a man of God who has never been all alone the way the narrator has. That's the song's sore spot. The narrator isn't asking to be forgiven. The narrator is asking someone to admit they don't know what this feels like, and the defiance carries something rawer underneath it.

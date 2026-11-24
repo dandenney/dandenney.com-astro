@@ -27,6 +27,11 @@ sources:
     url: "https://www.pulltabsports.com/blog/zach-bryan-is-having-a-moment"
   - title: "Holler: The Ridiculously Blasé Story of How Zach Bryan Created ‘Heading South’"
     url: "https://holler.country/news/breaking/the-ridiculously-blase-story-of-how-zach-bryan-created-heading-south/"
+recordedAt:
+  - city: "Jacksonville"
+    state: "Florida"
+    country: "United States"
+    source: "https://en.wikipedia.org/wiki/DeAnn"
 aiGenerated: true
 ---
 The cruelest line in **Condemned** is a tender one turned inside out: "You can tell me that you love me 'til your little lungs turn blue / But I'm always alone when I fall asleep." Someone is offering love as hard as they can, and Zach Bryan's narrator waves it off as noise. That word "little" is the giveaway. It is affectionate and dismissive at once, the sound of a person who has decided ahead of time that nothing anyone says will reach him.

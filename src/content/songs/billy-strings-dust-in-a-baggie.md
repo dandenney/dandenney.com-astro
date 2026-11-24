@@ -25,6 +25,12 @@ sources:
     url: "https://www.whiskeyriff.com/2024/02/17/billy-strings-shares-backstory-of-iconic-dust-in-a-baggie-basement-video/"
   - title: "Wikipedia: Live Vol. 1 (Billy Strings album)"
     url: "https://en.wikipedia.org/wiki/Live_Vol._1_(Billy_Strings_album)"
+recordedAt:
+  - studio: "Minutia Studios"
+    city: "Nashville"
+    state: "Tennessee"
+    country: "USA"
+    source: "https://billystringsstore.com/products/billy-strings-ep"
 aiGenerated: true
 ---
 One phone call, and the narrator of **Dust in a Baggie** spends it on his father. Not a lawyer, not a friend from the crowd that got him here. "I used my only phone call to contact my daddy," Billy Strings sings, and the next line lands like a gavel: "I got 20 long years for some dust in a baggie." The phrasing does a lot of work. "Daddy" is a kid's word, reached for by a grown man who has nobody else. "Dust" makes the drug sound like almost nothing, which is the point. A lifetime traded for a speck in a plastic bag.

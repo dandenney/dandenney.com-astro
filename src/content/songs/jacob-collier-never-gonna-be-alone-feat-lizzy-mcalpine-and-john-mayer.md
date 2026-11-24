@@ -25,6 +25,11 @@ sources:
     url: "https://www.discogs.com/release/30075988-Jacob-Collier-Djesse-Vol-4"
   - title: "MusicRadar: Lizzy McAlpine, John Mayer and Jacob Collier perform Never Gonna Be Alone together for the first time"
     url: "https://www.musicradar.com/news/john-mayer-lizzy-mcalpine-jacob-collier-live"
+recordedAt:
+  - city: "London"
+    state: "England"
+    country: "United Kingdom"
+    source: "https://www.universalmusic.ca/2024/03/01/four-albums-seven-years-hundreds-of-collaborations-hundreds-of-thousands-of-voices-jacob-colliers-djesse-vol-4-out-now/"
 aiGenerated: true
 ---
 A patch of sunlight on a carpet is a small thing to build a song around, and that smallness is the point. **Never Gonna Be Alone** opens with the narrator looking at the spot "on the carpet where I held you for a moment in June," and everything after is an effort to stay inside that moment. Jacob Collier wrote it with his friend Lizzy McAlpine in the depths of lockdown, and he has said he wanted to explore isolation, loss and memory. You can hear all three in where the lyric goes: a room, a window, a door, a garden at night with a tree looking up at the moon. Nobody leaves home. The person being loved exists only as a place.

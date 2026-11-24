@@ -25,6 +25,11 @@ sources:
     url: "https://www.wyso.org/show/kaleidoscope/2023-08-10/anna-moss-and-the-nightshades-bring-new-orleans-rhythm-to-yellow-springs"
   - title: "neworleans.com: Anna Moss"
     url: "https://www.neworleans.com/listing/anna-moss/47808/"
+recordedAt:
+  - city: "New Orleans"
+    state: "Louisiana"
+    country: "United States"
+    source: "https://www.broadwayworld.com/bwwmusic/article/Anna-Moss-Releases-New-Single-Gravy-Ahead-of-New-Album-20231116"
 aiGenerated: true
 ---
 Before the first verse, there's a count: "one, two, three, one, two, three," then a quiet "shh." That hush is also the first word of the verse, so **Slow Down, Kamikaze** begins by calming the room before it tries to calm anyone in it. The whole lyric works that way. It talks someone down and keeps its voice low while doing it.
