@@ -1,7 +1,7 @@
 {
   "format": "stock-yardage",
   "version": 1,
-  "exportedAt": "2026-11-21T00:33:52.726Z",
+  "exportedAt": "2026-11-25T01:08:52.933Z",
   "goodShots": 5,
   "players": [
     {
@@ -9,24 +9,21 @@
       "name": "Dan",
       "card": [
         {
-          "id": "5i",
-          "label": "5 Iron",
-          "short": "5I",
-          "site": "5i",
-          "carry": {},
-          "total": {},
-          "venues": {}
-        },
-        {
           "id": "6i",
           "label": "6 Iron",
           "short": "6I",
           "site": "6i",
           "carry": {
+            "tee": {
+              "low": 62,
+              "typical": 103,
+              "high": 117,
+              "n": 4
+            },
             "ground": {
               "low": 98,
-              "typical": 129,
-              "high": 147,
+              "typical": 116,
+              "high": 141,
               "n": 5
             }
           },
@@ -44,6 +41,12 @@
               "typical": 129,
               "high": 147,
               "n": 5
+            },
+            "topgolf": {
+              "low": 62,
+              "typical": 114,
+              "high": 117,
+              "n": 5
             }
           }
         },
@@ -52,9 +55,29 @@
           "label": "7 Iron",
           "short": "7I",
           "site": "7i",
-          "carry": {},
+          "carry": {
+            "tee": {
+              "low": 75,
+              "typical": 97,
+              "high": 105,
+              "n": 3
+            },
+            "ground": {
+              "low": 116,
+              "typical": 126,
+              "high": 127,
+              "n": 3
+            }
+          },
           "total": {},
-          "venues": {}
+          "venues": {
+            "topgolf": {
+              "low": 75,
+              "typical": 105,
+              "high": 126,
+              "n": 5
+            }
+          }
         },
         {
           "id": "8i",
@@ -62,10 +85,16 @@
           "short": "8I",
           "site": "8i",
           "carry": {
-            "ground": {
-              "low": 82,
-              "typical": 102,
+            "tee": {
+              "low": 115,
+              "typical": 118,
               "high": 121,
+              "n": 2
+            },
+            "ground": {
+              "low": 102,
+              "typical": 113,
+              "high": 125,
               "n": 5
             }
           },
@@ -83,6 +112,12 @@
               "typical": 102,
               "high": 121,
               "n": 5
+            },
+            "topgolf": {
+              "low": 108,
+              "typical": 115,
+              "high": 125,
+              "n": 5
             }
           }
         },
@@ -91,18 +126,52 @@
           "label": "9 Iron",
           "short": "9I",
           "site": "9i",
-          "carry": {},
+          "carry": {
+            "tee": {
+              "low": 74,
+              "typical": 101,
+              "high": 109,
+              "n": 3
+            },
+            "ground": {
+              "low": 58,
+              "typical": 79,
+              "high": 104,
+              "n": 5
+            }
+          },
           "total": {},
-          "venues": {}
+          "venues": {
+            "topgolf": {
+              "low": 74,
+              "typical": 96,
+              "high": 109,
+              "n": 5
+            }
+          }
         },
         {
           "id": "pw",
           "label": "Pitching Wedge",
           "short": "PW",
           "site": "pw",
-          "carry": {},
+          "carry": {
+            "ground": {
+              "low": 78,
+              "typical": 84,
+              "high": 106,
+              "n": 4
+            }
+          },
           "total": {},
-          "venues": {}
+          "venues": {
+            "topgolf": {
+              "low": 78,
+              "typical": 84,
+              "high": 106,
+              "n": 4
+            }
+          }
         },
         {
           "id": "gw",
@@ -111,9 +180,9 @@
           "site": "gw",
           "carry": {
             "ground": {
-              "low": 89,
-              "typical": 92,
-              "high": 101,
+              "low": 65,
+              "typical": 91,
+              "high": 102,
               "n": 5
             }
           },
@@ -131,6 +200,12 @@
               "typical": 92,
               "high": 101,
               "n": 5
+            },
+            "topgolf": {
+              "low": 65,
+              "typical": 91,
+              "high": 102,
+              "n": 5
             }
           }
         },
@@ -139,9 +214,23 @@
           "label": "Sand Wedge",
           "short": "SW",
           "site": "sw",
-          "carry": {},
+          "carry": {
+            "ground": {
+              "low": 78,
+              "typical": 100,
+              "high": 114,
+              "n": 5
+            }
+          },
           "total": {},
-          "venues": {}
+          "venues": {
+            "topgolf": {
+              "low": 78,
+              "typical": 100,
+              "high": 114,
+              "n": 5
+            }
+          }
         }
       ]
     },

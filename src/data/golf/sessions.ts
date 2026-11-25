@@ -229,4 +229,49 @@ export const sessions: Session[] = [
     takeaway:
       "The first of many distance measurement sessions, which explains the spread. The numbers should tighten as the swing gets more consistent.",
   },
+  {
+    id: 7,
+    player: "dan",
+    date: "2026-11-24",
+    venueSlug: "topgolf-nashville",
+    kind: "range",
+    focus: "Whole bag in Stock Yardage, 6-iron through sand wedge, off the mat and off a tee",
+    clubs: [
+      {
+        club: "6i",
+        longest: 141,
+        note: "Best carry of seven good shots logged in Stock Yardage, three off the mat and four off a tee. Mat carry ran 114 to 141, tee carry 62 to 117. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+      {
+        club: "7i",
+        longest: 127,
+        note: "Best carry of six good shots logged in Stock Yardage, three off the mat and three off a tee. Mat carry ran 116 to 127, tee carry 75 to 105. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+      {
+        club: "8i",
+        longest: 125,
+        note: "Best carry of five good shots logged in Stock Yardage, three off the mat and two off a tee. Mat carry ran 108 to 125, tee carry 115 to 121. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+      {
+        club: "9i",
+        longest: 109,
+        note: "Best carry of eight good shots logged in Stock Yardage, five off the mat and three off a tee. Mat carry ran 58 to 104, tee carry 74 to 109. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+      {
+        club: "pw",
+        longest: 106,
+        note: "Best carry of four good shots logged in Stock Yardage, all off the mat. Carry ran 78 to 106. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+      {
+        club: "gw",
+        longest: 102,
+        note: "Best carry of 10 good shots logged in Stock Yardage, all off the mat. Carry ran 65 to 102. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+      {
+        club: "sw",
+        longest: 114,
+        note: "Best carry of 12 good shots logged in Stock Yardage, all off the mat. Carry ran 67 to 114. Topgolf reports carry only, and only good shots were logged, so no session averages.",
+      },
+    ],
+  },
 ];
