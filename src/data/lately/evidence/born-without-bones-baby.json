@@ -1,0 +1,211 @@
+{
+  "spotifyId": "1Qawn8hSErf3X5idQ2LEzD",
+  "reviewedAt": "2026-11-26T17:37:13.385Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3405884"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. Electric guitar plays a sustained, clean chord. Bass guitar plays a simple, root-note line. Drums enter with a driving beat, including snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is moderate. The groove is initially relaxed and then becomes more energetic and driving with the entry of the drums.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is initially melodic and then becomes more forceful and belted. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals and instruments. The texture is full.\n\nArrangement:\nThe excerpt begins with acoustic guitar, electric guitar, and bass. The voice enters shortly after. Drums enter around the 24-second mark, making the arrangement fuller and more dynamic.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. Electric guitar plays a sustained chord. Bass guitar plays a simple, root-note line. Drums enter with a driving beat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is initially relaxed and then becomes more energetic and driving.\n\nVocals:\nThe male voice is clear and melodic, with a slightly raw, unpolished character. The delivery is initially gentle, then becomes more forceful and passionate. There are no harmonies.\n\nProduction:\nThe sound is somewhat raw and unpolished, with a natural room sound. The texture is clear, allowing individual instruments to be heard.\n\nArrangement:\nThe excerpt begins with acoustic guitar, electric guitar, and bass. The drums enter later, building the energy. The vocals begin softly and then increase in intensity.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. Electric guitar plays a sustained, clean chord. Bass guitar plays a simple, root-note line. Drums enter with a driving beat, including snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is moderate. The groove is initially relaxed and then becomes more energetic and driving with the entry of the drums.\n\nVocals:\nA single voice sings in a clear, mid-range register. The delivery is initially melodic and then becomes more forceful and belted. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals and instruments. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with acoustic guitar, electric guitar, and bass. The voice enters shortly after. Drums enter around the 24-second mark, increasing the intensity and building to a fuller sound.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The album Baby was recorded in September and November 2012 at Magpie Cage in Baltimore, MD. J. Robbins engineered it, Justin Fogleman assisted, and Dan Coutant mastered it.",
+        "source": "https://bornwithoutbones.bandcamp.com/album/baby"
+      },
+      {
+        "claim": "Discogs credits production of Baby to Born Without Bones and J. Robbins. It also lists Jim Creighton on bass, Patrick Murphy on drums, Jonathan Brucato on guitar, and Scott Ayotte on guitar and vocals. Robbins is credited with slide guitar, tambourine and shaker on some tracks, and Shawna Potter with vocals on 'Bad Habit'.",
+        "source": "https://www.discogs.com/release/12781083-Born-Without-Bones-Baby"
+      },
+      {
+        "claim": "Scott Ayotte said he wrote the song 'Baby' first. The rest of the album's songs were then about relationships, love and heartbreak, and he noted that many people call their partners 'baby'.",
+        "source": "https://chorus.fm/features/interviews/scott-ayotte-of-born-without-bones/"
+      },
+      {
+        "claim": "Ayotte said the band had never played 'Baby' live when they recorded it for the album. He called it almost a meme song now and said it was the song that started that.",
+        "source": "https://www.getalternative.com/artist-interview-scott-ayotte-of-born-without-bones/"
+      },
+      {
+        "claim": "Ayotte said Pat Murphy drummed on Baby and Young at the Bend, and on a couple of songs on Say Hello.",
+        "source": "https://www.getalternative.com/artist-interview-scott-ayotte-of-born-without-bones/"
+      },
+      {
+        "claim": "Ayotte said he was 21 when they recorded Baby and that the band didn't really know what they were doing.",
+        "source": "https://chorus.fm/features/interviews/scott-ayotte-of-born-without-bones/"
+      },
+      {
+        "claim": "The band said they found a lot of common ground in taste with J. Robbins. Robbins also showed them music while they made the record.",
+        "source": "https://open.spotify.com/artist/541FGx3Aj5vHIpwFiByjFg"
+      },
+      {
+        "claim": "Ayotte called Baby a heartbreak record and said it is when the group really became a band and developed its sound.",
+        "source": "https://www.strawberryskiesblog.com/post/interview-born-without-bones-scott-ayotte-talks-eight-years-of-baby-live-shows-and-what-s-next"
+      },
+      {
+        "claim": "Baby was self-released in 2013. Born Without Bones signed to Pure Noise Records in 2021 and issued the Pictures of the Sun EP, which re-recorded songs including 'Baby'. In 2023 they toured for the album's 10th anniversary.",
+        "source": "https://www.masqueradeatlanta.com/attraction/born-without-bones/"
+      },
+      {
+        "claim": "Born Without Bones started as a solo project by Scott Ayotte. Guitarist Jonathan Brucato and bassist Jim Creighton later joined, and the band is from Milford, Massachusetts.",
+        "source": "https://www.last.fm/music/Born+Without+Bones/Baby"
+      }
+    ],
+    "lineage": "The band is rooted in the Massachusetts DIY punk scene and mixes 90s alternative guitars and hooks with heartland singer-songwriter storytelling, and sources also tag it as midwest emo.",
+    "genres": [
+      "alternative rock",
+      "midwest emo",
+      "indie rock"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Magpie Cage Recording Studio",
+        "city": "Baltimore",
+        "state": "MD",
+        "country": "USA",
+        "source": "https://bornwithoutbones.bandcamp.com/album/baby"
+      }
+    ]
+  },
+  "draft": "**Baby** opens with an ultimatum: \"You're killing me so finish me off or spare me.\" Then Born Without Bones swerves into something smaller and harder to bear. Scott Ayotte starts taking attendance in a house he's no longer welcome in. Where's Nicole? Is Priscilla ordering Chinese? Is Wayne working through the wine bottles everyone brought? It's the jealousy of someone picturing a party that goes on fine without them. The details are so ordinary they sting, because ordinary is exactly what he's lost.\n\nThe memories come in the same plain register: sex on the living room floor every Sunday, the smell of a log cabin, small hands reaching for his. Then the line where it curdles: \"I wonder what they're clasped around now.\" It reads as tenderness and works as suspicion. He can't think about her hands without imagining someone else holding them. Later, a bed that sinks in the middle, a mismatch of bodies, waking up covered in lint. Ayotte keeps reaching for physical evidence, as if proving the closeness was real might bring it back.\n\nWhat keeps the song honest is that he doesn't only grieve. \"But I don't miss not hearing my name\" admits the relationship was starving him too, that he wanted more and kept getting the same. Then he folds anyway: \"You've got me now.\" Clear-eyed and hopelessly hooked sit in the same verse, and neither wins. The last stretch of lyrics goes big (\"I lived and died,\" a \"meaningless life\"), the way heartbreak does at 21, which is how old Ayotte says he was when the band cut the record.\n\nThe arrangement holds back to start. A fingerpicked acoustic pattern circles under a clean, sustained electric chord and a bass that sticks to root notes. The tempo is moderate and the groove is relaxed. Ayotte sings clear and mid-range, alone, with no harmonies to soften it. Then the drums kick in with a driving beat, and his delivery moves from melodic to belted. It's the midwest emo move by way of Massachusetts DIY punk: a quiet confession that can't stay quiet, with 90s alternative guitars underneath and heartland storytelling in the specifics.\n\nAyotte says he wrote \"Baby\" before anything else on the album, and the band had never played it live when they tracked it with J. Robbins at Magpie Cage in Baltimore in 2012. He's called it almost a meme song now. They re-recorded it in 2021 for the Pictures of the Sun EP, and toured the album's tenth anniversary in 2023.\n\nIt sticks because it asks the question you're ashamed to ask after a breakup, what their hands are holding now, and then lets you shout it.",
+  "factCheck": [
+    {
+      "claim": "Opens with the line \"You're killing me so finish me off or spare me.\"",
+      "verdict": "supported",
+      "note": "Matches the first lyric exactly."
+    },
+    {
+      "claim": "Scott Ayotte is the singer taking attendance on Nicole, Priscilla and Wayne",
+      "verdict": "supported",
+      "note": "Discogs credits Ayotte with guitar and vocals, and the names and wine details are in the lyrics."
+    },
+    {
+      "claim": "He is in a house he's no longer welcome in",
+      "verdict": "corrected",
+      "note": "The lyrics don't say he's unwelcome. Changed to a reading that fits the lyrics (picturing the scene from far away)."
+    },
+    {
+      "claim": "Quotes: \"I wonder what they're clasped around now\" and \"But I don't miss not hearing my name\"",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "Memories: Sunday-night sex on the living room floor, log cabin smell, small hands, bed that sinks in the middle, waking up covered in lint",
+      "verdict": "supported",
+      "note": "All in the lyrics."
+    },
+    {
+      "claim": "Clear-eyed and hopelessly hooked sit \"in the same verse\"",
+      "verdict": "corrected",
+      "note": "The lyrics have no stanza breaks, so verse structure can't be claimed. Changed to \"same breath\"."
+    },
+    {
+      "claim": "Quoted \"You're got me now\" / \"I lived and died\" / \"meaningless life\" as extra quotes",
+      "verdict": "corrected",
+      "note": "The wording matches the lyrics, but the review quoted more than three lines. Turned these into paraphrase."
+    },
+    {
+      "claim": "Ayotte was 21 when the band cut the record",
+      "verdict": "supported",
+      "note": "Ayotte said this in the Chorus.fm interview."
+    },
+    {
+      "claim": "Fingerpicked acoustic pattern, clean sustained electric chord, root-note bass, moderate tempo, relaxed groove",
+      "verdict": "supported",
+      "note": "All three passes agree. Pass 2 omits \"clean\" but agrees on the rest."
+    },
+    {
+      "claim": "Ayotte sings clear, mid-range, alone, no harmonies",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 say clear mid-range, pass 2 says clear, and all three say no harmonies and a single voice."
+    },
+    {
+      "claim": "Drums come in with a driving beat and the delivery moves from melodic to belted",
+      "verdict": "supported",
+      "note": "All passes agree. Removed \"holds back to start\" because the excerpt's position in the song is unknown."
+    },
+    {
+      "claim": "90s alternative guitars underneath the song",
+      "verdict": "removed",
+      "note": "A sound claim not backed by the listening passes. The lineage note describes the band, not this track's sound."
+    },
+    {
+      "claim": "Rooted in Massachusetts DIY punk, tagged midwest emo, heartland storytelling",
+      "verdict": "supported",
+      "note": "From the lineage note. Reworded to describe the band's tags and roots rather than the track's guitar sound."
+    },
+    {
+      "claim": "Ayotte says he wrote \"Baby\" before anything else on the album",
+      "verdict": "supported",
+      "note": "He said he wrote the song first."
+    },
+    {
+      "claim": "Band had never played it live when recording; called it almost a meme song now",
+      "verdict": "supported",
+      "note": "From the Get Alternative interview."
+    },
+    {
+      "claim": "Tracked with J. Robbins at Magpie Cage in Baltimore in 2012",
+      "verdict": "corrected",
+      "note": "The album was recorded there in September and November 2012, with Robbins engineering. Reworded to match."
+    },
+    {
+      "claim": "Re-recorded in 2021 for the Pictures of the Sun EP",
+      "verdict": "supported",
+      "note": "Per the Masquerade Atlanta source."
+    },
+    {
+      "claim": "Toured the album's tenth anniversary in 2023",
+      "verdict": "supported",
+      "note": "Per the Masquerade Atlanta source."
+    }
+  ],
+  "lint": [
+    "evidence"
+  ],
+  "cost": {
+    "totalUsd": 0.2568,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014986,
+        "detail": "1097 in / 199 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014336,
+        "detail": "1097 in / 173 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014886,
+        "detail": "1097 in / 195 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.144596,
+        "detail": "49478 in / 1564 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.051648,
+        "detail": "3862 in / 1810 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056136,
+        "detail": "5053 in / 4603 out"
+      }
+    ]
+  }
+}

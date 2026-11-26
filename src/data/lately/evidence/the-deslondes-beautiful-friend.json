@@ -1,0 +1,218 @@
+{
+  "spotifyId": "4G3hsMbbTUffZfG9l400kU",
+  "reviewedAt": "2026-11-26T17:46:30.134Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/10258125"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked pattern. A bass guitar plays a walking line. A drum kit plays a shuffle beat with brushes. A harmonica plays a melodic line.\n\nTempo and Groove Feel\nThe tempo is medium. The groove feels relaxed and swinging.\n\nVocals\nA male voice sings in a clear, mid-range register. The delivery is smooth. Harmonies are present, with a second voice singing in unison or a close interval.\n\nProduction\nThe room sounds open. The texture is clean. The production is polished.\n\nArrangement\nThe excerpt begins with acoustic guitar, bass, and drums. Vocals enter shortly after. Harmonica enters around the middle of the excerpt and continues to the end.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked pattern. A bass guitar plays a walking line. A drum kit plays a shuffle rhythm with brushes. A steel guitar plays sustained notes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed shuffle.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and unforced. Harmonies are present, with multiple voices singing in unison or close harmony.\n\nProduction:\nThe room sounds open. The texture is clean. The production is polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums. The steel guitar enters around the 0:08 mark, playing sustained notes. The vocals enter around 0:02. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked pattern. A bass guitar plays a walking line. A drum kit plays a shuffle beat with brushes. A steel guitar plays sustained notes.\n\nTempo and Groove Feel\nThe tempo is medium. The groove feels relaxed and swinging.\n\nVocals\nA male voice sings in a clear, mid-range register. The delivery is smooth and conversational. Harmonies are present, with a second voice singing in unison or a close interval.\n\nProduction\nThe room sounds moderately live, with some natural reverb. The texture is warm and full. The production feels polished.\n\nArrangement\nThe excerpt begins with acoustic guitar, bass, and drums. Vocals enter shortly after. The steel guitar enters later in the excerpt, playing sustained notes over the existing instrumentation. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Beautiful Friend\" was written by Dan Cutler, who is the bassist of The Deslondes. He says it was inspired by the Stanley Brothers hymn \"Jordan.\"",
+        "source": "https://www.dontrocktheinbox.com/meet-the-best-country-band-youre-not-listening-to-the-deslondes/"
+      },
+      {
+        "claim": "Cutler said he was thinking about how to make up with his now-ex-wife after upsetting her when he wrote the song.",
+        "source": "https://www.dontrocktheinbox.com/meet-the-best-country-band-youre-not-listening-to-the-deslondes/"
+      },
+      {
+        "claim": "The song is described as one of the band's few true ballads. Bassist Howe Pearson recalls that someone proposed during a performance of it at one of the first shows he played with the band.",
+        "source": "https://www.dontrocktheinbox.com/meet-the-best-country-band-youre-not-listening-to-the-deslondes/"
+      },
+      {
+        "claim": "Hurry Home (13 songs) was released June 23, 2017 on New West Records. It is the band's second album, following their 2015 self-titled debut.",
+        "source": "https://savingcountrymusic.com/the-deslondes-to-release-new-album-hurry-home/"
+      },
+      {
+        "claim": "The album was produced by The Deslondes and Andrija Tokic. Tokic and Eduardo DuQuesne recorded it at The Tigermen Den in New Orleans and The Bomb Shelter in Nashville, and John Baldwin mastered it in Nashville.",
+        "source": "https://thedeslondes.bandcamp.com/album/hurry-home"
+      },
+      {
+        "claim": "The album credits list all five members as performers: Sam Doores, Riley Downing, Dan Cutler, John James Tourville and Cameron Snyder.",
+        "source": "https://thedeslondes.bandcamp.com/album/hurry-home"
+      },
+      {
+        "claim": "The album sessions began with five days of recording at New West's studio and rehearsal space in Athens, GA. Tracking then moved to a makeshift studio at The Tigermen Den in New Orleans' Bywater neighborhood, and the album was finished in sessions at Tokic's Nashville studio in fall 2016.",
+        "source": "https://static1.squarespace.com/static/55db3cf0e4b06db5067b85e7/t/5910980eff7c502e783d6fae/1494259727443/DeslondesHurryHomeAlbumPressRelease.pdf"
+      },
+      {
+        "claim": "Songwriting and lead vocals on Hurry Home were split among all five band members, and each member contributed at least two original songs.",
+        "source": "https://savingcountrymusic.com/the-deslondes-to-release-new-album-hurry-home/"
+      },
+      {
+        "claim": "A later \"Live AF\" version of \"Beautiful Friend\" was released April 9, 2024 on Western AF. It has Cutler on lead vocals and bass, and Riley Downing on harmonica and guitar.",
+        "source": "https://www.youtube.com/watch?v=r7klSPRXbcU&pp=0gcJCdgAo7VqN5tD"
+      },
+      {
+        "claim": "Cutler grew up in Detroit and studied audio engineering at Berklee. He moved to New Orleans not long after Katrina, where he met Sam Doores and formed The Tumbleweeds, the band that became The Deslondes.",
+        "source": "https://www.dontrocktheinbox.com/meet-the-best-country-band-youre-not-listening-to-the-deslondes/"
+      }
+    ],
+    "lineage": "The Deslondes are a New Orleans band that blends country, R&B, soul, folk and gospel, and Hurry Home moved toward a more electrified, psychedelic soul sound than their country-folk debut.",
+    "genres": [
+      "americana",
+      "country soul",
+      "country folk"
+    ],
+    "recordedAt": [
+      {
+        "studio": "The Tigermen Den",
+        "city": "New Orleans",
+        "state": "LA",
+        "country": "USA",
+        "source": "https://thedeslondes.bandcamp.com/album/hurry-home"
+      },
+      {
+        "studio": "The Bomb Shelter",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "source": "https://thedeslondes.bandcamp.com/album/hurry-home"
+      },
+      {
+        "studio": "New West Records studio and rehearsal space",
+        "city": "Athens",
+        "state": "GA",
+        "country": "USA",
+        "source": "https://static1.squarespace.com/static/55db3cf0e4b06db5067b85e7/t/5910980eff7c502e783d6fae/1494259727443/DeslondesHurryHomeAlbumPressRelease.pdf"
+      }
+    ]
+  },
+  "draft": "**Beautiful Friend** is an apology that won't quite start. Every verse opens on a condition: if you really want to know, if you ask just one time, then I'll tell you how I feel. The narrator has the words ready but needs the other person to make the first move. Dan Cutler, the Deslondes' bassist, wrote it while thinking about how to make up with his now-ex-wife after he'd upset her. You can hear that stalemate in the grammar. Someone is standing in the doorway, sorry, and still a little too proud to walk in unasked.\n\nThe chorus is where the guard drops. It doesn't beg for forgiveness or love. It asks for something smaller and harder: would you want to be a beautiful friend to me, because I want to be one to you. After a fight, that's the honest request. It means *let's be on the same side again*.\n\nThe middle verse is the song's best piece of writing. It tries out the escape fantasy and talks itself out of it in the same breath: \"If I didn't have you to lose / I guess I'd be a free man.\" The phrase \"you to lose\" carries the fear plainly. Then comes the turn, a \"heartworn\" person asking what good freedom would even do, and the line that stays with you: \"The cost of love that you never had.\" Freedom gets weighed against loneliness, and the narrator doesn't pretend the choice is close.\n\nCutler says the song grew out of the Stanley Brothers hymn \"Jordan,\" and that bluegrass-gospel root shows in its plainness: short lines, a repeated plea, nothing clever standing between the singer and the confession. The band plays it as a slow country shuffle. Brushes swish on the snare, the bass walks, an acoustic guitar is fingerpicked underneath, and steel guitar lays long sustained notes over the top. The lead voice is clear and unhurried, sitting in the middle of its range, with a second voice shadowing it in close harmony. The room sounds open and clean, so the song feels like it was played together, not stacked up part by part.\n\nThat's notable on *Hurry Home*, the 2017 record where the New Orleans band reached toward electrified, psychedelic soul. \"Beautiful Friend\" is one of their few true ballads, and it stays close to the front porch. Bassist Howe Pearson remembers someone proposing during a performance of it at one of his first shows with the band. A song written to patch up a marriage that didn't last became somebody else's beginning. That isn't a contradiction. Wanting to be good to someone is the part that carries over to other people.\n\nIt sticks because it catches the moment just before reconciliation, when you know exactly what you'd say and are still waiting, hoping, to be asked.",
+  "factCheck": [
+    {
+      "claim": "Verses open on conditions: 'if you really wanna know', 'if you ask me just one time'",
+      "verdict": "corrected",
+      "note": "Lyrics support this for the first and last verses, and the middle verse opens on 'if I didn't have you by my side'. Changed 'every verse' to 'the verses keep opening'."
+    },
+    {
+      "claim": "Dan Cutler, the Deslondes' bassist, wrote the song while thinking about how to make up with his now-ex-wife after upsetting her",
+      "verdict": "supported",
+      "note": "Matches the Don't Rock the Inbox facts."
+    },
+    {
+      "claim": "Quote: 'If I didn't have you to lose / I guess I'd be a free man'",
+      "verdict": "supported",
+      "note": "Exact match, two consecutive lines."
+    },
+    {
+      "claim": "Quote: 'heartworn' and 'The cost of love that you never had'",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "Chorus paraphrase: wanting to be a beautiful friend to each other",
+      "verdict": "supported",
+      "note": "Matches the chorus lyrics."
+    },
+    {
+      "claim": "Cutler says the song grew out of the Stanley Brothers hymn 'Jordan'",
+      "verdict": "supported",
+      "note": "The source says it was inspired by the hymn."
+    },
+    {
+      "claim": "The hymn's 'bluegrass-gospel root'",
+      "verdict": "corrected",
+      "note": "The Stanley Brothers' genre is not in the facts. Changed to 'hymn root'."
+    },
+    {
+      "claim": "Played as a 'slow country shuffle'",
+      "verdict": "corrected",
+      "note": "The passes say medium or moderate tempo with a relaxed shuffle. 'Slow' and 'country' are not backed. Changed to 'relaxed, medium-tempo shuffle'."
+    },
+    {
+      "claim": "Brushes on the drums, walking bass, fingerpicked acoustic guitar",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Steel guitar plays long sustained notes",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree. Pass 1 heard harmonica instead."
+    },
+    {
+      "claim": "Lead voice is clear and mid-range; unhurried",
+      "verdict": "corrected",
+      "note": "Clear, mid-range and smooth are backed by all passes. 'Unhurried' is not, so it became 'smooth'."
+    },
+    {
+      "claim": "A second voice shadows in close harmony",
+      "verdict": "supported",
+      "note": "All passes report harmonies, with a second voice in unison or a close interval."
+    },
+    {
+      "claim": "Room sounds open and clean, so it feels played together",
+      "verdict": "supported",
+      "note": "Open is in passes 1 and 2, clean in all three. The 'played together' feeling is the critic's impression; the claim about how it was recorded was softened."
+    },
+    {
+      "claim": "Hurry Home is a 2017 record where the New Orleans band reached toward electrified, psychedelic soul",
+      "verdict": "supported",
+      "note": "Matches the lineage note and the release date."
+    },
+    {
+      "claim": "One of their few true ballads",
+      "verdict": "supported",
+      "note": "Matches the Don't Rock the Inbox facts."
+    },
+    {
+      "claim": "Howe Pearson remembers someone proposing during a performance at one of his first shows with the band",
+      "verdict": "supported",
+      "note": "Matches the source."
+    },
+    {
+      "claim": "The song was written to patch up a marriage that didn't last",
+      "verdict": "supported",
+      "note": "Follows from Cutler's 'now-ex-wife' and the reconciliation context."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2584,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014301,
+        "detail": "1102 in / 171 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013751,
+        "detail": "1102 in / 149 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014201,
+        "detail": "1102 in / 167 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15201599999999998,
+        "detail": "51283 in / 1945 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054572,
+        "detail": "3753 in / 1978 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047546,
+        "detail": "4928 in / 3769 out"
+      }
+    ]
+  }
+}

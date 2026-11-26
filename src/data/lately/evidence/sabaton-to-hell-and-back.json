@@ -1,0 +1,223 @@
+{
+  "spotifyId": "1BrgjqSg9du0lj3TUMLluL",
+  "reviewedAt": "2026-11-26T17:50:37.461Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/7982198"
+  },
+  "listening": "Pass 1:\nA male voice sings with a clear, powerful, and slightly raspy character. He sings in a mid-range, with a sustained, almost operatic delivery. The vocals are mostly solo, but there are instances of layered harmonies, particularly during the chorus-like sections.\n\nThe instruments include a prominent electric guitar, which plays both rhythmic power chords and melodic lines. A bass guitar provides a deep, driving foundation. Drums lay down a steady, mid-tempo beat with a strong emphasis on the snare and kick drum, creating a marching feel. There are also orchestral elements, including strings and possibly brass, adding a grand and epic texture.\n\nThe tempo is moderate, with a consistent, driving groove that feels anthemic and powerful. The production is polished and clean, with a spacious room sound that gives the impression of a large, open space. The overall texture is full and rich.\n\nThe arrangement builds from a more sparse vocal and guitar intro into a fuller sound with the addition of drums, bass, and orchestral elements. The intensity increases as the song progresses, with the layered vocals and instruments creating a powerful, wall-of-sound effect.\n\nPass 2:\nInstruments:\nA distorted electric guitar plays a driving, palm-muted riff. A bass guitar plays a low, rumbling line. Drums provide a steady beat with kick, snare, and cymbals. A keyboard plays sustained, high-pitched chords.\n\nTempo and Groove:\nThe tempo is fast. The groove is a driving, powerful rock feel.\n\nVocals:\nA single voice sings with a clear, powerful, and slightly raspy character. The delivery is anthemic and strong. There are no harmonies.\n\nProduction:\nThe production sounds like a large, open room. The texture is full and polished, with a clear mix.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter immediately. The keyboard chords enter and sustain. The drums maintain a consistent beat throughout. The guitar riff continues as the main melodic driver.\n\nPass 3:\nInstruments:\nA distorted electric guitar plays a driving, palm-muted riff. A bass guitar plays a low, steady line. Drums provide a powerful, consistent beat with a strong snare and kick, and occasional cymbal crashes. A keyboard or synth plays sustained, high-pitched notes.\n\nTempo and Groove:\nThe tempo is fast and driving. The groove is a steady, powerful march.\n\nVocals:\nA male voice sings with a clear, strong, and slightly raspy character. The delivery is anthemic and declarative. There are no harmonies.\n\nProduction:\nThe production is polished and full, with a clear, open room sound. The texture is thick and powerful.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter immediately. The keyboard/synth enters and drops out, then re-enters. The drums maintain a consistent beat throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"To Hell and Back\" was written by Joakim Brodén and Pär Sundström and produced by Peter Tägtgren.",
+        "source": "https://www.imdb.com/title/tt14463526/"
+      },
+      {
+        "claim": "Pär Sundström said Joakim wrote the song. Joakim called the rest of the band to hear it, and they all agreed it was a great song.",
+        "source": "https://sabaton.fandom.com/wiki/To_Hell_and_Back_(song)"
+      },
+      {
+        "claim": "The song is about Audie Murphy, one of the most decorated US soldiers of WWII, and his post-war battle with PTSD. It draws on his poem 'The Crosses Grow on Anzio' from his book To Hell and Back.",
+        "source": "https://en.wikipedia.org/wiki/Heroes_(Sabaton_album)"
+      },
+      {
+        "claim": "It was released as the first single from Heroes, on 28 March 2014, ahead of the album.",
+        "source": "https://en.wikipedia.org/wiki/Heroes_(Sabaton_album)"
+      },
+      {
+        "claim": "In an interview with Metal Exiles, Joakim Brodén called it the album's first single, about Audie Murphy, and said it has some interesting musical twists. He also noted that Murphy became a western movie star after the war.",
+        "source": "http://metalexiles.com/sabaton1.html"
+      },
+      {
+        "claim": "Brodén has described the song as heavy metal meets spaghetti western in the style of Ennio Morricone.",
+        "source": "https://2loud2oldmusic.com/2024/03/03/my-sunday-song-to-hell-and-back-by-sabaton/"
+      },
+      {
+        "claim": "Brodén visited Audie Murphy's grave at Arlington. Murphy's son later came to a Sabaton show at the Greek Theatre in Los Angeles and gave the band an original poster from the 1955 film To Hell and Back.",
+        "source": "https://sabaton.fandom.com/wiki/To_Hell_and_Back_(song)"
+      },
+      {
+        "claim": "The music video was directed by Owe Lingvall and produced by Bengt Larvia.",
+        "source": "https://en.wikipedia.org/wiki/Heroes_(Sabaton_album)"
+      },
+      {
+        "claim": "Heroes was recorded in January–February 2014 at The Abyss (Pärlby, Sweden) and produced by Peter Tägtgren. It is the first Sabaton album with guitarists Chris Rörland and Thobbe Englund and drummer Hannes van Dahl.",
+        "source": "https://en.wikipedia.org/wiki/Heroes_(Sabaton_album)"
+      },
+      {
+        "claim": "Heroes personnel: Pär Sundström on bass and backing vocals, Joakim Brodén on keyboards and vocals, Thobbe Englund and Chris Rörland on guitars and backing vocals, Hannes Van Dahl on drums. Tägtgren produced, recorded, engineered and mixed. Jonas Kjellgren did additional recording and mastering.",
+        "source": "https://metal.fandom.com/wiki/Heroes"
+      }
+    ],
+    "lineage": "Sabaton is a Swedish power metal band known for history- and war-themed songs, and Heroes continued that approach by focusing on individual soldiers.",
+    "genres": [
+      "power metal",
+      "heavy metal"
+    ],
+    "recordedAt": [
+      {
+        "studio": "The Abyss (Abyss Studios)",
+        "city": "Pärlby",
+        "state": null,
+        "country": "Sweden",
+        "source": "https://en.wikipedia.org/wiki/Heroes_(Sabaton_album)"
+      }
+    ]
+  },
+  "draft": "The cruelest line in **To Hell and Back** is a piece of battlefield advice: \"Let them fall face down if they must die / Making it easier to say goodbye.\" It's practical and it's awful. You don't look at the faces of the friends you lose, because you still have to get up and keep fighting. Sabaton tuck that line into a verse about Audie Murphy, one of the most decorated American soldiers of the Second World War, and it tells you more about what war cost him than any medal count could.\n\nThe song is built on that split. The chorus is a salute, all charging and attacking, a hero's march into hell and out again. The verses keep catching what the salute leaves out. The opening verse says Murphy \"hides his emotions,\" and the bridge between choruses won't quite commit to glory: if war holds any, the song says, let it rest on men like him. Then, in the first verse, a small aside notes that dead men never come back. In the second, that same spot becomes the men who went to hell and came back. The pride is real, and so is the doubt underneath it.\n\nThen the point of view shifts. The last stretch drops the third person and speaks as Murphy, calling listeners to gather round while he tells of cannons that still roar along the shore, the dead that are \"still there when I sleep.\" Joakim Brodén and Pär Sundström built the song around Murphy's own poem, \"The Crosses Grow on Anzio,\" from his book *To Hell and Back*, and the song is as much about his post-war PTSD as his combat. The final chorus moves into the past tense. He charged. He went to hell and back. The war is over, but the man is still carrying it.\n\nMusically it's Sabaton doing what the Swedish power metal band does best, turning history into something a crowd can shout back. A distorted, palm-muted guitar riff drives it, with a low bass line underneath and drums hitting hard on kick and snare in a quick, steady march. High keyboard chords hang over the top. Brodén sings with a clear, strong, slightly raspy voice, declaring more than confiding. The production, by Peter Tägtgren, sounds polished and huge, like a hall built for the chorus.\n\nBrodén described it as heavy metal meeting the spaghetti westerns of Ennio Morricone. That fits a story whose hero came home and became a western movie star, playing himself in the 1955 film of his own book. Brodén later visited Murphy's grave at Arlington, and Murphy's son came to a Sabaton show in Los Angeles and gave the band an original poster from that film.\n\nYou come for the fist-raising chorus and stay for the man inside it, a hero being cheered for the very thing that won't let him sleep.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"Let them fall face down if they must die / Making it easier to say goodbye.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. It is two consecutive lines."
+    },
+    {
+      "claim": "The song is about Audie Murphy, one of the most decorated American soldiers of WWII.",
+      "verdict": "supported",
+      "note": "Supported by the Heroes album facts."
+    },
+    {
+      "claim": "The opening verse says Murphy \"hides his emotions.\"",
+      "verdict": "corrected",
+      "note": "The lyric is accurate, but it was turned into a paraphrase to keep the quoted lines within the limit of three."
+    },
+    {
+      "claim": "The \"bridge between choruses\" says that if war holds any glory, let it rest on men like him.",
+      "verdict": "corrected",
+      "note": "The lyrics support the content. The structural label 'bridge' was replaced with a plain description of the section."
+    },
+    {
+      "claim": "In the first verse, a small aside says dead men never come back; in the second, that same spot becomes the men who went to hell and came back.",
+      "verdict": "corrected",
+      "note": "The parenthetical '(Dead men will never come back)' appears in the first 'Bright, a white light' section, not in a verse. The second pass of that section ends 'Who went to hell and came back.' Wording fixed."
+    },
+    {
+      "claim": "The last stretch speaks as Murphy, calling listeners to gather round, with cannons that still roar along the shore.",
+      "verdict": "supported",
+      "note": "'Gather 'round me and listen while I speak' and 'where cannons still roar' are in the lyrics. That it is Murphy speaking is interpretation."
+    },
+    {
+      "claim": "The dead are \"still there when I sleep.\"",
+      "verdict": "corrected",
+      "note": "In the lyrics the cannons are 'still there when I sleep', not the dead. Corrected."
+    },
+    {
+      "claim": "The final chorus moves into the past tense: He charged. He went to hell and back.",
+      "verdict": "supported",
+      "note": "Matches the final lyrics."
+    },
+    {
+      "claim": "Brodén and Sundström built the song around Murphy's own poem 'The Crosses Grow on Anzio' from his book To Hell and Back.",
+      "verdict": "corrected",
+      "note": "The packet says the song draws on the poem and that Brodén and Sundström wrote it. 'Built around' was softened to 'draws on'."
+    },
+    {
+      "claim": "The song is as much about his post-war PTSD as his combat.",
+      "verdict": "supported",
+      "note": "The packet cites the post-war PTSD theme. The weighing is interpretation."
+    },
+    {
+      "claim": "Sabaton is a Swedish power metal band that turns history into something a crowd can shout back.",
+      "verdict": "supported",
+      "note": "The Swedish power metal band and history themes are supported. The crowd line is opinion."
+    },
+    {
+      "claim": "A distorted, palm-muted guitar riff drives it, with a low bass line underneath.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on the riff. All passes mention the bass."
+    },
+    {
+      "claim": "Drums hit hard on kick and snare in a quick, steady march.",
+      "verdict": "corrected",
+      "note": "Strong kick and snare are backed by passes 1 and 3. A steady march is backed by passes 1 and 3. 'Quick' is not backed by enough passes, since pass 1 says moderate, so it was dropped."
+    },
+    {
+      "claim": "High keyboard chords hang over the top.",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 describe sustained high-pitched keyboard or synth."
+    },
+    {
+      "claim": "Brodén sings with a clear, strong, slightly raspy voice, declaring more than confiding.",
+      "verdict": "supported",
+      "note": "All passes agree on the voice. Passes 2 and 3 call the delivery anthemic, and pass 3 adds declarative. Brodén is credited with vocals."
+    },
+    {
+      "claim": "The production, by Peter Tägtgren, sounds polished and huge, like a hall.",
+      "verdict": "supported",
+      "note": "Tägtgren produced it. All passes describe a polished production with a large, open room sound."
+    },
+    {
+      "claim": "Brodén described it as heavy metal meeting the spaghetti westerns of Ennio Morricone.",
+      "verdict": "supported",
+      "note": "Supported."
+    },
+    {
+      "claim": "Murphy came home and became a western movie star.",
+      "verdict": "supported",
+      "note": "Brodén noted this in the Metal Exiles interview."
+    },
+    {
+      "claim": "Murphy played himself in the 1955 film of his own book.",
+      "verdict": "removed",
+      "note": "The packet mentions only a poster from the 1955 film To Hell and Back. Nothing says he played himself."
+    },
+    {
+      "claim": "Brodén later visited Murphy's grave at Arlington.",
+      "verdict": "corrected",
+      "note": "The visit is supported. 'Later' is not supported, so it was removed."
+    },
+    {
+      "claim": "Murphy's son came to a Sabaton show in Los Angeles and gave the band an original poster from the 1955 film.",
+      "verdict": "supported",
+      "note": "Supported (Greek Theatre, Los Angeles)."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1948,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014517,
+        "detail": "1099 in / 180 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014442,
+        "detail": "1099 in / 177 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015817,
+        "detail": "1099 in / 232 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083002,
+        "detail": "24031 in / 1494 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050696,
+        "detail": "3869 in / 1761 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.056604,
+        "detail": "5037 in / 4653 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "spotifyId": "4xsC885WqBl1gS7SbUlZTn",
+  "reviewedAt": "2026-11-26T17:54:25.809Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a rhythmic strumming pattern. A banjo plays a melodic line with a quick, plucked attack. A bass guitar plays a walking bass line. A mandolin plays a melodic counterpoint to the banjo.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed, driving bluegrass feel.\n\nVocals:\nA male voice sings with a clear, slightly nasal character. The delivery is conversational and melodic. There are no harmonies.\n\nProduction:\nThe room sounds open, with a natural, unpolished texture. The production is raw, with instruments sounding close-miked.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter shortly after. The mandolin and banjo trade melodic phrases throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a rhythmic strumming pattern. A banjo plays a melodic line with a quick, plucked attack. A bass guitar plays a walking bass line. A mandolin plays a melodic counterpoint to the banjo.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed, driving bluegrass or folk-rock feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and slightly melancholic. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, suggesting a small room. The texture is clean and unadorned. The production is polished, with each instrument clearly defined.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter shortly after the start. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar, banjo, mandolin, and upright bass. The acoustic guitar plays a rhythmic strumming pattern. The banjo plays a melodic line with a quick, rolling feel. The mandolin plays a rhythmic chop. The upright bass plays a walking bass line.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a bluegrass shuffle.\n\nVocals:\nA male voice sings in a clear, mid-range tone. The delivery is conversational and slightly melancholic. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, suggesting a small room. The texture is clean and unadorned. The production is polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The vocals enter shortly after. All instruments and vocals continue throughout the excerpt. There are no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Gypsy\" is track 5 on Kitchen Dwellers' album Ghost In The Bottle, released April 21, 2017, and runs about 5:52 on Bandcamp.",
+        "source": "https://kitchendwellersgrass.bandcamp.com/album/ghost-in-the-bottle"
+      },
+      {
+        "claim": "Shazam's credits list Torrin Daniels as songwriter of \"Gypsy\", and Deezer lists him as composer.",
+        "source": "https://www.shazam.com/en-gb/song/1513187432/gypsy"
+      },
+      {
+        "claim": "Bandcamp's album credits say it was produced by A.G. Lunsford with assistance from Matt Cottle, and mixed and mastered by A.G. Lunsford. They say it was recorded at Desert Rose and Mountain Star Studios.",
+        "source": "https://kitchendwellersgrass.bandcamp.com/album/ghost-in-the-bottle"
+      },
+      {
+        "claim": "Press coverage at the album's announcement said it was produced by Leftover Salmon's Andy Thorne, with Grammy-winning engineer A.G. Lunsford mixing and mastering.",
+        "source": "https://liveforlivemusic.com/news/the-kitchen-dwellers-announce-new-album-and-tour-dates/"
+      },
+      {
+        "claim": "Ghost In The Bottle was recorded between Mountain Star Studio in Nederland, Colorado, and Desert Rose Studio in Durango, Colorado.",
+        "source": "https://liveforlivemusic.com/news/the-kitchen-dwellers-announce-new-album-and-tour-dates/"
+      },
+      {
+        "claim": "The 11-track album features guests Mihali Savoulidis of Twiddle, Anders Beck of Greensky Bluegrass, Tim Carbone of Railroad Earth and Bill Payne of Little Feat. The source does not say which of them play on \"Gypsy\".",
+        "source": "https://www.gratefulweb.com/articles/kitchen-dwellers-release-2nd-studio-album/"
+      },
+      {
+        "claim": "Ghost In The Bottle was the band's first official release since its 2013 self-titled debut, which makes it their second studio album.",
+        "source": "https://liveforlivemusic.com/news/the-kitchen-dwellers-announce-new-album-and-tour-dates/"
+      },
+      {
+        "claim": "Torrin Daniels is the band's lead singer and banjo player. He said the band had evolved a lot since its last studio time and wanted the album to represent its current sound.",
+        "source": "https://liveforlivemusic.com/news/the-kitchen-dwellers-announce-new-album-and-tour-dates/"
+      },
+      {
+        "claim": "Kitchen Dwellers are a Montana-bred bluegrass band whose sound fans have dubbed \"Galaxy Grass\". They formed while attending Montana State.",
+        "source": "https://sonichits.com/video/Kitchen_Dwellers/Ghost_in_the_Bottle"
+      },
+      {
+        "claim": "Ghost In The Bottle was followed by the albums Muir Maid (2019), Wise River (2022) and Seven Devils (2024).",
+        "source": "https://music.apple.com/us/artist/kitchen-dwellers/789144425"
+      }
+    ],
+    "lineage": "Kitchen Dwellers sit in the progressive, jam-oriented bluegrass (\"jamgrass\") scene, and they describe their own sound as \"Galaxy Grass\".",
+    "genres": [
+      "bluegrass",
+      "jamgrass",
+      "progressive bluegrass"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Mountain Star Studio",
+        "city": "Nederland",
+        "state": "Colorado",
+        "country": "USA",
+        "source": "https://liveforlivemusic.com/news/the-kitchen-dwellers-announce-new-album-and-tour-dates/"
+      },
+      {
+        "studio": "Desert Rose Studio",
+        "city": "Durango",
+        "state": "Colorado",
+        "country": "USA",
+        "source": "https://www.discogs.com/release/11137372-Kitchen-Dwellers-Ghost-In-The-Bottle"
+      }
+    ]
+  },
+  "draft": "Nobody sings harmony on **Gypsy**. Bluegrass is built on stacked voices, the high lonesome sound of several singers leaning into one microphone. Kitchen Dwellers hand this song to a single clear, mid-range voice and let it talk. The delivery is conversational, close to speech, with a slight melancholy running under it. It sounds less like a performance than like one person telling you something after everyone else has gone quiet.\n\nThe band around that voice keeps moving. Acoustic guitar strums a steady pattern, the banjo runs a quick, plucked melodic line, and the mandolin answers it in counterpoint instead of just keeping time. Underneath, the bass walks. A walking line belongs more to swing and jazz than to the two-beat thump of old bluegrass, and that kind of borrowing is what the jamgrass scene runs on. The tempo is moderate and the groove is relaxed but driving, so the song rolls forward even as the voice holds something back.\n\nThat's where the feeling lives, in the gap between a band that's going somewhere and a voice that sounds a little low. The two don't reconcile. The pickers stay bright and busy, the singing stays plain and a bit heavy, and the song lets both be true at once. Motion and sadness share the same frame, and neither one wins.\n\nTorrin Daniels, the band's lead singer and banjo player, is credited as the songwriter. Kitchen Dwellers came together at Montana State, and fans have taken to calling what they do \"Galaxy Grass.\" The song comes from Ghost in the Bottle, their second studio album and their first release since a 2013 debut. Daniels said at the time that the band had changed a lot since it last recorded and wanted the record to sound like who they were now. They cut it in two Colorado studios, Mountain Star in Nederland and Desert Rose in Durango, with Grammy-winning engineer A.G. Lunsford mixing and mastering.\n\nThe recording is dry and intimate, like a small room with the doors shut. It's clean and unadorned, polished without any gloss laid on top. There's no reverb to hide in, which suits a song that rests so much on one voice. At close to six minutes, it takes its time the way jam bands do.\n\nWhat makes **Gypsy** stick is that the band keeps carrying you down the road while the lone voice sounds like it's carrying the weight for everyone, so you feel how a person can keep moving and still be heavy-hearted.",
+  "factCheck": [
+    {
+      "claim": "No one sings harmony on the song (single voice, no harmonies).",
+      "verdict": "supported",
+      "note": "All three passes report no harmonies. Reworded so it describes what is heard rather than asserting something about the whole song."
+    },
+    {
+      "claim": "Bluegrass is built on stacked voices, the high lonesome sound of several singers leaning into one microphone.",
+      "verdict": "removed",
+      "note": "Genre-history claim with no support in the packet."
+    },
+    {
+      "claim": "A single clear, mid-range, conversational voice with slight melancholy.",
+      "verdict": "supported",
+      "note": "Clear and conversational in all three passes. Mid-range and slightly melancholic in passes 2 and 3."
+    },
+    {
+      "claim": "Acoustic guitar strums a steady pattern; banjo plays a quick, plucked melodic line.",
+      "verdict": "supported",
+      "note": "All passes agree on the strumming. Banjo is quick and plucked in passes 1 and 2, quick and rolling in pass 3."
+    },
+    {
+      "claim": "Mandolin answers the banjo in counterpoint instead of just keeping time.",
+      "verdict": "corrected",
+      "note": "Counterpoint is backed by passes 1 and 2, but pass 3 calls the mandolin a rhythmic chop. Dropped 'instead of just keeping time'."
+    },
+    {
+      "claim": "The bass walks.",
+      "verdict": "supported",
+      "note": "A walking bass line in all three passes."
+    },
+    {
+      "claim": "A walking line belongs more to swing and jazz than to old bluegrass's two-beat thump, and that borrowing is what the jamgrass scene runs on.",
+      "verdict": "removed",
+      "note": "Genre and scene history not in the packet."
+    },
+    {
+      "claim": "Moderate tempo, relaxed but driving groove.",
+      "verdict": "supported",
+      "note": "Moderate in all passes. Relaxed and driving in passes 1 and 2, bluegrass shuffle in pass 3."
+    },
+    {
+      "claim": "Torrin Daniels, lead singer and banjo player, is credited as songwriter.",
+      "verdict": "supported",
+      "note": "Shazam and Deezer credits plus band facts."
+    },
+    {
+      "claim": "Kitchen Dwellers came together at Montana State; fans call their sound 'Galaxy Grass'.",
+      "verdict": "supported",
+      "note": "Sonichits source."
+    },
+    {
+      "claim": "Ghost in the Bottle is their second studio album and first release since a 2013 debut.",
+      "verdict": "supported",
+      "note": "Live For Live Music source."
+    },
+    {
+      "claim": "Daniels said at the time the band had changed a lot since it last recorded and wanted the record to sound like who they were now.",
+      "verdict": "corrected",
+      "note": "Paraphrase is supported. Removed 'at the time' as an unneeded timing claim."
+    },
+    {
+      "claim": "Recorded in Mountain Star in Nederland and Desert Rose in Durango, Colorado, with Grammy-winning A.G. Lunsford mixing and mastering.",
+      "verdict": "supported",
+      "note": "Bandcamp credits and Live For Live Music."
+    },
+    {
+      "claim": "The recording is dry and intimate like a small room, clean and unadorned, polished.",
+      "verdict": "corrected",
+      "note": "Dry, intimate and clean are in passes 2 and 3. Pass 1 calls it raw, so 'polished' was dropped."
+    },
+    {
+      "claim": "There's no reverb to hide in.",
+      "verdict": "corrected",
+      "note": "Stronger than 'dry' supports. Reworded to say the dry sound leaves the voice exposed."
+    },
+    {
+      "claim": "At close to six minutes it takes its time the way jam bands do.",
+      "verdict": "corrected",
+      "note": "Length is supported (5:57 / 5:52). The jam-band generalization was tied instead to the band's documented place in the jamgrass scene."
+    },
+    {
+      "claim": "Band is in the jamgrass scene.",
+      "verdict": "supported",
+      "note": "Lineage note."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.216,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014417,
+        "detail": "1099 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014217,
+        "detail": "1099 in / 168 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014367,
+        "detail": "1099 in / 174 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.079616,
+        "detail": "20553 in / 1851 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.082736,
+        "detail": "3459 in / 3445 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049346,
+        "detail": "4568 in / 4021 out"
+      }
+    ]
+  }
+}

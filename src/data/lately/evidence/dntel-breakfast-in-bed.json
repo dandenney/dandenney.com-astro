@@ -1,0 +1,219 @@
+{
+  "spotifyId": "6oDjm30FUtB8GcckQEh3Tr",
+  "reviewedAt": "2026-11-26T17:36:06.890Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/17704826"
+  },
+  "listening": "Pass 1:\nInstruments:\nA male voice sings the main melody. A second male voice sings a harmony. A synth plays a sustained chord pad. A synth bass plays a simple, walking line. A drum machine plays a sparse, hip-hop-influenced beat.\n\nTempo and Groove:\nThe tempo is slow, with a relaxed, slightly swung groove.\n\nVocals:\nThe main vocal is a clear, somewhat breathy male voice. The harmony vocal is also male, singing a higher counter-melody. Both are delivered smoothly and with a gentle vibrato.\n\nProduction:\nThe production is clean and polished, with a warm, slightly reverberant texture. The vocals are upfront and clear, while the instruments blend together smoothly.\n\nArrangement:\nThe excerpt begins with the main vocal, synth pad, and drum machine. The synth bass enters shortly after, providing a steady foundation. The harmony vocal enters later, adding richness to the vocal arrangement. No elements drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA male voice sings the lead melody. A second male voice provides harmonies. A synth pad plays sustained chords. A synth bass plays a simple, walking bassline. A drum machine plays a sparse, hip-hop-influenced beat with a prominent snare.\n\nTempo and Groove Feel\nThe tempo is slow, with a relaxed, slightly laid-back groove. The feel is unhurried and steady.\n\nVocals\nThe lead male voice is breathy and intimate, with a slightly nasal quality. The delivery is conversational and understated. The second male voice provides a higher harmony, often in unison or a third above the lead.\n\nProduction\nThe room sounds dry and close-miked. The texture is clean and polished, with clear separation between instruments. There is a subtle reverb on the vocals.\n\nArrangement\nThe excerpt begins with all instruments and vocals present. The synth pad and bass provide a continuous foundation. The drum machine maintains a consistent beat. The vocals sing in phrases, with the harmony voice entering and exiting to support the lead. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nA male voice sings with a breathy, almost whispered delivery. A clean electric guitar plays a arpeggiated chords. A bass guitar plays a simple, sustained line. A drum machine provides a sparse, hip-hop-influenced beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is slow, with a laid-back, slightly dragging groove.\n\nVocals:\nThe male voice is soft and intimate, almost conversational. There are no harmonies.\n\nProduction:\nThe production is clean and polished, with a close-miked feel for the vocals. There's a slight reverb on the vocals and guitar, creating a sense of space without being overly ambient. The overall texture is smooth.\n\nArrangement:\nThe excerpt begins with the full arrangement. The electric guitar plays a consistent arpeggiated pattern throughout. The bass provides a steady foundation. The drum machine maintains a consistent, understated rhythm. Nothing enters, drops out, or builds significantly within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Breakfast in Bed\" is a track on Dntel's 2007 album Dumb Luck, and Bright Eyes' Conor Oberst sings lead vocals on it.",
+        "source": "https://www.emusician.com/gear/dntel"
+      },
+      {
+        "claim": "Dumb Luck came out in the US on Sub Pop on April 24, 2007. Moshi Moshi Records issued the UK CD (moshicd19) on June 21, 2007.",
+        "source": "https://discogs.com/Dntel-Dumb-Luck/master/28421"
+      },
+      {
+        "claim": "The song runs 3:52 and is track 8 of 9 on Dumb Luck.",
+        "source": "https://dntel.bandcamp.com/album/dumb-luck"
+      },
+      {
+        "claim": "Tamborello says he met Oberst through Jenny Lewis, whom he worked with on The Postal Service album.",
+        "source": "https://www.spinmagazine.com/2007/05/jimmy-tamborello-talks-dntel-postal-service/"
+      },
+      {
+        "claim": "Tamborello told NME he had a song with no vocals and asked Oberst if he wanted to sing on it. Oberst came over and recorded it, which Tamborello called \"all pretty casual\".",
+        "source": "https://www.nme.com/news/music/dntel-1339612"
+      },
+      {
+        "claim": "Tamborello's method for Dntel songs is to send contributors blank instrumental tracks with no instructions. They write the lyrics and vocals themselves, and he wrote lyrics only for the title track \"Dumb Luck\".",
+        "source": "https://www.nme.com/news/music/dntel-1339612"
+      },
+      {
+        "claim": "Oberst said Tamborello asked him to sing on the song, that he loved the beat and an \"Alka-Seltzer\" sound in it, and that he thinks he recorded the vocals in Tamborello's LA apartment.",
+        "source": "https://stereogum.com/2081556/bright-eyes-forced-convalescence-conor-oberst-interview/interviews/weve-got-a-file-on-you"
+      },
+      {
+        "claim": "Tamborello said the main melodic loop on \"Breakfast in Bed\" was a simple synth line run through a Line 6 Delay Modeler with the dry signal removed.",
+        "source": "https://www.emusician.com/gear/dntel"
+      },
+      {
+        "claim": "Dumb Luck was written and recorded over about four to five years. Tamborello said he kept reworking the songs, and he later said the album had gone in a direction that was barely to his tastes by the time it was done.",
+        "source": "https://music.avclub.com/dntel-1798227095"
+      },
+      {
+        "claim": "Dntel is Jimmy Tamborello, a Los Angeles electronic producer who also works in The Postal Service with Ben Gibbard. He described Dumb Luck as \"experimental techno-pop\", and Dumb Luck followed 2001's Life Is Full of Possibilities as his third Dntel album.",
+        "source": "https://www.nme.com/news/music/dntel-1339612"
+      }
+    ],
+    "lineage": "Dntel's music is experimental techno-pop that blends electronic and organic instrumentation, and it sits in the indie-electronic scene around The Postal Service and the Rilo Kiley and Bright Eyes circle.",
+    "genres": [
+      "electronic",
+      "indietronica",
+      "techno-pop"
+    ],
+    "recordedAt": [
+      {
+        "studio": null,
+        "city": "Los Angeles",
+        "state": "California",
+        "country": "United States",
+        "source": "https://stereogum.com/2081556/bright-eyes-forced-convalescence-conor-oberst-interview/interviews/weve-got-a-file-on-you"
+      }
+    ]
+  },
+  "draft": "The tenderest line in **Breakfast In Bed** is also the bleakest. Near the end, the singer hopes the other person will always find someone to take them home, put them to bed, and hold a hand under their nose to make sure they're still breathing. That's love described as a wellness check. Then comes the admission: \"I wish that could be me, but it's just not possible.\"\n\nConor Oberst sings it, and the words are his too. Jimmy Tamborello, who records as Dntel, sends collaborators blank instrumentals with no instructions and lets them write their own lyrics. He had a track with no vocals and asked Oberst if he wanted it. Oberst came over and recorded it, which Tamborello called \"all pretty casual.\" Oberst thinks it happened in Tamborello's LA apartment. The two met through Jenny Lewis, whom Tamborello had worked with on The Postal Service album, and the song sits right in that overlap of laptop pop and the Bright Eyes and Rilo Kiley circle.\n\nThe scene is a morning after, somewhere away from home: wine in the coffee cup, birds outside, still drunk, the maids on their way. The narrator is giddy and wary at once. Last night the other person said they wanted to die, and now they want to live. They said they loved the narrator after forty-five minutes. The narrator sees all of it and signs on anyway: \"If this is all a game can you just say it is? / I'll do it anyway.\" That's the knot of the song, clear eyes and total surrender in the same breath. Then the reason the morning has a clock on it is that back in New York nobody can find out. \"We can say anything, but we just can't say it loud.\"\n\nThe music keeps that hush. A drum machine lays down a sparse, hip-hop-leaning beat with a firm snare, and the tempo is slow and unbothered. A synth pad holds the chords while a synth bass walks underneath. Tamborello has said the main melodic loop is a simple synth line run through a delay modeler with the dry signal removed, so what you hear is only the echo. That suits a song about a moment that's already turning into memory. Oberst said he loved the beat and an \"Alka-Seltzer\" sound in it. He stays breathy and close to the mic, almost conversational, with a second voice drifting in on harmony. The production is clean and polished, with a little reverb on the voice and nothing pushed.\n\nIt sticks because it lets you stand inside a hard kind of tenderness: caring for someone completely in a room you'll both have to leave before anyone back home notices.",
+  "factCheck": [
+    {
+      "claim": "The last stanza hopes the other person will always find someone to take them home, put them to bed, and check their breathing with a hand under the nose",
+      "verdict": "supported",
+      "note": "Matches the final stanza of the lyrics. Reworded 'near the end' to 'in the last verse', which the lyric structure shows."
+    },
+    {
+      "claim": "Quote: \"I wish that could be me, but it's just not possible.\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "Conor Oberst sings it and wrote the words",
+      "verdict": "supported",
+      "note": "Oberst sings lead. Tamborello's method is that contributors write their own lyrics, and he wrote lyrics only for 'Dumb Luck'."
+    },
+    {
+      "claim": "Tamborello (Dntel) sends collaborators blank instrumentals with no instructions",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "He had a track with no vocals, asked Oberst, Oberst came over and recorded it, 'all pretty casual'",
+      "verdict": "supported",
+      "note": "NME."
+    },
+    {
+      "claim": "Oberst thinks it was recorded in Tamborello's LA apartment",
+      "verdict": "supported",
+      "note": "Stereogum."
+    },
+    {
+      "claim": "The two met through Jenny Lewis, whom Tamborello worked with on The Postal Service album",
+      "verdict": "supported",
+      "note": "Spin."
+    },
+    {
+      "claim": "The song sits in an overlap of 'laptop pop' and the Bright Eyes and Rilo Kiley circle",
+      "verdict": "corrected",
+      "note": "'Laptop pop' isn't in the evidence. Replaced with the supported 'indie-electronic' scene."
+    },
+    {
+      "claim": "Scene details: wine in the coffee cup, birds outside, still drunk, maids coming, New York back home",
+      "verdict": "supported",
+      "note": "All in the lyrics."
+    },
+    {
+      "claim": "The other person said they wanted to die, now want to live; said they loved the narrator after forty-five minutes",
+      "verdict": "supported",
+      "note": "Lyrics."
+    },
+    {
+      "claim": "Quote: \"If this is all a game can you just say it is? / I'll do it anyway\"",
+      "verdict": "corrected",
+      "note": "Wording is accurate, but the draft quoted four lines in total, over the three-line limit. Trimmed to one line and paraphrased the rest."
+    },
+    {
+      "claim": "Quote: \"We can say anything, but we just can't say it loud.\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "The clock on the morning is because back in New York nobody can find out",
+      "verdict": "corrected",
+      "note": "The lyrics give the time (eleven) and the secrecy separately. Reworded as the reading it is, not as a stated cause."
+    },
+    {
+      "claim": "Drum machine plays a sparse, hip-hop-leaning beat with a firm snare; slow tempo",
+      "verdict": "corrected",
+      "note": "Three passes agree on a sparse, hip-hop-influenced beat and a slow tempo. Two passes say 'prominent' snare, not 'firm'."
+    },
+    {
+      "claim": "Synth pad holds chords, synth bass walks underneath",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Tamborello said the main loop is a simple synth line through a delay modeler with the dry signal removed",
+      "verdict": "supported",
+      "note": "Electronic Musician. 'Only the echo' is the critic's inference."
+    },
+    {
+      "claim": "Oberst said he loved the beat and an 'Alka-Seltzer' sound in it",
+      "verdict": "supported",
+      "note": "Stereogum."
+    },
+    {
+      "claim": "Lead vocal is breathy, close, almost conversational",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "A second voice drifting in on harmony",
+      "verdict": "corrected",
+      "note": "Passes 1 and 2 agree on a harmony voice. 'Drifting in' implies an entrance, which can't be placed, so reworded."
+    },
+    {
+      "claim": "Production clean and polished with a little reverb on the voice",
+      "verdict": "supported",
+      "note": "All three passes."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.208,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015047,
+        "detail": "1092 in / 204 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015572,
+        "detail": "1092 in / 225 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00067157,
+        "detail": "1092 in / 204 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.080898,
+        "detail": "22279 in / 1634 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.069744,
+        "detail": "3866 in / 2714 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053624,
+        "detail": "4997 in / 4363 out"
+      }
+    ]
+  }
+}

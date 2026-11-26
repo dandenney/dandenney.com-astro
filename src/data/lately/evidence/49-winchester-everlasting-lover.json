@@ -1,0 +1,208 @@
+{
+  "spotifyId": "6M1CxE2roojruGqAIVNLYL",
+  "reviewedAt": "2026-11-26T17:29:02.406Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/10234436"
+  },
+  "listening": "Pass 1:\nA male voice sings lead, with a slightly raspy, mid-range character. His delivery is melodic and sustained. A second male voice sings a harmony line above the lead, with a similar character.\n\nThe tempo is slow. The groove feels like a ballad, with a gentle, swaying rhythm.\n\nInstruments include an acoustic guitar, playing arpeggiated chords, and a bass guitar, playing a walking line. A drum kit plays a simple beat with brushes on the snare, and a kick drum. A steel guitar plays sustained, sliding notes.\n\nThe production sounds raw and unpolished. The room sounds like a small, untreated space. The texture is warm and natural.\n\nThe arrangement remains consistent throughout the excerpt. All instruments and vocals are present from the beginning and continue to the end. There are no significant entries, drop-outs, or builds.\n\nPass 2:\nA male voice sings lead, with a slightly raspy, mid-range character. He sings with a relaxed, conversational delivery. A second male voice joins for harmonies, singing above the lead.\n\nThe tempo is moderate, with a gentle, swaying groove. A clean electric guitar plays arpeggiated chords, while a bass guitar provides a walking line. Drums enter with a simple, steady beat, featuring a kick drum, snare, and hi-hat.\n\nThe production sounds raw and unpolished, with a natural room sound. The texture is open, allowing each instrument to be heard clearly.\n\nThe excerpt begins with the lead vocal and electric guitar. The bass enters shortly after, followed by the drums. The second vocal harmony joins for the chorus. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nA male voice sings in a clear, mid-range, slightly nasal tone, with a country inflection. He sings the melody, with a second male voice harmonizing a third above. The vocals are dry and present.\n\nAcoustic guitar plays a strummed rhythm, with a clean electric guitar playing a simple, arpeggiated melody. A bass guitar plays a walking line. Drums play a simple, driving beat with a snare backbeat. The tempo is medium-slow, with a relaxed, swinging feel.\n\nThe production is clean and polished, with a natural room sound. The arrangement is consistent throughout the excerpt, with all instruments playing continuously.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Everlasting Lover\" was written by Isaac Gibson.",
+        "source": "https://americanahighways.org/2020/07/23/song-premiere-49-winchester-everlasting-lover/"
+      },
+      {
+        "claim": "The song was recorded live at Fat Baby Studios in Whitesburg, Kentucky.",
+        "source": "https://americanahighways.org/2020/07/23/song-premiere-49-winchester-everlasting-lover/"
+      },
+      {
+        "claim": "Kenny Miles of the Eastern Kentucky band Wayne Graham mixed, mastered and produced the song.",
+        "source": "https://americanahighways.org/2020/07/23/song-premiere-49-winchester-everlasting-lover/"
+      },
+      {
+        "claim": "Americana Highways describes the song as a love song and tribute to the woman in Gibson's life, who has been his anchor in hard times.",
+        "source": "https://americanahighways.org/2020/07/23/song-premiere-49-winchester-everlasting-lover/"
+      },
+      {
+        "claim": "The song was premiered on July 23, 2020, ahead of the album III. Preorders on Bandcamp included an instant download of the song and a bonus track, \"Long Hard Life\".",
+        "source": "https://americanahighways.org/2020/07/23/song-premiere-49-winchester-everlasting-lover/"
+      },
+      {
+        "claim": "It is track 2 on III, which was released October 2, 2020, and runs about 3:13.",
+        "source": "https://49winchester.bandcamp.com/track/everlasting-lover"
+      },
+      {
+        "claim": "Deezer credits the composer as Isaac Blaine Gibson.",
+        "source": "https://www.deezer.com/us/track/2668057662"
+      },
+      {
+        "claim": "III was the band's third album, following their 2014 self-titled debut and 2018's The Wind.",
+        "source": "https://entertainment-focus.com/2022/05/13/49-winchester-frontman-isaac-gibson-talks-new-album-fortune-favors-the-bold-and-much-more/"
+      },
+      {
+        "claim": "49 Winchester formed on Winchester Street in Castlewood, Virginia, as a group of neighbourhood teenage friends.",
+        "source": "https://entertainment-focus.com/2022/05/13/49-winchester-frontman-isaac-gibson-talks-new-album-fortune-favors-the-bold-and-much-more/"
+      },
+      {
+        "claim": "Isaac Gibson has described III as the band's \"pandemic record\" and says it helped them keep momentum.",
+        "source": "https://americana-uk.com/interview-49-winchesters-isaac-gibson-on-the-journey-to-their-first-major-label-release"
+      }
+    ],
+    "lineage": "49 Winchester is a band from Southern Appalachia (Castlewood, Virginia) whose country sound draws on the region's country and bluegrass roots as well as other influences.",
+    "genres": [
+      "country",
+      "americana"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Fat Baby Studios",
+        "city": "Whitesburg",
+        "state": "Kentucky",
+        "country": "USA",
+        "source": "https://americanahighways.org/2020/07/23/song-premiere-49-winchester-everlasting-lover/"
+      }
+    ]
+  },
+  "draft": "The line that gives **Everlasting Lover** away is the plainest one in it. Isaac Gibson thanks the person he's singing to for making him feel \"Like I ain't just some dude,\" and the shrug in that phrasing carries a lot. It's how someone talks when they've spent years assuming they didn't count for much, and when saying more would feel like bragging. The gratitude is real. So is the low opinion of himself hiding underneath it.\n\nGibson wrote the song as a tribute to the woman in his life, the one who has been his anchor through hard times. It never pretends he's been easy to anchor. Within the first verse he admits it \"ain't that I want to,\" but sometimes the pain takes over and he slips. Self-justification and confession sit in the same breath, and the song doesn't sort out which one wins. The chorus lays out the bad nights plainly: stoned, feeling rejected, worn down from the road. Then comes the image that turns the whole thing: \"You come off of your throne & I feel protected.\" He has put her above him, and what moves him is that she climbs down anyway. The second verse sharpens the contrast. She has \"the kindest eyes,\" his are red and he looks half dead, and the line about what she \"can't even realize\" stays open. It could mean she doesn't see how far gone he is, or that she doesn't know how much her kindness saves him. Probably both.\n\nThe band plays it like a slow dance in a small room. The sway is gentle. A clean guitar picks out arpeggiated chords, the bass walks underneath, and the drums keep a simple beat that never pushes. The lead vocal is slightly raspy and sits in the middle of the range. A second voice harmonizes above it, the high-lonesome stacking that runs straight back through Southern Appalachian country and bluegrass, the region 49 Winchester comes from. The band started as a group of teenage friends on Winchester Street in Castlewood, Virginia. This track was cut live at Fat Baby Studios in Whitesburg, Kentucky, with Kenny Miles of the Eastern Kentucky band Wayne Graham producing, and it sounds that way: raw, unpolished, the room left in. Gibson has called *III* the band's pandemic record, and this song's closeness fits that.\n\nThe lyric's last repetition comes apart on purpose. The promise from the bottom of the bottle, \"I know you won't let me drown,\" gets sung once whole, then breaks into fragments, as if he has to say it in pieces to keep believing it.\n\nIt sticks because it lets you hear what it's like to be loved more generously than you think you deserve, and to be grateful and ashamed at the same time.",
+  "factCheck": [
+    {
+      "claim": "The lyric 'Like I ain't just some dude' is sung to the 'everlasting lover' as thanks",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Isaac Gibson wrote the song",
+      "verdict": "supported",
+      "note": "Americana Highways credits Gibson, and Deezer credits Isaac Blaine Gibson."
+    },
+    {
+      "claim": "The song is a tribute to the woman in Gibson's life, his anchor through hard times",
+      "verdict": "supported",
+      "note": "Americana Highways describes it this way."
+    },
+    {
+      "claim": "The first verse says it 'ain't that I want to' but the pain takes over and he slips",
+      "verdict": "corrected",
+      "note": "The wording was accurate, but the review now paraphrases it. This keeps direct quotes to three or fewer."
+    },
+    {
+      "claim": "The repeated section lists being stoned, feeling rejected and worn down from the road",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "'You come off of your throne & I feel protected'",
+      "verdict": "supported",
+      "note": "Exact quote."
+    },
+    {
+      "claim": "The second verse mentions the kindest eyes, his red eyes, looking half dead, and 'can't even realize'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The quote marks were dropped for brevity. The reading of the line stays as interpretation."
+    },
+    {
+      "claim": "The band plays it like a slow dance in a small room",
+      "verdict": "corrected",
+      "note": "Only one pass says 'small room'. All three passes agree on a gentle sway and a natural room sound, so 'small' is removed."
+    },
+    {
+      "claim": "A clean guitar picks out arpeggiated chords; the bass walks",
+      "verdict": "supported",
+      "note": "All three passes agree on arpeggiated guitar and a walking bass. Passes 2 and 3 say clean electric."
+    },
+    {
+      "claim": "The drums keep a simple beat that never pushes",
+      "verdict": "corrected",
+      "note": "Passes agree the beat is simple. Pass 3 calls it 'driving', so 'never pushes' is removed."
+    },
+    {
+      "claim": "The lead vocal is slightly raspy and mid-range; a second voice harmonizes above",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree on raspy and mid-range. All three agree on the higher harmony."
+    },
+    {
+      "claim": "The harmony is 'high-lonesome stacking that runs straight back through Southern Appalachian country and bluegrass'",
+      "verdict": "corrected",
+      "note": "The packet supports only that the band's sound draws on the region's country and bluegrass roots. The sentence is reworded to match that."
+    },
+    {
+      "claim": "The band started as teenage friends on Winchester Street in Castlewood, Virginia",
+      "verdict": "supported",
+      "note": "Entertainment Focus."
+    },
+    {
+      "claim": "Recorded live at Fat Baby Studios in Whitesburg, Kentucky, with Kenny Miles of Wayne Graham producing",
+      "verdict": "supported",
+      "note": "Americana Highways."
+    },
+    {
+      "claim": "The recording sounds raw, unpolished, with the room left in",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 say raw and unpolished. All three say natural room sound."
+    },
+    {
+      "claim": "Gibson has called III the band's pandemic record",
+      "verdict": "supported",
+      "note": "Americana UK."
+    },
+    {
+      "claim": "The last repetition 'comes apart on purpose'",
+      "verdict": "corrected",
+      "note": "Intent isn't supported. The lyrics do show the line breaking into fragments, so the sentence is reworded as a reading."
+    },
+    {
+      "claim": "The 'drown' line is sung whole, then breaks into fragments",
+      "verdict": "supported",
+      "note": "Matches the lyrics' final lines."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1983,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001442,
+        "detail": "1100 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013395,
+        "detail": "1100 in / 135 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00058137,
+        "detail": "1100 in / 165 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077052,
+        "detail": "21331 in / 1439 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.060452,
+        "detail": "3413 in / 2340 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.057392,
+        "detail": "4581 in / 4823 out"
+      }
+    ]
+  }
+}

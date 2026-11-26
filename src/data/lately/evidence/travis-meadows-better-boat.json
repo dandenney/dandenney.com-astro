@@ -1,0 +1,208 @@
+{
+  "spotifyId": "0AP1oqhd2cAs0q4X3hBtNk",
+  "reviewedAt": "2026-11-26T17:30:10.223Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8992022"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter with a light, brushed beat, including snare, kick, and cymbals.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and intimate. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a natural room feel. The texture is warm and open.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter at \"I breathe in,\" adding a gentle rhythm. All instruments continue throughout the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter with a light, brushed snare and kick drum.\n\nTempo and Groove:\nSlow tempo. The groove is laid-back and gentle, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is conversational and intimate, with a slight country inflection. No harmonies are present.\n\nProduction:\nThe sound is clean and well-defined, with a natural room ambiance. The texture is warm and inviting. The production is polished but not overly processed.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter around 0:02, providing a subtle rhythmic foundation. The vocals enter immediately after the drums. All instruments maintain their roles throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a walking bass line. A drum kit plays a slow, steady beat with brushes, including a kick drum, snare drum, and hi-hat.\n\nTempo and Groove:\nSlow tempo, with a relaxed, slightly swaying feel.\n\nVocals:\nA male voice sings in a clear, mid-range tenor. The delivery is conversational and slightly melancholic. No harmonies are present.\n\nProduction:\nThe sound is clean and well-balanced, with a natural room sound. The texture is smooth and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums already established. The vocals enter shortly after the start. All instruments maintain their presence throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Better Boat\" was written by Travis Meadows and Liz Rose, and appears as track 9 on Meadows' 2017 album First Cigarette.",
+        "source": "https://travismeadows.com/lyrics"
+      },
+      {
+        "claim": "Meadows said the song came from a recovery meeting, where he heard that serenity is found in building a better boat, not in a calmer sea.",
+        "source": "https://en.wikipedia.org/wiki/Better_Boat"
+      },
+      {
+        "claim": "First Cigarette was produced by Jeremy Spillman, with Jay Joyce as executive producer. It was released by Blaster Records.",
+        "source": "https://www.discogs.com/Travis-Meadows-First-Cigarette/release/11652784"
+      },
+      {
+        "claim": "Album personnel on Discogs: Meadows (vocals, guitars, harmonica); Spillman (acoustic and electric guitar, backing vocals); Joyce (electric guitar, organ); Oran Thornton (drums, electric guitar, backing vocals, recorder, mixer); Whiskey Jack Untz (steel guitars, mandolin, mandocello, electric guitar, backing vocals); Jessy Wilson and Joanna Janet (backing vocals). These are album-level credits, not a track-by-track breakdown for \"Better Boat\".",
+        "source": "https://www.discogs.com/Travis-Meadows-First-Cigarette/release/11652784"
+      },
+      {
+        "claim": "The album was recorded at Neon Cross in Nashville, TN, per the Discogs release credits. Oran Thornton is credited as recording engineer.",
+        "source": "https://www.discogs.com/release/11652784-Travis-Meadows-First-Cigarette"
+      },
+      {
+        "claim": "Uproxx reports that Meadows wrote and recorded the album with Jay Joyce and Jeremy Spillman, reworking the songs until they reached a new pinnacle. Meadows said Joyce stepped in during tracking after about the second day, saying he wasn't believing any of what they had recorded.",
+        "source": "https://uproxx.com/music/travis-meadows-first-cigarette-country-myth-making-the-rx/"
+      },
+      {
+        "claim": "Meadows said his producers Spillman and Joyce wanted the album to sound like he would sound live in a bar.",
+        "source": "https://countryexclusive.com/album-review-travis-meadows-first-cigarette/"
+      },
+      {
+        "claim": "Six Shooter Country described \"Better Boat\" as having a haunting guitar intro that leads into a soul-baring song about recovery.",
+        "source": "https://sixshootercountry.com/2017/10/22/travis-meadows-first-cigarette-nashville-songwriter-meadows-wows-and-hits-home-with-his-first-major-label-lp/"
+      },
+      {
+        "claim": "Kenny Chesney later recorded \"Better Boat\" with Mindy Smith and released it in August 2018 as the second single from Songs for the Saints. Meadows said he cried when he first heard Chesney's version.",
+        "source": "https://en.wikipedia.org/wiki/Better_Boat"
+      },
+      {
+        "claim": "First Cigarette was Meadows' first album with label support. It debuted at No. 21 on Billboard's Heatseekers chart. Before it, he released My Life 101 (2007), Killin' Uncle Buzzy (2011) and the Old Ghosts & Unfinished Business EP (2013).",
+        "source": "https://en.wikipedia.org/wiki/Travis_Meadows"
+      },
+      {
+        "claim": "Meadows was born in 1965 and raised in Jackson, Mississippi. He battled cancer and addiction and worked as a preacher. He entered recovery in 2010 and then built a Nashville songwriting career, with songs cut by Dierks Bentley (\"Riser\"), Eric Church and Jake Owen.",
+        "source": "https://www.allmusic.com/artist/travis-meadows-mn0001555460"
+      }
+    ],
+    "lineage": "Meadows' recovery-themed, confessional songwriting sits in the Nashville Music Row songwriter-turned-artist tradition, with country, Americana and singer-songwriter roots.",
+    "genres": [
+      "country",
+      "americana",
+      "singer-songwriter"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Neon Cross",
+        "city": "Nashville",
+        "state": "Tennessee",
+        "country": "USA",
+        "source": "https://www.discogs.com/release/11652784-Travis-Meadows-First-Cigarette"
+      }
+    ]
+  },
+  "draft": "\"I ain't lonely, but I spend a lot of time alone.\" That's how **Better Boat** opens: a denial and a confession in the same breath. Travis Meadows doesn't wait for anyone to ask whether he's all right. He answers first, then quietly takes some of it back. The rest of the song lives in that gap between what a person says to stay upright and what is actually true.\n\nThe image came from a recovery meeting. Meadows has said he heard there that serenity comes from building a better boat, not from a calmer sea. Meadows entered recovery in 2010 after years of addiction and a fight with cancer. He spent time as a preacher. Then he became a Music Row songwriter whose songs went to Dierks Bentley, Eric Church and Jake Owen. He wrote this one with Liz Rose, and you can hear the old program wisdom being worn down into ordinary speech. The verses list small, unglamorous progress: smiling more, waiting badly, friends who let him talk about \"all the things I feel like cussing out.\" The anger stays in the song. It just has somewhere to go now.\n\nThe sound gives all of it room. A fingerpicked acoustic guitar rolls out patient arpeggios. Bass holds long, simple notes underneath, and brushed drums keep a slow, swaying pulse. The room feels warm and close, which fits what producers Jeremy Spillman and Jay Joyce wanted from *First Cigarette*: Meadows as he'd sound live in a bar. Meadows has said Joyce stepped in during tracking because he didn't believe what they'd cut. Here, belief isn't a problem. Meadows sings in a clear, middle-range voice with a slight country bend, conversational enough that the chorus feels less like a hook than a thing he repeats to himself.\n\nWhat lifts the song is a refusal to oversell. \"Sometimes it's hard to change a man\" is said with no self-pity, and \"I'll let God do what He does\" sounds less like a sermon than like setting down something heavy. The writing saves its best move for the last chorus, where new lines slip in: \"If it's working I don't know / When I get done, the thing may not float.\" Most recovery songs end on arrival. This one ends mid-construction, with hope and doubt holding the same hammer.\n\nKenny Chesney later cut the song with Mindy Smith, and Meadows said hearing it made him cry. You can see why. The original is lean enough to hand to someone else.\n\n**Better Boat** sticks because it lets you admit you're not okay while still claiming you're getting somewhere, and it never forces you to pick one.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote \"I ain't lonely, but I spend a lot of time alone\" opens the song",
+      "verdict": "supported",
+      "note": "Matches the first lyric line exactly."
+    },
+    {
+      "claim": "The song's image came from a recovery meeting, where Meadows heard serenity comes from building a better boat, not a calmer sea",
+      "verdict": "supported",
+      "note": "Researched facts (Wikipedia)."
+    },
+    {
+      "claim": "Meadows entered recovery in 2010 after years of addiction and a fight with cancer",
+      "verdict": "corrected",
+      "note": "The packet says he battled cancer and addiction and entered recovery in 2010. It doesn't say 'years of', so that phrasing was dropped."
+    },
+    {
+      "claim": "He spent time as a preacher; became a Music Row songwriter with songs cut by Dierks Bentley, Eric Church and Jake Owen",
+      "verdict": "supported",
+      "note": "AllMusic fact and the Nashville Music Row lineage line."
+    },
+    {
+      "claim": "Written with Liz Rose",
+      "verdict": "supported",
+      "note": "Credited in researched facts."
+    },
+    {
+      "claim": "Verses list smiling more, impatience, and friends who let him talk about \"all the things I feel like cussing out\"",
+      "verdict": "corrected",
+      "note": "The content is supported and the quote is exact. The quote was turned into a paraphrase to stay within the three-line quote limit."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with arpeggios; bass with long simple notes; brushed drums",
+      "verdict": "supported",
+      "note": "All three passes agree on the guitar and brushed drums. Passes 1 and 2 agree on the sustained, simple bass."
+    },
+    {
+      "claim": "Slow, swaying pulse",
+      "verdict": "supported",
+      "note": "All three passes say slow; passes 2 and 3 describe a swing or sway feel."
+    },
+    {
+      "claim": "Warm, close room feel",
+      "verdict": "supported",
+      "note": "Natural room sound in all three passes; warm in passes 1 and 2; intimate delivery in passes 1 and 2."
+    },
+    {
+      "claim": "Producers Spillman and Joyce wanted Meadows to sound as he would live in a bar",
+      "verdict": "supported",
+      "note": "Attributed to Meadows (Country Exclusive). Wording now makes the attribution explicit."
+    },
+    {
+      "claim": "Joyce stepped in during tracking because he didn't believe what they'd cut",
+      "verdict": "supported",
+      "note": "Uproxx; Meadows said Joyce wasn't believing any of what they had recorded."
+    },
+    {
+      "claim": "Clear, middle-range, conversational voice with a slight country bend",
+      "verdict": "corrected",
+      "note": "Clear, mid-range and conversational are backed by all three passes. 'Country inflection' appears in only one pass, so it was removed."
+    },
+    {
+      "claim": "\"Sometimes it's hard to change a man\" quote",
+      "verdict": "corrected",
+      "note": "The quote is accurate but was paraphrased to stay within the three-line quote limit."
+    },
+    {
+      "claim": "\"I'll let God do what He does\"",
+      "verdict": "supported",
+      "note": "Exact lyric. Reading of it as setting down something heavy is interpretation."
+    },
+    {
+      "claim": "Final lines: \"If it's working I don't know / When I get done, the thing may not float\" arrive after the last repeated chorus",
+      "verdict": "corrected",
+      "note": "The placement is shown by the lyric structure and the quotation is exact. Trimmed to a single line to meet the quote limit."
+    },
+    {
+      "claim": "Most recovery songs end on arrival",
+      "verdict": "removed",
+      "note": "Unsupported genre generalization."
+    },
+    {
+      "claim": "Kenny Chesney later cut the song with Mindy Smith, and Meadows said hearing it made him cry",
+      "verdict": "supported",
+      "note": "Wikipedia fact."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2619,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014061,
+        "detail": "1097 in / 162 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014511,
+        "detail": "1097 in / 180 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013761,
+        "detail": "1097 in / 150 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.150338,
+        "detail": "50684 in / 1897 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05494,
+        "detail": "3985 in / 1950 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.052414,
+        "detail": "5137 in / 4214 out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "spotifyId": "3amyMj0CEMOjRRfPWQ3fsM",
+  "reviewedAt": "2026-11-26T17:47:35.192Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: Fingerpicked, with a clear, resonant tone. It plays a consistent arpeggiated pattern.\n\nTempo and Groove:\nSlow tempo. The groove feels gentle and flowing, driven by the consistent guitar arpeggios.\n\nVocals:\nVoice character: A male voice, with a slightly raspy, warm quality.\nDelivery: Melodic and expressive, with a clear, forward placement in the mix.\nHarmonies: None.\n\nProduction:\nRoom: Sounds like a natural, medium-sized room, with a slight sense of space around the instruments and voice.\nTexture: Clean and clear, with good separation between the guitar and vocals.\nPolished/Raw: Leans towards a polished sound, but retains a natural, unadorned feel.\n\nArrangement:\nThe excerpt features a consistent arrangement throughout. The acoustic guitar plays continuously, providing the harmonic and rhythmic foundation. The voice enters at the beginning and remains present, singing the lead melody. No instruments enter, drop out, or build within this specific excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar: Fingerpicked, with a clear, resonant tone. The bass notes are prominent, providing a rhythmic foundation.\n\nTempo and Groove:\nSlow tempo. The groove feels relaxed and steady, with a gentle forward motion.\n\nVocals:\nVoice character: A male voice, with a slightly rough, warm timbre.\nDelivery: Melodic and clear, with a natural, unforced quality.\nHarmonies: None.\n\nProduction:\nRoom: Sounds like a medium-sized room, with a natural, uncolored acoustic.\nTexture: Clean and transparent, allowing the individual instruments and voice to be heard distinctly.\nPolished/Raw: Leans towards raw, with a natural, unpolished feel.\n\nArrangement:\nThe arrangement is consistent throughout the excerpt. The acoustic guitar plays a continuous fingerpicked pattern, and the vocals are present from the beginning to the end. No instruments enter, drop out, or build within this segment.\n\nPass 3:\nInstruments:\nAcoustic guitar: Fingerpicked, with a clear, resonant tone. The bass notes are prominent.\n\nTempo and Groove:\nSlow tempo. The groove feels relaxed and flowing, driven by the consistent fingerpicking pattern.\n\nVocals:\nVoice character: A male voice, with a slightly raspy, warm quality.\nDelivery: Solo, with a direct, storytelling delivery. The phrasing is unhurried.\nHarmonies: None.\n\nProduction:\nRoom: Sounds like a small to medium-sized room, with a natural, uncolored acoustic.\nTexture: Clean and clear, with good separation between the guitar and vocals.\nPolished/Raw: Leans towards raw, with a natural, unpolished feel.\n\nArrangement:\nThe excerpt features a consistent arrangement throughout: solo male vocal accompanied by fingerpicked acoustic guitar. No instruments enter, drop out, or build within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Willie Watson's 'Dancing On My Own' is a cover of Robyn's 2010 pop hit.",
+        "source": "https://store.aconyrecords.com/products/dancing-on-my-own"
+      },
+      {
+        "claim": "The song was written by Patrik Berger and Robyn, and Robyn first released it in 2010.",
+        "source": "https://secondhandsongs.com/performance/1214591/all"
+      },
+      {
+        "claim": "Robyn's original was produced by Patrik Berger and co-produced by Robyn.",
+        "source": "https://en.wikipedia.org/wiki/Dancing_on_My_Own"
+      },
+      {
+        "claim": "The Acony Records page describes the single as Watson's answer to collective self-isolation in 2020. It says he was inspired by frequent live streaming from home and recorded the track alone in his living room.",
+        "source": "https://store.aconyrecords.com/products/dancing-on-my-own"
+      },
+      {
+        "claim": "The single was released digitally on May 15, 2020 on Acony Records. It is one 5:30 track, and the Bandcamp credit reads 'Originally performed by Robyn'.",
+        "source": "https://williewatson.bandcamp.com/track/dancing-on-my-own?label=4199166075&tab=artists"
+      },
+      {
+        "claim": "A video of Watson performing the song was uploaded to YouTube on April 8, 2020, about five weeks before the single came out.",
+        "source": "https://www.youtube.com/watch?v=_IrpgGAiF8o"
+      },
+      {
+        "claim": "A 2020 Delaware Liberal write-up said it was unsurprising for Watson, an old-time specialist, to release a cover. It called his choice of Swedish disco singer Robyn the surprising part.",
+        "source": "https://delawareliberal.net/2020/07/13/song-of-the-day-7-13-willie-watson-dancing-on-my-own/"
+      },
+      {
+        "claim": "Watson grew up in Watkins Glen, New York, and was a founding member of Old Crow Medicine Show. He recorded and toured with the band for about 17 years before going solo in 2011.",
+        "source": "https://www.allmusic.com/artist/willie-watson-mn0000961532"
+      },
+      {
+        "claim": "Watson's debut solo album Folk Singer, Vol. 1 was produced by David Rawlings and released in 2014 on Acony Records, the label run by Rawlings and Gillian Welch. Folksinger, Vol. 2 followed in September 2017.",
+        "source": "https://www.iheart.com/artist/willie-watson-30380833/"
+      },
+      {
+        "claim": "Folk Singer, Vol. 1 was recorded at Woodland Sound Studios in Nashville, which Rawlings co-owns with Welch. Unlike that album, this single was recorded alone at home.",
+        "source": "http://www.rustyrailbrewing.com/watson"
+      }
+    ],
+    "lineage": "Watson's work sits in the modern American folk and old-time tradition, rooted in Lead Belly, Harry Smith's anthology and string-band music. On this single he applies that stripped-down acoustic approach to a contemporary pop song.",
+    "genres": [
+      "folk",
+      "americana",
+      "acoustic"
+    ],
+    "recordedAt": []
+  },
+  "draft": "There are no harmonies on Willie Watson's **Dancing On My Own**. Nobody joins in on a chorus, and there's no second voice to lean on. There is one fingerpicked acoustic guitar with a clear, ringing tone and heavy bass notes doing the work a kick drum used to do. Over it, Watson sings in a warm voice with a slight rasp around the edges. It's a slow, steady performance, and its plainness is the first thing that hits you.\n\nThe song belongs to Robyn. She wrote it with Patrik Berger and released it in 2010, a Swedish pop record built for dark rooms and loud systems, produced by Berger with Robyn as co-producer. That Watson would cover something wasn't news; he has spent his career inside other people's songs. As one 2020 write-up put it, the surprise was that an old-time specialist went to a Swedish disco singer for material. Watson came up as a founding member of Old Crow Medicine Show, spent about 17 years recording and touring with them, then went solo in 2011. His two Folk Singer records ran on the Lead Belly and Harry Smith anthology lineage, and he cut the first of them with David Rawlings at Woodland Sound Studios in Nashville.\n\nThis one he made alone in his living room. Acony Records framed the single as his answer to the collective self-isolation of spring 2020, sparked by all the live-streaming he'd been doing from home, and a video of him playing it surfaced in early April, about five weeks before the release. That context changes what the title means. In 2010 the phrase belonged to a club. In 2020 it described almost everyone's evening.\n\nThe recording shows where it was made. The room sounds natural and medium-sized, with no coloring added, and the guitar and voice sit apart from each other cleanly. It feels raw more than polished, like a take rather than a production. The fingerpicking keeps a gentle, rolling motion, and that's the quiet trick here. The pulse that made the original a dance song is still there, carried by a thumb on the low strings instead of a drum machine. Watson doesn't sell the song. He sings it melodically and directly, and he lets the loneliness speak through how little is going on around him.\n\nWhat comes through isn't despair. It's closer to company, one person in a room making the sound of someone else's song so the people watching on the other end of a stream feel a bit less alone in theirs.\n\nIt sticks because it turns a song about being alone in a crowd into a song about being alone together, and you can hear the room he was stuck in.",
+  "factCheck": [
+    {
+      "claim": "There are no harmonies on the track.",
+      "verdict": "supported",
+      "note": "All three passes list harmonies as none."
+    },
+    {
+      "claim": "Nobody joins in on a chorus, and there's no second voice to lean on.",
+      "verdict": "removed",
+      "note": "Chorus structure isn't established, and the passes cover only a short excerpt. Replaced with a plain statement that Watson sings alone."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with a clear, ringing tone and heavy bass notes.",
+      "verdict": "supported",
+      "note": "All three passes say fingerpicked and clear and resonant. Passes 2 and 3 say the bass notes are prominent."
+    },
+    {
+      "claim": "Warm voice with a slight rasp; slow, steady performance.",
+      "verdict": "supported",
+      "note": "Passes agree on a warm, slightly raspy or rough voice, slow tempo and a steady groove."
+    },
+    {
+      "claim": "Robyn wrote the song with Patrik Berger and released it in 2010; Berger produced and Robyn co-produced.",
+      "verdict": "supported",
+      "note": "Matches the SecondHandSongs and Wikipedia facts."
+    },
+    {
+      "claim": "A Swedish pop record built for dark rooms and loud systems.",
+      "verdict": "corrected",
+      "note": "'Built for dark rooms and loud systems' has no support. Reduced to a 2010 pop hit by a Swedish singer."
+    },
+    {
+      "claim": "He has spent his career inside other people's songs.",
+      "verdict": "corrected",
+      "note": "Not supported. The packet says only that a cover was unsurprising for an old-time specialist."
+    },
+    {
+      "claim": "A 2020 write-up said the surprise was an old-time specialist choosing a Swedish disco singer.",
+      "verdict": "supported",
+      "note": "Matches the Delaware Liberal write-up."
+    },
+    {
+      "claim": "Founding member of Old Crow Medicine Show, about 17 years recording and touring, then solo in 2011.",
+      "verdict": "supported",
+      "note": "Matches the AllMusic fact."
+    },
+    {
+      "claim": "His two Folk Singer records ran on the Lead Belly and Harry Smith anthology lineage.",
+      "verdict": "corrected",
+      "note": "The lineage note describes Watson's work generally, not those two records specifically. Reworded to his solo work."
+    },
+    {
+      "claim": "He cut the first Folk Singer record with David Rawlings at Woodland Sound Studios in Nashville.",
+      "verdict": "supported",
+      "note": "Rawlings produced Vol. 1, and it was recorded at Woodland Sound Studios in Nashville."
+    },
+    {
+      "claim": "Made alone in his living room; Acony framed it as an answer to collective self-isolation, sparked by live-streaming from home.",
+      "verdict": "supported",
+      "note": "Matches the Acony Records page."
+    },
+    {
+      "claim": "A video surfaced in early April, about five weeks before release.",
+      "verdict": "supported",
+      "note": "YouTube upload on April 8, 2020; single released May 15."
+    },
+    {
+      "claim": "In 2010 the phrase belonged to a club.",
+      "verdict": "corrected",
+      "note": "No support for a club setting. Reframed as an interpretation of the title in 2020."
+    },
+    {
+      "claim": "Room sounds natural and medium-sized, uncolored; guitar and voice cleanly separated; leans raw.",
+      "verdict": "supported",
+      "note": "Passes agree on a natural room of small to medium size and clear separation. Passes 2 and 3 say raw."
+    },
+    {
+      "claim": "The pulse of the original is carried by a thumb on the low strings instead of a drum machine.",
+      "verdict": "removed",
+      "note": "Nothing in the packet covers the original's instrumentation or the picking technique. Reworded around the prominent bass notes."
+    },
+    {
+      "claim": "He sings it melodically and directly.",
+      "verdict": "supported",
+      "note": "Passes describe a melodic, clear, direct delivery."
+    },
+    {
+      "claim": "People watching on the other end of a stream.",
+      "verdict": "removed",
+      "note": "Nothing says this recording was streamed. Replaced with a general interpretive line."
+    },
+    {
+      "claim": "A song about being alone in a crowd turned into one about being alone together.",
+      "verdict": "removed",
+      "note": "It paraphrases lyrics that aren't available. Reworded without describing the lyrics."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2965,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014742,
+        "detail": "1099 in / 189 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015567,
+        "detail": "1099 in / 222 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015017,
+        "detail": "1099 in / 200 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.194864,
+        "detail": "69392 in / 1608 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.046264,
+        "detail": "3481 in / 1617 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.050834,
+        "detail": "4607 in / 4162 out"
+      }
+    ]
+  }
+}

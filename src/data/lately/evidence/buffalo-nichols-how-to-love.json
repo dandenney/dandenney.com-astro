@@ -1,0 +1,211 @@
+{
+  "spotifyId": "5xSUcxAoaRsXMaaSace7ST",
+  "reviewedAt": "2026-11-26T17:41:45.322Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/34130228"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, with a slide on some notes.\nBass guitar: plays a walking bass line.\nDrums: light, with a shuffle feel, featuring brushes on the snare.\n\nTempo and Groove:\nMedium tempo, with a relaxed, slightly swung shuffle groove.\n\nVocals:\nMale voice, clear and slightly raspy, delivered with a laid-back, conversational feel. No harmonies.\n\nProduction:\nThe sound is clean and relatively dry, with a natural, unpolished texture. The room sound is minimal, suggesting a close-miked recording.\n\nArrangement:\nThe excerpt begins with the acoustic guitar and bass already playing. The drums enter shortly after, establishing the shuffle. The vocals enter, then drop out briefly before returning. The acoustic guitar continues its fingerpicked pattern throughout, with the bass and drums providing a consistent rhythmic foundation.\n\nPass 2:\nInstruments:\nAcoustic guitar: fingerpicked, with a slide on some notes.\nElectric guitar: plays a simple, clean, melodic line.\nBass: plays a walking bass line.\nDrums: light, brushed snare, with a kick drum.\n\nTempo and Groove:\nSlow tempo, with a relaxed, bluesy shuffle feel.\n\nVocals:\nMale voice, with a slightly raspy, warm tone. Delivered in a conversational, storytelling style. No harmonies.\n\nProduction:\nThe sound is clean and clear, with a natural room ambiance. The texture is warm and organic, with a polished but not overly produced feel.\n\nArrangement:\nThe excerpt begins with the acoustic guitar and vocals. The electric guitar enters shortly after, playing a melodic counterpoint. The bass and drums enter to establish the groove. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nAcoustic guitar: fingerpicked, with a slide on some notes.\nElectric guitar: plays a simple, clean melody.\nBass: plays a walking bass line.\nDrums: light, brushed snare and kick drum.\n\nTempo and Groove:\nSlow tempo, with a relaxed, bluesy shuffle feel.\n\nVocals:\nMale voice, with a slightly raspy, soulful character. Delivered in a conversational, storytelling style. No harmonies.\n\nProduction:\nThe sound is warm and intimate, with a natural room acoustic. The texture is clean and polished, but not overly produced.\n\nArrangement:\nThe excerpt begins with the acoustic guitar and vocals. The bass and drums enter shortly after, establishing the groove. The electric guitar enters around the middle of the excerpt, playing a melodic counterpoint to the vocals. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"How to Love\" is track 5 of 8 on Buffalo Nichols' self-titled debut album, released 15 October 2021 on Fat Possum Records.",
+        "source": "https://rateyourmusic.com/release/album/buffalo-nichols/buffalo-nichols-1/"
+      },
+      {
+        "claim": "Fat Possum describes the album as its first solo blues signing in nearly 20 years.",
+        "source": "https://store.fatpossum.com/products/buffalo-nichols"
+      },
+      {
+        "claim": "The label's album notes say the record deals with empathy and forgiveness on \"How to Love,\" which they call a poignant, ever-building melody.",
+        "source": "https://www.highresaudio.com/en/album/view/22ncfq/buffalo-nichols-buffalo-nichols"
+      },
+      {
+        "claim": "Uncut reads the song as Nichols counting the lessons and scars from a relationship, knowing his lover took just as many. The refrain is that the way they hurt you showed you how to love, and the way you hurt me showed me how to love.",
+        "source": "https://www.uncut.co.uk/reviews/album/buffalo-nichols-buffalo-nichols-134501/"
+      },
+      {
+        "claim": "The album is composed largely of demos and studio sessions recorded between Wisconsin and Texas.",
+        "source": "https://www.highresaudio.com/en/album/view/22ncfq/buffalo-nichols-buffalo-nichols"
+      },
+      {
+        "claim": "Nichols recorded demos for many of the album's songs in Milwaukee. He also recorded at Electric Deluxe, the South Austin home studio of Black Pumas' Adrian Quesada.",
+        "source": "https://www.austinmonthly.com/now-based-in-austin-buffalo-nichols-makes-waves-with-his-debut-album/"
+      },
+      {
+        "claim": "The album also had additional sessions at Sonic Ranch in Tornillo, Texas.",
+        "source": "https://www.statesman.com/story/entertainment/music/2022/03/24/buffalo-nichols-talks-blues-music-moving-austin-and-more/9192402002/"
+      },
+      {
+        "claim": "Austin drummer Brannen Temple plays on a couple of songs on the album. Discogs credits Temple (drums), Matthew Wilson (bass, drums), Jess McIntosh (violin), Danny Zelonky (recorded by) and Clay Jones (mixed and mastered by) on the album.",
+        "source": "https://www.discogs.com/master/2400397-Buffalo-Nichols-Buffalo-Nichols"
+      },
+      {
+        "claim": "Nichols told an interviewer that before writing one song he had written many political songs that demand something of the audience, and that people then wanted to discuss those songs after shows. He said he tries to put the idea into the music so nobody has to tell him what they think afterward. The interview discusses \"How to Love\" and \"Back On Top\" as love songs.",
+        "source": "https://sinceileftyoublog.tumblr.com/post/669829538268807168/buffalo-nichols-interview-the-word-is-empathy"
+      },
+      {
+        "claim": "Nichols was born Carl Nichols in Houston, Texas, and raised in Milwaukee, Wisconsin. He first played in the duo Nickel & Rose with Johanna Rose before going solo as Buffalo Nichols, and he later based himself in Austin.",
+        "source": "https://www.amazon.com/Buffalo-Nichols/dp/B097NWTGKP"
+      }
+    ],
+    "lineage": "The song sits in contemporary folk-blues, with fingerstyle and slide guitar influenced by Bentonia, Mississippi players such as Skip James, and with Nichols stating an aim to put more Black stories into folk and blues.",
+    "genres": [
+      "blues",
+      "folk blues",
+      "acoustic blues"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Electric Deluxe",
+        "city": "Austin",
+        "state": "Texas",
+        "country": "USA",
+        "source": "https://www.austinmonthly.com/now-based-in-austin-buffalo-nichols-makes-waves-with-his-debut-album/"
+      },
+      {
+        "studio": "Sonic Ranch",
+        "city": "Tornillo",
+        "state": "Texas",
+        "country": "USA",
+        "source": "https://www.statesman.com/story/entertainment/music/2022/03/24/buffalo-nichols-talks-blues-music-moving-austin-and-more/9192402002/"
+      }
+    ]
+  },
+  "draft": "The last choruses of **How to Love** change a few small words and turn the whole song inside out. For most of its length Buffalo Nichols sings a wounded thank-you note, \"the way you hurt me showed me how to love,\" the kind of thing people tell themselves to make a breakup worth something. Then, in the final verse, years have passed. He barely recognizes the person who walked out the door, decides they couldn't hurt a fly, and the refrain swings around to face them: \"the way they hurt you showed you.\" The hurt stops belonging to him alone. It becomes a chain, handed down from whoever got to his ex first.\n\nThat turn lands because the song lets him be a mess before he earns it. The opening blames a pretty girl for every ugly thing he did, the cigarettes and the diamond rings, half joke and half alibi. He insists he isn't heartless, then admits there's a lot he hardly understands. He sold everything for a lie, and the second verse ends on the bitterest image in the song: love could have been the cure, \"but your love was a disease.\" Gratitude and self-pity share the same chorus and never settle. Even the first refrain carries a sting he leaves alone, sitting right after the admission that in the end he wasn't good enough.\n\nThe playing keeps all of that low to the ground. A fingerpicked acoustic guitar carries the song, a slide catching some of the notes, over a walking bass and light drums: brushes on the snare, a soft kick. The tempo is slow and the shuffle relaxed, never pushed. A clean electric guitar traces a simple melody against the vocal. Nichols sings in a slightly raspy, conversational voice with no harmonies to cushion it, telling the story more than performing it. The room sounds warm and natural, finished without being buffed to a shine.\n\nThe guitar style has roots in the Bentonia, Mississippi players like Skip James. Nichols has said he wants to put more Black stories into folk and blues, and Fat Possum signed him as its first solo blues act in nearly 20 years. Here he bends that tradition toward a love song about forgiveness. He has also talked about moving away from political songs that demand something of an audience. He'd rather build the idea into the music, so nobody has to explain it to him after the show. In this song the idea is empathy, and he never says the word. He just changes who's getting hurt.\n\nIt sticks because it walks you from blaming someone to understanding them inside a single refrain, then leaves you wondering who taught you to love the way you do.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"the way you hurt me showed me how to love\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Lyric quote: \"the way they hurt you showed you\"",
+      "verdict": "supported",
+      "note": "Matches the final refrain, which continues \"...how to love\"."
+    },
+    {
+      "claim": "Lyric quote: \"but your love was a disease\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "In the final verse, years have passed; he barely recognizes the person who walked out and decides they couldn't hurt a fly",
+      "verdict": "supported",
+      "note": "Lyrics: \"I hardly recognize you anymore / It's been so many years since you walked out of the door\" and \"you could hardly hurt a fly\"."
+    },
+    {
+      "claim": "The opening blames a pretty girl for ugly things like cigarettes and diamond rings; he says he isn't heartless but hardly understands some things",
+      "verdict": "supported",
+      "note": "Directly from the first verse. 'Half joke and half alibi' is interpretation."
+    },
+    {
+      "claim": "He sold everything for a lie; second verse ends on 'love could have been the cure'/'disease'; first refrain follows the admission that he wasn't good enough",
+      "verdict": "supported",
+      "note": "Matches the lyric structure."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with slide on some notes, walking bass, light drums with brushes on the snare",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A soft kick drum",
+      "verdict": "corrected",
+      "note": "Two passes mention a kick drum but none say it is soft. Changed to 'a kick'."
+    },
+    {
+      "claim": "Slow tempo, relaxed shuffle",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 say slow, and all three say relaxed shuffle."
+    },
+    {
+      "claim": "Clean electric guitar traces a simple melody against the vocal",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree."
+    },
+    {
+      "claim": "Slightly raspy, conversational voice, no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Room sounds warm and natural, finished but not overly polished",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree, and pass 1 says natural."
+    },
+    {
+      "claim": "The guitar style has roots in Bentonia, Mississippi players like Skip James",
+      "verdict": "corrected",
+      "note": "The packet says the fingerstyle and slide guitar is influenced by these players. Reworded to 'draws on'."
+    },
+    {
+      "claim": "Nichols has said he wants to put more Black stories into folk and blues",
+      "verdict": "supported",
+      "note": "From the lineage note."
+    },
+    {
+      "claim": "Fat Possum signed him as its first solo blues act in nearly 20 years",
+      "verdict": "supported",
+      "note": "Fat Possum's own description of the album."
+    },
+    {
+      "claim": "A love song about forgiveness; the idea is empathy",
+      "verdict": "supported",
+      "note": "Label notes cite empathy and forgiveness, and the interview calls the song a love song. 'Never says the word' is true of the lyrics."
+    },
+    {
+      "claim": "He has talked about moving away from political songs that demand something of an audience, building the idea into the music so nobody has to explain it to him after the show",
+      "verdict": "corrected",
+      "note": "The packet says he wrote many such songs and people wanted to discuss them after shows, and that he tries to put the idea into the music so nobody has to tell him what they think. 'Moving away' overstated it, so the passage was reworded."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2805,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014714,
+        "detail": "1098 in / 188 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014739,
+        "detail": "1098 in / 189 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014589,
+        "detail": "1098 in / 183 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.150598,
+        "detail": "50564 in / 1947 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07432,
+        "detail": "4035 in / 2909 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051148,
+        "detail": "5149 in / 4085 out"
+      }
+    ]
+  }
+}

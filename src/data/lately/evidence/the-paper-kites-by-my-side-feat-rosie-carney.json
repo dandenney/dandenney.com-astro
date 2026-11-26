@@ -1,0 +1,225 @@
+{
+  "spotifyId": "1XrC5SDkVnGgCBXzwI8NfV",
+  "reviewedAt": "2026-11-26T17:44:19.858Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3848431"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a simple, arpeggiated chord progression. A piano plays sustained chords, often in unison with the guitar.\n\nTempo and Groove:\nThe tempo is slow. The groove is gentle and flowing, with a sense of calm.\n\nVocals:\nA male voice sings in a soft, breathy character. The delivery is intimate and slightly melancholic. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The texture is smooth. There is a sense of a small, intimate room.\n\nArrangement:\nThe excerpt begins with acoustic guitar and piano. The male vocal enters shortly after. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building significantly.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A piano plays sustained chords.\n\nTempo and Groove:\nThe tempo is slow. The groove feels gentle and flowing.\n\nVocals:\nA male voice sings in a clear, breathy character. The delivery is soft and intimate. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The texture is smooth. The room sounds like a medium-sized space with a short reverb tail.\n\nArrangement:\nThe excerpt begins with acoustic guitar and piano. The male vocal enters shortly after. The arrangement remains consistent throughout the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A piano plays sustained chords.\n\nTempo and Groove:\nThe tempo is slow. The groove is gentle and flowing, with a slight push and pull in the rhythm.\n\nVocals:\nA male voice sings in a clear, breathy, and slightly melancholic tone. The delivery is intimate and expressive. There are no harmonies.\n\nProduction:\nThe sound is clean and polished, with a sense of space. The instruments are well-balanced, creating a smooth texture.\n\nArrangement:\nThe excerpt begins with acoustic guitar and piano. The male vocal enters shortly after. The piano chords sustain throughout, while the acoustic guitar maintains its arpeggiated pattern. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "'By My Side' is the second single from The Paper Kites' fifth studio album Roses and was released on 25 September 2020 with a video.",
+        "source": "https://www.nme.com/news/music/the-paper-kites-share-new-single-by-my-side-featuring-rosie-carney-2761250"
+      },
+      {
+        "claim": "Roses was produced by Sam Bentley and Tom Iansek (of #1 Dads and Big Scary).",
+        "source": "https://nettwerk.com/news/the-paper-kites-share-by-my-side-feat-rosie-carney-from-forthcoming-lp-roses%E2%80%82"
+      },
+      {
+        "claim": "Nettwerk calls the song a restrained, delicate love song, with guest vocals from Irish singer-songwriter Rosie Carney.",
+        "source": "https://nettwerk.com/news/the-paper-kites-share-by-my-side-feat-rosie-carney-from-forthcoming-lp-roses%E2%80%82"
+      },
+      {
+        "claim": "Discogs credits 'By My Side' as recorded by Tom Iansek, with additional recording by Rosie Carney and Sam Bentley.",
+        "source": "https://www.discogs.com/release/17828713-The-Paper-Kites-Roses"
+      },
+      {
+        "claim": "Sam Bentley recalled that Rosie Carney recorded her vocal on the floor of her London flat. She was worried because she was not used to recording without an engineer. She then sent the vocals to the band.",
+        "source": "https://www.orchestrate.ie/the-paper-kites/"
+      },
+      {
+        "claim": "The band says Rosie Carney was in a hard lockdown when she recorded her part. Most of the album's music was recorded early in 2020, before Melbourne's harsher second-wave lockdown.",
+        "source": "https://culturecollide.com/interview-the-paper-kites-release-new-album-roses/"
+      },
+      {
+        "claim": "Sam Bentley said Roses is 'an album of duets', made of songs the band had written and wanted to record with these artists. It was about finding the right voices for each song.",
+        "source": "https://themusic.com.au/features/album-walkthrough-the-paper-kites-break-down-their-sensational-new-album-roses/aFDWen18f34/23-03-21"
+      },
+      {
+        "claim": "Bentley said he wrote the Roses songs after listening closely to the chosen singers' records, aiming for songs he thought they could sing well.",
+        "source": "https://www.rte.ie/entertainment/2021/0418/1210609-the-paper-kites-best-buds-make-gorgeous-album-roses/"
+      },
+      {
+        "claim": "Reviewer George Graham describes 'By My Side' as the album's closing track, a melancholy love song with a piano-based arrangement and a little steel guitar that sounds distinctive within the album.",
+        "source": "http://www.georgegraham.com/reviews/paper-kites-2021.html"
+      },
+      {
+        "claim": "The Paper Kites are a Melbourne indie-folk band formed in 2009 by Sam Bentley and Christina Lacy. Roses followed their 2018 album On the Corner Where You Live, which earned an ARIA nomination, and is a collection of duets.",
+        "source": "https://www.amazon.com/My-Side-feat-Rosie-Carney/dp/B08HNFTHKY"
+      }
+    ],
+    "lineage": "The song sits in the Australian indie-folk tradition of The Paper Kites, which sources describe as lush harmonies, introspective lyrics and understated, restrained songwriting, here in a duet format.",
+    "genres": [
+      "indie folk",
+      "folk pop"
+    ],
+    "recordedAt": [
+      {
+        "studio": "BellBird Studio",
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia",
+        "source": "https://www.discogs.com/release/17828713-The-Paper-Kites-Roses"
+      },
+      {
+        "studio": null,
+        "city": "London",
+        "state": null,
+        "country": "United Kingdom",
+        "source": "https://www.orchestrate.ie/the-paper-kites/"
+      }
+    ]
+  },
+  "draft": "\"And if I ran then I would run to you.\" That line in **By My Side** does a lot of quiet work. It admits that running has crossed the narrator's mind, then bends the escape back into the promise. Even the getaway has a destination. The whole song works the same way: love declared through a pile of wants, stacked one on top of another until they start to sound like a vow.\n\nCount how often the lyric says \"I want.\" To take you in my arms, to talk with you, to vanish in the night with you. Then comes the little tag \"I do,\" tacked onto the ends of lines like a reassurance, as if the singer is answering a doubt nobody voiced out loud, maybe their own. Nothing here is clever, and that's the point. Dressing it up would be a way to hide.\n\nThe best line is the most modest one: \"I'm gonna make some kind of life for you / Any way I can.\" \"Some kind\" is an honest phrase. There's no plan and no picture of the house, just willingness, plus a quiet admission that the means might be thin. Pride and uncertainty share the same breath. The chorus pares things down further, \"By my side\" answered by fragments like \"The only place,\" as if full sentences are more than the feeling needs.\n\nThe music matches that restraint. A fingerpicked acoustic guitar turns over a steady arpeggio while piano holds long, sustained chords underneath. The tempo is slow, the groove gentle and flowing. The lead voice is soft and breathy, close to the ear, with a slight melancholy that keeps the devotion from tipping into sweetness. Everything is clean and polished. Sam Bentley and Tom Iansek produced *Roses*, and Iansek recorded the track. Critic George Graham heard it as the album's closing track, a melancholy, piano-based love song, with a little steel guitar that sets it apart from the rest of the record.\n\n*Roses* is, in Bentley's words, \"an album of duets,\" and he wrote its songs after listening closely to each guest's records, aiming for material they could sing well. So this one was built for Rosie Carney, the Irish singer-songwriter. She recorded her part on the floor of her London flat during a hard lockdown, worried because she wasn't used to working without an engineer, then sent the vocals to the band. That gives the song a strange, tender backstory: a duet about wanting someone by your side, finished by people who couldn't share a room. It's the Melbourne indie-folk band's understated style turned toward distance, longing carried by two parties apart.\n\nThe song sticks because it never claims to know how love will work out, only that the wanting is real, and it makes \"any way I can\" sound like the most generous promise you could hear.",
+  "factCheck": [
+    {
+      "claim": "Quote: \"And if I ran then I would run to you.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Quote: \"I'm gonna make some kind of life for you / Any way I can\"",
+      "verdict": "supported",
+      "note": "Two consecutive lines, matching the lyrics."
+    },
+    {
+      "claim": "Quotes of the chorus: \"By my side\" answered by \"The only place\"",
+      "verdict": "corrected",
+      "note": "The words match the lyrics, but the review quoted more than three lyric lines in total. Replaced with a paraphrase of the chorus."
+    },
+    {
+      "claim": "The lyric repeats \"I want\" (take you in my arms, talk with you, vanish in the night) and tags lines with \"I do\"",
+      "verdict": "supported",
+      "note": "All of these appear in the lyrics."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar playing an arpeggio",
+      "verdict": "supported",
+      "note": "All three passes agree on arpeggiated guitar, and two say fingerpicked."
+    },
+    {
+      "claim": "The arpeggio is \"steady\"",
+      "verdict": "removed",
+      "note": "No pass says steady. Pass 3 mentions a slight push and pull in the rhythm."
+    },
+    {
+      "claim": "Piano holds long, sustained chords",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Slow tempo, gentle and flowing groove",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Lead voice soft, breathy, close to the ear, slightly melancholy",
+      "verdict": "supported",
+      "note": "Breathy and intimate are in all three passes. Soft is in passes 1 and 2. Melancholy is in passes 1 and 3."
+    },
+    {
+      "claim": "Everything is clean and polished",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Sam Bentley and Tom Iansek produced Roses",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "Iansek recorded the track",
+      "verdict": "supported",
+      "note": "Discogs credits recording to Tom Iansek."
+    },
+    {
+      "claim": "George Graham calls it the album's closing track, a melancholy, piano-based love song with a little steel guitar that sounds distinctive on the record",
+      "verdict": "supported",
+      "note": "Matches Graham's review as summarized in the packet."
+    },
+    {
+      "claim": "Bentley called Roses \"an album of duets\"",
+      "verdict": "supported",
+      "note": "Quoted in the packet."
+    },
+    {
+      "claim": "Bentley wrote the songs after listening closely to each guest's records, aiming for material they could sing well",
+      "verdict": "supported",
+      "note": "Matches the RTE source."
+    },
+    {
+      "claim": "\"So this one was built for Rosie Carney\"",
+      "verdict": "corrected",
+      "note": "Bentley spoke about the album in general, not this song. Reworded as an inference."
+    },
+    {
+      "claim": "Rosie Carney is an Irish singer-songwriter",
+      "verdict": "supported",
+      "note": "Stated in the Nettwerk fact."
+    },
+    {
+      "claim": "Carney recorded on the floor of her London flat during a hard lockdown, worried about recording without an engineer, then sent the vocals to the band",
+      "verdict": "supported",
+      "note": "Stated in the Orchestrate and Culture Collide facts."
+    },
+    {
+      "claim": "The song fits the Melbourne indie-folk band's understated style",
+      "verdict": "supported",
+      "note": "Supported by the band description and the lineage note."
+    },
+    {
+      "claim": "Interpretive readings (the destination in the getaway line, \"some kind\" as honest, pride beside uncertainty, longing across distance)",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics and the supported recording backstory."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2761,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013344,
+        "detail": "1108 in / 132 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013794,
+        "detail": "1108 in / 150 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014169,
+        "detail": "1108 in / 165 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15608,
+        "detail": "52730 in / 2062 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.068084,
+        "detail": "3601 in / 2684 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047774,
+        "detail": "4762 in / 3825 out"
+      }
+    ]
+  }
+}
