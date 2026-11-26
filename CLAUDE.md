@@ -62,6 +62,10 @@ writeups in the `golf-venues` collection. Log entries with `/add-golf-session`
 and `/add-round`. Shared identity in `src/styles/golf.css` plus
 `src/layouts/Golf.astro`; never use `dark:` variants inside `.golf`.
 
+### UI explorations (`/ui`)
+
+Each exploration is `ui/<slug>/` (`BRIEF.md`, one `<variant>.html` per model or agent, optional `NOTES.md`), served as self-contained frames with Tailwind compiled at build time (`src/lib/ui-lab.ts`). Workflow and `yarn ui:generate` / `yarn ui:og` in `ui/README.md`; the contract for generating agents is `ui/AGENTS.md`.
+
 ### Agent Content Pipeline
 
 `docs/agent-content-pipeline/README.md` describes the Leif → Quillan → Watten → Shelby agent workflow for generating No Reservaitions and music reviews. Scripts are in `scripts/agent-content/`. Use `yarn agent:packet:validate` and `yarn agent:content:publish` to drive the pipeline.

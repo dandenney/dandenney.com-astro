@@ -1,0 +1,137 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { SITE_TITLE } from '@/consts';
+import { ClientRouter } from 'astro:transitions';
+import { UI_KINDS, UI_KIND_LABELS } from '@/lib/ui-kinds';
+import { frameUrl, shownVariant, variantsFor } from '@/lib/ui-variants';
+
+export const prerender = true;
+
+const items = (await getCollection('ui'))
+	.filter((e) => shownVariant(e))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const kinds = UI_KINDS.filter((k) => items.some((i) => i.data.kind === k));
+---
+
+<BaseLayout
+	title="UI | Dan Denney"
+	description="Interface explorations: sections, interactions and visual directions, each a single live HTML file, made with whichever model I'm trying out."
+	bodyClass="bg-white dark:bg-slate-900"
+>
+	<Fragment slot="head">
+		<ClientRouter />
+	</Fragment>
+	<main id="main-content" tabindex="-1" class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+		<Header title={SITE_TITLE} />
+
+		<section class="pt-16 pb-24" data-ui-gallery>
+			<div class="px-8">
+				<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+					<span class="whitespace-nowrap">[&nbsp;{items.length} exploration{items.length === 1 ? '' : 's'}&nbsp;]</span>
+				</p>
+				<h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-slate-100">UI</h1>
+				<p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-100">
+					Where I stash interface explorations: sections, interactions and whole visual directions. Each one is a single HTML file you can poke at, built by me and whichever model I'm trying out.
+				</p>
+				{kinds.length > 1 && (
+					<div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Filter by kind">
+						<button type="button" class="ui-chip" data-kind="all" aria-pressed="true">All</button>
+						{kinds.map((k) => <button type="button" class="ui-chip" data-kind={k} aria-pressed="false">{UI_KIND_LABELS[k]}</button>)}
+					</div>
+				)}
+			</div>
+
+			<div class="tinkerings-grid mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-y border-gray-200 dark:border-slate-700">
+				{items.map((item) => {
+					const versions = variantsFor(item.id).length;
+					return (
+						<article class="ui-card group relative flex flex-col bg-slate-50 dark:bg-slate-800" data-card-kind={item.data.kind}>
+							<div class="ui-thumb relative aspect-[16/10] overflow-hidden bg-white" data-thumb aria-hidden="true">
+								<iframe
+									src={frameUrl(item.id, shownVariant(item)!)}
+									title=""
+									tabindex="-1"
+									loading="lazy"
+									class="ui-thumb__frame"
+								></iframe>
+							</div>
+							<div class="flex flex-1 flex-col p-6 md:p-8">
+								<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+									<span class="whitespace-nowrap">[&nbsp;{item.data.kind}&nbsp;]</span>
+									{versions > 1 && <span class="ml-2 whitespace-nowrap">{versions} versions</span>}
+								</p>
+								<h2 class="mt-3 text-lg font-semibold leading-snug text-red-700 transition-colors group-hover:text-red-800 dark:text-red-400 dark:group-hover:text-red-300">
+									<a href={`/ui/${item.id}/`} class="ui-card__link no-underline">{item.data.title}</a>
+								</h2>
+								<p class="mt-3 flex-1 text-sm leading-relaxed text-gray-500 dark:text-slate-400">{item.data.summary}</p>
+							</div>
+						</article>
+					);
+				})}
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>
+
+<style>
+	.ui-card__link::after { content: ''; inset: 0; position: absolute; z-index: 1; }
+	.ui-card__link:focus-visible { outline: none; }
+	.ui-card:has(.ui-card__link:focus-visible) { outline: 2px solid #b91c1c; outline-offset: -2px; }
+	.ui-card[hidden] { display: none; }
+	.ui-thumb__frame {
+		border: 0;
+		height: 800px;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		transform: scale(var(--thumb-scale, 0.3));
+		transform-origin: 0 0;
+		width: 1280px;
+	}
+	.ui-chip {
+		border: 1px solid #d1d5db;
+		border-radius: 9999px;
+		color: #374151;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		padding: 0.25rem 0.75rem;
+		transition: border-color 150ms, color 150ms;
+	}
+	.ui-chip:hover { border-color: #b91c1c; color: #b91c1c; }
+	.ui-chip[aria-pressed='true'] { background: #111827; border-color: #111827; color: white; }
+	.ui-chip:focus-visible { outline: 2px solid #b91c1c; outline-offset: 2px; }
+	:global(.dark) .ui-chip { border-color: #475569; color: #e2e8f0; }
+	:global(.dark) .ui-chip[aria-pressed='true'] { background: #f1f5f9; border-color: #f1f5f9; color: #0f172a; }
+</style>
+
+<script>
+	function initGallery() {
+		const gallery = document.querySelector<HTMLElement>('[data-ui-gallery]');
+		if (!gallery) return;
+
+		const thumbs = gallery.querySelectorAll<HTMLElement>('[data-thumb]');
+		const fit = new ResizeObserver((entries) => {
+			for (const { target, contentRect } of entries) {
+				(target as HTMLElement).style.setProperty('--thumb-scale', String(contentRect.width / 1280));
+			}
+		});
+		thumbs.forEach((t) => fit.observe(t));
+
+		const chips = gallery.querySelectorAll<HTMLButtonElement>('[data-kind]');
+		chips.forEach((chip) =>
+			chip.addEventListener('click', () => {
+				const kind = chip.dataset.kind;
+				chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+				gallery.querySelectorAll<HTMLElement>('[data-card-kind]').forEach((card) => {
+					card.hidden = kind !== 'all' && card.dataset.cardKind !== kind;
+				});
+			})
+		);
+	}
+	document.addEventListener('astro:page-load', initGallery);
+</script>

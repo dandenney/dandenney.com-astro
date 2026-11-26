@@ -1,5 +1,6 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
+import { UI_KINDS } from "@/lib/ui-kinds";
 
 const posts = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/posts" }),
@@ -56,6 +57,31 @@ const factory = defineCollection({
     tinkering: z.string().optional(),
     aiGenerated: z.boolean().default(true),
   }),
+});
+
+// UI explorations: ui/<slug>/BRIEF.md, beside the <variant>.html files it describes (ui/README.md)
+const uiEntryId = ({ entry }: { entry: string }) => entry.split("/")[0];
+
+const ui = defineCollection({
+  loader: glob({ pattern: "*/BRIEF.md", base: "./ui", generateId: uiEntryId }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    kind: z.enum(UI_KINDS),
+    tags: z.array(z.string()).default([]),
+    pubDate: z.coerce.date(),
+    // variant (file name without .html) shown first; defaults to the only or first one
+    shipped: z.string().optional(),
+    // "free" opts out of the house taste in ui/AGENTS.md
+    style: z.enum(["house", "free"]).default("house"),
+    // frame height in px on the exploration's page
+    height: z.number().int().positive().default(560),
+  }),
+});
+
+const uiNotes = defineCollection({
+  loader: glob({ pattern: "*/NOTES.md", base: "./ui", generateId: uiEntryId }),
+  schema: z.object({}).passthrough(),
 });
 
 const trueCrime = defineCollection({
@@ -200,4 +226,6 @@ export const collections = {
   songs,
   tinkerings,
   "true-crime": trueCrime,
+  ui,
+  "ui-notes": uiNotes,
 };

@@ -1,0 +1,166 @@
+---
+import { existsSync } from 'node:fs';
+import { type CollectionEntry, getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { ClientRouter } from 'astro:transitions';
+import { frameUrl, shownVariant, sourceUrl, variantsFor } from '@/lib/ui-variants';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+	const entries = await getCollection('ui');
+	return entries.filter((e) => shownVariant(e)).map((entry) => ({ params: { slug: entry.id }, props: entry }));
+}
+type Props = CollectionEntry<'ui'>;
+
+const entry = Astro.props;
+const slug = entry.id;
+const { title, summary, kind, tags, pubDate, height, shipped } = entry.data;
+const shown = shownVariant(entry)!;
+const variants = variantsFor(slug).map((v) => v.variant);
+const { Content: Brief } = await render(entry);
+const notes = await getEntry('ui-notes', slug);
+const Notes = notes ? (await render(notes)).Content : undefined;
+const image = existsSync(`public/ui/${slug}/og.png`) ? `/ui/${slug}/og.png` : undefined;
+const dateStr = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const widths = [
+	{ label: 'Fill', value: '100%' },
+	{ label: 'Tablet', value: '768px' },
+	{ label: 'Phone', value: '390px' },
+];
+---
+
+<BaseLayout title={`${title} | UI | Dan Denney`} description={summary} image={image} datePublished={pubDate} bodyClass="bg-white dark:bg-slate-900">
+	<Fragment slot="head">
+		<ClientRouter />
+	</Fragment>
+	<Header />
+	<main id="main-content" tabindex="-1" class="bg-white relative shadow-xs z-10 dark:bg-slate-900 dark:text-slate-200">
+		<header class="px-8 pt-10">
+			<p class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+				<a href="/ui/" class="ui-link whitespace-nowrap">&larr;&nbsp;All UI</a>
+				<span class="ml-2 whitespace-nowrap">[&nbsp;{kind}&nbsp;]</span>
+				<span class="ml-2 whitespace-nowrap">{dateStr}</span>
+			</p>
+			<h1 class="mt-4 max-w-3xl text-4xl font-black tracking-tight text-balance text-gray-900 sm:text-5xl dark:text-white">{title}</h1>
+			<p class="mt-4 max-w-2xl text-lg leading-8 text-gray-600 dark:text-slate-300">{summary}</p>
+		</header>
+
+		<section class="ui-stage mt-10 px-4 sm:px-8" data-ui-stage>
+			<div class="flex flex-wrap items-center justify-between gap-3 border-t border-gray-200 py-3 dark:border-slate-700">
+				<div class="flex flex-wrap items-center gap-2" role="group" aria-label="Frame width">
+					{widths.map((w, i) => (
+						<button type="button" class="ui-chip" data-width={w.value} aria-pressed={i === 0 ? 'true' : 'false'}>{w.label}</button>
+					))}
+				</div>
+				{variants.length > 1 && (
+					<div class="flex flex-wrap items-center gap-2" role="group" aria-label="Version">
+						{variants.map((v) => (
+							<button type="button" class="ui-chip" data-variant={v} data-src={frameUrl(slug, v)} data-source={sourceUrl(slug, v)} aria-pressed={v === shown ? 'true' : 'false'}>
+								{v}{v === shipped && <span class="sr-only"> (shipped)</span>}{v === shipped && <span aria-hidden="true" class="ml-1 text-red-700 dark:text-red-400">●</span>}
+							</button>
+						))}
+					</div>
+				)}
+				<div class="flex items-center gap-4 text-sm font-semibold">
+					<a href={frameUrl(slug, shown)} class="ui-link" data-open>Open on its own <span aria-hidden="true">↗</span></a>
+					<a href={sourceUrl(slug, shown)} class="ui-link" data-source-link>Source <span aria-hidden="true">↗</span></a>
+				</div>
+			</div>
+			<div class="ui-stage__well flex justify-center border-y border-gray-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
+				<iframe
+					src={frameUrl(slug, shown)}
+					title={`${title}, live`}
+					class="ui-stage__frame block w-full bg-white"
+					style={`height: ${height}px`}
+					data-frame
+				></iframe>
+			</div>
+			<p class="mt-3 text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">
+				Made by <span data-made-by>{shown}</span>
+			</p>
+		</section>
+
+		<div class="grid gap-12 px-8 pt-12 pb-24 lg:grid-cols-2">
+			<section aria-labelledby="brief-heading" class="prose-ui">
+				<h2 id="brief-heading" class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">The brief</h2>
+				<div class="mt-4 has-links text-base leading-7 text-gray-700 dark:text-slate-300"><Brief /></div>
+				{tags.length > 0 && (
+					<ul class="mt-6 flex flex-wrap gap-2" aria-label="Tags">
+						{tags.map((t) => <li class="rounded-full border border-gray-200 px-3 py-0.5 text-xs text-gray-500 dark:border-slate-700 dark:text-slate-400">{t}</li>)}
+					</ul>
+				)}
+			</section>
+			{Notes && (
+				<section aria-labelledby="notes-heading" class="prose-ui">
+					<h2 id="notes-heading" class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">Notes</h2>
+					<div class="mt-4 has-links text-base leading-7 text-gray-700 dark:text-slate-300"><Notes /></div>
+				</section>
+			)}
+		</div>
+	</main>
+	<Footer />
+</BaseLayout>
+
+<style>
+	.ui-chip {
+		border: 1px solid #d1d5db;
+		border-radius: 9999px;
+		color: #374151;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		padding: 0.25rem 0.75rem;
+		transition: border-color 150ms, color 150ms;
+	}
+	.ui-chip:hover { border-color: #b91c1c; color: #b91c1c; }
+	.ui-chip[aria-pressed='true'] { background: #111827; border-color: #111827; color: white; }
+	.ui-chip:focus-visible, .ui-link:focus-visible { outline: 2px solid #b91c1c; outline-offset: 2px; }
+	:global(.dark) .ui-chip { border-color: #475569; color: #e2e8f0; }
+	:global(.dark) .ui-chip[aria-pressed='true'] { background: #f1f5f9; border-color: #f1f5f9; color: #0f172a; }
+	.ui-link { color: #111827; text-decoration: none; }
+	.ui-link:hover { color: #b91c1c; }
+	:global(.dark) .ui-link { color: #f1f5f9; }
+	.ui-stage__frame { max-width: 100%; transition: max-width 200ms ease; }
+	.ui-stage__well { padding-block: 0; }
+	.ui-stage__well:has(.ui-stage__frame[data-narrow]) { padding-block: 1.5rem; }
+	.ui-stage__frame[data-narrow] { box-shadow: 0 1px 2px rgb(15 23 42 / 0.08), 0 8px 24px rgb(15 23 42 / 0.08); border-radius: 0.5rem; }
+	.prose-ui :global(p + p) { margin-top: 1rem; }
+	.prose-ui :global(ul) { list-style: disc; padding-left: 1.25rem; margin-top: 0.75rem; }
+	.prose-ui :global(li + li) { margin-top: 0.25rem; }
+	.prose-ui :global(h3) { font-weight: 700; margin-top: 1.5rem; color: #111827; }
+	:global(.dark) .prose-ui :global(h3) { color: #f1f5f9; }
+	@media (prefers-reduced-motion: reduce) { .ui-stage__frame { transition: none; } }
+</style>
+
+<script>
+	function initStage() {
+		const stage = document.querySelector<HTMLElement>('[data-ui-stage]');
+		if (!stage) return;
+		const frame = stage.querySelector<HTMLIFrameElement>('[data-frame]')!;
+		const open = stage.querySelector<HTMLAnchorElement>('[data-open]')!;
+		const source = stage.querySelector<HTMLAnchorElement>('[data-source-link]')!;
+		const madeBy = stage.querySelector<HTMLElement>('[data-made-by]')!;
+		const press = (group: string, button: HTMLElement) =>
+			stage.querySelectorAll(`[${group}]`).forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+
+		stage.querySelectorAll<HTMLButtonElement>('[data-width]').forEach((button) =>
+			button.addEventListener('click', () => {
+				const width = button.dataset.width!;
+				frame.style.maxWidth = width;
+				frame.toggleAttribute('data-narrow', width !== '100%');
+				press('data-width', button);
+			})
+		);
+		stage.querySelectorAll<HTMLButtonElement>('[data-variant]').forEach((button) =>
+			button.addEventListener('click', () => {
+				frame.src = open.href = button.dataset.src!;
+				source.href = button.dataset.source!;
+				madeBy.textContent = button.dataset.variant!;
+				press('data-variant', button);
+			})
+		);
+	}
+	document.addEventListener('astro:page-load', initStage);
+</script>

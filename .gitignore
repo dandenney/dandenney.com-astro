@@ -34,3 +34,6 @@ docs/agent-content-pipeline/runs/
 
 # graphify knowledge graph (local, regenerate with /graphify .)
 graphify-out/
+
+# yarn ui:generate replies with no HTML document in them
+ui/**/.*.reply.txt

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hold to confirm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+  @theme {
+    --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --color-paper: oklch(0.975 0.008 40);
+    --color-sheet: oklch(0.99 0.004 40);
+    --color-ink: oklch(0.24 0.02 30);
+    --color-dim: oklch(0.46 0.02 30);
+    --color-rule: oklch(0.89 0.012 35);
+    --color-accent: oklch(0.52 0.19 27);
+    --color-accent-deep: oklch(0.44 0.17 27);
+    --color-accent-soft: oklch(0.95 0.03 27);
+    --color-on-accent: oklch(0.985 0.01 30);
+  }
+  @layer components {
+    .hold {
+      @apply relative isolate inline-grid h-14 min-w-56 cursor-pointer select-none place-items-center overflow-hidden rounded-full border border-accent bg-sheet px-7 font-body text-[0.95rem] font-semibold text-accent outline-none;
+      touch-action: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 120ms ease, box-shadow 150ms ease;
+    }
+    .hold:focus-visible { box-shadow: 0 0 0 3px var(--color-paper), 0 0 0 5px var(--color-accent); }
+    .hold[data-state="holding"] { transform: scale(0.97); }
+    .hold[data-state="done"], .hold[data-state="gone"] { @apply cursor-default; }
+  }
+</style>
+<style>
+  .hold { --p: 0; }
+  .hold__fill { transform: scaleX(var(--p)); transform-origin: left; }
+  .hold__label--over { clip-path: inset(0 calc(100% - var(--p) * 100%) 0 0); }
+  .hold__label { grid-area: 1 / 1; }
+  @keyframes nudge { 0%,100% { translate: 0 } 25% { translate: -3px } 75% { translate: 3px } }
+  .hint[data-nudge] { animation: nudge 260ms ease; }
+  .undo-ring { transform: rotate(-90deg); }
+  .undo-ring circle:last-child { transition: stroke-dashoffset 1s linear; }
+  @media (prefers-reduced-motion: reduce) {
+    .hold { transition: none; }
+    .hold[data-state="holding"] { transform: none; }
+    .hint[data-nudge] { animation: none; }
+    .undo-ring circle:last-child { transition: none; }
+  }
+</style>
+</head>
+<body class="min-h-screen bg-paper font-body text-ink antialiased">
+  <main class="mx-auto max-w-3xl px-6 py-10 sm:px-10 sm:py-16">
+    <p class="font-body text-xs font-semibold uppercase tracking-[0.18em] text-dim">Workspace settings</p>
+    <h1 class="mt-2 font-display text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">Danger zone</h1>
+
+    <section aria-labelledby="delete-title" class="mt-8 border-y border-rule py-7 sm:mt-10">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="max-w-md">
+          <h2 id="delete-title" class="font-display text-xl font-semibold tracking-tight">Delete “Spring launch”</h2>
+          <p id="delete-desc" class="mt-1.5 text-[0.95rem] leading-relaxed text-dim">
+            Removes 14 pages and every visit and conversion recorded on them. You’ll have five seconds to undo.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-start gap-2 sm:items-end">
+          <button type="button" class="hold" data-state="idle" aria-describedby="delete-desc hold-hint" data-hold>
+            <span class="hold__fill absolute inset-0 -z-10 bg-accent" aria-hidden="true"></span>
+            <span class="hold__label" data-label>Hold to delete</span>
+            <span class="hold__label hold__label--over text-on-accent" aria-hidden="true" data-label-over>Hold to delete</span>
+          </button>
+          <p id="hold-hint" class="hint min-h-5 text-[0.8rem] text-dim" data-hint>Press and hold, or hold Space</p>
+        </div>
+      </div>
+
+      <div class="mt-6 hidden items-center gap-4 rounded-2xl bg-accent-soft px-5 py-4" data-undo-bar>
+        <svg class="undo-ring size-9 shrink-0" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="15" fill="none" stroke="var(--color-rule)" stroke-width="3"></circle>
+          <circle cx="18" cy="18" r="15" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="0" data-ring></circle>
+        </svg>
+        <p class="flex-1 text-[0.95rem]"><span class="font-semibold">Spring launch is being deleted.</span> <span class="text-dim" data-count>5 seconds to undo.</span></p>
+        <button type="button" class="h-11 rounded-full px-5 font-semibold text-accent-deep underline decoration-1 underline-offset-4 hover:decoration-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-undo>Undo</button>
+      </div>
+
+      <div class="mt-6 hidden items-center justify-between gap-4" data-gone>
+        <p class="text-[0.95rem] text-dim">Spring launch and its 14 pages are gone.</p>
+        <button type="button" class="h-11 rounded-full border border-rule px-5 text-sm font-semibold hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-reset>Reset the demo</button>
+      </div>
+    </section>
+
+    <dl class="mt-8 grid gap-x-10 gap-y-5 text-[0.95rem] sm:grid-cols-2">
+      <div><dt class="font-semibold">Transfer ownership</dt><dd class="mt-1 text-dim">Hand the workspace to another admin. You stay a member.</dd></div>
+      <div><dt class="font-semibold">Archive instead</dt><dd class="mt-1 text-dim">Unpublish every page but keep their results for later.</dd></div>
+    </dl>
+    <p class="sr-only" aria-live="polite" data-live></p>
+  </main>
+
+<script>
+  (() => {
+    const HOLD_MS = 1100, DRAIN_MS = 350, UNDO_S = 5;
+    const btn = document.querySelector("[data-hold]");
+    const labels = [btn.querySelector("[data-label]"), btn.querySelector("[data-label-over]")];
+    const hint = document.querySelector("[data-hint]");
+    const undoBar = document.querySelector("[data-undo-bar]");
+    const gone = document.querySelector("[data-gone]");
+    const ring = document.querySelector("[data-ring]");
+    const count = document.querySelector("[data-count]");
+    const live = document.querySelector("[data-live]");
+    const CIRC = 94.25;
+
+    let p = 0, held = false, last = 0, raf = 0, timer = 0, left = UNDO_S;
+
+    const setLabel = (t) => labels.forEach((l) => (l.textContent = t));
+    const setState = (s) => (btn.dataset.state = s);
+    const announce = (t) => { live.textContent = ""; requestAnimationFrame(() => (live.textContent = t)); };
+    const show = (el, on) => { el.classList.toggle("hidden", !on); el.classList.toggle("flex", on); };
+
+    function tick(now) {
+      const dt = now - last; last = now;
+      p = held ? Math.min(1, p + dt / HOLD_MS) : Math.max(0, p - dt / DRAIN_MS);
+      btn.style.setProperty("--p", p.toFixed(4));
+      if (p >= 1) return complete();
+      if (held || p > 0) raf = requestAnimationFrame(tick);
+      else if (btn.dataset.state !== "done") setState("idle");
+    }
+
+    function start() {
+      if (held || btn.dataset.state === "done" || btn.dataset.state === "gone") return;
+      held = true; setState("holding"); setLabel("Keep holding…");
+      hint.textContent = "Deleting when the bar fills";
+      cancelAnimationFrame(raf); last = performance.now(); raf = requestAnimationFrame(tick);
+    }
+
+    function stop() {
+      if (!held) return;
+      held = false;
+      if (p < 1) {
+        setLabel("Hold to delete");
+        hint.textContent = "Keep holding to delete";
+        hint.removeAttribute("data-nudge"); void hint.offsetWidth; hint.setAttribute("data-nudge", "");
+      }
+    }
+
+    function complete() {
+      held = false; setState("done"); setLabel("Deleted");
+      btn.setAttribute("aria-disabled", "true");
+      hint.textContent = "";
+      left = UNDO_S; show(undoBar, true);
+      ring.style.transition = "none"; ring.style.strokeDashoffset = "0";
+      requestAnimationFrame(() => { ring.style.transition = ""; renderCount(); });
+      announce(`Spring launch is being deleted. Undo is available for ${UNDO_S} seconds.`);
+      undoBar.querySelector("[data-undo]").focus({ preventScroll: true });
+      timer = setInterval(() => { left -= 1; renderCount(); if (left <= 0) finish(); }, 1000);
+    }
+
+    function renderCount() {
+      count.textContent = left === 1 ? "1 second to undo." : `${left} seconds to undo.`;
+      ring.style.strokeDashoffset = String(CIRC * (1 - left / UNDO_S));
+    }
+
+    function finish() {
+      clearInterval(timer); show(undoBar, false); show(gone, true);
+      setState("gone"); setLabel("Deleted");
+      announce("Spring launch was deleted.");
+      gone.querySelector("[data-reset]").focus({ preventScroll: true });
+    }
+
+    function reset(message) {
+      clearInterval(timer); cancelAnimationFrame(raf);
+      p = 0; btn.style.setProperty("--p", "0");
+      btn.removeAttribute("aria-disabled");
+      setState("idle"); setLabel("Hold to delete");
+      hint.textContent = "Press and hold, or hold Space";
+      show(undoBar, false); show(gone, false);
+      if (message) announce(message);
+      btn.focus({ preventScroll: true });
+    }
+
+    btn.addEventListener("pointerdown", (e) => { if (e.button === 0) { btn.setPointerCapture(e.pointerId); start(); } });
+    ["pointerup", "pointercancel", "lostpointercapture"].forEach((t) => btn.addEventListener(t, stop));
+    btn.addEventListener("keydown", (e) => { if ((e.key === " " || e.key === "Enter") && !e.repeat) { e.preventDefault(); start(); } else if (e.key === " " || e.key === "Enter") e.preventDefault(); });
+    btn.addEventListener("keyup", (e) => { if (e.key === " " || e.key === "Enter") stop(); });
+    btn.addEventListener("blur", stop);
+    btn.addEventListener("contextmenu", (e) => e.preventDefault());
+    undoBar.querySelector("[data-undo]").addEventListener("click", () => reset("Delete undone. Spring launch is safe."));
+    gone.querySelector("[data-reset]").addEventListener("click", () => reset());
+  })();
+</script>
+</body>
+</html>
