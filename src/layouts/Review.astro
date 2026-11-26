@@ -5,7 +5,7 @@ import Footer from '@/components/Footer.astro';
 import toTitleCase from '@/helpers/toTitleCase.js';
 import MarkdownToggle from '@/components/MarkdownToggle.astro';
 import LocalEditLink from '@/components/LocalEditLink.astro';
-import { episodeMap } from '@/helpers/nrai';
+import { citySlug, episodeMap } from '@/helpers/nrai';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
 import '@/styles/nrai.css';
@@ -55,7 +55,7 @@ const airDate = pubDate
 					<p class="rev-meta tw-links">
 						{ep && <span class="ep-tab">Ep. {ep}</span>}
 						<span>
-							<a href={`/no-reserv-ai-tions/cities/${city}`}>{toTitleCase(city)}</a>{state
+							<a href={`/no-reserv-ai-tions/cities/${citySlug(city)}/`}>{toTitleCase(city)}</a>{state
 								? <>, <a href={`/no-reserv-ai-tions/states/${state}`}>{toTitleCase(state)}</a></>
 								: country !== 'United States' && <>, <a href="/no-reserv-ai-tions/international">{country}</a></>}
 						</span>

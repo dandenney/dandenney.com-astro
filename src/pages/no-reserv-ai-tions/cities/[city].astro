@@ -4,7 +4,7 @@ import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import toTitleCase from '@/helpers/toTitleCase.js';
 import EpisodeRow from '@/components/nrai/EpisodeRow.astro';
-import { episodeMap } from '@/helpers/nrai';
+import { citySlug, episodeMap } from '@/helpers/nrai';
 import { ClientRouter } from 'astro:transitions';
 import { getCollection } from 'astro:content';
 import '@/styles/nrai.css';
@@ -14,11 +14,11 @@ export const prerender = true;
 export async function getStaticPaths() {
 	const allReviews = await getCollection('reviews');
 
-	const uniqueCities = [...new Set(allReviews.map((review) => String(review.data.city).toLowerCase()))];
+	const uniqueCities = [...new Set(allReviews.map((review) => citySlug(review.data.city)))];
 
 	return uniqueCities.map((city) => {
 		const filteredReviews = allReviews.filter(
-			(review) => String(review.data.city).toLowerCase() === city
+			(review) => citySlug(review.data.city) === city
 		);
 
 		return {

@@ -132,7 +132,7 @@ function makeTwin(
   body: string,
 ): TwinItem {
   const path = `${PREFIX[collection]}/${slugOf(id)}`;
-  const sourceUrl = `${SITE}/${path}`;
+  const sourceUrl = `${SITE}/${path}/`;
   return {
     collection,
     section: SECTION[collection],
@@ -141,7 +141,7 @@ function makeTwin(
     date: fmtDate(date),
     path,
     sourceUrl,
-    twinUrl: `${sourceUrl}.md`,
+    twinUrl: `${SITE}/${path}.md`,
     markdown: buildMarkdown(title, sourceUrl, date, extra, summary, body),
   };
 }

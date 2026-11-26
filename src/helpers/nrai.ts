@@ -29,3 +29,8 @@ export function airDate(review: Review): string {
 		.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
 		.toUpperCase();
 }
+
+/** URL slug for a review's city, e.g. "Las Vegas" → "las-vegas". */
+export function citySlug(city: unknown): string {
+	return String(city).trim().toLowerCase().replace(/\s+/g, '-');
+}

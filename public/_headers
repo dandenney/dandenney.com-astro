@@ -1,0 +1,3 @@
+# Markdown twins are for agents; keep them out of search results.
+/*.md
+  X-Robots-Tag: noindex

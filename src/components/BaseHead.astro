@@ -16,7 +16,8 @@ interface Props {
 	markdownTwin?: string;
 }
 
-const canonicalPathname = Astro.url.pathname.replace(/(.+)\/$/, '$1');
+const { pathname } = Astro.url;
+const canonicalPathname = pathname.endsWith('/') || /\.[a-z0-9]+$/i.test(pathname) ? pathname : `${pathname}/`;
 const canonicalURL = new URL(canonicalPathname, Astro.site);
 
 const {
