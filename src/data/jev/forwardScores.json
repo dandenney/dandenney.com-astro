@@ -2853,6 +2853,112 @@
         "input_tokens": 647,
         "output_tokens": 109
       }
+    },
+    "316": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-26T00:20:55.319Z",
+      "state": {
+        "date": "2026-11-25",
+        "sport": "NBA",
+        "matchup": "Cavaliers @ Knicks",
+        "pick": "James Harden Under 6.5 Assists",
+        "odds": "-132",
+        "recentForm": "7/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.86,
+          "confidence": 0.51,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.24,
+            "1": 0.67,
+            "2": 0.09
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 646,
+        "output_tokens": 109
+      }
+    },
+    "317": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-26T00:20:55.423Z",
+      "state": {
+        "date": "2026-11-25",
+        "sport": "NBA",
+        "matchup": "Spurs @ Trail Blazers",
+        "pick": "Stephon Castle Under 7.5 Assists",
+        "odds": "-147",
+        "recentForm": "7/10"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.6
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.42
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.83,
+          "confidence": 0.48,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.65,
+            "2": 0.09
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 648,
+        "output_tokens": 109
+      }
     }
   }
 }

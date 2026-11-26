@@ -5,7 +5,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { rithhmmPicks } from "../../src/data/rithhmmPicks.ts";
 import { questions, stateFor } from "../../src/data/jev/request.ts";
 
-const MODEL = "jev-1.14.0";
+const MODEL = "jev-preview";
 const API_URL = "https://api.typesafe.ai/v1/systemone";
 const OUT = "src/data/jev/forwardScores.json";
 
