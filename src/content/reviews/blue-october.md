@@ -10,7 +10,7 @@ heroImage: "blue-october"
 heroImageAlt: "The glowing marquee reading \"Blue October\" and \"Tonight\" hangs over the brick entrance of The Truth in Nashville at night, with concertgoers gathered behind metal barricades."
 heroImageAttribution: "Photo by Dan Denney"
 infoUrl: "https://www.thetruthnashville.com"
-pubDate: "2026-11-26"
+pubDate: "2026-11-25"
 tags: ["concert","music"]
 aiGenerated: true
 ---
