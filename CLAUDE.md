@@ -64,7 +64,7 @@ and `/add-round`. Shared identity in `src/styles/golf.css` plus
 
 ### UI explorations (`/ui`)
 
-Each exploration is `ui/<slug>/` (`BRIEF.md`, one `<variant>.html` per model or agent, optional `NOTES.md`), served as self-contained frames with Tailwind compiled at build time (`src/lib/ui-lab.ts`). Workflow and `yarn ui:generate` / `yarn ui:og` in `ui/README.md`; the contract for generating agents is `ui/AGENTS.md`.
+Each exploration is `ui/<slug>/` (`BRIEF.md`, one `<variant>.html` per model or agent, optional `NOTES.md` and `CRITIQUE.md`), served as self-contained frames with Tailwind compiled at build time (`src/lib/ui-lab.ts`). Workflow and `yarn ui:generate` / `yarn ui:critique` / `yarn ui:og` in `ui/README.md`; the contract for generating agents is `ui/AGENTS.md`.
 
 ### Agent Content Pipeline
 

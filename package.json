@@ -24,6 +24,7 @@
     "golf:yardages": "node --experimental-strip-types --no-warnings scripts/golf/import-yardages.ts",
     "lately:review": "node --experimental-strip-types --no-warnings scripts/lately/review.ts",
     "ui:generate": "node --experimental-strip-types --no-warnings scripts/ui/generate.ts",
+    "ui:critique": "node --experimental-strip-types --no-warnings scripts/ui/critique.ts",
     "ui:og": "node --experimental-strip-types --no-warnings scripts/ui/og.ts"
   },
   "dependencies": {

@@ -23,6 +23,8 @@ const variants = variantsFor(slug).map((v) => v.variant);
 const { Content: Brief } = await render(entry);
 const notes = await getEntry('ui-notes', slug);
 const Notes = notes ? (await render(notes)).Content : undefined;
+const critique = await getEntry('ui-critiques', slug);
+const Critique = critique ? (await render(critique)).Content : undefined;
 const image = existsSync(`public/ui/${slug}/og.png`) ? `/ui/${slug}/og.png` : undefined;
 const dateStr = pubDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const widths = [
@@ -100,6 +102,15 @@ const widths = [
 				</section>
 			)}
 		</div>
+		{Critique && critique && (
+			<section aria-labelledby="critique-heading" class="prose-ui border-t border-gray-200 px-8 pt-12 pb-24 dark:border-slate-700">
+				<h2 id="critique-heading" class="text-xs font-mono uppercase tracking-widest text-gray-400 dark:text-slate-500">Critique</h2>
+				<p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+					Of <span class="font-semibold">{critique.data.variant}</span> by <span class="font-semibold">{critique.data.critic}</span>{critique.data.scope === 'function' && ', on function only'}.
+				</p>
+				<div class="ui-critique__body mt-6 max-w-3xl has-links text-base leading-7 text-gray-700 dark:text-slate-300"><Critique /></div>
+			</section>
+		)}
 	</main>
 	<Footer />
 </BaseLayout>
@@ -127,10 +138,18 @@ const widths = [
 	.ui-stage__well:has(.ui-stage__frame[data-narrow]) { padding-block: 1.5rem; }
 	.ui-stage__frame[data-narrow] { box-shadow: 0 1px 2px rgb(15 23 42 / 0.08), 0 8px 24px rgb(15 23 42 / 0.08); border-radius: 0.5rem; }
 	.prose-ui :global(p + p) { margin-top: 1rem; }
-	.prose-ui :global(ul) { list-style: disc; padding-left: 1.25rem; margin-top: 0.75rem; }
-	.prose-ui :global(li + li) { margin-top: 0.25rem; }
+	.prose-ui :global(.has-links ul) { list-style: disc; padding-left: 1.25rem; margin-top: 0.75rem; }
+	.prose-ui :global(.has-links li + li) { margin-top: 0.25rem; }
 	.prose-ui :global(h3) { font-weight: 700; margin-top: 1.5rem; color: #111827; }
 	:global(.dark) .prose-ui :global(h3) { color: #f1f5f9; }
+	.ui-critique__body :global(h2) { color: #111827; font-size: 1.125rem; font-weight: 800; margin-top: 2.5rem; }
+	:global(.dark) .ui-critique__body :global(h2) { color: #f1f5f9; }
+	.ui-critique__body :global(h2 + *) { margin-top: 0.75rem; }
+	.ui-critique__body :global(table) { border-collapse: collapse; font-size: 0.9375rem; margin-top: 0.75rem; width: 100%; }
+	.ui-critique__body :global(th), .ui-critique__body :global(td) { border-bottom: 1px solid #e5e7eb; padding: 0.5rem 0.75rem 0.5rem 0; text-align: left; vertical-align: top; }
+	.ui-critique__body :global(th) { color: #6b7280; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+	:global(.dark) .ui-critique__body :global(th), :global(.dark) .ui-critique__body :global(td) { border-color: #334155; }
+	.ui-critique__body :global(td:nth-child(3)) { font-variant-numeric: tabular-nums; }
 	@media (prefers-reduced-motion: reduce) { .ui-stage__frame { transition: none; } }
 </style>
 

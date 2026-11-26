@@ -79,6 +79,16 @@ const ui = defineCollection({
   }),
 });
 
+const uiCritiques = defineCollection({
+  loader: glob({ pattern: "*/CRITIQUE.md", base: "./ui", generateId: uiEntryId }),
+  schema: z.object({
+    variant: z.string(),
+    critic: z.string(),
+    date: z.coerce.date(),
+    scope: z.enum(["full", "function"]).default("full"),
+  }),
+});
+
 const uiNotes = defineCollection({
   loader: glob({ pattern: "*/NOTES.md", base: "./ui", generateId: uiEntryId }),
   schema: z.object({}).passthrough(),
@@ -228,4 +238,5 @@ export const collections = {
   "true-crime": trueCrime,
   ui,
   "ui-notes": uiNotes,
+  "ui-critiques": uiCritiques,
 };
