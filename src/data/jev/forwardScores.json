@@ -2959,6 +2959,59 @@
         "input_tokens": 648,
         "output_tokens": 109
       }
+    },
+    "318": {
+      "model": "jev-1.14.0",
+      "scoredAt": "2026-11-26T17:04:51.540Z",
+      "state": {
+        "date": "2026-11-26",
+        "sport": "NFL",
+        "matchup": "Bears @ Lions",
+        "pick": "Caleb Williams Under 22.5 Rushing Yards",
+        "odds": "-108",
+        "recentForm": "5/7"
+      },
+      "answers": {
+        "will_hit": {
+          "type": "noul",
+          "noul": 0.63
+        },
+        "form_backs_pick": {
+          "type": "noul",
+          "noul": 0.42
+        },
+        "bet_type": {
+          "type": "choice",
+          "choice": "player_under",
+          "confidence": 1,
+          "probabilities": {
+            "moneyline": 0,
+            "spread": 0,
+            "game_total": 0,
+            "player_over": 0,
+            "player_under": 1
+          }
+        },
+        "lean": {
+          "type": "score",
+          "score": 0.77,
+          "confidence": 0.44,
+          "legend": {
+            "0": "Pass; the case doesn't justify the price",
+            "1": "Lean; some support, but a small stake at most",
+            "2": "Play; the case clearly beats the price"
+          },
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.63,
+            "2": 0.07
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 649,
+        "output_tokens": 109
+      }
     }
   }
 }
