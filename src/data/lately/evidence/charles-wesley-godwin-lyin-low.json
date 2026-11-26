@@ -1,0 +1,215 @@
+{
+  "spotifyId": "2dXGmRWNxNwSakbBPxAbiH",
+  "reviewedAt": "2026-11-24T15:35:23.261Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3824919"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady, fingerpicked arpeggio pattern. A bass guitar plays a simple, walking bass line. A steel guitar plays sustained, sliding notes. Drums play a simple, steady beat with brushes, emphasizing the snare and kick.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle, with a slight swing feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy baritone. The delivery is smooth and unhurried. There are no harmonies.\n\nProduction:\nThe room sounds open and natural, with a slight reverb. The texture is warm and organic. The production feels polished but not overly processed.\n\nArrangement:\nThe acoustic guitar and bass establish the foundation. The steel guitar enters with long, sustained notes, adding a melodic layer. The drums enter with a soft, brushed beat. All instruments maintain their roles throughout the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady, fingerpicked arpeggio pattern. A bass guitar plays a walking line. Drums provide a simple, driving beat with kick, snare, and hi-hat. A steel guitar plays sustained, melodic phrases.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, steady country feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy baritone. The delivery is straightforward and unadorned. There are no harmonies.\n\nProduction:\nThe room sounds moderately live, with a natural decay. The texture is clean and well-balanced. The production is polished, but not overly slick.\n\nArrangement:\nAll instruments are present from the beginning. The steel guitar enters with a melodic phrase after the first vocal line. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady, fingerpicked arpeggio pattern. A bass guitar plays a walking bass line. A drum kit provides a simple, driving beat with snare, kick, and hi-hat. A steel guitar plays sustained, melodic lines.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, slightly swung country feel.\n\nVocals:\nA male voice sings in a clear, slightly raspy baritone. The delivery is straightforward and earnest. There are no harmonies.\n\nProduction:\nThe room sounds moderately spacious, with a natural reverb. The texture is clean and well-defined. The production is polished but not overly slick.\n\nArrangement:\nAll instruments are present from the beginning. The steel guitar enters with a melodic phrase after the first vocal line. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building significantly.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Godwin wrote \"Lyin' Low\". Deezer lists him as the only writer and composer of the track, which is the second song on How the Mighty Fall (released 5 Nov 2021).",
+        "source": "https://www.deezer.com/us/album/604417782"
+      },
+      {
+        "claim": "How the Mighty Fall was produced, mixed and engineered by Al Torrence and mastered by Garrett Haines. Co-writes on the album went to Torrence, Zach McCord and Larry Hooper.",
+        "source": "https://americanahighways.org/2021/11/04/review-charles-wesley-godwin-how-the-mighty-fall/"
+      },
+      {
+        "claim": "Album musicians include Torrence (guitars, piano, Hammond B3, Mellotron), Ben Townsend (fiddle, banjo), Joe Pinchotti (drums), Nate Catanzarite (bass), Cody Woody (mandolin) and Max Somerville (piano, Rhodes). The credits do not say which players appear on \"Lyin' Low\" specifically.",
+        "source": "https://americanahighways.org/2021/11/04/review-charles-wesley-godwin-how-the-mighty-fall/"
+      },
+      {
+        "claim": "Godwin said he made How the Mighty Fall at Music Garden Studios in New Brighton, Pennsylvania. This is the studio where he made Seneca, and it is owned by Al Torrence.",
+        "source": "https://www.soundandsoulonline.com/2021/10/19/chasing-more-charles-wesley-godwin/"
+      },
+      {
+        "claim": "Godwin describes \"Lyin' Low\" as a song about being content. He says it is about stepping back, focusing on what matters, and staying out of the rat race and the never-ending desire for more.",
+        "source": "https://glidemagazine.com/262434/song-premiere-lp-announcement-charles-wesley-godwin-displays-gravity-grit-on-buzzin-lyin-low-off-how-the-mighty-fall-lp/"
+      },
+      {
+        "claim": "Godwin said he wrote \"Lyin' Low\" while sorting out his own priorities, with family and home coming first. He said there is a point of diminishing returns in chasing more.",
+        "source": "https://www.soundandsoulonline.com/2021/10/19/chasing-more-charles-wesley-godwin/"
+      },
+      {
+        "claim": "Americana Highways calls \"Lyin' Low\" a mid-tempo, fiddle-driven tune about a father who is happy to have his wilder days behind him.",
+        "source": "https://americanahighways.org/2021/11/04/review-charles-wesley-godwin-how-the-mighty-fall/"
+      },
+      {
+        "claim": "\"Lyin' Low\" was the first track released from How the Mighty Fall, and Saving Country Music said it leans heavily on Godwin's West Virginia roots.",
+        "source": "https://savingcountrymusic.com/charles-wesley-godwin-readies-new-album-how-the-mighty-fall/"
+      },
+      {
+        "claim": "Godwin released a live version of \"Lyin' Low\" on the 2023 EP Live from the Church, recorded at The Church studio in Pittsburgh.",
+        "source": "https://holler.country/news/breaking/charles-wesley-godwin-announces-new-live-from-the-church-ep/"
+      },
+      {
+        "claim": "Godwin was born in Morgantown, West Virginia, on May 18, 1993. His father was a coal miner and his mother a schoolteacher. His debut solo album Seneca came out in 2019, and his earlier band was Union Sound Treaty.",
+        "source": "https://sonichits.com/artist/Charles_Wesley_Godwin"
+      }
+    ],
+    "lineage": "The song sits in the Appalachian country-folk and Americana tradition of West Virginia, in which Godwin tells holler-centric, character-driven stories.",
+    "genres": [
+      "country-folk",
+      "appalachian americana",
+      "traditional country"
+    ]
+  },
+  "draft": "\"Lying low\" usually means hiding out. In **Lyin' Low**, Charles Wesley Godwin gives the phrase a second floor. The narrator lies low by choice, up the holler on the north side of the mountain. His father lay low because the job demanded it: \"In a better way than my daddy minin' thirty inch coal.\" Thirty inches is a seam too thin to stand up in. The chorus sets a man resting on his own land beside a man working on his belly underground, and it never says which feeling should win. There's pride in that line, and gratitude, and maybe a little guilt about having the easier version of a hard inheritance. Godwin's own father was a coal miner, which makes the comparison feel less like a device and more like a debt being acknowledged.\n\nGodwin has called it a song about being content: stepping back, staying out of the rat race, quitting the endless chase for more. He wrote it while sorting out his own priorities, with family and home first, and he talked about a point of diminishing returns. The lyric earns that peace honestly, because it keeps the fear in view. The narrator is \"like a bull to the slaughter, a fish out of water\" whenever he crosses the wood line. Running with the masses leads to \"an early casket.\" Contentment here isn't serene. It's a decision a man has to keep making, partly because he knows what pulls at him. \"I'm doin' just fine\" sounds like he's still convincing himself.\n\nThe sound matches that steadiness. A fingerpicked acoustic arpeggio rolls under a walking bass line. Simple drums hold a moderate, relaxed country groove with a slight swing, and a steel guitar lays long, sliding lines over it. Godwin sings alone, with no harmonies, in a clear baritone with a little rasp, delivered plainly and without hurry. The production, handled by Al Torrence at his Music Garden Studios in New Brighton, Pennsylvania, sounds polished but lived-in, with a natural room around the players.\n\nThis was the first song released from *How the Mighty Fall*, and it fits the West Virginia tradition of holler-centered, character-driven country-folk that Godwin keeps working in. The best small touch comes in the last chorus. \"Reapin' what I sow\" turns into \"where my ginseng grows,\" a shade-loving root that Appalachian people have long dug from north-facing slopes. The farmer's proverb becomes something wild and patient that only grows if you leave it alone.\n\nThe song sticks because it makes you feel what it costs to choose enough, carrying your father's thirty inches of coal in your chest while you sit still on purpose.",
+  "factCheck": [
+    {
+      "claim": "Narrator lies low up the holler on the north side of the mountain",
+      "verdict": "supported",
+      "note": "Lyrics: 'livin' up the holler' and 'On the north side of the mountain'."
+    },
+    {
+      "claim": "Quote: 'In a better way than my daddy minin' thirty inch coal.'",
+      "verdict": "supported",
+      "note": "Matches the second and third choruses exactly."
+    },
+    {
+      "claim": "Thirty inches is a seam too thin to stand up in",
+      "verdict": "removed",
+      "note": "Outside fact about coal mining, not in the packet."
+    },
+    {
+      "claim": "The father is working on his belly underground",
+      "verdict": "removed",
+      "note": "Not in the packet. Reworded to stay with the lyric's 'minin' thirty inch coal'."
+    },
+    {
+      "claim": "The chorus never says which feeling should win; pride, gratitude, guilt",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics."
+    },
+    {
+      "claim": "Godwin's own father was a coal miner",
+      "verdict": "supported",
+      "note": "Sonic Hits bio."
+    },
+    {
+      "claim": "Godwin calls it a song about being content: stepping back, staying out of the rat race and the endless desire for more",
+      "verdict": "supported",
+      "note": "Glide Magazine."
+    },
+    {
+      "claim": "He wrote it while sorting out his priorities, family and home first, and mentioned diminishing returns",
+      "verdict": "supported",
+      "note": "Sound and Soul interview."
+    },
+    {
+      "claim": "Quote: 'like a bull to the slaughter, a fish out of water'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: 'an early casket'",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote: 'I'm doin' just fine'",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The reading of self-persuasion is interpretation."
+    },
+    {
+      "claim": "Fingerpicked acoustic arpeggio, walking bass, simple drums, moderate relaxed country groove with slight swing",
+      "verdict": "supported",
+      "note": "Instruments agreed by all three passes. Moderate tempo by passes 2 and 3, relaxed by passes 1 and 2, swing by passes 1 and 3."
+    },
+    {
+      "claim": "Steel guitar lays long, sliding lines",
+      "verdict": "corrected",
+      "note": "'Sliding' appears in only one pass. Changed to sustained, melodic lines, which all three passes agree on."
+    },
+    {
+      "claim": "Solo voice, no harmonies, clear baritone with a little rasp, plain, without hurry",
+      "verdict": "corrected",
+      "note": "Solo voice, baritone and rasp are agreed by all three passes. Plain/straightforward is agreed by passes 2 and 3. 'Without hurry' rests on one pass, so it was dropped."
+    },
+    {
+      "claim": "Production polished but lived-in, with a natural room",
+      "verdict": "corrected",
+      "note": "Polished and not overly slick are agreed by all passes, and natural room by all. 'Lived-in' was dropped as unsupported."
+    },
+    {
+      "claim": "Production handled by Al Torrence at Music Garden Studios in New Brighton, PA",
+      "verdict": "corrected",
+      "note": "This is supported for the album, not specifically this track. Reworded to refer to the album."
+    },
+    {
+      "claim": "First song released from How the Mighty Fall",
+      "verdict": "supported",
+      "note": "Saving Country Music."
+    },
+    {
+      "claim": "Fits the West Virginia tradition of holler-centered, character-driven country-folk",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Ginseng appears in the last chorus, replacing 'reapin' what I sow'",
+      "verdict": "supported",
+      "note": "The lyric structure shows ginseng only in the final chorus."
+    },
+    {
+      "claim": "Ginseng is a shade-loving root Appalachian people have long dug from north-facing slopes",
+      "verdict": "removed",
+      "note": "Outside historical and botanical claim, not in the packet."
+    },
+    {
+      "claim": "Ginseng is wild and only grows if you leave it alone",
+      "verdict": "removed",
+      "note": "Unsupported factual claim about the plant. Replaced with interpretation grounded in the lyric."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2593,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00063137,
+        "detail": "1100 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014795,
+        "detail": "1100 in / 191 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014495,
+        "detail": "1100 in / 179 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.15115800000000001,
+        "detail": "52159 in / 1684 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054492,
+        "detail": "4038 in / 1917 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05008,
+        "detail": "5190 in / 3970 out"
+      }
+    ]
+  }
+}

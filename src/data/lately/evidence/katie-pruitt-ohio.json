@@ -1,0 +1,195 @@
+{
+  "spotifyId": "7LLUsLlN3ZqGxDJECgS6jN",
+  "reviewedAt": "2026-11-24T15:18:52.618Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/9208018"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays arpeggiated chords. Electric guitar plays a sustained, clean, melodic line. Bass guitar plays a walking bass line. Drums play a steady, driving beat with a prominent snare.\n\nTempo and Groove:\nMedium tempo. The groove feels steady and driving, with a slight push from the drums.\n\nVocals:\nA single voice with a clear, slightly raspy character. The delivery is direct and emotive. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a moderate amount of reverb suggesting a larger room. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with the full band. The acoustic guitar, electric guitar, bass, and drums maintain their roles throughout. The vocals are present for the first half, then drop out, leaving an instrumental section. No new elements enter or drop out within the instrumental section.\n\nPass 2:\nInstruments:\nAcoustic drums play a driving, straight-ahead beat with a prominent snare drum. An electric guitar plays arpeggiated chords with a clean tone. A bass guitar plays a walking bass line. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is a driving, straight-ahead rock feel.\n\nVocals:\nThe lead vocal is a clear, strong voice with a slight rasp. The delivery is passionate and direct. There are no harmonies.\n\nProduction:\nThe room sounds open and spacious. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The lead vocal enters shortly after. The electric guitar plays a melodic counterpoint to the vocal. The synth pad provides a sustained background. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a arpeggiated chord progression. Electric guitar plays a sustained, clean melody. Bass guitar plays a walking bass line. Drums play a steady, driving beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a rock ballad, with a steady, driving feel.\n\nVocals:\nThe lead voice is clear and strong, with a slight rasp. The delivery is passionate and expressive. Harmonies are present in the chorus, with a higher voice singing above the lead.\n\nProduction:\nThe room sounds like a medium-sized studio. The texture is clean and polished. The mix is well-balanced, with all instruments clearly audible.\n\nArrangement:\nThe excerpt begins with the full band playing. The lead voice enters with the first verse. The chorus features harmonies and a more prominent drum beat. The electric guitar plays a short, melodic fill between vocal phrases.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Katie Pruitt's \"Ohio\" is a cover of a Neil Young song, first released by Crosby, Stills, Nash & Young in 1970.",
+        "source": "https://secondhandsongs.com/performance/1087420"
+      },
+      {
+        "claim": "The two-song single \"Ohio / After The Gold Rush\" came out on October 29, 2020, on Rounder Records (distributed by Concord). \"Ohio\" runs 3:21.",
+        "source": "https://open.spotify.com/album/0DstfAvDUGVokiUpr8k2ci"
+      },
+      {
+        "claim": "Credits for Pruitt's \"Ohio\": Katie Pruitt (vocals, producer), Hank Born (guitar), Jess Nolan (background vocals), Calvin Knowles (bass) and Ross McReynolds (drums). Gary Paczosa is the recording engineer.",
+        "source": "https://www.shazam.com/en-us/song/1535878992/ohio"
+      },
+      {
+        "claim": "AllMusic credits Pruitt and Gary Paczosa as producers of the single. It lists Jess Nolan on keyboards and background vocals, and Neil Young as composer.",
+        "source": "https://www.allmusic.com/album/ohio-after-the-gold-rush-mw0003444114"
+      },
+      {
+        "claim": "Pruitt recorded \"Ohio\" shortly after returning home, on the same day as her original \"Look The Other Way\" and the Neil Young cover \"After the Gold Rush\".",
+        "source": "https://northerntransmissions.com/katie-pruitt-has-a-lot-on-her-mind/"
+      },
+      {
+        "claim": "Northern Transmissions describes the original \"Ohio\" as Young's angry response to the May 1970 Kent State shootings. It says Pruitt released her cover five days before the November 2020 election.",
+        "source": "https://northerntransmissions.com/katie-pruitt-has-a-lot-on-her-mind/"
+      },
+      {
+        "claim": "Pruitt sees \"Ohio\" as having a double meaning in 2020. It serves as an anthem against police brutality, and it acknowledges the roughly 230,000 Americans who had died of coronavirus.",
+        "source": "https://northerntransmissions.com/katie-pruitt-has-a-lot-on-her-mind/"
+      },
+      {
+        "claim": "Pruitt played \"Ohio\" live, followed by \"After the Gold Rush\", at a Nashville show at The Basement on October 25, 2020. The reviewer noted that studio versions were then released as a single.",
+        "source": "https://musiccitymike.net/2020/10/31/katie-pruitt-the-basement-outside-nashville-tn-october-25-2020/"
+      },
+      {
+        "claim": "The single followed her Rounder debut album Expectations, released in February 2020. It was also released shortly after her original protest song \"Look The Other Way\".",
+        "source": "https://www.allmusic.com/artist/katie-pruitt-mn0003765136"
+      },
+      {
+        "claim": "Pruitt grew up in suburban Atlanta and began writing songs as a teenager. She was first drawn to rock and punk bands, then to Joni Mitchell and Bonnie Raitt, and she moved to Nashville for college.",
+        "source": "https://www.amazon.com/Ohio-After-Gold-Katie-Pruitt/dp/B08LMHRVG3"
+      }
+    ],
+    "lineage": "Pruitt's \"Ohio\" belongs to the tradition of 1970s Neil Young protest songs, reinterpreted by a Nashville folk-rock/Americana singer-songwriter whose work blends rock grit with folk storytelling.",
+    "genres": [
+      "americana",
+      "folk rock",
+      "singer-songwriter"
+    ]
+  },
+  "draft": "The line that does the work in **Ohio** isn't the one everybody knows. It's the question in the middle: \"What if you knew her and / Found her dead on the ground?\" Neil Young wrote it in 1970, after the Kent State shootings, as an angry dare to anyone keeping their distance. In Katie Pruitt's hands it becomes a test of empathy. The song refuses to let the dead stay abstract. It asks you to put a face you love on the ground and then tells you what you already know, that running isn't an option once you've pictured it.\n\nPruitt released the cover five days before the November 2020 election, and she has said the song carried a double meaning that year. It worked as an anthem against police brutality, and it marked the roughly 230,000 Americans who had died of coronavirus by then. That reading changes what \"Four dead in Ohio\" means. The number stays four, but the grief behind it gets much bigger. The original was a newspaper headline set to a riff. Pruitt sings it as a stand-in for every count that kept rising that year.\n\nThe arrangement doesn't rough the song up the way Crosby, Stills, Nash & Young did. An acoustic guitar picks out arpeggiated chords. An electric guitar, played by Hank Born, holds a clean, sustained melody line. Calvin Knowles walks the bass underneath, and Ross McReynolds keeps a steady, driving beat with the snare out front. The production is clean and polished, with space around the players. Pruitt's voice is clear with a slight rasp, and the delivery is direct. There's no snarl in it. The anger comes through as steadiness, the sound of someone who has decided to say this plainly and keep saying it.\n\nThat steadiness fits the lyric's structure. The wordless \"na, na-na-na\" stretch is a crowd's chant, the part anyone can join in on. The ending repeats \"Four dead in Ohio\" seven times, and it lands less like a hook than a roll call that won't stop.\n\nPruitt grew up in suburban Atlanta loving rock and punk before turning to Joni Mitchell and Bonnie Raitt, and both pulls show here: the punk kid's belief that a song can be a weapon, the songwriter's trust in a clear voice over noise. She recorded it shortly after returning home, on the same day as her own protest song \"Look The Other Way\" and a cover of Young's \"After the Gold Rush.\" Hearing it, you can tell she meant it as part of the same argument.\n\nThe song gets under your skin by making you imagine one specific person on the ground, and then counting, over and over, until the number feels like a name.",
+  "factCheck": [
+    {
+      "claim": "Lyric quote: \"What if you knew her and / Found her dead on the ground?\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly. It is two consecutive lines."
+    },
+    {
+      "claim": "Neil Young wrote it in 1970, after the Kent State shootings, as an angry dare",
+      "verdict": "corrected",
+      "note": "The packet supports the song as Young's angry response to the May 1970 Kent State shootings and a first release in 1970. It does not give a writing date, so the wording now says it was a 1970 response. 'Dare' is interpretation and stays."
+    },
+    {
+      "claim": "Pruitt released the cover five days before the November 2020 election",
+      "verdict": "supported",
+      "note": "Northern Transmissions."
+    },
+    {
+      "claim": "Pruitt said the song carried a double meaning: an anthem against police brutality and a marker of roughly 230,000 coronavirus deaths",
+      "verdict": "supported",
+      "note": "Northern Transmissions."
+    },
+    {
+      "claim": "The original was a newspaper headline set to a riff",
+      "verdict": "corrected",
+      "note": "Nothing supports a description of the original's sound, so 'set to a riff' is removed. The headline image is kept as interpretation."
+    },
+    {
+      "claim": "The arrangement doesn't rough the song up the way Crosby, Stills, Nash & Young did",
+      "verdict": "removed",
+      "note": "There is no evidence describing the original recording's sound."
+    },
+    {
+      "claim": "Acoustic guitar picks out arpeggiated chords; electric guitar holds a clean, sustained melody line",
+      "verdict": "supported",
+      "note": "Passes 1 and 3 agree."
+    },
+    {
+      "claim": "The electric guitar is played by Hank Born",
+      "verdict": "corrected",
+      "note": "Born is credited only with 'guitar'. The packet doesn't say which guitar he played, so the attribution is removed."
+    },
+    {
+      "claim": "Calvin Knowles walks the bass; Ross McReynolds keeps a steady, driving beat with the snare out front",
+      "verdict": "supported",
+      "note": "Credits plus all three passes (walking bass, steady driving drums, prominent snare)."
+    },
+    {
+      "claim": "Clean, polished production with space around the players",
+      "verdict": "supported",
+      "note": "All three passes say clean and polished. All three describe a roomy, reverberant space."
+    },
+    {
+      "claim": "Pruitt's voice is clear with a slight rasp, direct delivery",
+      "verdict": "supported",
+      "note": "All three passes agree on the voice. Passes 1 and 2 agree on 'direct'. Pruitt is credited with vocals."
+    },
+    {
+      "claim": "No snarl; the anger comes through as steadiness",
+      "verdict": "supported",
+      "note": "Interpretation resting on the supported vocal description."
+    },
+    {
+      "claim": "The wordless 'na, na-na-na' stretch; the ending repeats 'Four dead in Ohio' seven times",
+      "verdict": "supported",
+      "note": "Lyrics structure. The final block repeats the line seven times."
+    },
+    {
+      "claim": "Pruitt grew up in suburban Atlanta loving rock and punk before turning to Joni Mitchell and Bonnie Raitt",
+      "verdict": "supported",
+      "note": "Amazon bio."
+    },
+    {
+      "claim": "Both pulls show here: the punk kid's belief that a song can be a weapon, the songwriter's trust in a clear voice",
+      "verdict": "corrected",
+      "note": "This assigned beliefs to Pruitt that the evidence doesn't show. It is reworded as the critic's listening, tied to the supported sound."
+    },
+    {
+      "claim": "She recorded it shortly after returning home, on the same day as her own protest song 'Look The Other Way' and a cover of Young's 'After the Gold Rush'",
+      "verdict": "supported",
+      "note": "Northern Transmissions; AllMusic calls 'Look The Other Way' an original protest song."
+    },
+    {
+      "claim": "Hearing it, you can tell she meant it as part of the same argument",
+      "verdict": "supported",
+      "note": "Interpretation resting on the same-day recording. The wording is softened."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2412,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014861,
+        "detail": "1097 in / 194 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014461,
+        "detail": "1097 in / 178 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00062948,
+        "detail": "1097 in / 185 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.139144,
+        "detail": "46557 in / 1603 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.049116,
+        "detail": "3839 in / 1688 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049338,
+        "detail": "4994 in / 3935 out"
+      }
+    ]
+  }
+}

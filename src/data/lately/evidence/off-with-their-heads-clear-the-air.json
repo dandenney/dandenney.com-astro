@@ -1,0 +1,221 @@
+{
+  "spotifyId": "7dNsLDM4BflWv392VYzr7n",
+  "reviewedAt": "2026-11-26T17:51:58.013Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2868631"
+  },
+  "listening": "Pass 1:\nInstruments:\nThe excerpt features a full band: electric guitar, bass guitar, and drums. The electric guitar plays a distorted, driving riff with palm-muting. The bass guitar plays a steady, rhythmic line. The drums provide a solid, driving beat with a prominent snare and kick.\n\nTempo and Groove:\nThe tempo is fast. The groove is driving and energetic, with a punk rock feel.\n\nVocals:\nThe vocalist has a raw, slightly hoarse voice. The delivery is forceful and urgent, with a melodic shout. There are no harmonies.\n\nProduction:\nThe production sounds raw and unpolished, with a slightly distant, live room feel. The texture is gritty and full.\n\nArrangement:\nThe excerpt begins with the full band playing a driving instrumental section. The vocals enter around the 0:10 mark, maintaining the same instrumental intensity throughout. No instruments drop out or build significantly within this excerpt.\n\nPass 2:\nInstruments include a distorted electric guitar playing a fast, driving riff with palm-muting, a bass guitar playing a root-note pattern, and a drum kit with a prominent snare drum and cymbal crashes. The tempo is fast, with a driving, punk-rock groove.\n\nThe vocals are delivered by a single voice, with a raw, strained, and slightly hoarse character, sung with a forceful, almost shouting intensity. There are no harmonies.\n\nThe production is raw and unpolished, with a somewhat compressed and dense texture. The room sound is unclear.\n\nThe arrangement begins with the full band playing the main riff. The vocals enter, maintaining the full band instrumentation throughout the excerpt. There are no significant drops or builds within this section.\n\nPass 3:\nInstruments include drums, bass, and two distorted guitars. The drums play a driving, mid-tempo beat with a strong backbeat on the snare. The bass plays a root-note pattern. The guitars play power chords, with one guitar playing a sustained chord and the other playing a rhythmic, palm-muted riff.\n\nThe tempo is mid-tempo, with a driving, energetic groove.\n\nThe vocals are delivered by a single voice, with a raw, strained quality. The delivery is forceful and urgent. There are no harmonies.\n\nThe production is raw and unpolished, with a gritty texture. The room sound is somewhat open, but not overly reverberant.\n\nThe arrangement begins with all instruments playing. The vocals enter after a few measures. All instruments maintain a consistent presence throughout the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Clear The Air\" is the closing track of Off With Their Heads' 2010 Epitaph album In Desolation, which came out on a Tuesday, June 8, 2010.",
+        "source": "https://www.startribune.com/music-off-with-their-heads/96002564/"
+      },
+      {
+        "claim": "In Desolation was produced by Jacques Wait together with the band. Wait also recorded and engineered it, and the songs are credited to Off With Their Heads.",
+        "source": "https://www.discogs.com/release/24128420-Off-With-Their-Heads-In-Desolation"
+      },
+      {
+        "claim": "The album was recorded and engineered in January 2010 at the Terrarium in Minneapolis, MN, and mastered at Sterling Sound. The publisher is I Hate Francis (ASCAP), and Ryan is credited with lyrics.",
+        "source": "https://wheelcap.fr/rock/12469354-off-with-their-heads-in-desolation-download-free.html"
+      },
+      {
+        "claim": "The band members credited on In Desolation are Justin, Nate, Robbie, Ryan and Zack.",
+        "source": "https://www.discogs.com/release/24128420-Off-With-Their-Heads-In-Desolation"
+      },
+      {
+        "claim": "Songs for In Desolation were first recorded for a split EP with Dillinger Four that never came out. After signing to Epitaph, the band finished recording with the same producer, Jacques Wait.",
+        "source": "https://www.startribune.com/music-off-with-their-heads/96002564/"
+      },
+      {
+        "claim": "The Star Tribune called \"Clear the Air\" the album's epic closer.",
+        "source": "https://www.startribune.com/music-off-with-their-heads/96002564/"
+      },
+      {
+        "claim": "The A.V. Club quoted the closing track's lyrics about the mask worn to hide what's inside, in a review that called the album's production too slick for the band's emotional style.",
+        "source": "https://www.avclub.com/off-with-their-heads-in-desolation-1798165077"
+      },
+      {
+        "claim": "Ryan Young said the lyrics of the In Desolation version of \"Clear The Air\" were very cut and paste. For the 2016 acoustic re-recording, they decided against punching in, so his gasping for air can be heard.",
+        "source": "https://www.punknews.org/article/61963/interviews-ryan-young-on-off-with-their-heads-going-acoustic-working-with-his-friends-and-more"
+      },
+      {
+        "claim": "An acoustic version of \"Clear The Air\" opens the 2016 album Won't Be Missed, released October 25, 2016 on Ryan Young's Anxious and Angry. Young recorded it in Minneapolis with Dan Jensen, John and Joe.",
+        "source": "https://www.punknews.org/article/61956/media-off-with-their-heads-clear-the-air-acoustic-punknews-exclusive"
+      },
+      {
+        "claim": "Off With Their Heads is a punk rock band formed in 2002 in Minneapolis. It has had a rotating line-up, and Ryan Young is the singer and guitarist. A music video for \"Clear the Air\" is listed for 2011.",
+        "source": "https://en.wikipedia.org/wiki/Off_with_Their_Heads_(band)"
+      }
+    ],
+    "lineage": "Off With Their Heads sit in the Minneapolis-born, Fest-circuit gritty punk and melodic hardcore tradition, and their Epitaph debut was likened to bands such as The Bronx and Against Me!.",
+    "genres": [
+      "punk rock",
+      "melodic hardcore",
+      "hardcore punk"
+    ],
+    "recordedAt": [
+      {
+        "studio": "The Terrarium",
+        "city": "Minneapolis",
+        "state": "Minnesota",
+        "country": "USA",
+        "source": "https://wheelcap.fr/rock/12469354-off-with-their-heads-in-desolation-download-free.html"
+      }
+    ]
+  },
+  "draft": "Near the end of **Clear The Air**, Ryan Young stops explaining and starts bargaining. \"Don't leave yet,\" he sings, promising he hasn't reached the part that makes sense of everything. He never does reach it. The song circles back to its opening, the lines about wanting to tell, wanting to share, the fear that \"I'll choke to death if I don't clear the air,\" and tacks \"right now\" onto the end. The whole confession turns out to be the run-up to one that still hasn't been said.\n\nThat's the feeling Off With Their Heads chose to close In Desolation, their 2010 Epitaph album, with: the panic of saying the hard thing out loud to someone who sleeps beside you. Young admits that the face this person sees from morning to night \"is the mask that I put on to hide what's inside,\" and that it stays on until they fall asleep. The shame comes with real tenderness. He tells them it isn't their fault when he begs and pleads. He worries they'll get scared because they have no frame of reference. Then he asks them to stay anyway and catch him before he falls. He wants to protect them from what's inside him, and he wants them to hold it. The song never picks one.\n\nThe bluntest lines are the plainest. He calls himself a failure who will never be significant. He thought getting older would make it go away, and instead it got worse. He says being alone is getting harder, and that's why he has to tell them. There's no metaphor to hide behind except the mask, and he's taking that off.\n\nThe band doesn't soften any of it. Distorted guitars drive a palm-muted riff at a fast clip, the bass holds to root notes, and the snare hits hard. Young's voice is raw and hoarse, more a melodic shout than singing, with no harmonies to share the load. That's the Minneapolis punk the band has played since 2002, the gritty Fest-circuit strain that got this Epitaph debut compared to The Bronx and Against Me!. The confession isn't whispered at a kitchen table. It's hollered over a full band.\n\nThe Star Tribune called it the album's epic closer. Jacques Wait produced it with the band at the Terrarium in Minneapolis, and some of these songs were first cut for a split with Dillinger Four that never came out. The A.V. Club quoted the mask lines but found the record's production too slick for that kind of feeling. Young seems to have heard something similar. He later called the album version very cut and paste, and when he re-recorded it acoustic to open 2016's Won't Be Missed, they skipped the punch-ins so you can hear him gasping for air.\n\nIt sticks because it puts you in the room with someone halfway through the hardest thing they've ever said, pleading with you to stay for an ending they don't have yet.",
+  "factCheck": [
+    {
+      "claim": "Ryan Young sings the song and is the lyric voice; the draft calls the narrator 'he'",
+      "verdict": "supported",
+      "note": "Young is the singer and Ryan is credited with lyrics. The interview refers to 'his' gasping."
+    },
+    {
+      "claim": "Quote: \"Don't leave yet\" and the promise that he hasn't reached the part that explains it all",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The 'near the end' placement follows the lyric structure."
+    },
+    {
+      "claim": "Quote: \"I'll choke to death if I don't clear the air\"; the opening lines return at the end with 'right now' added",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The repeat and the 'right now' ending are visible in the lyric structure."
+    },
+    {
+      "claim": "The song closes In Desolation, a 2010 Epitaph album",
+      "verdict": "supported",
+      "note": "Closing track of the 2010 Epitaph album."
+    },
+    {
+      "claim": "Quote: \"is the mask that I put on to hide what's inside\"; it stays on until they fall asleep",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "The confession is to 'someone who sleeps beside you'",
+      "verdict": "corrected",
+      "note": "The lyrics say only 'until you fall asleep'. Shared sleeping arrangements aren't stated, so this was rephrased."
+    },
+    {
+      "claim": "He says it isn't their fault when he begs and pleads; they have no frame of reference and get scared; he asks them to catch him before he falls",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "He calls himself a failure who will never be significant; he thought age would fix it but it got worse; being alone is getting harder",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "'There's no metaphor to hide behind except the mask, and he's taking that off'",
+      "verdict": "corrected",
+      "note": "The lyrics contain other images (down on my knees in the dark, the fallen pieces), so the claim was softened. It stays as a reading."
+    },
+    {
+      "claim": "Distorted guitars drive a palm-muted riff at a fast clip",
+      "verdict": "corrected",
+      "note": "Distortion, palm-muting and a fast tempo are backed by at least two passes. Only one pass reports two guitars, so it is now a single distorted guitar."
+    },
+    {
+      "claim": "Bass holds to root notes; the snare hits hard",
+      "verdict": "supported",
+      "note": "Passes 2 and 3 agree on root notes. All passes describe a prominent or strong snare."
+    },
+    {
+      "claim": "Young's voice is raw and hoarse, more a melodic shout than singing, with no harmonies",
+      "verdict": "supported",
+      "note": "Raw is agreed by all passes, hoarse by passes 1 and 2, shouted delivery by passes 1 and 2, and no harmonies by all."
+    },
+    {
+      "claim": "The band has played Minneapolis punk since 2002, in a gritty Fest-circuit strain; this Epitaph debut was compared to The Bronx and Against Me!",
+      "verdict": "corrected",
+      "note": "Formed in Minneapolis in 2002 and the Fest-circuit lineage are supported. 'Epitaph debut' is the lineage note's wording, so the phrasing was adjusted to match it."
+    },
+    {
+      "claim": "The Star Tribune called it the album's epic closer",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "Jacques Wait produced with the band at the Terrarium in Minneapolis",
+      "verdict": "supported",
+      "note": "Wait produced with the band. The album was recorded in January 2010 at the Terrarium in Minneapolis."
+    },
+    {
+      "claim": "Some songs were first cut for a split with Dillinger Four that never came out",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "The A.V. Club quoted the mask lines but found the production too slick for the emotional style",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "'Young seems to have heard something similar'",
+      "verdict": "removed",
+      "note": "Young's comment was about the lyrics being cut and paste, not about slick production, so the parallel isn't supported."
+    },
+    {
+      "claim": "He later called the album version very cut and paste",
+      "verdict": "corrected",
+      "note": "He said the lyrics of the In Desolation version were very cut and paste. 'Later' is not established."
+    },
+    {
+      "claim": "Acoustic re-recording opens 2016's Won't Be Missed; they skipped punch-ins so his gasping for air can be heard",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2262,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013795,
+        "detail": "1100 in / 151 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001482,
+        "detail": "1100 in / 192 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00057387,
+        "detail": "1100 in / 162 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083758,
+        "detail": "22904 in / 1795 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.076216,
+        "detail": "3934 in / 3024 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.06277,
+        "detail": "5125 in / 5252 out"
+      }
+    ]
+  }
+}

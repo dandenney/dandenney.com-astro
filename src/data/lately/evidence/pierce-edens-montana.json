@@ -1,0 +1,204 @@
+{
+  "spotifyId": "6iUYqKyjgFBiHwRQPlltWn",
+  "reviewedAt": "2026-11-26T17:48:30.304Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11675298"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm, with a bass guitar playing a walking bass line. A drum kit plays a simple, driving beat.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, driving groove that feels like a country-rock shuffle.\n\nVocals:\nA male voice sings lead, with a slightly raspy, clear tone. The delivery is conversational and energetic. Harmonies are present in the chorus, with a second male voice singing a higher harmony.\n\nProduction:\nThe sound is clean and clear, with a moderate amount of reverb, giving it a slightly open room feel. The texture is full but not overly dense. The production is polished.\n\nArrangement:\nThe excerpt begins with all instruments playing. The lead vocal enters immediately. Harmonies enter during the chorus. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady strumming rhythm. A bass guitar plays a walking bass line. A drum kit plays a simple beat with kick, snare, and hi-hat.\n\nTempo and groove:\nThe tempo is moderate. The groove feels like a relaxed country shuffle.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is conversational and melodic. There are no harmonies.\n\nProduction:\nThe sound is dry and direct, with minimal room ambience. The texture is clean and unadorned. The production is polished.\n\nArrangement:\nAll instruments and vocals are present from the beginning of the excerpt. No instruments drop out or build within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady strumming rhythm. A bass guitar plays a walking bass line. A drum kit plays a simple beat with a snare drum backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed, country-folk shuffle.\n\nVocals:\nA male voice sings in a clear, slightly raspy tone. The delivery is conversational and melodic. There are no harmonies.\n\nProduction:\nThe sound is dry and direct, with a clear, present texture. It sounds raw rather than polished.\n\nArrangement:\nAll instruments and vocals are present from the beginning of the excerpt. No instruments drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Montana\" was written by Pierce Edens and is the opening track of his self-titled 2012 album.",
+        "source": "https://pierceedens.com/lyrics/montana/"
+      },
+      {
+        "claim": "The self-titled album was produced by Adam Johnson and Pierce Edens, and engineered and mastered by Adam Johnson, as a SoundLab Studios production.",
+        "source": "https://shop.pierceedens.com/product/self-titled/"
+      },
+      {
+        "claim": "Album credits list Pierce Edens on vocals, guitar, banjo and percussion; Ron Clearfield on cello; Jesse James Hongisto on bass; Lady Lane on backup vocals; and Nicky Sanders on violin.",
+        "source": "https://shop.pierceedens.com/product/self-titled/"
+      },
+      {
+        "claim": "The album was recorded at Edens' renovated childhood home in the Appalachian Mountains of Western North Carolina.",
+        "source": "https://shop.pierceedens.com/product/self-titled/"
+      },
+      {
+        "claim": "Edens bought his family home and remodeled it as a recording space, and the album was recorded there in 2012 with The Dirty Work.",
+        "source": "https://www.amazon.com/Pierce-Edens-Dirty-Work-Live/dp/B00H8YVDUM"
+      },
+      {
+        "claim": "The album was fan-financed through Kickstarter, which raised 130 percent of its goal within 45 days.",
+        "source": "https://mountainx.com/arts/art-news/112013for-the-record/"
+      },
+      {
+        "claim": "The album moved away from the 'bar-band, rockabilly blues' style of The Dirty Work toward a folk-oriented singer-songwriter approach. It adds a string section, background vocals and heavy overdubs.",
+        "source": "https://shop.pierceedens.com/product/self-titled/"
+      },
+      {
+        "claim": "Indy Week said the punk influence shows in the rebellious, free-spirited nature of 'Montana'.",
+        "source": "https://www.amazon.com/Pierce-Edens-Dirty-Work-Live/dp/B00H8YVDUM"
+      },
+      {
+        "claim": "A live version, 'Montana: Live', was released as a single in December 2013.",
+        "source": "https://www.iheart.com/artist/pierce-edens-441407"
+      },
+      {
+        "claim": "Edens is an Asheville, NC singer-songwriter who grew up on regional mountain folk, then got into punk and grunge as a teenager. He merged the two styles, and self-released the Four Songs EP in 2004.",
+        "source": "https://music.apple.com/us/artist/pierce-edens/125370571"
+      }
+    ],
+    "lineage": "Asheville, NC Americana and Appalachian mountain folk blended with punk and grunge-influenced rock and roll.",
+    "genres": [
+      "americana",
+      "folk rock",
+      "alt-country"
+    ],
+    "recordedAt": [
+      {
+        "studio": "SoundLab Studios",
+        "city": "Asheville",
+        "state": "North Carolina",
+        "country": "USA",
+        "source": "https://www.discogs.com/release/12963634-Pierce-Edens-Piece-Edens"
+      }
+    ]
+  },
+  "draft": "The plan in **Montana** is half-baked on purpose. Pierce Edens wants to trade his truck for horses when he gets there and tear down every fence he meets, and he admits the logistics are an afterthought: \"we work the details later / if we work them out at all.\" That shrug is the most honest line in the song. It tells you this isn't a relocation plan. It's a way of saying *let's not be here anymore* to someone you hope will say yes.\n\nThe trouble with here comes in sideways. Two angels show up in a dream to warn that \"this whole town is going under,\" and later the narrator sounds worn out on the place itself. The old story keeps coming around \"again,\" and he swears one more hearing will make him snap. \"We've been beat so down,\" he says, before adding the brag that they \"painted this whole town.\" Pride and exhaustion sit in the same breath. He had a good time here, and it's done with him. Montana is barely a place in the song. It's a big sky, back roads and no fences, all of it borrowed from Western movies, and Edens knows it.\n\nThe phrase he keeps landing on is \"Just be happy lonesome and free.\" It's a strange wish to make to someone you're begging to come along. Lonesome usually means without anyone. Here it means alone together, two people off the map, and \"You and me\" gets repeated until it reads as a promise he's trying to make true by saying it.\n\nThe music doesn't hurry him. Strummed acoustic guitar, a walking bass line and a simple kit beat settle into a relaxed country shuffle at a moderate pace. The sound is dry and close, with nothing between the band and the listener. Edens sings in a clear voice with a little rasp at the edges, and his delivery stays conversational, like he's making the pitch across the cab of the truck rather than from a stage.\n\nThe backstory adds a twist. Edens grew up on mountain folk in Western North Carolina, then got into punk and grunge as a teenager, and Indy Week heard that punk streak in this song's rebellious, free-spirited pull. The self-titled album it opens was fan-funded on Kickstarter and recorded in his childhood home in the Appalachians, which he bought and turned into a studio. So a song about leaving town for good was cut in the house he came back to, a contradiction the song leaves alone.\n\nIt sticks because it captures the moment just before you leave anywhere, when the escape still feels like freedom and you're still waiting to hear whether you'll make it alone.",
+  "factCheck": [
+    {
+      "claim": "The narrator wants to trade his truck for horses and tear down every fence",
+      "verdict": "supported",
+      "note": "Lyrics: 'we can trade my truck for some horses / Tear down any fence in our way.' Attributed to the song's narrator."
+    },
+    {
+      "claim": "Quote: 'we work the details later / if we work them out at all.'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, two consecutive lines."
+    },
+    {
+      "claim": "Two angels appear in a dream and say 'this whole town is going under'",
+      "verdict": "supported",
+      "note": "Matches the opening lyric."
+    },
+    {
+      "claim": "The old story keeps coming 'again' and one more hearing will make him snap",
+      "verdict": "supported",
+      "note": "Lyrics: 'here it come again' and 'if i hear it one more time / I swear to God...'. 'Snap' is a paraphrase and an interpretation."
+    },
+    {
+      "claim": "'We've been beat so down' and 'painted this whole town'",
+      "verdict": "supported",
+      "note": "Both phrases appear in the lyrics. The pride-and-exhaustion reading is interpretation."
+    },
+    {
+      "claim": "Montana as a big sky, back roads and no fences",
+      "verdict": "supported",
+      "note": "Lyrics mention a great big sky, back roads and tearing down fences."
+    },
+    {
+      "claim": "All of it borrowed from Western movies, and Edens knows it",
+      "verdict": "removed",
+      "note": "No support for the film source, and it assigns the artist an awareness his words don't show."
+    },
+    {
+      "claim": "'Just be happy lonesome and free' and 'You and me' repeated",
+      "verdict": "supported",
+      "note": "Exact lyrics, repeated throughout."
+    },
+    {
+      "claim": "Strummed acoustic guitar, walking bass line and simple kit beat in a moderate, relaxed country shuffle",
+      "verdict": "supported",
+      "note": "All three passes agree on the instruments and a moderate country shuffle. Two passes say 'relaxed'."
+    },
+    {
+      "claim": "Sound is dry and close, with nothing between band and listener",
+      "verdict": "corrected",
+      "note": "Passes 2 and 3 say dry and direct, but pass 1 mentions reverb. Reworded to 'dry and direct' and dropped 'close'."
+    },
+    {
+      "claim": "Clear voice with a little rasp, conversational delivery",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Edens grew up on mountain folk in Western North Carolina, then got into punk and grunge as a teenager",
+      "verdict": "supported",
+      "note": "Apple Music bio and the album's recording location."
+    },
+    {
+      "claim": "Indy Week heard the punk streak in the song's rebellious, free-spirited pull",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "The self-titled album, which opens with this song, was fan-funded on Kickstarter",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Recorded in his childhood home in the Appalachians, which he bought and turned into a studio",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "The house is one 'he came back to'",
+      "verdict": "corrected",
+      "note": "A return is not stated. Changed to 'the house he grew up in'."
+    },
+    {
+      "claim": "Closing line: waiting to hear whether you'll make it alone",
+      "verdict": "corrected",
+      "note": "Interpretation kept, but reworded so it fits the song's 'you and me' plea."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2323,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013466,
+        "detail": "1090 in / 141 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013641,
+        "detail": "1090 in / 148 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014441,
+        "detail": "1090 in / 180 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.137098,
+        "detail": "46354 in / 1439 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.044788,
+        "detail": "3837 in / 1472 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046242,
+        "detail": "4936 in / 3637 out"
+      }
+    ]
+  }
+}

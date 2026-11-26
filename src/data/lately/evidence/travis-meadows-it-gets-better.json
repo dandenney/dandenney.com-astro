@@ -1,0 +1,211 @@
+{
+  "spotifyId": "3IYr6m7xVdVHoFEpd4MAdW",
+  "reviewedAt": "2026-11-26T17:32:31.871Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a walking bass line. A drum kit plays a simple, laid-back beat with brushes.\n\nTempo and Groove:\nThe tempo is slow. The groove is a relaxed, gentle swing.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and unforced. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced, with a natural room sound. The texture is warm and polished.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and drums already playing. The vocals enter shortly after. The arrangement remains consistent throughout the excerpt, with no instruments dropping out or building.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a walking line. A drum kit plays a simple, laid-back beat with brushes.\n\nTempo and Groove:\nThe tempo is slow. The groove feels relaxed and gentle.\n\nVocals:\nA male voice sings in a clear, mid-range register. The delivery is smooth and unhurried. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds like a medium-sized, well-treated space. The texture is smooth.\n\nArrangement:\nThe excerpt begins with acoustic guitar, bass, and vocals. Drums enter at the 0:11 mark. The vocals drop out at 0:24, leaving the instruments to play a short instrumental section.\n\nPass 3:\nInstruments:\nAcoustic guitar: fingerpicked, with a clean, bright tone.\nElectric guitar: plays sustained, clean chords with a slight tremolo effect.\nBass: plays a simple, foundational line.\nDrums: enter at 0:11, playing a light, brushed beat with a kick drum and snare.\n\nTempo and Groove:\nSlow tempo. The groove is relaxed and gentle.\n\nVocals:\nA male voice, with a clear, slightly raspy character. The delivery is smooth and melodic.\nHarmonies: A second male voice joins for a sustained \"ooh\" at 0:24, singing in a higher register.\n\nProduction:\nThe sound is clean and polished. The room sounds open, with a slight reverb on the vocals and instruments.\n\nArrangement:\nThe excerpt begins with acoustic guitar, electric guitar, and bass. Drums enter at 0:11. A second vocal harmony enters at 0:24. No instruments drop out.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The Bandcamp credits for Killin' Uncle Buzzy say the album was produced by Travis Meadows and Reid Scelza with Barry Dean, and recorded, mixed and mastered by Reid Scelza.",
+        "source": "https://travismeadows.bandcamp.com/album/killin-uncle-buzzy"
+      },
+      {
+        "claim": "Barry Dean sings background vocals on 'It Gets Better'. He is listed as the special guest vocalist for this track.",
+        "source": "https://travismeadows.bandcamp.com/track/it-gets-better"
+      },
+      {
+        "claim": "'It Gets Better' runs 3:10 and is track 7 of the 10-song album Killin' Uncle Buzzy.",
+        "source": "https://music.amazon.fr/albums/B08YMZXP7R"
+      },
+      {
+        "claim": "The digital distributor listing (TuneCore, via YouTube) shows a 2011 Independent release dated 2011-07-19, while Bandcamp lists the album as released July 4, 2011.",
+        "source": "https://www.youtube.com/watch?v=McCGf4PIm5g"
+      },
+      {
+        "claim": "Meadows wrote the album in 2010 while recovering from alcohol addiction during his fourth stay in rehab.",
+        "source": "https://en.wikipedia.org/wiki/Travis_Meadows"
+      },
+      {
+        "claim": "Meadows says a rehab counselor suggested he keep a journal, and he basically made the record out of that journal.",
+        "source": "https://travismeadows.com/bio"
+      },
+      {
+        "claim": "In his album note, Meadows says the record documents almost seven months of climbing out of a hole he dug for himself. He calls it part exorcism and part killing 'Uncle Buzzy'.",
+        "source": "https://travismeadows.bandcamp.com/album/killin-uncle-buzzy"
+      },
+      {
+        "claim": "Meadows told American Songwriter that Killin' Uncle Buzzy was the only record he never intended anyone to hear. He described it as his attempt to dig himself out of a hole.",
+        "source": "https://americansongwriter.com/keep-breathing-qa-travis-meadows/"
+      },
+      {
+        "claim": "The album was reissued on April 30, 2021 by Earache Records for its 10th anniversary, including a limited clear vinyl edition.",
+        "source": "https://en.wikipedia.org/wiki/Travis_Meadows"
+      },
+      {
+        "claim": "Meadows was born in 1965. He signed with Universal Music Publishing but his addictions kept him from capitalizing on it. He got sober in 2010 and self-released Killin' Uncle Buzzy. His songs have been cut by Dierks Bentley, Eric Church and Jake Owen, among others.",
+        "source": "https://music.apple.com/us/artist/travis-meadows/208038577"
+      }
+    ],
+    "lineage": "Nashville-based confessional country/Americana singer-songwriter tradition, with the album circulating among Nashville artists as an underground recovery-journal record before Meadows's songs were cut by mainstream country acts.",
+    "genres": [
+      "country",
+      "americana",
+      "singer-songwriter"
+    ],
+    "recordedAt": []
+  },
+  "draft": "**It Gets Better** moves like someone who has finally stopped running. The drums are played with brushes and sit far back, the bass walks instead of pushes, and a fingerpicked acoustic guitar turns its pattern over and over at a slow, easy swing. Travis Meadows sings over it in a clear, mid-range voice, smooth and unhurried, with no strain anywhere. It's a calm song. Once you know where it came from, that calm becomes the whole story.\n\nMeadows wrote *Killin' Uncle Buzzy* in 2010, during his fourth stay in rehab. A counselor suggested he keep a journal, and he says he basically made the record out of it. In his note for the album he describes almost seven months of climbing out of a hole he dug for himself, and calls the record \"part exorcism.\" He later told American Songwriter it was the only record he never meant anyone to hear.\n\nThat changes what a title like \"It Gets Better\" is doing. It isn't advice handed down from the safe side of recovery. It's a promise written from inside the process, by someone who had already tried this three times before. A journal entry can hold hope and doubt on the same page without settling which one wins, and this track carries that kind of hope: steady, quiet, and not yet proven. The arrangement never raises its voice to sell the idea. It just keeps time, which is its own kind of faith.\n\nFor a record built from private pages, it doesn't sound like a bedroom demo. Meadows produced it with Reid Scelza, who recorded, mixed and mastered it, along with Barry Dean, who also sings background vocals on this track as a guest. The sound is clean and polished, with a natural sense of room around the players. If anything, the polish makes the song gentler than its backstory, and some listeners may want more grit. The gentleness seems deliberate, though. You don't shout a thing you're still trying to believe.\n\nThe song belongs to the Nashville confessional songwriter tradition, where a song is first a place to tell the truth about yourself and only second a product. Meadows, born in 1965, had a Universal Music Publishing deal that his addictions kept him from using. *Killin' Uncle Buzzy* circulated among Nashville artists as an underground recovery record, and his songs went on to be cut by Dierks Bentley, Eric Church and Jake Owen. In 2021 Earache Records reissued it for its tenth anniversary, clear vinyl included, which is a long way to travel for a record meant for no one.\n\nThe song sticks because you're listening to a man say a hope out loud before he's earned it, softly enough that you end up holding it with him.",
+  "factCheck": [
+    {
+      "claim": "Drums are played with brushes",
+      "verdict": "supported",
+      "note": "All three passes describe a brushed, laid-back beat."
+    },
+    {
+      "claim": "Drums 'sit far back'",
+      "verdict": "corrected",
+      "note": "The passes say laid-back or light, not that the drums sit far back in the mix. Reworded to 'laid-back'."
+    },
+    {
+      "claim": "Bass walks instead of pushes",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 both describe a walking bass line."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar turning a pattern over",
+      "verdict": "supported",
+      "note": "All passes agree on fingerpicked acoustic guitar. Passes 1 and 2 call it arpeggiated."
+    },
+    {
+      "claim": "Slow, easy swing",
+      "verdict": "corrected",
+      "note": "All passes agree on slow and relaxed. Only pass 1 says 'swing'. Reworded to 'slow, relaxed groove'."
+    },
+    {
+      "claim": "Clear, mid-range voice, smooth and unhurried, with no strain anywhere",
+      "verdict": "corrected",
+      "note": "Clear, mid-range and smooth are agreed. 'Unhurried' and 'unforced' each appear in only one pass. Cut 'unhurried' and 'no strain'."
+    },
+    {
+      "claim": "Meadows wrote the album in 2010 during his fourth stay in rehab",
+      "verdict": "supported",
+      "note": "Wikipedia."
+    },
+    {
+      "claim": "A counselor suggested a journal and he basically made the record out of it",
+      "verdict": "supported",
+      "note": "Meadows's bio page."
+    },
+    {
+      "claim": "Album note describes almost seven months of climbing out of a hole he dug for himself, and calls it 'part exorcism'",
+      "verdict": "supported",
+      "note": "Bandcamp album note."
+    },
+    {
+      "claim": "He 'later' told American Songwriter it was the only record he never meant anyone to hear",
+      "verdict": "corrected",
+      "note": "The quote is supported. The timing ('later') is not, so it was removed."
+    },
+    {
+      "claim": "He had 'already tried this three times before'",
+      "verdict": "corrected",
+      "note": "The packet supports a fourth stay in rehab only. Reworded to that."
+    },
+    {
+      "claim": "The arrangement never raises its voice",
+      "verdict": "corrected",
+      "note": "This is a claim about the whole arrangement, and the excerpt's position is unknown. Reworded to a general statement about the playing."
+    },
+    {
+      "claim": "Produced by Meadows and Reid Scelza with Barry Dean; Scelza recorded, mixed and mastered it",
+      "verdict": "supported",
+      "note": "Bandcamp credits."
+    },
+    {
+      "claim": "Barry Dean sings background vocals on this track as a guest",
+      "verdict": "supported",
+      "note": "Bandcamp track page."
+    },
+    {
+      "claim": "Clean, polished sound with a natural sense of room",
+      "verdict": "supported",
+      "note": "All passes say clean and polished and describe a natural or open room."
+    },
+    {
+      "claim": "Song belongs to the Nashville confessional songwriter tradition",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "In that tradition a song is first a place to tell the truth and only second a product",
+      "verdict": "removed",
+      "note": "This is an unsupported claim about the tradition's history."
+    },
+    {
+      "claim": "Born in 1965; Universal Music Publishing deal his addictions kept him from using",
+      "verdict": "supported",
+      "note": "Apple Music bio."
+    },
+    {
+      "claim": "Album circulated among Nashville artists as an underground recovery record; songs cut by Bentley, Church, Owen",
+      "verdict": "supported",
+      "note": "Lineage note and Apple Music bio."
+    },
+    {
+      "claim": "2021 Earache Records reissue for the tenth anniversary, clear vinyl included",
+      "verdict": "supported",
+      "note": "Wikipedia."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2599,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013964,
+        "detail": "1098 in / 158 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014189,
+        "detail": "1098 in / 167 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00068791,
+        "detail": "1098 in / 208 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.138816,
+        "detail": "47938 in / 1294 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.070716,
+        "detail": "3274 in / 2881 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.046894,
+        "detail": "4427 in / 3804 out"
+      }
+    ]
+  }
+}

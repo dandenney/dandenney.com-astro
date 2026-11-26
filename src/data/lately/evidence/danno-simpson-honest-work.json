@@ -1,0 +1,186 @@
+{
+  "spotifyId": "5ubeiLynfU3jGge49yT6hK",
+  "reviewedAt": "2026-11-26T17:31:23.929Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggiated pattern, establishing a moderate tempo and a relaxed, slightly swaying groove. A male voice sings in a clear, mid-range tenor, with a conversational, slightly melancholic delivery. The vocals are mostly single-tracked, with occasional subtle harmonies on sustained notes. The production sounds clean and natural, with a sense of a small, intimate room. The texture is warm and clear, with a polished but not overly processed feel. The acoustic guitar is present throughout, providing a consistent rhythmic and harmonic foundation. The vocals enter shortly after the guitar, remaining the central focus. No other instruments enter or drop out within this excerpt.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggiated pattern with a clear, bright tone. A male voice sings in a mid-range, slightly raspy character, with a conversational, storytelling delivery. The tempo is moderate, with a relaxed, easygoing groove. The production is clean and intimate, with a natural room sound. The arrangement is sparse, with only the acoustic guitar and vocals present throughout the excerpt. No other instruments enter or drop out.\n\nPass 3:\nAcoustic guitar plays a steady, fingerpicked arpeggio pattern with a clear, bright tone. A male voice sings in a mid-range, slightly gravelly character, with a conversational, storytelling delivery. The tempo is moderate, with a relaxed, easygoing groove. The production is clean and intimate, with a natural room sound.\n\nThe acoustic guitar and vocals are present throughout the excerpt. There are no other instruments or significant changes in the arrangement.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Danno Simpson's 'Honest Work' was released on November 6, 2020 by Pothole Records as the title track of a 5-track, roughly 18-minute EP.",
+        "source": "https://www.qobuz.com/us-en/album/honest-work-danno-simpson/qt50k9knxosva"
+      },
+      {
+        "claim": "The song 'Honest Work' is credited to Daniel Simpson (Danno Simpson) as composer and lyricist.",
+        "source": "https://www.qobuz.com/gb-en/album/honest-work-danno-simpson/qt50k9knxosva"
+      },
+      {
+        "claim": "Jackson Earles plays fiddle on 'Honest Work'.",
+        "source": "https://www.qobuz.com/gb-en/album/honest-work-danno-simpson/qt50k9knxosva"
+      },
+      {
+        "claim": "The EP 'Honest Work' was Simpson's self-produced debut EP, released in 2020.",
+        "source": "https://do303.com/events/2025/7/20/danno-simpson-with-ronnie-the-redwoods-tickets"
+      },
+      {
+        "claim": "BandWagon Magazine reports that 'Honest Work' was recorded in a cramped apartment bathroom and has more than a million Spotify plays.",
+        "source": "https://bandwagmag.com/2024/02/danno-simpson-colorado-c/"
+      },
+      {
+        "claim": "Simpson recorded the EP of original Americana songs in his bathroom the year after his arrest and put it on streaming services during the height of the pandemic. 'Honest Work' then slowly gained streams from country fans.",
+        "source": "https://bandwagmag.com/2024/02/danno-simpson-colorado-c/"
+      },
+      {
+        "claim": "A Jambands.com concert review says Simpson described 'Honest Work' as a 'hit piece' on an old boss.",
+        "source": "https://jambands.com/reviews/2025/04/25/the-lil-smokies-with-danno-simpson-at-washingtons/"
+      },
+      {
+        "claim": "Simpson was born in Texas, raised in Georgia, and now lives on Colorado's Front Range. His influences include Guy Clark, Townes Van Zandt and Steve Earle, and the mountain music of the Rockies and Appalachia.",
+        "source": "https://first-avenue.com/performer/danno-simpson/"
+      },
+      {
+        "claim": "Before his 2020 breakout, Simpson was part of the Fort Collins DIY punk scene. He says his punk-leaning songs were mistaken for country songs.",
+        "source": "https://bandwagmag.com/2024/02/danno-simpson-colorado-c/"
+      },
+      {
+        "claim": "'Honest Work' is the biggest hit of Simpson's catalog to date. His later releases include the 2025 debut album 'The Kill Joy'.",
+        "source": "https://www.whiskeyriff.com/2025/06/18/danno-simpson-drops-two-must-hear-singles-ahead-of-debut-album-release/"
+      }
+    ],
+    "lineage": "Simpson's music sits in the Texas songwriter tradition (Townes Van Zandt, Guy Clark, Jerry Jeff Walker) and Appalachian and Rockies mountain music, within the growing Colorado alt-country/Americana scene that grew out of Fort Collins DIY punk.",
+    "genres": [
+      "americana",
+      "alt-country",
+      "country"
+    ],
+    "recordedAt": []
+  },
+  "draft": "A bathroom is a strange place to settle a score. **Honest Work** was cut in a cramped apartment bathroom, and the room comes through: a clean, close, natural space where a fingerpicked acoustic guitar rolls out bright arpeggios and Danno Simpson sings right on top of them. The arrangement is spare, and guitar and voice carry it. It sounds like someone telling you a story across a small table.\n\nBy Simpson's own account onstage, the story is a \"hit piece\" on an old boss. That description is the key to the song's feeling, and to its quiet trick. A grudge usually wants volume. Simpson gives it a moderate tempo and an easygoing sway. His mid-range voice has a bit of rasp and gravel, and he delivers it like conversation, not accusation. The anger is in the premise, but the music keeps its temper. That gap is where the song lives: resentment told at a relaxed pace, the calm of someone who has replayed an old injury often enough that it has become a tale. The choice to tell it rather than yell it is what lets a listener lean in instead of backing away.\n\nThat calm has a backstory. Simpson came out of the Fort Collins DIY punk scene, where, he says, his punk-leaning songs kept getting mistaken for country. He wrote and self-produced the *Honest Work* EP, five original Americana songs running about 18 minutes. He recorded it the year after his arrest and put it on streaming services, through Pothole Records, during the height of the pandemic. The title track then caught on slowly, finding country listeners on its own and passing a million Spotify plays. It remains the biggest song in his catalog, ahead of later work like his 2025 debut album *The Kill Joy*.\n\nThe lineage he claims is the Texas songwriter line of Guy Clark, Townes Van Zandt and Steve Earle, alongside the mountain music of the Rockies and Appalachia. He was born in Texas, raised in Georgia, and now lives on Colorado's Front Range. You can hear why people took his songs for country. The fingerpicking and the plain storytelling voice sit squarely in that tradition. What carries over from punk is the target: this is a song with an enemy, and it doesn't pretend otherwise. Jackson Earles plays fiddle on it, a nod to the mountain side of that inheritance.\n\nIt sticks because it lets you sit with a grudge without being swallowed by it, and telling the story this calmly becomes its own small revenge.",
+  "factCheck": [
+    {
+      "claim": "Honest Work was cut in a cramped apartment bathroom",
+      "verdict": "supported",
+      "note": "BandWagon Magazine reports this."
+    },
+    {
+      "claim": "Clean, close, natural room sound; fingerpicked acoustic guitar with bright arpeggios; Simpson sings over it",
+      "verdict": "supported",
+      "note": "All three passes agree on fingerpicked arpeggios, clean intimate production and natural room sound. Passes 2 and 3 say bright."
+    },
+    {
+      "claim": "The arrangement is spare, and guitar and voice carry it",
+      "verdict": "corrected",
+      "note": "The passes only show guitar and voice in the excerpt, and the song is credited with fiddle. Reworded so it doesn't claim a whole-song spare arrangement."
+    },
+    {
+      "claim": "By Simpson's own account onstage, the story is a 'hit piece' on an old boss",
+      "verdict": "corrected",
+      "note": "The Jambands.com concert review supports the quote and the old boss. 'Onstage' is an inference, so it was dropped."
+    },
+    {
+      "claim": "Moderate tempo, easygoing sway, mid-range voice with rasp and gravel, conversational delivery",
+      "verdict": "supported",
+      "note": "Tempo and conversational delivery are in all three passes. Rasp and gravel are in passes 2 and 3."
+    },
+    {
+      "claim": "Readings of the anger, the calm and the 'replayed an old injury' feeling",
+      "verdict": "supported",
+      "note": "Interpretation resting on the 'hit piece' description and the delivery. Kept."
+    },
+    {
+      "claim": "Simpson came out of the Fort Collins DIY punk scene and says his punk-leaning songs kept getting mistaken for country",
+      "verdict": "corrected",
+      "note": "Supported, but 'kept' is stronger than the source, which says they 'were mistaken'. The framing of this as the backstory of the song's calm was also removed."
+    },
+    {
+      "claim": "He wrote and self-produced the Honest Work EP, five original Americana songs running about 18 minutes",
+      "verdict": "corrected",
+      "note": "Self-produced, five tracks, about 18 minutes and original Americana songs are supported. Credit as writer is only documented for the title track, so the claim was narrowed."
+    },
+    {
+      "claim": "Recorded it the year after his arrest and put it on streaming services, through Pothole Records, during the height of the pandemic",
+      "verdict": "supported",
+      "note": "BandWagon and Qobuz."
+    },
+    {
+      "claim": "Title track caught on slowly, finding country listeners and passing a million Spotify plays",
+      "verdict": "supported",
+      "note": "BandWagon: slow gain from country fans and more than a million plays. 'On its own' was removed as extra."
+    },
+    {
+      "claim": "Biggest song in his catalog, ahead of his 2025 debut album The Kill Joy",
+      "verdict": "supported",
+      "note": "Whiskey Riff."
+    },
+    {
+      "claim": "Influences Guy Clark, Townes Van Zandt, Steve Earle, plus Rockies and Appalachian mountain music; born in Texas, raised in Georgia, lives on Colorado's Front Range",
+      "verdict": "supported",
+      "note": "First Avenue bio."
+    },
+    {
+      "claim": "The fingerpicking and plain storytelling voice sit squarely in that tradition; what carries over from punk is the target",
+      "verdict": "supported",
+      "note": "Interpretation resting on supported lineage and sound facts. Kept."
+    },
+    {
+      "claim": "Jackson Earles plays fiddle on it",
+      "verdict": "supported",
+      "note": "Qobuz credit."
+    },
+    {
+      "claim": "The fiddle is a nod to the mountain side of that inheritance",
+      "verdict": "removed",
+      "note": "Presented as intent and not sourced. It also sat awkwardly with the claim of a spare arrangement."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2668,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012317,
+        "detail": "1099 in / 92 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012342,
+        "detail": "1099 in / 93 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013417,
+        "detail": "1099 in / 136 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.146942,
+        "detail": "45626 in / 1569 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.068364,
+        "detail": "3061 in / 2806 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.047706,
+        "detail": "4178 in / 3935 out"
+      }
+    ]
+  }
+}

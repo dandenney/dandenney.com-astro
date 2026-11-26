@@ -1,0 +1,201 @@
+{
+  "spotifyId": "7Dr8fMfYoVviKMrVVMhRfw",
+  "reviewedAt": "2026-11-26T17:42:51.645Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/2874885"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a sustained chord. Bass guitar plays a root-note line. Drums play a simple rock beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nMedium tempo. The groove feels like a straightforward rock feel.\n\nVocals:\nA single voice sings with a clear, mid-range character. The delivery is melodic and sustained. Harmonies enter with a second voice, singing in unison or parallel to the lead.\n\nProduction:\nThe sound is clean and polished. The room sounds like a dry, controlled space. The texture is full and balanced.\n\nArrangement:\nThe excerpt begins with all instruments playing. The lead vocal enters, followed by a second vocal harmony. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a sustained, distorted chord. Bass guitar plays a walking bass line. Drums play a driving rock beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is driving and energetic.\n\nVocals:\nThe lead vocalist has a clear, strong voice, singing with a full, open tone. The delivery is passionate. Harmonies are present, with multiple voices singing in unison or close harmony, creating a full, layered sound.\n\nProduction:\nThe sound is full and rich, with a clear, present mix. The texture is clean but with a raw edge from the distorted guitar. The production is polished.\n\nArrangement:\nThe excerpt begins with all instruments and vocals already present. The arrangement remains consistent throughout, with no instruments dropping out or entering, and no significant builds or changes in dynamics.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a strummed rhythm. Electric guitar plays a sustained, distorted chord. Bass guitar plays a walking bass line. Drums play a driving rock beat with a prominent snare.\n\nTempo and Groove:\nThe tempo is medium-fast. The groove is energetic and driving.\n\nVocals:\nA male voice sings with a raw, slightly strained character. The lead vocal is accompanied by a harmony vocal, singing in unison or parallel harmony.\n\nProduction:\nThe sound is full and somewhat raw, with a live-sounding room. The texture is thick, with a slightly overdriven quality.\n\nArrangement:\nAll instruments and vocals are present from the beginning of the excerpt. No elements drop out or build within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Cursing Concrete\" is track 2 on the 2005 No Idea Records album Rumbleseat Is Dead (3:02).",
+        "source": "https://www.amazon.com/Rumbleseat-Dead/dp/B007U8TSC6"
+      },
+      {
+        "claim": "The song is credited as written by Charles Allen Ragan (Chuck Ragan).",
+        "source": "https://www.elyrics.net/read/r/rumbleseat-lyrics/cursing-concrete-lyrics.html"
+      },
+      {
+        "claim": "The album was recorded at Goldentone Studios, with Rob McGregor credited as recording engineer and Michael Sarsfield as mastering engineer.",
+        "source": "https://www.discogs.com/release/7358377-Rumbleseat-Is-Dead"
+      },
+      {
+        "claim": "A Discogs release note says the album material was recorded at Goldentone Studios between summer 1998 and sometime in 1999.",
+        "source": "https://www.discogs.com/release/1643350-Rumbleseat-Is-Dead"
+      },
+      {
+        "claim": "Goldentone Studios is a recording studio in Gainesville, Florida, operated by Rob McGregor.",
+        "source": "https://www.discogs.com/label/281800-Goldentone-Studios"
+      },
+      {
+        "claim": "Rumbleseat were Chris Wollard and Chuck Ragan on guitars and vocals, and Samantha Jones on bass and vocals.",
+        "source": "https://www.discogs.com/release/573267-Rumbleseat-Is-Dead"
+      },
+      {
+        "claim": "The CD edition also includes a demo version of \"Cursing Concrete\" (3:14), and a hidden-track version appears on streaming listings.",
+        "source": "https://www.discogs.com/release/573267-Rumbleseat-Is-Dead"
+      },
+      {
+        "claim": "Rumbleseat Is Dead is the band's only full-length album. It collects songs from four 7-inch singles, two compilation tracks and four previously unreleased songs, and was released July 12, 2005 after repeated delays.",
+        "source": "https://en.wikipedia.org/wiki/Rumbleseat"
+      },
+      {
+        "claim": "Rumbleseat was an acoustic side project of Hot Water Music's Chuck Ragan and Chris Wollard, formed in Gainesville, Florida in 1998 with Samantha Jones.",
+        "source": "https://en.wikipedia.org/wiki/Rumbleseat"
+      },
+      {
+        "claim": "Punknews described the band as 'acoustic whiskey-influenced campfire punk rock' and noted fans waited over two years for the album.",
+        "source": "https://www.punknews.org/review/4736/rumbleseat-is-dead"
+      }
+    ],
+    "lineage": "Rumbleseat sits in the Gainesville, Florida punk scene around No Idea Records, as an acoustic folk and country-leaning side project of Hot Water Music members, drawing on Johnny Cash and Uncle Tupelo-style Southern acoustic songwriting.",
+    "genres": [
+      "acoustic folk",
+      "folk punk",
+      "alt-country"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Goldentone Studios",
+        "city": "Gainesville",
+        "state": "Florida",
+        "country": "USA",
+        "source": "https://www.discogs.com/label/281800-Goldentone-Studios"
+      }
+    ]
+  },
+  "draft": "**Cursing Concrete** starts with a man swearing at the ground. \"I cursed concrete,\" the song admits, and on the second pass the target widens to the streets that run under his feet. It's a small, almost comic picture of anger with nowhere to go: you can shout at pavement all day and it won't move. Rumbleseat take that helplessness seriously. The song never pretends the cursing fixes anything.\n\nWhat sits underneath is heavier. The narrator talks about wearing out his voice trying to lift a burden that \"eats at\" him, then asks a question with no answer, \"Where's shame?\", from a place pinned down in one hard line: \"Shouting from a lot where the kids can't play.\" That's a dead space, a patch of ground meant for something and used for nothing, and the narrator is standing in it, loud. Then comes the walk back, replaying how things could have gone. Regret and defiance share the same few bars, and neither wins.\n\nThe turn is the hope. Wanting to \"make a mark\" and \"stand strong even when I'm gone\" moves the song from a bad night to a whole life, and the middle section says it outright: before he's done, before he lays down. The best knot in the lyric is the promise to go off but still be on. That means losing it and staying present at once. It's the voice of someone who knows his temper and has decided to keep showing up anyway.\n\nThe band plays it like a push forward. A strummed acoustic guitar drives at a medium-fast clip, a distorted electric holds long chords over it, the bass walks instead of sitting on the root, and the snare cracks hard. The voices come doubled, moving together in unison or close parallel lines, so the confession sounds shared, like a room singing along. The arrangement doesn't build or pull back. It just keeps going, which suits a song about not stopping. The mix is clean, with the electric guitar's grit as its rough edge.\n\nChuck Ragan wrote it. Rumbleseat was the acoustic side project he and Chris Wollard ran outside Hot Water Music, formed in Gainesville in 1998 with Samantha Jones on bass and vocals, all three singing. Punknews called them \"acoustic whiskey-influenced campfire punk rock,\" which gets the Johnny Cash and Uncle Tupelo lean right. The song was cut at Rob McGregor's Goldentone Studios in Gainesville around 1998 and 1999, and it waited until 2005 to land on the band's only full-length, an album titled like an obituary. That suits a song so worried about leaving a mark after it's gone.\n\nIt sticks because it lets you be furious and hopeful in the same breath, and it hands you a chorus to shout at the pavement with a few friends.",
+  "factCheck": [
+    {
+      "claim": "\"I cursed concrete\" is a lyric, and the target later widens to the streets that run under the narrator's feet.",
+      "verdict": "corrected",
+      "note": "The quote matches the lyrics and the streets line is there. 'On the second pass' was reworded to 'later' because it could be read as a reference to the listening passes. 'His feet' was made neutral because the lyrics give no gender."
+    },
+    {
+      "claim": "The narrator is a man ('a man swearing', 'his voice', 'his temper', 'he').",
+      "verdict": "corrected",
+      "note": "The lyrics don't state the narrator's gender, and only one listening pass said 'male voice'. Pronouns were made neutral."
+    },
+    {
+      "claim": "Quoted fragments \"eats at\", \"Where's shame?\", \"make a mark\", plus the other quoted lines.",
+      "verdict": "corrected",
+      "note": "The fragments match the lyrics, but the draft quoted more than three lines in total. The quotes were trimmed to three, and the rest were paraphrased."
+    },
+    {
+      "claim": "\"Shouting from a lot where the kids can't play\" and \"stand strong even when I'm gone\".",
+      "verdict": "supported",
+      "note": "Both match the lyrics exactly."
+    },
+    {
+      "claim": "The middle section says it outright: before he's done, before he lays down.",
+      "verdict": "corrected",
+      "note": "The lines are in the lyrics, but 'middle section' is a claim about where they fall in the song. It was changed to 'the song says it outright'."
+    },
+    {
+      "claim": "The promise to go off but still be on.",
+      "verdict": "supported",
+      "note": "Matches 'I'll go off / But I'll be on'. The reading is interpretation."
+    },
+    {
+      "claim": "Strummed acoustic guitar, distorted electric holding long chords, walking bass, prominent snare, medium-fast tempo.",
+      "verdict": "supported",
+      "note": "Acoustic strum is in all three passes. Distorted sustained electric, walking bass, prominent snare and medium-fast tempo are in passes 2 and 3. 'Cracks hard' was softened to 'prominent snare'."
+    },
+    {
+      "claim": "Voices come doubled in unison or close parallel lines.",
+      "verdict": "supported",
+      "note": "All three passes describe harmony vocals in unison or parallel."
+    },
+    {
+      "claim": "The arrangement doesn't build or pull back. It just keeps going, which suits a song about not stopping.",
+      "verdict": "removed",
+      "note": "This is a claim about the arrangement across the song, but the notes cover only a short excerpt of unknown position."
+    },
+    {
+      "claim": "The mix is clean with the electric guitar's grit as its rough edge.",
+      "verdict": "supported",
+      "note": "Pass 1 says clean and pass 2 says clean with a raw edge from the distorted guitar. Pass 3 also says raw and overdriven."
+    },
+    {
+      "claim": "Chuck Ragan wrote it.",
+      "verdict": "supported",
+      "note": "Written-by credit in the research."
+    },
+    {
+      "claim": "Rumbleseat was the acoustic side project of Ragan and Chris Wollard outside Hot Water Music, formed in Gainesville in 1998 with Samantha Jones on bass and vocals, all three singing.",
+      "verdict": "supported",
+      "note": "Supported by the Wikipedia and Discogs facts."
+    },
+    {
+      "claim": "Punknews called them \"acoustic whiskey-influenced campfire punk rock\", which gets the Johnny Cash and Uncle Tupelo lean right.",
+      "verdict": "supported",
+      "note": "The quote matches. The Cash and Uncle Tupelo lineage is in the packet, and the comparison is the critic's opinion."
+    },
+    {
+      "claim": "The song was cut at Rob McGregor's Goldentone Studios in Gainesville around 1998 and 1999.",
+      "verdict": "corrected",
+      "note": "The facts cover the album material being recorded at Goldentone between summer 1998 and 1999, not this song specifically. The sentence was reworded to refer to the album's material."
+    },
+    {
+      "claim": "It waited until 2005 to land on the band's only full-length, an album titled like an obituary.",
+      "verdict": "supported",
+      "note": "Rumbleseat Is Dead is the only full-length, released July 2005 after delays. The obituary comparison is interpretation."
+    },
+    {
+      "claim": "The song hands you a chorus to shout.",
+      "verdict": "corrected",
+      "note": "The lyrics don't clearly mark a chorus, so 'chorus' became 'a line'."
+    }
+  ],
+  "lint": [
+    "clip"
+  ],
+  "cost": {
+    "totalUsd": 0.2827,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013892,
+        "detail": "1099 in / 155 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014692,
+        "detail": "1099 in / 187 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014242,
+        "detail": "1099 in / 169 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.170332,
+        "detail": "57296 in / 1574 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.054228,
+        "detail": "3507 in / 2010 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053818,
+        "detail": "4689 in / 4444 out"
+      }
+    ]
+  }
+}

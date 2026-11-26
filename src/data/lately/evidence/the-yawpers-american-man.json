@@ -1,0 +1,199 @@
+{
+  "spotifyId": "0sLTzudvxp09seIdr5yyap",
+  "reviewedAt": "2026-11-26T17:39:19.871Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11142185"
+  },
+  "listening": "Pass 1:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a walking line. Drums play a simple rock beat with a snare on beats two and four, and a kick drum on one and three. The hi-hat plays eighth notes.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and steady.\n\nVocals:\nA male voice sings in a mid-range, with a slightly raspy, conversational delivery. There are no harmonies.\n\nProduction:\nThe sound is dry and clear, with a raw, unpolished texture. The room sounds small.\n\nArrangement:\nThe excerpt begins with the guitar, bass, and drums already playing. The vocals enter shortly after. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA clean electric guitar plays arpeggiated chords. A bass guitar plays a walking line. Drums play a simple beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a relaxed, steady shuffle.\n\nVocals:\nA male voice sings in a mid-range, with a slightly raspy, conversational tone. The delivery is mostly sustained notes, with some slight melodic variations. There are no harmonies.\n\nProduction:\nThe sound is dry and close-miked, suggesting a small room or studio. The texture is clear and uncompressed. The production is polished.\n\nArrangement:\nThe excerpt begins with the guitar, bass, and drums already playing. The vocals enter shortly after. All instruments maintain a consistent presence throughout the excerpt.\n\nPass 3:\nInstruments:\nA clean electric guitar plays arpeggiated chords with a slight tremolo effect. A second electric guitar plays a simple, sustained bass line. A drum kit plays a slow, steady beat with brushes on the snare and a kick drum.\n\nTempo and Groove:\nThe tempo is slow, with a relaxed, almost ballad-like feel. The groove is steady and unhurried.\n\nVocals:\nA male voice sings in a mid-range, with a slightly raspy, conversational delivery. There are no harmonies.\n\nProduction:\nThe sound is dry and intimate, with a close-miked feel. The texture is raw and unpolished.\n\nArrangement:\nThe excerpt begins with the clean electric guitar and bass. The drums enter shortly after, establishing the slow beat. The vocals enter over this instrumentation. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "American Man was released October 30, 2015 on Bloodshot Records and was The Yawpers' first release for the label.",
+        "source": "https://turnuptheamp.com/home/2019/5/21/the-yawpers-human-question"
+      },
+      {
+        "claim": "The album was produced by Cracker guitarist and co-founder Johnny Hickman. Discogs credits production to Hickman and The Yawpers, and credits The Yawpers with writing.",
+        "source": "https://www.discogs.com/release/7664953-The-Yawpers-American-Man"
+      },
+      {
+        "claim": "Discogs credits Nate Cook with vocals and guitar and Noah Shomberg with drums and vocals. It credits Andrew Berlin as recording engineer, Bill Douglass with additional recording, and Jim Wilson with mastering.",
+        "source": "https://www.discogs.com/release/7664953-The-Yawpers-American-Man"
+      },
+      {
+        "claim": "The album was recorded at the Blasting Room, the Colorado studio owned by Descendents drummer Bill Stevenson.",
+        "source": "https://www.rollingstone.com/music/music-country/hear-the-yawpers-mix-punk-poetry-roots-rock-romance-on-burdens-106399/"
+      },
+      {
+        "claim": "The album was recorded live to tape over a four-day session. Most of the material was written by Nate Cook in a 'feverish' stretch in February and March 2014.",
+        "source": "https://marqueemag.com/the-yawpers-sign-to-bloodshot-release-their-debut-american-man-and-struggle-through-an-insanely-difficult-time/"
+      },
+      {
+        "claim": "Nate Cook said the title track is written from the perspective of someone from his conservative small-town Texas hometown, someone so nationalistic they lose touch with reality, which he called 'Patriotism to the point of psychosis.'",
+        "source": "https://www.loudersound.com/features/bluesbreakers-the-yawpers"
+      },
+      {
+        "claim": "Cook said the title track is written from the perspective of someone he doesn't necessarily agree with. He said the album is written from the perspectives of characters who don't always share his views.",
+        "source": "https://www.cooldadmusic.com/2016/07/interview-matt-chrystal-talks-to.html"
+      },
+      {
+        "claim": "American Man is a 12-song set loosely based on the American West, told through 12 different narrators. Cook said it began as a concept record in which he wrote each song from a different American character's perspective.",
+        "source": "https://www.cpr.org/2015/11/10/the-yawpers-gain-a-national-spotlight-with-american-man/"
+      },
+      {
+        "claim": "Bloodshot signed the band after a SXSW 2015 showcase in Austin. The label offered a three-record deal for an album the band had finished in 2014.",
+        "source": "https://marqueemag.com/the-yawpers-sign-to-bloodshot-release-their-debut-american-man-and-struggle-through-an-insanely-difficult-time/"
+      },
+      {
+        "claim": "The Yawpers formed in 2011 around frontman Nate Cook and lead guitarist Jesse Parmet, and self-released their debut album Capon Crusade in 2012. The follow-up Bloodshot album, Boy in a Well, came out in October 2017.",
+        "source": "https://turnuptheamp.com/home/2019/5/21/the-yawpers-human-question"
+      }
+    ],
+    "lineage": "The Yawpers sit in the Colorado and Bloodshot Records tradition of punk-inflected roots rock, blending blues and country with punk energy and Walt Whitman-inspired lyrics.",
+    "genres": [
+      "roots rock",
+      "punk blues",
+      "alternative country"
+    ],
+    "recordedAt": [
+      {
+        "studio": "The Blasting Room",
+        "city": "Fort Collins",
+        "state": "Colorado",
+        "country": "USA",
+        "source": "https://turnuptheamp.com/home/2019/5/21/the-yawpers-human-question"
+      }
+    ]
+  },
+  "draft": "The scariest line in **American Man** is a prayer: \"I pray to God that I never have to take it too far.\" The narrator sings it in the chorus, twice, and means it each time. He doesn't want to hurt anyone. He also has guns, a grievance, and a flag, and the song spends four and a half minutes watching those things pull against his hope.\n\nNate Cook wrote it from inside the head of someone from his conservative small-town Texas hometown, a man he called a case of \"patriotism to the point of psychosis.\" Cook has said he doesn't necessarily agree with him. The song never sneers, though. It's one of twelve narrators on The Yawpers' Bloodshot debut, a loose concept record about the American West, and Cook gives this one real grief to carry. The man's father held the ground sacred. Now the streets are trash, the culture wars are lost, and \"This is my home and I'm a stranger here.\" That's displacement, the ache of outliving the world you were raised for, and it sits right next to the self-pity and the menace without canceling them out. He's too dried up to cry, he says, and in the next verse he's bringing the plague.\n\nThe music refuses to panic with him. A clean electric guitar rolls through arpeggiated chords, the bass walks underneath, and the drums keep a plain, unhurried beat at a moderate pace. Cook sings in a slightly raspy, conversational mid-range with no harmonies to soften it. It's dry and close, recorded live to tape over four days at the Blasting Room, Bill Stevenson's Colorado studio, with Cracker's Johnny Hickman producing. The raw, small-room sound makes the narrator feel like he's talking across a kitchen table, calm enough that you almost nod along.\n\nThat's the trick of it. Bloodshot's punk-inflected roots rock usually burns hot. Here the heat stays in the words. The flag goes from grand to hollow, its applause canned. He salutes her with blood on his hands. Then the last chorus turns the violence inward: \"I'll die for her and by my own hand.\" The devotion and the despair end up the same act, and the band chants the title over and over until the lyric marks it to fade.\n\nYou come out of it understanding a man you'd cross the street to avoid, which is harder and more useful than hating him.",
+  "factCheck": [
+    {
+      "claim": "Quoted line \"I pray to God that I never have to take it too far\" matches the lyrics.",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "The narrator sings the prayer line in the chorus, twice.",
+      "verdict": "corrected",
+      "note": "The line appears twice, but it closes the verse sections. The chorus is the \"So raise the flag...\" stanza. Changed to \"sings it twice.\""
+    },
+    {
+      "claim": "He has guns, a grievance, and a flag; he says he is not a violent man.",
+      "verdict": "supported",
+      "note": "\"I'm bringing the guns\"; \"I'm not a violent man\"; the flag lines."
+    },
+    {
+      "claim": "The song runs about four and a half minutes.",
+      "verdict": "supported",
+      "note": "Length is 4:39."
+    },
+    {
+      "claim": "Cook wrote it from the perspective of someone from his conservative small-town Texas hometown and called him \"patriotism to the point of psychosis.\"",
+      "verdict": "supported",
+      "note": "Matches the Louder Sound quote."
+    },
+    {
+      "claim": "Cook has said he doesn't necessarily agree with the narrator.",
+      "verdict": "supported",
+      "note": "Cool Dad Music interview."
+    },
+    {
+      "claim": "It is one of twelve narrators on The Yawpers' Bloodshot debut, a loose concept record about the American West.",
+      "verdict": "supported",
+      "note": "CPR: 12 songs, 12 narrators, loosely based on the American West. It was their first release for Bloodshot."
+    },
+    {
+      "claim": "Lyric paraphrases: father held the ground sacred, trash in the streets, culture wars lost, stranger at home, can't cry, bringing the plague.",
+      "verdict": "supported",
+      "note": "All track the lyrics. \"This is my home and I'm a stranger here\" is quoted exactly."
+    },
+    {
+      "claim": "Clean electric guitar with arpeggiated chords, walking bass, plain unhurried drum beat at a moderate pace.",
+      "verdict": "supported",
+      "note": "Passes agree on guitar, walking bass (1 and 2), simple drums, and moderate tempo (1 and 2)."
+    },
+    {
+      "claim": "Slightly raspy, conversational mid-range vocal with no harmonies.",
+      "verdict": "supported",
+      "note": "All three passes."
+    },
+    {
+      "claim": "Dry, close, raw, small-room sound.",
+      "verdict": "supported",
+      "note": "Dry (all three), close or small room (at least two), raw (passes 1 and 3)."
+    },
+    {
+      "claim": "Recorded live to tape over four days at the Blasting Room, Bill Stevenson's Colorado studio, with Johnny Hickman of Cracker producing.",
+      "verdict": "supported",
+      "note": "Rolling Stone, Marquee, Discogs."
+    },
+    {
+      "claim": "Bloodshot's punk-inflected roots rock usually burns hot.",
+      "verdict": "corrected",
+      "note": "A generalization about the label's sound is not supported. Replaced with the supported lineage line about the band blending blues and country with punk energy."
+    },
+    {
+      "claim": "The flag goes from grand to hollow, its applause canned; he salutes her with blood on his hands.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "\"I'll die for her and by my own hand\" comes in the last chorus.",
+      "verdict": "supported",
+      "note": "Quote matches and sits in the final stanza."
+    },
+    {
+      "claim": "The band chants the title over and over until it fades.",
+      "verdict": "corrected",
+      "note": "No listening pass supports group chanting. The lyrics only show \"(Repeat and fade).\" Reworded to the title line repeating and fading."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1903,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014039,
+        "detail": "1098 in / 161 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014214,
+        "detail": "1098 in / 168 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014539,
+        "detail": "1098 in / 181 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.083482,
+        "detail": "22371 in / 1874 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052672,
+        "detail": "3958 in / 1842 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049838,
+        "detail": "5009 in / 3982 out"
+      }
+    ]
+  }
+}

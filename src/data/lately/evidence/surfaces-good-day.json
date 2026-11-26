@@ -1,0 +1,196 @@
+{
+  "spotifyId": "5vu5o6RUJ2YiXv3LaPDYIF",
+  "reviewedAt": "2026-11-24T15:21:14.124Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/8519727"
+  },
+  "listening": "Pass 1:\nInstruments:\nA clean electric guitar plays a rhythmic, arpeggiated figure. A bass guitar plays a simple, root-note-driven line. Drums provide a steady, mid-tempo beat with a prominent snare and kick. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly swung, driven by the consistent drum beat and the guitar's rhythmic pattern.\n\nVocals:\nA single voice sings in a clear, smooth tenor. The delivery is melodic and unhurried. There are no harmonies.\n\nProduction:\nThe production is polished. The sound is clear and well-defined, with a slight reverb on the vocals suggesting a medium-sized room. The overall texture is bright and airy.\n\nArrangement:\nThe excerpt begins with the full instrumentation already present. The arrangement remains consistent throughout, with no instruments entering, dropping out, or building significantly within this 30-second segment.\n\nPass 2:\nInstruments:\nA clean electric guitar plays a rhythmic, arpeggiated figure. A bass guitar plays a simple, root-note-driven line. Drums provide a steady, mid-tempo beat with a prominent snare and kick. A synth pad provides sustained chords.\n\nTempo and Groove:\nThe tempo is moderate. The groove is relaxed and laid-back, with a slight swing feel.\n\nVocals:\nA male voice sings in a smooth, clear tenor. The delivery is melodic and unhurried. There are no harmonies.\n\nProduction:\nThe room sound is open and spacious, with a slight reverb on the vocals and drums. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter immediately. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.\n\nPass 3:\nInstruments:\nA clean electric guitar plays a rhythmic, arpeggiated figure. A bass guitar plays a simple, root-note-driven line. Drums provide a steady, mid-tempo beat with a prominent snare and kick.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels relaxed and slightly swung, with a consistent, laid-back feel.\n\nVocals:\nA single male voice sings in a smooth, clear tone. The delivery is melodic and unadorned. There are no harmonies.\n\nProduction:\nThe sound is clean and polished. The room sounds like a dry, controlled studio space. The texture is smooth and well-balanced.\n\nArrangement:\nThe excerpt begins with the full instrumentation. The guitar, bass, and drums maintain a consistent presence throughout. The vocals are present from the start and continue without interruption. No instruments drop out or build within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Good Day\" was written by Colin Padalecki and Forrest Frank, and both are credited as producers. Frank sings lead vocals.",
+        "source": "https://www.shazam.com/en-us/song/1711413812/horizons"
+      },
+      {
+        "claim": "Alex Sacco is credited as mixing engineer and Colin Leonard as mastering engineer on the Horizons credits.",
+        "source": "https://www.shazam.com/en-us/song/1711413812/horizons"
+      },
+      {
+        "claim": "Horizons was written in summer 2019 at Padalecki's family home on Lake LBJ, just outside Austin, Texas.",
+        "source": "https://music.apple.com/us/album/horizons/1492167020"
+      },
+      {
+        "claim": "Forrest Frank told Apple Music that \"Good Day\" is a pure beach song. He said the duo spent their time outside at the lake all day, and that it was a good day.",
+        "source": "https://music.apple.com/us/album/horizons/1492167020"
+      },
+      {
+        "claim": "Padalecki told Apple Music the song narrates what they were doing outside on a sunny day, and they wanted to capture the energy of that day.",
+        "source": "https://music.apple.com/us/album/horizons/1492167020"
+      },
+      {
+        "claim": "Padalecki told Popdust that \"Good Day\" is a functional song that could be anyone's soundtrack for a good time outside. He said its bossa nova chords and laid-back drums are meant to support the relaxed mood.",
+        "source": "https://www.popdust.com/surfaces-band-interview-2641250427"
+      },
+      {
+        "claim": "Padalecki said he and Frank recorded most of their music near his college house in College Station, Texas, where he attended Texas A&M.",
+        "source": "https://music.apple.com/us/album/horizons/1492167020"
+      },
+      {
+        "claim": "Frank said the duo recorded Horizons in a studio in Texas.",
+        "source": "https://www.songwriteruniverse.com/surfaces-band-interview-2021/"
+      },
+      {
+        "claim": "Surfaces formed in 2017 in College Station, Texas. Their debut album Surf (2017) was followed by Where the Light Is (2019) and Horizons (2020). Horizons was released on February 28, 2020.",
+        "source": "https://en.wikipedia.org/wiki/Surfaces_(band)"
+      },
+      {
+        "claim": "Padalecki began making music in high school with his cousin Alexa Padalecki. Frank, a Baylor graduate, contacted him after hearing his music online and invited him to record on his houseboat.",
+        "source": "https://en.wikipedia.org/wiki/Surfaces_(band)"
+      },
+      {
+        "claim": "The duo's breakout hit \"Sunday Best\" peaked at #19 on the Billboard Hot 100 and passed 2 billion global streams.",
+        "source": "https://first-avenue.com/performer/surfaces/"
+      }
+    ],
+    "lineage": "Surfaces make upbeat, feel-good bedroom pop that AllMusic describes as influenced by 1970s R&B, electronica and hip-hop, and the duo first collaborated online through SoundCloud files.",
+    "genres": [
+      "indie pop",
+      "bedroom pop",
+      "feel-good pop"
+    ]
+  },
+  "draft": "The chorus of **Good Day** is in the past tense. That small choice does a lot of quiet work. Surfaces are describing an afternoon of doing nothing by a lake, but they sing it as something already finished, a day being looked back on. The feeling isn't only contentment. It's contentment with a little gratitude pressed into it, the kind you feel once you realize a good day happened and you were paying attention while it did.\n\nColin Padalecki and Forrest Frank wrote and produced the song during summer 2019 at Padalecki's family home on Lake LBJ, outside Austin. Frank, who sings lead, told Apple Music it's a pure beach song: they spent all day outside at the lake, and it was a good day. That's very nearly the lyric. Padalecki went further with Popdust and called it a functional song, something that could soundtrack anyone's good time outside. He's honest about the design, and the record wears it openly.\n\nThe sound follows that plan. A clean electric guitar picks out a rhythmic, arpeggiated figure. The bass stays on simple root notes, and the drums sit at a steady mid-tempo, snare and kick up front, with a slight swing that keeps things loose. A synth pad holds sustained chords underneath. Padalecki credits bossa nova chords and laid-back drums for the relaxed mood, and you can hear that lineage filtered through the polished, upbeat bedroom pop the duo came up making on SoundCloud. Frank's tenor is smooth, clear and unhurried, with no harmonies stacked on top and just a little reverb around it. Nothing pushes. The song doesn't build toward anything because the day it describes didn't have to.\n\nThe verses are where the feeling sharpens. \"No more room to feel these blues\" admits that the blues exist somewhere offstage. School, rules, and whatever else waits back home all get named, then shut out for an afternoon. And \"Everything we're given is enough\" is the line the whole song leans on. It's a statement of having stopped wanting, which is rarer than it sounds in a pop lyric.\n\nThe chorus repeats without changing, and the words are slight. That can make the song feel thin if you came for story. But the repetition matches what's being sung. You don't narrate a lazy afternoon. You just say again, \"I'm so glad the sun stayed around.\"\n\nThe song teaches you to notice a good day while it's still happening, so you get to keep it afterward.",
+  "factCheck": [
+    {
+      "claim": "The chorus is in the past tense (\"It was a good day\", \"the sun stayed around\").",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Surfaces describe an afternoon of doing nothing by a lake.",
+      "verdict": "supported",
+      "note": "Lyrics ('Not much to do but just lay around', 'Two feet hangin' in the water') plus Frank's Apple Music remark about the lake."
+    },
+    {
+      "claim": "Padalecki and Frank wrote and produced the song.",
+      "verdict": "supported",
+      "note": "Both are credited as writers and producers."
+    },
+    {
+      "claim": "The song was written in summer 2019 at Padalecki's family home on Lake LBJ, outside Austin.",
+      "verdict": "corrected",
+      "note": "The packet says the album Horizons was written there, not this song specifically. Reworded to attribute it to the album."
+    },
+    {
+      "claim": "Frank sings lead and told Apple Music it's a pure beach song: they spent all day outside at the lake and it was a good day.",
+      "verdict": "supported",
+      "note": "Matches the Apple Music quote."
+    },
+    {
+      "claim": "Padalecki told Popdust it's a functional song that could soundtrack anyone's good time outside.",
+      "verdict": "supported",
+      "note": "Matches the Popdust interview."
+    },
+    {
+      "claim": "Clean electric guitar with an arpeggiated rhythmic figure; bass on simple root notes; steady mid-tempo drums with prominent snare and kick; slight swing.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "A synth pad holds sustained chords.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Padalecki credits bossa nova chords and laid-back drums for the relaxed mood.",
+      "verdict": "supported",
+      "note": "Popdust interview."
+    },
+    {
+      "claim": "You can hear that bossa nova lineage filtered through polished, upbeat bedroom pop the duo came up making on SoundCloud.",
+      "verdict": "corrected",
+      "note": "The listening notes don't confirm bossa nova by ear. AllMusic supports 'upbeat bedroom pop', and the duo first collaborated through SoundCloud files, not 'came up making' music there. Reworded."
+    },
+    {
+      "claim": "Frank's tenor is smooth, clear and unhurried, with no harmonies and a little reverb.",
+      "verdict": "supported",
+      "note": "Passes agree on a smooth, clear male voice, no harmonies and slight vocal reverb (passes 1 and 2); Frank is the lead singer."
+    },
+    {
+      "claim": "The song doesn't build toward anything because the day it describes didn't have to.",
+      "verdict": "removed",
+      "note": "A claim about the whole song's arc; the listening notes only cover a short excerpt."
+    },
+    {
+      "claim": "\"No more room to feel these blues\" (lyric quote).",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "School, rules, and whatever else waits back home all get named, then shut out.",
+      "verdict": "corrected",
+      "note": "Only school and rules are in the lyrics; 'back home' was invented. Trimmed."
+    },
+    {
+      "claim": "\"Everything we're given is enough\" (lyric quote).",
+      "verdict": "supported",
+      "note": "Exact lyric."
+    },
+    {
+      "claim": "The chorus repeats without changing; \"I'm so glad the sun stayed around\".",
+      "verdict": "supported",
+      "note": "Lyric structure shows an identical repeated chorus; quote is exact."
+    }
+  ],
+  "lint": [
+    "source"
+  ],
+  "cost": {
+    "totalUsd": 0.1714,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014658,
+        "detail": "1096 in / 186 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014383,
+        "detail": "1096 in / 175 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014933,
+        "detail": "1096 in / 197 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.077542,
+        "detail": "22166 in / 1321 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.045148,
+        "detail": "3677 in / 1522 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.044344,
+        "detail": "4772 in / 3480 out"
+      }
+    ]
+  }
+}

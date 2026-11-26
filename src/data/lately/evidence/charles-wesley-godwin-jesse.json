@@ -1,0 +1,220 @@
+{
+  "spotifyId": "5loHd8KKK93wxEOkgGU12Q",
+  "reviewedAt": "2026-11-24T15:38:04.462Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3822967"
+  },
+  "listening": "Pass 1:\nAcoustic guitar plays a fingerpicked arpeggio pattern. A male voice sings with a slightly raspy, clear tone, delivering the melody in a straightforward manner. The tempo is slow. The groove feels relaxed and flowing.\n\nA second acoustic guitar enters, strumming chords. A bass guitar plays a simple, foundational line. A steel guitar enters, playing sustained, sliding notes. The vocals are single-tracked.\n\nThe production sounds dry and intimate, with a natural room feel. The texture is clean and unpolished. The arrangement builds subtly with the addition of instruments, maintaining a consistent vocal delivery.\n\nPass 2:\nAcoustic guitar plays a fingerpicked arpeggio pattern. A male voice sings with a slightly raspy, mid-range character, delivering the melody in a straightforward manner. The tempo is slow, creating a relaxed, reflective groove. The production sounds raw and intimate, as if recorded in a small room. The texture is sparse.\n\nAt 0:10, a second acoustic guitar enters, strumming chords. A third acoustic guitar enters, playing a melodic line with a slightly higher register. The vocals remain consistent. The arrangement builds subtly with the addition of the two guitars, adding harmonic and melodic depth without increasing intensity. No harmonies are present.\n\nPass 3:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A male voice sings with a slightly raspy, mid-range character, delivered with a country inflection. The tempo is slow, creating a reflective groove. A second acoustic guitar enters, strumming chords. A bass guitar plays a simple, sustained line. A steel guitar enters, playing sustained, sliding notes. The vocals are single-tracked. The production sounds clean and polished, with a natural room sound.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Jesse\" is track 3 on Charles Wesley Godwin's second album How the Mighty Fall, released November 5, 2021.",
+        "source": "https://www.deezer.com/us/album/604417782"
+      },
+      {
+        "claim": "\"Jesse\" was co-written by Charles Wesley Godwin and Zach McCord.",
+        "source": "https://www.last.fm/music/Charles+Wesley+Godwin/_/Jesse/+lyrics"
+      },
+      {
+        "claim": "How the Mighty Fall was produced, mixed and engineered by Al Torrence and mastered by Garrett Haines.",
+        "source": "https://americanahighways.org/2021/11/04/review-charles-wesley-godwin-how-the-mighty-fall/"
+      },
+      {
+        "claim": "Torrence also worked on Godwin's debut Seneca. Musicians on How the Mighty Fall include Eric James (acoustic guitar, backing vocals), Ben Townsend (fiddle, banjo), Joe Pinchotti (drums), Nate Catanzarite (bass) and Max Somerville (piano, Rhodes). The review does not break down who plays on \"Jesse\" specifically.",
+        "source": "https://americanahighways.org/2021/11/04/review-charles-wesley-godwin-how-the-mighty-fall/"
+      },
+      {
+        "claim": "Godwin wrote \"Jesse\" after seeing spray-painted graffiti under a bridge on a run. He wondered who wrote the message and why, and began the song soon afterward.",
+        "source": "https://www.whiskeyriff.com/2021/11/05/charles-wesley-godwins-new-album-how-the-mighty-fall-is-a-master-class-in-appalachian-storytelling/"
+      },
+      {
+        "claim": "In a 2021 interview Godwin said he has often seen things spray-painted on walls, trains and overpasses, and wonders about the circumstances behind them. He gave this as the story behind \"Jesse\".",
+        "source": "https://thecreekfm.com/2021/10/19/chasing-more-charles-wesley-godwin/"
+      },
+      {
+        "claim": "Americana Highways describes \"Jesse\" as built on lovelorn graffiti under a bridge, from which Godwin paints a full story.",
+        "source": "https://americanahighways.org/2021/11/04/review-charles-wesley-godwin-how-the-mighty-fall/"
+      },
+      {
+        "claim": "The album moves away from the autobiographical songs of Seneca toward character-driven songs about mortality, hope and regret. It was made during the pandemic touring halt, when Godwin's son was born and his family moved back to West Virginia.",
+        "source": "https://first-avenue.com/performer/charles-wesley-godwin/"
+      },
+      {
+        "claim": "Country Chord ranks \"Jesse\" among Godwin's top songs. It calls the song a messy breakup told by an unidentified third-party narrator.",
+        "source": "https://countrychord.com/top-five-charles-wesley-godwin-tracks/"
+      },
+      {
+        "claim": "Godwin was born May 18, 1993 in Morgantown, West Virginia. He began at West Virginia University in 2012 hoping to play football, was cut from the team, and turned to music.",
+        "source": "https://theforestscout.com/43384/uncategorized/charles-wesley-godwin-profile/"
+      }
+    ],
+    "lineage": "The song sits in the Appalachian country-folk storytelling tradition of West Virginia, described by sources as traditional country informed by folk, with character-driven narratives.",
+    "genres": [
+      "country",
+      "folk",
+      "americana"
+    ]
+  },
+  "draft": "Somebody spray-painted a question under a bridge in bright red letters: \"Jesse do you miss me like I miss you tonight?\" **Jesse** starts there, on a walk past that spot under the log-truck route, and Charles Wesley Godwin builds a whole broken love affair out of one line of graffiti. That's close to how it really happened. Godwin has said he saw the message while out on a run, wondered who wrote it and why, and started the song soon after. He has talked about how often he notices words painted on walls, trains and overpasses, and how he can't help imagining the circumstances behind them. He co-wrote this one with Zach McCord, and it's a clear example of the turn he took on How the Mighty Fall, away from the autobiographical songs of his debut Seneca and toward characters living with regret.\n\nThe narrator isn't the heartbroken one, and isn't Jesse. It's a passerby who has decided they know the whole story, and they aren't gentle about it. The chorus shuts like a door: \"Jesse don't hear you and neither do I.\" The verses lay out the charges. The writer had the chance to confess and didn't, and they swore a love that would last until death. Then comes the sharpest line in the song, cutting at the gap between big words and small courage: \"But only so much that you wrote it in red.\" That is love declared in paint, to a concrete wall, where Jesse will never read it. By the short middle section Jesse has someone else, with a ring on her hand, and the chance is gone.\n\nBut look at the frame. The song opens and closes on the same two lines, back under that bridge a week later, as if the narrator can't stop walking past it. Nobody spends a week scolding a stranger's graffiti unless it got to them. Contempt and fascination sit side by side, and the song never says which one is stronger. Maybe the coldness is just how the narrator keeps from feeling the same loss.\n\nThe music doesn't take sides either. A fingerpicked acoustic pattern moves at a slow, unhurried pace, and Godwin's voice is slightly raspy and mid-range, single-tracked with no harmony to soften the judgment. A second acoustic guitar strums underneath, a bass holds a simple line, and steel guitar slides in with long sustained notes. The arrangement fills out without getting louder, and the room sounds close. Al Torrence produced the album during the pandemic touring halt, when Godwin moved his family back to West Virginia. This is Appalachian country-folk storytelling, the old habit of singing someone else's trouble. Godwin bends it by making the teller a judge who can't quite walk away.\n\nYou come away wondering who you'd be in that story: the one who painted the words, or the one who couldn't stop reading them.",
+  "factCheck": [
+    {
+      "claim": "Graffiti under a bridge in bright red letters reading \"Jesse do you miss me like I miss you tonight?\"",
+      "verdict": "supported",
+      "note": "The quote matches the lyric. The bridge and the red letters are in the lyrics, and the spray-painted graffiti is in the researched facts."
+    },
+    {
+      "claim": "The song starts on a walk under the log-truck bridge.",
+      "verdict": "supported",
+      "note": "Matches the opening lyric about walking down the road under the bridge where the log trucks roll."
+    },
+    {
+      "claim": "Godwin builds a whole broken love affair out of one line of graffiti.",
+      "verdict": "supported",
+      "note": "Americana Highways describes it as lovelorn graffiti from which Godwin paints a full story."
+    },
+    {
+      "claim": "Godwin saw the message while out on a run, wondered who wrote it and why, and started the song soon after.",
+      "verdict": "supported",
+      "note": "Whiskey Riff, and the interview gives this as the story behind the song."
+    },
+    {
+      "claim": "He has talked about how often he notices words painted on walls, trains and overpasses, and how he can't help imagining the circumstances.",
+      "verdict": "corrected",
+      "note": "The interview says he wonders about the circumstances. \"Can't help imagining\" overstated it, so I softened it."
+    },
+    {
+      "claim": "Co-written with Zach McCord.",
+      "verdict": "supported",
+      "note": "Last.fm."
+    },
+    {
+      "claim": "The album turns from the autobiographical songs of debut Seneca toward characters living with regret.",
+      "verdict": "supported",
+      "note": "First Avenue: character-driven songs about mortality, hope and regret. Seneca is the debut."
+    },
+    {
+      "claim": "The narrator is a passerby, not Jesse or the heartbroken writer.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the lyrics. Country Chord calls the narrator an unidentified third party."
+    },
+    {
+      "claim": "Chorus quote \"Jesse don't hear you and neither do I.\"",
+      "verdict": "supported",
+      "note": "Exact match."
+    },
+    {
+      "claim": "The writer could have confessed and didn't, and swore love until death.",
+      "verdict": "supported",
+      "note": "Matches the lyrics."
+    },
+    {
+      "claim": "Quote \"But only so much that you wrote it in red.\"",
+      "verdict": "supported",
+      "note": "Matches the lyric. The draft has three quotes in total, which is within the limit."
+    },
+    {
+      "claim": "Love declared in paint \"to a concrete wall.\"",
+      "verdict": "corrected",
+      "note": "No concrete wall appears anywhere in the facts. The graffiti is under a bridge, so I changed it to that."
+    },
+    {
+      "claim": "\"By the short middle section\" Jesse has a girl with a ring on her hand.",
+      "verdict": "corrected",
+      "note": "The ring line is in the lyrics, but placing it in a \"middle section\" is a claim about song structure. I removed the placement."
+    },
+    {
+      "claim": "The song opens and closes on the same two lines, \"back under that bridge a week later.\"",
+      "verdict": "corrected",
+      "note": "The opening and closing lines do repeat. But the lyric says the walk was \"a week ago,\" so \"a week later\" is wrong. I fixed it."
+    },
+    {
+      "claim": "\"Nobody spends a week scolding a stranger's graffiti...\"",
+      "verdict": "corrected",
+      "note": "The week detail is not supported. I reworded it as interpretation without the week."
+    },
+    {
+      "claim": "A fingerpicked acoustic pattern at a slow pace.",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Slightly raspy, mid-range voice, single-tracked, no harmony.",
+      "verdict": "supported",
+      "note": "All passes say slightly raspy. Two say mid-range and two say single-tracked. Pass 2 says no harmonies."
+    },
+    {
+      "claim": "A second acoustic strums, a bass holds a simple line, steel guitar adds long sustained notes.",
+      "verdict": "supported",
+      "note": "Second guitar in all three passes. Bass and steel in passes 1 and 3. I dropped \"slides in\" because it implies timing."
+    },
+    {
+      "claim": "The arrangement fills out without getting louder.",
+      "verdict": "removed",
+      "note": "This describes how the arrangement develops over the song, and the excerpt's position is unknown. Pass 3 does not mention it."
+    },
+    {
+      "claim": "The room sounds close.",
+      "verdict": "corrected",
+      "note": "Reworded to an intimate, natural room sound. All passes mention the natural room, and two say intimate."
+    },
+    {
+      "claim": "Al Torrence produced the album during the pandemic touring halt, when Godwin moved his family back to West Virginia.",
+      "verdict": "supported",
+      "note": "Torrence produced the album. The album was made during the touring halt, when the family moved back to West Virginia. I split the two facts for clarity."
+    },
+    {
+      "claim": "Appalachian country-folk storytelling, \"the old habit.\"",
+      "verdict": "corrected",
+      "note": "The lineage is supported. \"Old habit\" is an unsupported claim about history, so I reworded it."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2756,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0012436,
+        "detail": "1097 in / 97 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013086,
+        "detail": "1097 in / 123 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013336,
+        "detail": "1097 in / 133 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14156000000000002,
+        "detail": "47400 in / 1676 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.067536,
+        "detail": "3614 in / 2654 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.0626,
+        "detail": "4805 in / 5299 out"
+      }
+    ]
+  }
+}

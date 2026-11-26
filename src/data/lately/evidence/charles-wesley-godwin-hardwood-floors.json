@@ -1,0 +1,200 @@
+{
+  "spotifyId": "5M02K0TQ0zLiF69bTPGX7w",
+  "reviewedAt": "2026-11-24T15:34:19.462Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/3623426"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a rhythmic strumming pattern. A bass guitar plays a walking bass line. A fiddle plays a melodic line with double stops and slides. Drums play a shuffle beat with a snare backbeat.\n\nTempo and Groove\nThe tempo is moderate. The groove is a shuffle, giving it a relaxed, slightly swung feel.\n\nVocals\nThe voice is a male baritone, delivered in a clear, slightly twangy style. There are no harmonies.\n\nProduction\nThe room sound is open and natural. The texture is clean and well-defined. The production is polished.\n\nArrangement\nThe excerpt begins with the full band playing. The fiddle enters with a prominent melodic line after a few seconds. The vocals enter around the 19-second mark, with the fiddle continuing to play fills and counter-melodies. The bass and drums maintain a consistent rhythm throughout.\n\nPass 2:\nInstruments:\nAcoustic guitar strums a steady rhythm. A bass guitar plays a walking bass line. A fiddle plays a melodic line with a slight country twang. A drum kit provides a consistent beat with a snare drum backbeat.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a two-step or a country shuffle, with a driving, upbeat feel.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy voice. The delivery is straightforward and melodic. There are no harmonies in this excerpt.\n\nProduction:\nThe sound is clean and well-balanced. The room sounds natural, not overly reverberant. The texture is polished, with all instruments clearly defined.\n\nArrangement:\nThe excerpt begins with the full band playing. The fiddle takes a prominent melodic role throughout. The vocals enter around the 19-second mark, with the band maintaining its established groove. No instruments drop out or build significantly within this short segment.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a rhythmic strumming pattern. Electric guitar plays a melodic, twangy lead line. Bass guitar provides a walking bassline. Drums play a shuffle beat with a prominent snare.\n\nTempo and groove:\nThe tempo is moderate. The groove feels like a country shuffle, with a strong emphasis on the off-beats.\n\nVocals:\nThe voice is male, with a clear, slightly raspy character. The delivery is conversational and relaxed. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, with a natural room sound. The texture is warm and full. The production is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The lead electric guitar enters with a prominent melodic line, then drops out for the second vocal phrase. The full band continues throughout.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Hardwood Floors\" is a track on Charles Wesley Godwin's debut solo album Seneca, released February 15, 2019.",
+        "source": "https://countrycentral.com/reviews/charles-wesley-godwin-seneca/"
+      },
+      {
+        "claim": "Godwin is the sole writer of the song; the Seneca album was written entirely by him.",
+        "source": "https://www.shazam.com/en-us/song/1752600718/hardwood-floors"
+      },
+      {
+        "claim": "Seneca was produced, engineered and mixed by Al Torrence, recorded at Music Garden Studios and mastered by Garrett Haines at Treelady Studios.",
+        "source": "https://www.discogs.com/release/15853545-Charles-Wesley-Godwin-Seneca"
+      },
+      {
+        "claim": "Godwin says the song was inspired by a date night with his wife and is about living in the moment.",
+        "source": "https://theboot.com/charles-wesley-godwin-hardwood-floors/"
+      },
+      {
+        "claim": "Godwin told The Boot that Ryan Bingham's work influenced the sound of \"Hardwood Floors\", and that it took some time to get the song to its recorded state.",
+        "source": "https://theboot.com/charles-wesley-godwin-hardwood-floors/"
+      },
+      {
+        "claim": "The Boot premiered the song exclusively ahead of the album's release.",
+        "source": "https://theboot.com/charles-wesley-godwin-hardwood-floors/"
+      },
+      {
+        "claim": "Country Central describes the track as an acoustic rocker with a blazing steel guitar solo that captures Godwin's energy on stage.",
+        "source": "https://countrycentral.com/reviews/charles-wesley-godwin-seneca/"
+      },
+      {
+        "claim": "Americana Highways calls \"Hardwood Floors\" a honky tonk number, and the Boot premiere describes frenetic fiddle and an urgent melody.",
+        "source": "https://americanahighways.org/2019/02/15/review-charles-wesley-godwin-sings-with-authenticity-about-seneca-creek/"
+      },
+      {
+        "claim": "Seneca earned enthusiastic reviews, and \"Hardwood Floors\" became a success on streaming services.",
+        "source": "https://www.amazon.com/Hardwood-Floors/dp/B0D7BS81SX"
+      },
+      {
+        "claim": "Godwin calls Seneca the \"autobiography of an Appalachian boy\". He is from Morgantown, West Virginia, and wrote the album while living in the Midwest (Ohio).",
+        "source": "https://www.nashville.com/charles-wesley-godwin-set-to-release-debut-album/"
+      }
+    ],
+    "lineage": "The song sits in the Appalachian country, Americana and folk storytelling tradition of West Virginia, a lineage that sources compare to Tyler Childers and to Creedence Clearwater Revival and Simon & Garfunkel.",
+    "genres": [
+      "americana",
+      "country",
+      "appalachian folk"
+    ]
+  },
+  "draft": "The narrator of **Hardwood Floors** doesn't ask for much. Stay downstairs, watch the blue dress come down the steps, then take a hand and move furniture out of the way. Charles Wesley Godwin wrote the song after a date night with his wife, and he has said it's about living in the moment. The song is that, but the moment is hard-won. Before the first chorus arrives, the narrator admits \"it seems like we're always fightin' time,\" and the only thing keeping hope alive on the bad nights is a thought carried \"across state lines.\"\n\nThat's the feeling under all the motion: a dance as a defense against distance. The chorus shows it best. \"And pretend there ain't nobody else in town,\" the narrator sings, and then, a line later, the pretending drops away. There ain't nobody else around. The wish turns into a fact just by being said again, and the refrain keeps repeating until it sounds like a vow. In the second verse the narrator lets slip how rare this is: \"for once my blues have past.\" *For once.* The joy here is real, but it's the joy of someone who knows the blues are usually waiting. When a partner's eyes go \"reading what lies behind,\" the answer is a gentle dodge: it's just love, don't you mind. Tenderness and something unspoken share the same breath, and the song doesn't sort them out.\n\nThe band keeps it moving so the worry never settles. Acoustic guitar strums steadily over a walking bass line and a shuffle beat with a firm snare backbeat, at an easy middle tempo built for two people on a living-room floor. A fiddle carries a bright melodic line and keeps weaving fills around the vocal. Godwin sings alone, with no harmonies, in a clear voice with a little rasp at the edges, delivered plainly, like he's talking to the person in front of him. The recording, produced and mixed by Al Torrence at Music Garden Studios, sounds clean and close, a natural room rather than a big hall.\n\nAmericana Highways called it a honky tonk number, and that fits. Godwin also credited Ryan Bingham's work as a shaping force on its sound, and said it took a while to get the song where he wanted it. It sits on *Seneca*, the 2019 debut he calls the \"autobiography of an Appalachian boy,\" written entirely by him while the Morgantown, West Virginia native was living in Ohio. Knowing that, the state lines in the first verse carry a bit more weight. Of all the album's homesick stories, this is the one that found its biggest audience on streaming, and it isn't hard to see why.\n\nThe song catches you in that small, defiant decision to treat one evening as the whole world, made by someone who knows exactly how rarely that works.",
+  "factCheck": [
+    {
+      "claim": "The narrator stays downstairs and watches the blue dress come down the steps",
+      "verdict": "supported",
+      "note": "Matches 'Go put on that blue dress' and 'I'll stay down here / So I can watch you stridin' down the steps'."
+    },
+    {
+      "claim": "The narrator will 'move furniture out of the way'",
+      "verdict": "removed",
+      "note": "Nothing in the lyrics mentions furniture. Replaced with taking a hand and dancing."
+    },
+    {
+      "claim": "Godwin wrote the song after a date night with his wife and has said it's about living in the moment",
+      "verdict": "corrected",
+      "note": "The source says the song was inspired by a date night with his wife. Changed 'after' to 'inspired by'. Living in the moment is supported."
+    },
+    {
+      "claim": "Quote: 'it seems like we're always fightin' time' and 'across state lines'",
+      "verdict": "supported",
+      "note": "Both quotes match the lyrics. They sit in the first verse, before the first chorus."
+    },
+    {
+      "claim": "Quote: 'And pretend there ain't nobody else in town', followed by 'nobody else around'",
+      "verdict": "supported",
+      "note": "Matches the chorus lines and their order. The refrain repeats."
+    },
+    {
+      "claim": "Quote: 'for once my blues have past' in the second verse",
+      "verdict": "supported",
+      "note": "Matches the lyric and falls in the second verse."
+    },
+    {
+      "claim": "Quote: 'reading what lies behind'; paraphrase of 'It's just love, honey, don't you mind'",
+      "verdict": "supported",
+      "note": "Quote is exact. The paraphrase is faithful."
+    },
+    {
+      "claim": "Acoustic guitar strums steadily over walking bass and a shuffle beat with a snare backbeat, at a moderate tempo",
+      "verdict": "supported",
+      "note": "All three passes agree on the strumming, walking bass, moderate tempo and shuffle feel with a snare. Passes 1 and 2 call the snare a backbeat and pass 3 calls it prominent."
+    },
+    {
+      "claim": "A fiddle carries a bright melodic line and keeps weaving fills around the vocal",
+      "verdict": "corrected",
+      "note": "Two passes support a prominent fiddle melodic line. 'Bright' and the fills around the vocal appear in only one pass, so both were dropped."
+    },
+    {
+      "claim": "Built for two people on a living-room floor",
+      "verdict": "corrected",
+      "note": "'Living-room' is not supported. Changed to a hardwood floor, which comes from the title and lyrics."
+    },
+    {
+      "claim": "Godwin sings alone, no harmonies, clear voice with a little rasp, plain and conversational delivery",
+      "verdict": "supported",
+      "note": "All three passes report no harmonies and a clear voice. Passes 2 and 3 say slightly raspy. Passes 2 and 3 say straightforward or conversational."
+    },
+    {
+      "claim": "Produced and mixed by Al Torrence at Music Garden Studios",
+      "verdict": "supported",
+      "note": "The album credits Torrence as producer, engineer and mixer, and name Music Garden Studios as the recording location."
+    },
+    {
+      "claim": "The recording sounds clean and close, a natural room rather than a big hall",
+      "verdict": "corrected",
+      "note": "Clean and natural room are supported by all passes. 'Close' and the big-hall contrast are not, so they were removed."
+    },
+    {
+      "claim": "Americana Highways called it a honky tonk number",
+      "verdict": "supported",
+      "note": "Stated in the researched facts."
+    },
+    {
+      "claim": "Godwin credited Ryan Bingham's work as a shaping force on the sound and said it took a while to get the song right",
+      "verdict": "supported",
+      "note": "He told The Boot that Bingham influenced the sound and that the song took time to reach its recorded state."
+    },
+    {
+      "claim": "Seneca is the 2019 debut, called the 'autobiography of an Appalachian boy', written entirely by Godwin, a Morgantown, West Virginia native living in Ohio",
+      "verdict": "corrected",
+      "note": "Supported, but the packet calls it his debut solo album. Wording adjusted."
+    },
+    {
+      "claim": "Of all the album's homesick stories, this is the one that found its biggest audience on streaming",
+      "verdict": "corrected",
+      "note": "The packet says only that the song became a success on streaming. 'Homesick stories' and 'biggest audience' were removed."
+    },
+    {
+      "claim": "The state lines carry more weight knowing he wrote the album in Ohio; the closing reading about a defiant decision",
+      "verdict": "supported",
+      "note": "Interpretation resting on supported facts."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.195,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014667,
+        "detail": "1099 in / 186 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014392,
+        "detail": "1099 in / 175 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015017,
+        "detail": "1099 in / 200 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.079876,
+        "detail": "23483 in / 1291 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.057656,
+        "detail": "3839 in / 2115 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.053032,
+        "detail": "5021 in / 4299 out"
+      }
+    ]
+  }
+}

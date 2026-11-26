@@ -1,0 +1,170 @@
+{
+  "spotifyId": "41LiSeJIhiXDGGNaYXhIzx",
+  "reviewedAt": "2026-11-24T15:26:31.871Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/12690938"
+  },
+  "listening": "Pass 1:\nInstruments:\nA full drum kit plays a driving, mid-tempo beat. An electric bass plays a simple, root-note pattern. An electric guitar plays a clean, arpeggiated riff with a slight tremolo effect. A second electric guitar plays a sustained, distorted chord.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, driving feel. The groove is a straightforward rock feel, with a strong emphasis on the backbeat.\n\nVocals:\nThe lead vocalist is a male with a deep, slightly gravelly voice. He sings with a clear, confident delivery. There are no harmonies in this excerpt.\n\nProduction:\nThe production is clean and polished, with a full, rich sound. The instruments are well-balanced, and the vocals are clear and prominent. The room sounds like a medium-sized studio.\n\nArrangement:\nThe excerpt begins with the full band playing. The lead vocal enters at 0:09. The second electric guitar enters at 0:28, adding a sustained, distorted chord.\n\nPass 2:\nInstruments:\nA full drum kit plays a driving beat with a prominent snare. An electric bass plays a simple, root-note-heavy line. An electric guitar plays a clean, arpeggiated riff, and a second electric guitar plays a distorted, sustained chord.\n\nTempo and Groove:\nThe tempo is moderate, with a steady, driving feel. The groove is straightforward and rhythmic.\n\nVocals:\nA male voice sings with a slightly raspy, mid-range character. The delivery is clear and direct. There are no harmonies.\n\nProduction:\nThe sound is clean and well-defined, with a moderate amount of reverb suggesting a medium-sized room. The texture is full and balanced, with a polished feel.\n\nArrangement:\nThe excerpt begins with all instruments playing. The drums, bass, and clean guitar establish the main groove. The distorted guitar enters with a sustained chord, then drops out as the vocals begin. The distorted guitar re-enters with a sustained chord at the end of the excerpt.\n\nPass 3:\nInstruments:\nA full drum kit plays a driving beat with a prominent snare. An electric bass plays a simple, rhythmic line. An electric guitar plays a clean, arpeggiated riff, then switches to a distorted, strummed chord progression. A steel guitar plays sustained, melodic lines.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving rock feel.\n\nVocals:\nA male voice sings with a slightly raspy, clear tone. The delivery is confident and direct. There are no harmonies.\n\nProduction:\nThe sound is clean and well-balanced, with a moderate amount of reverb suggesting a medium-sized room. The texture is polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The vocals enter, and the electric guitar switches from arpeggios to strummed chords. The steel guitar provides fills throughout. No instruments drop out or build significantly within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Paul Cauthen's single \"Bones\" was released on August 7, 2020, under the label name Paul Cauthen, and runs 3:12.",
+        "source": "https://www.shazam.com/en-us/song/1523818126/bones"
+      },
+      {
+        "claim": "\"Bones\" was written by Jaida Dreyer and Teddy Geiger, so it is a cover of an outside song and not a Cauthen original.",
+        "source": "https://radiotexaslive.com/listen-up-paul-cauthen-drops-new-song-bones/"
+      },
+      {
+        "claim": "Cauthen thanked Dreyer and Geiger for \"hitting the hammer on the nail\" with the tune and said he was proud to cut it.",
+        "source": "https://radiotexaslive.com/listen-up-paul-cauthen-drops-new-song-bones/"
+      },
+      {
+        "claim": "Cauthen described the song's message as burying negative thoughts, moving forward, working for others and lending a hand.",
+        "source": "https://radiotexaslive.com/listen-up-paul-cauthen-drops-new-song-bones/"
+      },
+      {
+        "claim": "\"Bones\" was one of two solo singles Cauthen released in 2020, along with \"America\". That year he also teamed with Orville Peck as the Unrighteous Brothers for Righteous Brothers covers.",
+        "source": "https://www.iheart.com/artist/paul-cauthen-31278791/"
+      },
+      {
+        "claim": "Cauthen is nicknamed \"Big Velvet\" for his smooth baritone. His catalog includes the 2016 breakthrough My Gospel and the 2018 follow-up Have Mercy.",
+        "source": "https://www.iheart.com/artist/paul-cauthen-31278791/"
+      },
+      {
+        "claim": "Cauthen was born in Tyler, Texas. He was influenced by his late grandfather Jim Paul Cauthen, a songwriter who gave him a guitar.",
+        "source": "https://en.wikipedia.org/wiki/Paul_Cauthen"
+      },
+      {
+        "claim": "Before going solo, Cauthen was half of the duo Sons of Fathers with David Beck.",
+        "source": "https://radiotexaslive.com/listen-up-paul-cauthen-drops-new-song-bones/"
+      },
+      {
+        "claim": "Cauthen's previous full-length before \"Bones\" was Room 41, released in September 2019. It includes \"Cocaine Country Dancing\".",
+        "source": "https://radiotexaslive.com/listen-up-paul-cauthen-drops-new-song-bones/"
+      },
+      {
+        "claim": "Cauthen said Room 41 came out of a rough period and that writing was like therapy for him.",
+        "source": "https://www.lonesomehighway.com/interviewsold/2019/11/1/paul-cauthen-interview"
+      }
+    ],
+    "lineage": "The song sits in Texas outlaw country, which Cauthen mixes with gospel and soul influences. Sources describe him as keeping old-fashioned outlaw country alive with a gospel undercurrent.",
+    "genres": [
+      "outlaw country",
+      "country",
+      "americana"
+    ]
+  },
+  "draft": "The verb that matters in **Bones** is in the present tense. The singer isn't done burying anything. The title phrase comes back so many times at the end, stripped of everything around it, that it stops sounding like a statement and starts sounding like labor: shovel, dirt, shovel, dirt. Whatever's going in the ground needs a lot of covering.\n\nPaul Cauthen didn't write it. The song came from Jaida Dreyer and Teddy Geiger, and Cauthen thanked them for \"hitting the hammer on the nail,\" saying he was proud to cut it. You can hear why it fit. Cauthen's records have long kept old Texas outlaw country running with a gospel current underneath, and this lyric talks like a sermon preached at a graveside. \"We'll bless these bleeding hands and what will rest below\" is church language pointed at something unholy, a blessing asked for hands that got bloody doing the work.\n\nWhat makes the song hit is how much the narrator admits while claiming to be fine. The first verse is pure swagger, fate thrown in the fire and a vow to live free or die trying. Then comes \"Made friends with darkness, out here digging a hole,\" and the swagger cracks. Being alone with the dark has turned into company. The second verse is plainer still: \"Right now I'm strong but I'm not naive.\" It's a line from someone who knows the strength won't last, saying it out loud before it fails. Pride and dread share the same breath, and the chorus never picks one. It says that every now and then you let what you love go, and that the wicked things you carry can swallow you whole. That's letting go and getting buried, offered as the same act.\n\nCauthen describes the message as burying negative thoughts, moving forward, lending a hand to others. That reading is in there, but the song is darker than the summary, and the tension between the two is the interesting part. It's hope from someone who can still feel the weight.\n\nThe band plays it straight and heavy. A full kit drives a steady, mid-tempo backbeat with the snare up front. The bass sits on simple, root-heavy notes. A clean electric guitar picks out an arpeggiated figure while a second guitar lands distorted, sustained chords on top, like a door slammed shut over a lit room. The production is polished, with a moderate room around it. Cauthen's voice, the baritone that earned the nickname Big Velvet, comes through slightly raspy and direct, with no harmonies to share the load. Nobody helps with the digging.\n\nIt sticks because you know that feeling: being strong enough today, honest enough to admit it might not hold, and still reaching for the shovel.",
+  "factCheck": [
+    {
+      "claim": "The title phrase repeats many times at the end, with nothing else around it.",
+      "verdict": "supported",
+      "note": "The lyric structure shows the closing stanzas are only 'I'm burying bones' and 'Burying bones'. The wording is kept to what the lyrics show."
+    },
+    {
+      "claim": "Paul Cauthen didn't write it; Jaida Dreyer and Teddy Geiger did.",
+      "verdict": "supported",
+      "note": "Researched facts."
+    },
+    {
+      "claim": "Cauthen thanked them for \"hitting the hammer on the nail\" and said he was proud to cut it.",
+      "verdict": "supported",
+      "note": "Quote and paraphrase match the researched facts."
+    },
+    {
+      "claim": "Cauthen's records have long kept old Texas outlaw country running with a gospel current underneath.",
+      "verdict": "supported",
+      "note": "Matches the lineage note on outlaw country with a gospel undercurrent."
+    },
+    {
+      "claim": "Quoted lines: 'We'll bless these bleeding hands and what will rest below'; 'Made friends with darkness, out here digging a hole'; 'Right now I'm strong but I'm not naive.'",
+      "verdict": "supported",
+      "note": "All three match the lyrics exactly. Each is a single line, and there are three quotes in total."
+    },
+    {
+      "claim": "First verse: fate thrown in the fire, a vow to live free or die trying; chorus says you let what you love go and wicked things can swallow you whole.",
+      "verdict": "supported",
+      "note": "Accurate paraphrase of the lyrics."
+    },
+    {
+      "claim": "Cauthen describes the message as burying negative thoughts, moving forward, lending a hand to others.",
+      "verdict": "supported",
+      "note": "Matches the researched facts."
+    },
+    {
+      "claim": "Full kit drives a steady mid-tempo backbeat with the snare up front; bass plays simple root-heavy notes.",
+      "verdict": "supported",
+      "note": "Agreed across the passes."
+    },
+    {
+      "claim": "A clean electric guitar plays an arpeggiated figure while a second guitar plays distorted, sustained chords.",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree, and pass 3 is consistent."
+    },
+    {
+      "claim": "The production is polished, with a moderate room around it.",
+      "verdict": "supported",
+      "note": "All passes describe a clean, polished sound in a medium-sized room."
+    },
+    {
+      "claim": "Cauthen's voice is the baritone that earned the nickname Big Velvet, slightly raspy and direct.",
+      "verdict": "supported",
+      "note": "The nickname and baritone are in the researched facts. The passes agree on a raspy, direct male voice."
+    },
+    {
+      "claim": "There are no harmonies to share the load; nobody helps with the digging.",
+      "verdict": "removed",
+      "note": "The passes only report no harmonies within a short excerpt, so this can't be stated about the whole song."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1701,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015242,
+        "detail": "1099 in / 209 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00064544,
+        "detail": "1099 in / 191 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015442,
+        "detail": "1099 in / 217 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.074,
+        "detail": "20410 in / 1318 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.050036,
+        "detail": "3774 in / 1747 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.04234,
+        "detail": "4925 in / 3249 out"
+      }
+    ]
+  }
+}

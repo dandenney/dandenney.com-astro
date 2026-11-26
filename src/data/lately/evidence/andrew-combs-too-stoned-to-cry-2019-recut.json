@@ -1,0 +1,201 @@
+{
+  "spotifyId": "62PAopUaQeb36QyRB0qQbi",
+  "reviewedAt": "2026-11-26T17:33:44.780Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/15116266"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar playing arpeggiated chords, electric guitar playing a simple melody, bass guitar playing a walking bassline, and drums playing a simple beat.\n\nTempo and groove feel:\nSlow tempo, with a relaxed, slightly melancholic groove.\n\nVocals:\nA male voice with a slightly raspy, warm character. The delivery is laid-back and conversational. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a natural room feel. The texture is smooth and well-balanced.\n\nArrangement:\nThe excerpt begins with acoustic guitar, electric guitar, bass, and drums. The vocals enter shortly after. All instruments remain present throughout the excerpt, maintaining a consistent texture.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, walking line. Drums enter with a light, brushed snare and kick drum, then transition to a full kit with a steady beat. An electric guitar plays a clean, sustained melody line.\n\nTempo and Groove:\nSlow tempo. The groove is relaxed and laid-back, with a gentle sway.\n\nVocals:\nA male voice sings in a clear, slightly raspy baritone. The delivery is conversational and understated. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a natural room feel. The texture is smooth and well-balanced.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter, followed by the lead vocal. The electric guitar enters later, adding a melodic counterpoint. No instruments drop out.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a fingerpicked arpeggiated pattern. A bass guitar plays a simple, sustained line. Drums enter with a light, brushed snare and kick drum pattern. An electric guitar plays a clean, sustained melody line.\n\nTempo and Groove:\nSlow tempo with a relaxed, easygoing groove.\n\nVocals:\nA male voice sings in a clear, slightly nasal tone. The delivery is laid-back and conversational. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a natural room feel. The texture is smooth and well-balanced.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter shortly after the vocals begin. The electric guitar enters around the halfway point, adding a melodic counterpoint. No instruments drop out or build significantly within the excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Too Stoned to Cry (2019 Recut)\" is a newly re-recorded version of a song from Andrew Combs' 2012 debut album Worried Man. It appears on the Worried Man (Deluxe Edition) reissue, alongside a recut of \"Take It From Me\".",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Andrew-Combs-Debut-Album-Worried-Man-Gets-Deluxe-Reissue-20190111"
+      },
+      {
+        "claim": "Combs said he had always wanted to re-record the song. He said he loves it but can't stand his vocal take on the original, and that he sounded \"so young and pitchy\".",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Andrew-Combs-Debut-Album-Worried-Man-Gets-Deluxe-Reissue-20190111"
+      },
+      {
+        "claim": "Combs described the recut as an updated version that somewhat replicates how his band plays it every night on the road.",
+        "source": "https://circuitsweet.co.uk/2019/01/deluxe-re-issue-of-andrew-combs-debut-album-european-tour-underway/"
+      },
+      {
+        "claim": "The recut was released digitally ahead of the album as the first track from the deluxe reissue. The reissue was handled by New West Records, and by Loose Records in the UK/EU.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Andrew-Combs-Debut-Album-Worried-Man-Gets-Deluxe-Reissue-20190111"
+      },
+      {
+        "claim": "The Bandcamp credits for the deluxe edition say all songs were written by Andrew Combs, apart from \"Heavy\" and \"Come Tomorrow\". The album credits list production by Mike Odmark and Andrew Combs.",
+        "source": "https://andrewcombs.bandcamp.com/album/worried-man-deluxe-edition"
+      },
+      {
+        "claim": "The credited band on the Worried Man album is Jon Radford (drums, percussion), Mike Rinne (bass), Micah Hulscher (piano, organ), Spencer Cullum Jr. (pedal steel, dobro, backing vocals), Jeremy Fetzer (lead guitar, backing vocals) and Combs (rhythm guitar, backing vocals). These are the credits for the original 2012 album. They are not specific to the 2019 recut.",
+        "source": "https://andrewcombs.bandcamp.com/album/worried-man-deluxe-edition"
+      },
+      {
+        "claim": "The 2019 recut runs 3:24, against 3:37 for the original album version.",
+        "source": "https://andrewcombs.bandcamp.com/album/worried-man-deluxe-edition"
+      },
+      {
+        "claim": "Rolling Stone Country said Worried Man (2012) showed flashes of brilliance on songs like \"Too Stoned to Cry\". It also noted appearances by Caitlin Rose and Spencer Cullum Jr.",
+        "source": "https://www.rollingstone.com/music/music-country/nashville-troubadour-andrew-combs-talks-new-album-political-discord-192829/"
+      },
+      {
+        "claim": "A London live review noted that Combs re-cut the track from his 2012 self-funded Worried Man album, and that it is one of his favourite songs to sing live.",
+        "source": "https://buildingourownnashville.com/2019/01/29/andrew-combs-mesmerises-london-live-review/"
+      },
+      {
+        "claim": "Combs was born in Dallas, Texas, on December 19, 1986, and moved to Nashville to pursue music. AllMusic describes him as pairing indie Americana with vintage country-pop in the vein of Mickey Newbury, Harry Nilsson and Townes Van Zandt.",
+        "source": "https://allmusic.com/artist/andrew-combs-mn0002926583/biography"
+      }
+    ],
+    "lineage": "Combs is a Dallas-born, Nashville-based singer-songwriter in the indie Americana and country-folk tradition, which AllMusic compares to Mickey Newbury, Harry Nilsson and Townes Van Zandt.",
+    "genres": [
+      "americana",
+      "country-folk",
+      "indie folk"
+    ],
+    "recordedAt": []
+  },
+  "draft": "The cruelest joke in **Too Stoned to Cry** is that the drugs don't kill the pain. They only take away the release. Andrew Combs builds the whole song on that trap. The narrator is lonesome and bled dry, and the one thing that would let any of it out is the thing he's too far gone to do. Each time the refrain comes around, the last word changes. First it's *cry*, then *fly*, then *die*: \"I keep tryin' / But I'm too stoned to die.\" That's the turn. It's not quite a death wish, and it's not quite a confession. It reads more like a man noticing that even giving up is out of reach.\n\nCombs wrote it for his self-funded 2012 debut, *Worried Man*. Rolling Stone Country singled it out as one of that record's flashes of brilliance. He said he always loved the song but couldn't stand his original vocal, which sounded \"so young and pitchy\" to him. So he cut it again for the 2019 deluxe reissue, aiming for something close to how his band plays it every night on the road. It's one of his favorite songs to sing live, and the recut has that worn-in ease.\n\nThe arrangement stays gentle. A fingerpicked acoustic guitar rolls through arpeggiated chords over a simple bass line. The drums are light, with brushes on the snare, and a clean electric guitar sings a sustained melody against the vocal. The tempo is slow, with a relaxed sway, and the room sound is natural and unfussy. Combs sings in a slightly raspy, conversational voice, and he doesn't push. Nobody harmonizes with him. That fits a song this alone.\n\nThe lineage is plain. The opening pairing of \"lonesome\" with being too stoned to cry bends one of country's oldest lament phrases into something numbed out. AllMusic places Combs near Townes Van Zandt and Mickey Newbury. You can hear that kinship in the fatalism without melodrama. The catalog in the middle is whiskey, wine, pills, cocaine and easy women, all delivered as flatly as a grocery list. The sea imagery carries more of the feeling, in \"I'm a sailor who's cold in the worst kind of storm.\" He even writes off salvation in a single shrug, saying the promise of Jesus was a lie.\n\nWhat lingers is the gap between the words and the voice. The narrator insists he isn't happy, only numb, yet the band plays with real warmth. The song makes you feel grief that someone has sealed off from himself, and you end up doing the crying for him.",
+  "factCheck": [
+    {
+      "claim": "Each time the refrain comes around, the last word changes: first cry, then fly, then die",
+      "verdict": "corrected",
+      "note": "The lyrics run cry, fly, die and then return to cry, so 'each time' was overstated. Reworded to say the last word shifts."
+    },
+    {
+      "claim": "Quote: \"I keep tryin' / But I'm too stoned to die.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, two consecutive lines."
+    },
+    {
+      "claim": "Combs wrote it for his self-funded 2012 debut, Worried Man",
+      "verdict": "supported",
+      "note": "The song is from the 2012 debut. The Bandcamp credits say Combs wrote all songs except 'Heavy' and 'Come Tomorrow'. The London review calls the album self-funded."
+    },
+    {
+      "claim": "Rolling Stone Country singled it out as one of that record's flashes of brilliance",
+      "verdict": "supported",
+      "note": "Rolling Stone Country said the album showed flashes of brilliance on songs like this one."
+    },
+    {
+      "claim": "He said he always loved the song but couldn't stand his original vocal, 'so young and pitchy'",
+      "verdict": "corrected",
+      "note": "The source says he loves the song and always wanted to re-record it. 'Always loved' was changed to 'loves'. The quote is supported."
+    },
+    {
+      "claim": "Cut again for the 2019 deluxe reissue, aiming for something close to how his band plays it every night on the road",
+      "verdict": "corrected",
+      "note": "Combs said it 'somewhat replicates' the band's nightly version. Softened to match."
+    },
+    {
+      "claim": "It's one of his favorite songs to sing live",
+      "verdict": "supported",
+      "note": "From the London live review."
+    },
+    {
+      "claim": "Fingerpicked acoustic guitar with arpeggiated chords, simple bass line, light brushed snare, clean sustained electric guitar melody",
+      "verdict": "supported",
+      "note": "At least two passes agree on each detail."
+    },
+    {
+      "claim": "Slow tempo with a relaxed sway",
+      "verdict": "corrected",
+      "note": "All passes agree on slow and relaxed. Only one mentions 'sway', so it was dropped."
+    },
+    {
+      "claim": "Natural room sound",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Slightly raspy, conversational voice that doesn't push",
+      "verdict": "supported",
+      "note": "Raspy appears in two passes. All three call the delivery conversational or laid-back."
+    },
+    {
+      "claim": "Nobody harmonizes with him",
+      "verdict": "removed",
+      "note": "The passes only cover a short excerpt, so this can't be said about the whole song. The following line was adjusted."
+    },
+    {
+      "claim": "The pairing of 'lonesome' with being too stoned to cry bends one of country's oldest lament phrases",
+      "verdict": "removed",
+      "note": "A claim about the history of a country phrase with no support. Reframed as a reading of the lyric."
+    },
+    {
+      "claim": "AllMusic places Combs near Townes Van Zandt and Mickey Newbury",
+      "verdict": "supported",
+      "note": "From the AllMusic biography. Nilsson is also named there."
+    },
+    {
+      "claim": "The catalog 'in the middle' is whiskey, wine, pills, cocaine and easy women",
+      "verdict": "corrected",
+      "note": "The list is in the lyrics, but its position in the song isn't established. 'In the middle' was removed."
+    },
+    {
+      "claim": "Quote: \"I'm a sailor who's cold in the worst kind of storm.\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "He writes off salvation, saying the promise of Jesus was a lie",
+      "verdict": "corrected",
+      "note": "The lyric is 'They said Jesus could save me / But that was a lie.' Reworded to keep the 'they said' attribution."
+    },
+    {
+      "claim": "The band plays with real warmth",
+      "verdict": "corrected",
+      "note": "The passes support a relaxed, unhurried groove and a clean sound, not 'warmth' in the band. Reworded."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2719,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0013844,
+        "detail": "1108 in / 152 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014344,
+        "detail": "1108 in / 172 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014569,
+        "detail": "1108 in / 181 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.152366,
+        "detail": "52198 in / 1797 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.060272,
+        "detail": "3988 in / 2216 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.05503,
+        "detail": "5120 in / 4479 out"
+      }
+    ]
+  }
+}

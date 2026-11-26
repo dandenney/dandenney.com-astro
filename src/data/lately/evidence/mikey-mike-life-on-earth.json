@@ -1,0 +1,186 @@
+{
+  "spotifyId": "4zCVknIsuMpvBSBZA7N1rt",
+  "reviewedAt": "2026-11-26T17:26:31.175Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/13010580"
+  },
+  "listening": "Pass 1:\nInstruments:\nA male voice sings lead vocals. A bass guitar plays a simple, repetitive line. A drum kit plays a steady, driving beat with a prominent snare. An electric guitar plays a clean, arpeggiated riff.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels steady and driving, with a slight urgency.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy voice. The delivery is straightforward and melodic. There are no harmonies.\n\nProduction:\nThe room sound is relatively dry. The texture is clean and well-defined. The production feels polished.\n\nArrangement:\nThe excerpt begins with the full band playing. The bass and drums maintain a consistent rhythm throughout. The electric guitar plays a repeating riff. The vocals are present from the beginning and continue throughout. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nA male voice sings lead vocals. A bass guitar plays a simple, repetitive line. A drum kit plays a steady, driving beat with a prominent snare. An electric guitar plays a clean, arpeggiated melody.\n\nTempo and Groove:\nThe tempo is moderate. The groove is a steady, driving rock feel.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy voice. The delivery is straightforward and melodic. There are no harmonies in this excerpt.\n\nProduction:\nThe production sounds clean and polished. The instruments are well-balanced, and the overall texture is full. The room sound is neutral, not particularly wet or dry.\n\nArrangement:\nThe excerpt begins with the full band playing. The bass and drums maintain a consistent rhythm throughout. The electric guitar plays a melodic counterpoint to the vocals. No instruments drop out or build significantly within this excerpt.\n\nPass 3:\nInstruments:\nA male voice sings lead vocals. A bass guitar plays a simple, repetitive line. A drum kit provides a steady, driving beat with a prominent snare drum. An electric guitar plays a clean, arpeggiated riff that occasionally adds a sustained chord.\n\nTempo and Groove:\nThe tempo is moderate. The groove is steady and driving, with a slight swing feel.\n\nVocals:\nThe lead vocalist has a clear, slightly raspy voice. The delivery is melodic and expressive. There are no harmonies in this excerpt.\n\nProduction:\nThe room sound is relatively dry. The texture is clean and well-defined. The production is polished, with a clear separation of instruments.\n\nArrangement:\nThe excerpt begins with the full band playing. The lead vocal enters shortly after. The electric guitar plays a consistent arpeggiated riff throughout, occasionally adding a sustained chord. The bass and drums maintain a steady rhythm. No instruments drop out or build significantly within this excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "Mikey Mike's Life on Earth: Vol. 1 was released on 30 August 2019 on Trippy Circus. It has 13 tracks and runs about 33 minutes.",
+        "source": "https://music.apple.com/us/album/mikey-mikes-life-on-earth-vol-1/1470419060"
+      },
+      {
+        "claim": "Qobuz's credits for the standalone \"Life on Earth\" single list Mikey Mike as composer, lyricist and producer, and Mark Nolan as an additional producer. The track runs 2:45.",
+        "source": "https://www.qobuz.com/gb-en/album/life-on-earth-mikey-mike/bifw965oyyt5a"
+      },
+      {
+        "claim": "EARMILK premiered \"Life On Earth\" in March 2019 as the first track from the album. It describes the song as built on acoustic guitar chords and delicate vocals.",
+        "source": "https://earmilk.com/2019/03/14/mikey-mike-releases-peaceful-life-on-earth-premiere/"
+      },
+      {
+        "claim": "Mikey Mike has said the album was made to be loose and raw rather than polished by a big production team. He also said he and his team want to make a TV show called Life on Earth, with each song shaping an episode.",
+        "source": "https://altwire.net/altwire-interview-mikey-mike/"
+      },
+      {
+        "claim": "Mikey Mike described the album as a trip through life, from spiritual places to more physical or nasty ones. He told one outlet that Vol. 1 was diverse in genre.",
+        "source": "https://titusvillemusic.wordpress.com/2020/03/10/exclusive-titusville-interview-mikey-mike/"
+      },
+      {
+        "claim": "Gigsoup reports that \"Life on Earth\" and \"Strange Times\" are among the album's more philosophical tracks. It also says he began the album about five years before release and was signed and then dropped by a label in that time.",
+        "source": "https://titusvillemusic.wordpress.com/2020/03/10/mikey-mike-releases-life-on-earth-vol-1/"
+      },
+      {
+        "claim": "\"Mikey Mike's Life on Earth\" is an ongoing project that he expects to complete over his lifetime and release in volumes. Vol. 1 includes earlier singles such as \"Doin' Me\", which was used in a Canon commercial.",
+        "source": "https://www.clickondetroit.com/2019/06/28/mikey-mike-announces-debut-album-with-release-of-new-single-yasmin-you-will-never-hear-this/"
+      },
+      {
+        "claim": "His official bio says the Life on Earth album roll-out began with \"Doin' Me\". It describes a series of singles that will make up a complete album only upon his death, and says a scripted TV series of the same name is in the works.",
+        "source": "https://www.allaccess.com/alternative/artist-info/q/id/12673/mikey-mike"
+      },
+      {
+        "claim": "Mikey Mike is the stage name of Mike Williams, a Los Angeles-based singer, songwriter and producer. His debut single \"Doin' Me\" (2017) was produced by Rick Rubin and promoted with a viral billboard and poster campaign. He produced \"Jump\" on Rihanna's 2012 album Unapologetic.",
+        "source": "https://www.iheart.com/artist/mikey-mike-31504122/"
+      },
+      {
+        "claim": "He was born in a small town in Maryland. He later moved to Nashville and recorded his second album, Life on Earth, Vol. 2, with Dave Cobb.",
+        "source": "https://notion.online/broken-man-by-mikey-mike/"
+      }
+    ],
+    "lineage": "Mikey Mike sits in a Los Angeles-based alt-pop and indie scene that mixes pop, rap, R&B and hooky indie rock, and the sources link him to producer Rick Rubin.",
+    "genres": [
+      "alternative pop",
+      "indie rock",
+      "alternative rap"
+    ],
+    "recordedAt": []
+  },
+  "draft": "The trouble starts with a math problem: \"the more I see / Of life on earth, the more I wanna leave.\" Mikey Mike sets it up as a simple ratio, the kind of thing you'd say half-joking, and then spends the rest of **Life on Earth** proving he means it. This isn't a breakup song or a bad-day song. It's about a deeper tiredness, a sense that the place itself is wrong, and a stubborn faith that somewhere else must be right.\n\nThe chorus carries that faith. \"Take me home, take me home\" sounds like homesickness, but the home is a place the narrator has never been, only a \"better place out there.\" That's what gives the song its odd tenderness. Exhaustion and hope sit in the same breath, and neither wins. The second verse gets angrier. He's \"so damn low,\" watching psychopaths run the show and get rewarded for it, and the line about how far you'll go curdles into a sneer. Then the bridge drops the anger for something more fragile: \"please wake me up from this dream / I think I'm stuck.\" The next confession is the one that lands hardest. \"I been trying, trying to sing\" his way out, and the song we're hearing becomes the attempt itself. After that the chorus comes back twice, no answer found, just the plea again.\n\nThe band doesn't mope along with him. A drum kit keeps a steady, driving beat with a prominent snare. The bass holds a plain, repeating line, and a clean guitar figure picks out arpeggios around the melody. The groove has a moderate tempo and a slight push to it, so the music keeps moving forward even as the words keep asking to get off. Mikey Mike's voice is clear with a little rasp at the edges, and he sings it straight, no theatrics, which makes the despair sound lived-in rather than performed.\n\nMikey Mike is the stage name of Mike Williams, a Los Angeles singer, songwriter and producer who produced \"Jump\" for Rihanna and whose debut single, \"Doin' Me,\" was produced by Rick Rubin. He wrote and produced this one himself, with Mark Nolan as an additional producer. It opened the album *Mikey Mike's Life on Earth: Vol. 1*, a record he started about five years before its release, a stretch in which he was signed and then dropped by a label. He calls the project a trip through life, from spiritual places to nasty ones, and plans to keep adding volumes for the rest of his life. This song is the title-card thesis for all of it.\n\nIt sticks because it lets you admit you're worn out on the world without giving up on the idea that a better one is waiting somewhere.",
+  "factCheck": [
+    {
+      "claim": "Opening lyric quote: \"the more I see / Of life on earth, the more I wanna leave\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics (the sung line is 'the more, the more I see', and the quoted words appear in it)."
+    },
+    {
+      "claim": "Quoted fragments \"Take me home, take me home\", \"better place out there\", \"so damn low\", \"please wake me up from this dream / I think I'm stuck\" and \"I been trying, trying to sing\"",
+      "verdict": "corrected",
+      "note": "All match the lyrics, but together they go past the three-line quote limit. I kept the opening couplet and 'I been trying, trying to sing' as quotes and paraphrased the rest."
+    },
+    {
+      "claim": "Psychopaths run the show and are rewarded; the line about how far you'll go",
+      "verdict": "supported",
+      "note": "Paraphrase of the second verse."
+    },
+    {
+      "claim": "Chorus comes back twice after the 'wake me up' section",
+      "verdict": "supported",
+      "note": "The lyric structure shows two final choruses. I dropped the 'bridge' label and describe the section by what it says."
+    },
+    {
+      "claim": "Drum kit with steady, driving beat and prominent snare; simple repeating bass line; clean arpeggiated guitar",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Moderate tempo",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "\"slight push\" to the groove",
+      "verdict": "corrected",
+      "note": "Only one pass says 'slight urgency' and another says 'slight swing', so no two agree. Reduced to 'steady, driving'."
+    },
+    {
+      "claim": "Voice is clear with a little rasp, sung straight",
+      "verdict": "supported",
+      "note": "All three passes agree on the clear, slightly raspy voice. Two passes say straightforward delivery."
+    },
+    {
+      "claim": "Mikey Mike is the stage name of Mike Williams, a Los Angeles singer, songwriter and producer; produced \"Jump\" for Rihanna; debut single \"Doin' Me\" produced by Rick Rubin",
+      "verdict": "supported",
+      "note": "iHeart bio."
+    },
+    {
+      "claim": "He wrote and produced this one himself, with Mark Nolan as an additional producer",
+      "verdict": "corrected",
+      "note": "Qobuz credits him as composer, lyricist and producer, with Nolan as an additional producer. Reworded to match the credits."
+    },
+    {
+      "claim": "It opened the album",
+      "verdict": "corrected",
+      "note": "The source says it was the first track from the album to be premiered (March 2019), not that it is track one. Reworded."
+    },
+    {
+      "claim": "Started the album about five years before release; signed and then dropped by a label in that time",
+      "verdict": "supported",
+      "note": "Gigsoup."
+    },
+    {
+      "claim": "He calls the project a trip through life, from spiritual places to nasty ones",
+      "verdict": "corrected",
+      "note": "The source says 'spiritual places to more physical or nasty ones'. Reworded."
+    },
+    {
+      "claim": "Plans to keep adding volumes for the rest of his life",
+      "verdict": "supported",
+      "note": "ClickOnDetroit: ongoing project released in volumes over his lifetime."
+    },
+    {
+      "claim": "Interpretive readings (homesickness for an unknown place, tiredness, 'title-card thesis', band doesn't mope)",
+      "verdict": "supported",
+      "note": "Critic's interpretation resting on the lyrics and the supported sound."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2988,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014639,
+        "detail": "1098 in / 185 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014464,
+        "detail": "1098 in / 178 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015064,
+        "detail": "1098 in / 202 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.17941400000000002,
+        "detail": "58992 in / 2143 out / 4 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.06346,
+        "detail": "4030 in / 2367 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051464,
+        "detail": "5182 in / 4110 out"
+      }
+    ]
+  }
+}

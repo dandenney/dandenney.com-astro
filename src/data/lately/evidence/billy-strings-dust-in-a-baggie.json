@@ -1,0 +1,185 @@
+{
+  "spotifyId": "2Lk8XTulavagQOrYqFpGB8",
+  "reviewedAt": "2026-11-24T15:29:40.786Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/1138291"
+  },
+  "listening": "Pass 1:\nInstruments:\nThe excerpt features a banjo, acoustic guitar, upright bass, and a mandolin. The banjo plays a fast, intricate melody with rolls and arpeggios. The acoustic guitar provides rhythmic strumming. The upright bass plays a walking bass line. The mandolin plays a melodic counterpoint to the banjo.\n\nTempo and Groove:\nThe tempo is fast. The groove is a driving, energetic bluegrass feel.\n\nVocals:\nA male voice sings with a clear, slightly raspy character. The delivery is conversational and rhythmic. There are no harmonies.\n\nProduction:\nThe sound is bright and clear, with a natural room acoustic. The texture is clean and polished.\n\nArrangement:\nThe excerpt begins with all instruments playing an instrumental break. At 0:17, the vocals enter, with the instruments continuing to play their established parts. The mandolin and banjo continue to play melodic fills between vocal phrases.\n\nPass 2:\nInstruments:\nA banjo plays a fast, melodic line with a bright, percussive attack. A mandolin plays a similar, but slightly less prominent, melodic line. A guitar provides rhythmic strumming and occasional melodic fills. An upright bass plays a walking bass line. A fiddle plays sustained notes and fills.\n\nTempo and Groove:\nThe tempo is fast. The groove is a driving, bluegrass feel with a strong forward momentum.\n\nVocals:\nA single voice sings with a clear, slightly raspy character. The delivery is energetic and conversational. There are no harmonies.\n\nProduction:\nThe sound is bright and clear, with a natural room sound. The texture is clean and well-defined. The production is polished.\n\nArrangement:\nThe excerpt begins with all instruments playing a fast, instrumental section. The banjo and mandolin take turns playing lead melodic lines, supported by the guitar, bass, and fiddle. At 0:17, the voice enters, singing the lead melody while the instruments continue their accompaniment. The banjo and mandolin continue to play fills and counter-melodies around the vocal line.\n\nPass 3:\nInstruments:\nA banjo plays a fast, intricate melody with a bright, percussive tone. A mandolin doubles the banjo melody, adding a slightly softer, ringing quality. A guitar provides rhythmic strumming, outlining chords. An upright bass plays a walking bass line, providing a deep, resonant foundation.\n\nTempo and Groove Feel:\nThe tempo is fast. The groove is a driving, energetic bluegrass feel, with a strong emphasis on the downbeat.\n\nVocals:\nA single voice sings with a clear, slightly nasal character. The delivery is conversational and rhythmic. No harmonies are present.\n\nProduction:\nThe room sounds live and open, with a natural acoustic reverb. The texture is clean and bright. The production is polished, with each instrument clearly defined in the mix.\n\nArrangement:\nThe excerpt begins with all instruments playing an instrumental break. The banjo and mandolin lead the melody, supported by the guitar and bass. After approximately 17 seconds, the voice enters, singing the lead melody while the instruments continue their accompaniment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The Billy Strings EP's liner notes credit the recording of 'Dust in a Baggie' to April 11–12, 2016 at Minutia Studios in Nashville. Shalini Gandhi was the recording and mixing engineer, and Anna Frick mastered it at Airshow Studios in Boulder, CO.",
+        "source": "https://billystringsstore.com/products/billy-strings-ep"
+      },
+      {
+        "claim": "The EP credits Billy Strings on guitar, lead vocal and banjo, Casey Campbell on mandolin, John Mailander on fiddle, Billy Failing on banjo and backing vocal, and Erik Alvar on upright bass. The song is credited to William Apostol (Billy Strings).",
+        "source": "https://billystringsstore.com/products/billy-strings-ep"
+      },
+      {
+        "claim": "Billy Strings released the self-titled, six-song EP on June 10, 2016. 'Dust in a Baggie' is its closing track.",
+        "source": "https://www.billystrings.com/music/billy-strings-ep"
+      },
+      {
+        "claim": "The song first appeared on record on the 2013 album 'Rock of Ages', a collaboration with mandolinist Don Julin. The 2016 EP version is a re-recording.",
+        "source": "https://www.newsbreak.com/news/2567068915655/billy-strings-dust-in-a-baggie-lyrics-story-behind-the-song"
+      },
+      {
+        "claim": "Strings said he wrote the song in about 30 minutes at work, with no guitar, just a melody in his head and a little notepad.",
+        "source": "https://thebluegrasssituation.com/read/billy-strings-could-play-whatever-he-wants-and-still-chooses-bluegrass/"
+      },
+      {
+        "claim": "Strings told Theo Von the song is about Brad Lasco. He said the 'Me/And/Dad' record was dedicated to Lasco, who had died a couple of years earlier.",
+        "source": "https://www.whiskeyriff.com/2024/02/17/billy-strings-shares-backstory-of-iconic-dust-in-a-baggie-basement-video/"
+      },
+      {
+        "claim": "Strings said the song is about a man who ruined his life and sits in prison wondering where he went wrong. He added that some traditional bluegrass fans dismissed it as a song about meth.",
+        "source": "https://www.newsbreak.com/news/2567068915655/billy-strings-dust-in-a-baggie-lyrics-story-behind-the-song"
+      },
+      {
+        "claim": "A widely viewed basement video of Strings playing the song was filmed in a friend's basement while he and others were on mushrooms. The video is known for 'Barefoot Ben' in the background, and it had passed 29 million views by early 2024.",
+        "source": "https://www.whiskeyriff.com/2024/02/17/billy-strings-shares-backstory-of-iconic-dust-in-a-baggie-basement-video/"
+      },
+      {
+        "claim": "A live version recorded December 15, 2023 at Mohegan Sun Arena opens the 2024 album 'Live Vol. 1', which Billy Strings produced.",
+        "source": "https://en.wikipedia.org/wiki/Live_Vol._1_(Billy_Strings_album)"
+      },
+      {
+        "claim": "Billy Strings was born William Apostol in Lansing, MI, in 1992. He grew up in Michigan and Kentucky and was heavily influenced by his bluegrass-guitar-playing father. His 2019 album 'Home' won a Grammy.",
+        "source": "https://music.apple.com/us/artist/billy-strings/727659624"
+      }
+    ],
+    "lineage": "The song is a fast, traditional-sounding bluegrass prison narrative by a player raised on Doc Watson, Bill Monroe and Larry Sparks, and it became a staple of his jamgrass-leaning live shows.",
+    "genres": [
+      "bluegrass",
+      "jamgrass",
+      "americana"
+    ]
+  },
+  "draft": "One phone call, and the narrator of **Dust in a Baggie** spends it on his father. Not a lawyer, not a friend from the crowd that got him here. \"I used my only phone call to contact my daddy,\" Billy Strings sings, and the next line lands like a gavel: \"I got 20 long years for some dust in a baggie.\" The phrasing does a lot of work. \"Daddy\" is a kid's word, reached for by a grown man who has nobody else. \"Dust\" makes the drug sound like almost nothing, which is the point. A lifetime traded for a speck in a plastic bag.\n\nStrings has said he wrote it in about 30 minutes at work, with no guitar, just a melody in his head and a little notepad. He told Theo Von it's about Brad Lasco, the friend he later dedicated the *Me/And/Dad* record to, who had died a couple of years before. Strings has also described the song as being about a man who ruined his life and sits in prison wondering where he went wrong. Some traditional bluegrass fans waved it off as a song about meth. They missed the shame. The verses move from the binge (no sleep in seven days, the lighter under the bulb) to the regret of not listening to \"mom and papa,\" and then to the line that strips the man down: \"In here where they call me by a number, not a name.\" He isn't defiant and he isn't asking for pity. He's embarrassed, and he knows he's back \"once again,\" so the regret comes with a suspicion it won't stick.\n\nThe band plays it fast and bright, which is how bluegrass has always handled a prison song. On this 2016 re-recording, the closing track of his self-titled EP, cut in Nashville at Minutia Studios, the banjo snaps out quick, percussive runs, and Casey Campbell's mandolin weaves fills around the vocal. Acoustic guitar keeps a hard rhythm and Erik Alvar's upright bass walks underneath. The room sounds clean and open. Strings sings in a clear, slightly raspy voice, conversational, more like someone telling you what happened than performing a lament. That plainness keeps the despair from going syrupy.\n\nIt's a player raised on Doc Watson, Bill Monroe and Larry Sparks writing a song that could pass for an old one, with a modern drug at the center. The song first appeared on *Rock of Ages*, his 2013 record with Don Julin. Later it became a live staple. A basement video, shot while Strings and friends were on mushrooms, passed 29 million views, and a 2023 Mohegan Sun performance opens *Live Vol. 1*.\n\nThe picking races ahead like nothing's wrong, and that's the trap: you're tapping your foot right up until you realize you're keeping time with a man counting out twenty years.",
+  "factCheck": [
+    {
+      "claim": "Lyric quotes: 'I used my only phone call to contact my daddy' / 'I got 20 long years for some dust in a baggie'",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly, and the two lines are consecutive."
+    },
+    {
+      "claim": "Lyric quotes: 'mom and papa', 'In here where they call me by a number, not a name', 'once again'",
+      "verdict": "supported",
+      "note": "All match the lyrics. The lighter-under-the-bulb and no-sleep-in-seven-days details are also in the lyrics."
+    },
+    {
+      "claim": "Strings wrote it in about 30 minutes at work, with no guitar, just a melody in his head and a little notepad",
+      "verdict": "supported",
+      "note": "Matches The Bluegrass Situation."
+    },
+    {
+      "claim": "He told Theo Von it's about Brad Lasco, 'the friend' he 'later' dedicated the Me/And/Dad record to, who had died a couple of years before",
+      "verdict": "corrected",
+      "note": "The packet doesn't call Lasco a friend and doesn't say 'later'. It says the record was dedicated to Lasco, who had died a couple of years earlier."
+    },
+    {
+      "claim": "Strings described the song as about a man who ruined his life and sits in prison wondering where he went wrong; some traditional bluegrass fans dismissed it as a song about meth",
+      "verdict": "supported",
+      "note": "Matches the NewsBreak source."
+    },
+    {
+      "claim": "Fast and bright, 'which is how bluegrass has always handled a prison song'",
+      "verdict": "removed",
+      "note": "This is a genre-history claim with no support. The fast, bright sound itself is backed by all three passes."
+    },
+    {
+      "claim": "2016 re-recording, closing track of his self-titled EP, cut in Nashville at Minutia Studios",
+      "verdict": "supported",
+      "note": "Backed by the liner notes and the EP page."
+    },
+    {
+      "claim": "Banjo plays quick, percussive runs; mandolin (Casey Campbell) weaves fills around the vocal; upright bass (Erik Alvar) walks underneath",
+      "verdict": "supported",
+      "note": "At least two passes agree on each, and the credits match."
+    },
+    {
+      "claim": "Acoustic guitar keeps a 'hard' rhythm",
+      "verdict": "corrected",
+      "note": "The passes only say rhythmic strumming, so 'hard' was changed to 'steady'."
+    },
+    {
+      "claim": "Room sounds clean and open; clear, slightly raspy, conversational voice",
+      "verdict": "supported",
+      "note": "Natural room and clean texture are agreed by all passes. Passes 1 and 2 say raspy and all three say conversational."
+    },
+    {
+      "claim": "A player raised on Doc Watson, Bill Monroe and Larry Sparks writing a song that could pass for an old one",
+      "verdict": "supported",
+      "note": "Supported by the lineage note ('traditional-sounding'). 'A modern drug' was changed to 'meth' to avoid an unsupported history claim."
+    },
+    {
+      "claim": "First appeared on Rock of Ages, 2013 record with Don Julin; later a live staple",
+      "verdict": "supported",
+      "note": "Both are in the packet."
+    },
+    {
+      "claim": "Basement video shot while Strings and friends were on mushrooms passed 29 million views",
+      "verdict": "corrected",
+      "note": "Supported, but the packet dates the figure to early 2024, so that was added."
+    },
+    {
+      "claim": "A 2023 Mohegan Sun performance opens Live Vol. 1",
+      "verdict": "supported",
+      "note": "Recorded December 15, 2023 at Mohegan Sun Arena, and it opens the album."
+    },
+    {
+      "claim": "Interpretive readings ('daddy' as a kid's word, shame over defiance, tapping your foot while he counts out twenty years)",
+      "verdict": "supported",
+      "note": "These are critic interpretation resting on the lyrics and the supported sound."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.1939,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.001537,
+        "detail": "1100 in / 214 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014795,
+        "detail": "1100 in / 191 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015745,
+        "detail": "1100 in / 229 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.081822,
+        "detail": "23136 in / 1555 out / 2 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.056248,
+        "detail": "4152 in / 1982 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.051216,
+        "detail": "5358 in / 4050 out"
+      }
+    ]
+  }
+}

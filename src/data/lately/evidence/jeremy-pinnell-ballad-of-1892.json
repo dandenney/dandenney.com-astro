@@ -1,0 +1,200 @@
+{
+  "spotifyId": "0hMQ7O4h9m3C3GJfXHRvAl",
+  "reviewedAt": "2026-11-24T15:23:12.843Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11641122"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar plays a steady rhythm with a strumming pattern. An electric guitar plays a melodic line with a clean, slightly reverbed tone. Bass guitar provides a foundational low end. Drums play a simple, consistent beat with kick, snare, and hi-hat.\n\nTempo and Groove Feel:\nThe tempo is moderate. The groove is a steady, laid-back country feel.\n\nVocals:\nA male voice sings with a clear, slightly nasal character. The delivery is straightforward and narrative. There are no harmonies.\n\nProduction:\nThe room sounds open with a moderate amount of reverb, giving a slightly spacious texture. The overall sound is polished but retains a natural, organic feel.\n\nArrangement:\nThe excerpt begins with all instruments playing. The electric guitar plays a melodic line throughout the excerpt. The vocals enter shortly after the beginning and continue until the end. No instruments drop out or build significantly within this short excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar plays a steady rhythm with a strumming pattern. An electric guitar plays a simple, melodic lead line with a clean tone. A bass guitar provides a foundational low end. Drums play a simple, consistent beat with a snare, kick, and hi-hat.\n\nTempo and Groove Feel:\nThe tempo is moderate. The groove is a steady, easy-going country-folk feel.\n\nVocals:\nThe vocalist has a clear, mid-range voice. The delivery is straightforward and narrative. There are no harmonies.\n\nProduction:\nThe room sounds somewhat open, with a slight natural reverb. The texture is clean and well-defined. The production is polished.\n\nArrangement:\nAll instruments are present from the beginning of the excerpt. The electric guitar lead line is consistent throughout. No instruments drop out or build significantly within this segment.\n\nPass 3:\nInstruments:\nAcoustic guitar plays a steady, strummed rhythm. An electric guitar plays a melodic, fingerpicked line with a slight twang. Bass guitar provides a walking bass line. Drums play a simple, consistent beat with a snare emphasis on beats two and four.\n\nTempo and Groove:\nThe tempo is moderate. The groove feels like a relaxed, country-folk shuffle.\n\nVocals:\nThe voice is a male baritone, delivered with a clear, slightly nasal quality. The delivery is straightforward and narrative. There are no harmonies.\n\nProduction:\nThe room sounds moderately dry, with a clear, present texture. The production is polished, with instruments well-balanced and distinct.\n\nArrangement:\nThe excerpt begins with the full band playing. The electric guitar enters with its melodic line shortly after the start. No instruments drop out or build significantly within this short excerpt.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Ballad of 1892\" is track 1 on Jeremy Pinnell's album Ties of Blood and Affection, released January 27, 2017 on SofaBurn Records.",
+        "source": "https://www.shazam.com/song/1454678820/ballad-of-1892"
+      },
+      {
+        "claim": "Jeremy Pinnell is credited as the writer and composer of \"Ballad of 1892\", which runs 3:05.",
+        "source": "https://www.deezer.com/en/artist/6152334"
+      },
+      {
+        "claim": "Discogs credits for the album list Jeremy Pinnell (acoustic guitar, vocals, producer), Brad Myers (bass, electric guitar), Adam Nurre (drums, backing vocals, percussion), Bob Nave (Hammond organ) and Cameron Cochran (acoustic guitar, pedal steel, backing vocals, on track B4 only).",
+        "source": "https://www.discogs.com/release/24709322-Jeremy-Pinnell-Ties-Of-Blood-And-Affection"
+      },
+      {
+        "claim": "Mike Montgomery is credited as producer, recording engineer, mixer and mastering engineer on the album.",
+        "source": "https://www.discogs.com/release/24709322-Jeremy-Pinnell-Ties-Of-Blood-And-Affection"
+      },
+      {
+        "claim": "The album was recorded, mixed and mastered at Candyland Recording Studio in Dayton, KY.",
+        "source": "https://www.discogs.com/release/24709322-Jeremy-Pinnell-Ties-Of-Blood-And-Affection"
+      },
+      {
+        "claim": "Mike Montgomery, owner of Candyland, named Ties of Blood and Affection among the last records he made using a fully analog tape workflow.",
+        "source": "https://www.famemagazine.co.uk/candyland-recording-studio-marks-10-years-blending-analog-tape-with-hybrid-production-systems/"
+      },
+      {
+        "claim": "Ties of Blood and Affection is Pinnell's sophomore album, following the 2015 debut OH/KY. The label bio says it finds him taking comfort in his own skin and reaching the redemption only hinted at in his earlier songs.",
+        "source": "https://www.sofaburn.com/jeremy-pinnell"
+      },
+      {
+        "claim": "Press material describes the album's songs as chugging along in a spring-reverb sound from somewhere between 1955 and 1975, rooted in Pinnell's steady acoustic guitar.",
+        "source": "https://www.broadwayworld.com/bwwmusic/article/Jeremy-Pinnell-to-Release-Sophomore-Studio-Album-Ties-of-Blood-and-Affection-20170612"
+      },
+      {
+        "claim": "Rolling Stone called the album a stellar collection that could earn Pinnell comparisons to Sturgill Simpson.",
+        "source": "https://www.weku.org/kentucky-arts-and-culture/2021-07-27/ky-singer-jeremy-pinnell-brings-old-time-country-sound-and-a-rep-for-being-good-people"
+      },
+      {
+        "claim": "Pinnell grew up in Elsmere, Kentucky, and has been making country music since his 2014 debut OH/KY.",
+        "source": "https://www.weku.org/kentucky-arts-and-culture/2021-07-27/ky-singer-jeremy-pinnell-brings-old-time-country-sound-and-a-rep-for-being-good-people"
+      }
+    ],
+    "lineage": "Pinnell's song sits in the traditional, outlaw-leaning honky-tonk country tradition of northern Kentucky and Cincinnati, with a Bakersfield and 1970s country sound that critics compare to Waylon Jennings, Johnny Cash and Buck Owens.",
+    "genres": [
+      "honky-tonk",
+      "outlaw country",
+      "traditional country"
+    ]
+  },
+  "draft": "The preacher shows up in the second verse, and the narrator of **Ballad of 1892** has no patience for him. \"The preacher wanna tell me that he knows about hell,\" Jeremy Pinnell sings from a prison cell, and the next lines make the case against him: no job, no home, and a man of God who \"don't know what it's like to be all alone.\" That's the song's sore spot. The narrator isn't asking to be forgiven. The narrator is asking someone to admit they don't know what this feels like, and the defiance carries something rawer underneath it.\n\nThe first verse sets up how he got here, and it barely flinches. A house \"full of hookers and wine,\" a lover in the back room \"done committing a crime.\" Then comes the line that holds the whole thing: \"Bad times ahead good times behind.\" It's a shrug and a sentence handed down at the same moment. The chorus keeps circling back to the person he can't stop worrying about. *My baby gets high, walking the line.* That phrase belongs to Johnny Cash, and Pinnell bends it. In Cash's song, walking the line is a vow of faithfulness. Here it sounds like balancing on an edge, and the narrator watches from behind bars and can't do a thing. Love and helplessness sit in the same three words, and neither one wins.\n\nThe arrangement takes all of this calmly, and that's the trick. An acoustic guitar strums a steady rhythm. A clean electric guitar plays a simple melodic line that stays put the whole way. Bass and drums keep a plain, unhurried beat at a moderate country-folk pace. Pinnell sings straight and clear, telling it like a story, with no harmonies to soften anything. Nobody in the band raises their voice about the crime or the cell, so the feeling has to come through the words.\n\nThis is the first track on *Ties of Blood and Affection*, Pinnell's second album. His label describes the record as the one where the Elsmere, Kentucky songwriter finally reaches the redemption his earlier songs only hinted at. Putting this song first makes sense. It starts at the bottom, before any redemption arrives. The album was made at Candyland Recording Studio in Dayton, Kentucky, with Mike Montgomery producing and engineering, and Montgomery has named it among the last records he made entirely on analog tape. Press for the album placed its sound somewhere between 1955 and 1975, and the song fits that window: honky-tonk storytelling with outlaw country's grudge against anyone who claims to know better.\n\nThe song keeps you in that cell with someone who would rather be judged than pitied, and the line it keeps coming back to isn't about his own trouble but about the person outside who's still getting high.",
+  "factCheck": [
+    {
+      "claim": "The preacher appears in the second verse, and the narrator sings from a prison cell.",
+      "verdict": "supported",
+      "note": "The lyrics' structure and the line 'Locked up in the pen laid up in the cell' back this."
+    },
+    {
+      "claim": "Quote: \"The preacher wanna tell me that he knows about hell\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Quote: \"don't know what it's like to be all alone\"; no job, no home",
+      "verdict": "supported",
+      "note": "Matches the lyrics. The quote was turned into a paraphrase to stay within the three-line quote limit."
+    },
+    {
+      "claim": "Quotes: \"full of hookers and wine\" and \"done committing a crime\"; lover \"in the back room\"",
+      "verdict": "corrected",
+      "note": "The lyric says 'in the back', not 'back room'. Both quotes were paraphrased to stay within the three-quote limit."
+    },
+    {
+      "claim": "Quote: \"Bad times ahead good times behind\"",
+      "verdict": "supported",
+      "note": "Matches the lyrics exactly."
+    },
+    {
+      "claim": "Chorus quote: My baby gets high, walking the line",
+      "verdict": "corrected",
+      "note": "Trimmed to the single line 'My baby gets high' to stay within three quoted lines. 'Walking the line' is now paraphrased."
+    },
+    {
+      "claim": "The phrase 'walking the line' belongs to Johnny Cash, and in Cash's song it is a vow of faithfulness.",
+      "verdict": "removed",
+      "note": "The packet only mentions Cash as a critics' comparison. Nothing in it covers a Cash song or what it means."
+    },
+    {
+      "claim": "Love and helplessness sit in the same three words.",
+      "verdict": "corrected",
+      "note": "This is an interpretive point, but 'three words' did not match the line. It was reworded."
+    },
+    {
+      "claim": "Acoustic guitar strums a steady rhythm; clean electric guitar plays a simple melodic line; bass and drums keep a plain beat at a moderate country-folk pace.",
+      "verdict": "supported",
+      "note": "All three passes agree on the instruments and moderate tempo. Two passes say country-folk."
+    },
+    {
+      "claim": "The electric guitar line 'stays put the whole way'.",
+      "verdict": "removed",
+      "note": "This is a claim about how the part behaves across the song. The passes disagree on when it enters, and the excerpt's position is unknown."
+    },
+    {
+      "claim": "Pinnell sings straight and clear, narrative delivery, no harmonies.",
+      "verdict": "supported",
+      "note": "All three passes agree. Pinnell is credited with vocals."
+    },
+    {
+      "claim": "First track on Ties of Blood and Affection, Pinnell's second album.",
+      "verdict": "supported",
+      "note": "Supported by the Shazam and SofaBurn facts."
+    },
+    {
+      "claim": "The label says the album finds the Elsmere, Kentucky songwriter 'finally' reaching the redemption only hinted at in earlier songs.",
+      "verdict": "corrected",
+      "note": "The label bio doesn't say 'finally'. Elsmere comes from a different source. The sentence was rewritten to match the bio."
+    },
+    {
+      "claim": "Recorded at Candyland Recording Studio in Dayton, Kentucky, with Mike Montgomery producing and engineering.",
+      "verdict": "supported",
+      "note": "Discogs credits Montgomery as producer and engineer. Candyland in Dayton, KY is also in the packet."
+    },
+    {
+      "claim": "Montgomery has named it among the last records he made entirely on analog tape.",
+      "verdict": "supported",
+      "note": "The Fame Magazine fact says 'fully analog tape workflow'."
+    },
+    {
+      "claim": "Press placed the album's sound somewhere between 1955 and 1975.",
+      "verdict": "supported",
+      "note": "Matches the BroadwayWorld press material."
+    },
+    {
+      "claim": "Honky-tonk storytelling with outlaw country's grudge.",
+      "verdict": "supported",
+      "note": "Interpretation resting on the stated lineage of traditional, outlaw-leaning honky-tonk."
+    },
+    {
+      "claim": "Closing line: the person 'outside' who's still getting high.",
+      "verdict": "corrected",
+      "note": "The lyrics don't place the baby outside. Reworded to 'the person he loves'."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2547,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014607,
+        "detail": "1104 in / 183 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00061946,
+        "detail": "1104 in / 179 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.00065696,
+        "detail": "1104 in / 194 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.14694200000000002,
+        "detail": "49851 in / 1724 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.05088,
+        "detail": "3735 in / 1797 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.054144,
+        "detail": "4917 in / 4431 out"
+      }
+    ]
+  }
+}

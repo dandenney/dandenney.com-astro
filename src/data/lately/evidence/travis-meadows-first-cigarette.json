@@ -1,0 +1,249 @@
+{
+  "spotifyId": "12WPyTmExymjR4LW5wPZj9",
+  "reviewedAt": "2026-11-26T17:34:55.661Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "missing",
+    "source": null
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, with a clean, bright tone.\nElectric guitar: plays sustained, clean chords.\nBass guitar: plays a simple, foundational line.\nDrums: enter at the end, playing a simple, soft beat.\n\nTempo and groove feel:\nSlow tempo. The groove is relaxed and gentle.\n\nVocals:\nVoice character: A male voice, with a smooth, slightly raspy quality.\nDelivery: Melodic, with a conversational, intimate feel.\nHarmonies: Unsure.\n\nProduction:\nRoom: Sounds like a medium-sized room, with a natural, open feel.\nTexture: Clean and clear, with good separation between instruments.\nPolished/raw: Polished, with a professional mix.\n\nArrangement:\nThe excerpt begins with acoustic guitar, electric guitar, and bass. The vocals enter shortly after. The drums enter at the very end, adding a soft, rhythmic pulse. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar: fingerpicked, with a clean, bright tone.\nElectric guitar: plays a sustained, clean chord.\nBass: plays a simple, foundational line.\nDrums: enter later, playing a light, brushed rhythm.\n\nTempo and Groove:\nSlow tempo. The groove feels relaxed and gentle.\n\nVocals:\nVoice character: A male voice, with a smooth, mid-range quality.\nDelivery: Melodic, with a slight vibrato.\nHarmonies: Unsure.\n\nProduction:\nRoom: Sounds like a medium-sized room, with some natural reverb.\nTexture: Clean and clear.\nPolished/Raw: Polished.\n\nArrangement:\nThe acoustic guitar and lead vocal begin. The electric guitar enters with a sustained chord. The bass enters, followed by the drums, which play a light, brushed rhythm. No instruments drop out or build significantly within the excerpt.\n\nPass 3:\nInstruments:\nAcoustic guitar, played with a pick, strumming chords.\nBass guitar, playing a walking bass line.\nDrums, playing a simple, steady beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nSlow tempo. The groove feels relaxed and steady.\n\nVocals:\nA male voice, singing in a mid-range. The delivery is clear and unhurried. There are no harmonies.\n\nProduction:\nThe sound is clean and clear, with a moderate amount of reverb, suggesting a medium-sized room. The texture is polished.\n\nArrangement:\nThe excerpt begins with the full band. The acoustic guitar, bass, and drums maintain their parts consistently throughout. The vocals are present from the beginning and continue until the end of the excerpt. No instruments drop out or build significantly within this segment.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "The album First Cigarette was released October 13, 2017 on Blaster Records, and it was Travis Meadows' first release with label support.",
+        "source": "https://www.rollingstone.com/music/music-country/why-songwriter-travis-meadows-is-nashvilles-favorite-underdog-115356/"
+      },
+      {
+        "claim": "The album was produced by Jeremy Spillman, with Jay Joyce as executive producer.",
+        "source": "https://musicrow.com/page/2076/?cat=rlczrehbiibdz"
+      },
+      {
+        "claim": "Discogs credits for the album list Oran Thornton on drums, electric guitar and backing vocals, and as recording and mixing engineer. It lists Jay Joyce on electric guitar and organ, Spillman on acoustic and electric guitar and backing vocals, and Meadows on vocals, guitars and harmonica.",
+        "source": "https://discogs.com/Travis-Meadows-First-Cigarette/release/11652784"
+      },
+      {
+        "claim": "The album was recorded at Neon Cross in Nashville, TN, according to Discogs. Discogs lists Jeremy Spillman as a writer of track 4, \"First Cigarette\".",
+        "source": "https://discogs.com/Travis-Meadows-First-Cigarette/release/11652784"
+      },
+      {
+        "claim": "Meadows said he wrote the opening phrase of the song in his phone after a morning cigarette, then took it to Jeremy Spillman for a co-write. He said he knew it was his own song to record.",
+        "source": "https://theboot.com/travis-meadows-first-cigarette-lyrics/"
+      },
+      {
+        "claim": "Meadows says the song is about contentment and learning to accept yourself. He has said that its title has nothing to do with smoking and everything to do with contentment.",
+        "source": "https://www.lyricmagazine.co.uk/lyricinterviews-travis-meadows-first-cigarettes-second-chances-song-writing/"
+      },
+      {
+        "claim": "Meadows said the title line sums up where he is in his life and is the heart of the record.",
+        "source": "https://americansongwriter.com/2017/10/keep-breathing-qa-travis-meadows"
+      },
+      {
+        "claim": "Meadows told Rolling Stone he had quit smoking but still sneaks one, calling that first cigarette his \"legal buzz\".",
+        "source": "http://www.rollingstone.com/country/news/hear-travis-meadows-nod-to-springsteen-in-new-song-w495417"
+      },
+      {
+        "claim": "Meadows funded the album with royalties from his songwriting success, including the Dierks Bentley hit \"Riser\". He also wrote songs recorded by Eric Church (\"Knives of New Orleans\") and Jake Owen (\"What We Ain't Got\").",
+        "source": "https://musicrow.com/page/2076/?cat=rlczrehbiibdz"
+      },
+      {
+        "claim": "Meadows was born in Jackson, Mississippi, and was raised by his grandparents. He battled cancer and addiction at an early age and entered recovery in 2010.",
+        "source": "https://www.iheart.com/artist/travis-meadows-616460/"
+      }
+    ],
+    "lineage": "Meadows sits in Nashville's confessional singer-songwriter tradition, as a Music Row songwriter-turned-artist whose album follows his earlier indie releases Killin' Uncle Buzzy (2011) and the EP Old Ghosts & Unfinished Business (2013).",
+    "genres": [
+      "country",
+      "singer-songwriter",
+      "americana"
+    ],
+    "recordedAt": [
+      {
+        "studio": "Neon Cross",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "source": "https://discogs.com/Travis-Meadows-First-Cigarette/release/11652784"
+      }
+    ]
+  },
+  "draft": "Travis Meadows named a song after a cigarette and then insisted it has nothing to do with smoking. **First Cigarette** is, by his account, about contentment and learning to accept yourself. He has called its title line the heart of the record that shares its name. That's a strange place to hang the word contentment, and the strangeness is the point. He told Rolling Stone he quit smoking but still sneaks one, and he called that first cigarette his \"legal buzz.\" He fought addiction and cancer young and entered recovery in 2010, so the phrase carries weight. The peace he describes isn't purity. It's a small, allowed pleasure at the start of the day, held by someone who knows exactly what the bigger ones cost.\n\nThe song started in that moment. Meadows has said he typed its opening phrase into his phone after a morning cigarette, then took it to Jeremy Spillman to finish the co-write. He also said he knew it was his own song to record, not one to pitch. That matters, because Meadows had spent years handing his best work to other people: Dierks Bentley's \"Riser,\" Eric Church's \"Knives of New Orleans,\" Jake Owen's \"What We Ain't Got.\" The royalties from those songs paid for this album, his first with label support, after the indie releases *Killin' Uncle Buzzy* and *Old Ghosts & Unfinished Business*. When Music Row writers step out front, it's often to sing what's too personal to give away. This song sits squarely in that confessional Nashville line.\n\nThe sound matches the subject. Fingerpicked acoustic guitar rings clean and bright. An electric guitar holds long, sustained chords behind it, and the bass sticks to a simple line that keeps the floor steady. The drums stay soft. The tempo is slow and the groove relaxed, with nothing pushing. Meadows sings smooth and mid-range, melodic rather than gravelly, in a room with a natural, open reverb. Spillman produced, with Jay Joyce as executive producer, and the album was cut at Neon Cross in Nashville with Oran Thornton engineering. The polish is real, but it's the polish of a clean room rather than a glossy one. There's air around every instrument.\n\nWhat moves you is how unbothered it all sounds. A song about self-acceptance from a man in recovery could easily become a testimony with its fist raised. This one leans back instead. It trusts that contentment doesn't need to be argued for, and it doesn't pretend the person feeling it has become flawless. The pride and the old damage sit in the same easy tempo, and neither one is asked to leave.\n\nIt sticks because it lets you hear what peace sounds like to someone who knows its price: slow, a little imperfect, and allowed one small buzz to start the day.",
+  "factCheck": [
+    {
+      "claim": "Meadows named the song after a cigarette but says it has nothing to do with smoking",
+      "verdict": "supported",
+      "note": "Meadows has said the title has nothing to do with smoking and everything to do with contentment."
+    },
+    {
+      "claim": "The song is about contentment and learning to accept yourself",
+      "verdict": "supported",
+      "note": "Meadows' own description."
+    },
+    {
+      "claim": "He has called the title line the heart of the record",
+      "verdict": "supported",
+      "note": "American Songwriter Q&A."
+    },
+    {
+      "claim": "Told Rolling Stone he quit smoking but still sneaks one, calling it his 'legal buzz'",
+      "verdict": "supported",
+      "note": "Matches the Rolling Stone item."
+    },
+    {
+      "claim": "He fought addiction and cancer young and entered recovery in 2010",
+      "verdict": "supported",
+      "note": "iHeart bio."
+    },
+    {
+      "claim": "He typed the opening phrase into his phone after a morning cigarette",
+      "verdict": "corrected",
+      "note": "The source says he 'wrote' it in his phone. 'Typed' was changed."
+    },
+    {
+      "claim": "He took it to Jeremy Spillman to finish the co-write",
+      "verdict": "corrected",
+      "note": "The source says he took it to Spillman 'for a co-write'. 'Finish' was dropped."
+    },
+    {
+      "claim": "He knew it was his own song to record, not one to pitch",
+      "verdict": "corrected",
+      "note": "'Knew it was his own song to record' is supported. 'Not one to pitch' is an unsupported embellishment and was removed."
+    },
+    {
+      "claim": "Meadows had spent years handing his best work to other people",
+      "verdict": "corrected",
+      "note": "'Years' and 'best work' are unsupported. Reworded to say other artists recorded his songs."
+    },
+    {
+      "claim": "Songs recorded by Dierks Bentley ('Riser'), Eric Church ('Knives of New Orleans'), Jake Owen ('What We Ain't Got')",
+      "verdict": "supported",
+      "note": "MusicRow."
+    },
+    {
+      "claim": "Royalties from those songs paid for the album, his first with label support",
+      "verdict": "supported",
+      "note": "MusicRow and Rolling Stone. Reworded slightly, since the funding came from his songwriting success including 'Riser'."
+    },
+    {
+      "claim": "Earlier indie releases Killin' Uncle Buzzy and Old Ghosts & Unfinished Business",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "When Music Row writers step out front, it's often to sing what's too personal to give away",
+      "verdict": "removed",
+      "note": "Unsupported generalization about Nashville songwriter history."
+    },
+    {
+      "claim": "The song sits in a confessional Nashville line",
+      "verdict": "supported",
+      "note": "Lineage note."
+    },
+    {
+      "claim": "Fingerpicked, clean, bright acoustic guitar",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Electric guitar holds long sustained chords",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Bass sticks to a simple line",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 agree."
+    },
+    {
+      "claim": "Drums are soft",
+      "verdict": "supported",
+      "note": "Passes 1 and 2 describe soft or light drums. 'Stay soft' was reworded to avoid implying an arc."
+    },
+    {
+      "claim": "Slow tempo, relaxed groove",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "Smooth, mid-range male voice",
+      "verdict": "supported",
+      "note": "Smooth in passes 1 and 2, mid-range in passes 2 and 3."
+    },
+    {
+      "claim": "Melodic rather than gravelly",
+      "verdict": "removed",
+      "note": "Pass 1 describes a slightly raspy quality, so the contrast is not supported. 'Melodic' is kept, since passes 1 and 2 agree on it."
+    },
+    {
+      "claim": "A room with natural, open reverb",
+      "verdict": "corrected",
+      "note": "Medium-sized room with some natural reverb is supported by passes 2 and 3. 'Open' appears in only one pass and was dropped."
+    },
+    {
+      "claim": "Spillman produced, Jay Joyce executive producer",
+      "verdict": "supported",
+      "note": "MusicRow."
+    },
+    {
+      "claim": "Cut at Neon Cross in Nashville with Oran Thornton engineering",
+      "verdict": "supported",
+      "note": "Discogs."
+    },
+    {
+      "claim": "Polished, clean sound",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "There's air around every instrument",
+      "verdict": "corrected",
+      "note": "Reworded to the supported clean, clear texture."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2698,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0015289,
+        "detail": "1098 in / 211 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014414,
+        "detail": "1098 in / 176 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014864,
+        "detail": "1098 in / 194 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.144836,
+        "detail": "49248 in / 1634 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.07072,
+        "detail": "3500 in / 2836 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.049782,
+        "detail": "4701 in / 4038 out"
+      }
+    ]
+  }
+}

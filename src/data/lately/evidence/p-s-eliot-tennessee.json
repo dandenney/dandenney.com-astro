@@ -1,0 +1,219 @@
+{
+  "spotifyId": "46NB89qr5pfPT3L7QxVpgH",
+  "reviewedAt": "2026-11-26T17:38:14.757Z",
+  "models": {
+    "writer": "claude-opus-5-5",
+    "research": "claude-sonnet-5-5",
+    "listen": "google/gemini-2.5-flash"
+  },
+  "lyrics": {
+    "status": "found",
+    "source": "https://lrclib.net/api/get/11560384"
+  },
+  "listening": "Pass 1:\nInstruments:\nAcoustic guitar: fingerpicked, with a clean, bright tone.\nElectric guitar: plays a sustained, clean, bright melody line.\nBass guitar: plays a simple, root-note line.\nDrums: unsure.\n\nTempo and groove:\nSlow tempo, with a relaxed, flowing feel.\n\nVocals:\nA single voice, with a clear, slightly breathy character. The delivery is gentle and melodic. No harmonies are present.\n\nProduction:\nThe sound is clean and polished, with a natural room sound. The texture is smooth and well-balanced.\n\nArrangement:\nThe acoustic guitar establishes the main melody and rhythm. The electric guitar enters with a sustained melody line. The bass guitar provides a simple, foundational line. The vocals enter after the initial instrumental intro. No instruments drop out or build significantly within the excerpt.\n\nPass 2:\nInstruments:\nAcoustic guitar, played with a pick, strumming chords.\nElectric bass, playing a root-note groove.\nDrums, playing a simple beat with kick, snare, and hi-hat.\n\nTempo and groove:\nMedium tempo, with a relaxed, slightly swung feel.\n\nVocals:\nA single voice, with a clear, slightly breathy character. The delivery is melodic and expressive. No harmonies are present.\n\nProduction:\nThe sound is clean and well-defined, with a natural room sound. The texture is polished, with a balanced mix.\n\nArrangement:\nThe excerpt begins with the acoustic guitar, bass, and drums already established. The vocals enter shortly after the beginning. All instruments continue throughout the excerpt without significant changes in their roles or dynamics.\n\nPass 3:\nInstruments:\nAcoustic guitar, played with a pick, strumming chords. Bass guitar, playing a root-note-based line. Drums, playing a simple rock beat with kick, snare, and hi-hat.\n\nTempo and Groove:\nMedium tempo. The groove feels relaxed and steady, with a slight swing feel.\n\nVocals:\nA single voice, with a clear, slightly breathy character. The delivery is melodic and expressive. No harmonies are present.\n\nProduction:\nThe room sounds fairly dry, with a natural, unpolished texture. The overall mix is clear and balanced.\n\nArrangement:\nThe excerpt begins with acoustic guitar and bass. Drums enter shortly after the vocals begin. The arrangement remains consistent throughout the excerpt, with no significant changes in instrumentation or dynamics.",
+  "research": {
+    "identity": "confirmed",
+    "facts": [
+      {
+        "claim": "\"Tennessee\" is track 1 on P.S. Eliot's album Introverted Romance In Our Troubled Minds, released June 1, 2009 on Salinas Records. It runs 3:04.",
+        "source": "https://www.beatsource.com/release/introverted-romance-in-our-troubled-minds/1894278"
+      },
+      {
+        "claim": "Katie Crutchfield sings lead on \"Tennessee\". The song comes from the band's first full-length album.",
+        "source": "https://www.songfacts.com/place/tennessee/tennessee"
+      },
+      {
+        "claim": "The album credits list Matt Whitson as engineer and producer, with engineering and production help from P.S. Eliot. Credited band members are Allison Crutchfield (drums, vocals), Katie Crutchfield, Katherine Simonetti (bass) and Will Granger (guitar, vocals).",
+        "source": "https://www.discogs.com/release/2133815-PS-Eliot-Introverted-Romance-In-Our-Troubled-Minds"
+      },
+      {
+        "claim": "The album's Discogs notes say the songs were recorded in November 2008 at the band's old house in Tuscaloosa, Alabama.",
+        "source": "https://www.discogs.com/release/2133815-PS-Eliot-Introverted-Romance-In-Our-Troubled-Minds"
+      },
+      {
+        "claim": "Katie Crutchfield said the album was recorded at the band's Tuscaloosa house in one weekend. The band wanted to record everything live, and the engineer said the LP was mostly recorded in two days.",
+        "source": "http://fvckthemedia.com/issue72/ps-eliot"
+      },
+      {
+        "claim": "Songfacts describes \"Tennessee\" as a love song about romance and escape. Its destination, Tennessee, is about a three-hour drive up I-65 from Birmingham.",
+        "source": "https://www.songfacts.com/place/tennessee/tennessee"
+      },
+      {
+        "claim": "A 2016 review of the P.S. Eliot compilation 2007-2011 quotes \"Tennessee\" as the album opener and cites its line about quitting at twenty-five.",
+        "source": "https://politicianmusic.wordpress.com/2016/09/19/p-s-eliot-2007-2011-review/"
+      },
+      {
+        "claim": "P.S. Eliot formed in Birmingham, Alabama in 2007 and was led by twin sisters Katie (guitar, vocals) and Allison Crutchfield (drums). Their core lineup later added bassist Katherine Simonetti and guitarist Will Granger.",
+        "source": "https://dongiovannirecords.com/pages/p-s-eliot"
+      },
+      {
+        "claim": "The band's catalog is the Bike Wreck demo (2008), Introverted Romance In Our Troubled Minds (2009), the Living in Squalor EP (2010) and Sadie (2011). Don Giovanni collected it all in the 2016 set 2007-2011.",
+        "source": "https://dongiovannirecords.bandcamp.com/album/2007-2011"
+      },
+      {
+        "claim": "The band broke up in 2011 after moving to Brooklyn. Katie Crutchfield went on to form Waxahatchee in 2010, following the breakup of P.S. Eliot.",
+        "source": "https://en.wikipedia.org/wiki/Waxahatchee"
+      }
+    ],
+    "lineage": "P.S. Eliot sits in the DIY pop-punk and indie-rock scene of Birmingham, Alabama, centered on the Cave 9 venue, and was an explicitly feminist band within a male-dominated punk scene.",
+    "genres": [
+      "pop punk",
+      "indie rock",
+      "garage rock"
+    ],
+    "recordedAt": [
+      {
+        "studio": null,
+        "city": "Tuscaloosa",
+        "state": "Alabama",
+        "country": "United States",
+        "source": "https://www.discogs.com/release/2133815-PS-Eliot-Introverted-Romance-In-Our-Troubled-Minds"
+      }
+    ]
+  },
+  "draft": "\"I've got affection to criticise.\" That's the first line of the first song on P.S. Eliot's first full-length, and it sets out the whole problem. Before **Tennessee** gets anywhere near a love song, Katie Crutchfield lists her defenses: monogamy to scorn, a cold heart, an altered state of mind. Then the turn comes, almost a punchline: \"baby, you're just what I'm looking for.\" The narrator isn't giving up the armor. They want someone who will wear it with them.\n\nThat tension carries the whole song. The narrator brags about feeling indestructible, says they'll quit when they're 25, waves off sleep until death. It's the swagger of being young and broke, and it's real. But the lines keep giving away their own doubt. The narrator calls themself a pessimist. They point out that this other person has made a mess of this road before. Then, in the last section, comes a line that undercuts every boast: a \"mental image of the way you used to look at me.\" \"Used to\" is the giveaway. Even as the song pushes forward, part of it is already looking back at something that may be slipping. Hope and dread sit side by side, and the song doesn't sort them out.\n\nThe escape it offers is small and specific, which is why it lands. Tennessee is roughly three hours up I-65 from Birmingham, where the band started in 2007. The details are road-trip details, sharp and a little ugly: \"Butterfly guts on the windshield,\" smoke trailing out the window. And the plan is only as big as the tank: \"I've got a racing mind and enough gas to get to Tennessee.\" That isn't freedom forever. It's one night's worth, and the triple \"tonight\" at the close admits as much.\n\nThe sound is plain and close. A picked acoustic guitar strums the chords, the bass holds the root notes, and the drums keep a simple kick-snare-hi-hat beat at a relaxed medium tempo with a slight swing. Crutchfield's voice is clear and a little breathy, a single line with no harmonies, melodic but carrying weight. The arrangement holds steady instead of building, which lets the words do the pushing. That directness fits how it was made. The band recorded the album live at their old house in Tuscaloosa in November 2008, mostly over two days, with Matt Whitson engineering. Allison Crutchfield, Katie's twin, plays drums.\n\nP.S. Eliot came out of Birmingham's DIY punk scene around the Cave 9 venue, an openly feminist band in a mostly male world. Katie Crutchfield later went on to Waxahatchee, and the line that runs through both bands is already here: confessional writing that refuses to make the narrator look better than they are. \"Tennessee\" is pop-punk with the volume turned down and the nerve left in.\n\nIt sticks because it captures the exact moment when you know a thing probably won't last, decide to drive toward it anyway, and count the gas instead of the odds.",
+  "factCheck": [
+    {
+      "claim": "'I've got affection to criticise' is the first line of the first song on P.S. Eliot's first full-length",
+      "verdict": "supported",
+      "note": "Lyrics match. Tennessee is track 1 on the band's first full-length."
+    },
+    {
+      "claim": "Katie Crutchfield sings the song",
+      "verdict": "supported",
+      "note": "She sings lead per the researched facts."
+    },
+    {
+      "claim": "Quote: 'baby, you're just what I'm looking for'",
+      "verdict": "supported",
+      "note": "Matches the lyric."
+    },
+    {
+      "claim": "Narrator will 'quit when they're 25', feels indestructible, waves off sleep until death",
+      "verdict": "supported",
+      "note": "Matches 'we'll go to sleep when we're dead' and 'I'll quit when I'm 25'."
+    },
+    {
+      "claim": "The swagger of being young and broke",
+      "verdict": "corrected",
+      "note": "'Broke' is not in the lyrics or facts. Dropped it."
+    },
+    {
+      "claim": "Narrator calls themself a pessimist; says the other person has messed up this road before",
+      "verdict": "supported",
+      "note": "Matches 'I'm pessimistic' and 'you fucked up down this road before'."
+    },
+    {
+      "claim": "Quote: 'mental image of the way you used to look at me' appears in the last section",
+      "verdict": "supported",
+      "note": "Exact lyric fragment. It sits in the final stanza of the lyrics."
+    },
+    {
+      "claim": "Tennessee is roughly three hours up I-65 from Birmingham, where the band started in 2007",
+      "verdict": "supported",
+      "note": "Songfacts and the Don Giovanni bio."
+    },
+    {
+      "claim": "Quotes: 'Butterfly guts on the windshield'; 'I've got a racing mind and enough gas to get to Tennessee'",
+      "verdict": "supported",
+      "note": "Exact."
+    },
+    {
+      "claim": "Triple 'tonight' at the close",
+      "verdict": "supported",
+      "note": "The lyrics end with three repeated 'tonight' lines."
+    },
+    {
+      "claim": "A picked acoustic guitar strums the chords",
+      "verdict": "corrected",
+      "note": "Two passes agree on pick-strummed chords. Pass 1 said fingerpicked. Reworded to a strummed acoustic guitar."
+    },
+    {
+      "claim": "Bass holds root notes; simple kick-snare-hi-hat beat; relaxed medium tempo with slight swing",
+      "verdict": "supported",
+      "note": "Backed by at least two passes."
+    },
+    {
+      "claim": "Clear, slightly breathy single voice, no harmonies",
+      "verdict": "supported",
+      "note": "All three passes agree."
+    },
+    {
+      "claim": "The sound is plain and close",
+      "verdict": "corrected",
+      "note": "'Close' is not backed. Changed to clean and plain."
+    },
+    {
+      "claim": "The arrangement holds steady instead of building",
+      "verdict": "removed",
+      "note": "An overall-arc claim that the excerpt can't support."
+    },
+    {
+      "claim": "Recorded the album live at their old house in Tuscaloosa in November 2008, mostly over two days, Matt Whitson engineering",
+      "verdict": "supported",
+      "note": "Discogs notes and the interview. The band wanted to record everything live. Reworded to match."
+    },
+    {
+      "claim": "Allison Crutchfield, Katie's twin, plays drums",
+      "verdict": "supported",
+      "note": "Band bio and credits."
+    },
+    {
+      "claim": "Came out of Birmingham's DIY punk scene around Cave 9, an openly feminist band in a mostly male world",
+      "verdict": "supported",
+      "note": "Matches the lineage note."
+    },
+    {
+      "claim": "Katie Crutchfield later went on to Waxahatchee",
+      "verdict": "corrected",
+      "note": "Waxahatchee formed in 2010, before the 2011 breakup. Changed to 'went on to form Waxahatchee'."
+    },
+    {
+      "claim": "The line running through both bands is confessional writing",
+      "verdict": "removed",
+      "note": "Nothing in the facts describes Waxahatchee's writing."
+    }
+  ],
+  "lint": [],
+  "cost": {
+    "totalUsd": 0.2499,
+    "steps": [
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014142,
+        "detail": "1099 in / 165 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014092,
+        "detail": "1099 in / 163 out"
+      },
+      {
+        "step": "listen",
+        "model": "google/gemini-2.5-flash",
+        "usd": 0.0014467,
+        "detail": "1099 in / 178 out"
+      },
+      {
+        "step": "research",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.144732,
+        "detail": "49176 in / 1638 out / 3 searches"
+      },
+      {
+        "step": "write",
+        "model": "claude-opus-5-5",
+        "usd": 0.052648,
+        "detail": "3777 in / 1877 out"
+      },
+      {
+        "step": "fact-check",
+        "model": "claude-sonnet-5-5",
+        "usd": 0.048264,
+        "detail": "5032 in / 3820 out"
+      }
+    ]
+  }
+}
