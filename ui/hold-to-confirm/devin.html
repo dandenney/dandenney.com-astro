@@ -31,7 +31,12 @@
     }
     .hold:focus-visible { box-shadow: 0 0 0 3px var(--color-paper), 0 0 0 5px var(--color-accent); }
     .hold[data-state="holding"] { transform: scale(0.97); }
-    .hold[data-state="done"], .hold[data-state="gone"] { @apply cursor-default; }
+    .hold[data-state="confirm"] { @apply bg-accent-soft text-accent-deep; box-shadow: inset 0 0 0 1px var(--color-accent); }
+    .hold[data-state="confirm"]:focus-visible { box-shadow: inset 0 0 0 1px var(--color-accent), 0 0 0 3px var(--color-paper), 0 0 0 5px var(--color-accent); }
+    .hold[data-state="undo"] { @apply bg-accent-soft text-accent-deep; }
+    .hold[data-state="gone"] { @apply cursor-default border-rule bg-paper text-dim; }
+    .alt { @apply -mx-3 block min-h-11 w-full rounded-xl px-3 py-2.5 text-left outline-none transition-colors hover:bg-sheet focus-visible:bg-sheet; }
+    .alt:focus-visible { box-shadow: 0 0 0 2px var(--color-accent); }
   }
 </style>
 <style>
@@ -39,15 +44,16 @@
   .hold__fill { transform: scaleX(var(--p)); transform-origin: left; }
   .hold__label--over { clip-path: inset(0 calc(100% - var(--p) * 100%) 0 0); }
   .hold__label { grid-area: 1 / 1; }
+  .hold__ring { display: none; transform: rotate(-90deg); }
+  .hold__ring circle:last-child { transition: stroke-dashoffset 1s linear; }
+  .hold[data-state="undo"] .hold__ring { display: block; }
   @keyframes nudge { 0%,100% { translate: 0 } 25% { translate: -3px } 75% { translate: 3px } }
   .hint[data-nudge] { animation: nudge 260ms ease; }
-  .undo-ring { transform: rotate(-90deg); }
-  .undo-ring circle:last-child { transition: stroke-dashoffset 1s linear; }
   @media (prefers-reduced-motion: reduce) {
     .hold { transition: none; }
     .hold[data-state="holding"] { transform: none; }
     .hint[data-nudge] { animation: none; }
-    .undo-ring circle:last-child { transition: none; }
+    .hold__ring circle:last-child { transition: none; }
   }
 </style>
 </head>
@@ -56,78 +62,87 @@
     <p class="font-body text-xs font-semibold uppercase tracking-[0.18em] text-dim">Workspace settings</p>
     <h1 class="mt-2 font-display text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-[1.02] tracking-tight">Danger zone</h1>
 
-    <section aria-labelledby="delete-title" class="mt-8 border-y border-rule py-7 sm:mt-10">
-      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-        <div class="max-w-md">
+    <section aria-labelledby="delete-title" class="mt-8 border-y border-rule pt-7 pb-4 sm:mt-10">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+        <div class="max-w-md sm:pt-1.5">
           <h2 id="delete-title" class="font-display text-xl font-semibold tracking-tight">Delete “Spring launch”</h2>
           <p id="delete-desc" class="mt-1.5 text-[0.95rem] leading-relaxed text-dim">
             Removes 14 pages and every visit and conversion recorded on them. You’ll have five seconds to undo.
           </p>
         </div>
 
-        <div class="flex flex-col items-start gap-2 sm:items-end">
+        <div class="flex flex-col items-start gap-1 sm:shrink-0 sm:items-end">
           <button type="button" class="hold" data-state="idle" aria-describedby="delete-desc hold-hint" data-hold>
             <span class="hold__fill absolute inset-0 -z-10 bg-accent" aria-hidden="true"></span>
+            <svg class="hold__ring absolute left-4 top-1/2 -mt-3 size-6" viewBox="0 0 36 36" aria-hidden="true">
+              <circle cx="18" cy="18" r="14" fill="none" stroke="var(--color-rule)" stroke-width="4"></circle>
+              <circle cx="18" cy="18" r="14" fill="none" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="87.96" stroke-dashoffset="0" data-ring></circle>
+            </svg>
             <span class="hold__label" data-label>Hold to delete</span>
             <span class="hold__label hold__label--over text-on-accent" aria-hidden="true" data-label-over>Hold to delete</span>
           </button>
-          <p id="hold-hint" class="hint min-h-5 text-[0.8rem] text-dim" data-hint>Press and hold, or hold Space</p>
+          <div class="flex min-h-11 flex-wrap items-center gap-x-3 sm:flex-nowrap sm:justify-end">
+            <p id="hold-hint" class="hint text-[0.8rem] text-dim sm:whitespace-nowrap sm:text-right" data-hint>Press and hold for a second, or hold Space or Enter</p>
+            <button type="button" class="hidden h-11 rounded-full px-1 text-[0.8rem] font-semibold text-accent-deep underline decoration-1 underline-offset-4 hover:decoration-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-reset>Reset the demo</button>
+          </div>
         </div>
-      </div>
-
-      <div class="mt-6 hidden items-center gap-4 rounded-2xl bg-accent-soft px-5 py-4" data-undo-bar>
-        <svg class="undo-ring size-9 shrink-0" viewBox="0 0 36 36" aria-hidden="true">
-          <circle cx="18" cy="18" r="15" fill="none" stroke="var(--color-rule)" stroke-width="3"></circle>
-          <circle cx="18" cy="18" r="15" fill="none" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round" stroke-dasharray="94.25" stroke-dashoffset="0" data-ring></circle>
-        </svg>
-        <p class="flex-1 text-[0.95rem]"><span class="font-semibold">Spring launch is being deleted.</span> <span class="text-dim" data-count>5 seconds to undo.</span></p>
-        <button type="button" class="h-11 rounded-full px-5 font-semibold text-accent-deep underline decoration-1 underline-offset-4 hover:decoration-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-undo>Undo</button>
-      </div>
-
-      <div class="mt-6 hidden items-center justify-between gap-4" data-gone>
-        <p class="text-[0.95rem] text-dim">Spring launch and its 14 pages are gone.</p>
-        <button type="button" class="h-11 rounded-full border border-rule px-5 text-sm font-semibold hover:border-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-reset>Reset the demo</button>
       </div>
     </section>
 
-    <dl class="mt-8 grid gap-x-10 gap-y-5 text-[0.95rem] sm:grid-cols-2">
-      <div><dt class="font-semibold">Transfer ownership</dt><dd class="mt-1 text-dim">Hand the workspace to another admin. You stay a member.</dd></div>
-      <div><dt class="font-semibold">Archive instead</dt><dd class="mt-1 text-dim">Unpublish every page but keep their results for later.</dd></div>
-    </dl>
+    <section aria-labelledby="alt-title" class="mt-7">
+      <h2 id="alt-title" class="text-xs font-semibold uppercase tracking-[0.18em] text-dim">Or keep the results</h2>
+      <ul class="mt-2 grid gap-x-10 gap-y-1 text-[0.95rem] sm:grid-cols-2">
+        <li>
+          <button type="button" class="alt" data-alt="In the real settings this opens a list of admins to hand it to. It isn’t part of this demo.">
+            <span class="font-semibold">Transfer ownership <span aria-hidden="true">→</span></span>
+            <span class="mt-1 block text-dim">Hand the workspace to another admin. You stay a member.</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="alt" data-alt="In the real settings this unpublishes all 14 pages and keeps every result. It isn’t part of this demo.">
+            <span class="font-semibold">Archive instead <span aria-hidden="true">→</span></span>
+            <span class="mt-1 block text-dim">Unpublish every page but keep their results for later.</span>
+          </button>
+        </li>
+      </ul>
+      <p class="mt-2 min-h-5 text-[0.8rem] text-dim" aria-live="polite" data-alt-note></p>
+    </section>
     <p class="sr-only" aria-live="polite" data-live></p>
   </main>
 
 <script>
   (() => {
-    const HOLD_MS = 1100, DRAIN_MS = 350, UNDO_S = 5;
+    const HOLD_MS = 1100, DRAIN_MS = 350, UNDO_S = 5, CONFIRM_MS = 4000, CIRC = 87.96;
+    const HINT = "Press and hold for a second, or hold Space or Enter";
     const btn = document.querySelector("[data-hold]");
     const labels = [btn.querySelector("[data-label]"), btn.querySelector("[data-label-over]")];
     const hint = document.querySelector("[data-hint]");
-    const undoBar = document.querySelector("[data-undo-bar]");
-    const gone = document.querySelector("[data-gone]");
     const ring = document.querySelector("[data-ring]");
-    const count = document.querySelector("[data-count]");
+    const resetBtn = document.querySelector("[data-reset]");
     const live = document.querySelector("[data-live]");
-    const CIRC = 94.25;
+    const altNote = document.querySelector("[data-alt-note]");
 
-    let p = 0, held = false, last = 0, raf = 0, timer = 0, left = UNDO_S;
+    // `gesture` marks a press or key-hold in progress, so the click the browser fires when it ends isn't
+    // read as a separate activation. A click with no gesture behind it (a screen reader in browse mode,
+    // switch access) gets a two-press confirm instead of a hold.
+    let p = 0, held = false, gesture = false, last = 0, raf = 0, timer = 0, confirmTimer = 0, left = UNDO_S;
 
-    const setLabel = (t) => labels.forEach((l) => (l.textContent = t));
+    const state = () => btn.dataset.state;
     const setState = (s) => (btn.dataset.state = s);
+    const setLabel = (t) => labels.forEach((l) => (l.textContent = t));
+    const setFill = (v) => { p = v; btn.style.setProperty("--p", v.toFixed(4)); };
     const announce = (t) => { live.textContent = ""; requestAnimationFrame(() => (live.textContent = t)); };
-    const show = (el, on) => { el.classList.toggle("hidden", !on); el.classList.toggle("flex", on); };
+    const canStart = () => state() === "idle" || state() === "confirm";
 
     function tick(now) {
       const dt = now - last; last = now;
-      p = held ? Math.min(1, p + dt / HOLD_MS) : Math.max(0, p - dt / DRAIN_MS);
-      btn.style.setProperty("--p", p.toFixed(4));
+      setFill(held ? Math.min(1, p + dt / HOLD_MS) : Math.max(0, p - dt / DRAIN_MS));
       if (p >= 1) return complete();
       if (held || p > 0) raf = requestAnimationFrame(tick);
-      else if (btn.dataset.state !== "done") setState("idle");
     }
 
     function start() {
-      if (held || btn.dataset.state === "done" || btn.dataset.state === "gone") return;
+      clearTimeout(confirmTimer);
       held = true; setState("holding"); setLabel("Keep holding…");
       hint.textContent = "Deleting when the bar fills";
       cancelAnimationFrame(raf); last = performance.now(); raf = requestAnimationFrame(tick);
@@ -136,56 +151,91 @@
     function stop() {
       if (!held) return;
       held = false;
-      if (p < 1) {
-        setLabel("Hold to delete");
-        hint.textContent = "Keep holding to delete";
-        hint.removeAttribute("data-nudge"); void hint.offsetWidth; hint.setAttribute("data-nudge", "");
-      }
+      setState("idle"); setLabel("Hold to delete");
+      hint.textContent = "Keep holding to delete";
+      hint.removeAttribute("data-nudge"); void hint.offsetWidth; hint.setAttribute("data-nudge", "");
+    }
+
+    function endGesture() {
+      stop();
+      setTimeout(() => (gesture = false), 0);
+    }
+
+    function askAgain() {
+      setState("confirm"); setLabel("Press again to delete");
+      hint.textContent = "Press again within 4 seconds to delete";
+      announce("Press again to delete Spring launch.");
+      confirmTimer = setTimeout(() => {
+        if (state() !== "confirm") return;
+        toIdle();
+        announce("Delete cancelled.");
+      }, CONFIRM_MS);
     }
 
     function complete() {
-      held = false; setState("done"); setLabel("Deleted");
-      btn.setAttribute("aria-disabled", "true");
-      hint.textContent = "";
-      left = UNDO_S; show(undoBar, true);
+      held = false; clearTimeout(confirmTimer); cancelAnimationFrame(raf);
+      setFill(0); setState("undo"); setLabel("Undo");
+      left = UNDO_S;
       ring.style.transition = "none"; ring.style.strokeDashoffset = "0";
-      requestAnimationFrame(() => { ring.style.transition = ""; renderCount(); });
-      announce(`Spring launch is being deleted. Undo is available for ${UNDO_S} seconds.`);
-      undoBar.querySelector("[data-undo]").focus({ preventScroll: true });
-      timer = setInterval(() => { left -= 1; renderCount(); if (left <= 0) finish(); }, 1000);
+      requestAnimationFrame(() => requestAnimationFrame(() => { ring.style.transition = ""; renderCount(); }));
+      hint.textContent = countText();
+      announce(`Spring launch is being deleted. Press the button again within ${UNDO_S} seconds to undo.`);
+      timer = setInterval(() => { left -= 1; if (left <= 0) return finish(); renderCount(); }, 1000);
     }
 
+    const countText = () => `Deleting Spring launch in ${left} second${left === 1 ? "" : "s"}`;
+
     function renderCount() {
-      count.textContent = left === 1 ? "1 second to undo." : `${left} seconds to undo.`;
-      ring.style.strokeDashoffset = String(CIRC * (1 - left / UNDO_S));
+      hint.textContent = countText();
+      ring.style.strokeDashoffset = String(CIRC * (1 - (left - 1) / UNDO_S));
+    }
+
+    function undo() {
+      toIdle();
+      hint.textContent = "Undone. Nothing was deleted.";
+      announce("Delete undone. Spring launch is safe.");
     }
 
     function finish() {
-      clearInterval(timer); show(undoBar, false); show(gone, true);
+      clearInterval(timer);
       setState("gone"); setLabel("Deleted");
+      btn.setAttribute("aria-disabled", "true");
+      hint.textContent = "Gone, with all 14 pages.";
+      resetBtn.classList.remove("hidden");
       announce("Spring launch was deleted.");
-      gone.querySelector("[data-reset]").focus({ preventScroll: true });
+      if (document.activeElement === btn) resetBtn.focus({ preventScroll: true });
     }
 
-    function reset(message) {
-      clearInterval(timer); cancelAnimationFrame(raf);
-      p = 0; btn.style.setProperty("--p", "0");
+    function toIdle() {
+      clearInterval(timer); clearTimeout(confirmTimer); cancelAnimationFrame(raf);
+      held = false; setFill(0);
       btn.removeAttribute("aria-disabled");
       setState("idle"); setLabel("Hold to delete");
-      hint.textContent = "Press and hold, or hold Space";
-      show(undoBar, false); show(gone, false);
-      if (message) announce(message);
-      btn.focus({ preventScroll: true });
+      hint.textContent = HINT;
+      resetBtn.classList.add("hidden");
     }
 
-    btn.addEventListener("pointerdown", (e) => { if (e.button === 0) { btn.setPointerCapture(e.pointerId); start(); } });
-    ["pointerup", "pointercancel", "lostpointercapture"].forEach((t) => btn.addEventListener(t, stop));
-    btn.addEventListener("keydown", (e) => { if ((e.key === " " || e.key === "Enter") && !e.repeat) { e.preventDefault(); start(); } else if (e.key === " " || e.key === "Enter") e.preventDefault(); });
-    btn.addEventListener("keyup", (e) => { if (e.key === " " || e.key === "Enter") stop(); });
-    btn.addEventListener("blur", stop);
+    btn.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0 || !canStart()) return;
+      gesture = true; btn.setPointerCapture(e.pointerId); start();
+    });
+    ["pointerup", "pointercancel", "lostpointercapture"].forEach((t) => btn.addEventListener(t, endGesture));
+    btn.addEventListener("keydown", (e) => {
+      if (e.key !== " " && e.key !== "Enter") return;
+      if (gesture) return e.preventDefault();
+      if (!e.repeat && canStart()) { e.preventDefault(); gesture = true; start(); }
+    });
+    btn.addEventListener("keyup", (e) => { if (e.key === " " || e.key === "Enter") endGesture(); });
+    btn.addEventListener("blur", endGesture);
     btn.addEventListener("contextmenu", (e) => e.preventDefault());
-    undoBar.querySelector("[data-undo]").addEventListener("click", () => reset("Delete undone. Spring launch is safe."));
-    gone.querySelector("[data-reset]").addEventListener("click", () => reset());
+    btn.addEventListener("click", () => {
+      if (gesture) return;
+      if (state() === "undo") undo();
+      else if (state() === "confirm") complete();
+      else if (state() === "idle") askAgain();
+    });
+    resetBtn.addEventListener("click", () => { toIdle(); btn.focus({ preventScroll: true }); });
+    document.querySelectorAll("[data-alt]").forEach((b) => b.addEventListener("click", () => (altNote.textContent = b.dataset.alt)));
   })();
 </script>
 </body>
